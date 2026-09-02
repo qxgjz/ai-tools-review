@@ -28,11 +28,11 @@ interface GiscusProps {
 }
 
 export default function Giscus({
-  repo = "qxgjz/ai-tools-radar",
-  repoId = "R_kgDONv4q6g", // 占位，需要替换为你的实际 repoId
-  category = "General",
-  categoryId = "DIC_kwDONv4q6s4CkXmQ", // 占位，需要替换为你的实际 categoryId
-  theme = "light",
+  repo = "qxgjz/ai-tools-review",
+  repoId = "R_kgDOULm3Xw",
+  category = "Announcements",
+  categoryId = "DIC_kwDOULm3X84DEsrT",
+  theme = "preferred_color_scheme",
   lang = "zh-CN",
 }: GiscusProps) {
   const commentRef = useRef<HTMLDivElement>(null);
