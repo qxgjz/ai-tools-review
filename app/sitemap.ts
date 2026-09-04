@@ -116,7 +116,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     
     return {
       url: `${BASE_URL}/blog/${post.slug}`,
-      lastModified: new Date(post.updatedAt || post.publishedAt),
+      lastModified: new Date(post.publishedAt),
       changeFrequency,
       priority,
     };
