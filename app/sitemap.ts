@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
 import tools from "@/data/tools.json";
+import posts from "@/data/posts.json";
 
 // 网站基础 URL（部署后替换为你的域名）
 const BASE_URL = "https://www.aitoolcrux.com";
@@ -37,6 +38,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       changeFrequency: "monthly",
       priority: 0.5,
     },
+    {
+      url: `${BASE_URL}/blog`,
+      lastModified: new Date(),
+      changeFrequency: "weekly",
+      priority: 0.8,
+    },
   ];
 
   // 工具详情页
@@ -56,5 +63,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...toolPages, ...categoryPages];
+  // 博客文章页
+  const blogPages: MetadataRoute.Sitemap = posts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: new Date(post.publishedAt),
+    changeFrequency: "monthly",
+    priority: 0.7,
+  }));
+
+  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages];
 }

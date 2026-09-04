@@ -7,6 +7,9 @@ import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIO
 import { RadarChart } from "@/components/charts/RadarChart";
 import { ToolList } from "@/components/tools/ToolList";
 import Giscus from "@/components/comments/Giscus";
+import { BreadcrumbSchema, ProductSchema } from "@/components/seo/Schema";
+import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
+import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
@@ -25,12 +28,32 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
-  if (!tool) return { title: "工具未找到" };
+  if (!tool) return { title: "Tool Not Found | AIToolCrux" };
   const { total, grade } = calculateScoreResult(tool.scores);
+  const categoryFormatted = tool.category.charAt(0).toUpperCase() + tool.category.slice(1);
+  const prosSummary = tool.pros.slice(0, 2).join(", ");
+  const description = `${tool.name} by ${tool.vendor} — ${categoryFormatted} AI tool rated ${total.toFixed(1)}/10 (${grade} grade). Expert review: features, pricing, pros (${prosSummary}) & cons. Last updated ${tool.lastUpdated}. Find out if ${tool.name} is right for you.`;
   return {
-    title: `${tool.name} - ${total.toFixed(1)}分 ${grade}级 | AI工具测评台`,
-    description: tool.description,
-    keywords: [tool.name, tool.vendor, ...tool.tags, "AI工具测评"],
+    title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 (${grade} Grade) | Best ${categoryFormatted} AI Tool`,
+    description: description.slice(0, 160),
+    keywords: [tool.name, `${tool.name} review`, `${tool.name} pricing`, tool.vendor, ...tool.tags, `best ${tool.category} AI tools`, "AI tool review", "AI software comparison"],
+    alternates: {
+      canonical: `https://www.aitoolcrux.com/tools/${tool.slug}`,
+    },
+    openGraph: {
+      title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 (${grade} Grade)`,
+      description: description.slice(0, 160),
+      url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
+      type: "article",
+      publishedTime: tool.lastUpdated,
+      modifiedTime: tool.lastUpdated,
+      authors: ["AIToolCrux Editorial Team"],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 (${grade} Grade)`,
+      description: description.slice(0, 160),
+    },
   };
 }
 
@@ -41,7 +64,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   const { total, grade, breakdown } = calculateScoreResult(tool.scores);
   const relatedTools = toolsData
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
-    .slice(0, 3);
+    .slice(0, 6);
 
   // Schema.org 结构化数据 - Review
   const structuredData = {
@@ -80,52 +103,86 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
       />
+      <BreadcrumbSchema
+        items={[
+          { name: "Home", url: "/" },
+          { name: "Ranking", url: "/ranking" },
+          { name: tool.name, url: `/tools/${tool.slug}` },
+        ]}
+      />
+      {/* Product Schema - 工具产品结构化数据 */}
+      <ProductSchema
+        name={tool.name}
+        description={tool.description || `${tool.name} is an AI tool evaluated by AIToolCrux.`}
+        brand={tool.vendor}
+        category={tool.category}
+        ratingValue={total}
+        reviewCount={1}
+        price={tool.pricing?.[0]?.price || "Free"}
+        image={`https://www.aitoolcrux.com/og-image.svg`}
+        url={`https://www.aitoolcrux.com/tools/${tool.slug}`}
+      />
 
-      <Link href="/ranking" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 bg-white rounded-xl border border-gray-200 shadow-sm hover:border-blue-300 hover:text-blue-600 transition-all">
+      {/* 可视化面包屑导航 */}
+      <Breadcrumb
+        items={[
+          { name: "Ranking", url: "/ranking" },
+          { name: tool.category, url: `/category/${tool.category}` },
+          { name: tool.name },
+        ]}
+        className="mb-4"
+      />
+
+      <Link href="/ranking" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
         返回排行榜
       </Link>
 
       {/* 头部 */}
-      <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8 mb-6">
+      <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-start gap-6">
           <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-3xl font-extrabold shadow-lg">
             {tool.name.charAt(0).toUpperCase()}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-3 mb-2">
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900">{tool.name}</h1>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">{tool.name}</h1>
               <span className={`px-3 py-1 rounded-lg text-sm font-bold ${GRADE_STYLES[grade]}`}>
                 {grade}级 · {GRADE_DESCRIPTIONS[grade]}
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
               <span className="inline-flex items-center gap-1.5"><Building2 className="w-4 h-4" />{tool.vendor}</span>
               <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4" />更新于 {tool.lastUpdated}</span>
               <span className="inline-flex items-center gap-1.5"><Tag className="w-4 h-4" />{tool.category}</span>
-              {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 text-emerald-600 rounded-md text-xs font-semibold">有免费版</span>}
+              {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">有免费版</span>}
             </div>
           </div>
           <div className="text-center sm:text-right">
-            <div className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">{total.toFixed(1)}</div>
-            <div className="text-xs text-gray-400 mt-1">综合评分 / 10</div>
+            <div className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">{total.toFixed(1)}</div>
+            <div className="text-xs text-gray-400 dark:text-gray-500 mt-1">综合评分 / 10</div>
           </div>
         </div>
-        {tool.officialUrl && (
-          <div className="mt-6 pt-6 border-t border-gray-50">
-            <a href={tool.officialUrl} target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+        {(tool.officialUrl || (tool as any).affiliateUrl) && (
+          <div className="mt-6 pt-6 border-t border-gray-50 dark:border-gray-800">
+            <a href={(tool as any).affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
               <ExternalLink className="w-4 h-4" />
               访问官网
             </a>
+            {(tool as any).affiliateUrl && (
+              <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
+                <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
+              </p>
+            )}
           </div>
         )}
       </section>
 
       {/* 评分卡 + 雷达图 */}
       <section className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
-        <div className="lg:col-span-3 bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-5 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-blue-600" />
+        <div className="lg:col-span-3 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+            <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
             六维评分详情
           </h2>
           <div className="space-y-4">
@@ -135,13 +192,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               return (
                 <div key={dim}>
                   <div className="flex items-center justify-between mb-1.5">
-                    <span className="text-sm font-medium text-gray-700">
+                    <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {DIMENSION_LABELS[dim]}
-                      <span className="ml-2 text-xs text-gray-400">权重{(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</span>
+                      <span className="ml-2 text-xs text-gray-400 dark:text-gray-500">权重{(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</span>
                     </span>
-                    <span className="text-sm font-bold text-gray-900">{score.toFixed(1)}</span>
+                    <span className="text-sm font-bold text-gray-900 dark:text-white">{score.toFixed(1)}</span>
                   </div>
-                  <div className="h-2.5 bg-gray-100 rounded-full overflow-hidden">
+                  <div className="h-2.5 bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
                     <div className="h-full rounded-full bg-gradient-to-r from-blue-500 to-indigo-500 transition-all duration-700" style={{ width: `${percent}%` }} />
                   </div>
                 </div>
@@ -149,9 +206,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             })}
           </div>
         </div>
-        <div className="lg:col-span-2 bg-white rounded-2xl border border-gray-100 shadow-sm p-6 flex flex-col items-center justify-center">
-          <h2 className="text-lg font-bold text-gray-900 mb-4 self-start flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-purple-600" />
+        <div className="lg:col-span-2 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 flex flex-col items-center justify-center">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 self-start flex items-center gap-2">
+            <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
             能力雷达图
           </h2>
           <RadarChart scores={tool.scores} size={260} showValues />
@@ -160,29 +217,29 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
       {/* 优缺点 */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-          <h2 className="text-lg font-bold text-emerald-600 mb-4 flex items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-50"><Check className="w-5 h-5" /></div>
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
+          <h2 className="text-lg font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-50 dark:bg-emerald-900/20"><Check className="w-5 h-5" /></div>
             主要优势
           </h2>
           <ul className="space-y-3">
             {tool.pros.map((pro, i) => (
-              <li key={i} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 text-emerald-600 text-xs font-bold mt-0.5">{i + 1}</span>
+              <li key={i} className="flex gap-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">{i + 1}</span>
                 {pro}
               </li>
             ))}
           </ul>
         </div>
-        <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6">
-          <h2 className="text-lg font-bold text-red-500 mb-4 flex items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-red-50"><X className="w-5 h-5" /></div>
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
+          <h2 className="text-lg font-bold text-red-500 dark:text-red-400 mb-4 flex items-center gap-2">
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20"><X className="w-5 h-5" /></div>
             主要不足
           </h2>
           <ul className="space-y-3">
             {tool.cons.map((con, i) => (
-              <li key={i} className="flex gap-3 text-sm text-gray-600 leading-relaxed">
-                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-red-100 text-red-500 text-xs font-bold mt-0.5">!</span>
+              <li key={i} className="flex gap-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 text-red-500 dark:text-red-400 text-xs font-bold mt-0.5">!</span>
                 {con}
               </li>
             ))}
@@ -191,26 +248,26 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* 定价 */}
-      <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6">
-        <h2 className="text-lg font-bold text-gray-900 mb-5">价格方案</h2>
+      <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5">价格方案</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            <thead><tr className="border-b border-gray-100">
-              <th className="text-left py-3 px-4 font-semibold text-gray-500">方案</th>
-              <th className="text-left py-3 px-4 font-semibold text-gray-500">价格</th>
-              <th className="text-left py-3 px-4 font-semibold text-gray-500">说明</th>
+            <thead><tr className="border-b border-gray-100 dark:border-gray-800">
+              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">方案</th>
+              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">价格</th>
+              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">说明</th>
             </tr></thead>
             <tbody>
               {tool.pricing.map((tier, i) => (
-                <tr key={i} className={`border-b border-gray-50 hover:bg-gray-50 ${tier.recommended ? "bg-blue-50/50" : ""}`}>
+                <tr key={i} className={`border-b border-gray-50 dark:border-gray-800/50 hover:bg-gray-50 dark:hover:bg-gray-800/50 ${tier.recommended ? "bg-blue-50/50 dark:bg-blue-900/10" : ""}`}>
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-2">
-                      <span className="font-semibold text-gray-900">{tier.name}</span>
+                      <span className="font-semibold text-gray-900 dark:text-white">{tier.name}</span>
                       {tier.recommended && <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-md font-semibold">推荐</span>}
                     </div>
                   </td>
-                  <td className="py-3 px-4"><span className="font-bold text-blue-600">{tier.price}</span></td>
-                  <td className="py-3 px-4 text-gray-500">{tier.description ?? "-"}</td>
+                  <td className="py-3 px-4"><span className="font-bold text-blue-600 dark:text-blue-400">{tier.price}</span></td>
+                  <td className="py-3 px-4 text-gray-500 dark:text-gray-400">{tier.description ?? "-"}</td>
                 </tr>
               ))}
             </tbody>
@@ -219,38 +276,43 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* 评测摘要 */}
-      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 rounded-2xl border border-blue-100 p-6 sm:p-8 mb-6">
-        <h2 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-purple-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/30 p-6 sm:p-8 mb-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
           <Lightbulb className="w-5 h-5 text-amber-500" />
           编辑评测摘要
         </h2>
-        <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
+        <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
           {tool.name} 是由 {tool.vendor} 推出的{tool.category}类AI工具，综合评分 {total.toFixed(1)}/10，等级为 {grade}（{GRADE_DESCRIPTIONS[grade]}）。{tool.pros[0]}。需要注意的是，{tool.cons[0]}。{tool.hasFreeTier ? "该工具提供免费版本，适合预算有限的用户先体验再决定是否升级。" : ""}综合来看，{total >= 8 ? "是一款值得推荐的优秀工具。" : total >= 7 ? "是一款表现良好的工具，适合特定场景用户。" : "整体表现一般，建议结合需求谨慎选择。"}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
-            <span key={tag} className="px-2.5 py-1 bg-white/70 text-gray-600 rounded-md text-xs font-medium border border-gray-200">#{tag}</span>
+            <span key={tag} className="px-2.5 py-1 bg-white/70 dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 rounded-md text-xs font-medium border border-gray-200 dark:border-gray-700">#{tag}</span>
           ))}
         </div>
       </section>
 
       {/* 相关推荐 */}
       {relatedTools.length > 0 && (
-        <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 mb-6">
-          <h2 className="text-lg font-bold text-gray-900 mb-5 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-purple-600" />
+        <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+            <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
             同类工具推荐
           </h2>
           <ToolList tools={relatedTools} />
         </section>
       )}
 
+      {/* 邮件订阅CTA */}
+      <div className="mb-6">
+        <NewsletterSignup variant="compact" />
+      </div>
+
       {/* 评论区 */}
-      <section className="bg-white rounded-2xl border border-gray-100 shadow-sm p-6 sm:p-8">
+      <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
         <Giscus />
       </section>
 
-      <div className="mt-8 text-center text-xs text-gray-400">
+      <div className="mt-8 text-center text-xs text-gray-400 dark:text-gray-500">
         评分基于公开测评方法论，联盟链接收入不影响评分。最后更新于 {tool.lastUpdated}。
       </div>
     </div>
