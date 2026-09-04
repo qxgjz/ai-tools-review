@@ -15,7 +15,7 @@ export function Header() {
             <Sparkles className="w-5 h-5" />
           </div>
           <span className="text-lg font-extrabold text-gray-900 dark:text-white hidden sm:block">
-            AI工具测评台
+            AIToolCrux
           </span>
         </Link>
 
@@ -31,42 +31,42 @@ export function Header() {
             className="p-2 sm:px-3 sm:py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             <LayoutGrid className="w-5 h-5 sm:hidden" />
-            <span className="hidden sm:inline">首页</span>
+            <span className="hidden sm:inline">Home</span>
           </Link>
           <Link
             href="/ranking"
             className="p-2 sm:px-3 sm:py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             <Trophy className="w-5 h-5 sm:hidden" />
-            <span className="hidden sm:inline">排行榜</span>
+            <span className="hidden sm:inline">Ranking</span>
           </Link>
           <Link
             href="/compare"
             className="p-2 sm:px-3 sm:py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             <GitCompare className="w-5 h-5 sm:hidden" />
-            <span className="hidden sm:inline">对比</span>
+            <span className="hidden sm:inline">Compare</span>
           </Link>
           <Link
             href="/generator"
             className="p-2 sm:px-3 sm:py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             <SearchIcon className="w-5 h-5 sm:hidden" />
-            <span className="hidden sm:inline">智能匹配</span>
+            <span className="hidden sm:inline">Matcher</span>
           </Link>
           <Link
             href="/blog"
             className="p-2 sm:px-3 sm:py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             <BookOpen className="w-5 h-5 sm:hidden" />
-            <span className="hidden sm:inline">博客</span>
+            <span className="hidden sm:inline">Blog</span>
           </Link>
           <Link
             href="/about"
             className="p-2 sm:px-3 sm:py-2 rounded-lg text-sm font-medium text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
           >
             <Info className="w-5 h-5 sm:hidden" />
-            <span className="hidden sm:inline">关于</span>
+            <span className="hidden sm:inline">About</span>
           </Link>
           <ThemeToggle />
         </nav>

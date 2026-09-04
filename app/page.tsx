@@ -37,25 +37,25 @@ const NewsletterSignup = dynamic(() => import("@/components/monetization/Newslet
 });
 
 const CATEGORIES = [
-  { slug: "chat", name: "AI对话", icon: MessageSquare, color: "from-blue-500 to-cyan-500" },
-  { slug: "writing", name: "AI写作", icon: PenTool, color: "from-purple-500 to-pink-500" },
-  { slug: "image", name: "AI绘画", icon: ImageIcon, color: "from-orange-500 to-red-500" },
-  { slug: "code", name: "AI编程", icon: Code, color: "from-emerald-500 to-teal-500" },
-  { slug: "video", name: "AI视频", icon: Video, color: "from-rose-500 to-orange-500" },
-  { slug: "audio", name: "AI音频", icon: Music, color: "from-violet-500 to-purple-500" },
-  { slug: "productivity", name: "AI办公", icon: Briefcase, color: "from-indigo-500 to-blue-500" },
-  { slug: "search", name: "AI搜索", icon: SearchIcon, color: "from-sky-500 to-blue-500" },
+  { slug: "chat", name: "AI Chat", icon: MessageSquare, color: "from-blue-500 to-cyan-500" },
+  { slug: "writing", name: "AI Writing", icon: PenTool, color: "from-purple-500 to-pink-500" },
+  { slug: "image", name: "AI Image Generation", icon: ImageIcon, color: "from-orange-500 to-red-500" },
+  { slug: "code", name: "AI Programming", icon: Code, color: "from-emerald-500 to-teal-500" },
+  { slug: "video", name: "AI Video", icon: Video, color: "from-rose-500 to-orange-500" },
+  { slug: "audio", name: "AI Audio", icon: Music, color: "from-violet-500 to-purple-500" },
+  { slug: "productivity", name: "AI Office", icon: Briefcase, color: "from-indigo-500 to-blue-500" },
+  { slug: "search", name: "AI Search", icon: SearchIcon, color: "from-sky-500 to-blue-500" },
   { slug: "agent", name: "AI Agent", icon: Bot, color: "from-indigo-500 to-purple-600" },
-  { slug: "design", name: "AI设计", icon: Palette, color: "from-pink-500 to-rose-500" },
+  { slug: "design", name: "AI Design", icon: Palette, color: "from-pink-500 to-rose-500" },
 ];
 
 const METHODOLOGY = [
-  { icon: Zap, title: "功能与输出质量", weight: "25%", desc: "核心功能完整性、输出准确性、用例覆盖" },
-  { icon: Layers, title: "用户体验", weight: "20%", desc: "界面设计、上手曲线、文档质量" },
-  { icon: Star, title: "价格与价值", weight: "20%", desc: "成本透明度、免费额度、投资回报率" },
-  { icon: Code, title: "集成与开发者", weight: "15%", desc: "API 质量、平台兼容性、生态系统" },
-  { icon: Shield, title: "支持与可靠性", weight: "10%", desc: "正常运行时间、更新频率、客服响应" },
-  { icon: CheckCircle2, title: "伦理与透明度", weight: "10%", desc: "数据隐私、偏见披露、负责任 AI" },
+  { icon: Zap, title: "Features & Output Quality", weight: "25%", desc: "Core feature completeness, output accuracy, and use case coverage" },
+  { icon: Layers, title: "User Experience", weight: "20%", desc: "Interface design, learning curve, documentation quality" },
+  { icon: Star, title: "Price vs. Value", weight: "20%", desc: "Cost Transparency, Free Tier, Return on Investment" },
+  { icon: Code, title: "Integrations & Developers", weight: "15%", desc: "API quality, platform compatibility, ecosystem" },
+  { icon: Shield, title: "Support & Reliability", weight: "10%", desc: "Uptime, update frequency, customer support response" },
+  { icon: CheckCircle2, title: "Ethics and Transparency", weight: "10%", desc: "Data privacy, bias disclosure, responsible AI" },
 ];
 
 export default function HomePage() {
@@ -77,7 +77,7 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "AIToolCrux",
-            alternateName: "AI工具测评台",
+            alternateName: "AI Tool Review Platform",
             url: "https://www.aitoolcrux.com",
             description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.",
             inLanguage: ["en", "zh-CN"],
@@ -116,23 +116,23 @@ export default function HomePage() {
           {/* 标签 */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-sm mb-8 border border-white/10">
             <Sparkles className="w-4 h-4 text-yellow-400" />
-            <span className="text-blue-100">六维加权评分模型 · 专业独立测评</span>
+            <span className="text-blue-100">Six-Dimension Weighted Scoring · Professional Independent Reviews</span>
           </div>
 
           {/* 主标题 */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
-            找到最适合你的
+            Find the Perfect
             <br />
             <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
-              AI 工具
+              AI Tools
             </span>
           </h1>
 
           {/* 副标题 */}
           <p className="text-lg sm:text-xl text-blue-200/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            基于功能、体验、价格、集成、支持、伦理六维深度测评，
+            In-depth reviews across six dimensions: features, UX, pricing, integrations, support, and ethics.
             <br className="hidden sm:block" />
-            为你精选 {tools.length}+ 款优质 AI 工具，覆盖全品类
+            为你精选 {tools.length}+ 款优质 AI Tools，覆盖全品类
           </p>
 
           {/* CTA 按钮 */}
@@ -142,7 +142,7 @@ export default function HomePage() {
               className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300"
             >
               <Sparkles className="w-5 h-5" />
-              智能匹配工具
+              AI Tool Matcher
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
             <Link
@@ -150,7 +150,7 @@ export default function HomePage() {
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300"
             >
               <Trophy className="w-5 h-5 text-yellow-400" />
-              查看排行榜
+              View Ranking
             </Link>
           </div>
 
@@ -164,10 +164,10 @@ export default function HomePage() {
             </div>
             <div className="text-left">
               <div className="text-sm font-bold text-amber-100">
-                📚 免费下载：2026 AI工具指南
+                📚 Free Download: 2026 AI Tools Guide
               </div>
               <div className="text-xs text-amber-200/70">
-                Top 50工具深度测评 · 六维评分 · 可保存为PDF
+                Top 50 In-Depth Reviews · Six-Dimension Scores · PDF Ready
               </div>
             </div>
             <ArrowRight className="w-4 h-4 text-amber-300 group-hover:translate-x-1 transition-transform" />
@@ -179,28 +179,28 @@ export default function HomePage() {
               <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 {tools.length}+
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">精选工具</div>
+              <div className="text-sm text-blue-300/70 mt-1">Curated Tools</div>
             </div>
             <div className="w-px h-12 bg-white/10 hidden sm:block" />
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 10
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">工具分类</div>
+              <div className="text-sm text-blue-300/70 mt-1">Categories</div>
             </div>
             <div className="w-px h-12 bg-white/10 hidden sm:block" />
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 6
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">评分维度</div>
+              <div className="text-sm text-blue-300/70 mt-1">Score Dimensions</div>
             </div>
             <div className="w-px h-12 bg-white/10 hidden sm:block" />
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 100%
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">独立测评</div>
+              <div className="text-sm text-blue-300/70 mt-1">Independent Reviews</div>
             </div>
           </div>
         </div>
@@ -221,13 +221,13 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-4">
             <Layers className="w-4 h-4" />
-            全品类覆盖
+            All Categories Covered
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            浏览分类
+            Browse Categories
           </h2>
           <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            从对话到绘画，从编程到视频，覆盖 AI 全场景应用
+            From chat to image generation, coding to video, covering all AI use cases
           </p>
         </div>
 
@@ -257,7 +257,7 @@ export default function HomePage() {
                   </h3>
                   <p className="text-sm text-gray-400 dark:text-gray-500 mt-1 flex items-center gap-1">
                     <TrendingUp className="w-3 h-3" />
-                    {count} 款工具
+                    {count} tools
                   </p>
                 </div>
               </Link>
@@ -266,27 +266,27 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 热门排行榜 */}
+      {/* Trending Ranking */}
       <section className="bg-gray-50 dark:bg-gray-900/50 py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
             <div>
               <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-full text-sm font-medium mb-4">
                 <Trophy className="w-4 h-4" />
-                精选推荐
+                Top Picks
               </div>
               <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-                热门排行榜
+                Trending Ranking
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mt-2">
-                基于六维加权评分，为你精选最优质的 AI 工具
+                基于六维加权评分，为你精选最优质的 AI Tools
               </p>
             </div>
             <Link
               href="/ranking"
               className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 font-medium rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all"
             >
-              查看全部
+              View All
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
@@ -300,13 +300,13 @@ export default function HomePage() {
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium mb-4">
             <CheckCircle2 className="w-4 h-4" />
-            专业方法论
+            Professional Methodology
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            六维加权评分体系
+            Six-Dimension Weighted Scoring System
           </h2>
           <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            我们采用科学、可量化、可复现的六维评分框架，确保每一个评分都有依据
+            We use a scientific, quantifiable, and reproducible six-dimension framework to ensure every score is evidence-based
           </p>
         </div>
 
@@ -342,7 +342,7 @@ export default function HomePage() {
             href="/about"
             className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300"
           >
-            了解完整测评方法论
+            Learn About Our Full Methodology
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
@@ -356,20 +356,20 @@ export default function HomePage() {
               <div>
                 <div className="inline-flex items-center gap-2 px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium mb-4">
                   <PenTool className="w-4 h-4" />
-                  深度内容
+                  In-Depth Content
                 </div>
                 <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-                  最新文章
+                  Latest Articles
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  AI 工具深度测评、选型指南、行业动态
+                  AI Tools深度测评、选型指南、行业动态
                 </p>
               </div>
               <Link
                 href="/blog"
                 className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 font-medium rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all"
               >
-                全部文章
+                All Articles
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
@@ -401,7 +401,7 @@ export default function HomePage() {
                     <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
                       <span>{post.publishedAt}</span>
                       <span className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium group-hover:gap-2 transition-all">
-                        阅读全文
+                        Read More
                         <ArrowRight className="w-3 h-3" />
                       </span>
                     </div>
@@ -425,20 +425,20 @@ export default function HomePage() {
           <div className="relative">
             <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-sm mb-6">
               <Sparkles className="w-4 h-4 text-yellow-300" />
-              智能匹配
+              AI Matcher
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
-              不知道选哪个 AI 工具？
+              不知道选哪个 AI Tools？
             </h2>
             <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
-              告诉我们你的使用场景和优先级，我们会基于六维评分模型为你智能匹配最适合的 AI 工具
+              告诉我们你的使用场景和优先级，我们会基于六维评分模型为你AI Matcher最适合的 AI Tools
             </p>
             <Link
               href="/generator"
               className="group inline-flex items-center gap-2 px-10 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
             >
               <Sparkles className="w-5 h-5" />
-              开始智能匹配
+              开始AI Matcher
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
