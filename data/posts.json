@@ -404,7 +404,7 @@
       "ChatGPT",
       "OpenAI",
       "AI Chat",
-      "深度测评"
+      "Deep Review"
     ],
     "tagSlugs": [
       "chatgpt",
@@ -444,7 +444,7 @@
     "categorySlug": "guides",
     "tags": [
       "AITools",
-      "中小企业",
+      "SMB",
       "Selection Guide",
       "2026"
     ],
@@ -1648,10 +1648,10 @@
     "publishedAt": "2026-09-02",
     "tags": [
       "AITools",
-      "测评指南",
-      "六维Rating",
+      "Review Guide",
+      "Six-DimensionRating",
       "2026",
-      "市场Analysis"
+      "MarketAnalysis"
     ],
     "language": "zh",
     "readingTime": "25 min",
