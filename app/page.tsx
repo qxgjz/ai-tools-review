@@ -154,23 +154,19 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* Lead Magnet 小横幅 */}
+          {/* Lead Magnet 小横幅 - 简洁样式 */}
           <Link
             href="/free-ai-tools-guide"
-            className="inline-flex items-center gap-3 px-6 py-3 bg-gradient-to-r from-amber-500/20 to-orange-500/20 backdrop-blur-md rounded-xl border border-amber-400/30 hover:border-amber-400/50 hover:from-amber-500/30 hover:to-orange-500/30 transition-all duration-300 group"
+            className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group"
           >
-            <div className="w-8 h-8 bg-gradient-to-br from-amber-400 to-orange-500 rounded-lg flex items-center justify-center">
-              <FileText className="w-4 h-4 text-white" />
-            </div>
-            <div className="text-left">
-              <div className="text-sm font-bold text-amber-100">
-                📚 Free Download: 2026 AI Tools Guide
-              </div>
-              <div className="text-xs text-amber-200/70">
-                Top 50 In-Depth Reviews · Six-Dimension Scores · PDF Ready
-              </div>
-            </div>
-            <ArrowRight className="w-4 h-4 text-amber-300 group-hover:translate-x-1 transition-transform" />
+            <FileText className="w-4 h-4 text-blue-200" />
+            <span className="text-sm font-semibold text-white">
+              Free AI Tools Guide
+            </span>
+            <span className="text-xs text-blue-200/70 hidden sm:inline">
+              · Top 50 Reviews · PDF
+            </span>
+            <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 transition-transform" />
           </Link>
 
           {/* 统计数据 */}
@@ -205,13 +201,12 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* 底部波浪 */}
-        <div className="absolute bottom-0 left-0 right-0">
-          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="w-full" preserveAspectRatio="none">
+        {/* 底部波浪 - 修复黑线问题 */}
+        <div className="absolute bottom-0 left-0 right-0 leading-none">
+          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto block" preserveAspectRatio="none" style={{ display: 'block' }}>
             <path
-              d="M0 120L60 105C120 90 240 60 360 45C480 30 600 30 720 37.5C840 45 960 60 1080 67.5C1200 75 1320 75 1380 75L1440 75V120H1380C1320 120 1200 120 1080 120C960 120 840 120 720 120C600 120 480 120 360 120C240 120 120 120 60 120H0Z"
-              className="fill-gray-50 dark:fill-gray-950"
-              stroke="none"
+              d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
+              fill="#f9fafb"
             />
           </svg>
         </div>
