@@ -16,30 +16,30 @@ interface ReviewTabsProps {
   grade: string;
 }
 
-export function ReviewTabs({ dimensions, overallScore, grade }: ReviewTabsProps) {
+export default function ReviewTabs({ dimensions, overallScore, grade }: ReviewTabsProps) {
   return (
     <div className="my-8">
       <Tabs defaultValue="overview" className="w-full">
         <TabsList className="grid w-full grid-cols-2 lg:grid-cols-4">
-          <TabsTrigger value="overview">评分总览</TabsTrigger>
-          <TabsTrigger value="features">功能评测</TabsTrigger>
-          <TabsTrigger value="performance">性能体验</TabsTrigger>
-          <TabsTrigger value="pricing">价格对比</TabsTrigger>
+          <TabsTrigger value="overview">Score Overview</TabsTrigger>
+          <TabsTrigger value="features">Feature Review</TabsTrigger>
+          <TabsTrigger value="performance">Performance</TabsTrigger>
+          <TabsTrigger value="pricing">Pricing</TabsTrigger>
         </TabsList>
 
-        {/* 评分总览 */}
+        {/* Score Overview */}
         <TabsContent value="overview" className="mt-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {/* 总分卡片 */}
+            {/* Total Score Card */}
             <div className="text-center p-6 bg-gray-50 dark:bg-gray-800 rounded-xl">
               <div className="text-5xl font-extrabold text-gray-900 dark:text-white mb-2">
                 {overallScore.toFixed(1)}
               </div>
-              <div className="text-sm text-gray-500 dark:text-gray-400 mb-3">/ 10 总分</div>
-              <Badge className="text-lg px-4 py-1">{grade} 级</Badge>
+              <div className="text-sm text-gray-500 dark:text-gray-400 mb-3">/ 10 Total</div>
+              <Badge className="text-lg px-4 py-1">{grade} Grade</Badge>
             </div>
 
-            {/* 各维度评分 */}
+            {/* Dimension Scores */}
             <div className="md:col-span-2 space-y-4">
               {dimensions.map((dim, index) => (
                 <div key={index}>
@@ -58,10 +58,10 @@ export function ReviewTabs({ dimensions, overallScore, grade }: ReviewTabsProps)
           </div>
         </TabsContent>
 
-        {/* 功能评测 */}
+        {/* Feature Review */}
         <TabsContent value="features" className="mt-6">
           <div className="space-y-4">
-            {dimensions.filter(d => d.name.includes("功能") || d.name.includes("集成")).map((dim, index) => (
+            {dimensions.filter(d => d.name.toLowerCase().includes("function") || d.name.toLowerCase().includes("integration") || d.name.toLowerCase().includes("feature")).map((dim, index) => (
               <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
                   <h4 className="font-semibold text-gray-900 dark:text-white">{dim.name}</h4>
@@ -70,13 +70,16 @@ export function ReviewTabs({ dimensions, overallScore, grade }: ReviewTabsProps)
                 <p className="text-sm text-gray-600 dark:text-gray-400">{dim.description}</p>
               </div>
             ))}
+            {dimensions.filter(d => d.name.toLowerCase().includes("function") || d.name.toLowerCase().includes("integration") || d.name.toLowerCase().includes("feature")).length === 0 && (
+              <p className="text-sm text-gray-500 dark:text-gray-400">Feature dimension details will be displayed here.</p>
+            )}
           </div>
         </TabsContent>
 
-        {/* 性能体验 */}
+        {/* Performance */}
         <TabsContent value="performance" className="mt-6">
           <div className="space-y-4">
-            {dimensions.filter(d => d.name.includes("性能") || d.name.includes("易用") || d.name.includes("体验")).map((dim, index) => (
+            {dimensions.filter(d => d.name.toLowerCase().includes("performance") || d.name.toLowerCase().includes("ux") || d.name.toLowerCase().includes("experience") || d.name.toLowerCase().includes("speed")).map((dim, index) => (
               <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
                 <div className="flex justify-between items-center mb-2">
                   <h4 className="font-semibold text-gray-900 dark:text-white">{dim.name}</h4>
@@ -85,14 +88,17 @@ export function ReviewTabs({ dimensions, overallScore, grade }: ReviewTabsProps)
                 <p className="text-sm text-gray-600 dark:text-gray-400">{dim.description}</p>
               </div>
             ))}
+            {dimensions.filter(d => d.name.toLowerCase().includes("performance") || d.name.toLowerCase().includes("ux") || d.name.toLowerCase().includes("experience") || d.name.toLowerCase().includes("speed")).length === 0 && (
+              <p className="text-sm text-gray-500 dark:text-gray-400">Performance dimension details will be displayed here.</p>
+            )}
           </div>
         </TabsContent>
 
-        {/* 价格对比 */}
+        {/* Pricing */}
         <TabsContent value="pricing" className="mt-6">
           <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              详细的价格对比信息请参考文章中的价格对比表格。我们会定期更新各工具的最新定价和优惠信息。
+              For detailed pricing comparison, please refer to the pricing comparison table in the article. We regularly update the latest pricing and promotional information for each tool.
             </p>
           </div>
         </TabsContent>

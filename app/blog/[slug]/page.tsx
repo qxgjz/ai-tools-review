@@ -17,11 +17,11 @@ import { FAQSection, defaultFAQs } from "@/components/content/FAQSection";
 // 动态导入重型组件，减少初始JS包大小
 const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
   ssr: false,
-  loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">加载评论中...</div>,
+  loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading comments...</div>,
 });
 const ReviewTabs = dynamic(() => import("@/components/content/ReviewTabs"), {
   ssr: false,
-  loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">加载评分中...</div>,
+  loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading scores...</div>,
 });
 
 interface PostPageProps {
@@ -274,7 +274,7 @@ export default function PostPage({ params }: PostPageProps) {
         href="/blog"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
       >
-        ← 返回博客列表
+        ← Back to blog
       </Link>
 
       {/* 文章头部 */}
@@ -286,7 +286,7 @@ export default function PostPage({ params }: PostPageProps) {
           >
             {post.category}
           </Link>
-          <span className="text-sm text-gray-500 dark:text-gray-400">{post.readTime} 分钟阅读</span>
+          <span className="text-sm text-gray-500 dark:text-gray-400">{post.readTime} min read</span>
         </div>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
           {post.title}
@@ -356,7 +356,7 @@ export default function PostPage({ params }: PostPageProps) {
           dimensions={Object.entries(tool.scores).map(([name, score]) => ({
             name,
             score: typeof score === "number" ? score : 7.5,
-            description: `${toolName}在${name}方面的表现评分`,
+            description: `${toolName} performance score in ${name}`,
           }))}
           overallScore={avgScore}
           grade={avgScore >= 9 ? "S" : avgScore >= 8 ? "A" : avgScore >= 7 ? "B" : avgScore >= 6 ? "C" : avgScore >= 5 ? "D" : "F"}
@@ -454,14 +454,14 @@ export default function PostPage({ params }: PostPageProps) {
         <section className="mb-16">
           <div className="flex items-end justify-between mb-6">
             <div>
-              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">你可能还喜欢</h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400">基于标签、分类和内容相似度智能推荐</p>
+              <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">You might also like</h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400">Smart recommendations based on tags, categories, and content similarity</p>
             </div>
             <Link
               href="/blog"
               className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
             >
-              查看全部文章
+              View all articles
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>
@@ -484,7 +484,7 @@ export default function PostPage({ params }: PostPageProps) {
                 <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">{related.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400">{related.publishedAt}</span>
-                  <span className="text-xs text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">阅读 →</span>
+                  <span className="text-xs text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">Read →</span>
                 </div>
               </Link>
             ))}
@@ -495,7 +495,7 @@ export default function PostPage({ params }: PostPageProps) {
               href="/blog"
               className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
             >
-              查看全部文章
+              View all articles
               <ArrowRight className="w-4 h-4" />
             </Link>
           </div>

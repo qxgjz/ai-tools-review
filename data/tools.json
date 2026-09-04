@@ -5,7 +5,7 @@
     "name": "ChatGPT",
     "category": "chat",
     "vendor": "OpenAI",
-    "description": "由OpenAI开发的先进对话式AI助手，支持多轮对话、代码生成、文档分析和图像理解，是目前最流行的通用AI助手。\n\n**相关工具：** <a href=\"/tools/gemini\">Gemini</a>, <a href=\"/tools/claude\">Claude</a>",
+    "description": "Developed by OpenAI, the advanced conversational AI assistant supports multiple rounds of dialogue, code generation, document analysis, and image understanding, and is currently the most popular general-purpose AI assistant.\n\n* * Related Tools: * * <a href=\"/tools/gemini\">Gemini</a>, <a href=\"/tools/claude\">Claude</a>",
     "scores": {
       "functionality": 9.5,
       "ux": 9,
@@ -15,15 +15,15 @@
       "ethics": 6.5
     },
     "pros": [
-      "功能强大，支持文本、图像、代码多模态",
-      "界面简洁易用，上手零门槛",
-      "插件生态丰富，可扩展能力强",
-      "持续更新迭代，模型能力领先"
+      "Powerful, supports text, image, code multimodality",
+      "The interface is simple and easy to use, and there is no threshold to get started",
+      "Plug-ins are ecologically rich and scalable",
+      "Continuous update iteration, leading model capability"
     ],
     "cons": [
-      "高级功能需订阅Plus，月费较高",
-      "高峰期可能出现响应延迟",
-      "知识截止日期限制，实时信息需联网"
+      "Premium features require a Plus subscription for a higher monthly fee",
+      "Response delays may occur during peak periods",
+      "Knowledge deadline limit, real-time information needs to be online"
     ],
     "pricing": [
       {
@@ -46,9 +46,9 @@
       }
     ],
     "tags": [
-      "对话",
-      "AI助手",
-      "多模态",
+      "Dialog Icon",
+      "AI Assistant",
+      "Multimodal",
       "OpenAI"
     ],
     "hasFreeTier": true,
@@ -61,7 +61,7 @@
     "name": "Claude",
     "category": "chat",
     "vendor": "Anthropic",
-    "description": "Anthropic推出的安全对齐AI助手，以长文本处理、深度分析和严谨回答著称，支持200K超长上下文。\n\n**相关工具：** <a href=\"/tools/chatgpt\">ChatGPT</a>, <a href=\"/tools/gemini\">Gemini</a>",
+    "description": "Anthropic's securely aligned AI assistant, known for long text processing, in-depth analysis, and rigorous answers, supports 200K ultra-long contexts.\n\n* * Related tools: * * <a href=\"/tools/chatgpt\">ChatGPT</a>, <a href=\"/tools/gemini\">Gemini</a>",
     "scores": {
       "functionality": 9,
       "ux": 8.5,
@@ -71,15 +71,15 @@
       "ethics": 8.5
     },
     "pros": [
-      "超长上下文200K，适合长文档分析",
-      "回答严谨可靠，幻觉率较低",
-      "安全对齐做得好，伦理意识强",
-      "代码和写作能力出色"
+      "Extremely long context 200K for long document analysis",
+      "Rigorous and reliable answers, low hallucination rate",
+      "Good safety alignment and strong ethical awareness",
+      "Excellent code and writing skills"
     ],
     "cons": [
-      "Pro版价格较高",
-      "图像生成能力有限",
-      "国内访问需要网络配置"
+      "The Pro version is more expensive",
+      "Limited image generation capability",
+      "Domestic access requires network configuration"
     ],
     "pricing": [
       {
@@ -102,9 +102,9 @@
       }
     ],
     "tags": [
-      "对话",
-      "AI助手",
-      "长文本",
+      "Dialog Icon",
+      "AI Assistant",
+      "long text",
       "Anthropic"
     ],
     "hasFreeTier": true,
@@ -117,7 +117,7 @@
     "name": "Gemini",
     "category": "chat",
     "vendor": "Google",
-    "description": "Google开发的多模态AI模型，深度集成Google搜索和Workspace，支持实时信息检索和复杂推理。\n\n**相关工具：** <a href=\"/tools/chatgpt\">ChatGPT</a>, <a href=\"/tools/claude\">Claude</a>",
+    "description": "A multimodal AI model developed by Google that deeply integrates Google Search and Workspace to support real-time information retrieval and complex reasoning.\n\n* * Related Tools: * * <a href=\"/tools/chatgpt\">ChatGPT</a>, <a href=\"/tools/claude\">Claude</a>",
     "scores": {
       "functionality": 8.5,
       "ux": 8,
@@ -127,15 +127,15 @@
       "ethics": 7.5
     },
     "pros": [
-      "深度集成Google搜索，实时信息准确",
-      "多模态能力强，支持视频理解",
-      "免费版功能丰富",
-      "与Google生态无缝集成"
+      "Deeply integrated Google search for real-time accuracy",
+      "Strong multi-modal ability to support video understanding",
+      "The free version is feature-rich",
+      "Seamless integration with Google Ecosystem"
     ],
     "cons": [
-      "创意写作能力略逊于竞品",
-      "部分地区功能受限",
-      "高级功能需订阅"
+      "Creative writing skills are slightly inferior to competitors",
+      "Limited functionality in some areas",
+      "Premium features require subscription"
     ],
     "pricing": [
       {
@@ -152,10 +152,10 @@
       }
     ],
     "tags": [
-      "对话",
-      "AI助手",
+      "Dialog Icon",
+      "AI Assistant",
       "Google",
-      "多模态"
+      "Multimodal"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://gemini.google.com",
@@ -167,7 +167,7 @@
     "name": "Midjourney",
     "category": "image",
     "vendor": "Midjourney Inc.",
-    "description": "Midjourney by Midjourney Inc. is a AI-powered image generation and editing tool. Midjourney is a leading image AI tool. developed by Midjourney Inc.. with an overall rating of 6.9/10. Key strengths include 图像质量业界顶尖，艺术感强, 风格多样性丰富，从写实到抽象.",
+    "description": "Midjourney by Midjourney Inc. is an AI-powered image generation and editing tool. Midjourney is a leading image AI tool. developed by Midjourney Inc... with an overall rating of 6.9/10. Key strengths include industry-leading image quality, a strong sense of art, and a rich diversity of styles, from realism to abstraction.",
     "scores": {
       "functionality": 9.5,
       "ux": 7,
@@ -177,16 +177,16 @@
       "ethics": 6
     },
     "pros": [
-      "图像质量业界顶尖，艺术感强",
-      "风格多样性丰富，从写实到抽象",
-      "社区活跃，prompt分享丰富",
-      "持续更新模型，画质不断提升"
+      "Top image quality in the industry, strong sense of art",
+      "Variety of styles, from realistic to abstract",
+      "Active community, prompt sharing enrichment",
+      "The model is continuously updated, and the picture quality is continuously improved."
     ],
     "cons": [
-      "无免费版，必须订阅",
-      "需通过Discord使用，上手有门槛",
-      "中文prompt支持一般",
-      "版权争议较多"
+      "No free version, subscription required",
+      "Need to use through Discord, there is a threshold to get started",
+      "Chinese prompt support General",
+      "There are many copyright disputes"
     ],
     "pricing": [
       {
@@ -209,9 +209,9 @@
       }
     ],
     "tags": [
-      "图像生成",
-      "AI绘画",
-      "艺术",
+      "Image generation",
+      "AI Painting",
+      "Arts",
       "Midjourney"
     ],
     "hasFreeTier": false,
@@ -224,7 +224,7 @@
     "name": "DALL·E 3",
     "category": "image",
     "vendor": "OpenAI",
-    "description": "OpenAI开发的文本生成图像模型，以理解复杂prompt和生成高质量文字图像著称，集成在ChatGPT中。\n\n**相关工具：** <a href=\"/tools/midjourney\">Midjourney</a>, <a href=\"/tools/stable-diffusion\">Stable Diffusion</a>",
+    "description": "OpenAI developed a text generation image model, famous for understanding complex prompts and generating high-quality text images, integrated in ChatGPT.\n\n* * Related Tools: * * <a href=\"/tools/midjourney\">Midjourney</a>, <a href=\"/tools/stable-diffusion\">Stable Diffusion</a>",
     "scores": {
       "functionality": 8.5,
       "ux": 8.5,
@@ -234,16 +234,16 @@
       "ethics": 7
     },
     "pros": [
-      "prompt理解能力强，复杂描述也能准确生成",
-      "图像中文字渲染准确",
-      "与ChatGPT深度集成，对话式生成",
-      "安全性好，过滤不当内容"
+      "prompt Strong understanding, complex descriptions can also be accurately generated",
+      "Accurate rendering of text in images",
+      "Deep integration with ChatGPT, conversational generation",
+      "Good security, filtering inappropriate content"
     ],
     "cons": [
-      "艺术风格不如Midjourney多样",
-      "生成速度较慢",
-      "修改细节能力有限",
-      "需ChatGPT Plus订阅"
+      "Artistic style is not as diverse as Midjourney",
+      "Slow to generate",
+      "Limited ability to modify details",
+      "Requires ChatGPT Plus subscription"
     ],
     "pricing": [
       {
@@ -260,8 +260,8 @@
       }
     ],
     "tags": [
-      "图像生成",
-      "AI绘画",
+      "Image generation",
+      "AI Painting",
       "OpenAI",
       "ChatGPT"
     ],
@@ -285,16 +285,16 @@
       "ethics": 6.5
     },
     "pros": [
-      "完全开源免费，可本地部署",
-      "高度可定制，ControlNet等工具强大",
-      "社区模型丰富，Civitai等平台海量资源",
-      "无使用限制，隐私性好"
+      "Fully open source free, locally deployable",
+      "Highly customizable, powerful tools like ControlNet",
+      "Rich community models, abundant resources on platforms such as Civitai",
+      "No usage restrictions, good privacy"
     ],
     "cons": [
-      "本地部署需要高端显卡",
-      "界面复杂，上手门槛高",
-      "需要自行下载模型",
-      "默认画质不如商业模型"
+      "High-end graphics required for on-premises deployment",
+      "The interface is complex and the barrier to entry is high",
+      "Models need to be downloaded on their own",
+      "The default image quality is not as good as the business model"
     ],
     "pricing": [
       {
@@ -311,9 +311,9 @@
       }
     ],
     "tags": [
-      "图像生成",
-      "开源",
-      "AI绘画",
+      "Image generation",
+      "Open source",
+      "AI Painting",
       "Stable Diffusion"
     ],
     "hasFreeTier": true,
@@ -326,7 +326,7 @@
     "name": "GitHub Copilot",
     "category": "code",
     "vendor": "GitHub / Microsoft",
-    "description": "GitHub与OpenAI合作开发的AI编程助手，集成在VS Code等IDE中，提供实时代码补全、函数生成和bug修复。\n\n**相关工具：** <a href=\"/tools/cursor\">Cursor</a>, <a href=\"/tools/windsurf\">Windsurf</a>",
+    "description": "AI programming assistant developed by GitHub in collaboration with OpenAI, integrated in IDEs such as VS Code, providing real-time code completion, function generation, and bug fixes.\n\n* * Related Tools: * * <a href=\"/tools/cursor\">Cursor</a>, <a href=\"/tools/windsurf\">Windsurf</a>",
     "scores": {
       "functionality": 9,
       "ux": 9,
@@ -336,16 +336,16 @@
       "ethics": 7
     },
     "pros": [
-      "IDE深度集成，实时代码补全流畅",
-      "支持多种编程语言和框架",
-      "Copilot Chat支持对话式编程",
-      "企业版安全合规，代码不用于训练"
+      "Deep IDE integration, smooth real-time code completion",
+      "Supports multiple programming languages and frameworks",
+      "Copilot Chat supports conversational programming",
+      "Enterprise security compliance, code is not used for training"
     ],
     "cons": [
-      "生成代码可能存在安全漏洞",
-      "复杂逻辑理解有限",
-      "需要持续订阅",
-      "偶尔生成过时API"
+      "Generated code may have security flaws",
+      "Limited understanding of complex logic",
+      "Requires recurring subscription",
+      "Occasionally generate outdated APIs"
     ],
     "pricing": [
       {
@@ -368,9 +368,9 @@
       }
     ],
     "tags": [
-      "编程",
-      "代码补全",
-      "AI助手",
+      "programming",
+      "Code-completion",
+      "AI Assistant",
       "GitHub"
     ],
     "hasFreeTier": false,
@@ -393,16 +393,16 @@
       "ethics": 7
     },
     "pros": [
-      "AI原生设计，交互体验优秀",
-      "代码库级理解，跨文件修改能力强",
-      "支持多模型切换（GPT-4o/Claude等）",
-      "Composer功能可自动实现多文件功能"
+      "AI native design, excellent interaction experience",
+      "Code base level understanding, strong ability to modify across files",
+      "Supports multi-model switching (GPT-4o/Claude, etc.)",
+      "Composer function automatically enables multi-file function"
     ],
     "cons": [
-      "Pro版价格较高",
-      "大型项目索引较慢",
-      "部分高级功能有使用限额",
-      "相对新，生态不如VS Code"
+      "The Pro version is more expensive",
+      "Slow indexing of large projects",
+      "Some premium features have usage limits",
+      "Relatively new, less ecological than VS Code"
     ],
     "pricing": [
       {
@@ -425,10 +425,10 @@
       }
     ],
     "tags": [
-      "编程",
+      "programming",
       "IDE",
-      "AI编辑器",
-      "代码"
+      "AIKit Editor",
+      "CODE"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://cursor.com",
@@ -440,7 +440,7 @@
     "name": "Windsurf",
     "category": "code",
     "vendor": "Codeium",
-    "description": "AI驱动的代码编辑器，主打Cascade流式编程体验，支持自然语言描述自动生成完整功能，深度集成AI代理。\n\n**相关工具：** <a href=\"/tools/cursor\">Cursor</a>, <a href=\"/tools/github-copilot\">GitHub Copilot</a>",
+    "description": "AI-driven code editor, featuring Cascade streaming programming experience, support for automatic generation of natural language descriptions, and deep integration of AI agents.\n\n* * Related Tools: * * <a href=\"/tools/cursor\">Cursor</a>, <a href=\"/tools/github-copilot\">GitHub Copilot</a>",
     "scores": {
       "functionality": 8.5,
       "ux": 8,
@@ -450,16 +450,16 @@
       "ethics": 7
     },
     "pros": [
-      "Cascade功能强大，自然语言生成完整功能",
-      "免费版额度充足",
-      "AI代理可自动执行多步任务",
-      "基于VS Code，插件兼容"
+      "Cascade is powerful, natural language generation is full-featured",
+      "Plenty of free credits",
+      "AI agents can automate multi-step tasks",
+      "Plugin compatible based on VS Code"
     ],
     "cons": [
-      "品牌知名度不如Cursor",
-      "大型项目处理偶有卡顿",
-      "模型选择较少",
-      "社区资源相对少"
+      "Brand awareness is not as good as Cursor",
+      "Large Project Handling Occasional Caton",
+      "Fewer model choices",
+      "Relatively few community resources"
     ],
     "pricing": [
       {
@@ -476,9 +476,9 @@
       }
     ],
     "tags": [
-      "编程",
+      "programming",
       "IDE",
-      "AI编辑器",
+      "AIKit Editor",
       "Codeium"
     ],
     "hasFreeTier": true,
@@ -501,16 +501,16 @@
       "ethics": 7
     },
     "pros": [
-      "营销模板丰富，开箱即用",
-      "品牌声音定制，保持内容一致性",
-      "团队协作功能完善",
-      "支持SEO优化和多语言"
+      "Rich marketing templates, ready to use out of the box",
+      "Brand voice customization for content consistency",
+      "Fully functional teamwork",
+      "Supports SEO optimization and multilingualism"
     ],
     "cons": [
-      "价格较高，个人用户门槛高",
-      "创意写作能力一般",
-      "学习曲线较陡",
-      "字数限额需要额外购买"
+      "Higher prices, higher barriers for individual users",
+      "Average creative writing ability",
+      "The learning curve is steeper",
+      "Additional purchase required for word limit"
     ],
     "pricing": [
       {
@@ -533,9 +533,9 @@
       }
     ],
     "tags": [
-      "写作",
-      "营销",
-      "内容创作",
+      "Composition",
+      "Marketing",
+      "CONTENT CREATION",
       "Jasper"
     ],
     "hasFreeTier": false,
@@ -548,7 +548,7 @@
     "name": "Copy.ai",
     "category": "writing",
     "vendor": "Copy.ai",
-    "description": "专注于销售和营销文案的AI写作工具，提供90+模板，支持工作流自动化，帮助团队高效产出转化导向的内容。\n\n**相关工具：** <a href=\"/tools/jasper\">Jasper</a>, <a href=\"/tools/writesonic\">Writesonic</a>",
+    "description": "AI writing tools focused on sales and marketing copy, with 90 + templates to support workflow automation to help teams efficiently produce conversion-oriented content.\n\n* * Related Tools: * * <a href=\"/tools/jasper\">Jasper</a>, <a href=\"/tools/writesonic\">Writesonic</a>",
     "scores": {
       "functionality": 7.5,
       "ux": 8,
@@ -558,16 +558,16 @@
       "ethics": 7
     },
     "pros": [
-      "模板数量多，覆盖各种营销场景",
-      "免费版功能足够入门",
-      "工作流自动化提升效率",
-      "界面直观，易于使用"
+      "Large number of templates covering various marketing scenarios",
+      "Free features are enough to get started",
+      "Increase efficiency with workflow automation",
+      "Intuitive and easy to use interface"
     ],
     "cons": [
-      "长文生成能力有限",
-      "高级功能需付费",
-      "品牌定制能力较弱",
-      "多语言支持一般"
+      "Limited Changwen generation ability",
+      "Premium features for a fee",
+      "Weak brand customization capabilities",
+      "Multilingual support General"
     ],
     "pricing": [
       {
@@ -584,9 +584,9 @@
       }
     ],
     "tags": [
-      "写作",
-      "营销文案",
-      "内容创作",
+      "Composition",
+      "Marketing copy",
+      "CONTENT CREATION",
       "Copy.ai"
     ],
     "hasFreeTier": true,
@@ -599,7 +599,7 @@
     "name": "Notion AI",
     "category": "productivity",
     "vendor": "Notion",
-    "description": "集成在Notion中的AI助手，支持文档写作、摘要生成、任务管理和知识问答，与Notion笔记生态深度融合。\n\n**相关工具：** <a href=\"/tools/grammarly\">Grammarly</a>, <a href=\"/tools/n8n\">n8n</a>",
+    "description": "AI assistant integrated in Notion, supporting document writing, abstract generation, task management and knowledge Q&A, deeply integrated with Notion's note-taking ecosystem.\n\n* * Related Tools: * * <a href=\"/tools/grammarly\">Grammarly</a>, <a href=\"/tools/n8n\">n8n</a>",
     "scores": {
       "functionality": 8,
       "ux": 9,
@@ -609,16 +609,16 @@
       "ethics": 7.5
     },
     "pros": [
-      "与Notion深度集成，无缝体验",
-      "文档摘要和改写功能实用",
-      "界面优雅，交互流畅",
-      "支持跨文档知识问答"
+      "Deep integration with Notion for a seamless experience",
+      "Document abstracts and rewrites are useful",
+      "Elegant interface and smooth interaction",
+      "Supports cross-document knowledge Q&A"
     ],
     "cons": [
-      "AI功能需额外付费",
-      "复杂推理能力一般",
-      "离线不可用",
-      "高级模型有使用限额"
+      "AI features are available for an additional fee",
+      "Complex reasoning ability General",
+      "Not available offline",
+      "Premium models have usage limits"
     ],
     "pricing": [
       {
@@ -641,9 +641,9 @@
       }
     ],
     "tags": [
-      "办公",
-      "笔记",
-      "AI助手",
+      "Offices",
+      "Notes",
+      "AI Assistant",
       "Notion"
     ],
     "hasFreeTier": true,
@@ -656,7 +656,7 @@
     "name": "Grammarly",
     "category": "productivity",
     "vendor": "Grammarly",
-    "description": "AI驱动的英语写作辅助工具，实时检查语法、拼写、语气和清晰度，支持浏览器、Office和桌面端全平台覆盖。\n\n**相关工具：** <a href=\"/tools/notion-ai\">Notion AI</a>, <a href=\"/tools/n8n\">n8n</a>",
+    "description": "AI-powered English writing aids that check grammar, spelling, tone, and clarity in real time with full platform coverage for browsers, Office, and desktops.\n\n* * Related Tools: * * <a href=\"/tools/notion-ai\">Notion AI</a>, <a href=\"/tools/n8n\">n8n</a>",
     "scores": {
       "functionality": 8.5,
       "ux": 9,
@@ -666,16 +666,16 @@
       "ethics": 8
     },
     "pros": [
-      "语法检查准确率业界领先",
-      "全平台覆盖，实时检查",
-      "语气和风格建议实用",
-      "隐私保护好，不存储用户内容"
+      "Industry-leading grammar check accuracy",
+      "Full platform coverage, real-time inspection",
+      "Practical tone and style advice",
+      "Privacy is good and user content is not stored"
     ],
     "cons": [
-      "主要支持英语，中文有限",
-      "高级功能需付费",
-      "偶尔误报",
-      "创意写作建议保守"
+      "Mainly supports English, limited Chinese",
+      "Premium features for a fee",
+      "Occasional false positives",
+      "Creative Writing Advice Conservative"
     ],
     "pricing": [
       {
@@ -698,9 +698,9 @@
       }
     ],
     "tags": [
-      "办公",
-      "写作",
-      "语法检查",
+      "Offices",
+      "Composition",
+      "Grammar check",
       "Grammarly"
     ],
     "hasFreeTier": true,
@@ -723,16 +723,16 @@
       "ethics": 6.5
     },
     "pros": [
-      "视频生成质量业界领先",
-      "Gen-3模型支持长视频生成",
-      "专业视频编辑工具丰富",
-      "影视行业认可度高"
+      "Industry-leading video generation quality",
+      "Gen-3 model supports long video generation",
+      "Rich professional video editing tools",
+      "High recognition in the film and television industry"
     ],
     "cons": [
-      "价格昂贵， credits消耗快",
-      "生成时间较长",
-      "学习曲线较陡",
-      "免费版额度极少"
+      "Expensive and credits are consumed quickly",
+      "Long generation time",
+      "The learning curve is steeper",
+      "Very few free credits"
     ],
     "pricing": [
       {
@@ -761,9 +761,9 @@
       }
     ],
     "tags": [
-      "视频生成",
-      "AI视频",
-      "编辑",
+      "Video Generation",
+      "AI Video",
+      "Editor",
       "Runway"
     ],
     "hasFreeTier": true,
@@ -776,7 +776,7 @@
     "name": "Sora",
     "category": "video",
     "vendor": "OpenAI",
-    "description": "OpenAI开发的文生视频模型，能够生成长达60秒的高质量视频，支持复杂场景和多角色，代表视频生成前沿水平。\n\n**相关工具：** <a href=\"/tools/runway\">Runway</a>, <a href=\"/tools/pika\">Pika</a>",
+    "description": "OpenAI developed a bachelor's video model, capable of generating high-quality videos up to 60 seconds, supporting complex scenes and multiple characters, representing the cutting-edge level of video generation.\n\n* * Related Tools: * * <a href=\"/tools/runway\">Runway</a>, <a href=\"/tools/pika\">Pika</a>",
     "scores": {
       "functionality": 9.5,
       "ux": 7,
@@ -786,16 +786,16 @@
       "ethics": 6
     },
     "pros": [
-      "视频质量和时长业界顶尖",
-      "复杂场景理解能力强",
-      "多角色互动自然",
-      "持续快速迭代"
+      "Top-tier video quality and duration in the industry",
+      "Strong understanding of complex scenarios",
+      "Multi-role interaction nature",
+      "Continuous rapid iteration"
     ],
     "cons": [
-      "仅在ChatGPT Plus中可用",
-      "生成等待时间长",
-      "每日生成限额",
-      "可控性和编辑能力有限"
+      "Only available in ChatGPT Plus",
+      "Generation waiting time is long",
+      "Daily generation limit",
+      "Limited control and editing"
     ],
     "pricing": [
       {
@@ -812,8 +812,8 @@
       }
     ],
     "tags": [
-      "视频生成",
-      "AI视频",
+      "Video Generation",
+      "AI Video",
       "OpenAI",
       "Sora"
     ],
@@ -827,7 +827,7 @@
     "name": "ElevenLabs",
     "category": "audio",
     "vendor": "ElevenLabs",
-    "description": "业界领先的AI语音合成平台，支持29种语言的自然语音生成、声音克隆和语音设计，广泛用于播客、视频和有声书。\n\n**相关工具：** <a href=\"/tools/suno\">Suno</a>, <a href=\"/tools/litellm\">litellm</a>",
+    "description": "Industry-leading AI speech synthesis platform supporting natural speech generation, sound cloning, and speech design in 29 languages for use in podcasts, videos, and audiobooks.\n\n* * Related Tools: * * <a href=\"/tools/suno\">Suno</a>, <a href=\"/tools/litellm\">litellm</a>",
     "scores": {
       "functionality": 9,
       "ux": 8,
@@ -837,16 +837,16 @@
       "ethics": 6.5
     },
     "pros": [
-      "语音自然度业界最佳",
-      "声音克隆效果逼真",
-      "支持多语言和情感控制",
-      "API完善，集成方便"
+      "Best in the industry for voice spontaneity",
+      "Realistic sound cloning",
+      "Supports Multilingual and Emotional Control",
+      "Perfect API and easy integration"
     ],
     "cons": [
-      "免费版额度有限",
-      "声音克隆有滥用风险",
-      "高级语音需付费",
-      "长音频生成较慢"
+      "Limited free quota",
+      "Voice Cloning at Risk of Abuse",
+      "Premium Voice for a fee",
+      "Slow generation of long audio"
     ],
     "pricing": [
       {
@@ -875,9 +875,9 @@
       }
     ],
     "tags": [
-      "语音合成",
-      "AI音频",
-      "声音克隆",
+      "speech synthesis",
+      "AI Audio",
+      "Voice cloning",
       "ElevenLabs"
     ],
     "hasFreeTier": true,
@@ -901,16 +901,16 @@
       "ethics": 7.5
     },
     "pros": [
-      "实时搜索，答案带引用来源",
-      "界面简洁，交互流畅",
-      "深度研究模式功能强大",
-      "免费版功能丰富"
+      "Real-time search with cited sources for answers",
+      "Simple interface and smooth interaction",
+      "Deepin study mode is powerful",
+      "The free version is feature-rich"
     ],
     "cons": [
-      "复杂问题答案深度有限",
-      "Pro版价格较高",
-      "部分专业领域覆盖不足",
-      "偶尔引用不准确"
+      "Limited depth of answers to complex questions",
+      "The Pro version is more expensive",
+      "Inadequate coverage of some areas of expertise",
+      "Occasionally inaccurate citations"
     ],
     "pricing": [
       {
@@ -927,9 +927,9 @@
       }
     ],
     "tags": [
-      "搜索",
-      "AI助手",
-      "研究",
+      "Cari",
+      "AI Assistant",
+      "Research",
       "Perplexity"
     ],
     "hasFreeTier": true,
@@ -942,7 +942,7 @@
     "name": "Figma AI",
     "category": "design",
     "vendor": "Figma",
-    "description": "集成在Figma中的AI设计助手，支持UI自动生成、设计系统建议和原型制作，帮助设计师加速从概念到成品的流程。\n\n**相关工具：** <a href=\"/tools/canva-magic\">Canva Magic</a>, <a href=\"/tools/canva-ai\">Canva AI</a>",
+    "description": "The AI Design Assistant, integrated in Figma, enables automatic UI generation, design system suggestions, and prototyping to help designers accelerate the process from concept to finished product.\n\n* * Related Tools: * * <a href=\"/tools/canva-magic\">Canva Magic</a>, <a href=\"/tools/canva-ai\">Canva AI</a>",
     "scores": {
       "functionality": 8,
       "ux": 8.5,
@@ -952,16 +952,16 @@
       "ethics": 7
     },
     "pros": [
-      "与Figma深度集成，无缝工作流",
-      "UI生成质量高，可直接编辑",
-      "设计系统一致性好",
-      "团队协作功能强大"
+      "Deep integration with Figma for seamless workflows",
+      "UI generation is high quality and can be edited directly",
+      "Good consistency of design system",
+      "Strong teamwork"
     ],
     "cons": [
-      "AI功能需Organization计划",
-      "复杂设计理解有限",
-      "生成结果需人工调整",
-      "学习成本较高"
+      "AI functionality requires Organization planning",
+      "Limited understanding of complex design",
+      "The generated results need to be manually adjusted",
+      "Higher learning costs"
     ],
     "pricing": [
       {
@@ -984,10 +984,10 @@
       }
     ],
     "tags": [
-      "设计",
+      "Designed",
       "UI",
       "Figma",
-      "AI设计"
+      "AI Design"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://www.figma.com/ai",
@@ -999,7 +999,7 @@
     "name": "Canva Magic",
     "category": "design",
     "vendor": "Canva",
-    "description": "Canva平台的AI设计工具集，包含Magic Design一键生成、Magic Edit图像编辑、Magic Write文案生成，让非设计师也能快速出图。\n\n**相关工具：** <a href=\"/tools/figma-ai\">Figma AI</a>, <a href=\"/tools/canva-ai\">Canva AI</a>",
+    "description": "The AI design toolset for the Canva platform, including Magic Design One-Click Generation, Magic Edit Image Editing, and Magic Write Copy Generation, allows non-designers to quickly draw pictures.\n\n* * Related tools: * * <a href=\"/tools/figma-ai\">Figma AI</a>, <a href=\"/tools/canva-ai\">Canva AI</a>",
     "scores": {
       "functionality": 8,
       "ux": 9,
@@ -1009,16 +1009,16 @@
       "ethics": 7
     },
     "pros": [
-      "上手零门槛，非设计师也能用",
-      "模板资源极其丰富",
-      "AI功能全面，一站式设计",
-      "价格亲民，免费版够用"
+      "Zero threshold to get started, even for non-designers",
+      "Extremely rich template resources",
+      "AI full-featured, all-in-one design",
+      "The price is close to the people, the free version is enough"
     ],
     "cons": [
-      "专业设计能力有限",
-      "高级AI功能需Pro订阅",
-      "品牌定制能力较弱",
-      "导出质量有上限"
+      "Limited professional design capabilities",
+      "Advanced AI features require a Pro subscription",
+      "Weak brand customization capabilities",
+      "Export quality is capped"
     ],
     "pricing": [
       {
@@ -1041,10 +1041,10 @@
       }
     ],
     "tags": [
-      "设计",
-      "图像",
+      "Designed",
+      "image",
       "Canva",
-      "AI设计"
+      "AI Design"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://www.canva.com/magic",
@@ -1066,16 +1066,16 @@
       "ethics": 6
     },
     "pros": [
-      "音乐生成质量高，人声自然",
-      "支持多种音乐风格",
-      "歌词生成和歌曲创作一体化",
-      "创作速度快，几分钟出歌"
+      "High quality of music generation and natural vocals",
+      "Supports multiple musical styles",
+      "Integration of lyrics generation and songwriting",
+      "Fast songwriting, a few minutes of songwriting"
     ],
     "cons": [
-      "免费版每日限额",
-      "版权归属有争议",
-      "歌曲结构可控性有限",
-      "商业使用需高级订阅"
+      "Free Daily Limit",
+      "Disputed copyright ownership",
+      "Limited controllability of song structure",
+      "Premium subscription required for commercial use"
     ],
     "pricing": [
       {
@@ -1098,9 +1098,9 @@
       }
     ],
     "tags": [
-      "音乐生成",
-      "AI音频",
-      "创作",
+      "Music Generation",
+      "AI Audio",
+      "creation",
       "Suno"
     ],
     "hasFreeTier": true,
@@ -1113,7 +1113,7 @@
     "name": "n8n",
     "category": "productivity",
     "vendor": "n8n-io",
-    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400+ integrations.\n\n**相关工具：** <a href=\"/tools/inspector\">inspector<...",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400 + integrations.\n\n* * Related Tools: * * <a href=\"/tools/inspector\">inspector <...",
     "scores": {
       "functionality": 9.5,
       "ux": 8,
@@ -1123,14 +1123,14 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接",
-      "可视化操作，无需编程即可搭建工作流"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity",
+      "Visualize actions and build workflows without programming"
     ],
     "cons": [
-      "企业级功能复杂，小型团队可能用不上",
-      "部分高级功能需要额外配置"
+      "Enterprise-level features are complex and may not be needed by small teams",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1147,10 +1147,10 @@
       }
     ],
     "tags": [
-      "无代码",
-      "可视化",
-      "工作流",
-      "工具集成",
+      "Codeless",
+      "Visualization",
+      "The Workflow",
+      "Tool Integration",
       "API"
     ],
     "hasFreeTier": true,
@@ -1163,7 +1163,7 @@
     "name": "AutoGPT",
     "category": "agent",
     "vendor": "Significant-Gravitas",
-    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.\n\n**相关工具：** <a href=\"/tools/repomix\">repomix<...",
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.\n\n* * Related Tools: * * <a href=\"/tools/repomix\">repomix <...",
     "scores": {
       "functionality": 9.5,
       "ux": 6.627595715799047,
@@ -1173,13 +1173,13 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity"
     ],
     "cons": [
-      "部分高级功能需要额外配置",
-      "部分高级功能需要额外配置"
+      "Some premium features require additional configuration",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1196,9 +1196,9 @@
       }
     ],
     "tags": [
-      "工具集成",
+      "Tool Integration",
       "API",
-      "自动化"
+      "AUTOMATION"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://agpt.co",
@@ -1210,7 +1210,7 @@
     "name": "ollama",
     "category": "dev-tools",
     "vendor": "ollama",
-    "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.\n\n**相关工具：** <a href=\"/tools/llama-cpp\">llama.cpp</a>, <a href=\"/tools/pydantic\">pydantic</a>",
+    "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.\n\n* * Related Tools: * * <a href=\"/tools/llama-cpp\">llama.cpp</a>, <a href=\"/tools/pydantic\">pydantic</a>",
     "scores": {
       "functionality": 9.5,
       "ux": 5.665161139991417,
@@ -1220,13 +1220,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -1244,8 +1244,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://ollama.com",
@@ -1257,7 +1257,7 @@
     "name": "dify",
     "category": "productivity",
     "vendor": "langgenius",
-    "description": "Production-ready platform for agentic workflow development.\n\n**相关工具：** <a href=\"/tools/anything-llm\">anything-llm</a>, <a href=\"/tools/flowise\">Flowise</a>",
+    "description": "Production-ready platform for agentic workflow development.\n\n* * Related Tools: * * <a href=\"/tools/anything-llm\">anything-llm</a>, <a href=\"/tools/flowise\">Flowise</a>",
     "scores": {
       "functionality": 9.5,
       "ux": 8,
@@ -1267,14 +1267,14 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接",
-      "可视化操作，无需编程即可搭建工作流"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity",
+      "Visualize actions and build workflows without programming"
     ],
     "cons": [
-      "企业级功能复杂，小型团队可能用不上",
-      "部分高级功能需要额外配置"
+      "Enterprise-level features are complex and may not be needed by small teams",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1291,11 +1291,11 @@
       }
     ],
     "tags": [
-      "无代码",
-      "可视化",
-      "工作流",
+      "Codeless",
+      "Visualization",
+      "The Workflow",
       "RAG",
-      "知识库"
+      "The knowledge base upon"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://dify.ai",
@@ -1317,13 +1317,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -1341,8 +1341,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://github.com/ggml-org/llama.cpp",
@@ -1354,7 +1354,7 @@
     "name": "gemini-cli",
     "category": "agent-runtime",
     "vendor": "google-gemini",
-    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.\n\n**相关工具：** <a href=\"/tools/goose\">goose</a>, <a href=\"/tools/openai-translator\">nextai-translator</a>",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.\n\n* * Related tools: * * <a href=\"/tools/goose\">goose</a>, <a href=\"/tools/openai-translator\">nextai-translator</a>",
     "scores": {
       "functionality": 9.5,
       "ux": 6.870992958262621,
@@ -1364,13 +1364,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1387,9 +1387,9 @@
       }
     ],
     "tags": [
-      "工具集成",
+      "Tool Integration",
       "API",
-      "自动化"
+      "AUTOMATION"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://geminicli.com",
@@ -1401,7 +1401,7 @@
     "name": "open-webui",
     "category": "chat",
     "vendor": "open-webui",
-    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API, ...)\n\n**相关工具：** <a href=\"/tools/lobe-chat\">lobehub</a>, <a href=\"/tools/gpt-computer-assistant\">Upsonic</a>",
+    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API,...)\n\n* * Related Tools: * * <a href=\"/tools/lobe-chat\">lobehub</a>, <a href=\"/tools/gpt-computer-assistant\">Upsonic</a>",
     "scores": {
       "functionality": 9.5,
       "ux": 6.155199853048397,
@@ -1411,14 +1411,14 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "部分高级功能需要额外配置",
-      "部分高级功能需要额外配置"
+      "Some premium features require additional configuration",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1436,9 +1436,9 @@
     ],
     "tags": [
       "RAG",
-      "知识库",
-      "记忆",
-      "工具集成",
+      "The knowledge base upon",
+      "memory.",
+      "Tool Integration",
       "API"
     ],
     "hasFreeTier": true,
@@ -1451,7 +1451,7 @@
     "name": "vllm",
     "category": "dev-tools",
     "vendor": "vllm-project",
-    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs\n\n**相关工具：** <a href=\"/tools/ai-getting-started\">ai-getting-started</a>, <a href=\"/tools/embedbase\">embedbase</a>",
+    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs\n\n* * Related tools: * * <a href=\"/tools/ai-getting-started\">ai-getting-started</a>, <a href=\"/tools/embedbase\">embedbase</a>",
     "scores": {
       "functionality": 9.3,
       "ux": 6.7794917275572,
@@ -1461,13 +1461,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1485,8 +1485,8 @@
     ],
     "tags": [
       "RAG",
-      "知识库",
-      "记忆"
+      "The knowledge base upon",
+      "memory."
     ],
     "hasFreeTier": true,
     "officialUrl": "https://vllm.ai",
@@ -1508,13 +1508,13 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "部分高级功能需要额外配置"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1532,8 +1532,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://code.claude.com/docs/en/overview",
@@ -1545,7 +1545,7 @@
     "name": "browser-use",
     "category": "productivity",
     "vendor": "browser-use",
-    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.\n\n**相关工具：** <a href=\"/tools/firecrawl\">firecrawl</a>, <a href=\"/tools/autogpt-js\">AutoGPT.js</a>",
+    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.\n\n* * Related Tools: * * <a href=\"/tools/firecrawl\">firecrawl</a>, <a href=\"/tools/autogpt-js\">AutoGPT.js</a>",
     "scores": {
       "functionality": 9.4,
       "ux": 6.5,
@@ -1555,13 +1555,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1578,9 +1578,9 @@
       }
     ],
     "tags": [
-      "浏览器自动化",
-      "网页Agent",
-      "爬虫"
+      "Browser Automation",
+      "Web Agent",
+      "Reptile"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://browser-use.com",
@@ -1602,14 +1602,14 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "部分高级功能需要额外配置"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1627,9 +1627,9 @@
     ],
     "tags": [
       "RAG",
-      "知识库",
-      "记忆",
-      "工具集成",
+      "The knowledge base upon",
+      "memory.",
+      "Tool Integration",
       "API"
     ],
     "hasFreeTier": true,
@@ -1642,7 +1642,7 @@
     "name": "langflow",
     "category": "productivity",
     "vendor": "langflow-ai",
-    "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.\n\n**相关工具：** <a href=\"/tools/n8n\">n8n</a>, <a href=\"/tools/dify\">dify</a>",
+    "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.\n\n* * Related tools: * * <a href=\"/tools/n8n\">n8n</a>, <a href=\"/tools/dify\">dify</a>",
     "scores": {
       "functionality": 9.4,
       "ux": 8,
@@ -1652,13 +1652,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "可视化操作，无需编程即可搭建工作流"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Visualize actions and build workflows without programming"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1675,9 +1675,9 @@
       }
     ],
     "tags": [
-      "无代码",
-      "可视化",
-      "工作流"
+      "Codeless",
+      "Visualization",
+      "The Workflow"
     ],
     "hasFreeTier": true,
     "officialUrl": "http://www.langflow.org",
@@ -1689,7 +1689,7 @@
     "name": "OpenHands",
     "category": "agent-runtime",
     "vendor": "OpenHands",
-    "description": "OpenHands is a AI-powered tool and platform. featuring intelligent automation and smart processing. OpenHands is a leading agent-runtime AI tool. developed by OpenHands. with an overall rating of 7.9/10. Key strengths include 免费使用，社区活跃, GitHub 高星项目，社区生态成熟，文档完善.",
+    "description": "OpenHands is an AI-powered tool and platform featuring intelligent automation and smart processing. OpenHands is a leading agent-runtime AI tool. developed by OpenHands. with an overall rating of 7.9/10. Key strengths include free to use, active community, GitHub high star project, mature community ecology, and complete documentation.",
     "scores": {
       "functionality": 9.3,
       "ux": 6.341457139252901,
@@ -1699,13 +1699,13 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "部分高级功能需要额外配置"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1723,8 +1723,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://openhands.dev",
@@ -1736,7 +1736,7 @@
     "name": "codex",
     "category": "code",
     "vendor": "openai",
-    "description": "Lightweight coding agent that runs in your terminal\n\n**相关工具：** <a href=\"/tools/continue\">continue</a>, <a href=\"/tools/roo-code\">Roo-Code</a>",
+    "description": "Lightweight coding agent that runs in your terminal\n\n* * Related tools: * * <a href=\"/tools/continue\">continue</a>, <a href=\"/tools/roo-code\">Roo-Code</a>",
     "scores": {
       "functionality": 9.3,
       "ux": 7.5,
@@ -1746,13 +1746,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "深度集成开发环境，提升编码效率"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Deeply integrated development environment to improve coding efficiency"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1769,9 +1769,9 @@
       }
     ],
     "tags": [
-      "AI编程",
-      "代码助手",
-      "开发者工具"
+      "AI Programming",
+      "Code helper",
+      "Developer Tools"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://github.com/openai/codex",
@@ -1783,7 +1783,7 @@
     "name": "MinerU",
     "category": "productivity",
     "vendor": "opendatalab",
-    "description": "Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows.\n\n**相关工具：** <a href=\"/tools/scrapegraph-ai\">Scrapegraph-ai</a>, <a href=\"/tools/unstructured\">unstruct...",
+    "description": "Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows.\n\n* * Related tools: * * <a href=\"/tools/scrapegraph-ai\">Scrapegraph-ai</a>, <a href=\"/tools/unstructured\">unstruct...",
     "scores": {
       "functionality": 9.2,
       "ux": 6.129954889976182,
@@ -1793,13 +1793,13 @@
       "ethics": 8.3
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "部分高级功能需要额外配置"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -1816,11 +1816,11 @@
       }
     ],
     "tags": [
-      "监控",
-      "评估",
-      "可观测",
+      "Monitor",
+      "Evaluation",
+      "Observable",
       "RAG",
-      "知识库"
+      "The knowledge base upon"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://opendatalab.github.io/MinerU/",
@@ -1842,14 +1842,14 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "支持 RAG 和知识库，可接入私有数据",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Supports rag and knowledge base for access to private data",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力",
-      "相对较新，社区生态仍在建设中"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities",
+      "Relatively new, the community ecosystem is still under construction."
     ],
     "pricing": [
       {
@@ -1867,10 +1867,10 @@
     ],
     "tags": [
       "RAG",
-      "知识库",
-      "记忆",
-      "企业级",
-      "Agent平台"
+      "The knowledge base upon",
+      "memory.",
+      "Enterprise Grade",
+      "Agent Platform"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://docs.langchain.com/langchain/",
@@ -1892,13 +1892,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -1916,8 +1916,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://docling-project.github.io/docling",
@@ -1929,7 +1929,7 @@
     "name": "llama_index",
     "category": "rag",
     "vendor": "run-llama",
-    "description": "LlamaIndex is the leading document agent and OCR platform\n\n**相关工具：** <a href=\"/tools/langchain\">langchain</a>, <a href=\"/tools/langgraph\">langgraph</a>",
+    "description": "LlamaIndex is the leading document agent and OCR platform\n\n* * Related tools: * * <a href=\"/tools/langchain\">langchain</a>, <a href=\"/tools/langgraph\">langgraph</a>",
     "scores": {
       "functionality": 9.1,
       "ux": 6.5,
@@ -1939,13 +1939,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "企业级功能复杂，小型团队可能用不上"
+      "Self-hosting requires server resources and operations capabilities",
+      "Enterprise-level features are complex and may not be needed by small teams"
     ],
     "pricing": [
       {
@@ -1963,10 +1963,10 @@
     ],
     "tags": [
       "RAG",
-      "知识库",
-      "记忆",
-      "企业级",
-      "Agent平台"
+      "The knowledge base upon",
+      "memory.",
+      "Enterprise Grade",
+      "Agent Platform"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://developers.llamaindex.ai",
@@ -1978,7 +1978,7 @@
     "name": "worldmonitor",
     "category": "agent",
     "vendor": "koala73",
-    "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface\n\n**相关工具：** <a href=\"/tools/op...",
+    "description": "Real-time global intelligence dashboard. AI-powered news aggregation, geopolitical monitoring, and infrastructure tracking in a unified situational awareness interface\n\n* * Related Tools: * * < a href = \"/tools/op...",
     "scores": {
       "functionality": 9.1,
       "ux": 6.57442702694052,
@@ -1988,13 +1988,13 @@
       "ethics": 8.8
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2011,9 +2011,9 @@
       }
     ],
     "tags": [
-      "监控",
-      "评估",
-      "可观测"
+      "Monitor",
+      "Evaluation",
+      "Observable"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://worldmonitor.app",
@@ -2025,7 +2025,7 @@
     "name": "crewAI",
     "category": "agent-framework",
     "vendor": "crewAIInc",
-    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.\n\n**相关工具：** <a hr...",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.\n\n* * Related Tools: * * < a hr...",
     "scores": {
       "functionality": 9.1,
       "ux": 6.3650262819241314,
@@ -2035,13 +2035,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -2059,8 +2059,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://crewai.com",
@@ -2072,7 +2072,7 @@
     "name": "milvus",
     "category": "database",
     "vendor": "milvus-io",
-    "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector ANN search\n\n**相关工具：** <a href=\"/tools/chroma\">chroma</a>, <a href=\"/tools/faiss\">faiss</a>",
+    "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector Ann search\n\n* * Related tools: * * <a href=\"/tools/chroma\">chroma</a>, <a href=\"/tools/faiss\">faiss</a>",
     "scores": {
       "functionality": 9.1,
       "ux": 5.679527442688409,
@@ -2082,13 +2082,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2106,8 +2106,8 @@
     ],
     "tags": [
       "RAG",
-      "知识库",
-      "记忆"
+      "The knowledge base upon",
+      "memory."
     ],
     "hasFreeTier": true,
     "officialUrl": "https://milvus.io",
@@ -2119,7 +2119,7 @@
     "name": "ragflow",
     "category": "rag",
     "vendor": "infiniflow",
-    "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (RAG) engine that fuses cutting-edge RAG with Agent capabilities to create a superior context layer for LLMs\n\n**相关工具：** <a href=\"/too...",
+    "description": "RAGFlow is a leading open-source Retrieval-Augmented Generation (rag) engine that fuses cutting-edge rag with Agent capabilities to create a superior context layer for LLMs\n\n* * Related Tools: * * < a href = \"/too...",
     "scores": {
       "functionality": 9.3,
       "ux": 6.059295801303426,
@@ -2129,14 +2129,14 @@
       "ethics": 8.8
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接",
-      "支持 RAG 和知识库，可接入私有数据"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity",
+      "Supports rag and knowledge base for access to private data"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2153,11 +2153,11 @@
       }
     ],
     "tags": [
-      "监控",
-      "评估",
-      "可观测",
+      "Monitor",
+      "Evaluation",
+      "Observable",
       "RAG",
-      "知识库"
+      "The knowledge base upon"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://ragflow.io",
@@ -2169,7 +2169,7 @@
     "name": "cherry-studio",
     "category": "agent-framework",
     "vendor": "CherryHQ",
-    "description": "AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs\n\n**相关工具：** <a href=\"/tools/crewai\">crewAI</a>, <a href=\"/tools/fabric\">Fabric</a>",
+    "description": "AI productivity studio with smart chat, autonomous agents, and 300 + assistants. Unified access to frontier LLMs\n\n* * Tools: * * <a href=\"/tools/crewai\">crewAI</a>, <a href=\"/tools/fabric\">Fabric</a>",
     "scores": {
       "functionality": 9.1,
       "ux": 6.387643606400678,
@@ -2179,13 +2179,13 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "社区活跃，持续更新迭代",
-      "基于开源社区驱动，功能迭代快速"
+      "Free to use, active community",
+      "Active community, continually updated iterations",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "部分高级功能需要额外配置"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2203,8 +2203,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://cherry-ai.com",
@@ -2216,7 +2216,7 @@
     "name": "ray",
     "category": "agent-runtime",
     "vendor": "ray-project",
-    "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.\n\n**相关工具：** <a href=\"/tools/claude-code\">claude-code</a>, <a href=\"/t...",
+    "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.\n\n* * Related tools: * * <a href=\"/tools/claude-code\">claude-code</a>, < a href = \"/t...",
     "scores": {
       "functionality": 9,
       "ux": 6.130790943988701,
@@ -2226,13 +2226,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -2250,8 +2250,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://ray.io",
@@ -2263,7 +2263,7 @@
     "name": "jan",
     "category": "agent",
     "vendor": "janhq",
-    "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer.\n\n**相关工具：** <a href=\"/tools/llama-factory\">LlamaFactory</a>, <a href=\"/tools/chainlit\">chainlit</a>",
+    "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer.\n\n* * Related Tools: * * <a href=\"/tools/llama-factory\">LlamaFactory</a>, <a href=\"/tools/chainlit\">chainlit</a>",
     "scores": {
       "functionality": 9,
       "ux": 5.757245452543449,
@@ -2273,13 +2273,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -2297,8 +2297,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://jan.ai/",
@@ -2320,13 +2320,13 @@
       "ethics": 8.3
     },
     "pros": [
-      "免费使用，社区活跃",
-      "社区活跃，持续更新迭代",
-      "支持丰富的工具集成和 API 连接"
+      "Free to use, active community",
+      "Active community, continually updated iterations",
+      "Supports rich tool integration and API connectivity"
     ],
     "cons": [
-      "部分高级功能需要额外配置",
-      "部分高级功能需要额外配置"
+      "Some premium features require additional configuration",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2343,11 +2343,11 @@
       }
     ],
     "tags": [
-      "语音AI",
+      "Voice AI",
       "TTS",
-      "语音助手",
-      "监控",
-      "评估"
+      "Voice Assistance",
+      "Monitor",
+      "Evaluation"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://docs.litellm.ai/docs/",
@@ -2359,7 +2359,7 @@
     "name": "unsloth",
     "category": "audio",
     "vendor": "unslothai",
-    "description": "Unsloth Studio is a web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.\n\n**相关工具：** <a href=\"/tools/litellm\">litellm</a>, <a href=\"/tools/composio\">composio</a>",
+    "description": "Unsloth Studio is a web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.\n\n* * Related tools: * * <a href=\"/tools/litellm\">litellm</a>, <a href=\"/tools/composio\">composio</a>",
     "scores": {
       "functionality": 9.2,
       "ux": 7,
@@ -2369,13 +2369,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "自托管需要服务器资源和运维能力",
-      "部分高级功能需要额外配置"
+      "Self-hosting requires server resources and operations capabilities",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2392,9 +2392,9 @@
       }
     ],
     "tags": [
-      "语音AI",
+      "Voice AI",
       "TTS",
-      "语音助手"
+      "Voice Assistance"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://unsloth.ai/docs",
@@ -2406,7 +2406,7 @@
     "name": "text-generation-webui",
     "category": "dev-tools",
     "vendor": "oobabooga",
-    "description": "The original local LLM interface. Text, vision, tool-calling, training, and more. 100% offline.\n\n**相关工具：** <a href=\"/tools/composio\">composio</a>, <a href=\"/tools/tts-generation-webui\">TTS-WebUI</a>",
+    "description": "The original local LLM interface. Text, vision, tool-calling, training, and more. 100% offline.\n\n* * Related tools: * * <a href=\"/tools/composio\">composio</a>, <a href=\"/tools/tts-generation-webui\">TTS-WebUI</a>",
     "scores": {
       "functionality": 9.1,
       "ux": 7,
@@ -2416,13 +2416,13 @@
       "ethics": 8
     },
     "pros": [
-      "免费使用，社区活跃",
-      "社区活跃，持续更新迭代",
-      "支持丰富的工具集成和 API 连接"
+      "Free to use, active community",
+      "Active community, continually updated iterations",
+      "Supports rich tool integration and API connectivity"
     ],
     "cons": [
-      "部分高级功能需要额外配置",
-      "部分高级功能需要额外配置"
+      "Some premium features require additional configuration",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2439,10 +2439,10 @@
       }
     ],
     "tags": [
-      "语音AI",
+      "Voice AI",
       "TTS",
-      "语音助手",
-      "工具集成",
+      "Voice Assistance",
+      "Tool Integration",
       "API"
     ],
     "hasFreeTier": true,
@@ -2455,7 +2455,7 @@
     "name": "firecrawl",
     "category": "productivity",
     "vendor": "firecrawl",
-    "description": "🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data\n\n**相关工具：** <a href=\"/tools/browser-use\">browser-use</a>, <a href=\"/tools/autogpt-js\">AutoGPT.js</a>",
+    "description": "🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data\n\n* * Related tools: * * <a href=\"/tools/browser-use\">browser-use</a>, <a href=\"/tools/autogpt-js\">AutoGPT.js</a>",
     "scores": {
       "functionality": 9.3,
       "ux": 6.5,
@@ -2465,13 +2465,13 @@
       "ethics": 8.3
     },
     "pros": [
-      "免费使用，社区活跃",
-      "GitHub 高星项目，社区生态成熟，文档完善",
-      "支持丰富的工具集成和 API 连接"
+      "Free to use, active community",
+      "GitHub Gaoxing project, mature community ecology, perfect documentation",
+      "Supports rich tool integration and API connectivity"
     ],
     "cons": [
-      "部分高级功能需要额外配置",
-      "部分高级功能需要额外配置"
+      "Some premium features require additional configuration",
+      "Some premium features require additional configuration"
     ],
     "pricing": [
       {
@@ -2488,11 +2488,11 @@
       }
     ],
     "tags": [
-      "浏览器自动化",
-      "网页Agent",
-      "爬虫",
-      "监控",
-      "评估"
+      "Browser Automation",
+      "Web Agent",
+      "Reptile",
+      "Monitor",
+      "Evaluation"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://firecrawl.dev",
@@ -2504,7 +2504,7 @@
     "name": "Fabric",
     "category": "agent-framework",
     "vendor": "danielmiessler",
-    "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.\n\n**相关...",
+    "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.\n\n* * Related...",
     "scores": {
       "functionality": 9,
       "ux": 6.847044106792852,
@@ -2514,13 +2514,13 @@
       "ethics": 8.5
     },
     "pros": [
-      "完全开源免费，可自托管，数据自主可控",
-      "社区活跃，持续更新迭代",
-      "基于开源社区驱动，功能迭代快速"
+      "Fully open source, free, self-hosted, data autonomous",
+      "Active community, continually updated iterations",
+      "Functional iteration is fast based on open source community-driven"
     ],
     "cons": [
-      "需要一定技术能力，学习曲线较陡",
-      "自托管需要服务器资源和运维能力"
+      "A certain technical ability is required, and the learning curve is steep",
+      "Self-hosting requires server resources and operations capabilities"
     ],
     "pricing": [
       {
@@ -2538,8 +2538,8 @@
     ],
     "tags": [
       "AI Agent",
-      "框架",
-      "开源"
+      "Frame",
+      "Open source"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://danielmiessler.com/p/fabric-origin-story",
