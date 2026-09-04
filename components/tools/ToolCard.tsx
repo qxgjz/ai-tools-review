@@ -48,15 +48,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent rotate-45 transform translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
           </div>
 
-          {/* 精选标签（参考Aceternity UI）- 移到左上角避免与评级重叠 */}
-          {isFeatured && (
-            <div className="absolute top-3 left-3 z-10">
-              <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full shadow-lg shadow-amber-500/30">
-                <Sparkles className="w-3 h-3" />
-                TOP
-              </span>
-            </div>
-          )}
+          {/* 精选标签已移到评分区域，避免与Logo和评级标签重叠 */}
 
           {/* 头部：Logo + 等级 */}
           <div className="flex items-start justify-between mb-4 relative z-10">
@@ -96,6 +88,12 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
           <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-800 relative z-10">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-baseline gap-1">
+                {isFeatured && (
+                  <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full shadow-lg shadow-amber-500/30 mr-2">
+                    <Sparkles className="w-3 h-3" />
+                    TOP
+                  </span>
+                )}
                 <span className="text-2xl font-extrabold text-gray-900 dark:text-white">{total.toFixed(1)}</span>
                 <span className="text-xs text-gray-400">/10</span>
               </div>
