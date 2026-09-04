@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon } from "lucide-react";
+import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon, Award, Target, Users, Wrench, GitCompare, Microscope, Quote } from "lucide-react";
 import toolsData from "@/data/tools.json";
 import type { Tool, Grade, ScoreDimension } from "@/types";
 import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
@@ -11,6 +11,7 @@ import { BreadcrumbSchema, ProductSchema } from "@/components/seo/Schema";
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
+import { AuthorBio } from "@/components/author/AuthorBio";
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
@@ -179,6 +180,17 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         )}
       </section>
 
+      {/* Author Bio - E-E-A-T Expertise & Authoritativeness signal */}
+      {(tool as any).author && (
+        <section className="mb-6">
+          <AuthorBio
+            name={(tool as any).author.name}
+            role={(tool as any).author.role}
+            bio={(tool as any).author.bio}
+          />
+        </section>
+      )}
+
       {/* Score card + Radar chart */}
       <section className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
         <div className="lg:col-span-3 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
@@ -248,6 +260,108 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
+      {/* Detailed Description - E-E-A-T Experience signal */}
+      {(tool as any).longDescription && (
+        <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <Quote className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            What is {tool.name}?
+          </h2>
+          <div className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed space-y-4">
+            {(tool as any).longDescription.split('\n\n').map((paragraph: string, i: number) => (
+              <p key={i}>{paragraph}</p>
+            ))}
+          </div>
+        </section>
+      )}
+
+      {/* Testing Methodology - E-E-A-T Experience & Trust signal */}
+      {((tool as any).testingPeriod || (tool as any).testingDetails) && (
+        <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <Microscope className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            Our Testing Methodology
+          </h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            {(tool as any).testingPeriod && (
+              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
+                <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Testing Period</div>
+                <div className="text-sm font-semibold text-gray-900 dark:text-white">{(tool as any).testingPeriod}</div>
+              </div>
+            )}
+            {(tool as any).testingDetails && (
+              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
+                <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Testing Details</div>
+                <div className="text-sm font-semibold text-gray-900 dark:text-white">{(tool as any).testingDetails}</div>
+              </div>
+            )}
+          </div>
+          <p className="text-sm text-gray-500 dark:text-gray-400 mt-4 italic">
+            All ratings are based on hands-on testing by our editorial team. We do not accept payment for positive reviews, and affiliate relationships never influence our ratings or recommendations.
+          </p>
+        </section>
+      )}
+
+      {/* Key Features */}
+      {(tool as any).keyFeatures && (tool as any).keyFeatures.length > 0 && (
+        <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+            <Wrench className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            Key Features
+          </h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {(tool as any).keyFeatures.map((feature: string, i: number) => (
+              <li key={i} className="flex gap-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold mt-0.5">{i + 1}</span>
+                {feature}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Use Cases */}
+      {(tool as any).useCases && (tool as any).useCases.length > 0 && (
+        <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+            <Target className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            Common Use Cases
+          </h2>
+          <ul className="space-y-3">
+            {(tool as any).useCases.map((useCase: string, i: number) => (
+              <li key={i} className="flex gap-3 text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
+                <Check className="w-5 h-5 flex-shrink-0 text-emerald-500 mt-0.5" />
+                {useCase}
+              </li>
+            ))}
+          </ul>
+        </section>
+      )}
+
+      {/* Best For / Not Ideal For */}
+      {((tool as any).bestFor || (tool as any).notIdealFor) && (
+        <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          {(tool as any).bestFor && (
+            <div className="bg-emerald-50 dark:bg-emerald-950/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/30 p-6">
+              <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-3 flex items-center gap-2">
+                <Users className="w-5 h-5" />
+                Best For
+              </h3>
+              <p className="text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">{(tool as any).bestFor}</p>
+            </div>
+          )}
+          {(tool as any).notIdealFor && (
+            <div className="bg-amber-50 dark:bg-amber-950/20 rounded-2xl border border-amber-100 dark:border-amber-900/30 p-6">
+              <h3 className="text-base font-bold text-amber-700 dark:text-amber-400 mb-3 flex items-center gap-2">
+                <X className="w-5 h-5" />
+                Not Ideal For
+              </h3>
+              <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">{(tool as any).notIdealFor}</p>
+            </div>
+          )}
+        </section>
+      )}
+
       {/* Tool Screenshot - E-E-A-T trust signal */}
       <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
@@ -292,21 +406,57 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
-      {/* Editor review summary */}
+      {/* Editor review summary / Final Verdict */}
       <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-purple-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/30 p-6 sm:p-8 mb-6">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-          <Lightbulb className="w-5 h-5 text-amber-500" />
-          Editor's Review Summary
+          <Award className="w-5 h-5 text-amber-500" />
+          Final Verdict & Recommendation
         </h2>
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-          {tool.name} is a {tool.category} AI tool by {tool.vendor}, with an overall score of {total.toFixed(1)}/10 and a {grade} grade ({GRADE_DESCRIPTIONS[grade]}). {tool.pros[0]}. It's worth noting that {tool.cons[0]}. {tool.hasFreeTier ? "This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade." : ""} Overall, {total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : "overall performance is average, we recommend choosing carefully based on your requirements."}
+          {(tool as any).verdict || `${tool.name} is a ${tool.category} AI tool by ${tool.vendor}, with an overall score of ${total.toFixed(1)}/10 and a ${grade} grade (${GRADE_DESCRIPTIONS[grade]}). ${tool.pros[0]}. It's worth noting that ${tool.cons[0]}. ${tool.hasFreeTier ? "This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade." : ""} Overall, ${total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : "overall performance is average, we recommend choosing carefully based on your requirements."}`}
         </p>
+        <div className="mt-5 flex flex-wrap items-center gap-3">
+          {(tool.officialUrl || (tool as any).affiliateUrl) && (
+            <a href={(tool as any).affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
+              <ExternalLink className="w-4 h-4" />
+              Visit {tool.name}
+            </a>
+          )}
+          <span className="text-xs text-gray-500 dark:text-gray-400 italic">
+            Score: {total.toFixed(1)}/10 · Grade: {grade} · Last updated: {tool.lastUpdated}
+          </span>
+        </div>
         <div className="mt-4 flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
             <span key={tag} className="px-2.5 py-1 bg-white/70 dark:bg-gray-900/50 text-gray-600 dark:text-gray-300 rounded-md text-xs font-medium border border-gray-200 dark:border-gray-700">#{tag}</span>
           ))}
         </div>
       </section>
+
+      {/* Alternatives - E-E-A-T comparison signal */}
+      {(tool as any).alternatives && (tool as any).alternatives.length > 0 && (
+        <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
+          <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
+            <GitCompare className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            Top Alternatives to {tool.name}
+          </h2>
+          <div className="space-y-3">
+            {(tool as any).alternatives.map((alt: any, i: number) => (
+              <div key={i} className="flex items-center justify-between p-4 bg-gray-50 dark:bg-gray-800/50 rounded-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors">
+                <div className="flex-1">
+                  <Link href={`/tools/${alt.slug}`} className="text-sm font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                    {alt.name}
+                  </Link>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">{alt.reason}</p>
+                </div>
+                <Link href={`/tools/${alt.slug}`} className="text-xs text-blue-600 dark:text-blue-400 font-medium hover:underline ml-4">
+                  Read Review →
+                </Link>
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Related recommendations */}
       {relatedTools.length > 0 && (
