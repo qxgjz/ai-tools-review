@@ -22,7 +22,7 @@ interface SearchBoxProps {
   placeholder?: string;
 }
 
-export function SearchBox({ className = "", placeholder = "搜索AI工具、厂商、标签..." }: SearchBoxProps) {
+export function SearchBox({ className = "", placeholder = "Search AI tools, vendors, tags..." }: SearchBoxProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState<Tool[]>([]);
   const [isOpen, setIsOpen] = useState(false);
@@ -132,7 +132,7 @@ export function SearchBox({ className = "", placeholder = "搜索AI工具、厂�
           onKeyDown={handleKeyDown}
           onFocus={() => results.length > 0 && setIsOpen(true)}
           placeholder={placeholder}
-          aria-label="搜索AI工具"
+          aria-label="Search AI tools"
           autoComplete="off"
           spellCheck={false}
           className="w-full pl-10 pr-10 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 transition-all"
@@ -141,7 +141,7 @@ export function SearchBox({ className = "", placeholder = "搜索AI工具、厂�
           {isSearching ? (
             <Loader2 className="w-4 h-4 text-gray-400 dark:text-gray-500 animate-spin" />
           ) : query ? (
-            <button onClick={handleClear} aria-label="清除搜索" className="p-1 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors rounded">
+            <button onClick={handleClear} aria-label="Clear search" className="p-1 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors rounded">
               <X className="w-4 h-4" />
             </button>
           ) : null}
@@ -153,9 +153,9 @@ export function SearchBox({ className = "", placeholder = "搜索AI工具、厂�
           {results.length > 0 ? (
             <>
               <div className="px-4 py-2.5 text-xs text-gray-400 dark:text-gray-500 border-b border-gray-50 dark:border-gray-800 flex items-center justify-between bg-gray-50/50 dark:bg-gray-800/50">
-                <span>找到 <span className="font-semibold text-gray-600 dark:text-gray-300">{results.length}</span> 个匹配工具</span>
+                <span>Found <span className="font-semibold text-gray-600 dark:text-gray-300">{results.length}</span> matching tools</span>
                 <button onClick={goToSearchPage} className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold transition-colors">
-                  查看全部 →
+                  View all →
                 </button>
               </div>
               <ul className="max-h-80 overflow-y-auto">
@@ -177,7 +177,7 @@ export function SearchBox({ className = "", placeholder = "搜索AI工具、厂�
                         </div>
                         <div className="text-right flex-shrink-0">
                           <div className="text-sm font-bold text-gray-900 dark:text-white">{total.toFixed(1)}</div>
-                          <div className={`text-xs font-bold ${GRADE_TEXT_COLOR[grade]}`}>{grade}级</div>
+                          <div className={`text-xs font-bold ${GRADE_TEXT_COLOR[grade]}`}>Grade {grade}</div>
                         </div>
                       </Link>
                     </li>
@@ -187,9 +187,9 @@ export function SearchBox({ className = "", placeholder = "搜索AI工具、厂�
             </>
           ) : (
             <div className="px-4 py-8 text-center">
-              <div className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">没有找到匹配的工具</div>
+              <div className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">No matching tools found</div>
               <button onClick={goToSearchPage} className="text-xs text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold">
-                搜索 "{query}" →
+                Search "{query}" →
               </button>
             </div>
           )}

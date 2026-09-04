@@ -132,7 +132,7 @@ export default function HomePage() {
           <p className="text-lg sm:text-xl text-blue-200/80 mb-10 max-w-2xl mx-auto leading-relaxed">
             In-depth reviews across six dimensions: features, UX, pricing, integrations, support, and ethics.
             <br className="hidden sm:block" />
-            为你精选 {tools.length}+ 款优质 AI Tools，覆盖全品类
+            Curated selection of {tools.length}+ top AI tools across all categories
           </p>
 
           {/* CTA 按钮 */}
