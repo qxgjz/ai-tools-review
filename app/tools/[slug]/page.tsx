@@ -290,9 +290,27 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               </div>
             )}
             {(tool as any).testingDetails && (
-              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4">
-                <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-1">Testing Details</div>
-                <div className="text-sm font-semibold text-gray-900 dark:text-white">{(tool as any).testingDetails}</div>
+              <div className="bg-gray-50 dark:bg-gray-800/50 rounded-xl p-4 md:col-span-2">
+                <div className="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide mb-2">Testing Details</div>
+                {typeof (tool as any).testingDetails === 'string' ? (
+                  <div className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{(tool as any).testingDetails}</div>
+                ) : (
+                  <div className="space-y-2">
+                    {(tool as any).testingDetails.testing_methodology && (
+                      <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">{(tool as any).testingDetails.testing_methodology}</p>
+                    )}
+                    {(tool as any).testingDetails.benchmark_tests && Array.isArray((tool as any).testingDetails.benchmark_tests) && (
+                      <div>
+                        <div className="text-xs font-semibold text-gray-500 dark:text-gray-400 mb-1">Benchmark Tests:</div>
+                        <ul className="text-xs text-gray-600 dark:text-gray-400 space-y-0.5 list-disc list-inside">
+                          {(tool as any).testingDetails.benchmark_tests.slice(0, 4).map((test: string, i: number) => (
+                            <li key={i}>{test}</li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
+                  </div>
+                )}
               </div>
             )}
           </div>
