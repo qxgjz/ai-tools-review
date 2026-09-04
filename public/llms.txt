@@ -32,7 +32,7 @@
 - Jasper: https://www.aitoolcrux.com/tools/jasper
 
 # 工具分类
-- AI对话/聊天: https://www.aitoolcrux.com/category/chat
+- AI Chat: https://www.aitoolcrux.com/category/chat
 - AI图像生成: https://www.aitoolcrux.com/category/image
 - AI编程助手: https://www.aitoolcrux.com/category/programming
 - AI视频生成: https://www.aitoolcrux.com/category/video
