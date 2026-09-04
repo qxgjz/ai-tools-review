@@ -55,7 +55,7 @@ export default function TagPage({ params }: TagPageProps) {
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
           标签：#{tagName}
         </h1>
-        <p className="text-gray-600 dark:text-gray-400">共 {tagPosts.length} 篇文章</p>
+        <p className="text-gray-600 dark:text-gray-400">{tagPosts.length} articles</p>
       </div>
 
       {/* 文章列表 */}
@@ -73,7 +73,7 @@ export default function TagPage({ params }: TagPageProps) {
               >
                 {post.category}
               </Link>
-              <span className="text-xs text-gray-500 dark:text-gray-400">{post.readTime} 分钟阅读</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">{post.readTime} min read</span>
             </div>
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
               {post.title}

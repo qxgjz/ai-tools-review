@@ -6,11 +6,11 @@ import type { Grade } from "@/types";
 export const runtime = "edge";
 
 const GRADE_COLORS: Record<Grade, { bg: string; text: string; label: string }> = {
-  S: { bg: "#f59e0b", text: "#ffffff", label: "卓越" },
-  A: { bg: "#10b981", text: "#ffffff", label: "优秀" },
-  B: { bg: "#3b82f6", text: "#ffffff", label: "良好" },
-  C: { bg: "#eab308", text: "#ffffff", label: "一般" },
-  D: { bg: "#ef4444", text: "#ffffff", label: "较差" },
+  S: { bg: "#f59e0b", text: "#ffffff", label: "Excellent" },
+  A: { bg: "#10b981", text: "#ffffff", label: "Great" },
+  B: { bg: "#3b82f6", text: "#ffffff", label: "Good" },
+  C: { bg: "#eab308", text: "#ffffff", label: "Average" },
+  D: { bg: "#ef4444", text: "#ffffff", label: "Poor" },
   F: { bg: "#6b7280", text: "#ffffff", label: "不推荐" },
 };
 

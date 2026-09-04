@@ -66,7 +66,7 @@ export default function Giscus({
 
   return (
     <div className="mt-12">
-      <h2 className="text-xl font-bold text-gray-900 mb-6">评论与讨论</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-6">Comments & Discussion</h2>
       <div ref={commentRef} className="min-h-[200px]" />
       <p className="text-xs text-gray-400 mt-4">
         评论由 Giscus 驱动，使用 GitHub 账号登录。评论数据存储在 GitHub Discussions 中。

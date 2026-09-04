@@ -12,7 +12,7 @@ interface FAQSectionProps {
   title?: string;
 }
 
-export function FAQSection({ items, title = "常见问题" }: FAQSectionProps) {
+export function FAQSection({ items, title = "Frequently Asked Questions" }: FAQSectionProps) {
   if (!items || items.length === 0) return null;
 
   return (
@@ -37,19 +37,19 @@ export function FAQSection({ items, title = "常见问题" }: FAQSectionProps) {
 // 默认FAQ数据 - AI工具评测网站通用问题
 export const defaultFAQs: FAQItem[] = [
   {
-    question: "这些AI工具是免费的吗？",
-    answer: "大部分AI工具提供免费试用版或免费额度，具体免费额度因工具而异。我们在每篇评测中都会详细说明免费版和付费版的区别，帮助你选择最适合的方案。",
+    question: "Are these AI tools free?",
+    answer: "Most AI tools offer free trials or free tiers. The specific free limits vary by tool. We detail the differences between free and paid versions in each review to help you choose the best option.",
   },
   {
-    question: "你们的评测是客观的吗？",
-    answer: "是的，我们的评测基于实际使用体验和客观测试数据。每款工具都经过多维度评分，包括功能丰富度、易用性、性能、性价比、客户支持等。我们可能会通过部分工具的联盟链接获得佣金，但这不会影响我们的评分和推荐。",
+    question: "Are your reviews objective?",
+    answer: "Yes, our reviews are based on hands-on experience and objective test data. Each tool is scored across multiple dimensions including feature richness, usability, performance, value for money, and customer support. We may earn commissions through affiliate links for some tools, but this never influences our ratings or recommendations.",
   },
   {
-    question: "如何选择最适合我的AI工具？",
+    question: "How do I choose the best AI tool for me?",
     answer: "首先明确你的使用场景和预算，然后参考我们的评测和对比文章。我们建议先使用免费版试用，再决定是否升级到付费版。如果你有特定需求，可以查看我们的分类页面或使用对比工具。",
   },
   {
-    question: "这些AI工具的数据安全吗？",
+    question: "这些Is my data safe with AI tools?",
     answer: "我们在评测中会关注每款工具的隐私政策和数据安全措施。大部分主流AI工具都采用加密传输和严格的数据保护政策。建议在使用前仔细阅读工具的隐私政策，特别是处理敏感数据时。",
   },
   {

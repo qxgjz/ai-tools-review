@@ -7,7 +7,7 @@ import type { Score, ScoreDimension, Grade, ScoreResult } from "@/types";
 /** 六维权重配置（总和=100%） */
 export const SCORE_WEIGHTS: Record<ScoreDimension, number> = {
   functionality: 0.25, // 功能与输出质量 25%
-  ux: 0.2, // 用户体验 20%
+  ux: 0.2, // User Experience 20%
   pricing: 0.2, // 价格与价值 20%
   integration: 0.15, // 集成与开发者体验 15%
   support: 0.1, // 支持与可靠性 10%
@@ -16,12 +16,12 @@ export const SCORE_WEIGHTS: Record<ScoreDimension, number> = {
 
 /** 六维中文标签 */
 export const DIMENSION_LABELS: Record<ScoreDimension, string> = {
-  functionality: "功能质量",
-  ux: "用户体验",
-  pricing: "价格价值",
-  integration: "集成开发",
-  support: "支持可靠",
-  ethics: "伦理透明",
+  functionality: "Functionality",
+  ux: "User Experience",
+  pricing: "Pricing & Value",
+  integration: "Integrations",
+  support: "Support & Reliability",
+  ethics: "Ethics & Transparency",
 };
 
 /** 等级描述 */

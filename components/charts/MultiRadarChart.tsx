@@ -4,12 +4,12 @@ import { useId } from "react";
 import type { Score, ScoreDimension } from "@/types";
 
 const DIMENSIONS: { key: ScoreDimension; label: string }[] = [
-  { key: "functionality", label: "功能质量" },
-  { key: "ux", label: "用户体验" },
-  { key: "pricing", label: "价格价值" },
-  { key: "integration", label: "集成开发" },
-  { key: "support", label: "支持可靠" },
-  { key: "ethics", label: "伦理透明" },
+  { key: "functionality", label: "Functionality" },
+  { key: "ux", label: "User Experience" },
+  { key: "pricing", label: "Pricing & Value" },
+  { key: "integration", label: "Integrations" },
+  { key: "support", label: "Support & Reliability" },
+  { key: "ethics", label: "Ethics & Transparency" },
 ];
 
 interface ToolData {

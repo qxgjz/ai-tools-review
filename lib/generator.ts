@@ -29,21 +29,21 @@ export interface GeneratorResult {
 }
 
 export const SCENARIO_LABELS: Record<ScenarioType, string> = {
-  writing: "内容写作",
-  design: "设计创作",
-  coding: "编程开发",
-  video: "视频制作",
-  office: "效率办公",
-  other: "其他通用",
+  writing: "Content Writing",
+  design: "Design & Creation",
+  coding: "Programming",
+  video: "Video Production",
+  office: "Productivity",
+  other: "General Use",
 };
 
 export const SCENARIO_DESCRIPTIONS: Record<ScenarioType, string> = {
-  writing: "文案创作、文章撰写、内容润色",
-  design: "图像生成、UI设计、视觉创作",
-  coding: "代码编写、程序开发、技术研发",
-  video: "视频生成、剪辑制作、多媒体创作",
-  office: "文档处理、会议纪要、团队协作",
-  other: "其他通用AI使用场景",
+  writing: "Copywriting, article writing, content polishing",
+  design: "Image generation, UI design, visual creation",
+  coding: "Coding, programming, tech development",
+  video: "Video generation, editing, multimedia creation",
+  office: "Document processing, meeting notes, team collaboration",
+  other: "General UseAI使用场景",
 };
 
 const SCENARIO_DIMENSION_BOOST: Record<ScenarioType, ScoreDimension[]> = {

@@ -36,7 +36,7 @@ export function ThemeToggle() {
       onClick={cycleTheme}
       className="p-2 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 transition-colors"
       aria-label="Toggle theme"
-      title={`当前: ${theme === "light" ? "浅色" : theme === "dark" ? "深色" : "跟随系统"}`}
+      title={`当前: ${theme === "light" ? "Light" : theme === "dark" ? "Dark" : "System"}`}
     >
       {theme === "system" ? (
         <Monitor className="w-5 h-5 text-gray-600 dark:text-gray-300" />

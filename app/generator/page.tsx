@@ -49,14 +49,14 @@ export default function GeneratorPage() {
 
   const handleShare = async () => {
     const shareText = results
-      ? `我用AIToolCrux找到了适合${SCENARIO_LABELS[scenario]} - Top 3 tools: ${results.map((r) => `${r.rank}.${r.tool.name}(${r.matchScore}分)`).join("、")}`
-      : "来试试AI工具智能匹配！";
+      ? `I found the perfect tools for ${SCENARIO_LABELS[scenario]} on AIToolCrux - Top 3 tools: ${results.map((r) => `${r.rank}.${r.tool.name}(${r.matchScore}/10)`).join("、")}`
+      : "Try AI Tool Matcher now!";
     try {
       await navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);
       setCopied(true);
       setTimeout(() => setCopied(false), 2000);
     } catch {
-      alert("复制失败");
+      alert("Copy failed");
     }
   };
 
@@ -64,23 +64,23 @@ export default function GeneratorPage() {
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
       <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
-        返回首页
+        Back to Home
       </Link>
 
       <div className="text-center mb-10">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-4 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 border border-blue-100 dark:border-blue-800 rounded-full text-sm text-blue-700 dark:text-blue-400 font-medium">
           <Sparkles className="w-4 h-4" />
-          智能匹配引擎
+          AI Matcher Engine
         </div>
         <h1 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-3">
-          找到最适合你的 <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AI 工具</span>
+          Find the Perfect <span className="bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">AI Tools</span>
         </h1>
-        <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">选择你的使用场景和最关注的维度，系统将基于六维评分模型为你智能推荐 Top3 工具</p>
+        <p className="text-gray-500 dark:text-gray-400 max-w-xl mx-auto">Select your use case and priority dimensions. Our system will recommend the Top 3 tools based on the six-dimension scoring model.</p>
       </div>
 
       <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-8">
         <div className="mb-8">
-          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">1. 你的主要使用场景</label>
+          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-3">1. Your Primary Use Case</label>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {scenarioOptions.map((opt) => (
               <button
@@ -96,8 +96,8 @@ export default function GeneratorPage() {
         </div>
 
         <div className="mb-8">
-          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">2. 你最关注的维度（可多选）</label>
-          <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">选中的维度在推荐时会获得更高权重</p>
+          <label className="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-1">2. Priority Dimensions (Multi-select)</label>
+          <p className="text-xs text-gray-400 dark:text-gray-500 mb-3">Selected dimensions get higher weight in recommendations</p>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
             {DIMENSION_OPTIONS.map((dim) => {
               const isSelected = priorityDims.includes(dim);
@@ -112,7 +112,7 @@ export default function GeneratorPage() {
                   </div>
                   <div className="text-left min-w-0">
                     <div className={`text-sm font-semibold ${isSelected ? "text-indigo-700 dark:text-indigo-400" : "text-gray-700 dark:text-gray-300"}`}>{DIMENSION_LABELS[dim]}</div>
-                    <div className="text-xs text-gray-400 dark:text-gray-500">权重 {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</div>
+                    <div className="text-xs text-gray-400 dark:text-gray-500">Weight {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</div>
                   </div>
                 </button>
               );
@@ -126,11 +126,11 @@ export default function GeneratorPage() {
             disabled={isGenerating}
             className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-10 py-4 bg-gradient-to-r from-blue-600 to-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:-translate-y-0.5 transition-all disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            {isGenerating ? (<><Loader2 className="w-5 h-5 animate-spin" />智能匹配中...</>) : (<><Sparkles className="w-5 h-5" />生成我的专属推荐</>)}
+            {isGenerating ? (<><Loader2 className="w-5 h-5 animate-spin" />Matching...</>) : (<><Sparkles className="w-5 h-5" />Generate My Recommendations</>)}
           </button>
           {results && (
             <button onClick={handleReset} className="inline-flex items-center gap-2 px-6 py-4 text-gray-500 dark:text-gray-400 font-medium hover:text-gray-700 dark:hover:text-gray-300 transition-colors">
-              重新选择
+              Reset
             </button>
           )}
         </div>
@@ -142,12 +142,12 @@ export default function GeneratorPage() {
             <div>
               <h2 className="text-2xl font-extrabold text-gray-900 dark:text-white flex items-center gap-2">
                 <Trophy className="w-6 h-6 text-amber-500" />
-                为你推荐的 Top 3 工具
+                Top 3 Recommended Tools
               </h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">基于「{SCENARIO_LABELS[scenario]}」场景{priorityDims.length > 0 && `，重点关注${priorityDims.map((d) => DIMENSION_LABELS[d]).join("、")}`}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Based on "{SCENARIO_LABELS[scenario]}" scenario{priorityDims.length > 0 && `, focusing on ${priorityDims.map((d) => DIMENSION_LABELS[d]).join("、")}`}</p>
             </div>
             <button onClick={handleShare} className="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm font-medium rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
-              {copied ? (<><CheckCircle2 className="w-4 h-4 text-emerald-500" />已复制</>) : (<><Share2 className="w-4 h-4" />分享结果</>)}
+              {copied ? (<><CheckCircle2 className="w-4 h-4 text-emerald-500" />Copied</>) : (<><Share2 className="w-4 h-4" />Share Results</>)}
             </button>
           </div>
 
@@ -166,14 +166,14 @@ export default function GeneratorPage() {
                       <h3 className="text-lg font-bold text-gray-900 dark:text-white truncate">{result.tool.name}</h3>
                       <p className="text-xs text-gray-400 dark:text-gray-500">{result.tool.vendor}</p>
                       <div className="flex items-center gap-2 mt-1.5">
-                        <span className={`px-2 py-0.5 rounded-md text-xs font-bold ${GRADE_STYLES[result.scoreResult.grade]}`}>{result.scoreResult.grade}级</span>
-                        <span className="text-xs text-gray-400 dark:text-gray-500">综合 {result.scoreResult.total.toFixed(1)}分</span>
+                        <span className={`px-2 py-0.5 rounded-md text-xs font-bold ${GRADE_STYLES[result.scoreResult.grade]}`}>{result.scoreResult.grade} Grade</span>
+                        <span className="text-xs text-gray-400 dark:text-gray-500">Overall {result.scoreResult.total.toFixed(1)}/10</span>
                       </div>
                     </div>
                   </div>
                   <div className="mb-4 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl">
                     <div className="flex items-center justify-between mb-1.5">
-                      <span className="text-xs font-medium text-gray-500 dark:text-gray-400">匹配度</span>
+                      <span className="text-xs font-medium text-gray-500 dark:text-gray-400">Match Score</span>
                       <span className="text-xl font-extrabold text-blue-600 dark:text-blue-400">{result.matchScore.toFixed(1)}<span className="text-xs text-gray-400 dark:text-gray-500 font-normal">/100</span></span>
                     </div>
                     <div className="h-2 bg-white dark:bg-gray-800 rounded-full overflow-hidden">
@@ -183,7 +183,7 @@ export default function GeneratorPage() {
                   <div className="mb-4">
                     <div className="flex items-center gap-1.5 mb-2">
                       <Lightbulb className="w-4 h-4 text-amber-500" />
-                      <span className="text-xs font-semibold text-gray-600 dark:text-gray-400">推荐理由</span>
+                      <span className="text-xs font-semibold text-gray-600 dark:text-gray-400">Why Recommended</span>
                     </div>
                     <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">{result.recommendationReason}</p>
                   </div>
@@ -195,7 +195,7 @@ export default function GeneratorPage() {
                     </div>
                   )}
                   <Link href={`/tools/${result.tool.slug}`} className="block w-full py-2.5 text-center text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 rounded-xl hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors">
-                    查看完整测评 →
+                    View Full Review →
                   </Link>
                 </div>
               </div>
@@ -205,7 +205,7 @@ export default function GeneratorPage() {
           <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
             <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
               <Sparkles className="w-5 h-5 text-purple-600" />
-              六维能力雷达图对比
+              Six-Dimension Radar Chart Comparison
             </h3>
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {results.map((result) => (

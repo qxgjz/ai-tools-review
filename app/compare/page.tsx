@@ -59,11 +59,11 @@ export default function ComparePage() {
           href="/"
           className="inline-flex items-center text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300 mb-4"
         >
-          ← 返回首页
+          ← Back to Home
         </Link>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">工具对比</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Tool Comparison</h1>
         <p className="text-gray-600 dark:text-gray-400">
-          选择最多 3 个 AI 工具，基于六维评分模型进行横向对比
+          Select up to 3 AI tools for side-by-side comparison based on the six-dimension scoring model
         </p>
       </div>
 
@@ -71,9 +71,9 @@ export default function ComparePage() {
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
-            选择对比工具
+            Select Tools to Compare
             <span className="ml-2 text-sm font-normal text-gray-500 dark:text-gray-400">
-              已选 {selectedSlugs.length}/3
+              Selected {selectedSlugs.length}/3
             </span>
           </h2>
           {selectedSlugs.length > 0 && (
@@ -81,7 +81,7 @@ export default function ComparePage() {
               onClick={() => setSelectedSlugs([])}
               className="text-sm text-red-500 hover:text-red-600"
             >
-              清空选择
+              Clear All
             </button>
           )}
         </div>
@@ -89,7 +89,7 @@ export default function ComparePage() {
         {/* 搜索框 */}
         <input
           type="text"
-          placeholder="搜索工具名称、厂商或标签..."
+          placeholder="Search tool name, vendor, or tags..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
           className="w-full px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-4"
@@ -185,7 +185,7 @@ export default function ComparePage() {
                     <span className="text-lg text-gray-400 font-normal">/10</span>
                   </div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {GRADE_DESCRIPTIONS[result.grade]} · 更新于 {tool.lastUpdated}
+                    {GRADE_DESCRIPTIONS[result.grade]} · Updated  {tool.lastUpdated}
                   </p>
                 </Link>
               );
@@ -194,7 +194,7 @@ export default function ComparePage() {
 
           {/* 叠加雷达图对比 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">六维能力叠加雷达图对比</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Six-Dimension Overlay Radar Chart Comparison</h2>
             <div className="flex justify-center">
               <MultiRadarChart
                 tools={selectedTools.map((t, i) => ({
@@ -209,15 +209,15 @@ export default function ComparePage() {
 
           {/* 按场景推荐 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">按使用场景推荐</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Recommendations by Use Case</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { scene: "追求最强功能", dim: "functionality", icon: "⚡", desc: "核心功能完整性、输出准确性" },
-                { scene: "新手友好易用", dim: "ux", icon: "🎯", desc: "界面直观、上手曲线平缓" },
-                { scene: "预算有限性价比", dim: "pricing", icon: "💰", desc: "免费额度充足、成本透明" },
-                { scene: "开发者集成需求", dim: "integration", icon: "🔧", desc: "API质量、平台兼容性" },
-                { scene: "企业级稳定可靠", dim: "support", icon: "🛡️", desc: "正常运行时间、更新频率" },
-                { scene: "重视数据隐私", dim: "ethics", icon: "🔒", desc: "数据隐私、负责任AI" },
+                { scene: "Best Functionality", dim: "functionality", icon: "⚡", desc: "Core feature completeness, output accuracy" },
+                { scene: "Best for Beginners", dim: "ux", icon: "🎯", desc: "Intuitive interface, gentle learning curve" },
+                { scene: "Best Value for Money", dim: "pricing", icon: "💰", desc: "Generous free tier, transparent pricing" },
+                { scene: "Best for Developers", dim: "integration", icon: "🔧", desc: "API quality, platform compatibility" },
+                { scene: "Best Enterprise Reliability", dim: "support", icon: "🛡️", desc: "Uptime, update frequency" },
+                { scene: "Best Data Privacy", dim: "ethics", icon: "🔒", desc: "Data privacy, responsible AI" },
               ].map(({ scene, dim, icon, desc }) => {
                 const winner = selectedTools.reduce((best, t) =>
                   (t.scores as any)[dim] > (best.scores as any)[dim] ? t : best
@@ -234,7 +234,7 @@ export default function ComparePage() {
                     <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{desc}</p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-bold text-blue-600 dark:text-blue-400">
-                        推荐：{winner.name}
+                        Recommended: {winner.name}
                       </span>
                       <span className="text-xs text-gray-500 dark:text-gray-400">
                         {(winner.scores as any)[dim].toFixed(1)}/10
@@ -249,14 +249,14 @@ export default function ComparePage() {
           {/* 详细对比表格 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
             <div className="p-6 border-b border-gray-100 dark:border-gray-800">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">详细参数对比</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Detailed Specification Comparison</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead>
                   <tr className="bg-gray-50 dark:bg-gray-800/50">
                     <th className="text-left py-3 px-4 text-sm font-semibold text-gray-600 dark:text-gray-400 w-32">
-                      对比项
+                      Feature
                     </th>
                     {selectedTools.map((tool) => (
                       <th
@@ -269,27 +269,27 @@ export default function ComparePage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-                  {/* 厂商 */}
+                  {/* Vendor */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">厂商</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Vendor</td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4 text-sm text-gray-900 dark:text-white">
                         {tool.vendor}
                       </td>
                     ))}
                   </tr>
-                  {/* 分类 */}
+                  {/* Category */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">分类</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Category</td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4 text-sm text-gray-900 dark:text-white">
                         {tool.category}
                       </td>
                     ))}
                   </tr>
-                  {/* 综合评分 */}
+                  {/* Overall Score */}
                   <tr className="bg-blue-50/50 dark:bg-blue-900/10">
-                    <td className="py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">综合评分</td>
+                    <td className="py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">Overall Score</td>
                     {selectedTools.map((tool) => {
                       const result = calculateScoreResult(tool.scores);
                       return (
