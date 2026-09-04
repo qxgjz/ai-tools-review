@@ -257,23 +257,23 @@ const CATEGORY_CONTENT: Record<string, {
 };
 
 const CATEGORIES: Record<string, { name: string; description: string; icon: LucideIcon; gradient: string }> = {
-  chat: { name: "AI 对话助手", description: "Intelligent dialogue, Q&A interaction, multi-turn chat", icon: MessageSquare, gradient: "from-blue-600 to-cyan-500" },
-  writing: { name: "AI 写作工具", description: "Article writing, copywriting, and content polishing", icon: PenTool, gradient: "from-purple-600 to-pink-500" },
-  image: { name: "AI 绘画设计", description: "Image generation, art creation, design assistance", icon: ImageIcon, gradient: "from-orange-500 to-red-500" },
-  code: { name: "AI 编程开发", description: "Code generation, software development, technical assistance", icon: Code, gradient: "from-emerald-600 to-teal-500" },
-  video: { name: "AI 视频制作", description: "Video generation, video editing and production, multimedia creation", icon: Video, gradient: "from-rose-500 to-orange-500" },
-  audio: { name: "AI 音频音乐", description: "Speech Synthesis, Music Generation, Audio Processing", icon: Music, gradient: "from-violet-600 to-purple-500" },
-  productivity: { name: "AI 效率办公", description: "Document processing, meeting notes, team collaboration", icon: Briefcase, gradient: "from-indigo-600 to-blue-500" },
-  search: { name: "AI 智能搜索", description: "Intelligent Search, Information Retrieval, Knowledge Q&A", icon: SearchIcon, gradient: "from-sky-600 to-blue-500" },
+  chat: { name: "AI Chat Assistants", description: "Intelligent dialogue, Q&A interaction, multi-turn chat", icon: MessageSquare, gradient: "from-blue-600 to-cyan-500" },
+  writing: { name: "AI Writing Tools", description: "Article writing, copywriting, and content polishing", icon: PenTool, gradient: "from-purple-600 to-pink-500" },
+  image: { name: "AI Image & Design", description: "Image generation, art creation, design assistance", icon: ImageIcon, gradient: "from-orange-500 to-red-500" },
+  code: { name: "AI Programming", description: "Code generation, software development, technical assistance", icon: Code, gradient: "from-emerald-600 to-teal-500" },
+  video: { name: "AI Video Production", description: "Video generation, video editing and production, multimedia creation", icon: Video, gradient: "from-rose-500 to-orange-500" },
+  audio: { name: "AI Audio & Music", description: "Speech Synthesis, Music Generation, Audio Processing", icon: Music, gradient: "from-violet-600 to-purple-500" },
+  productivity: { name: "AI Productivity", description: "Document processing, meeting notes, team collaboration", icon: Briefcase, gradient: "from-indigo-600 to-blue-500" },
+  search: { name: "AI Search", description: "Intelligent Search, Information Retrieval, Knowledge Q&A", icon: SearchIcon, gradient: "from-sky-600 to-blue-500" },
   agent: { name: "AI Agent Framework", description: "Agent development, automated workflows, autonomous AI systems", icon: Bot, gradient: "from-indigo-600 to-purple-600" },
-  design: { name: "AI 设计工具", description: "UI design, prototyping, and creative design assistance", icon: Palette, gradient: "from-pink-500 to-rose-500" },
+  design: { name: "AI Design Tools", description: "UI design, prototyping, and creative design assistance", icon: Palette, gradient: "from-pink-500 to-rose-500" },
   "agent-framework": { name: "AI Agent Framework", description: "Multi-agent orchestration, role-based collaboration, automation framework", icon: Bot, gradient: "from-indigo-600 to-blue-600" },
   "agent-runtime": { name: "AI Agent Runtime", description: "Agent execution platform, development environment, runtime tools", icon: Code, gradient: "from-emerald-600 to-teal-600" },
   rag: { name: "RAG 检索增强", description: "Retrieval-Augmented Generation, Document Q&A, Knowledge Base System", icon: SearchIcon, gradient: "from-sky-600 to-cyan-600" },
-  memory: { name: "AI 记忆系统", description: "Long-term Memory, Knowledge Storage, Context Management", icon: Briefcase, gradient: "from-violet-600 to-purple-600" },
-  "dev-tools": { name: "AI 开发工具", description: "Developer Tools, SDK, API, Testing Frameworks", icon: Code, gradient: "from-gray-600 to-slate-600" },
-  database: { name: "AI 数据库", description: "Vector Database, Data Storage, Data Processing", icon: Briefcase, gradient: "from-amber-600 to-orange-600" },
-  observability: { name: "AI 可观测性", description: "Monitoring, Logging, Tracing, Profiling", icon: SearchIcon, gradient: "from-teal-600 to-emerald-600" },
+  memory: { name: "AI Memory Systems", description: "Long-term Memory, Knowledge Storage, Context Management", icon: Briefcase, gradient: "from-violet-600 to-purple-600" },
+  "dev-tools": { name: "AI Dev Tools", description: "Developer Tools, SDK, API, Testing Frameworks", icon: Code, gradient: "from-gray-600 to-slate-600" },
+  database: { name: "AI Databases", description: "Vector Database, Data Storage, Data Processing", icon: Briefcase, gradient: "from-amber-600 to-orange-600" },
+  observability: { name: "AI Observability", description: "Monitoring, Logging, Tracing, Profiling", icon: SearchIcon, gradient: "from-teal-600 to-emerald-600" },
 };
 
 export function generateStaticParams() {
@@ -330,7 +330,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
       <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
-        返回首页
+        Back to Home
       </Link>
 
       {/* 可视化面包屑导航 */}
@@ -355,7 +355,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           </div>
           <div className="text-center flex-shrink-0">
             <div className="text-4xl font-extrabold">{sortedTools.length}</div>
-            <div className="text-sm text-white/70">款工具</div>
+            <div className="text-sm text-white/70">Tools</div>
           </div>
         </div>
       </section>
@@ -367,13 +367,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         <div className="mt-12 space-y-10">
           {/* 分类详细介绍 */}
           <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{category.name}完全指南</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{category.name}Complete Guide</h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{CATEGORY_CONTENT[params.slug].intro}</p>
           </section>
 
-          {/* 选购指南 */}
+          {/* Buying Guide */}
           <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">如何选择适合你的{category.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">How to Choose the Right{category.name}</h2>
             <div className="space-y-4">
               {CATEGORY_CONTENT[params.slug].buyingGuide.map((tip, i) => (
                 <div key={i} className="flex gap-4">
@@ -386,7 +386,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             </div>
           </section>
 
-          {/* 该分类下的深度评测文章 - 内链 */}
+          {/* 该分类下的In-Depth Reviews文章 - 内链 */}
           {(() => {
             const categoryPosts = postsData.filter((p) => {
               const postCat = (p.categorySlug || p.category || "").toLowerCase();
@@ -396,8 +396,8 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             if (categoryPosts.length === 0) return null;
             return (
               <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
-                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{category.name}深度评测</h2>
-                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">我们的编辑团队经过30天实测，为你带来最真实的工具评测</p>
+                <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">{category.name}In-Depth Reviews</h2>
+                <p className="text-sm text-gray-500 dark:text-gray-400 mb-6">Our editorial team tested each tool for 30 days to bring you the most authentic reviews</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   {categoryPosts.map((post) => (
                     <Link
@@ -425,7 +425,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
               <HelpCircle className="w-6 h-6 text-blue-500" />
-              常见问题
+              FAQ
             </h2>
             <div className="space-y-6">
               {CATEGORY_CONTENT[params.slug].faqs.map((faq, i) => (
@@ -452,7 +452,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                 </div>
                 <div className="min-w-0">
                   <div className="text-sm font-semibold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">{cat.name}</div>
-                  <div className="text-xs text-gray-400 dark:text-gray-500">{count} 款工具</div>
+                  <div className="text-xs text-gray-400 dark:text-gray-500">{count} Tools</div>
                 </div>
               </Link>
             );
