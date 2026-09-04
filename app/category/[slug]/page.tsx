@@ -17,263 +17,263 @@ const CATEGORY_CONTENT: Record<string, {
   faqs: { q: string; a: string }[];
 }> = {
   chat: {
-    intro: "AI对话助手是目前应用最广泛的AI工具类型，能够通过自然语言交互完成问答、写作、分析、编程等多种任务。2026年，AI对话工具已经从简单的聊天机器人进化为具备推理、多模态理解、工具调用能力的智能助手。主流产品包括ChatGPT、Claude、Gemini、Perplexity等，各有特色：ChatGPT在生态和插件方面领先，Claude在长文本和写作方面表现优异，Gemini深度整合Google生态，Perplexity则以实时搜索和引用见长。选择AI对话工具时，需要考虑你的主要用途（日常问答/专业写作/编程辅助/研究搜索）、预算、隐私需求以及是否需要特定功能（如代码解释器、文件上传、语音对话）。",
+    intro: "AI conversation assistants are currently the most widely used type of AI tool, capable of handling Q&A, writing, analysis, programming, and many other tasks through natural language interaction. By 2026, AI conversation tools have evolved from simple chatbots into intelligent assistants with reasoning, multimodal understanding, and tool-calling capabilities. Major products include ChatGPT, Claude, Gemini, and Perplexity, each with its own strengths: ChatGPT leads in ecosystem and plugins, Claude excels in long-context processing and writing, Gemini is deeply integrated with the Google ecosystem, and Perplexity stands out for real-time search and citations. When choosing an AI conversation tool, you need to consider your primary use case (daily Q&A / professional writing / programming assistance / research search), budget, privacy needs, and whether you require specific features (such as code interpreter, file upload, or voice conversation).",
     buyingGuide: [
-      "明确主要用途：日常问答选ChatGPT免费版即可，专业写作选Claude，研究搜索选Perplexity，编程选ChatGPT或Cursor",
-      "评估上下文需求：处理长文档（50页以上PDF）优先选Claude（200K上下文）或Gemini（1M上下文）",
-      "考虑多模态需求：需要图片理解、语音对话、视频分析选ChatGPT Plus或Gemini Advanced",
-      "隐私和数据安全：企业用户或处理敏感数据优先考虑有企业版和数据不用于训练承诺的产品",
-      "预算考量：个人用户$20/月可获得大部分高级功能，企业用户$25-30/人/月可获得管理功能和安全保障"
+      "Identify your primary use case: For everyday Q&A, ChatGPT's free version is sufficient; for professional writing, choose Claude; for research and search, choose Perplexity; for programming, choose ChatGPT or Cursor.",
+      "Assess context needs: For processing long documents (PDFs over 50 pages), prioritize Claude (200K context) or Gemini (1M context).",
+      "Considering multimodal needs: For image understanding, voice conversation, and video analysis, choose ChatGPT Plus or Gemini Advanced.",
+      "Privacy and Data Security: Enterprise users or those handling sensitive data should prioritize products with enterprise plans and commitments that data won't be used for training.",
+      "Budget consideration: Individual users at $20/month get access to most advanced features, while business users at $25-30/person/month get management features and security assurance."
     ],
     faqs: [
-      { q: "AI对话工具能完全替代搜索引擎吗？", a: "不能完全替代。AI对话工具擅长综合回答和解释，但可能产生幻觉（编造信息），且知识有截止日期。对于需要最新信息、精确事实或多源对比的查询，仍需结合搜索引擎使用。Perplexity等结合了搜索的AI工具是更好的折中方案。" },
-      { q: "免费版和付费版的主要区别是什么？", a: "付费版（通常$20/月）的主要优势包括：更强大的模型（GPT-4o/Claude 3.5 Opus等）、更高的使用限额、更快的响应速度、高级功能（代码解释器、文件上传、DALL-E图像生成、语音对话）、优先访问新功能。免费版适合轻度使用和体验，重度用户或专业人士建议升级付费版。" }
+      { q: "Can AI conversational tools completely replace search engines?", a: "Not a complete replacement. AI chat tools are good at synthesizing answers and explanations, but they can hallucinate (fabricate information) and have a knowledge cutoff date. For queries that require the latest information, precise facts, or multi-source comparison, you still need to use them together with a search engine. AI tools that combine search, such as Perplexity, are a better middle-ground option." },
+      { q: "What are the main differences between the free and paid versions?", a: "The main advantages of the paid version (usually $20/month) include: more powerful models (GPT-4o/Claude 3.5 Opus, etc.), higher usage limits, faster response speeds, advanced features (code interpreter, file upload, DALL-E image generation, voice conversations), and priority access to new features. The free version is suitable for light use and trying things out, while heavy users or professionals are advised to upgrade to the paid version." }
     ]
   },
   code: {
-    intro: "AI编程工具正在革命性地改变软件开发方式，从代码补全到整个功能的自动生成，AI已经成为开发者的得力助手。2026年，AI编程工具主要分为三类：代码补全工具（如GitHub Copilot、Tabnine）在IDE中实时提供代码建议；AI原生IDE（如Cursor、Windsurf）将AI深度整合到开发环境中，支持代码生成、重构、调试、终端操作；云端开发平台（如Replit、GitHub Codespaces）提供零配置的云端开发环境，配合AI助手实现从想法到部署的全流程。选择AI编程工具时，需要考虑你的编程语言、IDE偏好、项目规模、隐私需求以及预算。",
+    intro: "AI programming tools are revolutionizing the way software is developed. From code completion to automatic generation of entire features, AI has become an indispensable assistant for developers. In 2026, AI programming tools fall into three main categories: code completion tools (such as GitHub Copilot and Tabnine) provide real-time code suggestions in the IDE; AI-native IDEs (such as Cursor and Windsurf) deeply integrate AI into the development environment, supporting code generation, refactoring, debugging, and terminal operations; cloud development platforms (such as Replit and GitHub Codespaces) offer zero-configuration cloud development environments, working with AI assistants to cover the entire workflow from idea to deployment. When choosing an AI programming tool, you need to consider your programming language, IDE preference, project size, privacy requirements, and budget.",
     buyingGuide: [
-      "选择合适的类型：已有IDE习惯选GitHub Copilot插件，想要AI原生体验选Cursor，快速原型选Replit",
-      "语言和框架支持：确保工具支持你常用的语言（Python/JavaScript/TypeScript/Go/Rust等）和框架",
-      "上下文理解能力：大型项目需要能理解整个代码库的工具（Cursor的Codebase Indexing、Copilot的Workspace Intelligence）",
-      "隐私和合规：企业代码或开源项目贡献者需确认代码不会被用于训练，Tabnine和Copilot Business有相应保障",
-      "预算：个人开发者$10-20/月，企业团队$19-39/人/月，免费试用后再决定"
+      "Choose the right type: if you already have IDE habits, choose the GitHub Copilot plugin; if you want an AI-native experience, choose Cursor; for rapid prototyping, choose Replit.",
+      "Language and framework support: Make sure the tool supports the languages you commonly use (Python/JavaScript/TypeScript/Go/Rust, etc.) and frameworks.",
+      "Context understanding capability: Large projects need tools that can understand the entire codebase (Cursor's Codebase Indexing, Copilot's Workspace Intelligence)",
+      "Privacy and Compliance: Enterprise developers and open-source project contributors need assurance that their code won't be used for training—Tabnine and Copilot Business offer corresponding safeguards.",
+      "Budget: Individual developers $10-20/month, enterprise teams $19-39/person/month—try free before deciding"
     ],
     faqs: [
-      { q: "AI编程工具会取代程序员吗？", a: "不会。AI编程工具是增强开发者生产力的助手，而非替代品。AI擅长生成模板代码、补全重复模式、解释陌生代码、生成测试用例，但仍需要人类开发者进行架构设计、需求理解、复杂逻辑实现、代码审查和质量把控。会用AI工具的开发者会取代不会用AI工具的开发者，但AI本身不会取代程序员。" },
-      { q: "GitHub Copilot和Cursor哪个更好？", a: "取决于你的需求。GitHub Copilot是IDE插件，支持VS Code、JetBrains等主流IDE，代码补全质量高，适合已有IDE习惯的开发者。Cursor是AI原生IDE，基于VS Code但深度整合AI，支持代码库级理解、AI重构、多文件编辑、终端AI操作，适合愿意尝试新开发体验的开发者。两者可以同时使用：Cursor做主力开发，Copilot做额外补全。" }
+      { q: "Will AI programming tools replace programmers?", a: "No. AI coding tools are assistants that enhance developer productivity, not replacements. AI excels at generating boilerplate code, completing repetitive patterns, explaining unfamiliar code, and creating test cases, but human developers are still needed for architecture design, requirements understanding, complex logic implementation, code review, and quality control. Developers who know how to use AI tools will replace those who don't, but AI itself will not replace programmers." },
+      { q: "GitHub Copilot vs. Cursor: Which One Is Better?", a: "It depends on your needs. GitHub Copilot is an IDE plugin that supports major IDEs like VS Code and JetBrains, with high-quality code completion, making it suitable for developers who are used to their existing IDEs. Cursor is an AI-native IDE based on VS Code but with deep AI integration, offering codebase-level understanding, AI refactoring, multi-file editing, and terminal AI operations, suitable for developers willing to try a new development experience. Both can be used together: Cursor as your primary development environment and Copilot for additional completion." }
     ]
   },
   image: {
-    intro: "AI图像生成工具已经从实验性技术发展为设计师、营销人员和创作者的日常工具。2026年，AI图像工具在图像质量、文字渲染、一致性控制、编辑能力等方面都有了巨大进步。主流产品包括：Midjourney以艺术感和美学著称，适合创作高质量艺术图像；DALL-E 3深度整合ChatGPT，擅长根据详细描述生成精准图像；Stable Diffusion是开源模型，可本地部署和自定义训练，适合技术用户和需要隐私的场景；Leonardo AI专注于游戏资产和概念设计；Firefly是Adobe的AI工具，与Photoshop等创意软件深度整合。选择AI图像工具时，需要考虑你的用途（艺术创作/产品图/营销素材/游戏资产）、对图像一致性的要求、是否需要编辑能力、预算以及技术水平。",
+    intro: "AI image generation tools have evolved from experimental technology into everyday tools for designers, marketers, and creators. In 2026, AI image tools have made significant progress in image quality, text rendering, consistency control, and editing capabilities. Mainstream products include: Midjourney is known for its artistic feel and aesthetics, making it suitable for creating high-quality art images; DALL-E 3 deeply integrates with ChatGPT and excels at generating precise images from detailed descriptions; Stable Diffusion is an open-source model that can be deployed locally and custom-trained, ideal for technical users and scenarios requiring privacy; Leonardo AI focuses on game assets and concept design; Firefly is Adobe's AI tool, deeply integrated with creative software like Photoshop. When choosing an AI image tool, you need to consider your use case (art creation / product images / marketing materials / game assets), your requirements for image consistency, whether you need editing capabilities, budget, and technical skill level.",
     buyingGuide: [
-      "明确用途：艺术创作选Midjourney，营销素材选DALL-E 3或Firefly，游戏资产选Leonardo AI，技术用户选Stable Diffusion",
-      "图像质量和风格：Midjourney美学最佳，DALL-E 3文字理解最准，Stable Diffusion通过模型定制可实现各种风格",
-      "编辑和修改能力：需要局部重绘、扩展、背景移除选Firefly或Leonardo AI，Midjourney编辑能力较弱",
-      "一致性需求：产品图或角色系列需要高一致性选DALL-E 3（ChatGPT记忆）或Stable Diffusion（LoRA训练）",
-      "预算和技术：$10-30/月可获得大部分工具，Stable Diffusion免费但需要GPU和技术能力"
+      "Clarify your use case: choose Midjourney for artistic creation, DALL-E 3 or Firefly for marketing assets, Leonardo AI for game assets, and Stable Diffusion for technical users.",
+      "Image quality and style: Midjourney excels in aesthetics, DALL-E 3 has the most accurate text understanding, and Stable Diffusion can achieve various styles through model customization.",
+      "Editing and modification features: For inpainting, outpainting, and background removal, choose Firefly or Leonardo AI; Midjourney's editing capabilities are weaker.",
+      "Consistency needs: For product images or character series requiring high consistency, choose DALL-E 3 (ChatGPT memory) or Stable Diffusion (LoRA training)",
+      "Budget and technical requirements: $10–30/month gets you most tools; Stable Diffusion is free but requires a GPU and technical expertise."
     ],
     faqs: [
-      { q: "AI生成的图片有版权吗？可以商用吗？", a: "AI生成图片的版权问题在不同国家有不同规定。美国版权局目前不授予纯AI生成作品版权，但人类对AI输出进行了实质性修改和创作的部分可能受保护。商用方面：Midjourney付费版允许商用，DALL-E 3允许商用，Stable Diffusion基于开源许可证通常允许商用，Firefly付费版允许商用。但建议：重要商业用途咨询法律意见，对AI输出进行实质性修改，保留创作过程记录，避免生成与现有受保护作品高度相似的内容。" },
-      { q: "Midjourney和DALL-E 3哪个更适合新手？", a: "DALL-E 3更适合新手。DALL-E 3通过ChatGPT界面使用，自然语言理解能力强，能根据详细描述生成精准图像，不需要学习复杂的参数和提示词技巧。Midjourney通过Discord使用，需要学习参数（--ar、--v、--style等）和提示词技巧，上手门槛较高，但图像质量和艺术感更好。建议：新手从DALL-E 3开始，有一定经验后再尝试Midjourney以获得更高质量的艺术图像。" }
+      { q: "Do AI-generated images have copyright? Can they be used commercially?", a: "Copyright issues for AI-generated images have different regulations in different countries. The U.S. Copyright Office currently does not grant copyright to purely AI-generated works, but portions where a human has made substantial modifications and creative contributions to the AI output may be protected. For commercial use: Midjourney paid plans allow commercial use, DALL-E 3 allows commercial use, Stable Diffusion generally allows commercial use under its open-source license, and Firefly paid plans allow commercial use. However, it is recommended that you seek legal advice for important commercial uses, make substantial modifications to AI output, keep records of your creation process, and avoid generating content highly similar to existing protected works." },
+      { q: "Which is more suitable for beginners: Midjourney or DALL-E 3?", a: "DALL-E 3 is more beginner-friendly. DALL-E 3 works through the ChatGPT interface, has strong natural language understanding, and can generate accurate images from detailed descriptions without requiring you to learn complex parameters and prompt techniques. Midjourney is used through Discord and requires learning parameters (--ar, --v, --style, etc.) and prompt techniques, so it has a steeper learning curve, but it delivers better image quality and artistic feel. Recommendation: beginners should start with DALL-E 3, then try Midjourney after gaining some experience to get higher-quality artistic images." }
     ]
   },
   writing: {
-    intro: "AI写作工具正在改变内容创作的方式，从博客文章到营销文案，从邮件到报告，AI已经成为写作者的得力助手。2026年，AI写作工具主要分为两类：通用AI助手（ChatGPT、Claude、Gemini）具备强大的写作能力，适合各种写作场景；专业AI写作工具（Jasper、Copy.ai、Writesonic）专为营销和内容创作设计，提供模板、品牌声音、SEO优化、团队协作等功能。选择AI写作工具时，需要考虑你的写作类型（博客/营销文案/社交媒体/技术文档）、是否需要SEO优化、团队协作需求、品牌声音一致性、预算以及对AI味的控制能力。",
+    intro: "AI writing tools are transforming content creation, from blog posts to marketing copy, from emails to reports, AI has become a powerful assistant for writers. In 2026, AI writing tools fall mainly into two categories: general-purpose AI assistants (ChatGPT, Claude, Gemini) with strong writing capabilities suitable for various writing scenarios; specialized AI writing tools (Jasper, Copy.ai, Writesonic) designed specifically for marketing and content creation, offering templates, brand voice, SEO optimization, team collaboration, and more. When choosing an AI writing tool, you need to consider your writing type (blog/marketing copy/social media/technical documentation), whether you need SEO optimization, team collaboration needs, brand voice consistency, budget, and control over AI-sounding output.",
     buyingGuide: [
-      "明确写作类型：通用写作选ChatGPT或Claude，营销文案选Jasper，社交媒体选Copy.ai，长文博客选Claude",
-      "SEO优化需求：需要关键词优化、内容评分、SEO建议选Jasper或Writesonic（内置SEO功能）",
-      "品牌声音一致性：需要保持品牌语调选Jasper（Brand Voice）或Copy.ai（Brand Profile）",
-      "团队协作：多人协作选Jasper或Copy.ai（团队工作区、审批流程、共享模板）",
-      "去AI味：通用AI助手输出更自然，专业工具模板化输出可能AI味较重，需人工编辑润色"
+      "Define your writing type: choose ChatGPT or Claude for general writing, Jasper for marketing copy, Copy.ai for social media, and Claude for long-form blog posts.",
+      "SEO optimization needs: If you need keyword optimization, content scoring, and SEO suggestions, choose Jasper or Writesonic (with built-in SEO features).",
+      "Brand Voice Consistency: Need to maintain brand tone? Choose Jasper (Brand Voice) or Copy.ai (Brand Profile).",
+      "Team Collaboration: For multi-person collaboration, choose Jasper or Copy.ai (team workspaces, approval workflows, shared templates)",
+      "Removing the AI feel: General-purpose AI assistants produce more natural output, while specialized tools with templated output may have a heavier AI tone and require manual editing and polishing."
     ],
     faqs: [
-      { q: "AI写作工具生成的内容会被Google惩罚吗？", a: "Google明确表示不惩罚AI内容本身，而是惩罚低质量内容——无论是否由AI生成。Google的Helpful Content Update针对的是对用户没有帮助、为搜索引擎而写的内容。高质量的AI内容（有原创见解、经过人工编辑、提供真实价值、有EEAT信号）可以获得好排名。建议：用AI生成初稿但必须人工编辑，添加原创见解和个人经验，确保内容对读者有实质帮助，建立作者署名和专业背景，避免批量生成低质量内容。" },
-      { q: "专业AI写作工具（Jasper等）比通用AI（ChatGPT）好在哪里？", a: "专业AI写作工具的优势在于：营销模板（博客大纲、Facebook广告、邮件序列等开箱即用）、品牌声音（学习并保持品牌语调）、SEO集成（关键词优化、内容评分、Surfer SEO集成）、团队协作（共享工作区、审批流程、内容日历）、多语言支持、 plagiarism检查。但通用AI（ChatGPT/Claude）的优势是：写作质量更高更自然，模型更强大，灵活性更高，价格更低。建议：营销团队和内容机构选专业工具，个人写作者和通用需求选ChatGPT/Claude。" }
+      { q: "Will content generated by AI writing tools be penalized by Google?", a: "Google has made it clear that it does not penalize AI content itself, but rather low-quality content—whether AI-generated or not. Google's Helpful Content Update targets content that is unhelpful to users and written for search engines. High-quality AI content (with original insights, human editing, real value, and E-E-A-T signals) can rank well. Recommendations: Use AI to generate a first draft but always edit it manually, add original insights and personal experience, ensure the content is genuinely helpful to readers, establish author bylines and professional background, and avoid mass-producing low-quality content." },
+      { q: "What makes specialized AI writing tools (Jasper, etc.) better than general-purpose AI (ChatGPT)?", a: "The advantages of professional AI writing tools include: marketing templates (blog outlines, Facebook ads, email sequences, etc., ready to use out of the box), brand voice (learns and maintains your brand tone), SEO integration (keyword optimization, content scoring, Surfer SEO integration), team collaboration (shared workspaces, approval workflows, content calendar), multilingual support, and plagiarism checking. However, general-purpose AI (ChatGPT/Claude) offers advantages such as higher and more natural writing quality, more powerful models, greater flexibility, and lower prices. Recommendation: marketing teams and content agencies should choose professional tools, while individual writers and general needs should choose ChatGPT/Claude." }
     ]
   },
   video: {
-    intro: "AI视频生成工具是2024-2026年发展最快的AI领域之一，从文本到视频的生成质量有了惊人的进步。2026年，AI视频工具主要分为：文生视频模型（Runway Gen-3、Sora、Pika、Kling）根据文本描述生成短视频；AI视频编辑工具（Descript、CapCut AI）提供AI辅助的剪辑、字幕、背景移除；数字人工具（Synthesia、HeyGen）生成AI数字人讲解视频。选择AI视频工具时，需要考虑你的用途（短视频创作/营销视频/培训视频/影视特效）、视频长度、质量要求、是否需要数字人、编辑能力、预算以及技术水平。",
+    intro: "AI video generation tools are one of the fastest-growing AI fields from 2024 to 2026, with remarkable progress in text-to-video generation quality. In 2026, AI video tools are mainly divided into: text-to-video models (Runway Gen-3, Sora, Pika, Kling) that generate short videos from text descriptions; AI video editing tools (Descript, CapCut AI) that provide AI-assisted editing, subtitles, and background removal; and digital human tools (Synthesia, HeyGen) that generate AI digital human explainer videos. When choosing an AI video tool, you need to consider your use case (short video creation/marketing videos/training videos/film and TV effects), video length, quality requirements, whether you need digital humans, editing capabilities, budget, and technical skill level.",
     buyingGuide: [
-      "明确用途：创意短视频选Runway或Pika，电影级质量选Sora，数字人讲解选Synthesia或HeyGen，AI剪辑选Descript",
-      "视频长度：目前AI生成视频多为5-15秒，需要长视频选支持扩展的工具或拼接多个片段",
-      "质量和真实感：Sora质量最高但访问受限，Runway Gen-3质量优秀且易获得，Kling在中文场景表现好",
-      "数字人需求：培训、营销、讲解视频选Synthesia（模板多）或HeyGen（质量高、多语言）",
-      "预算：$12-40/月可获得大部分工具，高质量生成消耗积分较快，需评估使用量"
+      "Define your use case: choose Runway or Pika for creative short videos, Sora for cinematic quality, Synthesia or HeyGen for digital human presentations, and Descript for AI editing.",
+      "Video Length: Currently, most AI-generated videos are 5–15 seconds. For longer videos, choose tools that support extension or stitch multiple clips together.",
+      "Quality and realism: Sora has the highest quality but limited access, Runway Gen-3 offers excellent quality and is easily accessible, Kling performs well in Chinese scenarios",
+      "Digital human needs: For training, marketing, or explainer videos, choose Synthesia (more templates) or HeyGen (higher quality, multilingual).",
+      "Budget: $12–40/month gives access to most tools; high-quality generations consume credits quickly, so assess your usage."
     ],
     faqs: [
-      { q: "AI生成的视频可以商用吗？", a: "大多数付费AI视频工具允许商用生成的视频，但有一些限制：不能生成违法或有害内容，不能冒充真实人物（数字人工具除外），不能生成与受保护作品高度相似的内容，部分工具对大规模商用或高流量使用有额外要求。建议：阅读各工具的服务条款，重要商业用途咨询法律意见，对AI输出进行实质性编辑，保留创作记录。数字人工具通常明确允许商用，但需确保不用于欺诈或冒充。" },
-      { q: "AI视频生成会取代视频剪辑师吗？", a: "短期内不会完全取代。AI视频生成工具目前擅长生成短视频片段和辅助剪辑，但在叙事结构、情感表达、精细剪辑、色彩调色、声音设计等方面仍需人类专业人士。AI会改变视频制作流程：剪辑师从手动剪辑转向AI辅助+创意指导，效率大幅提升。会用AI工具的视频创作者会更有竞争力。对于简单的营销视频、社交媒体短视频、培训视频，AI工具已经可以独立完成大部分工作。" }
+      { q: "Can AI-generated videos be used commercially?", a: "Most paid AI video tools allow commercial use of generated videos, but with some restrictions: they cannot generate illegal or harmful content, cannot impersonate real people (except digital human tools), cannot generate content highly similar to copyrighted works, and some tools have additional requirements for large-scale commercial or high-traffic use. Recommendations: read each tool's terms of service, seek legal advice for important commercial use, make substantive edits to AI output, and keep creation records. Digital human tools usually explicitly allow commercial use, but you should ensure they are not used for fraud or impersonation." },
+      { q: "Will AI video generation replace video editors?", a: "AI won't fully replace human video professionals in the short term. AI video generation tools are currently good at generating short video clips and assisting with editing, but they still require human professionals in areas such as narrative structure, emotional expression, fine editing, color grading, and sound design. AI will change the video production workflow: editors will shift from manual editing to AI-assisted work plus creative direction, greatly improving efficiency. Video creators who know how to use AI tools will be more competitive. For simple marketing videos, social media short videos, and training videos, AI tools can already independently handle most of the work." }
     ]
   },
   audio: {
-    intro: "AI音频工具正在革新语音和音乐创作，从逼真的语音合成到原创歌曲生成，AI已经成为音频创作者的得力工具。2026年，AI音频工具主要分为：语音合成工具（ElevenLabs）生成逼真的人类语音，支持多语言、多角色、情感控制；音乐生成工具（Suno、Udio）根据文本描述生成包含人声的完整歌曲；会议转录工具（Otter.ai、Fireflies）实时转录会议并生成摘要和行动项；音频编辑工具（Descript）提供AI辅助的音频编辑、降噪、语音克隆。选择AI音频工具时，需要考虑你的用途（语音合成/音乐创作/会议转录/播客制作）、语音质量要求、多语言需求、商业使用权限、预算。",
+    intro: "AI audio tools are revolutionizing voice and music creation. From lifelike speech synthesis to original song generation, AI has become an essential tool for audio creators. In 2026, AI audio tools mainly fall into the following categories: voice synthesis tools (ElevenLabs) that generate realistic human voices and support multilingual, multi-character, and emotional control; music generation tools (Suno, Udio) that generate complete songs with vocals based on text descriptions; meeting transcription tools (Otter.ai, Fireflies) that transcribe meetings in real time and produce summaries and action items; and audio editing tools (Descript) that offer AI-assisted audio editing, noise reduction, and voice cloning. When choosing an AI audio tool, consider your use case (voice synthesis/music creation/meeting transcription/podcast production), voice quality requirements, multilingual needs, commercial usage rights, and budget.",
     buyingGuide: [
-      "明确用途：语音合成选ElevenLabs，AI音乐选Suno，会议转录选Otter.ai，播客制作选Descript",
-      "语音质量：ElevenLabs语音最逼真，支持情感控制和多角色，适合 audiobook、视频配音、IVR",
-      "音乐创作：Suno人声质量最佳，支持自定义歌词和风格，适合内容创作者和音乐人做demo",
-      "会议效率：Otter.ai转录准确，支持实时字幕、摘要、行动项提取，适合远程团队",
-      "商用权限：语音合成商用需付费版，音乐商用权限各工具不同，需仔细阅读条款"
+      "Clear use cases: Choose ElevenLabs for voice synthesis, Suno for AI music, Otter.ai for meeting transcription, and Descript for podcast production.",
+      "Voice Quality: ElevenLabs voices are the most realistic, support emotional control and multiple characters, ideal for audiobooks, video voiceovers, and IVR.",
+      "Music Creation: Suno offers the best vocal quality, supports custom lyrics and styles, and is ideal for content creators and musicians making demos.",
+      "Meeting Efficiency: Otter.ai transcribes accurately, supports real-time captions, summaries, and action item extraction, ideal for remote teams.",
+      "Commercial rights: Voice synthesis commercial use requires the paid version; music commercial rights vary by tool, so review the terms carefully."
     ],
     faqs: [
-      { q: "AI语音合成可以用来克隆别人的声音吗？", a: "技术上可以，但伦理和法律上有严格限制。ElevenLabs等工具明确禁止未经授权克隆他人声音，要求用户只能克隆自己有权使用的声音，并提供了声音保护机制（个人可以注册自己的声音防止被克隆）。法律上，未经授权克隆他人声音可能侵犯肖像权、声音权，用于欺诈可能构成犯罪。建议：只克隆自己或获得明确授权的声音，明确标注AI生成内容，不用于误导或欺诈，关注各地区AI声音相关法规。" },
-      { q: "AI生成的音乐可以用于视频和播客吗？", a: "可以，但需要注意商用权限。Suno等工具的付费版通常允许将生成的音乐用于视频、播客、游戏等内容，但有一些限制：不能将AI音乐作为纯音乐作品在流媒体平台发行（部分工具限制），不能用于NFT，高流量或大规模商用可能需要更高档位。建议：阅读工具的商用条款，在内容描述中注明AI生成，重要商业项目咨询法律意见，保留生成记录和付费凭证。对于需要纯背景音乐的场景，也可以考虑Epidemic Sound等版权音乐库。" }
+      { q: "Can AI voice synthesis be used to clone someone else's voice?", a: "Technically possible, but strict ethical and legal limits apply. Tools like ElevenLabs explicitly prohibit cloning someone else's voice without authorization, require users to clone only voices they have the right to use, and offer voice protection mechanisms (individuals can register their own voices to prevent cloning). Legally, cloning someone else's voice without authorization may infringe on their image rights and voice rights, and using it for fraud may constitute a crime. Recommendations: only clone your own voice or a voice with explicit authorization; clearly label AI-generated content; do not use it to mislead or defraud; and stay informed about AI voice regulations in different regions." },
+      { q: "Can AI-generated music be used for videos and podcasts?", a: "Yes, but you need to pay attention to commercial usage rights. Paid plans for tools like Suno generally allow you to use the generated music in videos, podcasts, games, and other content, but there are some restrictions: you cannot release AI music as standalone music on streaming platforms (some tools restrict this), cannot use it for NFTs, and high-traffic or large-scale commercial use may require a higher tier. Recommendations: read the tool's commercial terms, note AI generation in the content description, consult legal advice for important commercial projects, and keep generation records and payment receipts. For scenarios that require pure background music, you can also consider royalty-free music libraries such as Epidemic Sound." }
     ]
   },
   productivity: {
-    intro: "AI生产力工具正在改变我们的工作方式，从文档处理到会议管理，从邮件回复到任务规划，AI已经成为职场人士的得力助手。2026年，AI生产力工具主要分为：办公套件AI助手（Microsoft 365 Copilot、Google Duet AI）深度整合Word/Excel/PPT/Gmail等办公应用；笔记和知识管理AI（Notion AI、Obsidian插件）帮助整理、总结、检索信息；会议AI助手（Otter.ai、Fireflies、Fathom）实时转录、总结、提取行动项；邮件AI助手（Superhuman、Shortwave）帮助快速处理邮件。选择AI生产力工具时，需要考虑你使用的办公生态（Microsoft/Google/Notion）、主要痛点（文档/会议/邮件/笔记）、团队协作需求、隐私和安全要求、预算。",
+    intro: "AI productivity tools are transforming the way we work. From document processing to meeting management, from email replies to task planning, AI has become an indispensable assistant for professionals. In 2026, AI productivity tools are mainly divided into: office suite AI assistants (Microsoft 365 Copilot, Google Duet AI) deeply integrated with Word/Excel/PPT/Gmail and other office applications; note-taking and knowledge management AI (Notion AI, Obsidian plugins) that help organize, summarize, and retrieve information; meeting AI assistants (Otter.ai, Fireflies, Fathom) that transcribe, summarize, and extract action items in real time; and email AI assistants (Superhuman, Shortwave) that help process emails quickly. When choosing an AI productivity tool, you need to consider the office ecosystem you use (Microsoft/Google/Notion), your main pain points (documents/meetings/email/notes), team collaboration needs, privacy and security requirements, and budget.",
     buyingGuide: [
-      "选择办公生态：Microsoft 365用户选Copilot，Google Workspace用户选Duet AI，Notion用户选Notion AI",
-      "明确主要痛点：文档处理选Copilot/Duet AI，会议管理选Otter.ai/Fathom，邮件处理选Superhuman",
-      "团队协作：企业用户选有管理后台、SSO、审计日志的企业版，小团队选基础版即可",
-      "隐私安全：处理敏感数据选有企业版、数据不用于训练、合规认证（SOC2/GDPR）的工具",
-      "预算：$10-30/人/月可获得大部分工具，企业版价格更高但有安全保障"
+      "Choose your office ecosystem: Microsoft 365 users choose Copilot, Google Workspace users choose Duet AI, Notion users choose Notion AI",
+      "Identify the main pain points: for document processing, choose Copilot/Duet AI; for meeting management, choose Otter.ai/Fathom; for email handling, choose Superhuman.",
+      "Team collaboration: Enterprise users should choose the enterprise edition with an admin console, SSO, and audit logs; small teams can simply choose the basic plan.",
+      "Privacy & Security: For sensitive data, choose tools with enterprise plans, no training on your data, and compliance certifications (SOC2/GDPR)",
+      "Budget: $10-30/person/month gets you most tools; enterprise plans cost more but include security assurance."
     ],
     faqs: [
-      { q: "Microsoft 365 Copilot值得买吗？", a: "取决于你的使用频率和角色。Copilot ($30/月+M365订阅) 适合：每天大量使用Office的职场人士（写文档、做PPT、处理邮件、开会），能显著提升效率；企业团队统一部署，协作效率提升明显。不值得买：轻度Office用户（每周只用几次），性价比不高；预算有限的个人用户，ChatGPT Plus ($20/月) 更灵活；非Microsoft生态用户。建议：先试用30天评估实际使用频率和效率提升，重度用户值得购买，轻度用户用ChatGPT等通用AI即可。" },
-      { q: "AI会议转录工具的准确率如何？", a: "2026年主流AI会议转录工具（Otter.ai、Fireflies、Fathom）的英文转录准确率可达90-95%，中文准确率约80-90%，取决于口音、背景噪音、专业术语等因素。多人对话时说话人识别准确率约80-90%。摘要和行动项提取的质量取决于转录准确性和AI模型，主流工具表现良好但仍需人工核对。建议：重要会议人工核对转录和行动项，专业术语多的会议可能需要自定义词汇表，英文会议效果优于中文会议。" }
+      { q: "Is Microsoft 365 Copilot Worth Buying?", a: "It depends on your usage frequency and role. Copilot ($30/month + Microsoft 365 subscription) is a good fit for: professionals who use Office heavily every day (writing documents, making PowerPoint presentations, handling emails, attending meetings), as it can significantly improve efficiency; enterprise teams with unified deployment, where collaboration efficiency improves noticeably. Not worth buying for: light Office users (only a few times per week), as the cost-performance ratio is low; budget-conscious individual users, for whom ChatGPT Plus ($20/month) is more flexible; users outside the Microsoft ecosystem. Suggestion: Try it for 30 days first to evaluate actual usage frequency and efficiency gains. Heavy users are worth buying, while light users can use general-purpose AI tools like ChatGPT." },
+      { q: "How accurate are AI meeting transcription tools?", a: "In 2026, mainstream AI meeting transcription tools (Otter.ai, Fireflies, Fathom) can achieve 90-95% English transcription accuracy, and around 80-90% Chinese accuracy, depending on factors such as accent, background noise, and technical terminology. In multi-speaker conversations, speaker identification accuracy is about 80-90%. The quality of summaries and action item extraction depends on transcription accuracy and the AI model; mainstream tools perform well but still require manual review. Recommendations: manually verify transcripts and action items for important meetings; meetings with heavy technical terminology may require a custom vocabulary; English meetings deliver better results than Chinese meetings." }
     ]
   },
   search: {
-    intro: "AI搜索工具正在改变我们获取信息的方式，从传统的关键词搜索到自然语言问答，AI搜索提供了更直接、更高效的信息获取体验。2026年，AI搜索工具主要分为：AI搜索引擎（Perplexity、You.com）结合实时搜索和AI综合，提供带引用的答案；浏览器内置AI（Arc Search、Opera Aria）在浏览器中提供AI搜索和摘要；企业搜索（Glean、Cortex）搜索企业内部文档和知识。选择AI搜索工具时，需要考虑你的搜索类型（研究/日常/企业内部）、对引用和来源的需求、隐私要求、是否需要深度研究功能、预算。",
+    intro: "AI search tools are changing how we access information. From traditional keyword search to natural language Q&A, AI search delivers a more direct and efficient information retrieval experience. In 2026, AI search tools mainly fall into: AI search engines (Perplexity, You.com), which combine real-time search with AI synthesis to provide answers with citations; browser-native AI (Arc Search, Opera Aria), which offers AI search and summarization within the browser; and enterprise search (Glean, Cortex), which searches internal company documents and knowledge. When choosing an AI search tool, consider your search type (research/daily/enterprise), your need for citations and sources, privacy requirements, whether you need deep research features, and budget.",
     buyingGuide: [
-      "明确搜索类型：研究和深度问答选Perplexity，日常搜索选You.com或浏览器AI，企业内部搜索选Glean",
-      "引用和来源：需要可验证的来源和引用选Perplexity（每个论断都有来源链接）",
-      "深度研究：需要多步搜索、综合分析、长报告选Perplexity Pro Search或Deep Research模式",
-      "隐私要求：不希望搜索数据被用于训练选有隐私模式的工具，企业用户选企业版",
-      "预算：免费版可满足日常使用，$20/月Pro版可获得无限深度搜索和高级功能"
+      "Clarify your search type: choose Perplexity for research and deep Q&A, You.com or browser AI for everyday search, and Glean for enterprise internal search.",
+      "Citations and sources: Need verifiable sources and citations? Choose Perplexity (every claim comes with a source link)",
+      "Deep research: For multi-step searches, comprehensive analysis, and long reports, choose Perplexity Pro Search or Deep Research mode",
+      "Privacy requirements: If you don't want search data used for training, choose tools with a privacy mode; enterprise users should choose the enterprise version.",
+      "Budget: The free version is sufficient for daily use, and the $20/month Pro version offers unlimited deep search and advanced features"
     ],
     faqs: [
-      { q: "AI搜索会取代Google吗？", a: "短期内不会完全取代，但会显著分流。AI搜索（Perplexity等）在研究、问答、综合类查询上体验更好——直接给出答案和引用，省去点击多个链接的时间。但Google在本地搜索、购物、图片、视频、地图、最新新闻等方面仍有优势。2026年的趋势是：Google也在整合AI（AI Overview），AI搜索工具也在增加更多搜索功能。建议：研究和学习用AI搜索，日常和本地用Google，两者结合使用效率最高。" },
-      { q: "AI搜索的答案可靠吗？会有幻觉吗？", a: "AI搜索的答案比纯聊天AI更可靠，因为它基于实时搜索结果并提供引用，但仍可能出现问题：引用的来源可能质量不高（博客、内容农场），可能断章取义或曲解来源，可能遗漏重要信息，综合多个来源时可能产生矛盾。建议：重要信息点击引用链接核实原文，交叉验证多个来源，对有争议的话题注意来源偏见，AI搜索作为研究起点而非最终答案。Perplexity等工具的Pro Search模式质量更高，但仍需验证。" }
+      { q: "Will AI Search Replace Google?", a: "In the short term, AI search won’t completely replace Google, but it will significantly divert traffic. AI search (Perplexity, etc.) offers a better experience for research, Q&A, and comprehensive queries—it directly provides answers and citations, saving you the time of clicking through multiple links. However, Google still has advantages in local search, shopping, images, video, maps, and the latest news. The trend for 2026 is clear: Google is integrating AI (AI Overview), while AI search tools are also adding more search features. Suggestion: use AI search for research and learning, and Google for daily and local searches; combining both gives you the highest efficiency." },
+      { q: "Are AI search answers reliable? Do they hallucinate?", a: "AI search answers are more reliable than pure chat AI because they are based on real-time search results and provide citations, but issues can still arise: cited sources may be low quality (blogs, content farms), may take sources out of context or misinterpret them, may omit important information, and may produce contradictions when synthesizing multiple sources. Recommendations: For important information, click citation links to verify original sources, cross-check multiple sources, watch for source bias on controversial topics, and treat AI search as a research starting point rather than a final answer. Tools like Perplexity's Pro Search mode offer higher quality, but still require verification." }
     ]
   },
   design: {
-    intro: "AI设计工具正在革新UI/UX设计和创意设计流程，从线框图到高保真原型，从图像编辑到设计系统，AI已经成为设计师的得力助手。2026年，AI设计工具主要分为：UI设计AI（Figma AI、Magician、Galileo AI）在设计工具中提供AI辅助的布局生成、组件设计、文案生成；图像编辑AI（Adobe Firefly、Canva AI、Photoshop Generative Fill）提供AI辅助的图像生成、编辑、背景移除、扩展；设计系统AI（Frontitude、Stitch）帮助管理和生成设计系统。选择AI设计工具时，需要考虑你的设计类型（UI/UX/平面/产品）、使用的设计工具（Figma/Adobe/Canva）、对设计质量的要求、团队协作需求、预算。",
+    intro: "AI design tools are revolutionizing UI/UX design and creative design workflows. From wireframes to high-fidelity prototypes, from image editing to design systems, AI has become an indispensable assistant for designers. In 2026, AI design tools mainly fall into: UI design AI (Figma AI, Magician, Galileo AI), which provide AI-assisted layout generation, component design, and copy generation within design tools; image editing AI (Adobe Firefly, Canva AI, Photoshop Generative Fill), which provide AI-assisted image generation, editing, background removal, and expansion; and design system AI (Frontitude, Stitch), which help manage and generate design systems. When choosing an AI design tool, consider your design type (UI/UX/graphic/product), the design tools you use (Figma/Adobe/Canva), your requirements for design quality, team collaboration needs, and budget.",
     buyingGuide: [
-      "明确设计类型：UI/UX设计选Figma AI，平面设计选Canva AI或Firefly，照片编辑选Photoshop Generative Fill",
-      "设计工具生态：Figma用户选Figma AI或Magician插件，Adobe用户选Firefly，Canva用户选Canva AI",
-      "设计质量：需要高质量UI设计选Figma AI（基于设计系统生成），需要创意图像选Firefly或Midjourney",
-      "团队协作：设计团队选有团队工作区、共享设计系统、版本控制的工具",
-      "预算：$10-30/月可获得大部分工具，Adobe Creative Cloud订阅包含Firefly"
+      "Clarify your design type: choose Figma AI for UI/UX design, Canva AI or Firefly for graphic design, and Photoshop Generative Fill for photo editing.",
+      "Design tool ecosystem: Figma users choose Figma AI or the Magician plugin, Adobe users choose Firefly, Canva users choose Canva AI",
+      "Design quality: For high-quality UI design, choose Figma AI (generated based on design systems); for creative images, choose Firefly or Midjourney.",
+      "Team Collaboration: Design Teams Choose Tools with Team Workspaces, Shared Design Systems, and Version Control",
+      "Budget: $10-30/month gets you most tools; Adobe Creative Cloud subscription includes Firefly"
     ],
     faqs: [
-      { q: "AI设计工具会取代UI设计师吗？", a: "不会完全取代，但会改变设计师的工作方式。AI设计工具擅长：生成布局变体、创建重复组件、生成占位文案、快速原型、图像编辑辅助。但仍需要人类设计师进行：用户研究、设计策略、信息架构、交互细节、品牌一致性、设计系统维护、可访问性确保。AI会让设计师从重复劳动中解放出来，更专注于创意和策略。会用AI工具的设计师效率会大幅提升，不会用AI工具的设计师可能面临竞争压力。建议：设计师学习使用AI工具作为助手，而不是担心被取代。" },
-      { q: "Figma AI和Adobe Firefly哪个更好？", a: "取决于你的设计场景。Figma AI专注于UI/UX设计，在Figma中提供AI辅助的布局生成、组件设计、设计系统应用，适合UI/UX设计师和产品团队。Adobe Firefly专注于图像生成和编辑，与Photoshop、Illustrator等创意软件深度整合，适合平面设计师、摄影师和创意专业人士。两者不是直接竞争关系，而是针对不同设计场景。很多设计师同时使用：Figma AI做UI设计，Firefly做图像素材。建议：UI/UX设计师选Figma AI，平面/创意设计师选Firefly，两者都需要的可以都用。" }
+      { q: "Will AI Design Tools Replace UI Designers?", a: "It will not completely replace designers, but it will change the way designers work. AI design tools are good at: generating layout variations, creating repetitive components, generating placeholder copy, rapid prototyping, and image editing assistance. However, human designers are still needed for: user research, design strategy, information architecture, interaction details, brand consistency, design system maintenance, and accessibility assurance. AI will free designers from repetitive tasks, allowing them to focus more on creativity and strategy. Designers who can use AI tools will see a significant increase in efficiency, while those who cannot may face competitive pressure. Suggestion: Designers should learn to use AI tools as assistants rather than worry about being replaced." },
+      { q: "Figma AI vs Adobe Firefly: Which is Better?", a: "It depends on your design scenario. Figma AI focuses on UI/UX design, offering AI-assisted layout generation, component design, and design system application within Figma, making it ideal for UI/UX designers and product teams. Adobe Firefly focuses on image generation and editing, deeply integrated with creative software like Photoshop and Illustrator, making it suitable for graphic designers, photographers, and creative professionals. The two are not direct competitors; they target different design scenarios. Many designers use both: Figma AI for UI design and Firefly for image assets. Recommendation: choose Figma AI if you're a UI/UX designer, choose Firefly if you're a graphic/creative designer, and if you need both, you can use both." }
     ]
   },
   agent: {
-    intro: "AI Agent框架是2025-2026年最热门的AI技术方向之一，能够让AI自主完成复杂任务，从网页浏览到代码编写，从数据分析到工作流自动化。AI Agent不同于传统的AI对话——它能够规划任务、调用工具、执行操作、迭代改进，最终完成多步骤的复杂目标。主流AI Agent框架包括：LangChain（最流行的开源框架）、LlamaIndex（专注于数据连接和RAG）、AutoGPT（自主AI代理）、CrewAI（多Agent协作）、Dify（可视化AI应用开发平台）、n8n（工作流自动化+AI节点）。选择AI Agent框架时，需要考虑你的技术水平、使用场景（自主代理/RAG/工作流/多Agent）、是否需要可视化界面、部署方式（云/本地/自托管）、编程语言偏好。",
+    intro: "AI Agent frameworks are one of the hottest AI technology directions for 2025-2026, enabling AI to autonomously complete complex tasks, from web browsing to code writing, from data analysis to workflow automation. AI Agent differs from traditional AI conversations—it can plan tasks, call tools, execute actions, iterate and improve, and ultimately complete multi-step complex goals. Mainstream AI Agent frameworks include: LangChain (the most popular open-source framework), LlamaIndex (focused on data connections and RAG), AutoGPT (autonomous AI agents), CrewAI (multi-Agent collaboration), Dify (visual AI application development platform), and n8n (workflow automation + AI nodes). When choosing an AI Agent framework, you need to consider your technical skill level, use case (autonomous agents / RAG / workflow / multi-Agent), whether you need a visual interface, deployment method (cloud / local / self-hosted), and programming language preference.",
     buyingGuide: [
-      "技术水平：开发者选LangChain或LlamaIndex，非技术用户选Dify或n8n（可视化），想要自主代理选AutoGPT或CrewAI",
-      "使用场景：RAG和数据连接选LlamaIndex，通用Agent开发选LangChain，工作流自动化选n8n，可视化AI应用选Dify",
-      "多Agent协作：需要多个AI角色协作选CrewAI或AutoGen，适合复杂任务分解",
-      "部署方式：云服务选Dify Cloud或LangChain Cloud，自托管选开源框架自行部署，本地运行选Ollama+开源框架",
-      "学习资源：LangChain社区最大文档最全，Dify有中文社区和教程，n8n有丰富的模板库"
+      "Skill level: Developers should choose LangChain or LlamaIndex, non-technical users should choose Dify or n8n (visual), and for autonomous agents choose AutoGPT or CrewAI.",
+      "Use cases: Choose LlamaIndex for RAG and data connections, LangChain for general agent development, n8n for workflow automation, and Dify for visual AI applications.",
+      "Multi-Agent Collaboration: Choose CrewAI or AutoGen when you need multiple AI roles working together, ideal for breaking down complex tasks.",
+      "Deployment method: For cloud service, choose Dify Cloud or LangChain Cloud; for self-hosting, choose an open-source framework and deploy it yourself; for local running, choose Ollama + open-source framework.",
+      "Learning Resources: LangChain has the largest community and the most comprehensive documentation, Dify has a Chinese community and tutorials, and n8n has a rich template library."
     ],
     faqs: [
-      { q: "AI Agent和AI聊天机器人有什么区别？", a: "AI聊天机器人（ChatGPT等）是单轮或多轮对话，用户每次输入一个指令，AI给出一个回答，需要用户逐步引导。AI Agent是自主的——用户给出一个目标（如'帮我调研竞品并生成报告'），Agent会自主规划任务步骤、调用工具（搜索、浏览器、代码执行、文件操作）、执行操作、检查结果、迭代改进，最终完成整个目标。AI Agent的核心能力是：规划（分解任务）、工具调用（使用外部工具）、记忆（记住之前的操作和结果）、自主迭代（根据反馈调整策略）。简单说：聊天机器人是你问一句它答一句，Agent是你给一个目标它自己干完。" },
-      { q: "非技术用户可以使用AI Agent吗？", a: "可以，但需要选择合适的工具。非技术用户建议：Dify（可视化拖拽搭建AI应用和Agent，有中文界面和教程）、n8n（工作流自动化工具，有AI节点，可视化连接）、ChatGPT插件/自定义GPT（通过自然语言配置简单的Agent）、Coze（字节跳动的AI Bot开发平台，可视化）。这些工具不需要写代码，通过可视化界面和自然语言配置即可创建AI Agent。但更复杂的Agent（多Agent协作、自定义工具、深度集成）仍需要技术能力。建议：非技术用户从Dify或n8n开始，有一定基础后再学习LangChain等开发框架。" }
+      { q: "What is the difference between AI Agents and AI chatbots?", a: "AI chatbots (ChatGPT, etc.) are single-turn or multi-turn conversations. The user enters one instruction at a time, the AI gives one answer, and the user needs to guide it step by step. AI Agents are autonomous—users give a goal (such as "research competitors and generate a report for me"), and the Agent autonomously plans task steps, calls tools (search, browser, code execution, file operations), executes actions, checks results, iterates and improves, and ultimately completes the entire goal. The core capabilities of an AI Agent are: planning (decomposing tasks), tool calling (using external tools), memory (remembering previous operations and results), and autonomous iteration (adjusting strategy based on feedback). Simply put: a chatbot is you ask one thing and it answers one thing; an Agent is you give one goal and it gets it done on its own." },
+      { q: "Can non-technical users use AI Agent?", a: "Yes, but you need to choose the right tools. For non-technical users, we recommend: Dify (visual drag-and-drop building of AI applications and agents, with Chinese interface and tutorials), n8n (workflow automation tool with AI nodes and visual connections), ChatGPT plugins/custom GPTs (configure simple agents through natural language), and Coze (ByteDance's AI bot development platform, visual). These tools do not require coding; you can create AI agents through visual interfaces and natural language configuration. However, more complex agents (multi-agent collaboration, custom tools, deep integration) still require technical skills. Suggestion: non-technical users should start with Dify or n8n, and after building some foundation, learn development frameworks such as LangChain." }
     ]
   },
   "agent-framework": {
-    intro: "AI Agent框架是构建自主AI系统的基础工具，提供任务规划、工具调用、记忆管理、多Agent协作等核心能力。2026年，AI Agent框架已经从实验性技术发展为生产级工具，被广泛应用于自动化工作流、客服机器人、数据分析、代码编写等场景。主流框架包括：LangChain（最流行的开源框架，生态丰富）、LlamaIndex（专注于数据连接和RAG）、CrewAI（多Agent协作）、AutoGen（微软的多Agent框架）、Dify（可视化AI应用开发平台）。选择AI Agent框架时，需要考虑你的技术水平、使用场景、是否需要可视化界面、部署方式以及编程语言偏好。",
+    intro: "AI agent frameworks are foundational tools for building autonomous AI systems, providing core capabilities such as task planning, tool calling, memory management, and multi-agent collaboration. In 2026, AI agent frameworks have evolved from experimental technology into production-grade tools, and are widely used in scenarios such as automated workflows, customer service bots, data analysis, and code writing. Mainstream frameworks include: LangChain (the most popular open-source framework with a rich ecosystem), LlamaIndex (focused on data connection and RAG), CrewAI (multi-agent collaboration), AutoGen (Microsoft's multi-agent framework), and Dify (a visual AI application development platform). When choosing an AI agent framework, you need to consider your technical skill level, use case, whether you need a visual interface, deployment method, and programming language preference.",
     buyingGuide: [
-      "评估技术水平：非技术用户优先选Dify或Coze等可视化平台，开发者可选LangChain或LlamaIndex",
-      "明确使用场景：简单自动化选n8n+AI节点，复杂多Agent选CrewAI或AutoGen，RAG应用选LlamaIndex",
-      "考虑部署方式：云服务优先选Dify或Coze，自托管选LangChain或CrewAI，企业级选AutoGen",
-      "评估生态和社区：LangChain生态最丰富，教程和插件最多；CrewAI多Agent协作最成熟；Dify可视化最好",
-      "成本考量：开源框架免费但需要自己部署和维护，云平台有免费额度但高级功能付费"
+      "Assess technical skill level: Non-technical users should prioritize visual platforms like Dify or Coze, while developers can choose LangChain or LlamaIndex.",
+      "Clarify your use case: for simple automation choose n8n + AI nodes, for complex multi-agent systems choose CrewAI or AutoGen, and for RAG applications choose LlamaIndex.",
+      "Consider deployment method: For cloud services, prioritize Dify or Coze; for self-hosting, choose LangChain or CrewAI; for enterprise-level, choose AutoGen.",
+      "Evaluating the ecosystem and community: LangChain has the richest ecosystem, with the most tutorials and plugins; CrewAI has the most mature multi-agent collaboration; Dify offers the best visualization.",
+      "Cost consideration: Open-source frameworks are free but require self-hosting and maintenance, while cloud platforms offer free quotas but charge for advanced features."
     ],
     faqs: [
-      { q: "AI Agent框架和AI Agent平台有什么区别？", a: "AI Agent框架（如LangChain、CrewAI）是代码库，需要开发者编写代码来构建Agent，灵活性高但需要技术能力。AI Agent平台（如Dify、Coze）是可视化工具，通过拖拽和自然语言配置即可创建Agent，易用性高但灵活性有限。选择取决于你的技术水平和需求复杂度：简单场景用平台，复杂场景用框架。" },
-      { q: "哪个AI Agent框架最适合初学者？", a: "初学者建议从Dify开始，它提供可视化界面、中文文档、丰富的模板，不需要写代码就能创建AI Agent和应用。有一定编程基础后，可以学习LangChain，它是最流行的框架，生态最丰富，教程最多。如果对多Agent协作感兴趣，可以学习CrewAI，它的概念简单，上手快。" }
+      { q: "What is the difference between AI Agent framework and AI Agent platform?", a: "AI Agent frameworks (such as LangChain, CrewAI) are code libraries that require developers to write code to build agents, offering high flexibility but requiring technical skills. AI Agent platforms (such as Dify, Coze) are visual tools that let you create agents through drag-and-drop and natural language configuration, offering high ease of use but limited flexibility. The choice depends on your technical level and the complexity of your needs: use a platform for simple scenarios, and use a framework for complex scenarios." },
+      { q: "Which AI Agent framework is best for beginners?", a: "Beginners are advised to start with Dify, which offers a visual interface, Chinese documentation, and rich templates, allowing you to create AI Agents and applications without writing code. After you have some programming foundation, you can learn LangChain, which is the most popular framework with the richest ecosystem and the most tutorials. If you are interested in multi-Agent collaboration, you can learn CrewAI, as its concepts are simple and quick to get started." }
     ]
   },
   "agent-runtime": {
-    intro: "AI Agent运行时是执行和管理AI Agent的平台，提供Agent部署、监控、调度、扩展等能力。2026年，随着AI Agent从实验走向生产，Agent运行时成为关键基础设施。主流运行时包括：LangGraph（LangChain的Agent执行引擎，支持状态管理和复杂工作流）、AutoGen（微软的多Agent运行时）、CrewAI（内置运行时的多Agent框架）、Modal（Serverless AI运行时）、Banana（GPU云运行时）。选择AI Agent运行时时，需要考虑你的Agent框架、部署环境、性能需求、监控需求以及成本。",
+    intro: "AI agent runtime is the platform for executing and managing AI agents, providing capabilities such as agent deployment, monitoring, scheduling, and scaling. In 2026, as AI agents move from experimentation to production, agent runtime becomes critical infrastructure. Mainstream runtimes include: LangGraph (LangChain's agent execution engine, supporting state management and complex workflows), AutoGen (Microsoft's multi-agent runtime), CrewAI (a multi-agent framework with built-in runtime), Modal (serverless AI runtime), and Banana (GPU cloud runtime). When choosing an AI agent runtime, you need to consider your agent framework, deployment environment, performance requirements, monitoring needs, and cost.",
     buyingGuide: [
-      "匹配Agent框架：LangChain生态选LangGraph，多Agent选AutoGen或CrewAI，Serverless选Modal",
-      "评估性能需求：高并发选Modal或Banana等GPU云，低延迟选自托管LangGraph",
-      "考虑监控和可观测性：生产环境需要完善的日志、追踪、性能监控，AutoGen和LangGraph支持较好",
-      "成本考量：Serverless按使用量付费适合波动负载，自托管适合稳定负载但需要运维能力",
-      "社区和支持：选择活跃的社区和良好的文档，遇到问题能快速找到解决方案"
+      "Matching Agent Frameworks: Choose LangGraph for the LangChain ecosystem, AutoGen or CrewAI for multi-agent, and Modal for serverless.",
+      "Assess performance requirements: For high concurrency, choose GPU clouds like Modal or Banana; for low latency, choose self-hosted LangGraph.",
+      "Consider monitoring and observability: production environments require robust logging, tracing, and performance monitoring, and AutoGen and LangGraph provide good support.",
+      "Cost Consideration: Serverless pay-as-you-go suits variable workloads, while self-hosting fits stable workloads but requires operational capability.",
+      "Community and Support: Choose an active community and good documentation so you can quickly find solutions when you run into problems."
     ],
     faqs: [
-      { q: "我需要单独的Agent运行时吗？", a: "取决于你的场景。如果只是实验或简单应用，框架内置的执行能力就够了。如果是生产环境，需要高可用、监控、扩展、调度等能力，就需要专门的Agent运行时。建议：先从框架开始，当Agent复杂度增加或需要生产部署时，再引入运行时。" },
-      { q: "LangGraph和AutoGen哪个更好？", a: "各有优势。LangGraph是LangChain生态的一部分，擅长状态管理和复杂工作流，与LangChain工具和集成无缝配合，适合构建有明确流程的Agent。AutoGen是微软的多Agent框架，擅长多Agent对话和协作，支持人机交互，适合构建需要多个Agent协作的复杂系统。选择取决于你的技术栈和需求：LangChain用户选LangGraph，多Agent协作选AutoGen。" }
+      { q: "Do I need a separate Agent runtime?", a: "It depends on your scenario. If you're just experimenting or building a simple application, the framework's built-in execution capabilities are sufficient. For production environments that require high availability, monitoring, scaling, scheduling, and similar capabilities, you'll need a dedicated Agent runtime. Recommendation: start with the framework first, and introduce a runtime when Agent complexity increases or production deployment is needed." },
+      { q: "Which is better: LangGraph or AutoGen?", a: "Each has its own strengths. LangGraph is part of the LangChain ecosystem, excels at state management and complex workflows, and works seamlessly with LangChain tools and integrations, making it suitable for building agents with well-defined processes. AutoGen is Microsoft's multi-agent framework, excels at multi-agent conversation and collaboration, supports human-in-the-loop interaction, and is suitable for building complex systems that require multiple agents to collaborate. The choice depends on your tech stack and needs: choose LangGraph if you are a LangChain user, and choose AutoGen for multi-agent collaboration." }
     ]
   },
   rag: {
-    intro: "RAG（检索增强生成，Retrieval-Augmented Generation）是将外部知识库与大语言模型结合的技术，能够让AI基于你的私有数据回答问题，减少幻觉，提高准确性。2026年，RAG已经成为企业AI应用的核心技术，被广泛应用于客服机器人、知识库问答、文档摘要、法律合规等场景。主流RAG框架和工具包括：LlamaIndex（最流行的RAG框架）、LangChain（支持RAG的通用框架）、Dify（可视化RAG平台）、Haystack（企业级RAG框架）、Weaviate/Pinecone（向量数据库）。选择RAG工具时，需要考虑你的数据类型、技术水平、是否需要可视化、部署方式以及性能需求。",
+    intro: "RAG (Retrieval-Augmented Generation) is a technology that combines external knowledge bases with large language models, enabling AI to answer questions based on your private data, reduce hallucinations, and improve accuracy. In 2026, RAG has become a core technology for enterprise AI applications, widely used in customer service bots, knowledge base Q&A, document summarization, legal compliance, and other scenarios. Mainstream RAG frameworks and tools include: LlamaIndex (the most popular RAG framework), LangChain (a general-purpose framework supporting RAG), Dify (a visual RAG platform), Haystack (an enterprise-grade RAG framework), and Weaviate/Pinecone (vector databases). When choosing a RAG tool, you need to consider your data type, technical skill level, whether you need visualization, deployment method, and performance requirements.",
     buyingGuide: [
-      "评估数据类型：结构化数据选LangChain+SQL Agent，非结构化文档选LlamaIndex或Dify，多模态选Pinecone+CLIP",
-      "技术水平：非技术用户选Dify（可视化配置），开发者选LlamaIndex或LangChain（灵活定制）",
-      "性能需求：大规模数据选Pinecone或Weaviate（专用向量数据库），小规模选Chroma或FAISS（本地向量库）",
-      "部署方式：云服务选Dify或Pinecone，自托管选LlamaIndex+Weaviate，企业级选Haystack",
-      "成本考量：开源框架免费但需要自己维护，云平台有免费额度但大规模使用付费"
+      "Assess data types: choose LangChain + SQL Agent for structured data, LlamaIndex or Dify for unstructured documents, and Pinecone + CLIP for multimodal.",
+      "Skill level: Non-technical users choose Dify (visual configuration), developers choose LlamaIndex or LangChain (flexible customization)",
+      "Performance requirements: For large-scale data, choose Pinecone or Weaviate (dedicated vector databases); for small-scale data, choose Chroma or FAISS (local vector libraries).",
+      "Deployment options: Choose Dify or Pinecone for cloud services, LlamaIndex + Weaviate for self-hosting, and Haystack for enterprise-level needs.",
+      "Cost considerations: Open-source frameworks are free but require self-maintenance, while cloud platforms offer free tiers but charge for large-scale usage."
     ],
     faqs: [
-      { q: "RAG和微调（Fine-tuning）有什么区别？", a: "RAG是在推理时检索外部知识，不需要修改模型，知识更新即时生效，成本低，适合频繁变化的知识。微调是在训练时将知识融入模型参数，需要训练数据和计算资源，知识更新需要重新训练，成本高，适合稳定的领域知识和风格学习。建议：大多数场景优先用RAG，当需要特定风格或领域深度理解时再考虑微调。" },
-      { q: "RAG能完全解决AI幻觉问题吗？", a: "不能完全解决，但能大幅减少。RAG通过提供相关上下文，让模型基于真实数据回答，显著降低幻觉概率。但如果检索到的信息不准确、不完整，或者模型忽略了上下文，仍可能产生幻觉。最佳实践是：RAG+来源引用+人工审核，关键场景需要人工确认。" }
+      { q: "What is the difference between RAG and fine-tuning?", a: "RAG retrieves external knowledge at inference time, requires no model modification, and updates knowledge instantly at low cost, making it ideal for frequently changing knowledge. Fine-tuning embeds knowledge into model parameters during training, requires training data and computing resources, and requires retraining to update knowledge at high cost, making it suitable for stable domain knowledge and style learning. Recommendation: Prioritize RAG in most scenarios, and consider fine-tuning when you need a specific style or deep domain understanding." },
+      { q: "Can RAG completely solve the AI hallucination problem?", a: "It can’t completely solve the problem, but it can significantly reduce it. RAG provides relevant context so the model answers based on real data, greatly lowering the probability of hallucinations. However, if the retrieved information is inaccurate, incomplete, or the model ignores the context, hallucinations can still occur. The best practice is: RAG + source citations + human review, and critical scenarios require human confirmation." }
     ]
   },
   database: {
-    intro: "AI数据库是专为AI应用设计的数据存储和检索系统，包括向量数据库、图数据库、时序数据库等，能够高效存储和检索AI模型需要的高维向量、复杂关系和实时数据。2026年，AI数据库已经成为AI基础设施的核心组件，被广泛应用于RAG、推荐系统、图像搜索、异常检测等场景。主流AI数据库包括：Pinecone（托管向量数据库）、Weaviate（开源向量数据库）、Chroma（轻量级向量数据库）、Milvus（分布式向量数据库）、Neo4j（图数据库）。选择AI数据库时，需要考虑你的数据规模、查询类型、性能需求、部署方式以及成本。",
+    intro: "AI databases are data storage and retrieval systems designed specifically for AI applications, including vector databases, graph databases, time-series databases, and more. They can efficiently store and retrieve the high-dimensional vectors, complex relationships, and real-time data required by AI models. In 2026, AI databases have become a core component of AI infrastructure, widely used in scenarios such as RAG, recommendation systems, image search, and anomaly detection. Mainstream AI databases include: Pinecone (managed vector database), Weaviate (open-source vector database), Chroma (lightweight vector database), Milvus (distributed vector database), and Neo4j (graph database). When choosing an AI database, you need to consider your data scale, query type, performance requirements, deployment method, and cost.",
     buyingGuide: [
-      "数据规模：小规模（<100万向量）选Chroma或FAISS，中规模（100万-1亿）选Weaviate或Pinecone，大规模（>1亿）选Milvus",
-      "查询类型：纯向量相似性搜索选Pinecone或Chroma，向量+过滤选Weaviate，复杂关系查询选Neo4j",
-      "性能需求：低延迟高并发选Pinecone或Milvus，开发原型选Chroma，企业级高可用选Weaviate Enterprise",
-      "部署方式：托管服务选Pinecone，自托管选Weaviate或Milvus，嵌入式选Chroma或FAISS",
-      "成本考量：开发阶段用Chroma（免费），生产阶段根据规模选Weaviate（开源免费）或Pinecone（托管付费）"
+      "Data scale: small-scale (<1 million vectors) choose Chroma or FAISS, medium-scale (1 million–100 million) choose Weaviate or Pinecone, large-scale (>100 million) choose Milvus.",
+      "Query type: For pure vector similarity search choose Pinecone or Chroma, for vector + filtering choose Weaviate, for complex relationship queries choose Neo4j",
+      "Performance requirements: For low latency and high concurrency, choose Pinecone or Milvus; for prototyping, choose Chroma; for enterprise-grade high availability, choose Weaviate Enterprise.",
+      "Deployment method: For managed services choose Pinecone, for self-hosted choose Weaviate or Milvus, and for embedded choose Chroma or FAISS.",
+      "Cost consideration: Use Chroma (free) during development, and choose Weaviate (open-source free) or Pinecone (managed paid) in production based on scale."
     ],
     faqs: [
-      { q: "向量数据库和传统数据库有什么区别？", a: "传统数据库（如MySQL、PostgreSQL）擅长存储结构化数据，支持精确匹配和复杂查询，但不擅长高维向量相似性搜索。向量数据库专门设计用于存储和检索高维向量（如文本、图像的embedding），支持近似最近邻（ANN）搜索，能够快速找到语义相似的数据。建议：AI应用中通常需要两者结合，传统数据库存储元数据，向量数据库存储embedding。" },
-      { q: "我需要专门的向量数据库吗？", a: "取决于你的场景。如果只是简单的RAG原型，用pgvector（PostgreSQL扩展）或Chroma就够了。如果需要生产级的性能、扩展、高可用，或者数据量超过100万向量，就需要专门的向量数据库如Pinecone、Weaviate或Milvus。建议：先从简单方案开始，当性能成为瓶颈时再迁移到专业向量数据库。" }
+      { q: "What is the difference between vector databases and traditional databases?", a: "Traditional databases (such as MySQL and PostgreSQL) excel at storing structured data, supporting exact matching and complex queries, but they are not well suited for high-dimensional vector similarity search. Vector databases are specifically designed to store and retrieve high-dimensional vectors (such as text and image embeddings), support approximate nearest neighbor (ANN) search, and can quickly find semantically similar data. Recommendation: AI applications typically need both, with traditional databases storing metadata and vector databases storing embeddings." },
+      { q: "Do I need a dedicated vector database?", a: "It depends on your use case. If you're just building a simple RAG prototype, pgvector (a PostgreSQL extension) or Chroma is sufficient. If you need production-grade performance, scalability, high availability, or have more than 1 million vectors, you'll need a dedicated vector database such as Pinecone, Weaviate, or Milvus. Recommendation: start with a simple solution and migrate to a specialized vector database when performance becomes a bottleneck." }
     ]
   },
   memory: {
-    intro: "AI记忆系统是让AI应用具备长期记忆和上下文管理能力的技术，能够存储和检索用户历史对话、偏好、知识，提供个性化和连贯的交互体验。2026年，随着AI助手和Agent的普及，记忆系统成为提升用户体验的关键组件。主流AI记忆工具和框架包括：LangChain Memory（LangChain的记忆模块）、Zep（开源AI记忆服务器）、Mem0（AI记忆层）、LangGraph Memory（状态管理）、Redis（缓存和短期记忆）。选择AI记忆系统时，需要考虑你的应用类型、记忆时长、隐私需求、部署方式以及与AI框架的兼容性。",
+    intro: "AI memory systems are technologies that enable AI applications to have long-term memory and context management capabilities, storing and retrieving users' historical conversations, preferences, and knowledge to provide personalized and coherent interactive experiences. In 2026, with the popularization of AI assistants and agents, memory systems have become a key component for improving user experience. Mainstream AI memory tools and frameworks include: LangChain Memory (LangChain's memory module), Zep (open-source AI memory server), Mem0 (AI memory layer), LangGraph Memory (state management), and Redis (caching and short-term memory). When choosing an AI memory system, you need to consider your application type, memory duration, privacy requirements, deployment method, and compatibility with AI frameworks.",
     buyingGuide: [
-      "应用类型：对话机器人选Zep或Mem0（长期记忆），Agent选LangGraph Memory（状态管理），短期上下文选Redis",
-      "记忆时长：短期记忆（会话内）选LangChain Memory或Redis，长期记忆（跨会话）选Zep或Mem0",
-      "隐私需求：敏感数据选自托管Zep或Mem0，一般数据选云服务，需要符合GDPR/HIPAA选企业版",
-      "部署方式：快速原型选LangChain Memory（内置），生产环境选Zep或Mem0（独立服务），Serverless选Redis Cloud",
-      "框架兼容性：LangChain用户选LangChain Memory或Zep，多框架选Mem0，自定义选Redis+自己实现"
+      "Application type: For chatbots, choose Zep or Mem0 (long-term memory); for agents, choose LangGraph Memory (state management); for short-term context, choose Redis.",
+      "Memory duration: For short-term memory (within a session), choose LangChain Memory or Redis; for long-term memory (across sessions), choose Zep or Mem0.",
+      "Privacy requirements: For sensitive data, choose self-hosted Zep or Mem0; for general data, choose cloud services; if GDPR/HIPAA compliance is required, choose the enterprise edition.",
+      "Deployment method: For rapid prototyping, choose LangChain Memory (built-in); for production, choose Zep or Mem0 (standalone service); for Serverless, choose Redis Cloud.",
+      "Framework Compatibility: LangChain users should choose LangChain Memory or Zep, multi-framework users choose Mem0, and custom setups choose Redis + build your own implementation."
     ],
     faqs: [
-      { q: "AI记忆系统和RAG有什么区别？", a: "RAG是检索外部知识库（如文档、网页），通常是静态的、与用户无关的知识。AI记忆系统是存储用户特定的历史交互、偏好、行为，通常是动态的、个性化的。两者可以结合使用：RAG提供通用知识，记忆系统提供个性化上下文。建议：对话型AI应用两者都需要，知识库问答只需要RAG。" },
-      { q: "AI记忆会带来隐私问题吗？", a: "是的，AI记忆存储用户的个人信息、对话历史、偏好，可能涉及隐私和合规问题。最佳实践包括：明确告知用户记忆功能、提供记忆删除选项、敏感数据加密存储、符合GDPR/CCPA等法规、定期清理过期记忆。建议：在产品设计时就考虑隐私，提供用户控制记忆的能力。" }
+      { q: "What is the difference between AI memory systems and RAG?", a: "RAG retrieves external knowledge bases (such as documents and web pages), usually static, user-independent knowledge. An AI memory system stores user-specific historical interactions, preferences, and behaviors, typically dynamic and personalized. The two can be used together: RAG provides general knowledge, while the memory system provides personalized context. Recommendation: conversational AI applications need both, while knowledge base Q&A only needs RAG." },
+      { q: "Does AI memory raise privacy concerns?", a: "Yes, AI memory stores users' personal information, conversation history, and preferences, which may raise privacy and compliance concerns. Best practices include: clearly informing users about the memory feature, providing memory deletion options, encrypting sensitive data at rest, complying with regulations such as GDPR/CCPA, and regularly clearing expired memories. Recommendation: consider privacy at the product design stage and give users the ability to control their memory." }
     ]
   },
   observability: {
-    intro: "AI可观测性是监控、追踪、分析AI应用性能和行为的技术，能够帮助开发者发现和解决AI应用中的问题，如延迟、错误、幻觉、成本超支等。2026年，随着AI应用从实验走向生产，可观测性成为确保AI应用可靠性和成本效益的关键工具。主流AI可观测性工具包括：LangSmith（LangChain的可观测性平台）、Weights & Biases（ML实验追踪）、Arize AI（AI可观测性）、Helicone（LLM可观测性）、Langfuse（开源LLM可观测性）。选择AI可观测性工具时，需要考虑你的AI框架、监控需求、部署方式、成本以及团队规模。",
+    intro: "AI observability is the practice of monitoring, tracing, and analyzing the performance and behavior of AI applications, helping developers detect and resolve issues in AI applications such as latency, errors, hallucinations, and cost overruns. In 2026, as AI applications move from experimentation to production, observability becomes a key tool for ensuring AI application reliability and cost efficiency. Leading AI observability tools include: LangSmith (LangChain's observability platform), Weights & Biases (ML experiment tracking), Arize AI (AI observability), Helicone (LLM observability), and Langfuse (open-source LLM observability). When choosing an AI observability tool, you need to consider your AI framework, monitoring requirements, deployment method, cost, and team size.",
     buyingGuide: [
-      "AI框架：LangChain用户首选LangSmith（无缝集成），多框架选Langfuse或Arize，OpenAI专用选Helicone",
-      "监控需求：实验追踪选Weights & Biases，生产监控选Arize或Langfuse，成本追踪选Helicone",
-      "部署方式：快速开始选LangSmith或Helicone（云服务），自托管选Langfuse（开源），企业级选Arize",
-      "团队规模：小团队选LangSmith或Helicone（简单易用），大团队选Arize或Weights & Biases（企业功能）",
-      "成本考量：开发阶段用免费额度，生产阶段根据调用量选择付费计划，开源方案可自托管降低成本"
+      "AI Frameworks: LangChain users prefer LangSmith (seamless integration), for multi-framework choose Langfuse or Arize, and for OpenAI-specific use Helicone.",
+      "Monitoring needs: Choose Weights & Biases for experiment tracking, Arize or Langfuse for production monitoring, and Helicone for cost tracking.",
+      "Deployment options: For a quick start, choose LangSmith or Helicone (cloud services); for self-hosting, choose Langfuse (open source); for enterprise-level, choose Arize",
+      "Team size: Small teams choose LangSmith or Helicone (simple and easy to use), large teams choose Arize or Weights & Biases (enterprise features)",
+      "Cost consideration: Use free quotas during the development stage, choose a paid plan based on call volume in production, and self-host open-source solutions to reduce costs."
     ],
     faqs: [
-      { q: "AI可观测性和传统APM有什么区别？", a: "传统APM（应用性能监控）关注系统指标如延迟、错误率、吞吐量，适合传统软件。AI可观测性除了系统指标，还关注AI特有的指标，如token使用量、模型成本、幻觉率、输出质量、提示词效果、检索相关性等。AI应用的不确定性更高，需要专门的工具来监控和调试。建议：AI应用需要两者结合，传统APM监控基础设施，AI可观测性监控AI行为。" },
-      { q: "我什么时候需要AI可观测性？", a: "从第一天就应该开始。即使在开发阶段，可观测性工具能帮助你调试提示词、评估输出质量、追踪成本。当应用进入生产环境，可观测性成为必需，帮助你发现性能问题、成本异常、用户体验问题。建议：至少接入一个基础的可观测性工具（如LangSmith或Langfuse），从开发阶段开始收集数据。" }
+      { q: "What is the difference between AI observability and traditional APM?", a: "Traditional APM (Application Performance Monitoring) focuses on system metrics such as latency, error rate, and throughput, making it suitable for traditional software. In addition to system metrics, AI observability also tracks AI-specific metrics such as token usage, model cost, hallucination rate, output quality, prompt effectiveness, and retrieval relevance. AI applications are more uncertain and require specialized tools for monitoring and debugging. Recommendation: AI applications need a combination of both—traditional APM monitors infrastructure, while AI observability monitors AI behavior." },
+      { q: "When do I need AI observability?", a: "Start from day one. Even during the development stage, observability tools can help you debug prompts, evaluate output quality, and track costs. When your application enters production, observability becomes essential, helping you identify performance issues, cost anomalies, and user experience problems. Recommendation: integrate at least one basic observability tool (such as LangSmith or Langfuse) and start collecting data from the development stage." }
     ]
   },
   "dev-tools": {
-    intro: "AI开发工具是帮助开发者构建、测试、部署AI应用的工具集合，包括SDK、API、测试框架、部署工具等。2026年，AI开发工具生态已经非常成熟，覆盖从模型调用到应用部署的全流程。主流AI开发工具包括：OpenAI API（最流行的LLM API）、Anthropic API（Claude模型）、Hugging Face（模型库和部署平台）、Vercel AI SDK（Next.js AI应用开发）、LangChain（AI应用框架）、PromptLayer（提示词管理）。选择AI开发工具时，需要考虑你的技术栈、模型需求、部署环境、成本以及团队规模。",
+    intro: "AI development tools are a collection of tools that help developers build, test, and deploy AI applications, including SDKs, APIs, testing frameworks, deployment tools, and more. By 2026, the AI development tool ecosystem has become highly mature, covering the entire workflow from model invocation to application deployment. Mainstream AI development tools include: OpenAI API (the most popular LLM API), Anthropic API (Claude models), Hugging Face (model repository and deployment platform), Vercel AI SDK (Next.js AI application development), LangChain (AI application framework), and PromptLayer (prompt management). When choosing AI development tools, you need to consider your tech stack, model requirements, deployment environment, cost, and team size.",
     buyingGuide: [
-      "技术栈：Next.js/React选Vercel AI SDK，Python选LangChain或LlamaIndex，全栈选Supabase+Edge Functions",
-      "模型需求：通用LLM选OpenAI或Anthropic，开源模型选Hugging Face，多模型选Router（如LiteLLM）",
-      "部署环境：Serverless选Vercel或Cloudflare Workers，容器化选Docker+Kubernetes，边缘部署选Cloudflare",
-      "成本考量：开发阶段用免费额度，生产阶段根据调用量优化（缓存、批处理、小模型），开源模型可自托管降低成本",
-      "团队协作：提示词管理选PromptLayer或LangSmith，实验追踪选Weights & Biases，代码协作选GitHub"
+      "Tech stack: Next.js/React pairs with Vercel AI SDK, Python with LangChain or LlamaIndex, and full-stack with Supabase + Edge Functions.",
+      "Model requirements: For general-purpose LLMs choose OpenAI or Anthropic, for open-source models choose Hugging Face, for multi-model choose Router (such as LiteLLM)",
+      "Deployment environment: For serverless, choose Vercel or Cloudflare Workers; for containerization, choose Docker + Kubernetes; for edge deployment, choose Cloudflare.",
+      "Cost considerations: use free quotas during development, optimize based on call volume in production (caching, batch processing, smaller models), and open-source models can be self-hosted to reduce costs.",
+      "Team Collaboration: Choose PromptLayer or LangSmith for prompt management, Weights & Biases for experiment tracking, and GitHub for code collaboration."
     ],
     faqs: [
-      { q: "我应该用哪个LLM API？", a: "取决于你的需求。通用场景选OpenAI GPT-4o（生态最丰富，功能最全），长文本和写作选Anthropic Claude（上下文长，写作质量高），成本敏感选OpenAI GPT-3.5或开源模型，多模态选GPT-4o或Gemini。建议：先用一个主流API（如OpenAI）开发，当有特定需求时再引入其他模型，使用LiteLLM等路由工具统一接口。" },
-      { q: "Vercel AI SDK和LangChain怎么选？", a: "Vercel AI SDK是轻量级的前端/全栈AI开发工具，专注于Next.js/React生态，提供流式响应、UI组件、模型路由，适合构建用户-facing的AI应用。LangChain是功能丰富的AI应用框架，支持复杂工作流、RAG、Agent、工具调用，适合构建复杂的后端AI应用。建议：前端交互多用Vercel AI SDK，复杂后端逻辑用LangChain，两者可以结合使用。" }
+      { q: "Which LLM API should I use?", a: "It depends on your needs. For general scenarios choose OpenAI GPT-4o (richest ecosystem, most complete features), for long-form text and writing choose Anthropic Claude (long context, high writing quality), for cost-sensitive choose OpenAI GPT-3.5 or open-source models, for multimodal choose GPT-4o or Gemini. Suggestion: start with a mainstream API (such as OpenAI) for development, introduce other models when you have specific needs, and use routing tools like LiteLLM to unify the interface." },
+      { q: "How to Choose Between Vercel AI SDK and LangChain?", a: "Vercel AI SDK is a lightweight frontend/full-stack AI development tool focused on the Next.js/React ecosystem, offering streaming responses, UI components, and model routing, making it suitable for building user-facing AI applications. LangChain is a feature-rich AI application framework that supports complex workflows, RAG, Agent, tool calling, and is suitable for building complex backend AI applications. Recommendation: use Vercel AI SDK more for frontend interactions, use LangChain for complex backend logic, and the two can be used together." }
     ]
   }
 };
 
 const CATEGORIES: Record<string, { name: string; description: string; icon: LucideIcon; gradient: string }> = {
-  chat: { name: "AI 对话助手", description: "智能对话、问答交互、多轮聊天", icon: MessageSquare, gradient: "from-blue-600 to-cyan-500" },
-  writing: { name: "AI 写作工具", description: "文章撰写、文案创作、内容润色", icon: PenTool, gradient: "from-purple-600 to-pink-500" },
-  image: { name: "AI 绘画设计", description: "图像生成、艺术创作、设计辅助", icon: ImageIcon, gradient: "from-orange-500 to-red-500" },
-  code: { name: "AI 编程开发", description: "代码生成、程序开发、技术辅助", icon: Code, gradient: "from-emerald-600 to-teal-500" },
-  video: { name: "AI 视频制作", description: "视频生成、剪辑制作、多媒体创作", icon: Video, gradient: "from-rose-500 to-orange-500" },
-  audio: { name: "AI 音频音乐", description: "语音合成、音乐生成、音频处理", icon: Music, gradient: "from-violet-600 to-purple-500" },
-  productivity: { name: "AI 效率办公", description: "文档处理、会议纪要、团队协作", icon: Briefcase, gradient: "from-indigo-600 to-blue-500" },
-  search: { name: "AI 智能搜索", description: "智能搜索、信息检索、知识问答", icon: SearchIcon, gradient: "from-sky-600 to-blue-500" },
-  agent: { name: "AI Agent 框架", description: "智能体开发、自动化工作流、自主AI系统", icon: Bot, gradient: "from-indigo-600 to-purple-600" },
-  design: { name: "AI 设计工具", description: "UI设计、原型制作、创意设计辅助", icon: Palette, gradient: "from-pink-500 to-rose-500" },
-  "agent-framework": { name: "AI Agent 框架", description: "多智能体编排、角色协作、自动化框架", icon: Bot, gradient: "from-indigo-600 to-blue-600" },
-  "agent-runtime": { name: "AI Agent 运行时", description: "智能体执行平台、开发环境、运行时工具", icon: Code, gradient: "from-emerald-600 to-teal-600" },
-  rag: { name: "RAG 检索增强", description: "检索增强生成、文档问答、知识库系统", icon: SearchIcon, gradient: "from-sky-600 to-cyan-600" },
-  memory: { name: "AI 记忆系统", description: "长期记忆、知识存储、上下文管理", icon: Briefcase, gradient: "from-violet-600 to-purple-600" },
-  "dev-tools": { name: "AI 开发工具", description: "开发者工具、SDK、API、测试框架", icon: Code, gradient: "from-gray-600 to-slate-600" },
-  database: { name: "AI 数据库", description: "向量数据库、数据存储、数据处理", icon: Briefcase, gradient: "from-amber-600 to-orange-600" },
-  observability: { name: "AI 可观测性", description: "监控、日志、追踪、性能分析", icon: SearchIcon, gradient: "from-teal-600 to-emerald-600" },
+  chat: { name: "AI 对话助手", description: "Intelligent dialogue, Q&A interaction, multi-turn chat", icon: MessageSquare, gradient: "from-blue-600 to-cyan-500" },
+  writing: { name: "AI 写作工具", description: "Article writing, copywriting, and content polishing", icon: PenTool, gradient: "from-purple-600 to-pink-500" },
+  image: { name: "AI 绘画设计", description: "Image generation, art creation, design assistance", icon: ImageIcon, gradient: "from-orange-500 to-red-500" },
+  code: { name: "AI 编程开发", description: "Code generation, software development, technical assistance", icon: Code, gradient: "from-emerald-600 to-teal-500" },
+  video: { name: "AI 视频制作", description: "Video generation, video editing and production, multimedia creation", icon: Video, gradient: "from-rose-500 to-orange-500" },
+  audio: { name: "AI 音频音乐", description: "Speech Synthesis, Music Generation, Audio Processing", icon: Music, gradient: "from-violet-600 to-purple-500" },
+  productivity: { name: "AI 效率办公", description: "Document processing, meeting notes, team collaboration", icon: Briefcase, gradient: "from-indigo-600 to-blue-500" },
+  search: { name: "AI 智能搜索", description: "Intelligent Search, Information Retrieval, Knowledge Q&A", icon: SearchIcon, gradient: "from-sky-600 to-blue-500" },
+  agent: { name: "AI Agent Framework", description: "Agent development, automated workflows, autonomous AI systems", icon: Bot, gradient: "from-indigo-600 to-purple-600" },
+  design: { name: "AI 设计工具", description: "UI design, prototyping, and creative design assistance", icon: Palette, gradient: "from-pink-500 to-rose-500" },
+  "agent-framework": { name: "AI Agent Framework", description: "Multi-agent orchestration, role-based collaboration, automation framework", icon: Bot, gradient: "from-indigo-600 to-blue-600" },
+  "agent-runtime": { name: "AI Agent Runtime", description: "Agent execution platform, development environment, runtime tools", icon: Code, gradient: "from-emerald-600 to-teal-600" },
+  rag: { name: "RAG 检索增强", description: "Retrieval-Augmented Generation, Document Q&A, Knowledge Base System", icon: SearchIcon, gradient: "from-sky-600 to-cyan-600" },
+  memory: { name: "AI 记忆系统", description: "Long-term Memory, Knowledge Storage, Context Management", icon: Briefcase, gradient: "from-violet-600 to-purple-600" },
+  "dev-tools": { name: "AI 开发工具", description: "Developer Tools, SDK, API, Testing Frameworks", icon: Code, gradient: "from-gray-600 to-slate-600" },
+  database: { name: "AI 数据库", description: "Vector Database, Data Storage, Data Processing", icon: Briefcase, gradient: "from-amber-600 to-orange-600" },
+  observability: { name: "AI 可观测性", description: "Monitoring, Logging, Tracing, Profiling", icon: SearchIcon, gradient: "from-teal-600 to-emerald-600" },
 };
 
 export function generateStaticParams() {
