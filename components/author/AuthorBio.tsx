@@ -26,7 +26,7 @@ export function AuthorBio({
               src={avatar}
               alt={name}
               className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-500/20"
-            />
+            / loading="lazy">
           ) : (
             <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
               {name.charAt(0).toUpperCase()}
