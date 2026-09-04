@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
@@ -302,7 +302,7 @@ export default function ComparePage() {
                       );
                     })}
                   </tr>
-                  {/* 六维评分 */}
+                  {/* Six-Dimension Scores */}
                   {dimensions.map((dim) => (
                     <tr key={dim}>
                       <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">
@@ -336,38 +336,38 @@ export default function ComparePage() {
                       })}
                     </tr>
                   ))}
-                  {/* 免费版 */}
+                  {/* Free */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">免费版</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Free</td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4">
                         {tool.hasFreeTier ? (
                           <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
-                            有免费版
+                            有Free
                           </span>
                         ) : (
                           <span className="inline-flex items-center px-2 py-1 rounded-full text-xs font-medium bg-gray-100 dark:bg-gray-800 text-gray-500 dark:text-gray-400">
-                            无免费版
+                            No Free Plan
                           </span>
                         )}
                       </td>
                     ))}
                   </tr>
-                  {/* 起步价 */}
+                  {/* Starting Price */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">起步价</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Starting Price</td>
                     {selectedTools.map((tool) => {
                       const paid = tool.pricing.find((p) => !p.price.includes("$0"));
                       return (
                         <td key={tool.slug} className="py-3 px-4 text-sm text-gray-900 dark:text-white">
-                          {paid ? paid.price : "免费"}
+                          {paid ? paid.price : "Free"}
                         </td>
                       );
                     })}
                   </tr>
-                  {/* 主要优势 */}
+                  {/* Key Strengths */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">主要优势</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">Key Strengths</td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4">
                         <ul className="space-y-1">
@@ -381,9 +381,9 @@ export default function ComparePage() {
                       </td>
                     ))}
                   </tr>
-                  {/* 主要不足 */}
+                  {/* Key Weaknesses */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">主要不足</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">Key Weaknesses</td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4">
                         <ul className="space-y-1">
@@ -399,7 +399,7 @@ export default function ComparePage() {
                   </tr>
                   {/* 官网链接 */}
                   <tr className="bg-gray-50 dark:bg-gray-800/50">
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">操作</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Action</td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4">
                         <div className="flex gap-2">
@@ -407,7 +407,7 @@ export default function ComparePage() {
                             href={`/tools/${tool.slug}`}
                             className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
                           >
-                            查看详情 →
+                            View Details →
                           </Link>
                           {tool.officialUrl && (
                             <a
@@ -431,7 +431,7 @@ export default function ComparePage() {
           {/* 价格方案详细对比 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
             <div className="p-6 border-b border-gray-100 dark:border-gray-800">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">价格方案对比</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Pricing Comparison</h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -451,9 +451,9 @@ export default function ComparePage() {
                   </tr>
                 </thead>
                 <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
-                  {/* 免费版 */}
+                  {/* Free */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">免费版</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Free</td>
                     {selectedTools.map((tool) => {
                       const free = tool.pricing.find((p) => p.price.includes("$0"));
                       return (
@@ -464,15 +464,15 @@ export default function ComparePage() {
                               <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">{free.description}</p>
                             </div>
                           ) : (
-                            <span className="text-gray-400">无免费版</span>
+                            <span className="text-gray-400">No Free Plan</span>
                           )}
                         </td>
                       );
                     })}
                   </tr>
-                  {/* 入门版 */}
+                  {/* Starter */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">入门版</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Starter</td>
                     {selectedTools.map((tool) => {
                       const paid = tool.pricing.filter((p) => !p.price.includes("$0"));
                       const entry = paid[0];
@@ -490,9 +490,9 @@ export default function ComparePage() {
                       );
                     })}
                   </tr>
-                  {/* 专业版 */}
+                  {/* Pro */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">专业版</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Pro</td>
                     {selectedTools.map((tool) => {
                       const paid = tool.pricing.filter((p) => !p.price.includes("$0"));
                       const pro = paid[1] || paid[0];
@@ -510,9 +510,9 @@ export default function ComparePage() {
                       );
                     })}
                   </tr>
-                  {/* 企业版 */}
+                  {/* Enterprise */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">最高级</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Top Tier</td>
                     {selectedTools.map((tool) => {
                       const paid = tool.pricing.filter((p) => !p.price.includes("$0"));
                       const top = paid[paid.length - 1];
@@ -567,9 +567,9 @@ export default function ComparePage() {
               />
             </svg>
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">选择工具开始对比</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Select tools to compare</h3>
           <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
-            从上方列表中选择 2-3 个工具，系统将基于六维评分模型生成详细对比报告
+            从上方列表中选择 2-3 个工具，系统将基于Six-Dimension Scores模型生成详细对比报告
           </p>
         </div>
       )}

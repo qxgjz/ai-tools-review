@@ -43,7 +43,7 @@ export const SCENARIO_DESCRIPTIONS: Record<ScenarioType, string> = {
   coding: "Coding, programming, tech development",
   video: "Video generation, editing, multimedia creation",
   office: "Document processing, meeting notes, team collaboration",
-  other: "General UseAI使用场景",
+  other: "General Use",
 };
 
 const SCENARIO_DIMENSION_BOOST: Record<ScenarioType, ScoreDimension[]> = {
@@ -125,8 +125,8 @@ function generateReason(
     const dimNames = matchedDims.map((d) => DIMENSION_LABELS[d]).join("、");
     parts.push(`在${dimNames}方面表现突出`);
   }
-  if (tool.hasFreeTier) parts.push("提供免费版本可先体验");
-  parts.push(`适合${SCENARIO_LABELS[scenario] || "通用"}场景使用`);
+  if (tool.hasFreeTier) parts.push("Free version available to try");
+  parts.push(`适合${SCENARIO_LABELS[scenario] || "General"}场景使用`);
   return parts.join("，") + "。";
 }
 

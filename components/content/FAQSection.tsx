@@ -46,14 +46,14 @@ export const defaultFAQs: FAQItem[] = [
   },
   {
     question: "How do I choose the best AI tool for me?",
-    answer: "首先明确你的使用场景和预算，然后参考我们的评测和对比文章。我们建议先使用免费版试用，再决定是否升级到付费版。如果你有特定需求，可以查看我们的分类页面或使用对比工具。",
+    answer: "Start by clarifying your use case and budget, then refer to our reviews and comparison articles. We recommend trying the free version first before deciding whether to upgrade to a paid plan. If you have specific needs, check our category pages or use the comparison tool.",
   },
   {
-    question: "这些Is my data safe with AI tools?",
-    answer: "我们在评测中会关注每款工具的隐私政策和数据安全措施。大部分主流AI工具都采用加密传输和严格的数据保护政策。建议在使用前仔细阅读工具的隐私政策，特别是处理敏感数据时。",
+    question: "Is my data safe with AI tools?",
+    answer: "We evaluate each tool's privacy policy and data security measures in our reviews. Most mainstream AI tools use encrypted transmission and strict data protection policies. We recommend carefully reading the tool's privacy policy before use, especially when handling sensitive data.",
   },
   {
-    question: "如何获取最新的AI工具更新？",
-    answer: "我们会定期更新评测内容，添加新发布的AI工具。你可以订阅我们的邮件通讯，或关注我们的社交媒体，获取最新的AI工具资讯和评测更新。",
+    question: "How do I get the latest AI tool updates?",
+    answer: "We regularly update our reviews and add newly released AI tools. You can subscribe to our newsletter or follow our social media to get the latest AI tool news and review updates.",
   },
 ];

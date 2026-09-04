@@ -65,7 +65,7 @@ export function MultiRadarChart({
         viewBox={`0 0 ${size} ${size}`}
         className={className}
         role="img"
-        aria-label="多工具六维能力雷达图对比"
+        aria-label="Multi-Tool Six-Dimension Radar Chart Comparison"
       >
         {/* 网格背景 */}
         {gridLevels.map((level) => (

@@ -11,10 +11,10 @@ const GRADE_COLORS: Record<Grade, { bg: string; text: string; label: string }> =
   B: { bg: "#3b82f6", text: "#ffffff", label: "Good" },
   C: { bg: "#eab308", text: "#ffffff", label: "Average" },
   D: { bg: "#ef4444", text: "#ffffff", label: "Poor" },
-  F: { bg: "#6b7280", text: "#ffffff", label: "不推荐" },
+  F: { bg: "#6b7280", text: "#ffffff", label: "Not Recommended" },
 };
 
-const DIMENSION_LABELS_OG = ["功能质量", "用户体验", "价格价值", "集成开发", "支持可靠", "伦理透明"];
+const DIMENSION_LABELS_OG = ["Functionality", "User Experience", "Pricing & Value", "Integrations", "Support & Reliability", "Ethics & Transparency"];
 
 export async function GET(_request: Request, { params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
@@ -25,7 +25,7 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
         <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #6366f1 100%)", fontFamily: "sans-serif" }}>
           <div style={{ width: 120, height: 120, borderRadius: 28, background: "white", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 56, fontWeight: 900, color: "#1e40af", marginBottom: 32 }}>AI</div>
           <div style={{ fontSize: 72, fontWeight: 800, color: "white", marginBottom: 16 }}>AIToolCrux</div>
-          <div style={{ fontSize: 28, color: "rgba(255,255,255,0.85)" }}>六维评分模型 · 专业测评 · 智能推荐</div>
+          <div style={{ fontSize: 28, color: "rgba(255,255,255,0.85)" }}>Six-Dimension Scoring · Expert Reviews · Smart Recommendations</div>
         </div>
       ),
       { width: 1200, height: 630 }
@@ -51,12 +51,12 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
           <div style={{ fontSize: 22, color: "#6b7280", fontWeight: 500, marginBottom: 10 }}>{tool.vendor}</div>
           <div style={{ display: "flex", alignItems: "center", marginBottom: 20, flexWrap: "wrap" }}>
             <div style={{ fontSize: 60, fontWeight: 900, color: "#111827", marginRight: 24, letterSpacing: -1 }}>{tool.name}</div>
-            <div style={{ padding: "14px 28px", borderRadius: 14, background: gradeColor.bg, color: gradeColor.text, fontSize: 30, fontWeight: 800 }}>{grade}级 · {gradeColor.label}</div>
+            <div style={{ padding: "14px 28px", borderRadius: 14, background: gradeColor.bg, color: gradeColor.text, fontSize: 30, fontWeight: 800 }}>Grade {grade} · {gradeColor.label}</div>
           </div>
           <div style={{ fontSize: 23, color: "#4b5563", lineHeight: 1.5, marginBottom: 28, maxWidth: 820 }}>{tool.description.length > 80 ? tool.description.slice(0, 80) + "..." : tool.description}</div>
           <div style={{ display: "flex", alignItems: "flex-end" }}>
             <div style={{ fontSize: 100, fontWeight: 900, color: "#1e40af", lineHeight: 1, letterSpacing: -2 }}>{total.toFixed(1)}</div>
-            <div style={{ fontSize: 28, color: "#9ca3af", marginLeft: 14, marginBottom: 14, fontWeight: 500 }}>/ 10<div style={{ fontSize: 18, color: "#d1d5db", marginTop: 4 }}>综合评分</div></div>
+            <div style={{ fontSize: 28, color: "#9ca3af", marginLeft: 14, marginBottom: 14, fontWeight: 500 }}>/ 10<div style={{ fontSize: 18, color: "#d1d5db", marginTop: 4 }}>Overall Score</div></div>
           </div>
         </div>
 

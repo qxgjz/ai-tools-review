@@ -269,7 +269,7 @@ const CATEGORIES: Record<string, { name: string; description: string; icon: Luci
   design: { name: "AI Design Tools", description: "UI design, prototyping, and creative design assistance", icon: Palette, gradient: "from-pink-500 to-rose-500" },
   "agent-framework": { name: "AI Agent Framework", description: "Multi-agent orchestration, role-based collaboration, automation framework", icon: Bot, gradient: "from-indigo-600 to-blue-600" },
   "agent-runtime": { name: "AI Agent Runtime", description: "Agent execution platform, development environment, runtime tools", icon: Code, gradient: "from-emerald-600 to-teal-600" },
-  rag: { name: "RAG 检索增强", description: "Retrieval-Augmented Generation, Document Q&A, Knowledge Base System", icon: SearchIcon, gradient: "from-sky-600 to-cyan-600" },
+  rag: { name: "RAG & Retrieval", description: "Retrieval-Augmented Generation, Document Q&A, Knowledge Base System", icon: SearchIcon, gradient: "from-sky-600 to-cyan-600" },
   memory: { name: "AI Memory Systems", description: "Long-term Memory, Knowledge Storage, Context Management", icon: Briefcase, gradient: "from-violet-600 to-purple-600" },
   "dev-tools": { name: "AI Dev Tools", description: "Developer Tools, SDK, API, Testing Frameworks", icon: Code, gradient: "from-gray-600 to-slate-600" },
   database: { name: "AI Databases", description: "Vector Database, Data Storage, Data Processing", icon: Briefcase, gradient: "from-amber-600 to-orange-600" },
@@ -440,7 +440,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       )}
 
       <section className="mt-12 pt-8 border-t border-gray-100 dark:border-gray-800">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">浏览其他分类</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Browse Other Categories</h2>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           {Object.entries(CATEGORIES).filter(([slug]) => slug !== params.slug).slice(0, 4).map(([slug, cat]) => {
             const CatIcon = cat.icon;

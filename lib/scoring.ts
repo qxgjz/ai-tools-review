@@ -26,12 +26,12 @@ export const DIMENSION_LABELS: Record<ScoreDimension, string> = {
 
 /** 等级描述 */
 export const GRADE_DESCRIPTIONS: Record<Grade, string> = {
-  S: "卓越",
-  A: "优秀",
-  B: "良好",
-  C: "一般",
-  D: "较差",
-  F: "不推荐",
+  S: "Excellent",
+  A: "Great",
+  B: "Good",
+  C: "Average",
+  D: "Poor",
+  F: "Not Recommended",
 };
 
 /**
