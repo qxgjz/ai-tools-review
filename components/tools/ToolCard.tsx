@@ -64,11 +64,19 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             </span>
           </div>
 
-          {/* 名称 + 厂商 */}
+          {/* 名称 + 厂商 + 精选标签 */}
           <div className="relative z-10">
-            <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
-              {tool.name}
-            </h3>
+            <div className="flex items-center gap-2">
+              <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1 flex-1">
+                {tool.name}
+              </h3>
+              {isFeatured && (
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full shadow-lg shadow-amber-500/30 flex-shrink-0">
+                  <Sparkles className="w-3 h-3" />
+                  TOP
+                </span>
+              )}
+            </div>
             <p className="mt-0.5 text-xs text-gray-400 dark:text-gray-500">{tool.vendor}</p>
           </div>
 
@@ -88,12 +96,6 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
           <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-800 relative z-10">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-baseline gap-1">
-                {isFeatured && (
-                  <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full shadow-lg shadow-amber-500/30 mr-2">
-                    <Sparkles className="w-3 h-3" />
-                    TOP
-                  </span>
-                )}
                 <span className="text-2xl font-extrabold text-gray-900 dark:text-white">{total.toFixed(1)}</span>
                 <span className="text-xs text-gray-400">/10</span>
               </div>

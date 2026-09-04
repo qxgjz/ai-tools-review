@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import dynamic from "next/dynamic";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Image as ImageIcon } from "lucide-react";
 import posts from "@/data/posts.json";
 import tools from "@/data/tools.json";
 import { AffiliateCTA } from "@/components/monetization/AffiliateCTA";
@@ -13,6 +13,7 @@ import { AuthorBio } from "@/components/author/AuthorBio";
 import { SourceReferences } from "@/components/seo/SourceReferences";
 import { HandsOnExperience } from "@/components/content/HandsOnExperience";
 import { FAQSection, defaultFAQs } from "@/components/content/FAQSection";
+import { ToolScreenshot } from "@/components/content/ToolScreenshot";
 
 // 动态导入重型组件，减少初始JS包大小
 const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
@@ -343,6 +344,24 @@ export default function PostPage({ params }: PostPageProps) {
         grade="B"
         testDuration="30 days"
       />
+
+      {/* 工具截图展示 - E-E-A-T信任信号，真实使用证据 */}
+      {tool && (
+        <div className="mb-10">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+            <ImageIcon className="w-6 h-6 text-blue-600" />
+            {toolName} Interface & Screenshots
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+            Real screenshots from our hands-on testing of {toolName}. Click to enlarge.
+          </p>
+          <ToolScreenshot
+            toolSlug={tool.slug}
+            toolName={toolName}
+            vendor={tool.vendor}
+          />
+        </div>
+      )}
 
       {/* 文章内容 */}
       <article

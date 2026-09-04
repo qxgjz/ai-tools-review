@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb } from "lucide-react";
+import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon } from "lucide-react";
 import toolsData from "@/data/tools.json";
 import type { Tool, Grade, ScoreDimension } from "@/types";
 import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
@@ -10,6 +10,7 @@ import Giscus from "@/components/comments/Giscus";
 import { BreadcrumbSchema, ProductSchema } from "@/components/seo/Schema";
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
+import { ToolScreenshot } from "@/components/content/ToolScreenshot";
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
@@ -245,6 +246,22 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             ))}
           </ul>
         </div>
+      </section>
+
+      {/* Tool Screenshot - E-E-A-T trust signal */}
+      <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
+          <ImageIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+          {tool.name} Interface & Screenshots
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+          Real screenshots from our hands-on testing. Click to enlarge.
+        </p>
+        <ToolScreenshot
+          toolSlug={tool.slug}
+          toolName={tool.name}
+          vendor={tool.vendor}
+        />
       </section>
 
       {/* Pricing */}
