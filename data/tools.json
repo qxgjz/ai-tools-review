@@ -5,7 +5,7 @@
     "name": "ChatGPT",
     "category": "chat",
     "vendor": "OpenAI",
-    "description": "Developed by OpenAI, the advanced conversational AI assistant supports multiple rounds of dialogue, code generation, document analysis, and image understanding, and is currently the most popular general-purpose AI assistant.\n\n* * Related Tools: * * <a href=\"/tools/gemini\">Gemini</a>, <a href=\"/tools/claude\">Claude</a>",
+    "description": "Developed by OpenAI, the advanced conversational AI assistant supports multiple rounds of dialogue, code generation, document analysis, and image understanding, and is currently the most popular general-purpose AI assistant. * * Related Tools: * * Gemini, Claude",
     "scores": {
       "functionality": 9.5,
       "ux": 9,
@@ -61,7 +61,7 @@
     "name": "Claude",
     "category": "chat",
     "vendor": "Anthropic",
-    "description": "Anthropic's securely aligned AI assistant, known for long text processing, in-depth analysis, and rigorous answers, supports 200K ultra-long contexts.\n\n* * Related tools: * * <a href=\"/tools/chatgpt\">ChatGPT</a>, <a href=\"/tools/gemini\">Gemini</a>",
+    "description": "Anthropic's securely aligned AI assistant, known for long text processing, in-depth analysis, and rigorous answers, supports 200K ultra-long contexts. * * Related tools: * * ChatGPT, Gemini",
     "scores": {
       "functionality": 9,
       "ux": 8.5,
@@ -117,7 +117,7 @@
     "name": "Gemini",
     "category": "chat",
     "vendor": "Google",
-    "description": "A multimodal AI model developed by Google that deeply integrates Google Search and Workspace to support real-time information retrieval and complex reasoning.\n\n* * Related Tools: * * <a href=\"/tools/chatgpt\">ChatGPT</a>, <a href=\"/tools/claude\">Claude</a>",
+    "description": "A multimodal AI model developed by Google that deeply integrates Google Search and Workspace to support real-time information retrieval and complex reasoning. * * Related Tools: * * ChatGPT, Claude",
     "scores": {
       "functionality": 8.5,
       "ux": 8,
@@ -224,7 +224,7 @@
     "name": "DALL·E 3",
     "category": "image",
     "vendor": "OpenAI",
-    "description": "OpenAI developed a text generation image model, famous for understanding complex prompts and generating high-quality text images, integrated in ChatGPT.\n\n* * Related Tools: * * <a href=\"/tools/midjourney\">Midjourney</a>, <a href=\"/tools/stable-diffusion\">Stable Diffusion</a>",
+    "description": "OpenAI developed a text generation image model, famous for understanding complex prompts and generating high-quality text images, integrated in ChatGPT. * * Related Tools: * * Midjourney, Stable Diffusion",
     "scores": {
       "functionality": 8.5,
       "ux": 8.5,
@@ -326,7 +326,7 @@
     "name": "GitHub Copilot",
     "category": "code",
     "vendor": "GitHub / Microsoft",
-    "description": "AI programming assistant developed by GitHub in collaboration with OpenAI, integrated in IDEs such as VS Code, providing real-time code completion, function generation, and bug fixes.\n\n* * Related Tools: * * <a href=\"/tools/cursor\">Cursor</a>, <a href=\"/tools/windsurf\">Windsurf</a>",
+    "description": "AI programming assistant developed by GitHub in collaboration with OpenAI, integrated in IDEs such as VS Code, providing real-time code completion, function generation, and bug fixes. * * Related Tools: * * Cursor, Windsurf",
     "scores": {
       "functionality": 9,
       "ux": 9,
@@ -440,7 +440,7 @@
     "name": "Windsurf",
     "category": "code",
     "vendor": "Codeium",
-    "description": "AI-driven code editor, featuring Cascade streaming programming experience, support for automatic generation of natural language descriptions, and deep integration of AI agents.\n\n* * Related Tools: * * <a href=\"/tools/cursor\">Cursor</a>, <a href=\"/tools/github-copilot\">GitHub Copilot</a>",
+    "description": "AI-driven code editor, featuring Cascade streaming programming experience, support for automatic generation of natural language descriptions, and deep integration of AI agents. * * Related Tools: * * Cursor, GitHub Copilot",
     "scores": {
       "functionality": 8.5,
       "ux": 8,
@@ -548,7 +548,7 @@
     "name": "Copy.ai",
     "category": "writing",
     "vendor": "Copy.ai",
-    "description": "AI writing tools focused on sales and marketing copy, with 90 + templates to support workflow automation to help teams efficiently produce conversion-oriented content.\n\n* * Related Tools: * * <a href=\"/tools/jasper\">Jasper</a>, <a href=\"/tools/writesonic\">Writesonic</a>",
+    "description": "AI writing tools focused on sales and marketing copy, with 90 + templates to support workflow automation to help teams efficiently produce conversion-oriented content. * * Related Tools: * * Jasper, Writesonic",
     "scores": {
       "functionality": 7.5,
       "ux": 8,
@@ -599,7 +599,7 @@
     "name": "Notion AI",
     "category": "productivity",
     "vendor": "Notion",
-    "description": "AI assistant integrated in Notion, supporting document writing, abstract generation, task management and knowledge Q&A, deeply integrated with Notion's note-taking ecosystem.\n\n* * Related Tools: * * <a href=\"/tools/grammarly\">Grammarly</a>, <a href=\"/tools/n8n\">n8n</a>",
+    "description": "AI assistant integrated in Notion, supporting document writing, abstract generation, task management and knowledge Q&A, deeply integrated with Notion's note-taking ecosystem. * * Related Tools: * * Grammarly, n8n",
     "scores": {
       "functionality": 8,
       "ux": 9,
@@ -656,7 +656,7 @@
     "name": "Grammarly",
     "category": "productivity",
     "vendor": "Grammarly",
-    "description": "AI-powered English writing aids that check grammar, spelling, tone, and clarity in real time with full platform coverage for browsers, Office, and desktops.\n\n* * Related Tools: * * <a href=\"/tools/notion-ai\">Notion AI</a>, <a href=\"/tools/n8n\">n8n</a>",
+    "description": "AI-powered English writing aids that check grammar, spelling, tone, and clarity in real time with full platform coverage for browsers, Office, and desktops. * * Related Tools: * * Notion AI, n8n",
     "scores": {
       "functionality": 8.5,
       "ux": 9,
@@ -776,7 +776,7 @@
     "name": "Sora",
     "category": "video",
     "vendor": "OpenAI",
-    "description": "OpenAI developed a bachelor's video model, capable of generating high-quality videos up to 60 seconds, supporting complex scenes and multiple characters, representing the cutting-edge level of video generation.\n\n* * Related Tools: * * <a href=\"/tools/runway\">Runway</a>, <a href=\"/tools/pika\">Pika</a>",
+    "description": "OpenAI developed a bachelor's video model, capable of generating high-quality videos up to 60 seconds, supporting complex scenes and multiple characters, representing the cutting-edge level of video generation. * * Related Tools: * * Runway, Pika",
     "scores": {
       "functionality": 9.5,
       "ux": 7,
@@ -827,7 +827,7 @@
     "name": "ElevenLabs",
     "category": "audio",
     "vendor": "ElevenLabs",
-    "description": "Industry-leading AI speech synthesis platform supporting natural speech generation, sound cloning, and speech design in 29 languages for use in podcasts, videos, and audiobooks.\n\n* * Related Tools: * * <a href=\"/tools/suno\">Suno</a>, <a href=\"/tools/litellm\">litellm</a>",
+    "description": "Industry-leading AI speech synthesis platform supporting natural speech generation, sound cloning, and speech design in 29 languages for use in podcasts, videos, and audiobooks. * * Related Tools: * * Suno, litellm",
     "scores": {
       "functionality": 9,
       "ux": 8,
@@ -942,7 +942,7 @@
     "name": "Figma AI",
     "category": "design",
     "vendor": "Figma",
-    "description": "The AI Design Assistant, integrated in Figma, enables automatic UI generation, design system suggestions, and prototyping to help designers accelerate the process from concept to finished product.\n\n* * Related Tools: * * <a href=\"/tools/canva-magic\">Canva Magic</a>, <a href=\"/tools/canva-ai\">Canva AI</a>",
+    "description": "The AI Design Assistant, integrated in Figma, enables automatic UI generation, design system suggestions, and prototyping to help designers accelerate the process from concept to finished product. * * Related Tools: * * Canva Magic, Canva AI",
     "scores": {
       "functionality": 8,
       "ux": 8.5,
@@ -999,7 +999,7 @@
     "name": "Canva Magic",
     "category": "design",
     "vendor": "Canva",
-    "description": "The AI design toolset for the Canva platform, including Magic Design One-Click Generation, Magic Edit Image Editing, and Magic Write Copy Generation, allows non-designers to quickly draw pictures.\n\n* * Related tools: * * <a href=\"/tools/figma-ai\">Figma AI</a>, <a href=\"/tools/canva-ai\">Canva AI</a>",
+    "description": "The AI design toolset for the Canva platform, including Magic Design One-Click Generation, Magic Edit Image Editing, and Magic Write Copy Generation, allows non-designers to quickly draw pictures. * * Related tools: * * Figma AI, Canva AI",
     "scores": {
       "functionality": 8,
       "ux": 9,
@@ -1113,7 +1113,7 @@
     "name": "n8n",
     "category": "productivity",
     "vendor": "n8n-io",
-    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400 + integrations.\n\n* * Related Tools: * * <a href=\"/tools/inspector\">inspector <...",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400 + integrations. * * Related Tools: * * <a href=\"/tools/inspector\">inspector <...",
     "scores": {
       "functionality": 9.5,
       "ux": 8,
@@ -1163,7 +1163,7 @@
     "name": "AutoGPT",
     "category": "agent",
     "vendor": "Significant-Gravitas",
-    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.\n\n* * Related Tools: * * <a href=\"/tools/repomix\">repomix <...",
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters. * * Related Tools: * * <a href=\"/tools/repomix\">repomix <...",
     "scores": {
       "functionality": 9.5,
       "ux": 6.627595715799047,
@@ -1210,7 +1210,7 @@
     "name": "ollama",
     "category": "dev-tools",
     "vendor": "ollama",
-    "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models.\n\n* * Related Tools: * * <a href=\"/tools/llama-cpp\">llama.cpp</a>, <a href=\"/tools/pydantic\">pydantic</a>",
+    "description": "Get up and running with Kimi-K2.5, GLM-5, MiniMax, DeepSeek, gpt-oss, Qwen, Gemma and other models. * * Related Tools: * * llama.cpp, pydantic",
     "scores": {
       "functionality": 9.5,
       "ux": 5.665161139991417,
@@ -1257,7 +1257,7 @@
     "name": "dify",
     "category": "productivity",
     "vendor": "langgenius",
-    "description": "Production-ready platform for agentic workflow development.\n\n* * Related Tools: * * <a href=\"/tools/anything-llm\">anything-llm</a>, <a href=\"/tools/flowise\">Flowise</a>",
+    "description": "Production-ready platform for agentic workflow development. * * Related Tools: * * anything-llm, Flowise",
     "scores": {
       "functionality": 9.5,
       "ux": 8,
@@ -1354,7 +1354,7 @@
     "name": "gemini-cli",
     "category": "agent-runtime",
     "vendor": "google-gemini",
-    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal.\n\n* * Related tools: * * <a href=\"/tools/goose\">goose</a>, <a href=\"/tools/openai-translator\">nextai-translator</a>",
+    "description": "An open-source AI agent that brings the power of Gemini directly into your terminal. * * Related tools: * * goose, nextai-translator",
     "scores": {
       "functionality": 9.5,
       "ux": 6.870992958262621,
@@ -1401,7 +1401,7 @@
     "name": "open-webui",
     "category": "chat",
     "vendor": "open-webui",
-    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API,...)\n\n* * Related Tools: * * <a href=\"/tools/lobe-chat\">lobehub</a>, <a href=\"/tools/gpt-computer-assistant\">Upsonic</a>",
+    "description": "User-friendly AI Interface (Supports Ollama, OpenAI API,...) * * Related Tools: * * lobehub, Upsonic",
     "scores": {
       "functionality": 9.5,
       "ux": 6.155199853048397,
@@ -1451,7 +1451,7 @@
     "name": "vllm",
     "category": "dev-tools",
     "vendor": "vllm-project",
-    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs\n\n* * Related tools: * * <a href=\"/tools/ai-getting-started\">ai-getting-started</a>, <a href=\"/tools/embedbase\">embedbase</a>",
+    "description": "A high-throughput and memory-efficient inference and serving engine for LLMs * * Related tools: * * ai-getting-started, embedbase",
     "scores": {
       "functionality": 9.3,
       "ux": 6.7794917275572,
@@ -1545,7 +1545,7 @@
     "name": "browser-use",
     "category": "productivity",
     "vendor": "browser-use",
-    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease.\n\n* * Related Tools: * * <a href=\"/tools/firecrawl\">firecrawl</a>, <a href=\"/tools/autogpt-js\">AutoGPT.js</a>",
+    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease. * * Related Tools: * * firecrawl, AutoGPT.js",
     "scores": {
       "functionality": 9.4,
       "ux": 6.5,
@@ -1642,7 +1642,7 @@
     "name": "langflow",
     "category": "productivity",
     "vendor": "langflow-ai",
-    "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows.\n\n* * Related tools: * * <a href=\"/tools/n8n\">n8n</a>, <a href=\"/tools/dify\">dify</a>",
+    "description": "Langflow is a powerful tool for building and deploying AI-powered agents and workflows. * * Related tools: * * n8n, dify",
     "scores": {
       "functionality": 9.4,
       "ux": 8,
@@ -1736,7 +1736,7 @@
     "name": "codex",
     "category": "code",
     "vendor": "openai",
-    "description": "Lightweight coding agent that runs in your terminal\n\n* * Related tools: * * <a href=\"/tools/continue\">continue</a>, <a href=\"/tools/roo-code\">Roo-Code</a>",
+    "description": "Lightweight coding agent that runs in your terminal * * Related tools: * * continue, Roo-Code",
     "scores": {
       "functionality": 9.3,
       "ux": 7.5,
@@ -1783,7 +1783,7 @@
     "name": "MinerU",
     "category": "productivity",
     "vendor": "opendatalab",
-    "description": "Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows.\n\n* * Related tools: * * <a href=\"/tools/scrapegraph-ai\">Scrapegraph-ai</a>, <a href=\"/tools/unstructured\">unstruct...",
+    "description": "Transforms complex documents like PDFs into LLM-ready markdown/JSON for your Agentic workflows. * * Related tools: * * Scrapegraph-ai, <a href=\"/tools/unstructured\">unstruct...",
     "scores": {
       "functionality": 9.2,
       "ux": 6.129954889976182,
@@ -1929,7 +1929,7 @@
     "name": "llama_index",
     "category": "rag",
     "vendor": "run-llama",
-    "description": "LlamaIndex is the leading document agent and OCR platform\n\n* * Related tools: * * <a href=\"/tools/langchain\">langchain</a>, <a href=\"/tools/langgraph\">langgraph</a>",
+    "description": "LlamaIndex is the leading document agent and OCR platform * * Related tools: * * langchain, langgraph",
     "scores": {
       "functionality": 9.1,
       "ux": 6.5,
@@ -2072,7 +2072,7 @@
     "name": "milvus",
     "category": "database",
     "vendor": "milvus-io",
-    "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector Ann search\n\n* * Related tools: * * <a href=\"/tools/chroma\">chroma</a>, <a href=\"/tools/faiss\">faiss</a>",
+    "description": "Milvus is a high-performance, cloud-native vector database built for scalable vector Ann search * * Related tools: * * chroma, faiss",
     "scores": {
       "functionality": 9.1,
       "ux": 5.679527442688409,
@@ -2169,7 +2169,7 @@
     "name": "cherry-studio",
     "category": "agent-framework",
     "vendor": "CherryHQ",
-    "description": "AI productivity studio with smart chat, autonomous agents, and 300 + assistants. Unified access to frontier LLMs\n\n* * Tools: * * <a href=\"/tools/crewai\">crewAI</a>, <a href=\"/tools/fabric\">Fabric</a>",
+    "description": "AI productivity studio with smart chat, autonomous agents, and 300 + assistants. Unified access to frontier LLMs * * Tools: * * crewAI, Fabric",
     "scores": {
       "functionality": 9.1,
       "ux": 6.387643606400678,
@@ -2216,7 +2216,7 @@
     "name": "ray",
     "category": "agent-runtime",
     "vendor": "ray-project",
-    "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.\n\n* * Related tools: * * <a href=\"/tools/claude-code\">claude-code</a>, < a href = \"/t...",
+    "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads. * * Related tools: * * claude-code, < a href = \"/t...",
     "scores": {
       "functionality": 9,
       "ux": 6.130790943988701,
@@ -2263,7 +2263,7 @@
     "name": "jan",
     "category": "agent",
     "vendor": "janhq",
-    "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer.\n\n* * Related Tools: * * <a href=\"/tools/llama-factory\">LlamaFactory</a>, <a href=\"/tools/chainlit\">chainlit</a>",
+    "description": "Jan is an open source alternative to ChatGPT that runs 100% offline on your computer. * * Related Tools: * * LlamaFactory, chainlit",
     "scores": {
       "functionality": 9,
       "ux": 5.757245452543449,
@@ -2359,7 +2359,7 @@
     "name": "unsloth",
     "category": "audio",
     "vendor": "unslothai",
-    "description": "Unsloth Studio is a web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally.\n\n* * Related tools: * * <a href=\"/tools/litellm\">litellm</a>, <a href=\"/tools/composio\">composio</a>",
+    "description": "Unsloth Studio is a web UI for training and running open models like Qwen, DeepSeek, gpt-oss and Gemma locally. * * Related tools: * * litellm, composio",
     "scores": {
       "functionality": 9.2,
       "ux": 7,
@@ -2406,7 +2406,7 @@
     "name": "text-generation-webui",
     "category": "dev-tools",
     "vendor": "oobabooga",
-    "description": "The original local LLM interface. Text, vision, tool-calling, training, and more. 100% offline.\n\n* * Related tools: * * <a href=\"/tools/composio\">composio</a>, <a href=\"/tools/tts-generation-webui\">TTS-WebUI</a>",
+    "description": "The original local LLM interface. Text, vision, tool-calling, training, and more. 100% offline. * * Related tools: * * composio, TTS-WebUI",
     "scores": {
       "functionality": 9.1,
       "ux": 7,
@@ -2455,7 +2455,7 @@
     "name": "firecrawl",
     "category": "productivity",
     "vendor": "firecrawl",
-    "description": "🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data\n\n* * Related tools: * * <a href=\"/tools/browser-use\">browser-use</a>, <a href=\"/tools/autogpt-js\">AutoGPT.js</a>",
+    "description": "🔥 The Web Data API for AI - Turn entire websites into LLM-ready markdown or structured data * * Related tools: * * browser-use, AutoGPT.js",
     "scores": {
       "functionality": 9.3,
       "ux": 6.5,
