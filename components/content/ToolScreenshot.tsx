@@ -35,7 +35,7 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "" }: T
           src={screenshotUrl}
           alt={`${toolName} screenshot - ${vendor || "AIToolCrux"}`}
           className="w-full h-auto object-cover"
-          onError={() = loading="lazy"> setImageError(true)}
+          onError={() => setImageError(true)}
           loading="lazy"
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
@@ -64,7 +64,8 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "" }: T
             src={screenshotUrl}
             alt={`${toolName} screenshot - ${vendor || "AIToolCrux"}`}
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
-            onClick={(e) = loading="lazy"> e.stopPropagation()}
+            onClick={(e) => e.stopPropagation()}
+            loading="lazy"
           />
         </div>
       )}
