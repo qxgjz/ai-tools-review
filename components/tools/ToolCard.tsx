@@ -48,9 +48,9 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent rotate-45 transform translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
           </div>
 
-          {/* 精选标签（参考Aceternity UI） */}
+          {/* 精选标签（参考Aceternity UI）- 移到左上角避免与评级重叠 */}
           {isFeatured && (
-            <div className="absolute top-3 right-3 z-10">
+            <div className="absolute top-3 left-3 z-10">
               <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full shadow-lg shadow-amber-500/30">
                 <Sparkles className="w-3 h-3" />
                 TOP

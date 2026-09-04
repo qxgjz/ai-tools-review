@@ -12,8 +12,8 @@ interface ToolListProps {
 export function ToolList({
   tools,
   className = "",
-  emptyTitle = "暂无工具",
-  emptyDescription = "当前筛选条件下没有匹配的工具。",
+  emptyTitle = "No tools found",
+  emptyDescription = "No tools match your current filters.",
 }: ToolListProps) {
   if (tools.length === 0) {
     return (

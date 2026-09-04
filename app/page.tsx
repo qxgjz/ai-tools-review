@@ -279,7 +279,7 @@ export default function HomePage() {
                 Trending Ranking
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mt-2">
-                基于六维加权评分，为你精选最优质的 AI Tools
+                Top AI tools curated based on our six-dimension weighted scoring
               </p>
             </div>
             <Link
