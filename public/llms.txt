@@ -1,0 +1,101 @@
+# llms.txt - AIToolCrux
+# AI Tools Review & Comparison Platform
+# https://www.aitoolcrux.com
+
+# 网站基本信息
+- 名称: AIToolCrux
+- 描述: 专业的AI工具评测、对比和推荐平台，帮助用户找到最适合的AI工具
+- 语言: 中文（简体）
+- 类型: 工具评测/对比/推荐
+- 最后更新: 2026-09-04
+
+# 主要栏目
+- 首页: https://www.aitoolcrux.com/
+- 工具列表: https://www.aitoolcrux.com/tools
+- 工具分类: https://www.aitoolcrux.com/category
+- 工具对比: https://www.aitoolcrux.com/compare
+- 排行榜: https://www.aitoolcrux.com/ranking
+- 评测博客: https://www.aitoolcrux.com/blog
+- 工具生成器: https://www.aitoolcrux.com/generator
+- 搜索: https://www.aitoolcrux.com/search
+
+# 热门工具评测
+- ChatGPT: https://www.aitoolcrux.com/tools/chatgpt
+- Claude: https://www.aitoolcrux.com/tools/claude
+- Gemini: https://www.aitoolcrux.com/tools/gemini
+- Midjourney: https://www.aitoolcrux.com/tools/midjourney
+- DALL-E 3: https://www.aitoolcrux.com/tools/dall-e-3
+- Stable Diffusion: https://www.aitoolcrux.com/tools/stable-diffusion
+- GitHub Copilot: https://www.aitoolcrux.com/tools/github-copilot
+- Cursor: https://www.aitoolcrux.com/tools/cursor
+- Windsurf: https://www.aitoolcrux.com/tools/windsurf
+- Jasper: https://www.aitoolcrux.com/tools/jasper
+
+# 工具分类
+- AI对话/聊天: https://www.aitoolcrux.com/category/chat
+- AI图像生成: https://www.aitoolcrux.com/category/image
+- AI编程助手: https://www.aitoolcrux.com/category/programming
+- AI视频生成: https://www.aitoolcrux.com/category/video
+- AI写作助手: https://www.aitoolcrux.com/category/writing
+- AI音频处理: https://www.aitoolcrux.com/category/audio
+- AI办公效率: https://www.aitoolcrux.com/category/office
+- AI设计工具: https://www.aitoolcrux.com/category/design
+- AI数据分析: https://www.aitoolcrux.com/category/data
+- AI教育学习: https://www.aitoolcrux.com/category/education
+
+# 热门对比
+- ChatGPT vs Claude: https://www.aitoolcrux.com/compare?tools=chatgpt,claude
+- ChatGPT vs Gemini: https://www.aitoolcrux.com/compare?tools=chatgpt,gemini
+- Midjourney vs DALL-E 3: https://www.aitoolcrux.com/compare?tools=midjourney,dall-e-3
+- GitHub Copilot vs Cursor: https://www.aitoolcrux.com/compare?tools=github-copilot,cursor
+
+# 评测文章
+- ChatGPT深度评测2026: https://www.aitoolcrux.com/blog/chatgpt-deep-review-2026
+- ChatGPT vs Claude 2026对比: https://www.aitoolcrux.com/blog/chatgpt-vs-claude-2026-comparison
+
+# 重要页面
+- 关于我们: https://www.aitoolcrux.com/about
+- 联系我们: https://www.aitoolcrux.com/contact
+- 隐私政策: https://www.aitoolcrux.com/privacy
+- 联盟披露: https://www.aitoolcrux.com/disclosure
+- 免费AI工具指南: https://www.aitoolcrux.com/free-ai-tools-guide
+
+# 内容结构说明
+## 工具详情页结构
+- 工具基本信息（名称、厂商、价格、评分）
+- 功能介绍
+- 优缺点分析
+- 使用场景
+- 与竞品对比
+- 用户评价
+- 相关推荐
+
+## 评测文章结构
+- 结论前置
+- 详细评测
+- 对比分析
+- 使用建议
+- FAQ
+
+## 对比页结构
+- 双栏对比
+- 评分雷达图
+- 按场景推荐
+- 价格对比
+- 功能对比
+
+# 数据来源
+- 官方网站信息
+- 实际使用测试
+- 用户评价汇总
+- 社区反馈
+
+# 更新频率
+- 工具信息: 每周更新
+- 评测文章: 每日更新
+- 排行榜: 每月更新
+- 对比数据: 实时更新
+
+# 联系信息
+- 邮箱: contact@aitoolcrux.com
+- 网站: https://www.aitoolcrux.com
