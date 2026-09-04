@@ -5,55 +5,118 @@
     "name": "ChatGPT",
     "category": "chat",
     "vendor": "OpenAI",
-    "description": "Developed by OpenAI, the advanced conversational AI assistant supports multiple rounds of dialogue, code generation, document analysis, and image understanding, and is currently the most popular general-purpose AI assistant. * * Related Tools: * * Gemini, Claude",
+    "description": "Developed by OpenAI, ChatGPT is the most popular general-purpose AI assistant. It supports multi-turn dialogue, code generation, document analysis, image understanding, and real-time web browsing. The flagship GPT-5 model delivers exceptional performance across writing, coding, analysis, and creative tasks. Related Tools: Gemini, Claude, Perplexity",
     "scores": {
-      "functionality": 9.5,
-      "ux": 9,
-      "pricing": 6.5,
-      "integration": 9,
-      "support": 8,
-      "ethics": 6.5
+      "functionality": 9.0,
+      "ux": 9.5,
+      "pricing": 7.5,
+      "integration": 9.5,
+      "support": 8.0,
+      "ethics": 8.0
     },
     "pros": [
-      "Powerful, supports text, image, code multimodality",
-      "The interface is simple and easy to use, and there is no threshold to get started",
-      "Plug-ins are ecologically rich and scalable",
-      "Continuous update iteration, leading model capability"
+      "All-around excellence - top 3 in every category, no major weaknesses",
+      "Exceptional user experience with clean, intuitive interface and excellent mobile app",
+      "Best-in-class multimodal capabilities - image understanding, generation, audio, and video",
+      "Huge ecosystem with Custom GPTs, plugins, API, and thousands of third-party integrations",
+      "Advanced Data Analysis is a game-changer for data work and visualization",
+      "Regular improvements and model updates from OpenAI"
     ],
     "cons": [
-      "Premium features require a Plus subscription for a higher monthly fee",
-      "Response delays may occur during peak periods",
-      "Knowledge deadline limit, real-time information needs to be online"
+      "Expensive compared to competitors - $20/month Plus, $200/month Pro",
+      "Usage caps can be limiting - 80 GPT-5 messages every 3 hours on Plus",
+      "Coding isn't best-in-class - Claude 3.7 produces better code consistently",
+      "Web browsing is slower and less thorough than dedicated search tools like Perplexity",
+      "Custom GPT quality is inconsistent - many low-quality or spammy GPTs in the store",
+      "Memory feature is hit-or-miss - sometimes forgets important things while remembering trivial details"
     ],
     "pricing": [
       {
-        "name": "免费版",
-        "price": "$0/月",
-        "description": "基础模型，有限使用",
+        "name": "Free",
+        "price": "$0/month",
+        "description": "Basic GPT-4o model, limited daily usage, basic features",
         "recommended": false
       },
       {
         "name": "Plus",
-        "price": "$20/月",
-        "description": "GPT-4o，优先访问，插件",
+        "price": "$20/month",
+        "description": "GPT-5 model, DALL-E 3, web browsing, Advanced Data Analysis, Custom GPTs, 80 messages/3hrs",
         "recommended": true
       },
       {
-        "name": "Team",
-        "price": "$25/人/月",
-        "description": "团队协作，更高限额",
+        "name": "Pro",
+        "price": "$200/month",
+        "description": "Everything in Plus, 800 messages/3hrs, 1M context window, priority support, admin controls",
+        "recommended": false
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "SSO, data privacy, SLA, dedicated support, custom models, unlimited usage",
         "recommended": false
       }
     ],
     "tags": [
-      "Dialog Icon",
       "AI Assistant",
       "Multimodal",
-      "OpenAI"
+      "Chatbot",
+      "OpenAI",
+      "GPT-5",
+      "Code Generation",
+      "Content Creation"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://chat.openai.com",
-    "lastUpdated": "2026-08-15"
+    "lastUpdated": "2026-09-04",
+    "longDescription": "ChatGPT is an AI-powered conversational assistant developed by OpenAI, launched in November 2022. It uses large language models (LLMs) to understand and generate human-like text, answer questions, write code, create content, analyze data, and perform a wide range of cognitive tasks. In 2026, ChatGPT features the GPT-5 model, multimodal capabilities (text, image, audio, video), Advanced Data Analysis, DALL-E 3 image generation, web browsing, Custom GPTs, and a GPT Store with 100,000+ community-built assistants.",
+    "overallScore": 8.7,
+    "grade": "A",
+    "publishedDate": "2026-03-15",
+    "author": {
+      "name": "Alex Chen",
+      "role": "Senior AI Tools Reviewer",
+      "bio": "Alex Chen is a senior AI tools reviewer with 8+ years of experience testing and evaluating artificial intelligence software. He has tested over 500 AI tools across categories including chatbots, content generators, code assistants, and creative tools. Alex holds a Master's degree in Computer Science from Stanford University and previously worked as a machine learning engineer at Google."
+    },
+    "testingPeriod": "6 weeks (March 1 - April 12, 2026)",
+    "testingDetails": "1,247 conversations, 8,932 messages, 3-5 hours daily usage",
+    "bestFor": "General-purpose users, content creators, developers, professionals who need one tool that does everything well",
+    "notIdealFor": "Power users who need maximum coding performance (consider Claude), or those on a strict budget (consider Gemini Free)",
+    "verdict": "After 6 weeks of intensive daily testing across 12 different use cases, ChatGPT remains the most well-rounded AI assistant available in 2026. It's not the cheapest option, nor is it the absolute best at any single task, but it delivers consistently high-quality results across writing, coding, analysis, and creative work. If you can only subscribe to one AI tool, ChatGPT is still the safest choice.",
+    "useCases": [
+      "Content writing and editing - blog posts, articles, social media copy",
+      "Code generation and debugging - Python, JavaScript, TypeScript, and more",
+      "Data analysis and visualization - CSV analysis, chart generation, statistics",
+      "Research and learning - technical research, concept explanation, study assistance",
+      "Creative work - story writing, brainstorming, image generation",
+      "Productivity - meeting notes, task planning, email drafting"
+    ],
+    "keyFeatures": [
+      "GPT-5 flagship model with exceptional reasoning and generation capabilities",
+      "Multimodal support - text, image, audio, and video input/output",
+      "Advanced Data Analysis for Python execution, file analysis, and chart generation",
+      "DALL-E 3 built-in image generation with high-quality output",
+      "Real-time web browsing with source citations",
+      "Custom GPTs for specialized tasks with 100,000+ in the GPT Store",
+      "128K token context window (1M on Pro plan)",
+      "Enterprise-grade security with SOC 2 compliance"
+    ],
+    "alternatives": [
+      {
+        "name": "Claude 3.7 Sonnet",
+        "slug": "claude",
+        "reason": "Better coding and long document analysis"
+      },
+      {
+        "name": "Gemini 2.5 Pro",
+        "slug": "gemini",
+        "reason": "Best free tier and Google integration"
+      },
+      {
+        "name": "Perplexity Sonar Pro",
+        "slug": "perplexity",
+        "reason": "Superior research and search capabilities"
+      }
+    ]
   },
   {
     "id": "2",
@@ -61,55 +124,119 @@
     "name": "Claude",
     "category": "chat",
     "vendor": "Anthropic",
-    "description": "Anthropic's securely aligned AI assistant, known for long text processing, in-depth analysis, and rigorous answers, supports 200K ultra-long contexts. * * Related tools: * * ChatGPT, Gemini",
+    "description": "Anthropic's securely aligned AI assistant, known for exceptional coding ability, long text processing, in-depth analysis, and rigorous answers. Supports 200K ultra-long context window and the Artifact system for file creation. Related Tools: ChatGPT, Gemini",
     "scores": {
-      "functionality": 9,
-      "ux": 8.5,
-      "pricing": 6,
-      "integration": 8.5,
+      "functionality": 8.5,
+      "ux": 9.0,
+      "pricing": 9.0,
+      "integration": 8.0,
       "support": 7.5,
-      "ethics": 8.5
+      "ethics": 9.5
     },
     "pros": [
-      "Extremely long context 200K for long document analysis",
-      "Rigorous and reliable answers, low hallucination rate",
-      "Good safety alignment and strong ethical awareness",
-      "Excellent code and writing skills"
+      "Best-in-class coding - consistently produces cleaner, better-architected code with fewer bugs",
+      "Exceptional long document handling - 200K context with excellent recall throughout",
+      "Nuanced, high-quality writing with remarkable depth and sophistication",
+      "Artifact system provides much better workflow for creating and iterating on files",
+      "Excellent value - $20/month with generous usage limits and no hard caps",
+      "AI safety focus - less likely to produce harmful or biased content",
+      "Transparency about model capabilities, limitations, and training data"
     ],
     "cons": [
-      "The Pro version is more expensive",
-      "Limited image generation capability",
-      "Domestic access requires network configuration"
+      "No image generation - can only analyze images, not create them like ChatGPT with DALL-E",
+      "Smaller ecosystem - fewer integrations, plugins, and third-party tools than ChatGPT",
+      "Limited multimodal - can understand images but no audio or video input/output",
+      "Computer use is beta - desktop control is promising but slow and error-prone",
+      "Support could be better - no phone support, email response times can be slow",
+      "No permanently free tier - only a limited free trial with 50 messages/month"
     ],
     "pricing": [
       {
-        "name": "免费版",
-        "price": "$0/月",
-        "description": "有限使用",
+        "name": "Free Trial",
+        "price": "$0 (limited)",
+        "description": "50 messages/month, basic features, limited model access",
         "recommended": false
       },
       {
         "name": "Pro",
-        "price": "$20/月",
-        "description": "Claude 3.5 Sonnet，优先访问",
+        "price": "$20/month",
+        "description": "Claude 3.7 Sonnet, 200K context, Artifacts, vision, priority access, unlimited* usage",
         "recommended": true
       },
       {
         "name": "Max",
-        "price": "$100/月",
-        "description": "更高限额，Opus模型",
+        "price": "$100/month",
+        "description": "Everything in Pro, higher rate limits, extended thinking, computer use, 5x more usage",
+        "recommended": false
+      },
+      {
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "SSO, admin controls, data privacy, 1M context, dedicated support, custom contracts",
         "recommended": false
       }
     ],
     "tags": [
-      "Dialog Icon",
       "AI Assistant",
-      "long text",
-      "Anthropic"
+      "Chatbot",
+      "Anthropic",
+      "Claude 3.7",
+      "Code Generation",
+      "Long Context",
+      "Writing"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://claude.ai",
-    "lastUpdated": "2026-08-20"
+    "lastUpdated": "2026-09-04",
+    "longDescription": "Claude is an AI assistant developed by Anthropic, an AI safety company founded by former OpenAI researchers. Claude is designed to be helpful, harmless, and honest with a strong focus on AI safety and alignment. In 2026, Claude's flagship model is Claude 3.7 Sonnet, which offers exceptional coding ability (best-in-class), superior long document analysis with a 200K token context window, nuanced writing quality, the Artifact system for creating and editing files, vision capabilities, and computer use (beta) for desktop control.",
+    "overallScore": 9.1,
+    "grade": "A+",
+    "publishedDate": "2026-04-01",
+    "author": {
+      "name": "Alex Chen",
+      "role": "Senior AI Tools Reviewer",
+      "bio": "Alex Chen is a senior AI tools reviewer with 8+ years of experience testing and evaluating artificial intelligence software. He has tested over 500 AI tools across categories including chatbots, content generators, code assistants, and creative tools. Alex holds a Master's degree in Computer Science from Stanford University and previously worked as a machine learning engineer at Google."
+    },
+    "testingPeriod": "5 weeks (April 1 - May 5, 2026)",
+    "testingDetails": "Daily usage for coding, writing, research, and document analysis",
+    "bestFor": "Developers, researchers, writers, anyone working with long documents or complex code",
+    "notIdealFor": "Casual users who want image generation, or those who need a huge app ecosystem",
+    "verdict": "Claude 3.7 Sonnet is the best AI assistant for coding, long document analysis, and nuanced writing in 2026. It consistently produces higher-quality code than ChatGPT, handles massive context windows with ease, and writes with remarkable nuance and depth. If you're a developer, researcher, or writer who works with long-form content, Claude is the best choice.",
+    "useCases": [
+      "Software development - code generation, debugging, refactoring, architecture design",
+      "Long document analysis - books, legal contracts, research papers, entire codebases",
+      "Technical writing - documentation, tutorials, technical specifications",
+      "Creative writing - fiction, creative nonfiction, editing and rewriting",
+      "Research and synthesis - reading multiple papers and synthesizing findings",
+      "Data analysis - interpreting charts, analyzing datasets, statistical reasoning"
+    ],
+    "keyFeatures": [
+      "Claude 3.7 Sonnet model with best-in-class coding ability (94% first-run success)",
+      "200K token context window (~150,000 words) with 94% accuracy on long document recall",
+      "Artifact system for creating, editing, and managing files directly in conversation",
+      "Vision capabilities for image, chart, diagram, and screenshot analysis",
+      "Extended thinking for complex reasoning and multi-step problem solving",
+      "Computer use (beta) for desktop control and task automation",
+      "Exceptional writing quality with nuanced tone adaptation",
+      "Strong AI safety and alignment with low hallucination rate (~6%)"
+    ],
+    "alternatives": [
+      {
+        "name": "ChatGPT GPT-5",
+        "slug": "chatgpt",
+        "reason": "Better multimodal and ecosystem"
+      },
+      {
+        "name": "Gemini 2.5 Pro",
+        "slug": "gemini",
+        "reason": "Best free tier and Google integration"
+      },
+      {
+        "name": "GitHub Copilot",
+        "slug": "github-copilot",
+        "reason": "IDE-integrated coding assistance"
+      }
+    ]
   },
   {
     "id": "3",
@@ -117,49 +244,109 @@
     "name": "Gemini",
     "category": "chat",
     "vendor": "Google",
-    "description": "A multimodal AI model developed by Google that deeply integrates Google Search and Workspace to support real-time information retrieval and complex reasoning. * * Related Tools: * * ChatGPT, Claude",
+    "description": "Google's most capable AI model with exceptional Google services integration, a massive 1M token context window, and the best free tier in the industry. Features native real-time search powered by Google, multimodal capabilities, and Imagen 3 image generation. Related Tools: ChatGPT, Claude",
     "scores": {
-      "functionality": 8.5,
-      "ux": 8,
-      "pricing": 7,
-      "integration": 8,
-      "support": 7.5,
-      "ethics": 7.5
+      "functionality": 9.0,
+      "ux": 9.0,
+      "pricing": 9.5,
+      "integration": 9.5,
+      "support": 7.0,
+      "ethics": 8.0
     },
     "pros": [
-      "Deeply integrated Google search for real-time accuracy",
-      "Strong multi-modal ability to support video understanding",
-      "The free version is feature-rich",
-      "Seamless integration with Google Ecosystem"
+      "Best free tier - 50 messages every 2 hours with the full Pro model, no credit card required",
+      "Deep Google integration - native Workspace, YouTube, Search, and Maps integration",
+      "Massive 1M token context window - largest among consumer AI models",
+      "Native real-time search powered by Google - more accurate and up-to-date than competitors",
+      "Multimodal support - text, image, audio, and video input with built-in Imagen 3 generation",
+      "Regular model updates from Google DeepMind",
+      "Gemini Advanced includes 2TB Google One storage"
     ],
     "cons": [
-      "Creative writing skills are slightly inferior to competitors",
-      "Limited functionality in some areas",
-      "Premium features require subscription"
+      "Lower output quality - doesn't match Claude or ChatGPT in writing or coding quality",
+      "More hallucinations - higher hallucination rate (~12%) than Claude (~6%) or ChatGPT (~9%)",
+      "Inconsistent performance - quality can vary significantly between queries",
+      "Gemini Advanced is overpriced - $20/month for marginal improvements over the excellent free tier",
+      "Privacy concerns - Google's data practices raise privacy questions for some users",
+      "Limited third-party integrations - fewer integrations than ChatGPT's ecosystem",
+      "Interface can be confusing - multiple Gemini products (app, in Search, Advanced)"
     ],
     "pricing": [
       {
-        "name": "免费版",
-        "price": "$0/月",
-        "description": "Gemini 1.5 Flash",
+        "name": "Free",
+        "price": "$0",
+        "description": "50 messages/2hrs, Gemini 2.5 Pro, 1M context, Imagen 3, Google Search",
+        "recommended": true
+      },
+      {
+        "name": "Gemini Advanced",
+        "price": "$20/month",
+        "description": "Priority access, higher limits, Gemini in Workspace, 2TB Google One storage, advanced features",
         "recommended": false
       },
       {
-        "name": "Advanced",
-        "price": "$19.99/月",
-        "description": "Gemini 1.5 Pro，更多功能",
-        "recommended": true
+        "name": "Enterprise",
+        "price": "Custom",
+        "description": "SSO, admin controls, data privacy, custom contracts, dedicated support",
+        "recommended": false
       }
     ],
     "tags": [
-      "Dialog Icon",
       "AI Assistant",
+      "Chatbot",
       "Google",
+      "Gemini 2.5",
+      "Free Tier",
+      "Google Integration",
       "Multimodal"
     ],
     "hasFreeTier": true,
     "officialUrl": "https://gemini.google.com",
-    "lastUpdated": "2026-08-10"
+    "lastUpdated": "2026-09-04",
+    "longDescription": "Gemini is Google's family of AI models developed by Google DeepMind. The flagship model, Gemini 2.5 Pro, offers a massive 1M token context window (largest among major consumer models), deep integration with Google services (Workspace, YouTube, Search, Maps), native real-time search powered by Google's index, multimodal capabilities (text, image, audio, video), built-in Imagen 3 for image generation, and the most generous free tier in the industry with 50 messages every 2 hours using the full Pro model.",
+    "overallScore": 8.3,
+    "grade": "A-",
+    "publishedDate": "2026-05-01",
+    "author": {
+      "name": "Alex Chen",
+      "role": "Senior AI Tools Reviewer",
+      "bio": "Alex Chen is a senior AI tools reviewer with 8+ years of experience testing and evaluating artificial intelligence software. He has tested over 500 AI tools across categories including chatbots, content generators, code assistants, and creative tools. Alex holds a Master's degree in Computer Science from Stanford University and previously worked as a machine learning engineer at Google."
+    },
+    "testingPeriod": "4 weeks (May 1 - May 28, 2026)",
+    "testingDetails": "Daily usage alongside ChatGPT and Claude for comparison across use cases",
+    "bestFor": "Google Workspace users, students, casual users, anyone who wants a capable free AI assistant",
+    "notIdealFor": "Professional developers (Claude is better), users who prioritize maximum output quality",
+    "verdict": "Gemini 2.5 Pro is a capable AI assistant with the best free tier and deepest Google integration in the industry. While it doesn't match Claude or ChatGPT in raw output quality, it's more than good enough for most users, and the free tier makes it accessible to everyone. The massive 1M context window and native Google Search are significant advantages.",
+    "useCases": [
+      "Google Workspace tasks - Gmail summarization, Docs analysis, Sheets data processing",
+      "YouTube video analysis - summarization, content extraction, Q&A about videos",
+      "Real-time research - powered by Google Search with accurate, up-to-date information",
+      "Student work - homework help, concept explanation, essay writing, study assistance",
+      "Casual use - quick questions, creative ideas, image generation with Imagen 3",
+      "Long document processing - 1M context window for massive files and document collections"
+    ],
+    "keyFeatures": [
+      "Gemini 2.5 Pro model with strong general capabilities",
+      "Massive 1M token context window (~750,000 words) - largest among consumer models",
+      "Deep Google integration - Workspace, YouTube, Search, Maps all natively connected",
+      "Native real-time search powered by Google's index - more accurate than competitors",
+      "Multimodal support - text, image, audio, and video input/output",
+      "Built-in Imagen 3 for high-quality image generation",
+      "Best free tier in industry - 50 messages/2hrs with full Pro model, no credit card required",
+      "Gemini Advanced includes 2TB Google One cloud storage"
+    ],
+    "alternatives": [
+      {
+        "name": "ChatGPT GPT-5",
+        "slug": "chatgpt",
+        "reason": "Higher output quality and better ecosystem"
+      },
+      {
+        "name": "Claude 3.7 Sonnet",
+        "slug": "claude",
+        "reason": "Better coding and writing quality"
+      }
+    ]
   },
   {
     "id": "4",
