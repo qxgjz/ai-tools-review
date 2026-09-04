@@ -16,16 +16,16 @@ interface AdSlotProps {
 }
 
 /**
- * AdSense广告位组件
+ * AdSense广告位Component
  * 预留广告位，接入AdSense后自动显示广告
- * 当前为占位符，配置AdSense publisher ID后自动启用
+ * 当前为占位符，ConfigurationAdSense publisher ID后自动启用
  */
 export function AdSlot({ slot = "0000000000", format = "auto", className = "", label }: AdSlotProps) {
   const adRef = useRef<HTMLModElement>(null);
   const loaded = useRef(false);
 
   useEffect(() => {
-    // 只有在配置了真实的AdSense slot后才加载广告
+    // 只有在Configuration了真实的AdSense slot后才加载广告
     if (slot !== "0000000000" && adRef.current && !loaded.current) {
       try {
         (window.adsbygoogle = window.adsbygoogle || []).push({});
@@ -36,7 +36,7 @@ export function AdSlot({ slot = "0000000000", format = "auto", className = "", l
     }
   }, [slot]);
 
-  // 如果未配置真实slot，显示占位符
+  // 如果未Configuration真实slot，显示占位符
   if (slot === "0000000000") {
     return (
       <div className={`my-6 ${className}`}>

@@ -74,7 +74,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200">
         <ThemeProvider>
-          {/* 全局SEO结构化数据 - 服务器端渲染，确保搜索引擎可抓取 */}
+          {/* 全局SEO结构化数据 - 服务器端渲染，确保Search引擎可抓取 */}
           <script
             type="application/ld+json"
             dangerouslySetInnerHTML={{
@@ -109,10 +109,10 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="dns-prefetch" href="https://giscus.app" />
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-          {/* 性能优化：字体显示优化，避免FOIT */}
+          {/* Performance Optimization：字体显示优化，避免FOIT */}
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" />
-          {/* Umami 网站分析 */}
+          {/* Umami 网站Analysis */}
           <Script
             strategy="afterInteractive"
             src="https://cloud.umami.is/script.js"
@@ -134,7 +134,7 @@ export default function RootLayout({
               });
             `}
           </Script>
-          {/* 百度统计（未配置ID时自动不加载） */}
+          {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
           <AffiliateDisclosure />
           <Header />
@@ -189,7 +189,7 @@ export default function RootLayout({
                   </div>
                 </div>
 
-                {/* 主要页面列 */}
+                {/* 主要Page列 */}
                 <div>
                   <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
                     Explore
@@ -203,7 +203,7 @@ export default function RootLayout({
                   </ul>
                 </div>
 
-                {/* 热门分类列 */}
+                {/* PopularCategories列 */}
                 <div>
                   <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
                     Categories

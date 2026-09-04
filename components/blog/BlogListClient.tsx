@@ -28,7 +28,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
 
-  // 获取所有分类
+  // 获取所有Categories
   const categories = useMemo(() => {
     const catSet = new Set<string>();
     posts.forEach((p) => catSet.add(p.category));
@@ -39,7 +39,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
   const filteredAndSortedPosts = useMemo(() => {
     let result = [...posts];
 
-    // 按分类筛选
+    // 按Categories筛选
     if (categoryFilter !== "all") {
       result = result.filter((post) => post.category === categoryFilter);
     }
@@ -76,9 +76,9 @@ export function BlogListClient({ posts }: BlogListClientProps) {
 
   return (
     <div className="mb-8">
-      {/* 筛选和排序工具栏 */}
+      {/* 筛选和排序Tools栏 */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 p-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
-        {/* 分类筛选 */}
+        {/* Categories筛选 */}
         <div className="flex items-center gap-2 flex-wrap">
           <Filter className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2">
@@ -131,7 +131,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
         </div>
       </div>
 
-      {/* 结果统计 */}
+      {/* 结果Statistics */}
       <div className="flex items-center justify-between mb-4">
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Showing{" "}
@@ -159,7 +159,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
         )}
       </div>
 
-      {/* 文章列表 */}
+      {/* 文章列Table */}
       {filteredAndSortedPosts.length > 0 ? (
         <div className="space-y-4">
           {filteredAndSortedPosts.map((post) => (

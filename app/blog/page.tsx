@@ -14,7 +14,7 @@ export default function BlogPage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-      {/* 页面标题 */}
+      {/* Page标题 */}
       <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
         <div>
           <h1 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -35,7 +35,7 @@ export default function BlogPage() {
         </a>
       </div>
 
-      {/* 精选文章 */}
+      {/* Featured文章 */}
       {featuredPosts.length > 0 && (
         <div className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">

@@ -18,7 +18,7 @@ import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 
-// 分类配置
+// CategoriesConfiguration
 const CATEGORIES = [
   { slug: "chat", name: "AI Chat & Assistants", icon: "💬" },
   { slug: "writing", name: "AI Writing & Content", icon: "✍️" },
@@ -35,7 +35,7 @@ const CATEGORIES = [
   { slug: "observability", name: "AI Observability", icon: "📈" },
 ];
 
-// 主要页面
+// 主要Page
 const MAIN_PAGES = [
   { href: "/", name: "Home", icon: Home, desc: "AI tools homepage with featured tools" },
   { href: "/ranking", name: "Tool Rankings", icon: Trophy, desc: "All AI tools ranked by 6-dimension score" },
@@ -46,7 +46,7 @@ const MAIN_PAGES = [
   { href: "/free-ai-tools-guide", name: "Free AI Tools Guide", icon: Download, desc: "Download Top 50 AI tools guide (PDF)" },
 ];
 
-// 信息页面
+// 信息Page
 const INFO_PAGES = [
   { href: "/about", name: "About Us", icon: Info, desc: "Learn about AIToolCrux and our mission" },
   { href: "/privacy", name: "Privacy Policy", icon: Shield, desc: "How we handle your data and privacy" },
@@ -58,7 +58,7 @@ export default function SitemapPage() {
   const tools = toolsData as Tool[];
   const posts = postsData;
 
-  // 按分类分组工具
+  // 按Categories分组Tools
   const toolsByCategory: Record<string, Tool[]> = {};
   for (const tool of tools) {
     if (!toolsByCategory[tool.category]) {
@@ -67,20 +67,20 @@ export default function SitemapPage() {
     toolsByCategory[tool.category].push(tool);
   }
 
-  // 按评分排序每个分类的工具
+  // 按Rating排序每个Categories的Tools
   for (const cat of Object.keys(toolsByCategory)) {
     toolsByCategory[cat].sort(
       (a, b) => calculateScoreResult(b.scores).total - calculateScoreResult(a.scores).total
     );
   }
 
-  // 热门工具（Top 20）
+  // PopularTools（Top 20）
   const topTools = [...tools]
     .map((t) => ({ ...t, total: calculateScoreResult(t.scores).total }))
     .sort((a, b) => b.total - a.total)
     .slice(0, 20);
 
-  // 按分类分组博客文章
+  // 按Categories分组Blog文章
   const postsByCategory: Record<string, any[]> = {};
   for (const post of posts) {
     const cat = (post as any).category || "General";
@@ -90,7 +90,7 @@ export default function SitemapPage() {
     postsByCategory[cat].push(post);
   }
 
-  // 按发布日期排序每个分类的文章（最新的在前）
+  // 按Published排序每个Categories的文章（Latest的在前）
   for (const cat of Object.keys(postsByCategory)) {
     postsByCategory[cat].sort(
       (a, b) =>
@@ -100,7 +100,7 @@ export default function SitemapPage() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
-      {/* 页面头部 */}
+      {/* Page头部 */}
       <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
@@ -128,7 +128,7 @@ export default function SitemapPage() {
       </section>
 
       <div className="max-w-5xl mx-auto px-4 py-12">
-        {/* 主要页面 */}
+        {/* 主要Page */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <Home className="w-6 h-6 text-blue-600" />
@@ -156,7 +156,7 @@ export default function SitemapPage() {
           </div>
         </section>
 
-        {/* 分类页面 */}
+        {/* CategoriesPage */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <Layers className="w-6 h-6 text-purple-600" />
@@ -188,7 +188,7 @@ export default function SitemapPage() {
           </div>
         </section>
 
-        {/* 热门工具 */}
+        {/* PopularTools */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <Trophy className="w-6 h-6 text-amber-500" />
@@ -222,7 +222,7 @@ export default function SitemapPage() {
           </div>
         </section>
 
-        {/* 博客文章 - 按分类分组 */}
+        {/* Blog文章 - 按Categories分组 */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <FileText className="w-6 h-6 text-emerald-600" />
@@ -269,7 +269,7 @@ export default function SitemapPage() {
           </div>
         </section>
 
-        {/* 信息页面 */}
+        {/* 信息Page */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
             <Info className="w-6 h-6 text-gray-600" />

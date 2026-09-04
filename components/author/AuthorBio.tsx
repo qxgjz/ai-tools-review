@@ -19,7 +19,7 @@ export function AuthorBio({
   return (
     <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800">
       <div className="flex items-start gap-4">
-        {/* 作者头像 */}
+        {/* Author头像 */}
         <div className="flex-shrink-0">
           {avatar ? (
             <img
@@ -34,7 +34,7 @@ export function AuthorBio({
           )}
         </div>
 
-        {/* 作者信息 */}
+        {/* Author Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h4 className="text-base font-bold text-gray-900 dark:text-white">{name}</h4>

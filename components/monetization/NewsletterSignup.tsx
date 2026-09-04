@@ -3,8 +3,8 @@
 import { useState } from "react";
 
 /**
- * 邮件订阅组件
- * 用于收集用户邮箱，发送AI工具评测周报和独家内容
+ * 邮件订阅Component
+ * 用于收集用户邮箱，发送AITool Reviews周报和独家内容
  */
 export function NewsletterSignup({ variant = "default" }: { variant?: "default" | "compact" }) {
   const [email, setEmail] = useState("");

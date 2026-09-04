@@ -11,8 +11,8 @@ interface AffiliateCTAProps {
 }
 
 /**
- * 联盟CTA组件
- * 在评测页中显示"访问官网"按钮，带联盟链接
+ * 联盟CTAComponent
+ * 在评测页中显示"Visit Website"按钮，带联盟链接
  */
 export function AffiliateCTA({
   toolName,
@@ -102,7 +102,7 @@ export function AffiliateCTA({
 }
 
 /**
- * 对比表格中的联盟链接按钮
+ * CompareTable格中的联盟链接按钮
  */
 export function CompareAffiliateButton({ toolName, url }: { toolName: string; url?: string }) {
   if (!url) return <span className="text-gray-400 text-sm">N/A</span>;

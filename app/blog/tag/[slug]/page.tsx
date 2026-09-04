@@ -19,8 +19,8 @@ export function generateMetadata({ params }: TagPageProps) {
     }
   }
   return {
-    title: `#${tagName} - AIToolCrux博客`,
-    description: `AIToolCrux博客 - 标签 #${tagName} 的所有文章`,
+    title: `#${tagName} - AIToolCruxBlog`,
+    description: `AIToolCruxBlog - Tags #${tagName} 的所有文章`,
   };
 }
 
@@ -42,23 +42,23 @@ export default function TagPage({ params }: TagPageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-      {/* 返回按钮 */}
+      {/* Return按钮 */}
       <Link
         href="/blog"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
       >
-        ← 返回博客列表
+        ← ReturnBlog列Table
       </Link>
 
-      {/* 标签标题 */}
+      {/* Tags标题 */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          标签：#{tagName}
+          Tags：#{tagName}
         </h1>
         <p className="text-gray-600 dark:text-gray-400">{tagPosts.length} articles</p>
       </div>
 
-      {/* 文章列表 */}
+      {/* 文章列Table */}
       <div className="space-y-4">
         {tagPosts.map((post) => (
           <Link

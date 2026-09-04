@@ -53,7 +53,7 @@ export default function ComparePage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-      {/* 页面标题 */}
+      {/* Page标题 */}
       <div className="mb-8">
         <Link
           href="/"
@@ -67,7 +67,7 @@ export default function ComparePage() {
         </p>
       </div>
 
-      {/* 工具选择器 */}
+      {/* Tools选择器 */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
         <div className="flex items-center justify-between mb-4">
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
@@ -86,7 +86,7 @@ export default function ComparePage() {
           )}
         </div>
 
-        {/* 搜索框 */}
+        {/* Search框 */}
         <input
           type="text"
           placeholder="Search tool name, vendor, or tags..."
@@ -95,7 +95,7 @@ export default function ComparePage() {
           className="w-full px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-4"
         />
 
-        {/* 工具列表 */}
+        {/* Tools列Table */}
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-h-64 overflow-y-auto">
           {filteredTools.map((tool) => {
             const isSelected = selectedSlugs.includes(tool.slug);
@@ -148,7 +148,7 @@ export default function ComparePage() {
         </div>
       </div>
 
-      {/* 对比结果 */}
+      {/* Compare结果 */}
       {selectedTools.length >= 2 ? (
         <div className="space-y-8">
           {/* 总览卡片 */}
@@ -192,7 +192,7 @@ export default function ComparePage() {
             })}
           </div>
 
-          {/* 叠加雷达图对比 */}
+          {/* 叠加雷达图Compare */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Six-Dimension Overlay Radar Chart Comparison</h2>
             <div className="flex justify-center">
@@ -246,7 +246,7 @@ export default function ComparePage() {
             </div>
           </div>
 
-          {/* 详细对比表格 */}
+          {/* 详细CompareTable格 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
             <div className="p-6 border-b border-gray-100 dark:border-gray-800">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Detailed Specification Comparison</h2>
@@ -428,7 +428,7 @@ export default function ComparePage() {
             </div>
           </div>
 
-          {/* 价格方案详细对比 */}
+          {/* Pricing方案详细Compare */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
             <div className="p-6 border-b border-gray-100 dark:border-gray-800">
               <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Pricing Comparison</h2>
@@ -569,7 +569,7 @@ export default function ComparePage() {
           </div>
           <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Select tools to compare</h3>
           <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
-            从上方列表中选择 2-3 个工具，系统将基于Six-Dimension Scores模型生成详细对比报告
+            从上方列Table中选择 2-3 个Tools，System将基于Six-Dimension Scores模型生成详细CompareReport
           </p>
         </div>
       )}

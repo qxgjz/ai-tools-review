@@ -8,7 +8,7 @@ interface HandsOnExperienceProps {
   testDuration?: string;
 }
 
-// 根据分类生成不同的使用体验场景
+// 根据Categories生成不同的使用体验场景
 const CATEGORY_SCENARIOS: Record<string, { tasks: string[]; strengths: string[]; weaknesses: string[] }> = {
   chat: {
     tasks: [

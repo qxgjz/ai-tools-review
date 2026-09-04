@@ -15,7 +15,7 @@ interface ReviewSchemaProps {
 
 /**
  * Review Schema - 评测文章结构化数据
- * 帮助搜索引擎理解评测内容，显示评分星级
+ * 帮助Search引擎理解评测内容，显示Rating星级
  */
 export function ReviewSchema({
   name,
@@ -71,8 +71,8 @@ interface FAQSchemaProps {
 }
 
 /**
- * FAQ Schema - 常见问题结构化数据
- * 帮助搜索引擎在搜索结果中显示FAQ富摘要
+ * FAQ Schema - FAQ结构化数据
+ * 帮助Search引擎在Search Results中显示FAQ富摘要
  */
 export function FAQSchema({ faqs }: FAQSchemaProps) {
   const schema = {
@@ -109,8 +109,8 @@ interface ProductSchemaProps {
 }
 
 /**
- * Product Schema - 产品/工具结构化数据
- * 帮助搜索引擎理解工具产品信息，显示价格和评分
+ * Product Schema - 产品/Tools结构化数据
+ * 帮助Search引擎理解Tools产品信息，显示Pricing和Rating
  */
 export function ProductSchema({
   name,
@@ -180,7 +180,7 @@ interface BreadcrumbSchemaProps {
 
 /**
  * Breadcrumb Schema - 面包屑导航结构化数据
- * 帮助搜索引擎理解页面层级关系
+ * 帮助Search引擎理解Page层级关系
  */
 export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   const schema = {
@@ -204,7 +204,7 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
 
 /**
  * Organization Schema - 网站组织信息结构化数据
- * 全局注入，帮助搜索引擎理解网站身份
+ * 全局注入，帮助Search引擎理解网站身份
  */
 export function OrganizationSchema() {
   const schema = {
@@ -241,7 +241,7 @@ export function OrganizationSchema() {
 
 /**
  * WebSite Schema - 网站信息结构化数据
- * 包含站内搜索功能，帮助搜索引擎显示搜索框
+ * 包含站内SearchFunctionality，帮助Search引擎显示Search框
  */
 export function WebSiteSchema() {
   const schema = {

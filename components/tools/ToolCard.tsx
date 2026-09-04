@@ -48,7 +48,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent rotate-45 transform translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
           </div>
 
-          {/* 精选标签已移到评分区域，避免与Logo和评级标签重叠 */}
+          {/* FeaturedTags已移到Rating区域，避免与Logo和评级Tags重叠 */}
 
           {/* 头部：Logo + 等级 */}
           <div className="flex items-start justify-between mb-4 relative z-10">
@@ -64,7 +64,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             </span>
           </div>
 
-          {/* 名称 + 厂商 + 精选标签 */}
+          {/* 名称 + 厂商 + FeaturedTags */}
           <div className="relative z-10">
             <div className="flex items-center gap-2">
               <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1 flex-1">
@@ -80,7 +80,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <p className="mt-0.5 text-xs text-gray-400 dark:text-gray-500">{tool.vendor}</p>
           </div>
 
-          {/* 分类标签（参考shadcn/ui Badge） */}
+          {/* CategoriesTags（参考shadcn/ui Badge） */}
           <div className="mt-2 relative z-10">
             <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-[10px] font-medium border border-gray-100 dark:border-gray-700">
               {tool.category}
@@ -92,7 +92,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             {tool.description}
           </p>
 
-          {/* 评分区域（参考shadcn/ui Progress + Aceternity UI） */}
+          {/* Rating区域（参考shadcn/ui Progress + Aceternity UI） */}
           <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-800 relative z-10">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-baseline gap-1">
@@ -103,7 +103,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                 <ArrowUpRight className="w-4 h-4" />
               </div>
             </div>
-            {/* 评分进度条（参考shadcn/ui Progress） */}
+            {/* Rating进度条（参考shadcn/ui Progress） */}
             <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}

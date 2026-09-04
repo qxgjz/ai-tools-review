@@ -3,27 +3,27 @@
 import { useEffect, useRef } from "react";
 
 /**
- * Giscus 评论系统组件
- * 基于 GitHub Discussions，开源免费，无广告
+ * Giscus Comment System Component
+ * Based on GitHub Discussions, open source, free, no ads
  *
- * 使用前需要：
- * 1. 在 GitHub 仓库启用 Discussions
- * 2. 安装 Giscus App: https://github.com/apps/giscus
- * 3. 访问 https://giscus.app 获取你的 repoId 和 categoryId
- * 4. 替换下方的配置
+ * Before using:
+ * 1. Enable Discussions in your GitHub repository
+ * 2. Install Giscus App: https://github.com/apps/giscus
+ * 3. Visit https://giscus.app to get your repoId and categoryId
+ * 4. Replace the configuration below
  */
 interface GiscusProps {
-  /** GitHub 仓库，格式：owner/repo */
+  /** GitHub repository, format: owner/repo */
   repo?: string;
-  /** 仓库 ID（从 giscus.app 获取） */
+  /** Repository ID (obtained from giscus.app) */
   repoId?: string;
-  /** 讨论分类名称 */
+  /** Discussion category name */
   category?: string;
-  /** 分类 ID（从 giscus.app 获取） */
+  /** Category ID (obtained from giscus.app) */
   categoryId?: string;
-  /** 主题 */
+  /** Theme */
   theme?: "light" | "dark" | "preferred_color_scheme";
-  /** 语言 */
+  /** Language */
   lang?: string;
 }
 
@@ -40,10 +40,10 @@ export default function Giscus({
   useEffect(() => {
     if (!commentRef.current) return;
 
-    // 清空容器
+    // Clear container
     commentRef.current.innerHTML = "";
 
-    // 创建 giscus 脚本
+    // Create giscus script
     const script = document.createElement("script");
     script.src = "https://giscus.app/client.js";
     script.async = true;

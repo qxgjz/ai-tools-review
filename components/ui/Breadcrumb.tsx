@@ -12,8 +12,8 @@ interface BreadcrumbProps {
 }
 
 /**
- * Breadcrumb - 可视化面包屑导航组件
- * 帮助用户了解当前页面位置，提升用户体验和SEO
+ * Breadcrumb - 可视化面包屑导航Component
+ * 帮助用户了解当前Page位置，提升User Experience和SEO
  */
 export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
   return (
@@ -21,7 +21,7 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
       aria-label="Breadcrumb"
       className={`flex items-center flex-wrap gap-1 text-sm text-gray-500 dark:text-gray-400 ${className}`}
     >
-      {/* 首页链接 */}
+      {/* Home链接 */}
       <Link
         href="/"
         className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"

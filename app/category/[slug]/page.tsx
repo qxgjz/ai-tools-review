@@ -10,7 +10,7 @@ import { ToolList } from "@/components/tools/ToolList";
 import { CategoryToolsClient } from "@/components/tools/CategoryToolsClient";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 
-// 分类详细内容（用于SEO主题集群）
+// Categories详细内容（用于SEO主题Cluster）
 const CATEGORY_CONTENT: Record<string, {
   intro: string;
   buyingGuide: string[];
@@ -362,10 +362,10 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
       <CategoryToolsClient tools={sortedTools} />
 
-      {/* 分类详细内容 - SEO主题集群 */}
+      {/* Categories详细内容 - SEO主题Cluster */}
       {CATEGORY_CONTENT[params.slug] && (
         <div className="mt-12 space-y-10">
-          {/* 分类详细介绍 */}
+          {/* Categories详细介绍 */}
           <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{category.name}Complete Guide</h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{CATEGORY_CONTENT[params.slug].intro}</p>
@@ -386,7 +386,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             </div>
           </section>
 
-          {/* 该分类下的In-Depth Reviews文章 - 内链 */}
+          {/* 该Categories下的In-Depth Reviews文章 - 内链 */}
           {(() => {
             const categoryPosts = postsData.filter((p) => {
               const postCat = (p.categorySlug || p.category || "").toLowerCase();

@@ -108,7 +108,7 @@ export function RadarChart({
 
       {showValues &&
         dataPoints.map((p, i) => {
-          // 修复：将评分值放在数据点内侧（-14），避免与外侧维度标签重叠
+          // 修复：将Rating值放在数据点内侧（-14），避免与外侧维度Tags重叠
           const valueRadius = Math.max(0, p.score / 10 * radius - 14);
           const lp = polarToCartesian(getAngle(i), valueRadius);
           return (

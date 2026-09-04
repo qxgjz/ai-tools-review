@@ -34,7 +34,7 @@ export function FAQSection({ items, title = "Frequently Asked Questions" }: FAQS
   );
 }
 
-// 默认FAQ数据 - AI工具评测网站通用问题
+// 默认FAQ数据 - AITool Reviews网站通用问题
 export const defaultFAQs: FAQItem[] = [
   {
     question: "Are these AI tools free?",

@@ -27,7 +27,7 @@ import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 
-// 动态导入重型组件，减少首屏JS包大小
+// 动态Import重型Component，减少首屏JS包大小
 const ToolList = dynamic(() => import("@/components/tools/ToolList").then(m => m.ToolList), {
   loading: () => <div className="animate-pulse h-64 bg-gray-100 dark:bg-gray-800 rounded-xl" />,
 });
@@ -113,7 +113,7 @@ export default function HomePage() {
         />
 
         <div className="relative max-w-5xl mx-auto text-center">
-          {/* 标签 */}
+          {/* Tags */}
           <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-sm mb-8 border border-white/10">
             <Sparkles className="w-4 h-4 text-yellow-400" />
             <span className="text-blue-100">Six-Dimension Weighted Scoring · Professional Independent Reviews</span>
@@ -171,7 +171,7 @@ export default function HomePage() {
             </Link>
           </div>
 
-          {/* 统计数据 */}
+          {/* Statistics数据 */}
           <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 pb-6">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
@@ -215,7 +215,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 分类网格 - 更精致的卡片 */}
+      {/* Categories网格 - 更精致的卡片 */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-4">
@@ -294,7 +294,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 测评方法论 - 新增区块 */}
+      {/* 测评方法论 - Add区块 */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium mb-4">
@@ -347,7 +347,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 最新博客 - 新增区块 */}
+      {/* LatestBlog - Add区块 */}
       {latestPosts.length > 0 && (
         <section className="bg-gray-50 dark:bg-gray-900/50 py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
@@ -412,7 +412,7 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* CTA 区域 - 新增区块 */}
+      {/* CTA 区域 - Add区块 */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
         <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 dark:from-blue-700 dark:via-indigo-700 dark:to-purple-800 rounded-3xl p-12 sm:p-16 text-center text-white">
           {/* 背景装饰 */}
@@ -444,7 +444,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 邮件订阅 - 变现组件 */}
+      {/* 邮件订阅 - 变现Component */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
         <NewsletterSignup />
       </section>

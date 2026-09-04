@@ -17,7 +17,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
   const [sortBy, setSortBy] = useState<SortOption>("rating");
   const [priceFilter, setPriceFilter] = useState<PriceFilter>("all");
 
-  // 判断工具的定价模式
+  // 判断Tools的定价模式
   const getPriceMode = (tool: Tool): "free" | "freemium" | "paid" => {
     const pricing = (tool as any).pricing;
     if (!pricing || pricing.length === 0) return "freemium";
@@ -41,7 +41,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
     return "paid";
   };
 
-  // 筛选和排序工具
+  // 筛选和排序Tools
   const filteredAndSortedTools = useMemo(() => {
     let result = [...tools];
 
@@ -89,7 +89,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
 
   return (
     <div className="mb-8">
-      {/* 筛选和排序工具栏 */}
+      {/* 筛选和排序Tools栏 */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 p-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
         {/* 定价模式筛选 */}
         <div className="flex items-center gap-2 flex-wrap">
@@ -134,7 +134,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
         </div>
       </div>
 
-      {/* 结果统计 */}
+      {/* 结果Statistics */}
       <div className="flex items-center justify-between mb-4">
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Showing <span className="font-semibold text-gray-900 dark:text-white">{filteredAndSortedTools.length}</span> of{" "}
@@ -159,7 +159,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
         )}
       </div>
 
-      {/* 工具列表 */}
+      {/* Tools列Table */}
       <ToolList
         tools={filteredAndSortedTools}
         emptyTitle="No tools found"

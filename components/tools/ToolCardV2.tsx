@@ -52,7 +52,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
             <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent rotate-45 transform translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
           </div>
 
-          {/* 精选标签 */}
+          {/* FeaturedTags */}
           {isFeatured && (
             <div className="absolute top-3 right-3 z-10">
               <Badge className="bg-gradient-to-r from-amber-400 to-orange-500 text-white border-0 shadow-lg shadow-amber-500/30">
@@ -85,7 +85,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
               <CardDescription className="mt-0.5 text-xs">{tool.vendor}</CardDescription>
             </div>
 
-            {/* 分类标签 */}
+            {/* CategoriesTags */}
             <div className="mt-2">
               <Badge variant="outline" className="text-xs">
                 {tool.category}
@@ -111,7 +111,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
-              {/* 评分进度条 - 使用shadcn/ui Progress */}
+              {/* Rating进度条 - 使用shadcn/ui Progress */}
               <Progress value={scorePercent} className="h-1.5" />
             </div>
           </CardFooter>

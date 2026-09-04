@@ -24,7 +24,7 @@ export default function FreeAIGuidePage() {
   const [submitted, setSubmitted] = useState(false);
   const [error, setError] = useState("");
 
-  // 获取Top 10工具用于预览
+  // 获取Top 10Tools用于预览
   const topTools = [...tools]
     .sort((a, b) => {
       const scoreA = calculateScoreResult(a.scores).total;
@@ -44,7 +44,7 @@ export default function FreeAIGuidePage() {
       return;
     }
 
-    // 模拟提交（后续接入Mailchimp/ConvertKit）
+    // 模拟Commit（后续接入Mailchimp/ConvertKit）
     setSubmitted(true);
 
     // 存储邮箱到localStorage（后续可同步到邮件服务）
@@ -204,7 +204,7 @@ export default function FreeAIGuidePage() {
                   for your records.
                 </p>
 
-                {/* 下载按钮 - PDF和HTML两个版本 */}
+                {/* 下载按钮 - PDF和HTML两个Version */}
                 <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
                   <a
                     href="/2026-ai-tools-guide.pdf"

@@ -12,8 +12,8 @@ export function generateMetadata({ params }: CategoryPageProps) {
   const categoryPosts = posts.filter((p) => p.categorySlug === params.slug);
   const categoryName = categoryPosts.length > 0 ? categoryPosts[0].category : params.slug;
   return {
-    title: `${categoryName} - AIToolCrux博客`,
-    description: `AIToolCrux博客 - ${categoryName}分类的所有文章`,
+    title: `${categoryName} - AIToolCruxBlog`,
+    description: `AIToolCruxBlog - ${categoryName}Categories的所有文章`,
   };
 }
 
@@ -28,23 +28,23 @@ export default function CategoryPage({ params }: CategoryPageProps) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
-      {/* 返回按钮 */}
+      {/* Return按钮 */}
       <Link
         href="/blog"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
       >
-        ← 返回博客列表
+        ← ReturnBlog列Table
       </Link>
 
-      {/* 分类标题 */}
+      {/* Categories标题 */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          分类：{categoryName}
+          Categories：{categoryName}
         </h1>
         <p className="text-gray-600 dark:text-gray-400">{categoryPosts.length} articles</p>
       </div>
 
-      {/* 文章列表 */}
+      {/* 文章列Table */}
       <div className="space-y-4">
         {categoryPosts.map((post) => (
           <Link

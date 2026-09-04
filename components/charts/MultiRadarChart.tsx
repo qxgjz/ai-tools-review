@@ -113,7 +113,7 @@ export function MultiRadarChart({
           );
         })}
 
-        {/* 各工具数据多边形 */}
+        {/* 各Tools数据多边形 */}
         {toolsWithColor.map((tool, toolIdx) => {
           const dataPoints = DIMENSIONS.map((dim) => {
             const score = clampScore(tool.scores[dim.key] ?? 0);
@@ -151,7 +151,7 @@ export function MultiRadarChart({
           );
         })}
 
-        {/* 维度标签 */}
+        {/* 维度Tags */}
         {DIMENSIONS.map((dim, i) => {
           const angle = getAngle(i);
           const p = polarToCartesian(angle, radius + 28);

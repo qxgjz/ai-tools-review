@@ -12,7 +12,7 @@ export default function NotFound() {
   const router = useRouter();
   const [searchQuery, setSearchQuery] = useState("");
 
-  // 获取热门工具（按评分排序，取前6个）
+  // 获取PopularTools（按Rating排序，取前6个）
   const popularTools = [...tools]
     .sort((a, b) => {
       const scoreA = calculateScoreResult(a.scores).total;
@@ -21,7 +21,7 @@ export default function NotFound() {
     })
     .slice(0, 6);
 
-  // 热门分类
+  // PopularCategories
   const popularCategories = [
     { slug: "chat", name: "AI Chatbots", icon: "💬" },
     { slug: "image", name: "AI Image", icon: "🎨" },
@@ -55,7 +55,7 @@ export default function NotFound() {
           </p>
         </div>
 
-        {/* 搜索框 */}
+        {/* Search框 */}
         <form onSubmit={handleSearch} className="mb-10 max-w-md mx-auto">
           <div className="relative">
             <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
@@ -100,7 +100,7 @@ export default function NotFound() {
           </Link>
         </div>
 
-        {/* 热门分类 */}
+        {/* PopularCategories */}
         <div className="mb-10">
           <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
             Popular Categories
@@ -121,7 +121,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* 热门工具 */}
+        {/* PopularTools */}
         <div className="mb-10">
           <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4">
             Top Rated AI Tools
@@ -152,7 +152,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* 最新文章 */}
+        {/* Latest文章 */}
         <div>
           <h3 className="text-sm font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-wider mb-4 flex items-center gap-2">
             <FileText className="w-4 h-4" />
@@ -188,7 +188,7 @@ export default function NotFound() {
           </div>
         </div>
 
-        {/* 返回链接 */}
+        {/* Return链接 */}
         <div className="mt-10">
           <button
             onClick={() => router.back()}

@@ -81,7 +81,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
             ))}
           </div>
 
-          {/* 分类快捷入口 */}
+          {/* Categories快捷入口 */}
           <div className="border-t border-gray-100 dark:border-gray-800 pt-6">
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">Or browse by category</p>
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">

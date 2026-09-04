@@ -19,7 +19,7 @@ export function Header() {
           </span>
         </Link>
 
-        {/* 搜索框 */}
+        {/* Search框 */}
         <div className="flex-1 max-w-md hidden md:block">
           <SearchBox />
         </div>

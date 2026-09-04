@@ -6,7 +6,7 @@ export const runtime = 'edge';
 export async function GET(request: NextRequest) {
   const { searchParams } = new URL(request.url);
   
-  // 获取参数
+  // 获取Parameters
   const title = searchParams.get('title') || 'AIToolCrux';
   const description = searchParams.get('description') || 'Discover the best AI tools with expert reviews and comparisons';
   const category = searchParams.get('category') || 'AI Tools';
@@ -30,7 +30,7 @@ export async function GET(request: NextRequest) {
           fontFamily: 'system-ui, -apple-system, sans-serif',
         }}
       >
-        {/* 顶部：Logo和分类 */}
+        {/* 顶部：Logo和Categories */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
           <div style={{ display: 'flex', alignItems: 'center', gap: '16px' }}>
             <div
@@ -100,7 +100,7 @@ export async function GET(request: NextRequest) {
           )}
         </div>
 
-        {/* 底部：统计和网址 */}
+        {/* 底部：Statistics和网址 */}
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
           <div style={{ display: 'flex', gap: '40px' }}>
             <div>

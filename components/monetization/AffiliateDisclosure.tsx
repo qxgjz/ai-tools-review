@@ -3,7 +3,7 @@
 import { useState } from "react";
 
 /**
- * 全局FTC联盟披露条
+ * 全局FTCAffiliate Disclosure条
  * 显示在网站顶部，告知用户网站包含联盟链接
  */
 export function AffiliateDisclosure() {

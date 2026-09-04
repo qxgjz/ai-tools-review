@@ -15,7 +15,7 @@ import { HandsOnExperience } from "@/components/content/HandsOnExperience";
 import { FAQSection, defaultFAQs } from "@/components/content/FAQSection";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
 
-// 动态导入重型组件，减少初始JS包大小
+// 动态Import重型Component，减少初始JS包大小
 const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
   ssr: false,
   loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading comments...</div>,
@@ -91,16 +91,16 @@ export default function PostPage({ params }: PostPageProps) {
     notFound();
   }
 
-  // 智能相关文章推荐：标签重叠度(60%) + 分类匹配(25%) + 标题关键词相似度(15%)
+  // 智能Related Articles推荐：Tags重叠度(60%) + Categories匹配(25%) + 标题关键词相似度(15%)
   const calculateRelevance = (a: typeof post, b: typeof post): number => {
     let score = 0;
-    // 标签重叠度（权重60%）
+    // Tags重叠度（权重60%）
     const tagsA = a.tags || [];
     const tagsB = b.tags || [];
     const commonTags = tagsA.filter((t) => tagsB.includes(t));
     const tagOverlap = tagsA.length > 0 ? commonTags.length / Math.min(tagsA.length, 4) : 0;
     score += tagOverlap * 60;
-    // 分类匹配（权重25%）
+    // Categories匹配（权重25%）
     if (a.category === b.category) score += 25;
     else if (a.categorySlug === b.categorySlug) score += 20;
     // 标题关键词相似度（权重15%）
@@ -119,10 +119,10 @@ export default function PostPage({ params }: PostPageProps) {
     .slice(0, 6)
     .map((item) => item.post);
 
-  // 相关工具推荐：基于文章标签、分类和标题关键词
+  // 相关Tools推荐：基于Tags、Categories和标题关键词
   const calculateToolRelevance = (tool: any): number => {
     let score = 0;
-    // 标签匹配（权重50%）
+    // Tags匹配（权重50%）
     const postTags = (post.tags || []).map((t: string) => t.toLowerCase());
     const toolName = tool.name.toLowerCase();
     const toolVendor = (tool.vendor || "").toLowerCase();
@@ -135,7 +135,7 @@ export default function PostPage({ params }: PostPageProps) {
       }
     }
 
-    // 分类匹配（权重30%）
+    // Categories匹配（权重30%）
     const postCategory = (post.category || "").toLowerCase();
     const categoryMap: Record<string, string[]> = {
       "ai chat": ["chat", "agent"],
@@ -164,7 +164,7 @@ export default function PostPage({ params }: PostPageProps) {
     return score;
   };
 
-  // 查找关联工具信息（用于联盟CTA和相关工具推荐过滤）
+  // 查找关联Tools信息（用于联盟CTA和相关Tools推荐过滤）
   const toolSlug = post.slug.replace("-review-2026", "");
 
   const relatedTools = tools
@@ -180,7 +180,7 @@ export default function PostPage({ params }: PostPageProps) {
   const officialUrl = tool?.officialUrl || `https://www.google.com/search?q=${encodeURIComponent(toolName)}`;
   const affiliateUrl = (tool as any)?.affiliateUrl || undefined;
 
-  // 计算工具平均评分（用于Review Schema）
+  // 计算Tools平均Rating（用于Review Schema）
   const avgScore = tool?.scores
     ? Object.values(tool.scores).reduce((a, b) => a + (typeof b === "number" ? b : 0), 0) /
       Object.keys(tool.scores).filter((k) => typeof (tool.scores as any)[k] === "number").length
@@ -205,7 +205,7 @@ export default function PostPage({ params }: PostPageProps) {
         datePublished={post.publishedAt}
         itemReviewed={toolName}
       />
-      {/* Article Schema - 博客文章结构化数据 */}
+      {/* Article Schema - Blog文章结构化数据 */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -239,7 +239,7 @@ export default function PostPage({ params }: PostPageProps) {
           }),
         }}
       />
-      {/* FAQ Schema - 常见问题结构化数据（使用文章真实FAQ数据） */}
+      {/* FAQ Schema - FAQ结构化数据（使用文章真实FAQ数据） */}
       {post.faq && post.faq.length > 0 && (
         <script
           type="application/ld+json"
@@ -270,7 +270,7 @@ export default function PostPage({ params }: PostPageProps) {
         className="mb-4"
       />
 
-      {/* 返回按钮 */}
+      {/* Return按钮 */}
       <Link
         href="/blog"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
@@ -299,7 +299,7 @@ export default function PostPage({ params }: PostPageProps) {
         </div>
       </header>
 
-      {/* 作者简介卡片 - E-E-A-T信任信号 */}
+      {/* Author简介卡片 - E-E-A-T信任信号 */}
       <div className="mb-8">
         <AuthorBio
           name={post.author || "AIToolCrux Editorial Team"}
@@ -323,7 +323,7 @@ export default function PostPage({ params }: PostPageProps) {
         />
       )}
 
-      {/* 文章标签 */}
+      {/* Tags */}
       <div className="flex flex-wrap gap-2 mb-10">
         {post.tags.map((tag, index) => (
           <Link
@@ -345,7 +345,7 @@ export default function PostPage({ params }: PostPageProps) {
         testDuration="30 days"
       />
 
-      {/* 工具截图展示 - E-E-A-T信任信号，真实使用证据 */}
+      {/* Tools截图展示 - E-E-A-T信任信号，真实使用证据 */}
       {tool && (
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
@@ -369,7 +369,7 @@ export default function PostPage({ params }: PostPageProps) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
-      {/* 评分总览 - 使用shadcn/ui Tabs组件 */}
+      {/* Rating总览 - 使用shadcn/ui TabsComponent */}
       {tool && tool.scores && (
         <ReviewTabs
           dimensions={Object.entries(tool.scores).map(([name, score]) => ({
@@ -382,7 +382,7 @@ export default function PostPage({ params }: PostPageProps) {
         />
       )}
 
-      {/* FAQ 常见问题展示区域 - 使用shadcn/ui Accordion组件 */}
+      {/* FAQ FAQ展示区域 - 使用shadcn/ui AccordionComponent */}
       <FAQSection
         items={post.faq && post.faq.length > 0 ? post.faq.map((item: any) => ({ question: item.q, answer: item.a })) : defaultFAQs}
         title="Frequently Asked Questions"
@@ -416,7 +416,7 @@ export default function PostPage({ params }: PostPageProps) {
         <NewsletterSignup variant="compact" />
       </div>
 
-      {/* 相关工具推荐 */}
+      {/* 相关Tools推荐 */}
       {relatedTools.length > 0 && (
         <section className="mb-16">
           <div className="flex items-end justify-between mb-6">
@@ -468,7 +468,7 @@ export default function PostPage({ params }: PostPageProps) {
         </section>
       )}
 
-      {/* 相关文章 - 智能推荐 */}
+      {/* Related Articles - 智能推荐 */}
       {relatedPosts.length > 0 && (
         <section className="mb-16">
           <div className="flex items-end justify-between mb-6">
@@ -521,7 +521,7 @@ export default function PostPage({ params }: PostPageProps) {
         </section>
       )}
 
-      {/* 来源引用列表 - E-E-A-T信任信号 */}
+      {/* 来源引用列Table - E-E-A-T信任信号 */}
       <section className="mt-10">
         <SourceReferences
           toolName={toolName}
@@ -529,7 +529,7 @@ export default function PostPage({ params }: PostPageProps) {
         />
       </section>
 
-      {/* 评论区 */}
+      {/* Comments */}
       <section className="border-t border-gray-200 dark:border-gray-800 pt-10">
         <Giscus />
       </section>
