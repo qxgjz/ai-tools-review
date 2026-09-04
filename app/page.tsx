@@ -362,7 +362,7 @@ export default function HomePage() {
                   Latest Articles
                 </h2>
                 <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  AI Tools深度测评、选型指南、行业动态
+                  In-depth AI tool reviews, buying guides, and industry insights
                 </p>
               </div>
               <Link
@@ -428,17 +428,17 @@ export default function HomePage() {
               AI Matcher
             </div>
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
-              不知道选哪个 AI Tools？
+              Not Sure Which AI Tool to Choose?
             </h2>
             <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
-              告诉我们你的使用场景和优先级，我们会基于六维评分模型为你AI Matcher最适合的 AI Tools
+              Tell us your use case and priorities, and we'll match you with the perfect AI tool based on our six-dimension scoring model
             </p>
             <Link
               href="/generator"
               className="group inline-flex items-center gap-2 px-10 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
             >
               <Sparkles className="w-5 h-5" />
-              开始AI Matcher
+              Start Matching
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>

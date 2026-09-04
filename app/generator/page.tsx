@@ -49,7 +49,7 @@ export default function GeneratorPage() {
 
   const handleShare = async () => {
     const shareText = results
-      ? `我用AI工具测评台找到了适合${SCENARIO_LABELS[scenario]}的Top3工具：${results.map((r) => `${r.rank}.${r.tool.name}(${r.matchScore}分)`).join("、")}`
+      ? `我用AIToolCrux找到了适合${SCENARIO_LABELS[scenario]} - Top 3 tools: ${results.map((r) => `${r.rank}.${r.tool.name}(${r.matchScore}分)`).join("、")}`
       : "来试试AI工具智能匹配！";
     try {
       await navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);

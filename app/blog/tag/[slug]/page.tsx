@@ -19,8 +19,8 @@ export function generateMetadata({ params }: TagPageProps) {
     }
   }
   return {
-    title: `#${tagName} - AI工具测评台博客`,
-    description: `AI工具测评台博客 - 标签 #${tagName} 的所有文章`,
+    title: `#${tagName} - AIToolCrux博客`,
+    description: `AIToolCrux博客 - 标签 #${tagName} 的所有文章`,
   };
 }
 

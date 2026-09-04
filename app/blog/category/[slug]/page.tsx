@@ -12,8 +12,8 @@ export function generateMetadata({ params }: CategoryPageProps) {
   const categoryPosts = posts.filter((p) => p.categorySlug === params.slug);
   const categoryName = categoryPosts.length > 0 ? categoryPosts[0].category : params.slug;
   return {
-    title: `${categoryName} - AI工具测评台博客`,
-    description: `AI工具测评台博客 - ${categoryName}分类的所有文章`,
+    title: `${categoryName} - AIToolCrux博客`,
+    description: `AIToolCrux博客 - ${categoryName}分类的所有文章`,
   };
 }
 

@@ -24,7 +24,7 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
       (
         <div style={{ width: "100%", height: "100%", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", background: "linear-gradient(135deg, #1e3a8a 0%, #3b82f6 50%, #6366f1 100%)", fontFamily: "sans-serif" }}>
           <div style={{ width: 120, height: 120, borderRadius: 28, background: "white", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 56, fontWeight: 900, color: "#1e40af", marginBottom: 32 }}>AI</div>
-          <div style={{ fontSize: 72, fontWeight: 800, color: "white", marginBottom: 16 }}>AI工具测评台</div>
+          <div style={{ fontSize: 72, fontWeight: 800, color: "white", marginBottom: 16 }}>AIToolCrux</div>
           <div style={{ fontSize: 28, color: "rgba(255,255,255,0.85)" }}>六维评分模型 · 专业测评 · 智能推荐</div>
         </div>
       ),
@@ -42,7 +42,7 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 36, position: "relative", zIndex: 1 }}>
           <div style={{ display: "flex", alignItems: "center" }}>
             <div style={{ width: 52, height: 52, borderRadius: 14, background: "white", display: "flex", alignItems: "center", justifyContent: "center", fontSize: 26, fontWeight: 900, color: "#1e40af", marginRight: 14 }}>AI</div>
-            <div style={{ fontSize: 26, fontWeight: 700, color: "white" }}>AI工具测评台</div>
+            <div style={{ fontSize: 26, fontWeight: 700, color: "white" }}>AIToolCrux</div>
           </div>
           <div style={{ padding: "8px 20px", background: "rgba(255,255,255,0.15)", borderRadius: 999, fontSize: 18, color: "white", fontWeight: 500 }}>{tool.category}</div>
         </div>
