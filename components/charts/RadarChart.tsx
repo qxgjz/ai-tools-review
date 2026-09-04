@@ -30,7 +30,7 @@ export function RadarChart({
   const gradientId = useId();
   const cx = size / 2;
   const cy = size / 2;
-  const padding = 42;
+  const padding = 55;
   const radius = size / 2 - padding;
   const n = 6;
 
