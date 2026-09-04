@@ -4,12 +4,12 @@ import { useId } from "react";
 import type { Score, ScoreDimension } from "@/types";
 
 const DIMENSIONS: { key: ScoreDimension; label: string }[] = [
-  { key: "functionality", label: "功能质量" },
-  { key: "ux", label: "用户体验" },
-  { key: "pricing", label: "价格价值" },
-  { key: "integration", label: "集成开发" },
-  { key: "support", label: "支持可靠" },
-  { key: "ethics", label: "伦理透明" },
+  { key: "functionality", label: "Functionality" },
+  { key: "ux", label: "UX" },
+  { key: "pricing", label: "Pricing" },
+  { key: "integration", label: "Integration" },
+  { key: "support", label: "Support" },
+  { key: "ethics", label: "Ethics" },
 ];
 
 interface RadarChartProps {
@@ -58,7 +58,7 @@ export function RadarChart({
   const gridLevels = [2, 4, 6, 8, 10];
 
   return (
-    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className={className} role="img" aria-label="六维能力雷达图">
+    <svg width={size} height={size} viewBox={`0 0 ${size} ${size}`} className={className} role="img" aria-label="Six-dimension capability radar chart">
       <defs>
         <linearGradient id={gradientId} x1="0%" y1="0%" x2="100%" y2="100%">
           <stop offset="0%" stopColor={color} stopOpacity="0.25" />
@@ -108,7 +108,9 @@ export function RadarChart({
 
       {showValues &&
         dataPoints.map((p, i) => {
-          const lp = polarToCartesian(getAngle(i), p.score / 10 * radius + 16);
+          // 修复：将评分值放在数据点内侧（-14），避免与外侧维度标签重叠
+          const valueRadius = Math.max(0, p.score / 10 * radius - 14);
+          const lp = polarToCartesian(getAngle(i), valueRadius);
           return (
             <text
               key={`v-${p.dim}`}

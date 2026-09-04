@@ -66,7 +66,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 6);
 
-  // Schema.org 结构化数据 - Review
+  // Schema.org structured data - Review
   const structuredData = {
     "@context": "https://schema.org",
     "@type": "Review",
@@ -90,7 +90,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     },
     author: {
       "@type": "Organization",
-      name: "AI工具测评台",
+      name: "AIToolCrux Editorial Team",
     },
     datePublished: tool.lastUpdated,
     reviewBody: tool.description,
@@ -98,7 +98,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
-      {/* Schema.org 结构化数据 */}
+      {/* Schema.org structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
@@ -110,7 +110,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           { name: tool.name, url: `/tools/${tool.slug}` },
         ]}
       />
-      {/* Product Schema - 工具产品结构化数据 */}
+      {/* Product Schema - tool product structured data */}
       <ProductSchema
         name={tool.name}
         description={tool.description || `${tool.name} is an AI tool evaluated by AIToolCrux.`}
@@ -123,7 +123,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         url={`https://www.aitoolcrux.com/tools/${tool.slug}`}
       />
 
-      {/* 可视化面包屑导航 */}
+      {/* Visual breadcrumb navigation */}
       <Breadcrumb
         items={[
           { name: "Ranking", url: "/ranking" },
@@ -135,10 +135,10 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
       <Link href="/ranking" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
-        返回排行榜
+        Back to Ranking
       </Link>
 
-      {/* 头部 */}
+      {/* Header */}
       <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-start gap-6">
           <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-3xl font-extrabold shadow-lg">
@@ -148,26 +148,26 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             <div className="flex flex-wrap items-center gap-3 mb-2">
               <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">{tool.name}</h1>
               <span className={`px-3 py-1 rounded-lg text-sm font-bold ${GRADE_STYLES[grade]}`}>
-                {grade}级 · {GRADE_DESCRIPTIONS[grade]}
+                {grade} Grade · {GRADE_DESCRIPTIONS[grade]}
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-gray-500 dark:text-gray-400">
               <span className="inline-flex items-center gap-1.5"><Building2 className="w-4 h-4" />{tool.vendor}</span>
-              <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4" />更新于 {tool.lastUpdated}</span>
+              <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4" />Updated {tool.lastUpdated}</span>
               <span className="inline-flex items-center gap-1.5"><Tag className="w-4 h-4" />{tool.category}</span>
-              {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">有免费版</span>}
+              {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">Free Tier Available</span>}
             </div>
           </div>
           <div className="text-center sm:text-right">
             <div className="text-5xl font-extrabold bg-gradient-to-r from-blue-600 to-indigo-600 dark:from-blue-400 dark:to-indigo-400 bg-clip-text text-transparent">{total.toFixed(1)}</div>
-            <div className="text-xs text-gray-400 dark:text-gray-500 mt-1">综合评分 / 10</div>
+            <div className="text-xs text-gray-400 dark:text-gray-500 mt-1">Overall Score / 10</div>
           </div>
         </div>
         {(tool.officialUrl || (tool as any).affiliateUrl) && (
           <div className="mt-6 pt-6 border-t border-gray-50 dark:border-gray-800">
             <a href={(tool as any).affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-indigo-600 text-white text-sm font-semibold rounded-xl shadow-md hover:shadow-lg hover:-translate-y-0.5 transition-all">
               <ExternalLink className="w-4 h-4" />
-              访问官网
+              Visit Official Website
             </a>
             {(tool as any).affiliateUrl && (
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
@@ -178,12 +178,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         )}
       </section>
 
-      {/* 评分卡 + 雷达图 */}
+      {/* Score card + Radar chart */}
       <section className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
         <div className="lg:col-span-3 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
             <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-            六维评分详情
+            Six-Dimension Score Details
           </h2>
           <div className="space-y-4">
             {DIMENSION_ORDER.map((dim) => {
@@ -194,7 +194,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {DIMENSION_LABELS[dim]}
-                      <span className="ml-2 text-xs text-gray-400 dark:text-gray-500">权重{(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</span>
+                      <span className="ml-2 text-xs text-gray-400 dark:text-gray-500">Weight {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</span>
                     </span>
                     <span className="text-sm font-bold text-gray-900 dark:text-white">{score.toFixed(1)}</span>
                   </div>
@@ -209,18 +209,18 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <div className="lg:col-span-2 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 flex flex-col items-center justify-center">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 self-start flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-            能力雷达图
+            Capability Radar Chart
           </h2>
           <RadarChart scores={tool.scores} size={260} showValues />
         </div>
       </section>
 
-      {/* 优缺点 */}
+      {/* Pros and Cons */}
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
           <h2 className="text-lg font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
             <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-50 dark:bg-emerald-900/20"><Check className="w-5 h-5" /></div>
-            主要优势
+            Key Advantages
           </h2>
           <ul className="space-y-3">
             {tool.pros.map((pro, i) => (
@@ -234,7 +234,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6">
           <h2 className="text-lg font-bold text-red-500 dark:text-red-400 mb-4 flex items-center gap-2">
             <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20"><X className="w-5 h-5" /></div>
-            主要不足
+            Key Disadvantages
           </h2>
           <ul className="space-y-3">
             {tool.cons.map((con, i) => (
@@ -247,15 +247,15 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
-      {/* 定价 */}
+      {/* Pricing */}
       <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5">价格方案</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5">Pricing Plans</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead><tr className="border-b border-gray-100 dark:border-gray-800">
-              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">方案</th>
-              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">价格</th>
-              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">说明</th>
+              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">Plan</th>
+              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">Price</th>
+              <th className="text-left py-3 px-4 font-semibold text-gray-500 dark:text-gray-400">Description</th>
             </tr></thead>
             <tbody>
               {tool.pricing.map((tier, i) => (
@@ -263,7 +263,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-gray-900 dark:text-white">{tier.name}</span>
-                      {tier.recommended && <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-md font-semibold">推荐</span>}
+                      {tier.recommended && <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-md font-semibold">Recommended</span>}
                     </div>
                   </td>
                   <td className="py-3 px-4"><span className="font-bold text-blue-600 dark:text-blue-400">{tier.price}</span></td>
@@ -275,14 +275,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
-      {/* 评测摘要 */}
+      {/* Editor review summary */}
       <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-purple-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/30 p-6 sm:p-8 mb-6">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
           <Lightbulb className="w-5 h-5 text-amber-500" />
-          编辑评测摘要
+          Editor's Review Summary
         </h2>
         <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 leading-relaxed">
-          {tool.name} 是由 {tool.vendor} 推出的{tool.category}类AI工具，综合评分 {total.toFixed(1)}/10，等级为 {grade}（{GRADE_DESCRIPTIONS[grade]}）。{tool.pros[0]}。需要注意的是，{tool.cons[0]}。{tool.hasFreeTier ? "该工具提供免费版本，适合预算有限的用户先体验再决定是否升级。" : ""}综合来看，{total >= 8 ? "是一款值得推荐的优秀工具。" : total >= 7 ? "是一款表现良好的工具，适合特定场景用户。" : "整体表现一般，建议结合需求谨慎选择。"}
+          {tool.name} is a {tool.category} AI tool by {tool.vendor}, with an overall score of {total.toFixed(1)}/10 and a {grade} grade ({GRADE_DESCRIPTIONS[grade]}). {tool.pros[0]}. It's worth noting that {tool.cons[0]}. {tool.hasFreeTier ? "This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade." : ""} Overall, {total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : "overall performance is average, we recommend choosing carefully based on your requirements."}
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
@@ -291,29 +291,29 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
       </section>
 
-      {/* 相关推荐 */}
+      {/* Related recommendations */}
       {relatedTools.length > 0 && (
         <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5 flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
-            同类工具推荐
+            Similar Tools Recommended
           </h2>
           <ToolList tools={relatedTools} />
         </section>
       )}
 
-      {/* 邮件订阅CTA */}
+      {/* Newsletter signup CTA */}
       <div className="mb-6">
         <NewsletterSignup variant="compact" />
       </div>
 
-      {/* 评论区 */}
+      {/* Comments section */}
       <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
         <Giscus />
       </section>
 
       <div className="mt-8 text-center text-xs text-gray-400 dark:text-gray-500">
-        评分基于公开测评方法论，联盟链接收入不影响评分。最后更新于 {tool.lastUpdated}。
+        Scores are based on our public evaluation methodology. Affiliate link revenue does not affect scores. Last updated {tool.lastUpdated}.
       </div>
     </div>
   );
