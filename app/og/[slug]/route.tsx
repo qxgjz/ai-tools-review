@@ -3,7 +3,7 @@ import toolsData from "@/data/tools.json";
 import { calculateScoreResult } from "@/lib/scoring";
 import type { Grade } from "@/types";
 
-export const runtime = "edge";
+export const runtime = "nodejs";
 
 const GRADE_COLORS: Record<Grade, { bg: string; text: string; label: string }> = {
   S: { bg: "#f59e0b", text: "#ffffff", label: "Excellent" },
