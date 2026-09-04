@@ -155,10 +155,11 @@ export default function HomePage() {
           </div>
 
           {/* Lead Magnet 小横幅 - 简洁样式 */}
-          <Link
-            href="/free-ai-tools-guide"
-            className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group"
-          >
+          <div className="flex justify-center mb-8">
+            <Link
+              href="/free-ai-tools-guide"
+              className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group"
+            >
             <FileText className="w-4 h-4 text-blue-200" />
             <span className="text-sm font-semibold text-white">
               Free AI Tools Guide
@@ -166,11 +167,12 @@ export default function HomePage() {
             <span className="text-xs text-blue-200/70 hidden sm:inline">
               · Top 50 Reviews · PDF
             </span>
-            <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 transition-transform" />
-          </Link>
+              <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 transition-transform" />
+            </Link>
+          </div>
 
           {/* 统计数据 */}
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12">
+          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 pb-6">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
                 {tools.length}+
