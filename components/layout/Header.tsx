@@ -4,10 +4,12 @@ import Link from "next/link";
 import { Sparkles, LayoutGrid, Trophy, Search as SearchIcon, GitCompare, BookOpen, Info } from "lucide-react";
 import { SearchBox } from "@/components/search/SearchBox";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
+import { AffiliateDisclosure } from "@/components/monetization/AffiliateDisclosure";
 
 export function Header() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 dark:bg-gray-900/80 backdrop-blur-md border-b border-gray-100 dark:border-gray-800">
+      <AffiliateDisclosure />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-4">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 flex-shrink-0">

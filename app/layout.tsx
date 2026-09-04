@@ -4,7 +4,6 @@ import Link from "next/link";
 import "./globals.css";
 import { Header } from "@/components/layout/Header";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { AffiliateDisclosure } from "@/components/monetization/AffiliateDisclosure";
 import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
 
 export const metadata: Metadata = {
@@ -136,9 +135,8 @@ export default function RootLayout({
           </Script>
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
-          <AffiliateDisclosure />
           <Header />
-          <main className="pt-16">{children}</main>
+          <main className="pt-24">{children}</main>
           <footer className="mt-16 py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               {/* 多列链接区域 */}
