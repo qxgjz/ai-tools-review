@@ -12,11 +12,16 @@ import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { AuthorBio } from "@/components/author/AuthorBio";
 import { SourceReferences } from "@/components/seo/SourceReferences";
 import { HandsOnExperience } from "@/components/content/HandsOnExperience";
+import { FAQSection, defaultFAQs } from "@/components/content/FAQSection";
 
 // 动态导入重型组件，减少初始JS包大小
 const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
   ssr: false,
   loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">加载评论中...</div>,
+});
+const ReviewTabs = dynamic(() => import("@/components/content/ReviewTabs"), {
+  ssr: false,
+  loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">加载评分中...</div>,
 });
 
 interface PostPageProps {
@@ -345,46 +350,24 @@ export default function PostPage({ params }: PostPageProps) {
         dangerouslySetInnerHTML={{ __html: post.content }}
       />
 
-      {/* FAQ 常见问题展示区域 */}
-      {post.faq && post.faq.length > 0 && (
-        <section className="mb-10">
-          <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-            <span className="w-8 h-8 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-              <span className="text-blue-600 dark:text-blue-400 font-bold text-sm">Q</span>
-            </span>
-            Frequently Asked Questions
-          </h2>
-          <div className="space-y-3">
-            {post.faq.map((item: any, index: number) => (
-              <details
-                key={index}
-                className="group bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl overflow-hidden hover:border-blue-300 dark:hover:border-blue-700 transition-colors"
-              >
-                <summary className="flex items-center justify-between p-5 cursor-pointer list-none">
-                  <span className="font-semibold text-gray-900 dark:text-white pr-4">
-                    {item.q}
-                  </span>
-                  <span className="flex-shrink-0 w-6 h-6 bg-gray-100 dark:bg-gray-800 rounded-full flex items-center justify-center group-open:bg-blue-100 dark:group-open:bg-blue-900/30 transition-colors">
-                    <svg
-                      className="w-4 h-4 text-gray-500 dark:text-gray-400 group-open:text-blue-600 dark:group-open:text-blue-400 group-open:rotate-45 transition-transform"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                    </svg>
-                  </span>
-                </summary>
-                <div className="px-5 pb-5 pt-0">
-                  <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    {item.a}
-                  </p>
-                </div>
-              </details>
-            ))}
-          </div>
-        </section>
+      {/* 评分总览 - 使用shadcn/ui Tabs组件 */}
+      {tool && tool.scores && (
+        <ReviewTabs
+          dimensions={Object.entries(tool.scores).map(([name, score]) => ({
+            name,
+            score: typeof score === "number" ? score : 7.5,
+            description: `${toolName}在${name}方面的表现评分`,
+          }))}
+          overallScore={avgScore}
+          grade={avgScore >= 9 ? "S" : avgScore >= 8 ? "A" : avgScore >= 7 ? "B" : avgScore >= 6 ? "C" : avgScore >= 5 ? "D" : "F"}
+        />
       )}
+
+      {/* FAQ 常见问题展示区域 - 使用shadcn/ui Accordion组件 */}
+      <FAQSection
+        items={post.faq && post.faq.length > 0 ? post.faq.map((item: any) => ({ question: item.q, answer: item.a })) : defaultFAQs}
+        title="Frequently Asked Questions"
+      />
 
       {/* 中部联盟CTA */}
       {affiliateUrl && (
