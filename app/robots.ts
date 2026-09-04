@@ -87,6 +87,27 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
         disallow: ["/api/", "/admin", "/private"],
       },
+      // 更多AI爬虫配置（有助于AI搜索和引用）
+      {
+        userAgent: "Google-Extended",
+        allow: "/",
+        disallow: ["/api/", "/admin", "/private"],
+      },
+      {
+        userAgent: "Applebot",
+        allow: "/",
+        disallow: ["/api/", "/admin", "/private"],
+      },
+      {
+        userAgent: "Amazonbot",
+        allow: "/",
+        disallow: ["/api/", "/admin", "/private"],
+      },
+      {
+        userAgent: "meta-externalagent",
+        allow: "/",
+        disallow: ["/api/", "/admin", "/private"],
+      },
       // 禁止恶意/资源消耗大的爬虫
       {
         userAgent: "AhrefsBot",
