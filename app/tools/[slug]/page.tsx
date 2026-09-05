@@ -24,10 +24,19 @@ const GRADE_STYLES: Record<Grade, string> = {
 
 const DIMENSION_ORDER: ScoreDimension[] = ["functionality", "ux", "pricing", "integration", "support", "ethics"];
 
-// Dynamic rendering (SSR) to avoid Vercel build timeout with 533 static pages
-// Pages are rendered on-demand, which is SEO-friendly and avoids build timeouts
-export const dynamic = 'force-dynamic';
-export const revalidate = 3600; // Revalidate every hour for performance
+// Static generation (SSG) for Top 20 tools only to avoid Vercel build timeout
+// Other tools use on-demand rendering with ISR (Incremental Static Regeneration)
+export const revalidate = 86400; // Revalidate daily for performance
+
+export function generateStaticParams() {
+  // Only pre-render Top 20 tools by score to avoid build timeout
+  const sortedTools = [...toolsData].sort((a, b) => {
+    const scoreA = Object.values(a.scores).reduce((sum, s) => sum + s, 0);
+    const scoreB = Object.values(b.scores).reduce((sum, s) => sum + s, 0);
+    return scoreB - scoreA;
+  });
+  return sortedTools.slice(0, 20).map((tool) => ({ slug: tool.slug }));
+}
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
