@@ -5,53 +5,13 @@ import { ArrowLeft, Calendar, Clock, FileText, Award } from "lucide-react";
 import postsData from "@/data/posts.json";
 
 const AUTHORS: Record<string, any> = {
-  "alex-chen": {
-    name: "Alex Chen",
-    role: "Editor-in-Chief",
-    bio: "10+ years in tech journalism. Former senior editor at a leading tech publication. Covers AI strategy, product analysis, and editorial standards. Alex ensures every review meets our rigorous quality standards and maintains editorial independence.",
-    expertise: ["AI Strategy", "Product Analysis", "Editorial Standards", "Tech Journalism"],
-    avatar: "AC",
+  "aitoolcrux-editorial-team": {
+    name: "AIToolCrux Editorial Team",
+    role: "Independent AI Tool Review Team",
+    bio: "The AIToolCrux Editorial Team is a collective of independent AI tool reviewers with decades of combined experience in tech, development, design, and content strategy. Our team follows a transparent six-dimensional evaluation methodology, tests every tool for 14+ days, and does not accept payment for higher ratings. We believe good tool selection should be based on data, not marketing hype.",
+    expertise: ["AI Chatbots", "Image Generation", "Code Assistants", "Productivity Tools", "Video Generation", "Enterprise AI"],
+    avatar: "AT",
     color: "from-blue-500 to-indigo-600",
-  },
-  "sarah-kim": {
-    name: "Sarah Kim",
-    role: "Senior Reviewer - Developer Tools",
-    bio: "Full-stack developer turned tech reviewer with 8 years of coding experience. Sarah has built production applications at multiple startups and now specializes in testing AI coding assistants, IDEs, and developer productivity tools.",
-    expertise: ["AI Coding", "DevTools", "Code Quality", "Full-Stack Development"],
-    avatar: "SK",
-    color: "from-emerald-500 to-teal-600",
-  },
-  "marcus-rodriguez": {
-    name: "Marcus Rodriguez",
-    role: "Senior Reviewer - Creative AI",
-    bio: "Digital artist and designer with 12 years of professional experience. Marcus has created work for major brands and now focuses on testing AI image, video, and audio generation tools from a working artist's perspective.",
-    expertise: ["AI Image", "AI Video", "Design Tools", "Digital Art"],
-    avatar: "MR",
-    color: "from-orange-500 to-rose-600",
-  },
-  "emily-watson": {
-    name: "Emily Watson",
-    role: "Reviewer - Productivity & Writing",
-    bio: "Content strategist and productivity consultant. Former marketing director at a SaaS company. Emily helps teams adopt AI writing and office tools, evaluating them based on real-world workflow integration and measurable productivity gains.",
-    expertise: ["AI Writing", "Productivity", "Marketing AI", "Content Strategy"],
-    avatar: "EW",
-    color: "from-purple-500 to-pink-600",
-  },
-  "david-park": {
-    name: "David Park",
-    role: "Reviewer - AI Chat & Search",
-    bio: "AI researcher and former NLP engineer. David has worked on conversational AI systems and now specializes in reviewing AI chatbots, search engines, and language models with deep technical understanding of their capabilities and limitations.",
-    expertise: ["AI Chat", "AI Search", "LLMs", "NLP"],
-    avatar: "DP",
-    color: "from-cyan-500 to-blue-600",
-  },
-  "lisa-anderson": {
-    name: "Lisa Anderson",
-    role: "Reviewer - Business & Enterprise AI",
-    bio: "Former IT director at a Fortune 500 company. Lisa has led enterprise AI adoption initiatives and now reviews business-focused AI tools, including automation platforms, analytics tools, and enterprise AI solutions.",
-    expertise: ["Enterprise AI", "Automation", "Business AI", "IT Strategy"],
-    avatar: "LA",
-    color: "from-amber-500 to-orange-600",
   },
 };
 
