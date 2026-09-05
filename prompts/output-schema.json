@@ -1,0 +1,315 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Website Optimization Report",
+  "description": "网站优化诊断报告的JSON输出格式规范，用于自动化系统解析和执行",
+  "type": "object",
+  "required": ["report_id", "generated_at", "website_url", "module", "summary", "issues", "action_plan", "expected_results", "verification"],
+  "properties": {
+    "report_id": {
+      "type": "string",
+      "description": "报告唯一ID，格式：module-YYYYMMDD-HHMMSS",
+      "example": "crawlability-20260905-143000"
+    },
+    "generated_at": {
+      "type": "string",
+      "format": "date-time",
+      "description": "报告生成时间（ISO 8601格式）"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "被诊断的网站URL",
+      "example": "https://www.aitoolcrux.com"
+    },
+    "module": {
+      "type": "string",
+      "description": "诊断模块名称",
+      "enum": [
+        "orchestrator",
+        "crawlability",
+        "renderability",
+        "indexability",
+        "core_web_vitals",
+        "tool_page_content",
+        "article_page_content",
+        "category_page_content",
+        "eeat",
+        "structured_data",
+        "internal_linking",
+        "link_building",
+        "conversion_rate"
+      ]
+    },
+    "summary": {
+      "type": "object",
+      "required": ["health_score", "most_critical_issue", "most_valuable_opportunity", "compliance_status"],
+      "properties": {
+        "health_score": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "该模块的健康度评分（0-100）"
+        },
+        "most_critical_issue": {
+          "type": "string",
+          "description": "最致命的1个问题（一句话）"
+        },
+        "most_valuable_opportunity": {
+          "type": "string",
+          "description": "最值钱的1个优化机会（一句话）"
+        },
+        "compliance_status": {
+          "type": "string",
+          "enum": ["compliant", "warning", "non_compliant"],
+          "description": "合规状态：compliant=合规，warning=有警告，non_compliant=不合规"
+        }
+      }
+    },
+    "issues": {
+      "type": "array",
+      "description": "问题清单，按优先级排序",
+      "items": {
+        "type": "object",
+        "required": ["id", "title", "severity", "priority", "evidence", "fix", "code_changes"],
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "问题唯一ID，格式：module-序号",
+            "example": "crawlability-001"
+          },
+          "title": {
+            "type": "string",
+            "description": "问题标题（简短描述）"
+          },
+          "severity": {
+            "type": "string",
+            "enum": ["critical", "high", "medium", "low", "info"],
+            "description": "严重程度：critical=致命，high=高，medium=中，low=低，info=信息"
+          },
+          "priority": {
+            "type": "string",
+            "enum": ["P0", "P1", "P2"],
+            "description": "优先级：P0=7天内必须解决，P1=30天内解决，P2=90天内解决"
+          },
+          "evidence": {
+            "type": "object",
+            "required": ["description", "affected_urls"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "问题描述和证据"
+              },
+              "affected_urls": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "受影响的URL列表"
+              },
+              "data_source": {
+                "type": "string",
+                "description": "数据来源（GSC/GA4/服务器日志/人工检查等）"
+              },
+              "screenshot_path": {
+                "type": "string",
+                "description": "截图文件路径（如果有）"
+              }
+            }
+          },
+          "fix": {
+            "type": "object",
+            "required": ["description", "steps", "estimated_effort", "expected_impact"],
+            "properties": {
+              "description": {
+                "type": "string",
+                "description": "修复方案描述"
+              },
+              "steps": {
+                "type": "array",
+                "items": {"type": "string"},
+                "description": "具体执行步骤（按顺序）"
+              },
+              "estimated_effort": {
+                "type": "string",
+                "enum": ["xs", "s", "m", "l", "xl"],
+                "description": "预估工作量：xs=<1小时，s=1-4小时，m=4-8小时，l=1-2天，xl=>2天"
+              },
+              "expected_impact": {
+                "type": "string",
+                "description": "预期效果（可量化）"
+              },
+              "rollback_plan": {
+                "type": "string",
+                "description": "回滚方案（如果修改出问题如何恢复）"
+              }
+            }
+          },
+          "code_changes": {
+            "type": "array",
+            "description": "需要修改的代码文件列表",
+            "items": {
+              "type": "object",
+              "required": ["file_path", "change_type", "description"],
+              "properties": {
+                "file_path": {
+                  "type": "string",
+                  "description": "文件路径（相对于项目根目录）",
+                  "example": "app/tools/[slug]/page.tsx"
+                },
+                "change_type": {
+                  "type": "string",
+                  "enum": ["create", "modify", "delete"],
+                  "description": "修改类型：create=新建，modify=修改，delete=删除"
+                },
+                "description": {
+                  "type": "string",
+                  "description": "修改内容描述"
+                },
+                "code_snippet": {
+                  "type": "string",
+                  "description": "代码片段（修改后的代码）"
+                },
+                "old_code_snippet": {
+                  "type": "string",
+                  "description": "原代码片段（用于对比和回滚）"
+                }
+              }
+            }
+          },
+          "status": {
+            "type": "string",
+            "enum": ["pending", "in_progress", "completed", "failed", "skipped"],
+            "description": "执行状态：pending=待执行，in_progress=执行中，completed=已完成，failed=失败，skipped=跳过"
+          }
+        }
+      }
+    },
+    "action_plan": {
+      "type": "object",
+      "required": ["p0_tasks", "p1_tasks", "p2_tasks"],
+      "properties": {
+        "p0_tasks": {
+          "type": "array",
+          "description": "P0优先级任务（7天内必须完成）",
+          "items": {
+            "type": "object",
+            "required": ["task_id", "title", "issue_ids", "deadline", "assigned_to"],
+            "properties": {
+              "task_id": {"type": "string"},
+              "title": {"type": "string"},
+              "issue_ids": {"type": "array", "items": {"type": "string"}},
+              "deadline": {"type": "string", "format": "date"},
+              "assigned_to": {"type": "string", "description": "负责人：ai=AI自动执行，human=人工执行"}
+            }
+          }
+        },
+        "p1_tasks": {
+          "type": "array",
+          "description": "P1优先级任务（30天内完成）",
+          "items": {"$ref": "#/properties/action_plan/properties/p0_tasks/items"}
+        },
+        "p2_tasks": {
+          "type": "array",
+          "description": "P2优先级任务（90天内完成）",
+          "items": {"$ref": "#/properties/action_plan/properties/p0_tasks/items"}
+        }
+      }
+    },
+    "expected_results": {
+      "type": "object",
+      "description": "预期效果和KPI",
+      "properties": {
+        "short_term": {
+          "type": "object",
+          "description": "短期效果（14天）",
+          "properties": {
+            "indexing_rate": {"type": "string", "description": "预期收录率变化"},
+            "impressions": {"type": "string", "description": "预期曝光量变化"},
+            "clicks": {"type": "string", "description": "预期点击量变化"},
+            "cwv_scores": {"type": "string", "description": "预期CWV分数变化"}
+          }
+        },
+        "medium_term": {
+          "type": "object",
+          "description": "中期效果（90天）",
+          "properties": {
+            "organic_traffic": {"type": "string"},
+            "keyword_rankings": {"type": "string"},
+            "conversion_rate": {"type": "string"},
+            "domain_authority": {"type": "string"}
+          }
+        }
+      }
+    },
+    "verification": {
+      "type": "object",
+      "required": ["methods", "success_criteria", "monitoring"],
+      "properties": {
+        "methods": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "验证方法列表"
+        },
+        "success_criteria": {
+          "type": "array",
+          "items": {"type": "string"},
+          "description": "成功标准（可量化、可验证）"
+        },
+        "monitoring": {
+          "type": "object",
+          "properties": {
+            "frequency": {"type": "string", "description": "监测频率"},
+            "tools": {"type": "array", "items": {"type": "string"}, "description": "监测工具"},
+            "alert_thresholds": {
+              "type": "object",
+              "description": "告警阈值",
+              "properties": {
+                "indexing_drop": {"type": "string"},
+                "traffic_drop": {"type": "string"},
+                "cwv_degradation": {"type": "string"}
+              }
+            }
+          }
+        }
+      }
+    },
+    "pending_verification": {
+      "type": "array",
+      "description": "待核实清单（缺失数据、需要用户确认的决策点）",
+      "items": {
+        "type": "object",
+        "required": ["item", "reason", "impact"],
+        "properties": {
+          "item": {"type": "string", "description": "待核实项"},
+          "reason": {"type": "string", "description": "为什么需要核实"},
+          "impact": {"type": "string", "description": "对诊断结果的影响"},
+          "suggested_action": {"type": "string", "description": "建议的核实方法"}
+        }
+      }
+    },
+    "compliance_check": {
+      "type": "object",
+      "description": "合规检查结果",
+      "properties": {
+        "google_guidelines": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string", "enum": ["pass", "warning", "fail"]},
+            "violations": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "ftc_disclosure": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string", "enum": ["pass", "warning", "fail"]},
+            "violations": {"type": "array", "items": {"type": "string"}}
+          }
+        },
+        "black_hat_risk": {
+          "type": "object",
+          "properties": {
+            "status": {"type": "string", "enum": ["none", "low", "medium", "high"]},
+            "risk_factors": {"type": "array", "items": {"type": "string"}}
+          }
+        }
+      }
+    }
+  }
+}
