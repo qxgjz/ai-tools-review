@@ -3409,7 +3409,7 @@
     "name": "n8n",
     "category": "productivity",
     "vendor": "n8n-io",
-    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400 + integrations.\n\n**相关工具：** <a href=\"/tools/dify\">dify</a>, <a h...",
+    "description": "Fair-code workflow automation platform with native AI capabilities. Combine visual building with custom code, self-host or cloud, 400 + integrations.\n\n**Related Tools:** <a href=\"/tools/dify\">dify</a>, <a h...",
     "scores": {
       "functionality": 9.5,
       "ux": 8,
@@ -3480,7 +3480,7 @@
     "name": "AutoGPT",
     "category": "agent",
     "vendor": "Significant-Gravitas",
-    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.\n\n**相关工具：** <a href=\"/tools/repomix\">repomix<...",
+    "description": "AutoGPT is the vision of accessible AI for everyone, to use and to build on. Our mission is to provide the tools, so that you can focus on what matters.\n\n**Related Tools:** <a href=\"/tools/repomix\">repomix<...",
     "scores": {
       "functionality": 9.5,
       "ux": 6.627595715799047,
@@ -4031,7 +4031,7 @@
     "name": "browser-use",
     "category": "productivity",
     "vendor": "browser-use",
-    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease. browser-use is a leading productivity AI tool. developed by browser-use. with an overall rating of 8.1/10. Key strengths include Fully open source, free, self-hosted, data autonomous, GitHub Gaoxing project, mature community ecology, perfect documentation.",
+    "description": "🌐 Make websites accessible for AI agents. Automate tasks online with ease. browser-use is a leading productivity AI tool. developed by browser-use. with an overall rating of 8.1/10. Key strengths include Fully open source, free, self-hosted, data autonomous, GitHub high-star project, mature community ecology, perfect documentation.",
     "scores": {
       "functionality": 9.4,
       "ux": 6.5,
@@ -4240,7 +4240,7 @@
     "name": "OpenHands",
     "category": "agent-runtime",
     "vendor": "OpenHands",
-    "description": "OpenHands is an AI-powered tool and platform featuring intelligent automation and smart processing. OpenHands is a leading agent-runtime AI tool.\n\n**相关工具：** <a href=\"/tools/claude-code\">claude-code...",
+    "description": "OpenHands is an AI-powered tool and platform featuring intelligent automation and smart processing. OpenHands is a leading agent-runtime AI tool.\n\n**Related Tools:** <a href=\"/tools/claude-code\">claude-code...",
     "scores": {
       "functionality": 9.3,
       "ux": 6.341457139252901,
@@ -4702,7 +4702,7 @@
     "name": "crewAI",
     "category": "agent-framework",
     "vendor": "crewAIInc",
-    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.\n\n**相关工具：** <a hr...",
+    "description": "Framework for orchestrating role-playing, autonomous AI agents. By fostering collaborative intelligence, CrewAI empowers agents to work together seamlessly, tackling complex tasks.\n\n**Related Tools:** <a hr...",
     "scores": {
       "functionality": 9.1,
       "ux": 6.3650262819241314,
@@ -4967,7 +4967,7 @@
     "name": "ray",
     "category": "agent-runtime",
     "vendor": "ray-project",
-    "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.\n\n**相关工具：** <a href=\"/tools/claude-code\">claude-code</a>, <a href=\"/t...",
+    "description": "Ray is an AI compute engine. Ray consists of a core distributed runtime and a set of AI Libraries for accelerating ML workloads.\n\n**Related Tools:** <a href=\"/tools/claude-code\">claude-code</a>, <a href=\"/t...",
     "scores": {
       "functionality": 9,
       "ux": 6.130790943988701,
@@ -5368,7 +5368,7 @@
     "name": "Fabric",
     "category": "agent-framework",
     "vendor": "danielmiessler",
-    "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.\n\n**相关...",
+    "description": "Fabric is an open-source framework for augmenting humans using AI. It provides a modular system for solving specific problems using a crowdsourced set of AI prompts that can be used anywhere.\n\n**Related...",
     "scores": {
       "functionality": 9,
       "ux": 6.847044106792852,

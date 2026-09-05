@@ -80,7 +80,7 @@ export default function HomePage() {
             alternateName: "AI Tool Review Platform",
             url: "https://www.aitoolcrux.com",
             description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.",
-            inLanguage: ["en", "zh-CN"],
+            inLanguage: "en",
             potentialAction: {
               "@type": "SearchAction",
               target: {
@@ -88,6 +88,32 @@ export default function HomePage() {
                 urlTemplate: "https://www.aitoolcrux.com/search?q={search_term_string}",
               },
               "query-input": "required name=search_term_string",
+            },
+          }),
+        }}
+      />
+
+      {/* Schema.org 结构化数据 - Organization */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            name: "AIToolCrux",
+            url: "https://www.aitoolcrux.com",
+            logo: "https://www.aitoolcrux.com/logo.png",
+            description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework.",
+            foundingDate: "2026",
+            sameAs: [
+              "https://twitter.com/aitoolcrux",
+              "https://www.linkedin.com/company/aitoolcrux",
+            ],
+            contactPoint: {
+              "@type": "ContactPoint",
+              contactType: "customer support",
+              email: "support@aitoolcrux.com",
+              availableLanguage: ["English"],
             },
           }),
         }}

@@ -53,6 +53,25 @@ export default function ComparePage() {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      {/* Schema.org 结构化数据 - Comparison */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebPage",
+            name: "AI Tool Comparison - AIToolCrux",
+            url: "https://www.aitoolcrux.com/compare",
+            description: "Compare AI tools side by side. Features, pricing, ratings, and more.",
+            inLanguage: "en",
+            mainEntity: {
+              "@type": "ItemList",
+              name: "AI Tool Comparisons",
+              description: "Side-by-side comparisons of popular AI tools",
+            },
+          }),
+        }}
+      />
       {/* Page标题 */}
       <div className="mb-8">
         <Link
