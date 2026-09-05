@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Terms of Service | AIToolCrux",
+  title: "Terms of Service",
   description: "Terms of Service for AIToolCrux - AI tool reviews and comparisons.",
 };
 

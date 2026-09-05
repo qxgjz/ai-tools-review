@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { Mail, MessageSquare, Clock, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Contact Us | AIToolCrux",
+  title: "Contact Us",
   description: "Contact AIToolCrux - questions, feedback, partnership inquiries, and correction requests.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/contact",

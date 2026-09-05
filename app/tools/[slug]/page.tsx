@@ -30,7 +30,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
-  if (!tool) return { title: "Tool Not Found | AIToolCrux" };
+  if (!tool) return { title: "Tool Not Found" };
   const { total, grade } = calculateScoreResult(tool.scores);
   const categoryFormatted = tool.category.charAt(0).toUpperCase() + tool.category.slice(1);
   const prosSummary = tool.pros.slice(0, 2).join(", ");

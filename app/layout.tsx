@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     default: "Best AI Tools 2026: Expert Reviews & Comparisons | AIToolCrux",
     template: "%s | AIToolCrux",
   },
-  description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney, GitHub Copilot & more. Find the perfect AI tool for your.",
+  description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney, GitHub Copilot & more. Find the perfect AI tool for your workflow in 2026.",
   keywords: ["best AI tools 2026", "AI tool reviews", "AI tools comparison", "ChatGPT review", "Claude review", "Midjourney review", "AI tool directory", "top AI tools", "AI software reviews", "best AI tools for creators"],
   authors: [{ name: "AIToolCrux Editorial Team" }],
   creator: "AIToolCrux",
@@ -83,7 +83,7 @@ export default function RootLayout({
                 name: "AIToolCrux",
                 url: "https://www.aitoolcrux.com",
                 logo: "https://www.aitoolcrux.com/logo.svg",
-                description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators,.",
+                description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.",
                 foundingDate: "2026",
                 sameAs: [
                   "https://github.com/qxgjz/ai-tools-review",

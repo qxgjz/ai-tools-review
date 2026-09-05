@@ -63,7 +63,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   const author = AUTHORS[params.slug];
   if (!author) return {};
   return {
-    title: `${author.name} - ${author.role} | AIToolCrux`,
+    title: `${author.name} - ${author.role}`,
     description: author.bio,
     alternates: {
       canonical: `https://www.aitoolcrux.com/authors/${params.slug}`,

@@ -283,7 +283,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const category = CATEGORIES[params.slug];
-  if (!category) return { title: "Category Not Found | AIToolCrux" };
+  if (!category) return { title: "Category Not Found" };
 
   const tools = toolsData.filter((t) => t.category === params.slug) as Tool[];
   const toolCount = tools.length;
@@ -294,7 +294,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     .join(", ");
 
   const categoryName = category.name.replace(/^AI\s+/, "").replace(/^AI/, "");
-  const title = `Best ${categoryName} AI Tools 2026: Top ${toolCount} Rated & Reviewed | AIToolCrux`;
+  const title = `Best ${categoryName} AI Tools 2026: Top ${toolCount} Rated & Reviewed`;
   const description = `Discover the best ${categoryName} AI tools in 2026. Expert reviews with 6-dimension ratings, pricing comparison, pros & cons. Top picks: ${topTools}. Find the perfect ${categoryName} tool for your needs.`;
 
   return {
@@ -328,6 +328,45 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
+      {/* CollectionPage + ItemList structured data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "CollectionPage",
+            name: `Best ${category.name} AI Tools 2026`,
+            description: category.description,
+            url: `https://www.aitoolcrux.com/category/${params.slug}`,
+            isPartOf: {
+              "@type": "WebSite",
+              name: "AIToolCrux",
+              url: "https://www.aitoolcrux.com",
+            },
+            mainEntity: {
+              "@type": "ItemList",
+              itemListElement: sortedTools.slice(0, 10).map((tool, index) => ({
+                "@type": "ListItem",
+                position: index + 1,
+                item: {
+                  "@type": "SoftwareApplication",
+                  name: tool.name,
+                  url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
+                  applicationCategory: "AIApplication",
+                  operatingSystem: "Web",
+                  aggregateRating: {
+                    "@type": "AggregateRating",
+                    ratingValue: calculateScoreResult(tool.scores).total.toFixed(1),
+                    bestRating: "10",
+                    worstRating: "0",
+                    reviewCount: 1,
+                  },
+                },
+              })),
+            },
+          }),
+        }}
+      />
       <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
         Back to Home
@@ -367,13 +406,13 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         <div className="mt-12 space-y-10">
           {/* Categories详细介绍 */}
           <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{category.name}Complete Guide</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">{category.name} Complete Guide</h2>
             <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{CATEGORY_CONTENT[params.slug].intro}</p>
           </section>
 
           {/* Buying Guide */}
           <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8">
-            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">How to Choose the Right{category.name}</h2>
+            <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">How to Choose the Right {category.name}</h2>
             <div className="space-y-4">
               {CATEGORY_CONTENT[params.slug].buyingGuide.map((tip, i) => (
                 <div key={i} className="flex gap-4">
