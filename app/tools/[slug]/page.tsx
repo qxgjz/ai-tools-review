@@ -415,6 +415,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               src={`/images/screenshots/${tool.slug}/product-hunt-search.png`}
               alt={`${tool.name} on Product Hunt`}
               className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
@@ -427,6 +429,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               src={`/images/screenshots/${tool.slug}/g2-search.png`}
               alt={`${tool.name} reviews on G2`}
               className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
@@ -439,6 +443,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               src={`/images/screenshots/${tool.slug}/reddit-discussion.png`}
               alt={`${tool.name} discussions on Reddit`}
               className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
@@ -451,6 +457,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               src={`/images/screenshots/${tool.slug}/alternativeto-search.png`}
               alt={`${tool.name} alternatives on AlternativeTo`}
               className="w-full h-auto"
+              loading="lazy"
+              decoding="async"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
             />
           </div>
