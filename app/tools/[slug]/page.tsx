@@ -24,9 +24,10 @@ const GRADE_STYLES: Record<Grade, string> = {
 
 const DIMENSION_ORDER: ScoreDimension[] = ["functionality", "ux", "pricing", "integration", "support", "ethics"];
 
-export function generateStaticParams() {
-  return toolsData.map((tool) => ({ slug: tool.slug }));
-}
+// Dynamic rendering (SSR) to avoid Vercel build timeout with 533 static pages
+// Pages are rendered on-demand, which is SEO-friendly and avoids build timeouts
+export const dynamic = 'force-dynamic';
+export const revalidate = 3600; // Revalidate every hour for performance
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
