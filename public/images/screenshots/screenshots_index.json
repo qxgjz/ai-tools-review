@@ -1,0 +1,516 @@
+{
+  "chatgpt": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/chatgpt/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "ChatGPT on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/chatgpt/g2-search.png",
+      "source": "G2",
+      "caption": "ChatGPT reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/chatgpt/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "ChatGPT discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/chatgpt/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "ChatGPT alternatives on AlternativeTo"
+    }
+  ],
+  "claude": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/claude/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Claude on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/claude/g2-search.png",
+      "source": "G2",
+      "caption": "Claude reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/claude/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Claude alternatives on AlternativeTo"
+    }
+  ],
+  "gemini": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/gemini/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Gemini on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/gemini/g2-search.png",
+      "source": "G2",
+      "caption": "Gemini reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/gemini/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Gemini discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/gemini/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Gemini alternatives on AlternativeTo"
+    }
+  ],
+  "midjourney": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/midjourney/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Midjourney on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/midjourney/g2-search.png",
+      "source": "G2",
+      "caption": "Midjourney reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/midjourney/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Midjourney discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/midjourney/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Midjourney alternatives on AlternativeTo"
+    }
+  ],
+  "dall-e-3": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/dall-e-3/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "DALL·E 3 on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/dall-e-3/g2-search.png",
+      "source": "G2",
+      "caption": "DALL·E 3 reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/dall-e-3/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "DALL·E 3 discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/dall-e-3/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "DALL·E 3 alternatives on AlternativeTo"
+    }
+  ],
+  "stable-diffusion": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/stable-diffusion/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Stable Diffusion on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/stable-diffusion/g2-search.png",
+      "source": "G2",
+      "caption": "Stable Diffusion reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/stable-diffusion/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Stable Diffusion discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/stable-diffusion/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Stable Diffusion alternatives on AlternativeTo"
+    }
+  ],
+  "github-copilot": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/github-copilot/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "GitHub Copilot on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/github-copilot/g2-search.png",
+      "source": "G2",
+      "caption": "GitHub Copilot reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/github-copilot/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "GitHub Copilot discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/github-copilot/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "GitHub Copilot alternatives on AlternativeTo"
+    }
+  ],
+  "cursor": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/cursor/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Cursor on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/cursor/g2-search.png",
+      "source": "G2",
+      "caption": "Cursor reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/cursor/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Cursor discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/cursor/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Cursor alternatives on AlternativeTo"
+    }
+  ],
+  "windsurf": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/windsurf/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Windsurf on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/windsurf/g2-search.png",
+      "source": "G2",
+      "caption": "Windsurf reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/windsurf/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Windsurf discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/windsurf/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Windsurf alternatives on AlternativeTo"
+    }
+  ],
+  "jasper": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/jasper/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Jasper on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/jasper/g2-search.png",
+      "source": "G2",
+      "caption": "Jasper reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/jasper/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Jasper discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/jasper/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Jasper alternatives on AlternativeTo"
+    }
+  ],
+  "copy-ai": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/copy-ai/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Copy.ai on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/copy-ai/g2-search.png",
+      "source": "G2",
+      "caption": "Copy.ai reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/copy-ai/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Copy.ai discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/copy-ai/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Copy.ai alternatives on AlternativeTo"
+    }
+  ],
+  "notion-ai": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/notion-ai/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Notion AI on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/notion-ai/g2-search.png",
+      "source": "G2",
+      "caption": "Notion AI reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/notion-ai/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Notion AI discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/notion-ai/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Notion AI alternatives on AlternativeTo"
+    }
+  ],
+  "grammarly": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/grammarly/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Grammarly on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/grammarly/g2-search.png",
+      "source": "G2",
+      "caption": "Grammarly reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/grammarly/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Grammarly discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/grammarly/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Grammarly alternatives on AlternativeTo"
+    }
+  ],
+  "runway": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/runway/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Runway on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/runway/g2-search.png",
+      "source": "G2",
+      "caption": "Runway reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/runway/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Runway discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/runway/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Runway alternatives on AlternativeTo"
+    }
+  ],
+  "sora": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/sora/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Sora on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/sora/g2-search.png",
+      "source": "G2",
+      "caption": "Sora reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/sora/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Sora discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/sora/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Sora alternatives on AlternativeTo"
+    }
+  ],
+  "elevenlabs": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/elevenlabs/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "ElevenLabs on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/elevenlabs/g2-search.png",
+      "source": "G2",
+      "caption": "ElevenLabs reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/elevenlabs/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "ElevenLabs discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/elevenlabs/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "ElevenLabs alternatives on AlternativeTo"
+    }
+  ],
+  "perplexity": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/perplexity/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Perplexity on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/perplexity/g2-search.png",
+      "source": "G2",
+      "caption": "Perplexity reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/perplexity/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Perplexity discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/perplexity/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Perplexity alternatives on AlternativeTo"
+    }
+  ],
+  "figma-ai": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/figma-ai/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Figma AI on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/figma-ai/g2-search.png",
+      "source": "G2",
+      "caption": "Figma AI reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/figma-ai/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Figma AI discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/figma-ai/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Figma AI alternatives on AlternativeTo"
+    }
+  ],
+  "canva-magic": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/canva-magic/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Canva Magic on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/canva-magic/g2-search.png",
+      "source": "G2",
+      "caption": "Canva Magic reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/canva-magic/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Canva Magic discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/canva-magic/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Canva Magic alternatives on AlternativeTo"
+    }
+  ],
+  "suno": [
+    {
+      "type": "product_hunt_search",
+      "path": "/images/screenshots/suno/product-hunt-search.png",
+      "source": "Product Hunt",
+      "caption": "Suno on Product Hunt - community reviews and discussions"
+    },
+    {
+      "type": "g2_search",
+      "path": "/images/screenshots/suno/g2-search.png",
+      "source": "G2",
+      "caption": "Suno reviews on G2 - user ratings and feedback"
+    },
+    {
+      "type": "reddit_discussion",
+      "path": "/images/screenshots/suno/reddit-discussion.png",
+      "source": "Reddit",
+      "caption": "Suno discussions on Reddit - real user experiences"
+    },
+    {
+      "type": "alternativeto_search",
+      "path": "/images/screenshots/suno/alternativeto-search.png",
+      "source": "AlternativeTo",
+      "caption": "Suno alternatives on AlternativeTo"
+    }
+  ]
+}

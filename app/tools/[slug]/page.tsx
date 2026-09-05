@@ -396,6 +396,70 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         />
       </section>
 
+      {/* Real User Discussions & Community Reviews */}
+      <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
+          <Users className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+          Real User Discussions & Community Reviews
+        </h2>
+        <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
+          Screenshots from real user discussions and reviews on Product Hunt, G2, Reddit, and AlternativeTo. These show how actual users experience {tool.name}.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          {/* Product Hunt */}
+          <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+            <div className="bg-orange-50 dark:bg-orange-900/20 px-3 py-2 border-b border-gray-200 dark:border-gray-700">
+              <span className="text-xs font-semibold text-orange-700 dark:text-orange-300">Product Hunt</span>
+            </div>
+            <img
+              src={`/images/screenshots/${tool.slug}/product-hunt-search.png`}
+              alt={`${tool.name} on Product Hunt`}
+              className="w-full h-auto"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+          </div>
+          {/* G2 */}
+          <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+            <div className="bg-blue-50 dark:bg-blue-900/20 px-3 py-2 border-b border-gray-200 dark:border-gray-700">
+              <span className="text-xs font-semibold text-blue-700 dark:text-blue-300">G2 Reviews</span>
+            </div>
+            <img
+              src={`/images/screenshots/${tool.slug}/g2-search.png`}
+              alt={`${tool.name} reviews on G2`}
+              className="w-full h-auto"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+          </div>
+          {/* Reddit */}
+          <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+            <div className="bg-red-50 dark:bg-red-900/20 px-3 py-2 border-b border-gray-200 dark:border-gray-700">
+              <span className="text-xs font-semibold text-red-700 dark:text-red-300">Reddit Discussions</span>
+            </div>
+            <img
+              src={`/images/screenshots/${tool.slug}/reddit-discussion.png`}
+              alt={`${tool.name} discussions on Reddit`}
+              className="w-full h-auto"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+          </div>
+          {/* AlternativeTo */}
+          <div className="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+            <div className="bg-green-50 dark:bg-green-900/20 px-3 py-2 border-b border-gray-200 dark:border-gray-700">
+              <span className="text-xs font-semibold text-green-700 dark:text-green-300">AlternativeTo</span>
+            </div>
+            <img
+              src={`/images/screenshots/${tool.slug}/alternativeto-search.png`}
+              alt={`${tool.name} alternatives on AlternativeTo`}
+              className="w-full h-auto"
+              onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }}
+            />
+          </div>
+        </div>
+        <p className="text-xs text-gray-400 dark:text-gray-500 mt-3">
+          Screenshots captured on 2026-09-05 from public community platforms. Content belongs to respective platforms and users.
+        </p>
+      </section>
+
       {/* Pricing */}
       <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 mb-6">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-5">Pricing Plans</h2>
