@@ -323,6 +323,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   if (!category) notFound();
 
   const Icon = category.icon;
+  const categoryContent = CATEGORY_CONTENT[params.slug];
   const tools = toolsData.filter((t) => t.category === params.slug) as Tool[];
   const sortedTools = [...tools].sort((a, b) => calculateScoreResult(b.scores).total - calculateScoreResult(a.scores).total);
 
@@ -359,7 +360,6 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                     ratingValue: calculateScoreResult(tool.scores).total.toFixed(1),
                     bestRating: "10",
                     worstRating: "0",
-                    reviewCount: 1,
                   },
                 },
               })),
@@ -367,6 +367,26 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           }),
         }}
       />
+      {/* FAQPage structured data for FAQ rich snippets */}
+      {categoryContent?.faqs && categoryContent.faqs.length > 0 && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: categoryContent.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.q,
+                acceptedAnswer: {
+                  "@type": "Answer",
+                  text: faq.a,
+                },
+              })),
+            }),
+          }}
+        />
+      )}
       <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
         Back to Home

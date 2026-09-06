@@ -236,6 +236,12 @@ export default function PostPage({ params }: PostPageProps) {
             image: (post as any).coverImage || (post as any).image || "https://www.aitoolcrux.com/og-image.svg",
             articleSection: post.category,
             wordCount: post.content ? post.content.length : 1500,
+            inLanguage: "en",
+            keywords: (post as any).tags ? (post as any).tags.join(", ") : post.category,
+            about: {
+              "@type": "Thing",
+              name: post.category || "AI Tools",
+            },
           }),
         }}
       />

@@ -66,8 +66,180 @@ export default function ComparePage() {
             inLanguage: "en",
             mainEntity: {
               "@type": "ItemList",
-              name: "AI Tool Comparisons",
-              description: "Side-by-side comparisons of popular AI tools",
+              "name": "Top 10 AI Tools Comparison",
+              "description": "Side-by-side comparisons of the most popular AI tools across all categories",
+              "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Grammarly",
+                  "url": "https://www.aitoolcrux.com/tools/grammarly",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "9.2",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Claude",
+                  "url": "https://www.aitoolcrux.com/tools/claude",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "9.1",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "GitHub Copilot",
+                  "url": "https://www.aitoolcrux.com/tools/github-copilot",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "9.1",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Cursor",
+                  "url": "https://www.aitoolcrux.com/tools/cursor",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "9.0",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 5,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "ElevenLabs",
+                  "url": "https://www.aitoolcrux.com/tools/elevenlabs",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "9.0",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 6,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "DALL·E 3",
+                  "url": "https://www.aitoolcrux.com/tools/dall-e-3",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "8.9",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 7,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Notion AI",
+                  "url": "https://www.aitoolcrux.com/tools/notion-ai",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "8.9",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 8,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Canva Magic",
+                  "url": "https://www.aitoolcrux.com/tools/canva-magic",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "8.9",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 9,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Windsurf",
+                  "url": "https://www.aitoolcrux.com/tools/windsurf",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "8.8",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              },
+              {
+                "@type": "ListItem",
+                "position": 10,
+                "item": {
+                  "@type": "SoftwareApplication",
+                  "name": "Perplexity",
+                  "url": "https://www.aitoolcrux.com/tools/perplexity",
+                  "applicationCategory": "AIApplication",
+                  "operatingSystem": "Web",
+                  "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "8.8",
+                    "bestRating": "10",
+                    "ratingCount": "1"
+                  }
+                }
+              }
+              ]
             },
           }),
         }}
