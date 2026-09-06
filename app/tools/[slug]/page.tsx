@@ -7,7 +7,7 @@ import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIO
 import { RadarChart } from "@/components/charts/RadarChart";
 import { ToolList } from "@/components/tools/ToolList";
 import Giscus from "@/components/comments/Giscus";
-import { BreadcrumbSchema, ProductSchema } from "@/components/seo/Schema";
+import { BreadcrumbSchema, ProductSchema, FAQSchema } from "@/components/seo/Schema";
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
@@ -95,8 +95,50 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       name: "AIToolCrux Editorial Team",
     },
     datePublished: tool.lastUpdated,
-    reviewBody: tool.description,
+    reviewBody: tool.review || tool.description,
+    name: `${tool.name} Review 2026: Expert Evaluation by AIToolCrux`,
+    publisher: {
+      "@type": "Organization",
+      name: "AIToolCrux",
+      url: "https://www.aitoolcrux.com",
+    },
   };
+
+  // Generate FAQ structured data for FAQPage rich snippet
+  const toolFAQs = [
+    {
+      question: `What is ${tool.name}?`,
+      answer: `${tool.name} is a ${tool.category} AI tool developed by ${tool.vendor}. ${tool.description} It is evaluated by AIToolCrux with a ${total.toFixed(1)}/10 overall score (${grade} grade) based on 6 dimensions: functionality, UX, pricing, integration, support, and ethics.`
+    },
+    {
+      question: `How much does ${tool.name} cost?`,
+      answer: `${tool.name} offers ${tool.pricing.length} pricing tier${tool.pricing.length > 1 ? 's' : ''}: ${tool.pricing.map(t => `${t.name} (${t.price})`).join(', ')}. ${tool.pricing.some(t => t.price?.includes('$0') || t.price?.toLowerCase().includes('free')) ? 'A free tier is available for users to try before committing to a paid plan.' : 'Paid plans start from ' + (tool.pricing[0]?.price || 'contact vendor') + '.'} Visit the official website for the most current pricing information.`
+    },
+    {
+      question: `Is ${tool.name} worth using in 2026?`,
+      answer: `Based on our comprehensive 6-dimension evaluation, ${tool.name} scored ${total.toFixed(1)}/10 (${grade} grade). It performs best in ${Object.entries(tool.scores || {}).sort((a,b) => b[1]-a[1])[0]?.[0] || 'functionality'} (${Object.entries(tool.scores || {}).sort((a,b) => b[1]-a[1])[0]?.[1] || 'N/A'}/10). We recommend it for users looking for a ${tool.category} solution. For the best fit, compare it with similar tools in our ranking.`
+    },
+    {
+      question: `What are the best alternatives to ${tool.name}?`,
+      answer: `Top alternatives to ${tool.name} include ${relatedTools.slice(0, 3).map(t => t.name).join(', ')}. Each alternative has different strengths and pricing models. We recommend comparing features, pricing, and use cases side-by-side to find the best fit for your specific needs. Visit our comparison page to compare ${tool.name} with up to 3 other tools simultaneously.`
+    },
+    {
+      question: `Does ${tool.name} offer a free trial or free plan?`,
+      answer: `${tool.pricing.some(t => t.price?.includes('$0') || t.price?.toLowerCase().includes('free') || t.price?.toLowerCase().includes('trial')) ? 'Yes, ' + tool.name + ' offers a free tier or free trial. ' : 'You can check ' + tool.name + "'s official website for current free trial offers and promotions. "}Most AI tools offer some form of free tier or trial period. We recommend starting with the free plan to evaluate whether the tool meets your needs before upgrading to a paid subscription.`
+    },
+    {
+      question: `How does ${tool.name} compare to other AI tools?`,
+      answer: `${tool.name} ranks among the top ${tool.category} AI tools with a ${total.toFixed(1)}/10 overall score. Compared to competitors, it offers ${(tool.keyFeatures?.[0] || tool.pros?.[0] || 'unique features and capabilities')}. See our detailed evaluation above for a comprehensive analysis of its strengths, weaknesses, pricing, and use cases. You can also use our comparison tool to see how it stacks up against specific alternatives.`
+    },
+    {
+      question: `Is ${tool.name} safe and trustworthy?`,
+      answer: `${tool.name} is developed by ${tool.vendor}, a company in the AI space. The tool uses standard security practices for data protection. Our ethics score for this tool is ${tool.scores?.ethics || 'N/A'}/10. As with any AI tool, we recommend reviewing their privacy policy and terms of service before inputting sensitive or confidential information. Always ensure you understand how your data is used, stored, and protected.`
+    },
+    {
+      question: `Can ${tool.name} be used for commercial or business purposes?`,
+      answer: `Commercial use rights for ${tool.name} depend on the specific pricing plan you choose. Most paid plans allow commercial use, while free tiers may have restrictions on commercial applications. We recommend carefully reviewing the tool's official terms of service, license agreement, or contacting their support team for the most accurate and up-to-date information about commercial licensing and usage rights.`
+    }
+  ];
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
@@ -118,12 +160,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         description={tool.description || `${tool.name} is an AI tool evaluated by AIToolCrux.`}
         brand={tool.vendor}
         category={tool.category}
-        ratingValue={total}
-        reviewCount={1}
         price={tool.pricing?.[0]?.price || "Free"}
         image={`https://www.aitoolcrux.com/og-image.svg`}
         url={`https://www.aitoolcrux.com/tools/${tool.slug}`}
       />
+
+      {/* FAQPage Schema - for FAQ rich snippets in Google Search */}
+      <FAQSchema faqs={toolFAQs.map(f => ({ question: f.question, answer: f.answer }))} />
 
       {/* Visual breadcrumb navigation */}
       <Breadcrumb

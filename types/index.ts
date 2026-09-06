@@ -48,6 +48,27 @@ export interface Tool {
   hasFreeTier: boolean;
   officialUrl?: string;
   lastUpdated: string;
+  // Extended fields for rich content
+  longDescription?: string;
+  overallScore?: number;
+  grade?: string;
+  publishedDate?: string;
+  author?: string | { name?: string; bio?: string };
+  testingPeriod?: string;
+  testingDetails?: string;
+  bestFor?: string;
+  notIdealFor?: string;
+  verdict?: string;
+  useCases?: string[];
+  keyFeatures?: string[];
+  alternatives?: Array<{ name?: string; slug?: string; reason?: string }> | string[];
+  ratings?: Record<string, number>;
+  related_tools?: Array<{ name?: string; slug?: string }> | string[];
+  long_description?: string;
+  review?: string;
+  review_updated?: string;
+  review_author?: string;
+  faq?: Array<{ question: string; answer: string }>;
 }
 
 /** 评分结果 */
