@@ -25,6 +25,7 @@ import {
 import toolsData from "@/data/tools.json";
 import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
+import { FadeIn, GradientText, GradientButton, Magnet, LogoMarquee } from "@/components/animations";
 import { calculateScoreResult } from "@/lib/scoring";
 
 // 动态Import重型Component，减少首屏JS包大小
@@ -146,39 +147,46 @@ export default function HomePage() {
           </div>
 
           {/* 主标题 */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
-            Find the Perfect
-            <br />
-            <span className="bg-gradient-to-r from-blue-400 via-cyan-400 to-teal-400 bg-clip-text text-transparent">
-              AI Tools
-            </span>
-          </h1>
+          <FadeIn delay={0.15} y={40}>
+            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
+              Find the Perfect
+              <br />
+              <GradientText from="#60A5FA" to="#22D3EE" className="font-black">
+                AI Tools
+              </GradientText>
+            </h1>
+          </FadeIn>
 
           {/* 副标题 */}
-          <p className="text-lg sm:text-xl text-blue-200/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-            In-depth reviews across six dimensions: features, UX, pricing, integrations, support, and ethics.
-            <br className="hidden sm:block" />
-            Curated selection of {tools.length}+ top AI tools across all categories
-          </p>
+          <FadeIn delay={0.25} y={20}>
+            <p className="text-lg sm:text-xl text-blue-200/80 mb-10 max-w-2xl mx-auto leading-relaxed">
+              In-depth reviews across six dimensions: features, UX, pricing, integrations, support, and ethics.
+              <br className="hidden sm:block" />
+              Curated selection of {tools.length}+ top AI tools across all categories
+            </p>
+          </FadeIn>
 
           {/* CTA 按钮 */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-            <Link
-              href="/generator"
-              className="group inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white font-bold rounded-xl shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/40 hover:-translate-y-0.5 transition-all duration-300"
-            >
-              <Sparkles className="w-5 h-5" />
-              AI Tool Matcher
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link
-              href="/ranking"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-md text-white font-bold rounded-xl border border-white/20 hover:bg-white/20 hover:border-white/30 transition-all duration-300"
-            >
-              <Trophy className="w-5 h-5 text-yellow-400" />
-              View Ranking
-            </Link>
-          </div>
+          <FadeIn delay={0.35} y={20}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+              <Magnet padding={100} strength={4}>
+                <GradientButton href="/generator">
+                  <Sparkles className="w-5 h-5" />
+                  AI Tool Matcher
+                  <ArrowRight className="w-4 h-4" />
+                </GradientButton>
+              </Magnet>
+              <Magnet padding={100} strength={4}>
+                <Link
+                  href="/ranking"
+                  className="inline-flex items-center gap-2 px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 bg-white/10 backdrop-blur-md text-white text-xs sm:text-sm md:text-base font-medium uppercase tracking-widest rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300"
+                >
+                  <Trophy className="w-5 h-5 text-yellow-400" />
+                  View Ranking
+                </Link>
+              </Magnet>
+            </div>
+          </FadeIn>
 
           {/* Lead Magnet 小横幅 - 简洁样式 */}
           <div className="flex justify-center mb-8">
@@ -198,35 +206,37 @@ export default function HomePage() {
           </div>
 
           {/* Statistics数据 */}
-          <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 pb-6">
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                {tools.length}+
+          <FadeIn delay={0.5} y={20}>
+            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 pb-6">
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  {tools.length}+
+                </div>
+                <div className="text-sm text-blue-300/70 mt-1">Curated Tools</div>
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">Curated Tools</div>
-            </div>
-            <div className="w-px h-12 bg-white/10 hidden sm:block" />
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                10
+              <div className="w-px h-12 bg-white/10 hidden sm:block" />
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  10
+                </div>
+                <div className="text-sm text-blue-300/70 mt-1">Categories</div>
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">Categories</div>
-            </div>
-            <div className="w-px h-12 bg-white/10 hidden sm:block" />
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                6
+              <div className="w-px h-12 bg-white/10 hidden sm:block" />
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  6
+                </div>
+                <div className="text-sm text-blue-300/70 mt-1">Score Dimensions</div>
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">Score Dimensions</div>
-            </div>
-            <div className="w-px h-12 bg-white/10 hidden sm:block" />
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                100%
+              <div className="w-px h-12 bg-white/10 hidden sm:block" />
+              <div className="text-center">
+                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
+                  100%
+                </div>
+                <div className="text-sm text-blue-300/70 mt-1">Independent Reviews</div>
               </div>
-              <div className="text-sm text-blue-300/70 mt-1">Independent Reviews</div>
             </div>
-          </div>
+          </FadeIn>
         </div>
 
         {/* 底部波浪 - 修复黑线问题 */}
