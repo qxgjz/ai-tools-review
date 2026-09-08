@@ -356,12 +356,6 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                   url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
                   applicationCategory: "AIApplication",
                   operatingSystem: "Web",
-                  aggregateRating: {
-                    "@type": "AggregateRating",
-                    ratingValue: calculateScoreResult(tool.scores).total.toFixed(1),
-                    bestRating: "10",
-                    worstRating: "0",
-                  },
                 },
               })),
             },
