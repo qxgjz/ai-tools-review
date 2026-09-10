@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
 import { ArrowLeft, Trophy, Star, ArrowRight } from "lucide-react";
 import toolsData from "@/data/tools.json";
 import type { Tool } from "@/types";
@@ -15,6 +16,8 @@ export default function RankingPage() {
     .sort((a, b) => b.total - a.total);
 
   const top10 = sortedTools.slice(0, 10);
+  const [showAll, setShowAll] = useState(false);
+  const displayTools = showAll ? sortedTools : sortedTools.slice(0, 50);
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
@@ -125,11 +128,21 @@ export default function RankingPage() {
               Complete Ranking
             </h2>
             <p className="text-gray-500 dark:text-gray-400">
-              All {sortedTools.length} tools sorted by score
+              Showing {displayTools.length} of {sortedTools.length} tools sorted by score
             </p>
           </div>
         </FadeIn>
-        <ToolList tools={sortedTools} />
+        <ToolList tools={displayTools} />
+        {!showAll && sortedTools.length > 50 && (
+          <div className="text-center mt-8">
+            <button
+              onClick={() => setShowAll(true)}
+              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-xl transition-colors shadow-lg hover:shadow-xl"
+            >
+              Show All {sortedTools.length} Tools
+            </button>
+          </div>
+        )}
       </div>
     </div>
   );
