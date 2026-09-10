@@ -1,8 +1,8 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import Link from "next/link";
-import { Filter, ArrowUpDown, Check } from "lucide-react";
+import { Filter, ArrowUpDown, Check, Loader2 } from "lucide-react";
 
 type SortOption = "newest" | "oldest" | "title";
 type CategoryFilter = "all" | string;
@@ -24,27 +24,31 @@ interface BlogListClientProps {
   posts: Post[];
 }
 
+const POSTS_PER_PAGE = 20;
+
 export function BlogListClient({ posts }: BlogListClientProps) {
   const [sortBy, setSortBy] = useState<SortOption>("newest");
   const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
+  const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
 
-  // 获取所有Categories
+  // Get all categories
   const categories = useMemo(() => {
     const catSet = new Set<string>();
     posts.forEach((p) => catSet.add(p.category));
     return Array.from(catSet).sort();
   }, [posts]);
 
-  // 筛选和排序文章
+  // Filter and sort posts
   const filteredAndSortedPosts = useMemo(() => {
     let result = [...posts];
 
-    // 按Categories筛选
+    // Filter by category
     if (categoryFilter !== "all") {
       result = result.filter((post) => post.category === categoryFilter);
     }
 
-    // 排序
+    // Sort
     switch (sortBy) {
       case "newest":
         result.sort(
@@ -68,6 +72,23 @@ export function BlogListClient({ posts }: BlogListClientProps) {
     return result;
   }, [posts, sortBy, categoryFilter]);
 
+  // Reset visible count when filter changes
+  useEffect(() => {
+    setVisibleCount(POSTS_PER_PAGE);
+  }, [categoryFilter, sortBy]);
+
+  const visiblePosts = filteredAndSortedPosts.slice(0, visibleCount);
+  const hasMore = visibleCount < filteredAndSortedPosts.length;
+
+  const handleLoadMore = () => {
+    setIsLoadingMore(true);
+    // Simulate loading for better UX
+    setTimeout(() => {
+      setVisibleCount((prev) => prev + POSTS_PER_PAGE);
+      setIsLoadingMore(false);
+    }, 300);
+  };
+
   const sortOptions: { value: SortOption; label: string }[] = [
     { value: "newest", label: "Newest First" },
     { value: "oldest", label: "Oldest First" },
@@ -76,9 +97,9 @@ export function BlogListClient({ posts }: BlogListClientProps) {
 
   return (
     <div className="mb-8">
-      {/* 筛选和排序Tools栏 */}
+      {/* Filter and sort toolbar */}
       <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6 p-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800">
-        {/* Categories筛选 */}
+        {/* Category filter */}
         <div className="flex items-center gap-2 flex-wrap">
           <Filter className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300 mr-2">
@@ -111,7 +132,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
           </div>
         </div>
 
-        {/* 排序选项 */}
+        {/* Sort options */}
         <div className="flex items-center gap-2">
           <ArrowUpDown className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
@@ -131,14 +152,14 @@ export function BlogListClient({ posts }: BlogListClientProps) {
         </div>
       </div>
 
-      {/* 结果Statistics */}
+      {/* Results statistics */}
       <div className="flex items-center justify-between mb-4">
         <p className="text-sm text-gray-500 dark:text-gray-400">
           Showing{" "}
           <span className="font-semibold text-gray-900 dark:text-white">
-            {filteredAndSortedPosts.length}
+            {visiblePosts.length}
           </span>{" "}
-          of <span className="font-semibold">{posts.length}</span> articles
+          of <span className="font-semibold">{filteredAndSortedPosts.length}</span> articles
           {categoryFilter !== "all" && (
             <span className="ml-1">
               · filtered by{" "}
@@ -159,10 +180,10 @@ export function BlogListClient({ posts }: BlogListClientProps) {
         )}
       </div>
 
-      {/* 文章列Table */}
-      {filteredAndSortedPosts.length > 0 ? (
+      {/* Article list */}
+      {visiblePosts.length > 0 ? (
         <div className="space-y-4">
-          {filteredAndSortedPosts.map((post) => (
+          {visiblePosts.map((post) => (
             <Link
               key={post.slug}
               href={`/blog/${post.slug}`}
@@ -204,6 +225,28 @@ export function BlogListClient({ posts }: BlogListClientProps) {
             className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
           >
             View all articles
+          </button>
+        </div>
+      )}
+
+      {/* Load more button */}
+      {hasMore && (
+        <div className="text-center mt-8">
+          <button
+            onClick={handleLoadMore}
+            disabled={isLoadingMore}
+            className="px-8 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white font-medium rounded-xl transition-colors shadow-lg hover:shadow-xl flex items-center gap-2 mx-auto"
+          >
+            {isLoadingMore ? (
+              <>
+                <Loader2 className="w-4 h-4 animate-spin" />
+                Loading...
+              </>
+            ) : (
+              <>
+                Load More Articles ({filteredAndSortedPosts.length - visibleCount} remaining)
+              </>
+            )}
           </button>
         </div>
       )}

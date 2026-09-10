@@ -11,7 +11,7 @@ import { CategoryToolsClient } from "@/components/tools/CategoryToolsClient";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { FadeIn, GradientText } from "@/components/animations";
 
-// Categories璇︾粏鍐呭锛堢敤浜嶴EO涓婚Cluster锛?
+// Category detailed content for SEO topic clusters
 const CATEGORY_CONTENT: Record<string, {
   intro: string;
   buyingGuide: string[];
@@ -387,7 +387,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         Back to Home
       </Link>
 
-      {/* 鍙鍖栭潰鍖呭睉瀵艰埅 */}
+      {/* Breadcrumb navigation */}
       <Breadcrumb
         items={[
           { name: "Home", url: "/" },
@@ -399,7 +399,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
       <FadeIn delay={0.1} y={30}>
         <section className={`relative overflow-hidden rounded-2xl bg-gradient-to-r ${category.gradient} p-8 text-white mb-8 shadow-lg`}>
-          {/* 3D瑁呴グ鍏冪礌 */}
+          {/* 3D decorative elements */}
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
           <div className="absolute -bottom-8 -left-8 w-32 h-32 bg-white/5 rounded-full blur-xl" />
           <div className="absolute top-1/2 right-1/4 w-2 h-2 bg-white/30 rounded-full" />
@@ -422,10 +422,10 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
 
       <CategoryToolsClient tools={sortedTools} />
 
-      {/* Categories璇︾粏鍐呭 - SEO涓婚Cluster */}
+      {/* Category detailed content - SEO topic cluster */}
       {CATEGORY_CONTENT[params.slug] && (
         <div className="mt-12 space-y-10">
-          {/* Categories璇︾粏浠嬬粛 */}
+          {/* Category detailed introduction */}
           <FadeIn delay={0.1} y={20}>
             <section className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-blue-500/5 to-transparent rounded-full blur-2xl" />
@@ -454,7 +454,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           </section>
           </FadeIn>
 
-          {/* 璇ategories涓嬬殑In-Depth Reviews鏂囩珷 - 鍐呴摼 */}
+          {/* In-Depth Reviews articles under this category - internal links */}
           {(() => {
             const categoryPosts = postsData.filter((p) => {
               const postCat = (p.categorySlug || p.category || "").toLowerCase();
@@ -479,7 +479,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                       <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-2">{post.excerpt}</p>
                       <div className="flex items-center gap-2 text-xs text-gray-400">
                         <span>{post.author}</span>
-                        <span>路</span>
+                        <span>·</span>
                         <span>{post.readTime || "5 min"}</span>
                       </div>
                     </Link>
