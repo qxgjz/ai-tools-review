@@ -1,0 +1,68 @@
+=== Top Priority URLs for Google Search Console Indexing ===
+Generated: 2026-09-11
+Total URLs: 57
+
+How to use:
+1. Go to Google Search Console: https://search.google.com/search-console
+2. Use the URL Inspection tool at the top
+3. Paste each URL below and click 'Request indexing'
+4. Wait for each URL to be processed (usually 1-2 minutes)
+
+=== URL List ===
+1. https://www.aitoolcrux.com/
+2. https://www.aitoolcrux.com/ranking
+3. https://www.aitoolcrux.com/compare
+4. https://www.aitoolcrux.com/blog
+5. https://www.aitoolcrux.com/about
+6. https://www.aitoolcrux.com/contact
+7. https://www.aitoolcrux.com/disclosure
+8. https://www.aitoolcrux.com/privacy
+9. https://www.aitoolcrux.com/terms
+10. https://www.aitoolcrux.com/methodology
+11. https://www.aitoolcrux.com/tools/gemini
+12. https://www.aitoolcrux.com/tools/anything-llm
+13. https://www.aitoolcrux.com/tools/n8n
+14. https://www.aitoolcrux.com/tools/dify
+15. https://www.aitoolcrux.com/tools/chatgpt
+16. https://www.aitoolcrux.com/tools/gemini-cli
+17. https://www.aitoolcrux.com/tools/claude
+18. https://www.aitoolcrux.com/tools/langflow
+19. https://www.aitoolcrux.com/tools/gpt-4o
+20. https://www.aitoolcrux.com/tools/goose
+21. https://www.aitoolcrux.com/tools/composio
+22. https://www.aitoolcrux.com/tools/ragflow
+23. https://www.aitoolcrux.com/tools/auto-gpt
+24. https://www.aitoolcrux.com/tools/github-copilot
+25. https://www.aitoolcrux.com/tools/librechat
+26. https://www.aitoolcrux.com/tools/litellm
+27. https://www.aitoolcrux.com/tools/openai-python
+28. https://www.aitoolcrux.com/tools/codex
+29. https://www.aitoolcrux.com/tools/text-generation-webui
+30. https://www.aitoolcrux.com/tools/gpt-researcher
+31. https://www.aitoolcrux.com/category/productivity
+32. https://www.aitoolcrux.com/category/video
+33. https://www.aitoolcrux.com/category/chat
+34. https://www.aitoolcrux.com/category/rag
+35. https://www.aitoolcrux.com/category/code
+36. https://www.aitoolcrux.com/category/dev-tools
+37. https://www.aitoolcrux.com/category/agent-framework
+38. https://www.aitoolcrux.com/category/design
+39. https://www.aitoolcrux.com/category/agent
+40. https://www.aitoolcrux.com/category/image
+41. https://www.aitoolcrux.com/category/audio
+42. https://www.aitoolcrux.com/category/writing
+43. https://www.aitoolcrux.com/category/memory
+44. https://www.aitoolcrux.com/category/search
+45. https://www.aitoolcrux.com/category/database
+46. https://www.aitoolcrux.com/category/observability
+47. https://www.aitoolcrux.com/category/agent-runtime
+48. https://www.aitoolcrux.com/blog/cursor-ai-review-2026-best-ai-code-editor
+49. https://www.aitoolcrux.com/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md
+50. https://www.aitoolcrux.com/blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md
+51. https://www.aitoolcrux.com/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md
+52. https://www.aitoolcrux.com/blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md
+53. https://www.aitoolcrux.com/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md
+54. https://www.aitoolcrux.com/blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md
+55. https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md
+56. https://www.aitoolcrux.com/blog/dify_ai_review
+57. https://www.aitoolcrux.com/blog/cursor_ai_review
