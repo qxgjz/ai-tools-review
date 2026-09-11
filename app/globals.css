@@ -171,3 +171,38 @@ img, svg { content-visibility: auto; }
     height: auto;
   }
 }
+
+/* 移动端表单优化：防止iOS自动缩放 */
+@media (max-width: 768px) {
+  input, select, textarea {
+    font-size: 16px !important;
+  }
+}
+
+/* 移动端点击高亮去除 */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 移动端滚动性能优化 */
+@media (max-width: 768px) {
+  body {
+    -webkit-overflow-scrolling: touch;
+    overscroll-behavior-y: contain;
+  }
+}
+
+/* 移动端固定底部导航安全区域 */
+@media (max-width: 768px) {
+  .fixed-bottom {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+}
+
+/* 移动端文字选择优化 */
+@media (max-width: 768px) {
+  p, h1, h2, h3, h4, h5, h6 {
+    -webkit-user-select: text;
+    user-select: text;
+  }
+}
