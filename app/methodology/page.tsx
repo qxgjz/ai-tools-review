@@ -19,7 +19,7 @@ import {
 export const metadata: Metadata = {
   title: "Review Methodology - How We Score AI Tools | AIToolCrux",
   description:
-    "Learn how AIToolCrux evaluates AI tools with our transparent six-dimensional scoring framework. We test every tool across functionality, UX, pricing, support, and ethics.",
+    "Learn how AIToolCrux evaluates AI tools with our transparent six-dimensional scoring framework. We test every tool across functionality, UX, pricing, support...",
   alternates: {
     canonical: "https://www.aitoolcrux.com/methodology",
   },
