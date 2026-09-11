@@ -13,6 +13,7 @@ import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
 import { AuthorBio } from "@/components/author/AuthorBio";
+import { FadeIn } from "@/components/animations";
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: "bg-amber-700 text-white",
@@ -271,6 +272,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* AEO/GEO Optimization: Quick Answer - Answer First for AI Search Citation */}
+      <FadeIn delay={0.1} y={20}>
       <section className="bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-2 mb-4">
           <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
@@ -291,8 +293,10 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </div>
         </div>
       </section>
+      </FadeIn>
 
       {/* AEO/GEO Optimization: Key Takeaways - Structured for AI Citation */}
+      <FadeIn delay={0.2} y={20}>
       <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
         <div className="flex items-center gap-2 mb-4">
           <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
@@ -342,6 +346,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </p>
         </div>
       </section>
+      </FadeIn>
 
       {/* Author Bio - E-E-A-T Expertise & Authoritativeness signal */}
       {(tool as any).author && (
