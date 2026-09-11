@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="800" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#10a37f;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a7f64;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="card" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.95" />
+      <stop offset="100%" style="stop-color:#f8fafc;stop-opacity:0.95" />
+    </linearGradient>
+  </defs>
+
+  <!-- 背景 -->
+  <rect width="800" height="500" fill="url(#bg)"/>
+
+  <!-- 顶部导航栏 -->
+  <rect x="0" y="0" width="800" height="50" fill="#1e293b" opacity="0.9"/>
+  <circle cx="25" cy="25" r="8" fill="#ef4444"/>
+  <circle cx="45" cy="25" r="8" fill="#f59e0b"/>
+  <circle cx="65" cy="25" r="8" fill="#22c55e"/>
+  <text x="100" y="30" fill="#94a3b8" font-family="Arial" font-size="12">OpenAI Python</text>
+
+  <!-- 侧边栏 -->
+  <rect x="0" y="50" width="180" height="450" fill="#0f172a" opacity="0.85"/>
+  <text x="20" y="85" fill="#f1f5f9" font-family="Arial" font-size="14" font-weight="bold">OpenAI Python</text>
+  <text x="20" y="105" fill="#64748b" font-family="Arial" font-size="10">Official Python SDK</text>
+
+  <!-- 侧边栏菜单项 -->
+  <rect x="10" y="125" width="160" height="30" rx="5" fill="#334155" opacity="0.6"/>
+  <text x="25" y="145" fill="#e2e8f0" font-family="Arial" font-size="11">Dashboard</text>
+
+  <rect x="10" y="165" width="160" height="30" rx="5" fill="transparent"/>
+  <text x="25" y="185" fill="#94a3b8" font-family="Arial" font-size="11">Projects</text>
+
+  <rect x="10" y="205" width="160" height="30" rx="5" fill="transparent"/>
+  <text x="25" y="225" fill="#94a3b8" font-family="Arial" font-size="11">Settings</text>
+
+  <rect x="10" y="245" width="160" height="30" rx="5" fill="transparent"/>
+  <text x="25" y="265" fill="#94a3b8" font-family="Arial" font-size="11">Documentation</text>
+
+  <!-- 主内容区 -->
+  <rect x="200" y="70" width="580" height="410" rx="10" fill="url(#card)"/>
+
+  <!-- 标题 -->
+  <text x="225" y="105" fill="#0f172a" font-family="Arial" font-size="18" font-weight="bold">Welcome to OpenAI Python</text>
+  <text x="225" y="125" fill="#64748b" font-family="Arial" font-size="11">Official Python SDK</text>
+
+  <!-- 统计卡片 -->
+  <rect x="225" y="145" width="165" height="70" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="240" y="170" fill="#64748b" font-family="Arial" font-size="10">Total Requests</text>
+  <text x="240" y="195" fill="#0f172a" font-family="Arial" font-size="20" font-weight="bold">12,847</text>
+  <text x="340" y="195" fill="#22c55e" font-family="Arial" font-size="10">+24%</text>
+
+  <rect x="405" y="145" width="165" height="70" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="420" y="170" fill="#64748b" font-family="Arial" font-size="10">Success Rate</text>
+  <text x="420" y="195" fill="#0f172a" font-family="Arial" font-size="20" font-weight="bold">98.7%</text>
+  <text x="520" y="195" fill="#22c55e" font-family="Arial" font-size="10">+1.2%</text>
+
+  <rect x="585" y="145" width="175" height="70" rx="8" fill="#f1f5f9" stroke="#e2e8f0" stroke-width="1"/>
+  <text x="600" y="170" fill="#64748b" font-family="Arial" font-size="10">Active Users</text>
+  <text x="600" y="195" fill="#0f172a" font-family="Arial" font-size="20" font-weight="bold">3,421</text>
+  <text x="700" y="195" fill="#22c55e" font-family="Arial" font-size="10">+18%</text>
+
+  <!-- 功能列表 -->
+  <text x="225" y="245" fill="#0f172a" font-family="Arial" font-size="14" font-weight="bold">Key Features</text>
+
+  <rect x="225" y="260" width="535" height="1" fill="#e2e8f0"/>
+
+  <!-- 功能项 -->
+  <circle cx="240" cy="290" r="6" fill="#10a37f"/>
+  <text x="258" y="294" fill="#334155" font-family="Arial" font-size="12" font-weight="bold">Complete API Coverage</text>
+  <text x="258" y="310" fill="#64748b" font-family="Arial" font-size="10">Chat, Completions, Embeddings, Images, Audio, Files</text>
+  <circle cx="240" cy="328" r="6" fill="#10a37f"/>
+  <text x="258" y="332" fill="#334155" font-family="Arial" font-size="12" font-weight="bold">Streaming Support</text>
+  <text x="258" y="348" fill="#64748b" font-family="Arial" font-size="10">Real-time streaming responses with SSE</text>
+  <circle cx="240" cy="366" r="6" fill="#10a37f"/>
+  <text x="258" y="370" fill="#334155" font-family="Arial" font-size="12" font-weight="bold">Type Safety</text>
+  <text x="258" y="386" fill="#64748b" font-family="Arial" font-size="10">Full TypeScript-style type hints with Pydantic models</text>
+  <circle cx="240" cy="404" r="6" fill="#10a37f"/>
+  <text x="258" y="408" fill="#334155" font-family="Arial" font-size="12" font-weight="bold">Async & Sync</text>
+  <text x="258" y="424" fill="#64748b" font-family="Arial" font-size="10">Both synchronous and asynchronous client interfaces</text>
+  <circle cx="240" cy="442" r="6" fill="#10a37f"/>
+  <text x="258" y="446" fill="#334155" font-family="Arial" font-size="12" font-weight="bold">Retry & Error Handling</text>
+  <text x="258" y="462" fill="#64748b" font-family="Arial" font-size="10">Automatic retries with exponential backoff</text>
+
+  <!-- 底部活动日志 -->
+  <rect x="225" y="450" width="535" height="20" rx="4" fill="#f8fafc"/>
+  <circle cx="238" cy="460" r="3" fill="#22c55e"/>
+  <text x="250" y="464" fill="#64748b" font-family="Arial" font-size="9">System operational · Last updated: just now</text>
+</svg>
