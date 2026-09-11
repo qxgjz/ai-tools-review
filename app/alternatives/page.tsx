@@ -3,8 +3,8 @@ import Link from "next/link";
 import alternativesData from "@/data/alternatives.json";
 
 export const metadata: Metadata = {
-  title: "Best AI Tool Alternatives 2026: Comprehensive Comparison Guide | AIToolCrux",
-  description: "Discover the best alternatives to popular AI tools. Compare ChatGPT alternatives, Midjourney alternatives, Jasper alternatives, and more. Find the perfect AI tool for your needs.",
+  title: "Best AI Tool Alternatives 2026 | AIToolCrux",
+  description: "Best AI tool alternatives 2026: ChatGPT, Midjourney, Claude alternatives compared with expert reviews and pricing.",
   keywords: "ai tool alternatives, chatgpt alternatives, midjourney alternatives, jasper alternatives, best ai tools",
   alternates: {
     canonical: "https://www.aitoolcrux.com/alternatives",
