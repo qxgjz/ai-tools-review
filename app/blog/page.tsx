@@ -80,7 +80,7 @@ export default function BlogPage() {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
           All Articles
         </h2>
-        <BlogListClient posts={allPosts} />
+        <BlogListClient posts={allPosts.map(({ slug, title, excerpt, category, categorySlug, tags, author, publishedAt, readTime, featured, image }) => ({ slug, title, excerpt, category, categorySlug, tags, author, publishedAt, readTime, featured, image }))} />
       </div>
     </div>
   );

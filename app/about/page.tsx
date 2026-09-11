@@ -4,7 +4,7 @@ import { Shield, Award, Users, Mail, Github, ExternalLink, CheckCircle2, Star } 
 
 export const metadata: Metadata = {
   title: "About Us - AIToolCrux | Professional AI Tool Reviews",
-  description: "Learn about AIToolCrux's mission, editorial team, and six-dimensional review methodology. We provide independent, data-driven AI tool reviews to help you make informed decisions.",
+  description: "AIToolCrux provides expert, unbiased AI tool reviews and comparisons. Our mission is to help you find the perfect AI tools with transparent, data-driven evaluations.'s mission, editorial team, and six-dimensional review methodology. We provide independent, data-driven AI tool reviews to help you make informed decisions.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/about",
   },

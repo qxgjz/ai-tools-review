@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const prosSummary = tool.pros.slice(0, 2).join(", ");
   const description = `${tool.name} by ${tool.vendor} — ${categoryFormatted} AI tool rated ${total.toFixed(1)}/10 (${grade} grade). Expert review: features, pricing, pros (${prosSummary}) & cons. Last updated ${tool.lastUpdated}. Find out if ${tool.name} is right for you.`;
   return {
-    title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 Rating, Pricing & Pros/Cons | AIToolCrux`,
+    title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 Rating, Pricing & Pros | AIToolCrux`,
     description: description.slice(0, 160),
     keywords: [tool.name, `${tool.name} review`, `${tool.name} pricing`, tool.vendor, ...tool.tags, `best ${tool.category} AI tools`, "AI tool review", "AI software comparison"],
     alternates: {
