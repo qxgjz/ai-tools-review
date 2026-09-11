@@ -4,6 +4,7 @@ import Link from "next/link";
 import "./globals.css";
 import "./design-tokens.css";
 import { Header } from "@/components/layout/Header";
+import { BackToTop } from "@/components/layout/BackToTop";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
 
@@ -134,7 +135,7 @@ export default function RootLayout({
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
           <Header />
-          <main className="pt-24">{children}</main>
+          <main id="main-content" className="pt-8">{children}</main>
           <footer className="mt-16 py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               {/* 多列链接区域 */}
@@ -149,7 +150,7 @@ export default function RootLayout({
                   </p>
                   <Link
                     href="/free-ai-tools-guide"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline mb-4"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mb-4"
                   >
                     📚 Get Free AI Tools Guide
                   </Link>
@@ -191,11 +192,11 @@ export default function RootLayout({
                     Explore
                   </h4>
                   <ul className="space-y-2">
-                    <li><Link href="/ranking" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Tool Rankings</Link></li>
-                    <li><Link href="/compare" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Compare Tools</Link></li>
-                    <li><Link href="/generator" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Tool Matcher</Link></li>
-                    <li><Link href="/blog" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Blog & Reviews</Link></li>
-                    <li><Link href="/sitemap" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Sitemap</Link></li>
+                    <li><Link href="/ranking" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Tool Rankings</Link></li>
+                    <li><Link href="/compare" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Compare Tools</Link></li>
+                    <li><Link href="/generator" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Tool Matcher</Link></li>
+                    <li><Link href="/blog" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Blog & Reviews</Link></li>
+                    <li><Link href="/sitemap" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Sitemap</Link></li>
                   </ul>
                 </div>
 
@@ -205,12 +206,12 @@ export default function RootLayout({
                     Categories
                   </h4>
                   <ul className="space-y-2">
-                    <li><Link href="/category/chat" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Chat</Link></li>
-                    <li><Link href="/category/writing" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Writing</Link></li>
-                    <li><Link href="/category/image" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Image</Link></li>
-                    <li><Link href="/category/code" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Coding</Link></li>
-                    <li><Link href="/category/video" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Video</Link></li>
-                    <li><Link href="/category/audio" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">AI Audio</Link></li>
+                    <li><Link href="/category/chat" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Chat</Link></li>
+                    <li><Link href="/category/writing" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Writing</Link></li>
+                    <li><Link href="/category/image" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Image</Link></li>
+                    <li><Link href="/category/code" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Coding</Link></li>
+                    <li><Link href="/category/video" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Video</Link></li>
+                    <li><Link href="/category/audio" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Audio</Link></li>
                   </ul>
                 </div>
 
@@ -220,13 +221,13 @@ export default function RootLayout({
                     Resources
                   </h4>
                   <ul className="space-y-2">
-                    <li><Link href="/about" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">About Us</Link></li>
-                    <li><Link href="/privacy" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Privacy Policy</Link></li>
-                    <li><Link href="/disclosure" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Affiliate Disclosure</Link></li>
-                    <li><Link href="/contact" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Contact Us</Link></li>
-                    <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">XML Sitemap</a></li>
-                    <li><a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">RSS Feed</a></li>
-                    <li><a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Robots.txt</a></li>
+                    <li><Link href="/about" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About Us</Link></li>
+                    <li><Link href="/privacy" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
+                    <li><Link href="/disclosure" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Affiliate Disclosure</Link></li>
+                    <li><Link href="/contact" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact Us</Link></li>
+                    <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">XML Sitemap</a></li>
+                    <li><a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">RSS Feed</a></li>
+                    <li><a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Robots.txt</a></li>
                   </ul>
                 </div>
               </div>
@@ -242,6 +243,7 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
+        <BackToTop />
         </ThemeProvider>
       </body>
     </html>
