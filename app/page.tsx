@@ -25,12 +25,12 @@ import {
 import toolsData from "@/data/tools.json";
 import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
-import { FadeIn, GradientText, GradientButton, Magnet, LogoMarquee } from "@/components/animations";
+import { FadeIn } from "@/components/animations";
 import { calculateScoreResult } from "@/lib/scoring";
 
-// 动态Import重型Component，减少首屏JS包大小
+// Dynamic import heavy components
 const ToolList = dynamic(() => import("@/components/tools/ToolList").then(m => m.ToolList), {
-  loading: () => <div className="animate-pulse h-64 bg-gray-100 dark:bg-gray-800 rounded-xl" />,
+  loading: () => <div className="animate-pulse h-64 bg-zinc-100 dark:bg-zinc-800 rounded-xl" />,
 });
 const NewsletterSignup = dynamic(() => import("@/components/monetization/NewsletterSignup").then(m => m.NewsletterSignup), {
   ssr: false,
@@ -38,24 +38,24 @@ const NewsletterSignup = dynamic(() => import("@/components/monetization/Newslet
 });
 
 const CATEGORIES = [
-  { slug: "chat", name: "AI Chat", icon: MessageSquare, color: "from-blue-500 to-cyan-500" },
-  { slug: "writing", name: "AI Writing", icon: PenTool, color: "from-purple-500 to-pink-500" },
-  { slug: "image", name: "AI Image Generation", icon: ImageIcon, color: "from-orange-500 to-red-500" },
-  { slug: "code", name: "AI Programming", icon: Code, color: "from-emerald-500 to-teal-500" },
-  { slug: "video", name: "AI Video", icon: Video, color: "from-rose-500 to-orange-500" },
-  { slug: "audio", name: "AI Audio", icon: Music, color: "from-violet-500 to-purple-500" },
-  { slug: "productivity", name: "AI Office", icon: Briefcase, color: "from-indigo-500 to-blue-500" },
-  { slug: "search", name: "AI Search", icon: SearchIcon, color: "from-sky-500 to-blue-500" },
-  { slug: "agent", name: "AI Agent", icon: Bot, color: "from-indigo-500 to-purple-600" },
-  { slug: "design", name: "AI Design", icon: Palette, color: "from-pink-500 to-rose-500" },
+  { slug: "chat", name: "AI Chat", icon: MessageSquare },
+  { slug: "writing", name: "AI Writing", icon: PenTool },
+  { slug: "image", name: "AI Image", icon: ImageIcon },
+  { slug: "code", name: "AI Coding", icon: Code },
+  { slug: "video", name: "AI Video", icon: Video },
+  { slug: "audio", name: "AI Audio", icon: Music },
+  { slug: "productivity", name: "AI Office", icon: Briefcase },
+  { slug: "search", name: "AI Search", icon: SearchIcon },
+  { slug: "agent", name: "AI Agent", icon: Bot },
+  { slug: "design", name: "AI Design", icon: Palette },
 ];
 
 const METHODOLOGY = [
   { icon: Zap, title: "Features & Output Quality", weight: "25%", desc: "Core feature completeness, output accuracy, and use case coverage" },
   { icon: Layers, title: "User Experience", weight: "20%", desc: "Interface design, learning curve, documentation quality" },
-  { icon: Star, title: "Price vs. Value", weight: "20%", desc: "Cost Transparency, Free Tier, Return on Investment" },
+  { icon: Star, title: "Price vs. Value", weight: "20%", desc: "Cost transparency, free tier, return on investment" },
   { icon: Code, title: "Integrations & Developers", weight: "15%", desc: "API quality, platform compatibility, ecosystem" },
-  { icon: Shield, title: "Support & Reliability", weight: "10%", desc: "Uptime, update frequency, customer support response" },
+  { icon: Shield, title: "Support & Reliability", weight: "10%", desc: "Uptime, update frequency, customer support" },
   { icon: CheckCircle2, title: "Ethics and Transparency", weight: "10%", desc: "Data privacy, bias disclosure, responsible AI" },
 ];
 
@@ -70,7 +70,7 @@ export default function HomePage() {
 
   return (
     <div className="min-h-screen">
-      {/* Schema.org 结构化数据 - WebSite */}
+      {/* Schema.org structured data */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
@@ -78,9 +78,8 @@ export default function HomePage() {
             "@context": "https://schema.org",
             "@type": "WebSite",
             name: "AIToolCrux",
-            alternateName: "AI Tool Review Platform",
             url: "https://www.aitoolcrux.com",
-            description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.",
+            description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework.",
             inLanguage: "en",
             potentialAction: {
               "@type": "SearchAction",
@@ -94,179 +93,160 @@ export default function HomePage() {
         }}
       />
 
-      {/* Schema.org 结构化数据 - Organization */}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Organization",
-            name: "AIToolCrux",
-            url: "https://www.aitoolcrux.com",
-            logo: "https://www.aitoolcrux.com/logo.png",
-            description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework.",
-            foundingDate: "2026",
-            sameAs: [
-              "https://twitter.com/aitoolcrux",
-              "https://www.linkedin.com/company/aitoolcrux",
-            ],
-            contactPoint: {
-              "@type": "ContactPoint",
-              contactType: "customer support",
-              email: "support@aitoolcrux.com",
-              availableLanguage: ["English"],
-            },
-          }),
-        }}
-      />
-
-      {/* Hero - 更现代的设计 */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-indigo-900 dark:from-slate-950 dark:via-blue-950 dark:to-indigo-950 text-white py-24 px-4">
-        {/* 背景装饰 */}
-        <div className="absolute inset-0 overflow-hidden">
-          <div className="absolute top-0 right-1/4 w-[500px] h-[500px] bg-blue-500/20 rounded-full blur-[120px] -translate-y-1/2" />
-          <div className="absolute bottom-0 left-1/4 w-[400px] h-[400px] bg-purple-500/20 rounded-full blur-[100px] translate-y-1/2" />
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-500/10 rounded-full blur-[150px]" />
-        </div>
-
-        {/* 网格背景 */}
+      {/* === HERO SECTION - Asymmetric layout (Taste Skill: Anti-Center Bias) === */}
+      <section className="relative bg-zinc-950 text-white overflow-hidden">
+        {/* Subtle grid background - no neon gradients */}
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage:
-              "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
+            backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
             backgroundSize: "60px 60px",
           }}
         />
 
-        <div className="relative max-w-5xl mx-auto text-center">
-          {/* Tags */}
-          <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/10 backdrop-blur-md rounded-full text-sm mb-8 border border-white/10">
-            <Sparkles className="w-4 h-4 text-yellow-400" />
-            <span className="text-blue-100">Six-Dimension Weighted Scoring · Professional Independent Reviews</span>
-          </div>
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-28">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            {/* Left: Content (7 cols) - left-aligned, NOT centered */}
+            <div className="lg:col-span-7">
+              <FadeIn delay={0.1} y={20}>
+                <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm mb-6">
+                  <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
+                  <span className="text-emerald-300">Independent AI Tool Reviews</span>
+                </div>
+              </FadeIn>
 
-          {/* 主标题 */}
-          <FadeIn delay={0.15} y={40}>
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold mb-6 leading-[1.1] tracking-tight">
-              Find the Perfect
-              <br />
-              <GradientText from="#60A5FA" to="#22D3EE" className="font-black">
-                AI Tools
-              </GradientText>
-            </h1>
-          </FadeIn>
+              <FadeIn delay={0.2} y={30}>
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
+                  Find the best AI tools,
+                  <br />
+                  <span className="text-emerald-400">tested and ranked.</span>
+                </h1>
+              </FadeIn>
 
-          {/* 副标题 */}
-          <FadeIn delay={0.25} y={20}>
-            <p className="text-lg sm:text-xl text-blue-200/80 mb-10 max-w-2xl mx-auto leading-relaxed">
-              In-depth reviews across six dimensions: features, UX, pricing, integrations, support, and ethics.
-              <br className="hidden sm:block" />
-              Curated selection of {tools.length}+ top AI tools across all categories
-            </p>
-          </FadeIn>
+              <FadeIn delay={0.3} y={20}>
+                <p className="text-lg text-zinc-400 mb-8 max-w-xl leading-relaxed">
+                  {tools.length}+ AI tools evaluated across six dimensions: features, UX, pricing, integrations, support, and ethics. No paid placements, no affiliate bias.
+                </p>
+              </FadeIn>
 
-          {/* CTA 按钮 */}
-          <FadeIn delay={0.35} y={20}>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
-              <Magnet padding={100} strength={4}>
-                <GradientButton href="/generator">
-                  <Sparkles className="w-5 h-5" />
-                  AI Tool Matcher
-                  <ArrowRight className="w-4 h-4" />
-                </GradientButton>
-              </Magnet>
-              <Magnet padding={100} strength={4}>
-                <Link
-                  href="/ranking"
-                  className="inline-flex items-center gap-2 px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 bg-white/10 backdrop-blur-md text-white text-xs sm:text-sm md:text-base font-medium uppercase tracking-widest rounded-full border-2 border-white/30 hover:bg-white/20 hover:border-white/50 transition-all duration-300"
-                >
-                  <Trophy className="w-5 h-5 text-yellow-400" />
-                  View Ranking
-                </Link>
-              </Magnet>
+              <FadeIn delay={0.4} y={20}>
+                <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+                  <Link
+                    href="/ranking"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg transition-colors"
+                  >
+                    <Trophy className="w-4 h-4" />
+                    View Rankings
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                  <Link
+                    href="/generator"
+                    className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium rounded-lg transition-colors"
+                  >
+                    <Sparkles className="w-4 h-4" />
+                    AI Tool Matcher
+                  </Link>
+                </div>
+              </FadeIn>
+
+              {/* Stats - left aligned, not centered */}
+              <FadeIn delay={0.5} y={20}>
+                <div className="flex flex-wrap items-center gap-8">
+                  <div>
+                    <div className="text-2xl font-bold text-white">{tools.length}+</div>
+                    <div className="text-sm text-zinc-500">Tools Reviewed</div>
+                  </div>
+                  <div className="w-px h-10 bg-zinc-800" />
+                  <div>
+                    <div className="text-2xl font-bold text-white">6</div>
+                    <div className="text-sm text-zinc-500">Score Dimensions</div>
+                  </div>
+                  <div className="w-px h-10 bg-zinc-800" />
+                  <div>
+                    <div className="text-2xl font-bold text-white">100%</div>
+                    <div className="text-sm text-zinc-500">Independent</div>
+                  </div>
+                </div>
+              </FadeIn>
             </div>
-          </FadeIn>
 
-          {/* Lead Magnet 小横幅 - 简洁样式 */}
-          <div className="flex justify-center mb-8">
-            <Link
-              href="/free-ai-tools-guide"
-              className="inline-flex items-center gap-2.5 px-5 py-2.5 bg-white/10 backdrop-blur-sm rounded-full border border-white/20 hover:bg-white/15 hover:border-white/30 transition-all duration-300 group"
-            >
-            <FileText className="w-4 h-4 text-blue-200" />
-            <span className="text-sm font-semibold text-white">
-              Free AI Tools Guide
-            </span>
-            <span className="text-xs text-blue-200/70 hidden sm:inline">
-              · Top 50 Reviews · PDF
-            </span>
-              <ArrowRight className="w-3.5 h-3.5 text-blue-200 group-hover:translate-x-0.5 transition-transform" />
-            </Link>
-          </div>
-
-          {/* Statistics数据 */}
-          <FadeIn delay={0.5} y={20}>
-            <div className="flex flex-wrap items-center justify-center gap-8 sm:gap-12 pb-6">
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  {tools.length}+
+            {/* Right: Visual element (5 cols) */}
+            <div className="lg:col-span-5 hidden lg:block">
+              <FadeIn delay={0.3} y={30}>
+                <div className="relative">
+                  {/* Featured tool card mockup */}
+                  <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-6 shadow-2xl">
+                    <div className="flex items-center justify-between mb-4">
+                      <div className="flex items-center gap-3">
+                        <div className="w-10 h-10 rounded-lg bg-emerald-600 flex items-center justify-center text-white font-bold">
+                          C
+                        </div>
+                        <div>
+                          <div className="font-semibold text-white">ChatGPT</div>
+                          <div className="text-xs text-zinc-500">OpenAI</div>
+                        </div>
+                      </div>
+                      <span className="px-2 py-0.5 bg-green-700 text-white text-xs font-bold rounded">A</span>
+                    </div>
+                    <div className="space-y-3">
+                      <div>
+                        <div className="flex justify-between text-xs mb-1">
+                          <span className="text-zinc-400">Features</span>
+                          <span className="text-zinc-300">9.2</span>
+                        </div>
+                        <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                          <div className="h-full bg-emerald-500 rounded-full" style={{ width: "92%" }} />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-xs mb-1">
+                          <span className="text-zinc-400">UX</span>
+                          <span className="text-zinc-300">8.8</span>
+                        </div>
+                        <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                          <div className="h-full bg-emerald-500 rounded-full" style={{ width: "88%" }} />
+                        </div>
+                      </div>
+                      <div>
+                        <div className="flex justify-between text-xs mb-1">
+                          <span className="text-zinc-400">Pricing</span>
+                          <span className="text-zinc-300">7.5</span>
+                        </div>
+                        <div className="h-1.5 bg-zinc-800 rounded-full overflow-hidden">
+                          <div className="h-full bg-emerald-500 rounded-full" style={{ width: "75%" }} />
+                        </div>
+                      </div>
+                    </div>
+                    <div className="mt-4 pt-4 border-t border-zinc-800 flex items-center justify-between">
+                      <span className="text-2xl font-bold text-white">8.7</span>
+                      <span className="text-xs text-zinc-500">/ 10 Overall</span>
+                    </div>
+                  </div>
+                  {/* Floating badge */}
+                  <div className="absolute -top-3 -right-3 px-3 py-1.5 bg-emerald-600 text-white text-xs font-semibold rounded-lg shadow-lg">
+                    #1 Ranked
+                  </div>
                 </div>
-                <div className="text-sm text-blue-300/70 mt-1">Curated Tools</div>
-              </div>
-              <div className="w-px h-12 bg-white/10 hidden sm:block" />
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  10
-                </div>
-                <div className="text-sm text-blue-300/70 mt-1">Categories</div>
-              </div>
-              <div className="w-px h-12 bg-white/10 hidden sm:block" />
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  6
-                </div>
-                <div className="text-sm text-blue-300/70 mt-1">Score Dimensions</div>
-              </div>
-              <div className="w-px h-12 bg-white/10 hidden sm:block" />
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold bg-gradient-to-r from-white to-blue-200 bg-clip-text text-transparent">
-                  100%
-                </div>
-                <div className="text-sm text-blue-300/70 mt-1">Independent Reviews</div>
-              </div>
+              </FadeIn>
             </div>
-          </FadeIn>
-        </div>
-
-        {/* 底部波浪 - 修复黑线问题 */}
-        <div className="absolute bottom-0 left-0 right-0 leading-none -mb-px z-10">
-          <svg viewBox="0 0 1440 120" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto block" preserveAspectRatio="none" style={{ display: 'block' }}>
-            <path
-              d="M0,64L48,69.3C96,75,192,85,288,80C384,75,480,53,576,48C672,43,768,53,864,64C960,75,1056,85,1152,80C1248,75,1344,53,1392,42.7L1440,32L1440,120L1392,120C1344,120,1248,120,1152,120C1056,120,960,120,864,120C768,120,672,120,576,120C480,120,384,120,288,120C192,120,96,120,48,120L0,120Z"
-              fill="#ffffff"
-              stroke="none"
-            />
-          </svg>
+          </div>
         </div>
       </section>
 
-      {/* Categories网格 - 更精致的卡片 */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-        <div className="text-center mb-12">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-4">
-            <Layers className="w-4 h-4" />
-            All Categories Covered
+      {/* === CATEGORIES SECTION - Clean grid, no gradient icons === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+              Browse by Category
+            </h2>
+            <p className="text-zinc-500 dark:text-zinc-400">
+              Explore tools across {CATEGORIES.length} categories
+            </p>
           </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            Browse Categories
-          </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            From chat to image generation, coding to video, covering all AI use cases
-          </p>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
           {CATEGORIES.map((cat) => {
             const count = tools.filter((t) => t.category === cat.slug).length;
             const Icon = cat.icon;
@@ -274,55 +254,39 @@ export default function HomePage() {
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                className="group relative p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 hover:border-blue-200 dark:hover:border-blue-800 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-sm transition-all"
               >
-                {/* 悬停渐变背景 */}
-                <div
-                  className={`absolute inset-0 bg-gradient-to-br ${cat.color} opacity-0 group-hover:opacity-5 transition-opacity duration-300`}
-                />
-
-                <div className="relative">
-                  <div
-                    className={`w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br ${cat.color} text-white shadow-lg mb-4 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300`}
-                  >
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                    {cat.name}
-                  </h3>
-                  <p className="text-sm text-gray-400 dark:text-gray-500 mt-1 flex items-center gap-1">
-                    <TrendingUp className="w-3 h-3" />
-                    {count} tools
-                  </p>
+                <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-3">
+                  <Icon className="w-4.5 h-4.5" />
                 </div>
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                  {cat.name}
+                </h3>
+                <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">{count} tools</p>
               </Link>
             );
           })}
         </div>
       </section>
 
-      {/* Trending Ranking */}
-      <section className="bg-gray-50 dark:bg-gray-900/50 py-20">
+      {/* === TRENDING RANKING - Left aligned, different layout === */}
+      <section className="bg-zinc-50 dark:bg-zinc-900/50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-full text-sm font-medium mb-4">
-                <Trophy className="w-4 h-4" />
-                Top Picks
-              </div>
-              <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-                Trending Ranking
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+                Top Rated AI Tools
               </h2>
-              <p className="text-gray-500 dark:text-gray-400 mt-2">
-                Top AI tools curated based on our six-dimension weighted scoring
+              <p className="text-zinc-500 dark:text-zinc-400">
+                Based on our six-dimension weighted scoring
               </p>
             </div>
             <Link
               href="/ranking"
-              className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 font-medium rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
             >
-              View All
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              View All Rankings
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
             </Link>
           </div>
 
@@ -330,82 +294,81 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* 测评方法论 - Add区块 */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-        <div className="text-center mb-16">
-          <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium mb-4">
-            <CheckCircle2 className="w-4 h-4" />
-            Professional Methodology
-          </div>
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mb-4">
-            Six-Dimension Weighted Scoring System
-          </h2>
-          <p className="text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-            We use a scientific, quantifiable, and reproducible six-dimension framework to ensure every score is evidence-based
-          </p>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {METHODOLOGY.map((item, index) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={index}
-                className="group p-6 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300"
+      {/* === METHODOLOGY SECTION - Asymmetric 2-col layout === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
+          {/* Left: Sticky header */}
+          <div className="lg:col-span-4">
+            <div className="lg:sticky lg:top-24">
+              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-4">
+                How We Score
+              </h2>
+              <p className="text-zinc-500 dark:text-zinc-400 mb-6 leading-relaxed">
+                Every tool is evaluated across six dimensions with transparent weighting. No affiliate revenue affects our ratings.
+              </p>
+              <Link
+                href="/methodology"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
               >
-                <div className="flex items-start justify-between mb-4">
-                  <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white shadow-md group-hover:scale-110 transition-transform">
-                    <Icon className="w-6 h-6" />
-                  </div>
-                  <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-lg text-sm font-bold">
-                    {item.weight}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
-                  {item.title}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed">
-                  {item.desc}
-                </p>
-              </div>
-            );
-          })}
-        </div>
+                Full Methodology
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+              </Link>
+            </div>
+          </div>
 
-        <div className="mt-12 text-center">
-          <Link
-            href="/about"
-            className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300"
-          >
-            Learn About Our Full Methodology
-            <ArrowRight className="w-4 h-4" />
-          </Link>
+          {/* Right: Methodology items */}
+          <div className="lg:col-span-8">
+            <div className="space-y-0">
+              {METHODOLOGY.map((item, index) => {
+                const Icon = item.icon;
+                return (
+                  <div
+                    key={index}
+                    className="flex items-start gap-4 py-5 border-b border-zinc-100 dark:border-zinc-800 last:border-0"
+                  >
+                    <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <div className="flex-1 min-w-0">
+                      <div className="flex items-center justify-between gap-4 mb-1">
+                        <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
+                          {item.title}
+                        </h3>
+                        <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+                          {item.weight}
+                        </span>
+                      </div>
+                      <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                        {item.desc}
+                      </p>
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
         </div>
       </section>
 
-      {/* LatestBlog - Add区块 */}
+      {/* === LATEST ARTICLES === */}
       {latestPosts.length > 0 && (
-        <section className="bg-gray-50 dark:bg-gray-900/50 py-20">
+        <section className="bg-zinc-50 dark:bg-zinc-900/50 py-16 lg:py-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
-            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-12 gap-4">
+            <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
               <div>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-purple-50 dark:bg-purple-900/20 text-purple-600 dark:text-purple-400 rounded-full text-sm font-medium mb-4">
-                  <PenTool className="w-4 h-4" />
-                  In-Depth Content
-                </div>
-                <h2 className="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white">
-                  Latest Articles
+                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+                  Latest Reviews & Guides
                 </h2>
-                <p className="text-gray-500 dark:text-gray-400 mt-2">
-                  In-depth AI tool reviews, buying guides, and industry insights
+                <p className="text-zinc-500 dark:text-zinc-400">
+                  In-depth AI tool reviews and industry insights
                 </p>
               </div>
               <Link
                 href="/blog"
-                className="group inline-flex items-center gap-2 px-5 py-2.5 bg-white dark:bg-gray-800 text-blue-600 dark:text-blue-400 font-medium rounded-xl border border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
               >
                 All Articles
-                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
               </Link>
             </div>
 
@@ -414,29 +377,29 @@ export default function HomePage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-800 hover:-translate-y-1 transition-all duration-300 overflow-hidden"
+                  className="group flex flex-col bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition-all overflow-hidden"
                 >
-                  <div className="h-40 bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-600 relative overflow-hidden">
+                  <div className="h-36 bg-zinc-100 dark:bg-zinc-800 relative overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <PenTool className="w-16 h-16 text-white/20" />
+                      <PenTool className="w-12 h-12 text-zinc-300 dark:text-zinc-700" />
                     </div>
-                    <div className="absolute top-4 left-4">
-                      <span className="px-3 py-1 bg-white/20 backdrop-blur-sm text-white text-xs font-medium rounded-full">
+                    <div className="absolute top-3 left-3">
+                      <span className="px-2 py-0.5 bg-white/90 dark:bg-zinc-900/90 text-zinc-600 dark:text-zinc-400 text-xs font-medium rounded">
                         {post.category}
                       </span>
                     </div>
                   </div>
-                  <div className="p-6 flex-1 flex flex-col">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-2 mb-3">
+                  <div className="p-5 flex-1 flex flex-col">
+                    <h3 className="text-base font-semibold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-3 flex-1 mb-4">
+                    <p className="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-2 flex-1 mb-4">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-gray-400 dark:text-gray-500">
+                    <div className="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500">
                       <span>{post.publishedAt}</span>
-                      <span className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 font-medium group-hover:gap-2 transition-all">
-                        Read More
+                      <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium group-hover:gap-2 transition-all">
+                        Read
                         <ArrowRight className="w-3 h-3" />
                       </span>
                     </div>
@@ -448,40 +411,28 @@ export default function HomePage() {
         </section>
       )}
 
-      {/* CTA 区域 - Add区块 */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20">
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 dark:from-blue-700 dark:via-indigo-700 dark:to-purple-800 rounded-3xl p-12 sm:p-16 text-center text-white">
-          {/* 背景装饰 */}
-          <div className="absolute inset-0 overflow-hidden">
-            <div className="absolute top-0 right-0 w-96 h-96 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-80 h-80 bg-white/10 rounded-full blur-3xl translate-y-1/2 -translate-x-1/2" />
-          </div>
-
-          <div className="relative">
-            <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur-sm rounded-full text-sm mb-6">
-              <Sparkles className="w-4 h-4 text-yellow-300" />
-              AI Matcher
-            </div>
-            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-6">
-              Not Sure Which AI Tool to Choose?
-            </h2>
-            <p className="text-lg text-blue-100 mb-10 max-w-2xl mx-auto">
-              Tell us your use case and priorities, and we'll match you with the perfect AI tool based on our six-dimension scoring model
-            </p>
-            <Link
-              href="/generator"
-              className="group inline-flex items-center gap-2 px-10 py-4 bg-white text-blue-600 font-bold rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all"
-            >
-              <Sparkles className="w-5 h-5" />
-              Start Matching
-              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-            </Link>
-          </div>
+      {/* === CTA SECTION - Clean, no gradient === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="bg-zinc-900 rounded-2xl p-10 sm:p-14 text-center text-white">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+            Not sure which AI tool to choose?
+          </h2>
+          <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
+            Tell us your use case and priorities, and we'll match you with the perfect AI tool based on our six-dimension scoring.
+          </p>
+          <Link
+            href="/generator"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg transition-colors"
+          >
+            <Sparkles className="w-4 h-4" />
+            Start Matching
+            <ArrowRight className="w-4 h-4" />
+          </Link>
         </div>
       </section>
 
-      {/* 邮件订阅 - 变现Component */}
-      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-20">
+      {/* === NEWSLETTER === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-16">
         <NewsletterSignup />
       </section>
     </div>
