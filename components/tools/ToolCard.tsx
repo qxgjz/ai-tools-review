@@ -6,22 +6,23 @@ import { ArrowUpRight, Sparkles } from "lucide-react";
 import type { Tool, Grade } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 
+// Grade styles - solid colors, NO gradients (Taste Skill rule)
 const GRADE_STYLES: Record<Grade, string> = {
-  S: "bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-amber-500/30",
-  A: "bg-gradient-to-br from-emerald-400 to-emerald-600 text-white shadow-emerald-500/30",
-  B: "bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-blue-500/30",
-  C: "bg-gradient-to-br from-yellow-400 to-yellow-500 text-white shadow-yellow-500/30",
-  D: "bg-gradient-to-br from-red-400 to-red-600 text-white shadow-red-500/30",
-  F: "bg-gradient-to-br from-gray-400 to-gray-500 text-white shadow-gray-500/30",
+  S: "bg-amber-700 text-white",
+  A: "bg-green-700 text-white",
+  B: "bg-blue-700 text-white",
+  C: "bg-yellow-600 text-white",
+  D: "bg-red-700 text-white",
+  F: "bg-zinc-500 text-white",
 };
 
 const GRADE_BAR_COLORS: Record<Grade, string> = {
-  S: "from-amber-400 to-amber-600",
-  A: "from-emerald-400 to-emerald-600",
-  B: "from-blue-400 to-blue-600",
-  C: "from-yellow-400 to-yellow-500",
-  D: "from-red-400 to-red-600",
-  F: "from-gray-400 to-gray-500",
+  S: "bg-amber-600",
+  A: "bg-green-600",
+  B: "bg-blue-600",
+  C: "bg-yellow-500",
+  D: "bg-red-600",
+  F: "bg-zinc-500",
 };
 
 interface ToolCardProps {
@@ -36,80 +37,69 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 16 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.5) }}
+      transition={{ duration: 0.3, delay: Math.min(index * 0.04, 0.4), ease: [0.16, 1, 0.3, 1] }}
       className="h-full group"
     >
       <Link href={`/tools/${tool.slug}`} className="block h-full">
-        <div className="relative h-full flex flex-col p-5 bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-2xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 hover:border-blue-200 dark:hover:border-blue-800 hover:-translate-y-1.5 transition-all duration-300 overflow-hidden">
-          {/* 微光悬停效果（参考Magic UI） */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-            <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent rotate-45 transform translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
-          </div>
-
-          {/* FeaturedTags已移到Rating区域，避免与Logo和评级Tags重叠 */}
-
-          {/* 头部：Logo + 等级 */}
-          <div className="flex items-start justify-between mb-4 relative z-10">
-            <div className="relative">
-              <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-xl font-extrabold shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                {tool.name.charAt(0).toUpperCase()}
-              </div>
-              {/* Logo微光效果 */}
-              <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400 to-indigo-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
+        <div className="relative h-full flex flex-col p-5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition-all duration-200 overflow-hidden">
+          {/* Header: Logo + Grade */}
+          <div className="flex items-start justify-between mb-4">
+            <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xl font-bold">
+              {tool.name.charAt(0).toUpperCase()}
             </div>
-            <span className={`px-2.5 py-1 rounded-lg text-sm font-bold shadow-lg ${GRADE_STYLES[grade]}`}>
-              {grade}
-            </span>
-          </div>
-
-          {/* 名称 + 厂商 + FeaturedTags */}
-          <div className="relative z-10">
             <div className="flex items-center gap-2">
-              <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1 flex-1">
-                {tool.name}
-              </h3>
               {isFeatured && (
-                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-gradient-to-r from-amber-400 to-orange-500 text-white text-[10px] font-bold rounded-full shadow-lg shadow-amber-500/30 flex-shrink-0">
+                <span className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-[10px] font-semibold rounded">
                   <Sparkles className="w-3 h-3" />
                   TOP
                 </span>
               )}
+              <span className={`px-2 py-0.5 rounded text-xs font-bold ${GRADE_STYLES[grade]}`}>
+                {grade}
+              </span>
             </div>
-            <p className="mt-0.5 text-xs text-gray-400 dark:text-gray-500">{tool.vendor}</p>
           </div>
 
-          {/* CategoriesTags（参考shadcn/ui Badge） */}
-          <div className="mt-2 relative z-10">
-            <span className="inline-flex items-center px-2 py-0.5 rounded-md bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-[10px] font-medium border border-gray-100 dark:border-gray-700">
+          {/* Name + Vendor */}
+          <div className="mb-3">
+            <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
+              {tool.name}
+            </h3>
+            <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">{tool.vendor}</p>
+          </div>
+
+          {/* Category tag */}
+          <div className="mb-3">
+            <span className="inline-flex items-center px-2 py-0.5 rounded bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 text-[10px] font-medium">
               {tool.category}
             </span>
           </div>
 
-          {/* 描述 */}
-          <p className="mt-3 text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 flex-1 relative z-10">
+          {/* Description */}
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed line-clamp-2 flex-1 mb-4">
             {tool.description}
           </p>
 
-          {/* Rating区域（参考shadcn/ui Progress + Aceternity UI） */}
-          <div className="mt-4 pt-4 border-t border-gray-50 dark:border-gray-800 relative z-10">
+          {/* Rating section */}
+          <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800">
             <div className="flex items-center justify-between mb-2">
               <div className="flex items-baseline gap-1">
-                <span className="text-2xl font-extrabold text-gray-900 dark:text-white">{total.toFixed(1)}</span>
-                <span className="text-xs text-gray-400">/10</span>
+                <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100">{total.toFixed(1)}</span>
+                <span className="text-xs text-zinc-400">/10</span>
               </div>
-              <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-500 group-hover:bg-blue-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
-                <ArrowUpRight className="w-4 h-4" />
+              <div className="w-7 h-7 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                <ArrowUpRight className="w-3.5 h-3.5" />
               </div>
             </div>
-            {/* Rating进度条（参考shadcn/ui Progress） */}
-            <div className="h-1.5 w-full bg-gray-100 dark:bg-gray-800 rounded-full overflow-hidden">
+            {/* Progress bar - solid color, no gradient */}
+            <div className="h-1 w-full bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
               <motion.div
                 initial={{ width: 0 }}
                 animate={{ width: `${scorePercent}%` }}
-                transition={{ duration: 1, delay: Math.min(index * 0.05 + 0.3, 0.8), ease: "easeOut" }}
-                className={`h-full bg-gradient-to-r ${GRADE_BAR_COLORS[grade]} rounded-full`}
+                transition={{ duration: 0.6, delay: Math.min(index * 0.04 + 0.2, 0.6), ease: "easeOut" }}
+                className={`h-full rounded-full ${GRADE_BAR_COLORS[grade]}`}
               />
             </div>
           </div>
