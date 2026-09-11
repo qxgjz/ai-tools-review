@@ -129,5 +129,8 @@ export default function robots(): MetadataRoute.Robots {
       "https://www.aitoolcrux.com/sitemap.xml",
     ],
     host: "www.aitoolcrux.com",
+    // AI crawler optimization: llms.txt and llms-full.txt are available at site root
+    // https://www.aitoolcrux.com/llms.txt - Site overview and content index for AI systems
+    // https://www.aitoolcrux.com/llms-full.txt - Full content in markdown format for LLM ingestion
   };
 }
