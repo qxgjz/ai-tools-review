@@ -60,7 +60,7 @@ export function generateMetadata({ params }: PostPageProps) {
   }
 
   return {
-    title: post.title,
+    title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
     description: description,
     keywords: keywords,
     alternates: {
@@ -70,7 +70,7 @@ export function generateMetadata({ params }: PostPageProps) {
       },
     },
     openGraph: {
-      title: post.title,
+      title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
       description: description,
       url: `https://www.aitoolcrux.com/blog/${post.slug}`,
       type: "article",
@@ -81,7 +81,7 @@ export function generateMetadata({ params }: PostPageProps) {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title,
+      title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
       description: description,
     },
   };
