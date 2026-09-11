@@ -1,0 +1,163 @@
+/* ============================================
+   AIToolCrux Design System v2.0
+   Based on Taste Skill Anti-Slop Framework
+   ============================================ */
+
+:root {
+  /* === Color Palette === */
+  /* Primary: Single high-contrast accent (NO gradients) */
+  --accent: #059669;
+  --accent-hover: #047857;
+  --accent-light: #d1fae5;
+  --accent-dark: #064e3b;
+  
+  /* Neutral: Zinc (not Slate - more premium feel) */
+  --bg: #fafafa;
+  --bg-elevated: #ffffff;
+  --bg-muted: #f4f4f5;
+  --border: #e4e4e7;
+  --border-light: #f4f4f5;
+  --text-primary: #18181b;
+  --text-secondary: #52525b;
+  --text-muted: #a1a1aa;
+  
+  /* Semantic */
+  --success: #16a34a;
+  --warning: #ca8a04;
+  --error: #dc2626;
+  --info: #2563eb;
+  
+  /* Grade colors (muted, not neon gradients) */
+  --grade-s: #b45309;
+  --grade-a: #15803d;
+  --grade-b: #1d4ed8;
+  --grade-c: #a16207;
+  --grade-d: #b91c1c;
+  --grade-f: #52525b;
+  
+  /* === Typography === */
+  --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'Geist Mono', 'JetBrains Mono', monospace;
+  
+  /* === Spacing === */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-2xl: 3rem;
+  --space-3xl: 4rem;
+  
+  /* === Border Radius (UNIFIED - Taste Skill rule) === */
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-full: 9999px;
+  
+  /* === Shadows (subtle, tinted) === */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.04);
+  --shadow-md: 0 2px 8px -2px rgb(0 0 0 / 0.06), 0 1px 3px -1px rgb(0 0 0 / 0.04);
+  --shadow-lg: 0 8px 24px -4px rgb(0 0 0 / 0.08), 0 4px 8px -4px rgb(0 0 0 / 0.04);
+  --shadow-xl: 0 20px 40px -8px rgb(0 0 0 / 0.1);
+  
+  /* === Motion (restrained - MOTION_INTENSITY=4) === */
+  --transition-fast: 150ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 250ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 400ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Dark mode */
+.dark {
+  --bg: #09090b;
+  --bg-elevated: #18181b;
+  --bg-muted: #18181b;
+  --border: #27272a;
+  --border-light: #27272a;
+  --text-primary: #fafafa;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+  
+  --accent-light: #064e3b;
+  --accent-dark: #d1fae5;
+  
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+  --shadow-md: 0 2px 8px -2px rgb(0 0 0 / 0.4), 0 1px 3px -1px rgb(0 0 0 / 0.3);
+  --shadow-lg: 0 8px 24px -4px rgb(0 0 0 / 0.5), 0 4px 8px -4px rgb(0 0 0 / 0.3);
+  --shadow-xl: 0 20px 40px -8px rgb(0 0 0 / 0.6);
+}
+
+/* === Utility classes === */
+.text-accent { color: var(--accent); }
+.bg-accent { background-color: var(--accent); }
+.border-accent { border-color: var(--accent); }
+
+.hover\:text-accent:hover { color: var(--accent); }
+.hover\:bg-accent:hover { background-color: var(--accent); }
+
+/* Grade badges - solid colors, NO gradients */
+.grade-s { background-color: var(--grade-s); color: white; }
+.grade-a { background-color: var(--grade-a); color: white; }
+.grade-b { background-color: var(--grade-b); color: white; }
+.grade-c { background-color: var(--grade-c); color: white; }
+.grade-d { background-color: var(--grade-d); color: white; }
+.grade-f { background-color: var(--grade-f); color: white; }
+
+/* Card base - unified radius and shadow */
+.card-base {
+  background-color: var(--bg-elevated);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-normal);
+}
+
+.card-base:hover {
+  box-shadow: var(--shadow-md);
+  border-color: var(--accent);
+}
+
+/* Button base */
+.btn-primary {
+  background-color: var(--accent);
+  color: white;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Focus states - accessibility */
+.focus-ring:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Selection color */
+::selection {
+  background-color: var(--accent);
+  color: white;
+}
