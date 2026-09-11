@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   },
 };
 
+// ISR: Cache for 1 hour, methodology rarely changes
+export const revalidate = 3600;
+export const dynamic = "force-static";
+
 const DIMENSIONS = [
   {
     key: "functionality",
