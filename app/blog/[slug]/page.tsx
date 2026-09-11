@@ -7,7 +7,7 @@ import tools from "@/data/tools.json";
 import { AffiliateCTA } from "@/components/monetization/AffiliateCTA";
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { AdSlot } from "@/components/monetization/AdSlot";
-import { ReviewSchema, BreadcrumbSchema, FAQSchema } from "@/components/seo/Schema";
+import { ReviewSchema, BreadcrumbSchema, FAQSchema , ComparisonSchema } from "@/components/seo/Schema";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { AuthorBio } from "@/components/author/AuthorBio";
 import { SourceReferences } from "@/components/seo/SourceReferences";

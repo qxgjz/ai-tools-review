@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon, Award, Target, Users, Wrench, GitCompare, Microscope, Quote } from "lucide-react";
 import toolsData from "@/data/tools.json";
+import postsData from "@/data/posts.json";
 import type { Tool, Grade, ScoreDimension } from "@/types";
 import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
 import { RadarChart } from "@/components/charts/RadarChart";
@@ -67,6 +68,52 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   const relatedTools = toolsData
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 6);
+
+  // 智能Related Articles推荐：工具名匹配(50%) + 分类匹配(30%) + 标签匹配(20%)
+  const toolNameWords = tool.name.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  const relatedArticles = postsData
+    .filter((p: any) => p.slug !== `${tool.slug}-review-2026`)
+    .map((post: any) => {
+      let relevance = 0;
+      const postTitle = post.title.toLowerCase();
+      const postTags = (post.tags || []).map((t: string) => t.toLowerCase());
+      const postCategory = (post.category || "").toLowerCase();
+
+      // 工具名匹配（最高权重）
+      for (const word of toolNameWords) {
+        if (postTitle.includes(word)) relevance += 15;
+        if (postTags.includes(word)) relevance += 10;
+      }
+      if (postTitle.includes(tool.name.toLowerCase())) relevance += 25;
+
+      // 分类匹配
+      if (postCategory.includes(tool.category) || tool.category.includes(postCategory)) {
+        relevance += 20;
+      }
+
+      // 标签匹配
+      const categoryKeywords: Record<string, string[]> = {
+        code: ["coding", "programming", "developer", "code", "software"],
+        chat: ["chatbot", "conversation", "assistant", "chat", "ai assistant"],
+        writing: ["writing", "content", "copywriting", "text"],
+        image: ["image", "art", "design", "visual", "generation"],
+        video: ["video", "animation", "editing", "motion"],
+        audio: ["audio", "music", "voice", "speech", "sound"],
+        productivity: ["productivity", "workflow", "automation", "efficiency"],
+        agent: ["agent", "autonomous", "automation", "workflow"],
+        search: ["search", "research", "discovery", "find"],
+      };
+      const keywords = categoryKeywords[tool.category] || [];
+      for (const kw of keywords) {
+        if (postTitle.includes(kw) || postTags.includes(kw)) relevance += 8;
+      }
+
+      return { post, relevance };
+    })
+    .filter((item: any) => item.relevance > 0)
+    .sort((a: any, b: any) => b.relevance - a.relevance)
+    .slice(0, 4)
+    .map((item: any) => item.post);
 
   // Schema.org structured data - Review
   const structuredData = {

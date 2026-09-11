@@ -267,3 +267,101 @@ export function WebSiteSchema() {
     />
   );
 }
+
+
+interface ComparisonItem {
+  name: string;
+  description?: string;
+  ratingValue?: number;
+  price?: string;
+  url?: string;
+  pros?: string[];
+  cons?: string[];
+}
+
+interface ComparisonSchemaProps {
+  name: string;
+  description: string;
+  items: ComparisonItem[];
+  author?: string;
+  datePublished?: string;
+}
+
+/**
+ * Comparison Schema - 产品对比结构化数据
+ * 帮助Search引擎理解对比文章，显示对比富摘要
+ */
+export function ComparisonSchema({
+  name,
+  description,
+  items,
+  author = "AIToolCrux Editorial Team",
+  datePublished = new Date().toISOString().split("T")[0],
+}: ComparisonSchemaProps) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": name,
+    "description": description,
+    "author": {
+      "@type": "Organization",
+      "name": author,
+    },
+    "datePublished": datePublished,
+    "publisher": {
+      "@type": "Organization",
+      "name": "AIToolCrux",
+      "url": "https://www.aitoolcrux.com",
+    },
+    "about": items.map((item) => ({
+      "@type": "SoftwareApplication",
+      "name": item.name,
+      "description": item.description || "",
+      "applicationCategory": "AI Tool",
+      "operatingSystem": "Web",
+      ...(item.ratingValue && {
+        "aggregateRating": {
+          "@type": "AggregateRating",
+          "ratingValue": item.ratingValue,
+          "bestRating": "10",
+          "worstRating": "1",
+          "ratingCount": "1",
+        },
+      }),
+      ...(item.price && {
+        "offers": {
+          "@type": "Offer",
+          "price": item.price === "Free" ? "0" : item.price,
+          "priceCurrency": "USD",
+        },
+      }),
+      ...(item.url && { "url": item.url }),
+    })),
+    "mainEntity": {
+      "@type": "ItemList",
+      "itemListElement": items.map((item, index) => ({
+        "@type": "ListItem",
+        "position": index + 1,
+        "item": {
+          "@type": "SoftwareApplication",
+          "name": item.name,
+          ...(item.ratingValue && {
+            "aggregateRating": {
+              "@type": "AggregateRating",
+              "ratingValue": item.ratingValue,
+              "bestRating": "10",
+              "ratingCount": "1",
+            },
+          }),
+        },
+      })),
+    },
+  };
+
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+    />
+  );
+}

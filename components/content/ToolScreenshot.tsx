@@ -37,6 +37,8 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "" }: T
           className="w-full h-auto object-cover"
           onError={() => setImageError(true)}
           loading="lazy"
+          width={1200}
+          height={675}
         />
         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
           <div className="bg-white/90 dark:bg-gray-800/90 rounded-full p-3 shadow-lg">
