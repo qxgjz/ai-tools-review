@@ -10,7 +10,7 @@ import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aitoolcrux.com"),
-  title: "Best AI Tools 2026: Expert Reviews & Comparisons | AIToolCrux",
+  title: "Best AI Tools 2026: Expert Reviews | AIToolCrux",
   description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney and more. Find your perfect AI tool in 2026.",
   keywords: ["best AI tools 2026", "AI tool reviews", "AI tools comparison", "ChatGPT review", "Claude review", "Midjourney review", "AI tool directory", "top AI tools", "AI software reviews", "best AI tools for creators"],
   authors: [{ name: "AIToolCrux Editorial Team" }],
@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   publisher: "AIToolCrux",
   formatDetection: { email: false, address: false, telephone: false },
   alternates: {
-    canonical: "https://www.aitoolcrux.com",
+    canonical: "https://www.aitoolcrux.com/",
     languages: {
       "en": "https://www.aitoolcrux.com",
       "zh-CN": "https://www.aitoolcrux.com",
@@ -41,12 +41,12 @@ export const metadata: Metadata = {
     alternateLocale: ["zh_CN"],
     url: "https://www.aitoolcrux.com",
     siteName: "AIToolCrux",
-    title: "Best AI Tools 2026: Expert Reviews & Comparisons | AIToolCrux",
+    title: "Best AI Tools 2026: Expert Reviews | AIToolCrux",
     description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney & more. Find your perfect AI tool in 2026.",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Best AI Tools 2026: Expert Reviews & Comparisons | AIToolCrux",
+    title: "Best AI Tools 2026: Expert Reviews | AIToolCrux",
     description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney & more. Find your perfect AI tool in 2026.",
   },
   robots: {
