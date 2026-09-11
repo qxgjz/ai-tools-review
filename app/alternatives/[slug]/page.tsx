@@ -59,14 +59,14 @@ export async function generateMetadata({
   }
 
   return {
-    title: page.title,
+    title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
     description: page.description,
     keywords: page.keywords.join(", "),
     alternates: {
       canonical: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
     },
     openGraph: {
-      title: page.title,
+      title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
       description: page.description,
       url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
       type: "article",
@@ -74,7 +74,7 @@ export async function generateMetadata({
     },
     twitter: {
       card: "summary_large_image",
-      title: page.title,
+      title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
       description: page.description,
     },
   };
