@@ -71,7 +71,7 @@ export default function HomePage() {
     .sort((a, b) => b.total - a.total)
     .slice(0, 8);
 
-  const latestPosts = postsData.slice(0, 3);
+  const latestPosts = postsData.slice(0, 6);
 
   return (
     <div className="min-h-screen">
@@ -404,6 +404,98 @@ export default function HomePage() {
               <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
+
+          {/* AI Chat */}
+          <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
+              <MessageSquare className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              AI Chat & Assistants
+            </h3>
+            <div className="space-y-2">
+              {tools.filter(t => t.category === "chat").slice(0, 4).map((tool) => {
+                const total = calculateScoreResult(tool.scores).total;
+                return (
+                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                  </Link>
+                );
+              })}
+            </div>
+            <Link href="/category/chat" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+              View all chat tools
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          {/* AI Writing */}
+          <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
+              <PenTool className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              AI Writing & Content
+            </h3>
+            <div className="space-y-2">
+              {tools.filter(t => t.category === "writing").slice(0, 4).map((tool) => {
+                const total = calculateScoreResult(tool.scores).total;
+                return (
+                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                  </Link>
+                );
+              })}
+            </div>
+            <Link href="/category/writing" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+              View all writing tools
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          {/* AI Video */}
+          <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
+              <Video className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              AI Video Generation
+            </h3>
+            <div className="space-y-2">
+              {tools.filter(t => t.category === "video").slice(0, 4).map((tool) => {
+                const total = calculateScoreResult(tool.scores).total;
+                return (
+                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                  </Link>
+                );
+              })}
+            </div>
+            <Link href="/category/video" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+              View all video tools
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
+
+          {/* AI Search */}
+          <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
+            <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
+              <SearchIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              AI Search & Research
+            </h3>
+            <div className="space-y-2">
+              {tools.filter(t => t.category === "search").slice(0, 4).map((tool) => {
+                const total = calculateScoreResult(tool.scores).total;
+                return (
+                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                  </Link>
+                );
+              })}
+            </div>
+            <Link href="/category/search" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+              View all search tools
+              <ArrowRight className="w-3 h-3" />
+            </Link>
+          </div>
         </div>
       </section>
 
@@ -555,6 +647,182 @@ export default function HomePage() {
           </div>
         </section>
       )}
+
+      {/* === AI INDUSTRY STATS - Content enrichment === */}
+      <section className="bg-zinc-50 dark:bg-zinc-900/50 py-16 lg:py-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6">
+          <div className="text-center mb-12">
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3">
+              The AI Tool Landscape in 2026
+            </h2>
+            <p className="text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto">
+              Key trends and statistics shaping the AI tools industry, based on our ongoing research and analysis of 500+ tools.
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+            {[
+              { value: "500+", label: "AI Tools Reviewed", desc: "Across 10 categories" },
+              { value: "6", label: "Evaluation Dimensions", desc: "Transparent weighted scoring" },
+              { value: "100%", label: "Independent Reviews", desc: "No paid placements" },
+              { value: "3+", label: "Weeks Testing Per Tool", desc: "Hands-on benchmarking" }
+            ].map((stat, i) => (
+              <div key={i} className="text-center">
+                <div className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">{stat.value}</div>
+                <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-1">{stat.label}</div>
+                <div className="text-xs text-zinc-500 dark:text-zinc-500">{stat.desc}</div>
+              </div>
+            ))}
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
+              <TrendingUp className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">Rapid Market Growth</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                The AI tools market continues explosive growth, with new tools launching weekly. Our database tracks 500+ tools across chat, writing, image, code, video, audio, productivity, search, agent, and design categories.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
+              <Layers className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">Consolidation Trend</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Leading platforms are expanding into multi-modal capabilities. Chat tools now include image generation, coding assistants add deployment features, and productivity suites integrate AI across all workflows.
+              </p>
+            </div>
+            <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
+              <Shield className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">Ethics & Transparency</h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
+                Users increasingly demand transparent AI practices. Our ethics dimension evaluates data privacy policies, bias mitigation, content labeling, and responsible AI commitments for every tool we review.
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 text-center">
+            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+              Read our latest AI industry analysis
+              <ArrowRight className="w-4 h-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* === FAQ SECTION - AEO Optimization + FAQ Schema === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+              Frequently Asked Questions
+            </h2>
+            <p className="text-zinc-500 dark:text-zinc-400">
+              Common questions about AI tools and our review methodology
+            </p>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+          {[
+            {
+              q: "How does AIToolCrux evaluate AI tools?",
+              a: "We evaluate every AI tool across six weighted dimensions: Features & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with standardized benchmarks over a minimum of three weeks."
+            },
+            {
+              q: "Are AIToolCrux reviews independent and unbiased?",
+              a: "Yes. We are 100% independent. No tool can pay for a higher ranking or positive review. Our scoring is based entirely on our six-dimension evaluation framework. While some tools may have affiliate links, these never influence our ratings or rankings. We clearly disclose all affiliate relationships."
+            },
+            {
+              q: "What is the best AI tool for beginners?",
+              a: "For beginners, we recommend starting with user-friendly tools like ChatGPT for general AI chat, Canva AI for design, and Notion AI for productivity. These tools have intuitive interfaces, generous free tiers, and extensive documentation. Our category pages filter tools by ease of use to help beginners find the right tool quickly."
+            },
+            {
+              q: "How often are AI tool reviews updated?",
+              a: "Our Top 100 tools are re-evaluated quarterly to reflect the latest features, pricing changes, and performance improvements. New tools are added weekly as they reach significant market adoption. Major updates (like GPT-5 releases or Claude model upgrades) trigger immediate re-evaluation of affected tools."
+            },
+            {
+              q: "Do you offer free AI tool recommendations?",
+              a: "Yes. All our reviews, rankings, and comparisons are completely free to access. We don't have a paywall or require registration. You can filter tools by free tier availability on our category pages to find tools that match your budget. Our AI Tool Matcher also provides free personalized recommendations."
+            },
+            {
+              q: "How do I choose between similar AI tools?",
+              a: "Start by identifying your primary use case and must-have features. Use our comparison articles for head-to-head analysis of popular tool pairs. Check our six-dimension scores for each tool, paying special attention to the dimensions most important to your workflow. Finally, take advantage of free tiers to test 2-3 top candidates before committing."
+            }
+          ].map((faq, i) => (
+            <div key={i} className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
+              <h3 className="text-base font-semibold text-zinc-900 dark:text-white mb-3 flex items-start gap-3">
+                <span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">Q</span>
+                </span>
+                {faq.q}
+              </h3>
+              <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed pl-9">
+                {faq.a}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      {/* FAQ Schema.org structured data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How does AIToolCrux evaluate AI tools?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "We evaluate every AI tool across six weighted dimensions: Features & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with standardized benchmarks over a minimum of three weeks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Are AIToolCrux reviews independent and unbiased?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. We are 100% independent. No tool can pay for a higher ranking or positive review. Our scoring is based entirely on our six-dimension evaluation framework. While some tools may have affiliate links, these never influence our ratings or rankings."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the best AI tool for beginners?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "For beginners, we recommend starting with user-friendly tools like ChatGPT for general AI chat, Canva AI for design, and Notion AI for productivity. These tools have intuitive interfaces, generous free tiers, and extensive documentation."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How often are AI tool reviews updated?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our Top 100 tools are re-evaluated quarterly to reflect the latest features, pricing changes, and performance improvements. New tools are added weekly as they reach significant market adoption."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Do you offer free AI tool recommendations?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes. All our reviews, rankings, and comparisons are completely free to access. We don't have a paywall or require registration. You can filter tools by free tier availability on our category pages."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I choose between similar AI tools?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Start by identifying your primary use case and must-have features. Use our comparison articles for head-to-head analysis. Check our six-dimension scores, and take advantage of free tiers to test 2-3 top candidates before committing."
+                }
+              }
+            ]
+          })
+        }}
+      />
 
       {/* === CTA SECTION - Clean, no gradient === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
