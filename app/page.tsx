@@ -17,6 +17,7 @@ import {
   CheckCircle2,
   Star,
   Zap,
+  BookOpen,
   Shield,
   Layers,
   TrendingUp,
@@ -213,6 +214,58 @@ export default function HomePage() {
       </section>
 
       {/* === CATEGORIES SECTION - Clean grid, no gradient icons === */}
+      {/* AEO/GEO Optimization: Quick Answer & Key Takeaways */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Quick Answer */}
+          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/50 p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-4">
+              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Quick Answer</h2>
+            </div>
+            <div className="space-y-4">
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">What is AIToolCrux?</h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+                  AIToolCrux is an independent AI tool review platform evaluating 500+ tools across 6 dimensions: functionality (25%), UX (20%), pricing (20%), integrations (15%), support (10%), ethics (10%). Every tool is hands-on tested with standardized benchmarks to help you choose the right AI tool.
+                </p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How do I choose the best AI tool?</h3>
+                <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+                  Start by identifying your use case (chat, writing, image, code, video, audio, productivity, search, agent, design). Compare tools in that category using our 6-dimension scores, check free tier availability, and read hands-on test metrics. Top leaders include ChatGPT, Claude, Gemini, Midjourney, and GitHub Copilot.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          {/* Key Takeaways */}
+          <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
+            <div className="flex items-center gap-2 mb-4">
+              <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h2>
+            </div>
+            <div className="space-y-3">
+              {[
+                "500+ AI tools reviewed across 10 categories with transparent 6-dimension scoring",
+                "Hands-on testing with standardized benchmarks, not just vendor claims",
+                "Free tier filtering to find tools matching your budget immediately",
+                "Real user experience data from 3+ weeks of testing per tool",
+                "Updated regularly to reflect latest AI tool features and pricing",
+                "100% independent — no paid placements, affiliate links clearly disclosed",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">{i + 1}</span>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 text-sm">{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
