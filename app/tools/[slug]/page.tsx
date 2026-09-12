@@ -26,6 +26,10 @@ const GRADE_STYLES: Record<Grade, string> = {
 
 const DIMENSION_ORDER: ScoreDimension[] = ["functionality", "ux", "pricing", "integration", "support", "ethics"];
 
+
+// ISR: revalidate tool pages every 24h
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return toolsData.map((tool) => ({ slug: tool.slug }));
 }
