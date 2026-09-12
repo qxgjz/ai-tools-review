@@ -33,6 +33,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 1,
+      "name": "GPT-4o",
       "item": {
         "@type": "SoftwareApplication",
         "name": "GPT-4o",
@@ -49,6 +50,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 2,
+      "name": "n8n",
       "item": {
         "@type": "SoftwareApplication",
         "name": "n8n",
@@ -65,6 +67,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 3,
+      "name": "AutoGPT",
       "item": {
         "@type": "SoftwareApplication",
         "name": "AutoGPT",
@@ -81,6 +84,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 4,
+      "name": "dify",
       "item": {
         "@type": "SoftwareApplication",
         "name": "dify",
@@ -97,6 +101,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 5,
+      "name": "gemini-cli",
       "item": {
         "@type": "SoftwareApplication",
         "name": "gemini-cli",
@@ -113,6 +118,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 6,
+      "name": "open-webui",
       "item": {
         "@type": "SoftwareApplication",
         "name": "open-webui",
@@ -129,6 +135,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 7,
+      "name": "Microsoft 365 Copilot",
       "item": {
         "@type": "SoftwareApplication",
         "name": "Microsoft 365 Copilot",
@@ -145,6 +152,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 8,
+      "name": "lobehub",
       "item": {
         "@type": "SoftwareApplication",
         "name": "lobehub",
@@ -161,6 +169,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 9,
+      "name": "ragflow",
       "item": {
         "@type": "SoftwareApplication",
         "name": "ragflow",
@@ -177,6 +186,7 @@ const itemListSchema = {
     {
       "@type": "ListItem",
       "position": 10,
+      "name": "ChatGPT",
       "item": {
         "@type": "SoftwareApplication",
         "name": "ChatGPT",
