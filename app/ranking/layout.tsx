@@ -20,6 +20,10 @@ export const metadata: Metadata = {
   },
 };
 
+
+// ISR: revalidate ranking every 1h
+export const revalidate = 3600;
+
 export default function RankingLayout({
   children,
 }: {
