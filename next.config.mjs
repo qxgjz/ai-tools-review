@@ -22,11 +22,7 @@ const nextConfig = {
 
   // 包导入优化
   experimental: {
-    optimizeCss: true, // Optimize CSS delivery
     optimizePackageImports: ["lucide-react", "framer-motion"],
-    modularizeImports: {
-      "lucide-react": { transform: "lucide-react/{{member}}" },
-    },
   },
 
   // 生成Etags
