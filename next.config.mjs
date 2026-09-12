@@ -112,9 +112,10 @@ const nextConfig = {
     ];
   },
 
-  // 重定向：根域名到www
+  // 重定向配置
   async redirects() {
     return [
+      // 根域名到www
       {
         source: "/",
         has: [
@@ -122,7 +123,11 @@ const nextConfig = {
             type: "host",
             value: "aitoolcrux.com",
           },
-              // 旧博客URL 301重定向到新URL（修复GSC中已索引的404页面）
+        ],
+        destination: "https://www.aitoolcrux.com/",
+        permanent: true,
+      },
+      // 旧博客URL 301重定向到新URL（修复GSC中已索引的404页面）
       {
         source: "/blog/stable-diffusion-review",
         destination: "/blog/stable-diffusion-review-2026",
@@ -136,10 +141,6 @@ const nextConfig = {
       {
         source: "/blog/chatgpt-vs-claude-2026",
         destination: "/blog/chatgpt-vs-claude-2026-comparison",
-        permanent: true,
-      },
-],
-        destination: "https://www.aitoolcrux.com/",
         permanent: true,
       },
     ];
