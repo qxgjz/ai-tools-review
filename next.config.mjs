@@ -122,7 +122,23 @@ const nextConfig = {
             type: "host",
             value: "aitoolcrux.com",
           },
-        ],
+              // 旧博客URL 301重定向到新URL（修复GSC中已索引的404页面）
+      {
+        source: "/blog/stable-diffusion-review",
+        destination: "/blog/stable-diffusion-review-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/chatgpt-deep-review-2",
+        destination: "/blog/chatgpt-deep-review-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/chatgpt-vs-claude-2026",
+        destination: "/blog/chatgpt-vs-claude-2026-comparison",
+        permanent: true,
+      },
+],
         destination: "https://www.aitoolcrux.com/",
         permanent: true,
       },
