@@ -8,6 +8,10 @@ export const metadata = {
   description: "Expert AI tool reviews, comparisons, buying guides, and industry news. Find the best AI tools for your needs with our 6-dimension evaluation methodology.",
 };
 
+
+// ISR: revalidate blog index every 1h
+export const revalidate = 3600;
+
 export default function BlogPage() {
   const allPosts = posts as any[];
   const featuredPosts = allPosts.filter((p) => p.featured);
