@@ -277,6 +277,10 @@ const CATEGORIES: Record<string, { name: string; description: string; icon: Luci
   observability: { name: "AI Observability", description: "Monitoring, Logging, Tracing, Profiling", icon: SearchIcon, gradient: "from-teal-600 to-emerald-600" },
 };
 
+
+// ISR: revalidate category pages every 24h
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   const categories = new Set(toolsData.map((t) => t.category));
   return Array.from(categories).map((slug) => ({ slug }));
