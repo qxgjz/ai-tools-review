@@ -15,6 +15,10 @@ const AUTHORS: Record<string, any> = {
   },
 };
 
+
+// ISR: revalidate author pages every 24h
+export const revalidate = 86400;
+
 export function generateStaticParams() {
   return Object.keys(AUTHORS).map((slug) => ({ slug }));
 }
