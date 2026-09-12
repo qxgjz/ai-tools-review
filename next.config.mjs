@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  swcMinify: true, // Enable SWC minification for faster builds
 
   // 图片优化
   images: {
@@ -21,7 +22,11 @@ const nextConfig = {
 
   // 包导入优化
   experimental: {
+    optimizeCss: true, // Optimize CSS delivery
     optimizePackageImports: ["lucide-react", "framer-motion"],
+    modularizeImports: {
+      "lucide-react": { transform: "lucide-react/{{member}}" },
+    },
   },
 
   // 生成Etags
