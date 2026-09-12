@@ -8,6 +8,7 @@ import {
   Clock,
   Target,
   Zap,
+  BookOpen,
   HeartHandshake,
   Code2,
   LifeBuoy,
@@ -250,6 +251,56 @@ export default function MethodologyPage() {
       />
 
       {/* Hero */}
+      {/* AEO/GEO Optimization: Quick Answer & Key Takeaways */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
+        {/* Quick Answer */}
+        <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/50 p-6 sm:p-8">
+          <div className="flex items-center gap-2 mb-4">
+            <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Quick Answer</h2>
+          </div>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How does AIToolCrux evaluate AI tools?</h3>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+                AIToolCrux uses a transparent six-dimensional framework: Functionality & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with 10+ standardized scenarios, repeated 3+ times for consistency, verified by our editorial team.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Are reviews independent and unbiased?</h3>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
+                Yes. AIToolCrux is 100% independent — no paid placements or sponsored reviews. All tools tested with the same methodology, scores calculated from objective test data. Affiliate links clearly disclosed per FTC guidelines and never influence scoring or rankings.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* Key Takeaways */}
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
+          <div className="flex items-center gap-2 mb-4">
+            <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h2>
+          </div>
+          <div className="space-y-3">
+            {[
+              "Six dimensions weighted: functionality 25%, UX 20%, pricing 20%, integrations 15%, support 10%, ethics 10%",
+              "10+ test scenarios per tool, repeated 3+ times for statistical consistency",
+              "1-10 scoring scale with clear rubrics for each dimension and A-F grade bands",
+              "Editorial verification — all scores reviewed by 2+ team members before publish",
+              "Quarterly re-testing to keep scores current as AI tools evolve rapidly",
+              "Zero paid placements — affiliate links disclosed but never influence rankings",
+            ].map((item, i) => (
+              <div key={i} className="flex items-start gap-3">
+                <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">{i + 1}</span>
+                </div>
+                <p className="text-gray-700 dark:text-gray-300 text-sm">{item}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-6">
           <Shield className="w-4 h-4" />
