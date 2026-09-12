@@ -59,6 +59,10 @@ const METHODOLOGY = [
   { icon: CheckCircle2, title: "Ethics and Transparency", weight: "10%", desc: "Data privacy, bias disclosure, responsible AI" },
 ];
 
+
+// ISR: revalidate homepage every 1h
+export const revalidate = 3600;
+
 export default function HomePage() {
   const tools = toolsData as Tool[];
   const topTools = [...tools]
