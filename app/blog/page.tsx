@@ -12,11 +12,127 @@ export const metadata = {
 // ISR: revalidate blog index every 1h
 export const revalidate = 3600;
 
+
+const collectionSchema = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "AIToolCrux Blog - AI Tool Reviews & Comparisons",
+  "description": "Expert AI tool reviews, comparisons, buying guides, and industry news",
+  "url": "https://www.aitoolcrux.com/blog",
+  "hasPart": [
+    {
+      "@type": "Article",
+      "headline": "Claude vs Gemini 2026: Complete 8-Dimension Comparison & Real-World Test",
+      "url": "https://www.aitoolcrux.com/blog/claude-vs-gemini-2026-comparison",
+      "datePublished": "2026-09-12",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Windsurf Review 2026: Is It the Best Code AI Tool?",
+      "url": "https://www.aitoolcrux.com/blog/windsurf-review-2026",
+      "datePublished": "2026-09-12",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Cursor vs GitHub Copilot 2026: Complete Comparison for...",
+      "url": "https://www.aitoolcrux.com/blog/cursor-vs-github-copilot-2026-comparison",
+      "datePublished": "2026-09-12",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Midjourney vs DALL-E 3 2026: Complete Comparison for AI...",
+      "url": "https://www.aitoolcrux.com/blog/midjourney-vs-dalle-3-2026-comparison",
+      "datePublished": "2026-09-12",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "ChatGPT vs Gemini 2026: Complete 8-Dimension Comparison...",
+      "url": "https://www.aitoolcrux.com/blog/chatgpt-vs-gemini-2026-comparison",
+      "datePublished": "2026-09-12",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Cursor AI Review 2026: Is It the Best AI Code Editor?",
+      "url": "https://www.aitoolcrux.com/blog/cursor-ai-review-2026-best-ai-code-editor",
+      "datePublished": "2026-09-11",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Midjourney v7 Review 2026: Is It Still the Best AI Image...",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md",
+      "datePublished": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "ElevenLabs v2 Review 2026: 3 Weeks of Testing the AI...",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md",
+      "datePublished": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Creatium Coach Review (2025): An Honest Look at This AI...",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md",
+      "datePublished": "2026-09-04",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    },
+    {
+      "@type": "Article",
+      "headline": "Midjourney v7 Review 2026: The Art Director's AI That...",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md",
+      "datePublished": "2026-09-03",
+      "author": {
+        "@type": "Organization",
+        "name": "AIToolCrux Editorial Team"
+      }
+    }
+  ]
+};
+
 export default function BlogPage() {
   const allPosts = posts as any[];
   const featuredPosts = allPosts.filter((p) => p.featured);
 
   return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(collectionSchema) }}
+      />
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
       {/* Page标题 */}
       <div className="mb-8 flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
@@ -87,5 +203,6 @@ export default function BlogPage() {
         <BlogListClient posts={allPosts.map(({ slug, title, excerpt, category, categorySlug, tags, author, publishedAt, readTime, featured, image }) => ({ slug, title, excerpt, category, categorySlug, tags, author, publishedAt, readTime, featured, image }))} />
       </div>
     </div>
+    </>
   );
 }
