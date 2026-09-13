@@ -12,6 +12,7 @@ import { BreadcrumbSchema, ProductSchema, FAQSchema, ReviewSchema } from "@/comp
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
+import { FAQSection } from "@/components/content/FAQSection";
 import { AuthorBio } from "@/components/author/AuthorBio";
 import { FadeIn } from "@/components/animations";
 
@@ -716,6 +717,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           ))}
         </div>
       </section>
+
+      {/* FAQ Section - visible content matching FAQSchema structured data (GROWTH-017) */}
+      <FAQSection items={toolFAQs} />
 
       {/* Alternatives - E-E-A-T comparison signal */}
       {(tool as any).alternatives && (tool as any).alternatives.length > 0 && (
