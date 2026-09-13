@@ -2,7 +2,8 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
 
-export const dynamic = "force-dynamic";
+// ISR: Cache for 1 hour, category pages rarely change
+export const revalidate = 3600;
 
 interface CategoryPageProps {
   params: { slug: string };
