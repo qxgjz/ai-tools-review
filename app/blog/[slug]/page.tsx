@@ -54,7 +54,7 @@ export function generateMetadata({ params }: PostPageProps) {
   const keywords = [...titleWords.slice(0, 5), ...(post.tags || []), "AI tools", "AI review", "AIToolCrux"];
 
   // 优化描述：确保150-160字符，包含关键词和CTA
-  let description = post.excerpt;
+  let description = post.excerpt || post.description || "";
   if (description.length > 160) {
     description = description.slice(0, 157) + "...";
   } else if (description.length < 120) {
@@ -218,7 +218,7 @@ export default function PostPage({ params }: PostPageProps) {
       />
       <ReviewSchema
         name={post.title}
-        reviewBody={post.excerpt}
+        reviewBody={post.excerpt || post.description || ""}
         ratingValue={Math.round(avgScore * 10) / 10}
         bestRating={10}
         worstRating={1}
