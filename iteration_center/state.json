@@ -1,12 +1,12 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 21,
+  "current_iteration": 22,
   "current_phase": "waiting_for_next_trigger",
   "status": "running",
-  "last_deployment": "2026-09-13T06:55:47.377627+08:00 (Iteration 20 - Review schema fix: Add ReviewSchema to 533 tool pages)",
-  "total_iterations_completed": 20,
-  "total_issues_fixed": 24,
+  "last_deployment": "2026-09-13T09:10:14.741612+08:00 (Iteration 21 - Article ReviewSchema params + Category meta desc fix)",
+  "total_iterations_completed": 21,
+  "total_issues_fixed": 26,
   "total_pages_optimized": 3724,
   "total_articles_generated": 4,
   "current_todo": [],
@@ -193,6 +193,21 @@
       "completed_at": "2026-09-13T06:55:47.377627+08:00",
       "result": "533个工具页添加完整ReviewSchema，所有必填字段齐全（reviewBody/reviewRating/author/datePublished/itemReviewed），Review富摘要资格恢复。Commit 200ee09d",
       "source": "结构化数据与技术SEO检查（Richie.js方法论）"
+    },
+    {
+      "id": "P1-ITER21-001",
+      "title": "Fix article page ReviewSchema missing bestRating/worstRating + category meta desc HTML entity overflow",
+      "description": "Article pages were missing bestRating/worstRating in ReviewSchema (causing schema validation error). Category page description contained '&' which HTML-encodes to '&amp;' (+4 chars), causing Chat category meta to be 164 chars instead of 160.",
+      "priority": "P1",
+      "status": "completed",
+      "created_iteration": 21,
+      "completed_at": "2026-09-13T09:10:14.741612+08:00",
+      "result": "Article ReviewSchema now includes bestRating=10/worstRating=1 (verified on 2 article pages). Category description 'pros & cons' -> 'pros and cons' (verified all 4 categories <=160 chars decoded). Commit 683b70cd",
+      "source": "Structured data audit (Richie.js methodology) + daily SEO check",
+      "files_modified": [
+        "app/blog/[slug]/page.tsx",
+        "app/category/[slug]/page.tsx"
+      ]
     }
   ],
   "phase_history": [
@@ -279,7 +294,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-13T06:55:47.377627+08:00",
+  "last_updated": "2026-09-13T09:10:14.741612+08:00",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -319,8 +334,10 @@
     "GROWTH-016: 创建Midjourney vs DALL-E 3 2026高价值对比文章（3000+字+截图+FAQ）",
     "P2-003: 进一步优化TTFB（当前434ms，目标<200ms），重点排查分类页928ms异常",
     "GROWTH-018: 外链建设（客座文章和目录提交）",
-    "P1-ITER21-001: 检查文章页Review schema（结构化数据检测发现文章页1个Review错误）",
-    "GROWTH-019: 为新发布的对比文章提交IndexNow索引"
+    "GROWTH-019: 为新发布的对比文章提交IndexNow索引",
+    "GROWTH-016: Create Midjourney vs DALL-E 3 2026 comparison article (3000+ words, screenshots + FAQ)",
+    "P2-003: Further optimize TTFB (currently ~928ms avg, target <200ms), focus on category/ranking pages",
+    "GROWTH-017: Add visible FAQ section to tool pages (FAQ schema exists but UI section missing - 0/10 coverage)"
   ],
   "milestones": [
     {
