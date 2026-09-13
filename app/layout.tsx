@@ -7,6 +7,7 @@ import { Header } from "@/components/layout/Header";
 import { BackToTop } from "@/components/layout/BackToTop";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
+import { GA4EventTracker } from "@/components/analytics/GA4EventTracker";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aitoolcrux.com"),
@@ -134,6 +135,7 @@ export default function RootLayout({
           </Script>
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
+          <GA4EventTracker />
           <Header />
           <main id="main-content" className="pt-8">{children}</main>
           <footer className="mt-16 py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
