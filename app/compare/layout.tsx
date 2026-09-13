@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 
+export const revalidate = 3600; // 1小时缓存
+
 export const metadata: Metadata = {
   title: "AI Tool Comparison 2026: Compare Top AI Tools | AIToolCrux",
   description: "Compare 500+ AI tools side by side in 2026. ChatGPT vs Claude, Midjourney vs DALL-E, Cursor vs Copilot. Features, pricing, ratings & 6-dimension analysis.",
