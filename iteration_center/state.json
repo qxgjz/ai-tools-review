@@ -1,14 +1,14 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 22,
+  "current_iteration": 29,
   "current_phase": "waiting_for_next_trigger",
   "status": "running",
-  "last_deployment": "2026-09-13T09:10:14.741612+08:00 (Iteration 21 - Article ReviewSchema params + Category meta desc fix)",
-  "total_iterations_completed": 21,
-  "total_issues_fixed": 26,
-  "total_pages_optimized": 3724,
-  "total_articles_generated": 4,
+  "last_deployment": "2026-09-13T19:04:45.243035+08:00 (Iteration 29 - Article internal link optimization: 215 links added)",
+  "total_iterations_completed": 28,
+  "total_issues_fixed": 37,
+  "total_pages_optimized": 3805,
+  "total_articles_generated": 7,
   "current_todo": [],
   "completed_todo": [
     {
@@ -208,6 +208,39 @@
         "app/blog/[slug]/page.tsx",
         "app/category/[slug]/page.tsx"
       ]
+    },
+    {
+      "id": "GROWTH-017",
+      "priority": "growth",
+      "title": "Add visible FAQ section to tool pages (FAQ schema exists but UI missing)",
+      "source": "next_iteration_focus / structured data audit",
+      "status": "completed",
+      "iteration": 22,
+      "completed_at": "2026-09-13T11:17:47.789694+08:00",
+      "result": "All 533 tool pages now have visible FAQSection with 8 dynamic FAQ items, matching existing FAQSchema structured data. Commit 8888961d"
+    },
+    {
+      "id": "GROWTH-018",
+      "title": "生成 Best AI Writing Tools 2026 高价值对比文章（3388词，10工具对比）",
+      "completed_at": "2026-09-13T09:27:17.284125Z",
+      "result": "新增3388词对比文章，包含Quick Answer/Key Takeaways/10工具详细对比/FAQ，部署验证通过"
+    },
+    {
+      "id": "FIX-ITER28-001",
+      "title": "修复 TypeScript 错误和 Vercel 构建失败",
+      "completed_at": "2026-09-13T09:27:17.284135Z",
+      "result": "修复blog/[slug]/page.tsx和rss.xml/route.ts的excerpt undefined问题，构建验证通过"
+    },
+    {
+      "id": "P1-ITER29-001",
+      "priority": "P1",
+      "title": "文章内链优化 - 为56篇文章添加Related Tools板块",
+      "source": "24小时自动迭代系统 / 内链审计发现Top20工具入链为0",
+      "status": "completed",
+      "created_iteration": 29,
+      "completed_at": "2026-09-13T19:04:45.243051+08:00",
+      "result": "所有56篇文章添加Related AI Tools内链板块，215个内链，Top20工具入链从0提升到平均10.8个，19/20工具获得≥4个内链",
+      "commit_sha": "d9bea046efd44bac10a49287bd57ef2392e8a226"
     }
   ],
   "phase_history": [
@@ -294,7 +327,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-13T09:10:14.741612+08:00",
+  "last_updated": "2026-09-13T11:04:45.243048+00:00",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -328,16 +361,53 @@
         "13620d0f"
       ],
       "verification": "全部通过（301重定向3/3，Title 6/6，Meta 6/6）"
+    },
+    {
+      "iteration": 23,
+      "tasks": [
+        "GROWTH-019",
+        "GROWTH-016"
+      ],
+      "completed_at": "2026-09-13T13:27:35.561559"
+    },
+    {
+      "task_id": "GROWTH-REAL-SCREENSHOTS",
+      "title": "真实产品界面截图系统建设",
+      "completed_at": "2026-09-13 16:29:40",
+      "description": "29张真实截图，13篇文章插图优化"
     }
   ],
   "next_iteration_focus": [
-    "GROWTH-016: 创建Midjourney vs DALL-E 3 2026高价值对比文章（3000+字+截图+FAQ）",
-    "P2-003: 进一步优化TTFB（当前434ms，目标<200ms），重点排查分类页928ms异常",
-    "GROWTH-018: 外链建设（客座文章和目录提交）",
-    "GROWTH-019: 为新发布的对比文章提交IndexNow索引",
-    "GROWTH-016: Create Midjourney vs DALL-E 3 2026 comparison article (3000+ words, screenshots + FAQ)",
-    "P2-003: Further optimize TTFB (currently ~928ms avg, target <200ms), focus on category/ranking pages",
-    "GROWTH-017: Add visible FAQ section to tool pages (FAQ schema exists but UI section missing - 0/10 coverage)"
+    {
+      "id": "P2-003",
+      "priority": "P2",
+      "title": "TTFB optimization (434ms -> <200ms)",
+      "description": "Optimize server response time, investigate category page 928ms anomaly, enable Vercel edge caching"
+    },
+    {
+      "id": "GROWTH-018",
+      "priority": "GROWTH",
+      "title": "Backlink building",
+      "description": "Submit 5 GitHub Awesome-List Issues and 15 AI directory sites for backlinks"
+    },
+    {
+      "id": "GROWTH-022",
+      "priority": "GROWTH",
+      "title": "Create Midjourney vs DALL-E 3 2026 comparison article",
+      "description": "High-search-volume keyword, 2500+ words, with real screenshots from crawled Top20 set"
+    },
+    {
+      "id": "P1-006",
+      "priority": "P1",
+      "title": "Add real screenshots to remaining articles",
+      "description": "Currently only 2 of 55 articles have real screenshots. Use crawled Top20 screenshots to add relevant images to articles"
+    },
+    {
+      "id": "GROWTH-023",
+      "priority": "GROWTH",
+      "title": "Expand Top20 tool pages with hands-on experience",
+      "description": "Add real usage experience, testing data, and performance benchmarks to Top20 tool detail pages"
+    }
   ],
   "milestones": [
     {
@@ -348,5 +418,6 @@
       "iteration": 14,
       "impact": "Complete E-E-A-T experience signal coverage across entire tool catalog"
     }
-  ]
+  ],
+  "last_iteration_summary": "Iteration 29: Article internal link optimization - Added Related AI Tools section to all 56 articles, 215 internal links, Top20 tool inbound links from 0 to avg 10.8. Commit d9bea046"
 }
