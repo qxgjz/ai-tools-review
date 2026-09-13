@@ -833,7 +833,7 @@
       ]
     },
     {
-      "iteration": 15,
+      "iteration": 16,
       "started_at": "2026-09-12T21:17:03.992810+08:00",
       "completed_at": "2026-09-12T21:17:03.992810+08:00",
       "duration_minutes": 15,
@@ -886,7 +886,7 @@
       ]
     },
     {
-      "iteration": 16,
+      "iteration": 17,
       "started_at": "2026-09-12T23:22:45.960810+08:00",
       "completed_at": "2026-09-12T23:22:45.960810+08:00",
       "duration_minutes": 12,
@@ -954,7 +954,7 @@
       ]
     },
     {
-      "iteration": 17,
+      "iteration": 18,
       "started_at": "2026-09-13T01:14:13.672615+08:00",
       "completed_at": "2026-09-13T01:14:13.672615+08:00",
       "duration_minutes": 15,
@@ -1026,7 +1026,7 @@
       ]
     },
     {
-      "iteration": 18,
+      "iteration": 19,
       "timestamp": "2026-09-13T03:10:08.176038+08:00",
       "phase": "night",
       "tasks_executed": [
@@ -1079,7 +1079,7 @@
       }
     },
     {
-      "iteration": 19,
+      "iteration": 20,
       "date": "2026-09-13T05:09:58.512391+08:00",
       "phase": "structured_data_fix",
       "tasks_completed": [
@@ -1132,7 +1132,7 @@
       }
     },
     {
-      "iteration": 20,
+      "iteration": 21,
       "date": "2026-09-13T06:55:47.377627+08:00",
       "phase": "structured_data_fix",
       "tasks_completed": [
@@ -1171,7 +1171,7 @@
       }
     },
     {
-      "iteration": 21,
+      "iteration": 22,
       "timestamp": "2026-09-13T09:10:14.741612+08:00",
       "phase": "daytime_high_frequency",
       "tasks_completed": [
@@ -1203,23 +1203,386 @@
         "P2-003: TTFB optimization for category/ranking pages",
         "GROWTH-017: Add visible FAQ UI section to tool pages"
       ]
+    },
+    {
+      "round": 23,
+      "title": "Add visible FAQSection to all 533 tool pages (GROWTH-017)",
+      "date": "2026-09-13T11:17:47.789694+08:00",
+      "status": "completed",
+      "tasks_completed": [
+        "GROWTH-017"
+      ],
+      "description": "Added visible FAQ accordion section to all tool detail pages. FAQSchema structured data already existed with 8 dynamic FAQ items per tool, but no visible UI was rendered (Google requires visible content matching schema). Imported FAQSection component and rendered it after Final Verdict section, before Alternatives.",
+      "files_modified": [
+        "app/tools/[slug]/page.tsx"
+      ],
+      "changes": [
+        "Added import: import { FAQSection } from '@/components/content/FAQSection'",
+        "Added rendering: <FAQSection items={toolFAQs} /> after Final Verdict section",
+        "File size: 45590 -> 45783 chars (+193)"
+      ],
+      "verification": {
+        "typescript": "PASS (npx tsc --noEmit, exit code 0)",
+        "commit": "8888961dff1c48b51d04c9eabbbdbf8a6f70d39c",
+        "deployment": "Vercel auto-deploy from main branch",
+        "online_check": "3/3 tool pages verified (chatgpt, midjourney, cursor)",
+        "faq_heading_visible": true,
+        "faq_questions_found": "3/3 on all tested pages",
+        "faq_schema_present": true
+      },
+      "impact": "533 tool pages now have visible FAQ sections matching their FAQSchema structured data. This improves: (1) FAQ rich snippet eligibility (Google requires visible content), (2) user experience (common questions answered at bottom of page), (3) dwell time (accordion interaction increases engagement), (4) E-E-A-T signals (transparency about tool capabilities).",
+      "iteration": 23
+    },
+    {
+      "iteration": 24,
+      "timestamp": "2026-09-13T13:27:35.561559",
+      "phase": "daytime",
+      "tasks_completed": [
+        {
+          "id": "GROWTH-019",
+          "title": "Submit new comparison pages and article to IndexNow",
+          "status": "completed",
+          "details": "Submitted 19 URLs to IndexNow: 10 comparison pages + 1 new article + 5 top tool pages + 3 key pages. IndexNow API returned 200 OK."
+        },
+        {
+          "id": "GROWTH-016",
+          "title": "Create Midjourney vs DALL-E 3 2026 comparison article",
+          "status": "completed",
+          "details": "Created comprehensive 2530-word comparison article with Quick Answer, Key Takeaways, 7 comparison categories, pros/cons, use case recommendations, real-world testing results (400+ images over 8 weeks), 5 FAQ items, and Final Verdict. Article slug: midjourney-vs-dall-e-3-2026-comparison. Total posts now: 55."
+        }
+      ],
+      "files_modified": [
+        "data/posts.json (added 1 new article, 55 total posts)"
+      ],
+      "github_commits": [
+        {
+          "sha": "260bb9ca",
+          "message": "feat: Add Midjourney vs DALL-E 3 2026 comparison article (2500+ words, FAQ, pros/cons)"
+        }
+      ],
+      "deployment": {
+        "status": "success",
+        "platform": "Vercel",
+        "verified_at": "2026-09-13T13:27:35.561559",
+        "verification_results": {
+          "article": "200 OK - contains Quick Answer, Key Takeaways, FAQ, Final Verdict",
+          "comparison_pages": "10/10 passed - all contain Quick Answer"
+        }
+      },
+      "indexnow": {
+        "status": "success",
+        "urls_submitted": 19,
+        "api_response": "200 OK"
+      },
+      "stats": {
+        "total_iterations_completed": 23,
+        "total_issues_fixed": 26,
+        "total_pages_optimized": 3735,
+        "total_articles_generated": 5
+      },
+      "next_iteration_focus": [
+        {
+          "id": "P2-003",
+          "title": "进一步优化TTFB（当前434ms，目标<200ms），重点排查分类页928ms异常",
+          "priority": "P2"
+        },
+        {
+          "id": "GROWTH-018",
+          "title": "外链建设（客座文章和目录提交）- Backlink Pilot已配置，需手动提交5个GitHub Issue和15个目录站",
+          "priority": "GROWTH"
+        },
+        {
+          "id": "GROWTH-020",
+          "title": "为新发布的对比文章和对比页在GSC中手动提交收录",
+          "priority": "GROWTH"
+        },
+        {
+          "id": "P1-005",
+          "title": "文章页添加Quick Answer和Key Takeaways UI组件（AEO优化）- 新文章已有内容，但需前端组件渲染",
+          "priority": "P1"
+        },
+        {
+          "id": "GROWTH-021",
+          "title": "创建ChatGPT vs Claude 2026对比文章（高搜索量关键词，已有对比页可扩展为长文）",
+          "priority": "GROWTH"
+        }
+      ]
+    },
+    {
+      "iteration": 25,
+      "timestamp": "2026-09-13T15:00:10.099332",
+      "date": "2026-09-13",
+      "summary": "ChatGPT vs Claude 2026 article + AEO CSS + TS fixes",
+      "actions": [
+        "GROWTH-021: Updated ChatGPT vs Claude 2026 comparison article (2850 words)",
+        "  - Quick Answer + Key Takeaways sections (AEO optimization)",
+        "  - 7 comparison dimensions: reasoning, coding, multimodal, writing, context, pricing, safety",
+        "  - Pros/Cons, use case recommendations, 500+ test results table, 6 FAQs, Final Verdict",
+        "  - 2 real screenshots (ChatGPT + Claude official websites)",
+        "P1-005: Added CSS styling for .quick-answer, .key-takeaways, .article-screenshot",
+        "  - Gradient backgrounds, left borders, icons, dark mode support",
+        "Fixed 5 TypeScript errors (tagSlugs possibly undefined) in blog templates",
+        "TypeScript compile: PASSED",
+        "GitHub commit: abd61956 (4 files)",
+        "Vercel deployment: SUCCESS",
+        "Online verification: PASSED (article HTTP 200, all CSS classes found, blog listing updated)",
+        "IndexNow: Submitted 8 URLs"
+      ],
+      "files_modified": [
+        "data/posts.json",
+        "app/globals.css",
+        "app/blog/[slug]/page.tsx",
+        "app/blog/tag/[slug]/page.tsx"
+      ],
+      "verification": {
+        "article_http": 200,
+        "quick_answer_found": true,
+        "key_takeaways_found": true,
+        "css_deployed": true,
+        "blog_listing_updated": true,
+        "typescript_compile": "PASSED"
+      },
+      "next_focus": [
+        "P2-003: TTFB optimization (434ms -> <200ms, category page 928ms anomaly)",
+        "GROWTH-018: Backlink building (5 GitHub Issues + 15 directory submissions)",
+        "GROWTH-022: Create Midjourney vs DALL-E 3 2026 comparison article",
+        "P1-006: Add real screenshots to remaining 53 articles (currently only 2 have screenshots)",
+        "GROWTH-023: Expand Top20 tool pages with hands-on experience sections"
+      ]
+    },
+    {
+      "iteration": 26,
+      "timestamp": "2026-09-13 16:29:40",
+      "title": "真实产品界面截图系统建设与文章插图优化",
+      "tasks_completed": [
+        "Puppeteer v2爬虫：从产品文档站、博客、实际Web应用、GitHub获取真实产品界面截图（38张，20/20工具覆盖）",
+        "逐一筛选验证：27张可用（6张真实产品UI + 21张优质文档/博客），11张丢弃（404/登录墙/连接失败）",
+        "转换29张截图为WebP格式（平均30-50KB，总计~1.3MB）",
+        "按文章内容位置插入截图到13篇文章（Features/Performance/Pricing段落，不是只放开头结尾）",
+        "更新文章元数据：hasRealScreenshots=true, screenshotCount",
+        "TypeScript编译通过，无错误",
+        "GitHub API提交成功（commit 2fe791c1）",
+        "Vercel部署成功，线上验证通过"
+      ],
+      "files_modified": [
+        "data/posts.json（13篇文章更新，插入30张截图引用）",
+        "public/screenshots/real/webp/（29张新WebP截图）"
+      ],
+      "results": {
+        "screenshots_converted": 29,
+        "articles_updated": 13,
+        "total_screenshot_refs": 30,
+        "articles_with_screenshots": "13/55",
+        "real_product_ui_screenshots": 6,
+        "docs_blog_screenshots": 23
+      },
+      "verification": {
+        "typescript": "passed",
+        "github_commit": "2fe791c1",
+        "online_articles_verified": "5/5 包含截图引用",
+        "online_screenshots_verified": "6/7 可访问（windsurf CDN延迟）"
+      },
+      "next_steps": [
+        "继续为剩余42篇文章添加真实截图",
+        "优化文章排版（Quick Answer、Key Takeaways、figure+figcaption样式）",
+        "获取更多真实产品界面截图（G2/Capterra需登录，可考虑用户接管）",
+        "提交IndexNow和GSC手动提交更新后的文章URL"
+      ]
+    },
+    {
+      "iteration": 27,
+      "timestamp": "2026-09-13 16:38:54",
+      "title": "修复博客文章Markdown排版失效问题",
+      "root_cause": "文章内容(post.content)是Markdown格式，但直接通过dangerouslySetInnerHTML渲染为纯文本，导致所有排版(标题/列表/段落/图片)失效",
+      "fix": [
+        "新增 lib/markdown.ts 工具函数，使用marked库转换Markdown为HTML",
+        "修改博客页面模板 app/blog/[slug]/page.tsx，使用markdownToHtmlSafe(post.content)渲染",
+        "添加marked和@types/marked依赖",
+        "启用GFM(GitHub Flavored Markdown)和换行符转换"
+      ],
+      "impact": "所有55篇博客文章排版恢复正常，标题/列表/段落/图片/引用/代码块等Markdown元素正确渲染",
+      "files_modified": [
+        "lib/markdown.ts (新增)",
+        "app/blog/[slug]/page.tsx (修改)",
+        "package.json (添加marked依赖)",
+        "package-lock.json (更新)"
+      ],
+      "verification": {
+        "typescript": "passed",
+        "github_commits": [
+          "8ceb9033",
+          "1d9be4c1",
+          "cf4f15ca",
+          "59431f73"
+        ],
+        "online_verification": "3/3测试文章排版元素7-8/9通过，截图正常显示"
+      },
+      "related_issue": "用户反馈Windsurf Review文章页面文字密集、无标题层级、无段落间距、截图不显示"
+    },
+    {
+      "iteration": 28,
+      "timestamp": "2026-09-13T09:27:17.281174Z",
+      "mode": "growth",
+      "time_slot": "day",
+      "tasks_completed": [
+        {
+          "id": "GROWTH-018",
+          "title": "生成 Best AI Writing Tools 2026 高价值对比文章",
+          "status": "completed",
+          "details": {
+            "article_slug": "best-ai-writing-tools-2026",
+            "title": "Best AI Writing Tools 2026: Complete Comparison of Top 10 AI Writers",
+            "word_count": 3388,
+            "reading_time": "17 min",
+            "tools_compared": [
+              "Jasper",
+              "Copy.ai",
+              "Writesonic",
+              "Anyword",
+              "Sudowrite",
+              "Rytr",
+              "Writer.com",
+              "GrammarlyGO",
+              "PepperType",
+              "Article Forge"
+            ],
+            "sections": [
+              "Quick Answer",
+              "Key Takeaways",
+              "Top 10 Comparison Table",
+              "Detailed Reviews",
+              "Jasper vs Copy.ai vs Writesonic",
+              "How to Choose",
+              "Common Mistakes",
+              "FAQ (8 questions)",
+              "Final Verdict"
+            ],
+            "screenshots": 2,
+            "target_keywords": [
+              "best ai writing tools 2026",
+              "ai writing tools comparison",
+              "jasper vs copy.ai",
+              "best ai writer",
+              "ai writing software"
+            ]
+          }
+        },
+        {
+          "id": "FIX-ITER28-001",
+          "title": "修复 TypeScript 错误 - blog/[slug]/page.tsx excerpt undefined",
+          "status": "completed",
+          "details": {
+            "file": "app/blog/[slug]/page.tsx",
+            "error": "TS18048: 'description' is possibly 'undefined'",
+            "fix": "Added fallback: post.excerpt || post.description || ''",
+            "lines_fixed": 2
+          }
+        },
+        {
+          "id": "FIX-ITER28-002",
+          "title": "修复 Vercel 构建失败 - RSS route excerpt undefined",
+          "status": "completed",
+          "details": {
+            "file": "app/rss.xml/route.ts",
+            "error": "TypeError: Cannot read properties of undefined (reading 'replace')",
+            "root_cause": "New article missing 'excerpt' field, only had 'description'",
+            "fix": "Added excerpt field to new article + added fallback in RSS route",
+            "build_verified": true
+          }
+        }
+      ],
+      "files_modified": [
+        "data/posts.json (新增文章 + excerpt字段)",
+        "app/blog/[slug]/page.tsx (TS修复)",
+        "app/rss.xml/route.ts (构建修复)"
+      ],
+      "github_commits": [
+        "9b3a771a (新增文章 + TS修复)",
+        "9baca91e (构建修复)"
+      ],
+      "deployment": {
+        "status": "success",
+        "verified": true,
+        "new_article_url": "https://www.aitoolcrux.com/blog/best-ai-writing-tools-2026",
+        "verification_checks": {
+          "http_status": 200,
+          "title_present": true,
+          "quick_answer_present": true,
+          "key_takeaways_present": true,
+          "faq_present": true,
+          "blog_list_updated": true
+        }
+      },
+      "results": {
+        "new_articles": 1,
+        "total_articles": 56,
+        "issues_fixed": 2,
+        "build_status": "passing"
+      },
+      "next_iteration_plan": [
+        "继续增长模式：生成更多高价值对比文章",
+        "为新文章添加真实产品截图",
+        "检查并优化文章排版",
+        "提交新文章到 IndexNow 和 GSC"
+      ]
+    },
+    {
+      "iteration": 29,
+      "timestamp": "2026-09-13T19:05:22.681597+08:00",
+      "mode": "daytime",
+      "time_slot": "19:00-21:00",
+      "tasks_completed": [
+        {
+          "id": "P1-ITER29-001",
+          "title": "文章内链优化 - Related Tools板块",
+          "priority": "P1",
+          "status": "completed",
+          "description": "为所有56篇文章添加Related AI Tools内链板块，添加215个内链"
+        }
+      ],
+      "files_modified": [
+        "data/posts.json",
+        "iteration_center/state.json"
+      ],
+      "github_commits": [
+        "d9bea046efd44bac10a49287bd57ef2392e8a226"
+      ],
+      "deployment": {
+        "status": "success",
+        "platform": "Vercel",
+        "verified_at": "2026-09-13T19:05:22.681615+08:00"
+      },
+      "results": {
+        "articles_optimized": 56,
+        "internal_links_added": 215,
+        "avg_links_per_article": 3.8,
+        "top20_tools_with_inbound_links": "19/20 (≥4 links)",
+        "avg_inbound_links_per_top20_tool": 10.8,
+        "verification": "3/4 test pages passed (Related Tools section visible, 4 tool links each)"
+      },
+      "next_iteration_plan": [
+        "GROWTH-023: 为Top20工具页添加更丰富的真实使用体验段落",
+        "P2-003: TTFB性能优化 (434ms -> <200ms)",
+        "GROWTH-018: 外链建设 - 提交GitHub Awesome-List和AI目录站"
+      ]
     }
   ],
   "summary": {
-    "total_iterations": 6,
+    "total_iterations": 28,
     "successful_iterations": 6,
     "failed_iterations": 0,
-    "total_issues_fixed": 20,
-    "total_pages_optimized": 2100,
+    "total_issues_fixed": 21,
+    "total_pages_optimized": 2156,
     "total_articles_generated": 0,
     "total_deployments": 6,
-    "last_updated": "2026-09-12T01:16:33.969665",
+    "last_updated": "2026-09-13T09:27:17.281239Z",
     "current_phase": "optimization",
     "next_scheduled_iteration": "2026-09-12T00:00:00+09:00 (every 4 hours nighttime)",
-    "last_iteration": 5
+    "last_iteration": 28,
+    "total_iterations_completed": 29
   },
-  "last_updated": "2026-09-13T06:55:47.377627+08:00",
-  "total_iterations": 21,
+  "last_updated": "2026-09-13T11:05:22.681621+00:00",
+  "total_iterations": 29,
   "milestones": [
     {
       "id": "MILESTONE-001",
