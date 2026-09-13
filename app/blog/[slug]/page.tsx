@@ -427,7 +427,7 @@ export default function PostPage({ params }: PostPageProps) {
         {post.tags.map((tag, index) => (
           <Link
             key={tag}
-            href={`/blog/tag/${post.tagSlugs[index]}`}
+            href={`/blog/tag/${(post.tagSlugs || [])[index]}`}
             className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           >
             #{tag}

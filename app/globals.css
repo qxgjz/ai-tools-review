@@ -310,3 +310,153 @@ textarea:focus-visible,
   header, footer { display: none; }
   main { padding-top: 0 !important; }
 }
+
+
+/* ===== AEO Optimization: Quick Answer & Key Takeaways ===== */
+.quick-answer {
+  background: linear-gradient(135deg, #f0fdf4 0%, #ecfeff 100%);
+  border-left: 4px solid #10b981;
+  border-radius: 0 12px 12px 0;
+  padding: 20px 24px;
+  margin: 24px 0;
+  position: relative;
+}
+
+.quick-answer::before {
+  content: "⚡ Quick Answer";
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #059669;
+  margin-bottom: 8px;
+}
+
+.quick-answer h2 {
+  display: none;
+}
+
+.quick-answer p {
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: #1f2937;
+}
+
+.quick-answer strong {
+  color: #047857;
+}
+
+@media (prefers-color-scheme: dark) {
+  .quick-answer {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(6, 182, 212, 0.1) 100%);
+    border-left-color: #10b981;
+  }
+  .quick-answer p { color: #d1fae5; }
+  .quick-answer strong { color: #6ee7b7; }
+}
+
+.key-takeaways {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  margin: 24px 0;
+}
+
+.key-takeaways::before {
+  content: "🔑 Key Takeaways";
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #475569;
+  margin-bottom: 12px;
+}
+
+.key-takeaways h2 {
+  display: none;
+}
+
+.key-takeaways ul {
+  margin: 0;
+  padding-left: 0;
+  list-style: none;
+}
+
+.key-takeaways li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.key-takeaways li:last-child {
+  margin-bottom: 0;
+}
+
+.key-takeaways li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #10b981;
+  font-weight: 700;
+}
+
+.key-takeaways strong {
+  color: #1e293b;
+}
+
+@media (prefers-color-scheme: dark) {
+  .key-takeaways {
+    background: rgba(30, 41, 59, 0.5);
+    border-color: #334155;
+  }
+  .key-takeaways li { color: #cbd5e1; }
+  .key-takeaways strong { color: #f1f5f9; }
+}
+
+/* ===== Article Screenshots ===== */
+.article-screenshot {
+  margin: 28px 0;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+.article-screenshot img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 0;
+}
+
+.article-screenshot figcaption {
+  padding: 10px 16px;
+  font-size: 13px;
+  color: #64748b;
+  text-align: center;
+  background: #f8fafc;
+  border-top: 1px solid #e2e8f0;
+  font-style: italic;
+}
+
+@media (prefers-color-scheme: dark) {
+  .article-screenshot {
+    border-color: #334155;
+    background: #1e293b;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+  .article-screenshot figcaption {
+    color: #94a3b8;
+    background: #0f172a;
+    border-top-color: #334155;
+  }
+}

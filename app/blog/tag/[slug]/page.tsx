@@ -9,10 +9,10 @@ interface TagPageProps {
 }
 
 export function generateMetadata({ params }: TagPageProps) {
-  const tagPosts = posts.filter((p) => p.tagSlugs.includes(params.slug));
+  const tagPosts = posts.filter((p) => (p.tagSlugs || []).includes(params.slug));
   let tagName = params.slug;
   for (const post of posts) {
-    const idx = post.tagSlugs.indexOf(params.slug);
+    const idx = (post.tagSlugs || []).indexOf(params.slug);
     if (idx !== -1) {
       tagName = post.tags[idx];
       break;
@@ -25,7 +25,7 @@ export function generateMetadata({ params }: TagPageProps) {
 }
 
 export default function TagPage({ params }: TagPageProps) {
-  const tagPosts = posts.filter((p) => p.tagSlugs.includes(params.slug));
+  const tagPosts = posts.filter((p) => (p.tagSlugs || []).includes(params.slug));
 
   if (tagPosts.length === 0) {
     notFound();
@@ -33,7 +33,7 @@ export default function TagPage({ params }: TagPageProps) {
 
   let tagName = params.slug;
   for (const post of posts) {
-    const idx = post.tagSlugs.indexOf(params.slug);
+    const idx = (post.tagSlugs || []).indexOf(params.slug);
     if (idx !== -1) {
       tagName = post.tags[idx];
       break;
