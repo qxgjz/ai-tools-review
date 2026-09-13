@@ -2,6 +2,9 @@ import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import "./globals.css";
+
+// 全局缓存配置：静态页面默认1小时缓存
+export const revalidate = 3600;
 import "./design-tokens.css";
 import { Header } from "@/components/layout/Header";
 import { BackToTop } from "@/components/layout/BackToTop";
