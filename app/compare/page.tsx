@@ -676,7 +676,7 @@ export default function ComparePage() {
                 <thead>
                   <tr className="bg-gray-50 dark:bg-gray-800/50">
                     <th className="text-left py-3 px-4 text-sm font-semibold text-gray-600 dark:text-gray-400 w-32">
-                      方案
+                      Plan
                     </th>
                     {selectedTools.map((tool) => (
                       <th
