@@ -17,6 +17,7 @@ import { ToolScreenshot } from "@/components/content/ToolScreenshot";
 import { ReadingProgress } from "@/components/blog/ReadingProgress";
 import { TableOfContents } from "@/components/blog/TableOfContents";
 import { PostNavigation } from "@/components/blog/PostNavigation";
+import { markdownToHtmlSafe } from "@/lib/markdown";
 
 // 动态Import重型Component，减少初始JS包大小
 const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
@@ -480,7 +481,7 @@ export default function PostPage({ params }: PostPageProps) {
           prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded-md prose-code:text-sm prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:font-mono
           prose-pre:bg-gray-900 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:my-8 prose-pre:overflow-x-auto prose-pre:text-sm
           first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:text-emerald-600 dark:first-letter:text-emerald-400 first-letter:mt-1"
-        dangerouslySetInnerHTML={{ __html: post.content }}
+        dangerouslySetInnerHTML={markdownToHtmlSafe(post.content)}
       />
 
       {/* Rating总览 - 使用shadcn/ui TabsComponent */}
