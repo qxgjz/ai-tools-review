@@ -18,7 +18,7 @@ export async function GET() {
     .map((post) => {
       const url = `${siteUrl}/blog/${post.slug}`;
       const pubDate = new Date(post.publishedAt).toUTCString();
-      const description = post.excerpt
+      const description = (post.excerpt || post.description || "")
         .replace(/<[^>]*>/g, "")
         .replace(/&/g, "&amp;")
         .replace(/</g, "&lt;")
