@@ -219,6 +219,8 @@ export default function PostPage({ params }: PostPageProps) {
         name={post.title}
         reviewBody={post.excerpt}
         ratingValue={Math.round(avgScore * 10) / 10}
+        bestRating={10}
+        worstRating={1}
         author={post.author}
         datePublished={post.publishedAt}
         itemReviewed={toolName}

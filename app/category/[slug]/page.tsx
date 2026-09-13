@@ -300,7 +300,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
 
   const categoryName = category.name.replace(/^AI\s+/, "").replace(/^AI/, "");
   const title = `Best ${categoryName} AI Tools: Top ${toolCount} Rated | AIToolCrux`;
-  const description = `Discover the best ${categoryName} AI tools in 2026. Expert reviews with 6-dimension ratings, pricing comparison, pros & cons. Top picks: ${topTools}. Find the perfect ${categoryName} tool for your needs.`;
+  const description = `Discover the best ${categoryName} AI tools in 2026. Expert reviews with 6-dimension ratings, pricing comparison, pros and cons. Top picks: ${topTools}. Find the perfect ${categoryName} tool for your needs.`;
 
   return {
     title: title,
