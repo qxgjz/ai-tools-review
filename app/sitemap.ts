@@ -2,6 +2,7 @@ import type { MetadataRoute } from "next";
 import tools from "@/data/tools.json";
 import posts from "@/data/posts.json";
 import alternatives from "@/data/alternatives.json";
+import comparisons from "@/data/comparisons.json";
 
 // 网站基础 URL（部署后替换为你的域名）
 const BASE_URL = "https://www.aitoolcrux.com";
@@ -167,5 +168,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.75,
   }));
 
-  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages, ...blogCategoryPages, ...blogTagPages, ...alternativePages];
+  // 对比页
+  const comparisonPages: MetadataRoute.Sitemap = comparisons.map((comp: any) => ({
+    url: `${BASE_URL}/compare/${comp.slug}`,
+    lastModified: new Date("2026-09-13"),
+    changeFrequency: "weekly",
+    priority: 0.85,
+  }));
+
+  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages, ...blogCategoryPages, ...blogTagPages, ...alternativePages, ...comparisonPages];
 }
