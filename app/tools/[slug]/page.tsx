@@ -84,6 +84,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 6);
 
+  // 跨分类热门工具推荐 - 增加重要工具入链（P1-004）
+  const popularToolSlugs = ["chatgpt", "claude", "gemini", "midjourney", "dall-e-3", "cursor", "elevenlabs", "notion-ai"];
+  const popularTools = toolsData
+    .filter((t) => popularToolSlugs.includes(t.slug) && t.slug !== tool.slug)
+    .slice(0, 8);
+
   // 智能Related Articles推荐：工具名匹配(50%) + 分类匹配(30%) + 标签匹配(20%)
   const toolNameWords = tool.name.toLowerCase().split(/\s+/).filter(w => w.length > 2);
   const relatedArticles = postsData
@@ -763,6 +769,20 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Similar Tools Recommended
           </h2>
           <ToolList tools={relatedTools} />
+        </section>
+      )}
+
+      {/* 跨分类热门工具推荐 - P1-004 增加重要工具入链 */}
+      {popularTools.length > 0 && (
+        <section className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-2xl border border-amber-100 dark:border-amber-900/50 shadow-sm p-6 mb-6">
+          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
+            <TrendingUp className="w-5 h-5 text-amber-600 dark:text-amber-400" />
+            Popular AI Tools
+          </h2>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-5">
+            Explore the most popular AI tools across all categories, handpicked by our editorial team.
+          </p>
+          <ToolList tools={popularTools} />
         </section>
       )}
 
