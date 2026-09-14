@@ -1,13 +1,13 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 29,
+  "current_iteration": 37,
   "current_phase": "waiting_for_next_trigger",
   "status": "running",
-  "last_deployment": "2026-09-13T19:04:45.243035+08:00 (Iteration 29 - Article internal link optimization: 215 links added)",
-  "total_iterations_completed": 28,
-  "total_issues_fixed": 37,
-  "total_pages_optimized": 3805,
+  "last_deployment": "2026-09-14 01:08:13 (Iteration 32 - Vercel edge cache configuration)",
+  "total_iterations_completed": 36,
+  "total_issues_fixed": 45,
+  "total_pages_optimized": 3867,
   "total_articles_generated": 7,
   "current_todo": [],
   "completed_todo": [
@@ -327,7 +327,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-13T11:04:45.243048+00:00",
+  "last_updated": "2026-09-14T09:35:11.316514",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -379,34 +379,22 @@
   ],
   "next_iteration_focus": [
     {
-      "id": "P2-003",
-      "priority": "P2",
-      "title": "TTFB optimization (434ms -> <200ms)",
-      "description": "Optimize server response time, investigate category page 928ms anomaly, enable Vercel edge caching"
-    },
-    {
-      "id": "GROWTH-018",
-      "priority": "GROWTH",
-      "title": "Backlink building",
-      "description": "Submit 5 GitHub Awesome-List Issues and 15 AI directory sites for backlinks"
-    },
-    {
-      "id": "GROWTH-022",
-      "priority": "GROWTH",
-      "title": "Create Midjourney vs DALL-E 3 2026 comparison article",
-      "description": "High-search-volume keyword, 2500+ words, with real screenshots from crawled Top20 set"
-    },
-    {
-      "id": "P1-006",
+      "id": "P1-008",
       "priority": "P1",
-      "title": "Add real screenshots to remaining articles",
-      "description": "Currently only 2 of 55 articles have real screenshots. Use crawled Top20 screenshots to add relevant images to articles"
+      "title": "用户确认截图后部署到网站",
+      "description": "用户确认截图质量后，将合格截图转换为WebP格式，部署到public/screenshots/real/webp/目录，并更新文章中的截图引用"
+    },
+    {
+      "id": "P1-009",
+      "priority": "P1",
+      "title": "重新爬取失败和低质量截图",
+      "description": "重新爬取suno docs和6张低质量截图（OpenAI相关页面可能需要特殊处理）"
     },
     {
       "id": "GROWTH-023",
       "priority": "GROWTH",
-      "title": "Expand Top20 tool pages with hands-on experience",
-      "description": "Add real usage experience, testing data, and performance benchmarks to Top20 tool detail pages"
+      "title": "Top20工具页内容扩充",
+      "description": "为Top20工具页添加真实使用体验、测试数据和性能基准"
     }
   ],
   "milestones": [
@@ -419,5 +407,19 @@
       "impact": "Complete E-E-A-T experience signal coverage across entire tool catalog"
     }
   ],
-  "last_iteration_summary": "Iteration 29: Article internal link optimization - Added Related AI Tools section to all 56 articles, 215 internal links, Top20 tool inbound links from 0 to avg 10.8. Commit d9bea046"
+  "last_iteration_summary": {
+    "iteration": 32,
+    "title": "Vercel edge cache configuration (vercel.json)",
+    "timestamp": "2026-09-14T01:08:13.258583+08:00",
+    "tasks_completed": [
+      "vercel.json添加HTML页面缓存: s-maxage=3600, stale-while-revalidate=86400",
+      "vercel.json添加静态资源缓存: max-age=31536000, immutable",
+      "vercel.json添加截图资源缓存: max-age=31536000, immutable",
+      "vercel.json添加API路由: no-store",
+      "TTFB从431ms降低到320ms (改善25.7%)"
+    ],
+    "github_commit": "4954244abaf15df8d0c50c14d32af4b886cc05f5",
+    "verification": "TTFB改善25.7%，但Vercel边缘缓存未完全生效，Cache-Control仍为max-age=0"
+  },
+  "latest_commit": "3280f4d09e9e2241a4d44e9e40ee11137864ef78"
 }
