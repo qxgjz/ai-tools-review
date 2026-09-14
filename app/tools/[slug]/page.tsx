@@ -60,10 +60,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       authors: ["AIToolCrux Editorial Team"],
       images: [
         {
-          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review 2026")}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(tool.category || "AI Tools")}`,
+          url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
           width: 1200,
           height: 630,
-          alt: `${tool.name} Review 2026 - AIToolCrux`,
+          alt: "AIToolCrux - AI Tool Reviews",
         },
       ],
     },

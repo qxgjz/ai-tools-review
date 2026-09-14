@@ -317,10 +317,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       siteName: "AIToolCrux",
       images: [
         {
-          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(title.slice(0, 80))}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(category?.name || "AI Tools")}`,
+          url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
           width: 1200,
           height: 630,
-          alt: `${title} - AIToolCrux`,
+          alt: "AIToolCrux - Best AI Tools",
         },
       ],
     },

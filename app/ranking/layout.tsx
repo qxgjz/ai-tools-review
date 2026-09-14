@@ -15,10 +15,10 @@ export const metadata: Metadata = {
     siteName: "AIToolCrux",
     images: [
       {
-        url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+Ranking+2026&description=Top+533+AI+tools+rated+and+reviewed&category=AI+Tools+Ranking",
+        url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
         width: 1200,
         height: 630,
-        alt: "AIToolCrux - Best AI Tools Ranking 2026",
+        alt: "AIToolCrux - Best AI Tools",
       },
     ],
   },

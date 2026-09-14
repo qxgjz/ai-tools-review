@@ -86,10 +86,10 @@ export function generateMetadata({ params }: PostPageProps) {
       tags: post.tags || [],
       images: [
         {
-          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 80))}&description=${encodeURIComponent(description.slice(0, 100))}&category=AI+Tool+Reviews`,
+          url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
           width: 1200,
           height: 630,
-          alt: `${post.title} - AIToolCrux`,
+          alt: "AIToolCrux - AI Tool Reviews",
         },
       ],
     },
