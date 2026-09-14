@@ -54,9 +54,18 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       description: description.slice(0, 160),
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       type: "article",
+      siteName: "AIToolCrux",
       publishedTime: tool.lastUpdated,
       modifiedTime: tool.lastUpdated,
       authors: ["AIToolCrux Editorial Team"],
+      images: [
+        {
+          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review 2026")}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(tool.category || "AI Tools")}`,
+          width: 1200,
+          height: 630,
+          alt: `${tool.name} Review 2026 - AIToolCrux`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",

@@ -12,6 +12,15 @@ export const metadata: Metadata = {
     description: "Discover the definitive ranking of the best AI tools in 2026. 533+ tools evaluated across 6 dimensions with expert reviews.",
     url: "https://www.aitoolcrux.com/ranking",
     type: "website",
+    siteName: "AIToolCrux",
+    images: [
+      {
+        url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+Ranking+2026&description=Top+533+AI+tools+rated+and+reviewed&category=AI+Tools+Ranking",
+        width: 1200,
+        height: 630,
+        alt: "AIToolCrux - Best AI Tools Ranking 2026",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",

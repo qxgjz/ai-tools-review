@@ -79,10 +79,19 @@ export function generateMetadata({ params }: PostPageProps) {
       description: description,
       url: `https://www.aitoolcrux.com/blog/${post.slug}`,
       type: "article",
+      siteName: "AIToolCrux",
       publishedTime: post.publishedAt,
       modifiedTime: post.publishedAt,
       authors: ["AIToolCrux Editorial Team"],
       tags: post.tags || [],
+      images: [
+        {
+          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 80))}&description=${encodeURIComponent(description.slice(0, 100))}&category=AI+Tool+Reviews`,
+          width: 1200,
+          height: 630,
+          alt: `${post.title} - AIToolCrux`,
+        },
+      ],
     },
     twitter: {
       card: "summary_large_image",
