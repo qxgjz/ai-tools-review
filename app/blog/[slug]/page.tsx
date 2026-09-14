@@ -79,19 +79,10 @@ export function generateMetadata({ params }: PostPageProps) {
       description: description,
       url: `https://www.aitoolcrux.com/blog/${post.slug}`,
       type: "article",
-      siteName: "AIToolCrux",
       publishedTime: post.publishedAt,
       modifiedTime: post.publishedAt,
       authors: ["AIToolCrux Editorial Team"],
       tags: post.tags || [],
-      images: [
-        {
-          url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
-          width: 1200,
-          height: 630,
-          alt: "AIToolCrux - AI Tool Reviews",
-        },
-      ],
     },
     twitter: {
       card: "summary_large_image",
