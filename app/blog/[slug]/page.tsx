@@ -97,6 +97,9 @@ export function generateMetadata({ params }: PostPageProps) {
       card: "summary_large_image",
       title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
       description: description,
+      images: [
+        `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 50))}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(post.category || "AI Tools")}`,
+      ],
     },
   };
 }
