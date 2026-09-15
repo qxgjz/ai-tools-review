@@ -47,6 +47,7 @@ export interface Tool {
   tags: string[];
   hasFreeTier: boolean;
   officialUrl?: string;
+  affiliateUrl?: string;
   lastUpdated: string;
   // Extended fields for rich content
   longDescription?: string;

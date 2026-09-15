@@ -208,7 +208,7 @@ export default function PostPage({ params }: PostPageProps) {
   const tool = tools.find((t) => t.slug === toolSlug);
   const toolName = tool?.name || post.title.split(" ")[0] || "this tool";
   const officialUrl = tool?.officialUrl || `https://www.google.com/search?q=${encodeURIComponent(toolName)}`;
-  const affiliateUrl = (tool as any)?.affiliateUrl || undefined;
+  const affiliateUrl = tool?.affiliateUrl || undefined;
 
   // 计算Tools平均Rating（用于Review Schema）
   const avgScore = tool?.scores

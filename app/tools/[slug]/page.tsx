@@ -288,13 +288,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             <div className="text-xs text-zinc-400 dark:text-zinc-500 mt-1">Overall Score / 10</div>
           </div>
         </div>
-        {(tool.officialUrl || (tool as any).affiliateUrl) && (
+        {(tool.officialUrl || tool.affiliateUrl) && (
           <div className="mt-6 pt-6 border-t border-gray-50 dark:border-zinc-800">
-            <a href={(tool as any).affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
+            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
               <ExternalLink className="w-4 h-4" />
               Visit Official Website
             </a>
-            {(tool as any).affiliateUrl && (
+            {tool.affiliateUrl && (
               <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
                 <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
               </p>
@@ -716,8 +716,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           {(tool as any).verdict || `${tool.name} is a ${tool.category} AI tool by ${tool.vendor}, with an overall score of ${total.toFixed(1)}/10 and a ${grade} grade (${GRADE_DESCRIPTIONS[grade]}). ${tool.pros[0]}. It's worth noting that ${tool.cons[0]}. ${tool.hasFreeTier ? "This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade." : ""} Overall, ${total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : "overall performance is average, we recommend choosing carefully based on your requirements."}`}
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3">
-          {(tool.officialUrl || (tool as any).affiliateUrl) && (
-            <a href={(tool as any).affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
+          {(tool.officialUrl || tool.affiliateUrl) && (
+            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
               <ExternalLink className="w-4 h-4" />
               Visit {tool.name}
             </a>

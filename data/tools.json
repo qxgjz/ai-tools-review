@@ -184,7 +184,8 @@
         "test": "1000+ chat organization usability",
         "comparison": "Folders help, search needs improvement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "2",
@@ -372,7 +373,8 @@
         "test": "200 benign creative prompts",
         "comparison": "Higher than desired for creative work"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "3",
@@ -552,7 +554,8 @@
         "test": "Interface and interaction expert review",
         "comparison": "Functional but less polished than competitors"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "4",
@@ -761,7 +764,8 @@
         "test": "Discord community usefulness assessment",
         "comparison": "Inspiring but interface is polarizing"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "5",
@@ -965,7 +969,8 @@
         "test": "200 benign creative prompts",
         "comparison": "More aggressive than competitors"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "6",
@@ -1167,7 +1172,8 @@
         "test": "Local runtime data privacy assessment",
         "comparison": "No data leaves local machine"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "7",
@@ -1376,7 +1382,8 @@
         "test": "GitHub controlled study (2000+ developers)",
         "comparison": "Significant for boilerplate-heavy tasks"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "8",
@@ -1584,7 +1591,8 @@
         "test": "30 feature descriptions to working code",
         "comparison": "Generates usable boilerplate, needs refinement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "9",
@@ -1787,7 +1795,8 @@
         "test": "Free tier agent call limit",
         "comparison": "Enough for casual use, Pro for heavy"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "10",
@@ -1996,7 +2005,8 @@
         "test": "$49/user/month value assessment",
         "comparison": "Good for teams, expensive for individuals"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "11",
@@ -2205,7 +2215,8 @@
         "test": "$49/user/month value assessment",
         "comparison": "Adds up quickly for large teams"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "12",
@@ -2415,7 +2426,8 @@
         "test": "50 documents with complex formatting",
         "comparison": "Most formatting preserved through AI edits"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "13",
@@ -2623,7 +2635,8 @@
         "test": "100 documents with known copied passages",
         "comparison": "Good for web content"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "14",
@@ -2837,7 +2850,8 @@
         "test": "Standard quality generation",
         "comparison": "Plan needed for batch processing"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "15",
@@ -3045,7 +3059,8 @@
         "test": "Waitlist-only access status",
         "comparison": "Not yet generally available"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "16",
@@ -3469,7 +3484,8 @@
         "test": "Performance across query categories",
         "comparison": "Excellent for research, weak for transactions"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "18",
@@ -3677,7 +3693,8 @@
         "test": "AI features in existing Figma workflow",
         "comparison": "Feels native, no context switching"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "19",
@@ -3887,7 +3904,8 @@
         "test": "Free tier export resolution",
         "comparison": "Pro needed for 4K and transparent backgrounds"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "20",
@@ -4096,7 +4114,8 @@
         "test": "30 song extensions, transition smoothness",
         "comparison": "Some transitions are abrupt"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "n8n",
@@ -4220,7 +4239,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "auto-gpt",
@@ -4340,7 +4360,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ollama",
@@ -4462,7 +4483,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dify",
@@ -4587,7 +4609,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-cpp",
@@ -4707,7 +4730,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gemini-cli",
@@ -4829,7 +4853,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "open-webui",
@@ -4954,7 +4979,8 @@
         "test": "100 edge case queries",
         "comparison": "Helpful without being reckless"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "vllm",
@@ -5075,7 +5101,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "claude-code",
@@ -5195,7 +5222,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "browser-use",
@@ -5317,7 +5345,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lobe-chat",
@@ -5441,7 +5470,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langflow",
@@ -5563,7 +5593,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openhands",
@@ -5680,7 +5711,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "codex",
@@ -5797,7 +5829,8 @@
         "test": "Code context capacity",
         "comparison": "Varies by plan"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mineru",
@@ -5917,7 +5950,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain",
@@ -6038,7 +6072,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "docling",
@@ -6156,7 +6191,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-index",
@@ -6277,7 +6313,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "worldmonitor",
@@ -6396,7 +6433,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "crewai",
@@ -6515,7 +6553,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "milvus",
@@ -6633,7 +6672,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ragflow",
@@ -6755,7 +6795,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "cherry-studio",
@@ -6873,7 +6914,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ray",
@@ -6991,7 +7033,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "jan",
@@ -7109,7 +7152,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "litellm",
@@ -7233,7 +7277,8 @@
         "test": "Supported output formats",
         "comparison": "Professional formats available"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "unsloth",
@@ -7352,7 +7397,8 @@
         "test": "Supported output formats",
         "comparison": "Professional formats available"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "text-generation-webui",
@@ -7472,7 +7518,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "firecrawl",
@@ -7592,7 +7639,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "fabric",
@@ -7709,7 +7757,8 @@
         "test": "Service availability guarantee",
         "comparison": "Enterprise-grade reliability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "phidata",
@@ -7827,7 +7876,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "goose",
@@ -7948,7 +7998,8 @@
         "method": "Time from code push to production deployment",
         "baseline": "Traditional deployments 15-30 minutes"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mem0",
@@ -8065,7 +8116,8 @@
         "method": "Time to integrate memory system into existing chat application",
         "baseline": "Custom vector DB setup 8-16 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "librechat",
@@ -8186,7 +8238,8 @@
         "method": "Percentage of interactions rated helpful or very helpful",
         "baseline": "Survey of 100 test sessions"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "anything-llm",
@@ -8306,7 +8359,8 @@
         "method": "Percentage of team members actively using after 2 weeks",
         "baseline": "Enterprise software average 50-60%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "continue",
@@ -8424,7 +8478,8 @@
         "method": "Time to become productive with core features",
         "baseline": "IDE integration is intuitive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "copilotkit",
@@ -8541,7 +8596,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "flowise",
@@ -8661,7 +8717,8 @@
         "method": "Percentage of team members actively using after 2 weeks",
         "baseline": "Enterprise software average 50-60%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "crawl4ai",
@@ -8780,7 +8837,8 @@
         "method": "Number of concurrent agents tested without performance issues",
         "baseline": "Tested on standard infrastructure"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "composio",
@@ -8900,7 +8958,8 @@
         "method": "Average response time for short audio requests",
         "baseline": "Real-time applications require <1s"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openai-python",
@@ -9018,7 +9077,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pydantic",
@@ -9135,7 +9195,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "semantic-kernel",
@@ -9252,7 +9313,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-factory",
@@ -9371,7 +9433,8 @@
         "method": "Number of concurrent agents tested without performance issues",
         "baseline": "Tested on standard infrastructure"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chroma",
@@ -9488,7 +9551,8 @@
         "method": "Time and expertise required for initial setup and tuning",
         "baseline": "Standard databases 2-4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langgraph",
@@ -9609,7 +9673,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openai-translator",
@@ -9728,7 +9793,8 @@
         "method": "Time from code push to production deployment",
         "baseline": "Traditional deployments 15-30 minutes"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "haystack",
@@ -9849,7 +9915,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langfuse",
@@ -9970,7 +10037,8 @@
         "method": "Time for initial setup and basic dashboard configuration",
         "baseline": "Enterprise tools 1-2 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai",
@@ -10087,7 +10155,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "repomix",
@@ -10204,7 +10273,8 @@
         "method": "Number of concurrent agents tested without performance issues",
         "baseline": "Tested on standard infrastructure"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mastra",
@@ -10324,7 +10394,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "faiss",
@@ -10443,7 +10514,8 @@
         "method": "Time and expertise required for initial setup and tuning",
         "baseline": "Standard databases 2-4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "python-sdk",
@@ -10562,7 +10634,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dspy",
@@ -10679,7 +10752,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "servers",
@@ -10796,7 +10870,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "prefect",
@@ -10915,7 +10990,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "scrapegraph-ai",
@@ -11036,7 +11112,8 @@
         "method": "Percentage of team members actively using after 2 weeks",
         "baseline": "Enterprise software average 50-60%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "markitdown",
@@ -11154,7 +11231,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autogen",
@@ -11271,7 +11349,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentscope",
@@ -11389,7 +11468,8 @@
         "method": "Number of concurrent agents tested without performance issues",
         "baseline": "Tested on standard infrastructure"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatbox",
@@ -11507,7 +11587,8 @@
         "method": "Percentage of interactions rated helpful or very helpful",
         "baseline": "Survey of 100 test sessions"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "skyvern",
@@ -11627,7 +11708,8 @@
         "method": "Number of concurrent agents tested without performance issues",
         "baseline": "Tested on standard infrastructure"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "qdrant",
@@ -11746,7 +11828,8 @@
         "method": "Time and expertise required for initial setup and tuning",
         "baseline": "Standard databases 2-4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tradingagents",
@@ -11863,7 +11946,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "temporal",
@@ -11980,7 +12064,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "promptfoo",
@@ -12101,7 +12186,8 @@
         "method": "Ongoing maintenance and administration effort",
         "baseline": "Automated indexing and monitoring"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "whisperx",
@@ -12219,7 +12305,8 @@
         "method": "Average response time for short audio requests",
         "baseline": "Real-time applications require <1s"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "opik",
@@ -12339,7 +12426,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "roo-code",
@@ -12457,7 +12545,8 @@
         "method": "Time to become productive with core features",
         "baseline": "IDE integration is intuitive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchainjs",
@@ -12574,7 +12663,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "windmill",
@@ -12695,7 +12785,8 @@
         "method": "Percentage of team members actively using after 2 weeks",
         "baseline": "Enterprise software average 50-60%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "weaviate",
@@ -12814,7 +12905,8 @@
         "method": "Time and expertise required for initial setup and tuning",
         "baseline": "Standard databases 2-4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "camel",
@@ -12931,7 +13023,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pydantic-ai",
@@ -13054,7 +13147,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "olmocr",
@@ -13173,7 +13267,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatdev",
@@ -13290,7 +13385,8 @@
         "method": "Time to switch between LLM providers in existing workflow",
         "baseline": "Manual code changes 1-2 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "unstructured",
@@ -13415,7 +13511,8 @@
         "method": "Percentage of team members actively using after 2 weeks",
         "baseline": "Enterprise software average 50-60%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "letta",
@@ -13539,7 +13636,8 @@
         "method": "Time to integrate memory system into existing chat application",
         "baseline": "Custom vector DB setup 8-16 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "typescript-sdk",
@@ -13657,7 +13755,8 @@
         "method": "Clarity, completeness, and usefulness of documentation",
         "baseline": "Developer tools average 7/10"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "a2a",
@@ -13776,7 +13875,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chainlit",
@@ -13893,7 +13993,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "buzz",
@@ -14010,7 +14111,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "open-notebook",
@@ -14128,7 +14230,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "e2b",
@@ -14249,7 +14352,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-researcher",
@@ -14368,7 +14472,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tensorzero",
@@ -14487,7 +14592,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "peft",
@@ -14605,7 +14711,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pipecat",
@@ -14723,7 +14830,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agency-agents",
@@ -14842,7 +14950,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "db-gpt",
@@ -14963,7 +15072,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "eino",
@@ -15081,7 +15191,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autoresearch",
@@ -15200,7 +15311,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gstack",
@@ -15317,7 +15429,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "deer-flow",
@@ -15436,7 +15549,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "wrenai",
@@ -15555,7 +15669,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-cpp-python",
@@ -15672,7 +15787,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "outlines",
@@ -15791,7 +15907,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "txtai",
@@ -15912,7 +16029,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "phoenix",
@@ -16029,7 +16147,8 @@
         "method": "p95 dashboard rendering time",
         "baseline": "Target <3s"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "smolagents",
@@ -16147,7 +16266,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "docsgpt",
@@ -16268,7 +16388,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "cognee",
@@ -16387,7 +16508,8 @@
         "method": "Cross-user memory leakage tests",
         "baseline": "Critical security requirement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tabby",
@@ -16506,7 +16628,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "guidance",
@@ -16625,7 +16748,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llmware",
@@ -16746,7 +16870,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain4j",
@@ -16866,7 +16991,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "deepeval",
@@ -16984,7 +17110,8 @@
         "method": "p95 dashboard rendering time",
         "baseline": "Target <3s"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "scalene",
@@ -17103,7 +17230,8 @@
         "method": "Cross-user memory leakage tests",
         "baseline": "Critical security requirement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mcp-go",
@@ -17222,7 +17350,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "bentoml",
@@ -17341,7 +17470,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gateway",
@@ -17464,7 +17594,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "axolotl",
@@ -17582,7 +17713,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-computer-assistant",
@@ -17701,7 +17833,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openllmetry",
@@ -17818,7 +17951,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "screenshot-to-code",
@@ -17937,7 +18071,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "voltagent",
@@ -18061,7 +18196,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "instructor",
@@ -18178,7 +18314,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "praisonai",
@@ -18299,7 +18436,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "guardrails",
@@ -18418,7 +18556,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "aider",
@@ -18537,7 +18676,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "oumi",
@@ -18656,7 +18796,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "whodb",
@@ -18775,7 +18916,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pr-agent",
@@ -18893,7 +19035,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chat-ui",
@@ -19011,7 +19154,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mlc-llm",
@@ -19128,7 +19272,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agency-swarm",
@@ -19247,7 +19392,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "manifest",
@@ -19365,7 +19511,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agenta",
@@ -19485,7 +19632,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "inspector",
@@ -19606,7 +19754,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "casibase",
@@ -19727,7 +19876,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-shortcut",
@@ -19845,7 +19995,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "steel-browser",
@@ -19966,7 +20117,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm",
@@ -20084,7 +20236,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langroid",
@@ -20205,7 +20358,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "text-generation-inference",
@@ -20323,7 +20477,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "bifrost",
@@ -20444,7 +20599,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "specification",
@@ -20563,7 +20719,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langwatch",
@@ -20683,7 +20840,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "private-gpt",
@@ -20804,7 +20962,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "bitnet",
@@ -20923,7 +21082,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "vanna",
@@ -21044,7 +21204,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ufo",
@@ -21167,7 +21328,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "swe-agent",
@@ -21287,7 +21449,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langgraphjs",
@@ -21406,7 +21569,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ragas",
@@ -21527,7 +21691,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "generative-ai",
@@ -21646,7 +21811,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "nemo-guardrails",
@@ -21763,7 +21929,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "happy",
@@ -21880,7 +22047,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "griptape",
@@ -21999,7 +22167,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openlit",
@@ -22121,7 +22290,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "botpress",
@@ -22240,7 +22410,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-chatbot",
@@ -22357,7 +22528,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "skills",
@@ -22476,7 +22648,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "open-interpreter",
@@ -22593,7 +22766,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "harbor",
@@ -22715,7 +22889,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "code-interpreter",
@@ -22833,7 +23008,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "claude-code-router",
@@ -22950,7 +23126,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "jupyter-ai",
@@ -23070,7 +23247,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "finrobot",
@@ -23188,7 +23366,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ludwig",
@@ -23307,7 +23486,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agixt",
@@ -23427,7 +23607,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "notte",
@@ -23546,7 +23727,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "toolhive",
@@ -23668,7 +23850,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "index-tts",
@@ -23786,7 +23969,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "auto-dev",
@@ -23908,7 +24092,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "metagpt",
@@ -24026,7 +24211,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gorilla",
@@ -24146,7 +24332,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mergekit",
@@ -24264,7 +24451,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tts-generation-webui",
@@ -24384,7 +24572,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pandas-ai",
@@ -24506,7 +24695,8 @@
         "method": "Time to productive use",
         "baseline": "Excellent"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-app",
@@ -24626,7 +24816,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "omniroute",
@@ -24743,7 +24934,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "localgpt",
@@ -24866,7 +25058,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-collection",
@@ -24984,7 +25177,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-next-web",
@@ -25103,7 +25297,8 @@
         "method": "Across 100 conversations",
         "baseline": "Good engagement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dolphin",
@@ -25226,7 +25421,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "kodus-ai",
@@ -25343,7 +25539,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pgvector",
@@ -25461,7 +25658,8 @@
         "method": "Stable with 500 concurrent clients",
         "baseline": "Good scalability"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "wfgy",
@@ -25581,7 +25779,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "uagents",
@@ -25705,7 +25904,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-engineer",
@@ -25825,7 +26025,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "genai-agents",
@@ -25943,7 +26144,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "grok-1",
@@ -26060,7 +26262,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dust",
@@ -26178,7 +26381,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "colossalai",
@@ -26296,7 +26500,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "superagent",
@@ -26414,7 +26619,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chattts",
@@ -26532,7 +26738,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "swarms",
@@ -26657,7 +26864,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "helicone",
@@ -26777,7 +26985,8 @@
         "method": "p95 dashboard rendering time",
         "baseline": "Target <3s"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "babyagi",
@@ -26895,7 +27104,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "qwen3",
@@ -27014,7 +27224,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-chatchat",
@@ -27134,7 +27345,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "promptify",
@@ -27252,7 +27464,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "taskweaver",
@@ -27370,7 +27583,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "fastchat",
@@ -27491,7 +27705,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-pilot",
@@ -27609,7 +27824,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "quivr",
@@ -27730,7 +27946,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-codereview-gitlab",
@@ -27847,7 +28064,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "uqlm",
@@ -27964,7 +28182,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentgpt",
@@ -28083,7 +28302,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatbot-ui",
@@ -28200,7 +28420,8 @@
         "method": "Across 100 conversations",
         "baseline": "Good engagement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tinytroupe",
@@ -28318,7 +28539,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-mobile",
@@ -28435,7 +28657,8 @@
         "method": "50 crash recovery tests",
         "baseline": "Target 100%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chat-langchain",
@@ -28552,7 +28775,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentops",
@@ -28671,7 +28895,8 @@
         "method": "p95 dashboard rendering time",
         "baseline": "Target <3s"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-artifacts",
@@ -28790,7 +29015,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "storm",
@@ -28911,7 +29137,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchaingo",
@@ -29030,7 +29257,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mistral-inference",
@@ -29148,7 +29376,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama3",
@@ -29266,7 +29495,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chathub",
@@ -29388,7 +29618,8 @@
         "method": "Across 100 conversations",
         "baseline": "Good engagement"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "typechat",
@@ -29505,7 +29736,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "flux",
@@ -29622,7 +29854,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "deepseek-coder",
@@ -29745,7 +29978,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-dart",
@@ -29863,7 +30097,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-crawler",
@@ -29980,7 +30215,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "nadirclaw",
@@ -30100,7 +30336,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "jina",
@@ -30223,7 +30460,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "hallucination-leaderboard",
@@ -30346,7 +30584,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "swarm",
@@ -30465,7 +30704,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "courses",
@@ -30582,7 +30822,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "generative-agents",
@@ -30699,7 +30940,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "devika",
@@ -30818,7 +31060,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "evals",
@@ -30937,7 +31180,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "git-lrc",
@@ -31056,7 +31300,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gemini-fullstack-langgraph-quickstart",
@@ -31181,7 +31426,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "superagi",
@@ -31305,7 +31551,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-scientist",
@@ -31423,7 +31670,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "plandex",
@@ -31546,7 +31794,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "aios",
@@ -31663,7 +31912,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama3-from-scratch",
@@ -31781,7 +32031,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "demogpt",
@@ -31901,7 +32152,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dalle-mini",
@@ -32018,7 +32270,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "adala",
@@ -32138,7 +32391,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "powerinfer",
@@ -32259,7 +32513,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gitingest",
@@ -32378,7 +32633,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lora",
@@ -32500,7 +32756,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-google-extension",
@@ -32619,7 +32876,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "jarvis-ai-assistant",
@@ -32736,7 +32994,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-town",
@@ -32859,7 +33118,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openprompt-co",
@@ -32978,7 +33238,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "open-llms",
@@ -33097,7 +33358,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openllm",
@@ -33216,7 +33478,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gptdiscord",
@@ -33337,7 +33600,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "developer",
@@ -33454,7 +33718,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-github",
@@ -33579,7 +33844,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "seamless-communication",
@@ -33697,7 +33963,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "insanely-fast-whisper",
@@ -33816,7 +34083,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "claude-engineer",
@@ -33933,7 +34201,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "go-openai",
@@ -34052,7 +34321,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchainrb",
@@ -34170,7 +34440,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "self-operating-computer",
@@ -34287,7 +34558,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-prompt-engineer",
@@ -34405,7 +34677,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "audiogpt",
@@ -34522,7 +34795,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "imagebind",
@@ -34639,7 +34913,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "petals",
@@ -34756,7 +35031,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "arcade-ai",
@@ -34876,7 +35152,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agents",
@@ -34994,7 +35271,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "bloop",
@@ -35113,7 +35391,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "papers-for-molecular-design-using-dl",
@@ -35232,7 +35511,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openchatkit",
@@ -35349,7 +35629,8 @@
         "method": "CPU <5%, RAM <200MB idle",
         "baseline": "Acceptable"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "r2r",
@@ -35468,7 +35749,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "robby-chatbot",
@@ -35588,7 +35870,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "xagent",
@@ -35706,7 +35989,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "emotivoice",
@@ -35825,7 +36109,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentbench",
@@ -35942,7 +36227,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "large-language-model-notebooks-course",
@@ -36059,7 +36345,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gptcache",
@@ -36180,7 +36467,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "sweep",
@@ -36298,7 +36586,8 @@
         "method": "Tested Python, JS, Go, Rust, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "verba",
@@ -36419,7 +36708,8 @@
         "method": "Vector index vs original document size",
         "baseline": "Efficient storage"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "diffusion-models-class",
@@ -36538,7 +36828,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "megaparse",
@@ -36655,7 +36946,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "shortgpt",
@@ -36772,7 +37064,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llocalsearch",
@@ -36892,7 +37185,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-migrate",
@@ -37014,7 +37308,8 @@
         "method": "Available integrations at time of testing",
         "baseline": "Growing ecosystem"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "voyager",
@@ -37132,7 +37427,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "appagent",
@@ -37253,7 +37549,8 @@
         "method": "MP3, WAV, FLAC, OGG, etc.",
         "baseline": "Comprehensive"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autopr",
@@ -37372,7 +37669,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "street-fighter-ai",
@@ -37491,7 +37789,8 @@
         "method": "From install to first working agent",
         "baseline": "Target <4 hours"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lavague",
@@ -37612,7 +37911,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "realchar",
@@ -37731,7 +38031,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "devopsgpt",
@@ -37849,7 +38150,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "rigging",
@@ -37968,7 +38270,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ultravox",
@@ -38086,7 +38389,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "taskingai",
@@ -38205,7 +38509,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "vision-agent",
@@ -38326,7 +38631,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openchat",
@@ -38445,7 +38751,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-answer-engine",
@@ -38562,7 +38869,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentverse",
@@ -38681,7 +38989,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openagents",
@@ -38800,7 +39109,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "brag-langchain",
@@ -38920,7 +39230,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ragapp",
@@ -39042,7 +39353,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "maestro",
@@ -39160,7 +39472,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lagent",
@@ -39279,7 +39592,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lmql",
@@ -39399,7 +39713,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-getting-started",
@@ -39517,7 +39832,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-cpp-agent",
@@ -39638,7 +39954,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "alphacodium",
@@ -39756,7 +40073,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "text-extract-api",
@@ -39876,7 +40194,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "codeinterpreter-api",
@@ -39993,7 +40312,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "turbopilot",
@@ -40112,7 +40432,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentic-radar",
@@ -40233,7 +40554,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-code-ui",
@@ -40351,7 +40673,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "simpleaichat",
@@ -40470,7 +40793,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-hub",
@@ -40590,7 +40914,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mistral-finetune",
@@ -40709,7 +41034,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "textgrad",
@@ -40827,7 +41153,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "hands-on-llms",
@@ -40947,7 +41274,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatfiles",
@@ -41068,7 +41396,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "pezzo",
@@ -41190,7 +41519,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chainforge",
@@ -41310,7 +41640,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "promptsource",
@@ -41429,7 +41760,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "core",
@@ -41554,7 +41886,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "databerry",
@@ -41673,7 +42006,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mini-agi",
@@ -41795,7 +42129,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-guard",
@@ -41913,7 +42248,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "priompt",
@@ -42037,7 +42373,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "clip-retrieval",
@@ -42156,7 +42493,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "vimgpt",
@@ -42276,7 +42614,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "camel-autogpt",
@@ -42396,7 +42735,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "memary",
@@ -42518,7 +42858,8 @@
         "method": "Time to first working memory system",
         "baseline": "Target <6h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "rasagpt",
@@ -42638,7 +42979,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "codel",
@@ -42756,7 +43098,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "fastagency",
@@ -42875,7 +43218,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "elia",
@@ -42994,7 +43338,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openai-openapi",
@@ -43113,7 +43458,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "uptrain",
@@ -43234,7 +43580,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llmstack",
@@ -43354,7 +43701,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "second-brain-agent",
@@ -43478,7 +43826,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openagi",
@@ -43597,7 +43946,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-agents",
@@ -43717,7 +44067,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gptswarm",
@@ -43835,7 +44186,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "neurite",
@@ -43952,7 +44304,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-directories",
@@ -44071,7 +44424,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autochain",
@@ -44189,7 +44543,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dev-gpt",
@@ -44312,7 +44667,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "solidgpt",
@@ -44429,7 +44785,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dialoqbase",
@@ -44549,7 +44906,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tarsier",
@@ -44667,7 +45025,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "minima",
@@ -44791,7 +45150,8 @@
         "method": "Time to first working RAG pipeline",
         "baseline": "Target <8h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llmsherpa",
@@ -44908,7 +45268,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpteam",
@@ -45032,7 +45393,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "react-agent",
@@ -45152,7 +45514,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "knowledge",
@@ -45269,7 +45632,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "knowledge-gpt",
@@ -45388,7 +45752,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "code-act",
@@ -45506,7 +45871,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-serve",
@@ -45631,7 +45997,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "streamlit-agent",
@@ -45754,7 +46121,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-data-science-prompts",
@@ -45871,7 +46239,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-chain",
@@ -45990,7 +46359,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-eval-survey",
@@ -46108,7 +46478,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langfair",
@@ -46231,7 +46602,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "thinkgpt",
@@ -46350,7 +46722,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatarena",
@@ -46469,7 +46842,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dataline",
@@ -46586,7 +46960,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "crewai-tools",
@@ -46704,7 +47079,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "loopgpt",
@@ -46822,7 +47198,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-newspaper",
@@ -46941,7 +47318,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agent-protocol",
@@ -47061,7 +47439,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ai-legion",
@@ -47183,7 +47562,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ailice",
@@ -47301,7 +47681,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "restgpt",
@@ -47421,7 +47802,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chidori",
@@ -47539,7 +47921,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "babyagi-ui",
@@ -47659,7 +48042,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "emcee",
@@ -47780,7 +48164,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "codefuse-chatbot",
@@ -47900,7 +48285,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "hexabot",
@@ -48019,7 +48405,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "browser-extension",
@@ -48141,7 +48528,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-rust",
@@ -48260,7 +48648,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llamagym",
@@ -48380,7 +48769,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "minichain",
@@ -48499,7 +48889,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "flock",
@@ -48620,7 +49011,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "evo-ninja",
@@ -48738,7 +49130,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "browsergpt",
@@ -48856,7 +49249,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-embeddings-fastapi-service",
@@ -48977,7 +49371,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "ix",
@@ -49096,7 +49491,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-agents",
@@ -49214,7 +49610,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "canopy",
@@ -49333,7 +49730,8 @@
         "method": "Time to first working RAG pipeline",
         "baseline": "Target <8h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autogpt-js",
@@ -49452,7 +49850,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-chat-nextjs",
@@ -49571,7 +49970,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "tutor-gpt",
@@ -49690,7 +50090,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "thoughtsource",
@@ -49809,7 +50210,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gptrpg",
@@ -49928,7 +50330,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langkit",
@@ -50047,7 +50450,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mamba-chat",
@@ -50167,7 +50571,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatgdb",
@@ -50285,7 +50690,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatpdf",
@@ -50406,7 +50812,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentforge",
@@ -50528,7 +50935,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "microagents",
@@ -50647,7 +51055,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "skyagi",
@@ -50765,7 +51174,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "auto-evaluator",
@@ -50883,7 +51293,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-visualizer",
@@ -51003,7 +51414,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "workgpt",
@@ -51125,7 +51537,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llmflows",
@@ -51244,7 +51657,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "automata",
@@ -51363,7 +51777,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autopilot",
@@ -51484,7 +51899,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "yeagerai-agent",
@@ -51604,7 +52020,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "dr-doc-search",
@@ -51722,7 +52139,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "best-of-ai",
@@ -51841,7 +52259,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "multi-gpt",
@@ -51961,7 +52380,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "whispers2t",
@@ -52082,7 +52502,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "snowchat",
@@ -52200,7 +52621,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentlabs",
@@ -52318,7 +52740,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentpilot",
@@ -52438,7 +52861,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "embedbase",
@@ -52558,7 +52982,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chatgpt-artifacts",
@@ -52677,7 +53102,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agency",
@@ -52795,7 +53221,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "eidolon",
@@ -52916,7 +53343,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-agent-production-starter",
@@ -53033,7 +53461,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lumos",
@@ -53152,7 +53581,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agent4rec",
@@ -53271,7 +53701,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "aifs",
@@ -53388,7 +53819,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "beebot",
@@ -53510,7 +53942,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llama-cult-and-more",
@@ -53628,7 +54061,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autonomous-hr-chatbot",
@@ -53746,7 +54180,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mindsql",
@@ -53867,7 +54302,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "book-gpt",
@@ -53984,7 +54420,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langstream",
@@ -54104,7 +54541,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "termgpt",
@@ -54224,7 +54662,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "genia",
@@ -54343,7 +54782,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-strategy",
@@ -54461,7 +54901,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "todoist-mcp-server",
@@ -54584,7 +55025,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-runner",
@@ -54704,7 +55146,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "openlm",
@@ -54822,7 +55265,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentrun",
@@ -54942,7 +55386,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "open-assistant-api",
@@ -55063,7 +55508,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "create-t3-turbo-ai",
@@ -55182,7 +55628,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "lemon-agent",
@@ -55300,7 +55747,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agent",
@@ -55420,7 +55868,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-js-llm-template",
@@ -55538,7 +55987,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "instrukt",
@@ -55655,7 +56105,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "bananalyzer",
@@ -55774,7 +56225,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "datachad",
@@ -55893,7 +56345,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "agentflow",
@@ -56013,7 +56466,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "blockagi",
@@ -56133,7 +56587,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "repochat",
@@ -56253,7 +56708,8 @@
         "method": "Time to first working RAG pipeline",
         "baseline": "Target <8h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-decorators",
@@ -56373,7 +56829,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "flappy",
@@ -56492,7 +56949,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "fact-checker",
@@ -56609,7 +57067,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "chat-gpt-jupyter-extension",
@@ -56729,7 +57188,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "prompt-optimizer",
@@ -56846,7 +57306,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "langchain-streamlit-template",
@@ -56965,7 +57426,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "mindgeniusai",
@@ -57084,7 +57546,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "qabot",
@@ -57202,7 +57665,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "prompt2ui",
@@ -57320,7 +57784,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "hands-on-langchain-for-llm-applications-development",
@@ -57437,7 +57902,8 @@
         "method": "Time to first working agent",
         "baseline": "Target <4h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "autoact",
@@ -57560,7 +58026,8 @@
         "method": "Time to first working workflow",
         "baseline": "Target <2h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "npi",
@@ -57677,7 +58144,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "bondai",
@@ -57796,7 +58264,8 @@
         "method": "Time to first working memory system",
         "baseline": "Target <6h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "llm-ts",
@@ -57916,7 +58385,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "astra-assistants-api",
@@ -58035,7 +58505,8 @@
         "method": "Time to become productive",
         "baseline": "Target <3 days"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "gpt-code-search",
@@ -58153,7 +58624,8 @@
         "method": "Time to first working RAG pipeline",
         "baseline": "Target <8h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "21",
@@ -58275,7 +58747,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "22",
@@ -58395,7 +58868,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "23",
@@ -58515,7 +58989,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "24",
@@ -58635,7 +59110,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "25",
@@ -58761,7 +59237,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "26",
@@ -58882,7 +59359,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "27",
@@ -59004,7 +59482,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "28",
@@ -59124,7 +59603,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "29",
@@ -59245,7 +59725,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "30",
@@ -59365,7 +59846,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "31",
@@ -59485,7 +59967,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "32",
@@ -59606,7 +60089,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "33",
@@ -59728,7 +60212,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "34",
@@ -59848,7 +60333,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "35",
@@ -59968,7 +60454,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "36",
@@ -60092,7 +60579,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >2K"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "37",
@@ -60213,7 +60701,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "38",
@@ -60333,7 +60822,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "39",
@@ -60454,7 +60944,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "40",
@@ -60576,7 +61067,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "41",
@@ -60696,7 +61188,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "42",
@@ -60820,7 +61313,8 @@
         "method": "Bugs correctly identified and fixed",
         "baseline": "Target >70%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "43",
@@ -60941,7 +61435,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "44",
@@ -61063,7 +61558,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "45",
@@ -61184,7 +61680,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "46",
@@ -61305,7 +61802,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "47",
@@ -61427,7 +61925,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "48",
@@ -61548,7 +62047,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "49",
@@ -61668,7 +62168,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "50",
@@ -61789,7 +62290,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "51",
@@ -61909,7 +62411,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "52",
@@ -62029,7 +62532,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "53",
@@ -62149,7 +62653,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "54",
@@ -62270,7 +62775,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "55",
@@ -62392,7 +62898,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "56",
@@ -62514,7 +63021,8 @@
         "method": "Time to first productive use",
         "baseline": "Target <1h"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "57",
@@ -62636,7 +63144,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "58",
@@ -62757,7 +63266,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "59",
@@ -62879,7 +63389,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "60",
@@ -62999,7 +63510,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "61",
@@ -63121,7 +63633,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "62",
@@ -63241,7 +63754,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "63",
@@ -63363,7 +63877,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "64",
@@ -63485,7 +64000,8 @@
         "method": "Available output resolutions",
         "baseline": "Target >720p"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "65",
@@ -63605,7 +64121,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "66",
@@ -63726,7 +64243,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "67",
@@ -63848,7 +64366,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "68",
@@ -63970,7 +64489,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "69",
@@ -64092,7 +64612,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "70",
@@ -64212,7 +64733,8 @@
         "method": "Production uptime over 3 weeks",
         "baseline": "Target >99.5%"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "71",
@@ -64332,7 +64854,8 @@
         "method": "Time to configure as default",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "72",
@@ -64453,7 +64976,8 @@
         "method": "Time to configure as default",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "73",
@@ -64574,7 +65098,8 @@
         "method": "Time to configure as default",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "74",
@@ -64695,7 +65220,8 @@
         "method": "Time to configure as default",
         "baseline": "Target <15 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "75",
@@ -64816,7 +65342,8 @@
         "method": "Time to first productive design",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "76",
@@ -64937,7 +65464,8 @@
         "method": "Time to first productive design",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "77",
@@ -65057,7 +65585,8 @@
         "method": "Time to first productive design",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "78",
@@ -65179,7 +65708,8 @@
         "method": "Time to first productive design",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "79",
@@ -65301,7 +65831,8 @@
         "method": "Time to first productive design",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   },
   {
     "id": "80",
@@ -65423,6 +65954,7 @@
         "method": "Time to first productive design",
         "baseline": "Target <30 min"
       }
-    ]
+    ],
+    "affiliateUrl": ""
   }
 ]

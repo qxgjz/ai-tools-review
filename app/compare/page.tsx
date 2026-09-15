@@ -946,7 +946,7 @@ export default function ComparePage() {
                 key={tool.slug}
                 toolName={tool.name}
                 officialUrl={tool.officialUrl}
-                affiliateUrl={(tool as any).affiliateUrl}
+                affiliateUrl={tool.affiliateUrl}
                 description={`Compare ${tool.name} with other AI tools and see our full review. Click to visit official site.`}
                 variant="bottom"
               />
