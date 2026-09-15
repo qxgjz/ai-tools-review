@@ -39,14 +39,15 @@ export function ReviewSchema({
       worstRating: worstRating,
     },
     author: {
-      "@type": "Organization",
+      "@type": "Person",
       name: author,
+      jobTitle: "Senior AI Tools Reviewer",
     },
     datePublished: datePublished,
     itemReviewed: {
       "@type": "SoftwareApplication",
       name: itemReviewed || name,
-      applicationCategory: "AI Tool",
+      applicationCategory: "WebApplication",
     },
     publisher: {
       "@type": "Organization",
@@ -132,7 +133,7 @@ export function ProductSchema({
     operatingSystem: "Web",
     offers: {
       "@type": "Offer",
-      price: price === "Free" ? "0" : price,
+      price: price === "Free" ? "0" : String(price).replace(/[^0-9.]/g, ""),
       priceCurrency: "USD",
       availability: "https://schema.org/InStock",
     },
@@ -317,7 +318,7 @@ export function ComparisonSchema({
       "@type": "SoftwareApplication",
       "name": item.name,
       "description": item.description || "",
-      "applicationCategory": "AI Tool",
+      "applicationCategory": "WebApplication",
       "operatingSystem": "Web",
       ...(item.ratingValue && {
         "aggregateRating": {

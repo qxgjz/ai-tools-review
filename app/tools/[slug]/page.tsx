@@ -9,7 +9,7 @@ import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIO
 import { RadarChart } from "@/components/charts/RadarChart";
 import { ToolList } from "@/components/tools/ToolList";
 import Giscus from "@/components/comments/Giscus";
-import { BreadcrumbSchema, ProductSchema, FAQSchema, ReviewSchema } from "@/components/seo/Schema";
+import { BreadcrumbSchema, ProductSchema, FAQSchema } from "@/components/seo/Schema";
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
@@ -152,7 +152,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     itemReviewed: {
       "@type": "SoftwareApplication",
       name: tool.name,
-      applicationCategory: "AIApplication",
+      applicationCategory: "WebApplication",
       operatingSystem: "Web",
       offers: tool.pricing.map((tier) => ({
         "@type": "Offer",
@@ -168,8 +168,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       worstRating: "0",
     },
     author: {
-      "@type": "Organization",
-      name: "AIToolCrux Editorial Team",
+      "@type": "Person",
+      name: "Alex Chen",
+      jobTitle: "Senior AI Tools Reviewer",
     },
     datePublished: tool.lastUpdated,
     reviewBody: tool.review || tool.description,
@@ -236,23 +237,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         name={tool.name}
         description={tool.description || `${tool.name} is an AI tool evaluated by AIToolCrux.`}
         brand={tool.vendor}
-        category={tool.category}
+        category="WebApplication"
+        ratingValue={total}
         price={tool.pricing?.[0]?.price || "Free"}
         image={`https://www.aitoolcrux.com/og-image.svg`}
         url={`https://www.aitoolcrux.com/tools/${tool.slug}`}
       />
 
-      {/* Review Schema - for review rich snippets in Google Search */}
-      <ReviewSchema
-        name={`${tool.name} Review 2026: Expert Evaluation by AIToolCrux`}
-        reviewBody={`AIToolCrux editorial team evaluated ${tool.name} across 6 dimensions: functionality, UX, pricing, integration, support, and ethics. Overall score: ${total.toFixed(1)}/10 (${grade} grade). This review includes hands-on testing, feature analysis, pricing comparison, and real-world usage scenarios.`}
-        ratingValue={total}
-        bestRating={10}
-        worstRating={1}
-        author="AIToolCrux Editorial Team"
-        datePublished={tool.lastUpdated}
-        itemReviewed={tool.name}
-      />
 
       {/* FAQPage Schema - for FAQ rich snippets in Google Search */}
       <FAQSchema faqs={toolFAQs.map(f => ({ question: f.question, answer: f.answer }))} />
