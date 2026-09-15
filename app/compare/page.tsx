@@ -433,6 +433,44 @@ export default function ComparePage() {
         </div>
       </div>
 
+
+      {/* FAQ Section - GEO/Rich Snippet Optimization */}
+      <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+        <div className="space-y-4">
+          <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">What is the best AI tool in 2026?</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              The best AI tool depends on your use case: ChatGPT 5 for general conversations, Claude Opus 4 for long-form writing and analysis, Midjourney v7 for photorealistic image generation, Cursor for AI-native coding, and ElevenLabs for lifelike voice synthesis. Use our side-by-side comparison above to evaluate 500+ tools across functionality, pricing, and UX.
+            </p>
+          </div>
+          <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">How do I compare AI tools side by side?</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Select up to 3 tools from the picker below. Our comparison engine evaluates each tool across 6 dimensions: functionality, UX, pricing, integration, support, and ethics. You will see radar charts, pros and cons, and pricing breakdowns for each tool.
+            </p>
+          </div>
+          <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Which AI tools are free in 2026?</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Top free AI tools include: ChatGPT (free tier), Google Gemini Flash (free tier), Claude (free tier), Stable Diffusion (open-source), Perplexity (free tier), and Canva AI (free tier). Most free tiers have usage limits but are sufficient for personal use.
+            </p>
+          </div>
+          <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Is ChatGPT better than Claude?</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              ChatGPT excels at coding, creativity, and third-party integrations. Claude excels at long-context analysis, writing quality, and ethical safety. For research and writing, Claude often produces more accurate results. For coding and general use, ChatGPT is more versatile. Compare both in our tool selector above.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">How accurate are your AI tool ratings?</h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Our ratings are based on hands-on testing of each tool for at least 3 weeks. We evaluate real-world usage scenarios, measure performance benchmarks, and compare pricing against alternatives. Every tool is scored across 6 weighted dimensions to ensure objectivity.
+            </p>
+          </div>
+        </div>
+      </div>
+
       {/* Tools选择器 */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
         <div className="flex items-center justify-between mb-4">
