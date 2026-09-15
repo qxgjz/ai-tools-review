@@ -151,9 +151,17 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  // 博客标签页
-  const allTags = [...new Set(posts.flatMap((p) => p.tagSlugs || []))];
-  const blogTagPages: MetadataRoute.Sitemap = allTags.slice(0, 50).map((tag) => ({
+  // 博客标签页（从tags字段生成slug）
+  function slugifyTag(name: string): string {
+    return name
+      .toLowerCase()
+      .trim()
+      .replace(/[^a-z0-9\s-]/g, '')
+      .replace(/\s+/g, '-')
+      .replace(/-+/g, '-');
+  }
+  const allTagSlugs = [...new Set(posts.flatMap((p) => (p.tags || []).map(slugifyTag)))];
+  const blogTagPages: MetadataRoute.Sitemap = allTagSlugs.slice(0, 50).map((tag) => ({
     url: `${BASE_URL}/blog/tag/${tag}`,
     lastModified: new Date(),
     changeFrequency: "weekly",

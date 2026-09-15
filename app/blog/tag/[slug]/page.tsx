@@ -5,17 +5,35 @@ import posts from "@/data/posts.json";
 // ISR: Cache for 1 hour, category pages rarely change
 export const revalidate = 3600;
 
+// Helper: convert tag name to URL-friendly slug
+function slugifyTag(name: string): string {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
+
+// Helper: get all tags for a post as (slug, displayName) pairs
+function getPostTagSlugs(post: any): { slug: string; name: string }[] {
+  const tags: string[] = post.tags || [];
+  return tags.map((name) => ({ slug: slugifyTag(name), name }));
+}
+
 interface TagPageProps {
   params: { slug: string };
 }
 
 export function generateMetadata({ params }: TagPageProps) {
-  const tagPosts = posts.filter((p) => (p.tagSlugs || []).includes(params.slug));
+  const tagPosts = posts.filter((p) =>
+    getPostTagSlugs(p).some((t) => t.slug === params.slug)
+  );
   let tagName = params.slug;
   for (const post of posts) {
-    const idx = (post.tagSlugs || []).indexOf(params.slug);
-    if (idx !== -1) {
-      tagName = post.tags[idx];
+    const match = getPostTagSlugs(post).find((t) => t.slug === params.slug);
+    if (match) {
+      tagName = match.name;
       break;
     }
   }
@@ -26,7 +44,9 @@ export function generateMetadata({ params }: TagPageProps) {
 }
 
 export default function TagPage({ params }: TagPageProps) {
-  const tagPosts = posts.filter((p) => (p.tagSlugs || []).includes(params.slug));
+  const tagPosts = posts.filter((p) =>
+    getPostTagSlugs(p).some((t) => t.slug === params.slug)
+  );
 
   if (tagPosts.length === 0) {
     notFound();
@@ -34,9 +54,9 @@ export default function TagPage({ params }: TagPageProps) {
 
   let tagName = params.slug;
   for (const post of posts) {
-    const idx = (post.tagSlugs || []).indexOf(params.slug);
-    if (idx !== -1) {
-      tagName = post.tags[idx];
+    const match = getPostTagSlugs(post).find((t) => t.slug === params.slug);
+    if (match) {
+      tagName = match.name;
       break;
     }
   }
@@ -82,7 +102,7 @@ export default function TagPage({ params }: TagPageProps) {
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">{post.excerpt}</p>
             <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
               <span>{post.author}</span>
-              <span>{post.date || post.publishedAt}</span>
+              <span>{post.date}</span>
             </div>
           </Link>
         ))}

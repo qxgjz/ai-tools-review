@@ -24,6 +24,16 @@ const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
   ssr: false,
   loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading comments...</div>,
 });
+
+// Helper: convert tag name to URL-friendly slug
+function slugifyTag(name: string): string {
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s-]/g, '')
+    .replace(/\s+/g, '-')
+    .replace(/-+/g, '-');
+}
 const ReviewTabs = dynamic(() => import("@/components/content/ReviewTabs"), {
   ssr: false,
   loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading scores...</div>,
@@ -440,7 +450,7 @@ export default function PostPage({ params }: PostPageProps) {
         {post.tags.map((tag, index) => (
           <Link
             key={tag}
-            href={`/blog/tag/${(post.tagSlugs || [])[index]}`}
+            href={`/blog/tag/${slugifyTag(tag)}`}
             className="text-xs text-gray-600 dark:text-gray-400 bg-gray-100 dark:bg-gray-800 px-3 py-1 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
           >
             #{tag}
