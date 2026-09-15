@@ -111,7 +111,7 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
                     <div className="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
                       <span className="inline-flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
-                        {post.publishedAt}
+                        {post.date || post.publishedAt}
                       </span>
                       {post.readingTime && (
                         <span className="inline-flex items-center gap-1">

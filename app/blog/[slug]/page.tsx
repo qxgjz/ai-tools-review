@@ -58,7 +58,7 @@ export function generateMetadata({ params }: PostPageProps) {
   if (description.length > 160) {
     description = description.slice(0, 157) + "...";
   } else if (description.length < 120) {
-    description = `${description} Expert analysis by AIToolCrux editorial team. Updated ${post.publishedAt || "2026"}.`;
+    description = `${description} Expert analysis by AIToolCrux editorial team. Updated ${(post.date || post.publishedAt || "2026").slice(0, 10)}.`;
     if (description.length > 160) {
       description = description.slice(0, 157) + "...";
     }
@@ -79,17 +79,17 @@ export function generateMetadata({ params }: PostPageProps) {
       description: description,
       url: `https://www.aitoolcrux.com/blog/${post.slug}`,
       type: "article",
-      publishedTime: post.publishedAt,
-      modifiedTime: post.publishedAt,
+      publishedTime: post.date || post.publishedAt,
+      modifiedTime: post.date || post.publishedAt,
       authors: ["AIToolCrux Editorial Team"],
       tags: post.tags || [],
       siteName: "AIToolCrux",
       images: [
         {
-          url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
+          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 50))}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(post.category || "AI Tools")}`,
           width: 1200,
           height: 630,
-          alt: "AIToolCrux - AI Tools Blog",
+          alt: post.title,
         },
       ],
     },
@@ -232,7 +232,7 @@ export default function PostPage({ params }: PostPageProps) {
         bestRating={10}
         worstRating={1}
         author={post.author}
-        datePublished={post.publishedAt}
+        datePublished={post.date || post.publishedAt}
         itemReviewed={toolName}
       />
       {/* Article Schema - Blog文章结构化数据 */}
@@ -248,8 +248,8 @@ export default function PostPage({ params }: PostPageProps) {
               "@type": "Organization",
               name: post.author || "AIToolCrux Editorial Team",
             },
-            datePublished: post.publishedAt,
-            dateModified: (post as any).updatedAt || (post as any).lastUpdated || post.publishedAt,
+            datePublished: post.date || post.publishedAt,
+            dateModified: (post as any).updatedAt || (post as any).lastUpdated || post.date || post.publishedAt,
             publisher: {
               "@type": "Organization",
               name: "AIToolCrux",
@@ -331,7 +331,7 @@ export default function PostPage({ params }: PostPageProps) {
         <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
           <span>{post.author}</span>
           <span>·</span>
-          <span>{post.publishedAt}</span>
+          <span>{post.date || post.publishedAt}</span>
         </div>
       </header>
 
@@ -416,7 +416,7 @@ export default function PostPage({ params }: PostPageProps) {
         </div>
         <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
           <p className="text-xs text-zinc-500 dark:text-zinc-400">
-            <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {post.publishedAt || "2026"} | <strong>Methodology:</strong> Six-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
+            <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {(post.date || post.publishedAt || '2026').slice(0,10)} | <strong>Methodology:</strong> Six-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
           </p>
         </div>
       </section>
@@ -634,7 +634,7 @@ export default function PostPage({ params }: PostPageProps) {
                 </h3>
                 <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">{related.excerpt}</p>
                 <div className="flex items-center justify-between">
-                  <span className="text-xs text-gray-400">{related.publishedAt}</span>
+                  <span className="text-xs text-gray-400">{related.date || related.publishedAt}</span>
                   <span className="text-xs text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">Read →</span>
                 </div>
               </Link>
@@ -657,7 +657,7 @@ export default function PostPage({ params }: PostPageProps) {
       <section className="mt-10">
         <SourceReferences
           toolName={toolName}
-          lastUpdated={post.publishedAt}
+          lastUpdated={post.date || post.publishedAt}
         />
       </section>
 

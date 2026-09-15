@@ -68,7 +68,7 @@ export default function CategoryPage({ params }: CategoryPageProps) {
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">{post.excerpt}</p>
             <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
               <span>{post.author}</span>
-              <span>{post.publishedAt}</span>
+              <span>{post.date || post.publishedAt}</span>
             </div>
           </Link>
         ))}

@@ -187,7 +187,7 @@ export default function BlogPage() {
                 </p>
                 <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
                   <span>{post.author}</span>
-                  <span>{post.publishedAt}</span>
+                  <span>{post.date || post.publishedAt}</span>
                 </div>
               </Link>
             ))}
@@ -200,7 +200,7 @@ export default function BlogPage() {
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
           All Articles
         </h2>
-        <BlogListClient posts={allPosts.map(({ slug, title, excerpt, category, categorySlug, tags, author, publishedAt, readTime, featured, image }) => ({ slug, title, excerpt, category, categorySlug, tags, author, publishedAt, readTime, featured, image }))} />
+        <BlogListClient posts={allPosts.map(({ slug, title, excerpt, category, categorySlug, tags, author, date, publishedAt, readTime, featured, image }) => ({ slug, title, excerpt, category, categorySlug, tags, author, date: date || publishedAt, publishedAt, readTime, featured, image }))} />
       </div>
     </div>
     </>

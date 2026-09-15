@@ -10,14 +10,14 @@ export async function GET() {
   // 按发布日期排序（最新的在前）
   const sortedPosts = [...posts].sort(
     (a, b) =>
-      new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      new Date(b.date || b.publishedAt).getTime() - new Date(a.date || a.publishedAt).getTime()
   );
 
   // 生成RSS XML
   const rssItems = sortedPosts
     .map((post) => {
       const url = `${siteUrl}/blog/${post.slug}`;
-      const pubDate = new Date(post.publishedAt).toUTCString();
+      const pubDate = new Date(post.date || post.publishedAt).toUTCString();
       const description = (post.excerpt || post.description || "")
         .replace(/<[^>]*>/g, "")
         .replace(/&/g, "&amp;")

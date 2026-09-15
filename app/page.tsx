@@ -634,7 +634,7 @@ export default function HomePage() {
                       {post.excerpt}
                     </p>
                     <div className="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500">
-                      <span>{post.publishedAt}</span>
+                      <span>{post.date || post.publishedAt}</span>
                       <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium group-hover:gap-2 transition-all">
                         Read
                         <ArrowRight className="w-3 h-3" />
