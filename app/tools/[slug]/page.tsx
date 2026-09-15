@@ -3,6 +3,7 @@ import Link from "next/link";
 import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon, Award, Target, Users, Wrench, GitCompare, Microscope, Quote, Zap, BookOpen, ShieldCheck } from "lucide-react";
 import toolsData from "@/data/tools.json";
 import postsData from "@/data/posts.json";
+import comparisonsData from "@/data/comparisons.json";
 import type { Tool, Grade, ScoreDimension } from "@/types";
 import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
 import { RadarChart } from "@/components/charts/RadarChart";
@@ -89,6 +90,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   const popularTools = toolsData
     .filter((t) => popularToolSlugs.includes(t.slug) && t.slug !== tool.slug)
     .slice(0, 8);
+
+  // Relevant comparison pages - hub-and-spoke internal linking (P0)
+  const relevantComparisons = (comparisonsData as any[])
+    .filter((c) => {
+      const hay = ((c.title || "") + " " + (c.slug || "")).toLowerCase();
+      return hay.includes(tool.slug) || hay.includes(tool.name.toLowerCase());
+    })
+    .slice(0, 4);
 
   // 智能Related Articles推荐：工具名匹配(50%) + 分类匹配(30%) + 标签匹配(20%)
   const toolNameWords = tool.name.toLowerCase().split(/\s+/).filter(w => w.length > 2);
@@ -783,6 +792,32 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Explore the most popular AI tools across all categories, handpicked by our editorial team.
           </p>
           <ToolList tools={popularTools} />
+        </section>
+      )}
+
+      {/* Comparison pages - hub-and-spoke internal linking */}
+      {relevantComparisons.length > 0 && (
+        <section className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 rounded-2xl border border-indigo-100 dark:border-indigo-900/50 shadow-sm p-6 mb-6">
+          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
+            <GitCompare className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+            Compare {tool.name} Side-by-Side
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {relevantComparisons.map((c: any) => (
+              <Link
+                key={c.slug}
+                href={`/compare/${c.slug}`}
+                className="block p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:shadow-md transition-all"
+              >
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white leading-snug mb-1">
+                  {c.title}
+                </h3>
+                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                  Read comparison &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
         </section>
       )}
 
