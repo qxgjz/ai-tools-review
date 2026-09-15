@@ -485,7 +485,13 @@ export default function PostPage({ params }: PostPageProps) {
         </div>
       )}
 
-      {/* 文章内容 - 优化排版：行高1.75，段落间距，最大阅读宽度 */}
+      {/* Affiliate Disclosure - FTC compliance */}
+      <div className="bg-amber-50 dark:bg-amber-950/30 border border-amber-200 dark:border-amber-800 rounded-lg px-4 py-3 mb-6 text-xs sm:text-sm text-amber-800 dark:text-amber-200">
+        <strong>Disclosure:</strong> Some links in this article are affiliate links. We may earn a commission at no extra cost to you. This does not affect our reviews or recommendations.{' '}
+        <Link href="/disclosure" className="underline hover:text-amber-900 dark:hover:text-amber-100">Learn more</Link>
+      </div>
+
+      {/* Article content */}
       <article
         className="prose prose-lg dark:prose-invert max-w-none mb-10
           prose-headings:scroll-mt-24
