@@ -3,8 +3,8 @@ import type { Metadata } from "next";
 export const revalidate = 3600; // 1小时缓存
 
 export const metadata: Metadata = {
-  title: "AI Tool Comparison 2026: Compare Top AI Tools | AIToolCrux",
-  description: "Compare 500+ AI tools side by side in 2026. ChatGPT vs Claude, Midjourney vs DALL-E, Cursor vs Copilot. Features, pricing, ratings & 6-dimension analysis.",
+  title: "Best AI Tools Comparison 2026: Side-by-Side Ratings & Pricing",
+  description: "Compare 500+ AI tools side by side in 2026. Honest ratings, pricing, pros & cons. ChatGPT vs Claude, Cursor vs Copilot — find your perfect AI tool free.",
   keywords: ["ai tool comparison", "compare ai tools", "best ai tools comparison", "chatgpt vs claude", "midjourney vs dall-e", "ai software comparison", "ai tools side by side", "ai tool ratings comparison"],
   alternates: {
     canonical: "https://www.aitoolcrux.com/compare",
