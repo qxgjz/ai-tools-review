@@ -278,8 +278,6 @@ const CATEGORIES: Record<string, { name: string; description: string; icon: Luci
 };
 
 
-// ISR: revalidate category pages every 24h
-export const revalidate = 86400;
 
 export function generateStaticParams() {
   const categories = new Set(toolsData.map((t) => t.category));

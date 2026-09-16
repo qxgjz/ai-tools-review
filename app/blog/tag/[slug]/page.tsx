@@ -2,8 +2,6 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import posts from "@/data/posts.json";
 
-// ISR: Cache for 1 hour, category pages rarely change
-export const revalidate = 3600;
 
 // Helper: convert tag name to URL-friendly slug
 function slugifyTag(name: string): string {

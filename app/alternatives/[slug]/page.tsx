@@ -39,8 +39,6 @@ interface AlternativePage {
 }
 
 
-// ISR: revalidate alternatives every 24h
-export const revalidate = 86400;
 
 export function generateStaticParams() {
   return alternativesData.map((item: AlternativePage) => ({

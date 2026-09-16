@@ -12,8 +12,6 @@ export const metadata = {
 };
 
 
-// ISR: revalidate blog index every 1h
-export const revalidate = 3600;
 
 
 const collectionSchema = {

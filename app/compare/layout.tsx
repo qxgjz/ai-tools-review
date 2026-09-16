@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 
-export const revalidate = 3600; // 1小时缓存
 
 export const metadata: Metadata = {
   title: "Best AI Tools Comparison 2026: Side-by-Side Ratings & Pricing",

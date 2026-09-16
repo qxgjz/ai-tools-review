@@ -61,8 +61,6 @@ const METHODOLOGY = [
 ];
 
 
-// ISR: revalidate homepage every 1h
-export const revalidate = 3600;
 
 export default function HomePage() {
   const tools = toolsData as Tool[];
