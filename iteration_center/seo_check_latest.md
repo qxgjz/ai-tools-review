@@ -1,6 +1,6 @@
 # SEO Health Check
 
-Generated: 2026-09-16 01:35 UTC
+Generated: 2026-09-16 21:53 UTC
 
 ## Summary
 
@@ -12,8 +12,8 @@ Generated: 2026-09-16 01:35 UTC
 | Blog index | 200 | 40c | 153c | Y | Y | 0 |
 | Category: Chat | 200 | 56c | 160c | Y | Y | 0 |
 | Tool: ChatGPT | 200 | 40c | 160c | Y | Y | 0 |
-| Blog: Stable Diffusion Review | 200 | 51c | 157c | Y | Y | 0 |
-| Blog: Cursor Review | 200 | 52c | 153c | Y | Y | 0 |
+| Blog: Stable Diffusion Review | 200 | 47c | 156c | Y | Y | 0 |
+| Blog: Cursor Review | 200 | 60c | 153c | Y | Y | 0 |
 
 ## Details
 
@@ -24,7 +24,7 @@ Generated: 2026-09-16 01:35 UTC
 - H1: Find the best AI tools,tested and ranked.
 - Canonical: https://www.aitoolcrux.com
 - Robots: index, follow
-- Words: 1929
+- Words: 1710
 
 ### Ranking (`/ranking`)
 - HTTP: 200
@@ -42,16 +42,16 @@ Generated: 2026-09-16 01:35 UTC
 - H1: AI Tool Comparison 2026
 - Canonical: https://www.aitoolcrux.com/compare
 - Robots: index, follow
-- Words: 2167
+- Words: 2179
 
 ### Blog index (`/blog`)
 - HTTP: 200
 - Title (40c): Blog - AI Tool Reviews &amp; Comparisons
 - Description (153c): Expert AI tool reviews, comparisons, buying guides, and industry news. Find the best AI tools for your needs with our 6-
 - H1: Blog &amp; Reviews
-- Canonical: https://www.aitoolcrux.com
+- Canonical: https://www.aitoolcrux.com/blog
 - Robots: index, follow
-- Words: 2773
+- Words: 2163
 
 ### Category: Chat (`/category/chat`)
 - HTTP: 200
@@ -60,7 +60,7 @@ Generated: 2026-09-16 01:35 UTC
 - H1: AI Chat Assistants
 - Canonical: https://www.aitoolcrux.com/category/chat
 - Robots: index, follow
-- Words: 1651
+- Words: 1666
 
 ### Tool: ChatGPT (`/tools/chatgpt`)
 - HTTP: 200
@@ -69,25 +69,25 @@ Generated: 2026-09-16 01:35 UTC
 - H1: ChatGPT
 - Canonical: https://www.aitoolcrux.com/tools/chatgpt
 - Robots: index, follow
-- Words: 2072
+- Words: 2070
 
 ### Blog: Stable Diffusion Review (`/blog/stable-diffusion-review-2026`)
 - HTTP: 200
-- Title (51c): Stable Diffusion Review 2026: Is It Still Worth It?
-- Description (157c): We tested Stable Diffusion 3.5 for 4 weeks with 50+ prompts. Read our honest review of image quality, speed, hardware ne
-- H1: Stable Diffusion Review 2026: Is It Still Worth It?
+- Title (47c): Stable Diffusion 3.5 Review: 4-Week Honest Test
+- Description (156c): Tested Stable Diffusion 3.5 for 4 weeks with 50+ prompts. Read our honest review of image quality, speed, hardware needs
+- H1: Stable Diffusion 3.5 Review: 4-Week Honest Test
 - Canonical: https://www.aitoolcrux.com/blog/stable-diffusion-review-2026
 - Robots: index, follow
-- Words: 15863
+- Words: 15990
 
 ### Blog: Cursor Review (`/blog/cursor-review-2026`)
 - HTTP: 200
-- Title (52c): Cursor Review 2026: Best AI Code Editor? Honest Take
+- Title (60c): Cursor Review 2026: Best AI Code Editor? Honest Take | AI...
 - Description (153c): After 3 months of daily use and 1,200+ hours coding with Cursor, read our honest review. Is it worth switching from VS C
-- H1: Cursor Review 2026: Best AI Code Editor? Honest Take
+- H1: Cursor Review 2026: Best AI Code Editor? Honest Take | AIToolCrux
 - Canonical: https://www.aitoolcrux.com/blog/cursor-review-2026
 - Robots: index, follow
-- Words: 13962
+- Words: 14102
 
 ---
 Total issues: 0
