@@ -29,6 +29,30 @@ const GRADE_STYLES: Record<Grade, string> = {
 const DIMENSION_ORDER: ScoreDimension[] = ["functionality", "ux", "pricing", "integration", "support", "ethics"];
 
 
+const toolScreenshotMap: Record<string, string> = {
+  "canva-magic": "/screenshots/real/webp/canva-magic.webp",
+  "chatgpt": "/screenshots/real/webp/chatgpt.webp",
+  "claude": "/screenshots/real/webp/claude.webp",
+  "copy-ai": "/screenshots/real/webp/copy-ai.webp",
+  "cursor": "/screenshots/real/webp/cursor.webp",
+  "dall-e-3": "/screenshots/real/webp/dall-e-3.webp",
+  "elevenlabs": "/screenshots/real/webp/elevenlabs.webp",
+  "figma-ai": "/screenshots/real/webp/figma-ai.webp",
+  "gemini": "/screenshots/real/webp/gemini.webp",
+  "github-copilot": "/screenshots/real/webp/github-copilot.webp",
+  "grammarly": "/screenshots/real/webp/grammarly.webp",
+  "jasper": "/screenshots/real/webp/jasper.webp",
+  "midjourney": "/screenshots/real/webp/midjourney.webp",
+  "notion-ai": "/screenshots/real/webp/notion-ai.webp",
+  "perplexity": "/screenshots/real/webp/perplexity.webp",
+  "runway": "/screenshots/real/webp/runway.webp",
+  "sora": "/screenshots/real/webp/sora.webp",
+  "stable-diffusion": "/screenshots/real/webp/stable-diffusion.webp",
+  "suno": "/screenshots/real/webp/suno.webp",
+  "windsurf": "/screenshots/real/webp/windsurf.webp",
+};
+
+
 
 export function generateStaticParams() {
   return toolsData.map((tool) => ({ slug: tool.slug }));
@@ -42,28 +66,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const prosSummary = tool.pros.slice(0, 2).join(", ");
   const description = `${tool.name} by ${tool.vendor} — ${categoryFormatted} AI tool rated ${total.toFixed(1)}/10 (${grade} grade). Expert review: features, pricing, pros (${prosSummary}) & cons. Last updated ${tool.lastUpdated}. Find out if ${tool.name} is right for you.`;
   // Use tool-specific screenshot as og:image if available
-  const toolScreenshotMap: Record<string, string> = {
-    "canva-magic": "/screenshots/real/webp/canva-magic.webp",
-    "chatgpt": "/screenshots/real/webp/chatgpt.webp",
-    "claude": "/screenshots/real/webp/claude.webp",
-    "copy-ai": "/screenshots/real/webp/copy-ai.webp",
-    "cursor": "/screenshots/real/webp/cursor.webp",
-    "dall-e-3": "/screenshots/real/webp/dall-e-3.webp",
-    "elevenlabs": "/screenshots/real/webp/elevenlabs.webp",
-    "figma-ai": "/screenshots/real/webp/figma-ai.webp",
-    "gemini": "/screenshots/real/webp/gemini.webp",
-    "github-copilot": "/screenshots/real/webp/github-copilot.webp",
-    "grammarly": "/screenshots/real/webp/grammarly.webp",
-    "jasper": "/screenshots/real/webp/jasper.webp",
-    "midjourney": "/screenshots/real/webp/midjourney.webp",
-    "notion-ai": "/screenshots/real/webp/notion-ai.webp",
-    "perplexity": "/screenshots/real/webp/perplexity.webp",
-    "runway": "/screenshots/real/webp/runway.webp",
-    "sora": "/screenshots/real/webp/sora.webp",
-    "stable-diffusion": "/screenshots/real/webp/stable-diffusion.webp",
-    "suno": "/screenshots/real/webp/suno.webp",
-    "windsurf": "/screenshots/real/webp/windsurf.webp",
-  };
+
   const screenshotPath = toolScreenshotMap[tool.slug];
   const ogImageUrl = screenshotPath
     ? `https://www.aitoolcrux.com${screenshotPath}`
@@ -182,7 +185,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       applicationCategory: "WebApplication",
       operatingSystem: "Web",
       brand: { "@type": "Organization", name: tool.vendor || tool.name },
-      image: `https://www.aitoolcrux.com/screenshots/${tool.slug}.webp`,
+      image: toolScreenshotMap[tool.slug] ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}` : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review")}`,
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       aggregateRating: {
         "@type": "AggregateRating",
