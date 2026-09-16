@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Privacy Policy",
+  title: "Privacy Policy | AIToolCrux",
   description: "Read AIToolCrux's privacy policy. Learn how we collect, use, and protect your personal data when browsing our AI tool reviews and comparisons.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/privacy",

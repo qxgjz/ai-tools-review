@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Affiliate Disclosure",
+  title: "Affiliate Disclosure | AIToolCrux",
   description: "FTC-compliant affiliate disclosure for AIToolCrux. Learn how we earn commissions through affiliate links without compromising the honesty of our AI tool reviews.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/disclosure",
