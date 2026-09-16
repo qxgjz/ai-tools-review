@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: gsc-fetch
+  cancel-in-progress: false
+
 jobs:
   fetch-gsc:
     runs-on: ubuntu-latest
@@ -27,13 +31,21 @@ jobs:
       - name: Fetch GSC data
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
-        run: python .github/scripts/fetch_gsc.py
+        run: |
+          python .github/scripts/fetch_gsc.py || {
+            echo "::error::GSC fetch failed. Check GOOGLE_SERVICE_ACCOUNT_JSON secret."
+            exit 1
+          }
 
       - name: Commit report
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add gsc-ga4-report/
-          git diff --staged --quiet || git commit -m "📊 GSC data $(date -u +%Y-%m-%d)"
+          if git diff --staged --quiet; then
+            echo "No new GSC report to commit"
+            exit 0
+          fi
+          git commit -m "📊 GSC data $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
           git push

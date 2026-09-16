@@ -79,10 +79,11 @@ def get_latest_gsc_report():
     latest = max(reports, key=os.path.getmtime)
     with open(latest, "r", encoding="utf-8") as f:
         content = f.read()
-    clicks = re.search(r"GSC 点击[：:]\s*(\d+)", content)
-    imp = re.search(r"GSC 曝光[：:]\s*(\d+)", content)
-    ctr = re.search(r"平均\s*CTR[：:]\s*([\d.]+%)", content)
-    rank = re.search(r"平均\s*排名[：:]\s*([\d.]+)", content)
+    # Match both Chinese (GSC 点击) and English (| Clicks |) report formats
+    clicks = re.search(r"GSC 点击[：:]\s*(\d+)", content) or re.search(r"\|\s*Clicks\s*\|\s*(\d+)", content)
+    imp = re.search(r"GSC 曝光[：:]\s*(\d+)", content) or re.search(r"\|\s*Impressions\s*\|\s*(\d+)", content)
+    ctr = re.search(r"平均\s*CTR[：:]\s*([\d.]+%)", content) or re.search(r"\|\s*CTR\s*\|\s*([\d.]+%)", content)
+    rank = re.search(r"平均\s*排名[：:]\s*([\d.]+)", content) or re.search(r"\|\s*Avg Position\s*\|\s*([\d.]+)", content)
     return {
         "file": os.path.basename(latest),
         "clicks": clicks.group(1) if clicks else "N/A",

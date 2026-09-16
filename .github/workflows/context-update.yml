@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: context-update
+  cancel-in-progress: false
+
 jobs:
   update-context:
     runs-on: ubuntu-latest
@@ -29,6 +33,10 @@ jobs:
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
           git add iteration_center/CONTEXT.md
-          git diff --staged --quiet || git commit -m "🤖 Update context $(date -u +%Y-%m-%d)"
+          if git diff --staged --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "🤖 Update context $(date -u +%Y-%m-%d)"
           git pull --rebase origin main
           git push
