@@ -15,6 +15,9 @@ export function generateMetadata({ params }: CategoryPageProps) {
   return {
     title: `${categoryName} - AIToolCruxBlog`,
     description: `AIToolCruxBlog - ${categoryName}Categories的所有文章`,
+    alternates: {
+      canonical: `https://www.aitoolcrux.com/blog/category/${params.slug}`,
+    },
   };
 }
 

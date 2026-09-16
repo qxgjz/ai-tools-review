@@ -40,6 +40,9 @@ export function generateMetadata({ params }: TagPageProps) {
   return {
     title: `#${tagName} - AIToolCruxBlog`,
     description: `AIToolCruxBlog - Tags #${tagName} 的所有文章`,
+    alternates: {
+      canonical: `https://www.aitoolcrux.com/blog/tag/${params.slug}`,
+    },
   };
 }
 

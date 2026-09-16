@@ -6,6 +6,9 @@ import { Rss } from "lucide-react";
 export const metadata = {
   title: "Blog - AI Tool Reviews & Comparisons",
   description: "Expert AI tool reviews, comparisons, buying guides, and industry news. Find the best AI tools for your needs with our 6-dimension evaluation methodology.",
+  alternates: {
+    canonical: "https://www.aitoolcrux.com/blog",
+  },
 };
 
 
