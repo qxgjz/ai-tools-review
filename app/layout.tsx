@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 // 全局缓存配置：静态页面默认1小时缓存
@@ -250,6 +251,7 @@ export default function RootLayout({
           </footer>
         <BackToTop />
         </ThemeProvider>
+      <Analytics />
       </body>
     </html>
   );
