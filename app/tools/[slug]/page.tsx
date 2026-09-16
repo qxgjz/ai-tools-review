@@ -115,6 +115,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 6);
 
+  // Resolve screenshot URL for ToolScreenshot: real webp if available, else /api/og fallback
+  const resolvedScreenshotPath = toolScreenshotMap[tool.slug] || `/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}`;
+
   // 跨分类热门工具推荐 - 增加重要工具入链（P1-004）
   const popularToolSlugs = ["chatgpt", "claude", "gemini", "midjourney", "dall-e-3", "cursor", "elevenlabs", "notion-ai"];
   const popularTools = toolsData
@@ -709,6 +712,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           toolSlug={tool.slug}
           toolName={tool.name}
           vendor={tool.vendor}
+          screenshotUrl={resolvedScreenshotPath}
         />
       </section>
 

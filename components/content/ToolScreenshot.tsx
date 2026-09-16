@@ -8,13 +8,15 @@ interface ToolScreenshotProps {
   toolName: string;
   vendor?: string;
   className?: string;
+  /** Optional resolved screenshot URL. If provided, used instead of the default /screenshots/{slug}.svg */
+  screenshotUrl?: string;
 }
 
-export function ToolScreenshot({ toolSlug, toolName, vendor, className = "" }: ToolScreenshotProps) {
+export function ToolScreenshot({ toolSlug, toolName, vendor, className = "", screenshotUrl }: ToolScreenshotProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
 
-  const screenshotUrl = `/screenshots/${toolSlug}.svg`;
+  const resolvedUrl = screenshotUrl || `/screenshots/${toolSlug}.svg`;
 
   if (imageError) {
     return (
@@ -32,7 +34,7 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "" }: T
         onClick={() => setIsLightboxOpen(true)}
       >
         <img
-          src={screenshotUrl}
+          src={resolvedUrl}
           alt={`${toolName} screenshot - ${vendor || "AIToolCrux"}`}
           className="w-full h-auto object-cover"
           onError={() => setImageError(true)}
@@ -63,7 +65,7 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "" }: T
             <X className="w-8 h-8" />
           </button>
           <img
-            src={screenshotUrl}
+            src={resolvedUrl}
             alt={`${toolName} screenshot - ${vendor || "AIToolCrux"}`}
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
