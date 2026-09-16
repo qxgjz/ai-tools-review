@@ -298,8 +298,21 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {/* Header */}
       <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
         <div className="flex flex-col sm:flex-row sm:items-start gap-6">
-          <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-3xl font-bold">
-            {tool.name.charAt(0).toUpperCase()}
+          <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700">
+            {toolScreenshotMap[tool.slug] ? (
+              <img
+                src={toolScreenshotMap[tool.slug]}
+                alt={`${tool.name} interface screenshot`}
+                width={80}
+                height={80}
+                className="w-full h-full object-cover"
+                loading="eager"
+              />
+            ) : (
+              <span className="text-zinc-700 dark:text-zinc-300 text-3xl font-bold">
+                {tool.name.charAt(0).toUpperCase()}
+              </span>
+            )}
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-3 mb-2">
@@ -315,9 +328,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">Free Tier Available</span>}
             </div>
           </div>
-          <div className="text-center sm:text-right">
-            <div className="text-5xl font-bold text-zinc-900 dark:text-white">{total.toFixed(1)}</div>
-            <div className="text-xs text-zinc-400 dark:text-zinc-500 mt-1">Overall Score / 10</div>
+          <div className="flex flex-row sm:flex-col items-baseline sm:items-end gap-1 sm:gap-0">
+            <div className="flex items-baseline gap-1">
+              <span className="text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none">{total.toFixed(1)}</span>
+              <span className="text-sm text-zinc-400 dark:text-zinc-500">/10</span>
+            </div>
+            <div className="text-xs text-zinc-400 dark:text-zinc-500">Overall Score</div>
           </div>
         </div>
         {(tool.officialUrl || tool.affiliateUrl) && (
