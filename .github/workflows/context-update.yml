@@ -19,6 +19,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -38,5 +40,6 @@ jobs:
             exit 0
           fi
           git commit -m "🤖 Update context $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
+          # Pull latest with rebase, fallback to merge if rebase fails
+          git pull --rebase origin main || git pull origin main
           git push
