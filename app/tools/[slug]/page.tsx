@@ -54,7 +54,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: description.slice(0, 160),
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
-      type: "article",
+      type: "website",
       publishedTime: tool.lastUpdated,
       modifiedTime: tool.lastUpdated,
       authors: ["AIToolCrux Editorial Team"],
