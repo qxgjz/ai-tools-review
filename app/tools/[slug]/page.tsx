@@ -292,7 +292,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           <div className="mt-6 pt-6 border-t border-gray-50 dark:border-zinc-800">
             <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
               <ExternalLink className="w-4 h-4" />
-              Visit Official Website
+              {tool.affiliateUrl ? `Try ${tool.name} Free` : "Visit Official Website"}
             </a>
             {tool.affiliateUrl && (
               <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
@@ -719,7 +719,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           {(tool.officialUrl || tool.affiliateUrl) && (
             <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
               <ExternalLink className="w-4 h-4" />
-              Visit {tool.name}
+              {tool.affiliateUrl ? `Try ${tool.name} Free →` : `Visit ${tool.name}`}
             </a>
           )}
           <span className="text-xs text-zinc-500 dark:text-zinc-400 italic">
