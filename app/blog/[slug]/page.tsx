@@ -261,8 +261,9 @@ export default function PostPage({ params }: PostPageProps) {
             headline: post.title,
             description: post.excerpt,
             author: {
-              "@type": "Organization",
-              name: post.author || "AIToolCrux Editorial Team",
+              "@type": "Person",
+              name: post.author || "Alex Chen",
+              jobTitle: "Senior AI Tools Reviewer",
             },
             datePublished: post.date || post.publishedAt,
             dateModified: (post as any).updatedAt || (post as any).lastUpdated || post.date || post.publishedAt,

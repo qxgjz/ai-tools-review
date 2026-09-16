@@ -9,7 +9,7 @@ import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIO
 import { RadarChart } from "@/components/charts/RadarChart";
 import { ToolList } from "@/components/tools/ToolList";
 import Giscus from "@/components/comments/Giscus";
-import { BreadcrumbSchema, ProductSchema, FAQSchema } from "@/components/seo/Schema";
+import { BreadcrumbSchema, FAQSchema } from "@/components/seo/Schema";
 import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { ToolScreenshot } from "@/components/content/ToolScreenshot";
@@ -181,6 +181,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       name: tool.name,
       applicationCategory: "WebApplication",
       operatingSystem: "Web",
+      brand: { "@type": "Organization", name: tool.vendor || tool.name },
+      image: `https://www.aitoolcrux.com/screenshots/${tool.slug}.webp`,
+      url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       aggregateRating: {
         "@type": "AggregateRating",
         ratingValue: total.toFixed(1),
@@ -267,19 +270,6 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           { name: tool.name, url: `/tools/${tool.slug}` },
         ]}
       />
-      {/* Product Schema - tool product structured data */}
-      <ProductSchema
-        name={tool.name}
-        description={tool.description || `${tool.name} is an AI tool evaluated by AIToolCrux.`}
-        brand={tool.vendor}
-        category="WebApplication"
-        ratingValue={total}
-        reviewCount={1}
-        price={tool.pricing?.[0]?.price || "Free"}
-        image={`https://www.aitoolcrux.com/og-image.svg`}
-        url={`https://www.aitoolcrux.com/tools/${tool.slug}`}
-      />
-
 
       {/* FAQPage Schema - for FAQ rich snippets in Google Search */}
       <FAQSchema faqs={toolFAQs.map(f => ({ question: f.question, answer: f.answer }))} />

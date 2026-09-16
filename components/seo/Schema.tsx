@@ -305,8 +305,9 @@ export function ComparisonSchema({
     "headline": name,
     "description": description,
     "author": {
-      "@type": "Organization",
+      "@type": "Person",
       "name": author,
+      "jobTitle": "Senior AI Tools Reviewer",
     },
     "datePublished": datePublished,
     "publisher": {
