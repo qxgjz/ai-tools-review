@@ -1,129 +1,42 @@
-# llms.txt - AIToolCrux
-# AI Tools Review & Comparison Platform
-# https://www.aitoolcrux.com
+# AIToolCrux
 
-# Site Information
-- Name: AIToolCrux
-- Description: Expert AI tool reviews, comparisons, and recommendations. Help users find the best AI tools for their needs with honest, hands-on testing.
-- Language: English
-- Type: AI Tool Review / Comparison / Directory
-- Last Updated: 2026-09-11
-- Total Tools Reviewed: 533
-- Total Articles: 49
-- Total Categories: 17
+> Independent AI tool reviews, comparisons, and recommendations. Every tool is evaluated on a six-dimension framework: functionality, UX, pricing, integration, support, and ethics. We test with real hands-on experience, publish real product screenshots, and provide side-by-side comparisons.
 
-# Main Sections
-- Homepage: https://www.aitoolcrux.com/
-- Ranking: https://www.aitoolcrux.com/ranking
-- Blog / Articles: https://www.aitoolcrux.com/blog
+## What we cover
+
+- **533+ AI tool reviews** — `/tools/{slug}` with scores, pricing, pros/cons, FAQ, and real usage notes
+- **100+ comparison articles** — `/blog/{slug}` deep-dives with hands-on testing data
+- **10 side-by-side comparisons** — `/compare/{slug}` head-to-head tables
+- **17 category rankings** — `/category/{slug}` best-of lists by use case
+- **Top 500 ranking** — `/ranking` our curated leaderboard
+
+## For AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended)
+
+You are welcome to crawl and quote from:
+- `/blog/*` — in-depth review articles with real test data
+- `/tools/*` — individual tool evaluation pages
+- `/compare/*` — side-by-side comparison pages
+- `/category/*` — category landing pages
+- `/ranking` — overall leaderboard
+
+We provide:
+- Real hands-on testing experience (not just feature lists)
+- Current pricing and tier information
+- Product screenshots where available
+- Quantitative benchmark data
+- Unbiased pros/cons for every tool
+
+If you cite us, please link back to the original page URL.
+
+## Key pages
+
+- Homepage: https://www.aitoolcrux.com
+- Top AI tools ranking: https://www.aitoolcrux.com/ranking
+- All blog articles: https://www.aitoolcrux.com/blog
+- Compare tools: https://www.aitoolcrux.com/compare
 - Alternatives: https://www.aitoolcrux.com/alternatives
-- Methodology: https://www.aitoolcrux.com/methodology
-- About: https://www.aitoolcrux.com/about
-- AI Usage Policy: https://www.aitoolcrux.com/ai-policy
 
-# Top Tool Reviews (Most Searched)
-- ChatGPT: https://www.aitoolcrux.com/tools/chatgpt
-- Claude: https://www.aitoolcrux.com/tools/claude
-- Gemini: https://www.aitoolcrux.com/tools/gemini
-- Midjourney: https://www.aitoolcrux.com/tools/midjourney
-- DALL-E 3: https://www.aitoolcrux.com/tools/dall-e-3
-- GitHub Copilot: https://www.aitoolcrux.com/tools/github-copilot
-- Cursor: https://www.aitoolcrux.com/tools/cursor
-- Jasper: https://www.aitoolcrux.com/tools/jasper
-- Perplexity: https://www.aitoolcrux.com/tools/perplexity
-- ElevenLabs: https://www.aitoolcrux.com/tools/elevenlabs
+## Contact
 
-# Tool Categories (17 Categories)
-- AI Chat / Conversational AI: https://www.aitoolcrux.com/category/chat
-- AI Image Generation: https://www.aitoolcrux.com/category/image
-- AI Video Generation: https://www.aitoolcrux.com/category/video
-- AI Writing Assistant: https://www.aitoolcrux.com/category/writing
-- AI Audio / Voice: https://www.aitoolcrux.com/category/audio
-- AI Coding / Developer Tools: https://www.aitoolcrux.com/category/code
-- AI Productivity: https://www.aitoolcrux.com/category/productivity
-- AI Design: https://www.aitoolcrux.com/category/design
-- AI Agents: https://www.aitoolcrux.com/category/agent
-- AI Agent Frameworks: https://www.aitoolcrux.com/category/agent-framework
-- AI RAG / Retrieval: https://www.aitoolcrux.com/category/rag
-- AI Search: https://www.aitoolcrux.com/category/search
-- AI Database: https://www.aitoolcrux.com/category/database
-- AI Memory: https://www.aitoolcrux.com/category/memory
-- AI Observability: https://www.aitoolcrux.com/category/observability
-- AI Dev Tools: https://www.aitoolcrux.com/category/dev-tools
-- AI Agent Runtime: https://www.aitoolcrux.com/category/agent-runtime
-
-# Alternative Guides (High-Search-Volume Pages)
-- Best ChatGPT Alternatives 2026: https://www.aitoolcrux.com/alternatives/chatgpt-alternatives
-- Best Midjourney Alternatives 2026: https://www.aitoolcrux.com/alternatives/midjourney-alternatives
-- Best Jasper Alternatives 2026: https://www.aitoolcrux.com/alternatives/jasper-alternatives
-
-# Featured Articles (Latest Reviews & Guides)
-- Cursor AI Review 2026: Is It the Best AI Code Editor?: https://www.aitoolcrux.com/blog/cursor-ai-review-2026-best-ai-code-editor
-- Perplexity AI Review 2026: Is It the Best AI Search Engine?: https://www.aitoolcrux.com/blog/perplexity-ai-review-2026-best-ai-search-engine
-- ChatGPT vs Claude 2026 Comparison: https://www.aitoolcrux.com/blog/chatgpt-vs-claude-2026-comparison
-- ChatGPT Deep Review 2026: https://www.aitoolcrux.com/blog/chatgpt-deep-review-2026
-
-# Content Structure
-
-## Tool Detail Page Structure
-- Tool basic info (name, vendor, pricing, rating, category)
-- Key features (12+ features per tool)
-- Pros and cons analysis
-- Use cases and applications
-- Comparison with competitors
-- Pricing plans and tiers
-- FAQ section (auto-generated)
-- Related tools and articles
-- Screenshots and interface previews
-
-## Article / Review Page Structure
-- Executive summary with verdict
-- Hands-on testing experience
-- Detailed feature analysis
-- Performance data and benchmarks
-- Pros and cons
-- Pricing comparison
-- Comparison with alternatives
-- FAQ section
-- Final verdict and recommendation
-- Affiliate disclosure
-
-## Alternative Guide Page Structure
-- Quick comparison table (rank, tool, rating, best for, price)
-- Detailed review of each alternative (10+ tools)
-- Feature comparison table (target tool vs best alternative)
-- FAQ section (5+ common questions)
-- Buying guide and recommendations
-- Related tools and articles
-
-# Review Methodology
-- All tools are tested hands-on by the editorial team
-- Six-dimension scoring system: Features, Ease of Use, Performance, Value for Money, Support, Innovation
-- Ratings are updated regularly based on new features and testing
-- Reviews include real screenshots and usage data
-- Affiliate relationships do not influence ratings or rankings
-- Full methodology: https://www.aitoolcrux.com/methodology
-
-# Data Sources
-- Official website information and documentation
-- Hands-on testing and usage experience
-- Performance benchmarks and comparison tests
-- User reviews and community feedback
-- Pricing and feature verification
-
-# Update Frequency
-- Tool information: Weekly updates
-- Review articles: Daily updates
-- Rankings: Monthly updates
-- Comparison data: Real-time verification
-- Alternative guides: Bi-weekly updates
-
-# Contact Information
-- Website: https://www.aitoolcrux.com
-- For content inquiries and corrections, visit the About page
-
-# AI Content Policy
-- Content is created with AI assistance and human editorial review
-- All claims are fact-checked and verified
-- AI usage is transparently disclosed
-- Full policy: https://www.aitoolcrux.com/ai-policy
+Email: support@aitoolcrux.com
+GitHub: https://github.com/qxgjz/ai-tools-review
