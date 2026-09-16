@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-16 01:35 UTC
+> Generated: 2026-09-16 02:43 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,17 +17,17 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 91 |
+| Posts | 101 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
-1. **Dify vs Coze 2026: Which AI Agent Builder Wins?** (`dify-vs-coze-2026-comparison`)
-2. **7 Best Stable Diffusion Alternatives in 2026** (`stable-diffusion-alternatives-2026`)
-3. **6 Best MidJourney Alternatives in 2026 (Free & Paid)** (`midjourney-alternatives-2026`)
-4. **Best AI Voice Generators 2026: Top 10 Ranked** (`best-ai-voice-generators-2026`)
-5. **Best AI Resume Builders 2026: Top 10 Ranked** (`best-ai-resume-builders-2026`)
+1. **Notion AI vs Obsidian 2026: Which Note-Taking Tool Wins?** (`notion-ai-vs-obsidian-2026`)
+2. **7 Best Notion AI Alternatives in 2026 (Free & Paid)** (`notion-ai-alternative-2026`)
+3. **MidJourney vs DALL-E 3 2026: Which AI Image Generator Wins?** (`midjourney-vs-dalle-3-2026`)
+4. **7 Best Jasper AI Alternatives in 2026 (Cheaper & Better)** (`jasper-ai-alternative-2026`)
+5. **ChatGPT vs Claude 2026: Which AI Chatbot Wins?** (`chatgpt-vs-claude-2026`)
 
 ## Iteration State
 
@@ -40,7 +40,13 @@
 
 ## GSC Data
 
-No GSC report found.
+| Metric | Value |
+|--------|-------|
+| Clicks | 5 |
+| Impressions | 1046 |
+| CTR | 0.48% |
+| Avg Ranking | 23.49 |
+| Report | 2026-08-16_2026-09-14.md |
 
 ## Audit Findings (pending)
 
