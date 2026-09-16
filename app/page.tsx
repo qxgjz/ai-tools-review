@@ -216,9 +216,9 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Quick Answer */}
-          <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/50 p-6 sm:p-8">
+          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
-              <Zap className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+              <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
               <h2 className="text-xl font-bold text-gray-900 dark:text-white">Quick Answer</h2>
             </div>
             <div className="space-y-4">

@@ -334,7 +334,7 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
 
       {/* Final Verdict */}
       <FadeIn delay={0.45}>
-        <div className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-purple-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/30 p-6 sm:p-8 mb-8 mt-8">
+        <div className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/30 dark:via-teal-950/30 dark:to-cyan-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/30 p-6 sm:p-8 mb-8 mt-8">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
             <Award className="w-5 h-5 text-amber-500" />
             Final Verdict

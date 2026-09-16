@@ -86,7 +86,7 @@ export function NewsletterSignup({ variant = "default" }: { variant?: "default" 
   }
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900">
+    <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl p-8 border border-emerald-100 dark:border-emerald-900">
       <div className="text-center max-w-xl mx-auto">
         <div className="inline-flex items-center justify-center w-12 h-12 bg-blue-600 rounded-full mb-4">
           <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">

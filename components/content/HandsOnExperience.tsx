@@ -150,7 +150,7 @@ export function HandsOnExperience({
   const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
-    <div className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-xl p-6 border border-blue-100 dark:border-blue-900/30 my-8">
+    <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-xl p-6 border border-emerald-100 dark:border-emerald-900/30 my-8">
       {/* 章节标题 */}
       <div className="flex items-center gap-3 mb-5">
         <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">

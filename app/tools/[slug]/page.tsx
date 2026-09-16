@@ -745,7 +745,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* Editor review summary / Final Verdict */}
-      <section className="bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50 dark:from-blue-950/30 dark:via-indigo-950/30 dark:to-purple-950/30 rounded-2xl border border-blue-100 dark:border-blue-900/30 p-6 sm:p-8 mb-6">
+      <section className="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 dark:from-emerald-950/30 dark:via-teal-950/30 dark:to-cyan-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/30 p-6 sm:p-8 mb-6">
         <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
           <Award className="w-5 h-5 text-amber-500" />
           Final Verdict & Recommendation
@@ -833,7 +833,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
       {/* Comparison pages - hub-and-spoke internal linking */}
       {relevantComparisons.length > 0 && (
-        <section className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/20 dark:to-purple-950/20 rounded-2xl border border-indigo-100 dark:border-indigo-900/50 shadow-sm p-6 mb-6">
+        <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <GitCompare className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
             Compare {tool.name} Side-by-Side
