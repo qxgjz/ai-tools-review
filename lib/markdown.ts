@@ -14,7 +14,13 @@ marked.setOptions({
 export function markdownToHtml(markdown: string): string {
   if (!markdown) return "";
   try {
-    return marked.parse(markdown) as string;
+    let html = marked.parse(markdown) as string;
+    // Add loading="lazy" and decoding="async" to all img tags for performance
+    html = html.replace(
+      /<img(\s+[^>]*?)>/g,
+      '<img$1 loading="lazy" decoding="async">'
+    );
+    return html;
   } catch (error) {
     console.error("Markdown conversion error:", error);
     return markdown; // 转换失败时返回原文

@@ -43,6 +43,34 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const categoryFormatted = tool.category.charAt(0).toUpperCase() + tool.category.slice(1);
   const prosSummary = tool.pros.slice(0, 2).join(", ");
   const description = `${tool.name} by ${tool.vendor} — ${categoryFormatted} AI tool rated ${total.toFixed(1)}/10 (${grade} grade). Expert review: features, pricing, pros (${prosSummary}) & cons. Last updated ${tool.lastUpdated}. Find out if ${tool.name} is right for you.`;
+  // Use tool-specific screenshot as og:image if available
+  const toolScreenshotMap: Record<string, string> = {
+    "canva-magic": "/screenshots/real/webp/canva-magic.webp",
+    "chatgpt": "/screenshots/real/webp/chatgpt.webp",
+    "claude": "/screenshots/real/webp/claude.webp",
+    "copy-ai": "/screenshots/real/webp/copy-ai.webp",
+    "cursor": "/screenshots/real/webp/cursor.webp",
+    "dall-e-3": "/screenshots/real/webp/dall-e-3.webp",
+    "elevenlabs": "/screenshots/real/webp/elevenlabs.webp",
+    "figma-ai": "/screenshots/real/webp/figma-ai.webp",
+    "gemini": "/screenshots/real/webp/gemini.webp",
+    "github-copilot": "/screenshots/real/webp/github-copilot.webp",
+    "grammarly": "/screenshots/real/webp/grammarly.webp",
+    "jasper": "/screenshots/real/webp/jasper.webp",
+    "midjourney": "/screenshots/real/webp/midjourney.webp",
+    "notion-ai": "/screenshots/real/webp/notion-ai.webp",
+    "perplexity": "/screenshots/real/webp/perplexity.webp",
+    "runway": "/screenshots/real/webp/runway.webp",
+    "sora": "/screenshots/real/webp/sora.webp",
+    "stable-diffusion": "/screenshots/real/webp/stable-diffusion.webp",
+    "suno": "/screenshots/real/webp/suno.webp",
+    "windsurf": "/screenshots/real/webp/windsurf.webp",
+  };
+  const screenshotPath = toolScreenshotMap[tool.slug];
+  const ogImageUrl = screenshotPath
+    ? `https://www.aitoolcrux.com${screenshotPath}`
+    : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(categoryFormatted)}`;
+
   return {
     title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
     description: description.slice(0, 160),
@@ -61,10 +89,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       siteName: "AIToolCrux",
       images: [
         {
-          url: "https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools",
+          url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: "AIToolCrux - AI Tool Review",
+          alt: `${tool.name} interface screenshot — AIToolCrux review`,
         },
       ],
     },
@@ -72,6 +100,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       card: "summary_large_image",
       title: `${tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: description.slice(0, 160),
+      images: [ogImageUrl],
     },
   };
 }

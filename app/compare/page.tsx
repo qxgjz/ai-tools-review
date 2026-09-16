@@ -253,6 +253,12 @@ export default function ComparePage() {
           ← Back to Home
         </Link>
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">AI Tool Comparison 2026</h1>
+        <div className="flex items-center gap-2 mb-3">
+          <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
+            ✅ Tested & Reviewed
+          </span>
+          <span className="text-xs text-gray-500 dark:text-gray-400">533+ tools hands-on tested by our editorial team</span>
+        </div>
         <p className="text-gray-600 dark:text-gray-400">
           Compare 500+ AI tools side by side. Features, pricing, ratings, and detailed six-dimension analysis to find your perfect AI tool in 2026.
         </p>
@@ -850,7 +856,7 @@ export default function ComparePage() {
                         <div className="flex gap-2">
                           <Link
                             href={`/tools/${tool.slug}`}
-                            className="text-sm text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300 font-medium"
+                            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/40 rounded-lg transition-colors"
                           >
                             View Details →
                           </Link>
@@ -858,10 +864,10 @@ export default function ComparePage() {
                             <a
                               href={tool.officialUrl}
                               target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-sm text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300"
+                              rel="noopener noreferrer nofollow sponsored"
+                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
                             >
-                              Official Site ↗
+                              Try Free →
                             </a>
                           )}
                         </div>
