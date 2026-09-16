@@ -144,6 +144,37 @@ const nextConfig = {
         destination: "/blog/chatgpt-vs-claude-2026-comparison",
         permanent: true,
       },
+      // Old review URLs that 404 - redirect to actual published posts
+      {
+        source: "/blog/dify-review",
+        destination: "/blog/dify-vs-langchain-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/cursor-review",
+        destination: "/blog/cursor-vs-windsurf-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/midjourney-review",
+        destination: "/blog/midjourney-vs-dalle-3-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/gemini-review",
+        destination: "/blog/gemini-alternatives-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/notion-ai-review",
+        destination: "/blog/notion-ai-vs-obsidian-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/elevenlabs-review",
+        destination: "/blog/best-ai-voice-generators-2026",
+        permanent: true,
+      },
     ];
   },
 };
