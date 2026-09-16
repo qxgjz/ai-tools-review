@@ -1,0 +1,33 @@
+name: SEO Check
+
+on:
+  schedule:
+    # Daily at 03:00 Beijing time = 19:00 UTC
+    - cron: '0 19 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  seo-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run SEO check
+        run: python .github/scripts/seo_check.py
+
+      - name: Commit report
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add iteration_center/seo_check_latest.md
+          git diff --staged --quiet || git commit -m "🔍 SEO check $(date -u +%Y-%m-%d)"
+          git push

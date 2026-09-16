@@ -1,0 +1,33 @@
+name: Context Update
+
+on:
+  schedule:
+    # Daily at 01:00 Beijing time = 17:00 UTC
+    - cron: '0 17 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-context:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Generate context
+        run: python .github/scripts/generate_context.py
+
+      - name: Commit context
+        run: |
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add iteration_center/CONTEXT.md
+          git diff --staged --quiet || git commit -m "🤖 Update context $(date -u +%Y-%m-%d)"
+          git push
