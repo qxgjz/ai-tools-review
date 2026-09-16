@@ -165,7 +165,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       "@type": "Rating",
       ratingValue: total.toFixed(1),
       bestRating: "10",
-      worstRating: "0",
+      worstRating: "1",
     },
     author: {
       "@type": "Person",
