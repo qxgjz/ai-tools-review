@@ -198,10 +198,15 @@ export default function PostPage({ params }: PostPageProps) {
   const relatedTools = tools
     .filter((t) => t.slug !== toolSlug)
     .map((t) => ({ tool: t, relevance: calculateToolRelevance(t) }))
-    .filter((item) => item.relevance > 10)
+    .filter((item) => item.relevance > 5)
     .sort((a, b) => b.relevance - a.relevance)
-    .slice(0, 4)
-    .map((item) => item.tool);
+    .reduce((acc: typeof tools, item) => {
+      const cat = (item.tool.category || "").toLowerCase();
+      const catCount = acc.filter((t) => (t.category || "").toLowerCase() === cat).length;
+      if (catCount < 3) acc.push(item.tool);
+      return acc;
+    }, [])
+    .slice(0, 8);
 
   const tool = tools.find((t) => t.slug === toolSlug);
   const toolName = tool?.name || post.title.split(" ")[0] || "this tool";
