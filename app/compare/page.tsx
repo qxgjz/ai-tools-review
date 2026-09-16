@@ -434,6 +434,47 @@ export default function ComparePage() {
       </div>
 
 
+
+      {/* Popular Comparison Pages - Internal Linking */}
+      <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Popular AI Tool Comparisons</h2>
+        <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
+          Detailed head-to-head comparisons with real test data, pricing breakdowns, and honest verdicts.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+          <Link href="/compare/chatgpt-vs-claude" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            ChatGPT vs Claude
+          </Link>
+          <Link href="/compare/chatgpt-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            ChatGPT vs Gemini
+          </Link>
+          <Link href="/compare/claude-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Claude vs Gemini
+          </Link>
+          <Link href="/compare/midjourney-vs-dall-e-3" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Midjourney vs DALL-E 3
+          </Link>
+          <Link href="/compare/midjourney-vs-stable-diffusion" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Midjourney vs Stable Diffusion
+          </Link>
+          <Link href="/compare/github-copilot-vs-cursor" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            GitHub Copilot vs Cursor
+          </Link>
+          <Link href="/compare/perplexity-vs-chatgpt" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Perplexity vs ChatGPT
+          </Link>
+          <Link href="/compare/runway-vs-sora" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Runway vs Sora
+          </Link>
+          <Link href="/compare/notion-ai-vs-grammarly" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Notion AI vs Grammarly
+          </Link>
+          <Link href="/compare/jasper-vs-copy-ai" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+            Jasper vs Copy.ai
+          </Link>
+        </div>
+      </div>
+
       {/* FAQ Section - GEO/Rich Snippet Optimization */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
