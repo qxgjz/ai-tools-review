@@ -1,6 +1,9 @@
 export const metadata = {
-  title: "Terms of Service",
-  description: "Terms of Service for AIToolCrux - AI tool reviews and comparisons.",
+  title: "Terms of Service | AIToolCrux",
+  description: "Read the Terms of Service for AIToolCrux. Our terms cover use of our AI tool reviews, affiliate links, and website content.",
+  alternates: {
+    canonical: "https://www.aitoolcrux.com/terms",
+  },
 };
 
 export default function TermsPage() {

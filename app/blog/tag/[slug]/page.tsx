@@ -37,9 +37,10 @@ export function generateMetadata({ params }: TagPageProps) {
       break;
     }
   }
+  const articleCount = tagPosts.length;
   return {
-    title: `#${tagName} - AIToolCruxBlog`,
-    description: `AIToolCruxBlog - Tags #${tagName} 的所有文章`,
+    title: `Best ${tagName} AI Tools & Articles 2026 | AIToolCrux`,
+    description: `Explore ${articleCount} expert-reviewed ${tagName} AI tools and articles on AIToolCrux. In-depth comparisons, honest reviews, and practical guides for 2026.`,
     alternates: {
       canonical: `https://www.aitoolcrux.com/blog/tag/${params.slug}`,
     },

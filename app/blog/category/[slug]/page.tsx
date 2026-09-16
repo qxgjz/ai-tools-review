@@ -12,9 +12,10 @@ interface CategoryPageProps {
 export function generateMetadata({ params }: CategoryPageProps) {
   const categoryPosts = posts.filter((p) => p.categorySlug === params.slug);
   const categoryName = categoryPosts.length > 0 ? categoryPosts[0].category : params.slug;
+  const articleCount = categoryPosts.length;
   return {
-    title: `${categoryName} - AIToolCruxBlog`,
-    description: `AIToolCruxBlog - ${categoryName}Categories的所有文章`,
+    title: `Best ${categoryName} Articles & Reviews 2026 | AIToolCrux`,
+    description: `Read ${articleCount} expert ${categoryName} articles and AI tool reviews on AIToolCrux. In-depth guides, comparisons, and testing results for 2026.`,
     alternates: {
       canonical: `https://www.aitoolcrux.com/blog/category/${params.slug}`,
     },
@@ -37,13 +38,13 @@ export default function CategoryPage({ params }: CategoryPageProps) {
         href="/blog"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
       >
-        ← ReturnBlog列Table
+        ← ← Back to Blog
       </Link>
 
       {/* Categories标题 */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Categories：{categoryName}
+          Category: {categoryName}
         </h1>
         <p className="text-gray-600 dark:text-gray-400">{categoryPosts.length} articles</p>
       </div>
