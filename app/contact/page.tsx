@@ -3,7 +3,7 @@ import { Mail, MessageSquare, Clock, Globe } from "lucide-react";
 
 export const metadata: Metadata = {
   title: "Contact Us",
-  description: "Contact AIToolCrux - questions, feedback, partnership inquiries, and correction requests.",
+  description: "Get in touch with the AIToolCrux team. Questions, feedback, partnership inquiries, and review correction requests — we respond within 24-48 hours.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/contact",
   },
