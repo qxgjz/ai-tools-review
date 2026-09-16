@@ -185,7 +185,8 @@
         "comparison": "Folders help, search needs improvement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "2",
@@ -374,7 +375,8 @@
         "comparison": "Higher than desired for creative work"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "3",
@@ -555,7 +557,8 @@
         "comparison": "Functional but less polished than competitors"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "4",
@@ -765,7 +768,8 @@
         "comparison": "Inspiring but interface is polarizing"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "5",
@@ -970,7 +974,8 @@
         "comparison": "More aggressive than competitors"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "6",
@@ -1173,7 +1178,8 @@
         "comparison": "No data leaves local machine"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "7",
@@ -1383,7 +1389,8 @@
         "comparison": "Significant for boilerplate-heavy tasks"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "8",
@@ -1592,7 +1599,8 @@
         "comparison": "Generates usable boilerplate, needs refinement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "9",
@@ -1796,7 +1804,8 @@
         "comparison": "Enough for casual use, Pro for heavy"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "10",
@@ -2006,7 +2015,8 @@
         "comparison": "Good for teams, expensive for individuals"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "11",
@@ -2216,7 +2226,8 @@
         "comparison": "Adds up quickly for large teams"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "12",
@@ -2427,7 +2438,8 @@
         "comparison": "Most formatting preserved through AI edits"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "note-taking"
   },
   {
     "id": "13",
@@ -2636,7 +2648,8 @@
         "comparison": "Good for web content"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "email"
   },
   {
     "id": "14",
@@ -2851,7 +2864,8 @@
         "comparison": "Plan needed for batch processing"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "15",
@@ -3060,7 +3074,8 @@
         "comparison": "Not yet generally available"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "16",
@@ -3275,7 +3290,8 @@
         "test": "Standard vs high quality comparison",
         "comparison": "Batch at standard quality for economy"
       }
-    ]
+    ],
+    "subcategory": "voice-generators"
   },
   {
     "id": "17",
@@ -3485,7 +3501,8 @@
         "comparison": "Excellent for research, weak for transactions"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ai-search"
   },
   {
     "id": "18",
@@ -3694,7 +3711,8 @@
         "comparison": "Feels native, no context switching"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "19",
@@ -3905,7 +3923,8 @@
         "comparison": "Pro needed for 4K and transparent backgrounds"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "20",
@@ -4115,7 +4134,8 @@
         "comparison": "Some transitions are abrupt"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "n8n",
@@ -4240,7 +4260,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "email"
   },
   {
     "id": "auto-gpt",
@@ -4361,7 +4382,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "ollama",
@@ -4484,7 +4506,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "dify",
@@ -4610,7 +4633,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "task-automation"
   },
   {
     "id": "llama-cpp",
@@ -4731,7 +4755,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment"
   },
   {
     "id": "gemini-cli",
@@ -4854,7 +4879,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "open-webui",
@@ -4980,7 +5006,8 @@
         "comparison": "Helpful without being reckless"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "search-assistants"
   },
   {
     "id": "vllm",
@@ -5102,7 +5129,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment"
   },
   {
     "id": "claude-code",
@@ -5223,7 +5251,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "browser-use",
@@ -5346,7 +5375,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "document-ai"
   },
   {
     "id": "lobe-chat",
@@ -5471,7 +5501,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "langflow",
@@ -5594,7 +5625,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "task-automation"
   },
   {
     "id": "openhands",
@@ -5712,7 +5744,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "codex",
@@ -5830,7 +5863,8 @@
         "comparison": "Varies by plan"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "testing"
   },
   {
     "id": "mineru",
@@ -5951,7 +5985,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "document-ai"
   },
   {
     "id": "langchain",
@@ -6073,7 +6108,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "docling",
@@ -6192,7 +6228,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "document-ai"
   },
   {
     "id": "llama-index",
@@ -6314,7 +6351,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "worldmonitor",
@@ -6434,7 +6472,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "crewai",
@@ -6554,7 +6593,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "milvus",
@@ -6673,7 +6713,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-db"
   },
   {
     "id": "ragflow",
@@ -6796,7 +6837,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "cherry-studio",
@@ -6915,7 +6957,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "ray",
@@ -7034,7 +7077,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "jan",
@@ -7153,7 +7197,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "litellm",
@@ -7278,7 +7323,8 @@
         "comparison": "Professional formats available"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "unsloth",
@@ -7398,7 +7444,8 @@
         "comparison": "Professional formats available"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "text-generation-webui",
@@ -7519,7 +7566,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "firecrawl",
@@ -7640,7 +7688,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "task-automation"
   },
   {
     "id": "fabric",
@@ -7758,7 +7807,8 @@
         "comparison": "Enterprise-grade reliability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "prompt-engineering"
   },
   {
     "id": "phidata",
@@ -7877,7 +7927,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "goose",
@@ -7999,7 +8050,8 @@
         "baseline": "Traditional deployments 15-30 minutes"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "mem0",
@@ -8117,7 +8169,8 @@
         "baseline": "Custom vector DB setup 8-16 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-memory"
   },
   {
     "id": "librechat",
@@ -8239,7 +8292,8 @@
         "baseline": "Survey of 100 test sessions"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "anything-llm",
@@ -8360,7 +8414,8 @@
         "baseline": "Enterprise software average 50-60%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-management"
   },
   {
     "id": "continue",
@@ -8479,7 +8534,8 @@
         "baseline": "IDE integration is intuitive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "copilotkit",
@@ -8597,7 +8653,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "flowise",
@@ -8718,7 +8775,8 @@
         "baseline": "Enterprise software average 50-60%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-management"
   },
   {
     "id": "crawl4ai",
@@ -8838,7 +8896,8 @@
         "baseline": "Tested on standard infrastructure"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "web-agents"
   },
   {
     "id": "composio",
@@ -8959,7 +9018,8 @@
         "baseline": "Real-time applications require <1s"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "openai-python",
@@ -9078,7 +9138,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "pydantic",
@@ -9196,7 +9257,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "semantic-kernel",
@@ -9314,7 +9376,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-framework"
   },
   {
     "id": "llama-factory",
@@ -9434,7 +9497,8 @@
         "baseline": "Tested on standard infrastructure"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chroma",
@@ -9552,7 +9616,8 @@
         "baseline": "Standard databases 2-4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-db"
   },
   {
     "id": "langgraph",
@@ -9674,7 +9739,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "openai-translator",
@@ -9794,7 +9860,8 @@
         "baseline": "Traditional deployments 15-30 minutes"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "haystack",
@@ -9916,7 +9983,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "langfuse",
@@ -10038,7 +10106,8 @@
         "baseline": "Enterprise tools 1-2 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-monitoring"
   },
   {
     "id": "ai",
@@ -10156,7 +10225,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "repomix",
@@ -10274,7 +10344,8 @@
         "baseline": "Tested on standard infrastructure"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "mastra",
@@ -10395,7 +10466,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation-tools"
   },
   {
     "id": "faiss",
@@ -10515,7 +10587,8 @@
         "baseline": "Standard databases 2-4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-db"
   },
   {
     "id": "python-sdk",
@@ -10635,7 +10708,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "dspy",
@@ -10753,7 +10827,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "servers",
@@ -10871,7 +10946,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "prefect",
@@ -10991,7 +11067,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "scrapegraph-ai",
@@ -11113,7 +11190,8 @@
         "baseline": "Enterprise software average 50-60%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-management"
   },
   {
     "id": "markitdown",
@@ -11232,7 +11310,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "autogen",
@@ -11350,7 +11429,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "agentscope",
@@ -11469,7 +11549,8 @@
         "baseline": "Tested on standard infrastructure"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chatbox",
@@ -11588,7 +11669,8 @@
         "baseline": "Survey of 100 test sessions"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "skyvern",
@@ -11709,7 +11791,8 @@
         "baseline": "Tested on standard infrastructure"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "qdrant",
@@ -11829,7 +11912,8 @@
         "baseline": "Standard databases 2-4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-db"
   },
   {
     "id": "tradingagents",
@@ -11947,7 +12031,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "temporal",
@@ -12065,7 +12150,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "promptfoo",
@@ -12187,7 +12273,8 @@
         "baseline": "Automated indexing and monitoring"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "whisperx",
@@ -12306,7 +12393,8 @@
         "baseline": "Real-time applications require <1s"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "opik",
@@ -12427,7 +12515,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "roo-code",
@@ -12546,7 +12635,8 @@
         "baseline": "IDE integration is intuitive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "langchainjs",
@@ -12664,7 +12754,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "windmill",
@@ -12786,7 +12877,8 @@
         "baseline": "Enterprise software average 50-60%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "weaviate",
@@ -12906,7 +12998,8 @@
         "baseline": "Standard databases 2-4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-db"
   },
   {
     "id": "camel",
@@ -13024,7 +13117,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "pydantic-ai",
@@ -13148,7 +13242,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "olmocr",
@@ -13268,7 +13363,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "chatdev",
@@ -13386,7 +13482,8 @@
         "baseline": "Manual code changes 1-2 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "unstructured",
@@ -13512,7 +13609,8 @@
         "baseline": "Enterprise software average 50-60%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "note-taking"
   },
   {
     "id": "letta",
@@ -13637,7 +13735,8 @@
         "baseline": "Custom vector DB setup 8-16 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-memory"
   },
   {
     "id": "typescript-sdk",
@@ -13756,7 +13855,8 @@
         "baseline": "Developer tools average 7/10"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "a2a",
@@ -13876,7 +13976,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-framework"
   },
   {
     "id": "chainlit",
@@ -13994,7 +14095,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "buzz",
@@ -14112,7 +14214,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "open-notebook",
@@ -14231,7 +14334,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "e2b",
@@ -14353,7 +14457,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "gpt-researcher",
@@ -14473,7 +14578,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "tensorzero",
@@ -14593,7 +14699,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "peft",
@@ -14712,7 +14819,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "pipecat",
@@ -14831,7 +14939,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "agency-agents",
@@ -14951,7 +15060,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "db-gpt",
@@ -15073,7 +15183,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "eino",
@@ -15192,7 +15303,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "autoresearch",
@@ -15312,7 +15424,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "gstack",
@@ -15430,7 +15543,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "deer-flow",
@@ -15550,7 +15664,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "wrenai",
@@ -15670,7 +15785,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "llama-cpp-python",
@@ -15788,7 +15904,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "outlines",
@@ -15908,7 +16025,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "testing"
   },
   {
     "id": "txtai",
@@ -16030,7 +16148,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "phoenix",
@@ -16148,7 +16267,8 @@
         "baseline": "Target <3s"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-monitoring"
   },
   {
     "id": "smolagents",
@@ -16267,7 +16387,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "docsgpt",
@@ -16389,7 +16510,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "cognee",
@@ -16509,7 +16631,8 @@
         "baseline": "Critical security requirement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-memory"
   },
   {
     "id": "tabby",
@@ -16629,7 +16752,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "guidance",
@@ -16749,7 +16873,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "testing"
   },
   {
     "id": "llmware",
@@ -16871,7 +16996,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "langchain4j",
@@ -16992,7 +17118,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "deepeval",
@@ -17111,7 +17238,8 @@
         "baseline": "Target <3s"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-monitoring"
   },
   {
     "id": "scalene",
@@ -17231,7 +17359,8 @@
         "baseline": "Critical security requirement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-memory"
   },
   {
     "id": "mcp-go",
@@ -17351,7 +17480,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "bentoml",
@@ -17471,7 +17601,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "gateway",
@@ -17595,7 +17726,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "axolotl",
@@ -17714,7 +17846,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "gpt-computer-assistant",
@@ -17834,7 +17967,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "openllmetry",
@@ -17952,7 +18086,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "screenshot-to-code",
@@ -18072,7 +18207,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "voltagent",
@@ -18197,7 +18333,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "instructor",
@@ -18315,7 +18452,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "testing"
   },
   {
     "id": "praisonai",
@@ -18437,7 +18575,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-management"
   },
   {
     "id": "guardrails",
@@ -18557,7 +18696,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "aider",
@@ -18677,7 +18817,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "oumi",
@@ -18797,7 +18938,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "whodb",
@@ -18917,7 +19059,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "pr-agent",
@@ -19036,7 +19179,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chat-ui",
@@ -19155,7 +19299,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "mlc-llm",
@@ -19273,7 +19418,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "agency-swarm",
@@ -19393,7 +19539,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "manifest",
@@ -19512,7 +19659,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "agenta",
@@ -19633,7 +19781,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "inspector",
@@ -19755,7 +19904,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "project-management"
   },
   {
     "id": "casibase",
@@ -19877,7 +20027,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "chatgpt-shortcut",
@@ -19996,7 +20147,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "steel-browser",
@@ -20118,7 +20270,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "llm",
@@ -20237,7 +20390,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langroid",
@@ -20359,7 +20513,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "text-generation-inference",
@@ -20478,7 +20633,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "bifrost",
@@ -20600,7 +20756,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "specification",
@@ -20720,7 +20877,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "langwatch",
@@ -20841,7 +20999,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "private-gpt",
@@ -20963,7 +21122,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "bitnet",
@@ -21083,7 +21243,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "vanna",
@@ -21205,7 +21366,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "ufo",
@@ -21329,7 +21491,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "swe-agent",
@@ -21450,7 +21613,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "langgraphjs",
@@ -21570,7 +21734,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "ragas",
@@ -21692,7 +21857,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag"
   },
   {
     "id": "generative-ai",
@@ -21812,7 +21978,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "nemo-guardrails",
@@ -21930,7 +22097,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "happy",
@@ -22048,7 +22216,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "griptape",
@@ -22168,7 +22337,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "openlit",
@@ -22291,7 +22461,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "botpress",
@@ -22411,7 +22582,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "ai-chatbot",
@@ -22529,7 +22701,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "skills",
@@ -22649,7 +22822,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "open-interpreter",
@@ -22767,7 +22941,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "harbor",
@@ -22890,7 +23065,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "code-interpreter",
@@ -23009,7 +23185,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "claude-code-router",
@@ -23127,7 +23304,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "jupyter-ai",
@@ -23248,7 +23426,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "finrobot",
@@ -23367,7 +23546,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "ludwig",
@@ -23487,7 +23667,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "agixt",
@@ -23608,7 +23789,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "notte",
@@ -23728,7 +23910,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "toolhive",
@@ -23851,7 +24034,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "index-tts",
@@ -23970,7 +24154,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "auto-dev",
@@ -24093,7 +24278,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "metagpt",
@@ -24212,7 +24398,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "gorilla",
@@ -24333,7 +24520,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "mergekit",
@@ -24452,7 +24640,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "tts-generation-webui",
@@ -24573,7 +24762,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "pandas-ai",
@@ -24696,7 +24886,8 @@
         "baseline": "Excellent"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-management"
   },
   {
     "id": "llm-app",
@@ -24817,7 +25008,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "omniroute",
@@ -24935,7 +25127,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "localgpt",
@@ -25059,7 +25252,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "ai-collection",
@@ -25178,7 +25372,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chatgpt-next-web",
@@ -25298,7 +25493,8 @@
         "baseline": "Good engagement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "dolphin",
@@ -25422,7 +25618,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "kodus-ai",
@@ -25540,7 +25737,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "pgvector",
@@ -25659,7 +25857,8 @@
         "baseline": "Good scalability"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-db"
   },
   {
     "id": "wfgy",
@@ -25780,7 +25979,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "uagents",
@@ -25905,7 +26105,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "gpt-engineer",
@@ -26026,7 +26227,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "genai-agents",
@@ -26145,7 +26347,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "grok-1",
@@ -26263,7 +26466,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "dust",
@@ -26382,7 +26586,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "colossalai",
@@ -26501,7 +26706,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "superagent",
@@ -26620,7 +26826,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "chattts",
@@ -26739,7 +26946,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "swarms",
@@ -26865,7 +27073,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "helicone",
@@ -26986,7 +27195,8 @@
         "baseline": "Target <3s"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-monitoring"
   },
   {
     "id": "babyagi",
@@ -27105,7 +27315,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "qwen3",
@@ -27225,7 +27436,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langchain-chatchat",
@@ -27346,7 +27558,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "promptify",
@@ -27465,7 +27678,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "taskweaver",
@@ -27584,7 +27798,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "fastchat",
@@ -27706,7 +27921,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "gpt-pilot",
@@ -27825,7 +28041,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "quivr",
@@ -27947,7 +28164,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "ai-codereview-gitlab",
@@ -28065,7 +28283,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "uqlm",
@@ -28183,7 +28402,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "observability"
   },
   {
     "id": "agentgpt",
@@ -28303,7 +28523,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "chatbot-ui",
@@ -28421,7 +28642,8 @@
         "baseline": "Good engagement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "tinytroupe",
@@ -28540,7 +28762,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "gpt-mobile",
@@ -28658,7 +28881,8 @@
         "baseline": "Target 100%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "chat-langchain",
@@ -28776,7 +29000,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag"
   },
   {
     "id": "agentops",
@@ -28896,7 +29121,8 @@
         "baseline": "Target <3s"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-monitoring"
   },
   {
     "id": "ai-artifacts",
@@ -29016,7 +29242,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag"
   },
   {
     "id": "storm",
@@ -29138,7 +29365,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langchaingo",
@@ -29258,7 +29486,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "mistral-inference",
@@ -29377,7 +29606,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "llama3",
@@ -29496,7 +29726,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "chathub",
@@ -29619,7 +29850,8 @@
         "baseline": "Good engagement"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "typechat",
@@ -29737,7 +29969,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "flux",
@@ -29855,7 +30088,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "deepseek-coder",
@@ -29979,7 +30213,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "langchain-dart",
@@ -30098,7 +30333,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "gpt-crawler",
@@ -30216,7 +30452,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "nadirclaw",
@@ -30337,7 +30574,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "jina",
@@ -30461,7 +30699,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "hallucination-leaderboard",
@@ -30585,7 +30824,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "swarm",
@@ -30705,7 +30945,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "courses",
@@ -30823,7 +31064,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "generative-agents",
@@ -30941,7 +31183,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "devika",
@@ -31061,7 +31304,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "evals",
@@ -31181,7 +31425,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation-tools"
   },
   {
     "id": "git-lrc",
@@ -31301,7 +31546,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "gemini-fullstack-langgraph-quickstart",
@@ -31427,7 +31673,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "superagi",
@@ -31552,7 +31799,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "ai-scientist",
@@ -31671,7 +31919,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "plandex",
@@ -31795,7 +32044,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "aios",
@@ -31913,7 +32163,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "llama3-from-scratch",
@@ -32032,7 +32283,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "demogpt",
@@ -32153,7 +32405,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "dalle-mini",
@@ -32271,7 +32524,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "adala",
@@ -32392,7 +32646,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "powerinfer",
@@ -32514,7 +32769,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "gitingest",
@@ -32634,7 +32890,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "lora",
@@ -32757,7 +33014,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "chatgpt-google-extension",
@@ -32877,7 +33135,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "jarvis-ai-assistant",
@@ -32995,7 +33254,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "ai-town",
@@ -33119,7 +33379,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "openprompt-co",
@@ -33239,7 +33500,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "open-llms",
@@ -33359,7 +33621,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "openllm",
@@ -33479,7 +33742,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "gptdiscord",
@@ -33601,7 +33865,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "developer",
@@ -33719,7 +33984,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "llama-github",
@@ -33845,7 +34111,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "observability"
   },
   {
     "id": "seamless-communication",
@@ -33964,7 +34231,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "insanely-fast-whisper",
@@ -34084,7 +34352,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "claude-engineer",
@@ -34202,7 +34471,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "go-openai",
@@ -34322,7 +34592,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "langchainrb",
@@ -34441,7 +34712,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "self-operating-computer",
@@ -34559,7 +34831,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "gpt-prompt-engineer",
@@ -34678,7 +34951,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "testing"
   },
   {
     "id": "audiogpt",
@@ -34796,7 +35070,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "imagebind",
@@ -34914,7 +35189,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "petals",
@@ -35032,7 +35308,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "arcade-ai",
@@ -35153,7 +35430,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "agents",
@@ -35272,7 +35550,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "bloop",
@@ -35392,7 +35671,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "papers-for-molecular-design-using-dl",
@@ -35512,7 +35792,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "openchatkit",
@@ -35630,7 +35911,8 @@
         "baseline": "Acceptable"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "r2r",
@@ -35750,7 +36032,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "robby-chatbot",
@@ -35871,7 +36154,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "xagent",
@@ -35990,7 +36274,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "emotivoice",
@@ -36110,7 +36395,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "agentbench",
@@ -36228,7 +36514,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "large-language-model-notebooks-course",
@@ -36346,7 +36633,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "gptcache",
@@ -36468,7 +36756,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "sweep",
@@ -36587,7 +36876,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "verba",
@@ -36709,7 +36999,8 @@
         "baseline": "Efficient storage"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-databases"
   },
   {
     "id": "diffusion-models-class",
@@ -36829,7 +37120,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "megaparse",
@@ -36947,7 +37239,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "shortgpt",
@@ -37065,7 +37358,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "llocalsearch",
@@ -37186,7 +37480,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "gpt-migrate",
@@ -37309,7 +37604,8 @@
         "baseline": "Growing ecosystem"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "voyager",
@@ -37428,7 +37724,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "appagent",
@@ -37550,7 +37847,8 @@
         "baseline": "Comprehensive"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "autopr",
@@ -37670,7 +37968,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "street-fighter-ai",
@@ -37790,7 +38089,8 @@
         "baseline": "Target <4 hours"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "lavague",
@@ -37912,7 +38212,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "realchar",
@@ -38032,7 +38333,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "devopsgpt",
@@ -38151,7 +38453,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "multi-agent"
   },
   {
     "id": "rigging",
@@ -38271,7 +38574,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "ultravox",
@@ -38390,7 +38694,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "taskingai",
@@ -38510,7 +38815,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "vision-agent",
@@ -38632,7 +38938,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "openchat",
@@ -38752,7 +39059,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "llm-answer-engine",
@@ -38870,7 +39178,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "agentverse",
@@ -38990,7 +39299,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "openagents",
@@ -39110,7 +39420,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "brag-langchain",
@@ -39231,7 +39542,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "ragapp",
@@ -39354,7 +39666,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "maestro",
@@ -39473,7 +39786,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "lagent",
@@ -39593,7 +39907,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "lmql",
@@ -39714,7 +40029,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "ai-getting-started",
@@ -39833,7 +40149,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "llama-cpp-agent",
@@ -39955,7 +40272,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "alphacodium",
@@ -40074,7 +40392,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "text-extract-api",
@@ -40195,7 +40514,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "observability"
   },
   {
     "id": "codeinterpreter-api",
@@ -40313,7 +40633,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "turbopilot",
@@ -40433,7 +40754,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "agentic-radar",
@@ -40555,7 +40877,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "gpt-code-ui",
@@ -40674,7 +40997,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "simpleaichat",
@@ -40794,7 +41118,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "llama-hub",
@@ -40915,7 +41240,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "mistral-finetune",
@@ -41035,7 +41361,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "textgrad",
@@ -41154,7 +41481,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "hands-on-llms",
@@ -41275,7 +41603,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chatfiles",
@@ -41397,7 +41726,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "pezzo",
@@ -41520,7 +41850,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "chainforge",
@@ -41641,7 +41972,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "promptsource",
@@ -41761,7 +42093,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "core",
@@ -41887,7 +42220,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "databerry",
@@ -42007,7 +42341,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "mini-agi",
@@ -42130,7 +42465,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "llm-guard",
@@ -42249,7 +42585,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "priompt",
@@ -42374,7 +42711,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-review"
   },
   {
     "id": "clip-retrieval",
@@ -42494,7 +42832,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "vimgpt",
@@ -42615,7 +42954,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "camel-autogpt",
@@ -42736,7 +43076,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "memary",
@@ -42859,7 +43200,8 @@
         "baseline": "Target <6h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-memory"
   },
   {
     "id": "rasagpt",
@@ -42980,7 +43322,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "codel",
@@ -43099,7 +43442,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "fastagency",
@@ -43219,7 +43563,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "elia",
@@ -43339,7 +43684,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "openai-openapi",
@@ -43459,7 +43805,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "uptrain",
@@ -43581,7 +43928,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "llmstack",
@@ -43702,7 +44050,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "second-brain-agent",
@@ -43827,7 +44176,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "openagi",
@@ -43947,7 +44297,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "llama-agents",
@@ -44068,7 +44419,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "gptswarm",
@@ -44187,7 +44539,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "neurite",
@@ -44305,7 +44658,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "ai-directories",
@@ -44425,7 +44779,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "autochain",
@@ -44544,7 +44899,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "dev-gpt",
@@ -44668,7 +45024,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "solidgpt",
@@ -44786,7 +45143,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "dialoqbase",
@@ -44907,7 +45265,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "tarsier",
@@ -45026,7 +45385,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "minima",
@@ -45151,7 +45511,8 @@
         "baseline": "Target <8h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "llmsherpa",
@@ -45269,7 +45630,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "gpteam",
@@ -45394,7 +45756,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "react-agent",
@@ -45515,7 +45878,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "knowledge",
@@ -45633,7 +45997,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "knowledge-gpt",
@@ -45753,7 +46118,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "code-act",
@@ -45872,7 +46238,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langchain-serve",
@@ -45998,7 +46365,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "streamlit-agent",
@@ -46122,7 +46490,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "chatgpt-data-science-prompts",
@@ -46240,7 +46609,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "llm-chain",
@@ -46360,7 +46730,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "llm-eval-survey",
@@ -46479,7 +46850,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langfair",
@@ -46603,7 +46975,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "observability"
   },
   {
     "id": "thinkgpt",
@@ -46723,7 +47096,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chatarena",
@@ -46843,7 +47217,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "dataline",
@@ -46961,7 +47336,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "crewai-tools",
@@ -47080,7 +47456,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "loopgpt",
@@ -47199,7 +47576,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "gpt-newspaper",
@@ -47319,7 +47697,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "agent-protocol",
@@ -47440,7 +47819,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-framework"
   },
   {
     "id": "ai-legion",
@@ -47563,7 +47943,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "ailice",
@@ -47682,7 +48063,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "restgpt",
@@ -47803,7 +48185,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "chidori",
@@ -47922,7 +48305,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "babyagi-ui",
@@ -48043,7 +48427,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "emcee",
@@ -48165,7 +48550,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "codefuse-chatbot",
@@ -48286,7 +48672,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "hexabot",
@@ -48406,7 +48793,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "browser-extension",
@@ -48529,7 +48917,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "langchain-rust",
@@ -48649,7 +49038,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "llamagym",
@@ -48770,7 +49160,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "minichain",
@@ -48890,7 +49281,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "flock",
@@ -49012,7 +49404,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-management"
   },
   {
     "id": "evo-ninja",
@@ -49131,7 +49524,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "browsergpt",
@@ -49250,7 +49644,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "task-automation"
   },
   {
     "id": "llama-embeddings-fastapi-service",
@@ -49372,7 +49767,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "observability"
   },
   {
     "id": "ix",
@@ -49492,7 +49888,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "llm-agents",
@@ -49611,7 +50008,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "canopy",
@@ -49731,7 +50129,8 @@
         "baseline": "Target <8h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "vector-databases"
   },
   {
     "id": "autogpt-js",
@@ -49851,7 +50250,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "task-automation"
   },
   {
     "id": "langchain-chat-nextjs",
@@ -49971,7 +50371,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "tutor-gpt",
@@ -50091,7 +50492,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "thoughtsource",
@@ -50211,7 +50613,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "gptrpg",
@@ -50331,7 +50734,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langkit",
@@ -50451,7 +50855,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "observability"
   },
   {
     "id": "mamba-chat",
@@ -50572,7 +50977,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chatgdb",
@@ -50691,7 +51097,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "chatpdf",
@@ -50813,7 +51220,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "agentforge",
@@ -50936,7 +51344,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "rag-frameworks"
   },
   {
     "id": "microagents",
@@ -51056,7 +51465,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "skyagi",
@@ -51175,7 +51585,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "auto-evaluator",
@@ -51294,7 +51705,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "langchain-visualizer",
@@ -51415,7 +51827,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "productivity"
   },
   {
     "id": "workgpt",
@@ -51538,7 +51951,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "llmflows",
@@ -51658,7 +52072,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "automata",
@@ -51778,7 +52193,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "autopilot",
@@ -51900,7 +52316,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "yeagerai-agent",
@@ -52021,7 +52438,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "dr-doc-search",
@@ -52140,7 +52558,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "best-of-ai",
@@ -52260,7 +52679,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "multi-gpt",
@@ -52381,7 +52801,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "whispers2t",
@@ -52503,7 +52924,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "snowchat",
@@ -52622,7 +53044,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "agentlabs",
@@ -52741,7 +53164,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "agentpilot",
@@ -52862,7 +53286,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "embedbase",
@@ -52983,7 +53408,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "chatgpt-artifacts",
@@ -53103,7 +53529,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "agency",
@@ -53222,7 +53649,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "eidolon",
@@ -53344,7 +53772,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-orchestration"
   },
   {
     "id": "langchain-agent-production-starter",
@@ -53462,7 +53891,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "lumos",
@@ -53582,7 +54012,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "agent4rec",
@@ -53702,7 +54133,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "aifs",
@@ -53820,7 +54252,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "beebot",
@@ -53943,7 +54376,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "llama-cult-and-more",
@@ -54062,7 +54496,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "autonomous-hr-chatbot",
@@ -54181,7 +54616,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "mindsql",
@@ -54303,7 +54739,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "book-gpt",
@@ -54421,7 +54858,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "langstream",
@@ -54542,7 +54980,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "termgpt",
@@ -54663,7 +55102,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "genia",
@@ -54783,7 +55223,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "llm-strategy",
@@ -54902,7 +55343,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "todoist-mcp-server",
@@ -55026,7 +55468,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "gpt-runner",
@@ -55147,7 +55590,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "openlm",
@@ -55266,7 +55710,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "agentrun",
@@ -55387,7 +55832,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "open-assistant-api",
@@ -55509,7 +55955,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "create-t3-turbo-ai",
@@ -55629,7 +56076,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "lemon-agent",
@@ -55748,7 +56196,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "agent",
@@ -55869,7 +56318,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "langchain-js-llm-template",
@@ -55988,7 +56438,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "instrukt",
@@ -56106,7 +56557,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "bananalyzer",
@@ -56226,7 +56678,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation-tools"
   },
   {
     "id": "datachad",
@@ -56346,7 +56799,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "agentflow",
@@ -56467,7 +56921,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "blockagi",
@@ -56588,7 +57043,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "repochat",
@@ -56709,7 +57165,8 @@
         "baseline": "Target <8h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "langchain-decorators",
@@ -56830,7 +57287,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "flappy",
@@ -56950,7 +57408,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "fact-checker",
@@ -57068,7 +57527,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "chat-gpt-jupyter-extension",
@@ -57189,7 +57649,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "workflow-automation"
   },
   {
     "id": "prompt-optimizer",
@@ -57307,7 +57768,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "langchain-streamlit-template",
@@ -57427,7 +57889,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "mindgeniusai",
@@ -57547,7 +58010,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-platforms"
   },
   {
     "id": "qabot",
@@ -57666,7 +58130,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "deployment-platforms"
   },
   {
     "id": "prompt2ui",
@@ -57785,7 +58250,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "hands-on-langchain-for-llm-applications-development",
@@ -57903,7 +58369,8 @@
         "baseline": "Target <4h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "llm-frameworks"
   },
   {
     "id": "autoact",
@@ -58027,7 +58494,8 @@
         "baseline": "Target <2h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "autonomous-agents"
   },
   {
     "id": "npi",
@@ -58145,7 +58613,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "bondai",
@@ -58265,7 +58734,8 @@
         "baseline": "Target <6h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "agent-memory"
   },
   {
     "id": "llm-ts",
@@ -58386,7 +58856,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "astra-assistants-api",
@@ -58506,7 +58977,8 @@
         "baseline": "Target <3 days"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "evaluation"
   },
   {
     "id": "gpt-code-search",
@@ -58625,7 +59097,8 @@
         "baseline": "Target <8h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "knowledge-bases"
   },
   {
     "id": "21",
@@ -58748,7 +59221,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "22",
@@ -58869,7 +59343,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "general-assistants"
   },
   {
     "id": "23",
@@ -58990,7 +59465,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "24",
@@ -59111,7 +59587,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "25",
@@ -59238,7 +59715,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "search-assistants"
   },
   {
     "id": "26",
@@ -59360,7 +59838,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "27",
@@ -59483,7 +59962,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "28",
@@ -59604,7 +60084,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "29",
@@ -59726,7 +60207,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "chat"
   },
   {
     "id": "30",
@@ -59847,7 +60329,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "31",
@@ -59968,7 +60451,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "32",
@@ -60090,7 +60574,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "33",
@@ -60213,7 +60698,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "34",
@@ -60334,7 +60820,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "35",
@@ -60455,7 +60942,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "36",
@@ -60580,7 +61068,8 @@
         "baseline": "Target >2K"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-image"
   },
   {
     "id": "37",
@@ -60702,7 +61191,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "38",
@@ -60823,7 +61313,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "39",
@@ -60945,7 +61436,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "40",
@@ -61068,7 +61560,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "41",
@@ -61189,7 +61682,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "42",
@@ -61314,7 +61808,8 @@
         "baseline": "Target >70%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "code-assistants"
   },
   {
     "id": "43",
@@ -61436,7 +61931,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "44",
@@ -61559,7 +62055,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "45",
@@ -61681,7 +62178,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "46",
@@ -61803,7 +62301,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "47",
@@ -61926,7 +62425,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "48",
@@ -62048,7 +62548,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "49",
@@ -62169,7 +62670,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "blog-writers"
   },
   {
     "id": "50",
@@ -62291,7 +62793,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "email"
   },
   {
     "id": "51",
@@ -62412,7 +62915,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "project-management"
   },
   {
     "id": "52",
@@ -62533,7 +63037,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "project-management"
   },
   {
     "id": "53",
@@ -62654,7 +63159,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "project-management"
   },
   {
     "id": "54",
@@ -62776,7 +63282,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "project-management"
   },
   {
     "id": "55",
@@ -62899,7 +63406,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "project-management"
   },
   {
     "id": "56",
@@ -63022,7 +63530,8 @@
         "baseline": "Target <1h"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "note-taking"
   },
   {
     "id": "57",
@@ -63145,7 +63654,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "58",
@@ -63267,7 +63777,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "59",
@@ -63390,7 +63901,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "60",
@@ -63511,7 +64023,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "61",
@@ -63634,7 +64147,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "62",
@@ -63755,7 +64269,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "63",
@@ -63878,7 +64393,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "64",
@@ -64001,7 +64517,8 @@
         "baseline": "Target >720p"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "text-to-video"
   },
   {
     "id": "65",
@@ -64122,7 +64639,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "66",
@@ -64244,7 +64762,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "67",
@@ -64367,7 +64886,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "68",
@@ -64490,7 +65010,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "69",
@@ -64613,7 +65134,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "70",
@@ -64734,7 +65256,8 @@
         "baseline": "Target >99.5%"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "voice-generators"
   },
   {
     "id": "71",
@@ -64855,7 +65378,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "research-tools"
   },
   {
     "id": "72",
@@ -64977,7 +65501,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "research-tools"
   },
   {
     "id": "73",
@@ -65099,7 +65624,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "research-tools"
   },
   {
     "id": "74",
@@ -65221,7 +65747,8 @@
         "baseline": "Target <15 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "research-tools"
   },
   {
     "id": "75",
@@ -65343,7 +65870,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "76",
@@ -65465,7 +65993,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "77",
@@ -65586,7 +66115,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "78",
@@ -65709,7 +66239,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "79",
@@ -65832,7 +66363,8 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   },
   {
     "id": "80",
@@ -65955,6 +66487,7 @@
         "baseline": "Target <30 min"
       }
     ],
-    "affiliateUrl": ""
+    "affiliateUrl": "",
+    "subcategory": "ui-design"
   }
 ]

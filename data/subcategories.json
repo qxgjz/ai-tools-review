@@ -1,0 +1,347 @@
+{
+  "voice-generators": {
+    "name": "AI Voice Generators",
+    "parent": "audio",
+    "toolCount": 43
+  },
+  "music-generation": {
+    "name": "AI Music Generators",
+    "parent": "audio",
+    "toolCount": 0
+  },
+  "transcription": {
+    "name": "AI Transcription",
+    "parent": "audio",
+    "toolCount": 0
+  },
+  "podcast-tools": {
+    "name": "AI Podcast Tools",
+    "parent": "audio",
+    "toolCount": 0
+  },
+  "voice-assistants": {
+    "name": "AI Voice Assistants",
+    "parent": "audio",
+    "toolCount": 0
+  },
+  "audio-editors": {
+    "name": "AI Audio Editors",
+    "parent": "audio",
+    "toolCount": 0
+  },
+  "code-assistants": {
+    "name": "AI Code Assistants",
+    "parent": "code",
+    "toolCount": 26
+  },
+  "code-review": {
+    "name": "AI Code Review",
+    "parent": "code",
+    "toolCount": 1
+  },
+  "debugging": {
+    "name": "AI Debugging",
+    "parent": "code",
+    "toolCount": 0
+  },
+  "testing": {
+    "name": "AI Testing Tools",
+    "parent": "code",
+    "toolCount": 5
+  },
+  "dev-environments": {
+    "name": "AI Dev Environments",
+    "parent": "code",
+    "toolCount": 0
+  },
+  "api-development": {
+    "name": "AI API Development",
+    "parent": "code",
+    "toolCount": 0
+  },
+  "note-taking": {
+    "name": "AI Note Taking",
+    "parent": "productivity",
+    "toolCount": 3
+  },
+  "project-management": {
+    "name": "AI Project Management",
+    "parent": "productivity",
+    "toolCount": 6
+  },
+  "email": {
+    "name": "AI Email Tools",
+    "parent": "productivity",
+    "toolCount": 3
+  },
+  "scheduling": {
+    "name": "AI Scheduling & Calendar",
+    "parent": "productivity",
+    "toolCount": 0
+  },
+  "document-ai": {
+    "name": "AI Document Tools",
+    "parent": "productivity",
+    "toolCount": 3
+  },
+  "task-automation": {
+    "name": "AI Task Automation",
+    "parent": "productivity",
+    "toolCount": 5
+  },
+  "knowledge-management": {
+    "name": "AI Knowledge Management",
+    "parent": "productivity",
+    "toolCount": 6
+  },
+  "agent-platforms": {
+    "name": "AI Agent Platforms",
+    "parent": "agent",
+    "toolCount": 43
+  },
+  "web-agents": {
+    "name": "Web Browsing Agents",
+    "parent": "agent",
+    "toolCount": 1
+  },
+  "multi-agent": {
+    "name": "Multi-Agent Systems",
+    "parent": "agent",
+    "toolCount": 1
+  },
+  "autonomous-agents": {
+    "name": "Autonomous Agents",
+    "parent": "agent",
+    "toolCount": 20
+  },
+  "chatbot-builders": {
+    "name": "Chatbot Builders",
+    "parent": "agent",
+    "toolCount": 0
+  },
+  "voice-agents": {
+    "name": "AI Voice Agents",
+    "parent": "agent",
+    "toolCount": 0
+  },
+  "workflow-automation": {
+    "name": "AI Workflow Automation",
+    "parent": "agent",
+    "toolCount": 81
+  },
+  "llm-frameworks": {
+    "name": "LLM Frameworks",
+    "parent": "agent-framework",
+    "toolCount": 25
+  },
+  "rag-frameworks": {
+    "name": "RAG Frameworks",
+    "parent": "agent-framework",
+    "toolCount": 23
+  },
+  "agent-orchestration": {
+    "name": "Agent Orchestration",
+    "parent": "agent-framework",
+    "toolCount": 42
+  },
+  "evaluation-tools": {
+    "name": "AI Evaluation Tools",
+    "parent": "agent-framework",
+    "toolCount": 3
+  },
+  "prompt-engineering": {
+    "name": "Prompt Engineering Tools",
+    "parent": "agent-framework",
+    "toolCount": 1
+  },
+  "llm-gateways": {
+    "name": "LLM Gateways & Routers",
+    "parent": "agent-framework",
+    "toolCount": 0
+  },
+  "observability": {
+    "name": "LLM Observability",
+    "parent": "dev-tools",
+    "toolCount": 6
+  },
+  "evaluation": {
+    "name": "AI Evaluation",
+    "parent": "dev-tools",
+    "toolCount": 48
+  },
+  "deployment": {
+    "name": "AI Deployment",
+    "parent": "dev-tools",
+    "toolCount": 2
+  },
+  "debugging-tools": {
+    "name": "AI Debugging Tools",
+    "parent": "dev-tools",
+    "toolCount": 0
+  },
+  "data-tools": {
+    "name": "AI Data Tools",
+    "parent": "dev-tools",
+    "toolCount": 0
+  },
+  "security": {
+    "name": "AI Security",
+    "parent": "dev-tools",
+    "toolCount": 0
+  },
+  "sandboxes": {
+    "name": "Agent Sandboxes",
+    "parent": "agent-runtime",
+    "toolCount": 0
+  },
+  "code-interpreters": {
+    "name": "Code Interpreters",
+    "parent": "agent-runtime",
+    "toolCount": 0
+  },
+  "deployment-platforms": {
+    "name": "Agent Deployment",
+    "parent": "agent-runtime",
+    "toolCount": 29
+  },
+  "vector-databases": {
+    "name": "Vector Databases",
+    "parent": "rag",
+    "toolCount": 2
+  },
+  "knowledge-bases": {
+    "name": "AI Knowledge Bases",
+    "parent": "rag",
+    "toolCount": 12
+  },
+  "chunking": {
+    "name": "RAG Chunking Tools",
+    "parent": "rag",
+    "toolCount": 0
+  },
+  "general-assistants": {
+    "name": "General AI Assistants",
+    "parent": "chat",
+    "toolCount": 8
+  },
+  "search-assistants": {
+    "name": "AI Search Assistants",
+    "parent": "chat",
+    "toolCount": 2
+  },
+  "writing-assistants": {
+    "name": "AI Writing Assistants",
+    "parent": "chat",
+    "toolCount": 0
+  },
+  "coding-assistants": {
+    "name": "AI Coding Assistants",
+    "parent": "chat",
+    "toolCount": 0
+  },
+  "blog-writers": {
+    "name": "AI Blog Writers",
+    "parent": "writing",
+    "toolCount": 9
+  },
+  "copywriting": {
+    "name": "AI Copywriting",
+    "parent": "writing",
+    "toolCount": 0
+  },
+  "email-writing": {
+    "name": "AI Email Writers",
+    "parent": "writing",
+    "toolCount": 0
+  },
+  "seo-writing": {
+    "name": "AI SEO Writing",
+    "parent": "writing",
+    "toolCount": 0
+  },
+  "text-to-image": {
+    "name": "Text-to-Image Generators",
+    "parent": "image",
+    "toolCount": 10
+  },
+  "ai-art": {
+    "name": "AI Art Generators",
+    "parent": "image",
+    "toolCount": 0
+  },
+  "logo-makers": {
+    "name": "AI Logo Makers",
+    "parent": "image",
+    "toolCount": 0
+  },
+  "photo-editing": {
+    "name": "AI Photo Editing",
+    "parent": "image",
+    "toolCount": 0
+  },
+  "text-to-video": {
+    "name": "Text-to-Video Generators",
+    "parent": "video",
+    "toolCount": 10
+  },
+  "video-editing": {
+    "name": "AI Video Editing",
+    "parent": "video",
+    "toolCount": 0
+  },
+  "digital-humans": {
+    "name": "AI Digital Humans",
+    "parent": "video",
+    "toolCount": 0
+  },
+  "ui-design": {
+    "name": "AI UI Design",
+    "parent": "design",
+    "toolCount": 8
+  },
+  "graphic-design": {
+    "name": "AI Graphic Design",
+    "parent": "design",
+    "toolCount": 0
+  },
+  "vector-db": {
+    "name": "Vector Databases",
+    "parent": "database",
+    "toolCount": 6
+  },
+  "sql-tools": {
+    "name": "AI SQL Tools",
+    "parent": "database",
+    "toolCount": 0
+  },
+  "agent-memory": {
+    "name": "AI Agent Memory",
+    "parent": "memory",
+    "toolCount": 6
+  },
+  "context-management": {
+    "name": "Context Management",
+    "parent": "memory",
+    "toolCount": 0
+  },
+  "ai-search": {
+    "name": "AI Search Engines",
+    "parent": "search",
+    "toolCount": 1
+  },
+  "research-tools": {
+    "name": "AI Research Tools",
+    "parent": "search",
+    "toolCount": 4
+  },
+  "llm-monitoring": {
+    "name": "LLM Monitoring",
+    "parent": "observability",
+    "toolCount": 5
+  },
+  "cost-tracking": {
+    "name": "LLM Cost Tracking",
+    "parent": "observability",
+    "toolCount": 0
+  }
+}

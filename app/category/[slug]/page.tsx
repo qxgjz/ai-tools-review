@@ -4,6 +4,7 @@ import { ArrowLeft, MessageSquare, PenTool, Image as ImageIcon, Code, Video, Mus
 import type { LucideIcon } from "lucide-react";
 import toolsData from "@/data/tools.json";
 import postsData from "@/data/posts.json";
+import subcatsData from "@/data/subcategories.json";
 import type { Tool } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 import { ToolList } from "@/components/tools/ToolList";
@@ -430,6 +431,31 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           </div>
         </section>
       </FadeIn>
+
+      {/* Subcategory navigation */}
+      {(() => {
+        const subs = Object.entries(subcatsData as Record<string, {name:string;parent:string;toolCount:number}>)
+          .filter(([_, v]) => v.parent === params.slug && v.toolCount > 0)
+          .sort((a, b) => b[1].toolCount - a[1].toolCount);
+        if (subs.length === 0) return null;
+        return (
+          <section className="mb-8">
+            <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-4">Browse by Subcategory</h2>
+            <div className="flex flex-wrap gap-2">
+              {subs.map(([slug, info]) => (
+                <Link
+                  key={slug}
+                  href={`/subcategory/${slug}`}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                >
+                  {info.name}
+                  <span className="text-xs text-gray-400">({info.toolCount})</span>
+                </Link>
+              ))}
+            </div>
+          </section>
+        );
+      })()}
 
       <CategoryToolsClient tools={sortedTools} />
 

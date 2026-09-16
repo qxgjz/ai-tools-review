@@ -38,6 +38,7 @@ export interface Tool {
   slug: string;
   name: string;
   category: string;
+  subcategory?: string;
   vendor: string;
   description: string;
   scores: Score;
