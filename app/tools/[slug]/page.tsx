@@ -183,11 +183,19 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       name: tool.name,
       applicationCategory: "WebApplication",
       operatingSystem: "Web",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: total.toFixed(1),
+        bestRating: "10",
+        worstRating: "1",
+        ratingCount: "1",
+      },
       offers: tool.pricing.map((tier) => ({
         "@type": "Offer",
         name: tier.name,
         price: tier.price.includes("$0") ? "0" : tier.price.replace(/[^0-9.]/g, ""),
         priceCurrency: "USD",
+        availability: "https://schema.org/InStock",
       })),
     },
     reviewRating: {
@@ -268,6 +276,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         brand={tool.vendor}
         category="WebApplication"
         ratingValue={total}
+        reviewCount={1}
         price={tool.pricing?.[0]?.price || "Free"}
         image={`https://www.aitoolcrux.com/og-image.svg`}
         url={`https://www.aitoolcrux.com/tools/${tool.slug}`}
