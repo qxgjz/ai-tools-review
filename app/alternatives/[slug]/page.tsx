@@ -133,7 +133,7 @@ export default function AlternativePage({
       />
 
       {/* Hero Section */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 py-16 px-4">
+      <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <nav className="text-sm text-gray-500 dark:text-gray-400 mb-4">
             <Link href="/" className="hover:text-blue-600">Home</Link>
@@ -388,7 +388,7 @@ export default function AlternativePage({
         </section>
 
         {/* Bottom CTA */}
-        <section className="bg-gradient-to-r from-blue-600 to-indigo-600 rounded-2xl p-8 text-center text-white">
+        <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-3">
             Still Not Sure Which Tool to Choose?
           </h2>

@@ -167,7 +167,7 @@ export default function BlogPage() {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="block bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-100 dark:border-blue-900/30 p-6 hover:shadow-lg hover:border-blue-200 dark:hover:border-blue-800 transition-all"
+                className="block bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl border border-emerald-100 dark:border-emerald-900/30 p-6 hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-800 transition-all"
               >
                 <div className="flex items-center gap-2 mb-3">
                   <span className="text-xs font-medium text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded">

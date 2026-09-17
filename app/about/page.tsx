@@ -158,7 +158,7 @@ export default function AboutPage() {
           ].map((member, i) => (
             <div key={i} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm hover:shadow-md transition-shadow">
               <div className="flex items-center gap-4 mb-4">
-                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl font-bold">
+                <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center text-white text-xl font-bold">
                   {member.name.charAt(0)}
                 </div>
                 <div>
@@ -210,7 +210,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="text-center">
-        <div className="bg-gradient-to-br from-blue-600 to-indigo-700 dark:from-blue-700 dark:to-indigo-800 rounded-3xl p-10 sm:p-12 text-white">
+        <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 sm:p-12 text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Start Exploring AI Tools</h2>
           <p className="text-blue-100 mb-8 max-w-xl mx-auto">
             Browse our directory of 540+ AI tools, read in-depth reviews, and find the perfect tool for your needs.

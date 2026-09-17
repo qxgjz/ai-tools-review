@@ -266,9 +266,9 @@ export default function ComparePage() {
 
 
       {/* Quick Answer - AEO Optimization */}
-      <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20 rounded-xl border border-blue-100 dark:border-blue-800 p-6 mb-8">
+      <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800 p-6 mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <span className="inline-flex items-center justify-center w-6 h-6 bg-blue-500 text-white text-xs font-bold rounded-full">Q</span>
+          <span className="inline-flex items-center justify-center w-6 h-6 bg-emerald-500 text-white text-xs font-bold rounded-full">Q</span>
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">Quick Answer</h2>
         </div>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
