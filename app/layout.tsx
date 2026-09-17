@@ -137,6 +137,13 @@ export default function RootLayout({
             `}
           </Script>
 
+
+          {/* Cloudflare Web Analytics 隐私友好统计 */}
+          <Script
+            strategy="afterInteractive"
+            src="https://static.cloudflareinsights.com/beacon.min.js"
+            data-cf-beacon='{"token": "b214dac5b8d9648b19b23d1450e345"}'
+          />
           {/* Microsoft Clarity 热力图+用户录屏 */}
           <Script id="ms-clarity" strategy="afterInteractive">
             {`
