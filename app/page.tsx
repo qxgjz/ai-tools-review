@@ -171,6 +171,31 @@ export default function HomePage() {
                   </div>
                 </div>
               </FadeIn>
+
+              {/* Mobile-only Top3 strip (P0-UX-002) */}
+              <FadeIn delay={0.55} y={20}>
+                <div className="mt-10 lg:hidden">
+                  <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">Top 3 Rated Tools</div>
+                  <div className="space-y-2">
+                    {topTools.slice(0, 3).map((tool, i) => (
+                      <Link
+                        key={tool.slug}
+                        href={`/tools/${tool.slug}`}
+                        className="flex items-center gap-3 p-3 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all"
+                      >
+                        <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold">
+                          {tool.name.charAt(0).toUpperCase()}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
+                          <div className="text-xs text-zinc-500 truncate">{tool.vendor}</div>
+                        </div>
+                        <div className="text-emerald-400 font-bold text-base">{tool.total.toFixed(1)}</div>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              </FadeIn>
             </div>
 
             {/* Right: Top 3 Tools showcase - real data, no fake UI (Taste Skill rule) */}
