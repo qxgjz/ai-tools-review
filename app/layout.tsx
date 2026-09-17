@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Script from "next/script";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
@@ -11,6 +11,7 @@ import { BackToTop } from "@/components/layout/BackToTop";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
 import { GA4EventTracker } from "@/components/analytics/GA4EventTracker";
+import WebVitalsReporter from "@/components/analytics/WebVitalsReporter";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.aitoolcrux.com"),
@@ -254,6 +255,7 @@ export default function RootLayout({
         <BackToTop />
         </ThemeProvider>
       <Analytics />
+        <WebVitalsReporter />
       </body>
     </html>
   );
