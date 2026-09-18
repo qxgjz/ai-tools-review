@@ -356,6 +356,31 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         )}
       </section>
 
+      {/* Product screenshot hero (16:9) — only when real screenshot exists */}
+      {toolScreenshotMap[tool.slug] && (
+        <FadeIn delay={0.15} y={20}>
+          <figure className="mb-6">
+            <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg">
+              <div className="aspect-video w-full">
+                <img
+                  src={toolScreenshotMap[tool.slug]}
+                  alt={`Screenshot of ${tool.name} interface and main dashboard`}
+                  className="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/90 dark:bg-zinc-900/90 backdrop-blur rounded-md text-xs font-medium text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+                Live screenshot
+              </div>
+            </div>
+            <figcaption className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 text-center">
+              {tool.name} — main interface, captured and reviewed by our editorial team
+            </figcaption>
+          </figure>
+        </FadeIn>
+      )}
+
       {/* AEO/GEO Optimization: Quick Answer - Answer First for AI Search Citation */}
       <FadeIn delay={0.1} y={20}>
       <section className="bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8 mb-6">
