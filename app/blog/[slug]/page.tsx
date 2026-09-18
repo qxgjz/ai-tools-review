@@ -142,7 +142,7 @@ export default function PostPage({ params }: PostPageProps) {
   const relatedPosts = posts
     .filter((p) => p.slug !== post.slug)
     .map((p) => ({ post: p, relevance: calculateRelevance(post, p) }))
-    .filter((item) => item.relevance > 5) // 最低相关性阈值
+    .filter((item) => item.relevance > 2) // 最低相关性阈值
     .sort((a, b) => b.relevance - a.relevance)
     .slice(0, 6)
     .map((item) => item.post);
@@ -198,7 +198,7 @@ export default function PostPage({ params }: PostPageProps) {
   const relatedTools = tools
     .filter((t) => t.slug !== toolSlug)
     .map((t) => ({ tool: t, relevance: calculateToolRelevance(t) }))
-    .filter((item) => item.relevance > 5)
+    .filter((item) => item.relevance > 2)
     .sort((a, b) => b.relevance - a.relevance)
     .reduce((acc: typeof tools, item) => {
       const cat = (item.tool.category || "").toLowerCase();
@@ -206,7 +206,7 @@ export default function PostPage({ params }: PostPageProps) {
       if (catCount < 3) acc.push(item.tool);
       return acc;
     }, [])
-    .slice(0, 8);
+    .slice(0, 12);
 
   const tool = tools.find((t) => t.slug === toolSlug);
   const toolName = tool?.name || post.title.split(" ")[0] || "this tool";

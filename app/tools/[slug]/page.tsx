@@ -898,6 +898,33 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
+
+      {/* Related Articles - internal linking to blog posts */}
+      {relatedArticles.length > 0 && (
+        <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-950/20 dark:to-indigo-950/20 rounded-2xl border border-blue-100 dark:border-blue-900/50 shadow-sm p-6 mb-6">
+          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
+            <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            Related Articles & Guides
+          </h2>
+          <div className="grid gap-3 sm:grid-cols-2">
+            {relatedArticles.map((post: any) => (
+              <Link
+                key={post.slug}
+                href={`/blog/${post.slug}`}
+                className="block p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-md transition-all"
+              >
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white leading-snug mb-1 line-clamp-2">
+                  {post.title}
+                </h3>
+                <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                  Read article &rarr;
+                </span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* Newsletter signup CTA */}
       <div className="mb-6">
         <NewsletterSignup variant="compact" />
