@@ -23,8 +23,22 @@ export default function AboutPage() {
           About AIToolCrux
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          We help developers, creators, and businesses find the best AI tools through independent, data-driven reviews based on our six-dimensional evaluation framework.
+          Our team has spent <strong>100+ hours hands-on testing 500+ AI tools</strong>. Every review is based on real usage experience — we don't copy vendor descriptions.
         </p>
+        <div className="flex flex-wrap justify-center gap-4 mt-6">
+          <div className="text-center">
+            <div className="text-3xl font-extrabold text-blue-600">533+</div>
+            <div className="text-sm text-gray-500">Tools Tested</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-extrabold text-emerald-600">100+</div>
+            <div className="text-sm text-gray-500">Hours Hands-On</div>
+          </div>
+          <div className="text-center">
+            <div className="text-3xl font-extrabold text-amber-600">6</div>
+            <div className="text-sm text-gray-500">Evaluation Dimensions</div>
+          </div>
+        </div>
       </div>
 
       {/* Our Mission */}
