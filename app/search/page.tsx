@@ -103,9 +103,9 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
       {query && (
         <>
           <div className="mb-8">
-            <h1 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mb-2">
               Search Results: <span className="text-blue-600 dark:text-blue-400">"{query}"</span>
-            </h1>
+            </h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">Found <span className="font-bold text-gray-700 dark:text-gray-300">{results.length}</span> matching tools</p>
           </div>
 

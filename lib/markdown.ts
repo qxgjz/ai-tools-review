@@ -20,6 +20,9 @@ export function markdownToHtml(markdown: string): string {
       /<img(\s+[^>]*?)>/g,
       '<img$1 loading="lazy" decoding="async">'
     );
+    // Convert h1 to h2: pages already have their own H1, content should not add another
+    html = html.replace(/<h1(\s+[^>]*?)>/g, '<h2$1>');
+    html = html.replace(/<\/h1>/g, '</h2>');
     return html;
   } catch (error) {
     console.error("Markdown conversion error:", error);
