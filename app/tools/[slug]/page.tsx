@@ -338,7 +338,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
         {(tool.officialUrl || tool.affiliateUrl) && (
           <div className="mt-6 pt-6 border-t border-gray-50 dark:border-zinc-800">
-            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
+            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md">
               <ExternalLink className="w-4 h-4" />
               {tool.affiliateUrl ? `Try ${tool.name} Free` : "Visit Official Website"}
             </a>
@@ -797,7 +797,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <div className="mt-5 flex flex-wrap items-center gap-3">
           {(tool.officialUrl || tool.affiliateUrl) && (
             <>
-            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-medium rounded-lg transition-colors">
+            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md">
               <ExternalLink className="w-4 h-4" />
               {tool.affiliateUrl ? `Try ${tool.name} Free →` : `Visit ${tool.name}`}
             </a>
