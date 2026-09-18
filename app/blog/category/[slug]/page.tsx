@@ -13,7 +13,7 @@ export function generateMetadata({ params }: CategoryPageProps) {
   const articleCount = categoryPosts.length;
   return {
     title: `Best ${categoryName} Articles & Reviews 2026 | AIToolCrux`,
-    description: `Read ${articleCount} expert ${categoryName} articles and AI tool reviews on AIToolCrux. In-depth guides, comparisons, and testing results for 2026.`,
+    description: `Read ${articleCount} expert ${categoryName} AI articles and reviews on AIToolCrux. In-depth guides, comparisons, and testing results.`,
     alternates: {
       canonical: `https://www.aitoolcrux.com/blog/category/${params.slug}`,
     },

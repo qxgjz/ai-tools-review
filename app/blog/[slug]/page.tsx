@@ -259,7 +259,7 @@ export default function PostPage({ params }: PostPageProps) {
             "@context": "https://schema.org",
             "@type": "Article",
             headline: post.title,
-            description: post.excerpt,
+            description: post.excerpt.slice(0, 155),
             author: {
               "@type": "Person",
               name: post.author || "Alex Chen",

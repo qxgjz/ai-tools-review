@@ -149,7 +149,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
   });
 
   // 博客分类页
-  const blogCategories = [...new Set(posts.map((p) => p.categorySlug).filter(Boolean))];
+  const aliasSlugs = new Set(["productivity", "image", "writing", "agent", "tools", "design", "code"]);
+  const blogCategories = [...new Set(posts.map((p) => p.categorySlug).filter((s): s is string => Boolean(s)))].filter(
+    (slug) => !aliasSlugs.has(slug)
+  );
   const blogCategoryPages: MetadataRoute.Sitemap = blogCategories.map((cat) => ({
     url: `${BASE_URL}/blog/category/${cat}`,
     lastModified: new Date(),
