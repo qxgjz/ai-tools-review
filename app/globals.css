@@ -301,6 +301,23 @@ textarea:focus-visible,
   color: #059669;
 }
 
+
+/* === Content Visibility - Performance (Chrome 85+, web.dev optimization) ===
+   content-visibility: auto skips rendering off-screen content until needed.
+   contain-intrinsic-size reserves space to prevent CLS.
+   Apply to below-the-fold sections on long pages (tool detail, blog posts). */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 400px;
+}
+
+/* Only enable on Chromium-based browsers (Chrome 85+, Edge 85+) */
+@supports not (content-visibility: auto) {
+  .cv-auto {
+    content-visibility: visible;
+  }
+}
+
 /* === Print styles === */
 @media print {
   .no-print { display: none !important; }

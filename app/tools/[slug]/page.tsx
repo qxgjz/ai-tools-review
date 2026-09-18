@@ -822,9 +822,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {/* FAQ Section - visible content matching FAQSchema structured data (GROWTH-017) */}
       <FAQSection items={toolFAQs} />
 
-      {/* Alternatives - E-E-A-T comparison signal */}
+      {/* Alternatives - E-E-A-T comparison signal (below fold - cv-auto) */}
       {(tool as any).alternatives && (tool as any).alternatives.length > 0 && (
-        <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
+        <section className="cv-auto bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <GitCompare className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Top Alternatives to {tool.name}
@@ -847,9 +847,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
-      {/* Related recommendations */}
+      {/* Related recommendations (below fold - cv-auto) */}
       {relatedTools.length > 0 && (
-        <section className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 mb-6">
+        <section className="cv-auto bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <Sparkles className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Similar Tools Recommended
@@ -858,9 +858,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
-      {/* 跨分类热门工具推荐 - P1-004 增加重要工具入链 */}
+      {/* 跨分类热门工具推荐 - P1-004 增加重要工具入链 (below fold - cv-auto) */}
       {popularTools.length > 0 && (
-        <section className="bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-2xl border border-amber-100 dark:border-amber-900/50 shadow-sm p-6 mb-6">
+        <section className="cv-auto bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-2xl border border-amber-100 dark:border-amber-900/50 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <TrendingUp className="w-5 h-5 text-amber-600 dark:text-amber-400" />
             Popular AI Tools
@@ -872,9 +872,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
-      {/* Comparison pages - hub-and-spoke internal linking */}
+      {/* Comparison pages - hub-and-spoke internal linking (below fold - cv-auto) */}
       {relevantComparisons.length > 0 && (
-        <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 shadow-sm p-6 mb-6">
+        <section className="cv-auto bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <GitCompare className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Compare {tool.name} Side-by-Side
