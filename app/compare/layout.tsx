@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 
 
 export const metadata: Metadata = {
-  title: "Best AI Tools Comparison 2026: Side-by-Side Ratings & Pricing",
+  title: "Best AI Tool Comparison 2026: Side-by-Side Ratings",
   description: "Compare 500+ AI tools side by side in 2026. Honest ratings, pricing, pros & cons. ChatGPT vs Claude, Cursor vs Copilot — find your perfect AI tool free.",
   keywords: ["ai tool comparison", "compare ai tools", "best ai tools comparison", "chatgpt vs claude", "midjourney vs dall-e", "ai software comparison", "ai tools side by side", "ai tool ratings comparison"],
   alternates: {

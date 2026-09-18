@@ -73,14 +73,14 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(categoryFormatted)}`;
 
   return {
-    title: `${tool.name.length > 35 ? tool.name.slice(0, 35) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+    title: `${tool.name.length > 27 ? tool.name.slice(0, 27) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
     description: description.slice(0, 160),
     keywords: [tool.name, `${tool.name} review`, `${tool.name} pricing`, tool.vendor, ...tool.tags, `best ${tool.category} AI tools`, "AI tool review", "AI software comparison"],
     alternates: {
       canonical: `https://www.aitoolcrux.com/tools/${tool.slug}`,
     },
     openGraph: {
-      title: `${tool.name.length > 35 ? tool.name.slice(0, 35) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+      title: `${tool.name.length > 27 ? tool.name.slice(0, 27) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: description.slice(0, 160),
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       type: "website",
@@ -99,7 +99,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     twitter: {
       card: "summary_large_image",
-      title: `${tool.name.length > 35 ? tool.name.slice(0, 35) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+      title: `${tool.name.length > 27 ? tool.name.slice(0, 27) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: description.slice(0, 160),
       images: [ogImageUrl],
     },
