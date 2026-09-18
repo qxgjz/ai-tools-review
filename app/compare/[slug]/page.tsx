@@ -46,13 +46,14 @@ export function generateMetadata({ params }: ComparisonPageProps) {
   const comparison = comparisonsData.find((c: any) => c.slug === params.slug);
   if (!comparison) return {};
 
+  const shortDesc = comparison.metaDescription.length > 160 ? comparison.metaDescription.slice(0, 157).trim() + "..." : comparison.metaDescription;
   return {
     title: comparison.title,
-    description: comparison.metaDescription,
+    description: shortDesc,
     keywords: `${comparison.toolA.name} vs ${comparison.toolB.name}, ${comparison.toolA.name} comparison, ${comparison.toolB.name} comparison, best AI tool 2026`,
     openGraph: {
       title: comparison.title,
-      description: comparison.metaDescription,
+      description: shortDesc,
       type: "article",
       url: `https://www.aitoolcrux.com/compare/${comparison.slug}`,
     },

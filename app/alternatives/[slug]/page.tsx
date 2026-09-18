@@ -61,16 +61,17 @@ export async function generateMetadata({
     };
   }
 
+  const shortDesc = page.description.length > 160 ? page.description.slice(0, 157).trim() + "..." : page.description;
   return {
     title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
-    description: page.description,
+    description: shortDesc,
     keywords: page.keywords.join(", "),
     alternates: {
       canonical: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
     },
     openGraph: {
       title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
-      description: page.description,
+      description: shortDesc,
       url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
       type: "article",
       siteName: "AIToolCrux",
@@ -78,7 +79,7 @@ export async function generateMetadata({
     twitter: {
       card: "summary_large_image",
       title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
-      description: page.description,
+      description: shortDesc,
     },
   };
 }

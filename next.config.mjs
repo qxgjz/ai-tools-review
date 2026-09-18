@@ -175,6 +175,42 @@ const nextConfig = {
         destination: "/blog/best-ai-voice-generators-2026",
         permanent: true,
       },
+      // Duplicate blog category slugs -> canonical URLs (fix duplicate titles)
+      {
+        source: "/blog/category/productivity",
+        destination: "/blog/category/ai-productivity",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/writing",
+        destination: "/blog/category/ai-writing",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/image",
+        destination: "/blog/category/ai-image",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/agent",
+        destination: "/blog/category/ai-agents",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/tools",
+        destination: "/blog/category/ai-audio",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/design",
+        destination: "/blog/category/ai-design",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/code",
+        destination: "/blog/category/ai-coding",
+        permanent: true,
+      },
     ];
   },
 };
