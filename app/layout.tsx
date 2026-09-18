@@ -139,12 +139,11 @@ export default function RootLayout({
           </Script>
 
           {/* Cloudflare Web Analytics */}
-          <script
-            type="module"
+          <Script
             src="https://static.cloudflareinsights.com/beacon.min.js"
+            strategy="beforeInteractive"
             data-cf-beacon='{"token": "3548091c1a4f5e1bba93c3aba216898"}'
           />
-
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
           <GA4EventTracker />
