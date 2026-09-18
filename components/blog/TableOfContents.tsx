@@ -147,7 +147,7 @@ export function TableOfContents({ contentHtml, className = "" }: TableOfContents
                   item.level === 3 ? "pl-6" : ""
                 } ${
                   activeId === item.id
-                    ? "text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 font-medium"
+                    ? "text-emerald-600 dark:text-emerald-400 bg-blue-50 dark:bg-emerald-900/20 font-medium"
                     : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
                 }`}
               >

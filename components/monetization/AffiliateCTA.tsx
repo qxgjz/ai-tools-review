@@ -31,7 +31,7 @@ export function AffiliateCTA({
           href={url}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
+          className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium"
         >
           Try {toolName}
         </a>
@@ -75,29 +75,29 @@ export function AffiliateCTA({
 
   // banner variant (default)
   return (
-    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/40 dark:to-indigo-950/40 border border-blue-200 dark:border-blue-800 rounded-xl p-5 my-6 shadow-sm hover:shadow-md transition-shadow">
+    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-emerald-950/40 dark:to-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5 my-6 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1 flex-wrap">
             <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">
               ✓ Free Trial Available
             </span>
-            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+            <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
               ⚡ Quick Setup
             </span>
           </div>
-          <p className="text-sm font-bold text-blue-900 dark:text-blue-100">
+          <p className="text-sm font-bold text-emerald-900 dark:text-emerald-100">
             Ready to Try {toolName}?
           </p>
           {description && (
-            <p className="text-blue-700 dark:text-blue-300 text-xs mt-1">{description}</p>
+            <p className="text-emerald-700 dark:text-emerald-300 text-xs mt-1">{description}</p>
           )}
         </div>
         <a
           href={url}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-indigo-600 text-white rounded-lg font-bold text-sm hover:from-blue-700 hover:to-indigo-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-emerald-600 to-emerald-600 text-white rounded-lg font-bold text-sm hover:from-emerald-700 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
         >
           Start Free Trial
           <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -106,7 +106,7 @@ export function AffiliateCTA({
         </a>
       </div>
       {isAffiliate && (
-        <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 pt-3 border-t border-blue-100 dark:border-blue-900/50">
+        <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 pt-3 border-t border-emerald-100 dark:border-emerald-900/50">
           <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you. This never affects our rating or recommendation.</em>
         </p>
       )}
@@ -124,7 +124,7 @@ export function CompareAffiliateButton({ toolName, url }: { toolName: string; ur
       href={url}
       target="_blank"
       rel="noopener noreferrer sponsored"
-      className="inline-flex items-center gap-1 text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
+      className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 hover:underline text-sm font-medium"
     >
       Visit
       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

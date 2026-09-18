@@ -24,7 +24,7 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
       {/* Home链接 */}
       <Link
         href="/"
-        className="flex items-center gap-1 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+        className="flex items-center gap-1 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
       >
         <Home className="w-3.5 h-3.5" />
         <span className="hidden sm:inline">Home</span>
@@ -37,7 +37,7 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
           {item.url && index < items.length - 1 ? (
             <Link
               href={item.url}
-              className="hover:text-blue-600 dark:hover:text-blue-400 transition-colors truncate max-w-[150px]"
+              className="hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors truncate max-w-[150px]"
             >
               {item.name}
             </Link>

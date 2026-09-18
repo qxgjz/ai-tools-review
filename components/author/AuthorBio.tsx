@@ -25,11 +25,11 @@ export function AuthorBio({
             <img
               src={avatar}
               alt={name}
-              className="w-14 h-14 rounded-full object-cover ring-2 ring-blue-500/20"
+              className="w-14 h-14 rounded-full object-cover ring-2 ring-emerald-500/20"
               loading="lazy"
             />
           ) : (
-            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-blue-500/20">
+            <div className="w-14 h-14 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center text-white text-xl font-bold shadow-lg shadow-emerald-500/20">
               {name.charAt(0).toUpperCase()}
             </div>
           )}
@@ -39,12 +39,12 @@ export function AuthorBio({
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2 flex-wrap">
             <h4 className="text-base font-bold text-gray-900 dark:text-white">{name}</h4>
-            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-[10px] font-semibold">
+            <span className="inline-flex items-center px-2 py-0.5 rounded-full bg-blue-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-[10px] font-semibold">
               <User className="w-3 h-3 mr-1" />
               Verified Expert
             </span>
           </div>
-          <p className="text-sm text-blue-600 dark:text-blue-400 font-medium mt-0.5">{role}</p>
+          <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">{role}</p>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">{bio}</p>
 
           {/* 链接 */}
@@ -52,7 +52,7 @@ export function AuthorBio({
             <div className="flex items-center gap-3 mt-3">
               <Link
                 href="/about"
-                className="text-xs text-blue-600 dark:text-blue-400 hover:underline font-medium inline-flex items-center gap-1"
+                className="text-xs text-emerald-600 dark:text-emerald-400 hover:underline font-medium inline-flex items-center gap-1"
               >
                 <Globe className="w-3 h-3" />
                 View Full Profile
@@ -61,7 +61,7 @@ export function AuthorBio({
                 href="https://twitter.com/aitoolcrux"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-500 transition-colors"
+                className="text-gray-400 hover:text-emerald-500 transition-colors"
                 aria-label="Twitter"
               >
                 <Twitter className="w-4 h-4" />
@@ -70,7 +70,7 @@ export function AuthorBio({
                 href="https://linkedin.com/company/aitoolcrux"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-blue-700 transition-colors"
+                className="text-gray-400 hover:text-emerald-700 transition-colors"
                 aria-label="LinkedIn"
               >
                 <Linkedin className="w-4 h-4" />

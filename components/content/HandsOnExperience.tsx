@@ -153,7 +153,7 @@ export function HandsOnExperience({
     <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-xl p-6 border border-emerald-100 dark:border-emerald-900/30 my-8">
       {/* 章节标题 */}
       <div className="flex items-center gap-3 mb-5">
-        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 flex items-center justify-center shadow-lg shadow-blue-500/20">
+        <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-emerald-500 to-emerald-600 flex items-center justify-center shadow-lg shadow-emerald-500/20">
           <Sparkles className="w-5 h-5 text-white" />
         </div>
         <div>
@@ -170,7 +170,7 @@ export function HandsOnExperience({
       {/* 测试背景 */}
       <div className="bg-white/70 dark:bg-gray-900/50 rounded-lg p-4 mb-5">
         <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-          <UserCheck className="w-4 h-4 text-blue-600" />
+          <UserCheck className="w-4 h-4 text-emerald-600" />
           How I Tested {toolName}
         </h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
@@ -219,7 +219,7 @@ export function HandsOnExperience({
       {/* 最终判断 */}
       <div className="bg-white/70 dark:bg-gray-900/50 rounded-lg p-4">
         <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2 flex items-center gap-2">
-          <Zap className="w-4 h-4 text-blue-600" />
+          <Zap className="w-4 h-4 text-emerald-600" />
           My Verdict After {testDuration}
         </h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">

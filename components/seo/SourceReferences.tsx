@@ -37,9 +37,9 @@ const TYPE_LABELS: Record<string, string> = {
 };
 
 const TYPE_COLORS: Record<string, string> = {
-  official: "bg-blue-50 text-blue-700 dark:bg-blue-900/30 dark:text-blue-400",
+  official: "bg-blue-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
   review: "bg-emerald-50 text-emerald-700 dark:bg-emerald-900/30 dark:text-emerald-400",
-  research: "bg-purple-50 text-purple-700 dark:bg-purple-900/30 dark:text-purple-400",
+  research: "bg-purple-50 text-teal-700 dark:bg-teal-900/30 dark:text-teal-400",
   documentation: "bg-gray-50 text-gray-700 dark:bg-gray-800 dark:text-gray-400",
 };
 
@@ -55,7 +55,7 @@ export function SourceReferences({
   return (
     <div className="bg-gray-50 dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800">
       <div className="flex items-center gap-2 mb-4">
-        <BookOpen className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+        <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
         <h3 className="text-base font-bold text-gray-900 dark:text-white">
           Sources & References
         </h3>
@@ -78,7 +78,7 @@ export function SourceReferences({
                   href={source.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium inline-flex items-center gap-1"
+                  className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline font-medium inline-flex items-center gap-1"
                 >
                   {source.title}
                   <ExternalLink className="w-3 h-3 flex-shrink-0" />
