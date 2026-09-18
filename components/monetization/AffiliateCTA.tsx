@@ -11,8 +11,30 @@ interface AffiliateCTAProps {
 }
 
 /**
+ * Track CTA click via Vercel Analytics (already loaded in layout)
+ * Uses window.va.track if available, falls back to custom event
+ */
+function trackCtaClick(toolName: string, variant: string, isAffiliate: boolean) {
+  if (typeof window !== "undefined" && (window as any).va) {
+    (window as any).va.track("affiliate_cta_click", {
+      tool: toolName,
+      variant: variant,
+      is_affiliate: isAffiliate,
+      page: window.location.pathname,
+    });
+  }
+  if (typeof window !== "undefined") {
+    window.dispatchEvent(
+      new CustomEvent("cta:click", {
+        detail: { tool: toolName, variant, isAffiliate, page: window.location.pathname },
+      })
+    );
+  }
+}
+
+/**
  * 联盟CTAComponent
- * 在评测页中显示"Visit Website"按钮，带联盟链接
+ * 在评测页中显示"Visit Website"按钮，带联盟链接和点击追踪
  */
 export function AffiliateCTA({
   toolName,
@@ -32,6 +54,9 @@ export function AffiliateCTA({
           target="_blank"
           rel="noopener noreferrer sponsored"
           className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium"
+          data-cta-type="affiliate"
+          data-tool={toolName}
+          onClick={() => trackCtaClick(toolName, "inline", isAffiliate)}
         >
           Try {toolName}
         </a>
@@ -52,17 +77,23 @@ export function AffiliateCTA({
               <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">{description}</p>
             )}
           </div>
-          <a
-            href={url}
-            target="_blank"
-            rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
-          >
-            Visit {toolName} Official Site
-            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-            </svg>
-          </a>
+          <div className="flex flex-col items-start gap-2">
+            <a
+              href={url}
+              target="_blank"
+              rel="noopener noreferrer sponsored"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
+              data-cta-type="affiliate"
+              data-tool={toolName}
+              onClick={() => trackCtaClick(toolName, "bottom", isAffiliate)}
+            >
+              Visit {toolName} Official Site
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+              </svg>
+            </a>
+            <p className="text-xs text-gray-500 dark:text-gray-400 mt-5">No credit card required</p>
+          </div>
         </div>
         {isAffiliate && (
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
@@ -93,17 +124,23 @@ export function AffiliateCTA({
             <p className="text-emerald-700 dark:text-emerald-300 text-xs mt-1">{description}</p>
           )}
         </div>
-        <a
-          href={url}
-          target="_blank"
-          rel="noopener noreferrer sponsored"
-          className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-600 text-white rounded-lg font-bold text-sm hover:from-emerald-700 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
-        >
-          Start Free Trial
-          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-          </svg>
-        </a>
+        <div className="flex flex-col items-start gap-2">
+          <a
+            href={url}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-600 text-white rounded-lg font-bold text-sm hover:from-emerald-700 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
+            data-cta-type="affiliate"
+            data-tool={toolName}
+            onClick={() => trackCtaClick(toolName, "banner", isAffiliate)}
+          >
+            Start Free Trial
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+            </svg>
+          </a>
+          <p className="text-xs text-gray-500 dark:text-gray-400 mt-5">No credit card required</p>
+        </div>
       </div>
       {isAffiliate && (
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 pt-3 border-t border-emerald-100 dark:border-emerald-900/50">
@@ -125,6 +162,9 @@ export function CompareAffiliateButton({ toolName, url }: { toolName: string; ur
       target="_blank"
       rel="noopener noreferrer sponsored"
       className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 hover:underline text-sm font-medium"
+      data-cta-type="affiliate"
+      data-tool={toolName}
+      onClick={() => trackCtaClick(toolName, "compare", true)}
     >
       Visit
       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">

@@ -345,10 +345,10 @@ export default function PostPage({ params }: PostPageProps) {
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
           {post.title}
         </h1>
-        <div className="flex items-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+        <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">
           <span>{post.author}</span>
-          <span>·</span>
-          <span>{post.date || post.publishedAt}</span>
+          <span className="text-gray-300 dark:text-gray-600">·</span>
+          <span className="text-xs text-gray-400 dark:text-gray-500">Last updated {String(post.date || post.publishedAt || '').slice(0, 10)}</span>
         </div>
       </header>
 
