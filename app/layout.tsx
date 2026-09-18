@@ -236,6 +236,7 @@ export default function RootLayout({
                     <li><a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">RSS Feed</a></li>
                     <li><a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Robots.txt</a></li>
                     <li><a href="https://dang.ai" target="_blank" rel="dofollow noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Tools Directory (Dang.ai)</a></li>
+                    <li><a href="https://www.agenthunter.io" target="_blank" rel="dofollow noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Featured AI Agent (AgentHunter)</a></li>
                   </ul>
                 </div>
               </div>
