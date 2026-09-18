@@ -11,7 +11,7 @@ const AUTHORS: Record<string, any> = {
     bio: "The AIToolCrux Editorial Team is a collective of independent AI tool reviewers with decades of combined experience in tech, development, design, and content strategy. Our team follows a transparent six-dimensional evaluation methodology, tests every tool for 14+ days, and does not accept payment for higher ratings. We believe good tool selection should be based on data, not marketing hype.",
     expertise: ["AI Chatbots", "Image Generation", "Code Assistants", "Productivity Tools", "Video Generation", "Enterprise AI"],
     avatar: "AT",
-    color: "from-blue-500 to-indigo-600",
+    color: "from-emerald-500 to-teal-600",
   },
 };
 
@@ -132,7 +132,7 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
       </section>
 
       {/* Editorial Standards CTA */}
-      <section className="mt-16 bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-2xl p-8 text-center">
+      <section className="mt-16 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 rounded-2xl p-8 text-center">
         <Award className="w-10 h-10 text-blue-600 mx-auto mb-4" />
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Editorial Independence</h3>
         <p className="text-gray-600 dark:text-gray-400 text-sm max-w-lg mx-auto mb-4">

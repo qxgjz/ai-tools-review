@@ -68,7 +68,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
 
       {!query && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-8 text-center">
-          <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/20 dark:to-indigo-900/20">
+          <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20">
             <Search className="w-8 h-8 text-blue-500" />
           </div>
           <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">Search AI Tools</h1>
@@ -117,7 +117,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                   <Link key={tool.id} href={`/tools/${tool.slug}`} className="group block bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg dark:hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-700 hover:-translate-y-0.5 transition-all p-5 sm:p-6">
                     <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                       <div className="flex sm:flex-col items-center sm:items-start gap-3 flex-shrink-0">
-                        <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-2xl font-extrabold shadow-md group-hover:scale-105 transition-transform">
+                        <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-2xl font-extrabold shadow-md group-hover:scale-105 transition-transform">
                           {tool.name.charAt(0).toUpperCase()}
                         </div>
                         <div className="text-center sm:text-left">

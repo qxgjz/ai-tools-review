@@ -19,7 +19,7 @@ const AUTHORS = [
     bio: "The AIToolCrux Editorial Team is a collective of independent AI tool reviewers with decades of combined experience in tech, development, design, and content strategy. Our team follows a transparent six-dimensional evaluation methodology, tests every tool for 14+ days, and does not accept payment for higher ratings. We believe good tool selection should be based on data, not marketing hype.",
     expertise: ["AI Chatbots", "Image Generation", "Code Assistants", "Productivity Tools", "Video Generation", "Enterprise AI"],
     avatar: "AT",
-    color: "from-blue-500 to-indigo-600",
+    color: "from-emerald-500 to-teal-600",
   },
 ];
 
@@ -92,7 +92,7 @@ export default function AuthorsPage() {
       </div>
 
       {/* Editorial Standards */}
-      <section className="bg-gradient-to-br from-blue-50 to-indigo-50 dark:from-blue-900/10 dark:to-indigo-900/10 rounded-3xl p-8 sm:p-12">
+      <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 rounded-3xl p-8 sm:p-12">
         <div className="max-w-3xl mx-auto text-center">
           <Award className="w-12 h-12 text-blue-600 mx-auto mb-4" />
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">

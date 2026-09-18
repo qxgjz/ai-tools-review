@@ -101,7 +101,7 @@ export default function SitemapPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       {/* Page头部 */}
-      <section className="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-600 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
@@ -298,7 +298,7 @@ export default function SitemapPage() {
         </section>
 
         {/* XML Sitemap 链接 */}
-        <section className="bg-gradient-to-r from-blue-50 to-indigo-50 dark:from-blue-950/30 dark:to-indigo-950/30 rounded-2xl p-8 border border-blue-100 dark:border-blue-900/30 text-center">
+        <section className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl p-8 border border-emerald-100 dark:border-emerald-900/30 text-center">
           <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
             XML Sitemap for Search Engines
           </h2>
