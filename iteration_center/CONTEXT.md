@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-17 19:56 UTC
+> Generated: 2026-09-18 19:19 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -23,11 +23,11 @@
 
 ## Recent Posts
 
-1. **Dify vs LangChain 2026: Which AI App Builder Should You Use? | AIToolC** (`dify-vs-langchain-2026`)
-2. **7 Best Gemini Alternatives in 2026: Tested & Ranked | AIToolCrux** (`gemini-alternatives-2026`)
-3. **Cursor vs Windsurf 2026: Which AI Code Editor Is Better? | AIToolCrux** (`cursor-vs-windsurf-2026`)
-4. **Notion AI vs Obsidian 2026: Which Note-Taking Tool Wins? | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
-5. **7 Best Notion AI Alternatives in 2026 (Free & Paid) | AIToolCrux** (`notion-ai-alternative-2026`)
+1. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
+2. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
+3. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
+4. **Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
+5. **7 Best Notion AI Alternatives in 2026 (Free & | AIToolCrux** (`notion-ai-alternative-2026`)
 
 ## Iteration State
 
@@ -42,11 +42,11 @@
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 5 |
-| Impressions | 1152 |
-| CTR | 0.43% |
-| Avg Ranking | 24.42 |
-| Report | 2026-08-16_2026-09-14.md |
+| Clicks | 7 |
+| Impressions | 1271 |
+| CTR | 0.55% |
+| Avg Ranking | 24.92 |
+| Report | 2026-08-17_2026-09-15.md |
 
 ## Audit Findings (pending)
 
