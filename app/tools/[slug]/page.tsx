@@ -290,7 +290,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         className="mb-4"
       />
 
-      <Link href="/ranking" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-zinc-600 dark:text-gray-300 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
+      <Link href="/ranking" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-zinc-600 dark:text-gray-300 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-gray-700 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
         Back to Ranking
       </Link>
@@ -398,8 +398,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30">
-              <Award className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+              <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
             </div>
             <div>
               <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Overall Rating</h4>
@@ -416,8 +416,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
-              <ShieldCheck className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30">
+              <ShieldCheck className="w-4 h-4 text-teal-600 dark:text-teal-400" />
             </div>
             <div>
               <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Ethics Score</h4>
@@ -427,7 +427,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
         <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
           <p className="text-xs text-zinc-500 dark:text-zinc-400">
-            <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {tool.lastUpdated} | <strong>Methodology:</strong> 6-dimension evaluation | <Link href="/methodology" className="text-blue-600 dark:text-blue-400 hover:underline">Full methodology</Link>
+            <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {tool.lastUpdated} | <strong>Methodology:</strong> 6-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
           </p>
         </div>
       </section>
@@ -448,7 +448,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       <section className="grid grid-cols-1 lg:grid-cols-5 gap-6 mb-6">
         <div className="lg:col-span-3 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             Six-Dimension Score Details
           </h2>
           <div className="space-y-4">
@@ -474,7 +474,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
         <div className="lg:col-span-2 bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 flex flex-col items-center justify-center">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 self-start flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            <Sparkles className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Capability Radar Chart
           </h2>
           <RadarChart scores={tool.scores} size={260} showValues />
@@ -517,7 +517,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {(tool as any).longDescription && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-            <Quote className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <Quote className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             What is {tool.name}?
           </h2>
           <div className="text-sm sm:text-base text-zinc-600 dark:text-gray-300 leading-relaxed space-y-4">
@@ -532,7 +532,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {((tool as any).testingPeriod || (tool as any).testingDetails) && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-            <Microscope className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            <Microscope className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Our Testing Methodology
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
@@ -622,7 +622,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {(tool as any).testMetrics && Array.isArray((tool as any).testMetrics) && (tool as any).testMetrics.length > 0 && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             Performance Test Results
           </h2>
           <div className="overflow-x-auto">
@@ -640,7 +640,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
                     <td className="py-3 px-3 font-medium text-zinc-900 dark:text-white">{metric.metric}</td>
                     <td className="py-3 px-3">
-                      <span className="inline-block bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-2.5 py-1 rounded-full text-xs font-bold">{metric.value}</span>
+                      <span className="inline-block bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full text-xs font-bold">{metric.value}</span>
                     </td>
                     <td className="py-3 px-3 text-zinc-600 dark:text-gray-400 text-xs hidden md:table-cell">{metric.test}</td>
                     <td className="py-3 px-3 text-zinc-500 dark:text-zinc-500 text-xs hidden lg:table-cell">{metric.comparison}</td>
@@ -659,13 +659,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {(tool as any).keyFeatures && (tool as any).keyFeatures.length > 0 && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
-            <Wrench className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <Wrench className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             Key Features
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {(tool as any).keyFeatures.map((feature: string, i: number) => (
               <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4">
-                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold mt-0.5">{i + 1}</span>
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">{i + 1}</span>
                 {feature}
               </li>
             ))}
@@ -718,7 +718,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {/* Tool Screenshot - E-E-A-T trust signal */}
       <section className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 mb-6">
         <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-          <ImageIcon className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+          <ImageIcon className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
           {tool.name} Interface & Screenshots
         </h2>
         <p className="text-zinc-600 dark:text-gray-300 mb-4 text-sm">
@@ -744,14 +744,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </tr></thead>
             <tbody>
               {tool.pricing.map((tier, i) => (
-                <tr key={i} className={`border-b border-gray-50 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-gray-800/50 ${tier.recommended ? "bg-blue-50/50 dark:bg-blue-900/10" : ""}`}>
+                <tr key={i} className={`border-b border-gray-50 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-gray-800/50 ${tier.recommended ? "bg-emerald-50/50 dark:bg-emerald-900/10" : ""}`}>
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-zinc-900 dark:text-white">{tier.name}</span>
-                      {tier.recommended && <span className="px-2 py-0.5 bg-blue-600 text-white text-xs rounded-md font-semibold">Recommended</span>}
+                      {tier.recommended && <span className="px-2 py-0.5 bg-emerald-600 text-white text-xs rounded-md font-semibold">Recommended</span>}
                     </div>
                   </td>
-                  <td className="py-3 px-4"><span className="font-bold text-blue-600 dark:text-blue-400">{tier.price}</span></td>
+                  <td className="py-3 px-4"><span className="font-bold text-emerald-600 dark:text-emerald-400">{tier.price}</span></td>
                   <td className="py-3 px-4 text-zinc-500 dark:text-zinc-400">{tier.description ?? "-"}</td>
                 </tr>
               ))}
@@ -801,19 +801,19 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {(tool as any).alternatives && (tool as any).alternatives.length > 0 && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
-            <GitCompare className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            <GitCompare className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Top Alternatives to {tool.name}
           </h2>
           <div className="space-y-3">
             {(tool as any).alternatives.map((alt: any, i: number) => (
               <div key={i} className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-gray-800/50 rounded-xl hover:bg-zinc-100 dark:hover:bg-gray-800 transition-colors">
                 <div className="flex-1">
-                  <Link href={`/tools/${alt.slug}`} className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                  <Link href={`/tools/${alt.slug}`} className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                     {alt.name}
                   </Link>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">{alt.reason}</p>
                 </div>
-                <Link href={`/tools/${alt.slug}`} className="text-xs text-blue-600 dark:text-blue-400 font-medium hover:underline ml-4">
+                <Link href={`/tools/${alt.slug}`} className="text-xs text-emerald-600 dark:text-emerald-400 font-medium hover:underline ml-4">
                   Read Review →
                 </Link>
               </div>
@@ -826,7 +826,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {relatedTools.length > 0 && (
         <section className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+            <Sparkles className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Similar Tools Recommended
           </h2>
           <ToolList tools={relatedTools} />
@@ -851,7 +851,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {relevantComparisons.length > 0 && (
         <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/20 dark:to-teal-950/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
-            <GitCompare className="w-5 h-5 text-indigo-600 dark:text-indigo-400" />
+            <GitCompare className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Compare {tool.name} Side-by-Side
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
@@ -859,12 +859,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               <Link
                 key={c.slug}
                 href={`/compare/${c.slug}`}
-                className="block p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-indigo-300 dark:hover:border-indigo-700 hover:shadow-md transition-all"
+                className="block p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-teal-300 dark:hover:border-teal-700 hover:shadow-md transition-all"
               >
                 <h3 className="text-sm font-semibold text-zinc-900 dark:text-white leading-snug mb-1">
                   {c.title}
                 </h3>
-                <span className="text-xs text-indigo-600 dark:text-indigo-400 font-medium">
+                <span className="text-xs text-teal-600 dark:text-teal-400 font-medium">
                   Read comparison &rarr;
                 </span>
               </Link>
