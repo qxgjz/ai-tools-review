@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Terms of Service | AIToolCrux",
+  title: "Terms of Service: Use Guidelines & Affiliate Disclosure",
   description: "Read the Terms of Service for AIToolCrux. Our terms cover use of our AI tool reviews, affiliate links, and website content.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/terms",
