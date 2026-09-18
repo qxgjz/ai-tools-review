@@ -326,7 +326,7 @@ export default function PostPage({ params }: PostPageProps) {
       {/* Return按钮 */}
       <Link
         href="/blog"
-        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
+        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 mb-8 transition-colors"
       >
         ← Back to blog
       </Link>
@@ -336,7 +336,7 @@ export default function PostPage({ params }: PostPageProps) {
         <div className="flex items-center gap-3 mb-4">
           <Link
             href={`/blog/category/${post.categorySlug}`}
-            className="text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-3 py-1 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+            className="text-sm font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-3 py-1 rounded-full hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
           >
             {post.category}
           </Link>
@@ -404,8 +404,8 @@ export default function PostPage({ params }: PostPageProps) {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30">
-              <Star className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30">
+              <Star className="w-4 h-4 text-teal-600 dark:text-teal-400" />
             </div>
             <div>
               <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Our Rating</h4>
@@ -422,8 +422,8 @@ export default function PostPage({ params }: PostPageProps) {
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
-              <Award className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-cyan-100 dark:bg-cyan-900/30">
+              <Award className="w-4 h-4 text-cyan-600 dark:text-cyan-400" />
             </div>
             <div>
               <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Expert Verdict</h4>
@@ -475,7 +475,7 @@ export default function PostPage({ params }: PostPageProps) {
       {tool && (
         <div className="mb-10">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-4 flex items-center gap-2">
-            <ImageIcon className="w-6 h-6 text-blue-600" />
+            <ImageIcon className="w-6 h-6 text-emerald-600" />
             {toolName} Interface & Screenshots
           </h2>
           <p className="text-gray-600 dark:text-gray-300 mb-4 text-sm">
@@ -581,7 +581,7 @@ export default function PostPage({ params }: PostPageProps) {
             </div>
             <Link
               href="/"
-              className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
             >
               Browse all tools
               <ArrowRight className="w-4 h-4" />
@@ -593,11 +593,11 @@ export default function PostPage({ params }: PostPageProps) {
                 <Link
                   key={relatedTool.slug}
                   href={`/tools/${relatedTool.slug}`}
-                  className="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-5 hover:shadow-lg dark:hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-200"
+                  className="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-5 hover:shadow-lg dark:hover:shadow-xl hover:border-emerald-300 dark:hover:border-emerald-700 transition-all duration-200"
                 >
                   <div className="flex items-start justify-between mb-3">
                     <div className="flex-1 min-w-0">
-                      <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors truncate">
+                      <h3 className="text-base font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors truncate">
                         {relatedTool.name}
                       </h3>
                       <p className="text-xs text-gray-500 dark:text-gray-400 mt-0.5 truncate">
@@ -612,7 +612,7 @@ export default function PostPage({ params }: PostPageProps) {
                     <span className="text-xs px-2 py-0.5 bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 rounded-full">
                       {relatedTool.category}
                     </span>
-                    <span className="text-xs text-blue-600 dark:text-blue-400 font-medium group-hover:underline">
+                    <span className="text-xs text-emerald-600 dark:text-emerald-400 font-medium group-hover:underline">
                       View →
                     </span>
                   </div>
@@ -633,7 +633,7 @@ export default function PostPage({ params }: PostPageProps) {
             </div>
             <Link
               href="/blog"
-              className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
             >
               View all articles
               <ArrowRight className="w-4 h-4" />
@@ -644,21 +644,21 @@ export default function PostPage({ params }: PostPageProps) {
               <Link
                 key={related.slug}
                 href={`/blog/${related.slug}`}
-                className="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-5 hover:shadow-lg dark:hover:shadow-xl hover:border-blue-300 dark:hover:border-blue-700 transition-all duration-200"
+                className="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-5 hover:shadow-lg dark:hover:shadow-xl hover:border-emerald-300 dark:hover:border-emerald-700 transition-all duration-200"
               >
                 <div className="flex items-center gap-2 mb-2">
-                  <span className="text-xs px-2 py-0.5 bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 rounded-full">
+                  <span className="text-xs px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full">
                     {related.category}
                   </span>
                   <span className="text-xs text-gray-400">{related.readTime || '5 min'}</span>
                 </div>
-                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                   {related.title}
                 </h3>
                 <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">{related.excerpt}</p>
                 <div className="flex items-center justify-between">
                   <span className="text-xs text-gray-400">{related.date || related.publishedAt}</span>
-                  <span className="text-xs text-blue-600 dark:text-blue-400 opacity-0 group-hover:opacity-100 transition-opacity">Read →</span>
+                  <span className="text-xs text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity">Read →</span>
                 </div>
               </Link>
             ))}
@@ -667,7 +667,7 @@ export default function PostPage({ params }: PostPageProps) {
           <div className="mt-6 text-center sm:hidden">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-1 text-sm font-medium text-blue-600 dark:text-blue-400 hover:underline"
+              className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
             >
               View all articles
               <ArrowRight className="w-4 h-4" />
