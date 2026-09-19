@@ -11,20 +11,32 @@ interface AffiliateCTAProps {
 }
 
 function trackCtaClick(toolName: string, variant: string, isAffiliate: boolean) {
-  if (typeof window !== "undefined" && (window as any).va) {
-    (window as any).va.track("affiliate_cta_click", {
-      tool: toolName,
-      variant: variant,
-      is_affiliate: isAffiliate,
-      page: window.location.pathname,
-    });
-  }
-  if (typeof window !== "undefined") {
-    window.dispatchEvent(
-      new CustomEvent("cta:click", {
-        detail: { tool: toolName, variant, isAffiliate, page: window.location.pathname },
-      })
-    );
+  // Defer non-urgent analytics to idle time so the click→navigation path
+  // is as fast as possible (improves INP). The link opens in a new tab,
+  // so blocking the click handler wastes interactivity budget.
+  const run = () => {
+    if (typeof window !== "undefined" && (window as any).va) {
+      (window as any).va.track("affiliate_cta_click", {
+        tool: toolName,
+        variant: variant,
+        is_affiliate: isAffiliate,
+        page: window.location.pathname,
+      });
+    }
+    if (typeof window !== "undefined") {
+      window.dispatchEvent(
+        new CustomEvent("cta:click", {
+          detail: { tool: toolName, variant, isAffiliate, page: window.location.pathname },
+        })
+      );
+    }
+  };
+  if (typeof window === "undefined") return;
+  const ric = (window as any).requestIdleCallback as ((cb: () => void, opts?: { timeout: number }) => number) | undefined;
+  if (ric) {
+    ric(run, { timeout: 1500 });
+  } else {
+    setTimeout(run, 0);
   }
 }
 
