@@ -334,6 +334,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4" />Updated {tool.lastUpdated}</span>
               <span className="inline-flex items-center gap-1.5"><Tag className="w-4 h-4" />{tool.category}</span>
               {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">Free Tier Available</span>}
+              {(tool as any).no_credit_card && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">No Credit Card</span>}
+              {(tool as any).free_quota && <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md text-xs font-semibold">Free: {(tool as any).free_quota}</span>}
+              {(tool as any).hidden_cost && <span className="px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-md text-xs font-semibold">⚠ {(tool as any).hidden_cost}</span>}
             </div>
           </div>
           <div className="flex flex-row sm:flex-col items-baseline sm:items-end gap-1 sm:gap-0">
