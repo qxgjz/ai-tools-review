@@ -120,14 +120,14 @@ function generateReason(
   scenario: ScenarioType
 ): string {
   const parts: string[] = [];
-  parts.push(`${tool.name} 综合评分 ${total.toFixed(1)} 分`);
+  parts.push(`${tool.name} overall score ${total.toFixed(1)}/10`);
   if (matchedDims.length > 0) {
-    const dimNames = matchedDims.map((d) => DIMENSION_LABELS[d]).join("、");
-    parts.push(`在${dimNames}方面表现突出`);
+    const dimNames = matchedDims.map((d) => DIMENSION_LABELS[d]).join(", ");
+    parts.push(`stands out in ${dimNames}`);
   }
   if (tool.hasFreeTier) parts.push("Free version available to try");
-  parts.push(`适合${SCENARIO_LABELS[scenario] || "General"}场景使用`);
-  return parts.join("，") + "。";
+  parts.push(`best suited for ${SCENARIO_LABELS[scenario] || "General"} use cases`);
+  return parts.join(". ") + ".";
 }
 
 export function getScenarioOptions() {
