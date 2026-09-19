@@ -58,6 +58,14 @@ export function generateStaticParams() {
   return toolsData.map((tool) => ({ slug: tool.slug }));
 }
 
+
+function truncateDescription(text: string, maxLen: number = 155): string {
+  if (text.length <= maxLen) return text;
+  const truncated = text.slice(0, maxLen);
+  const lastSpace = truncated.lastIndexOf(' ');
+  return (lastSpace > 120 ? truncated.slice(0, lastSpace) : truncated).replace(/[\s,;:-]+$/, '') + '…';
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
   if (!tool) return { title: "Tool Not Found" };
@@ -73,15 +81,15 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(categoryFormatted)}`;
 
   return {
-    title: `${tool.name.length > 27 ? tool.name.slice(0, 27) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
-    description: description.slice(0, 160),
+    title: `${tool.name.length > 24 ? tool.name.slice(0, 24) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+    description: truncateDescription(description),
     keywords: [tool.name, `${tool.name} review`, `${tool.name} pricing`, tool.vendor, ...tool.tags, `best ${tool.category} AI tools`, "AI tool review", "AI software comparison"],
     alternates: {
       canonical: `https://www.aitoolcrux.com/tools/${tool.slug}`,
     },
     openGraph: {
-      title: `${tool.name.length > 27 ? tool.name.slice(0, 27) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
-      description: description.slice(0, 160),
+      title: `${tool.name.length > 24 ? tool.name.slice(0, 24) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+      description: truncateDescription(description),
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       type: "website",
       publishedTime: tool.lastUpdated,
@@ -99,8 +107,8 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     twitter: {
       card: "summary_large_image",
-      title: `${tool.name.length > 27 ? tool.name.slice(0, 27) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
-      description: description.slice(0, 160),
+      title: `${tool.name.length > 24 ? tool.name.slice(0, 24) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+      description: truncateDescription(description),
       images: [ogImageUrl],
     },
   };
