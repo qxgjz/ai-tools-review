@@ -15,8 +15,8 @@ export default function DisclosurePage() {
       <p className="text-sm text-gray-500 dark:text-gray-400 mb-8">Last updated: September 2, 2026</p>
 
       <div className="prose dark:prose-invert max-w-none">
-        <div className="bg-blue-50 dark:bg-blue-950/30 border border-blue-200 dark:border-blue-800 rounded-lg p-4 mb-6">
-          <p className="text-blue-800 dark:text-blue-200 font-medium">
+        <div className="bg-emerald-50 dark:bg-emerald-950/30 border border-emerald-200 dark:border-emerald-800 rounded-lg p-4 mb-6">
+          <p className="text-emerald-800 dark:text-emerald-200 font-medium">
             AIToolCrux is reader-supported. When you buy through links on our site, we may earn an affiliate commission at no additional cost to you.
           </p>
         </div>
@@ -75,7 +75,7 @@ export default function DisclosurePage() {
 
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-3">Questions?</h2>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          If you have any questions about our affiliate relationships or this disclosure, please contact us at <a href="mailto:840754587@qq.com" className="text-blue-600 dark:text-blue-400 underline">840754587@qq.com</a>.
+          If you have any questions about our affiliate relationships or this disclosure, please contact us at <a href="mailto:840754587@qq.com" className="text-emerald-600 dark:text-emerald-400 underline">840754587@qq.com</a>.
         </p>
       </div>
     </div>

@@ -20,8 +20,8 @@ export default function ContactPage() {
       <div className="grid md:grid-cols-2 gap-6 mb-10">
         <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6">
           <div className="flex items-center gap-3 mb-4">
-            <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center">
-              <Mail className="w-5 h-5 text-blue-600 dark:text-blue-400" />
+            <div className="w-10 h-10 bg-emerald-100 dark:bg-emerald-900/30 rounded-lg flex items-center justify-center">
+              <Mail className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             </div>
             <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Email</h2>
           </div>
@@ -30,7 +30,7 @@ export default function ContactPage() {
           </p>
           <a
             href="mailto:840754587@qq.com"
-            className="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+            className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
           >
             840754587@qq.com
           </a>
@@ -50,7 +50,7 @@ export default function ContactPage() {
             href="https://github.com/qxgjz/ai-tools-review/discussions"
             target="_blank"
             rel="noopener noreferrer"
-            className="text-blue-600 dark:text-blue-400 font-medium hover:underline"
+            className="text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
           >
             GitHub Discussions
           </a>
@@ -59,8 +59,8 @@ export default function ContactPage() {
 
       <div className="bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-800 rounded-xl p-6 mb-10">
         <div className="flex items-center gap-3 mb-4">
-          <div className="w-10 h-10 bg-purple-100 dark:bg-purple-900/30 rounded-lg flex items-center justify-center">
-            <Clock className="w-5 h-5 text-purple-600 dark:text-purple-400" />
+          <div className="w-10 h-10 bg-teal-100 dark:bg-teal-900/30 rounded-lg flex items-center justify-center">
+            <Clock className="w-5 h-5 text-teal-600 dark:text-teal-400" />
           </div>
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Response Time</h2>
         </div>
@@ -78,19 +78,19 @@ export default function ContactPage() {
         </div>
         <ul className="space-y-3 text-gray-600 dark:text-gray-400">
           <li className="flex gap-3">
-            <span className="text-blue-500 font-bold">•</span>
+            <span className="text-emerald-500 font-bold">•</span>
             <span><strong>For tool-specific questions:</strong> Please check the tool's official documentation first, as we may not be able to provide technical support for third-party tools.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-blue-500 font-bold">•</span>
+            <span className="text-emerald-500 font-bold">•</span>
             <span><strong>For correction requests:</strong> If you find an error in one of our reviews, please include the article URL and the specific correction needed. We review all correction requests promptly.</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-blue-500 font-bold">•</span>
+            <span className="text-emerald-500 font-bold">•</span>
             <span><strong>For partnership inquiries:</strong> Please include your company name, product/service, and what type of partnership you're interested in (affiliate, sponsored content, etc.).</span>
           </li>
           <li className="flex gap-3">
-            <span className="text-blue-500 font-bold">•</span>
+            <span className="text-emerald-500 font-bold">•</span>
             <span><strong>For affiliate program questions:</strong> Please note that we do not manage affiliate programs for the tools we review. Contact the tool's affiliate program directly for affiliate-related questions.</span>
           </li>
         </ul>

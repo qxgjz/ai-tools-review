@@ -68,7 +68,7 @@ export default function TagPage({ params }: TagPageProps) {
       {/* Return按钮 */}
       <Link
         href="/blog"
-        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
+        className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 mb-8 transition-colors"
       >
         ← ReturnBlog列Table
       </Link>
@@ -92,13 +92,13 @@ export default function TagPage({ params }: TagPageProps) {
             <div className="flex items-center gap-2 mb-2">
               <Link
                 href={`/blog/category/${post.categorySlug}`}
-                className="text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded hover:bg-blue-100 dark:hover:bg-blue-900/30 transition-colors"
+                className="text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded hover:bg-emerald-100 dark:hover:bg-emerald-900/30 transition-colors"
               >
                 {post.category}
               </Link>
               <span className="text-xs text-gray-500 dark:text-gray-400">{post.readTime} min read</span>
             </div>
-            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+            <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               {post.title}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">{post.excerpt}</p>

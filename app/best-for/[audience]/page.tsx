@@ -199,7 +199,7 @@ export default function BestForPage({ params }: { params: { audience: string } }
       />
 
       <FadeIn delay={0.1} y={30}>
-        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-violet-600 via-purple-600 to-fuchsia-600 p-8 text-white mb-8 shadow-lg">
+        <section className="relative overflow-hidden rounded-2xl bg-gradient-to-r from-violet-600 via-teal-600 to-fuchsia-600 p-8 text-white mb-8 shadow-lg">
           <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full blur-2xl" />
           <div className="relative">
             <h1 className="text-3xl font-extrabold mb-3">{config.title}</h1>
@@ -210,13 +210,13 @@ export default function BestForPage({ params }: { params: { audience: string } }
 
       {/* Quick Answer */}
       <FadeIn delay={0.1} y={20}>
-        <section className="bg-blue-50 dark:bg-blue-900/20 rounded-2xl border-l-4 border-blue-500 p-6 mb-8">
+        <section className="bg-emerald-50 dark:bg-emerald-900/20 rounded-2xl border-l-4 border-emerald-500 p-6 mb-8">
           <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2">Quick Answer</h2>
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
             The best AI tools for {params.audience.replace("-", " ")} in 2026 are:{" "}
             {filteredTools.slice(0, 5).map((t, i) => (
               <span key={t.id}>
-                <Link href={`/tools/${(t as any).slug}`} className="text-blue-600 dark:text-blue-400 hover:underline font-medium">
+                <Link href={`/tools/${(t as any).slug}`} className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
                   {(t as any).name}
                 </Link>
                 {i < 4 ? ", " : ""}

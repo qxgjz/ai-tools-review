@@ -109,7 +109,7 @@ export default function SitemapPage() {
             </div>
             <h1 className="text-3xl sm:text-4xl font-extrabold">Sitemap</h1>
           </div>
-          <p className="text-blue-100 text-lg max-w-2xl">
+          <p className="text-emerald-100 text-lg max-w-2xl">
             Complete overview of all pages on AIToolCrux. Browse by category,
             explore top-rated tools, and discover our latest reviews.
           </p>
@@ -131,7 +131,7 @@ export default function SitemapPage() {
         {/* 主要Page */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-            <Home className="w-6 h-6 text-blue-600" />
+            <Home className="w-6 h-6 text-emerald-600" />
             Main Pages
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -139,11 +139,11 @@ export default function SitemapPage() {
               <Link
                 key={page.href}
                 href={page.href}
-                className="group bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-blue-300 dark:hover:border-blue-700 hover:shadow-lg transition-all"
+                className="group bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-emerald-300 dark:hover:border-emerald-700 hover:shadow-lg transition-all"
               >
                 <div className="flex items-start justify-between mb-2">
-                  <page.icon className="w-6 h-6 text-blue-600 dark:text-blue-400" />
-                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-blue-600 group-hover:translate-x-1 transition-all" />
+                  <page.icon className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+                  <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
                 </div>
                 <h3 className="font-bold text-gray-900 dark:text-white mb-1">
                   {page.name}
@@ -159,7 +159,7 @@ export default function SitemapPage() {
         {/* CategoriesPage */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-2">
-            <Layers className="w-6 h-6 text-purple-600" />
+            <Layers className="w-6 h-6 text-teal-600" />
             Tool Categories
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
@@ -168,11 +168,11 @@ export default function SitemapPage() {
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className="group bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-purple-300 dark:hover:border-purple-700 hover:shadow-lg transition-all"
+                  className="group bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-teal-300 dark:hover:border-teal-700 hover:shadow-lg transition-all"
                 >
                   <div className="flex items-start justify-between mb-2">
                     <span className="text-2xl">{cat.icon}</span>
-                    <span className="text-xs font-semibold text-purple-600 dark:text-purple-400 bg-purple-50 dark:bg-purple-900/30 px-2 py-1 rounded-full">
+                    <span className="text-xs font-semibold text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded-full">
                       {toolsByCategory[cat.slug]?.length || 0} tools
                     </span>
                   </div>
@@ -213,7 +213,7 @@ export default function SitemapPage() {
                       {tool.category} · {tool.vendor}
                     </div>
                   </div>
-                  <span className="text-lg font-bold text-blue-600 dark:text-blue-400 flex-shrink-0">
+                  <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400 flex-shrink-0">
                     {tool.total.toFixed(1)}
                   </span>
                 </Link>
@@ -240,7 +240,7 @@ export default function SitemapPage() {
                   </span>
                   <Link
                     href={`/blog/category/${categoryPosts[0]?.categorySlug || category.toLowerCase()}`}
-                    className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium ml-auto"
+                    className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline font-medium ml-auto"
                   >
                     View all →
                   </Link>
@@ -309,7 +309,7 @@ export default function SitemapPage() {
             href="/sitemap.xml"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
           >
             <FileText className="w-5 h-5" />
             View XML Sitemap

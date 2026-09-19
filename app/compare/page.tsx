@@ -332,70 +332,70 @@ export default function ComparePage() {
             <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
               <tr>
                 <td className="py-3 px-3 text-gray-500">1</td>
-                <td className="py-3 px-3"><Link href="/tools/chatgpt" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">ChatGPT</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/chatgpt" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">ChatGPT</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">All-purpose AI assistant</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.5</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">2</td>
-                <td className="py-3 px-3"><Link href="/tools/claude" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Claude</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/claude" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Claude</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Long docs & coding</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.2</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">3</td>
-                <td className="py-3 px-3"><Link href="/tools/github-copilot" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">GitHub Copilot</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/github-copilot" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">GitHub Copilot</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI pair programming</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">$10 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.1</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">4</td>
-                <td className="py-3 px-3"><Link href="/tools/cursor" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Cursor</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/cursor" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Cursor</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI-native code editor</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.0</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">5</td>
-                <td className="py-3 px-3"><Link href="/tools/elevenlabs" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">ElevenLabs</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/elevenlabs" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">ElevenLabs</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI voice synthesis</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $5 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.0</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">6</td>
-                <td className="py-3 px-3"><Link href="/tools/dall-e-3" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">DALL-E 3</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/dall-e-3" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">DALL-E 3</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI image generation</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Included in ChatGPT</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.9</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">7</td>
-                <td className="py-3 px-3"><Link href="/tools/notion-ai" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Notion AI</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/notion-ai" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Notion AI</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Workspace AI assistant</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $10 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.9</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">8</td>
-                <td className="py-3 px-3"><Link href="/tools/canva-magic" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Canva Magic</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/canva-magic" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Canva Magic</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI design &amp; graphics</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $13 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.9</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">9</td>
-                <td className="py-3 px-3"><Link href="/tools/perplexity" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Perplexity</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/perplexity" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Perplexity</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI research with citations</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.8</span></td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">10</td>
-                <td className="py-3 px-3"><Link href="/tools/gemini" className="font-semibold text-blue-600 dark:text-blue-400 hover:underline">Gemini</Link></td>
+                <td className="py-3 px-3"><Link href="/tools/gemini" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Gemini</Link></td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Google AI assistant</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
                 <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.7</span></td>
@@ -412,28 +412,28 @@ export default function ComparePage() {
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Compare by Category</h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          <Link href="/category/chat" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/chat" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Chatbots
           </Link>
-          <Link href="/category/image" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/image" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Image Generators
           </Link>
-          <Link href="/category/video" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/video" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Video Tools
           </Link>
-          <Link href="/category/audio" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/audio" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Audio &amp; Voice
           </Link>
-          <Link href="/category/coding" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/coding" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Coding Assistants
           </Link>
-          <Link href="/category/writing" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/writing" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Writing Tools
           </Link>
-          <Link href="/category/productivity" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/productivity" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Productivity
           </Link>
-          <Link href="/blog" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/blog" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             All Comparisons
           </Link>
         </div>
@@ -448,34 +448,34 @@ export default function ComparePage() {
           Detailed head-to-head comparisons with real test data, pricing breakdowns, and honest verdicts.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <Link href="/compare/chatgpt-vs-claude" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/chatgpt-vs-claude" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             ChatGPT vs Claude
           </Link>
-          <Link href="/compare/chatgpt-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/chatgpt-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             ChatGPT vs Gemini
           </Link>
-          <Link href="/compare/claude-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/claude-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Claude vs Gemini
           </Link>
-          <Link href="/compare/midjourney-vs-dall-e-3" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/midjourney-vs-dall-e-3" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Midjourney vs DALL-E 3
           </Link>
-          <Link href="/compare/midjourney-vs-stable-diffusion" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/midjourney-vs-stable-diffusion" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Midjourney vs Stable Diffusion
           </Link>
-          <Link href="/compare/github-copilot-vs-cursor" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/github-copilot-vs-cursor" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             GitHub Copilot vs Cursor
           </Link>
-          <Link href="/compare/perplexity-vs-chatgpt" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/perplexity-vs-chatgpt" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Perplexity vs ChatGPT
           </Link>
-          <Link href="/compare/runway-vs-sora" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/runway-vs-sora" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Runway vs Sora
           </Link>
-          <Link href="/compare/notion-ai-vs-grammarly" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/notion-ai-vs-grammarly" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Notion AI vs Grammarly
           </Link>
-          <Link href="/compare/jasper-vs-copy-ai" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-blue-400 dark:hover:border-blue-600 hover:bg-blue-50 dark:hover:bg-blue-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/compare/jasper-vs-copy-ai" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Jasper vs Copy.ai
           </Link>
         </div>
@@ -543,7 +543,7 @@ export default function ComparePage() {
           placeholder="Search tool name, vendor, or tags..."
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
-          className="w-full px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent mb-4"
+          className="w-full px-4 py-2 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-emerald-500 focus:border-transparent mb-4"
         />
 
         {/* Tools列Table */}
@@ -558,17 +558,17 @@ export default function ComparePage() {
                 disabled={isDisabled}
                 className={`p-3 rounded-lg border text-left transition-all ${
                   isSelected
-                    ? "border-blue-500 bg-blue-50 dark:bg-blue-900/20 ring-1 ring-blue-500"
+                    ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-500"
                     : isDisabled
                     ? "border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 opacity-50 cursor-not-allowed"
-                    : "border-gray-200 dark:border-gray-700 hover:border-blue-300 dark:hover:border-blue-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                    : "border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-700 hover:bg-gray-50 dark:hover:bg-gray-800"
                 }`}
               >
                 <div className="flex items-center gap-2">
                   <div
                     className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                       isSelected
-                        ? "border-blue-500 bg-blue-500"
+                        ? "border-emerald-500 bg-emerald-500"
                         : "border-gray-300 dark:border-gray-600"
                     }`}
                   >
@@ -624,7 +624,7 @@ export default function ComparePage() {
                           : result.grade === "A"
                           ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400"
                           : result.grade === "B"
-                          ? "bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400"
+                          ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400"
                           : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
                       }`}
                     >
@@ -684,7 +684,7 @@ export default function ComparePage() {
                     </div>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{desc}</p>
                     <div className="flex items-center justify-between">
-                      <span className="text-sm font-bold text-blue-600 dark:text-blue-400">
+                      <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400">
                         Recommended: {winner.name}
                       </span>
                       <span className="text-xs text-gray-500 dark:text-gray-400">
@@ -739,13 +739,13 @@ export default function ComparePage() {
                     ))}
                   </tr>
                   {/* Overall Score */}
-                  <tr className="bg-blue-50/50 dark:bg-blue-900/10">
+                  <tr className="bg-emerald-50/50 dark:bg-emerald-900/10">
                     <td className="py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">Overall Score</td>
                     {selectedTools.map((tool) => {
                       const result = calculateScoreResult(tool.scores);
                       return (
                         <td key={tool.slug} className="py-3 px-4">
-                          <span className="text-lg font-bold text-blue-600 dark:text-blue-400">
+                          <span className="text-lg font-bold text-emerald-600 dark:text-emerald-400">
                             {result.total.toFixed(1)}
                           </span>
                           <span className="text-sm text-gray-400 ml-1">/10</span>
@@ -769,14 +769,14 @@ export default function ComparePage() {
                               <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-full h-2 max-w-[100px]">
                                 <div
                                   className={`h-2 rounded-full ${
-                                    isMax ? "bg-blue-500" : "bg-gray-300 dark:bg-gray-600"
+                                    isMax ? "bg-emerald-500" : "bg-gray-300 dark:bg-gray-600"
                                   }`}
                                   style={{ width: `${(score / 10) * 100}%` }}
                                 />
                               </div>
                               <span
                                 className={`text-sm font-medium ${
-                                  isMax ? "text-blue-600 dark:text-blue-400" : "text-gray-600 dark:text-gray-400"
+                                  isMax ? "text-emerald-600 dark:text-emerald-400" : "text-gray-600 dark:text-gray-400"
                                 }`}
                               >
                                 {score.toFixed(1)}
@@ -856,7 +856,7 @@ export default function ComparePage() {
                         <div className="flex gap-2">
                           <Link
                             href={`/tools/${tool.slug}`}
-                            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/40 rounded-lg transition-colors"
+                            className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 hover:bg-emerald-100 dark:hover:bg-emerald-900/40 rounded-lg transition-colors"
                           >
                             View Details →
                           </Link>
@@ -865,7 +865,7 @@ export default function ComparePage() {
                               href={tool.officialUrl}
                               target="_blank"
                               rel="noopener noreferrer nofollow sponsored"
-                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 rounded-lg transition-colors"
+                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors"
                             >
                               Try Free →
                             </a>

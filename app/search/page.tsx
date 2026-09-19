@@ -8,7 +8,7 @@ import { ToolList } from "@/components/tools/ToolList";
 const GRADE_STYLES: Record<Grade, string> = {
   S: "bg-gradient-to-br from-amber-400 to-amber-600 text-white",
   A: "bg-gradient-to-br from-emerald-400 to-emerald-600 text-white",
-  B: "bg-gradient-to-br from-blue-400 to-blue-600 text-white",
+  B: "bg-gradient-to-br from-emerald-400 to-emerald-600 text-white",
   C: "bg-gradient-to-br from-yellow-400 to-yellow-500 text-white",
   D: "bg-gradient-to-br from-red-400 to-red-600 text-white",
   F: "bg-gradient-to-br from-gray-400 to-gray-500 text-white",
@@ -61,7 +61,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
-      <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
+      <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-400 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all">
         <ArrowLeft className="w-4 h-4" />
         Back to Home
       </Link>
@@ -69,13 +69,13 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
       {!query && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-8 text-center">
           <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20">
-            <Search className="w-8 h-8 text-blue-500" />
+            <Search className="w-8 h-8 text-emerald-500" />
           </div>
           <h1 className="text-2xl font-extrabold text-gray-900 dark:text-white mb-2">Search AI Tools</h1>
           <p className="text-gray-500 dark:text-gray-400 mb-6">Enter tool name, vendor, or feature tag</p>
           <div className="flex flex-wrap justify-center gap-2 max-w-lg mx-auto mb-8">
             {hotKeywords.map((kw) => (
-              <Link key={kw} href={`/search?q=${encodeURIComponent(kw)}`} className="px-3.5 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm rounded-lg border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all">
+              <Link key={kw} href={`/search?q=${encodeURIComponent(kw)}`} className="px-3.5 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm rounded-lg border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all">
                 {kw}
               </Link>
             ))}
@@ -89,7 +89,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                 <Link
                   key={cat.slug}
                   href={`/category/${cat.slug}`}
-                  className="flex items-center gap-2 px-3 py-2.5 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all text-left"
+                  className="flex items-center gap-2 px-3 py-2.5 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all text-left"
                 >
                   <span className="text-lg">{cat.icon}</span>
                   <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{cat.name}</span>
@@ -104,7 +104,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
         <>
           <div className="mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mb-2">
-              Search Results: <span className="text-blue-600 dark:text-blue-400">"{query}"</span>
+              Search Results: <span className="text-emerald-600 dark:text-emerald-400">"{query}"</span>
             </h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">Found <span className="font-bold text-gray-700 dark:text-gray-300">{results.length}</span> matching tools</p>
           </div>
@@ -114,7 +114,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
               {results.map((tool) => {
                 const { total, grade } = calculateScoreResult(tool.scores);
                 return (
-                  <Link key={tool.id} href={`/tools/${tool.slug}`} className="group block bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg dark:hover:shadow-xl hover:border-blue-200 dark:hover:border-blue-700 hover:-translate-y-0.5 transition-all p-5 sm:p-6">
+                  <Link key={tool.id} href={`/tools/${tool.slug}`} className="group block bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg dark:hover:shadow-xl hover:border-emerald-200 dark:hover:border-emerald-700 hover:-translate-y-0.5 transition-all p-5 sm:p-6">
                     <div className="flex flex-col sm:flex-row sm:items-start gap-4">
                       <div className="flex sm:flex-col items-center sm:items-start gap-3 flex-shrink-0">
                         <div className="w-14 h-14 flex items-center justify-center rounded-xl bg-gradient-to-br from-emerald-500 to-teal-600 text-white text-2xl font-extrabold shadow-md group-hover:scale-105 transition-transform">
@@ -126,7 +126,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
-                        <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-1">
+                        <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-1">
                           <HighlightText text={tool.name} query={query} />
                         </h3>
                         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-400 dark:text-gray-500 mb-2">
@@ -160,7 +160,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                 <p className="text-sm text-gray-400 dark:text-gray-500 mb-6">Try different keywords, or browse popular tools below</p>
                 <div className="flex flex-wrap justify-center gap-2">
                   {hotKeywords.map((kw) => (
-                    <Link key={kw} href={`/search?q=${encodeURIComponent(kw)}`} className="px-3.5 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm rounded-lg border border-gray-100 dark:border-gray-800 hover:border-blue-200 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-all">
+                    <Link key={kw} href={`/search?q=${encodeURIComponent(kw)}`} className="px-3.5 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm rounded-lg border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all">
                       {kw}
                     </Link>
                   ))}

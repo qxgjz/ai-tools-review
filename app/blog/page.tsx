@@ -173,14 +173,14 @@ export default function BlogPage() {
                   <span className="text-xs font-medium text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded">
                     Featured
                   </span>
-                  <span className="text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded">
+                  <span className="text-xs font-medium text-emerald-600 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/20 px-2 py-1 rounded">
                     {post.category}
                   </span>
                   <span className="text-xs text-gray-500 dark:text-gray-400">
                     {post.readTime} min read
                   </span>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 hover:text-blue-600 dark:hover:text-blue-400 transition-colors">
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
                   {post.title}
                 </h3>
                 <p className="text-gray-600 dark:text-gray-400 text-sm mb-4 line-clamp-3">

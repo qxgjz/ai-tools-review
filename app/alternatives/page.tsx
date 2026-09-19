@@ -49,13 +49,13 @@ export default function AlternativesPage() {
               <Link
                 key={item.slug}
                 href={`/alternatives/${item.slug}`}
-                className="group bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-lg hover:border-blue-300 dark:hover:border-blue-700 transition-all"
+                className="group bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6 shadow-sm hover:shadow-lg hover:border-emerald-300 dark:hover:border-emerald-700 transition-all"
               >
                 <div className="flex items-start justify-between mb-3">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                  <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                     {item.title.split(":")[0]}
                   </h3>
-                  <span className="text-blue-600 dark:text-blue-400 group-hover:translate-x-1 transition-transform">
+                  <span className="text-emerald-600 dark:text-emerald-400 group-hover:translate-x-1 transition-transform">
                     →
                   </span>
                 </div>
@@ -89,8 +89,8 @@ export default function AlternativesPage() {
           </h2>
           <div className="grid gap-6 md:grid-cols-3">
             <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
-              <div className="w-12 h-12 bg-blue-100 dark:bg-blue-900/50 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-emerald-100 dark:bg-emerald-900/50 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-emerald-600 dark:text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
@@ -111,8 +111,8 @@ export default function AlternativesPage() {
               </p>
             </div>
             <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 p-6">
-              <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900/50 rounded-lg flex items-center justify-center mb-4">
-                <svg className="w-6 h-6 text-purple-600 dark:text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <div className="w-12 h-12 bg-teal-100 dark:bg-teal-900/50 rounded-lg flex items-center justify-center mb-4">
+                <svg className="w-6 h-6 text-teal-600 dark:text-teal-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
                 </svg>
               </div>
@@ -129,19 +129,19 @@ export default function AlternativesPage() {
           <h2 className="text-2xl font-bold mb-3">
             Can't Find What You're Looking For?
           </h2>
-          <p className="text-blue-100 mb-6 max-w-xl mx-auto">
+          <p className="text-emerald-100 mb-6 max-w-xl mx-auto">
             Browse our complete directory of 533+ AI tools or use our comparison tool to find the perfect tool for your needs.
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/ranking"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-600 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
             >
               Browse All Tools
             </Link>
             <Link
               href="/compare"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-700 text-white rounded-lg font-bold hover:bg-blue-800 transition-colors border border-blue-500"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white rounded-lg font-bold hover:bg-emerald-800 transition-colors border border-emerald-500"
             >
               Compare Tools
             </Link>

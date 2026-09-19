@@ -137,9 +137,9 @@ export default function AlternativePage({
       <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <nav className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-            <Link href="/" className="hover:text-blue-600">Home</Link>
+            <Link href="/" className="hover:text-emerald-600">Home</Link>
             <span className="mx-2">/</span>
-            <Link href="/alternatives" className="hover:text-blue-600">Alternatives</Link>
+            <Link href="/alternatives" className="hover:text-emerald-600">Alternatives</Link>
             <span className="mx-2">/</span>
             <span className="text-gray-700 dark:text-gray-300">{page.title.split(":")[0]}</span>
           </nav>
@@ -202,8 +202,8 @@ export default function AlternativePage({
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-blue-100 dark:bg-blue-900/30">
-                <Star className="w-4 h-4 text-blue-600 dark:text-blue-400" />
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+                <Star className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div>
                 <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Top Rated</h4>
@@ -220,8 +220,8 @@ export default function AlternativePage({
               </div>
             </div>
             <div className="flex items-start gap-3">
-              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-purple-100 dark:bg-purple-900/30">
-                <Award className="w-4 h-4 text-purple-600 dark:text-purple-400" />
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30">
+                <Award className="w-4 h-4 text-teal-600 dark:text-teal-400" />
               </div>
               <div>
                 <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Expert Verdict</h4>
@@ -268,7 +268,7 @@ export default function AlternativePage({
                     <td className="px-4 py-3">
                       <Link
                         href={`/tools/${alt.slug}`}
-                        className="font-semibold text-blue-600 dark:text-blue-400 hover:underline"
+                        className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
                       >
                         {alt.name}
                       </Link>
@@ -309,7 +309,7 @@ export default function AlternativePage({
                   </div>
                   <Link
                     href={`/tools/${alt.slug}`}
-                    className="px-4 py-2 bg-blue-600 text-white rounded-lg font-semibold text-sm hover:bg-blue-700 transition-colors"
+                    className="px-4 py-2 bg-emerald-600 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors"
                   >
                     Full Review →
                   </Link>
@@ -393,12 +393,12 @@ export default function AlternativePage({
           <h2 className="text-2xl font-bold mb-3">
             Still Not Sure Which Tool to Choose?
           </h2>
-          <p className="text-blue-100 mb-6 max-w-xl mx-auto">
+          <p className="text-emerald-100 mb-6 max-w-xl mx-auto">
             Use our AI tool comparison tool to compare up to 3 tools side-by-side and find the perfect fit for your needs.
           </p>
           <Link
             href="/compare"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-blue-600 rounded-lg font-bold hover:bg-blue-50 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-emerald-600 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
           >
             Compare Tools Now
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

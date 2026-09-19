@@ -45,7 +45,7 @@ export default function PrivacyPage() {
           <li><strong>Umami:</strong> Privacy-focused website analytics. Does not use cookies and does not collect personal data.</li>
         </ul>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" className="text-blue-600 dark:text-blue-400 underline">Google Analytics Opt-out Browser Add-on</a>.
+          You can opt out of Google Analytics by installing the <a href="https://tools.google.com/dlpage/gaoptout" className="text-emerald-600 dark:text-emerald-400 underline">Google Analytics Opt-out Browser Add-on</a>.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-3">5. Cookies</h2>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
           <li>Withdraw consent at any time</li>
         </ul>
         <p className="text-gray-700 dark:text-gray-300 mb-4">
-          To exercise any of these rights, please contact us at <a href="mailto:840754587@qq.com" className="text-blue-600 dark:text-blue-400 underline">840754587@qq.com</a>.
+          To exercise any of these rights, please contact us at <a href="mailto:840754587@qq.com" className="text-emerald-600 dark:text-emerald-400 underline">840754587@qq.com</a>.
         </p>
 
         <h2 className="text-xl font-semibold text-gray-900 dark:text-white mt-8 mb-3">9. Children's Privacy</h2>
@@ -95,8 +95,8 @@ export default function PrivacyPage() {
           If you have any questions about this Privacy Policy, please contact us at:
         </p>
         <p className="text-gray-700 dark:text-gray-300">
-          Email: <a href="mailto:840754587@qq.com" className="text-blue-600 dark:text-blue-400 underline">840754587@qq.com</a><br />
-          Website: <a href="https://www.aitoolcrux.com/contact" className="text-blue-600 dark:text-blue-400 underline">https://www.aitoolcrux.com/contact</a>
+          Email: <a href="mailto:840754587@qq.com" className="text-emerald-600 dark:text-emerald-400 underline">840754587@qq.com</a><br />
+          Website: <a href="https://www.aitoolcrux.com/contact" className="text-emerald-600 dark:text-emerald-400 underline">https://www.aitoolcrux.com/contact</a>
         </p>
       </div>
     </div>
