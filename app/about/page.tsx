@@ -15,7 +15,7 @@ export default function AboutPage() {
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
       {/* Hero */}
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium mb-6">
           <Shield className="w-4 h-4" />
           Independent & Transparent
         </div>
@@ -27,7 +27,7 @@ export default function AboutPage() {
         </p>
         <div className="flex flex-wrap justify-center gap-4 mt-6">
           <div className="text-center">
-            <div className="text-3xl font-extrabold text-blue-600">533+</div>
+            <div className="text-3xl font-extrabold text-emerald-600">533+</div>
             <div className="text-sm text-gray-500">Tools Tested</div>
           </div>
           <div className="text-center">
@@ -44,7 +44,7 @@ export default function AboutPage() {
       {/* Our Mission */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-          <Award className="w-7 h-7 text-blue-600" />
+          <Award className="w-7 h-7 text-emerald-600" />
           Our Mission
         </h2>
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 shadow-sm">
@@ -81,7 +81,7 @@ export default function AboutPage() {
             <div key={i} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-5">
               <div className="flex items-center justify-between mb-2">
                 <h3 className="font-bold text-gray-900 dark:text-white text-sm">{item.dim}</h3>
-                <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded text-xs font-bold">{item.weight}</span>
+                <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded text-xs font-bold">{item.weight}</span>
               </div>
               <p className="text-xs text-gray-500 dark:text-gray-400 leading-relaxed">{item.desc}</p>
             </div>
@@ -121,10 +121,10 @@ export default function AboutPage() {
       {/* Affiliate Disclosure */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-          <ExternalLink className="w-7 h-7 text-purple-600" />
+          <ExternalLink className="w-7 h-7 text-teal-600" />
           Affiliate Disclosure
         </h2>
-        <div className="bg-purple-50 dark:bg-purple-900/10 rounded-2xl border border-purple-200 dark:border-purple-800 p-8">
+        <div className="bg-teal-50 dark:bg-teal-900/10 rounded-2xl border border-teal-200 dark:border-teal-800 p-8">
           <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-4">
             AIToolCrux may contain affiliate links. If you purchase a tool through these links, we may earn a commission at no additional cost to you.
           </p>
@@ -140,7 +140,7 @@ export default function AboutPage() {
       {/* Our Team */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-          <Users className="w-7 h-7 text-indigo-600" />
+          <Users className="w-7 h-7 text-emerald-600" />
           Our Editorial Team
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -177,7 +177,7 @@ export default function AboutPage() {
                 </div>
                 <div>
                   <h3 className="font-bold text-gray-900 dark:text-white">{member.name}</h3>
-                  <p className="text-sm text-blue-600 dark:text-blue-400">{member.role}</p>
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400">{member.role}</p>
                 </div>
               </div>
               <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{member.bio}</p>
@@ -192,7 +192,7 @@ export default function AboutPage() {
           ))}
         </div>
         <div className="mt-6 text-center">
-          <Link href="/authors" className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300">
+          <Link href="/authors" className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300">
             View all authors and their articles
             <ExternalLink className="w-4 h-4" />
           </Link>
@@ -202,7 +202,7 @@ export default function AboutPage() {
       {/* Contact */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
-          <Mail className="w-7 h-7 text-rose-600" />
+          <Mail className="w-7 h-7 text-emerald-600" />
           Contact Us
         </h2>
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-8 shadow-sm">
@@ -212,11 +212,11 @@ export default function AboutPage() {
           <div className="space-y-3">
             <div className="flex items-center gap-3">
               <Mail className="w-5 h-5 text-gray-400" />
-              <a href="mailto:editor@aitoolcrux.com" className="text-blue-600 dark:text-blue-400 hover:underline">editor@aitoolcrux.com</a>
+              <a href="mailto:editor@aitoolcrux.com" className="text-emerald-600 dark:text-emerald-400 hover:underline">editor@aitoolcrux.com</a>
             </div>
             <div className="flex items-center gap-3">
               <Github className="w-5 h-5 text-gray-400" />
-              <a href="https://github.com/qxgjz/ai-tools-review" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:underline">github.com/qxgjz/ai-tools-review</a>
+              <a href="https://github.com/qxgjz/ai-tools-review" target="_blank" rel="noopener noreferrer" className="text-emerald-600 dark:text-emerald-400 hover:underline">github.com/qxgjz/ai-tools-review</a>
             </div>
           </div>
         </div>
@@ -226,14 +226,14 @@ export default function AboutPage() {
       <section className="text-center">
         <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 sm:p-12 text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Start Exploring AI Tools</h2>
-          <p className="text-blue-100 mb-8 max-w-xl mx-auto">
+          <p className="text-white/90 mb-8 max-w-xl mx-auto">
             Browse our directory of 540+ AI tools, read in-depth reviews, and find the perfect tool for your needs.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link href="/ranking" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-white text-blue-600 font-bold rounded-xl hover:shadow-lg transition-shadow">
+            <Link href="/ranking" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white text-emerald-700 font-bold rounded-xl hover:shadow-lg transition-shadow">
               View Top Rated Tools
             </Link>
-            <Link href="/blog" className="inline-flex items-center justify-center gap-2 px-8 py-3 bg-blue-500/30 text-white font-bold rounded-xl border border-white/30 hover:bg-blue-500/40 transition-colors">
+            <Link href="/blog" className="inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-white/15 text-white font-bold rounded-xl border border-white/30 hover:bg-white/25 transition-colors">
               Read Latest Reviews
             </Link>
           </div>

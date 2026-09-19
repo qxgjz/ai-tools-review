@@ -30,7 +30,7 @@ export default function AuthorsPage() {
     <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
       {/* Hero */}
       <div className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-medium mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-medium mb-6">
           <Users className="w-4 h-4" />
           Our Editorial Team
         </div>
@@ -49,7 +49,7 @@ export default function AuthorsPage() {
           return (
             <div
               key={author.slug}
-              className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm hover:shadow-lg hover:border-blue-200 dark:hover:border-blue-800 transition-all duration-300"
+              className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 p-6 shadow-sm hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-800 transition-all duration-300"
             >
               <div className="flex items-center gap-4 mb-4">
                 <div className={`w-16 h-16 rounded-full bg-gradient-to-br ${author.color} flex items-center justify-center text-white text-2xl font-bold shadow-lg`}>
@@ -57,7 +57,7 @@ export default function AuthorsPage() {
                 </div>
                 <div>
                   <h2 className="text-lg font-bold text-gray-900 dark:text-white">{author.name}</h2>
-                  <p className="text-sm text-blue-600 dark:text-blue-400">{author.role}</p>
+                  <p className="text-sm text-emerald-600 dark:text-emerald-400">{author.role}</p>
                 </div>
               </div>
 
@@ -80,7 +80,7 @@ export default function AuthorsPage() {
                 </div>
                 <Link
                   href={`/authors/${author.slug}`}
-                  className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300"
+                  className="inline-flex items-center gap-1 text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300"
                 >
                   View articles
                   <ArrowRight className="w-4 h-4" />
@@ -94,7 +94,7 @@ export default function AuthorsPage() {
       {/* Editorial Standards */}
       <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 rounded-3xl p-8 sm:p-12">
         <div className="max-w-3xl mx-auto text-center">
-          <Award className="w-12 h-12 text-blue-600 mx-auto mb-4" />
+          <Award className="w-12 h-12 text-emerald-600 mx-auto mb-4" />
           <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 dark:text-white mb-4">
             Our Editorial Standards
           </h2>
@@ -111,7 +111,7 @@ export default function AuthorsPage() {
               "Full disclosure of affiliate relationships",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-2">
-                <span className="w-5 h-5 rounded-full bg-blue-600 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-5 h-5 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                   {i + 1}
                 </span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
@@ -121,7 +121,7 @@ export default function AuthorsPage() {
           <div className="mt-8">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-blue-600 text-white font-bold rounded-xl hover:bg-blue-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 transition-colors"
             >
               Learn More About Us
               <ArrowRight className="w-4 h-4" />

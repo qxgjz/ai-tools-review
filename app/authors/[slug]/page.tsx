@@ -46,7 +46,7 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
       {/* Back */}
       <Link
         href="/authors"
-        className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 mb-8 transition-colors"
+        className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 mb-8 transition-colors"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to all authors
@@ -60,7 +60,7 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
           </div>
           <div className="flex-1">
             <h1 className="text-3xl font-extrabold text-gray-900 dark:text-white mb-2">{author.name}</h1>
-            <p className="text-lg text-blue-600 dark:text-blue-400 font-medium mb-4">{author.role}</p>
+            <p className="text-lg text-emerald-600 dark:text-emerald-400 font-medium mb-4">{author.role}</p>
             <p className="text-gray-600 dark:text-gray-400 leading-relaxed mb-4">{author.bio}</p>
             <div className="flex flex-wrap gap-2">
               {author.expertise.map((exp: string, i: number) => (
@@ -76,11 +76,11 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
       {/* Articles */}
       <section>
         <div className="flex items-center gap-3 mb-8">
-          <FileText className="w-7 h-7 text-blue-600" />
+          <FileText className="w-7 h-7 text-emerald-600" />
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
             Articles by {author.name.split(" ")[0]}
           </h2>
-          <span className="px-3 py-1 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-full text-sm font-bold">
+          <span className="px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-sm font-bold">
             {posts.length}
           </span>
         </div>
@@ -96,11 +96,11 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}
-                className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 hover:shadow-md hover:border-blue-200 dark:hover:border-blue-800 transition-all"
+                className="block bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-6 hover:shadow-md hover:border-emerald-200 dark:hover:border-emerald-800 transition-all"
               >
                 <div className="flex items-start justify-between gap-4">
                   <div className="flex-1">
-                    <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors mb-2">
+                    <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-2">
                       {post.title}
                     </h3>
                     <p className="text-sm text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">
@@ -118,7 +118,7 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
                         </span>
                       )}
                       {post.category && (
-                        <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded">
+                        <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded">
                           {post.category}
                         </span>
                       )}
@@ -133,12 +133,12 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
 
       {/* Editorial Standards CTA */}
       <section className="mt-16 bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/10 dark:to-teal-900/10 rounded-2xl p-8 text-center">
-        <Award className="w-10 h-10 text-blue-600 mx-auto mb-4" />
+        <Award className="w-10 h-10 text-emerald-600 mx-auto mb-4" />
         <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Editorial Independence</h3>
         <p className="text-gray-600 dark:text-gray-400 text-sm max-w-lg mx-auto mb-4">
           All reviews are independent and based on hands-on testing. We do not accept payment for higher ratings.
         </p>
-        <Link href="/about" className="inline-flex items-center gap-2 text-blue-600 dark:text-blue-400 font-medium hover:text-blue-700 dark:hover:text-blue-300">
+        <Link href="/about" className="inline-flex items-center gap-2 text-emerald-600 dark:text-emerald-400 font-medium hover:text-emerald-700 dark:hover:text-emerald-300">
           Learn about our methodology
         </Link>
       </section>
