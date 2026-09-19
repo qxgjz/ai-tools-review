@@ -74,9 +74,12 @@ export function NewsletterSignup({ variant = "default" }: { variant?: "default" 
             <button
               type="submit"
               disabled={status === "loading"}
-              className="px-4 py-2 bg-white text-emerald-600 rounded-lg font-semibold text-sm hover:bg-blue-50 disabled:opacity-50"
+              className="px-4 py-2 bg-white text-emerald-600 rounded-lg font-semibold text-sm hover:bg-emerald-50 disabled:opacity-60 inline-flex items-center gap-2 transition-colors"
             >
-              {status === "loading" ? "..." : "Subscribe Free"}
+              {status === "loading" && (
+                <span className="w-3.5 h-3.5 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin" aria-hidden="true" />
+              )}
+              {status === "loading" ? "Subscribing..." : "Subscribe Free"}
             </button>
           </form>
         )}
@@ -115,8 +118,11 @@ export function NewsletterSignup({ variant = "default" }: { variant?: "default" 
             <button
               type="submit"
               disabled={status === "loading"}
-              className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:opacity-50 transition-colors"
+              className="px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:opacity-60 inline-flex items-center justify-center gap-2 transition-colors"
             >
+              {status === "loading" && (
+                <span className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" aria-hidden="true" />
+              )}
               {status === "loading" ? "Subscribing..." : "Subscribe Free"}
             </button>
           </form>
