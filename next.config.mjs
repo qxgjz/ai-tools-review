@@ -370,6 +370,228 @@ const nextConfig = {
         destination: "/",
         permanent: true,
       },
+      // OpenSEO fix: /tools list page 404 -> redirect to rankings
+      {
+        source: "/tools",
+        destination: "/ranking",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/amazon-polly 404 -> /category/audio
+      {
+        source: "/tools/amazon-polly",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/amazon-q-developer 404 -> /category/code
+      {
+        source: "/tools/amazon-q-developer",
+        destination: "/category/code",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/anthropic-claude 404 -> /category/chat
+      {
+        source: "/tools/anthropic-claude",
+        destination: "/category/chat",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/anytype 404 -> /category/productivity
+      {
+        source: "/tools/anytype",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/bolt-new 404 -> /category/code
+      {
+        source: "/tools/bolt-new",
+        destination: "/category/code",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/capacities 404 -> /category/productivity
+      {
+        source: "/tools/capacities",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/closerscopy 404 -> /category/writing
+      {
+        source: "/tools/closerscopy",
+        destination: "/category/writing",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/coda 404 -> /category/productivity
+      {
+        source: "/tools/coda",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/coqui 404 -> /category/audio
+      {
+        source: "/tools/coqui",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/craft 404 -> /category/productivity
+      {
+        source: "/tools/craft",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/figma 404 -> /category/design
+      {
+        source: "/tools/figma",
+        destination: "/category/design",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/firefly 404 -> /category/design
+      {
+        source: "/tools/firefly",
+        destination: "/category/design",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/frase 404 -> /category/writing
+      {
+        source: "/tools/frase",
+        destination: "/category/writing",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/getimg 404 -> /category/image
+      {
+        source: "/tools/getimg",
+        destination: "/category/image",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/google 404 -> /category/chat
+      {
+        source: "/tools/google",
+        destination: "/category/chat",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/google-text-to-speech 404 -> /category/audio
+      {
+        source: "/tools/google-text-to-speech",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/heptabase 404 -> /category/productivity
+      {
+        source: "/tools/heptabase",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/ink 404 -> /category/productivity
+      {
+        source: "/tools/ink",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/jetbrains-ai 404 -> /category/code
+      {
+        source: "/tools/jetbrains-ai",
+        destination: "/category/code",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/llama 404 -> /category/chat
+      {
+        source: "/tools/llama",
+        destination: "/category/chat",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/logseq 404 -> /category/productivity
+      {
+        source: "/tools/logseq",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/lumen5 404 -> /category/video
+      {
+        source: "/tools/lumen5",
+        destination: "/category/video",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/mem-ai 404 -> /category/productivity
+      {
+        source: "/tools/mem-ai",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/mutable-ai 404 -> /category/image
+      {
+        source: "/tools/mutable-ai",
+        destination: "/category/image",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/natural-reader 404 -> /category/audio
+      {
+        source: "/tools/natural-reader",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/playground 404 -> /category/image
+      {
+        source: "/tools/playground",
+        destination: "/category/image",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/recraft 404 -> /category/image
+      {
+        source: "/tools/recraft",
+        destination: "/category/image",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/reflect 404 -> /category/productivity
+      {
+        source: "/tools/reflect",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/replit-agent 404 -> /category/code
+      {
+        source: "/tools/replit-agent",
+        destination: "/category/code",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/resemble-ai 404 -> /category/audio
+      {
+        source: "/tools/resemble-ai",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/snappa 404 -> /category/design
+      {
+        source: "/tools/snappa",
+        destination: "/category/design",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/stencil 404 -> /category/design
+      {
+        source: "/tools/stencil",
+        destination: "/category/design",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/surfer 404 -> /category/writing
+      {
+        source: "/tools/surfer",
+        destination: "/category/writing",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/tana 404 -> /category/productivity
+      {
+        source: "/tools/tana",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/tensor-art 404 -> /category/image
+      {
+        source: "/tools/tensor-art",
+        destination: "/category/image",
+        permanent: true,
+      },
+      // OpenSEO fix: /tools/visme 404 -> /category/design
+      {
+        source: "/tools/visme",
+        destination: "/category/design",
+        permanent: true,
+      },
     ];
   },
 };
