@@ -2,8 +2,8 @@ name: Context Update
 
 on:
   schedule:
-    # Daily at 01:00 Beijing time = 17:00 UTC
-    - cron: '0 17 * * *'
+    # Daily at 01:17 Beijing time = 17:17 UTC
+    - cron: '17 17 * * *'
   workflow_dispatch:
 
 permissions:
@@ -19,8 +19,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
 
       - name: Setup Python
         uses: actions/setup-python@v5
@@ -40,6 +38,5 @@ jobs:
             exit 0
           fi
           git commit -m "🤖 Update context $(date -u +%Y-%m-%d)"
-          # Pull latest with rebase, fallback to merge if rebase fails
-          git pull --rebase origin main || git pull origin main
+          git pull --rebase origin main
           git push
