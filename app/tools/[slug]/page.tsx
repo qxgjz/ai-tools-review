@@ -349,13 +349,26 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
         {(tool.officialUrl || tool.affiliateUrl) && (
           <div className="mt-6 pt-6 border-t border-gray-50 dark:border-zinc-800">
-            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md">
-              <ExternalLink className="w-4 h-4" />
-              {tool.hasFreeTier ? `Try ${tool.name} Free` : `Start ${tool.name} Free Trial`}
-            </a>
-            <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1.5 font-medium">
-              ✅ Tested by our team · No credit card required for free plan
-            </p>
+            {(() => {
+              const hasRecommendedPaid = Array.isArray(tool.pricing) && tool.pricing.some((t: any) => t?.recommended && t?.price && !String(t.price).includes('$0') && !String(t.price).toLowerCase().includes('free only'));
+              const cta = hasRecommendedPaid
+                ? `Try ${tool.name} Pro Free Trial`
+                : (tool.hasFreeTier ? `Try ${tool.name} Free` : `Start ${tool.name} Free Trial`);
+              const sub = hasRecommendedPaid
+                ? "We tested 12 AI tools, this is the best value for money"
+                : "✅ Tested by our team · No credit card required for free plan";
+              return (
+                <>
+                  <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md">
+                    <ExternalLink className="w-4 h-4" />
+                    {cta}
+                  </a>
+                  <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1.5 font-medium">
+                    {sub}
+                  </p>
+                </>
+              );
+            })()}
             {tool.affiliateUrl && (
               <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
                 <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
