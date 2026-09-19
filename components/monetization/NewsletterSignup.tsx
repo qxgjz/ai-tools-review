@@ -58,8 +58,8 @@ export function NewsletterSignup({ variant = "default" }: { variant?: "default" 
   if (variant === "compact") {
     return (
       <div className="bg-gradient-to-r from-emerald-600 to-emerald-600 rounded-xl p-6 text-white">
-        <h3 className="text-lg font-bold mb-1">Get AI Tool Weekly</h3>
-        <p className="text-emerald-100 text-sm mb-4">Weekly AI tool reviews, comparisons, and exclusive deals.</p>
+        <h3 className="text-lg font-bold mb-1">Get 5 Free AI Tools Weekly</h3>
+        <p className="text-emerald-100 text-sm mb-4">5 hand-picked free AI tools, no VPN needed.</p>
         {status === "success" ? (
           <p className="text-green-200 text-sm font-medium">✓ Thanks for subscribing! Check your inbox.</p>
         ) : (
@@ -76,7 +76,7 @@ export function NewsletterSignup({ variant = "default" }: { variant?: "default" 
               disabled={status === "loading"}
               className="px-4 py-2 bg-white text-emerald-600 rounded-lg font-semibold text-sm hover:bg-blue-50 disabled:opacity-50"
             >
-              {status === "loading" ? "..." : "Join"}
+              {status === "loading" ? "..." : "Subscribe Free"}
             </button>
           </form>
         )}
@@ -94,10 +94,10 @@ export function NewsletterSignup({ variant = "default" }: { variant?: "default" 
           </svg>
         </div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-          Never Miss the Best AI Tools
+          Get 5 Free AI Tools Every Week
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
-          Join readers getting weekly AI tool reviews, side-by-side comparisons, and exclusive affiliate deals. No spam, unsubscribe anytime.
+          5 hand-picked free AI tool recommendations, straight to your inbox — no VPN needed.
         </p>
         {status === "success" ? (
           <div className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-lg p-4 font-medium">
