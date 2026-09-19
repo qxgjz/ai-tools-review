@@ -209,8 +209,8 @@ export default function PostPage({ params }: PostPageProps) {
     .slice(0, 12);
 
   const tool = tools.find((t) => t.slug === toolSlug);
-  const toolName = tool?.name || post.title.split(" ")[0] || "this tool";
-  const officialUrl = tool?.officialUrl || `https://www.google.com/search?q=${encodeURIComponent(toolName)}`;
+  const toolName = tool?.name || "this AI tool";
+  const officialUrl = tool?.officialUrl || undefined;
   const affiliateUrl = tool?.affiliateUrl || undefined;
 
   // 计算Tools平均Rating（用于Review Schema）
@@ -550,16 +550,18 @@ export default function PostPage({ params }: PostPageProps) {
         />
       )}
 
-      {/* 底部联盟CTA */}
-      <AffiliateCTA
-        toolName={toolName}
-        officialUrl={officialUrl}
-        affiliateUrl={affiliateUrl}
-        description={`Read our full review above, then visit ${toolName} official site to try it for yourself.`}
-        variant="bottom"
-        hasFreeTier={tool?.hasFreeTier}
-        freeAccess={/free/i.test(post.title || "")}
-      />
+      {/* 底部联盟CTA - only show when there is a valid official URL */}
+      {(officialUrl || affiliateUrl) && (
+        <AffiliateCTA
+          toolName={toolName}
+          officialUrl={officialUrl}
+          affiliateUrl={affiliateUrl}
+          description={`Read our full review above, then visit ${toolName} official site to try it for yourself.`}
+          variant="bottom"
+          hasFreeTier={tool?.hasFreeTier}
+          freeAccess={/free/i.test(post.title || "")}
+        />
+      )}
 
       {/* 文章底部广告位 */}
       <AdSlot label="Advertisement" className="my-8" />
