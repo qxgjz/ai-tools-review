@@ -2,8 +2,8 @@ name: GSC Data Fetch
 
 on:
   schedule:
-    # Daily at 02:00 Beijing time = 18:00 UTC
-    - cron: '0 18 * * *'
+    # Daily at 02:23 Beijing time = 18:23 UTC
+    - cron: '23 18 * * *'
   workflow_dispatch:
 
 permissions:
