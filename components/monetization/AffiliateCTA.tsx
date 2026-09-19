@@ -1,19 +1,14 @@
 "use client";
 
-import Link from "next/link";
-
 interface AffiliateCTAProps {
   toolName: string;
   officialUrl?: string;
   affiliateUrl?: string;
   description?: string;
   variant?: "inline" | "banner" | "bottom";
+  hasFreeTier?: boolean;
 }
 
-/**
- * Track CTA click via Vercel Analytics (already loaded in layout)
- * Uses window.va.track if available, falls back to custom event
- */
 function trackCtaClick(toolName: string, variant: string, isAffiliate: boolean) {
   if (typeof window !== "undefined" && (window as any).va) {
     (window as any).va.track("affiliate_cta_click", {
@@ -32,19 +27,23 @@ function trackCtaClick(toolName: string, variant: string, isAffiliate: boolean) 
   }
 }
 
-/**
- * 联盟CTAComponent
- * 在评测页中显示"Visit Website"按钮，带联盟链接和点击追踪
- */
+function ctaText(toolName: string, hasFreeTier?: boolean): string {
+  // hasFreeTier=true -> "Try X Free"
+  // hasFreeTier=false/undefined -> "Start X Free Trial"
+  return hasFreeTier ? `Try ${toolName} Free` : `Start ${toolName} Free Trial`;
+}
+
 export function AffiliateCTA({
   toolName,
   officialUrl,
   affiliateUrl,
   description,
   variant = "banner",
+  hasFreeTier = false,
 }: AffiliateCTAProps) {
   const url = affiliateUrl || officialUrl || "#";
   const isAffiliate = !!affiliateUrl;
+  const microcopy = "✅ Tested by our team · No credit card required for free plan";
 
   if (variant === "inline") {
     return (
@@ -58,7 +57,7 @@ export function AffiliateCTA({
           data-tool={toolName}
           onClick={() => trackCtaClick(toolName, "inline", isAffiliate)}
         >
-          Try {toolName}
+          {ctaText(toolName, hasFreeTier)}
         </a>
         {isAffiliate && <span className="text-xs text-gray-400">(affiliate)</span>}
       </span>
@@ -77,7 +76,7 @@ export function AffiliateCTA({
               <p className="text-gray-600 dark:text-gray-300 text-sm mt-1">{description}</p>
             )}
           </div>
-          <div className="flex flex-col items-start gap-2">
+          <div className="flex flex-col items-start gap-1">
             <a
               href={url}
               target="_blank"
@@ -87,12 +86,12 @@ export function AffiliateCTA({
               data-tool={toolName}
               onClick={() => trackCtaClick(toolName, "bottom", isAffiliate)}
             >
-              Visit {toolName} Official Site
+              {ctaText(toolName, hasFreeTier)}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
               </svg>
             </a>
-            <p className="text-xs text-gray-500 dark:text-gray-400 mt-5">No credit card required</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{microcopy}</p>
           </div>
         </div>
         {isAffiliate && (
@@ -104,14 +103,13 @@ export function AffiliateCTA({
     );
   }
 
-  // banner variant (default)
   return (
     <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-emerald-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl p-5 my-6 shadow-sm hover:shadow-md transition-shadow">
       <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3">
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-1 flex-wrap">
             <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-green-100 text-green-800 dark:bg-green-900/50 dark:text-green-300">
-              ✓ Free Trial Available
+              ✓ Free Tier
             </span>
             <span className="inline-flex items-center px-2 py-0.5 rounded text-xs font-medium bg-emerald-100 text-emerald-800 dark:bg-emerald-900/50 dark:text-emerald-300">
               ⚡ Quick Setup
@@ -124,7 +122,7 @@ export function AffiliateCTA({
             <p className="text-emerald-700 dark:text-emerald-300 text-xs mt-1">{description}</p>
           )}
         </div>
-        <div className="flex flex-col items-start gap-2">
+        <div className="flex flex-col items-start gap-1">
           <a
             href={url}
             target="_blank"
@@ -134,12 +132,12 @@ export function AffiliateCTA({
             data-tool={toolName}
             onClick={() => trackCtaClick(toolName, "banner", isAffiliate)}
           >
-            Start Free Trial
+            {ctaText(toolName, hasFreeTier)}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
           </a>
-          <p className="text-xs text-gray-500 dark:text-gray-400 mt-5">No credit card required</p>
+          <p className="text-xs text-gray-500 dark:text-gray-400">{microcopy}</p>
         </div>
       </div>
       {isAffiliate && (
@@ -151,10 +149,7 @@ export function AffiliateCTA({
   );
 }
 
-/**
- * CompareTable格中的联盟链接按钮
- */
-export function CompareAffiliateButton({ toolName, url }: { toolName: string; url?: string }) {
+export function CompareAffiliateButton({ toolName, url, hasFreeTier }: { toolName: string; url?: string; hasFreeTier?: boolean }) {
   if (!url) return <span className="text-gray-400 text-sm">N/A</span>;
   return (
     <a
@@ -166,7 +161,7 @@ export function CompareAffiliateButton({ toolName, url }: { toolName: string; ur
       data-tool={toolName}
       onClick={() => trackCtaClick(toolName, "compare", true)}
     >
-      Visit
+      {hasFreeTier ? "Try Free" : "Start Trial"}
       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
       </svg>

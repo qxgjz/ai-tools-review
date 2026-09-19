@@ -446,6 +446,7 @@ export default function PostPage({ params }: PostPageProps) {
           affiliateUrl={affiliateUrl}
           description={`Ready to try ${toolName}? Click below to visit the official site and get started.`}
           variant="banner"
+          hasFreeTier={tool?.hasFreeTier}
         />
       )}
 
@@ -543,6 +544,7 @@ export default function PostPage({ params }: PostPageProps) {
           affiliateUrl={affiliateUrl}
           description={`Still considering ${toolName}? Read our verdict below, or visit the official site now.`}
           variant="banner"
+          hasFreeTier={tool?.hasFreeTier}
         />
       )}
 
@@ -553,6 +555,7 @@ export default function PostPage({ params }: PostPageProps) {
         affiliateUrl={affiliateUrl}
         description={`Read our full review above, then visit ${toolName} official site to try it for yourself.`}
         variant="bottom"
+        hasFreeTier={tool?.hasFreeTier}
       />
 
       {/* 文章底部广告位 */}
