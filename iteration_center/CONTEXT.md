@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-18 19:19 UTC
+> Generated: 2026-09-19 19:20 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,17 +17,17 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 104 |
+| Posts | 105 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
-1. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
-2. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
-3. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
-4. **Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
-5. **7 Best Notion AI Alternatives in 2026 (Free & | AIToolCrux** (`notion-ai-alternative-2026`)
+1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Money) | AIToolCr** (`best-paid-ai-tools-worth-buying-2026`)
+2. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
+3. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
+4. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
+5. **Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
 
 ## Iteration State
 
@@ -46,7 +46,7 @@
 | Impressions | 1271 |
 | CTR | 0.55% |
 | Avg Ranking | 24.92 |
-| Report | 2026-08-17_2026-09-15.md |
+| Report | 2026-08-18_2026-09-16.md |
 
 ## Audit Findings (pending)
 
