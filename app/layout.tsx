@@ -2,6 +2,8 @@
 import Script from "next/script";
 import Link from "next/link";
 import { Analytics } from "@vercel/analytics/next";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
 import "./globals.css";
 
 // 全局缓存配置：静态页面默认1小时缓存
@@ -75,7 +77,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200">
+      <body className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200`}>
         <ThemeProvider>
           {/* 全局SEO结构化数据 - 服务器端渲染，确保Search引擎可抓取 */}
           <script
@@ -112,9 +114,7 @@ export default function RootLayout({
           <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="dns-prefetch" href="https://giscus.app" />
           <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-          {/* Performance Optimization：字体显示优化，避免FOIT */}
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-          <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500;600&display=swap" />
+          {/* Fonts self-hosted via next/font/google - no external Google Fonts request needed */}
           {/* Umami 网站Analysis */}
           <Script
             strategy="afterInteractive"

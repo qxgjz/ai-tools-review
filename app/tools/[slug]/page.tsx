@@ -198,13 +198,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       brand: { "@type": "Organization", name: tool.vendor || tool.name },
       image: toolScreenshotMap[tool.slug] ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}` : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review")}`,
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: total.toFixed(1),
-        bestRating: "10",
-        worstRating: "1",
-        ratingCount: "1",
-      },
+      // aggregateRating removed: single editorial review (ratingCount=1) violates Google policy.
+      // The reviewRating on the Review itself is the correct pattern for a single review.
       offers: tool.pricing.map((tier) => ({
         "@type": "Offer",
         name: tier.name,
