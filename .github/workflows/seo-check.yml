@@ -2,8 +2,8 @@ name: SEO Check
 
 on:
   schedule:
-    # Daily at 03:00 Beijing time = 19:00 UTC
-    - cron: '0 19 * * *'
+    # Daily at 03:11 Beijing time = 19:11 UTC
+    - cron: '11 19 * * *'
   workflow_dispatch:
 
 permissions:
