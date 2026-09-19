@@ -111,10 +111,8 @@ export default function RootLayout({
           {/* 预连接关键第三方域名，优化资源加载 */}
           <link rel="preconnect" href="https://cloud.umami.is" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
-          <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
           <link rel="dns-prefetch" href="https://giscus.app" />
-          <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
-          {/* Fonts self-hosted via next/font/google - no external Google Fonts request needed */}
+          {/* Fonts self-hosted via geist/font - no external Google Fonts request needed; preconnect/dns-prefetch to fonts.googleapis.com removed to save DNS overhead */}
           {/* Umami 网站Analysis */}
           <Script
             strategy="afterInteractive"
