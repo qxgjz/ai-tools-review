@@ -424,7 +424,7 @@ export default function ComparePage() {
           <Link href="/category/audio" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Audio &amp; Voice
           </Link>
-          <Link href="/category/coding" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link href="/category/code" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
             Coding Assistants
           </Link>
           <Link href="/category/writing" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">

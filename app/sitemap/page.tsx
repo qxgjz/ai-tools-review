@@ -239,7 +239,7 @@ export default function SitemapPage() {
                     {categoryPosts.length} articles
                   </span>
                   <Link
-                    href={`/blog/category/${categoryPosts[0]?.categorySlug || category.toLowerCase()}`}
+                    href={`/blog/category/${categoryPosts[0]?.categorySlug || "ai-tools"}`}
                     className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline font-medium ml-auto"
                   >
                     View all →

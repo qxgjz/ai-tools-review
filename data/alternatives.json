@@ -449,7 +449,7 @@
     "intro": "Notion AI has become one of the most popular AI-powered workspace tools, but it may not be the best fit for everyone. Whether you're looking for better AI capabilities, lower pricing, more specialized features, or a different user experience, there are excellent alternatives available. In this guide, we compare the top 10 Notion AI alternatives based on hands-on testing, feature analysis, and real user feedback.",
     "alternatives": [
       {
-        "slug": "obsidian",
+        "slug": "",
         "name": "Obsidian",
         "rating": 9.2,
         "reason": "Best for local-first knowledge management with powerful AI plugins",
@@ -594,7 +594,7 @@
     "intro": "Canva has revolutionized graphic design with its user-friendly interface and AI-powered features. However, depending on your needs, other tools may offer better professional features, more advanced AI capabilities, lower pricing, or specialized functionality. We've tested and compared the top 10 Canva alternatives to help you find the perfect design tool for your workflow.",
     "alternatives": [
       {
-        "slug": "adobe-express",
+        "slug": "adobe-firefly",
         "name": "Adobe Express",
         "rating": 9.0,
         "reason": "Best for professional quality with Adobe ecosystem integration",
@@ -739,7 +739,7 @@
     "intro": "ElevenLabs has set a high bar for AI voice generation with its realistic speech synthesis and voice cloning capabilities. However, depending on your needs, other tools may offer better pricing, more language support, specialized features, or different use case focus. We've tested and compared the top 10 ElevenLabs alternatives to help you find the best AI voice tool for your projects.",
     "alternatives": [
       {
-        "slug": "play-ht",
+        "slug": "",
         "name": "Play.ht",
         "rating": 9.1,
         "reason": "Best for ultra-realistic voices with commercial rights",

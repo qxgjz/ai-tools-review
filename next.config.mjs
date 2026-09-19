@@ -226,6 +226,150 @@ const nextConfig = {
         destination: "/blog/category/ai-coding",
         permanent: true,
       },
+      // GSC 404 fixes - blog category slugs
+      {
+        source: "/blog/category/video",
+        destination: "/blog/category/ai-video",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/audio",
+        destination: "/blog/category/ai-audio",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/marketing",
+        destination: "/blog/category/ai-marketing",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/research",
+        destination: "/blog/category/ai-productivity",
+        permanent: true,
+      },
+      // GSC 404 fixes - blog post slugs
+      {
+        source: "/blog/gemini-38-flash-review-2026",
+        destination: "/blog/gemini_38_flash_review",
+        permanent: true,
+      },
+      {
+        source: "/blog/claude-fable-51-review-2026",
+        destination: "/blog/claude_fable_51_review",
+        permanent: true,
+      },
+      {
+        source: "/blog/openai-astra-review-2026",
+        destination: "/blog/openai_astra_review",
+        permanent: true,
+      },
+      {
+        source: "/blog/midjourney-v7-review-2026",
+        destination: "/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md",
+        permanent: true,
+      },
+      {
+        source: "/blog/canva-ai-alternatives-2026",
+        destination: "/alternatives/canva-alternatives",
+        permanent: true,
+      },
+      // GSC 404 fixes - wrong tool slugs
+      {
+        source: "/tools/murf",
+        destination: "/tools/murf-ai",
+        permanent: true,
+      },
+      {
+        source: "/tools/luma",
+        destination: "/tools/luma-dream-machine",
+        permanent: true,
+      },
+      {
+        source: "/tools/kling",
+        destination: "/tools/kling-ai",
+        permanent: true,
+      },
+      {
+        source: "/tools/wellsaid",
+        destination: "/tools/wellsaid-labs",
+        permanent: true,
+      },
+      {
+        source: "/tools/soundraw",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      {
+        source: "/tools/playht",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      {
+        source: "/tools/aiva",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      {
+        source: "/tools/mubert",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      {
+        source: "/tools/udio",
+        destination: "/category/audio",
+        permanent: true,
+      },
+      {
+        source: "/tools/obsidian",
+        destination: "/category/productivity",
+        permanent: true,
+      },
+      {
+        source: "/tools/google",
+        destination: "/category/chat",
+        permanent: true,
+      },
+      {
+        source: "/tools/hemingway",
+        destination: "/category/writing",
+        permanent: true,
+      },
+      {
+        source: "/tools/amazon-q",
+        destination: "/category/code",
+        permanent: true,
+      },
+      {
+        source: "/tools/languagetool",
+        destination: "/category/writing",
+        permanent: true,
+      },
+      {
+        source: "/tools/prowritingaid",
+        destination: "/category/writing",
+        permanent: true,
+      },
+      {
+        source: "/tools/designs-ai",
+        destination: "/category/image",
+        permanent: true,
+      },
+      {
+        source: "/tools/adobe-express",
+        destination: "/tools/adobe-firefly",
+        permanent: true,
+      },
+      {
+        source: "/tools/galileo",
+        destination: "/category/chat",
+        permanent: true,
+      },
+      // GSC 404 fix - /category root
+      {
+        source: "/category",
+        destination: "/",
+        permanent: true,
+      },
     ];
   },
 };
