@@ -49,7 +49,7 @@ export default function GeneratorPage() {
 
   const handleShare = async () => {
     const shareText = results
-      ? `I found the perfect tools for ${SCENARIO_LABELS[scenario]} on AIToolCrux - Top 3 tools: ${results.map((r) => `${r.rank}.${r.tool.name}(${r.matchScore}/10)`).join("、")}`
+      ? `I found the perfect tools for ${SCENARIO_LABELS[scenario]} on AIToolCrux - Top 3 tools: ${results.map((r) => `${r.rank}.${r.tool.name}(${r.matchScore}/10)`).join(", ")}`
       : "Try AI Tool Matcher now!";
     try {
       await navigator.clipboard.writeText(`${shareText}\n${window.location.href}`);
@@ -144,7 +144,7 @@ export default function GeneratorPage() {
                 <Trophy className="w-6 h-6 text-amber-500" />
                 Top 3 Recommended Tools
               </h2>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Based on "{SCENARIO_LABELS[scenario]}" scenario{priorityDims.length > 0 && `, focusing on ${priorityDims.map((d) => DIMENSION_LABELS[d]).join("、")}`}</p>
+              <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">Based on "{SCENARIO_LABELS[scenario]}" scenario{priorityDims.length > 0 && `, focusing on ${priorityDims.map((d) => DIMENSION_LABELS[d]).join(", ")}`}</p>
             </div>
             <button onClick={handleShare} className="inline-flex items-center gap-2 px-4 py-2.5 bg-white dark:bg-gray-900 text-gray-600 dark:text-gray-400 text-sm font-medium rounded-xl border border-gray-200 dark:border-gray-800 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all">
               {copied ? (<><CheckCircle2 className="w-4 h-4 text-emerald-500" />Copied</>) : (<><Share2 className="w-4 h-4" />Share Results</>)}
