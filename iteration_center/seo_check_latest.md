@@ -1,6 +1,6 @@
 # SEO Health Check
 
-Generated: 2026-09-18 21:26 UTC
+Generated: 2026-09-19 21:26 UTC
 
 ## Summary
 
@@ -11,7 +11,7 @@ Generated: 2026-09-18 21:26 UTC
 | Compare | 200 | 50c | 156c | Y | Y | 0 |
 | Blog index | 200 | 40c | 153c | Y | Y | 0 |
 | Category: Chat | 200 | 56c | 160c | Y | Y | 0 |
-| Tool: ChatGPT | 200 | 40c | 160c | Y | Y | 0 |
+| Tool: ChatGPT | 200 | 40c | 155c | Y | Y | 0 |
 | Blog: Stable Diffusion Review | 200 | 47c | 156c | Y | Y | 0 |
 | Blog: Cursor Review | 200 | 53c | 153c | Y | Y | 0 |
 
@@ -24,7 +24,7 @@ Generated: 2026-09-18 21:26 UTC
 - H1: Find the best AI tools,tested and ranked.
 - Canonical: https://www.aitoolcrux.com
 - Robots: index, follow
-- Words: 1717
+- Words: 1729
 
 ### Ranking (`/ranking`)
 - HTTP: 200
@@ -33,7 +33,7 @@ Generated: 2026-09-18 21:26 UTC
 - H1: AI Tool Ranking
 - Canonical: https://www.aitoolcrux.com/ranking
 - Robots: index, follow
-- Words: 2268
+- Words: 2273
 
 ### Compare (`/compare`)
 - HTTP: 200
@@ -42,7 +42,7 @@ Generated: 2026-09-18 21:26 UTC
 - H1: AI Tool Comparison 2026
 - Canonical: https://www.aitoolcrux.com/compare
 - Robots: index, follow
-- Words: 2181
+- Words: 2186
 
 ### Blog index (`/blog`)
 - HTTP: 200
@@ -51,7 +51,7 @@ Generated: 2026-09-18 21:26 UTC
 - H1: Blog &amp; Reviews
 - Canonical: https://www.aitoolcrux.com/blog
 - Robots: index, follow
-- Words: 1753
+- Words: 1762
 
 ### Category: Chat (`/category/chat`)
 - HTTP: 200
@@ -60,16 +60,16 @@ Generated: 2026-09-18 21:26 UTC
 - H1: AI Chat Assistants
 - Canonical: https://www.aitoolcrux.com/category/chat
 - Robots: index, follow
-- Words: 1578
+- Words: 1583
 
 ### Tool: ChatGPT (`/tools/chatgpt`)
 - HTTP: 200
 - Title (40c): ChatGPT Review 2026: 8.7/10 | AIToolCrux
-- Description (160c): ChatGPT by OpenAI — Chat AI tool rated 8.7/10 (A grade). Expert review: features, pricing, pros (All-around excellence -
+- Description (155c): ChatGPT by OpenAI — Chat AI tool rated 8.7/10 (A grade). Expert review: features, pricing, pros (All-around excellence -
 - H1: ChatGPT
 - Canonical: https://www.aitoolcrux.com/tools/chatgpt
 - Robots: index, follow
-- Words: 2141
+- Words: 2232
 
 ### Blog: Stable Diffusion Review (`/blog/stable-diffusion-review-2026`)
 - HTTP: 200
@@ -78,7 +78,7 @@ Generated: 2026-09-18 21:26 UTC
 - H1: Stable Diffusion 3.5 Review: 4-Week Honest Test
 - Canonical: https://www.aitoolcrux.com/blog/stable-diffusion-review-2026
 - Robots: index, follow
-- Words: 16257
+- Words: 16295
 
 ### Blog: Cursor Review (`/blog/cursor-review-2026`)
 - HTTP: 200
@@ -87,7 +87,7 @@ Generated: 2026-09-18 21:26 UTC
 - H1: Cursor Review 2026: Best AI Code Editor? | AIToolCrux
 - Canonical: https://www.aitoolcrux.com/blog/cursor-review-2026
 - Robots: index, follow
-- Words: 14373
+- Words: 14411
 
 ---
 Total issues: 0
