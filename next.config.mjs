@@ -198,7 +198,22 @@ const nextConfig = {
       },
       {
         source: "/blog/category/tools",
-        destination: "/blog/category/ai-audio",
+        destination: "/blog/category/ai-tools",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/coding",
+        destination: "/blog/category/ai-coding",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/chat",
+        destination: "/blog/category/ai-chat",
+        permanent: true,
+      },
+      {
+        source: "/blog/category/search",
+        destination: "/blog/category/ai-search",
         permanent: true,
       },
       {
