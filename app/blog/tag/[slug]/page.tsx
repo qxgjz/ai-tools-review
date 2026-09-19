@@ -70,18 +70,18 @@ export default function TagPage({ params }: TagPageProps) {
         href="/blog"
         className="inline-flex items-center text-sm text-gray-600 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 mb-8 transition-colors"
       >
-        ← ReturnBlog列Table
+        ← Back to Blog
       </Link>
 
-      {/* Tags标题 */}
+      {/* Tags title */}
       <div className="mb-10">
         <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Tags：#{tagName}
+          Tags: #{tagName}
         </h1>
         <p className="text-gray-600 dark:text-gray-400">{tagPosts.length} articles</p>
       </div>
 
-      {/* 文章列Table */}
+      {/* Article list */}
       <div className="space-y-4">
         {tagPosts.map((post) => (
           <Link
