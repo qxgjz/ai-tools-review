@@ -447,6 +447,7 @@ export default function PostPage({ params }: PostPageProps) {
           description={`Ready to try ${toolName}? Click below to visit the official site and get started.`}
           variant="banner"
           hasFreeTier={tool?.hasFreeTier}
+          freeAccess={/free/i.test(post.title || "")}
         />
       )}
 
@@ -545,6 +546,7 @@ export default function PostPage({ params }: PostPageProps) {
           description={`Still considering ${toolName}? Read our verdict below, or visit the official site now.`}
           variant="banner"
           hasFreeTier={tool?.hasFreeTier}
+          freeAccess={/free/i.test(post.title || "")}
         />
       )}
 
@@ -556,6 +558,7 @@ export default function PostPage({ params }: PostPageProps) {
         description={`Read our full review above, then visit ${toolName} official site to try it for yourself.`}
         variant="bottom"
         hasFreeTier={tool?.hasFreeTier}
+        freeAccess={/free/i.test(post.title || "")}
       />
 
       {/* 文章底部广告位 */}
