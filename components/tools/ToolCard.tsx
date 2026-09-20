@@ -96,7 +96,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                 <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
                   {total.toFixed(1)}
                 </span>
-                <span className="text-xs text-zinc-400">/10</span>
+                <span className="text-xs text-zinc-500 dark:text-zinc-400">/10</span>
                 <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${GRADE_STYLES[grade]}`}>
                   Grade {grade}
                 </span>
