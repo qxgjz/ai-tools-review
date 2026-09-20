@@ -160,23 +160,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.65,
   }));
 
-  // 博客标签页（从tags字段生成slug）
-  function slugifyTag(name: string): string {
-    return name
-      .toLowerCase()
-      .trim()
-      .replace(/[^a-z0-9\s-]/g, '')
-      .replace(/\s+/g, '-')
-      .replace(/-+/g, '-');
-  }
-  const allTagSlugs = [...new Set(posts.flatMap((p) => (p.tags || []).map(slugifyTag)))];
-  const blogTagPages: MetadataRoute.Sitemap = allTagSlugs.slice(0, 50).map((tag) => ({
-    url: `${BASE_URL}/blog/tag/${tag}`,
-    lastModified: new Date(),
-    changeFrequency: "weekly",
-    priority: 0.5,
-  }));
-
   // 替代方案详情页
   const alternativePages: MetadataRoute.Sitemap = alternatives.map((alt) => ({
     url: `${BASE_URL}/alternatives/${alt.slug}`,
@@ -193,5 +176,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages, ...blogCategoryPages, ...blogTagPages, ...alternativePages, ...comparisonPages];
+  // Note: /blog/tag/* pages are noindex (thin content) and intentionally excluded from sitemap.
+  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages, ...blogCategoryPages, ...alternativePages, ...comparisonPages];
 }
