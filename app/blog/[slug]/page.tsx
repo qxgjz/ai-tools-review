@@ -262,8 +262,9 @@ export default function PostPage({ params }: PostPageProps) {
             description: post.excerpt.slice(0, 155),
             author: {
               "@type": "Person",
-              name: post.author || "Alex Chen",
+              name: post.author || "AIToolCrux Research Team",
               jobTitle: "Senior AI Tools Reviewer",
+              url: "https://www.aitoolcrux.com/about",
             },
             datePublished: post.date || post.publishedAt,
             dateModified: (post as any).updatedAt || (post as any).lastUpdated || post.date || post.publishedAt,
@@ -274,13 +275,22 @@ export default function PostPage({ params }: PostPageProps) {
               logo: {
                 "@type": "ImageObject",
                 url: "https://www.aitoolcrux.com/logo.svg",
+                width: 512,
+                height: 512,
               },
             },
             mainEntityOfPage: {
               "@type": "WebPage",
               "@id": `https://www.aitoolcrux.com/blog/${post.slug}`,
             },
-            image: (post as any).coverImage || (post as any).image || "https://www.aitoolcrux.com/og-image.svg",
+            image: [
+              {
+                "@type": "ImageObject",
+                url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 50))}&description=${encodeURIComponent((post.excerpt || "").slice(0, 100))}&category=${encodeURIComponent(post.category || "AI Tools")}`,
+                width: 1920,
+                height: 1080,
+              },
+            ],
             articleSection: post.category,
             wordCount: post.content ? post.content.length : 1500,
             inLanguage: "en",
