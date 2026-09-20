@@ -118,6 +118,43 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ["/api/",
           "/cdn-cgi/", "/admin", "/private"],
       },
+      // AI search/research crawlers added 2026-09-20 (GEO optimization)
+      {
+        userAgent: "OAI-SearchBot",
+        allow: "/",
+        disallow: ["/api/",
+          "/cdn-cgi/", "/admin", "/private"],
+      },
+      {
+        userAgent: "ChatGPT-User",
+        allow: "/",
+        disallow: ["/api/",
+          "/cdn-cgi/", "/admin", "/private"],
+      },
+      {
+        userAgent: "Claude-SearchBot",
+        allow: "/",
+        disallow: ["/api/",
+          "/cdn-cgi/", "/admin", "/private"],
+      },
+      {
+        userAgent: "Claude-User",
+        allow: "/",
+        disallow: ["/api/",
+          "/cdn-cgi/", "/admin", "/private"],
+      },
+      {
+        userAgent: "Perplexity-User",
+        allow: "/",
+        disallow: ["/api/",
+          "/cdn-cgi/", "/admin", "/private"],
+      },
+      {
+        userAgent: "Applebot-Extended",
+        allow: "/",
+        disallow: ["/api/",
+          "/cdn-cgi/", "/admin", "/private"],
+      },
       // 禁止恶意/资源消耗大的爬虫
       {
         userAgent: "AhrefsBot",
