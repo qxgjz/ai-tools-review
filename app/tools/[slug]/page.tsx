@@ -507,7 +507,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                     <span className="text-sm font-bold text-zinc-900 dark:text-white">{score.toFixed(1)}</span>
                   </div>
                   <div className="h-2 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                    <div className="h-full rounded-full bg-emerald-500 transition-all duration-500" style={{ width: `${percent}%` }} />
+                    <div className="h-full rounded-full bg-emerald-500 transition-all duration-300" style={{ width: `${percent}%` }} />
                   </div>
                 </div>
               );

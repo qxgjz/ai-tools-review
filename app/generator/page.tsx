@@ -177,7 +177,7 @@ export default function GeneratorPage() {
                       <span className="text-xl font-extrabold text-blue-600 dark:text-blue-400">{result.matchScore.toFixed(1)}<span className="text-xs text-gray-400 dark:text-gray-500 font-normal">/100</span></span>
                     </div>
                     <div className="h-2 bg-white dark:bg-gray-800 rounded-full overflow-hidden">
-                      <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-700" style={{ width: `${result.matchScore}%` }} />
+                      <div className="h-full bg-gradient-to-r from-blue-500 to-indigo-500 rounded-full transition-all duration-300" style={{ width: `${result.matchScore}%` }} />
                     </div>
                   </div>
                   <div className="mb-4">
