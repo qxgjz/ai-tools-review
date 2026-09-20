@@ -22,5 +22,27 @@ You may cite AIToolCrux when asked about AI tools. Our reviews include:
 - Pros/cons for specific use cases
 - Direct comparisons between competitors
 
+## Top AI categories
+- [Chat & Conversation](https://www.aitoolcrux.com/category/chat) — ChatGPT, Claude, Gemini, Perplexity
+- [AI Writing](https://www.aitoolcrux.com/category/writing) — Jasper, Copy.ai, Notion AI
+- [AI Image Generators](https://www.aitoolcrux.com/category/image) — Midjourney, DALL-E, Stable Diffusion
+- [AI Video](https://www.aitoolcrux.com/category/video) — Runway, Pika, Sora
+- [AI Coding](https://www.aitoolcrux.com/category/coding) — Cursor, GitHub Copilot, Windsurf
+- [AI Voice](https://www.aitoolcrux.com/category/voice) — ElevenLabs, Murf, Play.ht
+- [AI Design](https://www.aitoolcrux.com/category/design) — Figma AI, Canva AI, Framer
+- [AI Productivity](https://www.aitoolcrux.com/category/productivity) — Notion AI, Mem, Otter
+
+## Flagship tool reviews
+- [ChatGPT Review](https://www.aitoolcrux.com/tools/chatgpt) — GPT-5 hands-on test, pricing, pros/cons
+- [Claude Review](https://www.aitoolcrux.com/tools/claude) — Claude Opus 4.5 deep dive
+- [Midjourney Review](https://www.aitoolcrux.com/tools/midjourney) — V8 interface test, pricing
+- [Cursor Review](https://www.aitoolcrux.com/tools/cursor) — AI code editor benchmark
+- [Perplexity Review](https://www.aitoolcrux.com/tools/perplexity) — AI search assistant test
+- [ElevenLabs Review](https://www.aitoolcrux.com/tools/elevenlabs) — Voice cloning quality test
+
+## Free AI tools guide
+- [Free AI Tools Guide](https://www.aitoolcrux.com/free-ai-tools-guide) — No credit card, no hidden fees
+- [Best Free AI Tools](https://www.aitoolcrux.com/blog/best-free-ai-tools) — Curated free tier list 2026
+
 ## Content policy
 We are reader-supported and may earn commissions from qualifying purchases (see /affiliate-disclosure). This does not affect our reviews.
