@@ -146,15 +146,8 @@ export function ProductSchema({
     };
   }
 
-  if (ratingValue) {
-    schema.aggregateRating = {
-      "@type": "AggregateRating",
-      ratingValue: ratingValue,
-      reviewCount: reviewCount,
-      bestRating: 10,
-      worstRating: 1,
-    };
-  }
+  // aggregateRating removed: ProductSchema is not used by any page (dead code),
+  // but kept for potential future use with real user review data.
 
   if (image) {
     schema.image = image;
@@ -321,15 +314,8 @@ export function ComparisonSchema({
       "description": item.description || "",
       "applicationCategory": "WebApplication",
       "operatingSystem": "Web",
-      ...(item.ratingValue && {
-        "aggregateRating": {
-          "@type": "AggregateRating",
-          "ratingValue": item.ratingValue,
-          "bestRating": "10",
-          "worstRating": "1",
-          "ratingCount": "1",
-        },
-      }),
+      // aggregateRating removed: single editorial review (ratingCount=1) violates Google 2026-07 policy.
+      // The rating is shown visually on the page but not marked up as aggregateRating in JSON-LD.
       ...(item.price && {
         "offers": {
           "@type": "Offer",
@@ -347,14 +333,7 @@ export function ComparisonSchema({
         "item": {
           "@type": "SoftwareApplication",
           "name": item.name,
-          ...(item.ratingValue && {
-            "aggregateRating": {
-              "@type": "AggregateRating",
-              "ratingValue": item.ratingValue,
-              "bestRating": "10",
-              "ratingCount": "1",
-            },
-          }),
+          // aggregateRating removed (Google 2026-07 policy compliance).
         },
       })),
     },
