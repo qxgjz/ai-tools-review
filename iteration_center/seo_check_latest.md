@@ -1,6 +1,6 @@
 # SEO Health Check
 
-Generated: 2026-09-20 21:28 UTC
+Generated: 2026-09-21 22:33 UTC
 
 ## Summary
 
@@ -24,7 +24,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: Find the best AI tools,tested and ranked.
 - Canonical: https://www.aitoolcrux.com
 - Robots: index, follow
-- Words: 1729
+- Words: 1733
 
 ### Ranking (`/ranking`)
 - HTTP: 200
@@ -33,7 +33,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: AI Tool Ranking
 - Canonical: https://www.aitoolcrux.com/ranking
 - Robots: index, follow
-- Words: 2273
+- Words: 2277
 
 ### Compare (`/compare`)
 - HTTP: 200
@@ -42,7 +42,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: AI Tool Comparison 2026
 - Canonical: https://www.aitoolcrux.com/compare
 - Robots: index, follow
-- Words: 2186
+- Words: 2190
 
 ### Blog index (`/blog`)
 - HTTP: 200
@@ -51,7 +51,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: Blog &amp; Reviews
 - Canonical: https://www.aitoolcrux.com/blog
 - Robots: index, follow
-- Words: 1762
+- Words: 1766
 
 ### Category: Chat (`/category/chat`)
 - HTTP: 200
@@ -60,7 +60,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: AI Chat Assistants
 - Canonical: https://www.aitoolcrux.com/category/chat
 - Robots: index, follow
-- Words: 1583
+- Words: 1587
 
 ### Tool: ChatGPT (`/tools/chatgpt`)
 - HTTP: 200
@@ -69,7 +69,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: ChatGPT
 - Canonical: https://www.aitoolcrux.com/tools/chatgpt
 - Robots: index, follow
-- Words: 2232
+- Words: 2236
 
 ### Blog: Stable Diffusion Review (`/blog/stable-diffusion-review-2026`)
 - HTTP: 200
@@ -78,7 +78,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: Stable Diffusion 3.5 Review: 4-Week Honest Test
 - Canonical: https://www.aitoolcrux.com/blog/stable-diffusion-review-2026
 - Robots: index, follow
-- Words: 16295
+- Words: 16299
 
 ### Blog: Cursor Review (`/blog/cursor-review-2026`)
 - HTTP: 200
@@ -87,7 +87,7 @@ Generated: 2026-09-20 21:28 UTC
 - H1: Cursor Review 2026: Best AI Code Editor? | AIToolCrux
 - Canonical: https://www.aitoolcrux.com/blog/cursor-review-2026
 - Robots: index, follow
-- Words: 14411
+- Words: 14415
 
 ---
 Total issues: 0
