@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Uptime monitor: check if aitoolcrux.com is up. Send email only if down.
-Uses only Python stdlib (urllib/smtplib) so no pip install needed in CI.
+Uses only Python stdlib (urllib) — no pip dependencies needed on CI runner.
 """
 import os
 import smtplib
@@ -15,11 +15,11 @@ SITE_URL = "https://www.aitoolcrux.com"
 EXPECTED_STATUS = {200, 308}
 QQ_SMTP_SERVER = "smtp.qq.com"
 QQ_SMTP_PORT = 465
-TIMEOUT = 15
+USER_AGENT = "Mozilla/5.0 (compatible; AIToolCrux-UptimeBot/1.0)"
 
 
 def send_alert(email_user: str, auth_code: str, error_msg: str):
-    """Send alert email via QQ SMTP."""
+    """Send alert email via QQ SMTP. Logs but does not exit on failure."""
     msg = MIMEMultipart()
     msg["From"] = email_user
     msg["To"] = email_user
@@ -43,25 +43,8 @@ def send_alert(email_user: str, auth_code: str, error_msg: str):
         server.quit()
         print(f"✅ Alert email sent to {email_user}")
     except Exception as e:
-        print(f"❌ Failed to send email: {e}")
-        sys.exit(1)
-
-
-def check_site():
-    """Return (ok, status_or_error). urllib follows redirects by default."""
-    req = Request(SITE_URL, headers={"User-Agent": "UptimeMonitor/1.0"})
-    try:
-        with urlopen(req, timeout=TIMEOUT) as resp:
-            return True, resp.status
-    except HTTPError as e:
-        # e.g. 404/500, but redirects already followed
-        if e.code in EXPECTED_STATUS:
-            return True, e.code
-        return False, f"HTTP {e.code}"
-    except URLError as e:
-        return False, f"Connection error: {e.reason}"
-    except Exception as e:
-        return False, f"Unexpected error: {e}"
+        # Email failure should NOT mark the uptime check as failed
+        print(f"⚠️ Failed to send alert email (non-fatal): {e}")
 
 
 def main():
@@ -69,17 +52,41 @@ def main():
     auth_code = os.environ.get("QQ_MAIL_AUTH_CODE", "")
 
     print(f"Checking uptime: {SITE_URL}")
-    ok, info = check_site()
-    if ok:
-        print(f"✅ Site is UP (HTTP {info})")
-        return
-
-    error = str(info)
-    print(f"❌ Site DOWN: {error}")
-    if email_user and auth_code:
-        send_alert(email_user, auth_code, error)
-    else:
-        print("⚠️ No email credentials configured, skipping alert")
+    req = Request(SITE_URL, headers={"User-Agent": USER_AGENT})
+    try:
+        with urlopen(req, timeout=15) as resp:
+            status = resp.getcode()
+        if status in EXPECTED_STATUS:
+            print(f"✅ Site is UP (HTTP {status})")
+            return
+        else:
+            error = f"HTTP {status} (expected 200 or 308)"
+            print(f"❌ Site DOWN: {error}")
+            if email_user and auth_code:
+                send_alert(email_user, auth_code, error)
+            else:
+                print("⚠️ No email credentials configured, skipping alert")
+    except HTTPError as e:
+        error = f"HTTP {e.code} (expected 200 or 308)"
+        print(f"❌ Site DOWN: {error}")
+        if email_user and auth_code:
+            send_alert(email_user, auth_code, error)
+        else:
+            print("⚠️ No email credentials configured, skipping alert")
+    except URLError as e:
+        error = f"Connection error: {e.reason}"
+        print(f"❌ Site DOWN: {error}")
+        if email_user and auth_code:
+            send_alert(email_user, auth_code, error)
+        else:
+            print("⚠️ No email credentials configured, skipping alert")
+    except Exception as e:
+        error = f"Unexpected error: {e}"
+        print(f"❌ Site DOWN: {error}")
+        if email_user and auth_code:
+            send_alert(email_user, auth_code, error)
+        else:
+            print("⚠️ No email credentials configured, skipping alert")
 
 
 if __name__ == "__main__":
