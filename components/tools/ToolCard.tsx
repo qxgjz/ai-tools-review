@@ -11,7 +11,7 @@ const GRADE_STYLES: Record<Grade, string> = {
   S: "bg-amber-700 text-white",
   A: "bg-green-700 text-white",
   B: "bg-blue-700 text-white",
-  C: "bg-yellow-600 text-white",
+  C: "bg-yellow-800 text-white",
   D: "bg-red-700 text-white",
   F: "bg-zinc-500 text-white",
 };
