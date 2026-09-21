@@ -139,6 +139,14 @@ export default function RootLayout({
             `}
           </Script>
 
+          {/* Google AdSense (Auto Ads) */}
+          <Script
+            id="adsense-init"
+            strategy="afterInteractive"
+            src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4417371559152346"
+            crossOrigin="anonymous"
+          />
+
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
           <GA4EventTracker />
