@@ -78,12 +78,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/grammarly",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "9.2",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -95,12 +89,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/claude",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "9.1",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -112,12 +100,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/github-copilot",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "9.1",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -129,12 +111,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/cursor",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "9.0",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -146,12 +122,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/elevenlabs",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "9.0",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -163,12 +133,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/dall-e-3",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "8.9",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -180,12 +144,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/notion-ai",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "8.9",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -197,12 +155,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/canva-magic",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "8.9",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -214,12 +166,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/windsurf",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "8.8",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               },
               {
@@ -231,12 +177,6 @@ export default function ComparePage() {
                   "url": "https://www.aitoolcrux.com/tools/perplexity",
                   "applicationCategory": "AIApplication",
                   "operatingSystem": "Web",
-                  "aggregateRating": {
-                    "@type": "AggregateRating",
-                    "ratingValue": "8.8",
-                    "bestRating": "10",
-                    "ratingCount": "1"
-                  }
                 }
               }
               ]
