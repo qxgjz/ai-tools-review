@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
-"""Uptime monitor: check if aitoolcrux.com is up. Send email only if down."""
+"""Uptime monitor: check if aitoolcrux.com is up. Send email only if down.
+Uses only Python stdlib (urllib/smtplib) so no pip install needed in CI.
+"""
 import os
 import smtplib
 import sys
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-
-import httpx
+from urllib.request import Request, urlopen
+from urllib.error import URLError, HTTPError
 
 SITE_URL = "https://www.aitoolcrux.com"
 EXPECTED_STATUS = {200, 308}
 QQ_SMTP_SERVER = "smtp.qq.com"
 QQ_SMTP_PORT = 465
+TIMEOUT = 15
 
 
 def send_alert(email_user: str, auth_code: str, error_msg: str):
@@ -44,30 +47,39 @@ def send_alert(email_user: str, auth_code: str, error_msg: str):
         sys.exit(1)
 
 
+def check_site():
+    """Return (ok, status_or_error). urllib follows redirects by default."""
+    req = Request(SITE_URL, headers={"User-Agent": "UptimeMonitor/1.0"})
+    try:
+        with urlopen(req, timeout=TIMEOUT) as resp:
+            return True, resp.status
+    except HTTPError as e:
+        # e.g. 404/500, but redirects already followed
+        if e.code in EXPECTED_STATUS:
+            return True, e.code
+        return False, f"HTTP {e.code}"
+    except URLError as e:
+        return False, f"Connection error: {e.reason}"
+    except Exception as e:
+        return False, f"Unexpected error: {e}"
+
+
 def main():
     email_user = os.environ.get("QQ_MAIL_USER", "")
     auth_code = os.environ.get("QQ_MAIL_AUTH_CODE", "")
 
     print(f"Checking uptime: {SITE_URL}")
-    try:
-        r = httpx.get(SITE_URL, timeout=15, follow_redirects=True)
-        if r.status_code in EXPECTED_STATUS:
-            print(f"✅ Site is UP (HTTP {r.status_code})")
-            return
-        else:
-            error = f"HTTP {r.status_code} (expected 200 or 308)"
-            print(f"❌ Site DOWN: {error}")
-            if email_user and auth_code:
-                send_alert(email_user, auth_code, error)
-            else:
-                print("⚠️ No email credentials configured, skipping alert")
-    except Exception as e:
-        error = f"Connection error: {e}"
-        print(f"❌ Site DOWN: {error}")
-        if email_user and auth_code:
-            send_alert(email_user, auth_code, error)
-        else:
-            print("⚠️ No email credentials configured, skipping alert")
+    ok, info = check_site()
+    if ok:
+        print(f"✅ Site is UP (HTTP {info})")
+        return
+
+    error = str(info)
+    print(f"❌ Site DOWN: {error}")
+    if email_user and auth_code:
+        send_alert(email_user, auth_code, error)
+    else:
+        print("⚠️ No email credentials configured, skipping alert")
 
 
 if __name__ == "__main__":
