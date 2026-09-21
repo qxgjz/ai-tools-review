@@ -83,6 +83,13 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200`}>
         <ThemeProvider>
+          {/* Skip to main content - a11y: keyboard users bypass repeated nav */}
+          <a
+            href="#main-content"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:px-4 focus:py-2 focus:bg-emerald-600 focus:text-white focus:rounded-lg focus:text-sm focus:font-semibold focus:shadow-lg"
+          >
+            Skip to main content
+          </a>
           {/* 全局SEO结构化数据 - 服务器端渲染，确保Search引擎可抓取 */}
           <script
             type="application/ld+json"
