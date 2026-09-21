@@ -63,6 +63,7 @@ export const metadata: Metadata = {
   },
   other: {
     "color-scheme": "light dark",
+    "google-adsense-account": "ca-pub-4417371559152346",
   },
   verification: {
     google: "npnKpSTQ27It6K-ajF27C1ZArzyIbSUhFlgQFS02-gs",
