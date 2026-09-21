@@ -53,7 +53,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <div className="flex items-center gap-2">
               {isFeatured && (
                 <span
-                  className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-700 dark:text-amber-400 text-[10px] font-semibold rounded-md"
+                  className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-[10px] font-semibold rounded-md"
                   title="Top rated tool (score >= 8.5)"
                 >
                   <Sparkles className="w-3 h-3" aria-hidden="true" />
