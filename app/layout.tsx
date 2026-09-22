@@ -147,10 +147,10 @@ export default function RootLayout({
             `}
           </Script>
 
-          {/* Google AdSense (Auto Ads) */}
+          {/* Google AdSense (Auto Ads) - lazyOnload: load during browser idle, non-blocking for INP/LCP */}
           <Script
             id="adsense-init"
-            strategy="afterInteractive"
+            strategy="lazyOnload"
             src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4417371559152346"
             crossOrigin="anonymous"
           />

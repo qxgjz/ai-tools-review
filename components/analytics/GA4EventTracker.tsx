@@ -9,6 +9,23 @@ declare global {
   }
 }
 
+/**
+ * Defer non-urgent gtag events to browser idle time via requestIdleCallback.
+ * Falls back to direct call if requestIdleCallback is unavailable.
+ * This prevents analytics event firing from competing with user input for main thread,
+ * directly improving INP (Interaction to Next Paint).
+ */
+function trackEvent(...args: any[]) {
+  if (typeof window === "undefined" || !window.gtag) return;
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(() => {
+      window.gtag(...args);
+    }, { timeout: 3000 });
+  } else {
+    window.gtag(...args);
+  }
+}
+
 export function GA4EventTracker() {
   useEffect(() => {
     // 确保 gtag 可用
@@ -26,7 +43,7 @@ export function GA4EventTracker() {
       // 检测外链
       const isExternal = href.startsWith("http") && !href.includes("aitoolcrux.com");
       if (isExternal) {
-        window.gtag("event", "outbound_click", {
+        trackEvent("event", "outbound_click", {
           outbound_url: href,
           link_text: link.textContent?.trim().substring(0, 100) || "unknown",
         });
@@ -35,7 +52,7 @@ export function GA4EventTracker() {
       // 检测联盟链接点击
       const affiliateLinks = ["affiliate", "ref", "partner", "utm_source"];
       if (isExternal && affiliateLinks.some((p) => href.toLowerCase().includes(p))) {
-        window.gtag("event", "affiliate_click", {
+        trackEvent("event", "affiliate_click", {
           outbound_url: href,
           link_text: link.textContent?.trim().substring(0, 100) || "unknown",
         });
@@ -56,7 +73,7 @@ export function GA4EventTracker() {
       for (const depth of scrollDepths) {
         if (scrollPercent >= depth && !trackedDepths.has(depth)) {
           trackedDepths.add(depth);
-          window.gtag("event", "scroll_depth", {
+          trackEvent("event", "scroll_depth", {
             scroll_percent: depth,
             page_path: window.location.pathname,
           });
@@ -74,7 +91,7 @@ export function GA4EventTracker() {
       if (window.location.pathname === "/compare") {
         const toolName = toolButton.querySelector("span")?.textContent?.trim();
         if (toolName && toolName.length < 50) {
-          window.gtag("event", "tool_selected", {
+          trackEvent("event", "tool_selected", {
             tool_name: toolName,
             page_path: "/compare",
           });
