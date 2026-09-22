@@ -1,4 +1,5 @@
 import { notFound } from "next/navigation";
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon, Award, Target, Users, Wrench, GitCompare, Microscope, Quote, Zap, BookOpen, ShieldCheck } from "lucide-react";
 import toolsData from "@/data/tools.json";
@@ -303,13 +304,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <div className="flex flex-col sm:flex-row sm:items-start gap-6">
           <div className="w-20 h-20 flex-shrink-0 flex items-center justify-center rounded-xl overflow-hidden bg-zinc-100 dark:bg-zinc-800 ring-1 ring-zinc-200 dark:ring-zinc-700">
             {toolScreenshotMap[tool.slug] ? (
-              <img
+              <Image
                 src={toolScreenshotMap[tool.slug]}
                 alt={`${tool.name} interface screenshot`}
                 width={80}
                 height={80}
                 className="w-full h-full object-cover"
-                loading="eager"
               />
             ) : (
               <span className="text-zinc-700 dark:text-zinc-300 text-3xl font-bold">
@@ -379,11 +379,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           <figure className="mb-6">
             <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg">
               <div className="aspect-video w-full">
-                <img
+                <Image
                   src={toolScreenshotMap[tool.slug]}
                   alt={`Screenshot of ${tool.name} interface and main dashboard`}
-                  className="w-full h-full object-cover"
-                  loading="lazy"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, 800px"
+                  priority
                 />
               </div>
               <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/90 dark:bg-zinc-900/90 backdrop-blur rounded-md text-xs font-medium text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
