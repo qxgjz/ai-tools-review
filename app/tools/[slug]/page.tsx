@@ -815,6 +815,30 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </section>
       )}
 
+      {/* Mid-page repeat CTA — CRO: long-page users don't need to scroll back to top/bottom */}
+      {(tool.officialUrl || tool.affiliateUrl) && (
+        <section className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/30 p-8 mb-6 text-center">
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-white mb-2">
+            Ready to try {tool.name}?
+          </h2>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-5">
+            See for yourself why we scored it {total.toFixed(1)}/10 — no credit card required.
+          </p>
+          <a
+            href={tool.affiliateUrl || tool.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+          >
+            <ExternalLink className="w-4 h-4" />
+            {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}
+          </a>
+          {tool.affiliateUrl && tool.hasFreeTier && (
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">No credit card required · Cancel anytime</p>
+          )}
+        </section>
+      )}
+
       {/* Tool Screenshot - E-E-A-T trust signal */}
       <section className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 mb-6">
         <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
