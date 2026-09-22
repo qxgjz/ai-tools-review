@@ -28,6 +28,7 @@ import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
 import { FadeIn } from "@/components/animations";
 import { calculateScoreResult } from "@/lib/scoring";
+import { OrganizationSchema } from "@/components/seo/Schema";
 
 // Dynamic import heavy components
 const ToolList = dynamic(() => import("@/components/tools/ToolList").then(m => m.ToolList), {
@@ -84,17 +85,11 @@ export default function HomePage() {
             url: "https://www.aitoolcrux.com",
             description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework.",
             inLanguage: "en",
-            potentialAction: {
-              "@type": "SearchAction",
-              target: {
-                "@type": "EntryPoint",
-                urlTemplate: "https://www.aitoolcrux.com/search?q={search_term_string}",
-              },
-              "query-input": "required name=search_term_string",
-            },
           }),
         }}
       />
+      {/* Organization Schema - brand entity for Google Knowledge Graph */}
+      <OrganizationSchema />
 
       {/* === HERO SECTION - Asymmetric layout (Taste Skill: Anti-Center Bias) === */}
       <section className="relative bg-zinc-950 text-white overflow-hidden">
