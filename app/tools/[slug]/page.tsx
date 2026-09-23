@@ -833,8 +833,11 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             <ExternalLink className="w-4 h-4" />
             {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}
           </a>
+          <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">
+            ⭐ Rated {total.toFixed(1)}/10 by our editorial team · No affiliate bias
+          </p>
           {tool.affiliateUrl && tool.hasFreeTier && (
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">No credit card required · Cancel anytime</p>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">No credit card required · Cancel anytime</p>
           )}
           {tool.affiliateUrl && (
             <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">

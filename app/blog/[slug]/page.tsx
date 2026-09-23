@@ -231,7 +231,7 @@ export default function PostPage({ params }: PostPageProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-12">
         <div className="flex flex-col lg:flex-row gap-8">
           {/* 主内容区 - 优化排版 */}
-          <div className="flex-1 min-w-0 max-w-3xl">
+          <div className="flex-1 min-w-0 max-w-2xl">
       {/* SEO结构化数据 */}
       <BreadcrumbSchema
         items={[
