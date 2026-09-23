@@ -4,7 +4,7 @@ import { useState, useRef, useEffect, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import Link from "next/link";
 import { Search, X, Loader2 } from "lucide-react";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools-index.json";
 import type { Tool, Grade } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 

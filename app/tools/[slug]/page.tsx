@@ -836,6 +836,11 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           {tool.affiliateUrl && tool.hasFreeTier && (
             <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">No credit card required · Cancel anytime</p>
           )}
+          {tool.affiliateUrl && (
+            <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
+              <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
+            </p>
+          )}
         </section>
       )}
 

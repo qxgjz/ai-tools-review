@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { ArrowLeft, Search, TrendingUp, PackageSearch } from "lucide-react";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools-index.json";
 import type { Tool, Grade } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 import { ToolList } from "@/components/tools/ToolList";

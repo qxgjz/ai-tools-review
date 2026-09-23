@@ -1,5 +1,5 @@
 import type { MetadataRoute } from "next";
-import tools from "@/data/tools.json";
+import tools from "@/data/tools-index.json";
 import posts from "@/data/posts.json";
 import alternatives from "@/data/alternatives.json";
 import comparisons from "@/data/comparisons.json";

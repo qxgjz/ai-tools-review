@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { ArrowLeft, Trophy, Star, ArrowRight } from "lucide-react";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools-index.json";
 import type { Tool } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 import { ToolList } from "@/components/tools/ToolList";
