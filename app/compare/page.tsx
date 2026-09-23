@@ -800,11 +800,11 @@ export default function ComparePage() {
                           >
                             View Details →
                           </Link>
-                          {tool.officialUrl && (
+                          {(tool.affiliateUrl || tool.officialUrl) && (
                             <a
-                              href={tool.officialUrl}
+                              href={tool.affiliateUrl || tool.officialUrl}
                               target="_blank"
-                              rel="noopener noreferrer nofollow sponsored"
+                              rel="noopener noreferrer sponsored"
                               className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-emerald-600 hover:bg-emerald-700 rounded-lg transition-colors"
                             >
                               Try Free →
@@ -925,6 +925,39 @@ export default function ComparePage() {
               </table>
             </div>
           </div>
+
+          {/* Mid-page CTA banner — captures users who finished reading pricing comparison */}
+          <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-950/40 dark:to-teal-950/40 border border-emerald-200 dark:border-emerald-800 rounded-xl p-6 text-center">
+            <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-2">
+              Ready to choose? Start your free trial today
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
+              All tools above offer free tiers or free trials. Click "Try Free" on any tool to get started — no credit card required for free plans.
+            </p>
+            <div className="flex flex-wrap justify-center gap-3">
+              {selectedTools.slice(0, 3).map((tool) => (
+                (tool.affiliateUrl || tool.officialUrl) && (
+                  <a
+                    key={tool.slug}
+                    href={tool.affiliateUrl || tool.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-600 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors shadow-sm"
+                  >
+                    Try {tool.name} Free
+                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </a>
+                )
+              ))}
+            </div>
+          </div>
+
+          {/* FTC affiliate disclosure — clear and conspicuous near all outbound links */}
+          <p className="text-xs text-gray-500 dark:text-gray-400 text-center italic">
+            Disclosure: Some links on this page are affiliate links. We may earn a commission if you sign up through them, at no extra cost to you. This never affects our ratings or recommendations.
+          </p>
 
           {/* 底部联盟CTA */}
           <div className="space-y-4">
