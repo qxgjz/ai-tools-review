@@ -267,7 +267,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   ];
 
   return (
-    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8">
+    <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 pb-24 md:pb-8">
       {/* Schema.org structured data */}
       <script
         type="application/ld+json"
@@ -919,6 +919,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Score: {total.toFixed(1)}/10 · Grade: {grade} · Last updated: {tool.lastUpdated}
           </span>
         </div>
+        <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">
+          ✅ Independently tested by our editorial team · 🔗 No affiliate bias · 📊 6-dimension scoring
+        </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
             <span key={tag} className="px-2.5 py-1 bg-white/70 dark:bg-zinc-900/50 text-zinc-600 dark:text-gray-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-gray-700">#{tag}</span>
@@ -1045,6 +1048,21 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       <div className="mt-8 text-center text-xs text-zinc-400 dark:text-zinc-500">
         Scores are based on our public evaluation methodology. Affiliate link revenue does not affect scores. Last updated {tool.lastUpdated}.
       </div>
+
+      {/* Mobile sticky CTA — thumb zone: always reachable, hidden on desktop */}
+      {(tool.officialUrl || tool.affiliateUrl) && (
+        <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] z-40 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
+          <a
+            href={tool.affiliateUrl || tool.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer sponsored"
+            className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors active:scale-[0.98]"
+          >
+            <ExternalLink className="w-4 h-4" />
+            {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}
+          </a>
+        </div>
+      )}
     </div>
   );
 }
