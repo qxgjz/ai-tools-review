@@ -131,7 +131,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
                   <Link
                     href="/ranking"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white font-medium rounded-lg transition-colors"
                   >
                     <Trophy className="w-4 h-4" />
                     View Rankings
@@ -139,7 +139,7 @@ export default function HomePage() {
                   </Link>
                   <Link
                     href="/generator"
-                    className="inline-flex items-center gap-2 px-6 py-3 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium rounded-lg transition-colors"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium rounded-lg transition-colors"
                   >
                     <Sparkles className="w-4 h-4" />
                     AI Tool Matcher

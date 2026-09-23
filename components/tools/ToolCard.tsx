@@ -101,7 +101,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                   Grade {grade}
                 </span>
               </div>
-              <div className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95">
+              <div aria-hidden="true" className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95">
                 <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
               </div>
             </div>
