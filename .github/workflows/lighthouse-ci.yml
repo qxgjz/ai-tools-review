@@ -26,6 +26,7 @@ jobs:
             https://www.aitoolcrux.com/
             https://www.aitoolcrux.com/tools/midjourney
             https://www.aitoolcrux.com/blog/perplexity-ai-review-2026
+            https://www.aitoolcrux.com/compare
           uploadArtifacts: true
           temporaryPublicStorage: true
           configPath: "./.lighthouserc.json"
