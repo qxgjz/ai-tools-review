@@ -13,7 +13,7 @@ import {
   ArrowRight,
   Clock,
 } from "lucide-react";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools-index.json";
 import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";

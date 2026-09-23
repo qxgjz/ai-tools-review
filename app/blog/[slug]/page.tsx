@@ -509,6 +509,7 @@ export default function PostPage({ params }: PostPageProps) {
 
       {/* Article content */}
       <article
+        style={{ contentVisibility: "auto", containIntrinsicSize: "auto 800px" } as React.CSSProperties}
         className="prose prose-lg dark:prose-invert max-w-none mb-10
           prose-headings:scroll-mt-24
           prose-h2:text-3xl prose-h2:font-bold prose-h2:mt-16 prose-h2:mb-6 prose-h2:tracking-tight prose-h2:text-gray-900 dark:prose-h2:text-white

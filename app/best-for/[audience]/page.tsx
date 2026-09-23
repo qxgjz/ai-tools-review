@@ -1,6 +1,6 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools-index.json";
 import type { Tool } from "@/types";
 import { ToolList } from "@/components/tools/ToolList";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";

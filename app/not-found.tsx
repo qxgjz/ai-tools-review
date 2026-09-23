@@ -4,7 +4,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Home, Search, ArrowLeft, TrendingUp, Sparkles, FileText } from "lucide-react";
-import tools from "@/data/tools.json";
+import tools from "@/data/tools-index.json";
 import posts from "@/data/posts.json";
 import { calculateScoreResult } from "@/lib/scoring";
 

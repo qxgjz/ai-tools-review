@@ -3,7 +3,7 @@ import Link from "next/link";
 import { Zap, BookOpen, CheckCircle2, Star, Lightbulb, Award } from "lucide-react";
 import { notFound } from "next/navigation";
 import alternativesData from "@/data/alternatives.json";
-import toolsData from "@/data/tools.json";
+import toolsData from "@/data/tools-index.json";
 import { FAQSchema, BreadcrumbSchema } from "@/components/seo/Schema";
 import { AffiliateCTA } from "@/components/monetization/AffiliateCTA";
 

@@ -2,7 +2,7 @@
 
 import { useState, useMemo } from "react";
 import Link from "next/link";
-import tools from "@/data/tools.json";
+import tools from "@/data/tools-index.json";
 import type { Tool } from "@/types";
 import { calculateScoreResult, DIMENSION_LABELS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
 import { RadarChart } from "@/components/charts/RadarChart";
