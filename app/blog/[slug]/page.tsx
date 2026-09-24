@@ -352,7 +352,7 @@ export default function PostPage({ params }: PostPageProps) {
           </Link>
           <span className="text-sm text-gray-500 dark:text-gray-400">{post.readTime} min read</span>
         </div>
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
+        <h1 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 dark:text-white mb-4 leading-tight">
           {post.title}
         </h1>
         <div className="flex items-center gap-3 text-sm text-gray-500 dark:text-gray-400">

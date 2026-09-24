@@ -54,7 +54,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <div className="flex items-center gap-2">
               {isFeatured && (
                 <span
-                  className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-[10px] font-semibold rounded-md"
+                  className="inline-flex items-center gap-1 px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-800 dark:text-amber-300 text-[10px] font-semibold tracking-wider rounded-md"
                   title="Top rated tool (score >= 8.5)"
                 >
                   <Sparkles className="w-3 h-3" aria-hidden="true" />
@@ -62,7 +62,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                 </span>
               )}
               <span
-                className={`px-2 py-0.5 rounded-md text-xs font-bold ${GRADE_STYLES[grade]}`}
+                className={`px-2 py-0.5 rounded-md text-xs font-bold tracking-wider ${GRADE_STYLES[grade]}`}
                 title={`Grade ${grade} - based on 6-dimension scoring`}
               >
                 {grade}
@@ -98,7 +98,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                   {total.toFixed(1)}
                 </span>
                 <span className="text-xs text-zinc-500 dark:text-zinc-400">/10</span>
-                <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold ${GRADE_STYLES[grade]}`}>
+                <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider ${GRADE_STYLES[grade]}`}>
                   Grade {grade}
                 </span>
               </div>

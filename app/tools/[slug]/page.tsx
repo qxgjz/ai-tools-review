@@ -320,7 +320,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-3 mb-2">
               <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">{tool.name}</h1>
-              <span className={`px-3 py-1 rounded-lg text-sm font-bold ${GRADE_STYLES[grade]}`}>
+              <span className={`px-3 py-1 rounded-lg text-sm font-bold tracking-wider ${GRADE_STYLES[grade]}`}>
                 {grade} Grade · {GRADE_DESCRIPTIONS[grade]}
               </span>
             </div>
@@ -1052,6 +1052,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {/* Mobile sticky CTA — thumb zone: always reachable, hidden on desktop */}
       {(tool.officialUrl || tool.affiliateUrl) && (
         <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] z-40 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
+          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400 mb-2">&#11088; {total.toFixed(1)}/10 &middot; Grade {grade}</p>
           <a
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"
