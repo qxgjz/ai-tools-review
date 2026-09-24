@@ -130,6 +130,7 @@ export default function TrafficRankingPage() {
               <div className="col-span-4">
                 <Link
                   href={`/tools/${tool.slug}`}
+                  prefetch={false}
                   className="font-semibold text-gray-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400"
                 >
                   {tool.name}

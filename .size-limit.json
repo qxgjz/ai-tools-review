@@ -1,0 +1,26 @@
+[
+  {
+    "name": "framework-chunk",
+    "path": ".next/static/chunks/framework-*.js",
+    "limit": "60 KB",
+    "gzip": true
+  },
+  {
+    "name": "main-app-chunk",
+    "path": ".next/static/chunks/main-app-*.js",
+    "limit": "40 KB",
+    "gzip": true
+  },
+  {
+    "name": "total-shared-chunks",
+    "path": ".next/static/chunks/*.js",
+    "limit": "400 KB",
+    "gzip": true
+  },
+  {
+    "name": "total-all-js",
+    "path": ".next/static/**/*.js",
+    "limit": "2 MB",
+    "gzip": true
+  }
+]

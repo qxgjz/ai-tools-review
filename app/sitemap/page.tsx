@@ -200,6 +200,7 @@ export default function SitemapPage() {
                 <Link
                   key={tool.slug}
                   href={`/tools/${tool.slug}`}
+                  prefetch={false}
                   className="flex items-center gap-3 p-4 hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors"
                 >
                   <span className="w-8 h-8 flex items-center justify-center bg-gradient-to-br from-amber-400 to-orange-500 text-white text-sm font-bold rounded-lg flex-shrink-0">

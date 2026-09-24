@@ -38,6 +38,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
     >
       <Link
         href={`/tools/${tool.slug}`}
+        prefetch={false}
         className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 rounded-xl"
         aria-label={`${tool.name} review - rated ${total.toFixed(1)}/10, Grade ${grade}. Click to read full review.`}
       >
