@@ -1,6 +1,6 @@
 # SEO Health Check
 
-Generated: 2026-09-23 22:13 UTC
+Generated: 2026-09-24 22:16 UTC
 
 ## Summary
 
@@ -12,7 +12,7 @@ Generated: 2026-09-23 22:13 UTC
 | Blog index | 200 | 40c | 153c | Y | Y | 0 |
 | Category: Chat | 200 | 56c | 160c | Y | Y | 0 |
 | Tool: ChatGPT | 200 | 40c | 155c | Y | Y | 0 |
-| Blog: Stable Diffusion Review | 200 | 47c | 156c | Y | Y | 0 |
+| Blog: Stable Diffusion Review | 200 | 60c | 158c | Y | Y | 0 |
 | Blog: Cursor Review | 200 | 53c | 153c | Y | Y | 0 |
 
 ## Details
@@ -24,7 +24,7 @@ Generated: 2026-09-23 22:13 UTC
 - H1: Find the best AI tools,tested and ranked.
 - Canonical: https://www.aitoolcrux.com
 - Robots: index, follow
-- Words: 1733
+- Words: 1742
 
 ### Ranking (`/ranking`)
 - HTTP: 200
@@ -51,7 +51,7 @@ Generated: 2026-09-23 22:13 UTC
 - H1: Blog &amp; Reviews
 - Canonical: https://www.aitoolcrux.com/blog
 - Robots: index, follow
-- Words: 1766
+- Words: 1817
 
 ### Category: Chat (`/category/chat`)
 - HTTP: 200
@@ -69,16 +69,16 @@ Generated: 2026-09-23 22:13 UTC
 - H1: ChatGPT
 - Canonical: https://www.aitoolcrux.com/tools/chatgpt
 - Robots: index, follow
-- Words: 2287
+- Words: 2300
 
 ### Blog: Stable Diffusion Review (`/blog/stable-diffusion-review-2026`)
 - HTTP: 200
-- Title (47c): Stable Diffusion 3.5 Review: 4-Week Honest Test
-- Description (156c): Tested Stable Diffusion 3.5 for 4 weeks with 50+ prompts. Read our honest review of image quality, speed, hardware needs
-- H1: Stable Diffusion 3.5 Review: 4-Week Honest Test
+- Title (60c): Stable Diffusion 3.5 Review 2026: 4-Week Honest Test, Is ...
+- Description (158c): We tested Stable Diffusion 3.5 for 4 weeks in 2026. Honest review of image quality, VRAM needs, pricing, and whether it 
+- H1: Stable Diffusion 3.5 Review 2026: 4-Week Honest Test, Is It Worth It?
 - Canonical: https://www.aitoolcrux.com/blog/stable-diffusion-review-2026
 - Robots: index, follow
-- Words: 16299
+- Words: 16248
 
 ### Blog: Cursor Review (`/blog/cursor-review-2026`)
 - HTTP: 200
@@ -87,7 +87,7 @@ Generated: 2026-09-23 22:13 UTC
 - H1: Cursor Review 2026: Best AI Code Editor? | AIToolCrux
 - Canonical: https://www.aitoolcrux.com/blog/cursor-review-2026
 - Robots: index, follow
-- Words: 14415
+- Words: 14459
 
 ---
 Total issues: 0
