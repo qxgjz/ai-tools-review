@@ -3,6 +3,7 @@ import tools from "@/data/tools-index.json";
 import posts from "@/data/posts.json";
 import alternatives from "@/data/alternatives.json";
 import comparisons from "@/data/comparisons.json";
+import subcategories from "@/data/subcategories.json";
 
 // 网站基础 URL（部署后替换为你的域名）
 const BASE_URL = "https://www.aitoolcrux.com";
@@ -176,6 +177,16 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  // 子分类页（从subcategories.json中提取，仅包含有工具的子分类）
+  const subcategoryPages: MetadataRoute.Sitemap = Object.entries(subcategories)
+    .filter(([, meta]) => (meta as any).toolCount > 0)
+    .map(([slug]) => ({
+      url: `${BASE_URL}/subcategory/${slug}`,
+      lastModified: new Date(),
+      changeFrequency: "weekly" as const,
+      priority: 0.65,
+    }));
+
   // Note: /blog/tag/* pages are noindex (thin content) and intentionally excluded from sitemap.
-  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages, ...blogCategoryPages, ...alternativePages, ...comparisonPages];
+  return [...staticPages, ...toolPages, ...categoryPages, ...blogPages, ...blogCategoryPages, ...alternativePages, ...comparisonPages, ...subcategoryPages];
 }

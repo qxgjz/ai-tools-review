@@ -4,7 +4,7 @@ import posts from "@/data/posts.json";
 export const metadata = {
   title: "Free AI Tools Guide: No Credit Card, No Hidden Fees",
   description:
-    "Curated guide to the best free AI tools in 2026. No credit card required, no hidden fees. Image generation, writing, video, and design tools you can use for free today.",
+    "Curated guide to the best free AI tools in 2026. No credit card required, no hidden fees. Image, writing, video, and design tools you can use free today.",
   alternates: {
     canonical: "https://www.aitoolcrux.com/free-ai-tools-guide",
   },

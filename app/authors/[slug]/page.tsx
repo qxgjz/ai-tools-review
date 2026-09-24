@@ -26,7 +26,7 @@ export function generateMetadata({ params }: { params: { slug: string } }): Meta
   if (!author) return {};
   return {
     title: `${author.name} - ${author.role}`,
-    description: author.bio,
+    description: `Independent AI tool reviewers following a transparent six-dimensional methodology. We test every tool 14+ days and never accept payment for ratings.`,
     alternates: {
       canonical: `https://www.aitoolcrux.com/authors/${params.slug}`,
     },
