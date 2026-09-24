@@ -1,1 +1,185 @@
-InVzZSBjbGllbnQiOw0KDQppbXBvcnQgeyB1c2VFZmZlY3QgfSBmcm9tICJyZWFjdCI7DQoNCmRlY2xhcmUgZ2xvYmFsIHsNCiAgaW50ZXJmYWNlIFdpbmRvdyB7DQogICAgZGF0YUxheWVyOiBhbnlbXTsNCiAgICBndGFnOiAoLi4uYXJnczogYW55W10pID0+IHZvaWQ7DQogIH0NCn0NCg0KLyoqDQogKiBEZWZlciBub24tdXJnZW50IGd0YWcgZXZlbnRzIHRvIGJyb3dzZXIgaWRsZSB0aW1lIHZpYSByZXF1ZXN0SWRsZUNhbGxiYWNrLg0KICogRmFsbHMgYmFjayB0byBkaXJlY3QgY2FsbCBpZiByZXF1ZXN0SWRsZUNhbGxiYWNrIGlzIHVuYXZhaWxhYmxlLg0KICogVGhpcyBwcmV2ZW50cyBhbmFseXRpY3MgZXZlbnQgZmlyaW5nIGZyb20gY29tcGV0aW5nIHdpdGggdXNlciBpbnB1dCBmb3IgbWFpbiB0aHJlYWQsDQogKiBkaXJlY3RseSBpbXByb3ZpbmcgSU5QIChJbnRlcmFjdGlvbiB0byBOZXh0IFBhaW50KS4NCiAqLw0KZnVuY3Rpb24gdHJhY2tFdmVudCguLi5hcmdzOiBhbnlbXSkgew0KICBpZiAodHlwZW9mIHdpbmRvdyA9PT0gInVuZGVmaW5lZCIgfHwgIXdpbmRvdy5ndGFnKSByZXR1cm47DQogIGlmICh0eXBlb2Ygd2luZG93LnJlcXVlc3RJZGxlQ2FsbGJhY2sgPT09ICJmdW5jdGlvbiIpIHsNCiAgICB3aW5kb3cucmVxdWVzdElkbGVDYWxsYmFjaygoKSA9PiB7DQogICAgICB3aW5kb3cuZ3RhZyguLi5hcmdzKTsNCiAgICB9LCB7IHRpbWVvdXQ6IDMwMDAgfSk7DQogIH0gZWxzZSB7DQogICAgd2luZG93Lmd0YWcoLi4uYXJncyk7DQogIH0NCn0NCg0KLyoqIEV4dHJhY3QgdG9vbCBzbHVnIGZyb20gL3Rvb2xzL3tzbHVnfSBwYXRoICovDQpmdW5jdGlvbiBnZXRUb29sU2x1Z0Zyb21QYXRoKCk6IHN0cmluZyB8IG51bGwgew0KICBjb25zdCBtYXRjaCA9IHdpbmRvdy5sb2NhdGlvbi5wYXRobmFtZS5tYXRjaCgvXlwvdG9vbHNcLyhbXi9dKykvKTsNCiAgcmV0dXJuIG1hdGNoID8gbWF0Y2hbMV0gOiBudWxsOw0KfQ0KDQovKiogRXh0cmFjdCBhcnRpY2xlIHNsdWcgZnJvbSAvYmxvZy97c2x1Z30gcGF0aCAqLw0KZnVuY3Rpb24gZ2V0QXJ0aWNsZVNsdWdGcm9tUGF0aCgpOiBzdHJpbmcgfCBudWxsIHsNCiAgY29uc3QgbWF0Y2ggPSB3aW5kb3cubG9jYXRpb24ucGF0aG5hbWUubWF0Y2goL15cL2Jsb2dcLyhbXi9dKykvKTsNCiAgcmV0dXJuIG1hdGNoID8gbWF0Y2hbMV0gOiBudWxsOw0KfQ0KDQovKiogQ2hlY2sgaWYgYSBVUkwgbG9va3MgbGlrZSBhbiBhZmZpbGlhdGUvcGFydG5lciBsaW5rICovDQpmdW5jdGlvbiBpc0FmZmlsaWF0ZVVybChocmVmOiBzdHJpbmcpOiBib29sZWFuIHsNCiAgY29uc3QgYWZmaWxpYXRlUGF0dGVybnMgPSBbImFmZmlsaWF0ZSIsICJyZWYiLCAicGFydG5lciIsICJ1dG1fc291cmNlIiwgInV0bV9tZWRpdW0iLCAidHJhY2tpbmciLCAiY2xpY2tpZCJdOw0KICByZXR1cm4gYWZmaWxpYXRlUGF0dGVybnMuc29tZSgocCkgPT4gaHJlZi50b0xvd2VyQ2FzZSgpLmluY2x1ZGVzKHApKTsNCn0NCg0KLyoqIENoZWNrIGlmIGxpbmsgdGV4dCBvciBjb250ZXh0IGluZGljYXRlcyBhIENUQSBidXR0b24gKi8NCmZ1bmN0aW9uIGlzQ3RhQnV0dG9uKGxpbms6IEhUTUxBbmNob3JFbGVtZW50KTogYm9vbGVhbiB7DQogIGNvbnN0IHRleHQgPSBsaW5rLnRleHRDb250ZW50Py50cmltKCkudG9Mb3dlckNhc2UoKSB8fCAiIjsNCiAgY29uc3QgY3RhUGF0dGVybnMgPSBbInZpc2l0IiwgInRyeSAiLCAiZ2V0IHN0YXJ0ZWQiLCAic2lnbiB1cCIsICJzdGFydCBmcmVlIiwgImZyZWUgdHJpYWwiLCAiZ28gdG8iLCAibGVhcm4gbW9yZSJdOw0KICBjb25zdCBoYXNDdGFDbGFzcyA9IGxpbmsuY2xhc3NOYW1lLmluY2x1ZGVzKCJiZy1lbWVyYWxkIikgfHwgbGluay5jbGFzc05hbWUuaW5jbHVkZXMoImJnLWJsdWUiKSB8fCBsaW5rLmNsYXNzTmFtZS5pbmNsdWRlcygiZm9udC1zZW1pYm9sZCIpOw0KICByZXR1cm4gY3RhUGF0dGVybnMuc29tZSgocCkgPT4gdGV4dC5pbmNsdWRlcyhwKSkgfHwgaGFzQ3RhQ2xhc3M7DQp9DQoNCmV4cG9ydCBmdW5jdGlvbiBHQTRFdmVudFRyYWNrZXIoKSB7DQogIHVzZUVmZmVjdCgoKSA9PiB7DQogICAgLy8g56Gu5L+dIGd0YWcg5Y+v55SoDQogICAgaWYgKHR5cGVvZiB3aW5kb3cgPT09ICJ1bmRlZmluZWQiIHx8ICF3aW5kb3cuZ3RhZykgcmV0dXJuOw0KDQogICAgLy8gMS4g5aSW6ZO+54K55Ye76L+96LiqICsg6L2s5YyW5LqL5Lu2DQogICAgY29uc3QgaGFuZGxlQ2xpY2sgPSAoZTogTW91c2VFdmVudCkgPT4gew0KICAgICAgY29uc3QgdGFyZ2V0ID0gZS50YXJnZXQgYXMgSFRNTEVsZW1lbnQ7DQogICAgICBjb25zdCBsaW5rID0gdGFyZ2V0LmNsb3Nlc3QoImEiKTsNCiAgICAgIGlmICghbGluaykgcmV0dXJuOw0KDQogICAgICBjb25zdCBocmVmID0gbGluay5nZXRBdHRyaWJ1dGUoImhyZWYiKTsNCiAgICAgIGlmICghaHJlZikgcmV0dXJuOw0KDQogICAgICAvLyDmo4DmtYvlpJbpk74NCiAgICAgIGNvbnN0IGlzRXh0ZXJuYWwgPSBocmVmLnN0YXJ0c1dpdGgoImh0dHAiKSAmJiAhaHJlZi5pbmNsdWRlcygiYWl0b29sY3J1eC5jb20iKTsNCiAgICAgIGlmICghaXNFeHRlcm5hbCkgcmV0dXJuOw0KDQogICAgICBjb25zdCBsaW5rVGV4dCA9IGxpbmsudGV4dENvbnRlbnQ/LnRyaW0oKS5zdWJzdHJpbmcoMCwgMTAwKSB8fCAidW5rbm93biI7DQogICAgICBjb25zdCBwYWdlUGF0aCA9IHdpbmRvdy5sb2NhdGlvbi5wYXRobmFtZTsNCiAgICAgIGNvbnN0IHRvb2xTbHVnID0gZ2V0VG9vbFNsdWdGcm9tUGF0aCgpOw0KICAgICAgY29uc3QgYXJ0aWNsZVNsdWcgPSBnZXRBcnRpY2xlU2x1Z0Zyb21QYXRoKCk7DQogICAgICBjb25zdCBpc0FmZiA9IGlzQWZmaWxpYXRlVXJsKGhyZWYpOw0KICAgICAgY29uc3QgaXNDdGEgPSBpc0N0YUJ1dHRvbihsaW5rKTsNCg0KICAgICAgLy8g5Z+656GA5aSW6ZO+5LqL5Lu277yI5L+d55WZ5YW85a6577yJDQogICAgICB0cmFja0V2ZW50KCJldmVudCIsICJvdXRib3VuZF9jbGljayIsIHsNCiAgICAgICAgb3V0Ym91bmRfdXJsOiBocmVmLA0KICAgICAgICBsaW5rX3RleHQ6IGxpbmtUZXh0LA0KICAgICAgICBwYWdlX3BhdGg6IHBhZ2VQYXRoLA0KICAgICAgfSk7DQoNCiAgICAgIC8vID09PSDovazljJbkuovku7bvvJrlt6XlhbfpobXlh7rnq5nngrnlh7vvvIhLZXkgRXZlbnTlgJnpgInvvIk9PT0NCiAgICAgIGlmICh0b29sU2x1Zykgew0KICAgICAgICB0cmFja0V2ZW50KCJldmVudCIsICJ0b29sX291dGJvdW5kX2NsaWNrIiwgew0KICAgICAgICAgIHRvb2xfc2x1ZzogdG9vbFNsdWcsDQogICAgICAgICAgb3V0Ym91bmRfdXJsOiBocmVmLA0KICAgICAgICAgIGxpbmtfdGV4dDogbGlua1RleHQsDQogICAgICAgICAgaXNfYWZmaWxpYXRlOiBpc0FmZiwNCiAgICAgICAgICBpc19jdGFfYnV0dG9uOiBpc0N0YSwNCiAgICAgICAgICBjdGFfcG9zaXRpb246IHBhZ2VQYXRoLmluY2x1ZGVzKCIvdG9vbHMvIikgPyAoDQogICAgICAgICAgICAvLyBJbmZlciBwb3NpdGlvbiBmcm9tIHNjcm9sbCBjb250ZXh0DQogICAgICAgICAgICB3aW5kb3cuc2Nyb2xsWSA+IHdpbmRvdy5pbm5lckhlaWdodCAqIDIgPyAiYm90dG9tIiA6DQogICAgICAgICAgICB3aW5kb3cuc2Nyb2xsWSA+IHdpbmRvdy5pbm5lckhlaWdodCAqIDAuNSA/ICJtaWQiIDogInRvcCINCiAgICAgICAgICApIDogInVua25vd24iLA0KICAgICAgICB9KTsNCiAgICAgIH0NCg0KICAgICAgLy8gPT09IOi9rOWMluS6i+S7tu+8mkNvbXBhcmXpobVDVEHngrnlh7vvvIhLZXkgRXZlbnTlgJnpgInvvIk9PT0NCiAgICAgIGlmIChwYWdlUGF0aCA9PT0gIi9jb21wYXJlIiAmJiBpc0N0YSkgew0KICAgICAgICB0cmFja0V2ZW50KCJldmVudCIsICJjb21wYXJlX2N0YV9jbGljayIsIHsNCiAgICAgICAgICBvdXRib3VuZF91cmw6IGhyZWYsDQogICAgICAgICAgbGlua190ZXh0OiBsaW5rVGV4dCwNCiAgICAgICAgICBpc19hZmZpbGlhdGU6IGlzQWZmLA0KICAgICAgICB9KTsNCiAgICAgIH0NCg0KICAgICAgLy8gPT09IOi9rOWMluS6i+S7tu+8muaWh+eroOWGheiBlOebn+mTvuaOpeeCueWHu++8iEtleSBFdmVudOWAmemAie+8iT09PQ0KICAgICAgaWYgKGFydGljbGVTbHVnICYmIGlzQWZmKSB7DQogICAgICAgIHRyYWNrRXZlbnQoImV2ZW50IiwgImFydGljbGVfYWZmaWxpYXRlX2NsaWNrIiwgew0KICAgICAgICAgIGFydGljbGVfc2x1ZzogYXJ0aWNsZVNsdWcsDQogICAgICAgICAgb3V0Ym91bmRfdXJsOiBocmVmLA0KICAgICAgICAgIGxpbmtfdGV4dDogbGlua1RleHQsDQogICAgICAgIH0pOw0KICAgICAgfQ0KDQogICAgICAvLyDogZTnm5/pk77mjqXngrnlh7vvvIjkv53nlZnlhbzlrrnvvIkNCiAgICAgIGlmIChpc0FmZikgew0KICAgICAgICB0cmFja0V2ZW50KCJldmVudCIsICJhZmZpbGlhdGVfY2xpY2siLCB7DQogICAgICAgICAgb3V0Ym91bmRfdXJsOiBocmVmLA0KICAgICAgICAgIGxpbmtfdGV4dDogbGlua1RleHQsDQogICAgICAgICAgcGFnZV9wYXRoOiBwYWdlUGF0aCwNCiAgICAgICAgICB0b29sX3NsdWc6IHRvb2xTbHVnIHx8IHVuZGVmaW5lZCwNCiAgICAgICAgICBhcnRpY2xlX3NsdWc6IGFydGljbGVTbHVnIHx8IHVuZGVmaW5lZCwNCiAgICAgICAgfSk7DQogICAgICB9DQogICAgfTsNCg0KICAgIC8vIDIuIOa7muWKqOa3seW6pui/vei4qg0KICAgIGNvbnN0IHNjcm9sbERlcHRocyA9IFsyNSwgNTAsIDc1LCAxMDBdOw0KICAgIGNvbnN0IHRyYWNrZWREZXB0aHMgPSBuZXcgU2V0PG51bWJlcj4oKTsNCg0KICAgIGNvbnN0IGhhbmRsZVNjcm9sbCA9ICgpID0+IHsNCiAgICAgIGNvbnN0IHNjcm9sbFRvcCA9IHdpbmRvdy5zY3JvbGxZOw0KICAgICAgY29uc3QgZG9jSGVpZ2h0ID0gZG9jdW1lbnQuZG9jdW1lbnRFbGVtZW50LnNjcm9sbEhlaWdodCAtIHdpbmRvdy5pbm5lckhlaWdodDsNCiAgICAgIGlmIChkb2NIZWlnaHQgPD0gMCkgcmV0dXJuOw0KDQogICAgICBjb25zdCBzY3JvbGxQZXJjZW50ID0gTWF0aC5yb3VuZCgoc2Nyb2xsVG9wIC8gZG9jSGVpZ2h0KSAqIDEwMCk7DQoNCiAgICAgIGZvciAoY29uc3QgZGVwdGggb2Ygc2Nyb2xsRGVwdGhzKSB7DQogICAgICAgIGlmIChzY3JvbGxQZXJjZW50ID49IGRlcHRoICYmICF0cmFja2VkRGVwdGhzLmhhcyhkZXB0aCkpIHsNCiAgICAgICAgICB0cmFja2VkRGVwdGhzLmFkZChkZXB0aCk7DQogICAgICAgICAgdHJhY2tFdmVudCgiZXZlbnQiLCAic2Nyb2xsX2RlcHRoIiwgew0KICAgICAgICAgICAgc2Nyb2xsX3BlcmNlbnQ6IGRlcHRoLA0KICAgICAgICAgICAgcGFnZV9wYXRoOiB3aW5kb3cubG9jYXRpb24ucGF0aG5hbWUsDQogICAgICAgICAgfSk7DQogICAgICAgIH0NCiAgICAgIH0NCiAgICB9Ow0KDQogICAgLy8gMy4g5bel5YW36YCJ5oup6L+96Liq77yIY29tcGFyZemhtemdou+8iQ0KICAgIGNvbnN0IGhhbmRsZVRvb2xTZWxlY3QgPSAoZTogTW91c2VFdmVudCkgPT4gew0KICAgICAgY29uc3QgdGFyZ2V0ID0gZS50YXJnZXQgYXMgSFRNTEVsZW1lbnQ7DQogICAgICBjb25zdCB0b29sQnV0dG9uID0gdGFyZ2V0LmNsb3Nlc3QoImJ1dHRvbiIpOw0KICAgICAgaWYgKCF0b29sQnV0dG9uKSByZXR1cm47DQoNCiAgICAgIC8vIOajgOa1i+aYr+WQpuaYr+W3peWFt+mAieaLqeaMiemSru+8iOWcqCBjb21wYXJlIOmhtemdou+8iQ0KICAgICAgaWYgKHdpbmRvdy5sb2NhdGlvbi5wYXRobmFtZSA9PT0gIi9jb21wYXJlIikgew0KICAgICAgICBjb25zdCB0b29sTmFtZSA9IHRvb2xCdXR0b24ucXVlcnlTZWxlY3Rvcigic3BhbiIpPy50ZXh0Q29udGVudD8udHJpbSgpOw0KICAgICAgICBpZiAodG9vbE5hbWUgJiYgdG9vbE5hbWUubGVuZ3RoIDwgNTApIHsNCiAgICAgICAgICB0cmFja0V2ZW50KCJldmVudCIsICJ0b29sX3NlbGVjdGVkIiwgew0KICAgICAgICAgICAgdG9vbF9uYW1lOiB0b29sTmFtZSwNCiAgICAgICAgICAgIHBhZ2VfcGF0aDogIi9jb21wYXJlIiwNCiAgICAgICAgICB9KTsNCiAgICAgICAgfQ0KICAgICAgfQ0KICAgIH07DQoNCiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJjbGljayIsIGhhbmRsZUNsaWNrKTsNCiAgICBkb2N1bWVudC5hZGRFdmVudExpc3RlbmVyKCJjbGljayIsIGhhbmRsZVRvb2xTZWxlY3QpOw0KICAgIHdpbmRvdy5hZGRFdmVudExpc3RlbmVyKCJzY3JvbGwiLCBoYW5kbGVTY3JvbGwsIHsgcGFzc2l2ZTogdHJ1ZSB9KTsNCg0KICAgIHJldHVybiAoKSA9PiB7DQogICAgICBkb2N1bWVudC5yZW1vdmVFdmVudExpc3RlbmVyKCJjbGljayIsIGhhbmRsZUNsaWNrKTsNCiAgICAgIGRvY3VtZW50LnJlbW92ZUV2ZW50TGlzdGVuZXIoImNsaWNrIiwgaGFuZGxlVG9vbFNlbGVjdCk7DQogICAgICB3aW5kb3cucmVtb3ZlRXZlbnRMaXN0ZW5lcigic2Nyb2xsIiwgaGFuZGxlU2Nyb2xsKTsNCiAgICB9Ow0KICB9LCBbXSk7DQoNCiAgcmV0dXJuIG51bGw7DQp9DQo=
+"use client";
+
+import { useEffect } from "react";
+
+declare global {
+  interface Window {
+    dataLayer: any[];
+    gtag: (...args: any[]) => void;
+  }
+}
+
+/**
+ * Defer non-urgent gtag events to browser idle time via requestIdleCallback.
+ * Falls back to direct call if requestIdleCallback is unavailable.
+ * This prevents analytics event firing from competing with user input for main thread,
+ * directly improving INP (Interaction to Next Paint).
+ */
+function trackEvent(...args: any[]) {
+  if (typeof window === "undefined" || !window.gtag) return;
+  if (typeof window.requestIdleCallback === "function") {
+    window.requestIdleCallback(() => {
+      window.gtag(...args);
+    }, { timeout: 3000 });
+  } else {
+    window.gtag(...args);
+  }
+}
+
+/** Extract tool slug from /tools/{slug} path */
+function getToolSlugFromPath(): string | null {
+  const match = window.location.pathname.match(/^\/tools\/([^/]+)/);
+  return match ? match[1] : null;
+}
+
+/** Extract article slug from /blog/{slug} path */
+function getArticleSlugFromPath(): string | null {
+  const match = window.location.pathname.match(/^\/blog\/([^/]+)/);
+  return match ? match[1] : null;
+}
+
+/** Check if a URL looks like an affiliate/partner link */
+function isAffiliateUrl(href: string): boolean {
+  const affiliatePatterns = ["affiliate", "ref", "partner", "utm_source", "utm_medium", "tracking", "clickid"];
+  return affiliatePatterns.some((p) => href.toLowerCase().includes(p));
+}
+
+/** Check if link text or context indicates a CTA button */
+function isCtaButton(link: HTMLAnchorElement): boolean {
+  const text = link.textContent?.trim().toLowerCase() || "";
+  const ctaPatterns = ["visit", "try ", "get started", "sign up", "start free", "free trial", "go to", "learn more"];
+  const hasCtaClass = link.className.includes("bg-emerald") || link.className.includes("bg-blue") || link.className.includes("font-semibold");
+  return ctaPatterns.some((p) => text.includes(p)) || hasCtaClass;
+}
+
+export function GA4EventTracker() {
+  useEffect(() => {
+    // 确保 gtag 可用
+    if (typeof window === "undefined" || !window.gtag) return;
+
+    // 1. 外链点击追踪 + 转化事件
+    const handleClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const link = target.closest("a");
+      if (!link) return;
+
+      const href = link.getAttribute("href");
+      if (!href) return;
+
+      // 检测外链
+      const isExternal = href.startsWith("http") && !href.includes("aitoolcrux.com");
+      if (!isExternal) return;
+
+      const linkText = link.textContent?.trim().substring(0, 100) || "unknown";
+      const pagePath = window.location.pathname;
+      const toolSlug = getToolSlugFromPath();
+      const articleSlug = getArticleSlugFromPath();
+      const isAff = isAffiliateUrl(href);
+      const isCta = isCtaButton(link);
+
+      // 基础外链事件（保留兼容）
+      trackEvent("event", "outbound_click", {
+        outbound_url: href,
+        link_text: linkText,
+        page_path: pagePath,
+      });
+
+      // === 转化事件：工具页出站点击（Key Event候选）===
+      if (toolSlug) {
+        trackEvent("event", "tool_outbound_click", {
+          tool_slug: toolSlug,
+          outbound_url: href,
+          link_text: linkText,
+          is_affiliate: isAff,
+          is_cta_button: isCta,
+          cta_position: pagePath.includes("/tools/") ? (
+            // Infer position from scroll context
+            window.scrollY > window.innerHeight * 2 ? "bottom" :
+            window.scrollY > window.innerHeight * 0.5 ? "mid" : "top"
+          ) : "unknown",
+        });
+      }
+
+      // === 转化事件：Compare页CTA点击（Key Event候选）===
+      if (pagePath === "/compare" && isCta) {
+        trackEvent("event", "compare_cta_click", {
+          outbound_url: href,
+          link_text: linkText,
+          is_affiliate: isAff,
+        });
+      }
+
+      // === 转化事件：文章内联盟链接点击（Key Event候选）===
+      if (articleSlug && isAff) {
+        trackEvent("event", "article_affiliate_click", {
+          article_slug: articleSlug,
+          outbound_url: href,
+          link_text: linkText,
+        });
+      }
+
+      // 联盟链接点击（保留兼容）
+      if (isAff) {
+        trackEvent("event", "affiliate_click", {
+          outbound_url: href,
+          link_text: linkText,
+          page_path: pagePath,
+          tool_slug: toolSlug || undefined,
+          article_slug: articleSlug || undefined,
+        });
+      }
+    };
+
+    // 2. 滚动深度追踪
+    const scrollDepths = [25, 50, 75, 100];
+    const trackedDepths = new Set<number>();
+
+    const handleScroll = () => {
+      const scrollTop = window.scrollY;
+      const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+      if (docHeight <= 0) return;
+
+      const scrollPercent = Math.round((scrollTop / docHeight) * 100);
+
+      for (const depth of scrollDepths) {
+        if (scrollPercent >= depth && !trackedDepths.has(depth)) {
+          trackedDepths.add(depth);
+          trackEvent("event", "scroll_depth", {
+            scroll_percent: depth,
+            page_path: window.location.pathname,
+          });
+        }
+      }
+    };
+
+    // 3. 工具选择追踪（compare页面）
+    const handleToolSelect = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      const toolButton = target.closest("button");
+      if (!toolButton) return;
+
+      // 检测是否是工具选择按钮（在 compare 页面）
+      if (window.location.pathname === "/compare") {
+        const toolName = toolButton.querySelector("span")?.textContent?.trim();
+        if (toolName && toolName.length < 50) {
+          trackEvent("event", "tool_selected", {
+            tool_name: toolName,
+            page_path: "/compare",
+          });
+        }
+      }
+    };
+
+    document.addEventListener("click", handleClick);
+    document.addEventListener("click", handleToolSelect);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => {
+      document.removeEventListener("click", handleClick);
+      document.removeEventListener("click", handleToolSelect);
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
+  return null;
+}
