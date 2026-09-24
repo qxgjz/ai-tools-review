@@ -7,6 +7,12 @@ interface CategoryPageProps {
   params: { slug: string };
 }
 
+
+export function generateStaticParams() {
+  const slugs = new Set(posts.map((p) => p.categorySlug).filter(Boolean));
+  return Array.from(slugs).map((slug) => ({ slug }));
+}
+
 export function generateMetadata({ params }: CategoryPageProps) {
   const categoryPosts = posts.filter((p) => p.categorySlug === params.slug);
   const categoryName = categoryPosts.length > 0 ? categoryPosts[0].category : params.slug;
