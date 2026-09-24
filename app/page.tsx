@@ -107,7 +107,7 @@ export default function HomePage() {
             {/* Left: Content (7 cols) - left-aligned, NOT centered */}
             <div className="lg:col-span-7">
               <FadeIn delay={0.1} y={20}>
-                <div className="inline-flex items-center gap-2 px-3 py-1 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm mb-6">
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm sm:text-base mb-6">
                   <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
                   <span className="text-emerald-300">Independent AI Tool Reviews</span>
                 </div>
@@ -167,30 +167,33 @@ export default function HomePage() {
                 </div>
               </FadeIn>
 
-              {/* Mobile-only Top3 strip (P0-UX-002) */}
-              <FadeIn delay={0.55} y={20}>
-                <div className="mt-10 lg:hidden">
-                  <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">Top 3 Rated Tools</div>
-                  <div className="space-y-2">
-                    {topTools.slice(0, 3).map((tool, i) => (
-                      <Link
-                        key={tool.slug}
-                        href={`/tools/${tool.slug}`}
-                        className="flex items-center gap-3 p-3 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all"
-                      >
-                        <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold">
+              {/* Mobile Top3 horizontal scroll (P0-UX-MOBILE-HERO-001) */}
+              {/* Removed FadeIn wrapper: whileInView opacity:0 caused invisible cards on mobile */}
+              <div className="mt-8 lg:hidden">
+                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">Top 3 Rated Tools</div>
+                <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                  {topTools.slice(0, 3).map((tool, i) => (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex-shrink-0 w-56 snap-start p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all active:scale-[0.98]"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs font-bold text-emerald-400">#{i + 1}</span>
+                        <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-sm">
                           {tool.name.charAt(0).toUpperCase()}
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
-                          <div className="text-xs text-zinc-500 truncate">{tool.vendor}</div>
-                        </div>
-                        <div className="text-emerald-400 font-bold text-base">{tool.total.toFixed(1)}</div>
-                      </Link>
-                    ))}
-                  </div>
+                      </div>
+                      <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
+                      <div className="text-xs text-zinc-500 truncate mb-2">{tool.vendor}</div>
+                      <div className="flex items-baseline gap-1">
+                        <span className="text-emerald-400 font-bold text-lg">{tool.total.toFixed(1)}</span>
+                        <span className="text-xs text-zinc-600">/10</span>
+                      </div>
+                    </Link>
+                  ))}
                 </div>
-              </FadeIn>
+              </div>
             </div>
 
             {/* Right: Top 3 Tools showcase - real data, no fake UI (Taste Skill rule) */}
