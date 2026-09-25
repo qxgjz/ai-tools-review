@@ -230,6 +230,34 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     },
   };
 
+  // Standalone SoftwareApplication schema - for Google pricing/software rich snippets
+  // Separate from Review schema so Google can identify it as a top-level SoftwareApplication
+  const softwareAppData = {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    name: tool.name,
+    description: tool.description,
+    applicationCategory: "WebApplication",
+    operatingSystem: "Web",
+    brand: { "@type": "Organization", name: tool.vendor || tool.name },
+    image: toolScreenshotMap[tool.slug] ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}` : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review")}`,
+    url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
+    offers: tool.pricing.map((tier) => ({
+      "@type": "Offer",
+      name: tier.name,
+      price: tier.price.includes("$0") ? "0" : tier.price.replace(/[^0-9.]/g, ""),
+      priceCurrency: "USD",
+      availability: "https://schema.org/InStock",
+    })),
+    aggregateRating: {
+      "@type": "Rating",
+      ratingValue: total.toFixed(1),
+      bestRating: "10",
+      worstRating: "1",
+      ratingCount: "1",
+    },
+  };
+
   // Generate FAQ structured data for FAQPage rich snippet
   const toolFAQs = [
     {
@@ -268,10 +296,15 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
   return (
     <div className="max-w-5xl mx-auto px-4 sm:px-6 py-8 pb-24 md:pb-8">
-      {/* Schema.org structured data */}
+      {/* Schema.org structured data - Review */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
+      />
+      {/* Schema.org structured data - SoftwareApplication (standalone for rich snippets) */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(softwareAppData) }}
       />
       <BreadcrumbSchema
         items={[

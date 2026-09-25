@@ -10,9 +10,11 @@ import "./globals.css";
 import "./design-tokens.css";
 import { Header } from "@/components/layout/Header";
 import { BackToTop } from "@/components/layout/BackToTop";
+import { RouteFocusManager } from "@/components/layout/RouteFocusManager";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
 import { GA4EventTracker } from "@/components/analytics/GA4EventTracker";
+import { GA4PageTracker } from "@/components/analytics/GA4PageTracker";
 import WebVitalsReporter from "@/components/analytics/WebVitalsReporter";
 
 export const metadata: Metadata = {
@@ -142,7 +144,8 @@ export default function RootLayout({
               gtag('js', new Date());
               gtag('config', 'G-DGK601TM42', {
                 page_path: window.location.pathname,
-                anonymize_ip: true
+                anonymize_ip: true,
+                send_page_view: false
               });
             `}
           </Script>
@@ -158,7 +161,9 @@ export default function RootLayout({
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
           <GA4EventTracker />
+          <GA4PageTracker />
           <Header />
+          <RouteFocusManager />
           <main id="main-content" className="pt-8">{children}</main>
           <footer className="mt-16 py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
