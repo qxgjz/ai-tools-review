@@ -310,6 +310,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         items={[
           { name: "Home", url: "/" },
           { name: "Ranking", url: "/ranking" },
+          { name: tool.category, url: `/category/${tool.category}` },
           { name: tool.name, url: `/tools/${tool.slug}` },
         ]}
       />
