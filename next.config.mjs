@@ -1,4 +1,4 @@
-// @next/bundle-analyzer imported conditionally below (Vercel prod doesn't install devDeps)
+// next.config.mjs - AIToolCrux
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
@@ -606,10 +606,4 @@ const nextConfig = {
   },
 };
 
-// Conditional import: Vercel prod build doesn't install devDependencies,
-// so @next/bundle-analyzer must only be loaded when ANALYZE=true
-const withBundleAnalyzer = process.env.ANALYZE === "true"
-  ? (await import("@next/bundle-analyzer")).default({ enabled: true })
-  : (config) => config;
-
-export default withBundleAnalyzer(nextConfig);
+export default nextConfig;
