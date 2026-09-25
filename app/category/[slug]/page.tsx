@@ -10,7 +10,6 @@ import { calculateScoreResult } from "@/lib/scoring";
 import { ToolList } from "@/components/tools/ToolList";
 import { CategoryToolsClient } from "@/components/tools/CategoryToolsClient";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { BreadcrumbSchema } from "@/components/seo/Schema";
 import { FadeIn, GradientText } from "@/components/animations";
 
 // Category detailed content for SEO topic clusters
@@ -408,13 +407,6 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
           { name: category.name },
         ]}
         className="mb-6"
-      />
-      <BreadcrumbSchema
-        items={[
-          { name: "Home", url: "/" },
-          { name: "Categories", url: "/ranking" },
-          { name: category.name, url: `/category/${params.slug}` },
-        ]}
       />
 
       <FadeIn delay={0.1} y={30}>

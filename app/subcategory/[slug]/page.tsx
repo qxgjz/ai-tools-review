@@ -7,7 +7,6 @@ import type { Tool } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
 import { ToolList } from "@/components/tools/ToolList";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { BreadcrumbSchema } from "@/components/seo/Schema";
 import { FadeIn, GradientText } from "@/components/animations";
 
 type SubcatMeta = { name: string; parent: string; toolCount: number };
@@ -57,14 +56,6 @@ export default function SubcategoryPage({ params }: { params: { slug: string } }
           { name: parentName, url: `/category/${sub.parent}` },
           { name: sub.name },
         ]}
-        />
-        <BreadcrumbSchema
-          items={[
-            { name: "Home", url: "/" },
-            { name: "Categories", url: "/category" },
-            { name: parentName, url: `/category/${sub.parent}` },
-            { name: sub.name, url: `/subcategory/${params.slug}` },
-          ]}
         />
 
         <FadeIn>
