@@ -1,4 +1,4 @@
-﻿import { notFound } from "next/navigation";
+import { notFound } from "next/navigation";
 import Link from "next/link";
 import { ArrowLeft, MessageSquare, PenTool, Image as ImageIcon, Code, Video, Music, Briefcase, Search as SearchIcon, Layers, Palette, Bot, CheckCircle, HelpCircle } from "lucide-react";
 import type { LucideIcon } from "lucide-react";
