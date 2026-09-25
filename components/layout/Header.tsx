@@ -13,7 +13,15 @@ import {
   Menu,
   X,
 } from "lucide-react";
-import { SearchBox } from "@/components/search/SearchBox";
+import dynamic from "next/dynamic";
+
+// Lazy-load SearchBox (imports 1.72MB tools-index.json) to keep it out of initial bundle
+const SearchBox = dynamic(() => import("@/components/search/SearchBox").then((m) => m.SearchBox), {
+  ssr: false,
+  loading: () => (
+    <div className="w-full h-10 rounded-lg bg-zinc-100 dark:bg-zinc-800 animate-pulse" />
+  ),
+});
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { AffiliateDisclosure } from "@/components/monetization/AffiliateDisclosure";
 
