@@ -361,6 +361,11 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <p className="text-xs text-emerald-600 dark:text-emerald-400 mt-1.5 font-medium">
                     {sub}
                   </p>
+                  <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-[11px] text-zinc-500 dark:text-zinc-400">
+                    <span className="inline-flex items-center gap-1">✓ 编辑独立测试</span>
+                    <span className="inline-flex items-center gap-1">✓ 评分透明</span>
+                    <span className="inline-flex items-center gap-1">✓ 无付费排名</span>
+                  </div>
                 </>
               );
             })()}

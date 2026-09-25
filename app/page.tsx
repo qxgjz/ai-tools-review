@@ -194,6 +194,19 @@ export default function HomePage() {
                   ))}
                 </div>
               </div>
+
+              {/* Mobile quick-access chips (提升内容发现率, NN/g: 可见导航发现率48% vs 汉堡21%) */}
+              <div className="mt-6 lg:hidden">
+                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">快速入口</div>
+                <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+                  <Link href="/category/chat" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">🔥 热门工具</Link>
+                  <Link href="/category/image" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">🖼️ AI图像</Link>
+                  <Link href="/category/code" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">💻 AI编程</Link>
+                  <Link href="/category/writing" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">📝 AI写作</Link>
+                  <Link href="/category/video" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">🎬 AI视频</Link>
+                  <Link href="/blog" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">📖 评测博客</Link>
+                </div>
+              </div>
             </div>
 
             {/* Right: Top 3 Tools showcase - real data, no fake UI (Taste Skill rule) */}
