@@ -1,4 +1,16 @@
-﻿# 知识库：核心迭代（窗口1）
+## ⚠️ 部署前必做检查清单（2026-09-26新增，违反必导致Vercel构建失败）
+
+**背景**：2026-09-26因GA4PageTracker.tsx新文件从未git跟踪，Vercel连续9次构建失败。以下清单每次迭代后必须全部通过：
+
+1. **git status检查**：git status --short 确认没有未跟踪的新文件（??开头的文件必须git add）
+2. **新组件必须跟踪**：任何新创建的.tsx/.ts组件文件，如果被其他文件import了，必须git add确认被跟踪
+3. **立即提交**：每次迭代修改完后，不要积累，立即 git add -A && git commit -m "..." && git push origin main
+4. **禁止提交token**：commit/push/deploy临时脚本中绝不硬编码ghp_/vcp_/cfut_ token，全部加入.gitignore
+5. **push前验证**：git diff --cached --name-only 检查是否有.py脚本被staged，有则确认不含token
+6. **Vercel构建监控**：push后等2分钟，去Vercel看部署状态是否READY，失败立即看日志修复
+
+---
+# 知识库：核心迭代（窗口1）
 
 ## 📋 每日SOP（每次触发强制执行）
 
