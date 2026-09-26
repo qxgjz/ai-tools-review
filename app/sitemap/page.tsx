@@ -310,7 +310,7 @@ export default function SitemapPage() {
             href="/sitemap.xml"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+            className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
           >
             <FileText className="w-5 h-5" />
             View XML Sitemap

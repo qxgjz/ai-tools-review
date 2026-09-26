@@ -403,7 +403,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 : "Tested by our team · No credit card required for free plan";
               return (
                 <>
-                  <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
+                  <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
                     <ExternalLink className="w-4 h-4" />
                     {cta}
                   </a>
@@ -882,7 +882,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
           >
             <ExternalLink className="w-4 h-4" />
             {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}
@@ -934,7 +934,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-2">
                       <span className="font-semibold text-zinc-900 dark:text-white">{tier.name}</span>
-                      {tier.recommended && <span className="px-2 py-0.5 bg-emerald-600 text-white text-xs rounded-md font-semibold">Recommended</span>}
+                      {tier.recommended && <span className="px-2 py-0.5 bg-emerald-700 text-white text-xs rounded-md font-semibold">Recommended</span>}
                     </div>
                   </td>
                   <td className="py-3 px-4"><span className="font-bold text-emerald-600 dark:text-emerald-400">{tier.price}</span></td>
@@ -958,7 +958,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <div className="mt-5 flex flex-wrap items-center gap-3">
           {(tool.officialUrl || tool.affiliateUrl) && (
             <>
-            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
+            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
               <ExternalLink className="w-4 h-4" />
               {tool.affiliateUrl ? `Try ${tool.name} Free →` : `Visit ${tool.name}`}
             </a>
@@ -1111,7 +1111,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors active:scale-[0.98]"
           >
             <ExternalLink className="w-4 h-4" />
             {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}

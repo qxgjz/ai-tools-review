@@ -309,7 +309,7 @@ export default function AlternativePage({
                   </div>
                   <Link
                     href={`/tools/${alt.slug}`}
-                    className="px-4 py-2 bg-emerald-600 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors"
+                    className="px-4 py-2 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors"
                   >
                     Full Review →
                   </Link>

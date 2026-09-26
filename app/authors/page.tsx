@@ -111,7 +111,7 @@ export default function AuthorsPage() {
               "Full disclosure of affiliate relationships",
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-2">
-                <span className="w-5 h-5 rounded-full bg-emerald-600 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
+                <span className="w-5 h-5 rounded-full bg-emerald-700 text-white text-xs flex items-center justify-center flex-shrink-0 mt-0.5">
                   {i + 1}
                 </span>
                 <span className="text-sm text-gray-700 dark:text-gray-300">{item}</span>
@@ -121,7 +121,7 @@ export default function AuthorsPage() {
           <div className="mt-8">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-600 text-white font-bold rounded-xl hover:bg-emerald-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white font-bold rounded-xl hover:bg-emerald-700 transition-colors"
             >
               Learn More About Us
               <ArrowRight className="w-4 h-4" />

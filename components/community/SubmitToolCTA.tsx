@@ -10,7 +10,7 @@ export function SubmitToolCTA() {
   return (
     <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl p-8 border border-emerald-100 dark:border-emerald-900">
       <div className="flex flex-col sm:flex-row items-start sm:items-center gap-6">
-        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-emerald-600 text-white">
+        <div className="flex-shrink-0 w-14 h-14 flex items-center justify-center rounded-xl bg-emerald-700 text-white">
           <Upload className="w-6 h-6" aria-hidden="true" />
         </div>
         <div className="flex-1 min-w-0">
@@ -26,7 +26,7 @@ export function SubmitToolCTA() {
         </div>
         <Link
           href="/submit"
-          className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95 flex-shrink-0"
+          className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95 flex-shrink-0"
         >
           <Upload className="w-4 h-4" aria-hidden="true" />
           Submit Your Tool

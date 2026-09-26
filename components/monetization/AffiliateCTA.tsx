@@ -100,7 +100,7 @@ export function AffiliateCTA({
               href={url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
+              className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
               data-cta-type="affiliate"
               data-tool={toolName}
               onClick={() => trackCtaClick(toolName, "bottom", isAffiliate)}

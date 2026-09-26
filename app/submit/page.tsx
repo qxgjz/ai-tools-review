@@ -54,7 +54,7 @@ export default function SubmitPage() {
     <main className="min-h-screen bg-zinc-50 dark:bg-zinc-950 pt-24 pb-16 px-4">
       <div className="max-w-xl mx-auto">
         <div className="text-center mb-8">
-          <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-emerald-600 text-white">
+          <div className="w-14 h-14 mx-auto mb-4 flex items-center justify-center rounded-xl bg-emerald-700 text-white">
             <Upload className="w-6 h-6" aria-hidden="true" />
           </div>
           <h1 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2 tracking-tight">
@@ -151,7 +151,7 @@ export default function SubmitPage() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-[0.98] disabled:opacity-60"
+            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-[0.98] disabled:opacity-60"
           >
             {status === "submitting" ? (
               <>
