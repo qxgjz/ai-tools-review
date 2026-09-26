@@ -409,9 +409,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                     {sub}
                   </p>
                   <div className="flex flex-wrap items-center gap-x-3 gap-y-1 mt-2 text-[11px] text-zinc-500 dark:text-zinc-400">
-                    <span className="inline-flex items-center gap-1">✓ 编辑独立测试</span>
-                    <span className="inline-flex items-center gap-1">✓ 评分透明</span>
-                    <span className="inline-flex items-center gap-1">✓ 无付费排名</span>
+                    <span className="inline-flex items-center gap-1">✓ Independently tested</span>
+                    <span className="inline-flex items-center gap-1">✓ Transparent scoring</span>
+                    <span className="inline-flex items-center gap-1">✓ No paid rankings</span>
                   </div>
                 </>
               );
