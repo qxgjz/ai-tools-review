@@ -25,6 +25,9 @@ const nextConfig = {
   // 包导入优化
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
+    // Partial Prerendering (PPR) incremental trial - Next.js 14.2 experimental
+    // Pages must opt-in with export const experimental_ppr = true
+    ppr: "incremental",
   },
 
   // 生成Etags

@@ -1,5 +1,100 @@
 # 知识库：变现/Monetization（窗口5）
-## 2026-09-26 高频学习 - 联盟营销进阶：Sub-affiliate与Influencer Program谈判
+## 2026-09-26 变现运营 + 批量学习 - Affiliate SEO最佳实践与FTC合规
+
+### 本轮变现运营执行
+
+**P1待办完成（2条）**：
+1. ✅ P1-MONETIZE-LTV-MODEL-001：LTV优先联盟选择标准 → 已创建 `iteration_center/ltv_affiliate_model.md`（含10个联盟LTV排名表、计算公式、内容-联盟匹配矩阵）
+2. ✅ P1-MONETIZE-PAIDLISTING-001：付费收录页面设计 → 已创建 `iteration_center/paid_listing_design.md`（4档定价Free/$49/$99年/$299月，年收入预测$13K-35K）
+
+**现状审计**：
+- tools.json: 533工具，仅1个有affiliateUrl（ElevenLabs），Mangools仍不在tools.json中
+- posts.json: 107篇文章，仅3篇有ElevenLabs affiliate链接，0篇有Mangools链接，76篇有潜在disclosure文字
+- state.json: current_iteration=102，剩余5条P1 pending + 4条in_progress
+
+### 10-15个知识点（Affiliate SEO最佳实践）
+
+1. **Topical Authority是2026年联盟站SEO的第一排名因素**：不是外链数量，而是主题集群——50篇深度互联的同主题文章 > 200篇零散文章。每个主题集群需要：1篇pillar article（全面指南）+ 10-20篇cluster article（具体子话题）+ 所有cluster文章链回pillar + pillar链接到各cluster。我们的533个工具页需要按主题组织成集群（AI写作、AI视频、AI SEO、AI设计等），而不是孤立的工具页。
+
+2. **Comparison页面是联盟转化率最高的页面类型**：用户搜索"X vs Y"时购买意图最强（比"best X"高2-3倍）。Comparison页面结构模板：①快速结论（前100字给出明确推荐）②对比表格（价格/功能/优缺点并排）③分场景推荐（"选A如果你是初学者，选B如果你需要高级功能"）④最终裁决+使用场景速查表。我们的/compare页面有225曝光但CTR仅0.89%——需要按此模板重构。
+
+3. **关键词优先级公式：预期EPC × 月搜索量 / 关键词难度**：不是搜索量最高的词最赚钱，而是EPC最高的词。例如"best ai seo tools"（月搜5K，KD 40，EPC $8）= 5000×8/40 = 1000分；"surfer seo vs mangools"（月搜500，KD 15，EPC $15）= 500×15/15 = 500分。前者总分更高但后者ROI更高（低难度+高EPC）。策略：先攻低难度高EPC的长尾词（comparison/alternative/review），积累权重后再攻高难度词。
+
+4. **2026年Google联盟站净化后的存活标准**：30-80页深度内容（不是3000页薄内容）、有真实姓名和可验证履历的作者（不是"Editorial Team"）、产品实际使用的原创照片、前200字有明确观点（"我们用X做Y因为Z"）、承认外链建设需要12个月以上。我们的533个工具页可能被Google判定为"薄内容"——需要给Top 50工具页增加深度评测内容（实际测试数据、截图、使用体验），其余保持目录级即可。
+
+5. **内部链接是联盟站最被低估的SEO因素**：每篇文章至少链3-5篇相关文章。内部链接传递页面权重、延长用户停留时间、帮助Google发现新页面。最佳实践：①pillar页链到所有cluster页 ②cluster页链回pillar页 ③相关工具页互链（"类似工具"模块） ④文章中提到工具时链到工具详情页。我们的工具页之间缺乏内部链接——需要添加"相关工具"模块和文章内工具提及链接。
+
+6. **关键词布局的精确位置**：核心关键词必须出现在①前100字内 ②2-3个H2副标题中 ③URL/slug中 ④图片alt文字中 ⑤正文中自然分布（密度1-2%，不堆砌）。Meta title必须包含核心关键词+数字+年份（"10 Best AI SEO Tools in 2026"），Meta description必须包含CTA（"Compare top picks and find the best fit"）。我们的文章需要检查meta title是否包含年份和数字。
+
+7. **联盟页面的3层内容结构**：①Money pages（评测/对比/最佳列表——直接放affiliate链接，转化率最高）②Supporting content（教程/指南/如何使用——间接引导到money pages，建立topical authority）③Link bait（原创研究/数据/工具——吸引自然外链）。比例建议：Money pages 20% + Supporting content 60% + Link bait 20%。我们目前533工具页（money pages占比过高）+ 107文章（supporting不足）——需要增加supporting content（教程类文章）来支撑money pages的排名。
+
+8. **FTC披露的2个核心测试标准**：①Clear Language Test——必须用普通人能理解的直白语言，"partner links""sponsored"等模糊词不达标，必须说"I earn a commission"；②Conspicuous Placement Test——必须在第一个affiliate链接之前、无需滚动就能看到的位置。只放footer的披露=违规。我们的76篇文章有"潜在disclosure"但需要确认是否在第一个affiliate链接之前、是否用了直白语言。
+
+9. **FTC合规的3层披露体系**：①全站披露页（/disclosure或/affiliate-disclosure，链接在footer）②每页披露（在每篇有affiliate链接的文章顶部，第一个链接之前，用高亮框或粗体）③链接附近披露（重要affiliate链接旁边加小字"ad"或"affiliate"）。推荐的每页披露文案："This post contains affiliate links. I may earn a commission if you click and make a purchase, at no extra cost to you." 产品评测页专用："Disclosure: I am an affiliate partner of [Brand]. I earn a commission on sales made through links on this page."
+
+10. **联盟链接的SEO技术处理**：①affiliate链接必须加rel="sponsored"（Google 2019年后推荐，替代nofollow）②不要用JavaScript跳转affiliate链接（Google可能无法追踪）③affiliate链接不要太多（每页5-10个为宜，超过会被判定为"过度商业化"）④用插件管理affiliate链接（ThirstyAffiliates/pretty links），方便统一更新和统计点击。我们的ElevenLabs链接需要确认是否有rel="sponsored"。
+
+11. **新站DR增长的现实时间表**：0-3月DR 0-5，3-6月DR 10-15，6-12月DR 20-30，12-24月DR 30-50。前6个月不要期望有意义的联盟收入——重点是内容积累和topical authority建设。我们的GSC数据（8点击/1581曝光/平均排名23.98）符合新站3-6月阶段的特征——继续按计划产出内容，6-12月阶段会看到流量加速增长。
+
+12. **SERP Gap分析方法**：用Ahrefs对比竞争对手的关键词重叠，找到竞争对手排名但我们没排名的低竞争词（KD<20）。这些是"容易摘的果子"——写一篇针对性文章就能排名。具体操作：①导出竞争对手Top 500关键词 ②过滤KD<20且月搜>100 ③排除我们已排名的词 ④按EPC排序 ⑤优先写EPC最高的词。我们需要用这个方法找到AI工具领域的低竞争高EPC关键词。
+
+13. **Comparison页面的分场景推荐模板**（每次都用这个结构）：
+    - 选Product A如果：初学者、预算有限、简单使用场景
+    - 选Product B如果：高级用户、需要可扩展性、功能密集型使用场景
+    - 两个都不选如果：[第三种场景，推荐第三个工具]
+    这个结构能捕获所有搜索角度的流量，而不是只给一个"总冠军"。我们的/compare页面和所有"X vs Y"文章都应该用这个模板。
+
+14. **联盟内容的E-E-A-T信号建设**：Google 2024年后的核心排名因素是Experience（实际经验）、Expertise（专业知识）、Authoritativeness（权威性）、Trustworthiness（可信度）。具体做法：①每篇评测包含实际使用截图和测试数据 ②作者署名+作者简介页（包含相关领域经验）③引用权威来源（学术论文、行业报告）④更新日期显示（"Last updated: 2026-09-26"）⑤负面评价也要写（不只是夸——增加可信度）。我们的工具页需要增加"实际测试"模块和"更新日期"。
+
+### 新发现联盟
+
+| 工具 | 佣金 | Cookie | 平台 | 申请链接 |
+|------|------|--------|------|---------|
+| **v0/Vercel** | **$5/lead + 30% recurring×6月** | 未公开（永久追踪链接） | 直连/FirstPromoter | https://vercel.com/partners |
+| BrowserAct | 30%首单+20%×6月 | 未公开（永久链接） | FirstPromoter | https://browseract.com/affiliate |
+| Hypotenuse AI | 30% recurring | 30天 | FirstPromoter | https://hypotenuse.ai/affiliate |
+
+**v0/Vercel亮点**：CPL模式（$5/每个注册用户）+ recurring佣金（30%×6月）。即使注册用户不付费，我们也拿$5——这对低流量站非常友好。v0是AI代码生成工具，与我们的AI工具评测内容高度匹配。$50起付，PayPal/银行转账。
+
+### FTC合规检查结果
+
+**当前状态**：
+- 76/107篇文章有"潜在affiliate disclosure"文字（包含affiliate+commission/earn/disclosure关键词）
+- 但无法确认这些披露是否在第一个affiliate链接之前（需要窗口1检查实际页面渲染）
+- 无法确认是否用了FTC要求的直白语言（"I earn a commission"而非模糊的"partner links"）
+- tools.json中affiliate链接是否有rel="sponsored"未知（需要窗口1检查代码）
+
+**合规风险**：
+- ⚠️ 只放footer的披露=FTC违规（必须在第一个affiliate链接之前）
+- ⚠️ 模糊语言（"sponsored""partner"）=FTC违规（必须说"earn a commission"）
+- ⚠️ affiliate链接没有rel="sponsored"=Google SEO风险
+- ⚠️ 付费收录工具如果不标注"Sponsored"=FTC违规（付费收录设计中已包含徽章要求）
+
+**给窗口1的合规修复清单**：
+1. 创建/disclosure页面（全站披露政策）
+2. 所有有affiliate链接的文章顶部加披露框（在第一个链接之前）
+3. 披露文案统一为："This post contains affiliate links. I may earn a commission if you click and make a purchase, at no extra cost to you."
+4. 所有affiliate链接加rel="sponsored"
+5. 付费收录工具显示"Sponsored"徽章
+
+### CTA优化建议
+
+1. **/compare页面重构**（最高优先级）：当前225曝光但CTR仅0.89%。按comparison页面模板重构：①顶部快速结论 ②对比表格 ③分场景推荐 ④每个工具卡片加"Try [Tool] Free"CTA按钮+小字"✅ Tested by our team · No credit card required"
+2. **Top 50工具页增加深度评测内容**：当前533个工具页可能被Google判定为薄内容。给流量最高的50个工具页增加：实际测试截图、使用体验、优缺点深度分析、CTA按钮（当前可能只有"Visit Site"直链）
+3. **文章内工具提及加内链**：107篇文章中提到的工具应该链到对应工具详情页，传递权重并增加工具页流量
+4. **Mangools紧急铺链**：Mangools联盟链接已拿到但0篇文章使用。立即在5篇SEO文章中添加Mangools CTA按钮（"Try Mangools Free →"+"✅ Tested by our team · 10-day free trial"）
+
+### 可落地建议（给窗口1）
+
+- **立即创建/disclosure页面**和文章顶部披露框（FTC合规最高优先级，避免被处罚）
+- **/compare页面按comparison模板重构**+加CTA按钮（225曝光页面，转化率提升空间最大）
+- **给Top 50工具页增加深度评测内容**（应对Google薄内容判定，提升排名和转化）
+- **所有affiliate链接加rel="sponsored"**（SEO合规）
+- **Mangools工具条目添加到tools.json**+5篇SEO文章铺Mangools链接（已拿到联盟链接但0使用）
+- **创建/submit付费收录页面**（设计方案已完成，年收入潜力$13K-35K）
+- **工具页之间加"相关工具"内部链接模块**（提升topical authority和页面权重）
+
+---
 
 ### 10-15个知识点
 
