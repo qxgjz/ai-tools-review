@@ -4051,3 +4051,41 @@ Shift-Left Security（安全左移）是指在开发流程早期（编码、PR �
 - P2-PERF-FONT-001：检查 next/font 配置，次要字体用 `display: 'swap'` 配合 `adjustFontFallback: true`（Next.js 默认开），关键字体接受小 CLS。
 - P2-PERF-CLS-003：检查 cookie 横幅/通知条是否动态插入把内容往下推，改成固定高度预留或 fixed 悬浮。
 - P2-PERF-LCP-002：在首页/工具详情页用 DevTools 找 LCP 元素，针对性加 priority+fetchpriority=high（对应之前 P1-PERF-LCP-001）。
+
+
+---
+
+## [2026-09-26] Next.js Metadata API与Canonical标签最佳实践（12知识点）
+
+**学习背景**：第102轮修复了3个缺少canonical的页面（subcategory/top-ai-tools-by-traffic/submit），系统学习Metadata API确保后续不再遗漏。
+
+**知识点1：Next.js有两种Metadata定义方式——静态metadata对象和动态generateMetadata函数**。固定页面（首页、about）用`export const metadata: Metadata = {...}`；动态路由（blog/[slug]、tools/[slug]、subcategory/[slug]）必须用`export async function generateMetadata({ params })`，因为标题/描述/canonical都依赖params。两者不能同时在同一文件使用。（来源：https://nextjs.org/docs/app/api-reference/functions/generate-metadata）
+
+**知识点2：canonical必须放在alternates.canonical字段中，不能放在metadata顶层**。正确写法：`alternates: { canonical: "https://www.aitoolcrux.com/subcategory/voice-generators" }`。Next.js会自动渲染为`<link rel="canonical" href="..."/>`。写在顶层不会被识别。（来源：https://nextjs.org/docs/app/api-reference/functions/generate-metadata + https://nextjs.org/docs/app/building-your-application/optimizing/metadata）
+
+**知识点3：Client Component不能直接export metadata——必须通过layout.tsx或父Server Component提供**。submit/page.tsx是"use client"组件，无法export metadata。解决方案：在同目录创建layout.tsx（Server Component），在其中export metadata，children渲染client组件。这是Next.js App Router的标准模式。（来源：https://nextjs.org/docs/app/building-your-application/optimizing/metadata + https://nextjs.org/learn/dashboard-app/adding-metadata）
+
+**知识点4：Metadata沿路由段继承和合并——layout的metadata会被子page的metadata合并，子级优先**。app/layout.tsx定义的metadataBase和默认title会被所有页面继承。子页面可以覆盖title/description/canonical等字段。如果子页面不设canonical，不会继承父级的canonical（canonical是页面级的，必须每页单独设置）。（来源：https://nextjs.org/docs/app/building-your-application/optimizing/metadata）
+
+**知识点5：Google要求canonical使用绝对URL（含https://+域名），不能用相对路径**。正确：`https://www.aitoolcrux.com/tools/midjourney`；错误：`/tools/midjourney`。Next.js的metadataBase可以设置基础URL，然后canonical写相对路径会自动拼接，但显式写绝对URL更安全。（来源：https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls + https://getviralseo.com/articles/canonical-tags-and-canonicalization-the-complete-seo-guide-for-2026）
+
+**知识点6：canonical指向的页面必须返回200且可索引（不能是noindex/404/重定向）**。如果canonical指向一个noindex页面或404，Google会忽略该canonical标签。submit页面设置了noindex+canonical指向自己——这是合理的（告诉Google这是规范URL但不要索引）。（来源：https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls + https://lafactory.online/canonical-tags-duplicate-content-seo-guide/）
+
+**知识点7：同一页面不能有多个canonical标签——Google会全部忽略**。常见原因：插件冲突、layout和page都设了canonical、SSR和CSR各渲染一个。Next.js的Metadata API会自动去重，但如果用了第三方SEO插件（如next-seo）同时手动写metadata，可能产生重复。AIToolCrux只用原生Metadata API，无此风险。（来源：https://screpy.com/blog/how-to-fix-duplicate-content-with-canonical-tags/ + https://www.overthetopseo.com/canonical-tags-definitive-guide-duplicate-content/）
+
+**知识点8：generateMetadata中使用fetch会触发动态渲染（blocking-prerender-metadata-runtime警告）**。如果generateMetadata里fetch了外部数据，Next.js无法在构建时预渲染该页面。解决方案：用generateStaticParams预生成所有params，或从本地JSON导入数据（AIToolCrux的做法——从data/*.json导入，不触发动态渲染）。（来源：https://nextjs.org/docs/messages/blocking-prerender-metadata-runtime）
+
+**知识点9：noindex页面的canonical应指向自己，不要指向其他可索引页面**。常见错误：给noindex页面设置canonical指向首页，这会告诉Google"这个页面的规范版本是首页"，导致该页面内容被合并到首页。正确做法：noindex页面的canonical指向自己，robots设为{ index: false, follow: true }。（来源：https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls + https://surferseo.com/blog/canonical-tags-in-seo/）
+
+**知识点10：sitemap.xml中的URL应与canonical一致——非canonical URL不应出现在sitemap中**。如果sitemap包含了canonical指向其他页面的URL，Google会困惑。AIToolCrux的sitemap.ts应确保只输出每个页面的规范URL。（来源：https://developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls + https://www.overthetopseo.com/canonical-tags-duplicate-content-guide/）
+
+**知识点11：内部链接应使用canonical URL——不要链接到带参数或旧格式的URL**。如果内链指向`/blog/category/writing`（已301重定向到`/blog/category/ai-writing`），虽然重定向会传递权重，但增加了跳转延迟。最佳实践：内链直接用最终canonical URL。（来源：https://screpy.com/blog/how-to-fix-duplicate-content-with-canonical-tags/ + https://getviralseo.com/articles/canonical-tags-and-canonicalization-the-complete-seo-guide-for-2026）
+
+**知识点12：Metadata字段速查表——AIToolCrux每页应包含的最小SEO元数据**：title（≤60字符）、description（≤155字符）、alternates.canonical（绝对URL）、openGraph（title/description/type/image）、robots（默认index/follow，submit等页面设noindex）。工具页和文章页还应加JSON-LD结构化数据（但FAQPage已在2026年5月弃用）。（来源：https://nextjs.org/docs/app/api-reference/functions/generate-metadata + 综合Google Search Central文档）
+
+**落地计划（下次迭代执行）**：
+1. 知识点3（Client Component metadata模式）→ 任务P1-SEO-METADATA-AUDIT：扫描所有"use client"的page.tsx，检查是否有对应layout.tsx提供metadata，缺失的补建
+2. 知识点4+7（metadata继承+重复canonical检查）→ 任务P1-SEO-CANONICAL-AUDIT：用脚本扫描所有29个page.tsx+layout.tsx，确认每页恰好一个canonical，无重复无遗漏
+3. 知识点10（sitemap与canonical一致性）→ 任务P1-SEO-SITEMAP-CANONICAL：检查app/sitemap.ts输出的URL是否全部为canonical URL，排除noindex页面
+4. 知识点11（内链用canonical URL）→ 任务P1-SEO-INTERNAL-LINKS-CLEAN：扫描文章content中的内链，替换为重定向前的旧URL为最终canonical URL
+5. 知识点12（metadata最小集）→ 任务P1-SEO-METADATA-COMPLETENESS：写脚本检查每页是否都有title+description+canonical+OG，缺失的列出清单批量补全
