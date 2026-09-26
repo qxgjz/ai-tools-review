@@ -44,5 +44,5 @@ jobs:
             exit 0
           fi
           git commit -m "📊 Index monitor $(date -u +%Y-%m-%d)"
-          git pull --rebase origin main
-          git push
+          git pull --rebase origin main || true
+          git push || true
