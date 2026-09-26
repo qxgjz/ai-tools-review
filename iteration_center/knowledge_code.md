@@ -191,6 +191,46 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 
 ## 待补充
+- [2026-09-26] 学习主题：高星GitHub开源工具全景（SEO审计+性能监控+自动化测试）
+
+  **知识点1：Lighthouse是Google官方开源审计引擎，GitHub 30k+ stars**——Chrome团队维护，覆盖Performance/Accessibility/Best Practices/SEO/Progressive Web App五大类审计。基于Puppeteer启动真实Chrome运行页面，输出JSON/HTML报告。CLI用法：`npx lighthouse https://example.com --output=json --output-path=report.json`。是所有性能/SEO审计工具的底层引擎。（来源：https://github.com/GoogleChrome/lighthouse + https://developer.chrome.com/docs/lighthouse/overview/）
+
+  **知识点2：Lighthouse CI (LHCI)是Google官方CI集成方案，@lhci/cli月下载~2M**——专为持续集成设计，核心命令`lhci autorun`自动收集URL、运行Lighthouse、上传结果。支持assert断言（如`performance: 0.9`低于90分失败）、assertMatrix多URL不同阈值、GitHub Status Check在PR上显示分数。可选@lhci/server存储历史数据做趋势追踪。配置文件.lighthouserc.js。（来源：https://github.com/GoogleChrome/lighthouse-ci + https://googlechrome.github.io/lighthouse-ci/docs/getting-started.html）
+
+  **知识点3：Unlighthouse（4.8k stars）实现全站Lighthouse并行扫描**——`npx unlighthouse --site example.com`一条命令自动发现sitemap/爬取所有URL、并行运行Lighthouse、生成统一交互式报告。与单页Lighthouse CLI的区别：自动URL发现、无限页面、并行扫描、交互式UI。支持CI模式`unlighthouse-ci`，分数低于budget时构建失败。大站点用smart sampling只测代表性页面模板。（来源：https://github.com/harlan-zw/unlighthouse + https://unlighthouse.dev/）
+
+  **知识点4：Playwright（89.8k stars，Microsoft）已超越Cypress成为E2E测试首选**——支持Chromium/Firefox/WebKit三引擎、TypeScript/JS/Python/Java/C#多语言、内置auto-wait（元素就绪才操作，无需手动sleep）、API测试内置（APIRequestContext）、trace viewer调试、并行sharding。周npm下载52M+，活跃贡献者720+。State of JS 2024首次超越Cypress使用率。（来源：https://github.com/microsoft/playwright + https://testdino.com/blog/playwright-market-share）
+
+  **知识点5：Cypress（49.7k stars）仍有独特优势但局限明显**——优势：时间旅行调试（Test Runner可回看每步DOM状态）、初学者友好文档、实时重载。局限：仅JS/TS、iframe支持弱、多标签页/多域支持差、无原生移动端测试。企业采用率从Playwright的65%降至24%。新项目优先选Playwright。（来源：https://github.com/cypress-io/cypress + https://softwaretestpilot.com/blog/automation-testing/is-cypress-dead-playwright-market-share）
+
+  **知识点6：Vitest（13k+ stars）是Vite生态的单元测试框架**——基于Vite的ESM原生支持、零配置、Watch模式极快（利用Vite HMR）、Jest兼容API（describe/it/expect）、内置coverage（v8或istanbul）。与Next.js集成需mock next/image/next/navigation。适合组件测试和工具函数测试，不适合E2E。（来源：https://github.com/vitest-dev/vitest + https://www.pistack.xyz/posts/2026-07-21-javascript-testing-frameworks-vitest-jest-playwright/）
+
+  **知识点7：axe-core（7k+ stars，Deque）是行业标准无障碍测试引擎**——自动化检测90%以上WCAG 2.0/2.1/2.2 A/AA级问题，零误报设计（只报告确定的违规，不确定标记为incomplete）。支持@axe-core/playwright（Playwright集成）、@axe-core/cli（命令行）、@axe-core/puppeteer。是Lighthouse无障碍审计的底层引擎。（来源：https://github.com/dequelabs/axe-core + https://www.npmjs.com/package/axe-core）
+
+  **知识点8：Pa11y（4.5k stars）是CLI无障碍测试工具，支持双引擎**——`npx pa11y https://example.com`单页扫描，支持axe和HTML_CodeSniffer两种runner（`--runner axe --runner htmlcs`）。Pa11y CI可批量扫描URL列表，Pa11y Dashboard提供Web界面每日自动测试+趋势图。输出JSON/CSV/HTML格式，适合CI门禁。（来源：https://github.com/pa11y/pa11y + https://pa11y.org/）
+
+  **知识点9：@axe-core/playwright实现E2E测试中内嵌无障碍断言**——在Playwright测试导航到页面后调用`await AxeBuilder({ page }).analyze()`获取violations数组，用expect断言`violations.length === 0`。可配置`withTags(['wcag2a','wcag2aa'])`只检查特定标准，`disableRules(['color-contrast'])`排除已知问题。结果可附在Playwright HTML报告中。（来源：https://github.com/dequelabs/axe-core-npm + https://qaskills.sh/blog/axe-core-playwright-accessibility-testing-2026）
+
+  **知识点10：eslint-plugin-jsx-a11y在编码阶段拦截无障碍问题**——基于AST静态分析JSX，检查alt文本、aria属性、标题层级、交互元素键盘可达性等。与axe-core互补：eslint-plugin-jsx-a11y在写代码时发现问题（左移），axe-core在运行时发现动态渲染问题。Next.js项目默认已包含此插件。（来源：https://github.com/jsx-eslint/eslint-plugin-jsx-a11y + https://sujeet.pro/articles/accessibility-testing-tooling）
+
+  **知识点11：Plausible Analytics（28.9k stars）是隐私友好的轻量级GA替代**——无cookie、符合GDPR/CCPA、脚本<1KB（GA4约17KB）、实时仪表盘、开源可自托管。事件追踪用`plausible('event-name')`。适合不想用GA4但需要基础流量数据的站点。AIToolCrux已有GA4，可评估是否同时用Plausible做轻量备份。（来源：https://github.com/plausible/analytics + https://hellogithub.com/repository/plausible/analytics）
+
+  **知识点12：@next/bundle-analyzer是Next.js官方bundle可视化工具**——`ANALYZE=true npm run build`生成report.html，treemap展示每个包及其依赖大小。用于发现大型依赖、决定是否拆分或懒加载。Next.js 16.1新增Turbopack版实验性Bundle Analyzer（`next experimental-analyze`）。AIToolCrux可定期运行识别bundle膨胀。（来源：https://nextjs.org/docs/app/guides/package-bundling + https://www.npmjs.com/package/@next/bundle-analyzer）
+
+  **知识点13：size-limit是CI bundle预算门禁工具**——在.size-limit.json配置预算规则（如`"limit": "200 kB"`），CI中`size-limit`命令检查打包体积超预算则失败。支持webpack/rollup/esbuild，可按路径分别设限。AIToolCrux已有.size-limit.json（4条预算规则），应确保CI中运行。（来源：https://github.com/ai/size-limit + knowledge_code.md已记录）
+
+  **知识点14：测试金字塔与工具选型决策**——单元测试（Vitest，快、覆盖工具函数/Hooks/纯组件）> 组件测试（Vitest+RTL，测交互行为）> E2E测试（Playwright，测关键用户旅程如搜索/导航/表单）。比例约70/20/10。不要用E2E测每个边界条件（慢且脆弱），不要用单元测试测跨页面流程。AIToolCrux当前有Playwright E2E，缺Vitest单元测试层。（来源：https://www.pistack.xyz/posts/2026-07-21-javascript-testing-frameworks-vitest-jest-playwright/ + 综合）
+
+  **知识点15：工具组合推荐——AIToolCrux适用的CI质量门禁**——PR触发：①Vitest单元测试（快速反馈）②eslint+tsc（代码质量）③size-limit（bundle预算）④Lighthouse CI（性能/SEO/无障碍分数断言，对首页+工具页+文章页3个模板）⑤@axe-core/playwright（关键页面无障碍断言）。生产部署后：Unlighthouse全站扫描（每日定时）+ Plausible/GA4流量监控。形成左移（编码/PR阶段）+右移（生产监控）双层防护。（来源：综合Lighthouse CI/Unlighthouse/axe-core/Playwright官方文档）
+
+  **落地计划（下次迭代执行）**：
+  1. 知识点2+3（LHCI + Unlighthouse）→ 任务P2-QA-LHCI-SETUP：在.github/workflows/添加lighthouse-ci.yml，对首页/工具页/文章页3个模板做性能分数断言（performance>=80, seo>=90），生产部署后用unlighthouse-ci全站扫描
+  2. 知识点7+9（axe-core + @axe-core/playwright）→ 任务P2-A11Y-AXE-CI：在现有Playwright E2E测试中添加axe-core断言，对首页和工具详情页检查WCAG 2.2 AA违规，violations>0则CI失败
+  3. 知识点6+14（Vitest + 测试金字塔）→ 任务P2-QUALITY-VITEST-SETUP：初始化Vitest配置，为lib/工具函数（scoring/markdown/truncateAtWord）写单元测试，建立70%单元测试层
+  4. 知识点12（Bundle Analyzer）→ 任务P1-PERF-BUNDLE-ANALYZE-001：运行ANALYZE=true npm run build生成报告，识别Top10最大依赖，制定懒加载/替换计划
+  5. 知识点11（Plausible）→ 任务P2-GROWTH-PLAUSIBLE-EVAL：评估是否添加Plausible作为GA4的轻量备份（无cookie、脚本小），对比数据一致性
+  6. 知识点15（工具组合）→ 任务P2-QA-CI-GATE：整合上述工具到CI workflow，形成PR阶段（Vitest+eslint+tsc+size-limit+LHCI）和生产阶段（Unlighthouse+axe-core）双层质量门禁
+
 - [2026-09-20] 学习主题：IndexNow 协议完整实现规范（官方 indexnow.org FAQ + Bing 官方博客）
   1. IndexNow 是开放协议，一次请求同时推送给 Bing/Yandex/Naver/Seznam/Yep/Amazonbot 等所有参与搜索引擎，不需要逐个提交（来源：indexnow.org/faq + blogs.bing.com）
   2. API key 长度 8-128 字符，允许字符仅 [a-zA-Z0-9-]，不能有下划线/特殊符号（来源：indexnow.org/faq）

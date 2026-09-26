@@ -179,8 +179,10 @@ export default function robots(): MetadataRoute.Robots {
       "https://www.aitoolcrux.com/sitemap.xml",
     ],
     host: "www.aitoolcrux.com",
-    // AI crawler optimization: llms.txt and llms-full.txt are available at site root
-    // https://www.aitoolcrux.com/llms.txt - Site overview and content index for AI systems
-    // https://www.aitoolcrux.com/llms-full.txt - Full content in markdown format for LLM ingestion
+    // NOTE: Google officially confirmed it does NOT use llms.txt (2026-08).
+    // llms.txt remains available for non-Google AI crawlers (Claude, Perplexity, etc.)
+    // but is no longer a priority for Google SEO. Do not invest further in llms.txt optimization.
+    // https://www.aitoolcrux.com/llms.txt - Site overview for non-Google AI systems
+    // https://www.aitoolcrux.com/llms-full.txt - Full content for LLM ingestion
   };
 }

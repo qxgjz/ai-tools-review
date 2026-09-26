@@ -2180,6 +2180,94 @@
       "description": "GA4发现1个来自chatgpt.com/ai-assistant的会话(09-19至09-25期间)，这是ChatGPT引用我们网站的第一个真实信号。需持续监控GEO流量来源变化。",
       "created": "2026-09-26",
       "evidence": "GA4: chatgpt.com / ai-assistant, 1 session, 1 user"
+    },
+    {
+      "id": "P1-CONTENT-70-30-SPLIT-001",
+      "title": "内容70/30法则：30%产出转化内容（案例研究/工具深度评测/工作流教程），不只写排名内容",
+      "description": "根据StackCraft AI Affiliate Playbook，70%排名内容获流量但转化低，30%转化内容（案例研究、带截图的dashboard帖、单工具深度评测、how-I-would-do-X）转化率高3-5倍。窗口3需确保每10篇文章中有3篇是转化内容。",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "status": "pending",
+      "source": "AI工具站成功案例学习-StackCraft Playbook",
+      "created_at": "2026-09-26T11:20:00Z"
+    },
+    {
+      "id": "P1-MONETIZE-4NUMBER-AUDIT-001",
+      "title": "4数字漏斗审计：测量Capture/Engage/Click/Convert，识别瓶颈数字集中优化",
+      "description": "Pull 4 numbers: 访客→邮件订阅率(目标1.5-3%)、邮件打开率(35-50%)、打开→联盟链接点击率(8-12%)、点击→付费转化率(3-7%)。识别最差的瓶颈数字，未来2-3周所有优化能量集中在那里。不同时优化4个。",
+      "assigned_to": "窗口5",
+      "priority": "P1",
+      "status": "pending",
+      "source": "AI工具站成功案例学习-StackCraft 4-Number Audit",
+      "created_at": "2026-09-26T11:20:00Z"
+    },
+    {
+      "id": "P1-MONETIZE-WELCOME-SEQ-001",
+      "title": "建立5封欢迎邮件序列（产生60%联盟收入），锚定2-3个高EPC联盟计划",
+      "description": "E1立即交付lead magnet+提问回复；E2个人故事无联盟链接；E3首工具推荐嵌入具体用例；E4案例研究+数据证明；E5直接推荐+轻度紧迫感。每封邮件只1个CTA。只锚定3个联盟计划（品牌认知度>佣金比例）。",
+      "assigned_to": "窗口5",
+      "priority": "P1",
+      "status": "pending",
+      "source": "AI工具站成功案例学习-5-Email Welcome Sequence",
+      "created_at": "2026-09-26T11:20:00Z"
+    },
+    {
+      "id": "P1-MONETIZE-LEAD-MAGNET-001",
+      "title": "创建结果导向lead magnet替代'订阅newsletter'CTA，目标捕获率2%+",
+      "description": "不是'AI tools list'而是'The 7-Tool AI Stack That Replaces $3,200/Month in Software'。用交互式checklist/Notion模板/Make.com蓝图，不用PDF。放在top 3流量文章末尾inline form，不用sidebar。",
+      "assigned_to": "窗口5",
+      "priority": "P1",
+      "status": "pending",
+      "source": "AI工具站成功案例学习-Outcome-Promise Lead Magnet",
+      "created_at": "2026-09-26T11:20:00Z"
+    },
+    {
+      "id": "P1-OFFPAGE-REDDIT-COLDSTART-001",
+      "title": "Reddit冷启动策略：找绝望用户+写完美回复，不spam，提供真实价值",
+      "description": "在r/SideProject, r/Artificial, r/ChatGPT等subreddit找有真实痛点的帖子，写详细有帮助的回复，自然提及我们的工具。不隐藏失败，透明分享build过程。目标：每周5个高质量Reddit回复，每个带来10-50精准访客。",
+      "assigned_to": "窗口2",
+      "priority": "P1",
+      "status": "pending",
+      "source": "AI工具站成功案例学习-Reddit $0→$500MRR",
+      "created_at": "2026-09-26T11:20:00Z"
+    },
+    {
+      "id": "P2-GROWTH-COMMUNITY-FLYWHEEL-001",
+      "title": "建立社区×内容×反馈飞轮：用户展示区+社区互动，提升留存和回访",
+      "description": "参考Indie Hackers 0→100K/5月案例：用户展示区(submit AI projects)、Twitter shoutout tagging creators、社区互动。内容不再只是我们的，是社区驱动的。先从简单的用户提交功能开始。",
+      "assigned_to": "窗口6",
+      "priority": "P2",
+      "status": "completed",
+      "source": "AI工具站成功案例学习-Community Flywheel",
+      "created_at": "2026-09-26T11:20:00Z",
+      "completed_at": "2026-09-26 12:16:59",
+      "completed_by": "窗口6"
+    },
+    {
+      "id": "P2-ANALYTICS-WEEKLY-20MIN-001",
+      "title": "建立每周20分钟测量循环：每周一固定测4数字，识别瓶颈集中优化",
+      "description": "每周一固定20分钟：1.捕获率(订阅/访客目标1.5%+)；2.欢迎序列完成率+点击率(目标50%完成/25%+点击)；3.周报联盟链接点击率(目标8%+)；4.各计划转化率(30天)。识别瓶颈数字，集中优化2-3周。",
+      "assigned_to": "窗口4",
+      "priority": "P2",
+      "status": "pending",
+      "source": "AI工具站成功案例学习-Weekly 20-Min Measurement Loop",
+      "created_at": "2026-09-26T11:20:00Z"
+    },
+    {
+      "id": "P2-QA-LHCI-SETUP",
+      "title": "添加Lighthouse CI性能/SEO分数断言到GitHub Actions",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "description": "在.github/workflows/添加lighthouse-ci.yml，对首页/工具页/文章页3个模板做性能分数断言(performance>=80, seo>=90)，生产部署后用unlighthouse-ci全站扫描"
+    },
+    {
+      "id": "P2-A11Y-AXE-CI",
+      "title": "在Playwright E2E中添加axe-core无障碍断言",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "description": "用@axe-core/playwright对首页和工具详情页检查WCAG 2.2 AA违规，violations>0则CI失败"
     }
   ],
   "milestones": [

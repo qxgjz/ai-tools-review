@@ -27,6 +27,7 @@ import toolsData from "@/data/tools-index.json";
 import postsData from "@/data/posts.json";
 import type { Tool } from "@/types";
 import { FadeIn } from "@/components/animations";
+import { SubmitToolCTA } from "@/components/community/SubmitToolCTA";
 import { calculateScoreResult } from "@/lib/scoring";
 import { OrganizationSchema } from "@/components/seo/Schema";
 
@@ -145,6 +146,7 @@ export default function HomePage() {
                     AI Tool Matcher
                   </Link>
                 </div>
+                <p className="text-xs text-zinc-500 mt-3">Updated daily · No paid rankings · 100% editorially independent</p>
               </FadeIn>
 
               {/* Stats - left aligned, not centered */}
@@ -187,7 +189,7 @@ export default function HomePage() {
                       <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
                       <div className="text-xs text-zinc-500 truncate mb-2">{tool.vendor}</div>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-emerald-400 font-bold text-lg">{tool.total.toFixed(1)}</span>
+                        <span className="text-emerald-400 font-bold text-lg tabular-nums">{tool.total.toFixed(1)}</span>
                         <span className="text-xs text-zinc-600">/10</span>
                       </div>
                     </Link>
@@ -228,7 +230,7 @@ export default function HomePage() {
                         <div className="text-xs text-zinc-500 truncate">{tool.vendor}</div>
                       </div>
                       <div className="text-right">
-                        <div className="text-xl font-bold text-emerald-400">{tool.total.toFixed(1)}</div>
+                        <div className="text-xl font-bold text-emerald-400 tabular-nums">{tool.total.toFixed(1)}</div>
                         <div className="text-[10px] text-zinc-500">/10</div>
                       </div>
                       <div className="w-6 h-6 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
@@ -876,6 +878,11 @@ export default function HomePage() {
             <ArrowRight className="w-4 h-4" />
           </Link>
         </div>
+      </section>
+
+      {/* === COMMUNITY FLYWHEEL: Submit Tool CTA (P2-GROWTH-COMMUNITY-FLYWHEEL-001) === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 pb-12">
+        <SubmitToolCTA />
       </section>
 
       {/* === NEWSLETTER === */}

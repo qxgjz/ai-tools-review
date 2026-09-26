@@ -1,5 +1,56 @@
 [
   {
+    "timestamp": "2026-09-26 12:16:59",
+    "window": "窗口6",
+    "type": "ux_optimization",
+    "commit": "19c4054acf3a9bec3d67dab311ff9979b9686799",
+    "changes": [
+      "FadeIn + ToolCard: add prefers-reduced-motion (framer-motion useReducedMotion hook)",
+      "ToolCard: hover shadow-md -> shadow-lg, score numbers tabular-nums",
+      "Tool detail page: big score + 6 dimension scores tabular-nums",
+      "Tool detail page: remove user-visible emoji (star/check/warning entities)",
+      "Tool detail page: fix light-mode contrast (zinc-400 -> zinc-500 on 2 text blocks)",
+      "Homepage: add social proof line under hero CTA (Updated daily / No paid rankings / 100% independent)",
+      "Homepage: mobile + desktop Top3 scores tabular-nums",
+      "P2 community flywheel: SubmitToolCTA component + /submit page (frontend form)"
+    ],
+    "quality_gate": {
+      "no_business_logic_change": true,
+      "cta_min_44px": true,
+      "contrast_aa": "fixed 2 light-mode zinc-400 blocks",
+      "mobile_desktop": true
+    },
+    "status": "deployed_pending_verification"
+  },
+  {
+    "date": "2026-09-26",
+    "time": "11:37",
+    "window": "窗口6",
+    "type": "ux-optimization",
+    "commit": "8364a11570c4e601e78361cde90db749e512bb9d",
+    "changes": [
+      "修复英文站残留中文UI：首页移动端快速入口芯片改为 Quick Access + AI Chat/AI Image/AI Coding/AI Writing/AI Video/Reviews（去掉emoji）",
+      "修复英文站残留中文UI：工具详情页主CTA信任行改为 Independently tested / Transparent scoring / No paid rankings",
+      "新建 iteration_center/ux_audit.md 记录全面UX审计结果"
+    ],
+    "files_modified": [
+      "app/page.tsx",
+      "app/tools/[slug]/page.tsx",
+      "iteration_center/ux_audit.md"
+    ],
+    "quality_gate": {
+      "3_pages_200": true,
+      "styles_in_html": true,
+      "no_business_logic_change": true,
+      "cta_touch_target_44px": true,
+      "contrast_aa": true,
+      "mobile_desktop_ok": true
+    },
+    "verification": "线上3页200（首页/tool/anything-llm/blog/best-paid-ai-tools），HTML含Quick Access/AI Chat/Independently tested，不含快速入口/编辑独立测试/评分透明",
+    "learning_topic": "i18n一致性与设计系统（SVG icon替代emoji）",
+    "learning_points": 8
+  },
+  {
     "date": "2026-09-25",
     "time": "07:30",
     "window": "窗口6",

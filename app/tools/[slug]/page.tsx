@@ -378,12 +378,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">Free Tier Available</span>}
               {(tool as any).no_credit_card && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">No Credit Card</span>}
               {(tool as any).free_quota && <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md text-xs font-semibold">Free: {(tool as any).free_quota}</span>}
-              {(tool as any).hidden_cost && <span className="px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-md text-xs font-semibold">⚠ {(tool as any).hidden_cost}</span>}
+              {(tool as any).hidden_cost && <span className="px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-md text-xs font-semibold">Hidden cost: {(tool as any).hidden_cost}</span>}
             </div>
           </div>
           <div className="flex flex-row sm:flex-col items-baseline sm:items-end gap-1 sm:gap-0">
             <div className="flex items-baseline gap-1">
-              <span className="text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none">{total.toFixed(1)}</span>
+              <span className="text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none tabular-nums">{total.toFixed(1)}</span>
               <span className="text-sm text-zinc-400 dark:text-zinc-500">/10</span>
             </div>
             <div className="text-xs text-zinc-400 dark:text-zinc-500">Overall Score</div>
@@ -398,7 +398,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 : (tool.hasFreeTier ? `Try ${tool.name} Free` : `Start ${tool.name} Free Trial`);
               const sub = hasRecommendedPaid
                 ? "We tested 12 AI tools, this is the best value for money"
-                : "✅ Tested by our team · No credit card required for free plan";
+                : "Tested by our team · No credit card required for free plan";
               return (
                 <>
                   <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 dark:bg-emerald-500 dark:hover:bg-emerald-400 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
@@ -417,7 +417,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               );
             })()}
             {tool.affiliateUrl && (
-              <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
+              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
                 <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
               </p>
             )}
@@ -558,7 +558,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                       {DIMENSION_LABELS[dim]}
                       <span className="ml-2 text-xs text-zinc-400 dark:text-zinc-500">Weight {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</span>
                     </span>
-                    <span className="text-sm font-bold text-zinc-900 dark:text-white">{score.toFixed(1)}</span>
+                    <span className="text-sm font-bold text-zinc-900 dark:text-white tabular-nums">{score.toFixed(1)}</span>
                   </div>
                   <div className="h-2 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
                     <div className="h-full rounded-full bg-emerald-500 transition-all duration-300" style={{ width: `${percent}%` }} />
@@ -886,7 +886,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}
           </a>
           <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">
-            ⭐ Rated {total.toFixed(1)}/10 by our editorial team · No affiliate bias
+            Rated {total.toFixed(1)}/10 by our editorial team · No affiliate bias
           </p>
           {tool.affiliateUrl && tool.hasFreeTier && (
             <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">No credit card required · Cancel anytime</p>
@@ -1097,14 +1097,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <Giscus />
       </section>
 
-      <div className="mt-8 text-center text-xs text-zinc-400 dark:text-zinc-500">
+      <div className="mt-8 text-center text-xs text-zinc-500 dark:text-zinc-400">
         Scores are based on our public evaluation methodology. Affiliate link revenue does not affect scores. Last updated {tool.lastUpdated}.
       </div>
 
       {/* Mobile sticky CTA — thumb zone: always reachable, hidden on desktop */}
       {(tool.officialUrl || tool.affiliateUrl) && (
         <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] z-40 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
-          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400 mb-2">&#11088; {total.toFixed(1)}/10 &middot; Grade {grade}</p>
+          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400 mb-2">{total.toFixed(1)}/10 &middot; Grade {grade}</p>
           <a
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"
