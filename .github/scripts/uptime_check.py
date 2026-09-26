@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Uptime monitor: check if aitoolcrux.com is up. Send email only if down.
+"""Uptime + content integrity monitor for aitoolcrux.com.
+Checks HTTP status AND that key pages actually render expected content.
+Sends alert email only if down or content missing.
 Uses only Python stdlib (urllib) — no pip dependencies needed on CI runner.
 """
 import os
@@ -15,7 +17,51 @@ SITE_URL = "https://www.aitoolcrux.com"
 EXPECTED_STATUS = {200, 308}
 QQ_SMTP_SERVER = "smtp.qq.com"
 QQ_SMTP_PORT = 465
-USER_AGENT = "Mozilla/5.0 (compatible; AIToolCrux-UptimeBot/1.0)"
+USER_AGENT = "Mozilla/5.0 (compatible; AIToolCrux-UptimeBot/2.0)"
+
+# Pages to check: (path, list of required content markers)
+# If any marker is missing, alert fires
+CONTENT_CHECKS = [
+    ("/", ["aitoolcrux", "AI", "tool"]),
+    # Blog article — must have article body with prose class AND actual content text
+    ("/blog/perplexity-ai-review-2026", ["prose", "Perplexity"]),
+    # Tool detail page
+    ("/tools/perplexity-ai", ["Perplexity", "AI"]),
+    # Blog listing
+    ("/blog", ["blog", "article"]),
+]
+
+
+def fetch_page(path: str, timeout: int = 30) -> tuple[int, str]:
+    """Fetch a page, return (status_code, html_content)."""
+    url = SITE_URL + path
+    req = Request(url, headers={"User-Agent": USER_AGENT})
+    with urlopen(req, timeout=timeout) as resp:
+        status = resp.getcode()
+        # Read up to 500KB — enough for content checks without memory issues
+        html = resp.read(500_000).decode("utf-8", errors="replace")
+    return status, html
+
+
+def check_content(path: str, markers: list[str]) -> tuple[bool, str]:
+    """Check that page returns 200 and contains all required markers."""
+    try:
+        status, html = fetch_page(path)
+    except HTTPError as e:
+        return False, f"HTTP {e.code} on {path}"
+    except URLError as e:
+        return False, f"Connection error on {path}: {e.reason}"
+    except Exception as e:
+        return False, f"Unexpected error on {path}: {e}"
+
+    if status not in EXPECTED_STATUS:
+        return False, f"HTTP {status} on {path} (expected 200/308)"
+
+    missing = [m for m in markers if m.lower() not in html.lower()]
+    if missing:
+        return False, f"Content missing on {path}: {', '.join(missing)} (page size: {len(html)} bytes)"
+
+    return True, f"OK {path} ({len(html)} bytes, all markers found)"
 
 
 def send_alert(email_user: str, auth_code: str, error_msg: str):
@@ -23,15 +69,16 @@ def send_alert(email_user: str, auth_code: str, error_msg: str):
     msg = MIMEMultipart()
     msg["From"] = email_user
     msg["To"] = email_user
-    msg["Subject"] = "⚠️ 网站宕机告警 - AIToolCrux"
+    msg["Subject"] = "⚠️ 网站异常告警 - AIToolCrux"
 
     body = f"""
     <html><body>
-    <h2 style="color:red;">⚠️ 网站宕机告警</h2>
+    <h2 style="color:red;">⚠️ 网站异常告警</h2>
     <p><strong>网站：</strong>{SITE_URL}</p>
     <p><strong>时间：</strong>{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
-    <p><strong>错误：</strong>{error_msg}</p>
-    <p>请立即检查Vercel部署状态！</p>
+    <p><strong>问题：</strong></p>
+    <pre style="background:#f5f5f5;padding:10px;border-radius:4px;">{error_msg}</pre>
+    <p>请立即检查Vercel部署状态和最近的代码提交！</p>
     </body></html>
     """
     msg.attach(MIMEText(body, "html", "utf-8"))
@@ -43,7 +90,6 @@ def send_alert(email_user: str, auth_code: str, error_msg: str):
         server.quit()
         print(f"✅ Alert email sent to {email_user}")
     except Exception as e:
-        # Email failure should NOT mark the uptime check as failed
         print(f"⚠️ Failed to send alert email (non-fatal): {e}")
 
 
@@ -51,42 +97,32 @@ def main():
     email_user = os.environ.get("QQ_MAIL_USER", "")
     auth_code = os.environ.get("QQ_MAIL_AUTH_CODE", "")
 
-    print(f"Checking uptime: {SITE_URL}")
-    req = Request(SITE_URL, headers={"User-Agent": USER_AGENT})
-    try:
-        with urlopen(req, timeout=15) as resp:
-            status = resp.getcode()
-        if status in EXPECTED_STATUS:
-            print(f"✅ Site is UP (HTTP {status})")
-            return
+    all_ok = True
+    all_results = []
+
+    for path, markers in CONTENT_CHECKS:
+        ok, msg = check_content(path, markers)
+        all_results.append(msg)
+        if not ok:
+            all_ok = False
+            print(f"❌ {msg}")
         else:
-            error = f"HTTP {status} (expected 200 or 308)"
-            print(f"❌ Site DOWN: {error}")
-            if email_user and auth_code:
-                send_alert(email_user, auth_code, error)
-            else:
-                print("⚠️ No email credentials configured, skipping alert")
-    except HTTPError as e:
-        error = f"HTTP {e.code} (expected 200 or 308)"
-        print(f"❌ Site DOWN: {error}")
-        if email_user and auth_code:
-            send_alert(email_user, auth_code, error)
-        else:
-            print("⚠️ No email credentials configured, skipping alert")
-    except URLError as e:
-        error = f"Connection error: {e.reason}"
-        print(f"❌ Site DOWN: {error}")
-        if email_user and auth_code:
-            send_alert(email_user, auth_code, error)
-        else:
-            print("⚠️ No email credentials configured, skipping alert")
-    except Exception as e:
-        error = f"Unexpected error: {e}"
-        print(f"❌ Site DOWN: {error}")
-        if email_user and auth_code:
-            send_alert(email_user, auth_code, error)
-        else:
-            print("⚠️ No email credentials configured, skipping alert")
+            print(f"✅ {msg}")
+
+    if all_ok:
+        print(f"\n✅ All {len(CONTENT_CHECKS)} pages passed content integrity check")
+        return
+
+    error_summary = "\n".join(all_results)
+    print(f"\n❌ Content integrity check FAILED:\n{error_summary}")
+
+    if email_user and auth_code:
+        send_alert(email_user, auth_code, error_summary)
+    else:
+        print("⚠️ No email credentials configured, skipping alert")
+
+    # Exit with non-zero so GitHub Actions marks the run as failed
+    sys.exit(1)
 
 
 if __name__ == "__main__":
