@@ -192,6 +192,115 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ## 待补充
 
+## [2026-09-27] Next.js App Router数据获取与缓存策略深度实战
+
+### 知识点1：fetch缓存的4种模式
+Next.js App Router中fetch有4种缓存模式：`force-cache`（默认，永久缓存直到revalidate）、`no-store`（每次请求都重新获取，不缓存）、`revalidate: N`（时间驱动重新验证，N秒后过期）、`tags: ['xxx']`（标签驱动按需重新验证）。默认情况下GET请求会被永久缓存，这在Next.js 15中已改为默认不缓存（需显式指定force-cache）。
+来源：https://nextjs.org/docs/14/app/api-reference/functions/fetch
+交叉验证：https://nextjs.org/docs/14/app/building-your-application/caching
+
+### 知识点2：Data Cache vs Full Route Cache vs Router Cache三层缓存架构
+Next.js有三层缓存：①Data Cache（fetch结果缓存，持久化到磁盘，跨部署保留）②Full Route Cache（渲染后的HTML/RSC payload缓存，构建时生成，revalidate后失效）③Router Cache（客户端导航缓存，内存中，30秒自动过期或revalidatePath/revalidateTag触发失效）。理解这三层才能正确诊断"数据不更新"问题。
+来源：https://nextjs.org/docs/14/app/building-your-application/caching
+交叉验证：https://vercel.com/docs/caching/runtime-cache/data-cache
+
+### 知识点3：时间驱动重新验证（ISR）
+使用`fetch(url, { next: { revalidate: 3600 } })`设置缓存生命周期（秒），或在layout/page中使用`export const revalidate = 3600`。ISR允许在不重新构建整个站点的情况下更新静态内容，首次请求触发后台重新渲染，用户立即看到旧页面（stale-while-revalidate）。适合内容更新不频繁但需要定期刷新的页面。
+来源：https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration
+交叉验证：https://nextjs.org/docs/14/app/building-your-application/data-fetching/fetching-caching-and-revalidating
+
+### 知识点4：按需重新验证（On-Demand Revalidation）
+`revalidateTag('tag')`和`revalidatePath('/path')`可在Server Action或Route Handler中调用，立即失效对应缓存。revalidateTag按fetch标签失效（可跨多个路由），revalidatePath按路径失效（包含该路径下所有子路由）。必须在Server Component/Server Action/Route Handler中调用，不能在Client Component中直接调用。
+来源：https://nextjs.org/docs/14/app/building-your-application/data-fetching/fetching-caching-and-revalidating
+交叉验证：https://vercel.com/docs/caching/runtime-cache/data-cache
+
+### 知识点5：Cache Tags的最佳实践
+每个fetch可打最多128个标签，每个标签最长256字符。建议按资源类型打标签（如`posts`、`tools`、`comparisons`），而非按单个页面。在CMS webhook或数据更新后调用`revalidateTag('posts')`即可批量失效所有相关页面。标签是跨路由共享的，一个标签可关联多个fetch请求。
+来源：https://nextjs.org/docs/14/app/api-reference/functions/fetch
+交叉验证：https://nextjs.org/docs/app/api-reference/functions/revalidateTag
+
+### 知识点6：dynamic vs force-dynamic vs force-static
+`export const dynamic = 'force-dynamic'`强制页面每次请求动态渲染（不使用Full Route Cache），等同于所有fetch使用no-store。`export const dynamic = 'force-static'`强制静态渲染（即使有cookies/headers/dynamic API调用也会报错）。默认auto模式根据是否使用动态API自动决定。对内容站点应优先静态+ISR，仅搜索/用户个性化页面用动态。
+来源：https://nextjs.org/docs/14/app/api-reference/file-conventions/route-segment-config
+交叉验证：https://nextjs.org/docs/14/app/building-your-application/rendering/server-components
+
+### 知识点7：unstable_cache用于非fetch数据缓存
+当数据来源不是fetch（如直接读数据库、SDK调用、文件读取）时，使用`unstable_cache(fn, ['key'], { revalidate: 3600, tags: ['xxx'] })`包装。这与fetch缓存共享同一Data Cache层，支持revalidateTag失效。注意函数必须是async且返回可序列化数据。Next.js 15中已更名为`cache`（稳定版）。
+来源：https://nextjs.org/docs/14/app/api-reference/functions/unstable_cache
+交叉验证：https://nextjs.org/docs/app/getting-started/caching-and-revalidating
+
+### 知识点8：Next.js 15缓存行为变更（重要升级参考）
+Next.js 15将fetch默认缓存从`force-cache`改为`no-store`（不再默认缓存GET请求），Route Handler默认不再缓存响应，Router Cache从30秒缩短到5分钟（但仍可配置）。升级到15时需要显式为需要缓存的fetch添加`cache: 'force-cache'`或`revalidate`，否则所有页面变为动态渲染，构建时间和服务器负载会显著增加。
+来源：https://jsmanifest.com/nextjs-15-caching-changes
+交叉验证：https://nextjs.org/docs/app/getting-started/caching-and-revalidating
+
+### 知识点9：generateStaticParams与ISR的配合
+动态路由页面使用`generateStaticParams`在构建时预渲染指定路径，未预渲染的路径默认404（需设置`dynamicParams = true`才允许运行时渲染）。配合ISR（revalidate）可实现"构建时预渲染热门页面+运行时按需渲染长尾页面+后台定期更新"的混合模式。对533个工具页，建议generateStaticParams返回全部slug实现全量SSG。
+来源：https://nextjs.org/docs/14/app/api-reference/functions/generate-static-params
+交叉验证：https://nextjs.org/docs/app/building-your-application/data-fetching/incremental-static-regeneration
+
+### 知识点10：缓存失效的级联效应
+调用revalidateTag/revalidatePath会同时失效：①Data Cache中匹配的fetch条目 ②Full Route Cache中依赖这些数据的页面 ③Router Cache中对应路径。但Router Cache的失效需要用户触发导航（router.refresh()或revalidatePath在Server Action中自动触发）。纯API调用revalidateTag不会立即更新已打开页面的客户端缓存，需要刷新或重新导航。
+来源：https://nextjs.org/docs/14/app/building-your-application/caching
+交叉验证：https://docs.w3cub.com/nextjs/app/building-your-application/caching
+
+### 知识点11：Vercel上的Data Cache持久化
+在Vercel平台上，Data Cache持久化到ISR缓存（跨部署保留，除非使用`?x-vercel-cache=purge`或重新部署时设置了缓存清除）。Full Route Cache在每次部署时自动清除。本地开发环境（next dev）不使用Data Cache和Full Route Cache，所有fetch都是no-store，这就是为什么"开发环境正常但生产数据不更新"的常见原因。
+来源：https://vercel.com/docs/caching/runtime-cache/data-cache
+交叉验证：https://nextjs.org/docs/14/app/building-your-application/caching
+
+### 知识点12：缓存调试方法
+使用`x-vercel-cache`响应头判断Data Cache状态（HIT/MISS/STALE/BYPASS）。在fetch中添加`next: { revalidate: 0 }`临时禁用缓存排查问题。使用`?x-vercel-cache=purge`URL参数清除Vercel ISR缓存。在Vercel Dashboard的Functions日志中查看缓存命中情况。注意：`cache: 'no-store'`和`revalidate: 0`效果相同，但语义不同（前者完全不缓存，后者缓存0秒即每次重新验证）。
+来源：https://vercel.com/docs/caching/runtime-cache/data-cache
+交叉验证：https://nextjs.org/docs/14/app/api-reference/functions/fetch
+
+### 落地计划
+1. **P1-PERF-CACHE-AUDIT-001**：审计当前项目所有fetch调用的缓存策略，标记哪些应该用force-cache+revalidate、哪些应该no-store。项目当前是纯SSG（JSON import），但API路由（ga4-proxy、google-search等）使用了fetch，需要检查缓存配置。
+2. **P1-PERF-ISR-TOOLS-001**：为tools/[slug]页面评估是否需要ISR（当前全量SSG，533个工具构建时间长）。如果未来接入CMS，使用generateStaticParams+revalidate=86400（每日更新）。
+3. **P2-PERF-CACHE-TAGS-001**：为API路由的fetch添加cache tags（如`gsc-data`、`ga4-data`），在数据更新后通过webhook调用revalidateTag。
+4. **P2-PERF-NEXT15-CACHE-001**：升级Next.js 15前，先为所有需要缓存的fetch显式添加`cache: 'force-cache'`，避免升级后全部变为动态渲染。
+5. **P2-PERF-CACHE-DEBUG-001**：在Vercel上检查x-vercel-cache头，确认API路由的缓存命中率，对低命中率的路由优化缓存策略。
+
+
+---
+
+## [2026-09-26] 前端工程化：TypeScript严格模式与类型安全深度实战（12知识点）
+
+**学习背景**：项目tsconfig已开启strict:true，但代码库仍有约117处any类型（主要在API路由、数据展示页面）。第102轮消除了10处"as any"，剩余作为技术债。本次系统学习严格模式全量配置和any消除方法论。
+
+**知识点1：strict:true是7个编译器选项的集合——noImplicitAny+strictNullChecks+strictFunctionTypes+strictBindCallApply+strictPropertyInitialization+noImplicitThis+alwaysStrict**。`"strict": true`一键开启全部7项，但可单独关闭某一项。最核心的两个是`noImplicitAny`（禁止隐式any，函数参数/返回值必须有类型或可推断）和`strictNullChecks`（null/undefined不属于任何类型，必须显式联合）。AIToolCrux的tsconfig已开启strict，还额外添加了noFallthroughCasesInSwitch和noImplicitOverride。（来源：https://www.typescriptlang.org/docs/handbook/2/basic-types.html + https://www.typescriptlang.org/tsconfig/）
+
+**知识点2：any是类型检查的"逃生舱"——any出现的地方TypeScript完全放弃检查，应优先用unknown替代**。`any`允许访问任意属性、调用任意方法、赋值给任意类型，完全绕过类型系统。`unknown`是any的类型安全版本：任何值可赋给unknown，但unknown不能直接使用，必须先通过类型守卫（typeof/instanceof/自定义type guard）收窄。规则：API返回值、JSON.parse、第三方库未类型化的入口用unknown而非any。AIToolCrux的117处any中，API路由（ga4-proxy、google-search等）的响应数据应改为unknown+类型守卫。（来源：https://www.typescriptlang.org/docs/handbook/2/everyday-types.html + https://www.typescriptlang.org/docs/handbook/release-notes/typescript-3-0 + https://typescript-eslint.io/rules/no-explicit-any/）
+
+**知识点3：strictNullChecks开启后，null和undefined不再是任何类型的子类型——必须用联合类型显式声明**。未开启时，`let s: string = null`合法；开启后报错。正确写法：`let s: string | null = null`。可选属性`name?: string`等价于`name: string | undefined`。可选链`?.`和空值合并`??`是strictNullChecks下的必备工具。AIToolCrux的toolsData.find()返回`Tool | undefined`，代码中用`as Tool`断言跳过了undefined检查，应改用`if (!tool) notFound()`（已在工具详情页实现）。（来源：https://www.typescriptlang.org/docs/handbook/2/basic-types.html + https://www.typescriptlang.org/docs/handbook/advanced-types.html）
+
+**知识点4：类型收窄（Narrowing）是TypeScript类型安全的核心机制——typeof/instanceof/in/真值检查/判别联合均可收窄**。TypeScript通过控制流分析自动收窄类型：①`typeof x === "string"`收窄为string；②`x instanceof Foo`收窄为Foo实例；③`"prop" in x`检查属性存在；④`if (x)`真值检查收窄排除null/undefined/0/""；⑤判别联合（discriminated union）通过共同字面量属性收窄。AIToolCrux的alternatives/page.tsx用内联类型替代any后，应通过判别联合处理不同数据形态。（来源：https://www.typescriptlang.org/docs/handbook/2/narrowing.html）
+
+**知识点5：判别联合（Discriminated Union）是处理复杂状态的最佳模式——用共同字面量属性+exhaustive check替代any**。模式：定义多个接口，每个都有一个共同的字面量类型属性（如`kind: "circle"` | `kind: "square"`），联合后通过switch(kind)收窄。配合`never`类型实现exhaustive check（遗漏case时编译报错）。示例：`type Result = {status: "success", data: T} | {status: "error", error: string}`。AIToolCrux的API路由响应可用判别联合替代any，搜索组件的loading/success/error状态也适用。（来源：https://www.typescriptlang.org/docs/handbook/2/narrowing.html + https://www.typescriptlang.org/docs/handbook/unions-and-intersections.html）
+
+**知识点6：useUnknownInCatchVariables（TS 4.4+，strict包含）——catch子句变量从any变为unknown，必须先收窄才能使用**。开启前：`catch (e) { e.message }`合法（e是any）；开启后：e是unknown，`e.message`报错。正确写法：`catch (e) { if (e instanceof Error) console.log(e.message); else console.log(String(e)); }`。或用工具函数：`function isError(e: unknown): e is Error { return e instanceof Error; }`。AIToolCrux的API路由中如有try/catch，应确认catch变量处理正确。（来源：https://www.typescriptlang.org/docs/handbook/release-notes/typescript-4-4.html）
+
+**知识点7：noUncheckedIndexedAccess（严格索引访问）——数组/对象索引访问结果自动加undefined，防止arr[0]崩溃**。默认`const x = arr[0]`类型是T（假设一定存在）；开启后是`T | undefined`，强制处理越界。这是比strict更严格的选项，不在strict集合中，需单独开启。代价：所有数组访问都需undefined检查，代码量增加。AIToolCrux的toolsData.find()和数组索引较多，评估后暂不开启（第102轮审计结论），但新代码应手动处理undefined。（来源：https://www.typescriptlang.org/tsconfig/ + https://www.typescriptlang.org/docs/handbook/2/basic-types.html）
+
+**知识点8：exactOptionalPropertyTypes（精确可选属性类型）——可选属性不能显式赋值undefined，必须省略**。默认`name?: string`允许`name = undefined`；开启后只能省略属性或赋值string。这防止了"属性存在但值为undefined"和"属性不存在"的混淆。与React组件props配合良好。不在strict集合中，需单独开启。AIToolCrux的组件props定义可评估是否开启。（来源：https://www.typescriptlang.org/tsconfig/）
+
+**知识点9：typescript-eslint的strictTypeChecked配置——利用类型信息做更深层的lint，no-unsafe-*系列规则**。`@typescript-eslint/no-unsafe-assignment`（禁止any赋值）、`no-unsafe-argument`（禁止any参数调用）、`no-unsafe-member-access`（禁止any属性访问）、`no-unsafe-call`（禁止any调用）、`no-unnecessary-condition`（禁止永远为真/假的条件）。这些规则需要parserOptions.project指向tsconfig，比纯语法检查更严格。AIToolCrux的eslint.config.mjs已添加@typescript-eslint/no-explicit-any: warn，可升级为strictTypeChecked并逐步从warn到error。（来源：https://typescript-eslint.io/users/configs/ + https://typescript-eslint.io/rules/ + https://typescript-eslint.io/blog/avoiding-anys/）
+
+**知识点10：any消除的渐进式策略——不要一次性全改，按风险分层处理**。策略：①第一层：函数参数和返回值的隐式any（noImplicitAny已自动拦截）；②第二层：`as any`类型断言（改为`as unknown as T`或具体类型）；③第三层：显式`: any`标注（改为unknown+类型守卫或具体接口）；④第四层：第三方库无类型（写d.ts声明文件或用@ts-expect-error注释）。每改一批跑tsc+测试，确保不破坏功能。AIToolCrux的117处any按此策略：先消除数据展示页面的`as any`（低风险），再处理API路由（中风险，需验证响应结构）。（来源：https://www.typescriptlang.org/docs/handbook/migrating-from-javascript.html + https://typescript-eslint.io/blog/avoiding-anys/）
+
+**知识点11：类型声明文件（.d.ts）是为无类型第三方库/全局变量补类型的标准方式——不要用any绕过**。为未类型化的模块创建`declare module "xxx" { ... }`，为全局变量创建`declare global { ... }`。放在`types/`目录并在tsconfig的include中引用。@ts-expect-error用于临时抑制已知错误（升级后会报错提醒移除），比@ts-ignore好（@ts-ignore会抑制后续所有错误）。AIToolCrux的Crisp/Speed Insights等第三方脚本如有全局变量，应写d.ts而非any。（来源：https://www.typescriptlang.org/docs/handbook/declaration-files/do-s-and-don-ts.html + https://www.typescriptlang.org/docs/handbook/2/basic-types.html）
+
+**知识点12：verbatimModuleSyntax（TS 5.0+）——强制区分type import和value import，防止类型被误打包**。开启后，类型导入必须用`import type { Foo }`或`import { type Foo }`，值导入用`import { Foo }`。好处：①打包工具（esbuild/swc）可安全移除纯类型导入，减小bundle；②防止循环依赖中的类型引用导致运行时错误；③与isolatedModules配合确保单文件转译安全。AIToolCrux的Next.js项目用SWC/Turbopack，开启verbatimModuleSyntax可优化bundle。需检查现有import语句是否混用类型和值。（来源：https://www.typescriptlang.org/tsconfig/ + https://www.typescriptlang.org/docs/handbook/release-notes/typescript-5-0.html）
+
+**落地计划（下次迭代执行）**：
+1. 知识点2+10（unknown替代any+渐进式消除）→ 任务P1-QA-ANY-ELIMINATE-001：批量消除数据展示页面（blog/[slug]、tools/[slug]、alternatives、best-for）的`as any`和显式any，改为unknown+类型守卫或具体类型
+2. 知识点9（typescript-eslint strictTypeChecked）→ 任务P2-QA-ESLINT-STRICT-001：eslint.config.mjs升级为strictTypeChecked配置，no-explicit-any从warn升级为error，添加no-unsafe-*系列规则
+3. 知识点6（useUnknownInCatchVariables）→ 任务P2-QA-CATCH-UNKNOWN-001：审计所有API路由的catch子句，确保unknown类型正确收窄处理
+4. 知识点12（verbatimModuleSyntax）→ 任务P2-QA-VERBATIM-IMPORT-001：tsconfig开启verbatimModuleSyntax，修复所有类型/值导入混用
+5. 知识点11（.d.ts声明文件）→ 任务P2-QA-DTS-THIRDPARTY-001：为Crisp/Speed Insights/AdSense等第三方全局变量创建types/global.d.ts，消除window.any访问
+
+
+
 ---
 
 ## [2026-09-26] Core Web Vitals优化实战：LCP/INP/CLS深度优化（12知识点）

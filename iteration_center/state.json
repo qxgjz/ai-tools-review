@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-27T01:23:42.172727",
+  "last_updated": "2026-09-27T01:25:04.404970",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -2987,6 +2987,33 @@
       ],
       "source": "2026-09-26学习：TS严格模式知识点11",
       "created_at": "2026-09-26T23:18:24.451600"
+    },
+    {
+      "id": "P2-PERF-CACHE-TAGS-001",
+      "title": "为API路由fetch添加cache tags",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "为gsc-data/ga4-data等fetch添加tags，支持revalidateTag按需失效",
+      "created_at": "2026-09-27T01:25:04.404928"
+    },
+    {
+      "id": "P2-PERF-NEXT15-CACHE-001",
+      "title": "Next.js 15升级前缓存准备",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "为所有需要缓存的fetch显式添加cache: force-cache，避免15升级后全部动态渲染",
+      "created_at": "2026-09-27T01:25:04.404930"
+    },
+    {
+      "id": "P2-PERF-CACHE-DEBUG-001",
+      "title": "Vercel缓存命中率调试",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "检查x-vercel-cache头，优化低命中率路由的缓存策略",
+      "created_at": "2026-09-27T01:25:04.404932"
     }
   ],
   "milestones": [
