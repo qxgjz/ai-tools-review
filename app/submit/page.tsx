@@ -151,7 +151,7 @@ export default function SubmitPage() {
           <button
             type="submit"
             disabled={status === "submitting"}
-            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-700 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-[0.98] disabled:opacity-60"
+            className="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-[0.98] disabled:opacity-60"
           >
             {status === "submitting" ? (
               <>
