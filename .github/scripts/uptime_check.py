@@ -1,12 +1,13 @@
 #!/usr/bin/env python3
 """Uptime + content integrity monitor for aitoolcrux.com.
 Checks HTTP status AND that key pages actually render expected content.
-Sends alert email only if down or content missing.
+Sends alert email only if down or content missing (after retry).
 Uses only Python stdlib (urllib) — no pip dependencies needed on CI runner.
 """
 import os
 import smtplib
 import sys
+import time
 from datetime import datetime
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
@@ -17,36 +18,29 @@ SITE_URL = "https://www.aitoolcrux.com"
 EXPECTED_STATUS = {200, 308}
 QQ_SMTP_SERVER = "smtp.qq.com"
 QQ_SMTP_PORT = 465
-USER_AGENT = "Mozilla/5.0 (compatible; AIToolCrux-UptimeBot/2.0)"
+USER_AGENT = "Mozilla/5.0 (compatible; AIToolCrux-UptimeBot/2.1; +https://www.aitoolcrux.com)"
+MAX_RETRIES = 2
+RETRY_DELAY = 30  # seconds
 
 # Pages to check: (path, list of required content markers)
-# Markers must be specific to article BODY content, not just title/TOC
-# If any marker is missing, alert fires
 CONTENT_CHECKS = [
     ("/", ["aitoolcrux", "AI", "tool"]),
-    # Blog article — must have actual body content (not just title/TOC)
-    # "best AI search engine" only appears in article body, not in title or TOC
     ("/blog/perplexity-ai-review-2026", ["best AI search engine", "Key Takeaways", "Conclusion First"]),
-    # Tool detail page
     ("/tools/perplexity-ai", ["Perplexity", "AI"]),
-    # Blog listing
     ("/blog", ["blog", "article"]),
 ]
 
 
 def fetch_page(path: str, timeout: int = 30) -> tuple[int, str]:
-    """Fetch a page, return (status_code, html_content)."""
     url = SITE_URL + path
-    req = Request(url, headers={"User-Agent": USER_AGENT})
+    req = Request(url, headers={"User-Agent": USER_AGENT, "Accept": "text/html"})
     with urlopen(req, timeout=timeout) as resp:
         status = resp.getcode()
-        # Read up to 500KB — enough for content checks without memory issues
         html = resp.read(500_000).decode("utf-8", errors="replace")
     return status, html
 
 
 def check_content(path: str, markers: list[str]) -> tuple[bool, str]:
-    """Check that page returns 200 and contains all required markers."""
     try:
         status, html = fetch_page(path)
     except HTTPError as e:
@@ -54,7 +48,7 @@ def check_content(path: str, markers: list[str]) -> tuple[bool, str]:
     except URLError as e:
         return False, f"Connection error on {path}: {e.reason}"
     except Exception as e:
-        return False, f"Unexpected error on {path}: {e}"
+        return False, f"Unexpected error on {path}: {type(e).__name__}: {e}"
 
     if status not in EXPECTED_STATUS:
         return False, f"HTTP {status} on {path} (expected 200/308)"
@@ -63,11 +57,24 @@ def check_content(path: str, markers: list[str]) -> tuple[bool, str]:
     if missing:
         return False, f"Content missing on {path}: {', '.join(missing)} (page size: {len(html)} bytes)"
 
-    return True, f"OK {path} ({len(html)} bytes, all markers found)"
+    return True, f"OK {path} ({len(html)} bytes)"
+
+
+def check_with_retry(path: str, markers: list[str]) -> tuple[bool, str]:
+    """Retry up to MAX_RETRIES times before declaring failure."""
+    last_msg = ""
+    for attempt in range(1, MAX_RETRIES + 1):
+        ok, msg = check_content(path, markers)
+        if ok:
+            return True, msg
+        last_msg = msg
+        if attempt < MAX_RETRIES:
+            print(f"  Retry {attempt}/{MAX_RETRIES} after {RETRY_DELAY}s: {msg}")
+            time.sleep(RETRY_DELAY)
+    return False, last_msg
 
 
 def send_alert(email_user: str, auth_code: str, error_msg: str):
-    """Send alert email via QQ SMTP. Logs but does not exit on failure."""
     msg = MIMEMultipart()
     msg["From"] = email_user
     msg["To"] = email_user
@@ -80,7 +87,7 @@ def send_alert(email_user: str, auth_code: str, error_msg: str):
     <p><strong>时间：</strong>{datetime.now().strftime('%Y-%m-%d %H:%M:%S')}</p>
     <p><strong>问题：</strong></p>
     <pre style="background:#f5f5f5;padding:10px;border-radius:4px;">{error_msg}</pre>
-    <p>请立即检查Vercel部署状态和最近的代码提交！</p>
+    <p>已自动重试{MAX_RETRIES}次仍失败。请立即检查Vercel部署状态和最近的代码提交！</p>
     </body></html>
     """
     msg.attach(MIMEText(body, "html", "utf-8"))
@@ -103,7 +110,7 @@ def main():
     all_results = []
 
     for path, markers in CONTENT_CHECKS:
-        ok, msg = check_content(path, markers)
+        ok, msg = check_with_retry(path, markers)
         all_results.append(msg)
         if not ok:
             all_ok = False
@@ -116,14 +123,13 @@ def main():
         return
 
     error_summary = "\n".join(all_results)
-    print(f"\n❌ Content integrity check FAILED:\n{error_summary}")
+    print(f"\n❌ Content integrity check FAILED (after {MAX_RETRIES} retries):\n{error_summary}")
 
     if email_user and auth_code:
         send_alert(email_user, auth_code, error_summary)
     else:
         print("⚠️ No email credentials configured, skipping alert")
 
-    # Exit with non-zero so GitHub Actions marks the run as failed
     sys.exit(1)
 
 

@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-27T04:05:42.731498",
+  "last_updated": "2026-09-27T07:28:10.624199",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -3135,6 +3135,78 @@
       "status": "pending",
       "description": "2026-09-30安全更新(1 critical+2 high)，升级到15.5.27或16.3.7后验证无回归",
       "created_at": "2026-09-27T04:05:42.731456"
+    },
+    {
+      "id": "P2-ENG-PNPM-MIGRATE-001",
+      "title": "评估从npm迁移到pnpm",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "迁移package-lock.json到pnpm-lock.yaml，预期安装速度提升40%磁盘节省50%，验证Vercel构建兼容性",
+      "created_at": "2026-09-27T05:16:54.632577"
+    },
+    {
+      "id": "P2-ENG-TURBO-CI-001",
+      "title": "评估引入Turborepo优化CI",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "配置Turborepo+Remote Cache优化9个GitHub Actions workflow，先从lint+test任务试点，预期CI时间减少30-50%",
+      "created_at": "2026-09-27T05:16:54.632601"
+    },
+    {
+      "id": "P2-ENG-SHARED-LIB-001",
+      "title": "识别可提取的共享代码",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "评估types/index.ts(Tool/Post/Comparison)和lib/工具函数提取为packages/types和packages/utils的ROI",
+      "created_at": "2026-09-27T05:16:54.632603"
+    },
+    {
+      "id": "P2-ENG-MONOREPO-EVAL-001",
+      "title": "Monorepo架构迁移全面评估",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "输出单包→Monorepo(apps/web+packages/*+tools/*)迁移成本/收益分析报告，确定迁移触发阈值",
+      "created_at": "2026-09-27T05:16:54.632604"
+    },
+    {
+      "id": "P2-SEC-DEPENDABOT-SETUP-001",
+      "title": "配置Dependabot版本和安全更新",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "创建.github/dependabot.yml，npm生态weekly版本更新(生产/开发分组)+启用Security Updates",
+      "created_at": "2026-09-27T07:28:10.624132"
+    },
+    {
+      "id": "P2-SEC-OSV-SCANNER-CI-001",
+      "title": "CI集成OSV-Scanner漏洞扫描",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "在security.yml添加google/osv-scanner-action，与npm audit互补提高漏洞覆盖率",
+      "created_at": "2026-09-27T07:28:10.624161"
+    },
+    {
+      "id": "P2-SEC-SBOM-GENERATE-001",
+      "title": "配置SBOM生成",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "配置@cyclonedx/cyclonedx-npm生成CycloneDX SBOM，构建时作为artifact存储",
+      "created_at": "2026-09-27T07:28:10.624162"
+    },
+    {
+      "id": "P2-SEC-NPM-IGNORE-SCRIPTS-001",
+      "title": "CI中npm install添加--ignore-scripts",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "所有CI workflow的npm install添加--ignore-scripts防护install-time供应链攻击，验证无必须install脚本",
+      "created_at": "2026-09-27T07:28:10.624163"
     }
   ],
   "milestones": [

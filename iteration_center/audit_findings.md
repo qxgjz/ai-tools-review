@@ -2030,3 +2030,124 @@ GSC显示以下页面排名前15但0点击或极低CTR:
 ---
 
 *OpenSEO审计完成时间: 2026-09-26 22:03 | 审计ID: 1ccc56b0*
+
+---
+
+# 排版与FAQ检查报告
+生成时间: 2026-09-27 02:02:48
+抽样数量: 10 / 107 篇
+
+## 1. Perplexity Review 2026: Best AI Search Engine | AIToolCrux
+- slug: `perplexity-review-2026`
+- 字数: 57961
+- 标题结构: H1=0, H2=0, H3=0
+- 必要章节: 找到0/10 (无)
+- 图片数量: 3 (markdown=2, html=1)
+- FAQ数量: 4
+
+## 2. Dify vs Coze 2026: Which AI Agent Builder Wins? | AIToolCrux
+- slug: `dify-vs-coze-2026-comparison`
+- 字数: 9762
+- 标题结构: H1=0, H2=11, H3=4
+- 必要章节: 找到0/10 (无)
+- 图片数量: 0 (markdown=0, html=0)
+- FAQ数量: 0
+
+## 3. Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux
+- slug: `cursor-vs-windsurf-2026`
+- 字数: 12053
+- 标题结构: H1=0, H2=0, H3=0
+- 必要章节: 找到0/10 (无)
+- 图片数量: 2 (markdown=0, html=2)
+- FAQ数量: 0
+
+## 4. HeyGen Review 2026: Best AI Avatar Video Tool | AIToolCrux
+- slug: `heygen-review-2026`
+- 字数: 82392
+- 标题结构: H1=0, H2=0, H3=0
+- 必要章节: 找到0/10 (无)
+- 图片数量: 2 (markdown=2, html=0)
+- FAQ数量: 4
+
+## 5. Best AI Translation Tools 2026: 10 Languages | AIToolCrux
+- slug: `best-ai-translation-tools-2026`
+- 字数: 9702
+- 标题结构: H1=0, H2=8, H3=9
+- 必要章节: 找到1/10 (FAQ)
+- 图片数量: 0 (markdown=0, html=0)
+- FAQ数量: 0
+
+## 6. Best AI Project Management Tools 2026 | AIToolCrux
+- slug: `best-ai-project-management-tools-2026`
+- 字数: 14929
+- 标题结构: H1=0, H2=8, H3=16
+- 必要章节: 找到0/10 (无)
+- 图片数量: 0 (markdown=0, html=0)
+- FAQ数量: 0
+
+## 7. Best AI Automation Agents 2026: Top 10 Ranked | AIToolCrux
+- slug: `best-ai-automation-agents-2026`
+- 字数: 16560
+- 标题结构: H1=0, H2=9, H3=15
+- 必要章节: 找到0/10 (无)
+- 图片数量: 0 (markdown=0, html=0)
+- FAQ数量: 0
+
+## 8. Best AI Voice Generators 2026: Top 10 Ranked | AIToolCrux
+- slug: `best-ai-voice-generators-2026`
+- 字数: 16289
+- 标题结构: H1=0, H2=10, H3=15
+- 必要章节: 找到0/10 (无)
+- 图片数量: 0 (markdown=0, html=0)
+- FAQ数量: 0
+
+## 9. Best AI Idea Generators 2026: Top 7 for Startup | AIToolCrux
+- slug: `best-ai-idea-generators-2026`
+- 字数: 13117
+- 标题结构: H1=0, H2=11, H3=7
+- 必要章节: 找到0/10 (无)
+- 图片数量: 0 (markdown=0, html=0)
+- FAQ数量: 0
+
+## 10. Otter.ai Review 2026: Best AI Meeting | AIToolCrux
+- slug: `otter-ai-review-2026`
+- 字数: 81973
+- 标题结构: H1=0, H2=0, H3=0
+- 必要章节: 找到0/10 (无)
+- 图片数量: 2 (markdown=2, html=0)
+- FAQ数量: 4
+
+## 汇总
+- 排版问题总数: 20
+- FAQ问题总数: 7
+
+### 排版问题详情
+- perplexity-review-2026: 缺少H2章节标题
+- perplexity-review-2026: 必要章节不足(仅0个)
+- dify-vs-coze-2026-comparison: 必要章节不足(仅0个)
+- dify-vs-coze-2026-comparison: 文章中无图片
+- cursor-vs-windsurf-2026: 缺少H2章节标题
+- cursor-vs-windsurf-2026: 必要章节不足(仅0个)
+- heygen-review-2026: 缺少H2章节标题
+- heygen-review-2026: 必要章节不足(仅0个)
+- best-ai-translation-tools-2026: 必要章节不足(仅1个)
+- best-ai-translation-tools-2026: 文章中无图片
+- best-ai-project-management-tools-2026: 必要章节不足(仅0个)
+- best-ai-project-management-tools-2026: 文章中无图片
+- best-ai-automation-agents-2026: 必要章节不足(仅0个)
+- best-ai-automation-agents-2026: 文章中无图片
+- best-ai-voice-generators-2026: 必要章节不足(仅0个)
+- best-ai-voice-generators-2026: 文章中无图片
+- best-ai-idea-generators-2026: 必要章节不足(仅0个)
+- best-ai-idea-generators-2026: 文章中无图片
+- otter-ai-review-2026: 缺少H2章节标题
+- otter-ai-review-2026: 必要章节不足(仅0个)
+
+### FAQ问题详情
+- dify-vs-coze-2026-comparison: 无FAQ
+- cursor-vs-windsurf-2026: 无FAQ
+- best-ai-translation-tools-2026: 无FAQ
+- best-ai-project-management-tools-2026: 无FAQ
+- best-ai-automation-agents-2026: 无FAQ
+- best-ai-voice-generators-2026: 无FAQ
+- best-ai-idea-generators-2026: 无FAQ

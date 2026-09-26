@@ -265,7 +265,9 @@ export default function PostPage({ params }: PostPageProps) {
   // 计算Tools平均Rating（用于Review Schema）
   const avgScore = tool?.scores
     ? Object.values(tool.scores).reduce((a, b) => a + (typeof b === 'number' ? b : 0), 0) /
-      Object.keys(tool.scores).filter((k) => typeof (tool.scores as Record<string, number>)[k] === 'number').length
+      Object.keys(tool.scores).filter(
+        (k) => typeof (tool.scores as Record<string, number>)[k] === 'number',
+      ).length
     : 7.5;
 
   // 计算上一篇/下一篇文章
@@ -316,11 +318,7 @@ export default function PostPage({ params }: PostPageProps) {
                     url: 'https://www.aitoolcrux.com/about',
                   },
                   datePublished: post.date || post.publishedAt,
-                  dateModified:
-                    post.updatedAt ||
-                    post.lastUpdated ||
-                    post.date ||
-                    post.publishedAt,
+                  dateModified: post.updatedAt || post.lastUpdated || post.date || post.publishedAt,
                   publisher: {
                     '@type': 'Organization',
                     name: 'AIToolCrux',
@@ -474,7 +472,12 @@ export default function PostPage({ params }: PostPageProps) {
               <FAQSection
                 items={
                   post.faq && post.faq.length > 0
-                    ? post.faq.map((item: { q?: string; a?: string; question?: string; answer?: string }) => ({ question: item.q || item.question || '', answer: item.a || item.answer || '' }))
+                    ? post.faq.map(
+                        (item: { q?: string; a?: string; question?: string; answer?: string }) => ({
+                          question: item.q || item.question || '',
+                          answer: item.a || item.answer || '',
+                        }),
+                      )
                     : defaultFAQs
                 }
                 title="Frequently Asked Questions"

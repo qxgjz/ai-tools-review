@@ -256,7 +256,10 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       return { post, relevance };
     })
     .filter((item: { post: Post; relevance: number }) => item.relevance > 0)
-    .sort((a: { post: Post; relevance: number }, b: { post: Post; relevance: number }) => b.relevance - a.relevance)
+    .sort(
+      (a: { post: Post; relevance: number }, b: { post: Post; relevance: number }) =>
+        b.relevance - a.relevance,
+    )
     .slice(0, 4)
     .map((item: { post: Post; relevance: number }) => item.post);
 
@@ -701,11 +704,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {/* Author Bio - E-E-A-T Expertise & Authoritativeness signal */}
       {typeof tool.author === 'object' && tool.author && (
         <section className="mb-6">
-          <AuthorBio
-            name={tool.author.name}
-            role={tool.author.role}
-            bio={tool.author.bio}
-          />
+          <AuthorBio name={tool.author.name} role={tool.author.role} bio={tool.author.bio} />
         </section>
       )}
 
@@ -843,19 +842,49 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   </div>
                 ) : (
                   <div className="space-y-2">
-                    {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.testing_methodology && (
+                    {(
+                      tool.testingDetails as {
+                        testing_methodology?: string;
+                        benchmark_tests?: string[];
+                      }
+                    )?.testing_methodology && (
                       <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
-                        {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.testing_methodology}
+                        {
+                          (
+                            tool.testingDetails as {
+                              testing_methodology?: string;
+                              benchmark_tests?: string[];
+                            }
+                          )?.testing_methodology
+                        }
                       </p>
                     )}
-                    {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.benchmark_tests &&
-                      Array.isArray((tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.benchmark_tests) && (
+                    {(
+                      tool.testingDetails as {
+                        testing_methodology?: string;
+                        benchmark_tests?: string[];
+                      }
+                    )?.benchmark_tests &&
+                      Array.isArray(
+                        (
+                          tool.testingDetails as {
+                            testing_methodology?: string;
+                            benchmark_tests?: string[];
+                          }
+                        )?.benchmark_tests,
+                      ) && (
                         <div>
                           <div className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
                             Benchmark Tests:
                           </div>
                           <ul className="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 list-disc list-inside">
-                            {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.benchmark_tests?.slice(0, 4)
+                            {(
+                              tool.testingDetails as {
+                                testing_methodology?: string;
+                                benchmark_tests?: string[];
+                              }
+                            )?.benchmark_tests
+                              ?.slice(0, 4)
                               .map((test: string, i: number) => (
                                 <li key={i}>{test}</li>
                               ))}
@@ -1020,34 +1049,43 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* Performance Test Results - Quantitative E-E-A-T data */}
-      {tool.testMetrics &&
-        Array.isArray(tool.testMetrics) &&
-        tool.testMetrics.length > 0 && (
-          <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
-            <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-              <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-              Performance Test Results
-            </h2>
-            <div className="overflow-x-auto">
-              <table className="w-full text-sm">
-                <thead>
-                  <tr className="border-b border-zinc-200 dark:border-zinc-700">
-                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
-                      Metric
-                    </th>
-                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
-                      Result
-                    </th>
-                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden md:table-cell">
-                      Test Method
-                    </th>
-                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden lg:table-cell">
-                      Comparison
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {tool.testMetrics.map((metric: { name?: string; value?: string; score?: number; metric?: string; test?: string; comparison?: string }, i: number) => (
+      {tool.testMetrics && Array.isArray(tool.testMetrics) && tool.testMetrics.length > 0 && (
+        <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
+          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
+            <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            Performance Test Results
+          </h2>
+          <div className="overflow-x-auto">
+            <table className="w-full text-sm">
+              <thead>
+                <tr className="border-b border-zinc-200 dark:border-zinc-700">
+                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
+                    Metric
+                  </th>
+                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
+                    Result
+                  </th>
+                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden md:table-cell">
+                    Test Method
+                  </th>
+                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden lg:table-cell">
+                    Comparison
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {tool.testMetrics.map(
+                  (
+                    metric: {
+                      name?: string;
+                      value?: string;
+                      score?: number;
+                      metric?: string;
+                      test?: string;
+                      comparison?: string;
+                    },
+                    i: number,
+                  ) => (
                     <tr
                       key={i}
                       className="border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors"
@@ -1067,16 +1105,17 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                         {metric.comparison}
                       </td>
                     </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-            <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-4 italic">
-              Test results are based on our independent benchmarking. Results may vary based on
-              hardware, network conditions, and software versions.
-            </p>
-          </section>
-        )}
+                  ),
+                )}
+              </tbody>
+            </table>
+          </div>
+          <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-4 italic">
+            Test results are based on our independent benchmarking. Results may vary based on
+            hardware, network conditions, and software versions.
+          </p>
+        </section>
+      )}
 
       {/* Key Features */}
       {tool.keyFeatures && tool.keyFeatures.length > 0 && (
@@ -1315,28 +1354,30 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Top Alternatives to {tool.name}
           </h2>
           <div className="space-y-3">
-            {tool.alternatives.map((alt: { name?: string; slug?: string; reason?: string }, i: number) => (
-              <div
-                key={i}
-                className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-gray-800/50 rounded-xl hover:bg-zinc-100 dark:hover:bg-gray-800 transition-colors"
-              >
-                <div className="flex-1">
+            {tool.alternatives.map(
+              (alt: { name?: string; slug?: string; reason?: string }, i: number) => (
+                <div
+                  key={i}
+                  className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-gray-800/50 rounded-xl hover:bg-zinc-100 dark:hover:bg-gray-800 transition-colors"
+                >
+                  <div className="flex-1">
+                    <Link
+                      href={`/tools/${alt.slug}`}
+                      className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    >
+                      {alt.name}
+                    </Link>
+                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">{alt.reason}</p>
+                  </div>
                   <Link
                     href={`/tools/${alt.slug}`}
-                    className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    className="text-xs text-emerald-600 dark:text-emerald-400 font-medium hover:underline ml-4"
                   >
-                    {alt.name}
+                    Read Review →
                   </Link>
-                  <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">{alt.reason}</p>
                 </div>
-                <Link
-                  href={`/tools/${alt.slug}`}
-                  className="text-xs text-emerald-600 dark:text-emerald-400 font-medium hover:underline ml-4"
-                >
-                  Read Review →
-                </Link>
-              </div>
-            ))}
+              ),
+            )}
           </div>
         </section>
       )}

@@ -1,4 +1,85 @@
 # UI/UX设计知识库（窗口6专用）
+## 📚 学习记录 2026-09-27 07:00
+- 主题：高转化排版（深度版）— 阅读流畅度科学、字体节奏系统与内容型网站排版转化优化：x-height行高公式、F型扫描、模块化字阶、可读性与转化率的量化关系
+- 来源：
+  - https://www.smashingmagazine.com/2020/07/css-techniques-legibility/ （Smashing Magazine: Modern CSS Techniques To Improve Legibility，Edoardo Cavazza，含x-height行高科学公式与阅读障碍研究）
+  - https://www.nngroup.com/articles/how-users-read-on-the-web/ （NN/g: How Users Read on the Web，Jakob Nielsen经典研究，79%扫描+124%可用性提升实验）
+  - https://www.nngroup.com/articles/how-people-read-online/ （NN/g: How People Read Online — New and Old Findings，Kate Moran 2023更新）
+  - https://baymard.com/blog/ecommerce-readability （Baymard Institute: E-commerce Readability & Typography研究）
+  - https://www.smashingmagazine.com/2011/11/the-perfect-paragraph/ （Smashing Magazine: The Perfect Paragraph）
+- 知识点（15条）：
+  1. NN/g经典研究：79%的用户遇到新页面时扫描（scanning），仅16%逐字阅读；用户有三种阅读模式——随意浏览（casual reading）、有目的扫描（purposeful scanning）、深度阅读（engaged reading），排版必须同时服务扫描和深度阅读两种模式——NN/g Jakob Nielsen 1997 / Kate Moran 2023更新
+  2. NN/g量化实验：同一内容5种排版版本对比——简洁版（字数减半）可用性提升58%，可扫描布局版提升47%，客观语言版提升27%，三者合并版提升124%；推广性语言（"marketese"如"最棒的""国际知名"）增加认知负担，用户需花精力过滤夸张措辞，反而降低阅读效率——NN/g
+  3. 行宽黄金法则：Robert Bringhurst《Elements of Typographic Style》+ Baymard研究均确认舒适行宽为45-75字符（含空格），约66字符为单列理想值；超过75字符的行导致理解力下降和阅读速度变慢，用户在行尾换行时容易跳行或串行；CSS用`width: 60ch; max-width: 100%`精确控制——Bringhurst / Baymard
+  4. 行高科学公式（Smashing 2020突破性研究）：纸上阅读x-height与最优行距比为37.6，屏幕阅读需要更大行距，比值调整为32；CSS实现：`line-height: calc(1ex / 0.32)`——此公式对衬线和无衬线字体均适用，且即使用户覆盖字体也能保持最优行距；标题需更紧行距：h1/h2用`calc(1ex/0.42)`，h3用`calc(1ex/0.38)`，h4用`calc(1ex/0.37)`——Smashing Magazine
+  5. x-height决定视觉字号：相同font-size下不同字体的x-height（小写x的高度）差异巨大，导致视觉大小明显不同；`font-size-adjust`属性可统一x-height（目前Firefox原生支持，Chrome/Edge需flag），可用`@supports`渐进增强；这对Web Font加载时fallback字体→目标字体的切换闪烁（FOUT）尤其重要——Smashing Magazine
+  6. 阅读的视觉机制：人眼在一次注视（foveation）中只能聚焦约8个字母，因此换行是阅读中最复杂的操作之一；行宽过长=换行次数少但每次换行跨度大容易串行，行宽过短=换行频繁打断阅读节奏；60-70字符是换行频率和跨度的最优平衡点——Smashing Magazine
+  7. 字号与转化率：正文移动端最低16px（低于16px会触发iOS自动缩放且用户需眯眼），桌面端18px更舒适；16px是绝对底线而非目标，18-20px为内容型网站最佳实践；MIT 2019研究显示良好排版可提升阅读理解20%；MIT Media Lab 2022研究：无衬线字体在屏幕上阅读速度比衬线快8.7%，移动端更明显（12.3%）——Baymard / MIT研究
+  8. 模块化字阶（Modular Type Scale）：以基准字号（通常16px=1rem）为基础，按固定比率逐级倍增，产生视觉节奏一致的层级；常用比率：1.200（小三度，紧凑/仪表盘）、1.250（大三度，平衡/通用）、1.333（完全四度，编辑/长文）、1.5（增四度，大胆/落地页）；示例（1.25比率）：16→20→25→31→39→49px；任意选择字号（如13/17/22/31）会导致层级感混乱——Modular Scale理论
+  9. 行高与字号的关系：正文line-height 1.5-1.8（长文编辑用1.6-1.8），标题收紧到1.2-1.3；短行（<60字符）需要较小行高，长行（75-90字符）需要更大行高；浏览器默认line-height:1.2仅适合Times New Roman，对其他字体通常过紧——Smashing / Practical Typography
+  10. 对齐与连字符：避免无连字符支持的两端对齐（justified）——不均匀的词间距会形成"河流"（white space rivers）严重干扰阅读；左对齐是Web默认安全选择；若必须两端对齐，需配合`hyphens: auto`且确认浏览器对该语言支持良好（英语支持好，其他语言需测试）；`text-align: justify; hyphens: auto`仅用于`lang="en"`——Smashing Magazine
+  11. 阅读障碍研究突破：2020年Galliussi等人研究+2015年Gori & Facoetti研究均证实——"阅读障碍友好字体"的字形设计本身对阅读帮助不大，但更宽的字符间距（tracking/letter-spacing）确实能显著改善阅读障碍用户的阅读表现；普通`letter-spacing`会无条件破坏字体原始字距，可变字体（variable fonts）可参数化非线性调整间距，是更优方案——Smashing Magazine引用研究
+  12. F型扫描模式：NN/g眼动追踪研究发现用户在网页上以F型或倒L型扫描——先水平扫读顶部内容区，再下移后较短水平扫读，最后沿左侧垂直扫读；这意味着：最重要信息放左上角/开头，关键词前置，副标题和列表项的前几个词最关键，右侧和底部内容获得最少关注——NN/g眼动研究
+  13. 可扫描文本5要素（NN/g）：①高亮关键词（超链接、字体变化、颜色都是高亮形式）；②有意义的副标题（不用"聪明"但模糊的标题）；③项目符号列表；④每段一个核心观点（用户会跳过第一段前几个词之后的额外观点）；⑤倒金字塔结构（结论先行）；⑥字数比传统写作减半或更少——NN/g
+  14. 单位选择原则：字号用rem（响应用户浏览器偏好设置），段落间距用em（随字号变化保持垂直节奏），行宽用ch（精确控制字符数），行高用无单位数字或calc(1ex/x)；避免用px固定字号（不尊重用户放大字体偏好），避免用vw做正文（小屏幕字太小、大屏幕字太大）——Smashing Magazine / WCAG
+  15. 排版与转化率的直接关联：Baymard电商研究+多案例显示——正文<16px导致跳出率增加24%，行高<1.4导致阅读完成率下降，对比度<4.5:1（WCAG AA）导致可访问性失败且所有用户阅读疲劳；产品页价格需22-28px加粗（桌面）/20-26px（移动），CTA按钮文字16-18px中粗体且避免装饰性字体；全站不超过2种字体族（标题字体+正文字体），第三种通常只增加视觉噪音不提升清晰度——Baymard / 电商排版研究
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - 将文章页（app/blog/[slug]/page.tsx）的正文排版从当前默认改为高转化排版系统：正文容器`max-w-[68ch]`（68字符理想行宽）、正文`text-[17px] md:text-[18px] leading-[1.7]`（17-18px字号+1.7行高，符合Smashing calc(1ex/0.32)公式和MIT研究）、段落间距`space-y-5`（每段一个观点+充足呼吸）、标题字阶统一为1.25比率（h2=text-2xl md:text-3xl leading-tight, h3=text-xl md:text-2xl）、所有正文左对齐（避免两端对齐）、引用块用`border-l-4 border-emerald-600 pl-4 italic text-zinc-600`突出；参考NN/g 124%可用性提升实验——可扫描布局+简洁文本+客观语言三者合并效果最佳
+
+## 📚 学习记录 2026-09-27 04:00
+- 主题：移动端UX最佳实践（深度版）— 拇指热区科学、单手操作设计与移动端导航模式深度拆解：Steven Hoober研究、Fitts定律在触屏的反转、汉堡菜单可识别性最新研究
+- 来源：
+  - https://smashing-media.com/2016/09/the-thumb-zone-designing-for-mobile-users/ （Smashing Magazine: The Thumb Zone — Designing For Mobile Users，Steven Hoober & Josh Clark研究，Samantha Ingram用户测试验证）
+  - https://www.nngroup.com/articles/hamburger-menu-icon-recognizability/?pt=report （NN/g: The Hamburger-Menu Icon Today — Is it Recognizable?，2025-06最新研究）
+  - https://www.nngroup.com/articles/menu-design/?pt=report （NN/g: Menu-Design Checklist — 17 UX Guidelines，2024-06）
+  - https://www.nngroup.com/articles/mobile-navigation-patterns/ （NN/g: Basic Patterns for Mobile Navigation — A Primer，Raluca Budiu）
+  - https://evelance.io/blog/fittss-law-touch-target-sizing-mobile/ （Fitts's Law and Touch Target Sizing on Mobile — 桌面角=最便宜像素，手机角=最贵像素）
+- 知识点（15条）：
+  1. Steven Hoober研究：49%的人单手握持智能手机，Josh Clark研究确认75%的触屏交互由拇指驱动——这意味着移动端设计必须假设用户用单手+拇指操作，而非双手+食指；屏幕超过5.2英寸后拇指困难区急剧扩大，现代6.7英寸手机远超自然拇指范围——Smashing/Hoober
+  2. 拇指热区分三区：易触及区（屏幕底部和中下区域，拇指自然摆动覆盖）、困难区（顶部角落尤其是对侧上角，需要伸展或换手）、中间区（需一定伸展但可达）；设计原则=高频操作放易触及区，低频操作放困难区——Smashing/Hoober
+  3. Fitts定律在触屏的关键反转：桌面上屏幕角是"最便宜的像素"（无限大目标，鼠标自动停在边缘），但手机上角是"最贵的像素"——这就是为什么放在顶部角落的小关闭按钮会导致大量误触和重复点击；移动端应将关闭/取消按钮移至卡片底部或拇指区——Evelance Fitts's Law研究
+  4. 导航模式选择：长链接列表→全屏覆盖菜单（可将可点击元素对齐到拇指区，如Huge网站）；短链接（≤5个）→sticky底部导航栏（Airbnb模式，所有重要入口在拇指易触及区）；大型网站→混合菜单（Facebook模式：顶部sticky+底部sticky+抽屉，按内容量分级）——Smashing/NN/g
+  5. 卡片设计拇指原则：操作按钮（分享/保存/CTA）放在易触及区，纯展示内容（天气数据、图片）可放在困难区；Etsy结账卡片的关闭"x"在左上角拇指困难区是反面案例——用户被迫伸展且混淆"关闭卡片"vs"取消结账"；解决方案：将关闭按钮移至卡片底部，或限制卡片内容长度——Smashing
+  6. 手势设计数据：用户通常从设备边缘向中间斜向下滑动（非水平滑动）；滑动区域至少45×45像素以防止误触；Google Inbox是典范——滑动在易触及区、足够点击空间、可从邮件块任意位置开始滑动；避免多个可滑动元素重叠（如横向滚动卡片+页面下拉刷新冲突）——Smashing用户测试
+  7. NN/g 2015-2016经典研究：隐藏导航（汉堡菜单）导致用户参与度降低、任务成功率下降、任务时间增加、整体满意度降低——移动端和桌面端均如此，桌面端更严重；当时建议：尽可能让导航可见，仅在空间真正受限时才用汉堡菜单，桌面端绝不用——NN/g
+  8. NN/g 2025最新研究更新：汉堡菜单现在已成为用户广泛熟悉的模式（Apple/Amazon采用后标准化），大多数用户能正确识别为隐藏菜单（尤其是标准3条等长线+左上角位置）；但可识别性≠任务效率——隐藏导航仍增加交互成本（用户需额外一步才能看到菜单项），且对技术不熟练用户或不熟悉布局仍有理解障碍——NN/g 2025
+  9. 汉堡菜单位置决定一切：用户一致地在屏幕左上角寻找隐藏导航；放在其他位置会被忽略或误解；即使小设计变化（2线版、边框包围版、叠加箭头版）只要在左上角仍被正确识别，但额外装饰会引入轻微疑虑（Toms的边框版被1人误认为文档图标）——NN/g 2025
+  10. 视觉干扰陷阱：类似3条线结构的图标（列表视图、筛选器、内容视图）放在左上角会被误认为汉堡菜单——Apple Notes桌面端的列表视图图标被用户频繁误读为导航菜单，YouTube移动端的筛选图标被误读为分类/收藏列表；设计启示：左上角避免使用线型图标，必须用时加文字标签区分——NN/g 2025
+  11. 汉堡菜单设计10条最佳实践：标准3线图标（不要创意变形）、左上角位置、避免额外边框/装饰、加"Menu"文字标签（对新手尤其重要）、微妙动画过渡（汉堡变X）、确保足够对比度、图标周围加视觉padding、桌面端适当放大（手机尺寸在大屏上几乎不可见）、看起来可点击（极扁设计会降低可发现性）、提供其他导航方式（内联链接、显眼搜索、页脚链接）——NN/g 2025
+  12. NN/g菜单设计准则5：指示当前位置是导航菜单最重要的工作之一——"我在哪？"是用户导航成功的基本问题；用户常从外部链接直接进入内页而非首页，不指示当前位置=用户迷失；NN/g点名Anthropic未清晰区分当前位置为反面案例；解决方案：当前页高亮（颜色/背景/下划线）+面包屑——NN/g Menu Design 2024
+  13. NN/g准则11：菜单链接必须足够大易点击——移动端链接太小或太近是巨大挫败源；WCAG 2.5.5（AAA级）要求44×44 CSS像素，Apple HIG同样要求44pt，Google Material Design要求48×48dp；间距至少8px防止误触；桌面端小字体+低对比度链接（如Teenage Engineering）同样难用——NN/g/WCAG
+  14. NN/g准则13-14：子菜单用点击激活而非hover激活——触屏和键盘用户没有hover，hover菜单容易意外触发和关闭；避免多级级联菜单（超过两级容易误选或"掉出"菜单关闭），改用mega menu（可支持2-3级）或路由落地页；准则15：长页面考虑sticky菜单——用户滚到页面底部后无需费力滚回顶部——NN/g Menu Design 2024
+  15. 移动端导航核心原则（综合NN/g+Hoober）：①如果不需要隐藏导航就不要隐藏（底部tab bar优于汉堡菜单用于≤5个主要入口）；②必须隐藏时用标准汉堡+左上角+Menu标签；③主要CTA放底部拇指区（sticky CTA在移动端比顶部CTA转化率显著更高）；④触摸目标≥44px+8px间距；⑤当前位置必须高亮指示；⑥手势区域≥45px且避免重叠冲突——综合研究
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - 在移动端（<768px）添加一个sticky底部导航栏，固定在屏幕底部（`fixed bottom-0 left-0 right-0 z-50`），包含4个主要入口：首页(🏠/Home)、工具(🔧/Tools)、博客(📝/Blog)、对比(⚖️/Compare)，每个图标+文字垂直排列，触摸热区≥44px（`py-2.5`+`min-h-[44px]`），当前页用emerald-700高亮（配合刚提交的Header.tsx usePathname逻辑），背景用`bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800`；遵循Steven Hoober拇指热区研究——将主导航从顶部左上角汉堡菜单（伸展区）移至底部拇指易触及区，参考Airbnb/Facebook底部导航模式；页面主体底部加`pb-16`防止内容被底部栏遮挡
+
+## 📚 学习记录 2026-09-27 01:00
+- 主题：CRO转化率优化（深度版）— 定价页与对比表转化优化：价格锚定效应、诱饵效应、对比表UX最佳实践、折扣展示心理学
+- 来源：
+  - https://www.nngroup.com/articles/comparison-tables/?pt=article （NN/g: Comparison Tables for Products, Services, and Features，2024-02）
+  - https://www.nngroup.com/articles/anchoring-principle/ （NN/g: The Anchoring Principle，2018-12，Tversky & Kahneman理论）
+  - https://baymard.com/blog/product-page-price-discounts （Baymard Institute: How to Display Price Discounts — 4 Pitfalls，18%+站点中招）
+  - https://www.smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/ （Smashing: Intent-Driven Design定价与决策参考，2026-09）
+  - https://grow-conversions.com/cro-glossary/decoy-effect/ （Decoy Effect: Huber/Payne/Puto 1982非对称优势效应）
+- 知识点（15条）：
+  1. 对比是用户在网上最关键的活动之一——在购买/注册/联系之前几乎必经；对比表支持"补偿性决策"(compensatory decision making)，即用户同时权衡多个属性的优劣；而筛选器只支持"非补偿性决策"(用单一因素排除)——NN/g 2024
+  2. 静态对比表适用于≤5个选项，动态对比表（用户自选对比项）适用于>5个选项；AIToolCrux的/compare页应将同时对比的工具数控制在3-4个，超过5个会导致认知过载和横向滚动——NN/g
+  3. 对比表黄金法则：替用户完成工作——不要用非标准布局拖慢他们，不要让他们记住列名，不要让他们去Google不熟悉的术语；让决策尽可能简单——NN/g
+  4. 对比表最大的问题不是设计而是内容一致性——属性缺失、不完整或各选项间不一致会让表格瞬间失效（Best Buy的Sony相机元数据远多于其他品牌就是反面案例）；所有被对比工具必须有相同属性行且全部填满——NN/g
+  5. 可扫描性设计：标准布局（列=工具/选项，行=属性），行标签在左、列标签在上，每列文本对齐一致；文字尽量简短避免完整句子；颜色编码可帮助区分列（FitBit用不同颜色对勾），但必须保持足够对比度——NN/g
+  6. 长对比表必须固定列头(sticky column headers)——用户滚动多个屏幕后会忘记哪列对应哪个产品，被迫反复滚回顶部核对；Adobe的年费对比表因无固定列头被NN/g批评——NN/g
+  7. 属性必须对用户有意义：把技术参数翻译成消费者可理解的语言——Anker的"3350mAh≈1.2次iPhone充电"、"2.7oz≈一个鸡蛋的重量"是典范；不熟悉的术语用hover tooltip或上下文链接解释——NN/g
+  8. 给用户控制权：允许选择显示哪些属性行、隐藏所有选项都相同的行、"仅显示差异"(Highlight Differences)开关（Best Buy的黄色高亮差异被NN/g点赞）；简化表+详细表双层结构（SmugMug的"at a glance"+完整对比表）——NN/g
+  9. 移动端对比：屏幕上最多同时显示2个选项；如真对比表不可行，可转为tabs或列表形式，但tabs不支持真正的补偿性决策（用户需记住各产品属性才能权衡）——Shopify的移动端tabs方案是折中——NN/g
+  10. 锚定效应(Anchoring)定义：人们倾向于依赖最初遇到的单一信息来做后续判断和估值——Tversky & Kahneman 1974年经典研究：1×2×3...×8的中位数估计512，而8×7×6...×1的中位数估计2250，差异达4倍，尽管两题答案相同(40320)——NN/g
+  11. Ariely MIT实验：用社会安全号后两位作为"锚"来竞拍无线键盘，SSN末位00-19组平均出价$16.09，末位80-99组平均出价$55.64——完全无关的数字也能锚定支付意愿，差异3.5倍；定价页第一个被看到的价格决定了所有后续价格的感知——NN/g
+  12. 锚定的设计应用：①展示原价+划线价（strikethrough）让原价锚定价值感知；②好的默认值和建议值（Oxfam建议月捐£4比纯"立即捐赠"按钮表单完成率高23%）；③流程开始时给出准确时间预期——NN/g
+  13. 诱饵效应(Decoy Effect / 非对称优势效应)：Huber, Payne & Puto 1982年提出——添加一个明显劣于某选项但不劣于另一选项的第三选项，会将偏好转向占优选项；经典案例Williams-Sonoma推出$429面包机后，$279型号销量大增（$429是诱饵，没人买但让$279显得划算）；三档定价中中档通常占60%+选择——CRO Glossary
+  14. Baymard大规模测试：18%+电商站点存在4种定价展示陷阱之一——①价格和折扣与其他元素混在一起不突出；②折扣位置远离价格；③同一促销在页面重复多次；④未高亮折扣百分比或金额；价格不清晰=用户直接放弃，不会去看图片/描述/评论——Baymard Institute
+  15. 三档定价结构的三重心理学叠加：最高档在右/先展示=锚定效应校准感知价值；中档视觉高亮("Most Popular")+诱饵效应让中档显得最划算；限制为3档=避免选择过载(Paradox of Choice，Iyengar果酱实验6种vs24种购买率差10倍)；视觉勾选标记的对比表比纯文字列表转化率高约20%——综合CRO研究
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - 在工具详情页(/tools/[slug])的CTA按钮上方，添加一个紧凑的"vs 2个替代工具"迷你对比表组件：3列（当前工具+2个同类替代）、4-5行关键属性（价格/免费额度/核心功能/评分），列头sticky固定，加一个"仅显示差异"切换按钮（默认开启，用`bg-emerald-50 dark:bg-emerald-900/20`高亮差异行），遵循NN/g对比表黄金法则——替用户完成对比工作，在点击affiliate CTA前降低决策摩擦；移动端自动降为2列对比
+
 ## 📚 学习记录 2026-09-26 22:00
 - 主题：Web UI设计趋势（深度版）— 2026 AI-native UI与GenUI生成式界面：意图驱动设计、聊天界面交互组件、上下文感知与无界面范式
 - 来源：

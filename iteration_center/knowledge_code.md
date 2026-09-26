@@ -192,6 +192,144 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ## 待补充
 
+## [2026-09-27] 前端安全与依赖审计工具深度实战（npm audit + Snyk + Dependabot + OSV-Scanner + SBOM）
+
+### 知识点1：npm audit基础与使用
+npm audit是npm内置的依赖安全扫描命令，将项目依赖树描述提交到默认registry（registry.npmjs.org），返回已知漏洞报告。关键参数：npm audit（扫描）、npm audit fix（自动应用兼容修复）、npm audit fix --force（强制升级到最新版，可能breaking）、--audit-level=low/moderate/high/critical（控制退出码阈值）。退出码0=无漏洞，非0=有漏洞（CI中可阻断构建）。输出包含漏洞名称、严重等级、影响包、修复版本、依赖路径。
+来源：https://docs.npmjs.com/cli/v11/commands/npm-audit/
+交叉验证：https://snyk.io/de/articles/npm-security-best-practices-shai-hulud-attack/
+
+### 知识点2：npm audit局限性
+npm audit有明确局限性：①只扫描package.json+package-lock.json中的依赖，不扫描代码本身（SAST）②对传递依赖的覆盖不完整，部分深层漏洞可能遗漏③误报率较高（同一CVE可能影响多个版本范围）④不支持许可证合规审计⑤不提供持续监控（只在运行时扫描）⑥2025年Shai Hulud攻击暴露了npm生态的供应链风险，仅靠npm audit不足以防护。因此生产项目应组合使用多种工具。
+来源：https://snyk.io/de/articles/npm-security-best-practices-shai-hulud-attack/
+交叉验证：https://docs.npmjs.com/cli/v11/commands/npm-audit/
+
+### 知识点3：Snyk全面安全能力
+Snyk是开发者优先的云原生安全平台（npm包snyk周下载量巨大），四大产品：①Snyk Open Source（SCA软件成分分析，扫描开源依赖漏洞+许可证）②Snyk Code（SAST静态应用安全测试，实时扫描代码漏洞）③Snyk Container（容器镜像漏洞扫描）④Snyk IaC（基础设施即代码安全扫描，Terraform/K8s）。优势：比npm audit更全面的漏洞数据库、更准确的依赖路径分析、自动修复PR、持续监控。免费版支持个人项目。
+来源：https://www.npmjs.com/package/snyk?activeTab=versions
+交叉验证：https://docs.snyk.io/supported-languages/supported-languages-list/javascript/best-practices-for-javascript-and-node.js
+
+### 知识点4：Snyk最佳实践
+Snyk使用最佳实践：①lockfile优先（有package-lock.json时基于lockfile扫描，更准确）②CI中运行npx snyk test --severity-threshold=high（只阻断high/critical）③snyk monitor（上传依赖树到Snyk云，持续监控新漏洞）④snyk code test（SAST扫描代码）⑤Snyk GitHub Action集成PR检查⑥ignore策略（.snyk文件标记可接受的风险）。项目当前security.yml只用了npm audit，可考虑添加Snyk作为补充。
+来源：https://docs.snyk.io/supported-languages/supported-languages-list/javascript/best-practices-for-javascript-and-node.js
+交叉验证：https://snyk.io/pt-BR/blog/securing-ci-cd-pipeline-with-snyk/
+
+### 知识点5：GitHub Dependabot三大功能
+Dependabot是GitHub内置的依赖管理工具，三大功能：①Dependabot Alerts（漏洞通知：当依赖有已知CVE时发送通知）②Dependabot Security Updates（安全更新：自动创建PR将脆弱依赖升级到修复版本，漏洞披露后立即触发，不受schedule影响）③Dependabot Version Updates（版本更新：按schedule自动创建PR更新到最新版本）。三者独立配置，Security Updates优先级最高。
+来源：https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates
+交叉验证：https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-security-updates
+
+### 知识点6：Dependabot配置详解
+配置文件.github/dependabot.yml，关键字段：①version: 2（必须）②updates数组，每个包含package-ecosystem（npm/docker/github-actions等）、directory（依赖文件路径）、schedule（interval: daily/weekly/monthly + day/time/timezone）③open-pull-requests-limit（最多同时打开的PR数，默认5）④reviewers/assignees（自动分配审核人）⑤allow/ignore（白名单/黑名单依赖）⑥groups（分组更新，减少PR噪音）⑦labels（PR标签）⑧commit-message（自定义commit格式）。项目当前无dependabot.yml，可添加。
+来源：https://docs.github.com/en/code-security/dependabot/dependabot-version-updates/configuring-dependabot-version-updates
+交叉验证：https://learn.microsoft.com/en-us/training/modules/software-composition-analysis/4-implement-github-dependabot-alerts-security-updates
+
+### 知识点7：Dependabot分组更新策略
+Dependabot groups功能将多个依赖更新合并为一个PR，大幅减少PR噪音。配置：groups: { production-dependencies: { dependency-type: production }, development-dependencies: { dependency-type: development }, applies-to: version-updates }。安全更新也可分组：applies-to: security-updates，但安全更新默认在漏洞披露后立即触发，不受schedule影响。最佳实践：生产依赖和开发依赖分开分组，每周批量更新，安全更新单独快速合并。GitHub Blog 2026年7月文章强调"group your updates, slow the cadence, keep security fast"。
+来源：https://github.blog/security/supply-chain-security/tame-dependabot-group-your-updates-slow-the-cadence-keep-security-fast/
+交叉验证：https://docs.github.com/en/code-security/how-tos/secure-your-supply-chain/secure-your-dependencies/configuring-dependabot-security-updates
+
+### 知识点8：OSV-Scanner（Google开源漏洞扫描器）
+OSV-Scanner是Google开发的开源漏洞扫描器（GitHub高星，V2版本），基于OSV.dev分布式漏洞数据库。核心能力：①扫描lockfile（package-lock.json/yarn.lock/pnpm-lock.yaml等）②扫描SBOM（CycloneDX/SPDX）③递归扫描目录④容器镜像扫描⑤V2支持自动修复。安装：go install github.com/google/osv-scanner/v2/cmd/osv-scanner@v2或Docker。使用：osv-scanner scan -r ./project/、osv-scanner --lockfile=package-lock.json、osv-scanner --sbom=sbom.json。GitHub Action被1600+仓库采用。
+来源：https://osv.dev/
+交叉验证：https://blog.google/security/announcing-osv-scanner-v2-vulnerability/?m=0
+
+### 知识点9：OSV-Scanner优势与OSV schema
+OSV-Scanner相比传统扫描器的优势：①开源免费（Snyk商业版收费）②OSV schema使用精确的git commit级版本范围匹配，比CVE的模糊版本匹配更准确（减少误报）③聚合多个权威漏洞源（GitHub Advisory Database、PyPA、RustSec、Go vulndb等）④多生态支持（npm/Go/Python/Rust/PHP等15+）⑤与SBOM无缝集成。Google Cloud 2026年7月供应链攻击缓解指南推荐将OSV-Scanner集成到CI/CD。
+来源：https://cloud.google.com/blog/topics/threat-intelligence/mitigation-guidance-for-supply-chain-compromise
+交叉验证：http://google.github.io/osv-scanner/supported-languages-and-lockfiles/
+
+### 知识点10：SBOM（软件物料清单）
+SBOM是项目所有依赖组件的完整清单（名称、版本、许可证、依赖关系），两大标准：①CycloneDX（OWASP维护，轻量JSON/XML，适合安全用例）②SPDX（Linux基金会维护，更注重许可证合规）。生成工具：npm sbom（npm 10+内置，生成SPDX）、@cyclonedx/cyclonedx-npm（生成CycloneDX）、syft（多语言通用）。SBOM用途：漏洞快速定位（新CVE发布后检查SBOM）、合规要求（美国EO 14028要求联邦政府SBOM）、供应链透明度。最佳实践：每次构建生成SBOM并作为构建产物存储。
+来源：http://google.github.io/osv-scanner/usage/scan-source
+交叉验证：https://osv.dev/
+
+### 知识点11：npm供应链攻击防护策略
+2025-2026年npm供应链攻击频发（Shai Hulud、node-gyp worm等），防护策略：①CI中使用npm install --ignore-scripts（禁用preinstall/postinstall脚本，阻断install-time恶意代码）②lockfile完整性哈希验证（package-lock.json包含integrity字段）③registry冷却策略（新发布包等待几天后才允许进入构建）④最小权限CI/CD token（一个token泄露影响范围小）⑤npq工具（安装前检查包安全性：npx npq install <pkg>）⑥减少依赖树（每个依赖=攻击面，用原生JS替代工具库）。
+来源：https://snyk.io/es/blog/node-gyp-supply-chain-compromise-self-propagating-npm-worm-binding-gyp/
+交叉验证：https://www.npmjs.com/package/npq
+
+### 知识点12：AIToolCrux项目安全现状与改进
+项目当前安全配置：①.github/workflows/security.yml（npm audit --audit-level=high，每周一+PR触发）②next.config.mjs有完整CSP和安全头③CodeQL workflow（代码SAST扫描）。改进空间：①缺少Dependabot配置（无自动版本/安全更新PR）②缺少OSV-Scanner（npm audit覆盖不完整）③缺少SBOM生成④CI中npm install未加--ignore-scripts⑤缺少Snyk或其他SCA工具补充⑥依赖树45个包（23 prod+22 dev），攻击面可控。建议优先级：Dependabot配置 > OSV-Scanner CI > SBOM生成 > --ignore-scripts。
+来源：https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository
+交叉验证：https://cloud.google.com/blog/topics/threat-intelligence/mitigation-guidance-for-supply-chain-compromise
+
+### 落地计划
+1. **P2-SEC-DEPENDABOT-SETUP-001**：创建.github/dependabot.yml，配置npm生态weekly版本更新（生产/开发依赖分组）+启用GitHub Security Updates，减少手动依赖更新负担。
+2. **P2-SEC-OSV-SCANNER-CI-001**：在security.yml中添加OSV-Scanner GitHub Action（google/osv-scanner-action），扫描package-lock.json，与npm audit互补提高漏洞覆盖率。
+3. **P2-SEC-SBOM-GENERATE-001**：配置CycloneDX SBOM生成（@cyclonedx/cyclonedx-npm），在构建时生成并作为artifact存储，支持快速漏洞响应。
+4. **P2-SEC-NPM-IGNORE-SCRIPTS-001**：在所有CI workflow的npm install步骤添加--ignore-scripts，防护install-time供应链攻击，同时验证项目无必须的install脚本。
+
+
+## [2026-09-27] Monorepo架构与工具链深度实战（pnpm workspaces + Turborepo + Nx对比）
+
+### 知识点1：Monorepo定义与适用场景
+Monorepo是将多个项目/包放在同一个Git仓库中的开发策略。核心优势：①共享代码（types/utils/constants无需发npm包）②统一工具链（lint/test/build配置一处维护）③原子化提交（跨包修改一个commit完成）④统一依赖版本（避免版本漂移）。适用场景：团队≥3人、有≥2个可复用共享库、需要跨包协调发布。不适用：独立部署的微服务、团队间强隔离需求。
+来源：https://pnpm.io/next/workspaces
+交叉验证：https://nx.dev/docs/kb/pnpm-workspaces
+
+### 知识点2：pnpm workspaces基础配置
+pnpm内置Monorepo支持，无需额外工具。核心配置文件pnpm-workspace.yaml定义包路径：packages: - 'apps/*' - 'packages/*'。内部包引用用workspace:协议（"@project/ui": "workspace:*"），确保始终链接本地版本而非npm。pnpm install自动创建符号链接，硬链接到全局store节省磁盘空间（比npm/yarn节省50%+）。
+来源：https://pnpm.io/next/workspaces
+交叉验证：https://nx.dev/docs/kb/pnpm-workspaces
+
+### 知识点3：pnpm catalogs统一依赖版本
+pnpm catalogs是Monorepo中统一依赖版本的最佳实践。在pnpm-workspace.yaml中定义catalog: { react: "^19.0.0", typescript: "^5.5.0" }，各包引用时用"react": "catalog:"。好处：①版本一处定义，全仓库同步②升级依赖只需改一处③避免不同包用不同版本导致的运行时冲突。pnpm还支持catalogs:default和命名catalog（如catalogs:next）用于不同包组的版本策略。
+来源：https://pnpm.io/next/workspaces
+交叉验证：https://nx.dev/docs/kb/pnpm-workspaces
+
+### 知识点4：Turborepo核心概念与任务管道
+Turborepo是高性能构建系统（31.1K GitHub stars，29.4M周下载）。核心概念：①turbo.json定义任务管道（pipeline），每个任务声明dependsOn（依赖关系）、inputs（输入文件哈希）、outputs（输出目录）②内容感知哈希：根据输入文件内容生成hash，hash不变则跳过构建③增量构建：只重建变更的包及其依赖。示例：pipeline: { build: { dependsOn: ["^build"], outputs: [".next/**"] } }表示build依赖所有依赖包的build。
+来源：https://turborepo.org
+交叉验证：https://turborepo.ai/docs/reference/run
+
+### 知识点5：Turborepo Remote Caching
+Remote Caching是Turborepo的杀手级功能：将构建缓存（hash→artifacts）存储在远程服务器，跨开发者机器和CI共享。Vercel提供免费Remote Cache（所有计划），也可自托管（兼容S3 API）。配置：设置TURBO_TOKEN和TURBO_TEAM环境变量。效果：CI中第一次构建后，后续相同输入的构建直接从缓存恢复，速度提升10-100倍。项目当前9个GitHub Actions workflow可受益于此。
+来源：https://turborepo.ai/docs/core-concepts/remote-caching
+交叉验证：https://vercel.com/docs/monorepos/remote-caching
+
+### 知识点6：Turborepo pipeline配置详解
+turbo.json的pipeline每个任务可配置：①dependsOn：^build表示依赖所有上游包的build，build表示同包的build，^~build表示上游包的build但不阻塞②inputs：默认为包内所有文件，可指定["src/**", "package.json"]缩小哈希范围③outputs：构建输出目录，如[".next/**", "dist/**"]，用于缓存恢复④env：任务依赖的环境变量列表，如["DATABASE_URL"]，变化时缓存失效⑤cache：设为false禁用缓存（如dev任务）。
+来源：https://turborepo.ai/docs/reference/run
+交叉验证：https://turborepo.dev/blog/turbo-2-5
+
+### 知识点7：Nx vs Turborepo全面对比
+两者都提供任务调度、本地/远程缓存、affected检测。差异：①Turborepo轻量（~15分钟配置），基于仓库为事实来源，无侵入性②Nx功能全面：分布式CI（DTE）、多语言构建（polyglot）、AI CI工作流、丰富插件生态③Nx Cloud提供分布式任务执行（大仓库CI时间从小时降到分钟）④Turborepo 2.x已支持部分Nx功能（如persistent tasks、sidecar）。选择标准：≤5开发者/30包以内用Turborepo；6+开发者/复杂CI/多语言用Nx。
+来源：https://nx.dev/docs/guides/adopting-nx/nx-vs-turborepo
+交叉验证：https://turborepo.org/docs/guides/migrating-from-nx
+
+### 知识点8：Monorepo目录结构最佳实践
+标准目录结构：apps/（可部署应用，如web/admin/docs）、packages/（共享库，如ui/utils/types/config）、tools/（构建/脚本工具，如eslint-config/tsconfig）。每个包有独立package.json和name（@project/xxx作用域）。根package.json只包含devDependencies和scripts（turbo run build）。tsconfig.base.json定义共享TS配置，各包extends。.eslintrc.base.js同理。避免：apps和packages混放、包名无作用域、根目录有业务代码。
+来源：https://nx.dev/docs/kb/pnpm-workspaces
+交叉验证：https://blog.redlinesoft.net/posts/monorepos-pnpm-turborepo-nx/
+
+### 知识点9：Monorepo依赖管理最佳实践
+①内部包引用用workspace:*（始终链接本地）②外部依赖用pnpm catalog统一版本③peerDependencies正确声明（如react/next作为peerDependency）④避免循环依赖（A依赖B，B依赖A），用依赖分析工具检测⑤第三方依赖尽量放在根目录（hoisting），减少重复安装⑥用pnpm why <pkg>分析依赖树⑦定期运行pnpm dedupe去重。
+来源：https://pnpm.io/next/workspaces
+交叉验证：https://toolchew.com/en/best-monorepo-tool/
+
+### 知识点10：CI优化策略（affected-only + Remote Cache）
+Monorepo CI三大优化：①affected-only：turbo run build --filter=[origin/main]...只构建与主分支有差异的包及其依赖，PR构建从全量变为增量②Remote Cache：CI中命中缓存直接恢复artifacts，跳过构建③并行化：Turborepo自动并行执行无依赖关系的任务。组合效果：大型Monorepo CI时间从30分钟+降到3-5分钟。GitHub Actions中配置：setup-node cache: 'npm' + turbo run build --filter=...[origin/main]。
+来源：https://turborepo.ai/docs/crafting-your-repository/constructing-ci
+交叉验证：https://vercel.com/docs/monorepos/remote-caching
+
+### 知识点11：AIToolCrux项目Monorepo评估
+项目当前状态：单包Next.js 14.2.5项目，533工具+107文章，9个GitHub Actions workflow，有scripts/目录（quality_audit.py等）、iteration_center/（文档）、open-seo-local/（独立子项目）。Monorepo拆分评估：①可拆分：apps/web（主站）、apps/docs（文档站）、packages/types（共享类型）、packages/utils（工具函数）、tools/audit（审计脚本）②当前收益：低（单包简单，共享代码少）③未来触发点：新增第2个应用（如独立管理后台）、scripts需要复用types、CI构建时间>10分钟。结论：当前不急于拆分，但可先迁移pnpm+准备目录结构。
+来源：https://turborepo.org/docs/getting-started/add-to-existing-repository
+交叉验证：https://toolchew.com/en/best-monorepo-tool/
+
+### 知识点12：渐进式Monorepo迁移路径
+从单包迁移到Monorepo的渐进路径：①Step 1：迁移包管理器到pnpm（无需Monorepo，立即获得更快安装和磁盘节省）②Step 2：创建pnpm-workspace.yaml，将现有项目移到apps/web/，更新import路径③Step 3：提取共享代码到packages/（如types→@project/types，utils→@project/utils）④Step 4：引入Turborepo，配置turbo.json任务管道和Remote Cache⑤Step 5：优化CI为affected-only构建。每步独立可回滚，无需一次性大重构。
+来源：https://turborepo.org/docs/getting-started/add-to-existing-repository
+交叉验证：https://blog.redlinesoft.net/posts/monorepos-pnpm-turborepo-nx/
+
+### 落地计划
+1. **P2-ENG-PNPM-MIGRATE-001**：评估从npm迁移到pnpm的可行性（当前package-lock.json，迁移后pnpm-lock.yaml），预期安装速度提升40%、磁盘空间节省50%，验证Vercel构建兼容性。
+2. **P2-ENG-TURBO-CI-001**：评估引入Turborepo优化9个GitHub Actions workflow，配置Remote Cache（Vercel免费），预期CI构建时间减少30-50%，先从lint+test任务开始试点。
+3. **P2-ENG-SHARED-LIB-001**：识别可提取的共享代码（types/index.ts中的Tool/Post/Comparison类型、lib/中的工具函数），评估提取为packages/types和packages/utils的ROI。
+4. **P2-ENG-MONOREPO-EVAL-001**：全面评估Monorepo架构迁移（当前单包→apps/web+packages/*+tools/*），输出迁移成本/收益分析报告，确定触发迁移的阈值条件。
+
+
 ## [2026-09-27] Next.js 15/16新特性与升级路径深度实战
 
 ### 知识点1：Next.js 15核心破坏性变化
