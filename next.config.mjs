@@ -25,9 +25,6 @@ const nextConfig = {
   // 包导入优化
   experimental: {
     optimizePackageImports: ["lucide-react", "framer-motion"],
-    // Partial Prerendering (PPR) incremental trial - Next.js 14.2 experimental
-    // Pages must opt-in with export const experimental_ppr = true
-    ppr: "incremental",
   },
 
   // 生成Etags
@@ -90,6 +87,57 @@ const nextConfig = {
           {
             key: "Content-Type",
             value: "application/rss+xml; charset=utf-8",
+          },
+        ],
+      },
+      // OG图片路由长期缓存（减少ISR读取和函数调用）
+      {
+        source: "/og/:slug*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+          {
+            key: "CDN-Cache-Control",
+            value: "public, max-age=31536000, immutable",
+          },
+        ],
+      },
+      {
+        source: "/api/og/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=86400, s-maxage=604800",
+          },
+        ],
+      },
+      // 搜索API结果短期缓存
+      {
+        source: "/api/google-search/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=86400",
+          },
+        ],
+      },
+      {
+        source: "/api/searxng-search/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=86400",
+          },
+        ],
+      },
+      {
+        source: "/api/google-cse/:path*",
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=3600, s-maxage=86400",
           },
         ],
       },

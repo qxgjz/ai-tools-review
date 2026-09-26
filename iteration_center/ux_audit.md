@@ -6,6 +6,21 @@
 
 ---
 
+## 🔴 P1 已本轮修复（第三批，commit 9e9bfcb6 / 06436f3e / 2a29c53e）
+
+### P1-UX-CTA-CONTRAST 全站CTA按钮对比度不足（WCAG AA失败）
+- **问题**：全站主CTA按钮使用 `bg-emerald-600(#059669) + text-white`，对比度仅 **3.72:1**，低于WCAG AA正常文本要求的4.5:1
+- **修复**：升级为 `bg-emerald-700(#047857) + text-white`，对比度 **5.15:1**，通过AA
+- **涉及文件**：13个文件，28+处CTA按钮（首页hero、工具详情页、ranking、compare、submit、authors、sitemap、alternatives、layout、BackToTop、NewsletterSignup、AffiliateCTA、SubmitToolCTA）
+- **同时修复**：
+  - 移除反效果的暗色模式变体 `dark:bg-emerald-500 dark:hover:bg-emerald-400`（暗色模式下更浅=对比度更差）
+  - 修复9处CTA hover状态 `hover:bg-emerald-700`（与base相同无视觉反馈）→ `hover:bg-emerald-600`
+- **构建阻塞修复**：移除 `next.config.mjs` 中 `experimental.ppr:"incremental"`（需Next.js canary，项目用14.2.5稳定版，导致Vercel部署全部失败）
+- **保留未改**：5处非CTA装饰元素（ToolCard aria-hidden图标、Header logo圈、group-hover箭头圈），3:1阈值即可
+- **依据**：WCAG 2.1 SC 1.4.3 Contrast (Minimum)；色彩心理学学习（Smashing Magazine 2025 + Refactoring UI + ColorFYI）
+
+---
+
 ## 🔴 P0 已本轮修复（第一批，commit 8364a11）
 
 ### P0-I18N-001 英文站残留中文 UI 文本
@@ -61,7 +76,7 @@
 | 移动端 Hero 布局 | 左列 badge/H1/描述/CTA/stats，下方 Top3 横向 snap 滚动 + Quick Access | ✅ 不拥挤，无横向溢出 |
 | Hero 视觉吸引力 | `bg-zinc-950` 深色 + emerald 强调色，H1 `text-4xl~6xl tracking-tight` | ✅ 符合 Linear/Vercel 暗色 SaaS 规范 |
 | 导航清晰度 | Header sticky + backdrop-blur，6 导航项带 aria-label，移动端汉堡 48px | ✅ |
-| 按钮对比度 | 主 CTA `bg-emerald-600` on `zinc-950`，白字 ≥ 4.5:1 | ✅ 达标 |
+| 按钮对比度 | 主 CTA `bg-emerald-700` on `zinc-950`，白字 5.15:1 | ✅ 达标（第三批修复，原emerald-600仅3.72:1） |
 | CTA 触摸热区 | 所有 CTA `px-6 py-3.5`（≈48px） | ✅ ≥44px |
 | 加载性能 | SearchBox dynamic ssr:false + skeleton，NewsletterSignup dynamic | ✅ |
 | 深色/浅色模式 | ThemeProvider + ThemeToggle，全站 dark: 变体 | ✅ |
@@ -83,7 +98,7 @@
 ## 质量门
 - [x] 只改 className/可见文本，未改业务逻辑、SEO、数据、affiliate URL
 - [x] 改动文件：app/page.tsx、app/tools/[slug]/page.tsx、components/animations/FadeIn.tsx、components/tools/ToolCard.tsx、components/community/SubmitToolCTA.tsx（新）、app/submit/page.tsx（新）
-- [x] 已 push main（commit 19c4054a），线上验证：首页8/8 PASS、工具页UI修改全生效、文章页200、/submit页200且表单完整
+- [x] 已 push main（commit 19c4054a + 9e9bfcb6 + 06436f3e + 2a29c53e），线上验证：首页/工具页/文章页均200，CTA emerald-700已生效，hover状态正常
 - [x] CTA 触摸热区 ≥44px
 - [x] 文字对比度 ≥4.5:1（修复2处浅色 zinc-400）
 - [x] 移动端和桌面端均正常

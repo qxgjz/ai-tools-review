@@ -40,6 +40,8 @@ interface AlternativePage {
 
 
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   return alternativesData.map((item: AlternativePage) => ({
     slug: item.slug,

@@ -2497,6 +2497,258 @@
       "created_at": "2026-09-26T13:39:17.480698",
       "completed_at": "2026-09-26T14:10:18.678482",
       "completion_note": "已启用experimental.ppr=incremental，页面可通过export const experimental_ppr=true opt-in"
+    },
+    {
+      "id": "P2-CI-COMPOSITE-REFACTOR-001",
+      "title": "将9个workflow重复的checkout+setup-node+npm ci抽取为composite action",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：GitHub Actions自定义Action知识点1+2",
+      "created_at": "2026-09-26T17:17:36.782320"
+    },
+    {
+      "id": "P2-CI-CONCURRENCY-ALL-001",
+      "title": "为所有workflow添加concurrency配置（group含workflow名+ref，cancel-in-progress:true）",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：GitHub Actions知识点4",
+      "created_at": "2026-09-26T17:17:36.782345"
+    },
+    {
+      "id": "P2-CI-LIGHTHOUSE-MATRIX-001",
+      "title": "lighthouse-ci.yml改为matrix策略，对3个页面模板并行跑Lighthouse",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：GitHub Actions知识点5",
+      "created_at": "2026-09-26T17:17:36.782347"
+    },
+    {
+      "id": "P2-CI-CACHE-UNIFY-001",
+      "title": "所有workflow统一用setup-node cache:npm，移除手动actions/cache",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：GitHub Actions知识点6",
+      "created_at": "2026-09-26T17:17:36.782348"
+    },
+    {
+      "id": "P2-CI-PIN-SHA-001",
+      "title": "将所有第三方Action从tag改为完整commit SHA锁定",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：GitHub Actions知识点10",
+      "created_at": "2026-09-26T17:17:36.782349"
+    },
+    {
+      "id": "P2-CI-PERMISSIONS-001",
+      "title": "为所有workflow显式声明permissions最小权限",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：GitHub Actions知识点9",
+      "created_at": "2026-09-26T17:17:36.782350"
+    },
+    {
+      "id": "P0-GROWTH-REDDIT-001",
+      "title": "Reddit冷启动：在r/SaaS/r/IndieHackers/r/SideProject发build-in-public帖，分享AI工具目录站从0到1真实数据",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "description": "Reddit占indie SaaS初始注册34%，是零预算第一渠道。策略：1)先在3个subreddit贡献9条有用评论（回答别人的AI工具选择问题），再发1篇自己的故事帖；2)帖子标题用数字和真实数据，如我用AI+6个窗口做了个533工具的AI目录站，30天数据全公开；3)正文透明分享GSC数据/收入/错误，不推销；4)帖尾自然提一句网站链接。禁止硬广，禁止买赞。",
+      "created_at": "2026-09-26 17:20:35",
+      "source": "指挥官高频学习-冷启动增长"
+    },
+    {
+      "id": "P0-GROWTH-DIRECTORY-002",
+      "title": "批量提交到20+高DR AI工具目录站，获取外链+AI引擎引用（Futurepedia/Toolify等）",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "description": "目录提交不仅为流量，更为AI引用：ChatGPT/Claude/Perplexity从高DR目录拉数据推荐工具，AI推荐流量转化率比传统搜索高6-27倍。目标：提交到20+目录站，每个写SEO优化描述+截图。优先：Futurepedia、There's An AI For That、Toolify、AIToolsDir、TopAI.tools、OpenTools、ToolPilot等。每个目录提交后记录链接和状态。",
+      "created_at": "2026-09-26 17:20:35",
+      "source": "指挥官高频学习-冷启动增长"
+    },
+    {
+      "id": "P1-GROWTH-PROBLEM-CONTENT-003",
+      "title": "问题导向内容生产：从Reddit/Quora/IH采集20个真实AI工具选择问题，每篇写一篇问题解决型文章",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "description": "不写我们的工具很棒，写如何用AI在30分钟内做完XX。来源：r/ChatGPT、r/artificial、r/smallbusiness、Quora的AI工具话题。每篇结构：问题描述到3个解决方案对比到推荐+理由到步骤教程。目标月搜50-500、竞争低的长尾词。每篇必须有真实截图和内链。",
+      "created_at": "2026-09-26 17:20:35",
+      "source": "指挥官高频学习-冷启动增长"
+    },
+    {
+      "id": "P1-GROWTH-INTERNAL-LINK-004",
+      "title": "内链hub-and-spoke改造：每个工具详情页加4类内链（父分类+2同类+1对比+1替代），批量执行",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "description": "目录站排名差距的关键是内链结构。当前533个工具页可能内链不足。要求：每个工具详情页底部添加Related Tools（2个同类）、Compare（1个对比页）、Alternatives（1个替代页），面包屑含父分类。用模板批量生成，不需要手动写533个。",
+      "created_at": "2026-09-26 17:20:35",
+      "source": "指挥官高频学习-冷启动增长"
+    },
+    {
+      "id": "P1-GROWTH-PROGRAMMATIC-005",
+      "title": "Programmatic SEO：批量生成best AI tool for具体场景长尾页，首批50个高搜索低竞争词",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "description": "Programmatic SEO占indie SaaS初始注册24%。用现有533工具数据批量生成场景页：best AI tool for email marketing、best AI tool for resume、best AI tool for photo editing等。每页结构：场景描述到Top5工具对比表到每个工具优缺点到选择建议。关键词筛选：月搜50-500、前10结果薄内容、有affiliate机会。",
+      "created_at": "2026-09-26 17:20:35",
+      "source": "指挥官高频学习-冷启动增长"
+    },
+    {
+      "id": "P2-GROWTH-PH-LAUNCH-006",
+      "title": "Product Hunt发布准备：准备素材（GIF/视频/4截图/描述），找hunter，选周二/三凌晨PST发布",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "description": "Product Hunt是消费/设计类产品最佳发布平台。准备：1)制作30秒产品演示GIF或视频；2)4张高质量截图；3)一句话tagline；4)详细描述；5)maker comment准备好。提前2-3周联系Product Hunt hunter。发布时间：周二或周三00:01 PST。发布当天首小时激活支持者（真实用户，不买赞），回复每一条评论。",
+      "created_at": "2026-09-26 17:20:35",
+      "source": "指挥官高频学习-冷启动增长"
+    },
+    {
+      "id": "P2-CI-LHCI-ASSERTIONS-001",
+      "title": "lighthouserc.json添加性能预算断言（LCP<2500/TBT<200/CLS<0.1/JS<300KB）",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：高星工具知识点2+9",
+      "created_at": "2026-09-26T19:20:13.210522"
+    },
+    {
+      "id": "P2-CI-LINKINATOR-001",
+      "title": "创建broken-links.yml，每周linkinator扫描全站断链输出JSON报告",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：高星工具知识点5",
+      "created_at": "2026-09-26T19:20:13.210543"
+    },
+    {
+      "id": "P2-PERF-WEBVITALS-UPGRADE-001",
+      "title": "确认WebVitalsReporter使用web-vitals v4 onINP API，验证GA4上报格式",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：高星工具知识点4",
+      "created_at": "2026-09-26T19:20:13.210545"
+    },
+    {
+      "id": "P2-CI-LHCI-RUNS-001",
+      "title": "确认lighthouse-ci.yml numberOfRuns>=3取中位数减少波动",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：高星工具知识点10",
+      "created_at": "2026-09-26T19:20:13.210546"
+    },
+    {
+      "id": "P2-SEO-SCHEMA-VALIDATE-001",
+      "title": "创建脚本用schema.org validator API验证所有页面JSON-LD，CI运行",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：高星工具知识点11",
+      "created_at": "2026-09-26T19:20:13.210547"
+    },
+    {
+      "id": "P2-DEV-TOOL-AUDIT-001",
+      "title": "审计现有CI工具链，移除功能重叠的，补充缺失的（linkinator/schema验证）",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：高星工具知识点12",
+      "created_at": "2026-09-26T19:20:13.210548"
+    },
+    {
+      "id": "P0-MONETIZE-AFFILIATE-APPLY-001",
+      "title": "批量申请10个高佣AI联盟计划：Systeme.io/Surfer SEO/Semrush/Pictory/Jasper/Writesonic/Snov.io/beehiiv/HubSpot/CapCut",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "description": "当前仅ElevenLabs(22%×12月)和Mangools(25-35%)上线，严重不足。目标：申请10个高佣计划，优先recurring终身+90天以上cookie。通过Impact/PartnerStack/ShareASale网络申请，或直接去各官网affiliate页面。每个计划记录：申请状态/联盟ID/佣金比例/cookie时长/网络平台。已被拒的(Pictory/InVideo)换账号或跳过。",
+      "created_at": "2026-09-26 20:18:58",
+      "source": "指挥官高频学习-变现模式"
+    },
+    {
+      "id": "P0-MONETIZE-TRACKING-002",
+      "title": "建联盟营销跟踪表：每个计划记录点击/转化/收入/EPC，每月优化",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "description": "在iteration_center/建affiliate_tracking.json或CSV，字段：计划名/佣金比例/cookie/加入日期/链接数/点击数/转化数/收入/EPC(每点击收入)/状态。每月分析：砍掉EPC最低20%，加码最高20%。没有跟踪=不知道哪个赚钱=盲目铺链接。",
+      "created_at": "2026-09-26 20:18:58",
+      "source": "指挥官高频学习-变现模式"
+    },
+    {
+      "id": "P1-MONETIZE-COMPARISON-PAGES-003",
+      "title": "创建10个高转化对比页：X vs Y格式，转化率比普通评测高2-3倍",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "description": "对比页是转化率最高的页面格式，因为用户已在决策阶段。首批10个：Jasper vs Copy.ai、ElevenLabs vs Murf、Semrush vs Mangools、Surfer SEO vs Frase、Pictory vs InVideo、Notion AI vs Mem、Canva AI vs Adobe Firefly、Midjourney vs DALL-E、Grammarly vs LanguageTool、Calendly vs Cal.com。每页：对比表+优缺点+适用人群+联盟CTA。",
+      "created_at": "2026-09-26 20:18:58",
+      "source": "指挥官高频学习-变现模式"
+    },
+    {
+      "id": "P1-MONETIZE-ARTICLE-CTA-004",
+      "title": "给107篇文章加上下文联盟CTA：在决策点放链接，不堆在开头",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "description": "每篇文章检查：1)是否有联盟链接；2)链接位置是否在用户决策点（对比表后/步骤教程中/结论推荐处）；3)是否用了正确的已批准联盟链接（Mangools链接已入库待铺）。禁止开头堆链接，禁止用未批准的联盟链接。目标：每篇至少1个上下文CTA。",
+      "created_at": "2026-09-26 20:18:58",
+      "source": "指挥官高频学习-变现模式"
+    },
+    {
+      "id": "P2-MONETIZE-DIGITAL-PRODUCT-005",
+      "title": "创建首个数字产品：AI工具对比Notion模板或prompt库，$9-29定价",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "description": "数字产品高毛利无履约。选项A：533个AI工具的Notion对比数据库模板（含分类/价格/评分/适用场景），$19；选项B：100+高质量AI prompt库（按场景分类），$9。用Gumroad或Lemon Squeezy交付。在网站首页和文章底部推广。先做1个验证需求，再扩展。",
+      "created_at": "2026-09-26 20:18:58",
+      "source": "指挥官高频学习-变现模式"
+    },
+    {
+      "id": "P2-MONETIZE-DISPLAY-ADS-006",
+      "title": "评估展示广告时机：Ezoic门槛10K sessions/月，当前流量不够时先不做",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "description": "科技niche RPM $25-50，但Ezoic门槛10K sessions/月，Mediavine 50K。当前真实organic仅7次/周，远不够。待办：1)记录当前月sessions数；2)设定达到10K的目标日期；3)提前研究Ezoic vs Mediavine vs Raptive对比；4)流量达标后立即申请。不要现在就加广告拖慢速度。",
+      "created_at": "2026-09-26 20:18:58",
+      "source": "指挥官高频学习-变现模式"
     }
   ],
   "milestones": [
@@ -3961,8 +4213,8 @@
     }
   ],
   "last_deploy_time": "2026-09-24 19:40:02",
-  "last_learning_update": "2026-09-24T21:29:25.602827",
-  "last_learning_topic": "高星GitHub开源工具深度解析：SEO审计、性能监控与自动化测试（15知识点）",
+  "last_learning_update": "2026-09-26 20:18:58",
+  "last_learning_topic": "联盟营销/独立站变现模式创新（15知识点）",
   "iteration_log": [
     {
       "iteration": 100,

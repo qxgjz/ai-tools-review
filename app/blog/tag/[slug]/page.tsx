@@ -23,6 +23,19 @@ interface TagPageProps {
   params: { slug: string };
 }
 
+export const dynamic = "force-static";
+export const dynamicParams = false;
+
+export function generateStaticParams() {
+  const tagSlugs = new Set<string>();
+  posts.forEach((post: any) => {
+    (post.tags || []).forEach((tag: string) => {
+      tagSlugs.add(tag.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-'));
+    });
+  });
+  return Array.from(tagSlugs).map((slug) => ({ slug }));
+}
+
 export function generateMetadata({ params }: TagPageProps) {
   const tagPosts = posts.filter((p) =>
     getPostTagSlugs(p).some((t) => t.slug === params.slug)

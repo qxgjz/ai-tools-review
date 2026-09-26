@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import dynamic from "next/dynamic";
+import nextDynamic from "next/dynamic";
 import { ArrowRight, Image as ImageIcon, Zap, BookOpen, CheckCircle2, Star, Lightbulb, Award } from "lucide-react";
 import posts from "@/data/posts.json";
 import tools from "@/data/tools.json";
@@ -20,7 +20,7 @@ import { PostNavigation } from "@/components/blog/PostNavigation";
 import { markdownToHtmlSafe } from "@/lib/markdown";
 
 // 动态Import重型Component，减少初始JS包大小
-const Giscus = dynamic(() => import("@/components/comments/Giscus"), {
+const Giscus = nextDynamic(() => import("@/components/comments/Giscus"), {
   ssr: false,
   loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading comments...</div>,
 });
@@ -34,7 +34,7 @@ function slugifyTag(name: string): string {
     .replace(/\s+/g, '-')
     .replace(/-+/g, '-');
 }
-const ReviewTabs = dynamic(() => import("@/components/content/ReviewTabs"), {
+const ReviewTabs = nextDynamic(() => import("@/components/content/ReviewTabs"), {
   ssr: false,
   loading: () => <div className="h-40 flex items-center justify-center text-gray-400 text-sm">Loading scores...</div>,
 });
@@ -46,6 +46,8 @@ interface PostPageProps {
 
 
 export const dynamicParams = false;
+
+export const dynamic = "force-static";
 
 export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));

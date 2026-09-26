@@ -1,4 +1,4 @@
-"use client";
+﻿"use client";
 
 import Link from "next/link";
 import { useState } from "react";
@@ -137,7 +137,7 @@ export default function RankingPage() {
           <div className="text-center mt-8">
             <button
               onClick={() => setShowAll(true)}
-              className="px-6 py-3 bg-emerald-700 hover:bg-emerald-700 text-white font-medium rounded-xl transition-colors shadow-lg hover:shadow-xl"
+              className="px-6 py-3 bg-emerald-700 hover:bg-emerald-600 text-white font-medium rounded-xl transition-colors shadow-lg hover:shadow-xl"
             >
               Show All {sortedTools.length} Tools
             </button>

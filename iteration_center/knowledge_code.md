@@ -191,6 +191,86 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 
 ## 待补充
+
+---
+
+## [2026-09-26] 高星GitHub开源工具：SEO审计与性能监控工具深度评测（12知识点）
+
+**学习背景**：AIToolCrux已集成Lighthouse CI、Unlighthouse CI、Playwright E2E、Vitest、axe-core。系统评测其他高星SEO审计与性能监控工具，识别可补充现有工具链的开源项目。
+
+**知识点1：Unlighthouse（4.8K GitHub stars）是全站Lighthouse扫描工具，自动发现URL并并行运行Lighthouse**。`npx unlighthouse --site https://aitoolcrux.com`自动爬取sitemap/robots发现所有页面，并行跑Lighthouse，生成统一仪表盘。比Lighthouse CI（单URL）适合全站扫描。AIToolCrux已创建.github/workflows/unlighthouse.yml（每周日运行）。关键参数：`--throttling`模拟慢速网络，`--samples`多次运行取中位数减少波动，`--budget`设置分数阈值失败CI。（来源：https://unlighthouse.dev/ + https://unlighthouse.dev/integrations/ci）
+
+**知识点2：Lighthouse CI（6.3K GitHub stars）是Google官方的per-commit性能回归工具，在每次PR上跑Lighthouse并断言阈值**。`@lhci/cli`配置lighthouserc.json，设置`assert.assertions.lcp: ["error", {maxNumericValue: 2500}]`等断言，不达标则CI失败。支持上传报告到LHCI Server或临时存储。与Unlighthouse的区别：LHCI适合单/少量URL的per-commit回归，Unlighthouse适合全站定期扫描。AIToolCrux已有lighthouse-ci.yml，应补充assertions断言（当前仅运行未设阈值）。（来源：https://googlechrome.github.io/lighthouse-ci/docs/getting-started.html + https://unlighthouse.dev/learn-lighthouse/lighthouse-ci）
+
+**知识点3：sitespeed.io（5K GitHub stars）是最全面的开源性能测试工具，驱动真实浏览器（Chrome/Firefox/Edge/Safari）采集指标**。`sitespeed.io https://aitoolcrux.com`运行真实浏览器，采集HAR、瀑布图、视频回放、CPU/内存使用。包含子工具：Browsertime（浏览器自动化）、The Coach（性能最佳实践建议）、PageXray（页面资源分析）、Chrome-HAR（HAR生成）、Throttle（网络限速）。比Lighthouse更底层更详细，但配置复杂、运行慢。适合深度性能诊断，不适合CI高频运行。（来源：https://www.sitespeed.io/index.html + https://dev.co/observability/open-source/sitespeed-io）
+
+**知识点4：web-vitals是Google官方的Core Web Vitals RUM（真实用户监控）JS库，<3KB gzipped**。`import { onLCP, onINP, onCLS } from 'web-vitals'`，回调在指标就绪时触发。支持attribution构建（`onLCP(callback, {reportAllChanges: true})`）获取指标归因详情。用`navigator.sendBeacon()`上报到GA4/BigQuery确保页面卸载时数据不丢失。AIToolCrux已有WebVitalsReporter组件接入layout.tsx上报GA4，应确认使用最新web-vitals v4 API（onINP替代onFID）。（来源：https://www.npmjs.com/package/web-vitals + https://developers.google.com/codelabs/chrome-web-vitals-js + https://web.developers.google.cn/articles/vitals）
+
+**知识点5：linkinator是高星断链检查工具，支持远程网站/本地文件/Markdown扫描，可CI集成**。`npx linkinator https://aitoolcrux.com --recurse`递归扫描所有页面的所有链接（不仅`<a href>`，还包括img src、link href等）。支持`--skip`正则排除外部链接，`--format json`输出结构化结果，`--retry`重试临时失败。可在CI中作为断链检测步骤。AIToolCrux有227个孤立页面历史问题，linkinator可定期验证内链修复效果。替代方案：broken-link-checker（较旧，维护不活跃），linkinator更活跃。（来源：https://www.npmjs.com/package/linkinator + https://github.funny.asso.eu.org/JustinBeckwith/linkinator）
+
+**知识点6：webhint是微软开发的Web可访问性/性能/安全linting工具，类似ESLint但针对网页**。`npx hint https://aitoolcrux.com`检查：兼容性（browser compatibility）、性能（资源优化）、安全性（CSP/HTTPS）、可访问性（axe-core集成）、PWA、SEO。可配置.hintrc启用/禁用规则。与axe-core的区别：webhint是全维度linting（含性能/安全/兼容性），axe-core专注可访问性。AIToolCrux已有axe-core测试，webhint可补充性能和安全linting，但运行较慢。（来源：https://webhint.io/ + GitHub webhintio/hint）
+
+**知识点7：RUM（真实用户监控）vs Lab（实验室）数据的区别——两者互补不可替代**。Lab数据（Lighthouse/sitespeed.io）在受控环境中测量，可复现、可诊断，但不代表真实用户。RUM数据（web-vitals/GA4）采集真实用户设备/网络/地区的实际体验，是Google排名依据（CrUX），但波动大、难诊断。最佳实践：CI用Lab数据做回归防护（LHCI断言），生产用RUM数据做趋势监控（web-vitals上报GA4），两者结合。AIToolCrux已有两者，但RUM数据未建立仪表盘。（来源：https://web.developers.google.cn/articles/vitals + https://unlighthouse.dev/learn-lighthouse/lighthouse-ci）
+
+**知识点8：Core Web Vitals 2026阈值——LCP<2.5s、INP<200ms、CLS<0.1（75分位）**。INP于2024年3月正式替代FID成为Core Web Vitals。Lighthouse实验室中INP无法直接测量（需真实用户交互），用TBT（Total Blocking Time）作为代理指标。好的TBT<200ms对应好的INP。AIToolCrux的LHCI断言应设置TBT<200ms（代理INP）、LCP<2500ms、CLS<0.1。（来源：https://webperfclinic.com/hu/article/lighthouse-ci-2026-teljesitmenybudzse-core-web-vitals-pull-requestekben + https://unlighthouse.dev/learn-lighthouse/lighthouse-ci）
+
+**知识点9：性能预算（Performance Budget）是CI中防止性能退化的关键机制**。在lighthouserc.json中设置：`assert.assertions."resource-summary": ["error", {resourceType: "script", maxSize: 300000}]`（JS不超过300KB）、`"total-byte-weight": ["warn", {maxNumericValue: 1000000}]`（总资源<1MB）。也可用size-limit（已在knowledge_code.md覆盖）在构建时检查bundle大小。性能预算应基于当前基线设置（如当前JS 250KB，预算设300KB留20%余量），超过即CI失败。（来源：https://googlechrome.github.io/lighthouse-ci/docs/getting-started.html + https://unlighthouse.dev/learn-lighthouse/lighthouse-ci）
+
+**知识点10：多次运行取中位数减少Lighthouse波动——单次运行结果不可靠**。Lighthouse结果受CPU/网络波动影响，单次运行LCP可能偏差30%+。LHCI默认`collect.numberOfRuns: 3`取中位数。Unlighthouse用`--samples 3`。sitespeed.io默认多次运行。最佳实践：CI中至少跑3次取中位数，关键页面跑5次。AIToolCrux的lighthouse-ci.yml应确认numberOfRuns>=3。（来源：https://googlechrome.github.io/lighthouse-ci/docs/getting-started.html + https://unlighthouse.dev/learn-lighthouse/lighthouse-ci）
+
+**知识点11：SEO审计工具分层——技术SEO（OpenSEO/Lighthouse）、内容SEO、断链（linkinator）、结构化数据（Schema.org validator）**。技术SEO：OpenSEO（本地D1数据库，AIToolCrux已用）+ Lighthouse SEO审计。断链：linkinator定期扫描。结构化数据：Google Rich Results Test + Schema.org validator（手动）。内容SEO：SurferSEO/Frase（付费，无开源替代）。开源工具覆盖技术层和断链，内容层需付费工具。AIToolCrux的工具链已覆盖技术SEO+断链+性能，缺少结构化数据自动化验证。（来源：https://editorialge.com/open-source-seo-tools/ + https://www.bare-digital.com/best-free-website-audit-tools/）
+
+**知识点12：工具选择决策矩阵——按频率和深度选择工具，避免工具堆砌**。每PR运行：LHCI（3-5 URL，快）+ linkinator（增量）。每日/每周：Unlighthouse（全站）+ webhint（全维度lint）。按需深度诊断：sitespeed.io（真实浏览器详细指标）。持续监控：web-vitals RUM（GA4仪表盘）。AIToolCrux当前已有LHCI+Unlighthouse+Playwright+axe+web-vitals，建议补充：①LHCI assertions断言（性能预算）②linkinator CI断链检查③web-vitals GA4仪表盘。不建议引入sitespeed.io（运行慢、与LHCI功能重叠）。（来源：https://unlighthouse.dev/ + https://www.sitespeed.io/index.html + https://www.npmjs.com/package/linkinator）
+
+**落地计划（下次迭代执行）**：
+1. 知识点2+9（LHCI断言+性能预算）→ 任务P2-CI-LHCI-ASSERTIONS：在lighthouserc.json中添加assertions（LCP<2500ms、TBT<200ms、CLS<0.1、JS<300KB），CI失败即阻断
+2. 知识点5（linkinator断链）→ 任务P2-CI-LINKINATOR：创建.github/workflows/broken-links.yml，每周运行linkinator扫描全站断链，输出JSON报告
+3. 知识点4（web-vitals RUM）→ 任务P2-PERF-WEBVITALS-UPGRADE：确认WebVitalsReporter使用web-vitals v4的onINP API，验证GA4事件上报格式正确
+4. 知识点10（多次运行取中位数）→ 任务P2-CI-LHCI-RUNS：确认lighthouse-ci.yml的numberOfRuns>=3，如不足则修改
+5. 知识点11（结构化数据验证）→ 任务P2-SEO-SCHEMA-VALIDATE：创建脚本用schema.org validator API验证所有页面JSON-LD，CI中运行
+6. 知识点12（工具矩阵）→ 任务P2-DEV-TOOL-AUDIT：审计现有9个workflow+测试工具，移除功能重叠的，补充缺失的（linkinator/schema验证）
+
+
+
+---
+
+## [2026-09-26] GitHub Actions自动化：自定义Action开发与高级CI/CD模式（12知识点）
+
+**学习背景**：AIToolCrux已有9个workflow（lint/security/bundle-size/lighthouse-ci/unit-tests/playwright/codeql/unlighthouse/cache-monitor）和1个composite action（setup）。系统学习自定义Action开发和高级CI/CD模式，提升CI效率和可维护性。
+
+**知识点1：GitHub Actions有三种自定义Action类型——Composite、JavaScript、Docker Container**。Composite Action用YAML组合多个workflow步骤，最轻量，适合封装checkout+setup-node+npm ci等重复步骤（AIToolCrux的.github/actions/setup/action.yml即此类）。JavaScript Action用Node.js+@actions/core编写，可执行复杂逻辑，需打包dist。Docker Container Action打包完整环境，启动慢但环境一致。选择原则：纯步骤组合用Composite，需复杂逻辑用JS，需特定运行时用Docker。（来源：https://docs.github.com/en/enterprise-cloud@latest/actions/concepts/workflows-and-actions/about-custom-actions + https://docs.github.com/en/actions/creating-actions/creating-a-composite-action）
+
+**知识点2：Composite Action支持inputs/outputs，但不支持`uses`调用其他Action（仅支持`run`步骤）**。Composite Action的runs.using必须为"composite"，每个步骤指定shell。可定义inputs（带default和description）和outputs（通过$GITHUB_OUTPUT设置）。限制：不能在Composite中调用第三方Action（如actions/checkout），只能用run命令执行。这意味着AIToolCrux的setup composite action如果需要checkout，必须在调用方先checkout再调用setup。（来源：https://docs.github.com/en/actions/creating-actions/creating-a-composite-action + https://docs.github.com/en/actions/sharing-automations/creating-actions/metadata-syntax-for-github-actions）
+
+**知识点3：Reusable Workflow（可复用工作流）与Composite Action的区别——Reusable是完整job级别复用，Composite是步骤级别复用**。Reusable Workflow放在.github/workflows/下，用workflow_call触发，可被其他workflow的jobs中`uses: owner/repo/.github/workflows/file.yml@ref`调用。支持secrets继承和inputs传递。Composite是单个step级别，在job内调用。选择：跨job复用（如完整的build+test+deploy流程）用Reusable，job内步骤复用用Composite。AIToolCrux当前9个workflow有大量重复的checkout+setup-node+npm ci，可用Composite减少重复。（来源：https://docs.github.com/en/actions/how-tos/sharing-automations/reusing-workflows + https://docs.github.com/en/actions/creating-actions/creating-a-composite-action）
+
+**知识点4：concurrency控制并发执行，cancel-in-progress:true自动取消同一组中正在运行的旧任务**。`concurrency: { group: ci-${{ github.ref }}, cancel-in-progress: true }`确保同一分支同时只有一个CI运行，新push自动取消旧的运行，节省分钟数。最佳实践：group包含workflow名+ref，避免不同workflow互相取消。部署类workflow不要用cancel-in-progress（避免部署中断）。AIToolCrux的lighthouse-ci.yml和bundle-size.yml已添加concurrency，其余workflow应补充。（来源：https://docs.github.com/en/actions/using-jobs/using-concurrency + https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions）
+
+**知识点5：Matrix策略自动生成多维度job组合，include/exclude精细控制组合**。`strategy.matrix: { node-version: [18, 20, 22], os: [ubuntu-latest, windows-latest] }`自动生成6个job。`include`添加额外组合，`exclude`排除特定组合。`max-parallel`限制同时运行的job数（避免API限流）。`fail-fast:false`让所有组合跑完再报告失败（默认true即任一失败立即取消其他）。AIToolCrux可用matrix对多个关键页面跑Lighthouse（首页/工具页/文章页），而非写3个独立job。（来源：https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow + https://docs.github.com/en/actions/how-tos/sharing-automations/reusing-workflows）
+
+**知识点6：actions/cache@v4缓存依赖，key用hashFiles(package-lock.json)确保依赖变更时缓存失效**。标准npm缓存配置：`path: ~/.npm`，`key: ${{ runner.os }}-npm-${{ hashFiles('**/package-lock.json') }}`，`restore-keys: ${{ runner.os }}-npm-`。restore-keys实现前缀匹配回退（精确key未命中时用最近的npm缓存）。缓存上限10GB/repo，单缓存最大10GB，7天未访问自动清理。更简单的方式：setup-node@v4的`cache: npm`参数自动配置缓存，无需手动actions/cache。AIToolCrux的workflow应统一用setup-node cache:npm。（来源：https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/caching-dependencies-to-speed-up-workflows + https://docs.github.com/en/actions/reference/workflows-and-actions/dependency-caching）
+
+**知识点7：OIDC（OpenID Connect）消除长期云密钥，用短期JWT令牌动态获取云凭据**。工作流中设置`permissions: id-token: write`，然后用云厂商的login action（如aws-actions/configure-aws-credentials）交换短期令牌。无需在GitHub Secrets中存储AWS_ACCESS_KEY_ID等长期密钥。支持AWS/Azure/GCP/HashiCorp Vault/PyPI/JFrog等。AIToolCrux部署用Vercel（Vercel CLI token仍需secrets），但如未来接入AWS/GCP资源应优先OIDC。（来源：https://docs.github.com/en/actions/concepts/security/openid-connect + https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions）
+
+**知识点8：Secrets分三级——Repository、Environment、Organization，Environment Secrets需审批后才能访问**。Repository Secrets所有workflow可访问；Environment Secrets绑定特定environment（如production），可配置required reviewers审批后才解锁；Organization Secrets可设置可见性（all repos/private repos/selected repos）。敏感值永远不要写在workflow文件中。GitHub自动在日志中redact secrets的精确匹配和常见编码（base64等），但JSON结构中的secrets可能泄露。最佳实践：部署密钥用Environment Secrets+审批。（来源：https://docs.github.com/en/actions/security-guides/using-secrets-in-github-actions + https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions）
+
+**知识点9：permissions字段最小权限原则——GITHUB_TOKEN默认权限可收紧到具体操作**。在workflow或job级别设置`permissions: { contents: read, pull-requests: write }`，只授予需要的权限。默认GITHUB_TOKEN权限由仓库设置决定（可能是permissive或restricted）。安全最佳实践：在workflow顶部显式设置`permissions: contents: read`，然后在需要写权限的job中单独提升。第三方Action如果需要写权限会在文档中说明。AIToolCrux的workflow应显式声明permissions而非依赖默认。（来源：https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions + https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions）
+
+**知识点10：Action版本锁定——用commit SHA而非tag，防止第三方Action被篡改后投毒**。`uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29`（commit SHA）比`@v4`（tag）更安全，因为tag可被强制移动。GitHub推荐对第三方Action锁定完整commit SHA。可用Dependabot的versioning: "increase"自动更新Action版本。AIToolCrux的dependency-review-action和lighthouse-ci-action已标记需锁定SHA，应全部改为commit SHA。（来源：https://docs.github.com/en/actions/security-for-github-actions/security-guides/security-hardening-for-github-actions + knowledge_code.md已记录GHA安全扫描结果）
+
+**知识点11：job级别的needs和if实现复杂工作流依赖与条件执行**。`needs: [build, test]`等待多个前置job完成。`if: github.event_name == 'pull_request'`条件触发。`if: needs.build.result == 'success'`检查前置job结果。`if: always()`即使前置失败也执行（用于清理）。`if: failure()`仅前置失败时执行（用于通知）。组合使用可实现：build→test→deploy（仅main分支）→cleanup（always）。AIToolCrux的playwright.yml可加needs: build确保部署后再跑E2E。（来源：https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions + https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow）
+
+**知识点12：workflow_dispatch支持手动触发并带inputs，schedule用cron定时触发但有延迟**。`workflow_dispatch: inputs: { environment: { type: choice, options: [staging, production] } }`可在Actions页面手动选择参数运行。`schedule: - cron: '0 0 * * 0'`每周日UTC 0点运行（注意cron用UTC，北京时间需+8）。schedule触发可能有15分钟延迟（GitHub排队），不适合精确时间任务。schedule触发时github.event_name为schedule，secrets可正常使用，但pull_request的secrets在fork PR中不可用。AIToolCrux的unlighthouse.yml（每周日）和cache-monitor.yml（每日）用schedule触发是正确的。（来源：https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions + https://docs.github.com/en/actions/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow）
+
+**落地计划（下次迭代执行）**：
+1. 知识点1+2（Composite Action）→ 任务P2-CI-COMPOSITE-REFACTOR：将9个workflow中重复的checkout+setup-node+npm ci+缓存统一抽取为.github/actions/setup/action.yml，所有workflow调用此composite
+2. 知识点4（concurrency）→ 任务P2-CI-CONCURRENCY-ALL：为所有9个workflow添加concurrency配置（group含workflow名+ref，cancel-in-progress:true），部署类除外
+3. 知识点5（matrix）→ 任务P2-CI-LIGHTHOUSE-MATRIX：将lighthouse-ci.yml改为matrix策略，对首页/工具页/文章页3个模板并行跑Lighthouse，max-parallel:2
+4. 知识点6（缓存）→ 任务P2-CI-CACHE-UNIFY：所有workflow统一用setup-node@v4的cache:npm参数，移除手动actions/cache配置
+5. 知识点10（Action锁定SHA）→ 任务P2-CI-PIN-SHA：将所有第三方Action（dependency-review-action、lighthouse-ci-action、treosh/lighthouse-ci-action等）从tag改为完整commit SHA
+6. 知识点9（permissions最小权限）→ 任务P2-CI-PERMISSIONS：为所有workflow显式声明permissions字段，默认contents:read，需要写权限的job单独提升
+
+
 - [2026-09-26] 学习主题：高星GitHub开源工具全景（SEO审计+性能监控+自动化测试）
 
   **知识点1：Lighthouse是Google官方开源审计引擎，GitHub 30k+ stars**——Chrome团队维护，覆盖Performance/Accessibility/Best Practices/SEO/Progressive Web App五大类审计。基于Puppeteer启动真实Chrome运行页面，输出JSON/HTML报告。CLI用法：`npx lighthouse https://example.com --output=json --output-path=report.json`。是所有性能/SEO审计工具的底层引擎。（来源：https://github.com/GoogleChrome/lighthouse + https://developer.chrome.com/docs/lighthouse/overview/）

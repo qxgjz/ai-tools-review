@@ -280,6 +280,8 @@ const CATEGORIES: Record<string, { name: string; description: string; icon: Luci
 
 
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   const categories = new Set(toolsData.map((t) => t.category));
   return Array.from(categories).map((slug) => ({ slug }));

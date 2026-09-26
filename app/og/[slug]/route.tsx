@@ -19,6 +19,11 @@ const DIMENSION_LABELS_OG = ["Functionality", "User Experience", "Pricing & Valu
 export async function GET(_request: Request, { params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
 
+  const cacheHeaders = {
+    "Cache-Control": "public, max-age=31536000, immutable",
+    "CDN-Cache-Control": "public, max-age=31536000, immutable",
+  };
+
   if (!tool) {
     return new ImageResponse(
       (
@@ -28,7 +33,7 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
           <div style={{ fontSize: 28, color: "rgba(255,255,255,0.85)" }}>Six-Dimension Scoring · Expert Reviews · Smart Recommendations</div>
         </div>
       ),
-      { width: 1200, height: 630 }
+      { width: 1200, height: 630, headers: cacheHeaders }
     );
   }
 
@@ -67,6 +72,6 @@ export async function GET(_request: Request, { params }: { params: { slug: strin
         </div>
       </div>
     ),
-    { width: 1200, height: 630 }
+    { width: 1200, height: 630, headers: cacheHeaders }
   );
 }

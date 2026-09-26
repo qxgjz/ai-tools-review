@@ -72,6 +72,9 @@
 | 2026-09-24 | hello@replit.com | replit | /tools/replit | We reviewed Replit — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
 | 2026-09-24 | hello@windsurf.com | windsurf | /tools/windsurf | We reviewed Windsurf — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
 | 2026-09-24 | hello@v0.dev | v0 | /tools/v0 | We reviewed v0 — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
+| 2026-09-26 | hello@cherry-ai.com | cherry-studio | /tools/cherry-studio | We reviewed Cherry Studio — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
+| 2026-09-26 | hello@openhands.dev | openhands | /tools/openhands | We reviewed OpenHands — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
+| 2026-09-26 | hello@langflow.org | langflow | /tools/langflow | We reviewed Langflow — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
 
 ---
 

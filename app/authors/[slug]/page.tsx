@@ -17,6 +17,8 @@ const AUTHORS: Record<string, any> = {
 
 
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   return Object.keys(AUTHORS).map((slug) => ({ slug }));
 }

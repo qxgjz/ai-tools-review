@@ -158,6 +158,8 @@ const AUDIENCE_CONFIG: Record<AudienceSlug, {
   }
 };
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   return Object.keys(AUDIENCE_CONFIG).map((slug) => ({ audience: slug }));
 }

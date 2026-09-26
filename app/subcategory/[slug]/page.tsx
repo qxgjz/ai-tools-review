@@ -12,6 +12,8 @@ import { FadeIn, GradientText } from "@/components/animations";
 type SubcatMeta = { name: string; parent: string; toolCount: number };
 const subcats = subcatsData as Record<string, SubcatMeta>;
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   return Object.keys(subcats)
     .filter((s) => subcats[s].toolCount > 0)

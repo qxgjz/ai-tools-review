@@ -8,6 +8,8 @@ interface CategoryPageProps {
 }
 
 
+export const dynamic = "force-static";
+
 export function generateStaticParams() {
   const slugs = new Set(posts.map((p) => p.categorySlug).filter(Boolean));
   return Array.from(slugs).map((slug) => ({ slug }));
