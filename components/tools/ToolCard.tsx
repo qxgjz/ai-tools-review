@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { ArrowUpRight, Sparkles } from "lucide-react";
 import type { Tool, Grade } from "@/types";
 import { calculateScoreResult } from "@/lib/scoring";
@@ -24,11 +24,12 @@ interface ToolCardProps {
 export function ToolCard({ tool, index = 0 }: ToolCardProps) {
   const { total, grade } = calculateScoreResult(tool.scores);
   const isFeatured = total >= 8.5;
+  const reduce = useReducedMotion();
 
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
-      animate={{ opacity: 1, y: 0 }}
+      initial={reduce ? false : { opacity: 0, y: 16 }}
+      animate={reduce ? undefined : { opacity: 1, y: 0 }}
       transition={{
         duration: 0.35,
         delay: Math.min(index * 0.05, 0.5),
@@ -42,7 +43,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
         className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 rounded-xl"
         aria-label={`${tool.name} review - rated ${total.toFixed(1)}/10, Grade ${grade}. Click to read full review.`}
       >
-        <div className="relative h-full flex flex-col p-5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-md hover:-translate-y-0.5 transition-all duration-200 overflow-hidden">
+        <div className="relative h-full flex flex-col p-5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 overflow-hidden">
           {/* Subtle top accent line on hover */}
           <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
@@ -94,7 +95,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
           <div className="pt-4 border-t border-zinc-100 dark:border-zinc-800">
             <div className="flex items-center justify-between">
               <div className="flex items-baseline gap-2">
-                <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100">
+                <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100 tabular-nums">
                   {total.toFixed(1)}
                 </span>
                 <span className="text-xs text-zinc-500 dark:text-zinc-400">/10</span>
