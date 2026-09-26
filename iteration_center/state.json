@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 102,
+  "current_iteration": 103,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -741,7 +741,8 @@
       "description": "recurring碾压一次性：30%recurring 4个月超过50%一次性。优先选终身recurring(Systeme.io/Writesonic)和12个月recurring(ElevenLabs/HeyGen/Gamma)，放弃<15%一次性和<7天cookie的程序。更新knowledge_monetization.md的联盟评估标准。",
       "assigned_to": "窗口5",
       "source": "learning: 联盟营销变现 2026-09-23",
-      "status": "pending"
+      "status": "completed",
+      "completed_at": "2026-09-26"
     },
     {
       "id": "P1-MONETIZE-PAIDLISTING-001",
@@ -750,7 +751,8 @@
       "description": "目录站第二收入流。设计3档：Featured listing $99/月(分类页顶部+彩色边框)、Sponsored category $499/月(顶部+横幅)、Sponsored review $1500-5000/篇。月UV过500后启动销售，现在先建好页面和media kit。",
       "assigned_to": "窗口5",
       "source": "learning: 联盟营销变现 2026-09-23",
-      "status": "pending"
+      "status": "completed",
+      "completed_at": "2026-09-26"
     },
     {
       "id": "P1-CONTENT-ORIGINALITY-AUDIT-001",
