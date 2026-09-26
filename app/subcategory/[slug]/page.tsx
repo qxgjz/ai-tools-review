@@ -24,6 +24,9 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `${sub.name} - Top AI Tools 2026 | AIToolCrux`,
     description: `Discover the best ${sub.name.toLowerCase()} AI tools of 2026. We test and review ${sub.toolCount}+ tools with real hands-on experience, pricing, and pros/cons.`,
+    alternates: {
+      canonical: `https://www.aitoolcrux.com/subcategory/${params.slug}`,
+    },
   };
 }
 

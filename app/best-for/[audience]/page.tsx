@@ -37,7 +37,7 @@ const AUDIENCE_CONFIG: Record<AudienceSlug, {
       { q: "Is my code safe with AI tools?", a: "Reputable tools (GitHub Copilot, Cursor, Tabnine) have enterprise plans that guarantee your code is never used for training. Read the terms carefully — free tiers may use your code for model improvement. For sensitive or proprietary code, always use enterprise plans with data privacy guarantees." }
     ],
     filter: (tool) => {
-      const t = tool as any;
+      const t = tool as Tool;
       const cat = (t.category || "").toLowerCase();
       const tags = (t.tags || []).map((x: string) => x.toLowerCase()).join(" ");
       const bestFor = (t.bestFor || "").toLowerCase();
@@ -64,7 +64,7 @@ const AUDIENCE_CONFIG: Record<AudienceSlug, {
       { q: "Is it worth paying for AI tools as a content creator?", a: "If you create content regularly (weekly or more), yes. The time saved on editing, thumbnails, and voiceovers usually justifies $30-50/month. Start with free tiers, identify the biggest time drain, and upgrade that specific tool first." }
     ],
     filter: (tool) => {
-      const t = tool as any;
+      const t = tool as Tool;
       const cat = (t.category || "").toLowerCase();
       const tags = (t.tags || []).map((x: string) => x.toLowerCase()).join(" ");
       const bestFor = (t.bestFor || "").toLowerCase();
@@ -92,12 +92,12 @@ const AUDIENCE_CONFIG: Record<AudienceSlug, {
       { q: "Can AI help me write better essays?", a: "Yes — use AI to brainstorm outlines, check grammar, get feedback on clarity, and identify weak arguments. Never ask AI to write the essay for you. The best workflow: draft yourself, then use AI as a writing coach to improve structure, tone, and clarity. This actually improves your own writing skills over time." }
     ],
     filter: (tool) => {
-      const t = tool as any;
+      const t = tool as Tool;
       const cat = (t.category || "").toLowerCase();
       const tags = (t.tags || []).map((x: string) => x.toLowerCase()).join(" ");
       const bestFor = (t.bestFor || "").toLowerCase();
       return (cat === "chat" || cat === "writing" || cat === "productivity" || cat === "search" || cat === "code") &&
-             (tool as any).hasFreeTier &&
+             (tool as Tool).hasFreeTier &&
              (bestFor.includes("student") || bestFor.includes("learn") || bestFor.includes("education") ||
               tags.includes("education"));
     }
@@ -121,7 +121,7 @@ const AUDIENCE_CONFIG: Record<AudienceSlug, {
       { q: "How much should a startup spend on AI tools?", a: "Early-stage startups ($0-10k MRR) should spend $50-200/month total on AI tools. Focus on free tiers and tools that directly accelerate engineering or sales. As you grow, allocate 1-3% of revenue to productivity tools. Never let tool spending outpace revenue growth." }
     ],
     filter: (tool) => {
-      const t = tool as any;
+      const t = tool as Tool;
       const cat = (t.category || "").toLowerCase();
       const bestFor = (t.bestFor || "").toLowerCase();
       const tags = (t.tags || []).map((x: string) => x.toLowerCase()).join(" ");
@@ -149,7 +149,7 @@ const AUDIENCE_CONFIG: Record<AudienceSlug, {
       { q: "How do I keep my writing voice when using AI?", a: "Give AI examples of your writing style, explicitly ask it to match your tone, and always edit AI output to add your unique voice and insights. The best approach: use AI for brainstorming, outlines, and first drafts — then rewrite in your own voice. Think of AI as a very fast first reader or writing partner, not a replacement." }
     ],
     filter: (tool) => {
-      const t = tool as any;
+      const t = tool as Tool;
       const cat = (t.category || "").toLowerCase();
       const bestFor = (t.bestFor || "").toLowerCase();
       return cat === "writing" || cat === "chat" ||
@@ -184,7 +184,7 @@ export default function BestForPage({ params }: { params: { audience: string } }
 
   const filteredTools = (toolsData as Tool[])
     .filter(config.filter)
-    .sort((a, b) => ((b as any).overallScore || 0) - ((a as any).overallScore || 0))
+    .sort((a, b) => ((b as Tool).overallScore || 0) - ((a as Tool).overallScore || 0))
     .slice(0, 30);
 
   return (
@@ -216,8 +216,8 @@ export default function BestForPage({ params }: { params: { audience: string } }
             The best AI tools for {params.audience.replace("-", " ")} in 2026 are:{" "}
             {filteredTools.slice(0, 5).map((t, i) => (
               <span key={t.id}>
-                <Link href={`/tools/${(t as any).slug}`} className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
-                  {(t as any).name}
+                <Link href={`/tools/${(t as Tool).slug}`} className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium">
+                  {(t as Tool).name}
                 </Link>
                 {i < 4 ? ", " : ""}
               </span>

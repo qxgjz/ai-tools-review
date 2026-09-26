@@ -11,6 +11,9 @@ export const metadata: Metadata = {
     description: "The most visited AI tools ranked by monthly traffic. Updated weekly.",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.aitoolcrux.com/top-ai-tools-by-traffic",
+  },
 };
 
 type TrafficEntry = {

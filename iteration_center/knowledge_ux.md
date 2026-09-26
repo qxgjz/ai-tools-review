@@ -1,4 +1,34 @@
 # UI/UX设计知识库（窗口6专用）
+## 📚 学习记录 2026-09-26 13:00
+- 主题：色彩心理学与品牌色应用 — 语义色系统、暗色模式配色、CTA色转化率与emerald品牌色深度
+- 来源：
+  - https://www.smashingmagazine.com/2025/08/psychology-color-ux-design-digital-products/ （Smashing: Psychology of Color in UX — 62-90% snap judgment based on color）
+  - https://www.smashingmagazine.com/2010/01/color-theory-for-designers-part-1-the-meaning-of-color/ （Smashing: Color Theory Part 1 — color meaning table）
+  - https://smashing-media.com/2025/04/inclusive-dark-mode-designing-accessible-dark-themes/ （Smashing: Inclusive Dark Mode — no pure black, halo effect）
+  - http://raw.githubusercontent.com/wondelai/skills/main/refactoring-ui/SKILL.md （Refactoring UI: 5-9 shades per color, design in grayscale first）
+  - https://colorfyi.com/blog/semantic-color-systems/ （ColorFYI: Semantic Color Systems — name by purpose not hue）
+  - https://colorfyi.com/blog/dark-mode-colors/ （ColorFYI: Dark Mode Colors — 8-12% lightness bg, elevation via lighter surfaces）
+  - https://colorfyi.com/blog/color-in-marketing/ （ColorFYI: HubSpot red button study — contrast not color psychology）
+  - https://www.poper.ai/blog/cta-button-color-conversion/ （Poper: 12 years of CTA A/B tests — red won because it was only warm color on page）
+- 知识点：
+  1. 色彩判断速度与权重：研究显示62-90%的产品快速判断（snap judgment）仅基于颜色；消费者在首次接触90秒内形成判断，其中高达90%基于颜色 alone（Uxcel/CC Creative引用）；颜色在文字被阅读之前就触发情绪反应，是品牌第一印象的核心载体。
+  2. 蓝色=信任/稳定/专业：数字产品中最广泛使用的品牌色，SaaS/金融/科技首选；PayPal(#003087)、LinkedIn(#0077B5)、Stripe、Facebook、IBM均用蓝色建立可信度；蓝色降低交易中的感知风险，适合需要用户提交敏感信息（邮箱/信用卡）的场景。
+  3. 绿色=安全/成长/行动许可："Go"是绿色，确认/成功状态用绿色；WhatsApp用绿色创造放松沟通体验，Spotify用绿色传达积极；绿色与编辑独立、无付费排名的信任感天然契合——我们的emerald品牌色选择符合AI工具评测站的"可信推荐"定位。
+  4. CTA颜色没有绝对赢家，对比度才是真正驱动力：HubSpot著名"红比绿高21%"研究被广泛误读——真正原因是页面主色调为绿色，红色是唯一暖色形成视觉突出；研究者本人从未声称红色本身更好（ColorFYI, Poper.ai 12年A/B测试综述）；CXL meta-analysis显示红比绿高5-34%但机制是对比度而非色彩心理学。
+  5. CTA颜色取决于场景信任需求：高信任需求场景（金融/B2B SaaS长销售周期/医疗）中蓝绿CTA优于红橙，因为红橙让人感到压力和抗拒；低决策成本/冲动购买场景（闪购/电商）红色CTA表现更好；我们的AI工具评测站属于中高信任需求，emerald绿色CTA是合理选择。
+  6. 语义色系统（Semantic Color System）是可扩展架构：颜色按用途命名（--color-text-danger, --color-bg-brand）而非按色相命名（--color-red）；组件只引用语义token，永远不直接引用原始色板；暗色模式/主题切换在语义层映射，组件代码零改动（ColorFYI, Refactoring UI）。
+  7. 两层token架构：Tier 1原始色阶（blue-500等完整调色板，仅内部定义用），Tier 2角色/语义token（bg-primary, text-danger, border-subtle等，组件实际引用）；Shopify用13步色阶作为Tier 1但禁止应用开发者直接使用（ColorFYI: Color in Design Systems at Scale）。
+  8. 暗色模式禁用纯黑背景：用近黑（8-12%亮度，如#0A0A0A/#090909）而非#000000；纯黑+纯白造成过度对比（too much contrast）和光晕效应（halo effect）——文字边缘模糊过度发光，增加眼疲劳；NN/g研究指出暗色模式最常见问题就是过度对比（Smashing Inclusive Dark Mode, ColorFYI）。
+  9. 暗色模式正文用近白而非纯白：正文用90-96%亮度（如#E6E8EB/zinc-100）而非#FFFFFF；我们的网站暗色模式正文用text-zinc-100正确，但需确认elevated表面（卡片#18181B）上的次要文字（zinc-400）对比度是否仍≥4.5:1。
+  10. 暗色模式elevation用更亮表面而非阴影：暗色模式中卡片/弹窗/下拉菜单通过比背景更亮的表面色表达层级（bg-zinc-900卡片在zinc-950背景上），阴影效果差且不明显；表面色推荐#1E1E1E/#252525区间（ColorFYI, Smashing）；我们的ToolCard用bg-zinc-900正确。
+  11. 暗色模式品牌色需降饱和提亮度：亮色模式的emerald-600在暗色背景上对比度和视觉重量不足；通用调整公式：亮度+20-30%，饱和度-10-15%；如emerald-600(#059669)→暗色模式用emerald-400(#34D399)或emerald-500(#10B981)（MyPaletteTool, ColorFYI）。
+  12. Refactoring UI色彩系统核心法则：每个颜色5-9个色阶（50-900），最暗色不是纯黑而是深色调；灰色加微妙饱和度（cool gray偏蓝/warm gray偏橙）而非纯中性灰，纯灰在真实界面中显脏；先在灰度中完成布局和层级设计，最后才加品牌色——确保颜色用于强调而非装饰。
+  13. 色彩文化差异不可忽视：颜色联想不是普适的——棕色在哥伦比亚降低销量，尼加拉瓜人不喜欢棕色；白色在西方象征纯洁但在部分亚洲文化与哀悼相关；面向全球英文用户时西方联想表可作参考但应A/B验证（Supercharge Design, Smashing Color Theory）。
+  14. WCAG对比度在暗色模式同样适用且更易失败：正文4.5:1，大字(18px+粗/24px+)3:1，图标/焦点指示器3:1；暗色模式最常见失败点是elevated表面上的次要文本和输入框placeholder——设计师只测了基础背景色没测卡片背景（ColorPeek, learnspace.blog）；我们刚修复了2处浅色zinc-400→500，暗色模式zinc-400在zinc-900上约5.9:1达标。
+  15. 灰度优先设计法（Grayscale-First）：Refactoring UI核心工作流——先用黑白灰完成整个界面，确保层级、间距、排版都成立，最后引入品牌色；这样做能暴露"用颜色掩盖层级不足"的问题，确保品牌色只用于真正需要强调的元素（CTA/链接/活跃状态），我们的hero区用zinc灰阶+emerald强调符合此原则。
+- 🎯 下次可落地的 UI 优化点：
+  - 检查暗色模式CTA按钮对比度：当前bg-emerald-600(#059669)在zinc-950(#090909)背景上，白字在emerald-600上的对比度约3.0:1（低于WCAG AA 4.5:1）；建议暗色模式下CTA改为dark:bg-emerald-500(#10B981)，白字对比度提升至约3.5:1仍需确认，或考虑dark:bg-emerald-400(#34D399)+dark:text-emerald-950（深字浅底，对比度约7:1远超AA），参考ColorFYI暗色模式品牌色降饱和提亮度公式。
+
 ## 📚 学习记录 2026-09-26 10:00
 - 主题：高转化排版 — 字体节奏、行宽行高、视觉层级、留白与排版系统深入
 - 来源：

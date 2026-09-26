@@ -45,7 +45,7 @@ export default function AlternativesPage() {
             Browse All Alternative Guides
           </h2>
           <div className="grid gap-6 md:grid-cols-2">
-            {alternativesData.map((item: any) => (
+            {alternativesData.map((item: { slug: string; title: string; description: string; keywords: string[]; alternatives: Array<{ slug: string; name: string; rating: number; reason: string; pricing: string }> }) => (
               <Link
                 key={item.slug}
                 href={`/alternatives/${item.slug}`}
