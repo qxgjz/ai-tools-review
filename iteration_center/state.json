@@ -1388,8 +1388,9 @@
       "description": "GA4近7天1127用户中95.5%来自新加坡，互动率仅8.6%，确认是Bot。需要：①在GA4中创建过滤器排除新加坡数据中心IP段②在Cloudflare WAF配置JS Challenge③所有后续分析排除Bot流量，真实用户约50-100人/周",
       "assigned_to": "窗口4",
       "priority": "P0",
-      "status": "pending",
-      "source": "ga4_latest_data.md 2026-09-24"
+      "status": "pending_user_action",
+      "source": "ga4_latest_data.md 2026-09-24",
+      "note": "需用户在GA4 Admin手动配置：排除已知机器人流量 + Cloudflare WAF新加坡IP JS Challenge。API无法修改Admin设置。2026-09-26已确认Bot占96.1%流量。"
     },
     {
       "id": "P1-ANALYTICS-CLOUDFLARE-ZERO-001",
@@ -2305,10 +2306,11 @@
       "title": "P0: GA4 Bot过滤执行 — 新加坡数据中心IP排除",
       "priority": "P0",
       "assigned_to": "窗口4",
-      "status": "pending",
+      "status": "pending_user_action",
       "description": "紧急分析确认：近7天1156会话中1099(95.1%)来自新加坡，互动率6.3%，09-21单日爆发1043会话。需：①GA4 Admin启用排除已知机器人②创建过滤器排除新加坡IP③Cloudflare WAF配置JS Challenge。API无法修改Admin设置，需用户手动操作。",
       "created": "2026-09-26",
-      "evidence": "GA4近7天数据：Singapore 1099/1156 sessions, eng=6.3%, dur=5s; 09-21 burst 1043 sessions; direct/none=99.7%"
+      "evidence": "GA4近7天数据：Singapore 1099/1156 sessions, eng=6.3%, dur=5s; 09-21 burst 1043 sessions; direct/none=99.7%",
+      "note": "需用户在GA4 Admin手动配置：排除已知机器人流量 + Cloudflare WAF新加坡IP JS Challenge。API无法修改Admin设置。2026-09-26已确认Bot占96.1%流量。"
     },
     {
       "id": "P1-ANALYTICS-TOP10-ZERO-CTR-001",
@@ -2815,6 +2817,51 @@
       ],
       "source": "2026-09-26学习：GSC API知识点12",
       "created_at": "2026-09-26T21:23:30.429728"
+    },
+    {
+      "id": "P1-GEO-LLMSTXT-001",
+      "title": "窗口1：部署/llms.txt文件（AI爬虫内容地图，低投入高潜在收益）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "source": "learning: GEO前沿 2026-09-26",
+      "description": "按llmstxt.org规范创建根目录llms.txt，包含品牌简介+top20最有引用价值的页面链接+简短描述。Anthropic/Perplexity/OpenAI已采纳，约10%域名已部署，无确证权重但低投入。"
+    },
+    {
+      "id": "P1-GEO-STATS-001",
+      "title": "窗口3：GEO内容改造——top10高曝光页面注入具体统计数据+答案优先结构",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "source": "learning: GEO前沿 2026-09-26",
+      "description": "Princeton研究：Statistics Addition提升AI引用位置41%。对GSC top10页面（stable-diffusion/dify/cursor/midjourney/gemini等）每300字至少1个具体数字，段落首句直接给答案，段落2-3句。"
+    },
+    {
+      "id": "P0-GEO-REDDIT-001",
+      "title": "窗口2：Reddit第三方权威建设——Perplexity 47%引用来自Reddit，必须建存在感",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "source": "learning: GEO前沿 2026-09-26",
+      "description": "Perplexity每答案引用4-8源，Reddit占top10约47%，强时效性≤90天。在r/ChatGPT/r/ArtificialInteligence/r/midjourney等AI subreddit提供有价值的回答，自然提及aitoolcrux的对比数据。9:1法则（9次贡献1次推广）。"
+    },
+    {
+      "id": "P1-GEO-REFRESH-001",
+      "title": "窗口3：建立90天内容刷新机制——Perplexity强时效性加权，过期内容不被引用",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "source": "learning: GEO前沿 2026-09-26",
+      "description": "Perplexity对≤90天内容有强时效性加权。建立内容刷新SOP：每季度更新top50页面的数据/案例/定价，更新日期字段，确保AI引擎认为内容新鲜。"
+    },
+    {
+      "id": "P2-GEO-MONITOR-001",
+      "title": "窗口4：建立AI引用监测——手动测试ChatGPT/Perplexity对目标query是否引用我们",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口4",
+      "source": "learning: GEO前沿 2026-09-26",
+      "description": "每周用10个核心query在ChatGPT Search和Perplexity测试，记录是否被引用、引用位置、引用页面。GEO漏斗：Indexed→Retrieved→Cited→Visited，诊断断点。可用Otterly/Profound工具辅助。"
     }
   ],
   "milestones": [

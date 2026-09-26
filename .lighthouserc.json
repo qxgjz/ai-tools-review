@@ -60,13 +60,13 @@
         "total-blocking-time": [
           "warn",
           {
-            "maxNumericValue": 300
+            "maxNumericValue": 200
           }
         ],
         "resource-summary:script:size": [
           "warn",
           {
-            "maxNumericValue": 500000
+            "maxNumericValue": 300000
           }
         ],
         "resource-summary:third-party:count": [

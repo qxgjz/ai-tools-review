@@ -1,4 +1,31 @@
 # UI/UX设计知识库（窗口6专用）
+## 📚 学习记录 2026-09-26 22:00
+- 主题：Web UI设计趋势（深度版）— 2026 AI-native UI与GenUI生成式界面：意图驱动设计、聊天界面交互组件、上下文感知与无界面范式
+- 来源：
+  - https://www.nngroup.com/articles/genui-buttons-and-checkboxes/ （NN/g: GenUI In Real Life — Buttons and Checkboxes，2026-03）
+  - https://www.nngroup.com/articles/ai-chatbots-design-guidelines/ （NN/g: 10 Guidelines for Designing Your Site's AI Chatbots，2026-04）
+  - https://www.smashingmagazine.com/2026/09/death-button-why-best-interface-is-no-interface/ （Smashing Magazine: The Death Of The Button — Intent-Driven Design，2026-09）
+  - https://www.smashingmagazine.com/2026/07/matching-ai-modality-user-intent-designing-right-interface/ （Smashing Magazine: Matching AI Modality To User Intent，2026-07）
+  - https://ui.shadcn.com/docs/changelog/2026-06-chat-components （shadcn/ui: June 2026 Chat Components — MessageScroller/Bubble/Marker）
+- 知识点（15条）：
+  1. GenUI定义：AI实时生成、为单个用户定制的界面，区别于AI辅助设计（后者只在开发阶段帮助设计师，终端用户看到的仍是传统界面）——NN/g 2024正式定义，2026年已在聊天界面中落地
+  2. GenUI最显著的进展在AI聊天界面内：简单交互元素（按钮、表单字段、复选框）由AI在对话中上下文生成，而非设计师预设——Google AI Mode给酒店/搜索结果加复选框，选中项自动变成输入框上方的chips，用户无需重新输入
+  3. Claude的AskUserQuestion模块：AI在回复前生成交互式表单收集上下文，限制最多4个问题——这是给AI生成设计加护栏的范例，防止模型突然要求用户回答35个问题
+  4. 大多数用户用极简单prompt（"帮我规划伦敦旅行"），没有GenUI交互元素时，纯文本追问需要用户逐题打字、依赖短期记忆、易错且认知负担重——genUI控件让提供细节变得大幅更快更轻松
+  5. NN/g聊天机器人准则1：合并AI聊天与其他聊天功能为单一入口——一个能清楚标识自己、处理能处理的、不能处理时升级给人工的聊天机器人，优于多个机器人并存
+  6. NN/g准则2：聊天机器人应跨页面保持可访问——用户找到机器人后期望它跟随浏览，在多个页面间消失的机器人会被用户放弃使用
+  7. NN/g准则3：开场消息应清楚说明能做什么，且根据当前页面定制——模糊问候（"问我任何事"）让用户猜测且过度承诺；Amazon Rufus在首页给泛化建议，在产品页给该产品特定问题
+  8. NN/g准则4：建议问题用按钮而非文本呈现——减少用户输入负担；且应在整个对话中持续提供追问按钮，而非只在开场时提供（Scoutly只在开场给按钮被用户批评）
+  9. NN/g准则5：推荐结果包含图片而非仅文字链接——用户明确说"我喜欢它给我一些视觉效果"；纯文字推荐迫使用户额外点击才能评估选项
+  10. NN/g准则6：用渐进式披露保持聊天简短——产品详情应在原位展开/折叠，而非生成新聊天消息把列表推出视口（Amazon Rufus的"More details"生成新消息被用户批评）
+  11. NN/g准则7：流式回复时不要自动滚动到消息末尾——用户已开始阅读时被强行跳到底部会迷失位置；应保持滚动在新消息顶部
+  12. NN/g准则8-10：允许用户调整聊天窗口大小（地图/图片内容需要更大视口）、允许保存/分享聊天内容（有用对话消失=丢失价值）、考虑语音输入（对运动障碍用户是可访问性要求，对普通用户可降低打字挫败）
+  13. Intent-Driven Design三支柱：①高层目标输入（自然语言+上下文+习惯，替代微操作点击）②生成式UI（动态实时渲染布局，替代每人看到相同静态页）③AI代理自主执行（后台完成多步骤，替代用户手动执行）——Smashing Magazine 2026
+  14. 安全网从"预防"转向"易撤销"：传统界面痴迷确认弹窗（"确定删除？"），意图驱动界面用显著的Undo按钮、简单修订提示（"让摘要更短"）、透明审计日志替代侵入式警告——同时高风险操作（金融交易/发布公开内容/改隐私设置）仍需显式确认
+  15. 黑箱问题与透明反馈：Google PAIR指南主张系统必须显式陈述其解读（"正在搜索芝加哥直飞$300以下航班…"），让用户校准信任并即时纠正误解；最终衡量标准不是界面多漂亮或停留时长，而是"软件多有效地解决问题并让出道路"
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - 在首页SearchBox下方和/tools列表页搜索框下方，添加3-4个可点击的建议搜索chip按钮（如"Best AI coding tools"、"Free AI image generators"、"AI tools for students"），遵循NN/g准则4"建议问题用按钮而非文本"——减少用户输入负担、引导探索、提升搜索启动率；chip样式用`px-3 py-1.5 rounded-full text-sm border border-zinc-200 dark:border-zinc-700 hover:border-emerald-500 hover:text-emerald-600 transition-colors`，点击后填入搜索框并触发搜索
+
 ## 📚 学习记录 2026-09-26 19:00
 - 主题：用户心理与行为设计（深度版）— Fogg行为模型B=MAP、选择架构与Nudge理论、前景理论与损失厌恶、认知偏差在转化中的应用
 - 来源：
