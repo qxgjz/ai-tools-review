@@ -20,11 +20,13 @@ QQ_SMTP_PORT = 465
 USER_AGENT = "Mozilla/5.0 (compatible; AIToolCrux-UptimeBot/2.0)"
 
 # Pages to check: (path, list of required content markers)
+# Markers must be specific to article BODY content, not just title/TOC
 # If any marker is missing, alert fires
 CONTENT_CHECKS = [
     ("/", ["aitoolcrux", "AI", "tool"]),
-    # Blog article — must have article body with prose class AND actual content text
-    ("/blog/perplexity-ai-review-2026", ["prose", "Perplexity"]),
+    # Blog article — must have actual body content (not just title/TOC)
+    # "best AI search engine" only appears in article body, not in title or TOC
+    ("/blog/perplexity-ai-review-2026", ["best AI search engine", "Key Takeaways", "Conclusion First"]),
     # Tool detail page
     ("/tools/perplexity-ai", ["Perplexity", "AI"]),
     # Blog listing
