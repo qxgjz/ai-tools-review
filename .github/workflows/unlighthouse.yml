@@ -20,7 +20,7 @@ jobs:
       - name: Run Unlighthouse
         run: npx @unlighthouse/cli ci --site https://www.aitoolcrux.com --reporter=json
       - name: Upload results
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: unlighthouse-results
           path: .lighthouse
