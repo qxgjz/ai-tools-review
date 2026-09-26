@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import {
   Sparkles,
   LayoutGrid,
@@ -37,6 +38,13 @@ const NAV_LINKS = [
 export function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  // Determine if a nav link is the current page (NN/g: "not indicating current location is the most common menu error")
+  const isActive = (href: string) => {
+    if (href === "/") return pathname === "/";
+    return pathname.startsWith(href);
+  };
 
   // Scroll effect - UI/UX Pro Max: sticky header with background change
   useEffect(() => {
@@ -107,12 +115,18 @@ export function Header() {
           <nav className="hidden md:flex items-center gap-1" aria-label="Main navigation">
             {NAV_LINKS.map((link) => {
               const Icon = link.icon;
+              const active = isActive(link.href);
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="px-3 py-2 rounded-lg text-sm font-medium text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors focus-visible:outline-2 focus-visible:outline-emerald-500 focus-visible:outline-offset-2"
+                  className={`px-3 py-2 rounded-lg text-sm font-medium transition-colors focus-visible:outline-2 focus-visible:outline-emerald-500 focus-visible:outline-offset-2 ${
+                    active
+                      ? "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/25"
+                      : "text-zinc-600 dark:text-zinc-400 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+                  }`}
                   aria-label={link.ariaLabel}
+                  aria-current={active ? "page" : undefined}
                 >
                   {link.label}
                 </Link>
@@ -155,15 +169,21 @@ export function Header() {
             <nav className="px-2 py-2" aria-label="Mobile navigation">
               {NAV_LINKS.map((link) => {
                 const Icon = link.icon;
+                const active = isActive(link.href);
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
                     onClick={() => setMobileMenuOpen(false)}
-                    className="flex items-center gap-3 px-3 py-3 rounded-lg text-base font-medium text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-colors min-h-[48px]"
+                    className={`flex items-center gap-3 px-3 py-3 rounded-lg text-base font-medium transition-colors min-h-[48px] ${
+                      active
+                        ? "text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/25"
+                        : "text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20"
+                    }`}
                     aria-label={link.ariaLabel}
+                    aria-current={active ? "page" : undefined}
                   >
-                    <Icon className="w-5 h-5 text-zinc-400" aria-hidden="true" />
+                    <Icon className={`w-5 h-5 ${active ? "text-emerald-600 dark:text-emerald-400" : "text-zinc-400"}`} aria-hidden="true" />
                     {link.label}
                   </Link>
                 );
