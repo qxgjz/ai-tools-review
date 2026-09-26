@@ -9627,3 +9627,135 @@ if __name__ == "__main__":
 - 写Surfer SEO vs Frase对比页→截图两个工具的dashboard/editor对比
 - 需要登录的工具（Cursor/Claude/Perplexity）→先headed模式手动登录生成auth.json，再headless批量截
 - 公开Playground工具（Midjourney/Stable Diffusion）→直接headless截，不需要auth
+
+---
+
+## 高频学习 #77：E-E-A-T Authoritativeness（权威性）——4层金字塔+2026作者实体验证+新站90天建设路径（2026-09-26）
+
+**学习方向**: 方向1 E-E-A-T内容标准（Authoritativeness权威性，继#65 Experience、#69 Trust、#73 Expertise之后，完成E-E-A-T四维度全覆盖）
+**来源**:
+- Mitch Chadban — Best Ways to Build E-E-A-T in 2026 (4层金字塔模型) — https://mitchchadban.com/best-ways-to-build-e-e-a-t-in-2026/
+- Visiblytics — E-E-A-T in SEO: The Complete Guide 2026 (2026年3月Core Update数据+作者实体验证) — https://visiblytics.com/resources/e-e-a-t-in-seo-the-complete-guide-2026/
+- Ten Speed — EEAT for SEO and AEO: Practical Guide 2026 — https://www.tenspeed.io/blog/eeat-seo-aeo
+- Systems Architect — E-E-A-T Signals: What Google Actually Looks For — https://systemsarchitect.net/e-e-a-t-signals-what-google-actually-looks-for-with-examples/
+- Bizz Buzz Creations — What is E-E-A-T in SEO? Complete Guide to Building Authority 2026 — https://blog.bizzbuzzcreations.com/what-is-e-e-a-t-in-seo-complete-guide-to-building-authority-in-2026/
+
+### 10个可落地要点
+
+1. **Authoritativeness是唯一不能自封的维度——"别人替你说话vs自夸"**：Experience/Expertise/Trust可以在自己网站上展示（截图/作者bio/联系方式），但Authority必须来自外部认可——backlinks from trusted relevant sources、brand mentions in industry publications、guest bylines、industry awards、podcast appearances。Google Quality Rater Guidelines定义Authority为"your reputation within your industry or niche"，是外部评估不是自我声明。
+
+2. **4层金字塔模型（Mitch Chadban）：Authority是compound层不是直接build的**：Layer 1 Trust(base)→Layer 2 Proof→Layer 3 Original assets→Layer 4 Authority(compound)。"You don't build authority directly — you earn it by being genuinely trustworthy, proof-backed, and original." 先扎实做Trust+Proof+Original assets三层，Authority会自然compound。跳过底层直接追backlinks是本末倒置。
+
+3. **2026年3月Core Update数据：强E-E-A-T+原创研究=+22%可见度，越界发布=70-80%流量损失**：有original research和强E-E-A-T信号的站点平均可见度提升约22%；超出核心专业领域大规模发布的站点（如HubSpot模式扩张）部分报告70-80%有机流量损失。Authority是topic-specific的——在SEO领域的权威不自动转移到医疗/金融主题。AIToolCrux必须坚守AI工具评测核心领域，不要跨领域发内容。
+
+4. **作者实体验证是2026最大变化：Google交叉验证作者外部身份**：2026年3月和5月Core Update强化author entity verification——Google系统现在交叉验证作者身份与外部来源（LinkedIn profiles、conference speaker pages、其他权威出版物的bylines、publication history）。73% top-ranking YMYL页面现在显示详细作者凭证（更新前58%）。**匿名作者现在所有内容类型都有排名风险，不只是YMYL**。bio里一个名字但没有可验证外部身份的权重远低于有丰富外部专业存在的作者。
+
+5. **Person schema+sameAs是作者实体锚点，author bio page必须6要素齐全**：①全名（与所有出版物完全一致）②当前角色+组织（可验证连接）③与写作主题直接相关的凭证④所有发布平台链接（LinkedIn/Twitter/其他publications）⑤与外部平台一致的专业照片⑥Person schema的sameAs属性链接到外部profile。author bio page是Google用作entity reference point的hub page。
+
+6. **原创资产是Authority的最强引擎——5种高ROI类型**：①Benchmark post（原创数据定义"good"标准，每次有人需要参考点就被引用）②Calculator（解决具体计算，吸引links/bookmarks/return visits）③Template pack（即用框架，驱动downloads/shares/backlinks）④Comparison matrix（结构化回答高意图查询）⑤Named framework（带品牌名的模型/流程，品牌归因+被他人引用）。Original assets是唯一能同时build Authority+get cited by AI+attract backlinks的内容类型。
+
+7. **Brand mentions无链接也是强Authority信号，与#74 ChatGPT优化发现一致**：被行业出版物引用名字、被新闻报道、被学术研究参考、播客嘉宾——即使没有hyperlink也build authority。#74学到brand mentions 3.2x>citations，这里再次验证：无链接品牌提及是重要的实体关联信号。AIToolCrux可以通过guest posting、podcast interview、被其他评测站引用建立brand mentions。
+
+8. **新站Authority建设90天路径（可执行）**：Week 1 Trust基础设施（About/Contact/privacy policy/author bios/HTTPS）→Week 2 Proof pass（给top 10页面加截图/案例/数据+methodology/last updated dates）→Week 3-4 Original asset（选1个benchmark/template/calculator/comparison matrix，从最高流量页internal link到它，写2-3篇supporting articles）→Month 2+ Authority compound（pitch original asset到10-15个相关writer/publication，不是mass link requests而是targeted outreach；guest features/podcast；review collection）。
+
+9. **不要用AI制造scaled sameness，正确模式是"AI加速+human加载信号"**：大规模生成无原创价值内容违反Google scaled content abuse政策。AI适合：outline/structuring、summarising research、editing clarity、generating idea variations。Human必须加：original thinking/point of view、proof and evidence、firsthand experience、unique examples and case details、real assets worth citing。"Use AI to build faster, then load the result with human signal."
+
+10. **AI搜索中Authority更关键：高可信来源可能被引用即使传统排名不在top 10**：AI Overview/ChatGPT/Perplexity严重依赖E-E-A-T信号选择引用源。强E-E-A-T内容在特定subtopic可能被AI引用，即使整体页面不排broad keyword前10。Editorial links placed in trusted articles被绝大多数AI Overview响应引用。Quality and relevance of backlinks matter far more than volume——1个权威行业站点的editorial link > 100个低质量directory links。
+
+### 立即可用模板：新站Authoritativeness建设90天行动计划+作者实体Bio页面模板
+
+#### Part A: 90天Authority建设行动计划
+
+```
+Week 1 — Trust Foundation (Layer 1)
+□ About page: 谁创建/为什么做/资质（具体不是"passionate writer"）
+□ Contact page: 真实email（不是只有form），可考虑物理地址
+□ Privacy policy + Terms（footer可访问）
+□ 所有文章加named author byline（不用Admin/Team）
+□ Audit top 10页面：unverified claims→tighten或source
+□ HTTPS全站点确认
+
+Week 2 — Proof Pass (Layer 2)
+□ Top 10页面每个加至少1个proof block（截图/案例/数据+methodology）
+□ 加"Last Updated: [Month Year]"到有时效性的页面
+□ FAQ回答真实objections（不是generic问题）
+□ 所有statistic引用primary source（不是其他blog二手描述）
+
+Week 3-4 — Original Asset Build (Layer 3)
+□ 选1个asset类型：Benchmark（如"AI Tool Free Tier Limits Benchmark 2026"）
+  或Calculator（如"AI Image Generation Cost Calculator"）
+  或Template（如"AI Tool Testing Scorecard Template"）
+□ 从最高流量3个页面internal link到asset
+□ 写2-3篇supporting articles引用asset
+□ Asset必须有：original data/methodology/可下载/可引用
+
+Month 2+ — Authority Compound (Layer 4)
+□ 识别10-15个相关writer/publication（AI/tech/SaaS niche）
+□ Targeted outreach pitch original asset（给引用理由，不是求link）
+□ Guest feature 2-3个相关podcast/blog
+□ 收集真实user reviews（Google/相关平台）
+□ 监控author entity recognition（Google搜作者名看是否出knowledge panel）
+```
+
+#### Part B: 作者实体Bio页面模板（6要素+Person schema）
+
+```markdown
+# [Author Full Name]
+
+**Role:** [Specific role, e.g., "AI Tools Researcher and Reviewer"]
+**Organization:** AIToolCrux
+**Focus:** [Specific topics, e.g., "AI coding assistants, image generation tools, 
+  and SaaS comparison testing"]
+
+## About
+[2-3 sentences: real background, why qualified, what makes this person's 
+  reviews different. Specific not generic.]
+Example: "Alex has tested 200+ AI tools over 3 years, including 6 months as a 
+  full-time freelance prompt engineer. Before AIToolCrux, Alex built 3 SaaS 
+  products using AI automation and now applies that hands-on experience to 
+  every review."
+
+## Credentials & Experience
+- [Specific credential 1, e.g., "3 years testing AI tools professionally"]
+- [Specific credential 2, e.g., "Built 3 SaaS products with AI automation"]
+- [Specific credential 3, e.g., "Published in [Publication] about AI tools"]
+
+## Elsewhere
+- LinkedIn: [URL]
+- Twitter/X: [URL]
+- [Other publication byline]: [URL]
+- GitHub/Portfolio: [URL]
+
+## Articles by [Author Name]
+[List of articles on this site]
+```
+
+```json
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "[Author Full Name]",
+  "jobTitle": "AI Tools Researcher",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "AIToolCrux",
+    "url": "https://www.aitoolcrux.com"
+  },
+  "knowsAbout": ["AI Tools", "SaaS Reviews", "AI Coding Assistants"],
+  "sameAs": [
+    "https://www.linkedin.com/in/[profile]",
+    "https://twitter.com/[handle]",
+    "https://[other-publication]/author/[name]"
+  ],
+  "url": "https://www.aitoolcrux.com/author/[slug]"
+}
+```
+
+**下次落地**：
+- AIToolCrux当前是匿名/Admin作者→最高优先级：建立1个named author+bio page+Person schema，所有文章加byline
+- 创建1个original asset作为Authority引擎：推荐"AI Tool Free Tier Limits Benchmark 2026"（原创数据+可引用+与free薅羊毛内容协同）
+- 坚守AI工具评测核心领域，不跨领域发内容（避免70-80%流量损失模式）
+- 所有statistic引用primary source（官方pricing/docs，不是其他评测站二手）
+- 写对比页时authoritative来源引用inline带source name+date（如"According to Canva's 2026 pricing page..."）
+
+**E-E-A-T四维度学习完成状态**：Experience(#65)✓ Trust(#69)✓ Expertise(#73)✓ Authoritativeness(#77)✓ — 四维度全覆盖

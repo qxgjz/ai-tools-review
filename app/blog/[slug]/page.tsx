@@ -49,6 +49,16 @@ export function generateStaticParams() {
   return posts.map((post) => ({ slug: post.slug }));
 }
 
+
+// Truncate text at word boundary for SEO-friendly titles and descriptions
+function truncateAtWord(text: string, maxLen: number): string {
+  if (text.length <= maxLen) return text;
+  const truncated = text.slice(0, maxLen - 3);
+  const lastSpace = truncated.lastIndexOf(" ");
+  const result = lastSpace > maxLen * 0.6 ? truncated.slice(0, lastSpace) : truncated;
+  return result.replace(/[\s,;:\-–—]+$/, "") + "...";
+}
+
 export function generateMetadata({ params }: PostPageProps) {
   const post = posts.find((p) => p.slug === params.slug);
   if (!post) return {};
@@ -63,17 +73,19 @@ export function generateMetadata({ params }: PostPageProps) {
 
   // 优化描述：确保150-160字符，包含关键词和CTA
   let description = post.excerpt || post.description || "";
-  if (description.length > 160) {
-    description = description.slice(0, 157) + "...";
+  // Strip HTML tags from description
+  description = description.replace(/<[^>]+>/g, "").trim();
+  if (description.length > 155) {
+    description = truncateAtWord(description, 155);
   } else if (description.length < 120) {
-    description = `${description} Expert analysis by AIToolCrux editorial team. Updated ${(post.date || post.publishedAt || "2026").slice(0, 10)}.`;
-    if (description.length > 160) {
-      description = description.slice(0, 157) + "...";
+    description = `${description} Expert analysis by AIToolCrux. Updated ${(post.date || post.publishedAt || "2026").slice(0, 10)}.`;
+    if (description.length > 155) {
+      description = truncateAtWord(description, 155);
     }
   }
 
   return {
-    title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
+    title: truncateAtWord(post.title, 60),
     description: description,
     keywords: keywords,
     alternates: {
@@ -83,7 +95,7 @@ export function generateMetadata({ params }: PostPageProps) {
       },
     },
     openGraph: {
-      title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
+      title: truncateAtWord(post.title, 60),
       description: description,
       url: `https://www.aitoolcrux.com/blog/${post.slug}`,
       type: "article",
@@ -103,7 +115,7 @@ export function generateMetadata({ params }: PostPageProps) {
     },
     twitter: {
       card: "summary_large_image",
-      title: post.title.length > 60 ? post.title.slice(0, 57) + "..." : post.title,
+      title: truncateAtWord(post.title, 60),
       description: description,
       images: [
         `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 50))}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(post.category || "AI Tools")}`,

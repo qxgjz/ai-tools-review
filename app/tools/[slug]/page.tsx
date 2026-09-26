@@ -67,6 +67,19 @@ function truncateDescription(text: string, maxLen: number = 155): string {
   return (lastSpace > 120 ? truncated.slice(0, lastSpace) : truncated).replace(/[\s,;:-]+$/, '') + '…';
 }
 
+// Truncate tool name at word/hyphen boundary for SEO title
+function truncateToolName(name: string, maxLen: number = 28): string {
+  if (name.length <= maxLen) return name;
+  const truncated = name.slice(0, maxLen);
+  // Try hyphen boundary first (many tool names use hyphens)
+  const lastHyphen = truncated.lastIndexOf('-');
+  if (lastHyphen > maxLen * 0.6) return truncated.slice(0, lastHyphen) + '…';
+  // Fall back to space
+  const lastSpace = truncated.lastIndexOf(' ');
+  if (lastSpace > maxLen * 0.6) return truncated.slice(0, lastSpace) + '…';
+  return truncated + '…';
+}
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
   if (!tool) return { title: "Tool Not Found" };
@@ -81,15 +94,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     ? `https://www.aitoolcrux.com${screenshotPath}`
     : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}&description=${encodeURIComponent(description.slice(0, 100))}&category=${encodeURIComponent(categoryFormatted)}`;
 
+  const toolNameDisplay = truncateToolName(tool.name);
   return {
-    title: `${tool.name.length > 24 ? tool.name.slice(0, 24) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+    title: `${toolNameDisplay} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
     description: truncateDescription(description),
     keywords: [tool.name, `${tool.name} review`, `${tool.name} pricing`, tool.vendor, ...tool.tags, `best ${tool.category} AI tools`, "AI tool review", "AI software comparison"],
     alternates: {
       canonical: `https://www.aitoolcrux.com/tools/${tool.slug}`,
     },
     openGraph: {
-      title: `${tool.name.length > 24 ? tool.name.slice(0, 24) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+      title: `${toolNameDisplay} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: truncateDescription(description),
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       type: "website",
@@ -108,7 +122,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
     },
     twitter: {
       card: "summary_large_image",
-      title: `${tool.name.length > 24 ? tool.name.slice(0, 24) + "…" : tool.name} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
+      title: `${toolNameDisplay} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: truncateDescription(description),
       images: [ogImageUrl],
     },

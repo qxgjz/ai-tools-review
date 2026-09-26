@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-26 05:37:23",
+  "last_updated": "2026-09-26 (emergency analysis: GA4 bot + GSC CTR + OpenSEO)",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -2120,6 +2120,66 @@
       "description": "评估将Vercel部署从API Token（长期密钥）改为OIDC无密钥认证。Vercel支持通过OIDC与GitHub Actions集成。制定迁移计划：配置Vercel项目OIDC信任、修改deploy workflow使用OIDC、移除VERCEL_TOKEN secret。",
       "source": "学习主题：GitHub Actions安全加固（知识点1+5）",
       "created_at": "2026-09-26 09:22:06"
+    },
+    {
+      "id": "P0-ANALYTICS-GA4-BOT-FILTER-002",
+      "title": "P0: GA4 Bot过滤执行 — 新加坡数据中心IP排除",
+      "priority": "P0",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "description": "紧急分析确认：近7天1156会话中1099(95.1%)来自新加坡，互动率6.3%，09-21单日爆发1043会话。需：①GA4 Admin启用排除已知机器人②创建过滤器排除新加坡IP③Cloudflare WAF配置JS Challenge。API无法修改Admin设置，需用户手动操作。",
+      "created": "2026-09-26",
+      "evidence": "GA4近7天数据：Singapore 1099/1156 sessions, eng=6.3%, dur=5s; 09-21 burst 1043 sessions; direct/none=99.7%"
+    },
+    {
+      "id": "P1-ANALYTICS-TOP10-ZERO-CTR-001",
+      "title": "P1: 高曝光评测页排名Top10但0点击 — 标题优化",
+      "priority": "P1",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "description": "5个评测页排名Top10但CTR=0%：dify_ai_review(pos5.47/47imp), cursor_ai_review(pos6.8/46imp), stable-diffusion(pos8.45/51imp), gemini_38_flash(pos9.61/82imp), openai_astra(pos11/144imp)。533页同一标题模板触发Google micro-boilerplate重写。需优化为问题式标题。",
+      "created": "2026-09-26",
+      "evidence": "GSC 28天: dify 47imp/pos5.47/0click, cursor 46imp/pos6.8/0click, SD 51imp/pos8.45/0click, gemini 82imp/pos9.61/0click"
+    },
+    {
+      "id": "P1-SEO-404-BROKEN-LINKS-001",
+      "title": "P1: 修复3个404页面 + 3个broken internal links",
+      "priority": "P1",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "description": "OpenSEO审计(9/24)发现：404页面：/cursor-vs-github-copilot-2026, /how-to-use-cursor-for-react-development, /blog/best-ai-search-engines-2026。断链来自/blog/perplexity-vs-chatgpt-2026-comparison和/blog/github-copilot-review-2026。",
+      "created": "2026-09-26",
+      "evidence": "OpenSEO: 3 critical broken-internal-link, 3 warning broken-page 404"
+    },
+    {
+      "id": "P1-SEO-MULTIPLE-H1-001",
+      "title": "P1: 修复2个multiple H1 + 7个thin content分类页",
+      "priority": "P1",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "description": "multiple H1: /blog/suno-vs-udio-2026-comparison(2个H1), /blog/perplexity-vs-chatgpt-2026-comparison(2个H1)。thin content: 7个/blog/category/页面仅138-143词。",
+      "created": "2026-09-26",
+      "evidence": "OpenSEO: 2 multiple-h1 warning, 7 thin-content"
+    },
+    {
+      "id": "P2-ANALYTICS-MOBILE-001",
+      "title": "P2: 验证移动友好度 — PageSpeed Insights",
+      "priority": "P2",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "description": "GSC移动曝光仅220/1922(11.5%)，GA4移动会话仅8/1156(0.7%)。OpenSEO未发现mobile-specific问题。需用PageSpeed Insights API验证移动性能和移动友好度。",
+      "created": "2026-09-26",
+      "evidence": "GSC: desktop 1700imp vs mobile 220imp; GA4: desktop 1148 vs mobile 8"
+    },
+    {
+      "id": "P2-ANALYTICS-GEO-SIGNAL-001",
+      "title": "P2: 监控首个ChatGPT GEO信号",
+      "priority": "P2",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "description": "GA4发现1个来自chatgpt.com/ai-assistant的会话(09-19至09-25期间)，这是ChatGPT引用我们网站的第一个真实信号。需持续监控GEO流量来源变化。",
+      "created": "2026-09-26",
+      "evidence": "GA4: chatgpt.com / ai-assistant, 1 session, 1 user"
     }
   ],
   "milestones": [

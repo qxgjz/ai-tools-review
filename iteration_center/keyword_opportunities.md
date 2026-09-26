@@ -3284,3 +3284,75 @@ SEO A/B测试成熟度3/10。关键洞察：传统用户级A/B不可行(月9点�
 5. **不偷看规则**：所有测试预注册停止时间，中途数据只看收集量不看结论，避免40%假阳性
 6. **关键词入追踪标准**：新增"标题测试后CTR提升>20%的关键词"自动加入zens-ink追踪
 7. **内容词扩展**：SEO测试/CTR优化类方法论词标记为"seo-content"，适合写博客吸引SEO从业者反向链接
+
+
+## 2026-09-26 CTR优化与标题链接主题关键词机会（基于Google官方+SEJ泄露代码分析）
+
+来源：Google Search Central《Influencing your title links》(2025-12-10) + SEJ《How And Why Google Rewrites Your Hard-Earned Headlines》(2025-10-22, 基于Google泄露代码) + 验证(CTR0.47%/排名25.32/533页boilerplate标题风险/品牌词top10 CTR未知)
+
+### 核心发现
+CTR优化成熟度2✅/5⚠️/3🔴/2❓(NEEDS WORK)。关键洞察：不是CTR低=标题差，而是排名低(25.32)+boilerplate标题被Google重写。最大快速胜利=品牌词top10(priompt/autopr/creatium coach)的CTR诊断和优化。533工具页同一模板触发micro-boilerplate重写风险。关键词机会聚焦两类：①CTR/标题优化方法论内容词(吸引SEO从业者+反向链接)②AI工具评测类高CTR标题模板词(我们533页可直接套用)。
+
+### P0优先级（品牌词+高曝光页，可立即优化标题的AI工具词）
+
+| 关键词 | 类型 | 当前排名 | 标题优化方向 | 预期CTR提升 |
+|--------|------|----------|-------------|------------|
+| priompt | brand+review | 8.92 | "Priompt Review 2026: Is It Worth It?" vs 当前 | +5-15% |
+| autopr | brand+review | 6.9 | "AutoPR Review 2026: Pricing & Alternatives" vs 当前 | +5-15% |
+| creatium coach | brand+review | 8.13 | "Creatium Coach Review 2026: AI Coaching Tool" | +5-15% |
+| ai tool comparison | comparison | 76.9 | /compare页标题改为"AI Tool Comparison 2026: 10 Top Tools" | +50-100% |
+| cursor ai review | review+commercial | 55.3 | "Cursor AI Review 2026: Is It the Best AI Code Editor?" | +10-20% |
+| github copilot review | review+commercial | 未追踪 | "GitHub Copilot Review 2026: Pricing, Pros & Cons" | +10-20% |
+| best ai tools for coding | best+niche | 65.2 | "7 Best AI Tools for Coding in 2026 (Tested & Rated)" | +20-30% |
+| is cursor ai free | is+question | 未追踪 | "Is Cursor AI Free in 2026? Pricing Plans Explained" | +15-25% |
+
+### P1优先级（CTR/标题优化方法论内容词，吸引SEO从业者流量+反向链接）
+
+| 关键词 | 类型 | 内容方向 |
+|--------|------|----------|
+| why is google rewriting my title tags | why+diagnostic | 7大重写触发条件+修复方法(基于官方文档) |
+| how to increase ctr in google search | how+guide | 完整CTR优化指南(标题/描述/富摘要/站点链接) |
+| google title rewrite how to fix | how+fix | 诊断+修复Google标题重写的step-by-step指南 |
+| title tag best practices 2026 | best+guide | 2026年标题标签最佳实践(12词/600像素+AI Overviews影响) |
+| how to check if google rewrote my title | how+tool | 批量检测标题重写的方法+脚本 |
+| meta description length 2026 | is+guide | Google 2024-2025描述更新后的最佳长度和写法 |
+| seo ctr benchmarks by position | data+benchmark | 按排名位置的CTR基准数据表(我们可做原创研究) |
+| click through rate seo how to improve | how+methodology | CTR优化方法论+案例研究 |
+
+### P2优先级（AI工具评测类高CTR标题模板词，适合批量生成内容）
+
+| 关键词 | 类型 | 标题模板 | 机会点 |
+|--------|------|----------|--------|
+| [tool] worth it | question+commercial | "Is [Tool] Worth It in 2026? Honest Review" | 533工具页均可套用问题式标题 |
+| [tool] pricing 2026 | pricing+commercial | "[Tool] Pricing 2026: Plans, Costs & Free Tier" | 定价页加年份提升时效性CTR |
+| best free ai tools [category] | best+free | "5 Best Free AI Tools for [Category] in 2026" | 免费工具精选(学生/个人开发者高搜索量) |
+| [tool a] vs [tool b] | comparison | "[Tool A] vs [Tool B] 2026: Which Is Better?" | 对比页加年份; /compare已有258曝光 |
+| ai tools for [profession] | commercial | "7 Best AI Tools for [Profession] in 2026" | 按职业细分(教师/律师/医生)低竞争蓝海 |
+| how to use [tool] for [task] | how+tutorial | "How to Use [Tool] for [Task]: Step-by-Step 2026" | 工具使用教程(我们有评测数据可扩展) |
+| [tool] alternative | alternative | "Best [Tool] Alternatives in 2026 (Free & Paid)" | 竞品替代词(theresanaiforthat alternative等) |
+| [tool] review 2026 | review+year | "[Tool] Review 2026: Features, Pricing & Verdict" | 年份+明确结构提升CTR |
+
+### 标题模板CTR测试矩阵（从学习中提炼，可直接用于533工具页A/B测试）
+
+| 模板类型 | 示例 | 适用场景 | 预期CTR效应 |
+|----------|------|----------|------------|
+| 问题式 | "Is Cursor AI Worth It in 2026?" | 工具评测页 | +10-20% |
+| 数字列表式 | "7 Best AI Coding Tools in 2026" | 分类/列表页 | +20-30% |
+| 年份+评测式 | "Cursor AI Review 2026: Pricing & Verdict" | 工具详情页 | +5-15% |
+| 对比式 | "Cursor vs GitHub Copilot 2026" | 对比页 | +15-25% |
+| 定价式 | "Cursor AI Pricing 2026: Plans & Free Tier" | 定价/工具页 | +10-20% |
+| 教程式 | "How to Use Cursor AI for React in 2026" | 教程/博客页 | +15-25% |
+| 替代式 | "Best Cursor AI Alternatives in 2026" | 替代/对比页 | +10-20% |
+| 陈述式(当前) | "Cursor Review: Pricing, Pros, Cons" | 当前模板 | 基准(可能被Google重写) |
+
+### 筛选规则更新（本次学习后改进）
+1. **CTR差距自动标记**：GSC中按排名分桶，CTR低于同排名行业基准50%的页面自动标记为"标题问题候选"
+2. **品牌词top10优先**：排名1-10但CTR<5%的品牌词自动加入P0标题优化列表
+3. **boilerplate标题检测**：title模板相似度>80%的页面组(>30页)自动标记为去boilerplate优先
+4. **Google重写检测**：top20曝光页定期执行site:搜索，对比实际SERP标题与title标签，被重写的页面标记
+5. **高曝光低CTR页**：曝光>50且CTR<1%的页面自动加入标题测试候选池
+6. **标题长度检查**：title>60字符或>12词的页面自动标记为截断风险
+7. **H1-title对齐检查**：H1与title语义不一致或multiple H1的页面标记为语义对齐风险
+8. **关键词入追踪标准**：标题优化后CTR提升>20%的关键词自动加入zens-ink追踪
+9. **内容词扩展**：CTR/标题优化类方法论词标记为"seo-content"，适合写博客吸引SEO从业者反向链接
+10. **Before-After测试**：单页标题优化后必须记录优化前2周CTR基线，优化后2周对比，不中途偷看
