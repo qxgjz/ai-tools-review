@@ -1,9 +1,10 @@
-import withBundleAnalyzer from "@next/bundle-analyzer";
+﻿import withBundleAnalyzer from "@next/bundle-analyzer";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true, // Enable SWC minification for faster builds
+  // ISR overage fix: all [slug] pages force-static + OG/API cache headers (2026-09-26)
 
   // 图片优化
   images: {
