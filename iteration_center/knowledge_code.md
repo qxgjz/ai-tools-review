@@ -192,6 +192,215 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ## 待补充
 
+## [2026-09-27] Next.js 15/16新特性与升级路径深度实战
+
+### 知识点1：Next.js 15核心破坏性变化
+Next.js 15三大破坏性变化：①React 19 RC（App Router必须升级React 19）②fetch请求、GET Route Handlers、客户端导航默认不再缓存（Next 14默认缓存，需显式cache:'no-store'；Next 15需显式cache:'force-cache'才缓存）③cookies()、headers()、draftMode()、params变为async（必须await）。项目当前4个fetch调用、0个cookies/headers，升级影响中等。
+来源：https://nextjs.org/blog/next-15-rc
+交叉验证：https://nextjs.org/docs/15/app/guides/upgrading/version-15
+
+### 知识点2：Next.js 15升级codemod
+官方提供自动化升级工具：npx @next/codemod@canary upgrade latest。codemod会自动处理：①async request API迁移（cookies/headers/params加await）②experimental-edge改为edge③NextRequest.geo/ip替换为@vercel/functions。手动升级需安装next@15和react@19。升级后必须运行npx tsc和完整构建验证。
+来源：https://nextjs.org/docs/15/app/guides/upgrading/version-15
+交叉验证：https://nextjs.org/docs/pages/guides/upgrading/codemods
+
+### 知识点3：Next.js 16核心新特性
+Next.js 16（2025年10月发布）核心特性：①Cache Components（基于PPR+use cache的即时导航新模型）②Turbopack稳定（默认bundler）③React Compiler稳定（自动memoization）④proxy.ts替代middleware.ts（明确网络边界，默认Node.js Runtime）⑤Next.js Devtools MCP（AI agent调试集成）⑥Build Adapters API（alpha）。
+来源：https://nextjs.org/blog/next-16
+交叉验证：https://nextjs.org/docs/app/guides/upgrading/version-16
+
+### 知识点4：Turbopack稳定与性能提升
+Turbopack是Rust编写的增量bundler，Next.js 16起为默认bundler。性能数据：Fast Refresh快5-10倍，生产构建快2-5倍。Next.js 16.3进一步优化：dev模式内存使用减少90%，服务端渲染吞吐量提升22%，支持TypeScript 7类型检查。可通过--no-turbopack退回webpack。项目533工具页+107文章的SSG构建可显著受益。
+来源：https://nextjs.org/docs/app/api-reference/turbopack
+交叉验证：https://nextjs.org/blog/next-16-3
+
+### 知识点5：React Compiler稳定与自动memoization
+React Compiler（原React Forget）在Next.js 16中稳定，内置集成无需手动配置。它自动分析组件并在编译时插入memoization，无需手动写useMemo/useCallback/React.memo。这减少了大量性能优化样板代码，同时避免了手动memoization的常见错误（依赖数组遗漏）。项目当前代码中可能有多处useMemo/useCallback，升级后可考虑移除。
+来源：https://nextjs.org/blog/next-16
+交叉验证：https://nextjs.org/blog/next-15-rc
+
+### 知识点6：proxy.ts替代middleware.ts
+Next.js 16将middleware.ts重命名为proxy.ts，导出函数从middleware改为proxy。关键变化：proxy.ts默认运行在Node.js Runtime（而非Edge），因为大多数用例（认证/重定向/安全头）不需要Edge低延迟，Node.js兼容性更好。如需Edge Runtime仍可用middleware.ts（但会显示deprecation警告）。项目当前无middleware，升级到16时直接创建proxy.ts即可。
+来源：https://nextjs.org/blog/next-16#proxyts-formerly-middlewarets
+交叉验证：https://www.adeptdev.io/blogs/nextjs-middleware-complete-guide-for-2026
+
+### 知识点7：缓存策略变化（Next 14→15→16）
+Next 14：fetch默认缓存（force-cache），GET Route Handlers默认缓存。Next 15：fetch默认不缓存（no-store），需显式cache:'force-cache'或revalidate；GET Route Handlers默认不缓存。Next 16：引入Cache Components和use cache API，基于PPR实现更细粒度的缓存控制。项目当前是全SSG站点（generateStaticParams），缓存策略变化影响较小，但API路由（/api/google-search等）需注意默认不再缓存。
+来源：https://nextjs.org/blog/next-15-rc
+交叉验证：https://nextjs.org/blog/next-16#cache-components
+
+### 知识点8：Partial Prerendering (PPR) 演进
+PPR在Next 15中为experimental，Next 16中演化为Cache Components。PPR原理：静态外壳（shell）+动态内容流（streaming holes），结合SSG的速度和SSR的动态性。Next 16的use cache API让开发者显式标记可缓存的计算，实现即时导航（instant navigation）。项目next.config.mjs已添加experimental.ppr = "incremental"，升级到16后可迁移到Cache Components。
+来源：https://nextjs.org/blog/next-16#cache-components
+交叉验证：https://nextjs.org/blog/next-15-rc
+
+### 知识点9：next lint废弃与ESLint迁移
+Next.js 15.5开始next lint命令显示deprecation警告，Next 16中完全移除。替代方案：直接使用ESLint（npx eslint .），Next.js提供@next/eslint-plugin-next插件。项目已创建eslint.config.mjs（flat config），升级后只需将package.json中的lint脚本从next lint改为eslint .。Biome作为更快的替代方案也被推荐。
+来源：https://nextjs.org/blog/next-15-5
+交叉验证：https://nextjs.org/blog/next-16
+
+### 知识点10：Next.js安全更新策略
+Next.js有定期安全更新：2026年9月22日发布了critical out-of-band安全更新（16.3.6/15.5.26），2026年9月30日计划发布9个漏洞修复（1个critical、2个high）。LTS策略：Next 16为Active LTS，Next 15为Maintenance LTS。项目当前14.2.5已不在LTS范围内，存在安全风险。建议至少升级到15.5 LTS以获得安全更新。
+来源：https://nextjs.org/blog
+交叉验证：https://nextjs.org/blog/next-16-3
+
+### 知识点11：项目升级风险评估
+项目当前Next.js 14.2.5，升级风险评估：①4个fetch调用（需检查缓存策略变化）②0个cookies/headers（无async迁移负担）③全SSG站点（缓存策略影响小）④无middleware（无proxy.ts迁移）⑤已有eslint.config.mjs（lint迁移容易）⑥next.config.mjs有experimental.ppr（升级后需调整）。风险等级：中高（主要是React 19升级和fetch缓存变化）。建议路径：14→15.5 LTS（先获得安全更新）→稳定运行1个月→再评估16升级。
+来源：https://nextjs.org/docs/15/app/guides/upgrading/version-15
+交叉验证：https://nextjs.org/docs/app/guides/upgrading/version-16
+
+### 知识点12：升级前准备清单
+升级前必须完成：①备份当前代码（git tag）②运行npx tsc --noEmit确保0错误③运行完整构建确保成功④记录所有fetch调用的缓存意图⑤检查所有第三方依赖兼容性（特别是@next/bundle-analyzer、framer-motion、lucide-react）⑥创建升级分支。升级步骤：npx @next/codemod@canary upgrade latest → npm install → 修复tsc错误 → 修复构建错误 → 线上验证关键页面 → 监控Vercel部署日志。升级后回滚方案：git revert + Vercel rollback。
+来源：https://nextjs.org/docs/app/guides/upgrading/version-16
+交叉验证：https://nextjs.org/docs/15/app/guides/upgrading/version-15
+
+### 落地计划
+1. **P2-PERF-NEXT15-UPGRADE-001**：在升级分支执行npx @next/codemod@canary upgrade latest，升级到Next.js 15.5 LTS+React 19，修复tsc和构建错误，验证线上3个关键页面。先获得安全更新（当前14.2.5已不在LTS）。
+2. **P2-PERF-TURBOPACK-TRY-001**：在升级到15后尝试next dev --turbopack和next build --turbopack，验证533工具页+107文章的SSG构建兼容性，记录构建时间对比。
+3. **P2-PERF-REACT-COMPILER-001**：升级到Next 16后评估React Compiler启用，检查项目中useMemo/useCallback的使用情况，确定哪些可被Compiler自动处理。
+4. **P2-SEC-NEXT-SECURITY-UPDATE-001**：关注2026-09-30 Next.js安全更新（1 critical+2 high），升级到15.5.27或16.3.7后验证无回归。
+
+
+## [2026-09-27] Next.js Middleware与边缘运行时深度实战
+
+### 知识点1：Middleware执行时机与运行环境
+Middleware在请求完成前、路由渲染前执行，运行在Edge Runtime（Vercel边缘节点，接近用户）。它可以修改响应（重写/重定向/修改请求或响应头/直接响应）。middleware.ts放在项目根目录（与app同级）。Edge Runtime不支持Node.js API（fs/path/crypto等），只能用Web标准API。这是实现认证、日志、重定向、安全头的理想位置。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+交叉验证：https://vercel.com/docs/routing-middleware/getting-started
+
+### 知识点2：matcher配置与路径匹配
+通过export const config = { matcher: '/about/:path*' }限制Middleware只在匹配路径执行，避免不必要的性能开销。matcher支持精确路径、通配符（:path*）、正则表达式（用(?...)包裹）、负匹配（用!前缀）。建议matcher尽可能精确，不要用'/(.*)'匹配所有路径——这会导致静态资源也经过Middleware，增加延迟。静态文件（/_next/*、/favicon.ico等）默认被排除。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+交叉验证：https://nextjs.org/docs/14/app/api-reference/file-conventions/middleware
+
+### 知识点3：NextResponse API核心方法
+NextResponse是Middleware的响应API，核心方法：①redirect(url) - 307/308重定向 ②rewrite(url) - 内部重写（URL不变，内容来自目标路径）③next() - 继续到下一个Middleware或路由 ④headers - 设置/修改响应头 ⑤cookies - 读取/设置/删除cookie。NextResponse.next()可传入request和headers，在继续路由的同时修改头。
+来源：https://nextjs.org/docs/15/app/api-reference/functions/next-response
+交叉验证：https://nextjs.org/docs/14/app/api-reference/functions/next-response
+
+### 知识点4：CSP安全头与Nonce策略
+Content Security Policy（CSP）是防御XSS的核心机制。在Middleware中为每个请求生成随机nonce，设置Content-Security-Policy头（script-src 'self' 'nonce-xxx'），并将nonce通过request header传递给页面组件。Next.js官方推荐用Middleware设置CSP而非next.config.mjs的headers，因为nonce需要每个请求动态生成。项目当前无CSP头，建议先从Report-Only模式开始。
+来源：https://nextjs.org/docs/14/app/building-your-application/configuring/content-security-policy
+交叉验证：https://nextjs.net.cn/docs/pages/building-your-application/configuring/content-security-policy
+
+### 知识点5：重定向策略选择（3种方式对比）
+Next.js有3种重定向方式：①next.config.mjs的redirects() - 构建时静态配置，适合固定规则（项目当前91条），支持正则和通配符 ②Middleware的NextResponse.redirect() - 运行时动态重定向，适合需要条件判断（如基于cookie/geo/AB测试） ③redirect()函数 - 在Server Component/Server Action/Route Handler中使用，适合基于数据的重定向。选择原则：固定规则用config，动态条件用Middleware，数据依赖用redirect()。
+来源：https://nextjs.org/docs-wip/app/building-your-application/routing/redirecting
+交叉验证：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+
+### 知识点6：Bot检测与AI爬虫拦截
+Middleware可通过request.headers.get('user-agent')检测爬虫。常见AI爬虫UA：GPTBot、ChatGPT-User、Google-Extended、ClaudeBot、anthropic-ai。可在Middleware中拦截并返回403或重定向到llms.txt。但注意：简单UA检测容易被绕过（AI爬虫可伪造UA），更可靠的方案是结合robots.txt和IP范围。项目已有robots.txt禁止部分AI爬虫，Middleware可作为补充防线。
+来源：https://dev.to/webdecoy/nextjs-bot-detection-block-ai-crawlers-at-the-edge-4dd4
+交叉验证：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+
+### 知识点7：地理位置与A/B测试实现
+Middleware可通过request.geo获取用户地理位置（country/city/region，Vercel平台提供），实现基于地区的内容重写或重定向。A/B测试：在Middleware中根据用户ID/cookie分配实验变体，通过rewrite到不同页面路径或设置x-experiment-variant头传递给组件。优势：在边缘执行，无客户端闪烁（FOUC），对SEO友好（搜索引擎看到一致内容需谨慎处理）。
+来源：https://nextjslaunchpad.com/ja/article/nextjs-middleware-kanzen-guide-2026
+交叉验证：https://nurbak.com/en/blog/nextjs-middleware-guide/
+
+### 知识点8：速率限制（Rate Limiting）
+Middleware可实现API速率限制，常用Upstash Redis（Edge兼容的KV存储）记录请求计数。基于IP或API key限制（如每分钟100次），超限返回429 Too Many Requests。注意：Edge Runtime无持久存储，必须用外部KV（Upstash/Vercel KV）。项目的API路由（ga4-proxy/google-search等）可受益于速率限制，防止滥用。
+来源：https://nextjslaunchpad.com/el/article/nextjs-middleware-authentication-rate-limiting-i18n-security
+交叉验证：https://viadreams.cc/es/blog/nextjs-middleware-guide/
+
+### 知识点9：Edge Runtime限制与常见陷阱
+Edge Runtime不支持：Node.js内置模块（fs/path/crypto/os等）、某些npm包（依赖Node API的）、eval()、new Function()。可用：fetch、Web Crypto、URL、TextEncoder/Decoder、console、setTimeout等Web标准API。常见陷阱：①在Middleware中导入了依赖Node API的包导致构建失败 ②matcher过宽导致静态资源延迟增加 ③Middleware中做重计算（如JWT验证用了慢算法）增加p95延迟。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+交叉验证：https://strivelab.pl/blog/middleware-w-next-js-7-zastosowan-i-typowych-pulapek/
+
+### 知识点10：Next.js 16 proxy.ts重命名
+Next.js 16将middleware.ts重命名为proxy.ts，导出函数从middleware改为proxy。功能完全相同。proxy.ts默认运行在Node.js Runtime（而非Edge），如需Edge Runtime仍可用middleware.ts（但会显示deprecation警告）。这一变化是因为大多数Middleware用例（认证/重定向/安全头）不需要Edge的低延迟，Node.js运行时兼容性更好。项目当前Next.js 14.2.5，升级到16时需注意此变更。
+来源：https://www.adeptdev.io/blogs/nextjs-middleware-complete-guide-for-2026
+交叉验证：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+
+### 知识点11：waitUntil与异步后台任务
+Middleware中可用event.waitUntil(promise)执行不阻塞响应的异步任务（如日志记录、分析上报、缓存预热）。waitUntil确保函数在响应发送后继续执行直到promise完成（Vercel平台支持）。这比在Middleware中await异步操作更好——不会增加用户感知延迟。项目可用waitUntil在Middleware中记录请求日志到外部服务，不影响页面响应时间。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+交叉验证：https://nurbak.com/en/blog/nextjs-middleware-guide/
+
+### 知识点12：性能影响与最佳实践
+Middleware在每个匹配请求上执行，即使极快也会增加延迟（通常1-5ms）。最佳实践：①matcher尽可能精确，排除静态资源 ②避免重计算和外部API调用（如需调用用waitUntil） ③用Edge Runtime的全局缓存（如Edge Config）存储配置而非每次fetch ④监控p95/p99延迟而非平均值 ⑤复杂逻辑考虑移到Route Handler。项目当前无Middleware，添加时应从简单的安全头设置开始，逐步增加功能。
+来源：https://strivelab.pl/blog/middleware-w-next-js-7-zastosowan-i-typowych-pulapek/
+交叉验证：https://nextjs.org/docs/15/app/api-reference/file-conventions/middleware
+
+### 落地计划
+1. **P1-SEC-CSP-MIDDLEWARE-001**：创建middleware.ts，设置CSP Report-Only头（先监控不拦截），生成nonce并传递给页面。项目有17处dangerouslySetInnerHTML，需先评估CSP兼容性。
+2. **P1-SEC-SECURITY-HEADERS-001**：在Middleware中统一设置安全头：X-Frame-Options: DENY、X-Content-Type-Options: nosniff、Referrer-Policy: strict-origin-when-cross-origin、Permissions-Policy。替代next.config.mjs的静态headers（Middleware更灵活）。
+3. **P2-SEO-BOT-DETECTION-001**：在Middleware中检测AI爬虫UA（GPTBot/ClaudeBot/Google-Extended等），记录访问日志（waitUntil），评估是否需要对AI爬虫返回优化内容。配合已有robots.txt和llms.txt。
+4. **P2-PERF-REDIRECT-AUDIT-001**：审计next.config.mjs中91条重定向规则，评估哪些应迁移到Middleware（动态条件）、哪些保留config（固定规则）。删除过期/无效重定向，减少构建配置体积。
+5. **P2-SEC-RATE-LIMIT-001**：为API路由（/api/google-search、/api/ga4-proxy等）添加基于IP的速率限制（如每分钟60次），用Upstash Redis或Vercel KV存储计数，超限返回429。
+
+
+## [2026-09-27] 高星GitHub开源工具：自动化测试工具深度评测（Playwright/Vitest/Testing Library）
+
+### 知识点1：测试金字塔与工具选型
+自动化测试分三层：单元测试（Vitest/Jest，测试函数/组件，毫秒级）、集成测试（Vitest+Testing Library，测试组件交互）、端到端测试（Playwright/Cypress，真实浏览器测试用户流程）。标准组合：Vitest做单元+组件测试，Playwright做E2E测试。Cypress适合需要可视化调试的团队，但并行执行需付费；Playwright完全免费且多浏览器支持更好。
+来源：https://vitest.dev/guide/comparisons
+交叉验证：https://playwright.dev/docs/best-practices
+
+### 知识点2：Vitest核心配置与Next.js集成
+Vitest配置需安装：vitest、@vitejs/plugin-react、jsdom、@testing-library/react、@testing-library/jest-dom。vitest.config.ts中设置environment:'jsdom'、globals:true（全局describe/it/expect无需import）、setupFiles:['./tests/setup.ts']（导入jest-dom扩展匹配器）。coverage用v8 provider。Next.js官方推荐此配置。
+来源：https://nextjs.org/docs/14/app/building-your-application/testing/vitest
+交叉验证：https://nextjs.org/docs/app/guides/testing/vitest
+
+### 知识点3：jsdom vs happy-dom vs 真实浏览器环境
+jsdom是Node.js中的DOM模拟，不渲染CSS、不支持完整Web API、事件是合成的，适合纯逻辑和简单组件测试。happy-dom更轻量更快但API覆盖更少。Vitest Browser Mode使用真实浏览器（需安装playwright或webdriverio），支持真实CSS渲染、CDP事件、完整focus/a11y树，但运行更慢。对需要测试真实布局/focus管理的组件用Browser Mode，其余用jsdom。
+来源：https://main.vitest.dev/guide/browser
+交叉验证：https://vitest.dev/guide/comparisons
+
+### 知识点4：React Testing Library的核心原则
+Testing Library哲学：测试用户看到的行为，不测试实现细节。用getByRole/getByLabelText/getByPlaceholderText/getByText查询元素（模拟用户视角），不用CSS选择器或组件内部状态。断言用@testing-library/jest-dom的toBeInTheDocument/toBeVisible/toHaveTextContent。用户交互用@testing-library/user-event（fireEvent已废弃）。
+来源：https://testing-library.com/docs/guiding-principles
+交叉验证：https://main.vitest.dev/guide/browser/component-testing.html
+
+### 知识点5：Playwright测试隔离机制
+Playwright每个测试自动获得独立的BrowserContext（相当于全新隐身浏览器配置文件），包含独立的localStorage/sessionStorage/cookies。page fixture自动传入，无需手动创建/清理。测试间不共享状态，避免级联失败。需要共享登录状态时用storageState保存认证状态并在config中引用，而非在beforeEach中重复登录。
+来源：https://playwright.dev/docs/browser-contexts
+交叉验证：https://playwright.dev/docs/writing-tests
+
+### 知识点6：Playwright Locators与Web-First Assertions
+Locators是Playwright的核心元素定位方式，优先用getByRole（最接近用户视角）、getByLabel、getByPlaceholder、getByTestId，避免脆弱的CSS/XPath选择器。Web-First Assertions（expect(locator).toBeVisible()/toHaveText()）自动重试直到条件满足或超时，无需手动waitFor。默认超时5秒，可配置。这消除了E2E测试中最常见的flaky原因。
+来源：https://playwright.dev/docs/locators
+交叉验证：https://playwright.dev/docs/best-practices
+
+### 知识点7：Playwright CI并行与Sharding
+Playwright默认并行执行测试（workers数=CPU核数）。CI中用--shard=1/4将测试拆成4份在4台机器上同时运行，大幅缩短总时间。Sharding完全免费（Cypress并行需Cloud付费）。配合GitHub Actions matrix策略可自动分配shard。设置maxFailures限制失败数，failFast在达到阈值后停止剩余测试。
+来源：https://playwright.dev/docs/test-sharding
+交叉验证：https://playwright.dev/docs/test-parallel
+
+### 知识点8：测试描述与命名规范
+测试描述应说明用户可观察的行为，而非实现细节。好的描述：'shows error message when email format is invalid'、'disables submit button while form is submitting'。差的描述：'calls validateEmail function'、'sets isSubmitting state to true'。用describe分组相关测试，test名称以动词开头。这让测试失败时一眼看出哪个用户行为坏了。
+来源：https://main.vitest.dev/guide/browser/component-testing.html
+交叉验证：https://playwright.dev/docs/best-practices
+
+### 知识点9：Vitest 4/5新特性与升级注意
+Vitest 4新增Playwright Traces支持（Browser Mode下生成追踪文件）、改进的workspace配置。Vitest 5（2026年9月发布）改进了插件解析、.别名默认extends、更好的TypeScript支持。升级时注意：globals默认行为变化、coverage provider配置、环境匹配器API变化。项目当前用Vitest 2.x，升级前需检查setup.ts和测试兼容性。
+来源：https://vitest.dev/blog/vitest-4
+交叉验证：https://vitest.dev/blog/vitest-5
+
+### 知识点10：E2E测试的Trace Viewer与调试
+Playwright失败时自动生成trace.zip（包含DOM快照、网络请求、控制台日志、截图时间线），用playwright show-trace打开可时间旅行调试。CI中设置trace:'on-first-retry'仅在重试时生成，避免trace文件过大。调试用--headed模式看真实浏览器、--pause在断点处暂停、page.pause()打开Playwright Inspector。这是E2E测试排错的核心工具。
+来源：https://playwright.dev/docs/trace-viewer
+交叉验证：https://playwright.dev/docs/best-practices
+
+### 知识点11：测试覆盖率的合理目标
+单元测试覆盖率目标：核心工具函数/数据处理逻辑80%+，UI组件50%+（组件测试维护成本高）。E2E测试不追求覆盖率，追求关键用户路径（首页加载、搜索、文章阅读、工具对比）。用Vitest的v8 coverage生成html报告，CI中设置阈值（如lines>70%）防止覆盖率倒退。但不要为了覆盖率而写无意义的测试——测试质量>覆盖率数字。
+来源：https://vitest.dev/guide/coverage
+交叉验证：https://nextjs.org/docs/14/app/building-your-application/testing/vitest
+
+### 知识点12：项目当前测试基础设施的差距与补齐路径
+项目已安装vitest@2.x、@testing-library/react、jsdom、axe-core、@playwright/test（未在package.json）、playwright.config.ts、tests/e2e/smoke.spec.ts（3个测试）、tests/setup.ts、tests/setup.test.ts、tests/accessibility.test.ts。差距：①@playwright/test未加入devDependencies ②Vitest本地运行超时挂起（jsdom环境初始化问题，需排查）③只有3个smoke测试，无组件测试 ④无CI覆盖率阈值 ⑤无Playwright trace配置。补齐优先级：先修Vitest运行→添加@playwright/test→扩展smoke测试→添加组件测试→配置CI覆盖率。
+来源：https://playwright.dev/docs/best-practices
+交叉验证：https://nextjs.org/docs/14/app/building-your-application/testing/vitest
+
+### 落地计划
+1. **P1-QA-VITEST-FIX-001**：修复Vitest本地运行超时挂起问题。排查jsdom环境初始化，可能是@testing-library/jest-dom导入时机或setup.ts配置问题。参考Next.js官方with-vitest示例对比配置。
+2. **P1-QA-PLAYWRIGHT-INSTALL-001**：将@playwright/test加入package.json devDependencies并运行npm install，确保playwright.config.ts和tests/e2e/smoke.spec.ts可正常运行。
+3. **P2-QA-COMPONENT-TESTS-001**：为核心组件（ToolCard、FAQSection、ComparisonChart、Breadcrumb）编写Vitest+Testing Library组件测试，每个组件至少3个测试用例（渲染、交互、边界情况）。
+4. **P2-QA-E2E-EXPAND-001**：扩展Playwright E2E测试，覆盖搜索功能、工具对比页、分类导航、内链跳转等关键用户路径，从3个测试扩展到10+个。
+5. **P2-QA-COVERAGE-CI-001**：在unit-tests.yml中添加Vitest覆盖率阈值（lines>60%），生成html报告并上传为artifact，防止覆盖率倒退。
+
+
 ## [2026-09-27] Next.js App Router数据获取与缓存策略深度实战
 
 ### 知识点1：fetch缓存的4种模式

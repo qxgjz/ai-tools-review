@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-27T04:03:22.681901",
+  "last_updated": "2026-09-27T04:05:42.731498",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -3099,6 +3099,42 @@
       "status": "pending",
       "description": "为/api/google-search等API路由添加基于IP的速率限制(60次/分钟)，超限返回429",
       "created_at": "2026-09-27T03:22:09.688891"
+    },
+    {
+      "id": "P2-PERF-NEXT15-UPGRADE-001",
+      "title": "升级到Next.js 15.5 LTS+React 19",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "用codemod升级到15.5 LTS获得安全更新(当前14.2.5已不在LTS)，修复fetch缓存变化和async APIs，验证线上",
+      "created_at": "2026-09-27T04:05:42.731425"
+    },
+    {
+      "id": "P2-PERF-TURBOPACK-TRY-001",
+      "title": "验证Turbopack构建兼容性",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "尝试next build --turbopack，验证533工具页+107文章SSG构建，记录构建时间对比",
+      "created_at": "2026-09-27T04:05:42.731454"
+    },
+    {
+      "id": "P2-PERF-REACT-COMPILER-001",
+      "title": "评估React Compiler启用条件",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "Next 16升级后评估React Compiler，检查useMemo/useCallback使用情况，确定自动memoization范围",
+      "created_at": "2026-09-27T04:05:42.731455"
+    },
+    {
+      "id": "P2-SEC-NEXT-SECURITY-UPDATE-001",
+      "title": "跟进Next.js安全更新",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "2026-09-30安全更新(1 critical+2 high)，升级到15.5.27或16.3.7后验证无回归",
+      "created_at": "2026-09-27T04:05:42.731456"
     }
   ],
   "milestones": [
