@@ -194,6 +194,46 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ---
 
+## [2026-09-26] Core Web Vitals优化实战：LCP/INP/CLS深度优化（12知识点）
+
+**学习背景**：本轮收紧了LHCI断言（TBT<200ms, JS<300KB），系统学习CWV三大指标的优化方法，确保站点达标。
+
+**知识点1：CWV三大指标2026年最新阈值——LCP<2.5s, INP<200ms, CLS<0.1（p75）**。LCP衡量加载性能（最大内容元素渲染时间），INP衡量交互响应（2024年3月正式替代FID，观测所有交互取最长），CLS衡量视觉稳定性（布局偏移累积分数）。达标线取p75（75%用户体验好）。Google搜索排名将CWV作为页面体验信号。AIToolCrux的LHCI断言已设LCP<2500ms、CLS<0.1、TBT<200ms（TBT是INP的实验室代理指标）。（来源：https://developers.google.com/search/docs/appearance/core-web-vitals + https://web.dev/articles/top-cwv）
+
+**知识点2：LCP优化第一原则——确保LCP资源可从HTML源码中被发现并获得高优先级**。73%的移动页面LCP元素是图片。如果LCP图片是通过CSS background-image或JavaScript动态注入的，浏览器无法在HTML解析阶段发现它，会延迟加载。解决方案：①用`<img>`或next/image而非CSS背景图；②对LCP图片使用`priority`属性（next/image）或`<link rel="preload" as="image">`；③不要对LCP图片使用lazy loading。AIToolCrux的ToolScreenshot组件已有priority/fetchpriority设置，需确认首屏工具截图是LCP元素且已preload。（来源：https://web.dev/articles/top-cwv + https://nextjs.org/docs/app/guides/streaming + https://webperfclinic.com/article/complete-guide-largest-contentful-paint-optimizing-every-lcp-sub-part）
+
+**知识点3：LCP元素必须放在Suspense边界之外或之上——Streaming SSR的关键陷阱**。Next.js App Router中，如果LCP元素（如首屏大图/标题）被包裹在`<Suspense>`中，它会延迟到streaming chunk到达才渲染，严重影响LCP。最佳实践：静态shell（含LCP元素）先渲染，动态内容放在Suspense中。AIToolCrux的工具详情页首屏是工具名+评分+截图，这些应在Suspense之外。新建的loading.tsx骨架屏也需确保不延迟真实LCP元素。（来源：https://nextjs.org/docs/app/guides/streaming + https://vercel.com/kb/guide/optimizing-core-web-vitals-in-2024）
+
+**知识点4：Web Font加载优化——font-display:swap避免FOIT，next/font自托管消除外部请求**。如果LCP元素是文本（标题），浏览器可能等待web font下载才渲染文本（FOIT），导致LCP延迟。解决方案：①`font-display: swap`先用系统字体渲染，字体下载后替换；②用next/font（geist/font）自托管字体，零外部请求且自动preload关键字体；③font-display可选值：auto/block/swap/fallback/optional，swap是SEO站点最佳平衡。AIToolCrux已使用geist/font自托管，确认font-display为swap。（来源：https://webperfclinic.com/article/complete-guide-largest-contentful-paint-optimizing-every-lcp-sub-part + https://nextjs.org/learn/dashboard-app/optimizing-fonts-images + https://alexmayhew.dev/blog/core-web-vitals-optimization）
+
+**知识点5：INP优化核心——用scheduler.yield()拆分长任务（>50ms），2026年最直接的INP杠杆**。INP观测所有交互（点击/键盘/触摸），取p75最长交互延迟。长任务（>50ms）阻塞主线程，用户交互需等待。`scheduler.yield()`（Chrome 129+稳定）可暂停长任务让浏览器处理输入和渲染，然后以高优先级恢复（比setTimeout好，setTimeout把续体放到任务队列末尾）。用法：`async function longWork() { await scheduler.yield(); /* next chunk */ }`。polyfill：`await new Promise(r => setTimeout(r, 0))`。AIToolCrux的搜索/过滤/对比等交互组件如有重计算，应添加yield点。（来源：https://webperfclinic.com/article/scheduler-yield-break-up-long-tasks-fix-inp-2026 + https://codelabs.developers.google.com/understanding-inp + https://www.sitepoint.com/core-web-vitals-2026-fix-interaction-to-next-paint/）
+
+**知识点6：INP优化——减少不必要的JavaScript，延迟非关键第三方脚本**。INP差的根因通常是JS过多导致主线程繁忙。解决方案：①代码分割（dynamic import）延迟非首屏组件；②第三方脚本（AdSense/Giscus/GA4/Crisp/Speed Insights）用next/script的strategy="lazyOnload"或"afterInteractive"；③Partytown将第三方脚本移到Web Worker；④事件处理器中避免同步重计算，用useDeferredValue/useTransition。AIToolCrux有AdSense+Giscus+GA4+Crisp+Speed Insights共5个第三方脚本，是INP/TBT的主要来源，应评估Partytown或lazyOnload策略。（来源：https://web.dev/articles/top-cwv + https://web.developers.google.cn/articles/optimize-inp + https://www.pagespeedmatters.com/resources/guides/how-to-improve-inp）
+
+**知识点7：CLS优化第一原则——为所有媒体元素预留空间（width/height或aspect-ratio）**。CLS是布局偏移的累积分数，<0.1为良好。最常见原因：图片/广告/嵌入内容加载后推开下方内容。解决方案：①`<img>`必须有width和height属性（next/image自动处理）；②CSS `aspect-ratio`预留空间；③动态内容（如Giscus评论、AdSense广告位）用min-height或固定高度容器；④字体用font-display:swap避免字体切换导致偏移。AIToolCrux审计发现0个图片缺width/height，0个raw img标签，CLS基础良好；但Giscus评论区和AdSense广告位可能动态插入导致偏移，需预留空间。（来源：https://nadiamohamed.me/insights/core-web-vitals-for-developers/ + https://web.dev/articles/top-cwv + https://nextjs.org/learn/dashboard-app/optimizing-fonts-images）
+
+**知识点8：TTFB优化——CDN+SSG+缓存头是LCP的基础**。LCP=TTFB+资源加载+渲染，TTFB是起点。Vercel边缘网络+SSG（静态生成）确保TTFB<200ms。缓存头：`Cache-Control: s-maxage=31536000, stale-while-revalidate`让CDN命中。AIToolCrux首页x-vercel-cache=HIT，文章页/工具页=PRERENDER（SSG），TTFB良好。注意：避免重定向链（http→https→www→non-www可增加300-600ms），next.config.mjs已有91条重定向应确认无链式重定向。（来源：https://web.dev/articles/top-cwv + https://deepseoanalysis.com/blog/core-web-vitals-lcp-inp-cls-guide + https://vercel.com/kb/guide/optimizing-core-web-vitals-in-2024）
+
+**知识点9：preload/preconnect/prefetch/dns-prefetch的正确使用场景**。①`preconnect`：对关键第三方源（CDN/字体/API）提前建立DNS+TCP+TLS连接；②`preload`：立即获取高优先级资源（LCP图片、关键字体、关键JS模块用modulepreload）；③`prefetch`：低优先级预取未来导航资源（Next.js Link组件自动prefetch）；④`dns-prefetch`：仅DNS解析，用于非关键第三方源。错误用法：preload过多资源会竞争带宽，反而降低性能。原则：preload只用于LCP关键资源（1-2个），preconnect用于关键第三方（2-3个）。AIToolCrux应确认layout.tsx中没有过度preload。（来源：http://raw.githubusercontent.com/github/awesome-copilot/main/instructions/performance-optimization.instructions.md + https://vercel.com/kb/guide/optimizing-core-web-vitals-in-2024）
+
+**知识点10：CWV测量——实验室数据（Lighthouse）vs 真实用户数据（CrUX/RUM）的区别与互补**。Lighthouse/LHCI是实验室数据（受控环境，单次测量），适合CI阻断和回归检测；CrUX（Chrome User Experience Report）是真实用户数据（p75），是Google排名实际使用的数据；web-vitals库+GA4上报是RUM（真实用户监控），可归因到具体页面和交互。三者关系：实验室TBT是INP的代理指标，但INP只能从真实用户数据获取。AIToolCrux已有WebVitalsReporter上报GA4（RUM），LHCI做实验室CI，应定期对比CrUX数据确认真实达标。（来源：https://developers.google.com/search/docs/appearance/core-web-vitals + https://www.sitepoint.com/core-web-vitals-2026-fix-interaction-to-next-paint/ + https://alexmayhew.dev/blog/core-web-vitals-optimization）
+
+**知识点11：INP归因——web-vitals v4的attribution build可定位最差交互**。`onINP((metric) => { metric.attribution })`返回：`eventTarget`（触发交互的DOM元素）、`eventType`（click/keydown等）、`eventTime`、`processingStart`/`processingEnd`（事件处理耗时）、`presentationDelay`（渲染延迟）。这能精确定位是哪个按钮/组件导致INP差。AIToolCrux的WebVitalsReporter应使用attribution build，将最差交互元素上报GA4，便于针对性优化。注意：attribution build体积更大，仅在需要调试时使用。（来源：https://web.developers.google.cn/articles/optimize-inp + https://www.sitepoint.com/core-web-vitals-2026-fix-interaction-to-next-paint/）
+
+**知识点12：CWV优化优先级排序——先LCP后INP再CLS，先高流量页后全站**。优化顺序：①LCP（影响最大，73%页面LCP是图片，preload+CDN+字体即可快速改善）；②INP（需拆分长任务+减少第三方JS，工作量较大）；③CLS（预留空间，通常容易修复）。页面优先级：先优化高流量页（首页/Top10工具页/Top10文章页），再全站。LHCI CI只测4个URL（首页/midjourney/perplexity-review/compare），应扩展到Top10高流量页。AIToolCrux应：①确认Top10工具页LCP图片已preload；②评估第三方脚本Partytown迁移；③Giscus/AdSense动态区域预留min-height。（来源：https://web.dev/articles/top-cwv + https://dev.to/urielbitton/core-web-vitals-for-saas-landing-pages-fix-the-first-visit-5bc1 + https://nodesify.com/ar-ae/blog/core-web-vitals-inp-optimization-2026）
+
+**落地计划（下次迭代执行）**：
+1. 知识点2+3（LCP preload+Suspense边界）→ 任务P1-PERF-LCP-PRELOAD：审计Top10高流量工具页LCP元素，确认ToolScreenshot priority属性正确，LCP元素在Suspense之外
+2. 知识点5+6（scheduler.yield+第三方脚本）→ 任务P1-PERF-INP-3P：评估AdSense/Giscus/GA4/Crisp/Speed Insights第三方脚本策略，搜索组件添加scheduler.yield，评估Partytown
+3. 知识点7（CLS预留空间）→ 任务P2-PERF-CLS-RESERVE：Giscus评论区和AdSense广告位添加min-height/aspect-ratio预留空间
+4. 知识点10+11（RUM归因）→ 任务P2-PERF-RUM-ATTRIBUTION：WebVitalsReporter升级为attribution build，上报最差交互元素到GA4
+5. 知识点12（LHCI扩展）→ 任务P2-CI-LHCI-TOP10：lighthouse-ci.yml从4个URL扩展到Top10高流量页
+6. 知识点4（字体确认）→ 验证geist/font的font-display=swap，无需额外任务
+
+
+
+---
+
 ## [2026-09-26] SEO工程化：GSC API自动化与索引覆盖率深度监控（12知识点）
 
 **学习背景**：AIToolCrux有533工具页+107文章，索引覆盖率直接影响自然流量。系统学习GSC API自动化、URL Inspection API、Indexing API和IndexNow，建立索引监控体系。

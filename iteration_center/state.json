@@ -2875,6 +2875,61 @@
       "assigned_to": "窗口4",
       "source": "audit_findings.md P0-1 2026-09-26",
       "description": "GA4近7天1151用户中1100(96%)来自新加坡数据中心IP，互动率仅5.8%，严重污染所有指标。必须：1)在GA4中创建Bot过滤audience（排除新加坡数据中心IP+互动率<10%+单页会话）；2)GA4管理后台启用自动Bot过滤；3)对比过滤前后数据，建立干净数据视图。"
+    },
+    {
+      "id": "P1-PERF-LCP-PRELOAD-001",
+      "title": "审计Top10高流量工具页LCP元素，确认preload+Suspense边界正确",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：CWV知识点2+3",
+      "created_at": "2026-09-26T22:18:55.540095"
+    },
+    {
+      "id": "P1-PERF-INP-3P-001",
+      "title": "评估第三方脚本策略(AdSense/Giscus/GA4/Crisp)，搜索组件添加scheduler.yield",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：CWV知识点5+6",
+      "created_at": "2026-09-26T22:18:55.540120"
+    },
+    {
+      "id": "P2-PERF-CLS-RESERVE-001",
+      "title": "Giscus评论区和AdSense广告位添加min-height/aspect-ratio预留空间防CLS",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：CWV知识点7",
+      "created_at": "2026-09-26T22:18:55.540121"
+    },
+    {
+      "id": "P2-PERF-RUM-ATTRIBUTION-001",
+      "title": "WebVitalsReporter升级attribution build，上报最差交互元素到GA4",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：CWV知识点10+11",
+      "created_at": "2026-09-26T22:18:55.540122"
+    },
+    {
+      "id": "P2-CI-LHCI-TOP10-001",
+      "title": "lighthouse-ci.yml从4个URL扩展到Top10高流量页",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "source": "2026-09-26学习：CWV知识点12",
+      "created_at": "2026-09-26T22:18:55.540123"
     }
   ],
   "milestones": [
