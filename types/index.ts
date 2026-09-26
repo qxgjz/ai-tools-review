@@ -55,9 +55,9 @@ export interface Tool {
   overallScore?: number;
   grade?: string;
   publishedDate?: string;
-  author?: string | { name?: string; bio?: string };
+  author?: string | { name?: string; role?: string; bio?: string };
   testingPeriod?: string;
-  testingDetails?: string;
+  testingDetails?: string | { testing_methodology?: string; benchmark_tests?: string[] };
   bestFor?: string;
   notIdealFor?: string;
   verdict?: string;
@@ -71,6 +71,49 @@ export interface Tool {
   review_updated?: string;
   review_author?: string;
   faq?: Array<{ question: string; answer: string }>;
+  // Extended pricing fields
+  no_credit_card?: boolean;
+  free_quota?: string;
+  hidden_cost?: string;
+  // Extended author (with role)
+  // Extended review content
+  realExperience?: string;
+  usageScenarios?: string[];
+  notableObservations?: string[];
+  testMetrics?: Array<{ name?: string; value?: string; score?: number; metric?: string; test?: string; comparison?: string }>;
+}
+
+/** 文章数据 */
+export interface Post {
+  slug: string;
+  title: string;
+  description?: string;
+  excerpt?: string;
+  content?: string;
+  category: string;
+  categorySlug?: string;
+  date?: string;
+  publishedAt?: string;
+  updatedAt?: string;
+  lastUpdated?: string;
+  tags?: string[];
+  author?: string;
+  image?: string | null;
+  readingTime?: string | number;
+  readTime?: string | number;
+  wordCount?: number;
+  hasRealScreenshots?: boolean;
+  featured?: boolean;
+  faq?: Array<{ q?: string; a?: string; question?: string; answer?: string }>;
+  relatedTools?: string[];
+}
+
+/** 对比页数据 */
+export interface Comparison {
+  slug: string;
+  title?: string;
+  description?: string;
+  tools?: Array<{ slug?: string; name?: string; scores?: Record<string, number> }>;
 }
 
 /** 评分结果 */

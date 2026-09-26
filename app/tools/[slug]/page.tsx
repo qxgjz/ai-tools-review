@@ -27,7 +27,7 @@ import {
 import toolsData from '@/data/tools.json';
 import postsData from '@/data/posts.json';
 import comparisonsData from '@/data/comparisons.json';
-import type { Tool, Grade, ScoreDimension } from '@/types';
+import type { Tool, Grade, ScoreDimension, Post, Comparison, PricingTier } from '@/types';
 import {
   calculateScoreResult,
   DIMENSION_LABELS,
@@ -217,8 +217,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     .split(/\s+/)
     .filter((w) => w.length > 2);
   const relatedArticles = postsData
-    .filter((p: any) => p.slug !== `${tool.slug}-review-2026`)
-    .map((post: any) => {
+    .filter((p: Post) => p.slug !== `${tool.slug}-review-2026`)
+    .map((post: Post) => {
       let relevance = 0;
       const postTitle = post.title.toLowerCase();
       const postTags = (post.tags || []).map((t: string) => t.toLowerCase());
@@ -255,10 +255,10 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
       return { post, relevance };
     })
-    .filter((item: any) => item.relevance > 0)
-    .sort((a: any, b: any) => b.relevance - a.relevance)
+    .filter((item: { post: Post; relevance: number }) => item.relevance > 0)
+    .sort((a: { post: Post; relevance: number }, b: { post: Post; relevance: number }) => b.relevance - a.relevance)
     .slice(0, 4)
-    .map((item: any) => item.post);
+    .map((item: { post: Post; relevance: number }) => item.post);
 
   // Schema.org structured data - Review
   const structuredData = {
@@ -464,19 +464,19 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   Free Tier Available
                 </span>
               )}
-              {(tool as any).no_credit_card && (
+              {tool.no_credit_card && (
                 <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">
                   No Credit Card
                 </span>
               )}
-              {(tool as any).free_quota && (
+              {tool.free_quota && (
                 <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md text-xs font-semibold">
-                  Free: {(tool as any).free_quota}
+                  Free: {tool.free_quota}
                 </span>
               )}
-              {(tool as any).hidden_cost && (
+              {tool.hidden_cost && (
                 <span className="px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-md text-xs font-semibold">
-                  Hidden cost: {(tool as any).hidden_cost}
+                  Hidden cost: {tool.hidden_cost}
                 </span>
               )}
             </div>
@@ -497,7 +497,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               const hasRecommendedPaid =
                 Array.isArray(tool.pricing) &&
                 tool.pricing.some(
-                  (t: any) =>
+                  (t: PricingTier) =>
                     t?.recommended &&
                     t?.price &&
                     !String(t.price).includes('$0') &&
@@ -699,12 +699,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </FadeIn>
 
       {/* Author Bio - E-E-A-T Expertise & Authoritativeness signal */}
-      {(tool as any).author && (
+      {typeof tool.author === 'object' && tool.author && (
         <section className="mb-6">
           <AuthorBio
-            name={(tool as any).author.name}
-            role={(tool as any).author.role}
-            bio={(tool as any).author.bio}
+            name={tool.author.name}
+            role={tool.author.role}
+            bio={tool.author.bio}
           />
         </section>
       )}
@@ -800,14 +800,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* Detailed Description - E-E-A-T Experience signal */}
-      {(tool as any).longDescription && (
+      {tool.longDescription && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
             <Quote className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             What is {tool.name}?
           </h2>
           <div className="text-sm sm:text-base text-zinc-600 dark:text-gray-300 leading-relaxed space-y-4">
-            {(tool as any).longDescription.split('\n\n').map((paragraph: string, i: number) => (
+            {tool.longDescription.split('\n\n').map((paragraph: string, i: number) => (
               <p key={i}>{paragraph}</p>
             ))}
           </div>
@@ -815,48 +815,47 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       )}
 
       {/* Testing Methodology - E-E-A-T Experience & Trust signal */}
-      {((tool as any).testingPeriod || (tool as any).testingDetails) && (
+      {(tool.testingPeriod || tool.testingDetails) && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
             <Microscope className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Our Testing Methodology
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            {(tool as any).testingPeriod && (
+            {tool.testingPeriod && (
               <div className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4">
                 <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1">
                   Testing Period
                 </div>
                 <div className="text-sm font-semibold text-zinc-900 dark:text-white">
-                  {(tool as any).testingPeriod}
+                  {tool.testingPeriod}
                 </div>
               </div>
             )}
-            {(tool as any).testingDetails && (
+            {tool.testingDetails && (
               <div className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4 md:col-span-2">
                 <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-2">
                   Testing Details
                 </div>
-                {typeof (tool as any).testingDetails === 'string' ? (
+                {typeof tool.testingDetails === 'string' ? (
                   <div className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
-                    {(tool as any).testingDetails}
+                    {tool.testingDetails}
                   </div>
                 ) : (
                   <div className="space-y-2">
-                    {(tool as any).testingDetails.testing_methodology && (
+                    {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.testing_methodology && (
                       <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
-                        {(tool as any).testingDetails.testing_methodology}
+                        {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.testing_methodology}
                       </p>
                     )}
-                    {(tool as any).testingDetails.benchmark_tests &&
-                      Array.isArray((tool as any).testingDetails.benchmark_tests) && (
+                    {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.benchmark_tests &&
+                      Array.isArray((tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.benchmark_tests) && (
                         <div>
                           <div className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
                             Benchmark Tests:
                           </div>
                           <ul className="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 list-disc list-inside">
-                            {(tool as any).testingDetails.benchmark_tests
-                              .slice(0, 4)
+                            {(tool.testingDetails as { testing_methodology?: string; benchmark_tests?: string[] })?.benchmark_tests?.slice(0, 4)
                               .map((test: string, i: number) => (
                                 <li key={i}>{test}</li>
                               ))}
@@ -877,31 +876,31 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       )}
 
       {/* Real User Experience - E-E-A-T Experience signal (first-person usage) */}
-      {((tool as any).realExperience || (tool as any).usageScenarios) && (
+      {(tool.realExperience || tool.usageScenarios) && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
             <Users className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             Real User Experience
           </h2>
-          {(tool as any).realExperience && (
+          {tool.realExperience && (
             <div className="bg-emerald-50 dark:bg-emerald-900/10 border-l-4 border-emerald-500 rounded-r-xl p-4 mb-5">
               <div className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-2 font-semibold">
                 First-Hand Review
               </div>
               <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
-                {(tool as any).realExperience}
+                {tool.realExperience}
               </p>
             </div>
           )}
-          {(tool as any).usageScenarios &&
-            Array.isArray((tool as any).usageScenarios) &&
-            (tool as any).usageScenarios.length > 0 && (
+          {tool.usageScenarios &&
+            Array.isArray(tool.usageScenarios) &&
+            tool.usageScenarios.length > 0 && (
               <div className="mb-5">
                 <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
                   Tested Use Cases
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {(tool as any).usageScenarios.map((scenario: string, i: number) => (
+                  {tool.usageScenarios.map((scenario: string, i: number) => (
                     <div
                       key={i}
                       className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4 border border-zinc-100 dark:border-zinc-700/50"
@@ -919,15 +918,15 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 </div>
               </div>
             )}
-          {(tool as any).notableObservations &&
-            Array.isArray((tool as any).notableObservations) &&
-            (tool as any).notableObservations.length > 0 && (
+          {tool.notableObservations &&
+            Array.isArray(tool.notableObservations) &&
+            tool.notableObservations.length > 0 && (
               <div>
                 <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
                   Key Observations
                 </div>
                 <ul className="space-y-2">
-                  {(tool as any).notableObservations.map((obs: string, i: number) => (
+                  {tool.notableObservations.map((obs: string, i: number) => (
                     <li
                       key={i}
                       className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
@@ -1021,9 +1020,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       {/* Performance Test Results - Quantitative E-E-A-T data */}
-      {(tool as any).testMetrics &&
-        Array.isArray((tool as any).testMetrics) &&
-        (tool as any).testMetrics.length > 0 && (
+      {tool.testMetrics &&
+        Array.isArray(tool.testMetrics) &&
+        tool.testMetrics.length > 0 && (
           <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
             <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
               <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
@@ -1048,13 +1047,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   </tr>
                 </thead>
                 <tbody>
-                  {(tool as any).testMetrics.map((metric: any, i: number) => (
+                  {tool.testMetrics.map((metric: { name?: string; value?: string; score?: number; metric?: string; test?: string; comparison?: string }, i: number) => (
                     <tr
                       key={i}
                       className="border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors"
                     >
                       <td className="py-3 px-3 font-medium text-zinc-900 dark:text-white">
-                        {metric.metric}
+                        {metric.metric || metric.name}
                       </td>
                       <td className="py-3 px-3">
                         <span className="inline-block bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full text-xs font-bold">
@@ -1062,7 +1061,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                         </span>
                       </td>
                       <td className="py-3 px-3 text-zinc-600 dark:text-gray-400 text-xs hidden md:table-cell">
-                        {metric.test}
+                        {metric.test || metric.value}
                       </td>
                       <td className="py-3 px-3 text-zinc-500 dark:text-zinc-500 text-xs hidden lg:table-cell">
                         {metric.comparison}
@@ -1080,14 +1079,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         )}
 
       {/* Key Features */}
-      {(tool as any).keyFeatures && (tool as any).keyFeatures.length > 0 && (
+      {tool.keyFeatures && tool.keyFeatures.length > 0 && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <Wrench className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             Key Features
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {(tool as any).keyFeatures.map((feature: string, i: number) => (
+            {tool.keyFeatures.map((feature: string, i: number) => (
               <li
                 key={i}
                 className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4"
@@ -1103,14 +1102,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       )}
 
       {/* Use Cases */}
-      {(tool as any).useCases && (tool as any).useCases.length > 0 && (
+      {tool.useCases && tool.useCases.length > 0 && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <Target className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             Common Use Cases
           </h2>
           <ul className="space-y-3">
-            {(tool as any).useCases.map((useCase: string, i: number) => (
+            {tool.useCases.map((useCase: string, i: number) => (
               <li
                 key={i}
                 className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
@@ -1124,27 +1123,27 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       )}
 
       {/* Best For / Not Ideal For */}
-      {((tool as any).bestFor || (tool as any).notIdealFor) && (
+      {(tool.bestFor || tool.notIdealFor) && (
         <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
-          {(tool as any).bestFor && (
+          {tool.bestFor && (
             <div className="bg-emerald-50 dark:bg-emerald-950/20 rounded-2xl border border-emerald-100 dark:border-emerald-900/30 p-6">
               <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-3 flex items-center gap-2">
                 <Users className="w-5 h-5" />
                 Best For
               </h3>
               <p className="text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">
-                {(tool as any).bestFor}
+                {tool.bestFor}
               </p>
             </div>
           )}
-          {(tool as any).notIdealFor && (
+          {tool.notIdealFor && (
             <div className="bg-amber-50 dark:bg-amber-950/20 rounded-2xl border border-amber-100 dark:border-amber-900/30 p-6">
               <h3 className="text-base font-bold text-amber-700 dark:text-amber-400 mb-3 flex items-center gap-2">
                 <X className="w-5 h-5" />
                 Not Ideal For
               </h3>
               <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
-                {(tool as any).notIdealFor}
+                {tool.notIdealFor}
               </p>
             </div>
           )}
@@ -1263,7 +1262,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           Final Verdict & Recommendation
         </h2>
         <p className="text-sm sm:text-base text-zinc-600 dark:text-gray-300 leading-relaxed">
-          {(tool as any).verdict ||
+          {tool.verdict ||
             `${tool.name} is a ${tool.category} AI tool by ${tool.vendor}, with an overall score of ${total.toFixed(1)}/10 and a ${grade} grade (${GRADE_DESCRIPTIONS[grade]}). ${tool.pros[0]}. It's worth noting that ${tool.cons[0]}. ${tool.hasFreeTier ? 'This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade.' : ''} Overall, ${total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : 'overall performance is average, we recommend choosing carefully based on your requirements.'}`}
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -1309,14 +1308,14 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       <FAQSection items={toolFAQs} />
 
       {/* Alternatives - E-E-A-T comparison signal (below fold - cv-auto) */}
-      {(tool as any).alternatives && (tool as any).alternatives.length > 0 && (
+      {tool.alternatives && tool.alternatives.length > 0 && (
         <section className="cv-auto bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <GitCompare className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Top Alternatives to {tool.name}
           </h2>
           <div className="space-y-3">
-            {(tool as any).alternatives.map((alt: any, i: number) => (
+            {tool.alternatives.map((alt: { name?: string; slug?: string; reason?: string }, i: number) => (
               <div
                 key={i}
                 className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-gray-800/50 rounded-xl hover:bg-zinc-100 dark:hover:bg-gray-800 transition-colors"
@@ -1376,7 +1375,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Compare {tool.name} Side-by-Side
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
-            {relevantComparisons.map((c: any) => (
+            {relevantComparisons.map((c: Comparison) => (
               <Link
                 key={c.slug}
                 href={`/compare/${c.slug}`}
@@ -1402,7 +1401,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Related Articles & Guides
           </h2>
           <div className="grid gap-3 sm:grid-cols-2">
-            {relatedArticles.map((post: any) => (
+            {relatedArticles.map((post: Post) => (
               <Link
                 key={post.slug}
                 href={`/blog/${post.slug}`}

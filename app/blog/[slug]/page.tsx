@@ -12,6 +12,7 @@ import {
   Award,
 } from 'lucide-react';
 import posts from '@/data/posts.json';
+import { Post, Tool } from '@/types';
 import tools from '@/data/tools.json';
 import { AffiliateCTA } from '@/components/monetization/AffiliateCTA';
 import { NewsletterSignup } from '@/components/monetization/NewsletterSignup';
@@ -78,7 +79,7 @@ function truncateAtWord(text: string, maxLen: number): string {
 }
 
 export function generateMetadata({ params }: PostPageProps) {
-  const post = posts.find((p) => p.slug === params.slug);
+  const post = posts.find((p) => p.slug === params.slug) as Post | undefined;
   if (!post) return {};
 
   // 判断文章语言（包含中文字符则为中文，否则为英文）
@@ -99,7 +100,7 @@ export function generateMetadata({ params }: PostPageProps) {
   ];
 
   // 优化描述：确保150-160字符，包含关键词和CTA
-  let description = post.excerpt || post.description || '';
+  let description = post.excerpt || '' || post.description || '';
   // Strip HTML tags from description
   description = description.replace(/<[^>]+>/g, '').trim();
   if (description.length > 155) {
@@ -152,7 +153,7 @@ export function generateMetadata({ params }: PostPageProps) {
 }
 
 export default function PostPage({ params }: PostPageProps) {
-  const post = posts.find((p) => p.slug === params.slug);
+  const post = posts.find((p) => p.slug === params.slug) as Post | undefined;
 
   if (!post) {
     notFound();
@@ -193,7 +194,7 @@ export default function PostPage({ params }: PostPageProps) {
     .map((item) => item.post);
 
   // 相关Tools推荐：基于Tags、Categories和标题关键词
-  const calculateToolRelevance = (tool: any): number => {
+  const calculateToolRelevance = (tool: Tool): number => {
     let score = 0;
     // Tags匹配（权重50%）
     const postTags = (post.tags || []).map((t: string) => t.toLowerCase());
@@ -264,7 +265,7 @@ export default function PostPage({ params }: PostPageProps) {
   // 计算Tools平均Rating（用于Review Schema）
   const avgScore = tool?.scores
     ? Object.values(tool.scores).reduce((a, b) => a + (typeof b === 'number' ? b : 0), 0) /
-      Object.keys(tool.scores).filter((k) => typeof (tool.scores as any)[k] === 'number').length
+      Object.keys(tool.scores).filter((k) => typeof (tool.scores as Record<string, number>)[k] === 'number').length
     : 7.5;
 
   // 计算上一篇/下一篇文章
@@ -291,7 +292,7 @@ export default function PostPage({ params }: PostPageProps) {
             />
             <ReviewSchema
               name={post.title}
-              reviewBody={post.excerpt || post.description || ''}
+              reviewBody={post.excerpt || '' || post.description || ''}
               ratingValue={Math.round(avgScore * 10) / 10}
               bestRating={10}
               worstRating={1}
@@ -307,7 +308,7 @@ export default function PostPage({ params }: PostPageProps) {
                   '@context': 'https://schema.org',
                   '@type': 'Article',
                   headline: post.title,
-                  description: post.excerpt.slice(0, 155),
+                  description: post.excerpt || ''.slice(0, 155),
                   author: {
                     '@type': 'Person',
                     name: post.author || 'AIToolCrux Research Team',
@@ -316,8 +317,8 @@ export default function PostPage({ params }: PostPageProps) {
                   },
                   datePublished: post.date || post.publishedAt,
                   dateModified:
-                    (post as any).updatedAt ||
-                    (post as any).lastUpdated ||
+                    post.updatedAt ||
+                    post.lastUpdated ||
                     post.date ||
                     post.publishedAt,
                   publisher: {
@@ -338,7 +339,7 @@ export default function PostPage({ params }: PostPageProps) {
                   image: [
                     {
                       '@type': 'ImageObject',
-                      url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 50))}&description=${encodeURIComponent((post.excerpt || '').slice(0, 100))}&category=${encodeURIComponent(post.category || 'AI Tools')}`,
+                      url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(post.title.slice(0, 50))}&description=${encodeURIComponent((post.excerpt || '' || '').slice(0, 100))}&category=${encodeURIComponent(post.category || 'AI Tools')}`,
                       width: 1920,
                       height: 1080,
                     },
@@ -346,7 +347,7 @@ export default function PostPage({ params }: PostPageProps) {
                   articleSection: post.category,
                   wordCount: post.content ? post.content.length : 1500,
                   inLanguage: 'en',
-                  keywords: (post as any).tags ? (post as any).tags.join(', ') : post.category,
+                  keywords: post.tags ? post.tags.join(', ') : post.category,
                   about: {
                     '@type': 'Thing',
                     name: post.category || 'AI Tools',
@@ -379,7 +380,7 @@ export default function PostPage({ params }: PostPageProps) {
           prose-code:bg-gray-100 dark:prose-code:bg-gray-800 prose-code:px-2 prose-code:py-1 prose-code:rounded-md prose-code:text-sm prose-code:text-pink-600 dark:prose-code:text-pink-400 prose-code:font-mono
           prose-pre:bg-gray-900 prose-pre:rounded-2xl prose-pre:p-6 prose-pre:my-8 prose-pre:overflow-x-auto prose-pre:text-sm
           first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:text-emerald-600 dark:first-letter:text-emerald-400 first-letter:mt-1"
-              dangerouslySetInnerHTML={markdownToHtmlSafe(post.content)}
+              dangerouslySetInnerHTML={markdownToHtmlSafe(post.content || '')}
             />
 
             {/* Free AI Tools Guide cross-link */}
@@ -473,7 +474,7 @@ export default function PostPage({ params }: PostPageProps) {
               <FAQSection
                 items={
                   post.faq && post.faq.length > 0
-                    ? post.faq.map((item: any) => ({ question: item.q, answer: item.a }))
+                    ? post.faq.map((item: { q?: string; a?: string; question?: string; answer?: string }) => ({ question: item.q || item.question || '', answer: item.a || item.answer || '' }))
                     : defaultFAQs
                 }
                 title="Frequently Asked Questions"
@@ -494,7 +495,7 @@ export default function PostPage({ params }: PostPageProps) {
           {/* 右侧边栏 - 目录（桌面端固定） */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-24">
-              <TableOfContents contentHtml={post.content} />
+              <TableOfContents contentHtml={post.content || ''} />
             </div>
           </aside>
         </div>
