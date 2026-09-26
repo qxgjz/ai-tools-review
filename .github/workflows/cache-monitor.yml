@@ -1,0 +1,22 @@
+name: Cache Monitor
+
+on:
+  schedule:
+    - cron: "0 8 * * *"
+  workflow_dispatch:
+
+jobs:
+  check-cache:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check x-vercel-cache headers
+        run: |
+          URLs=("https://www.aitoolcrux.com" "https://www.aitoolcrux.com/tools/chatgpt" "https://www.aitoolcrux.com/blog/perplexity-ai-review-2026")
+          FAIL=0
+          for url in "${URLs[@]}"; do
+            STATUS=$(curl -sI "$url" | grep -i "x-vercel-cache" | tr -d '\r')
+            echo "$url -> $STATUS"
+            if echo "$STATUS" | grep -qi "MISS\|STALE"; then
+              echo "::warning::$url returned non-HIT cache status"
+            fi
+          done

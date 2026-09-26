@@ -1,0 +1,55 @@
+{
+  "rsc_audit": {
+    "client_components": 40,
+    "files": [
+      "app\\compare\\page.tsx",
+      "app\\generator\\page.tsx",
+      "app\\ranking\\page.tsx",
+      "app\\submit\\page.tsx",
+      "components\\analytics\\BaiduAnalytics.tsx",
+      "components\\analytics\\GA4EventTracker.tsx",
+      "components\\analytics\\GA4PageTracker.tsx",
+      "components\\analytics\\WebVitalsReporter.tsx",
+      "components\\animations\\AnimatedText.tsx",
+      "components\\animations\\FadeIn.tsx",
+      "components\\animations\\GradientText.tsx",
+      "components\\animations\\Magnet.tsx",
+      "components\\animations\\Marquee.tsx",
+      "components\\animations\\StackingCards.tsx",
+      "components\\blog\\BlogListClient.tsx",
+      "components\\blog\\ReadingProgress.tsx",
+      "components\\blog\\TableOfContents.tsx",
+      "components\\charts\\MultiRadarChart.tsx",
+      "components\\charts\\RadarChart.tsx",
+      "components\\comments\\Giscus.tsx",
+      "components\\content\\FAQSection.tsx",
+      "components\\content\\ReviewTabs.tsx",
+      "components\\content\\ToolScreenshot.tsx",
+      "components\\layout\\BackToTop.tsx",
+      "components\\layout\\Header.tsx",
+      "components\\layout\\RouteFocusManager.tsx",
+      "components\\monetization\\AdSlot.tsx",
+      "components\\monetization\\AffiliateCTA.tsx",
+      "components\\monetization\\AffiliateDisclosure.tsx",
+      "components\\monetization\\NewsletterSignup.tsx",
+      "components\\search\\SearchBox.tsx",
+      "components\\seo\\Schema.tsx",
+      "components\\theme\\ThemeProvider.tsx",
+      "components\\theme\\ThemeToggle.tsx",
+      "components\\tools\\CategoryToolsClient.tsx",
+      "components\\tools\\ToolCard.tsx",
+      "components\\tools\\ToolCardV2.tsx",
+      "components\\ui\\accordion.tsx",
+      "components\\ui\\progress.tsx",
+      "components\\ui\\tabs.tsx"
+    ]
+  },
+  "cls_audit": {
+    "images_without_dimensions": 0,
+    "raw_img_tags": 0,
+    "next_image_imports": 1
+  },
+  "lcp_audit": {
+    "priority_hints": 9
+  }
+}

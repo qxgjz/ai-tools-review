@@ -55,6 +55,8 @@ const toolScreenshotMap: Record<string, string> = {
 
 
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return toolsData.map((tool) => ({ slug: tool.slug }));
 }
@@ -68,7 +70,7 @@ function truncateDescription(text: string, maxLen: number = 155): string {
 }
 
 // Truncate tool name at word/hyphen boundary for SEO title
-function truncateToolName(name: string, maxLen: number = 28): string {
+function truncateToolName(name: string, maxLen: number = 25): string {
   if (name.length <= maxLen) return name;
   const truncated = name.slice(0, maxLen);
   // Try hyphen boundary first (many tool names use hyphens)

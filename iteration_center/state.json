@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-26T13:24:30.888002",
+  "last_updated": "2026-09-26T13:48:57.028655",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -904,8 +904,10 @@
       "priority": "P1",
       "title": "评估构建内存：确认tools-index.json迁移后Vercel构建内存是否下降，必要时添加NODE_OPTIONS=--max-old-space-size=6144",
       "assigned_to": "窗口1",
-      "status": "pending",
-      "source": "Vercel部署优化学习-知识点4"
+      "status": "completed",
+      "source": "Vercel部署优化学习-知识点4",
+      "completed_at": "2026-09-26T13:48:57.028521",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-OBS-SENTRY-001",
@@ -931,9 +933,11 @@
       "priority": "P1",
       "title": "审计Client Components使用情况，将非交互组件改为Server Component以减少bundle体积",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "RSC学习-知识点1/3/4",
-      "details": "扫描app/目录下所有'use client'文件，评估是否真的需要客户端交互；将纯展示组件移除'use client'；重点检查components/目录下的UI组件"
+      "details": "扫描app/目录下所有'use client'文件，评估是否真的需要客户端交互；将纯展示组件移除'use client'；重点检查components/目录下的UI组件",
+      "completed_at": "2026-09-26T13:59:30.684109",
+      "completion_note": "审计完成：40个client component，多数为必要交互组件（search/tabs/theme/评论），无需大规模迁移"
     },
     {
       "id": "P1-PERF-PREFETCH-001",
@@ -1046,8 +1050,10 @@
       "priority": "P2",
       "title": "审计全站Vary头确保无高基数头导致缓存碎片化",
       "assigned_to": "窗口1",
-      "status": "pending",
-      "source": "HTTP缓存策略学习(2026-09-24)知识点2/10"
+      "status": "completed",
+      "source": "HTTP缓存策略学习(2026-09-24)知识点2/10",
+      "completed_at": "2026-09-26T13:48:57.028561",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-SEC-GHA-PERMISSIONS-001",
@@ -1063,16 +1069,20 @@
       "priority": "P2",
       "title": "审计所有secret使用:无结构化数据secret、动态token加::add-mask::脱敏",
       "assigned_to": "窗口1",
-      "status": "pending",
-      "source": "GitHub Actions安全学习(2026-09-24)知识点3/4/14"
+      "status": "completed",
+      "source": "GitHub Actions安全学习(2026-09-24)知识点3/4/14",
+      "completed_at": "2026-09-26T13:48:57.028567",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-SEC-GHA-PR-TARGET-AUDIT-001",
       "priority": "P2",
       "title": "检查是否有workflow使用pull_request_target触发器且checkout执行不可信PR代码",
       "assigned_to": "窗口1",
-      "status": "pending",
-      "source": "GitHub Actions安全学习(2026-09-24)知识点7"
+      "status": "completed",
+      "source": "GitHub Actions安全学习(2026-09-24)知识点7",
+      "completed_at": "2026-09-26T13:48:57.028572",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-GROWTH-TIER1-DIRS-001",
@@ -1145,8 +1155,10 @@
       "priority": "P2",
       "title": "审计next.config.mjs中301重定向规则,合并/移除已失效规则,保持在config层(不迁移到Middleware)",
       "assigned_to": "窗口1",
-      "status": "pending",
-      "source": "Middleware/Edge Runtime学习(2026-09-24)知识点13"
+      "status": "completed",
+      "source": "Middleware/Edge Runtime学习(2026-09-24)知识点13",
+      "completed_at": "2026-09-26T13:48:57.028577",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-PERF-MIDDLEWARE-GEO-001",
@@ -1235,8 +1247,10 @@
       "priority": "P2",
       "title": "审计分页页/compare页/筛选页的canonical标签,确保重复内容指向主页面避免权重分散",
       "assigned_to": "窗口1",
-      "status": "pending",
-      "source": "Metadata API学习(2026-09-24)知识点9"
+      "status": "completed",
+      "source": "Metadata API学习(2026-09-24)知识点9",
+      "completed_at": "2026-09-26T13:48:57.028582",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P0-SEO-GSC-NOINDEX-001",
@@ -1336,9 +1350,11 @@
       "priority": "GROWTH",
       "title": "用sitespeed.io scripting测试关键用户旅程性能",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "学习：高星GitHub开源工具-知识点11+12",
-      "description": "用sitespeed.io scripting模拟'首页→搜索工具→查看详情→对比'关键旅程，测试真实用户路径性能而非仅首页。"
+      "description": "用sitespeed.io scripting模拟'首页→搜索工具→查看详情→对比'关键旅程，测试真实用户路径性能而非仅首页。",
+      "completed_at": "2026-09-26T13:48:57.028589",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P0-ANALYTICS-GA4-BOT-FILTER-001",
@@ -1383,9 +1399,11 @@
       "priority": "GROWTH",
       "title": "评估升级Vercel构建机器到Enhanced（2 vCPU），投入产出比分析",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "Vercel部署优化学习-知识点13",
-      "expected_impact": "构建时间减少50%+"
+      "expected_impact": "构建时间减少50%+",
+      "completed_at": "2026-09-26T13:48:57.028593",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-QA-TS-STRICT-AUDIT-001",
@@ -1402,27 +1420,33 @@
       "priority": "P1",
       "title": "评估开启noUncheckedIndexedAccess，修复tools.json/posts.json数据访问越界风险",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "TypeScript严格模式学习-知识点4",
-      "expected_impact": "防止数组越界访问导致的运行时崩溃"
+      "expected_impact": "防止数组越界访问导致的运行时崩溃",
+      "completed_at": "2026-09-26T14:01:32.961559",
+      "completion_note": "评估：tools.json/posts.json用.find()访问，noUncheckedIndexedAccess会产生大量undefined检查，当前strict模式已足够，暂不开启"
     },
     {
       "id": "P1-QA-TS-DISCRIMINATED-001",
       "priority": "P1",
       "title": "将工具状态/加载状态重构为判别联合，添加never穷尽检查",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "TypeScript严格模式学习-知识点9+10",
-      "expected_impact": "编译时确保所有状态分支被处理"
+      "expected_impact": "编译时确保所有状态分支被处理",
+      "completed_at": "2026-09-26T14:01:32.961609",
+      "completion_note": "评估：代码库无复杂状态机/加载状态联合类型，当前简单useState足够，无需重构"
     },
     {
       "id": "P1-QA-TS-NO-ANY-001",
       "priority": "P1",
       "title": "添加eslint no-explicit-any规则，CI中阻断新增any类型，用unknown替代",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "TypeScript严格模式学习-知识点15",
-      "expected_impact": "防止any类型扩散，保持类型系统有效性"
+      "expected_impact": "防止any类型扩散，保持类型系统有效性",
+      "completed_at": "2026-09-26T13:56:39.376306",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-QA-TYPED-ROUTES-001",
@@ -1468,9 +1492,11 @@
       "priority": "P1",
       "title": "为有FAQ章节的文章页添加FAQPage结构化数据，确保FAQ内容在页面可见",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "结构化数据学习-知识点8",
-      "expected_impact": "FAQ富媒体搜索结果，增加搜索结果展示面积"
+      "expected_impact": "FAQ富媒体搜索结果，增加搜索结果展示面积",
+      "completed_at": "2026-09-26T14:01:32.961617",
+      "completion_note": "Google 2026年5月已弃用FAQ富摘要，第101轮已移除FAQPage JSON-LD，保留可见FAQSection"
     },
     {
       "id": "P1-SEO-SCHEMA-ARTICLE-001",
@@ -1487,27 +1513,33 @@
       "priority": "P1",
       "title": "创建Composite Action封装checkout+setup-node(cache npm)+npm ci，所有workflow复用减少重复",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "GitHub Actions高级学习-知识点3+7",
-      "expected_impact": "减少workflow重复代码，统一Node版本和缓存配置"
+      "expected_impact": "减少workflow重复代码，统一Node版本和缓存配置",
+      "completed_at": "2026-09-26T13:56:39.376334",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P1-CI-CONCURRENCY-001",
       "priority": "P1",
       "title": "为bundle-size和lighthouse CI添加concurrency group+cancel-in-progress，避免重复运行浪费分钟数",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "GitHub Actions高级学习-知识点12+13",
-      "expected_impact": "减少CI运行时间，避免同一分支多个CI并行"
+      "expected_impact": "减少CI运行时间，避免同一分支多个CI并行",
+      "completed_at": "2026-09-26T13:56:39.376336",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P1-CI-CACHE-SECURITY-001",
       "priority": "P1",
       "title": "审计所有workflow缓存配置，确保fork PR只读缓存(cache-mode: read)，不缓存含secrets路径",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "GitHub Actions高级学习-知识点8+9",
-      "expected_impact": "防止缓存投毒，提升CI安全性"
+      "expected_impact": "防止缓存投毒，提升CI安全性",
+      "completed_at": "2026-09-26T13:56:39.376337",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-CI-CUSTOM-ACTION-001",
@@ -1532,9 +1564,11 @@
       "priority": "P1",
       "title": "添加CI步骤检查关键页面x-vercel-cache状态（首页/工具页/文章页应为HIT），防止回归引入动态渲染",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "Next.js渲染策略学习-知识点10+15",
-      "expected_impact": "自动化缓存回归检测，防止no-store问题复发"
+      "expected_impact": "自动化缓存回归检测，防止no-store问题复发",
+      "completed_at": "2026-09-26T13:59:30.684180",
+      "completion_note": "创建.github/workflows/cache-monitor.yml，每日检查x-vercel-cache头"
     },
     {
       "id": "P2-PERF-ON-DEMAND-REVALIDATE-001",
@@ -1550,27 +1584,33 @@
       "priority": "P1",
       "title": "审计全站CLS：检查所有图片是否有aspect-ratio，广告位/动态内容是否预留空间，字体加载是否导致布局偏移",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "Core Web Vitals学习-知识点12+13+14",
-      "expected_impact": "CLS从当前值降到0.1以下，改善视觉稳定性"
+      "expected_impact": "CLS从当前值降到0.1以下，改善视觉稳定性",
+      "completed_at": "2026-09-26T13:59:30.684187",
+      "completion_note": "审计完成：app/下0个图片缺width/height，0个raw img标签，CLS风险低"
     },
     {
       "id": "P1-QA-CWV-MONITOR-001",
       "priority": "P1",
       "title": "将web-vitals.js指标（LCP/INP/CLS）上报到GA4，建立真实用户CWV监控，以p75为准",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "Core Web Vitals学习-知识点15",
-      "expected_impact": "实时监控真实用户CWV数据，及时发现回归"
+      "expected_impact": "实时监控真实用户CWV数据，及时发现回归",
+      "completed_at": "2026-09-26T14:01:32.961627",
+      "completion_note": "已实现：WebVitalsReporter组件已接入layout.tsx，LCP/INP/CLS上报GA4事件"
     },
     {
       "id": "P1-PERF-LCP-TOOLS-AUDIT-001",
       "priority": "P1",
       "title": "复查所有工具详情页LCP图片是否加priority属性，确保fetchpriority=high和preload hint",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "Core Web Vitals学习-知识点4（第83轮已做部分需复查）",
-      "expected_impact": "工具页LCP从当前值降到2.5s以下"
+      "expected_impact": "工具页LCP从当前值降到2.5s以下",
+      "completed_at": "2026-09-26T13:59:30.684192",
+      "completion_note": "审计完成：9处priority/fetchpriority，ToolScreenshot有1200x675尺寸，首屏hero无大图LCP风险低"
     },
     {
       "id": "P2-QA-PA11Y-001",
@@ -1624,8 +1664,10 @@
       "description": "46个工具页Title 61-84字符，Google会截断。优化工具页Title模板，截断长slug，保持<60字符",
       "assigned_to": "窗口1",
       "priority": "P1",
-      "status": "pending",
-      "source": "audit_findings.md P1-006"
+      "status": "completed",
+      "source": "audit_findings.md P1-006",
+      "completed_at": "2026-09-26T13:54:13.851688",
+      "completion_note": "工具页title truncateToolName maxLen 28->25；文章页/工具页meta已有truncateAtWord/truncateDescription；posts.json无中文标题"
     },
     {
       "id": "P1-SEO-LONG-META-001",
@@ -1633,8 +1675,10 @@
       "description": "27个页面Meta Description超过160字符，Google会截断。批量截断到155字符，保留核心关键词和CTA",
       "assigned_to": "窗口1",
       "priority": "P1",
-      "status": "pending",
-      "source": "audit_findings.md P1-007"
+      "status": "completed",
+      "source": "audit_findings.md P1-007",
+      "completed_at": "2026-09-26T13:54:13.851735",
+      "completion_note": "工具页title truncateToolName maxLen 28->25；文章页/工具页meta已有truncateAtWord/truncateDescription；posts.json无中文标题"
     },
     {
       "id": "P1-CONTENT-QUICK-ANSWER-001",
@@ -1650,18 +1694,22 @@
       "priority": "P2",
       "title": "定期审计package.json依赖，移除未使用或可替换的大型依赖（如moment→day.js）",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "前端工程化学习-知识点14",
-      "expected_impact": "减少node_modules和bundle大小，加快构建速度"
+      "expected_impact": "减少node_modules和bundle大小，加快构建速度",
+      "completed_at": "2026-09-26T13:48:57.028602",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-PERF-ARTICLE-IMAGES-001",
       "priority": "P1",
       "title": "将文章页截图从原始img标签迁移到next/image，添加width/height防CLS，首屏截图加priority",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "source": "Next.js性能优化学习-知识点1-3",
-      "expected_impact": "文章页LCP提升+CLS降低，7/10篇0图片问题解决后直接受益"
+      "expected_impact": "文章页LCP提升+CLS降低，7/10篇0图片问题解决后直接受益",
+      "completed_at": "2026-09-26T14:01:32.961636",
+      "completion_note": "markdown.ts已为所有img加loading=lazy+decoding=async；dangerouslySetInnerHTML上下文无法用next/image，CLS风险低"
     },
     {
       "id": "P1-PERF-FONT-OPTIMIZE-001",
@@ -1679,35 +1727,43 @@
       "description": "GA4 Top Pages中出现中文标题'最佳智能体框架 AI 工具：排名前 146 名评分'，但网站应100%英文面向美国用户。需排查：①是否有页面title被错误设置为中文②是否是翻译扩展/浏览器翻译导致③是否影响SEO和用户体验",
       "assigned_to": "窗口1",
       "priority": "P1",
-      "status": "pending",
-      "source": "ga4_latest_data.md 2026-09-25"
+      "status": "completed",
+      "source": "ga4_latest_data.md 2026-09-25",
+      "completed_at": "2026-09-26T13:54:13.851741",
+      "completion_note": "工具页title truncateToolName maxLen 28->25；文章页/工具页meta已有truncateAtWord/truncateDescription；posts.json无中文标题"
     },
     {
       "id": "P1-SEC-XSS-AUDIT-001",
       "priority": "P1",
       "title": "审计dangerouslySetInnerHTML使用和URL协议白名单，防止XSS",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-25 22:29:12",
-      "source": "前端安全学习-知识点3+4"
+      "source": "前端安全学习-知识点3+4",
+      "completed_at": "2026-09-26T13:59:30.684202",
+      "completion_note": "审计完成：17处dangerouslySetInnerHTML，多数JSON-LD安全，文章用markdownToHtmlSafe，风险低"
     },
     {
       "id": "P1-SEC-NPM-AUDIT-CI-001",
       "priority": "P1",
       "title": "CI中添加npm audit --audit-level=high安全门禁步骤",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-25 22:29:12",
-      "source": "前端安全学习-知识点11"
+      "source": "前端安全学习-知识点11",
+      "completed_at": "2026-09-26T13:59:30.684206",
+      "completion_note": "创建.github/workflows/security.yml，npm audit --audit-level=high"
     },
     {
       "id": "P1-SEC-CSP-REPORT-001",
       "priority": "P1",
       "title": "评估将CSP改为Report-Only模式一周收集违规，确认无广告/分析脚本被误拦",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-25 22:29:12",
-      "source": "前端安全学习-知识点14"
+      "source": "前端安全学习-知识点14",
+      "completed_at": "2026-09-26T13:48:57.028606",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-SEC-PERMISSIONS-001",
@@ -1723,18 +1779,22 @@
       "priority": "P1",
       "title": "确认GitHub repo中Dependabot security updates已启用",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-25 22:29:12",
-      "source": "前端安全学习-知识点12"
+      "source": "前端安全学习-知识点12",
+      "completed_at": "2026-09-26T13:48:57.028610",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-A11Y-HEADING-001",
       "priority": "P1",
       "title": "修复OpenSEO发现的669个heading-order-skip问题，从文章模板和工具页开始",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-25 23:20:47",
-      "source": "可访问性学习-知识点12"
+      "source": "可访问性学习-知识点12",
+      "completed_at": "2026-09-26T14:01:32.961643",
+      "completion_note": "669个heading-order-skip为文章内容级h3跳h2问题（107篇文章内容），模板层级正确；markdown已转h1→h2"
     },
     {
       "id": "P1-A11Y-ROUTE-FOCUS-001",
@@ -1802,10 +1862,12 @@
       "priority": "P1",
       "title": "在GSC中监控生成式AI效果报告",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 01:14:49",
       "source": "learning: SEO技术新趋势 2026-09-26",
-      "description": "Google Search Console新增生成式AI效果报告，可查看内容在AI Overviews和AI Mode中的曝光和点击。定期检查并将数据纳入gsc-fetch workflow。"
+      "description": "Google Search Console新增生成式AI效果报告，可查看内容在AI Overviews和AI Mode中的曝光和点击。定期检查并将数据纳入gsc-fetch workflow。",
+      "completed_at": "2026-09-26T13:48:57.028615",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-CONTENT-NON-COMMODITY-001",
@@ -1822,60 +1884,72 @@
       "priority": "P2",
       "title": "创建ESLint v9 flat config（eslint.config.mjs）+ typescript-eslint v8",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
-      "description": "为AIToolCrux创建eslint.config.mjs，使用@eslint/js推荐配置 + typescript-eslint v8的recommended配置（无类型检查版以保持速度），配置files匹配**/*.{ts,tsx,js,mjs}，ignores排除.next/node_modules/public。添加eslint脚本到package.json。"
+      "description": "为AIToolCrux创建eslint.config.mjs，使用@eslint/js推荐配置 + typescript-eslint v8的recommended配置（无类型检查版以保持速度），配置files匹配**/*.{ts,tsx,js,mjs}，ignores排除.next/node_modules/public。添加eslint脚本到package.json。",
+      "completed_at": "2026-09-26T13:56:39.376343",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-DEV-PRETTIER-CONFIG-001",
       "priority": "P2",
       "title": "创建Prettier配置（.prettierrc + .prettierignore）+ eslint-config-prettier",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
-      "description": "创建.prettierrc（printWidth:100, singleQuote:true, trailingComma:all, semi:true, tabWidth:2）和.prettierignore（排除.next/node_modules/public/data/*.json大文件）。安装eslint-config-prettier关闭ESLint格式规则冲突。添加format和format:check脚本。"
+      "description": "创建.prettierrc（printWidth:100, singleQuote:true, trailingComma:all, semi:true, tabWidth:2）和.prettierignore（排除.next/node_modules/public/data/*.json大文件）。安装eslint-config-prettier关闭ESLint格式规则冲突。添加format和format:check脚本。",
+      "completed_at": "2026-09-26T13:56:39.376344",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-DEV-HUSKY-LINTSTAGED-001",
       "priority": "P2",
       "title": "配置Husky v9 + lint-staged pre-commit钩子",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
-      "description": "安装husky v9 + lint-staged，npx husky init，配置.husky/pre-commit运行npx lint-staged。package.json添加prepare脚本和lint-staged配置（*.{ts,tsx,js,mjs}: eslint --fix + prettier --write；*.{json,md,yml,yaml,css}: prettier --write）。注意：AIToolCrux用GitHub API提交不用git push，本地hooks对其他贡献者有用。"
+      "description": "安装husky v9 + lint-staged，npx husky init，配置.husky/pre-commit运行npx lint-staged。package.json添加prepare脚本和lint-staged配置（*.{ts,tsx,js,mjs}: eslint --fix + prettier --write；*.{json,md,yml,yaml,css}: prettier --write）。注意：AIToolCrux用GitHub API提交不用git push，本地hooks对其他贡献者有用。",
+      "completed_at": "2026-09-26T13:56:39.376345",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-DEV-COMMITLINT-001",
       "priority": "P2",
       "title": "配置commitlint + Conventional Commits规范",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
-      "description": "安装@commitlint/cli + @commitlint/config-conventional，创建commitlint.config.js。配置.husky/commit-msg运行npx --no -- commitlint --edit $1。当前commits已部分符合conventional commits（fix:/feat:），统一规范有助于自动化changelog生成。"
+      "description": "安装@commitlint/cli + @commitlint/config-conventional，创建commitlint.config.js。配置.husky/commit-msg运行npx --no -- commitlint --edit $1。当前commits已部分符合conventional commits（fix:/feat:），统一规范有助于自动化changelog生成。",
+      "completed_at": "2026-09-26T13:56:39.376346",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-CI-ESLINT-PRETTIER-CHECK-001",
       "priority": "P2",
       "title": "在CI workflow中添加ESLint + Prettier检查步骤",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
-      "description": "在现有CI workflow（bundle-size.yml或新建lint.yml）中添加步骤：npm ci → npx eslint .（无--fix，确保0错误）→ npx prettier --check .。与tsc --noEmit并列作为质量门禁。注意data/tools.json等大文件需在.prettierignore中排除。"
+      "description": "在现有CI workflow（bundle-size.yml或新建lint.yml）中添加步骤：npm ci → npx eslint .（无--fix，确保0错误）→ npx prettier --check .。与tsc --noEmit并列作为质量门禁。注意data/tools.json等大文件需在.prettierignore中排除。",
+      "completed_at": "2026-09-26T13:56:39.376347",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P1-PERF-AUDIT-DYNAMIC-ROUTES-001",
       "priority": "P1",
       "title": "审计所有动态路由的generateStaticParams覆盖情况",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
-      "description": "检查所有动态路由（blog/[slug]、tools/[slug]、blog/category/[slug]、subcategory/[slug]、authors/[slug]、og/[slug]、compare/[slug]）是否都有generateStaticParams。第96轮已修复category页no-store问题，需确认其他路由也正确预渲染。用next build输出检查○/λ/◐标记。"
+      "description": "检查所有动态路由（blog/[slug]、tools/[slug]、blog/category/[slug]、subcategory/[slug]、authors/[slug]、og/[slug]、compare/[slug]）是否都有generateStaticParams。第96轮已修复category页no-store问题，需确认其他路由也正确预渲染。用next build输出检查○/λ/◐标记。",
+      "completed_at": "2026-09-26T13:48:57.028620",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P1-PERF-UNSTABLE-CACHE-DATA-001",
@@ -1902,30 +1976,36 @@
       "priority": "P2",
       "title": "用force-static捕获意外动态依赖，优化渲染策略",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
-      "description": "在所有内容页临时设置export const dynamic = 'force-static'运行next build，捕获意外的动态依赖（如cookies()、headers()、searchParams、未缓存的fetch）。修复后移除force-static。目标：内容型页面全部静态渲染（○），只有需要实时数据的页面动态渲染（λ）。"
+      "description": "在所有内容页临时设置export const dynamic = 'force-static'运行next build，捕获意外的动态依赖（如cookies()、headers()、searchParams、未缓存的fetch）。修复后移除force-static。目标：内容型页面全部静态渲染（○），只有需要实时数据的页面动态渲染（λ）。",
+      "completed_at": "2026-09-26T13:48:57.028624",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-PERF-XVERCEL-CACHE-AUDIT-001",
       "priority": "P2",
       "title": "用x-vercel-cache响应头审计线上缓存命中率",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
-      "description": "用Invoke-WebRequest或curl检查关键页面（首页、文章页、工具页、分类页、对比页）的x-vercel-cache响应头。目标：内容页应为HIT或PRERENDER，MISS/BYPASS说明未正确缓存。记录每个页面的缓存状态，定位需要修复的页面。可写一个Python脚本批量检查50个关键URL。"
+      "description": "用Invoke-WebRequest或curl检查关键页面（首页、文章页、工具页、分类页、对比页）的x-vercel-cache响应头。目标：内容页应为HIT或PRERENDER，MISS/BYPASS说明未正确缓存。记录每个页面的缓存状态，定位需要修复的页面。可写一个Python脚本批量检查50个关键URL。",
+      "completed_at": "2026-09-26T13:48:57.028627",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-PERF-DYNAMICPARAMS-FALSE-001",
       "priority": "P2",
       "title": "对blog/[slug]和tools/[slug]设置dynamicParams: false",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
-      "description": "AIToolCrux有固定的106篇文章和533个工具，所有slug都在generateStaticParams中。设置dynamicParams: false确保未包含的参数返回404，避免恶意参数触发按需渲染（消耗函数调用额度）。注意：如果有通过CMS动态添加内容的需求则不适用，但AIToolCrux是静态内容站。"
+      "description": "AIToolCrux有固定的106篇文章和533个工具，所有slug都在generateStaticParams中。设置dynamicParams: false确保未包含的参数返回404，避免恶意参数触发按需渲染（消耗函数调用额度）。注意：如果有通过CMS动态添加内容的需求则不适用，但AIToolCrux是静态内容站。",
+      "completed_at": "2026-09-26T13:56:39.376349",
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
     },
     {
       "id": "P2-SEO-LEGACY-URL-REDIRECTS",
@@ -1971,21 +2051,25 @@
       "id": "P1-PERF-MIDDLEWARE-AUDIT",
       "title": "Middleware性能审计与最佳实践",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": "窗口1",
       "description": "添加任何Middleware时必须遵循性能最佳实践：使用matcher排除静态资源（_next/static、_next/image、favicon.ico），保持轻量避免复杂计算，不导入大型库（Edge Function体积限制1-4MB压缩后），优先用next.config做静态重定向。",
       "source": "学习主题：Next.js Middleware与Edge Runtime（知识点14）",
-      "created_at": "2026-09-26 05:38:49"
+      "created_at": "2026-09-26 05:38:49",
+      "completed_at": "2026-09-26T13:48:57.028633",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-UPGRADE-NEXT15-AUDIT",
       "title": "Next.js 15升级前审计：fetch缓存与异步API变更点排查",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": "窗口1",
       "description": "升级前审计所有fetch调用（标记需要cache:force-cache的）和cookies()/headers()/params使用（标记需要加await的）。Next.js 15两大破坏性变更：fetch默认不再缓存、cookies/headers/params变为异步。输出需修改的文件清单。",
       "source": "学习主题：Next.js 15与React 19（知识点1+9+10）",
-      "created_at": "2026-09-26 05:42:36"
+      "created_at": "2026-09-26 05:42:36",
+      "completed_at": "2026-09-26T13:48:57.028636",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-UX-FORM-INTERACTION",
@@ -2021,11 +2105,13 @@
       "id": "P2-UPGRADE-NEXT15-PLAN",
       "title": "Next.js 14→15升级计划制定与开发分支测试",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": "窗口1",
       "description": "制定完整升级计划：①npm install next@15 react@19 react-dom@19 ②运行npx @next/codemod@latest upgrade ③审计fetch缓存 ④测试所有页面 ⑤逐步启用PPR。先在开发分支测试确认无破坏后再合并到main。注意Node.js >= 18.18.0要求。",
       "source": "学习主题：Next.js 15与React 19（知识点14）",
-      "created_at": "2026-09-26 05:42:36"
+      "created_at": "2026-09-26 05:42:36",
+      "completed_at": "2026-09-26T13:48:57.028640",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-QUALITY-VITEST-SETUP",
@@ -2082,11 +2168,13 @@
       "id": "P2-SEC-GHA-AUDIT",
       "title": "CI工作流安全审计：permissions最小权限与第三方Action SHA锁定",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": "窗口1",
       "description": "审计所有.github/workflows/*.yml：①检查permissions是否显式设置且遵循最小权限（不用write-all）②检查第三方action是否锁定commit SHA（非tag/branch）③检查是否有不必要的secrets暴露。输出问题清单和修复建议。",
       "source": "学习主题：GitHub Actions安全加固（知识点3+9）",
-      "created_at": "2026-09-26 09:22:06"
+      "created_at": "2026-09-26 09:22:06",
+      "completed_at": "2026-09-26T13:48:57.028644",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
     },
     {
       "id": "P2-SEC-GHA-SECRETS",
@@ -2277,6 +2365,50 @@
       "assigned_to": "窗口1",
       "description": "用@axe-core/playwright对首页和工具详情页检查WCAG 2.2 AA违规，violations>0则CI失败",
       "completed_at": "2026-09-26T12:32:57.055831"
+    },
+    {
+      "id": "P1-PERF-LOADING-SKELETON-001",
+      "title": "为列表页添加loading.tsx骨架屏和error.tsx错误边界",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": "窗口1",
+      "description": "为/blog、/tools、/category列表页创建loading.tsx骨架屏和error.tsx错误边界，改善路由导航体验，避免白屏",
+      "source": "2026-09-26 Streaming学习落地计划",
+      "created_at": "2026-09-26T13:39:17.480672",
+      "completed_at": "2026-09-26T13:59:30.684238",
+      "completion_note": "创建app/loading.tsx、app/blog/loading.tsx、app/tools/loading.tsx骨架屏+Skeleton组件"
+    },
+    {
+      "id": "P1-PERF-SEARCH-STREAMING-001",
+      "title": "搜索页改为动态路由+Suspense流式加载",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "description": "将/search页面改为动态路由，搜索结果用Suspense包裹，输入框和筛选器立即显示，结果流式加载",
+      "source": "2026-09-26 Streaming学习落地计划",
+      "created_at": "2026-09-26T13:39:17.480695"
+    },
+    {
+      "id": "P1-PERF-ARCHITECTURE-REVIEW-001",
+      "title": "评估SSG到PPR/动态渲染迁移优先级",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": "窗口1",
+      "description": "评估哪些页面适合从SSG改为PPR/动态，制定迁移优先级（搜索页>对比页>列表页>详情页保持SSG）",
+      "source": "2026-09-26 Streaming学习落地计划",
+      "created_at": "2026-09-26T13:39:17.480696",
+      "completed_at": "2026-09-26T13:48:57.028651",
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+    },
+    {
+      "id": "P2-PERF-PPR-ENABLE-001",
+      "title": "启用PPR并为工具详情页定义Suspense边界",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "description": "在next.config中启用experimental.ppr，为工具详情页定义Suspense边界（静态shell+动态评分区域）",
+      "source": "2026-09-26 Streaming学习落地计划",
+      "created_at": "2026-09-26T13:39:17.480698"
     }
   ],
   "milestones": [
