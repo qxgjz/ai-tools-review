@@ -74,9 +74,9 @@
 1. ~~emoji 图标统一性~~ ✅ 本轮已修复（UI组件内emoji全部清理；markdown正文内的✅属内容数据）
 2. ~~prefers-reduced-motion 全局兜底~~ ✅ 本轮已修复（FadeIn+ToolCard）
 3. ~~ToolCard hover 微交互~~ ✅ 本轮已修复（shadow-lg + tabular-nums）
-4. **粉色第三方悬浮按钮**：layout.tsx 中无聊天 widget，疑似 Vercel Speed Insights badge 或浏览器扩展，待复现确认。
+4. ~~粉色第三方悬浮按钮~~ ✅ 已确认：浏览器翻译扩展，不需处理。
 5. **category/[slug] UTF-8 乱码**：en-dash/em-dash 编码损坏，属内容问题非 UI 问题，归窗口1/内容侧修复。
-6. **ToolCardV2.tsx**：存在但未读取，需检查是否需要同样的 reduced-motion / shadow-lg / tabular-nums 优化。
+6. ~~ToolCardV2.tsx~~ ✅ 已检查：未被任何页面import（dead code），无需优化。
 
 ---
 
