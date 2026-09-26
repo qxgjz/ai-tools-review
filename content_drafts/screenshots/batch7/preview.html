@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html><head><title>Batch7 Screenshot Preview - YouTube Frames</title>
+<style>
+body{font-family:Arial,sans-serif;background:#1a1a2e;color:#eee;padding:20px}
+h1{color:#00d4ff}
+.summary{background:#16213e;padding:15px;border-radius:8px;margin:15px 0}
+.pass{color:#00ff88;font-weight:bold}
+.fail{color:#ff4444;font-weight:bold}
+.grid{display:grid;grid-template-columns:1fr;gap:20px;margin-top:20px}
+.card{background:#16213e;border-radius:8px;overflow:hidden;border:1px solid #333}
+.card img{width:100%;display:block}
+.info{padding:12px}
+.info h3{margin:0 0 5px}
+.info p{margin:5px 0;color:#aaa;font-size:14px}
+.badge{padding:3px 10px;border-radius:4px;font-size:12px;font-weight:bold}
+.badge.pass{background:#00ff8822;color:#00ff88}
+.badge.fail{background:#ff444422;color:#ff4444}
+</style></head><body>
+<h1>Batch7: YouTube Frame Screenshots Preview</h1>
+<div class="summary">
+<h2>Results: 3 PASS / 3 FAIL (50% pass rate)</h2>
+<p><strong>PASS:</strong> dify, midjourney, gemini</p>
+<p><strong>FAIL:</strong> stable-diffusion (intro screen), chatgpt (host talking), claude (host talking)</p>
+<p><strong>Note:</strong> Failed videos need different timestamps or alternative videos. Per rules, after 2 failed retries we skip and record.</p>
+</div>
+<div class="grid">
+<div class="card">
+    <img src="dify.png" alt="Dify">
+    <div class="info">
+        <h3>Dify <span class="badge pass">PASS</span></h3>
+        <p>Real Dify workspace - workflow editor with LLM node config, variable panel</p>
+        <p>File: dify.png (1158KB)</p>
+    </div>
+</div>
+<div class="card">
+    <img src="stable-diffusion.png" alt="Stable Diffusion">
+    <div class="info">
+        <h3>Stable Diffusion <span class="badge fail">FAIL</span></h3>
+        <p>FAIL - video intro screen (host talking, not SD UI)</p>
+        <p>File: stable-diffusion.png (400KB)</p>
+    </div>
+</div>
+<div class="card">
+    <img src="midjourney.png" alt="Midjourney">
+    <div class="info">
+        <h3>Midjourney <span class="badge pass">PASS</span></h3>
+        <p>Real Midjourney V8.2 - image generation, prompt, action buttons</p>
+        <p>File: midjourney.png (395KB)</p>
+    </div>
+</div>
+<div class="card">
+    <img src="chatgpt.png" alt="ChatGPT">
+    <div class="info">
+        <h3>ChatGPT <span class="badge fail">FAIL</span></h3>
+        <p>FAIL - host talking into mic, not ChatGPT UI</p>
+        <p>File: chatgpt.png (462KB)</p>
+    </div>
+</div>
+<div class="card">
+    <img src="claude.png" alt="Claude">
+    <div class="info">
+        <h3>Claude <span class="badge fail">FAIL</span></h3>
+        <p>FAIL - host talking, not Claude UI</p>
+        <p>File: claude.png (613KB)</p>
+    </div>
+</div>
+<div class="card">
+    <img src="gemini.png" alt="Gemini">
+    <div class="info">
+        <h3>Gemini <span class="badge pass">PASS</span></h3>
+        <p>Real Gemini UI - home screen, Ask Gemini input, Flash model</p>
+        <p>File: gemini.png (66KB)</p>
+    </div>
+</div>
+</div></body></html>

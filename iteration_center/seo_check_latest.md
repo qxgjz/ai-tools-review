@@ -1,6 +1,6 @@
 # SEO Health Check
 
-Generated: 2026-09-25 22:14 UTC
+Generated: 2026-09-16 01:34 UTC
 
 ## Summary
 
@@ -8,12 +8,12 @@ Generated: 2026-09-25 22:14 UTC
 |------|------|-------|------|----|-----------|--------|
 | Homepage | 200 | 47c | 136c | Y | Y | 0 |
 | Ranking | 200 | 54c | 146c | Y | Y | 0 |
-| Compare | 200 | 50c | 156c | Y | Y | 0 |
+| Compare | 200 | 65c | 156c | Y | Y | 0 |
 | Blog index | 200 | 40c | 153c | Y | Y | 0 |
 | Category: Chat | 200 | 56c | 160c | Y | Y | 0 |
-| Tool: ChatGPT | 200 | 40c | 155c | Y | Y | 0 |
-| Blog: Stable Diffusion Review | 200 | 60c | 158c | Y | Y | 0 |
-| Blog: Cursor Review | 200 | 53c | 153c | Y | Y | 0 |
+| Tool: ChatGPT | 200 | 40c | 160c | Y | Y | 0 |
+| Blog: Stable Diffusion Review | 200 | 51c | 157c | Y | Y | 0 |
+| Blog: Cursor Review | 200 | 52c | 153c | Y | Y | 0 |
 
 ## Details
 
@@ -24,7 +24,7 @@ Generated: 2026-09-25 22:14 UTC
 - H1: Find the best AI tools,tested and ranked.
 - Canonical: https://www.aitoolcrux.com
 - Robots: index, follow
-- Words: 1755
+- Words: 1929
 
 ### Ranking (`/ranking`)
 - HTTP: 200
@@ -33,25 +33,25 @@ Generated: 2026-09-25 22:14 UTC
 - H1: AI Tool Ranking
 - Canonical: https://www.aitoolcrux.com/ranking
 - Robots: index, follow
-- Words: 2277
+- Words: 2264
 
 ### Compare (`/compare`)
 - HTTP: 200
-- Title (50c): Best AI Tool Comparison 2026: Side-by-Side Ratings
+- Title (65c): Best AI Tools Comparison 2026: Side-by-Side Ratings &amp; Pricing
 - Description (156c): Compare 500+ AI tools side by side in 2026. Honest ratings, pricing, pros &amp; cons. ChatGPT vs Claude, Cursor vs Copil
 - H1: AI Tool Comparison 2026
 - Canonical: https://www.aitoolcrux.com/compare
 - Robots: index, follow
-- Words: 2190
+- Words: 2167
 
 ### Blog index (`/blog`)
 - HTTP: 200
 - Title (40c): Blog - AI Tool Reviews &amp; Comparisons
 - Description (153c): Expert AI tool reviews, comparisons, buying guides, and industry news. Find the best AI tools for your needs with our 6-
 - H1: Blog &amp; Reviews
-- Canonical: https://www.aitoolcrux.com/blog
+- Canonical: https://www.aitoolcrux.com
 - Robots: index, follow
-- Words: 1817
+- Words: 2773
 
 ### Category: Chat (`/category/chat`)
 - HTTP: 200
@@ -60,34 +60,34 @@ Generated: 2026-09-25 22:14 UTC
 - H1: AI Chat Assistants
 - Canonical: https://www.aitoolcrux.com/category/chat
 - Robots: index, follow
-- Words: 1587
+- Words: 1651
 
 ### Tool: ChatGPT (`/tools/chatgpt`)
 - HTTP: 200
 - Title (40c): ChatGPT Review 2026: 8.7/10 | AIToolCrux
-- Description (155c): ChatGPT by OpenAI — Chat AI tool rated 8.7/10 (A grade). Expert review: features, pricing, pros (All-around excellence -
+- Description (160c): ChatGPT by OpenAI — Chat AI tool rated 8.7/10 (A grade). Expert review: features, pricing, pros (All-around excellence -
 - H1: ChatGPT
 - Canonical: https://www.aitoolcrux.com/tools/chatgpt
 - Robots: index, follow
-- Words: 2306
+- Words: 2072
 
 ### Blog: Stable Diffusion Review (`/blog/stable-diffusion-review-2026`)
 - HTTP: 200
-- Title (60c): Stable Diffusion 3.5 Review 2026: 4-Week Honest Test, Is ...
-- Description (158c): We tested Stable Diffusion 3.5 for 4 weeks in 2026. Honest review of image quality, VRAM needs, pricing, and whether it 
-- H1: Stable Diffusion 3.5 Review 2026: 4-Week Honest Test, Is It Worth It?
+- Title (51c): Stable Diffusion Review 2026: Is It Still Worth It?
+- Description (157c): We tested Stable Diffusion 3.5 for 4 weeks with 50+ prompts. Read our honest review of image quality, speed, hardware ne
+- H1: Stable Diffusion Review 2026: Is It Still Worth It?
 - Canonical: https://www.aitoolcrux.com/blog/stable-diffusion-review-2026
 - Robots: index, follow
-- Words: 16248
+- Words: 15863
 
 ### Blog: Cursor Review (`/blog/cursor-review-2026`)
 - HTTP: 200
-- Title (53c): Cursor Review 2026: Best AI Code Editor? | AIToolCrux
+- Title (52c): Cursor Review 2026: Best AI Code Editor? Honest Take
 - Description (153c): After 3 months of daily use and 1,200+ hours coding with Cursor, read our honest review. Is it worth switching from VS C
-- H1: Cursor Review 2026: Best AI Code Editor? | AIToolCrux
+- H1: Cursor Review 2026: Best AI Code Editor? Honest Take
 - Canonical: https://www.aitoolcrux.com/blog/cursor-review-2026
 - Robots: index, follow
-- Words: 14459
+- Words: 13962
 
 ---
 Total issues: 0

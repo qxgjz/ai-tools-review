@@ -1,0 +1,42 @@
+{
+  "audit_time": "2026-09-11T17:43:31.415191",
+  "hub_pages_crawled": 12,
+  "total_internal_links_found": 834,
+  "unique_pages_linked": 394,
+  "orphan_pages": [
+    "/tools/perplexity",
+    "/tools/dall-e",
+    "/tools/canva",
+    "/methodology"
+  ],
+  "link_distribution": {},
+  "anchor_text_analysis": {
+    "brand": 12,
+    "short": 52,
+    "moderate": 291,
+    "descriptive": 479
+  },
+  "content_clusters": {},
+  "score": 53.91021582733813,
+  "findings": [
+    "Low inbound links: /tools/midjourney - only 1 link(s)",
+    "Low inbound links: /tools/cursor - only 1 link(s)",
+    "Orphan page: /tools/perplexity - no inbound links from hub pages",
+    "Orphan page: /tools/dall-e - no inbound links from hub pages",
+    "Low inbound links: /tools/elevenlabs - only 1 link(s)",
+    "Low inbound links: /tools/notion-ai - only 1 link(s)",
+    "Orphan page: /tools/canva - no inbound links from hub pages",
+    "Low inbound links: /alternatives/chatgpt-alternatives - only 1 link(s)",
+    "Low inbound links: /alternatives/midjourney-alternatives - only 1 link(s)",
+    "Orphan page: /methodology - no inbound links from hub pages"
+  ],
+  "recommendations": [
+    "Add Quick Answer/Key Takeaways sections to all article pages (improves AEO and provides natural internal link opportunities)",
+    "Ensure every important tool page is linked from at least 2-3 hub pages",
+    "Add 'Related Articles' sections to all category pages (content cluster linking)",
+    "Use descriptive anchor text instead of generic 'click here' or 'learn more'",
+    "Add internal links from blog posts to relevant tool pages (and vice versa)",
+    "Create a 'Related Tools' section on all blog posts",
+    "Ensure orphan pages get at least one inbound link from a relevant hub page"
+  ]
+}

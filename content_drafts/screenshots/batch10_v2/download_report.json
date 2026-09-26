@@ -1,0 +1,70 @@
+{
+  "midjourney": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1920,
+    "kb": 211.7,
+    "source": "Product Hunt",
+    "file": "midjourney.webp"
+  },
+  "cursor": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1920,
+    "kb": 55.9,
+    "source": "Product Hunt",
+    "file": "cursor.webp"
+  },
+  "elevenlabs": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1935,
+    "kb": 70.8,
+    "source": "Product Hunt",
+    "file": "elevenlabs.webp"
+  },
+  "notion-ai": {
+    "status": "FAIL",
+    "reason": "no image >1200px and >50KB"
+  },
+  "stable-diffusion": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1920,
+    "kb": 249.0,
+    "source": "Product Hunt",
+    "file": "stable-diffusion.webp"
+  },
+  "gemini": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1928,
+    "kb": 170.5,
+    "source": "Product Hunt",
+    "file": "gemini.webp"
+  },
+  "chatgpt": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1920,
+    "kb": 99.3,
+    "source": "Product Hunt",
+    "file": "chatgpt.webp"
+  },
+  "claude": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1920,
+    "kb": 412.3,
+    "source": "Product Hunt",
+    "file": "claude.webp"
+  },
+  "perplexity": {
+    "status": "PASS",
+    "w": 1920,
+    "h": 1920,
+    "kb": 343.5,
+    "source": "Product Hunt",
+    "file": "perplexity.webp"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "audit_time": "2026-09-11T17:40:53.756104",
+  "base_url": "https://www.aitoolcrux.com",
+  "ai_crawler_accessibility": {
+    "accessible": 11,
+    "blocked": 0,
+    "not_configured": 0,
+    "total": 11,
+    "score": 10.0
+  },
+  "llms_txt_status": {
+    "llms.txt": {
+      "present": true,
+      "size": 5528,
+      "score": 10
+    },
+    "llms-full.txt": {
+      "present": true,
+      "size": 456828,
+      "lines": 7608,
+      "score": 10
+    }
+  },
+  "aeo_optimization": {
+    "/": {
+      "score": 6.25,
+      "checks_passed": 5,
+      "total_checks": 8
+    },
+    "/tools/chatgpt": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/tools/midjourney": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/tools/cursor": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/blog/chatgpt-vs-claude-2026-comparison": {
+      "score": 7.5,
+      "checks_passed": 6,
+      "total_checks": 8
+    },
+    "/alternatives/chatgpt-alternatives": {
+      "score": 6.25,
+      "checks_passed": 5,
+      "total_checks": 8
+    },
+    "/methodology": {
+      "score": 6.25,
+      "checks_passed": 5,
+      "total_checks": 8
+    }
+  },
+  "geo_readiness_score": 8.675595238095237,
+  "findings": [
+    "GPTBot is configured and accessible",
+    "ClaudeBot is configured and accessible",
+    "Claude-Web is configured and accessible",
+    "PerplexityBot is configured and accessible",
+    "Google-Extended is configured and accessible",
+    "Applebot is configured and accessible",
+    "Amazonbot is configured and accessible",
+    "Bytespider is configured and accessible",
+    "meta-externalagent is configured and accessible"
+  ],
+  "recommendations": []
+}

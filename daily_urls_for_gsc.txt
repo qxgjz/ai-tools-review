@@ -1,0 +1,41 @@
+# URLs for Google Search Console manual submission
+# Generated: 2026-09-11 15:01:55
+# Total: 37 URLs
+
+https://www.aitoolcrux.com/
+https://www.aitoolcrux.com/about
+https://www.aitoolcrux.com/blog
+https://www.aitoolcrux.com/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md
+https://www.aitoolcrux.com/blog/cursor-ai-review-2026-best-ai-code-editor
+https://www.aitoolcrux.com/blog/perplexity-ai-review-2026-best-ai-search-engine
+https://www.aitoolcrux.com/category/agent
+https://www.aitoolcrux.com/category/agent-framework
+https://www.aitoolcrux.com/category/agent-runtime
+https://www.aitoolcrux.com/category/audio
+https://www.aitoolcrux.com/category/chat
+https://www.aitoolcrux.com/category/code
+https://www.aitoolcrux.com/category/database
+https://www.aitoolcrux.com/category/design
+https://www.aitoolcrux.com/category/dev-tools
+https://www.aitoolcrux.com/category/image
+https://www.aitoolcrux.com/category/memory
+https://www.aitoolcrux.com/category/observability
+https://www.aitoolcrux.com/category/productivity
+https://www.aitoolcrux.com/category/rag
+https://www.aitoolcrux.com/category/search
+https://www.aitoolcrux.com/category/video
+https://www.aitoolcrux.com/category/writing
+https://www.aitoolcrux.com/methodology
+https://www.aitoolcrux.com/privacy
+https://www.aitoolcrux.com/ranking
+https://www.aitoolcrux.com/terms
+https://www.aitoolcrux.com/tools/anything-llm
+https://www.aitoolcrux.com/tools/chatgpt
+https://www.aitoolcrux.com/tools/claude
+https://www.aitoolcrux.com/tools/composio
+https://www.aitoolcrux.com/tools/dify
+https://www.aitoolcrux.com/tools/gemini
+https://www.aitoolcrux.com/tools/gemini-cli
+https://www.aitoolcrux.com/tools/goose
+https://www.aitoolcrux.com/tools/n8n
+https://www.aitoolcrux.com/tools/ragflow

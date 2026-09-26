@@ -1,0 +1,38 @@
+﻿Total tools: 533
+Tools to enhance (21-50): 30
+
+  SKIP (already enhanced): n8n
+  SKIP (already enhanced): AutoGPT
+  SKIP (already enhanced): ollama
+  SKIP (already enhanced): dify
+  SKIP (already enhanced): llama.cpp
+  SKIP (already enhanced): gemini-cli
+  SKIP (already enhanced): open-webui
+  SKIP (already enhanced): vllm
+  SKIP (already enhanced): claude-code
+  SKIP (already enhanced): browser-use
+  SKIP (already enhanced): lobehub
+  SKIP (already enhanced): langflow
+  SKIP (already enhanced): OpenHands
+  SKIP (already enhanced): codex
+  SKIP (already enhanced): MinerU
+  SKIP (already enhanced): langchain
+  SKIP (already enhanced): docling
+  SKIP (already enhanced): llama_index
+  SKIP (already enhanced): worldmonitor
+  SKIP (already enhanced): crewAI
+  SKIP (already enhanced): milvus
+  SKIP (already enhanced): ragflow
+  SKIP (already enhanced): cherry-studio
+  SKIP (already enhanced): ray
+  SKIP (already enhanced): jan
+  SKIP (already enhanced): litellm
+  SKIP (already enhanced): unsloth
+  SKIP (already enhanced): text-generation-webui
+  SKIP (already enhanced): firecrawl
+  SKIP (already enhanced): Fabric
+
+Total tools enhanced: 0/30
+Saved updated tools.json (533 tools)
+Total tools with realExperience: 50/533
+Done!

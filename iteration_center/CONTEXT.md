@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-25 20:30 UTC
+> Generated: 2026-09-16 01:34 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,36 +17,37 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 107 |
+| Posts | 91 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
-1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Money) | AIToolCr** (`best-paid-ai-tools-worth-buying-2026`)
-2. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
-3. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
-4. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
-5. **Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
+1. **Dify vs Coze 2026: Which AI Agent Builder Wins?** (`dify-vs-coze-2026-comparison`)
+2. **7 Best Stable Diffusion Alternatives in 2026** (`stable-diffusion-alternatives-2026`)
+3. **6 Best MidJourney Alternatives in 2026 (Free & Paid)** (`midjourney-alternatives-2026`)
+4. **Best AI Voice Generators 2026: Top 10 Ranked** (`best-ai-voice-generators-2026`)
+5. **Best AI Resume Builders 2026: Top 10 Ranked** (`best-ai-resume-builders-2026`)
 
 ## Iteration State
 
-- Current round: 39
-- Last commit: N/A
-- Last iteration: N/A
+- Current round: 1
+- Last commit: 6fda2415
+- Last iteration: 2026-09-16
 
 ## Recent Iterations
 
+- **Round 1** (6fda2415): Optimized titles/meta for 5 Top-10 ranking blog pages (stable-diffusion, dify, c; Added Popular Comparisons internal links section to /compare page (10 direct lin
 
 ## GSC Data
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 9 |
-| Impressions | 1664 |
-| CTR | 0.54% |
-| Avg Ranking | 24.51 |
-| Report | 2026-08-21_2026-09-19.md |
+| Clicks | 4 |
+| Impressions | 908 |
+| CTR | 0.44% |
+| Avg Ranking | 22.65 |
+| Report | 2026-08-14_2026-09-12.md |
 
 ## Audit Findings (pending)
 
@@ -55,27 +56,6 @@
 以下问题来自每周审计任务，按优先级排列。
 
 ## 待解决
-
-
-### P1-005: 8组重复Title（blog category双slug）
-- **来源**: 2026-09-16 全站技术SEO审计（770 URL）
-- **问题**: /blog/category/{x} 和 /blog/category/ai-{x} 两个URL输出相同Title和内容，造成重复内容
-- **涉及**: productivity, image, writing, audio, agent, design, code, chatgpt-vs-claude
-- **建议**: 对ai-* slug加301重定向到标准slug
-
-### P1-006: 46个Title过长（>60字符）
-- **来源**: 2026-09-16 全站技术SEO审计
-- **问题**: 工具页slug过长导致Title 61-84字符，Google会截断
-- **建议**: 工具页Title模板优化，截断长slug
-
-### P1-007: 27个Meta Description过长（>160字符）
-- **建议**: 批量截断到155字符
-
-### P2-003: /category/agent页面2.6MB过大
-- **建议**: 分类页工具卡片图片懒加载+WebP
-
-### P2-004: 4个短Title（contact/disclosure/privacy/terms）
-- **建议**: 扩展为"Contact Us | AIToolCrux"等格式
 
 ### P1-003: 文章页/替代方案页添加Quick Answer和Key Takeaways（AEO优化）
 - **来源**: 2026-09-16 内容质量检测
@@ -102,7 +82,18 @@
 - **状态**: 待解决
 
 ### P0-002: SoftwareApplication 缺少 AggregateRating（GSC 历史错误未根治）
-- **状态**: ✅ 已修复 (commit 15a33883, 2026-09-16) - 在Review.itemReviewed中添加了aggregateRating
+- **来源**: 2026-09-16 Richie.js审计
+- **问题**: 工具页 SoftwareApplication schema 没有 AggregateRating 节点，但页面展示评分 8.7/10。Google 富摘要要求：要么有 AggregateRating(ratingCount/reviewCount)，要么 Review 是单一真实评论。当前 GSC 报"应指定ratingCount或reviewCount"错误
+- **修复建议**: 在 SoftwareApplication 内添加 AggregateRating：
+  `json
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "8.7",
+    "bestRating": "10",
+    "ratingCount": "1"
+  }
+  `
+- **状态**: 待解决
 
 ### P1-001: applicationCategory 值不规范
 - **来源**: 2026-09-16 Richie.js审计
@@ -117,7 +108,10 @@
 - **状态**: 待解决
 
 ### P1-003: Offer price 字段含货币符号和空值
-- **状态**: ✅ 已修复 (commit 15a33883, 2026-09-16) - price已用正则清理非数字字符，添加了availability=InStock
+- **来源**: 2026-09-16 Richie.js审计
+- **问题**: SoftwareApplication 的 offer price 是 "/month"（含），Enterprise 档 price 是空字符串 ""。Google 要求 price 是纯数字
+- **修复建议**: price 改为 "0"、"20"、"200"，空值的 Enterprise offer 直接删除或填具体价格
+- **状态**: 待解决
 
 ### P1-004: 工具详情页 og:image 使用通用默认图
 - **来源**: 2026-09-16 Richie.js审计
