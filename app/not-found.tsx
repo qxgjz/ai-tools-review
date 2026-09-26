@@ -1,20 +1,36 @@
-"use client";
-
-import { useState } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import { Home, Search, ArrowLeft, TrendingUp, Sparkles, FileText } from "lucide-react";
 import tools from "@/data/tools-index.json";
 import posts from "@/data/posts.json";
 import { calculateScoreResult } from "@/lib/scoring";
 
-export default function NotFound() {
-  const router = useRouter();
-  const [searchQuery, setSearchQuery] = useState("");
+// 搜索框拆为独立客户端组件，避免整个404页变成client component导致5MB bundle
+function SearchBox() {
+  return (
+    <form action="/search" method="GET" className="mb-10 max-w-md mx-auto">
+      <div className="relative">
+        <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
+        <input
+          type="text"
+          name="q"
+          placeholder="Search AI tools, reviews, comparisons..."
+          className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
+        />
+      </div>
+      <button
+        type="submit"
+        className="mt-3 w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+      >
+        Search
+      </button>
+    </form>
+  );
+}
 
+export default function NotFound() {
   // 获取PopularTools（按Rating排序，取前6个）
   const popularTools = [...tools]
-    .sort((a, b) => {
+    .sort((a: any, b: any) => {
       const scoreA = calculateScoreResult(a.scores).total;
       const scoreB = calculateScoreResult(b.scores).total;
       return scoreB - scoreA;
@@ -30,13 +46,6 @@ export default function NotFound() {
     { slug: "video", name: "AI Video", icon: "🎬" },
     { slug: "audio", name: "AI Audio", icon: "🎵" },
   ];
-
-  const handleSearch = (e: React.FormEvent) => {
-    e.preventDefault();
-    if (searchQuery.trim()) {
-      router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
-    }
-  };
 
   return (
     <div className="min-h-[70vh] flex items-center justify-center px-4 py-12">
@@ -56,24 +65,7 @@ export default function NotFound() {
         </div>
 
         {/* Search框 */}
-        <form onSubmit={handleSearch} className="mb-10 max-w-md mx-auto">
-          <div className="relative">
-            <Search className="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search AI tools, reviews, comparisons..."
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              className="w-full pl-12 pr-4 py-3 border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-900 dark:text-white rounded-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-all"
-            />
-          </div>
-          <button
-            type="submit"
-            className="mt-3 w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
-          >
-            Search
-          </button>
-        </form>
+        <SearchBox />
 
         {/* 快速导航按钮 */}
         <div className="flex flex-col sm:flex-row gap-3 justify-center mb-12">
@@ -127,7 +119,7 @@ export default function NotFound() {
             Top Rated AI Tools
           </h3>
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
-            {popularTools.map((tool) => {
+            {popularTools.map((tool: any) => {
               const result = calculateScoreResult(tool.scores);
               return (
                 <Link
@@ -186,17 +178,6 @@ export default function NotFound() {
               <ArrowLeft className="w-3 h-3 rotate-180" />
             </Link>
           </div>
-        </div>
-
-        {/* Return链接 */}
-        <div className="mt-10">
-          <button
-            onClick={() => router.back()}
-            className="inline-flex items-center gap-1 text-sm text-blue-600 dark:text-blue-400 hover:underline"
-          >
-            <ArrowLeft className="w-4 h-4" />
-            Go back to previous page
-          </button>
         </div>
       </div>
     </div>
