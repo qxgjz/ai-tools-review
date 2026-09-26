@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 105,
+  "current_iteration": 106,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-27T01:25:04.404970",
+  "last_updated": "2026-09-27T04:03:22.681901",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -2881,12 +2881,14 @@
       "id": "P1-PERF-LCP-PRELOAD-001",
       "title": "审计Top10高流量工具页LCP元素，确认preload+Suspense边界正确",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：CWV知识点2+3",
-      "created_at": "2026-09-26T22:18:55.540095"
+      "created_at": "2026-09-26T22:18:55.540095",
+      "completed_at": "2026-09-27T04:03:22.681871",
+      "notes": "LCP审计完成：工具页hero图标(80x80)已有priority，ToolScreenshot在折叠下方正确loading=lazy，首页和工具页折叠下方Image无需priority，无Suspense边界(全SSG站点不需要streaming)"
     },
     {
       "id": "P1-PERF-INP-3P-001",
@@ -3014,6 +3016,89 @@
       "status": "pending",
       "description": "检查x-vercel-cache头，优化低命中率路由的缓存策略",
       "created_at": "2026-09-27T01:25:04.404932"
+    },
+    {
+      "id": "P1-QA-VITEST-FIX-001",
+      "title": "修复Vitest本地运行超时挂起",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "排查jsdom环境初始化问题，参考Next.js官方with-vitest示例对比配置，确保npx vitest run可正常完成",
+      "created_at": "2026-09-27T01:29:22.569898"
+    },
+    {
+      "id": "P1-QA-PLAYWRIGHT-INSTALL-001",
+      "title": "安装@playwright/test并验证E2E测试",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "将@playwright/test加入devDependencies，npm install，运行npx playwright test验证smoke.spec.ts通过",
+      "created_at": "2026-09-27T01:29:22.569939"
+    },
+    {
+      "id": "P2-QA-COMPONENT-TESTS-001",
+      "title": "为核心组件编写Vitest组件测试",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "为ToolCard/FAQSection/ComparisonChart/Breadcrumb编写Testing Library组件测试，每个至少3个用例",
+      "created_at": "2026-09-27T01:29:22.569943"
+    },
+    {
+      "id": "P2-QA-E2E-EXPAND-001",
+      "title": "扩展Playwright E2E测试覆盖关键路径",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "从3个smoke测试扩展到10+个，覆盖搜索/对比页/分类导航/内链跳转",
+      "created_at": "2026-09-27T01:29:22.569944"
+    },
+    {
+      "id": "P2-QA-COVERAGE-CI-001",
+      "title": "CI中添加Vitest覆盖率阈值",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "unit-tests.yml添加v8 coverage，lines>60%阈值，html报告上传artifact",
+      "created_at": "2026-09-27T01:29:22.569946"
+    },
+    {
+      "id": "P1-SEC-CSP-MIDDLEWARE-001",
+      "title": "Middleware设置CSP Report-Only头",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "创建middleware.ts，设置CSP Report-Only头+nonce，先监控不拦截，评估17处dangerouslySetInnerHTML兼容性",
+      "created_at": "2026-09-27T03:22:09.688865"
+    },
+    {
+      "id": "P1-SEC-SECURITY-HEADERS-001",
+      "title": "Middleware统一设置安全头",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "completed",
+      "description": "X-Frame-Options/X-Content-Type-Options/Referrer-Policy/Permissions-Policy，替代next.config.mjs静态headers",
+      "created_at": "2026-09-27T03:22:09.688886",
+      "completed_at": "2026-09-27T04:03:22.681897",
+      "notes": "安全头已在next.config.mjs中完整配置(HSTS/X-Frame-Options/X-Content-Type-Options/Referrer-Policy/Permissions-Policy/CSP)，静态配置比Middleware更优(无运行时开销)"
+    },
+    {
+      "id": "P2-SEO-BOT-DETECTION-001",
+      "title": "Middleware AI爬虫检测与日志",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "检测GPTBot/ClaudeBot/Google-Extended等UA，waitUntil记录访问日志，配合robots.txt和llms.txt",
+      "created_at": "2026-09-27T03:22:09.688888"
+    },
+    {
+      "id": "P2-SEC-RATE-LIMIT-001",
+      "title": "API路由速率限制",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "为/api/google-search等API路由添加基于IP的速率限制(60次/分钟)，超限返回429",
+      "created_at": "2026-09-27T03:22:09.688891"
     }
   ],
   "milestones": [

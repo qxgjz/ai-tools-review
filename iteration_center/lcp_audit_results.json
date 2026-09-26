@@ -1,0 +1,19 @@
+{
+  "next_image_without_priority": [
+    "app\\page.tsx: 1 Image without priority",
+    "app\\tools\\[slug]\\page.tsx: 2 Image without priority"
+  ],
+  "next_image_with_priority": [
+    "app\\tools\\[slug]\\page.tsx: 1"
+  ],
+  "raw_img_lazy": [
+    "components\\animations\\Marquee.tsx: 1",
+    "components\\author\\AuthorBio.tsx: 1"
+  ],
+  "raw_img_eager": [],
+  "raw_img_no_loading": [
+    "components\\content\\ToolScreenshot.tsx: 2 raw img without loading attr"
+  ],
+  "suspense_boundaries": [],
+  "hero_images": []
+}
