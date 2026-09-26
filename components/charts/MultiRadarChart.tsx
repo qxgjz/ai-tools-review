@@ -1,15 +1,15 @@
-"use client";
+'use client';
 
-import { useId } from "react";
-import type { Score, ScoreDimension } from "@/types";
+import { useId } from 'react';
+import type { Score, ScoreDimension } from '@/types';
 
 const DIMENSIONS: { key: ScoreDimension; label: string }[] = [
-  { key: "functionality", label: "Functionality" },
-  { key: "ux", label: "User Experience" },
-  { key: "pricing", label: "Pricing & Value" },
-  { key: "integration", label: "Integrations" },
-  { key: "support", label: "Support & Reliability" },
-  { key: "ethics", label: "Ethics & Transparency" },
+  { key: 'functionality', label: 'Functionality' },
+  { key: 'ux', label: 'User Experience' },
+  { key: 'pricing', label: 'Pricing & Value' },
+  { key: 'integration', label: 'Integrations' },
+  { key: 'support', label: 'Support & Reliability' },
+  { key: 'ethics', label: 'Ethics & Transparency' },
 ];
 
 interface ToolData {
@@ -24,13 +24,9 @@ interface MultiRadarChartProps {
   className?: string;
 }
 
-const COLORS = ["#3b82f6", "#10b981", "#f59e0b", "#ef4444", "#8b5cf6"];
+const COLORS = ['#3b82f6', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
 
-export function MultiRadarChart({
-  tools,
-  size = 400,
-  className = "",
-}: MultiRadarChartProps) {
+export function MultiRadarChart({ tools, size = 400, className = '' }: MultiRadarChartProps) {
   const gradientId = useId();
   const cx = size / 2;
   const cy = size / 2;
@@ -47,7 +43,7 @@ export function MultiRadarChart({
     Array.from({ length: n }, (_, i) => {
       const p = polarToCartesian(getAngle(i), r);
       return `${p.x.toFixed(2)},${p.y.toFixed(2)}`;
-    }).join(" ");
+    }).join(' ');
 
   const clampScore = (val: number) => Math.min(10, Math.max(0, val));
   const gridLevels = [2, 4, 6, 8, 10];
@@ -124,7 +120,7 @@ export function MultiRadarChart({
           });
           const dataPointsStr = dataPoints
             .map((p) => `${p.x.toFixed(2)},${p.y.toFixed(2)}`)
-            .join(" ");
+            .join(' ');
 
           return (
             <g key={tool.name}>
@@ -156,7 +152,7 @@ export function MultiRadarChart({
           const angle = getAngle(i);
           const p = polarToCartesian(angle, radius + 28);
           const cosVal = Math.cos(angle);
-          const anchor = cosVal > 0.3 ? "start" : cosVal < -0.3 ? "end" : "middle";
+          const anchor = cosVal > 0.3 ? 'start' : cosVal < -0.3 ? 'end' : 'middle';
           return (
             <text
               key={`c-${dim.key}`}
@@ -179,10 +175,7 @@ export function MultiRadarChart({
       <div className="flex flex-wrap justify-center gap-4 mt-4">
         {toolsWithColor.map((tool) => (
           <div key={tool.name} className="flex items-center gap-2">
-            <span
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: tool.color }}
-            />
+            <span className="w-3 h-3 rounded-full" style={{ backgroundColor: tool.color }} />
             <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
               {tool.name}
             </span>

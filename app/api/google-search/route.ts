@@ -4,7 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
  * Google搜索代理API
  * 解决中国大陆无法直接访问Google搜索的问题
  * 通过Vercel服务器代理访问Google搜索，返回结构化结果
- * 
+ *
  * 使用方法：
  * POST /api/google-search
  * Body: { "query": "site:https://www.aitoolcrux.com", "type": "indexing" | "ranking" }
@@ -15,7 +15,8 @@ import { NextRequest, NextResponse } from 'next/server';
 const API_KEY = 'aitoolcrux-google-proxy-2026';
 
 // Google搜索User-Agent
-const GOOGLE_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
+const GOOGLE_UA =
+  'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36';
 
 export async function POST(request: NextRequest) {
   try {
@@ -24,7 +25,7 @@ export async function POST(request: NextRequest) {
     if (!authHeader || authHeader !== `Bearer ${API_KEY}`) {
       return NextResponse.json(
         { error: 'Unauthorized', message: 'Invalid API key' },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -33,10 +34,7 @@ export async function POST(request: NextRequest) {
     const { query, type = 'indexing', num = 20 } = body;
 
     if (!query) {
-      return NextResponse.json(
-        { error: 'Missing query parameter' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing query parameter' }, { status: 400 });
     }
 
     console.log(`[Google Search Proxy] Query: ${query}, Type: ${type}`);
@@ -47,11 +45,12 @@ export async function POST(request: NextRequest) {
     // 在Vercel服务器端访问Google搜索
     const response = await fetch(searchUrl, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36',
-        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
+        'User-Agent':
+          'Mozilla/5.0 (Linux; Android 10; Pixel 3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.120 Mobile Safari/537.36',
+        Accept: 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8',
         'Accept-Language': 'en-US,en;q=0.5',
         'Accept-Encoding': 'gzip, deflate, br',
-        'Connection': 'keep-alive',
+        Connection: 'keep-alive',
         'Upgrade-Insecure-Requests': '1',
       },
       redirect: 'follow',
@@ -62,7 +61,7 @@ export async function POST(request: NextRequest) {
       console.error(`[Google Search Proxy] Google returned status: ${response.status}`);
       return NextResponse.json(
         { error: `Google search failed: ${response.status}` },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -70,9 +69,12 @@ export async function POST(request: NextRequest) {
     const html = await response.text();
 
     // 调试：检查是否是验证码页面
-    const isCaptcha = html.includes('captcha') || html.includes('Captcha') || 
-                      html.includes('unusual traffic') || html.includes('sorry/index') ||
-                      html.includes('Our systems have detected');
+    const isCaptcha =
+      html.includes('captcha') ||
+      html.includes('Captcha') ||
+      html.includes('unusual traffic') ||
+      html.includes('sorry/index') ||
+      html.includes('Our systems have detected');
 
     console.log(`[Google Search Proxy] HTML length: ${html.length}, Is captcha: ${isCaptcha}`);
 
@@ -93,14 +95,13 @@ export async function POST(request: NextRequest) {
         htmlPreview: html.substring(0, 500),
         hasH3: html.includes('<h3'),
         hasResultDiv: html.includes('class="g"') || html.includes('MjjYud'),
-      }
+      },
     });
-
   } catch (error: any) {
     console.error('[Google Search Proxy] Error:', error);
     return NextResponse.json(
       { error: 'Internal server error', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -122,7 +123,11 @@ function parseGoogleResults(html: string, type: string, query: string): any[] {
       while ((match = linkRegex.exec(html)) !== null) {
         const url = match[1];
         // 过滤掉Google自身的链接
-        if (!url.includes('google.com') && !url.includes('gstatic.com') && !url.startsWith('https://www.google.')) {
+        if (
+          !url.includes('google.com') &&
+          !url.includes('gstatic.com') &&
+          !url.startsWith('https://www.google.')
+        ) {
           links.push(url);
         }
       }
@@ -139,8 +144,8 @@ function parseGoogleResults(html: string, type: string, query: string): any[] {
         'did not match any search results',
       ];
 
-      const hasNoResults = noResultsIndicators.some(indicator => 
-        html.toLowerCase().includes(indicator.toLowerCase())
+      const hasNoResults = noResultsIndicators.some((indicator) =>
+        html.toLowerCase().includes(indicator.toLowerCase()),
       );
 
       // 返回收录检查结果
@@ -152,14 +157,16 @@ function parseGoogleResults(html: string, type: string, query: string): any[] {
         foundUrls: uniqueLinks.slice(0, 10),
         hasNoResultsIndicator: hasNoResults,
       });
-
     } else {
       // 排名检查模式：提取搜索结果的标题、链接、描述
       // Google搜索结果通常在 <div class="g"> 或 <div class="MjjYud"> 中
       // 使用更通用的正则表达式提取结果
 
       // 提取所有结果块
-      const resultBlocks = html.match(/<div[^>]*class="[^"]*(?:g|MjjYud|hlcw0c)[^"]*"[^>]*>[\s\S]*?<\/div>\s*<\/div>/gi) || [];
+      const resultBlocks =
+        html.match(
+          /<div[^>]*class="[^"]*(?:g|MjjYud|hlcw0c)[^"]*"[^>]*>[\s\S]*?<\/div>\s*<\/div>/gi,
+        ) || [];
 
       // 如果没找到标准结果块，使用备用方法提取链接和标题
       if (resultBlocks.length === 0) {
@@ -179,7 +186,11 @@ function parseGoogleResults(html: string, type: string, query: string): any[] {
 
         while ((linkMatch = linkRegex.exec(html)) !== null) {
           const url = linkMatch[1];
-          if (!url.includes('google.com') && !url.includes('gstatic.com') && !url.startsWith('https://www.google.')) {
+          if (
+            !url.includes('google.com') &&
+            !url.includes('gstatic.com') &&
+            !url.startsWith('https://www.google.')
+          ) {
             links.push(url);
           }
         }
@@ -208,7 +219,9 @@ function parseGoogleResults(html: string, type: string, query: string): any[] {
           const url = linkMatch ? linkMatch[1] : '';
 
           // 提取描述
-          const descMatch = block.match(/<div[^>]*class="[^"]*(?:VwiC3b|yXK7lf|IsZvec)[^"]*"[^>]*>([\s\S]*?)<\/div>/i);
+          const descMatch = block.match(
+            /<div[^>]*class="[^"]*(?:VwiC3b|yXK7lf|IsZvec)[^"]*"[^>]*>([\s\S]*?)<\/div>/i,
+          );
           const description = descMatch ? descMatch[1].replace(/<[^>]*>/g, '').trim() : '';
 
           if (title && url) {
@@ -222,7 +235,6 @@ function parseGoogleResults(html: string, type: string, query: string): any[] {
         });
       }
     }
-
   } catch (parseError) {
     console.error('[Google Search Proxy] Parse error:', parseError);
   }

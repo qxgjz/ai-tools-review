@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import Script from "next/script";
+import Script from 'next/script';
 
 /**
  * 百度StatisticsComponent
@@ -16,7 +16,7 @@ import Script from "next/script";
  */
 
 // 百度Statistics siteId（请填入你的百度Statistics siteId）
-const BAIDU_SITE_ID = process.env.NEXT_PUBLIC_BAIDU_SITE_ID || "";
+const BAIDU_SITE_ID = process.env.NEXT_PUBLIC_BAIDU_SITE_ID || '';
 
 export function BaiduAnalytics() {
   // 如果没有Configuration siteId，不加载任何脚本
@@ -48,18 +48,13 @@ export function BaiduAnalytics() {
  *   import { baiduTrackEvent } from "@/components/analytics/BaiduAnalytics";
  *   baiduTrackEvent("category", "action", "label", value);
  */
-export function baiduTrackEvent(
-  category: string,
-  action: string,
-  label?: string,
-  value?: number
-) {
-  if (typeof window === "undefined") return;
+export function baiduTrackEvent(category: string, action: string, label?: string, value?: number) {
+  if (typeof window === 'undefined') return;
   if (!(window as any)._hmt) return;
 
   const params: (string | number)[] = [category, action];
   if (label !== undefined) params.push(label);
   if (value !== undefined) params.push(value);
 
-  (window as any)._hmt.push(["_trackEvent", ...params]);
+  (window as any)._hmt.push(['_trackEvent', ...params]);
 }

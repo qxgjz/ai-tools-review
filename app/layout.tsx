@@ -1,89 +1,101 @@
-﻿import type { Metadata } from "next";
-import Script from "next/script";
-import Link from "next/link";
-import { Analytics } from "@vercel/analytics/next";
-import { GeistSans } from "geist/font/sans";
-import { GeistMono } from "geist/font/mono";
-import "./globals.css";
+﻿import type { Metadata } from 'next';
+import Script from 'next/script';
+import Link from 'next/link';
+import { Analytics } from '@vercel/analytics/next';
+import { GeistSans } from 'geist/font/sans';
+import { GeistMono } from 'geist/font/mono';
+import './globals.css';
 
 // 全局缓存配置：静态页面默认1小时缓存
-import "./design-tokens.css";
-import { Header } from "@/components/layout/Header";
-import { BackToTop } from "@/components/layout/BackToTop";
-import { RouteFocusManager } from "@/components/layout/RouteFocusManager";
-import { ThemeProvider } from "@/components/theme/ThemeProvider";
-import { BaiduAnalytics } from "@/components/analytics/BaiduAnalytics";
-import { GA4EventTracker } from "@/components/analytics/GA4EventTracker";
-import { GA4PageTracker } from "@/components/analytics/GA4PageTracker";
-import WebVitalsReporter from "@/components/analytics/WebVitalsReporter";
+import './design-tokens.css';
+import { Header } from '@/components/layout/Header';
+import { BackToTop } from '@/components/layout/BackToTop';
+import { RouteFocusManager } from '@/components/layout/RouteFocusManager';
+import { ThemeProvider } from '@/components/theme/ThemeProvider';
+import { BaiduAnalytics } from '@/components/analytics/BaiduAnalytics';
+import { GA4EventTracker } from '@/components/analytics/GA4EventTracker';
+import { GA4PageTracker } from '@/components/analytics/GA4PageTracker';
+import WebVitalsReporter from '@/components/analytics/WebVitalsReporter';
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.aitoolcrux.com"),
-  title: "Best AI Tools 2026: Expert Reviews | AIToolCrux",
-  description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney and more. Find your perfect AI tool in 2026.",
-  keywords: ["best AI tools 2026", "AI tool reviews", "AI tools comparison", "ChatGPT review", "Claude review", "Midjourney review", "AI tool directory", "top AI tools", "AI software reviews", "best AI tools for creators"],
-  authors: [{ name: "AIToolCrux Editorial Team" }],
-  creator: "AIToolCrux",
-  publisher: "AIToolCrux",
+  metadataBase: new URL('https://www.aitoolcrux.com'),
+  title: 'Best AI Tools 2026: Expert Reviews | AIToolCrux',
+  description:
+    'Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney and more. Find your perfect AI tool in 2026.',
+  keywords: [
+    'best AI tools 2026',
+    'AI tool reviews',
+    'AI tools comparison',
+    'ChatGPT review',
+    'Claude review',
+    'Midjourney review',
+    'AI tool directory',
+    'top AI tools',
+    'AI software reviews',
+    'best AI tools for creators',
+  ],
+  authors: [{ name: 'AIToolCrux Editorial Team' }],
+  creator: 'AIToolCrux',
+  publisher: 'AIToolCrux',
   formatDetection: { email: false, address: false, telephone: false },
   alternates: {
-    canonical: "https://www.aitoolcrux.com/",
+    canonical: 'https://www.aitoolcrux.com/',
     languages: {
-      "en": "https://www.aitoolcrux.com",
-      "zh-CN": "https://www.aitoolcrux.com",
+      en: 'https://www.aitoolcrux.com',
+      'zh-CN': 'https://www.aitoolcrux.com',
     },
     types: {
-      "application/rss+xml": "https://www.aitoolcrux.com/rss.xml",
+      'application/rss+xml': 'https://www.aitoolcrux.com/rss.xml',
     },
   },
   openGraph: {
-      images: [
-          {
-            url: 'https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools',
-            width: 1200,
-            height: 630,
-            alt: 'AIToolCrux - Best AI Tools 2026',
-          },
-        ],
-    type: "website",
-    locale: "en_US",
-    alternateLocale: ["zh_CN"],
-    url: "https://www.aitoolcrux.com",
-    siteName: "AIToolCrux",
-    title: "Best AI Tools 2026: Expert Reviews | AIToolCrux",
-    description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney & more. Find your perfect AI tool in 2026.",
+    images: [
+      {
+        url: 'https://www.aitoolcrux.com/api/og?title=Best+AI+Tools+2026&description=Discover+500%2B+AI+tools+with+expert+reviews+and+comparisons&category=AI+Tools',
+        width: 1200,
+        height: 630,
+        alt: 'AIToolCrux - Best AI Tools 2026',
+      },
+    ],
+    type: 'website',
+    locale: 'en_US',
+    alternateLocale: ['zh_CN'],
+    url: 'https://www.aitoolcrux.com',
+    siteName: 'AIToolCrux',
+    title: 'Best AI Tools 2026: Expert Reviews | AIToolCrux',
+    description:
+      'Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney & more. Find your perfect AI tool in 2026.',
   },
   twitter: {
-    card: "summary_large_image",
-    title: "Best AI Tools 2026: Expert Reviews | AIToolCrux",
-    description: "Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney & more. Find your perfect AI tool in 2026.",
+    card: 'summary_large_image',
+    title: 'Best AI Tools 2026: Expert Reviews | AIToolCrux',
+    description:
+      'Discover 500+ AI tools with expert 6-dimension reviews. Compare ChatGPT, Claude, Midjourney & more. Find your perfect AI tool in 2026.',
   },
   robots: {
     index: true,
     follow: true,
-    googleBot: { index: true, follow: true, "max-image-preview": "large", "max-snippet": -1 },
+    googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
   other: {
-    "color-scheme": "light dark",
-    "google-adsense-account": "ca-pub-4417371559152346",
+    'color-scheme': 'light dark',
+    'google-adsense-account': 'ca-pub-4417371559152346',
   },
   verification: {
-    google: "npnKpSTQ27It6K-ajF27C1ZArzyIbSUhFlgQFS02-gs",
+    google: 'npnKpSTQ27It6K-ajF27C1ZArzyIbSUhFlgQFS02-gs',
     other: {
-      "baidu-site-verification": "codeva-UVziTZwCm7",
-      "impact-site-verification": "4f7f2490-4228-4105-8a21-2b467e8cc78c",
+      'baidu-site-verification': 'codeva-UVziTZwCm7',
+      'impact-site-verification': '4f7f2490-4228-4105-8a21-2b467e8cc78c',
     },
   },
 };
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode;
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200`}>
+      <body
+        className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200`}
+      >
         <ThemeProvider>
           {/* Skip to main content - a11y: keyboard users bypass repeated nav */}
           <a
@@ -97,26 +109,27 @@ export default function RootLayout({
             type="application/ld+json"
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
-                "@context": "https://schema.org",
-                "@type": "Organization",
-                name: "AIToolCrux",
-                url: "https://www.aitoolcrux.com",
-                logo: "https://www.aitoolcrux.com/logo.svg",
-                description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.",
-                foundingDate: "2026",
+                '@context': 'https://schema.org',
+                '@type': 'Organization',
+                name: 'AIToolCrux',
+                url: 'https://www.aitoolcrux.com',
+                logo: 'https://www.aitoolcrux.com/logo.svg',
+                description:
+                  'Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.',
+                foundingDate: '2026',
                 sameAs: [
-                  "https://github.com/qxgjz/ai-tools-review",
-                  "https://twitter.com/aitoolcrux",
-                  "https://www.linkedin.com/company/aitoolcrux",
-                  "https://www.facebook.com/aitoolcrux",
-                  "https://www.youtube.com/@aitoolcrux",
-                  "https://www.reddit.com/r/aitoolcrux",
+                  'https://github.com/qxgjz/ai-tools-review',
+                  'https://twitter.com/aitoolcrux',
+                  'https://www.linkedin.com/company/aitoolcrux',
+                  'https://www.facebook.com/aitoolcrux',
+                  'https://www.youtube.com/@aitoolcrux',
+                  'https://www.reddit.com/r/aitoolcrux',
                 ],
                 contactPoint: {
-                  "@type": "ContactPoint",
-                  contactType: "customer support",
-                  email: "support@aitoolcrux.com",
-                  availableLanguage: ["English", "Chinese"],
+                  '@type': 'ContactPoint',
+                  contactType: 'customer support',
+                  email: 'support@aitoolcrux.com',
+                  availableLanguage: ['English', 'Chinese'],
                 },
               }),
             }}
@@ -164,7 +177,9 @@ export default function RootLayout({
           <GA4PageTracker />
           <Header />
           <RouteFocusManager />
-          <main id="main-content" className="pt-8">{children}</main>
+          <main id="main-content" className="pt-8">
+            {children}
+          </main>
           <footer className="mt-16 py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
             <div className="max-w-7xl mx-auto px-4 sm:px-6">
               {/* 多列链接区域 */}
@@ -175,7 +190,8 @@ export default function RootLayout({
                     AIToolCrux
                   </h3>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-                    Independent AI tool reviews and comparisons. Find the perfect AI tool for your needs.
+                    Independent AI tool reviews and comparisons. Find the perfect AI tool for your
+                    needs.
                   </p>
                   <Link
                     href="/free-ai-tools-guide"
@@ -192,7 +208,9 @@ export default function RootLayout({
                       className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
                       aria-label="GitHub"
                     >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+                      </svg>
                     </a>
                     <a
                       href="https://twitter.com/aitoolcrux"
@@ -201,7 +219,9 @@ export default function RootLayout({
                       className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
                       aria-label="Twitter/X"
                     >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                      </svg>
                     </a>
                     <a
                       href="https://www.linkedin.com/company/aitoolcrux"
@@ -210,7 +230,9 @@ export default function RootLayout({
                       className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
                       aria-label="LinkedIn"
                     >
-                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+                      <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                      </svg>
                     </a>
                   </div>
                 </div>
@@ -221,11 +243,46 @@ export default function RootLayout({
                     Explore
                   </h4>
                   <ul className="space-y-2">
-                    <li><Link href="/ranking" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Tool Rankings</Link></li>
-                    <li><Link href="/compare" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Compare Tools</Link></li>
-                    <li><Link href="/generator" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Tool Matcher</Link></li>
-                    <li><Link href="/blog" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Blog & Reviews</Link></li>
-                    <li><Link href="/sitemap" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Sitemap</Link></li>
+                    <li>
+                      <Link
+                        href="/ranking"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Tool Rankings
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/compare"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Compare Tools
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/generator"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Tool Matcher
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/blog"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Blog & Reviews
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/sitemap"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Sitemap
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
@@ -235,12 +292,54 @@ export default function RootLayout({
                     Categories
                   </h4>
                   <ul className="space-y-2">
-                    <li><Link href="/category/chat" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Chat</Link></li>
-                    <li><Link href="/category/writing" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Writing</Link></li>
-                    <li><Link href="/category/image" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Image</Link></li>
-                    <li><Link href="/category/code" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Coding</Link></li>
-                    <li><Link href="/category/video" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Video</Link></li>
-                    <li><Link href="/category/audio" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Audio</Link></li>
+                    <li>
+                      <Link
+                        href="/category/chat"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Chat
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/category/writing"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Writing
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/category/image"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Image
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/category/code"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Coding
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/category/video"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Video
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/category/audio"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Audio
+                      </Link>
+                    </li>
                   </ul>
                 </div>
 
@@ -250,17 +349,104 @@ export default function RootLayout({
                     Resources
                   </h4>
                   <ul className="space-y-2">
-                    <li><Link href="/about" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">About Us</Link></li>
-                    <li><Link href="/privacy" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Privacy Policy</Link></li>
-                    <li><Link href="/terms" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Terms of Service</Link></li>
-                    <li><Link href="/ai-policy" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Policy</Link></li>
-                    <li><Link href="/disclosure" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Affiliate Disclosure</Link></li>
-                    <li><Link href="/contact" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Contact Us</Link></li>
-                    <li><a href="/sitemap.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">XML Sitemap</a></li>
-                    <li><a href="/rss.xml" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">RSS Feed</a></li>
-                    <li><a href="/robots.txt" target="_blank" rel="noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Robots.txt</a></li>
-                    <li><a href="https://dang.ai" target="_blank" rel="dofollow noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">AI Tools Directory (Dang.ai)</a></li>
-                    <li><a href="https://www.agenthunter.io" target="_blank" rel="dofollow noopener noreferrer" className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">Featured AI Agent (AgentHunter)</a></li>
+                    <li>
+                      <Link
+                        href="/about"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        About Us
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/privacy"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Privacy Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/terms"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Terms of Service
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/ai-policy"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Policy
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/disclosure"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Affiliate Disclosure
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/contact"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Contact Us
+                      </Link>
+                    </li>
+                    <li>
+                      <a
+                        href="/sitemap.xml"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        XML Sitemap
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/rss.xml"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        RSS Feed
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/robots.txt"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Robots.txt
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://dang.ai"
+                        target="_blank"
+                        rel="dofollow noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        AI Tools Directory (Dang.ai)
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="https://www.agenthunter.io"
+                        target="_blank"
+                        rel="dofollow noopener noreferrer"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        Featured AI Agent (AgentHunter)
+                      </a>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -268,7 +454,8 @@ export default function RootLayout({
               {/* 底部版权信息 */}
               <div className="pt-8 border-t border-gray-100 dark:border-gray-800">
                 <p className="text-sm text-gray-400 dark:text-gray-500 text-center mb-2">
-                  AIToolCrux · Scores based on public review methodology, affiliate revenue does not affect ratings
+                  AIToolCrux · Scores based on public review methodology, affiliate revenue does not
+                  affect ratings
                 </p>
                 <p className="text-xs text-gray-300 dark:text-gray-600 text-center">
                   © 2026 AIToolCrux. All rights reserved.
@@ -276,9 +463,9 @@ export default function RootLayout({
               </div>
             </div>
           </footer>
-        <BackToTop />
+          <BackToTop />
         </ThemeProvider>
-      <Analytics />
+        <Analytics />
         <WebVitalsReporter />
       </body>
     </html>

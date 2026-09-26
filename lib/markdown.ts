@@ -1,4 +1,4 @@
-import { marked } from "marked";
+import { marked } from 'marked';
 
 // 配置marked
 marked.setOptions({
@@ -12,20 +12,17 @@ marked.setOptions({
  * @returns HTML字符串
  */
 export function markdownToHtml(markdown: string): string {
-  if (!markdown) return "";
+  if (!markdown) return '';
   try {
     let html = marked.parse(markdown) as string;
     // Add loading="lazy" and decoding="async" to all img tags for performance
-    html = html.replace(
-      /<img(\s+[^>]*?)>/g,
-      '<img$1 loading="lazy" decoding="async">'
-    );
+    html = html.replace(/<img(\s+[^>]*?)>/g, '<img$1 loading="lazy" decoding="async">');
     // Convert h1 to h2: pages already have their own H1, content should not add another
     html = html.replace(/<h1(\s+[^>]*?)>/g, '<h2$1>');
     html = html.replace(/<\/h1>/g, '</h2>');
     return html;
   } catch (error) {
-    console.error("Markdown conversion error:", error);
+    console.error('Markdown conversion error:', error);
     return markdown; // 转换失败时返回原文
   }
 }

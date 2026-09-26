@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import { Progress } from '@/components/ui/progress';
+import { Badge } from '@/components/ui/badge';
 
 interface DimensionScore {
   name: string;
@@ -61,17 +61,31 @@ export default function ReviewTabs({ dimensions, overallScore, grade }: ReviewTa
         {/* Feature Review */}
         <TabsContent value="features" className="mt-6">
           <div className="space-y-4">
-            {dimensions.filter(d => d.name.toLowerCase().includes("function") || d.name.toLowerCase().includes("integration") || d.name.toLowerCase().includes("feature")).map((dim, index) => (
-              <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold text-gray-900 dark:text-white">{dim.name}</h4>
-                  <Badge variant="secondary">{dim.score.toFixed(1)}/10</Badge>
+            {dimensions
+              .filter(
+                (d) =>
+                  d.name.toLowerCase().includes('function') ||
+                  d.name.toLowerCase().includes('integration') ||
+                  d.name.toLowerCase().includes('feature'),
+              )
+              .map((dim, index) => (
+                <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <div className="flex justify-between items-center mb-2">
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{dim.name}</h4>
+                    <Badge variant="secondary">{dim.score.toFixed(1)}/10</Badge>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{dim.description}</p>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{dim.description}</p>
-              </div>
-            ))}
-            {dimensions.filter(d => d.name.toLowerCase().includes("function") || d.name.toLowerCase().includes("integration") || d.name.toLowerCase().includes("feature")).length === 0 && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">Feature dimension details will be displayed here.</p>
+              ))}
+            {dimensions.filter(
+              (d) =>
+                d.name.toLowerCase().includes('function') ||
+                d.name.toLowerCase().includes('integration') ||
+                d.name.toLowerCase().includes('feature'),
+            ).length === 0 && (
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Feature dimension details will be displayed here.
+              </p>
             )}
           </div>
         </TabsContent>
@@ -79,17 +93,33 @@ export default function ReviewTabs({ dimensions, overallScore, grade }: ReviewTa
         {/* Performance */}
         <TabsContent value="performance" className="mt-6">
           <div className="space-y-4">
-            {dimensions.filter(d => d.name.toLowerCase().includes("performance") || d.name.toLowerCase().includes("ux") || d.name.toLowerCase().includes("experience") || d.name.toLowerCase().includes("speed")).map((dim, index) => (
-              <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
-                <div className="flex justify-between items-center mb-2">
-                  <h4 className="font-semibold text-gray-900 dark:text-white">{dim.name}</h4>
-                  <Badge variant="secondary">{dim.score.toFixed(1)}/10</Badge>
+            {dimensions
+              .filter(
+                (d) =>
+                  d.name.toLowerCase().includes('performance') ||
+                  d.name.toLowerCase().includes('ux') ||
+                  d.name.toLowerCase().includes('experience') ||
+                  d.name.toLowerCase().includes('speed'),
+              )
+              .map((dim, index) => (
+                <div key={index} className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
+                  <div className="flex justify-between items-center mb-2">
+                    <h4 className="font-semibold text-gray-900 dark:text-white">{dim.name}</h4>
+                    <Badge variant="secondary">{dim.score.toFixed(1)}/10</Badge>
+                  </div>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">{dim.description}</p>
                 </div>
-                <p className="text-sm text-gray-600 dark:text-gray-400">{dim.description}</p>
-              </div>
-            ))}
-            {dimensions.filter(d => d.name.toLowerCase().includes("performance") || d.name.toLowerCase().includes("ux") || d.name.toLowerCase().includes("experience") || d.name.toLowerCase().includes("speed")).length === 0 && (
-              <p className="text-sm text-gray-500 dark:text-gray-400">Performance dimension details will be displayed here.</p>
+              ))}
+            {dimensions.filter(
+              (d) =>
+                d.name.toLowerCase().includes('performance') ||
+                d.name.toLowerCase().includes('ux') ||
+                d.name.toLowerCase().includes('experience') ||
+                d.name.toLowerCase().includes('speed'),
+            ).length === 0 && (
+              <p className="text-sm text-gray-500 dark:text-gray-400">
+                Performance dimension details will be displayed here.
+              </p>
             )}
           </div>
         </TabsContent>
@@ -98,7 +128,9 @@ export default function ReviewTabs({ dimensions, overallScore, grade }: ReviewTa
         <TabsContent value="pricing" className="mt-6">
           <div className="p-4 bg-gray-50 dark:bg-gray-800 rounded-lg">
             <p className="text-sm text-gray-600 dark:text-gray-400">
-              For detailed pricing comparison, please refer to the pricing comparison table in the article. We regularly update the latest pricing and promotional information for each tool.
+              For detailed pricing comparison, please refer to the pricing comparison table in the
+              article. We regularly update the latest pricing and promotional information for each
+              tool.
             </p>
           </div>
         </TabsContent>

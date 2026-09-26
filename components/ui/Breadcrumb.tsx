@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ChevronRight, Home } from "lucide-react";
+import Link from 'next/link';
+import { ChevronRight, Home } from 'lucide-react';
 
 interface BreadcrumbItem {
   name: string;
@@ -15,7 +15,7 @@ interface BreadcrumbProps {
  * Breadcrumb - 可视化面包屑导航Component
  * 帮助用户了解当前Page位置，提升User Experience和SEO
  */
-export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
+export function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   return (
     <nav
       aria-label="Breadcrumb"
@@ -36,7 +36,10 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
         {/* 面包屑项 */}
         {items.map((item, index) => (
           <li key={index} className="flex items-center gap-1">
-            <ChevronRight className="w-3.5 h-3.5 text-gray-300 dark:text-gray-600 flex-shrink-0" aria-hidden="true" />
+            <ChevronRight
+              className="w-3.5 h-3.5 text-gray-300 dark:text-gray-600 flex-shrink-0"
+              aria-hidden="true"
+            />
             {item.url && index < items.length - 1 ? (
               <Link
                 href={item.url}
@@ -45,7 +48,10 @@ export function Breadcrumb({ items, className = "" }: BreadcrumbProps) {
                 {item.name}
               </Link>
             ) : (
-              <span aria-current="page" className="text-gray-900 dark:text-white font-medium truncate max-w-[200px]">
+              <span
+                aria-current="page"
+                className="text-gray-900 dark:text-white font-medium truncate max-w-[200px]"
+              >
                 {item.name}
               </span>
             )}

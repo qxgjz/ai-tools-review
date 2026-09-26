@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 /**
  * SearXNG 搜索代理 API
  * 通过多个公共 SearXNG 实例获取搜索结果，支持故障转移
- * 
+ *
  * 使用方法：
  * POST /api/searxng-search
  * Body: { "query": "site:https://www.aitoolcrux.com", "type": "indexing" | "ranking", "engines": "google" }
@@ -29,7 +29,10 @@ const SEARXNG_INSTANCES = [
 ];
 
 // 实例健康状态缓存
-const instanceHealth = new Map<string, { healthy: boolean; lastCheck: number; failCount: number }>();
+const instanceHealth = new Map<
+  string,
+  { healthy: boolean; lastCheck: number; failCount: number }
+>();
 
 // 健康检查间隔（5分钟）
 const HEALTH_CHECK_INTERVAL = 5 * 60 * 1000;
@@ -46,7 +49,7 @@ export async function POST(request: NextRequest) {
     if (!authHeader || authHeader !== `Bearer ${PROXY_API_KEY}`) {
       return NextResponse.json(
         { error: 'Unauthorized', message: 'Invalid API key' },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -55,39 +58,38 @@ export async function POST(request: NextRequest) {
     const { query, type = 'ranking', engines = 'google', limit = 20, language = 'en' } = body;
 
     if (!query) {
-      return NextResponse.json(
-        { error: 'Missing query parameter' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing query parameter' }, { status: 400 });
     }
 
     console.log(`[SearXNG] Query: ${query}, Type: ${type}, Engines: ${engines}`);
 
     // 获取健康的实例列表
     const healthyInstances = getHealthyInstances();
-    console.log(`[SearXNG] Healthy instances: ${healthyInstances.length}/${SEARXNG_INSTANCES.length}`);
+    console.log(
+      `[SearXNG] Healthy instances: ${healthyInstances.length}/${SEARXNG_INSTANCES.length}`,
+    );
 
     if (healthyInstances.length === 0) {
       return NextResponse.json(
         { error: 'No healthy SearXNG instances available' },
-        { status: 503 }
+        { status: 503 },
       );
     }
 
     // 尝试多个实例（故障转移）
     let results: any[] = [];
     let usedInstance = '';
-    let errors: string[] = [];
+    const errors: string[] = [];
 
     for (const instance of healthyInstances) {
       try {
         console.log(`[SearXNG] Trying instance: ${instance}`);
-        
+
         const searchUrl = `${instance}/search?q=${encodeURIComponent(query)}&format=json&engines=${engines}&language=${language}`;
-        
+
         const response = await fetch(searchUrl, {
           headers: {
-            'Accept': 'application/json',
+            Accept: 'application/json',
             'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
           },
           signal: AbortSignal.timeout(15000),
@@ -108,7 +110,6 @@ export async function POST(request: NextRequest) {
         } else {
           console.log(`[SearXNG] ${instance} returned empty results, trying next...`);
         }
-
       } catch (error: any) {
         const errorMsg = `${instance}: ${error.message}`;
         errors.push(errorMsg);
@@ -124,7 +125,7 @@ export async function POST(request: NextRequest) {
           errors,
           healthyInstances: healthyInstances.length,
         },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -136,7 +137,7 @@ export async function POST(request: NextRequest) {
       const foundUrls = results
         .map((r: any) => r.url)
         .filter((url: string) => url && url.startsWith('http'));
-      
+
       const totalResults = results.length;
 
       formattedResults.push({
@@ -148,7 +149,6 @@ export async function POST(request: NextRequest) {
         foundUrls: foundUrls.slice(0, 10),
         engines,
       });
-
     } else {
       // 排名检查模式
       formattedResults = results.map((item: any, index: number) => ({
@@ -173,12 +173,11 @@ export async function POST(request: NextRequest) {
       instanceCount: healthyInstances.length,
       errors: errors.slice(0, 3),
     });
-
   } catch (error: any) {
     console.error('[SearXNG] Error:', error);
     return NextResponse.json(
       { error: 'Internal server error', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -188,24 +187,24 @@ export async function POST(request: NextRequest) {
  */
 function getHealthyInstances(): string[] {
   const now = Date.now();
-  
-  return SEARXNG_INSTANCES.filter(instance => {
+
+  return SEARXNG_INSTANCES.filter((instance) => {
     const health = instanceHealth.get(instance);
-    
+
     if (!health) {
       return true; // 未检查过，默认健康
     }
-    
+
     // 如果超过健康检查间隔，重置状态
     if (now - health.lastCheck > HEALTH_CHECK_INTERVAL) {
       return true;
     }
-    
+
     // 如果失败次数超过最大值，暂时禁用
     if (health.failCount >= MAX_FAIL_COUNT) {
       return false;
     }
-    
+
     return true;
   });
 }
@@ -230,22 +229,23 @@ function markInstanceFailed(instance: string) {
     lastCheck: Date.now(),
     failCount: 0,
   };
-  
+
   health.failCount += 1;
   health.lastCheck = Date.now();
   health.healthy = false;
-  
+
   instanceHealth.set(instance, health);
 }
 
 // 支持GET请求（简单测试用）
 export async function GET(request: NextRequest) {
   const healthyInstances = getHealthyInstances();
-  
+
   return NextResponse.json({
     service: 'SearXNG Search Proxy',
     status: 'running',
-    usage: 'POST with { "query": "search terms", "type": "indexing" | "ranking", "engines": "google" }',
+    usage:
+      'POST with { "query": "search terms", "type": "indexing" | "ranking", "engines": "google" }',
     auth: 'Bearer aitoolcrux-searxng-proxy-2026',
     instances: {
       total: SEARXNG_INSTANCES.length,

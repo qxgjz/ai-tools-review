@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { motion, useReducedMotion } from "framer-motion";
-import type { ReactNode } from "react";
+import { motion, useReducedMotion } from 'framer-motion';
+import type { ReactNode } from 'react';
 
 interface FadeInProps {
   children: ReactNode;
@@ -19,7 +19,7 @@ export function FadeIn({
   duration = 0.7,
   x = 0,
   y = 30,
-  className = "",
+  className = '',
   once = true,
 }: FadeInProps) {
   const reduce = useReducedMotion();
@@ -28,7 +28,7 @@ export function FadeIn({
       className={className}
       initial={reduce ? false : { opacity: 0, x, y }}
       whileInView={reduce ? undefined : { opacity: 1, x: 0, y: 0 }}
-      viewport={{ once, margin: "50px", amount: 0 }}
+      viewport={{ once, margin: '50px', amount: 0 }}
       transition={{
         duration,
         delay,

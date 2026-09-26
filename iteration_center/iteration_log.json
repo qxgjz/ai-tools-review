@@ -1,5 +1,33 @@
 [
   {
+    "timestamp": "2026-09-26 21:22",
+    "window": "窗口6",
+    "type": "ux-optimization",
+    "title": "Header当前页高亮（aria-current + 视觉高亮）",
+    "commit": "6dbbeede2d4dbdc817783c7ffe948961ccd6b882",
+    "files_changed": [
+      "components/layout/Header.tsx"
+    ],
+    "changes": [
+      "导入 usePathname from next/navigation",
+      "添加 isActive(href) 辅助函数（/精确匹配，其他startsWith）",
+      "桌面端导航：active时 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emerald-900/25",
+      "移动端导航：同样active样式，图标active时变emerald色",
+      "添加 aria-current={active ? 'page' : undefined} 支持屏幕阅读器"
+    ],
+    "quality_gate": {
+      "3_pages_200": true,
+      "styles_in_html": true,
+      "no_business_logic_change": true,
+      "cta_touch_44px": true,
+      "contrast_aa": true,
+      "mobile_desktop_ok": true
+    },
+    "online_verification": "首页/文章页/工具页均200；aria-current和emerald-900/25在HTML中确认",
+    "design_principle": "NN/g: 'not indicating current location is the most common menu error'；信息架构学习记录可落地优化点",
+    "learning_topic": "用户心理与行为设计（深度版）— Fogg B=MAP、Nudge理论、前景理论、认知偏差（15知识点）"
+  },
+  {
     "timestamp": "2026-09-26 15:42:44",
     "window": "窗口6",
     "type": "ux_optimization",

@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import Link from "next/link";
+import type { Metadata } from 'next';
+import Link from 'next/link';
 import {
   Shield,
   Award,
@@ -15,205 +15,241 @@ import {
   Scale,
   TrendingUp,
   ExternalLink,
-} from "lucide-react";
+} from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Review Methodology - How We Score AI Tools | AIToolCrux",
+  title: 'Review Methodology - How We Score AI Tools | AIToolCrux',
   description:
-    "Learn how AIToolCrux evaluates AI tools with our transparent six-dimensional scoring framework. We test every tool across functionality, UX, pricing, support...",
+    'Learn how AIToolCrux evaluates AI tools with our transparent six-dimensional scoring framework. We test every tool across functionality, UX, pricing, support...',
   alternates: {
-    canonical: "https://www.aitoolcrux.com/methodology",
+    canonical: 'https://www.aitoolcrux.com/methodology',
   },
 };
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 const DIMENSIONS = [
   {
-    key: "functionality",
-    name: "Functionality & Output Quality",
-    weight: "25%",
+    key: 'functionality',
+    name: 'Functionality & Output Quality',
+    weight: '25%',
     icon: Zap,
-    color: "from-blue-500 to-indigo-600",
-    description:
-      "Core feature completeness, output accuracy, and real-world performance.",
+    color: 'from-blue-500 to-indigo-600',
+    description: 'Core feature completeness, output accuracy, and real-world performance.',
     criteria: [
-      "Feature completeness vs. advertised capabilities",
-      "Output accuracy on standardized test cases (10+ scenarios)",
-      "Consistency of results across repeated tests",
-      "Advanced features (multimodal, API, automation)",
-      "Error handling and edge case performance",
+      'Feature completeness vs. advertised capabilities',
+      'Output accuracy on standardized test cases (10+ scenarios)',
+      'Consistency of results across repeated tests',
+      'Advanced features (multimodal, API, automation)',
+      'Error handling and edge case performance',
     ],
     scoring: {
-      "9-10": "Exceptional: Industry-leading output quality, near-perfect accuracy",
-      "7-8": "Strong: Reliable output with minor inconsistencies",
-      "5-6": "Average: Functional but noticeable quality gaps",
-      "3-4": "Weak: Significant output quality issues",
-      "1-2": "Poor: Frequent errors, unreliable output",
+      '9-10': 'Exceptional: Industry-leading output quality, near-perfect accuracy',
+      '7-8': 'Strong: Reliable output with minor inconsistencies',
+      '5-6': 'Average: Functional but noticeable quality gaps',
+      '3-4': 'Weak: Significant output quality issues',
+      '1-2': 'Poor: Frequent errors, unreliable output',
     },
   },
   {
-    key: "ux",
-    name: "User Experience",
-    weight: "20%",
+    key: 'ux',
+    name: 'User Experience',
+    weight: '20%',
     icon: HeartHandshake,
-    color: "from-pink-500 to-rose-600",
-    description:
-      "Interface design, onboarding, learning curve, and overall usability.",
+    color: 'from-pink-500 to-rose-600',
+    description: 'Interface design, onboarding, learning curve, and overall usability.',
     criteria: [
-      "First-time user onboarding experience",
-      "Interface intuitiveness and navigation",
-      "Learning curve for advanced features",
-      "Mobile responsiveness and performance",
-      "Accessibility compliance (WCAG 2.1 AA)",
+      'First-time user onboarding experience',
+      'Interface intuitiveness and navigation',
+      'Learning curve for advanced features',
+      'Mobile responsiveness and performance',
+      'Accessibility compliance (WCAG 2.1 AA)',
     ],
     scoring: {
-      "9-10": "Exceptional: Polished, intuitive, delightful to use",
-      "7-8": "Strong: Clean interface with minor UX friction",
-      "5-6": "Average: Functional but lacks polish",
-      "3-4": "Weak: Confusing interface, steep learning curve",
-      "1-2": "Poor: Frustrating experience, significant usability issues",
+      '9-10': 'Exceptional: Polished, intuitive, delightful to use',
+      '7-8': 'Strong: Clean interface with minor UX friction',
+      '5-6': 'Average: Functional but lacks polish',
+      '3-4': 'Weak: Confusing interface, steep learning curve',
+      '1-2': 'Poor: Frustrating experience, significant usability issues',
     },
   },
   {
-    key: "pricing",
-    name: "Pricing & Value",
-    weight: "20%",
+    key: 'pricing',
+    name: 'Pricing & Value',
+    weight: '20%',
     icon: TrendingUp,
-    color: "from-emerald-500 to-teal-600",
-    description:
-      "Cost-effectiveness, pricing transparency, and value for money.",
+    color: 'from-emerald-500 to-teal-600',
+    description: 'Cost-effectiveness, pricing transparency, and value for money.',
     criteria: [
-      "Free tier availability and limitations",
-      "Price vs. feature set comparison",
-      "Pricing transparency (no hidden fees)",
-      "Scalability and enterprise pricing",
-      "Money-back guarantee and trial options",
+      'Free tier availability and limitations',
+      'Price vs. feature set comparison',
+      'Pricing transparency (no hidden fees)',
+      'Scalability and enterprise pricing',
+      'Money-back guarantee and trial options',
     ],
     scoring: {
-      "9-10": "Exceptional: Outstanding value, generous free tier",
-      "7-8": "Strong: Fair pricing with good value",
-      "5-6": "Average: Reasonable pricing but could be better",
-      "3-4": "Weak: Expensive for what's offered",
-      "1-2": "Poor: Overpriced, poor value proposition",
+      '9-10': 'Exceptional: Outstanding value, generous free tier',
+      '7-8': 'Strong: Fair pricing with good value',
+      '5-6': 'Average: Reasonable pricing but could be better',
+      '3-4': "Weak: Expensive for what's offered",
+      '1-2': 'Poor: Overpriced, poor value proposition',
     },
   },
   {
-    key: "integration",
-    name: "Integrations & Developer Experience",
-    weight: "15%",
+    key: 'integration',
+    name: 'Integrations & Developer Experience',
+    weight: '15%',
     icon: Code2,
-    color: "from-purple-500 to-violet-600",
-    description:
-      "API quality, third-party integrations, and developer-friendliness.",
+    color: 'from-purple-500 to-violet-600',
+    description: 'API quality, third-party integrations, and developer-friendliness.',
     criteria: [
-      "API documentation quality and completeness",
-      "SDK availability (Python, JavaScript, etc.)",
-      "Third-party integrations (Zapier, Slack, Notion)",
-      "Webhook and automation support",
-      "Rate limits and API reliability",
+      'API documentation quality and completeness',
+      'SDK availability (Python, JavaScript, etc.)',
+      'Third-party integrations (Zapier, Slack, Notion)',
+      'Webhook and automation support',
+      'Rate limits and API reliability',
     ],
     scoring: {
-      "9-10": "Exceptional: Best-in-class API, extensive integrations",
-      "7-8": "Strong: Good API with solid integrations",
-      "5-6": "Average: Basic API, limited integrations",
-      "3-4": "Weak: Poor API documentation, few integrations",
-      "1-2": "Poor: No API, no third-party integrations",
+      '9-10': 'Exceptional: Best-in-class API, extensive integrations',
+      '7-8': 'Strong: Good API with solid integrations',
+      '5-6': 'Average: Basic API, limited integrations',
+      '3-4': 'Weak: Poor API documentation, few integrations',
+      '1-2': 'Poor: No API, no third-party integrations',
     },
   },
   {
-    key: "support",
-    name: "Support & Reliability",
-    weight: "10%",
+    key: 'support',
+    name: 'Support & Reliability',
+    weight: '10%',
     icon: LifeBuoy,
-    color: "from-amber-500 to-orange-600",
-    description:
-      "Customer support quality, platform uptime, and issue resolution.",
+    color: 'from-amber-500 to-orange-600',
+    description: 'Customer support quality, platform uptime, and issue resolution.',
     criteria: [
-      "Support response time (measured via test tickets)",
-      "Support quality and knowledgeability",
-      "Platform uptime and reliability (90-day monitoring)",
-      "Self-service resources (docs, community, tutorials)",
-      "Issue resolution time and follow-up",
+      'Support response time (measured via test tickets)',
+      'Support quality and knowledgeability',
+      'Platform uptime and reliability (90-day monitoring)',
+      'Self-service resources (docs, community, tutorials)',
+      'Issue resolution time and follow-up',
     ],
     scoring: {
-      "9-10": "Exceptional: 24/7 support, <2hr response, 99.9% uptime",
-      "7-8": "Strong: Good support, <24hr response, high reliability",
-      "5-6": "Average: Basic support, 1-3 day response",
-      "3-4": "Weak: Slow support, frequent downtime",
-      "1-2": "Poor: No support, unreliable platform",
+      '9-10': 'Exceptional: 24/7 support, <2hr response, 99.9% uptime',
+      '7-8': 'Strong: Good support, <24hr response, high reliability',
+      '5-6': 'Average: Basic support, 1-3 day response',
+      '3-4': 'Weak: Slow support, frequent downtime',
+      '1-2': 'Poor: No support, unreliable platform',
     },
   },
   {
-    key: "ethics",
-    name: "Ethics & Transparency",
-    weight: "10%",
+    key: 'ethics',
+    name: 'Ethics & Transparency',
+    weight: '10%',
     icon: Scale,
-    color: "from-cyan-500 to-blue-600",
-    description:
-      "Data privacy, AI ethics, content policies, and business transparency.",
+    color: 'from-cyan-500 to-blue-600',
+    description: 'Data privacy, AI ethics, content policies, and business transparency.',
     criteria: [
-      "Data privacy policy and user data handling",
-      "AI safety measures and content moderation",
-      "Transparency about AI-generated content",
-      "Affiliate relationship disclosure",
-      "Company background and team visibility",
+      'Data privacy policy and user data handling',
+      'AI safety measures and content moderation',
+      'Transparency about AI-generated content',
+      'Affiliate relationship disclosure',
+      'Company background and team visibility',
     ],
     scoring: {
-      "9-10": "Exceptional: Exemplary ethics, full transparency",
-      "7-8": "Strong: Good privacy practices, clear policies",
-      "5-6": "Average: Basic compliance, some transparency gaps",
-      "3-4": "Weak: Privacy concerns, lack of transparency",
-      "1-2": "Poor: Unethical practices, no transparency",
+      '9-10': 'Exceptional: Exemplary ethics, full transparency',
+      '7-8': 'Strong: Good privacy practices, clear policies',
+      '5-6': 'Average: Basic compliance, some transparency gaps',
+      '3-4': 'Weak: Privacy concerns, lack of transparency',
+      '1-2': 'Poor: Unethical practices, no transparency',
     },
   },
 ];
 
 const GRADES = [
-  { grade: "S", range: "9.0 - 10.0", label: "Excellent", color: "from-amber-400 to-amber-600", desc: "Exceptional quality, industry-leading performance across all dimensions. Highly recommended for all users." },
-  { grade: "A", range: "8.0 - 8.9", label: "Great", color: "from-emerald-400 to-emerald-600", desc: "Strong overall performance with minor areas for improvement. Recommended for most use cases." },
-  { grade: "B", range: "7.0 - 7.9", label: "Good", color: "from-blue-400 to-blue-600", desc: "Solid performance with noticeable strengths and weaknesses. Worth considering for specific needs." },
-  { grade: "C", range: "6.0 - 6.9", label: "Average", color: "from-yellow-400 to-yellow-500", desc: "Functional but has significant room for improvement. Best for users with specific budget constraints." },
-  { grade: "D", range: "5.0 - 5.9", label: "Poor", color: "from-red-400 to-red-600", desc: "Below average with multiple issues. Not recommended unless no alternatives exist." },
-  { grade: "F", range: "< 5.0", label: "Not Recommended", color: "from-gray-400 to-gray-500", desc: "Severe quality, reliability, or ethical issues. We strongly advise against using this tool." },
+  {
+    grade: 'S',
+    range: '9.0 - 10.0',
+    label: 'Excellent',
+    color: 'from-amber-400 to-amber-600',
+    desc: 'Exceptional quality, industry-leading performance across all dimensions. Highly recommended for all users.',
+  },
+  {
+    grade: 'A',
+    range: '8.0 - 8.9',
+    label: 'Great',
+    color: 'from-emerald-400 to-emerald-600',
+    desc: 'Strong overall performance with minor areas for improvement. Recommended for most use cases.',
+  },
+  {
+    grade: 'B',
+    range: '7.0 - 7.9',
+    label: 'Good',
+    color: 'from-blue-400 to-blue-600',
+    desc: 'Solid performance with noticeable strengths and weaknesses. Worth considering for specific needs.',
+  },
+  {
+    grade: 'C',
+    range: '6.0 - 6.9',
+    label: 'Average',
+    color: 'from-yellow-400 to-yellow-500',
+    desc: 'Functional but has significant room for improvement. Best for users with specific budget constraints.',
+  },
+  {
+    grade: 'D',
+    range: '5.0 - 5.9',
+    label: 'Poor',
+    color: 'from-red-400 to-red-600',
+    desc: 'Below average with multiple issues. Not recommended unless no alternatives exist.',
+  },
+  {
+    grade: 'F',
+    range: '< 5.0',
+    label: 'Not Recommended',
+    color: 'from-gray-400 to-gray-500',
+    desc: 'Severe quality, reliability, or ethical issues. We strongly advise against using this tool.',
+  },
 ];
 
 const TESTING_STEPS = [
   {
     step: 1,
-    title: "Initial Research & Setup",
-    duration: "Day 1-2",
-    description: "Research the tool's features, pricing, and market positioning. Create test accounts and document the onboarding experience.",
+    title: 'Initial Research & Setup',
+    duration: 'Day 1-2',
+    description:
+      "Research the tool's features, pricing, and market positioning. Create test accounts and document the onboarding experience.",
   },
   {
     step: 2,
-    title: "Standardized Test Cases",
-    duration: "Day 3-7",
-    description: "Run 10+ standardized test cases across all core features. Test output accuracy, consistency, and edge case handling. Compare results with competing tools.",
+    title: 'Standardized Test Cases',
+    duration: 'Day 3-7',
+    description:
+      'Run 10+ standardized test cases across all core features. Test output accuracy, consistency, and edge case handling. Compare results with competing tools.',
   },
   {
     step: 3,
-    title: "Real-World Integration",
-    duration: "Day 8-12",
-    description: "Use the tool as part of our daily workflow for 5+ days. Test integrations, API calls, and automation workflows. Document any issues or workarounds.",
+    title: 'Real-World Integration',
+    duration: 'Day 8-12',
+    description:
+      'Use the tool as part of our daily workflow for 5+ days. Test integrations, API calls, and automation workflows. Document any issues or workarounds.',
   },
   {
     step: 4,
-    title: "Support & Reliability Testing",
-    duration: "Day 13-14",
-    description: "Submit test support tickets and measure response time. Monitor platform uptime and performance. Test self-service resources and community support.",
+    title: 'Support & Reliability Testing',
+    duration: 'Day 13-14',
+    description:
+      'Submit test support tickets and measure response time. Monitor platform uptime and performance. Test self-service resources and community support.',
   },
   {
     step: 5,
-    title: "Scoring & Review Writing",
-    duration: "Day 15",
-    description: "Score each dimension based on test results. Calculate weighted total and grade. Write comprehensive review with pros, cons, and recommendations.",
+    title: 'Scoring & Review Writing',
+    duration: 'Day 15',
+    description:
+      'Score each dimension based on test results. Calculate weighted total and grade. Write comprehensive review with pros, cons, and recommendations.',
   },
   {
     step: 6,
-    title: "Editorial Review & Publication",
-    duration: "Day 16",
-    description: "Senior editor reviews the review for accuracy and completeness. Verify all claims and data points. Publish with full methodology disclosure.",
+    title: 'Editorial Review & Publication',
+    duration: 'Day 16',
+    description:
+      'Senior editor reviews the review for accuracy and completeness. Verify all claims and data points. Publish with full methodology disclosure.',
   },
 ];
 
@@ -225,25 +261,26 @@ export default function MethodologyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
-            headline: "AIToolCrux Review Methodology: Six-Dimensional AI Tool Evaluation",
-            description: "Transparent methodology for evaluating AI tools across six dimensions: functionality, UX, pricing, integrations, support, and ethics.",
+            '@context': 'https://schema.org',
+            '@type': 'Article',
+            headline: 'AIToolCrux Review Methodology: Six-Dimensional AI Tool Evaluation',
+            description:
+              'Transparent methodology for evaluating AI tools across six dimensions: functionality, UX, pricing, integrations, support, and ethics.',
             author: {
-              "@type": "Organization",
-              name: "AIToolCrux Editorial Team",
+              '@type': 'Organization',
+              name: 'AIToolCrux Editorial Team',
             },
             publisher: {
-              "@type": "Organization",
-              name: "AIToolCrux",
+              '@type': 'Organization',
+              name: 'AIToolCrux',
               logo: {
-                "@type": "ImageObject",
-                url: "https://www.aitoolcrux.com/logo.svg",
+                '@type': 'ImageObject',
+                url: 'https://www.aitoolcrux.com/logo.svg',
               },
             },
-            datePublished: "2026-01-01",
-            dateModified: "2026-09-05",
-            mainEntityOfPage: "https://www.aitoolcrux.com/methodology",
+            datePublished: '2026-01-01',
+            dateModified: '2026-09-05',
+            mainEntityOfPage: 'https://www.aitoolcrux.com/methodology',
           }),
         }}
       />
@@ -259,15 +296,26 @@ export default function MethodologyPage() {
           </div>
           <div className="space-y-4">
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How does AIToolCrux evaluate AI tools?</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                How does AIToolCrux evaluate AI tools?
+              </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                AIToolCrux uses a transparent six-dimensional framework: Functionality & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with 10+ standardized scenarios, repeated 3+ times for consistency, verified by our editorial team.
+                AIToolCrux uses a transparent six-dimensional framework: Functionality & Output
+                Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations &
+                Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each
+                tool undergoes hands-on testing with 10+ standardized scenarios, repeated 3+ times
+                for consistency, verified by our editorial team.
               </p>
             </div>
             <div>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Are reviews independent and unbiased?</h3>
+              <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                Are reviews independent and unbiased?
+              </h3>
               <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                Yes. AIToolCrux is 100% independent — no paid placements or sponsored reviews. All tools tested with the same methodology, scores calculated from objective test data. Affiliate links clearly disclosed per FTC guidelines and never influence scoring or rankings.
+                Yes. AIToolCrux is 100% independent — no paid placements or sponsored reviews. All
+                tools tested with the same methodology, scores calculated from objective test data.
+                Affiliate links clearly disclosed per FTC guidelines and never influence scoring or
+                rankings.
               </p>
             </div>
           </div>
@@ -281,16 +329,18 @@ export default function MethodologyPage() {
           </div>
           <div className="space-y-3">
             {[
-              "Six dimensions weighted: functionality 25%, UX 20%, pricing 20%, integrations 15%, support 10%, ethics 10%",
-              "10+ test scenarios per tool, repeated 3+ times for statistical consistency",
-              "1-10 scoring scale with clear rubrics for each dimension and A-F grade bands",
-              "Editorial verification — all scores reviewed by 2+ team members before publish",
-              "Quarterly re-testing to keep scores current as AI tools evolve rapidly",
-              "Zero paid placements — affiliate links disclosed but never influence rankings",
+              'Six dimensions weighted: functionality 25%, UX 20%, pricing 20%, integrations 15%, support 10%, ethics 10%',
+              '10+ test scenarios per tool, repeated 3+ times for statistical consistency',
+              '1-10 scoring scale with clear rubrics for each dimension and A-F grade bands',
+              'Editorial verification — all scores reviewed by 2+ team members before publish',
+              'Quarterly re-testing to keep scores current as AI tools evolve rapidly',
+              'Zero paid placements — affiliate links disclosed but never influence rankings',
             ].map((item, i) => (
               <div key={i} className="flex items-start gap-3">
                 <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">{i + 1}</span>
+                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                    {i + 1}
+                  </span>
                 </div>
                 <p className="text-gray-700 dark:text-gray-300 text-sm">{item}</p>
               </div>
@@ -308,20 +358,27 @@ export default function MethodologyPage() {
           Our Review Methodology
         </h1>
         <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto leading-relaxed">
-          Every AI tool on AIToolCrux is evaluated through our rigorous six-dimensional weighted scoring framework. We test each tool for 14+ days, run standardized test cases, and score based on real-world performance — not marketing hype.
+          Every AI tool on AIToolCrux is evaluated through our rigorous six-dimensional weighted
+          scoring framework. We test each tool for 14+ days, run standardized test cases, and score
+          based on real-world performance — not marketing hype.
         </p>
       </div>
 
       {/* Quick Stats */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-16">
         {[
-          { value: "6", label: "Evaluation Dimensions" },
-          { value: "14+", label: "Days of Testing" },
-          { value: "10+", label: "Standardized Test Cases" },
-          { value: "533", label: "Tools Reviewed" },
+          { value: '6', label: 'Evaluation Dimensions' },
+          { value: '14+', label: 'Days of Testing' },
+          { value: '10+', label: 'Standardized Test Cases' },
+          { value: '533', label: 'Tools Reviewed' },
         ].map((stat, i) => (
-          <div key={i} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-4 text-center">
-            <div className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">{stat.value}</div>
+          <div
+            key={i}
+            className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-4 text-center"
+          >
+            <div className="text-3xl font-extrabold text-blue-600 dark:text-blue-400">
+              {stat.value}
+            </div>
             <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">{stat.label}</div>
           </div>
         ))}
@@ -334,14 +391,18 @@ export default function MethodologyPage() {
           Six Evaluation Dimensions
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
-          Each dimension is scored 1-10, then weighted to produce an overall score. The weights reflect what matters most for AI tool selection in 2026.
+          Each dimension is scored 1-10, then weighted to produce an overall score. The weights
+          reflect what matters most for AI tool selection in 2026.
         </p>
 
         <div className="space-y-6">
           {DIMENSIONS.map((dim) => {
             const Icon = dim.icon;
             return (
-              <div key={dim.key} className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+              <div
+                key={dim.key}
+                className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden"
+              >
                 <div className={`bg-gradient-to-r ${dim.color} p-6 text-white`}>
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-4">
@@ -362,10 +423,15 @@ export default function MethodologyPage() {
                 <div className="p-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-3">Evaluation Criteria</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-3">
+                        Evaluation Criteria
+                      </h4>
                       <ul className="space-y-2">
                         {dim.criteria.map((criterion, i) => (
-                          <li key={i} className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300">
+                          <li
+                            key={i}
+                            className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-300"
+                          >
                             <CheckCircle2 className="w-4 h-4 text-green-500 flex-shrink-0 mt-0.5" />
                             {criterion}
                           </li>
@@ -373,11 +439,15 @@ export default function MethodologyPage() {
                       </ul>
                     </div>
                     <div>
-                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-3">Scoring Guidelines</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-3">
+                        Scoring Guidelines
+                      </h4>
                       <div className="space-y-2">
                         {Object.entries(dim.scoring).map(([range, desc]) => (
                           <div key={range} className="flex gap-3 text-sm">
-                            <span className="font-bold text-blue-600 dark:text-blue-400 w-12 flex-shrink-0">{range}</span>
+                            <span className="font-bold text-blue-600 dark:text-blue-400 w-12 flex-shrink-0">
+                              {range}
+                            </span>
                             <span className="text-gray-600 dark:text-gray-300">{desc}</span>
                           </div>
                         ))}
@@ -412,10 +482,12 @@ export default function MethodologyPage() {
             <div className="mt-2">)</div>
           </div>
           <p className="text-gray-600 dark:text-gray-300 mt-6 text-sm">
-            <strong>Example:</strong> If a tool scores 8.5 in Functionality, 8.0 in UX, 7.5 in Pricing, 7.0 in Integrations, 8.0 in Support, and 7.5 in Ethics:
+            <strong>Example:</strong> If a tool scores 8.5 in Functionality, 8.0 in UX, 7.5 in
+            Pricing, 7.0 in Integrations, 8.0 in Support, and 7.5 in Ethics:
           </p>
           <div className="bg-blue-50 dark:bg-blue-900/20 rounded-xl p-4 mt-4 text-sm text-blue-800 dark:text-blue-200">
-            Total = (8.5×0.25) + (8.0×0.20) + (7.5×0.20) + (7.0×0.15) + (8.0×0.10) + (7.5×0.10) = <strong>7.875 → B Grade (Good)</strong>
+            Total = (8.5×0.25) + (8.0×0.20) + (7.5×0.20) + (7.0×0.15) + (8.0×0.10) + (7.5×0.10) ={' '}
+            <strong>7.875 → B Grade (Good)</strong>
           </div>
         </div>
       </section>
@@ -428,9 +500,14 @@ export default function MethodologyPage() {
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
           {GRADES.map((g) => (
-            <div key={g.grade} className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-5">
+            <div
+              key={g.grade}
+              className="bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-5"
+            >
               <div className="flex items-center gap-3 mb-3">
-                <div className={`w-12 h-12 bg-gradient-to-br ${g.color} rounded-xl flex items-center justify-center text-white text-xl font-extrabold`}>
+                <div
+                  className={`w-12 h-12 bg-gradient-to-br ${g.color} rounded-xl flex items-center justify-center text-white text-xl font-extrabold`}
+                >
                   {g.grade}
                 </div>
                 <div>
@@ -451,18 +528,24 @@ export default function MethodologyPage() {
           Our 16-Day Testing Process
         </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-8">
-          Every tool goes through a standardized 16-day testing process before publication. This ensures consistent, comparable, and reliable reviews.
+          Every tool goes through a standardized 16-day testing process before publication. This
+          ensures consistent, comparable, and reliable reviews.
         </p>
         <div className="space-y-4">
           {TESTING_STEPS.map((step) => (
-            <div key={step.step} className="flex gap-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-5">
+            <div
+              key={step.step}
+              className="flex gap-4 bg-white dark:bg-gray-900 rounded-xl border border-gray-100 dark:border-gray-800 p-5"
+            >
               <div className="flex-shrink-0 w-10 h-10 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
                 {step.step}
               </div>
               <div className="flex-1">
                 <div className="flex items-center justify-between mb-1">
                   <h3 className="font-bold text-gray-900 dark:text-white">{step.title}</h3>
-                  <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">{step.duration}</span>
+                  <span className="text-xs text-blue-600 dark:text-blue-400 font-medium">
+                    {step.duration}
+                  </span>
                 </div>
                 <p className="text-sm text-gray-600 dark:text-gray-300">{step.description}</p>
               </div>
@@ -481,23 +564,39 @@ export default function MethodologyPage() {
           <div className="space-y-4">
             <div className="flex gap-3">
               <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-700 dark:text-gray-300"><strong>No paid placements:</strong> We do not accept payment for higher ratings or featured positions.</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>No paid placements:</strong> We do not accept payment for higher ratings or
+                featured positions.
+              </p>
             </div>
             <div className="flex gap-3">
               <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-700 dark:text-gray-300"><strong>Real testing:</strong> Every tool is tested by our editorial team for 14+ days using standardized test cases.</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Real testing:</strong> Every tool is tested by our editorial team for 14+
+                days using standardized test cases.
+              </p>
             </div>
             <div className="flex gap-3">
               <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-700 dark:text-gray-300"><strong>Affiliate disclosure:</strong> Some links on our site are affiliate links. We may earn a commission if you sign up, at no extra cost to you. This never affects our ratings or recommendations.</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Affiliate disclosure:</strong> Some links on our site are affiliate links.
+                We may earn a commission if you sign up, at no extra cost to you. This never affects
+                our ratings or recommendations.
+              </p>
             </div>
             <div className="flex gap-3">
               <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-700 dark:text-gray-300"><strong>Transparent methodology:</strong> Our complete scoring methodology is published on this page and referenced in every review.</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Transparent methodology:</strong> Our complete scoring methodology is
+                published on this page and referenced in every review.
+              </p>
             </div>
             <div className="flex gap-3">
               <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
-              <p className="text-gray-700 dark:text-gray-300"><strong>Regular updates:</strong> Reviews are updated quarterly or when major product changes occur. Each review shows the last updated date.</p>
+              <p className="text-gray-700 dark:text-gray-300">
+                <strong>Regular updates:</strong> Reviews are updated quarterly or when major
+                product changes occur. Each review shows the last updated date.
+              </p>
             </div>
           </div>
         </div>

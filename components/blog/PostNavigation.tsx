@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import Link from 'next/link';
+import { ArrowLeft, ArrowRight } from 'lucide-react';
 
 interface Post {
   slug: string;
@@ -23,7 +23,7 @@ interface PostNavigationProps {
  * - 悬停效果
  * - 响应式设计
  */
-export function PostNavigation({ previousPost, nextPost, className = "" }: PostNavigationProps) {
+export function PostNavigation({ previousPost, nextPost, className = '' }: PostNavigationProps) {
   if (!previousPost && !nextPost) return null;
 
   return (

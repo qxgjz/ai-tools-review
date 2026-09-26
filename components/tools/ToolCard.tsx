@@ -1,19 +1,19 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { motion, useReducedMotion } from "framer-motion";
-import { ArrowUpRight, Sparkles } from "lucide-react";
-import type { Tool, Grade } from "@/types";
-import { calculateScoreResult } from "@/lib/scoring";
+import Link from 'next/link';
+import { motion, useReducedMotion } from 'framer-motion';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
+import type { Tool, Grade } from '@/types';
+import { calculateScoreResult } from '@/lib/scoring';
 
 // Grade styles - solid colors, NO gradients (Taste Skill + UI/UX Pro Max rule)
 const GRADE_STYLES: Record<Grade, string> = {
-  S: "bg-amber-700 text-white",
-  A: "bg-green-700 text-white",
-  B: "bg-blue-700 text-white",
-  C: "bg-yellow-800 text-white",
-  D: "bg-red-700 text-white",
-  F: "bg-zinc-500 text-white",
+  S: 'bg-amber-700 text-white',
+  A: 'bg-green-700 text-white',
+  B: 'bg-blue-700 text-white',
+  C: 'bg-yellow-800 text-white',
+  D: 'bg-red-700 text-white',
+  F: 'bg-zinc-500 text-white',
 };
 
 interface ToolCardProps {
@@ -99,11 +99,16 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                   {total.toFixed(1)}
                 </span>
                 <span className="text-xs text-zinc-500 dark:text-zinc-400">/10</span>
-                <span className={`px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider ${GRADE_STYLES[grade]}`}>
+                <span
+                  className={`px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider ${GRADE_STYLES[grade]}`}
+                >
                   Grade {grade}
                 </span>
               </div>
-              <div aria-hidden="true" className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95">
+              <div
+                aria-hidden="true"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95"
+              >
                 <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
               </div>
             </div>

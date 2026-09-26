@@ -1,4 +1,4 @@
-import Link from "next/link";
+import Link from 'next/link';
 import {
   Home,
   Search,
@@ -12,46 +12,81 @@ import {
   Layers,
   ArrowRight,
   Clock,
-} from "lucide-react";
-import toolsData from "@/data/tools-index.json";
-import postsData from "@/data/posts.json";
-import type { Tool } from "@/types";
-import { calculateScoreResult } from "@/lib/scoring";
+} from 'lucide-react';
+import toolsData from '@/data/tools-index.json';
+import postsData from '@/data/posts.json';
+import type { Tool } from '@/types';
+import { calculateScoreResult } from '@/lib/scoring';
 
 // CategoriesConfiguration
 const CATEGORIES = [
-  { slug: "chat", name: "AI Chat & Assistants", icon: "💬" },
-  { slug: "writing", name: "AI Writing & Content", icon: "✍️" },
-  { slug: "image", name: "AI Image & Art", icon: "🎨" },
-  { slug: "code", name: "AI Coding & Dev", icon: "💻" },
-  { slug: "video", name: "AI Video & Animation", icon: "🎬" },
-  { slug: "audio", name: "AI Audio & Music", icon: "🎵" },
-  { slug: "productivity", name: "AI Productivity", icon: "📊" },
-  { slug: "search", name: "AI Search & Research", icon: "🔍" },
-  { slug: "agent", name: "AI Agents & Automation", icon: "🤖" },
-  { slug: "design", name: "AI Design & Creative", icon: "🎨" },
-  { slug: "dev-tools", name: "AI Developer Tools", icon: "🛠️" },
-  { slug: "database", name: "AI Database & Vector", icon: "🗄️" },
-  { slug: "observability", name: "AI Observability", icon: "📈" },
+  { slug: 'chat', name: 'AI Chat & Assistants', icon: '💬' },
+  { slug: 'writing', name: 'AI Writing & Content', icon: '✍️' },
+  { slug: 'image', name: 'AI Image & Art', icon: '🎨' },
+  { slug: 'code', name: 'AI Coding & Dev', icon: '💻' },
+  { slug: 'video', name: 'AI Video & Animation', icon: '🎬' },
+  { slug: 'audio', name: 'AI Audio & Music', icon: '🎵' },
+  { slug: 'productivity', name: 'AI Productivity', icon: '📊' },
+  { slug: 'search', name: 'AI Search & Research', icon: '🔍' },
+  { slug: 'agent', name: 'AI Agents & Automation', icon: '🤖' },
+  { slug: 'design', name: 'AI Design & Creative', icon: '🎨' },
+  { slug: 'dev-tools', name: 'AI Developer Tools', icon: '🛠️' },
+  { slug: 'database', name: 'AI Database & Vector', icon: '🗄️' },
+  { slug: 'observability', name: 'AI Observability', icon: '📈' },
 ];
 
 // 主要Page
 const MAIN_PAGES = [
-  { href: "/", name: "Home", icon: Home, desc: "AI tools homepage with featured tools" },
-  { href: "/ranking", name: "Tool Rankings", icon: Trophy, desc: "All AI tools ranked by 6-dimension score" },
-  { href: "/generator", name: "AI Tool Matcher", icon: Sparkles, desc: "Find the perfect AI tool for your use case" },
-  { href: "/compare", name: "Compare Tools", icon: Layers, desc: "Side-by-side comparison of AI tools" },
-  { href: "/search", name: "Search", icon: Search, desc: "Search all AI tools and reviews" },
-  { href: "/blog", name: "Blog & Reviews", icon: FileText, desc: "In-depth AI tool reviews and comparisons" },
-  { href: "/free-ai-tools-guide", name: "Free AI Tools Guide", icon: Download, desc: "Download Top 50 AI tools guide (PDF)" },
+  { href: '/', name: 'Home', icon: Home, desc: 'AI tools homepage with featured tools' },
+  {
+    href: '/ranking',
+    name: 'Tool Rankings',
+    icon: Trophy,
+    desc: 'All AI tools ranked by 6-dimension score',
+  },
+  {
+    href: '/generator',
+    name: 'AI Tool Matcher',
+    icon: Sparkles,
+    desc: 'Find the perfect AI tool for your use case',
+  },
+  {
+    href: '/compare',
+    name: 'Compare Tools',
+    icon: Layers,
+    desc: 'Side-by-side comparison of AI tools',
+  },
+  { href: '/search', name: 'Search', icon: Search, desc: 'Search all AI tools and reviews' },
+  {
+    href: '/blog',
+    name: 'Blog & Reviews',
+    icon: FileText,
+    desc: 'In-depth AI tool reviews and comparisons',
+  },
+  {
+    href: '/free-ai-tools-guide',
+    name: 'Free AI Tools Guide',
+    icon: Download,
+    desc: 'Download Top 50 AI tools guide (PDF)',
+  },
 ];
 
 // 信息Page
 const INFO_PAGES = [
-  { href: "/about", name: "About Us", icon: Info, desc: "Learn about AIToolCrux and our mission" },
-  { href: "/privacy", name: "Privacy Policy", icon: Shield, desc: "How we handle your data and privacy" },
-  { href: "/disclosure", name: "Affiliate Disclosure", icon: FileText, desc: "Transparency about affiliate relationships" },
-  { href: "/contact", name: "Contact Us", icon: Mail, desc: "Get in touch with our team" },
+  { href: '/about', name: 'About Us', icon: Info, desc: 'Learn about AIToolCrux and our mission' },
+  {
+    href: '/privacy',
+    name: 'Privacy Policy',
+    icon: Shield,
+    desc: 'How we handle your data and privacy',
+  },
+  {
+    href: '/disclosure',
+    name: 'Affiliate Disclosure',
+    icon: FileText,
+    desc: 'Transparency about affiliate relationships',
+  },
+  { href: '/contact', name: 'Contact Us', icon: Mail, desc: 'Get in touch with our team' },
 ];
 
 export default function SitemapPage() {
@@ -70,7 +105,7 @@ export default function SitemapPage() {
   // 按Rating排序每个Categories的Tools
   for (const cat of Object.keys(toolsByCategory)) {
     toolsByCategory[cat].sort(
-      (a, b) => calculateScoreResult(b.scores).total - calculateScoreResult(a.scores).total
+      (a, b) => calculateScoreResult(b.scores).total - calculateScoreResult(a.scores).total,
     );
   }
 
@@ -83,7 +118,7 @@ export default function SitemapPage() {
   // 按Categories分组Blog文章
   const postsByCategory: Record<string, any[]> = {};
   for (const post of posts) {
-    const cat = (post as any).category || "General";
+    const cat = (post as any).category || 'General';
     if (!postsByCategory[cat]) {
       postsByCategory[cat] = [];
     }
@@ -93,8 +128,7 @@ export default function SitemapPage() {
   // 按Published排序每个Categories的文章（Latest的在前）
   for (const cat of Object.keys(postsByCategory)) {
     postsByCategory[cat].sort(
-      (a, b) =>
-        new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime()
+      (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
     );
   }
 
@@ -110,8 +144,8 @@ export default function SitemapPage() {
             <h1 className="text-3xl sm:text-4xl font-extrabold">Sitemap</h1>
           </div>
           <p className="text-emerald-100 text-lg max-w-2xl">
-            Complete overview of all pages on AIToolCrux. Browse by category,
-            explore top-rated tools, and discover our latest reviews.
+            Complete overview of all pages on AIToolCrux. Browse by category, explore top-rated
+            tools, and discover our latest reviews.
           </p>
           <div className="mt-6 flex flex-wrap gap-4 text-sm">
             <span className="flex items-center gap-1 bg-white/10 px-3 py-1 rounded-full">
@@ -145,12 +179,8 @@ export default function SitemapPage() {
                   <page.icon className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
                   <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-emerald-600 group-hover:translate-x-1 transition-all" />
                 </div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">
-                  {page.name}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {page.desc}
-                </p>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-1">{page.name}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{page.desc}</p>
               </Link>
             ))}
           </div>
@@ -163,28 +193,24 @@ export default function SitemapPage() {
             Tool Categories
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {CATEGORIES.filter((cat) => toolsByCategory[cat.slug]?.length > 0).map(
-              (cat) => (
-                <Link
-                  key={cat.slug}
-                  href={`/category/${cat.slug}`}
-                  className="group bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-teal-300 dark:hover:border-teal-700 hover:shadow-lg transition-all"
-                >
-                  <div className="flex items-start justify-between mb-2">
-                    <span className="text-2xl">{cat.icon}</span>
-                    <span className="text-xs font-semibold text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded-full">
-                      {toolsByCategory[cat.slug]?.length || 0} tools
-                    </span>
-                  </div>
-                  <h3 className="font-bold text-gray-900 dark:text-white mb-1">
-                    {cat.name}
-                  </h3>
-                  <p className="text-sm text-gray-500 dark:text-gray-400">
-                    Top: {toolsByCategory[cat.slug]?.[0]?.name || "N/A"}
-                  </p>
-                </Link>
-              )
-            )}
+            {CATEGORIES.filter((cat) => toolsByCategory[cat.slug]?.length > 0).map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/category/${cat.slug}`}
+                className="group bg-white dark:bg-gray-900 rounded-xl p-5 border border-gray-100 dark:border-gray-800 hover:border-teal-300 dark:hover:border-teal-700 hover:shadow-lg transition-all"
+              >
+                <div className="flex items-start justify-between mb-2">
+                  <span className="text-2xl">{cat.icon}</span>
+                  <span className="text-xs font-semibold text-teal-600 dark:text-teal-400 bg-teal-50 dark:bg-teal-900/30 px-2 py-1 rounded-full">
+                    {toolsByCategory[cat.slug]?.length || 0} tools
+                  </span>
+                </div>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-1">{cat.name}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">
+                  Top: {toolsByCategory[cat.slug]?.[0]?.name || 'N/A'}
+                </p>
+              </Link>
+            ))}
           </div>
         </section>
 
@@ -240,7 +266,7 @@ export default function SitemapPage() {
                     {categoryPosts.length} articles
                   </span>
                   <Link
-                    href={`/blog/category/${categoryPosts[0]?.categorySlug || "ai-tools"}`}
+                    href={`/blog/category/${categoryPosts[0]?.categorySlug || 'ai-tools'}`}
                     className="text-sm text-emerald-600 dark:text-emerald-400 hover:underline font-medium ml-auto"
                   >
                     View all →
@@ -287,12 +313,8 @@ export default function SitemapPage() {
                   <page.icon className="w-6 h-6 text-gray-600 dark:text-gray-400" />
                   <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-gray-600 group-hover:translate-x-1 transition-all" />
                 </div>
-                <h3 className="font-bold text-gray-900 dark:text-white mb-1">
-                  {page.name}
-                </h3>
-                <p className="text-sm text-gray-500 dark:text-gray-400">
-                  {page.desc}
-                </p>
+                <h3 className="font-bold text-gray-900 dark:text-white mb-1">{page.name}</h3>
+                <p className="text-sm text-gray-500 dark:text-gray-400">{page.desc}</p>
               </Link>
             ))}
           </div>

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useRef, useState, type ReactNode, type MouseEvent } from "react";
-import { motion } from "framer-motion";
+import { useRef, useState, type ReactNode, type MouseEvent } from 'react';
+import { motion } from 'framer-motion';
 
 interface MagnetProps {
   children: ReactNode;
@@ -16,9 +16,9 @@ export function Magnet({
   children,
   padding = 150,
   strength = 3,
-  activeTransition = "transform 0.3s ease-out",
-  inactiveTransition = "transform 0.6s ease-in-out",
-  className = "",
+  activeTransition = 'transform 0.3s ease-out',
+  inactiveTransition = 'transform 0.6s ease-in-out',
+  className = '',
 }: MagnetProps) {
   const ref = useRef<HTMLDivElement>(null);
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -56,7 +56,7 @@ export function Magnet({
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       className={`inline-block ${className}`}
-      style={{ willChange: "transform" }}
+      style={{ willChange: 'transform' }}
     >
       <motion.div
         animate={{
@@ -64,7 +64,7 @@ export function Magnet({
           y: position.y,
         }}
         transition={{
-          type: "spring",
+          type: 'spring',
           stiffness: 150,
           damping: 15,
         }}

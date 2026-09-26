@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import { Image as ImageIcon, ZoomIn, X } from "lucide-react";
+import { useState } from 'react';
+import { Image as ImageIcon, ZoomIn, X } from 'lucide-react';
 
 interface ToolScreenshotProps {
   toolSlug: string;
@@ -12,7 +12,13 @@ interface ToolScreenshotProps {
   screenshotUrl?: string;
 }
 
-export function ToolScreenshot({ toolSlug, toolName, vendor, className = "", screenshotUrl }: ToolScreenshotProps) {
+export function ToolScreenshot({
+  toolSlug,
+  toolName,
+  vendor,
+  className = '',
+  screenshotUrl,
+}: ToolScreenshotProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
 
@@ -20,22 +26,27 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "", scr
 
   if (imageError) {
     return (
-      <div className={`rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-8 text-center ${className}`}>
+      <div
+        className={`rounded-xl border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 p-8 text-center ${className}`}
+      >
         <ImageIcon className="w-12 h-12 mx-auto text-gray-400 mb-3" />
         <p className="text-gray-500 dark:text-gray-400 text-sm">Screenshot coming soon</p>
-        <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">We're working on capturing {toolName} screenshots</p>
+        <p className="text-gray-400 dark:text-gray-500 text-xs mt-1">
+          We're working on capturing {toolName} screenshots
+        </p>
       </div>
     );
   }
 
   return (
     <>
-      <div className={`relative group cursor-pointer rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all ${className}`}
+      <div
+        className={`relative group cursor-pointer rounded-xl overflow-hidden border border-gray-200 dark:border-gray-700 shadow-sm hover:shadow-md transition-all ${className}`}
         onClick={() => setIsLightboxOpen(true)}
       >
         <img
           src={resolvedUrl}
-          alt={`${toolName} screenshot - ${vendor || "AIToolCrux"}`}
+          alt={`${toolName} screenshot - ${vendor || 'AIToolCrux'}`}
           className="w-full h-auto object-cover"
           onError={() => setImageError(true)}
           loading="lazy"
@@ -66,7 +77,7 @@ export function ToolScreenshot({ toolSlug, toolName, vendor, className = "", scr
           </button>
           <img
             src={resolvedUrl}
-            alt={`${toolName} screenshot - ${vendor || "AIToolCrux"}`}
+            alt={`${toolName} screenshot - ${vendor || 'AIToolCrux'}`}
             className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
             onClick={(e) => e.stopPropagation()}
             loading="lazy"

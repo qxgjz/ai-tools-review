@@ -2,17 +2,11 @@
  * 评测生成器核心计算逻辑
  * ============================================================ */
 
-import toolsData from "@/data/tools.json";
-import type { Tool, ScoreDimension } from "@/types";
-import { calculateScoreResult, DIMENSION_LABELS } from "@/lib/scoring";
+import toolsData from '@/data/tools.json';
+import type { Tool, ScoreDimension } from '@/types';
+import { calculateScoreResult, DIMENSION_LABELS } from '@/lib/scoring';
 
-export type ScenarioType =
-  | "writing"
-  | "design"
-  | "coding"
-  | "video"
-  | "office"
-  | "other";
+export type ScenarioType = 'writing' | 'design' | 'coding' | 'video' | 'office' | 'other';
 
 export interface GeneratorInput {
   scenario: ScenarioType;
@@ -29,44 +23,44 @@ export interface GeneratorResult {
 }
 
 export const SCENARIO_LABELS: Record<ScenarioType, string> = {
-  writing: "Content Writing",
-  design: "Design & Creation",
-  coding: "Programming",
-  video: "Video Production",
-  office: "Productivity",
-  other: "General Use",
+  writing: 'Content Writing',
+  design: 'Design & Creation',
+  coding: 'Programming',
+  video: 'Video Production',
+  office: 'Productivity',
+  other: 'General Use',
 };
 
 export const SCENARIO_DESCRIPTIONS: Record<ScenarioType, string> = {
-  writing: "Copywriting, article writing, content polishing",
-  design: "Image generation, UI design, visual creation",
-  coding: "Coding, programming, tech development",
-  video: "Video generation, editing, multimedia creation",
-  office: "Document processing, meeting notes, team collaboration",
-  other: "General Use",
+  writing: 'Copywriting, article writing, content polishing',
+  design: 'Image generation, UI design, visual creation',
+  coding: 'Coding, programming, tech development',
+  video: 'Video generation, editing, multimedia creation',
+  office: 'Document processing, meeting notes, team collaboration',
+  other: 'General Use',
 };
 
 const SCENARIO_DIMENSION_BOOST: Record<ScenarioType, ScoreDimension[]> = {
-  writing: ["functionality", "ux", "pricing"],
-  design: ["functionality", "ux", "integration"],
-  coding: ["functionality", "integration", "support"],
-  video: ["functionality", "ux", "pricing"],
-  office: ["ux", "pricing", "integration"],
-  other: ["functionality", "ux", "pricing"],
+  writing: ['functionality', 'ux', 'pricing'],
+  design: ['functionality', 'ux', 'integration'],
+  coding: ['functionality', 'integration', 'support'],
+  video: ['functionality', 'ux', 'pricing'],
+  office: ['ux', 'pricing', 'integration'],
+  other: ['functionality', 'ux', 'pricing'],
 };
 
 const SCENARIO_CATEGORY_MAP: Record<ScenarioType, string[]> = {
-  writing: ["writing", "chat"],
-  design: ["image", "audio"],
-  coding: ["code"],
-  video: ["video", "audio"],
-  office: ["productivity", "search"],
+  writing: ['writing', 'chat'],
+  design: ['image', 'audio'],
+  coding: ['code'],
+  video: ['video', 'audio'],
+  office: ['productivity', 'search'],
   other: [],
 };
 
 export function generateRecommendations(
   input: GeneratorInput,
-  topN: number = 3
+  topN: number = 3,
 ): GeneratorResult[] {
   const { scenario, priorityDimensions } = input;
   const allPriorityDims = new Set<ScoreDimension>([
@@ -117,17 +111,17 @@ function generateReason(
   tool: Tool,
   total: number,
   matchedDims: ScoreDimension[],
-  scenario: ScenarioType
+  scenario: ScenarioType,
 ): string {
   const parts: string[] = [];
   parts.push(`${tool.name} overall score ${total.toFixed(1)}/10`);
   if (matchedDims.length > 0) {
-    const dimNames = matchedDims.map((d) => DIMENSION_LABELS[d]).join(", ");
+    const dimNames = matchedDims.map((d) => DIMENSION_LABELS[d]).join(', ');
     parts.push(`stands out in ${dimNames}`);
   }
-  if (tool.hasFreeTier) parts.push("Free version available to try");
-  parts.push(`best suited for ${SCENARIO_LABELS[scenario] || "General"} use cases`);
-  return parts.join(". ") + ".";
+  if (tool.hasFreeTier) parts.push('Free version available to try');
+  parts.push(`best suited for ${SCENARIO_LABELS[scenario] || 'General'} use cases`);
+  return parts.join('. ') + '.';
 }
 
 export function getScenarioOptions() {

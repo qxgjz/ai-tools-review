@@ -3,7 +3,7 @@ import { NextRequest, NextResponse } from 'next/server';
 /**
  * Google Custom Search API代理
  * 使用Google官方Custom Search JSON API获取搜索结果
- * 
+ *
  * 配置方法：
  * 1. 在Google Cloud Console启用Custom Search API
  * 2. 创建可编程搜索引擎 (https://programmablesearchengine.google.com/)
@@ -11,7 +11,7 @@ import { NextRequest, NextResponse } from 'next/server';
  * 4. 在Vercel环境变量中配置:
  *    - GOOGLE_CSE_API_KEY
  *    - GOOGLE_CSE_CX
- * 
+ *
  * 使用方法：
  * POST /api/google-cse
  * Body: { "query": "site:https://www.aitoolcrux.com", "type": "indexing" | "ranking" }
@@ -34,7 +34,7 @@ export async function POST(request: NextRequest) {
     if (!authHeader || authHeader !== `Bearer ${PROXY_API_KEY}`) {
       return NextResponse.json(
         { error: 'Unauthorized', message: 'Invalid API key' },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -46,13 +46,14 @@ export async function POST(request: NextRequest) {
           message: 'Please configure GOOGLE_CSE_API_KEY and GOOGLE_CSE_CX environment variables',
           setupGuide: {
             step1: 'Go to Google Cloud Console → APIs & Services → Enable Custom Search JSON API',
-            step2: 'Go to https://programmablesearchengine.google.com/ → Create a new search engine',
+            step2:
+              'Go to https://programmablesearchengine.google.com/ → Create a new search engine',
             step3: 'Get API key from Google Cloud Console → Credentials',
             step4: 'Get Search engine ID (CX) from Programmable Search Engine settings',
             step5: 'Add to Vercel environment variables: GOOGLE_CSE_API_KEY and GOOGLE_CSE_CX',
           },
         },
-        { status: 503 }
+        { status: 503 },
       );
     }
 
@@ -61,10 +62,7 @@ export async function POST(request: NextRequest) {
     const { query, type = 'indexing', num = 10 } = body;
 
     if (!query) {
-      return NextResponse.json(
-        { error: 'Missing query parameter' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing query parameter' }, { status: 400 });
     }
 
     console.log(`[Google CSE] Query: ${query}, Type: ${type}`);
@@ -74,7 +72,7 @@ export async function POST(request: NextRequest) {
 
     const response = await fetch(cseUrl, {
       headers: {
-        'Accept': 'application/json',
+        Accept: 'application/json',
       },
       signal: AbortSignal.timeout(20000),
     });
@@ -84,7 +82,7 @@ export async function POST(request: NextRequest) {
       console.error(`[Google CSE] API error: ${response.status}`, errorText);
       return NextResponse.json(
         { error: `Google CSE API error: ${response.status}`, details: errorText },
-        { status: 502 }
+        { status: 502 },
       );
     }
 
@@ -94,7 +92,9 @@ export async function POST(request: NextRequest) {
     const items = data.items || [];
     const searchInformation = data.searchInformation || {};
 
-    console.log(`[Google CSE] Found ${items.length} results, totalResults: ${searchInformation.totalResults}`);
+    console.log(
+      `[Google CSE] Found ${items.length} results, totalResults: ${searchInformation.totalResults}`,
+    );
 
     // 根据类型格式化结果
     let results: any[] = [];
@@ -113,7 +113,6 @@ export async function POST(request: NextRequest) {
         foundUrls: foundUrls.slice(0, 10),
         searchTime: searchInformation.searchTime,
       });
-
     } else {
       // 排名检查模式
       results = items.map((item: any, index: number) => ({
@@ -140,12 +139,11 @@ export async function POST(request: NextRequest) {
         formattedSearchTime: searchInformation.formattedSearchTime,
       },
     });
-
   } catch (error: any) {
     console.error('[Google CSE] Error:', error);
     return NextResponse.json(
       { error: 'Internal server error', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }

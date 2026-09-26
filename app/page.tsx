@@ -1,5 +1,5 @@
-﻿import Link from "next/link";
-import dynamic from "next/dynamic";
+﻿import Link from 'next/link';
+import dynamic from 'next/dynamic';
 import {
   Sparkles,
   Trophy,
@@ -22,47 +22,78 @@ import {
   Layers,
   TrendingUp,
   FileText,
-} from "lucide-react";
-import toolsData from "@/data/tools-index.json";
-import postsData from "@/data/posts.json";
-import type { Tool } from "@/types";
-import { FadeIn } from "@/components/animations";
-import { SubmitToolCTA } from "@/components/community/SubmitToolCTA";
-import { calculateScoreResult } from "@/lib/scoring";
-import { OrganizationSchema } from "@/components/seo/Schema";
+} from 'lucide-react';
+import toolsData from '@/data/tools-index.json';
+import postsData from '@/data/posts.json';
+import type { Tool } from '@/types';
+import { FadeIn } from '@/components/animations';
+import { SubmitToolCTA } from '@/components/community/SubmitToolCTA';
+import { calculateScoreResult } from '@/lib/scoring';
+import { OrganizationSchema } from '@/components/seo/Schema';
 
 // Dynamic import heavy components
-const ToolList = dynamic(() => import("@/components/tools/ToolList").then(m => m.ToolList), {
+const ToolList = dynamic(() => import('@/components/tools/ToolList').then((m) => m.ToolList), {
   loading: () => <div className="animate-pulse h-64 bg-zinc-100 dark:bg-zinc-800 rounded-xl" />,
 });
-const NewsletterSignup = dynamic(() => import("@/components/monetization/NewsletterSignup").then(m => m.NewsletterSignup), {
-  ssr: false,
-  loading: () => null,
-});
+const NewsletterSignup = dynamic(
+  () => import('@/components/monetization/NewsletterSignup').then((m) => m.NewsletterSignup),
+  {
+    ssr: false,
+    loading: () => null,
+  },
+);
 
 const CATEGORIES = [
-  { slug: "chat", name: "AI Chat", icon: MessageSquare },
-  { slug: "writing", name: "AI Writing", icon: PenTool },
-  { slug: "image", name: "AI Image", icon: ImageIcon },
-  { slug: "code", name: "AI Coding", icon: Code },
-  { slug: "video", name: "AI Video", icon: Video },
-  { slug: "audio", name: "AI Audio", icon: Music },
-  { slug: "productivity", name: "AI Office", icon: Briefcase },
-  { slug: "search", name: "AI Search", icon: SearchIcon },
-  { slug: "agent", name: "AI Agent", icon: Bot },
-  { slug: "design", name: "AI Design", icon: Palette },
+  { slug: 'chat', name: 'AI Chat', icon: MessageSquare },
+  { slug: 'writing', name: 'AI Writing', icon: PenTool },
+  { slug: 'image', name: 'AI Image', icon: ImageIcon },
+  { slug: 'code', name: 'AI Coding', icon: Code },
+  { slug: 'video', name: 'AI Video', icon: Video },
+  { slug: 'audio', name: 'AI Audio', icon: Music },
+  { slug: 'productivity', name: 'AI Office', icon: Briefcase },
+  { slug: 'search', name: 'AI Search', icon: SearchIcon },
+  { slug: 'agent', name: 'AI Agent', icon: Bot },
+  { slug: 'design', name: 'AI Design', icon: Palette },
 ];
 
 const METHODOLOGY = [
-  { icon: Zap, title: "Features & Output Quality", weight: "25%", desc: "Core feature completeness, output accuracy, and use case coverage" },
-  { icon: Layers, title: "User Experience", weight: "20%", desc: "Interface design, learning curve, documentation quality" },
-  { icon: Star, title: "Price vs. Value", weight: "20%", desc: "Cost transparency, free tier, return on investment" },
-  { icon: Code, title: "Integrations & Developers", weight: "15%", desc: "API quality, platform compatibility, ecosystem" },
-  { icon: Shield, title: "Support & Reliability", weight: "10%", desc: "Uptime, update frequency, customer support" },
-  { icon: CheckCircle2, title: "Ethics and Transparency", weight: "10%", desc: "Data privacy, bias disclosure, responsible AI" },
+  {
+    icon: Zap,
+    title: 'Features & Output Quality',
+    weight: '25%',
+    desc: 'Core feature completeness, output accuracy, and use case coverage',
+  },
+  {
+    icon: Layers,
+    title: 'User Experience',
+    weight: '20%',
+    desc: 'Interface design, learning curve, documentation quality',
+  },
+  {
+    icon: Star,
+    title: 'Price vs. Value',
+    weight: '20%',
+    desc: 'Cost transparency, free tier, return on investment',
+  },
+  {
+    icon: Code,
+    title: 'Integrations & Developers',
+    weight: '15%',
+    desc: 'API quality, platform compatibility, ecosystem',
+  },
+  {
+    icon: Shield,
+    title: 'Support & Reliability',
+    weight: '10%',
+    desc: 'Uptime, update frequency, customer support',
+  },
+  {
+    icon: CheckCircle2,
+    title: 'Ethics and Transparency',
+    weight: '10%',
+    desc: 'Data privacy, bias disclosure, responsible AI',
+  },
 ];
-
-
 
 export default function HomePage() {
   const tools = toolsData as Tool[];
@@ -80,12 +111,13 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            name: "AIToolCrux",
-            url: "https://www.aitoolcrux.com",
-            description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework.",
-            inLanguage: "en",
+            '@context': 'https://schema.org',
+            '@type': 'WebSite',
+            name: 'AIToolCrux',
+            url: 'https://www.aitoolcrux.com',
+            description:
+              'Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework.',
+            inLanguage: 'en',
           }),
         }}
       />
@@ -98,8 +130,9 @@ export default function HomePage() {
         <div
           className="absolute inset-0 opacity-[0.03]"
           style={{
-            backgroundImage: "linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
+            backgroundImage:
+              'linear-gradient(to right, white 1px, transparent 1px), linear-gradient(to bottom, white 1px, transparent 1px)',
+            backgroundSize: '60px 60px',
           }}
         />
 
@@ -124,7 +157,8 @@ export default function HomePage() {
 
               <FadeIn delay={0.3} y={20}>
                 <p className="text-lg text-zinc-400 mb-8 max-w-xl leading-relaxed">
-                  {tools.length}+ AI tools evaluated across six dimensions: features, UX, pricing, integrations, support, and ethics. No paid placements, no affiliate bias.
+                  {tools.length}+ AI tools evaluated across six dimensions: features, UX, pricing,
+                  integrations, support, and ethics. No paid placements, no affiliate bias.
                 </p>
               </FadeIn>
 
@@ -146,7 +180,9 @@ export default function HomePage() {
                     AI Tool Matcher
                   </Link>
                 </div>
-                <p className="text-xs text-zinc-500 mt-3">Updated daily · No paid rankings · 100% editorially independent</p>
+                <p className="text-xs text-zinc-500 mt-3">
+                  Updated daily · No paid rankings · 100% editorially independent
+                </p>
               </FadeIn>
 
               {/* Stats - left aligned, not centered */}
@@ -172,7 +208,9 @@ export default function HomePage() {
               {/* Mobile Top3 horizontal scroll (P0-UX-MOBILE-HERO-001) */}
               {/* Removed FadeIn wrapper: whileInView opacity:0 caused invisible cards on mobile */}
               <div className="mt-8 lg:hidden">
-                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">Top 3 Rated Tools</div>
+                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">
+                  Top 3 Rated Tools
+                </div>
                 <div className="flex gap-3 overflow-x-auto snap-x snap-mandatory pb-2 -mx-4 px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   {topTools.slice(0, 3).map((tool, i) => (
                     <Link
@@ -189,7 +227,9 @@ export default function HomePage() {
                       <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
                       <div className="text-xs text-zinc-500 truncate mb-2">{tool.vendor}</div>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-emerald-400 font-bold text-lg tabular-nums">{tool.total.toFixed(1)}</span>
+                        <span className="text-emerald-400 font-bold text-lg tabular-nums">
+                          {tool.total.toFixed(1)}
+                        </span>
                         <span className="text-xs text-zinc-600">/10</span>
                       </div>
                     </Link>
@@ -199,14 +239,46 @@ export default function HomePage() {
 
               {/* Mobile quick-access chips (提升内容发现率, NN/g: 可见导航发现率48% vs 汉堡21%) */}
               <div className="mt-6 lg:hidden">
-                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">Quick Access</div>
+                <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-3">
+                  Quick Access
+                </div>
                 <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-                  <Link href="/category/chat" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">AI Chat</Link>
-                  <Link href="/category/image" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">AI Image</Link>
-                  <Link href="/category/code" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">AI Coding</Link>
-                  <Link href="/category/writing" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">AI Writing</Link>
-                  <Link href="/category/video" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">AI Video</Link>
-                  <Link href="/blog" className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors">Reviews</Link>
+                  <Link
+                    href="/category/chat"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                  >
+                    AI Chat
+                  </Link>
+                  <Link
+                    href="/category/image"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                  >
+                    AI Image
+                  </Link>
+                  <Link
+                    href="/category/code"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                  >
+                    AI Coding
+                  </Link>
+                  <Link
+                    href="/category/writing"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                  >
+                    AI Writing
+                  </Link>
+                  <Link
+                    href="/category/video"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                  >
+                    AI Video
+                  </Link>
+                  <Link
+                    href="/blog"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                  >
+                    Reviews
+                  </Link>
                 </div>
               </div>
             </div>
@@ -215,7 +287,9 @@ export default function HomePage() {
             <div className="lg:col-span-5 hidden lg:block">
               <FadeIn delay={0.3} y={30}>
                 <div className="space-y-3">
-                  <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">Top 3 Rated Tools</div>
+                  <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">
+                    Top 3 Rated Tools
+                  </div>
                   {topTools.slice(0, 3).map((tool, i) => (
                     <Link
                       key={tool.slug}
@@ -226,11 +300,15 @@ export default function HomePage() {
                         {tool.name.charAt(0).toUpperCase()}
                       </div>
                       <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-white group-hover:text-emerald-400 transition-colors truncate">{tool.name}</div>
+                        <div className="font-semibold text-white group-hover:text-emerald-400 transition-colors truncate">
+                          {tool.name}
+                        </div>
                         <div className="text-xs text-zinc-500 truncate">{tool.vendor}</div>
                       </div>
                       <div className="text-right">
-                        <div className="text-xl font-bold text-emerald-400 tabular-nums">{tool.total.toFixed(1)}</div>
+                        <div className="text-xl font-bold text-emerald-400 tabular-nums">
+                          {tool.total.toFixed(1)}
+                        </div>
                         <div className="text-[10px] text-zinc-500">/10</div>
                       </div>
                       <div className="w-6 h-6 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
@@ -238,7 +316,10 @@ export default function HomePage() {
                       </div>
                     </Link>
                   ))}
-                  <Link href="/ranking" className="flex items-center justify-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors pt-2">
+                  <Link
+                    href="/ranking"
+                    className="flex items-center justify-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors pt-2"
+                  >
                     View all {tools.length} rankings
                     <ArrowRight className="w-4 h-4" />
                   </Link>
@@ -261,15 +342,25 @@ export default function HomePage() {
             </div>
             <div className="space-y-4">
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">What is AIToolCrux?</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  What is AIToolCrux?
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                  AIToolCrux is an independent AI tool review platform evaluating 500+ tools across 6 dimensions: functionality (25%), UX (20%), pricing (20%), integrations (15%), support (10%), ethics (10%). Every tool is hands-on tested with standardized benchmarks to help you choose the right AI tool.
+                  AIToolCrux is an independent AI tool review platform evaluating 500+ tools across
+                  6 dimensions: functionality (25%), UX (20%), pricing (20%), integrations (15%),
+                  support (10%), ethics (10%). Every tool is hands-on tested with standardized
+                  benchmarks to help you choose the right AI tool.
                 </p>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How do I choose the best AI tool?</h3>
+                <h3 className="font-semibold text-gray-900 dark:text-white mb-2">
+                  How do I choose the best AI tool?
+                </h3>
                 <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-sm">
-                  Start by identifying your use case (chat, writing, image, code, video, audio, productivity, search, agent, design). Compare tools in that category using our 6-dimension scores, check free tier availability, and read hands-on test metrics. Top leaders include ChatGPT, Claude, Gemini, Midjourney, and GitHub Copilot.
+                  Start by identifying your use case (chat, writing, image, code, video, audio,
+                  productivity, search, agent, design). Compare tools in that category using our
+                  6-dimension scores, check free tier availability, and read hands-on test metrics.
+                  Top leaders include ChatGPT, Claude, Gemini, Midjourney, and GitHub Copilot.
                 </p>
               </div>
             </div>
@@ -283,16 +374,18 @@ export default function HomePage() {
             </div>
             <div className="space-y-3">
               {[
-                "500+ AI tools reviewed across 10 categories with transparent 6-dimension scoring",
-                "Hands-on testing with standardized benchmarks, not just vendor claims",
-                "Free tier filtering to find tools matching your budget immediately",
-                "Real user experience data from 3+ weeks of testing per tool",
-                "Updated regularly to reflect latest AI tool features and pricing",
-                "100% independent — no paid placements, affiliate links clearly disclosed",
+                '500+ AI tools reviewed across 10 categories with transparent 6-dimension scoring',
+                'Hands-on testing with standardized benchmarks, not just vendor claims',
+                'Free tier filtering to find tools matching your budget immediately',
+                'Real user experience data from 3+ weeks of testing per tool',
+                'Updated regularly to reflect latest AI tool features and pricing',
+                '100% independent — no paid placements, affiliate links clearly disclosed',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
                   <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">{i + 1}</span>
+                    <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                      {i + 1}
+                    </span>
                   </div>
                   <p className="text-gray-700 dark:text-gray-300 text-sm">{item}</p>
                 </div>
@@ -356,17 +449,31 @@ export default function HomePage() {
               AI Image Generation
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "image").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'image')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/image"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all image tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -379,17 +486,31 @@ export default function HomePage() {
               AI Coding Tools
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "code").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'code')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/code"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all coding tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -402,17 +523,31 @@ export default function HomePage() {
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "audio").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'audio')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/audio"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all audio tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -425,17 +560,31 @@ export default function HomePage() {
               AI Productivity
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "productivity").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'productivity')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/productivity"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -448,17 +597,31 @@ export default function HomePage() {
               AI Chat & Assistants
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "chat").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'chat')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/chat" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/chat"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all chat tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -471,17 +634,31 @@ export default function HomePage() {
               AI Writing & Content
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "writing").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'writing')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/writing" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/writing"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all writing tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -494,17 +671,31 @@ export default function HomePage() {
               AI Video Generation
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "video").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'video')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/video" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/video"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all video tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -517,17 +708,31 @@ export default function HomePage() {
               AI Search & Research
             </h3>
             <div className="space-y-2">
-              {tools.filter(t => t.category === "search").slice(0, 4).map((tool) => {
-                const total = calculateScoreResult(tool.scores).total;
-                return (
-                  <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
-                  </Link>
-                );
-              })}
+              {tools
+                .filter((t) => t.category === 'search')
+                .slice(0, 4)
+                .map((tool) => {
+                  const total = calculateScoreResult(tool.scores).total;
+                  return (
+                    <Link
+                      key={tool.slug}
+                      href={`/tools/${tool.slug}`}
+                      className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
+                    >
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                        {tool.name}
+                      </span>
+                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                        {total.toFixed(1)}
+                      </span>
+                    </Link>
+                  );
+                })}
             </div>
-            <Link href="/category/search" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/category/search"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               View all search tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -570,7 +775,8 @@ export default function HomePage() {
                 How We Score
               </h2>
               <p className="text-zinc-500 dark:text-zinc-400 mb-6 leading-relaxed">
-                Every tool is evaluated across six dimensions with transparent weighting. No affiliate revenue affects our ratings.
+                Every tool is evaluated across six dimensions with transparent weighting. No
+                affiliate revenue affects our ratings.
               </p>
               <Link
                 href="/methodology"
@@ -692,20 +898,25 @@ export default function HomePage() {
               The AI Tool Landscape in 2026
             </h2>
             <p className="text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto">
-              Key trends and statistics shaping the AI tools industry, based on our ongoing research and analysis of 500+ tools.
+              Key trends and statistics shaping the AI tools industry, based on our ongoing research
+              and analysis of 500+ tools.
             </p>
           </div>
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
             {[
-              { value: "500+", label: "AI Tools Reviewed", desc: "Across 10 categories" },
-              { value: "6", label: "Evaluation Dimensions", desc: "Transparent weighted scoring" },
-              { value: "100%", label: "Independent Reviews", desc: "No paid placements" },
-              { value: "3+", label: "Weeks Testing Per Tool", desc: "Hands-on benchmarking" }
+              { value: '500+', label: 'AI Tools Reviewed', desc: 'Across 10 categories' },
+              { value: '6', label: 'Evaluation Dimensions', desc: 'Transparent weighted scoring' },
+              { value: '100%', label: 'Independent Reviews', desc: 'No paid placements' },
+              { value: '3+', label: 'Weeks Testing Per Tool', desc: 'Hands-on benchmarking' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">{stat.value}</div>
-                <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-1">{stat.label}</div>
+                <div className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-1">
+                  {stat.label}
+                </div>
                 <div className="text-xs text-zinc-500 dark:text-zinc-500">{stat.desc}</div>
               </div>
             ))}
@@ -714,29 +925,44 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
               <TrendingUp className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
-              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">Rapid Market Growth</h3>
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
+                Rapid Market Growth
+              </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                The AI tools market continues explosive growth, with new tools launching weekly. Our database tracks 500+ tools across chat, writing, image, code, video, audio, productivity, search, agent, and design categories.
+                The AI tools market continues explosive growth, with new tools launching weekly. Our
+                database tracks 500+ tools across chat, writing, image, code, video, audio,
+                productivity, search, agent, and design categories.
               </p>
             </div>
             <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
               <Layers className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
-              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">Consolidation Trend</h3>
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
+                Consolidation Trend
+              </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Leading platforms are expanding into multi-modal capabilities. Chat tools now include image generation, coding assistants add deployment features, and productivity suites integrate AI across all workflows.
+                Leading platforms are expanding into multi-modal capabilities. Chat tools now
+                include image generation, coding assistants add deployment features, and
+                productivity suites integrate AI across all workflows.
               </p>
             </div>
             <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
               <Shield className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
-              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">Ethics & Transparency</h3>
+              <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
+                Ethics & Transparency
+              </h3>
               <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-                Users increasingly demand transparent AI practices. Our ethics dimension evaluates data privacy policies, bias mitigation, content labeling, and responsible AI commitments for every tool we review.
+                Users increasingly demand transparent AI practices. Our ethics dimension evaluates
+                data privacy policies, bias mitigation, content labeling, and responsible AI
+                commitments for every tool we review.
               </p>
             </div>
           </div>
 
           <div className="mt-10 text-center">
-            <Link href="/blog" className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+            >
               Read our latest AI industry analysis
               <ArrowRight className="w-4 h-4" />
             </Link>
@@ -760,34 +986,39 @@ export default function HomePage() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           {[
             {
-              q: "How does AIToolCrux evaluate AI tools?",
-              a: "We evaluate every AI tool across six weighted dimensions: Features & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with standardized benchmarks over a minimum of three weeks."
+              q: 'How does AIToolCrux evaluate AI tools?',
+              a: 'We evaluate every AI tool across six weighted dimensions: Features & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with standardized benchmarks over a minimum of three weeks.',
             },
             {
-              q: "Are AIToolCrux reviews independent and unbiased?",
-              a: "Yes. We are 100% independent. No tool can pay for a higher ranking or positive review. Our scoring is based entirely on our six-dimension evaluation framework. While some tools may have affiliate links, these never influence our ratings or rankings. We clearly disclose all affiliate relationships."
+              q: 'Are AIToolCrux reviews independent and unbiased?',
+              a: 'Yes. We are 100% independent. No tool can pay for a higher ranking or positive review. Our scoring is based entirely on our six-dimension evaluation framework. While some tools may have affiliate links, these never influence our ratings or rankings. We clearly disclose all affiliate relationships.',
             },
             {
-              q: "What is the best AI tool for beginners?",
-              a: "For beginners, we recommend starting with user-friendly tools like ChatGPT for general AI chat, Canva AI for design, and Notion AI for productivity. These tools have intuitive interfaces, generous free tiers, and extensive documentation. Our category pages filter tools by ease of use to help beginners find the right tool quickly."
+              q: 'What is the best AI tool for beginners?',
+              a: 'For beginners, we recommend starting with user-friendly tools like ChatGPT for general AI chat, Canva AI for design, and Notion AI for productivity. These tools have intuitive interfaces, generous free tiers, and extensive documentation. Our category pages filter tools by ease of use to help beginners find the right tool quickly.',
             },
             {
-              q: "How often are AI tool reviews updated?",
-              a: "Our Top 100 tools are re-evaluated quarterly to reflect the latest features, pricing changes, and performance improvements. New tools are added weekly as they reach significant market adoption. Major updates (like GPT-5 releases or Claude model upgrades) trigger immediate re-evaluation of affected tools."
+              q: 'How often are AI tool reviews updated?',
+              a: 'Our Top 100 tools are re-evaluated quarterly to reflect the latest features, pricing changes, and performance improvements. New tools are added weekly as they reach significant market adoption. Major updates (like GPT-5 releases or Claude model upgrades) trigger immediate re-evaluation of affected tools.',
             },
             {
-              q: "Do you offer free AI tool recommendations?",
-              a: "Yes. All our reviews, rankings, and comparisons are completely free to access. We don't have a paywall or require registration. You can filter tools by free tier availability on our category pages to find tools that match your budget. Our AI Tool Matcher also provides free personalized recommendations."
+              q: 'Do you offer free AI tool recommendations?',
+              a: "Yes. All our reviews, rankings, and comparisons are completely free to access. We don't have a paywall or require registration. You can filter tools by free tier availability on our category pages to find tools that match your budget. Our AI Tool Matcher also provides free personalized recommendations.",
             },
             {
-              q: "How do I choose between similar AI tools?",
-              a: "Start by identifying your primary use case and must-have features. Use our comparison articles for head-to-head analysis of popular tool pairs. Check our six-dimension scores for each tool, paying special attention to the dimensions most important to your workflow. Finally, take advantage of free tiers to test 2-3 top candidates before committing."
-            }
+              q: 'How do I choose between similar AI tools?',
+              a: 'Start by identifying your primary use case and must-have features. Use our comparison articles for head-to-head analysis of popular tool pairs. Check our six-dimension scores for each tool, paying special attention to the dimensions most important to your workflow. Finally, take advantage of free tiers to test 2-3 top candidates before committing.',
+            },
           ].map((faq, i) => (
-            <div key={i} className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
+            <div
+              key={i}
+              className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6"
+            >
               <h3 className="text-base font-semibold text-zinc-900 dark:text-white mb-3 flex items-start gap-3">
                 <span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">Q</span>
+                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                    Q
+                  </span>
                 </span>
                 {faq.q}
               </h3>
@@ -804,59 +1035,59 @@ export default function HomePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
               {
-                "@type": "Question",
-                "name": "How does AIToolCrux evaluate AI tools?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We evaluate every AI tool across six weighted dimensions: Features & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with standardized benchmarks over a minimum of three weeks."
-                }
+                '@type': 'Question',
+                name: 'How does AIToolCrux evaluate AI tools?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We evaluate every AI tool across six weighted dimensions: Features & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool undergoes hands-on testing with standardized benchmarks over a minimum of three weeks.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "Are AIToolCrux reviews independent and unbiased?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. We are 100% independent. No tool can pay for a higher ranking or positive review. Our scoring is based entirely on our six-dimension evaluation framework. While some tools may have affiliate links, these never influence our ratings or rankings."
-                }
+                '@type': 'Question',
+                name: 'Are AIToolCrux reviews independent and unbiased?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. We are 100% independent. No tool can pay for a higher ranking or positive review. Our scoring is based entirely on our six-dimension evaluation framework. While some tools may have affiliate links, these never influence our ratings or rankings.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "What is the best AI tool for beginners?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "For beginners, we recommend starting with user-friendly tools like ChatGPT for general AI chat, Canva AI for design, and Notion AI for productivity. These tools have intuitive interfaces, generous free tiers, and extensive documentation."
-                }
+                '@type': 'Question',
+                name: 'What is the best AI tool for beginners?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'For beginners, we recommend starting with user-friendly tools like ChatGPT for general AI chat, Canva AI for design, and Notion AI for productivity. These tools have intuitive interfaces, generous free tiers, and extensive documentation.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "How often are AI tool reviews updated?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Our Top 100 tools are re-evaluated quarterly to reflect the latest features, pricing changes, and performance improvements. New tools are added weekly as they reach significant market adoption."
-                }
+                '@type': 'Question',
+                name: 'How often are AI tool reviews updated?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Our Top 100 tools are re-evaluated quarterly to reflect the latest features, pricing changes, and performance improvements. New tools are added weekly as they reach significant market adoption.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "Do you offer free AI tool recommendations?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes. All our reviews, rankings, and comparisons are completely free to access. We don't have a paywall or require registration. You can filter tools by free tier availability on our category pages."
-                }
+                '@type': 'Question',
+                name: 'Do you offer free AI tool recommendations?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: "Yes. All our reviews, rankings, and comparisons are completely free to access. We don't have a paywall or require registration. You can filter tools by free tier availability on our category pages.",
+                },
               },
               {
-                "@type": "Question",
-                "name": "How do I choose between similar AI tools?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Start by identifying your primary use case and must-have features. Use our comparison articles for head-to-head analysis. Check our six-dimension scores, and take advantage of free tiers to test 2-3 top candidates before committing."
-                }
-              }
-            ]
-          })
+                '@type': 'Question',
+                name: 'How do I choose between similar AI tools?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Start by identifying your primary use case and must-have features. Use our comparison articles for head-to-head analysis. Check our six-dimension scores, and take advantage of free tiers to test 2-3 top candidates before committing.',
+                },
+              },
+            ],
+          }),
         }}
       />
 
@@ -867,7 +1098,8 @@ export default function HomePage() {
             Not sure which AI tool to choose?
           </h2>
           <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
-            Tell us your use case and priorities, and we'll match you with the perfect AI tool based on our six-dimension scoring.
+            Tell us your use case and priorities, and we'll match you with the perfect AI tool based
+            on our six-dimension scoring.
           </p>
           <Link
             href="/generator"

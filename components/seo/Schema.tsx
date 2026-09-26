@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useEffect } from "react";
+import { useEffect } from 'react';
 
 interface ReviewSchemaProps {
   name: string;
@@ -23,36 +23,36 @@ export function ReviewSchema({
   ratingValue,
   bestRating = 10,
   worstRating = 1,
-  author = "AIToolCrux Editorial Team",
-  datePublished = new Date().toISOString().split("T")[0],
+  author = 'AIToolCrux Editorial Team',
+  datePublished = new Date().toISOString().split('T')[0],
   itemReviewed,
 }: ReviewSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "Review",
+    '@context': 'https://schema.org',
+    '@type': 'Review',
     name: name,
     reviewBody: reviewBody,
     reviewRating: {
-      "@type": "Rating",
+      '@type': 'Rating',
       ratingValue: ratingValue,
       bestRating: bestRating,
       worstRating: worstRating,
     },
     author: {
-      "@type": "Person",
+      '@type': 'Person',
       name: author,
-      jobTitle: "Senior AI Tools Reviewer",
+      jobTitle: 'Senior AI Tools Reviewer',
     },
     datePublished: datePublished,
     itemReviewed: {
-      "@type": "SoftwareApplication",
+      '@type': 'SoftwareApplication',
       name: itemReviewed || name,
-      applicationCategory: "WebApplication",
+      applicationCategory: 'WebApplication',
     },
     publisher: {
-      "@type": "Organization",
-      name: "AIToolCrux",
-      url: "https://www.aitoolcrux.com",
+      '@type': 'Organization',
+      name: 'AIToolCrux',
+      url: 'https://www.aitoolcrux.com',
     },
   };
 
@@ -77,13 +77,13 @@ interface FAQSchemaProps {
  */
 export function FAQSchema({ faqs }: FAQSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
     mainEntity: faqs.map((faq) => ({
-      "@type": "Question",
+      '@type': 'Question',
       name: faq.question,
       acceptedAnswer: {
-        "@type": "Answer",
+        '@type': 'Answer',
         text: faq.answer,
       },
     })),
@@ -117,31 +117,31 @@ export function ProductSchema({
   name,
   description,
   brand,
-  category = "AI Tool",
+  category = 'AI Tool',
   ratingValue,
   reviewCount = 1,
-  price = "Free",
+  price = 'Free',
   image,
   url,
 }: ProductSchemaProps) {
   const schema: any = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
     name: name,
     description: description,
     applicationCategory: category,
-    operatingSystem: "Web",
+    operatingSystem: 'Web',
     offers: {
-      "@type": "Offer",
-      price: price === "Free" ? "0" : String(price).replace(/[^0-9.]/g, ""),
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
+      '@type': 'Offer',
+      price: price === 'Free' ? '0' : String(price).replace(/[^0-9.]/g, ''),
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
     },
   };
 
   if (brand) {
     schema.brand = {
-      "@type": "Organization",
+      '@type': 'Organization',
       name: brand,
     };
   }
@@ -178,10 +178,10 @@ interface BreadcrumbSchemaProps {
  */
 export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
     itemListElement: items.map((item, index) => ({
-      "@type": "ListItem",
+      '@type': 'ListItem',
       position: index + 1,
       name: item.name,
       item: `https://www.aitoolcrux.com${item.url}`,
@@ -202,26 +202,27 @@ export function BreadcrumbSchema({ items }: BreadcrumbSchemaProps) {
  */
 export function OrganizationSchema() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "AIToolCrux",
-    url: "https://www.aitoolcrux.com",
-    logo: "https://www.aitoolcrux.com/logo.svg",
-    description: "Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.",
-    foundingDate: "2026",
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'AIToolCrux',
+    url: 'https://www.aitoolcrux.com',
+    logo: 'https://www.aitoolcrux.com/logo.svg',
+    description:
+      'Professional AI tool reviews, comparisons, and recommendations based on a six-dimensional evaluation framework. Discover the best AI tools for creators, developers, and businesses.',
+    foundingDate: '2026',
     sameAs: [
-      "https://github.com/qxgjz/ai-tools-review",
-      "https://twitter.com/aitoolcrux",
-      "https://www.linkedin.com/company/aitoolcrux",
-      "https://www.facebook.com/aitoolcrux",
-      "https://www.youtube.com/@aitoolcrux",
-      "https://www.reddit.com/r/aitoolcrux",
+      'https://github.com/qxgjz/ai-tools-review',
+      'https://twitter.com/aitoolcrux',
+      'https://www.linkedin.com/company/aitoolcrux',
+      'https://www.facebook.com/aitoolcrux',
+      'https://www.youtube.com/@aitoolcrux',
+      'https://www.reddit.com/r/aitoolcrux',
     ],
     contactPoint: {
-      "@type": "ContactPoint",
-      contactType: "customer support",
-      email: "support@aitoolcrux.com",
-      availableLanguage: ["English", "Chinese"],
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: 'support@aitoolcrux.com',
+      availableLanguage: ['English', 'Chinese'],
     },
   };
 
@@ -239,18 +240,18 @@ export function OrganizationSchema() {
  */
 export function WebSiteSchema() {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    name: "AIToolCrux",
-    url: "https://www.aitoolcrux.com",
-    description: "Professional AI tool reviews, comparisons, and recommendations.",
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'AIToolCrux',
+    url: 'https://www.aitoolcrux.com',
+    description: 'Professional AI tool reviews, comparisons, and recommendations.',
     potentialAction: {
-      "@type": "SearchAction",
+      '@type': 'SearchAction',
       target: {
-        "@type": "EntryPoint",
-        urlTemplate: "https://www.aitoolcrux.com/search?q={search_term_string}",
+        '@type': 'EntryPoint',
+        urlTemplate: 'https://www.aitoolcrux.com/search?q={search_term_string}',
       },
-      "query-input": "required name=search_term_string",
+      'query-input': 'required name=search_term_string',
     },
   };
 
@@ -261,7 +262,6 @@ export function WebSiteSchema() {
     />
   );
 }
-
 
 interface ComparisonItem {
   name: string;
@@ -289,50 +289,50 @@ export function ComparisonSchema({
   name,
   description,
   items,
-  author = "AIToolCrux Editorial Team",
-  datePublished = new Date().toISOString().split("T")[0],
+  author = 'AIToolCrux Editorial Team',
+  datePublished = new Date().toISOString().split('T')[0],
 }: ComparisonSchemaProps) {
   const schema = {
-    "@context": "https://schema.org",
-    "@type": "Article",
-    "headline": name,
-    "description": description,
-    "author": {
-      "@type": "Person",
-      "name": author,
-      "jobTitle": "Senior AI Tools Reviewer",
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: name,
+    description: description,
+    author: {
+      '@type': 'Person',
+      name: author,
+      jobTitle: 'Senior AI Tools Reviewer',
     },
-    "datePublished": datePublished,
-    "publisher": {
-      "@type": "Organization",
-      "name": "AIToolCrux",
-      "url": "https://www.aitoolcrux.com",
+    datePublished: datePublished,
+    publisher: {
+      '@type': 'Organization',
+      name: 'AIToolCrux',
+      url: 'https://www.aitoolcrux.com',
     },
-    "about": items.map((item) => ({
-      "@type": "SoftwareApplication",
-      "name": item.name,
-      "description": item.description || "",
-      "applicationCategory": "WebApplication",
-      "operatingSystem": "Web",
+    about: items.map((item) => ({
+      '@type': 'SoftwareApplication',
+      name: item.name,
+      description: item.description || '',
+      applicationCategory: 'WebApplication',
+      operatingSystem: 'Web',
       // aggregateRating removed: single editorial review (ratingCount=1) violates Google 2026-07 policy.
       // The rating is shown visually on the page but not marked up as aggregateRating in JSON-LD.
       ...(item.price && {
-        "offers": {
-          "@type": "Offer",
-          "price": item.price === "Free" ? "0" : item.price,
-          "priceCurrency": "USD",
+        offers: {
+          '@type': 'Offer',
+          price: item.price === 'Free' ? '0' : item.price,
+          priceCurrency: 'USD',
         },
       }),
-      ...(item.url && { "url": item.url }),
+      ...(item.url && { url: item.url }),
     })),
-    "mainEntity": {
-      "@type": "ItemList",
-      "itemListElement": items.map((item, index) => ({
-        "@type": "ListItem",
-        "position": index + 1,
-        "item": {
-          "@type": "SoftwareApplication",
-          "name": item.name,
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: items.map((item, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'SoftwareApplication',
+          name: item.name,
           // aggregateRating removed (Google 2026-07 policy compliance).
         },
       })),

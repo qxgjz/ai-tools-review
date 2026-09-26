@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { User, Twitter, Linkedin, Github, Globe } from "lucide-react";
+import Link from 'next/link';
+import { User, Twitter, Linkedin, Github, Globe } from 'lucide-react';
 
 interface AuthorBioProps {
   name?: string;
@@ -10,9 +10,9 @@ interface AuthorBioProps {
 }
 
 export function AuthorBio({
-  name = "AIToolCrux Editorial Team",
-  role = "AI Tools Expert & Reviewer",
-  bio = "Our editorial team has 8+ years of experience testing and reviewing AI tools. We conduct hands-on testing, compare features across 6 dimensions, and update reviews regularly to ensure you get the most accurate and up-to-date recommendations.",
+  name = 'AIToolCrux Editorial Team',
+  role = 'AI Tools Expert & Reviewer',
+  bio = 'Our editorial team has 8+ years of experience testing and reviewing AI tools. We conduct hands-on testing, compare features across 6 dimensions, and update reviews regularly to ensure you get the most accurate and up-to-date recommendations.',
   avatar,
   showLinks = true,
 }: AuthorBioProps) {
@@ -44,7 +44,9 @@ export function AuthorBio({
               Verified Expert
             </span>
           </div>
-          <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">{role}</p>
+          <p className="text-sm text-emerald-600 dark:text-emerald-400 font-medium mt-0.5">
+            {role}
+          </p>
           <p className="text-sm text-gray-600 dark:text-gray-400 mt-2 leading-relaxed">{bio}</p>
 
           {/* 链接 */}

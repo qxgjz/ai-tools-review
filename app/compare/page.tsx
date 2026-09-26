@@ -1,21 +1,21 @@
-﻿"use client";
+﻿'use client';
 
-import { useState, useMemo } from "react";
-import Link from "next/link";
-import tools from "@/data/tools-index.json";
-import type { Tool } from "@/types";
-import { calculateScoreResult, DIMENSION_LABELS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
-import { RadarChart } from "@/components/charts/RadarChart";
-import { MultiRadarChart } from "@/components/charts/MultiRadarChart";
-import { AffiliateCTA } from "@/components/monetization/AffiliateCTA";
+import { useState, useMemo } from 'react';
+import Link from 'next/link';
+import tools from '@/data/tools-index.json';
+import type { Tool } from '@/types';
+import { calculateScoreResult, DIMENSION_LABELS, GRADE_DESCRIPTIONS } from '@/lib/scoring';
+import { RadarChart } from '@/components/charts/RadarChart';
+import { MultiRadarChart } from '@/components/charts/MultiRadarChart';
+import { AffiliateCTA } from '@/components/monetization/AffiliateCTA';
 
 export default function ComparePage() {
   const [selectedSlugs, setSelectedSlugs] = useState<string[]>([]);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState('');
 
   const selectedTools = useMemo(
     () => tools.filter((t) => selectedSlugs.includes(t.slug)),
-    [selectedSlugs]
+    [selectedSlugs],
   );
 
   const filteredTools = useMemo(() => {
@@ -26,7 +26,7 @@ export default function ComparePage() {
         t.name.toLowerCase().includes(q) ||
         t.vendor.toLowerCase().includes(q) ||
         t.description.toLowerCase().includes(q) ||
-        t.tags.some((tag) => tag.toLowerCase().includes(q))
+        t.tags.some((tag) => tag.toLowerCase().includes(q)),
     );
   }, [searchQuery]);
 
@@ -43,12 +43,12 @@ export default function ComparePage() {
   };
 
   const dimensions = [
-    "functionality",
-    "ux",
-    "pricing",
-    "integration",
-    "support",
-    "ethics",
+    'functionality',
+    'ux',
+    'pricing',
+    'integration',
+    'support',
+    'ethics',
   ] as const;
 
   return (
@@ -58,128 +58,129 @@ export default function ComparePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "WebPage",
-            name: "AI Tool Comparison - AIToolCrux",
-            url: "https://www.aitoolcrux.com/compare",
-            description: "Compare AI tools side by side. Features, pricing, ratings, and more.",
-            inLanguage: "en",
+            '@context': 'https://schema.org',
+            '@type': 'WebPage',
+            name: 'AI Tool Comparison - AIToolCrux',
+            url: 'https://www.aitoolcrux.com/compare',
+            description: 'Compare AI tools side by side. Features, pricing, ratings, and more.',
+            inLanguage: 'en',
             mainEntity: {
-              "@type": "ItemList",
-              "name": "Top 10 AI Tools Comparison",
-              "description": "Side-by-side comparisons of the most popular AI tools across all categories",
-              "itemListElement": [
-              {
-                "@type": "ListItem",
-                "position": 1,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Grammarly",
-                  "url": "https://www.aitoolcrux.com/tools/grammarly",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 2,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Claude",
-                  "url": "https://www.aitoolcrux.com/tools/claude",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 3,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "GitHub Copilot",
-                  "url": "https://www.aitoolcrux.com/tools/github-copilot",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 4,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Cursor",
-                  "url": "https://www.aitoolcrux.com/tools/cursor",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 5,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "ElevenLabs",
-                  "url": "https://www.aitoolcrux.com/tools/elevenlabs",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 6,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "DALL·E 3",
-                  "url": "https://www.aitoolcrux.com/tools/dall-e-3",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 7,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Notion AI",
-                  "url": "https://www.aitoolcrux.com/tools/notion-ai",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 8,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Canva Magic",
-                  "url": "https://www.aitoolcrux.com/tools/canva-magic",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 9,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Windsurf",
-                  "url": "https://www.aitoolcrux.com/tools/windsurf",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              },
-              {
-                "@type": "ListItem",
-                "position": 10,
-                "item": {
-                  "@type": "SoftwareApplication",
-                  "name": "Perplexity",
-                  "url": "https://www.aitoolcrux.com/tools/perplexity",
-                  "applicationCategory": "AIApplication",
-                  "operatingSystem": "Web",
-                }
-              }
-              ]
+              '@type': 'ItemList',
+              name: 'Top 10 AI Tools Comparison',
+              description:
+                'Side-by-side comparisons of the most popular AI tools across all categories',
+              itemListElement: [
+                {
+                  '@type': 'ListItem',
+                  position: 1,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Grammarly',
+                    url: 'https://www.aitoolcrux.com/tools/grammarly',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 2,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Claude',
+                    url: 'https://www.aitoolcrux.com/tools/claude',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 3,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'GitHub Copilot',
+                    url: 'https://www.aitoolcrux.com/tools/github-copilot',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 4,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Cursor',
+                    url: 'https://www.aitoolcrux.com/tools/cursor',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 5,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'ElevenLabs',
+                    url: 'https://www.aitoolcrux.com/tools/elevenlabs',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 6,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'DALL·E 3',
+                    url: 'https://www.aitoolcrux.com/tools/dall-e-3',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 7,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Notion AI',
+                    url: 'https://www.aitoolcrux.com/tools/notion-ai',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 8,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Canva Magic',
+                    url: 'https://www.aitoolcrux.com/tools/canva-magic',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 9,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Windsurf',
+                    url: 'https://www.aitoolcrux.com/tools/windsurf',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+                {
+                  '@type': 'ListItem',
+                  position: 10,
+                  item: {
+                    '@type': 'SoftwareApplication',
+                    name: 'Perplexity',
+                    url: 'https://www.aitoolcrux.com/tools/perplexity',
+                    applicationCategory: 'AIApplication',
+                    operatingSystem: 'Web',
+                  },
+                },
+              ],
             },
           }),
         }}
@@ -192,27 +193,38 @@ export default function ComparePage() {
         >
           ← Back to Home
         </Link>
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">AI Tool Comparison 2026</h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
+          AI Tool Comparison 2026
+        </h1>
         <div className="flex items-center gap-2 mb-3">
           <span className="inline-flex items-center gap-1 px-3 py-1 rounded-full text-xs font-semibold bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400">
             ✅ Tested & Reviewed
           </span>
-          <span className="text-xs text-gray-500 dark:text-gray-400">533+ tools hands-on tested by our editorial team</span>
+          <span className="text-xs text-gray-500 dark:text-gray-400">
+            533+ tools hands-on tested by our editorial team
+          </span>
         </div>
         <p className="text-gray-600 dark:text-gray-400">
-          Compare 500+ AI tools side by side. Features, pricing, ratings, and detailed six-dimension analysis to find your perfect AI tool in 2026.
+          Compare 500+ AI tools side by side. Features, pricing, ratings, and detailed six-dimension
+          analysis to find your perfect AI tool in 2026.
         </p>
       </div>
-
 
       {/* Quick Answer - AEO Optimization */}
       <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800 p-6 mb-8">
         <div className="flex items-center gap-2 mb-3">
-          <span className="inline-flex items-center justify-center w-6 h-6 bg-emerald-500 text-white text-xs font-bold rounded-full">Q</span>
+          <span className="inline-flex items-center justify-center w-6 h-6 bg-emerald-500 text-white text-xs font-bold rounded-full">
+            Q
+          </span>
           <h2 className="text-lg font-bold text-gray-900 dark:text-white">Quick Answer</h2>
         </div>
         <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-          The <strong>best AI tool in 2026</strong> depends on your use case: <strong>ChatGPT</strong> for general-purpose conversational AI, <strong>Claude</strong> for long-form writing and analysis, <strong>Midjourney</strong> for image generation, <strong>Cursor</strong> for AI-powered coding, and <strong>ElevenLabs</strong> for voice synthesis. Use our side-by-side comparison below to compare features, pricing, and ratings across 500+ tools.
+          The <strong>best AI tool in 2026</strong> depends on your use case:{' '}
+          <strong>ChatGPT</strong> for general-purpose conversational AI, <strong>Claude</strong>{' '}
+          for long-form writing and analysis, <strong>Midjourney</strong> for image generation,{' '}
+          <strong>Cursor</strong> for AI-powered coding, and <strong>ElevenLabs</strong> for voice
+          synthesis. Use our side-by-side comparison below to compare features, pricing, and ratings
+          across 500+ tools.
         </p>
       </div>
 
@@ -221,201 +233,393 @@ export default function ComparePage() {
         <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Key Takeaways</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           <div className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">
+              1
+            </span>
             <div>
-              <p className="text-sm font-semibold text-gray-900 dark:text-white">6-Dimension Scoring</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Every tool rated on functionality, UX, pricing, integration, support, and ethics</p>
+              <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                6-Dimension Scoring
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Every tool rated on functionality, UX, pricing, integration, support, and ethics
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">
+              2
+            </span>
             <div>
-              <p className="text-sm font-semibold text-gray-900 dark:text-white">500+ Tools Compared</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">From chatbots to image generators, find the right tool for any task</p>
+              <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                500+ Tools Compared
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                From chatbots to image generators, find the right tool for any task
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">
+              3
+            </span>
             <div>
-              <p className="text-sm font-semibold text-gray-900 dark:text-white">Real User Testing</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Every tool tested hands-on for 3+ weeks with performance benchmarks</p>
+              <p className="text-sm font-semibold text-gray-900 dark:text-white">
+                Real User Testing
+              </p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Every tool tested hands-on for 3+ weeks with performance benchmarks
+              </p>
             </div>
           </div>
           <div className="flex items-start gap-3">
-            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+            <span className="flex-shrink-0 w-6 h-6 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full flex items-center justify-center text-sm font-bold">
+              4
+            </span>
             <div>
               <p className="text-sm font-semibold text-gray-900 dark:text-white">Updated Weekly</p>
-              <p className="text-xs text-gray-500 dark:text-gray-400">Pricing, features, and ratings refreshed regularly to stay current</p>
+              <p className="text-xs text-gray-500 dark:text-gray-400">
+                Pricing, features, and ratings refreshed regularly to stay current
+              </p>
             </div>
           </div>
         </div>
       </div>
 
-
       {/* Static Top 10 Comparison Table - SEO Indexable Content */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Top 10 AI Tools Comparison (2026)</h2>
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+          Top 10 AI Tools Comparison (2026)
+        </h2>
         <p className="text-gray-600 dark:text-gray-400 mb-6 text-sm">
-          We tested 533+ AI tools across 6 dimensions. Here are the top 10 ranked by our proprietary scoring model.
+          We tested 533+ AI tools across 6 dimensions. Here are the top 10 ranked by our proprietary
+          scoring model.
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>
               <tr className="bg-gray-50 dark:bg-gray-800/50">
-                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">#</th>
-                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">Tool</th>
-                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">Best For</th>
-                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">Starting Price</th>
-                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">Score</th>
+                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">
+                  #
+                </th>
+                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">
+                  Tool
+                </th>
+                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">
+                  Best For
+                </th>
+                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">
+                  Starting Price
+                </th>
+                <th className="text-left py-3 px-3 font-semibold text-gray-700 dark:text-gray-300">
+                  Score
+                </th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
               <tr>
                 <td className="py-3 px-3 text-gray-500">1</td>
-                <td className="py-3 px-3"><Link href="/tools/chatgpt" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">ChatGPT</Link></td>
-                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">All-purpose AI assistant</td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/chatgpt"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    ChatGPT
+                  </Link>
+                </td>
+                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">
+                  All-purpose AI assistant
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.5</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">9.5</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">2</td>
-                <td className="py-3 px-3"><Link href="/tools/claude" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Claude</Link></td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/claude"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Claude
+                  </Link>
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Long docs & coding</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.2</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">9.2</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">3</td>
-                <td className="py-3 px-3"><Link href="/tools/github-copilot" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">GitHub Copilot</Link></td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/github-copilot"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    GitHub Copilot
+                  </Link>
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI pair programming</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">$10 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.1</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">9.1</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">4</td>
-                <td className="py-3 px-3"><Link href="/tools/cursor" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Cursor</Link></td>
-                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI-native code editor</td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/cursor"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Cursor
+                  </Link>
+                </td>
+                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">
+                  AI-native code editor
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.0</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">9.0</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">5</td>
-                <td className="py-3 px-3"><Link href="/tools/elevenlabs" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">ElevenLabs</Link></td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/elevenlabs"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    ElevenLabs
+                  </Link>
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI voice synthesis</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $5 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">9.0</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">9.0</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">6</td>
-                <td className="py-3 px-3"><Link href="/tools/dall-e-3" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">DALL-E 3</Link></td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/dall-e-3"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    DALL-E 3
+                  </Link>
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI image generation</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Included in ChatGPT</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.9</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">8.9</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">7</td>
-                <td className="py-3 px-3"><Link href="/tools/notion-ai" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Notion AI</Link></td>
-                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Workspace AI assistant</td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/notion-ai"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Notion AI
+                  </Link>
+                </td>
+                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">
+                  Workspace AI assistant
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $10 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.9</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">8.9</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">8</td>
-                <td className="py-3 px-3"><Link href="/tools/canva-magic" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Canva Magic</Link></td>
-                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI design &amp; graphics</td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/canva-magic"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Canva Magic
+                  </Link>
+                </td>
+                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">
+                  AI design &amp; graphics
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $13 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.9</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">8.9</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">9</td>
-                <td className="py-3 px-3"><Link href="/tools/perplexity" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Perplexity</Link></td>
-                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">AI research with citations</td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/perplexity"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Perplexity
+                  </Link>
+                </td>
+                <td className="py-3 px-3 text-gray-600 dark:text-gray-400">
+                  AI research with citations
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.8</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">8.8</span>
+                </td>
               </tr>
               <tr>
                 <td className="py-3 px-3 text-gray-500">10</td>
-                <td className="py-3 px-3"><Link href="/tools/gemini" className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline">Gemini</Link></td>
+                <td className="py-3 px-3">
+                  <Link
+                    href="/tools/gemini"
+                    className="font-semibold text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    Gemini
+                  </Link>
+                </td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Google AI assistant</td>
                 <td className="py-3 px-3 text-gray-600 dark:text-gray-400">Free / $20 mo</td>
-                <td className="py-3 px-3"><span className="font-bold text-emerald-600">8.7</span></td>
+                <td className="py-3 px-3">
+                  <span className="font-bold text-emerald-600">8.7</span>
+                </td>
               </tr>
             </tbody>
           </table>
         </div>
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-4">
-          Rankings based on our 6-dimension scoring model (functionality, UX, pricing, integration, support, ethics). Updated September 2026.
+          Rankings based on our 6-dimension scoring model (functionality, UX, pricing, integration,
+          support, ethics). Updated September 2026.
         </p>
       </div>
 
       {/* Category Quick Links */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Compare by Category</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+          Compare by Category
+        </h2>
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-3">
-          <Link href="/category/chat" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/chat"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Chatbots
           </Link>
-          <Link href="/category/image" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/image"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Image Generators
           </Link>
-          <Link href="/category/video" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/video"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Video Tools
           </Link>
-          <Link href="/category/audio" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/audio"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Audio &amp; Voice
           </Link>
-          <Link href="/category/code" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/code"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Coding Assistants
           </Link>
-          <Link href="/category/writing" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/writing"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Writing Tools
           </Link>
-          <Link href="/category/productivity" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/category/productivity"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Productivity
           </Link>
-          <Link href="/blog" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/blog"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             All Comparisons
           </Link>
         </div>
       </div>
 
-
-
       {/* Popular Comparison Pages - Internal Linking */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Popular AI Tool Comparisons</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+          Popular AI Tool Comparisons
+        </h2>
         <p className="text-sm text-gray-600 dark:text-gray-400 mb-4">
-          Detailed head-to-head comparisons with real test data, pricing breakdowns, and honest verdicts.
+          Detailed head-to-head comparisons with real test data, pricing breakdowns, and honest
+          verdicts.
         </p>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
-          <Link href="/compare/chatgpt-vs-claude" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/chatgpt-vs-claude"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             ChatGPT vs Claude
           </Link>
-          <Link href="/compare/chatgpt-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/chatgpt-vs-gemini"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             ChatGPT vs Gemini
           </Link>
-          <Link href="/compare/claude-vs-gemini" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/claude-vs-gemini"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Claude vs Gemini
           </Link>
-          <Link href="/compare/midjourney-vs-dall-e-3" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/midjourney-vs-dall-e-3"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Midjourney vs DALL-E 3
           </Link>
-          <Link href="/compare/midjourney-vs-stable-diffusion" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/midjourney-vs-stable-diffusion"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Midjourney vs Stable Diffusion
           </Link>
-          <Link href="/compare/github-copilot-vs-cursor" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/github-copilot-vs-cursor"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             GitHub Copilot vs Cursor
           </Link>
-          <Link href="/compare/perplexity-vs-chatgpt" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/perplexity-vs-chatgpt"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Perplexity vs ChatGPT
           </Link>
-          <Link href="/compare/runway-vs-sora" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/runway-vs-sora"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Runway vs Sora
           </Link>
-          <Link href="/compare/notion-ai-vs-grammarly" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/notion-ai-vs-grammarly"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Notion AI vs Grammarly
           </Link>
-          <Link href="/compare/jasper-vs-copy-ai" className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300">
+          <Link
+            href="/compare/jasper-vs-copy-ai"
+            className="p-3 rounded-lg border border-gray-200 dark:border-gray-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-gray-700 dark:text-gray-300"
+          >
             Jasper vs Copy.ai
           </Link>
         </div>
@@ -423,36 +627,62 @@ export default function ComparePage() {
 
       {/* FAQ Section - GEO/Rich Snippet Optimization */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+          Frequently Asked Questions
+        </h2>
         <div className="space-y-4">
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">What is the best AI tool in 2026?</h3>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              What is the best AI tool in 2026?
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              The best AI tool depends on your use case: ChatGPT 5 for general conversations, Claude Opus 4 for long-form writing and analysis, Midjourney v7 for photorealistic image generation, Cursor for AI-native coding, and ElevenLabs for lifelike voice synthesis. Use our side-by-side comparison above to evaluate 500+ tools across functionality, pricing, and UX.
+              The best AI tool depends on your use case: ChatGPT 5 for general conversations, Claude
+              Opus 4 for long-form writing and analysis, Midjourney v7 for photorealistic image
+              generation, Cursor for AI-native coding, and ElevenLabs for lifelike voice synthesis.
+              Use our side-by-side comparison above to evaluate 500+ tools across functionality,
+              pricing, and UX.
             </p>
           </div>
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">How do I compare AI tools side by side?</h3>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              How do I compare AI tools side by side?
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              Select up to 3 tools from the picker below. Our comparison engine evaluates each tool across 6 dimensions: functionality, UX, pricing, integration, support, and ethics. You will see radar charts, pros and cons, and pricing breakdowns for each tool.
+              Select up to 3 tools from the picker below. Our comparison engine evaluates each tool
+              across 6 dimensions: functionality, UX, pricing, integration, support, and ethics. You
+              will see radar charts, pros and cons, and pricing breakdowns for each tool.
             </p>
           </div>
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Which AI tools are free in 2026?</h3>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              Which AI tools are free in 2026?
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              Top free AI tools include: ChatGPT (free tier), Google Gemini Flash (free tier), Claude (free tier), Stable Diffusion (open-source), Perplexity (free tier), and Canva AI (free tier). Most free tiers have usage limits but are sufficient for personal use.
+              Top free AI tools include: ChatGPT (free tier), Google Gemini Flash (free tier),
+              Claude (free tier), Stable Diffusion (open-source), Perplexity (free tier), and Canva
+              AI (free tier). Most free tiers have usage limits but are sufficient for personal use.
             </p>
           </div>
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Is ChatGPT better than Claude?</h3>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              Is ChatGPT better than Claude?
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              ChatGPT excels at coding, creativity, and third-party integrations. Claude excels at long-context analysis, writing quality, and ethical safety. For research and writing, Claude often produces more accurate results. For coding and general use, ChatGPT is more versatile. Compare both in our tool selector above.
+              ChatGPT excels at coding, creativity, and third-party integrations. Claude excels at
+              long-context analysis, writing quality, and ethical safety. For research and writing,
+              Claude often produces more accurate results. For coding and general use, ChatGPT is
+              more versatile. Compare both in our tool selector above.
             </p>
           </div>
           <div>
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">How accurate are your AI tool ratings?</h3>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              How accurate are your AI tool ratings?
+            </h3>
             <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-              Our ratings are based on hands-on testing of each tool for at least 3 weeks. We evaluate real-world usage scenarios, measure performance benchmarks, and compare pricing against alternatives. Every tool is scored across 6 weighted dimensions to ensure objectivity.
+              Our ratings are based on hands-on testing of each tool for at least 3 weeks. We
+              evaluate real-world usage scenarios, measure performance benchmarks, and compare
+              pricing against alternatives. Every tool is scored across 6 weighted dimensions to
+              ensure objectivity.
             </p>
           </div>
         </div>
@@ -498,18 +728,18 @@ export default function ComparePage() {
                 disabled={isDisabled}
                 className={`p-3 rounded-lg border text-left transition-all ${
                   isSelected
-                    ? "border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-500"
+                    ? 'border-emerald-500 bg-emerald-50 dark:bg-emerald-900/20 ring-1 ring-emerald-500'
                     : isDisabled
-                    ? "border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 opacity-50 cursor-not-allowed"
-                    : "border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-700 hover:bg-gray-50 dark:hover:bg-gray-800"
+                      ? 'border-gray-100 dark:border-gray-800 bg-gray-50 dark:bg-gray-900 opacity-50 cursor-not-allowed'
+                      : 'border-gray-200 dark:border-gray-700 hover:border-emerald-300 dark:hover:border-emerald-700 hover:bg-gray-50 dark:hover:bg-gray-800'
                 }`}
               >
                 <div className="flex items-center gap-2">
                   <div
                     className={`w-5 h-5 rounded border-2 flex items-center justify-center flex-shrink-0 ${
                       isSelected
-                        ? "border-emerald-500 bg-emerald-500"
-                        : "border-gray-300 dark:border-gray-600"
+                        ? 'border-emerald-500 bg-emerald-500'
+                        : 'border-gray-300 dark:border-gray-600'
                     }`}
                   >
                     {isSelected && (
@@ -532,7 +762,9 @@ export default function ComparePage() {
                     {tool.name}
                   </span>
                 </div>
-                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate">{tool.vendor}</p>
+                <p className="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate">
+                  {tool.vendor}
+                </p>
               </button>
             );
           })}
@@ -554,18 +786,20 @@ export default function ComparePage() {
                 >
                   <div className="flex items-start justify-between mb-4">
                     <div>
-                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">{tool.name}</h3>
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                        {tool.name}
+                      </h3>
                       <p className="text-sm text-gray-500 dark:text-gray-400">{tool.vendor}</p>
                     </div>
                     <span
                       className={`px-3 py-1 rounded-full text-sm font-bold ${
-                        result.grade === "S"
-                          ? "bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400"
-                          : result.grade === "A"
-                          ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400"
-                          : result.grade === "B"
-                          ? "bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400"
-                          : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400"
+                        result.grade === 'S'
+                          ? 'bg-amber-100 dark:bg-amber-900/30 text-amber-700 dark:text-amber-400'
+                          : result.grade === 'A'
+                            ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
+                            : result.grade === 'B'
+                              ? 'bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400'
+                              : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400'
                       }`}
                     >
                       {result.grade}
@@ -576,7 +810,7 @@ export default function ComparePage() {
                     <span className="text-lg text-gray-400 font-normal">/10</span>
                   </div>
                   <p className="text-sm text-gray-500 dark:text-gray-400">
-                    {GRADE_DESCRIPTIONS[result.grade]} · Updated  {tool.lastUpdated}
+                    {GRADE_DESCRIPTIONS[result.grade]} · Updated {tool.lastUpdated}
                   </p>
                 </Link>
               );
@@ -585,13 +819,15 @@ export default function ComparePage() {
 
           {/* 叠加雷达图Compare */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Six-Dimension Overlay Radar Chart Comparison</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
+              Six-Dimension Overlay Radar Chart Comparison
+            </h2>
             <div className="flex justify-center">
               <MultiRadarChart
                 tools={selectedTools.map((t, i) => ({
                   name: t.name,
                   scores: t.scores,
-                  color: ["#3b82f6", "#10b981", "#f59e0b"][i % 3],
+                  color: ['#3b82f6', '#10b981', '#f59e0b'][i % 3],
                 }))}
                 size={420}
               />
@@ -600,18 +836,50 @@ export default function ComparePage() {
 
           {/* 按场景推荐 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6">
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">Recommendations by Use Case</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white mb-6">
+              Recommendations by Use Case
+            </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
               {[
-                { scene: "Best Functionality", dim: "functionality", icon: "⚡", desc: "Core feature completeness, output accuracy" },
-                { scene: "Best for Beginners", dim: "ux", icon: "🎯", desc: "Intuitive interface, gentle learning curve" },
-                { scene: "Best Value for Money", dim: "pricing", icon: "💰", desc: "Generous free tier, transparent pricing" },
-                { scene: "Best for Developers", dim: "integration", icon: "🔧", desc: "API quality, platform compatibility" },
-                { scene: "Best Enterprise Reliability", dim: "support", icon: "🛡️", desc: "Uptime, update frequency" },
-                { scene: "Best Data Privacy", dim: "ethics", icon: "🔒", desc: "Data privacy, responsible AI" },
+                {
+                  scene: 'Best Functionality',
+                  dim: 'functionality',
+                  icon: '⚡',
+                  desc: 'Core feature completeness, output accuracy',
+                },
+                {
+                  scene: 'Best for Beginners',
+                  dim: 'ux',
+                  icon: '🎯',
+                  desc: 'Intuitive interface, gentle learning curve',
+                },
+                {
+                  scene: 'Best Value for Money',
+                  dim: 'pricing',
+                  icon: '💰',
+                  desc: 'Generous free tier, transparent pricing',
+                },
+                {
+                  scene: 'Best for Developers',
+                  dim: 'integration',
+                  icon: '🔧',
+                  desc: 'API quality, platform compatibility',
+                },
+                {
+                  scene: 'Best Enterprise Reliability',
+                  dim: 'support',
+                  icon: '🛡️',
+                  desc: 'Uptime, update frequency',
+                },
+                {
+                  scene: 'Best Data Privacy',
+                  dim: 'ethics',
+                  icon: '🔒',
+                  desc: 'Data privacy, responsible AI',
+                },
               ].map(({ scene, dim, icon, desc }) => {
                 const winner = selectedTools.reduce((best, t) =>
-                  (t.scores as any)[dim] > (best.scores as any)[dim] ? t : best
+                  (t.scores as any)[dim] > (best.scores as any)[dim] ? t : best,
                 );
                 return (
                   <div
@@ -620,7 +888,9 @@ export default function ComparePage() {
                   >
                     <div className="flex items-center gap-2 mb-2">
                       <span className="text-xl">{icon}</span>
-                      <span className="text-sm font-semibold text-gray-900 dark:text-white">{scene}</span>
+                      <span className="text-sm font-semibold text-gray-900 dark:text-white">
+                        {scene}
+                      </span>
                     </div>
                     <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">{desc}</p>
                     <div className="flex items-center justify-between">
@@ -640,7 +910,9 @@ export default function ComparePage() {
           {/* 详细CompareTable格 */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
             <div className="p-6 border-b border-gray-100 dark:border-gray-800">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Detailed Specification Comparison</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                Detailed Specification Comparison
+              </h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -664,7 +936,10 @@ export default function ComparePage() {
                   <tr>
                     <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Vendor</td>
                     {selectedTools.map((tool) => (
-                      <td key={tool.slug} className="py-3 px-4 text-sm text-gray-900 dark:text-white">
+                      <td
+                        key={tool.slug}
+                        className="py-3 px-4 text-sm text-gray-900 dark:text-white"
+                      >
                         {tool.vendor}
                       </td>
                     ))}
@@ -673,14 +948,19 @@ export default function ComparePage() {
                   <tr>
                     <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Category</td>
                     {selectedTools.map((tool) => (
-                      <td key={tool.slug} className="py-3 px-4 text-sm text-gray-900 dark:text-white">
+                      <td
+                        key={tool.slug}
+                        className="py-3 px-4 text-sm text-gray-900 dark:text-white"
+                      >
                         {tool.category}
                       </td>
                     ))}
                   </tr>
                   {/* Overall Score */}
                   <tr className="bg-emerald-50/50 dark:bg-emerald-900/10">
-                    <td className="py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">Overall Score</td>
+                    <td className="py-3 px-4 text-sm font-semibold text-gray-700 dark:text-gray-300">
+                      Overall Score
+                    </td>
                     {selectedTools.map((tool) => {
                       const result = calculateScoreResult(tool.scores);
                       return (
@@ -709,14 +989,16 @@ export default function ComparePage() {
                               <div className="flex-1 bg-gray-100 dark:bg-gray-800 rounded-full h-2 max-w-[100px]">
                                 <div
                                   className={`h-2 rounded-full ${
-                                    isMax ? "bg-emerald-500" : "bg-gray-300 dark:bg-gray-600"
+                                    isMax ? 'bg-emerald-500' : 'bg-gray-300 dark:bg-gray-600'
                                   }`}
                                   style={{ width: `${(score / 10) * 100}%` }}
                                 />
                               </div>
                               <span
                                 className={`text-sm font-medium ${
-                                  isMax ? "text-emerald-600 dark:text-emerald-400" : "text-gray-600 dark:text-gray-400"
+                                  isMax
+                                    ? 'text-emerald-600 dark:text-emerald-400'
+                                    : 'text-gray-600 dark:text-gray-400'
                                 }`}
                               >
                                 {score.toFixed(1)}
@@ -746,24 +1028,34 @@ export default function ComparePage() {
                   </tr>
                   {/* Starting Price */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">Starting Price</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400">
+                      Starting Price
+                    </td>
                     {selectedTools.map((tool) => {
-                      const paid = tool.pricing.find((p) => !p.price.includes("$0"));
+                      const paid = tool.pricing.find((p) => !p.price.includes('$0'));
                       return (
-                        <td key={tool.slug} className="py-3 px-4 text-sm text-gray-900 dark:text-white">
-                          {paid ? paid.price : "Free"}
+                        <td
+                          key={tool.slug}
+                          className="py-3 px-4 text-sm text-gray-900 dark:text-white"
+                        >
+                          {paid ? paid.price : 'Free'}
                         </td>
                       );
                     })}
                   </tr>
                   {/* Key Strengths */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">Key Strengths</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">
+                      Key Strengths
+                    </td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4">
                         <ul className="space-y-1">
                           {tool.pros.slice(0, 3).map((pro, i) => (
-                            <li key={i} className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-1">
+                            <li
+                              key={i}
+                              className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-1"
+                            >
                               <span className="text-emerald-500 flex-shrink-0">✓</span>
                               <span>{pro}</span>
                             </li>
@@ -774,12 +1066,17 @@ export default function ComparePage() {
                   </tr>
                   {/* Key Weaknesses */}
                   <tr>
-                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">Key Weaknesses</td>
+                    <td className="py-3 px-4 text-sm text-gray-500 dark:text-gray-400 align-top">
+                      Key Weaknesses
+                    </td>
                     {selectedTools.map((tool) => (
                       <td key={tool.slug} className="py-3 px-4">
                         <ul className="space-y-1">
                           {tool.cons.slice(0, 3).map((con, i) => (
-                            <li key={i} className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-1">
+                            <li
+                              key={i}
+                              className="text-sm text-gray-700 dark:text-gray-300 flex items-start gap-1"
+                            >
                               <span className="text-red-400 flex-shrink-0">✗</span>
                               <span>{con}</span>
                             </li>
@@ -822,7 +1119,9 @@ export default function ComparePage() {
           {/* Pricing方案详细Compare */}
           <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 overflow-hidden">
             <div className="p-6 border-b border-gray-100 dark:border-gray-800">
-              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Pricing Comparison</h2>
+              <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+                Pricing Comparison
+              </h2>
             </div>
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -844,15 +1143,24 @@ export default function ComparePage() {
                 <tbody className="divide-y divide-gray-100 dark:divide-gray-800">
                   {/* Free */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Free</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Free
+                    </td>
                     {selectedTools.map((tool) => {
-                      const free = tool.pricing.find((p) => p.price.includes("$0"));
+                      const free = tool.pricing.find((p) => p.price.includes('$0'));
                       return (
-                        <td key={tool.slug} className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">
+                        <td
+                          key={tool.slug}
+                          className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400"
+                        >
                           {free ? (
                             <div>
-                              <span className="font-semibold text-emerald-600 dark:text-emerald-400">{free.price}</span>
-                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">{free.description}</p>
+                              <span className="font-semibold text-emerald-600 dark:text-emerald-400">
+                                {free.price}
+                              </span>
+                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                {free.description}
+                              </p>
                             </div>
                           ) : (
                             <span className="text-gray-400">No Free Plan</span>
@@ -863,16 +1171,25 @@ export default function ComparePage() {
                   </tr>
                   {/* Starter */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Starter</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Starter
+                    </td>
                     {selectedTools.map((tool) => {
-                      const paid = tool.pricing.filter((p) => !p.price.includes("$0"));
+                      const paid = tool.pricing.filter((p) => !p.price.includes('$0'));
                       const entry = paid[0];
                       return (
-                        <td key={tool.slug} className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">
+                        <td
+                          key={tool.slug}
+                          className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400"
+                        >
                           {entry ? (
                             <div>
-                              <span className="font-semibold">{entry.name}: {entry.price}</span>
-                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">{entry.description}</p>
+                              <span className="font-semibold">
+                                {entry.name}: {entry.price}
+                              </span>
+                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                {entry.description}
+                              </p>
                             </div>
                           ) : (
                             <span className="text-gray-400">-</span>
@@ -883,16 +1200,25 @@ export default function ComparePage() {
                   </tr>
                   {/* Pro */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Pro</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Pro
+                    </td>
                     {selectedTools.map((tool) => {
-                      const paid = tool.pricing.filter((p) => !p.price.includes("$0"));
+                      const paid = tool.pricing.filter((p) => !p.price.includes('$0'));
                       const pro = paid[1] || paid[0];
                       return (
-                        <td key={tool.slug} className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">
+                        <td
+                          key={tool.slug}
+                          className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400"
+                        >
                           {pro && paid.length > 1 ? (
                             <div>
-                              <span className="font-semibold">{pro.name}: {pro.price}</span>
-                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">{pro.description}</p>
+                              <span className="font-semibold">
+                                {pro.name}: {pro.price}
+                              </span>
+                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                {pro.description}
+                              </p>
                             </div>
                           ) : (
                             <span className="text-gray-400">-</span>
@@ -903,16 +1229,25 @@ export default function ComparePage() {
                   </tr>
                   {/* Enterprise */}
                   <tr>
-                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">Top Tier</td>
+                    <td className="py-3 px-4 text-sm font-medium text-gray-700 dark:text-gray-300">
+                      Top Tier
+                    </td>
                     {selectedTools.map((tool) => {
-                      const paid = tool.pricing.filter((p) => !p.price.includes("$0"));
+                      const paid = tool.pricing.filter((p) => !p.price.includes('$0'));
                       const top = paid[paid.length - 1];
                       return (
-                        <td key={tool.slug} className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400">
+                        <td
+                          key={tool.slug}
+                          className="py-3 px-4 text-sm text-gray-600 dark:text-gray-400"
+                        >
                           {top && paid.length > 2 ? (
                             <div>
-                              <span className="font-semibold">{top.name}: {top.price}</span>
-                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">{top.description}</p>
+                              <span className="font-semibold">
+                                {top.name}: {top.price}
+                              </span>
+                              <p className="text-xs text-gray-500 dark:text-gray-500 mt-0.5">
+                                {top.description}
+                              </p>
                             </div>
                           ) : (
                             <span className="text-gray-400">-</span>
@@ -932,31 +1267,45 @@ export default function ComparePage() {
               Ready to choose? Start your free trial today
             </h3>
             <p className="text-sm text-gray-600 dark:text-gray-300 mb-4 max-w-2xl mx-auto">
-              All tools above offer free tiers or free trials. Click "Try Free" on any tool to get started — no credit card required for free plans.
+              All tools above offer free tiers or free trials. Click "Try Free" on any tool to get
+              started — no credit card required for free plans.
             </p>
             <div className="flex flex-wrap justify-center gap-3">
-              {selectedTools.slice(0, 3).map((tool) => (
-                (tool.affiliateUrl || tool.officialUrl) && (
-                  <a
-                    key={tool.slug}
-                    href={tool.affiliateUrl || tool.officialUrl}
-                    target="_blank"
-                    rel="noopener noreferrer sponsored"
-                    className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors shadow-sm"
-                  >
-                    Try {tool.name} Free
-                    <svg className="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                )
-              ))}
+              {selectedTools.slice(0, 3).map(
+                (tool) =>
+                  (tool.affiliateUrl || tool.officialUrl) && (
+                    <a
+                      key={tool.slug}
+                      href={tool.affiliateUrl || tool.officialUrl}
+                      target="_blank"
+                      rel="noopener noreferrer sponsored"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors shadow-sm"
+                    >
+                      Try {tool.name} Free
+                      <svg
+                        className="w-3.5 h-3.5"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                        />
+                      </svg>
+                    </a>
+                  ),
+              )}
             </div>
           </div>
 
           {/* FTC affiliate disclosure — clear and conspicuous near all outbound links */}
           <p className="text-xs text-gray-500 dark:text-gray-400 text-center italic">
-            Disclosure: Some links on this page are affiliate links. We may earn a commission if you sign up through them, at no extra cost to you. This never affects our ratings or recommendations.
+            Disclosure: Some links on this page are affiliate links. We may earn a commission if you
+            sign up through them, at no extra cost to you. This never affects our ratings or
+            recommendations.
           </p>
 
           {/* 底部联盟CTA */}
@@ -991,36 +1340,78 @@ export default function ComparePage() {
               />
             </svg>
           </div>
-          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">Select tools to compare</h3>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Select tools to compare
+          </h3>
           <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
-            Select 2-3 tools from the list above to generate a detailed comparison report based on our six-dimension scoring model.
+            Select 2-3 tools from the list above to generate a detailed comparison report based on
+            our six-dimension scoring model.
           </p>
         </div>
       )}
 
       {/* FAQ Section */}
       <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-6 mt-8">
-        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Frequently Asked Questions About AI Tool Comparison</h2>
+        <h2 className="text-xl font-bold text-gray-900 dark:text-white mb-6">
+          Frequently Asked Questions About AI Tool Comparison
+        </h2>
         <div className="space-y-4">
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">What is the best AI tool in 2026?</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">The best AI tool depends on your needs. For general conversation and writing, ChatGPT and Claude lead the market. For coding, Cursor and GitHub Copilot are top choices. For image generation, Midjourney and DALL-E 3 excel. Use our comparison tool above to compare up to 3 tools side by side across 6 dimensions.</p>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              What is the best AI tool in 2026?
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              The best AI tool depends on your needs. For general conversation and writing, ChatGPT
+              and Claude lead the market. For coding, Cursor and GitHub Copilot are top choices. For
+              image generation, Midjourney and DALL-E 3 excel. Use our comparison tool above to
+              compare up to 3 tools side by side across 6 dimensions.
+            </p>
           </div>
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">How do you compare AI tools?</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We use a proprietary 6-dimension scoring model: Functionality (features and output quality), UX (ease of use and learning curve), Pricing (value for money and free tiers), Integration (API quality and platform support), Support (reliability and customer service), and Ethics (data privacy and responsible AI). Each tool is tested hands-on for 3+ weeks.</p>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              How do you compare AI tools?
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              We use a proprietary 6-dimension scoring model: Functionality (features and output
+              quality), UX (ease of use and learning curve), Pricing (value for money and free
+              tiers), Integration (API quality and platform support), Support (reliability and
+              customer service), and Ethics (data privacy and responsible AI). Each tool is tested
+              hands-on for 3+ weeks.
+            </p>
           </div>
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">Are these AI tool comparisons free?</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">Yes, all our AI tool comparisons, reviews, and ratings are completely free. We may earn affiliate commissions when you purchase through our links, but this never influences our ratings or recommendations. Our scoring is based purely on hands-on testing and objective criteria.</p>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              Are these AI tool comparisons free?
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              Yes, all our AI tool comparisons, reviews, and ratings are completely free. We may
+              earn affiliate commissions when you purchase through our links, but this never
+              influences our ratings or recommendations. Our scoring is based purely on hands-on
+              testing and objective criteria.
+            </p>
           </div>
           <div className="border-b border-gray-100 dark:border-gray-800 pb-4">
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">ChatGPT vs Claude: which is better?</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">ChatGPT excels at general-purpose tasks, code generation, and multimodal capabilities (image, voice, video). Claude shines in long-form writing, nuanced analysis, and handling very large documents (up to 200K tokens). Both are excellent; choose ChatGPT for versatility and Claude for writing and analysis. Compare them in detail using our tool above.</p>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              ChatGPT vs Claude: which is better?
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              ChatGPT excels at general-purpose tasks, code generation, and multimodal capabilities
+              (image, voice, video). Claude shines in long-form writing, nuanced analysis, and
+              handling very large documents (up to 200K tokens). Both are excellent; choose ChatGPT
+              for versatility and Claude for writing and analysis. Compare them in detail using our
+              tool above.
+            </p>
           </div>
           <div>
-            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">How often are AI tool ratings updated?</h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">We update our AI tool ratings weekly to reflect new features, pricing changes, and performance improvements. Major updates (new models, significant price drops, platform launches) trigger immediate re-evaluation. Check individual tool pages for the last updated date.</p>
+            <h3 className="text-base font-semibold text-gray-900 dark:text-white mb-2">
+              How often are AI tool ratings updated?
+            </h3>
+            <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+              We update our AI tool ratings weekly to reflect new features, pricing changes, and
+              performance improvements. Major updates (new models, significant price drops, platform
+              launches) trigger immediate re-evaluation. Check individual tool pages for the last
+              updated date.
+            </p>
           </div>
         </div>
       </div>
@@ -1030,54 +1421,53 @@ export default function ComparePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "FAQPage",
-            "mainEntity": [
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
               {
-                "@type": "Question",
-                "name": "What is the best AI tool in 2026?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "The best AI tool depends on your needs. For general conversation and writing, ChatGPT and Claude lead the market. For coding, Cursor and GitHub Copilot are top choices. For image generation, Midjourney and DALL-E 3 excel."
-                }
+                '@type': 'Question',
+                name: 'What is the best AI tool in 2026?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'The best AI tool depends on your needs. For general conversation and writing, ChatGPT and Claude lead the market. For coding, Cursor and GitHub Copilot are top choices. For image generation, Midjourney and DALL-E 3 excel.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "How do you compare AI tools?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "We use a 6-dimension scoring model: Functionality, UX, Pricing, Integration, Support, and Ethics. Each tool is tested hands-on for 3+ weeks with performance benchmarks."
-                }
+                '@type': 'Question',
+                name: 'How do you compare AI tools?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'We use a 6-dimension scoring model: Functionality, UX, Pricing, Integration, Support, and Ethics. Each tool is tested hands-on for 3+ weeks with performance benchmarks.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "Are these AI tool comparisons free?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Yes, all comparisons and reviews are free. We may earn affiliate commissions but this never influences our ratings."
-                }
+                '@type': 'Question',
+                name: 'Are these AI tool comparisons free?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes, all comparisons and reviews are free. We may earn affiliate commissions but this never influences our ratings.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "ChatGPT vs Claude: which is better?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "ChatGPT excels at general-purpose tasks and multimodal capabilities. Claude shines in long-form writing and large document analysis. Both are excellent top-tier AI assistants."
-                }
+                '@type': 'Question',
+                name: 'ChatGPT vs Claude: which is better?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'ChatGPT excels at general-purpose tasks and multimodal capabilities. Claude shines in long-form writing and large document analysis. Both are excellent top-tier AI assistants.',
+                },
               },
               {
-                "@type": "Question",
-                "name": "How often are AI tool ratings updated?",
-                "acceptedAnswer": {
-                  "@type": "Answer",
-                  "text": "Ratings are updated weekly to reflect new features, pricing changes, and performance improvements."
-                }
-              }
-            ]
-          })
+                '@type': 'Question',
+                name: 'How often are AI tool ratings updated?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Ratings are updated weekly to reflect new features, pricing changes, and performance improvements.',
+                },
+              },
+            ],
+          }),
         }}
       />
-
     </div>
   );
 }

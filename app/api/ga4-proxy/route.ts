@@ -72,16 +72,12 @@ export async function POST(request: NextRequest) {
       {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${token.token}`,
+          Authorization: `Bearer ${token.token}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
           dateRanges: [{ startDate, endDate }],
-          dimensions: [
-            { name: 'date' },
-            { name: 'pagePath' },
-            { name: 'deviceCategory' },
-          ],
+          dimensions: [{ name: 'date' }, { name: 'pagePath' }, { name: 'deviceCategory' }],
           metrics: [
             { name: 'activeUsers' },
             { name: 'screenPageViews' },
@@ -91,14 +87,14 @@ export async function POST(request: NextRequest) {
           ],
           limit: 10000,
         }),
-      }
+      },
     );
 
     if (!response.ok) {
       const errorText = await response.text();
       return NextResponse.json(
         { error: `GA4 API error: ${response.status}`, details: errorText },
-        { status: response.status }
+        { status: response.status },
       );
     }
 
@@ -112,14 +108,14 @@ export async function POST(request: NextRequest) {
     console.error('GA4 Proxy Error:', error);
     return NextResponse.json(
       { error: 'Internal server error', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
 
 function processGa4Data(data: any) {
   const rows = data.rows || [];
-  
+
   let totalUsers = 0;
   let totalPageviews = 0;
   let totalSessionDuration = 0;

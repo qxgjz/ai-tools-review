@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
-import { useState, useMemo, useEffect } from "react";
-import Link from "next/link";
-import { Filter, ArrowUpDown, Check, Loader2 } from "lucide-react";
+import { useState, useMemo, useEffect } from 'react';
+import Link from 'next/link';
+import { Filter, ArrowUpDown, Check, Loader2 } from 'lucide-react';
 
-type SortOption = "newest" | "oldest" | "title";
-type CategoryFilter = "all" | string;
+type SortOption = 'newest' | 'oldest' | 'title';
+type CategoryFilter = 'all' | string;
 
 interface Post {
   slug: string;
@@ -27,8 +27,8 @@ interface BlogListClientProps {
 const POSTS_PER_PAGE = 20;
 
 export function BlogListClient({ posts }: BlogListClientProps) {
-  const [sortBy, setSortBy] = useState<SortOption>("newest");
-  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>("all");
+  const [sortBy, setSortBy] = useState<SortOption>('newest');
+  const [categoryFilter, setCategoryFilter] = useState<CategoryFilter>('all');
   const [visibleCount, setVisibleCount] = useState(POSTS_PER_PAGE);
   const [isLoadingMore, setIsLoadingMore] = useState(false);
 
@@ -44,27 +44,23 @@ export function BlogListClient({ posts }: BlogListClientProps) {
     let result = [...posts];
 
     // Filter by category
-    if (categoryFilter !== "all") {
+    if (categoryFilter !== 'all') {
       result = result.filter((post) => post.category === categoryFilter);
     }
 
     // Sort
     switch (sortBy) {
-      case "newest":
+      case 'newest':
         result.sort(
-          (a, b) =>
-            new Date(b.publishedAt).getTime() -
-            new Date(a.publishedAt).getTime()
+          (a, b) => new Date(b.publishedAt).getTime() - new Date(a.publishedAt).getTime(),
         );
         break;
-      case "oldest":
+      case 'oldest':
         result.sort(
-          (a, b) =>
-            new Date(a.publishedAt).getTime() -
-            new Date(b.publishedAt).getTime()
+          (a, b) => new Date(a.publishedAt).getTime() - new Date(b.publishedAt).getTime(),
         );
         break;
-      case "title":
+      case 'title':
         result.sort((a, b) => a.title.localeCompare(b.title));
         break;
     }
@@ -90,9 +86,9 @@ export function BlogListClient({ posts }: BlogListClientProps) {
   };
 
   const sortOptions: { value: SortOption; label: string }[] = [
-    { value: "newest", label: "Newest First" },
-    { value: "oldest", label: "Oldest First" },
-    { value: "title", label: "Title A-Z" },
+    { value: 'newest', label: 'Newest First' },
+    { value: 'oldest', label: 'Oldest First' },
+    { value: 'title', label: 'Title A-Z' },
   ];
 
   return (
@@ -107,11 +103,11 @@ export function BlogListClient({ posts }: BlogListClientProps) {
           </span>
           <div className="flex gap-1 flex-wrap">
             <button
-              onClick={() => setCategoryFilter("all")}
+              onClick={() => setCategoryFilter('all')}
               className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-all ${
-                categoryFilter === "all"
-                  ? "bg-blue-600 text-white"
-                  : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                categoryFilter === 'all'
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
               }`}
             >
               All
@@ -122,8 +118,8 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                 onClick={() => setCategoryFilter(cat)}
                 className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-all ${
                   categoryFilter === cat
-                    ? "bg-blue-600 text-white"
-                    : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700'
                 }`}
               >
                 {cat}
@@ -135,9 +131,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
         {/* Sort options */}
         <div className="flex items-center gap-2">
           <ArrowUpDown className="w-4 h-4 text-gray-500 dark:text-gray-400 flex-shrink-0" />
-          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
-            Sort:
-          </span>
+          <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Sort:</span>
           <select
             value={sortBy}
             onChange={(e) => setSortBy(e.target.value as SortOption)}
@@ -155,23 +149,19 @@ export function BlogListClient({ posts }: BlogListClientProps) {
       {/* Results statistics */}
       <div className="flex items-center justify-between mb-4">
         <p className="text-sm text-gray-500 dark:text-gray-400">
-          Showing{" "}
-          <span className="font-semibold text-gray-900 dark:text-white">
-            {visiblePosts.length}
-          </span>{" "}
+          Showing{' '}
+          <span className="font-semibold text-gray-900 dark:text-white">{visiblePosts.length}</span>{' '}
           of <span className="font-semibold">{filteredAndSortedPosts.length}</span> articles
-          {categoryFilter !== "all" && (
+          {categoryFilter !== 'all' && (
             <span className="ml-1">
-              · filtered by{" "}
-              <span className="font-medium text-blue-600 dark:text-blue-400">
-                {categoryFilter}
-              </span>
+              · filtered by{' '}
+              <span className="font-medium text-blue-600 dark:text-blue-400">{categoryFilter}</span>
             </span>
           )}
         </p>
-        {categoryFilter !== "all" && (
+        {categoryFilter !== 'all' && (
           <button
-            onClick={() => setCategoryFilter("all")}
+            onClick={() => setCategoryFilter('all')}
             className="text-sm text-blue-600 dark:text-blue-400 hover:underline font-medium flex items-center gap-1"
           >
             <Check className="w-3 h-3" />
@@ -221,7 +211,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
             No articles found in this category.
           </p>
           <button
-            onClick={() => setCategoryFilter("all")}
+            onClick={() => setCategoryFilter('all')}
             className="text-blue-600 dark:text-blue-400 hover:underline font-medium"
           >
             View all articles
@@ -243,9 +233,7 @@ export function BlogListClient({ posts }: BlogListClientProps) {
                 Loading...
               </>
             ) : (
-              <>
-                Load More Articles ({filteredAndSortedPosts.length - visibleCount} remaining)
-              </>
+              <>Load More Articles ({filteredAndSortedPosts.length - visibleCount} remaining)</>
             )}
           </button>
         </div>

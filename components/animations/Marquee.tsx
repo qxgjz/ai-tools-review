@@ -1,21 +1,16 @@
-"use client";
+'use client';
 
-import { useEffect, useRef, useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useEffect, useRef, useState } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface MarqueeProps {
   images: string[];
-  direction?: "left" | "right";
+  direction?: 'left' | 'right';
   speed?: number;
   className?: string;
 }
 
-export function Marquee({
-  images,
-  direction = "left",
-  speed = 0.3,
-  className = "",
-}: MarqueeProps) {
+export function Marquee({ images, direction = 'left', speed = 0.3, className = '' }: MarqueeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [sectionTop, setSectionTop] = useState(0);
 
@@ -30,7 +25,7 @@ export function Marquee({
   const offset = useTransform(
     scrollY,
     [sectionTop - window.innerHeight, sectionTop + 1000],
-    [0, 1000]
+    [0, 1000],
   );
 
   const tripledImages = [...images, ...images, ...images];
@@ -39,21 +34,19 @@ export function Marquee({
     <div
       ref={containerRef}
       className={`overflow-hidden ${className}`}
-      style={{ willChange: "transform" }}
+      style={{ willChange: 'transform' }}
     >
       <motion.div
         className="flex gap-3"
         style={{
-          x: direction === "left"
-            ? useTransform(offset, (v) => -(v * speed))
-            : useTransform(offset, (v) => v * speed),
+          x:
+            direction === 'left'
+              ? useTransform(offset, (v) => -(v * speed))
+              : useTransform(offset, (v) => v * speed),
         }}
       >
         {tripledImages.map((src, i) => (
-          <div
-            key={i}
-            className="flex-shrink-0 w-[420px] h-[270px] rounded-2xl overflow-hidden"
-          >
+          <div key={i} className="flex-shrink-0 w-[420px] h-[270px] rounded-2xl overflow-hidden">
             <img
               src={src}
               alt={`Marquee image ${i + 1}`}
@@ -69,15 +62,11 @@ export function Marquee({
 
 interface LogoMarqueeProps {
   logos: { name: string; icon: string; color: string }[];
-  direction?: "left" | "right";
+  direction?: 'left' | 'right';
   className?: string;
 }
 
-export function LogoMarquee({
-  logos,
-  direction = "left",
-  className = "",
-}: LogoMarqueeProps) {
+export function LogoMarquee({ logos, direction = 'left', className = '' }: LogoMarqueeProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState(0);
 
@@ -89,9 +78,7 @@ export function LogoMarquee({
       if (lastTime !== 0) {
         const delta = time - lastTime;
         setOffset((prev) => {
-          const newOffset = direction === "left"
-            ? prev + delta * 0.05
-            : prev - delta * 0.05;
+          const newOffset = direction === 'left' ? prev + delta * 0.05 : prev - delta * 0.05;
           return newOffset;
         });
       }
@@ -109,7 +96,7 @@ export function LogoMarquee({
     <div
       ref={containerRef}
       className={`overflow-hidden py-8 ${className}`}
-      style={{ willChange: "transform" }}
+      style={{ willChange: 'transform' }}
     >
       <div
         className="flex gap-6 items-center"
@@ -127,9 +114,7 @@ export function LogoMarquee({
             >
               {logo.name.charAt(0)}
             </div>
-            <span className="text-white/80 font-medium whitespace-nowrap">
-              {logo.name}
-            </span>
+            <span className="text-white/80 font-medium whitespace-nowrap">{logo.name}</span>
           </div>
         ))}
       </div>

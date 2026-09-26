@@ -194,6 +194,46 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ---
 
+## [2026-09-26] SEO工程化：GSC API自动化与索引覆盖率深度监控（12知识点）
+
+**学习背景**：AIToolCrux有533工具页+107文章，索引覆盖率直接影响自然流量。系统学习GSC API自动化、URL Inspection API、Indexing API和IndexNow，建立索引监控体系。
+
+**知识点1：Google Search Console API有4个核心服务——Search Analytics、Sitemaps、Sites、URL Inspection**。Search Analytics查询流量数据（曝光/点击/CTR/排名，按query/page/country/device/date维度）。Sitemaps管理提交/列出/删除sitemap。Sites管理GSC属性。URL Inspection检查单个URL的索引状态（等同于GSC UI的URL检查工具）。API端点：`https://searchconsole.googleapis.com/v1/`。需要OAuth 2.0认证，scope为`https://www.googleapis.com/auth/webmasters.readonly`（只读）或`webmasters`（读写）。（来源：https://developers.google.com/webmaster-tools/v1/api_reference_index + http://raw.githubusercontent.com/api-evangelist/google-search-console/refs/heads/main/apis.yml）
+
+**知识点2：URL Inspection API是索引覆盖率监控的核心——每个属性每天2000次查询配额**。`POST https://searchconsole.googleapis.com/v1/urlInspection/index:inspect`，body含`inspectionUrl`、`siteUrl`、`languageCode`。返回`UrlInspectionResult`含：`inspectionResult.indexStatusResult.verdict`（PASS/PARTIAL/NEUTRAL/FAIL）、`coverageState`（如"Submitted and indexed"/"Crawled - currently not indexed"/"Excluded by noindex tag"）、`lastCrawlTime`、`googleCanonical`、`userCanonical`、`robotsTxtState`。2000次/天/属性的配额意味着533工具页+107文章=640URL，可每3天全量检查一次。（来源：https://developers.google.com/webmaster-tools/v1/urlInspection.index/inspect + https://seoautomationclub.com/automate-index-coverage-monitoring-url-inspection-api-python-n8n/）
+
+**知识点3：Indexing API与URL Inspection API是两个不同的API——Indexing API用于通知Google更新/删除URL，URL Inspection用于查询状态**。Indexing API端点：`https://indexing.googleapis.com/v3/urlNotifications:publish`，body含`url`和`type`（URL_UPDATED/URL_DELETED）。**重要限制：Indexing API只能用于包含JobPosting或BroadcastEvent结构化数据的页面**，普通页面调用会被拒绝。AIToolCrux是工具评测站，没有JobPosting/BroadcastEvent，因此Indexing API不适用。替代方案：sitemap提交+IndexNow。（来源：https://developers.google.com/search/apis/indexing-api/v3/using-api + https://developers.google.cn/search/apis/indexing-api/v3/quota-pricing?hl=zh-cn）
+
+**知识点4：IndexNow是微软Bing发起的开放索引通知协议，支持Bing/Yandex/Naver/Seznam/Yep/Amazon等搜索引擎**。`GET https://api.indexnow.org/indexnow?url={url}&key={key}`或POST批量提交（最多10000URL/请求）。密钥文件`{key}.txt`放在网站根目录，内容为key本身。无需OAuth，无需Google认证。**Google不支持IndexNow**（Google靠sitemap+自然爬取）。AIToolCrux已有IndexNow key（3f7f80308bcbbd81d91bd93cdc0e1120），应在每次发布新文章/工具页后自动ping IndexNow。（来源：https://www.indexnow.org/faq + https://www.bing.com/indexnow/getstarted + http://www.yandex.com/support/webmaster/en/indexnow/reference）
+
+**知识点5：索引覆盖率监控的最佳实践是分层调度——高价值URL每天查，中价值每周查，低价值每月查**。2000次/天配额不足以每天查640个URL。分层：①Top 50流量页（每天查）②新发布页面（发布后连续7天查）③随机抽样100个（每天查）④全量640个（每3天查）。用SQLite存储每次verdict，diff检测状态转换（如"Submitted and indexed"→"Crawled - currently not indexed"即被降权/去索引），触发告警。（来源：https://seoautomationclub.com/index-coverage-watchdog-gsc-url-inspection-api-python/ + https://seoautomationclub.com/automate-index-coverage-monitoring-url-inspection-api-python-n8n/）
+
+**知识点6：Search Analytics API查询有数据延迟——最新数据延迟2-3天，最多返回5000行/请求**。`POST https://www.googleapis.com/webmasters/v3/sites/{siteUrl}/searchAnalytics/query`，body含`startDate`/`endDate`（YYYY-MM-DD）、`dimensions`（date/query/page/country/device/searchAppearance）、`rowLimit`（默认1000，最大25000）、`startRow`（分页）。数据延迟：GSC数据通常延迟2天（如今天查不到前天之前的最新数据）。聚合维度组合会产生大量行，需分页获取。AIToolCrux的gsc-ga4-report目录已有GSC数据，应确认API拉取逻辑处理了延迟和分页。（来源：https://developers.google.com/webmaster-tools/v1/searchanalytics/query + https://developers.google.com/webmaster-tools/v1/api_reference_index）
+
+**知识点7：Python认证用google-api-python-client + service account或OAuth client**。Service Account方式：`ServiceAccountCredentials.from_json_keyfile_name(key_file, SCOPES)`，需将service account email添加为GSC属性所有者。OAuth方式：`InstalledAppFlow.from_client_secrets_file(client_secret, SCOPES)`，首次需浏览器授权，之后token自动刷新。推荐service account（无人值守CI/定时任务）。Python客户端：`googleapiclient.discovery.build('searchconsole', 'v1', credentials=creds)`。AIToolCrux如要自动化GSC查询，应创建service account并添加为GSC所有者。（来源：https://developers.google.com/search/apis/indexing-api/v3/prereqs + https://googleapis.github.io/google-api-python-client/docs/dyn/searchconsole_v1.urlInspection.index.html + https://www.copebusiness.com/technical-seo/url-inspection-api/）
+
+**知识点8：URL Inspection API的verdict字段含义——PASS=已索引，PARTIAL=部分问题，NEUTRAL=未确定，FAIL=未索引**。`coverageState`更详细："Submitted and indexed"（sitemap提交且已索引，最佳）、"Indexed, not submitted in sitemap"（已索引但不在sitemap中）、"Crawled - currently not indexed"（已爬取但未索引，最常见问题）、"Discovered - currently not indexed"（已发现但未爬取）、"Excluded by noindex tag"（被noindex排除）、"Page with redirect"（重定向页）、"Duplicate without user-selected canonical"（重复内容无canonical）。监控重点："Crawled - currently not indexed"占比高说明内容质量问题或抓取预算不足。（来源：https://developers.google.com/webmaster-tools/v1/urlInspection.index/inspect + http://raw.githubusercontent.com/api-evangelist/google-search-console/refs/heads/main/openapi/google-search-console-url-inspection-api-openapi.yml）
+
+**知识点9：Sitemap API可程序化提交sitemap——`PUT https://www.googleapis.com/webmasters/v3/sites/{siteUrl}/sitemaps/{feedpath}`**。提交后Google会异步处理，不保证立即爬取。也可`GET`列出所有sitemap及其状态（lastSubmitted/lastDownloaded/isPending/warnings/errors/contents）。最佳实践：每次新增内容后自动提交sitemap（而非等Google自然发现）。AIToolCrux的sitemap.xml包含所有文章和工具页，应在部署后通过API或ping（`https://www.google.com/ping?sitemap=`）通知Google。（来源：https://developers.google.com/webmaster-tools/v1/api_reference_index + http://raw.githubusercontent.com/api-evangelist/google-search-console/refs/heads/main/apis.yml）
+
+**知识点10：索引覆盖率的关键指标——已索引URL数/总URL数、新页面平均索引时间、去索引率、crawl budget使用率**。已索引率=（URL Inspection verdict=PASS的URL数）/（sitemap中总URL数），目标>90%。新页面索引时间=从发布到verdict=PASS的天数，目标<7天。去索引率=从PASS变为非PASS的URL比例，目标<1%/月。crawl budget通过GSC Settings→Crawl stats查看，大型站点（>10000URL）需关注，AIToolCrux 640URL无需担心。这些指标应每周计算并写入报告。（来源：https://seoautomationclub.com/index-coverage-watchdog-gsc-url-inspection-api-python/ + https://seoautomationclub.com/automate-index-coverage-monitoring-url-inspection-api-python-n8n/）
+
+**知识点11：IndexNow批量提交用POST，URL列表在body中，最多10000个URL/请求**。`POST https://api.indexnow.org/indexnow`，body：`{"host":"aitoolcrux.com","key":"3f7f8030...","keyLocation":"https://aitoolcrux.com/3f7f8030....txt","urlList":["https://aitoolcrux.com/blog/xxx","https://aitoolcrux.com/tools/yyy"]}`。返回200=成功，400=格式错误，403=密钥无效（密钥文件不在根目录），422=URL不属于host。也可向各搜索引擎单独提交（Bing/Yandex等），但api.indexnow.org会自动转发给所有支持的引擎。AIToolCrux应在部署脚本中添加IndexNow批量ping。（来源：https://www.indexnow.org/faq + https://www.indexnow.org/ko_kr/faq + http://www.yandex.com/support/webmaster/en/indexnow/reference）
+
+**知识点12：GSC API的限制与替代——API不提供GSC UI的所有报告（如增强报告、体验报告），且有配额限制**。URL Inspection 2000次/天/属性，Search Analytics 5000行/请求（可分页），Sitemaps无明确配额。GSC UI的"页面体验"报告（CWV数据）、"增强"报告（结构化数据）无法通过API获取。替代方案：①CWV用web-vitals RUM+GA4（已覆盖）②结构化数据用Rich Results Test API或schema.org validator③索引状态用URL Inspection API。AIToolCrux的自动化体系应：GSC API（流量+索引）+ web-vitals（CWV）+ schema validator（结构化数据）+ IndexNow（索引通知）。（来源：https://developers.google.com/webmaster-tools/v1/api_reference_index + https://developers.google.com/search/updates#may-2022）
+
+**落地计划（下次迭代执行）**：
+1. 知识点2+5+8（URL Inspection监控）→ 任务P2-SEO-INDEX-MONITOR：创建Python脚本用URL Inspection API分层检查640个URL索引状态，SQLite存储verdict，diff检测去索引，输出周报
+2. 知识点4+11（IndexNow自动ping）→ 任务P2-SEO-INDEXNOW-AUTO：在Vercel部署后脚本中添加IndexNow批量ping，提交所有新增/修改的URL
+3. 知识点7（Service Account认证）→ 任务P2-SEO-GSC-SERVICE-ACCOUNT：创建Google Cloud service account，添加为GSC属性所有者，下载密钥，为自动化脚本提供认证
+4. 知识点6+10（Search Analytics+覆盖率指标）→ 任务P2-SEO-GSC-REPORT：完善gsc-ga4-report脚本，计算索引覆盖率/新页面索引时间/去索引率，写入iteration_center
+5. 知识点9（Sitemap API提交）→ 任务P2-SEO-SITEMAP-SUBMIT：部署后自动通过Sitemap API提交sitemap.xml，替代手动ping
+6. 知识点12（工具链整合）→ 任务P2-SEO-AUTOMATION-SUITE：整合GSC API+web-vitals+schema validator+IndexNow为统一SEO自动化脚本，每周运行
+
+
+
+---
+
 ## [2026-09-26] 高星GitHub开源工具：SEO审计与性能监控工具深度评测（12知识点）
 
 **学习背景**：AIToolCrux已集成Lighthouse CI、Unlighthouse CI、Playwright E2E、Vitest、axe-core。系统评测其他高星SEO审计与性能监控工具，识别可补充现有工具链的开源项目。

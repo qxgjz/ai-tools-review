@@ -1,7 +1,6 @@
-import Link from "next/link";
-import { notFound } from "next/navigation";
-import posts from "@/data/posts.json";
-
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import posts from '@/data/posts.json';
 
 // Helper: convert tag name to URL-friendly slug
 function slugifyTag(name: string): string {
@@ -23,23 +22,28 @@ interface TagPageProps {
   params: { slug: string };
 }
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 export const dynamicParams = false;
 
 export function generateStaticParams() {
   const tagSlugs = new Set<string>();
   posts.forEach((post: any) => {
     (post.tags || []).forEach((tag: string) => {
-      tagSlugs.add(tag.toLowerCase().trim().replace(/[^a-z0-9\s-]/g, '').replace(/\s+/g, '-').replace(/-+/g, '-'));
+      tagSlugs.add(
+        tag
+          .toLowerCase()
+          .trim()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .replace(/-+/g, '-'),
+      );
     });
   });
   return Array.from(tagSlugs).map((slug) => ({ slug }));
 }
 
 export function generateMetadata({ params }: TagPageProps) {
-  const tagPosts = posts.filter((p) =>
-    getPostTagSlugs(p).some((t) => t.slug === params.slug)
-  );
+  const tagPosts = posts.filter((p) => getPostTagSlugs(p).some((t) => t.slug === params.slug));
   let tagName = params.slug;
   for (const post of posts) {
     const match = getPostTagSlugs(post).find((t) => t.slug === params.slug);
@@ -63,9 +67,7 @@ export function generateMetadata({ params }: TagPageProps) {
 }
 
 export default function TagPage({ params }: TagPageProps) {
-  const tagPosts = posts.filter((p) =>
-    getPostTagSlugs(p).some((t) => t.slug === params.slug)
-  );
+  const tagPosts = posts.filter((p) => getPostTagSlugs(p).some((t) => t.slug === params.slug));
 
   if (tagPosts.length === 0) {
     notFound();
@@ -92,9 +94,7 @@ export default function TagPage({ params }: TagPageProps) {
 
       {/* Tags title */}
       <div className="mb-10">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-          Tags: #{tagName}
-        </h1>
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">Tags: #{tagName}</h1>
         <p className="text-gray-600 dark:text-gray-400">{tagPosts.length} articles</p>
       </div>
 
@@ -113,12 +113,16 @@ export default function TagPage({ params }: TagPageProps) {
               >
                 {post.category}
               </Link>
-              <span className="text-xs text-gray-500 dark:text-gray-400">{post.readTime} min read</span>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {post.readTime} min read
+              </span>
             </div>
             <h2 className="text-lg font-bold text-gray-900 dark:text-white mb-2 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
               {post.title}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">{post.excerpt}</p>
+            <p className="text-gray-600 dark:text-gray-400 text-sm mb-3 line-clamp-2">
+              {post.excerpt}
+            </p>
             <div className="flex items-center justify-between text-xs text-gray-500 dark:text-gray-400">
               <span>{post.author}</span>
               <span>{post.date}</span>

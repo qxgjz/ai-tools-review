@@ -1,74 +1,106 @@
-import { notFound } from "next/navigation";
-import Image from "next/image";
-import Link from "next/link";
-import { ArrowLeft, Check, X, Building2, Clock, Tag, ExternalLink, TrendingUp, Sparkles, Lightbulb, Image as ImageIcon, Award, Target, Users, Wrench, GitCompare, Microscope, Quote, Zap, BookOpen, ShieldCheck } from "lucide-react";
-import toolsData from "@/data/tools.json";
-import postsData from "@/data/posts.json";
-import comparisonsData from "@/data/comparisons.json";
-import type { Tool, Grade, ScoreDimension } from "@/types";
-import { calculateScoreResult, DIMENSION_LABELS, SCORE_WEIGHTS, GRADE_DESCRIPTIONS } from "@/lib/scoring";
-import { RadarChart } from "@/components/charts/RadarChart";
-import { ToolList } from "@/components/tools/ToolList";
-import Giscus from "@/components/comments/Giscus";
-import { BreadcrumbSchema, FAQSchema } from "@/components/seo/Schema";
-import { NewsletterSignup } from "@/components/monetization/NewsletterSignup";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { ToolScreenshot } from "@/components/content/ToolScreenshot";
-import { FAQSection } from "@/components/content/FAQSection";
-import { AuthorBio } from "@/components/author/AuthorBio";
-import { FadeIn } from "@/components/animations";
+import { notFound } from 'next/navigation';
+import Image from 'next/image';
+import Link from 'next/link';
+import {
+  ArrowLeft,
+  Check,
+  X,
+  Building2,
+  Clock,
+  Tag,
+  ExternalLink,
+  TrendingUp,
+  Sparkles,
+  Lightbulb,
+  Image as ImageIcon,
+  Award,
+  Target,
+  Users,
+  Wrench,
+  GitCompare,
+  Microscope,
+  Quote,
+  Zap,
+  BookOpen,
+  ShieldCheck,
+} from 'lucide-react';
+import toolsData from '@/data/tools.json';
+import postsData from '@/data/posts.json';
+import comparisonsData from '@/data/comparisons.json';
+import type { Tool, Grade, ScoreDimension } from '@/types';
+import {
+  calculateScoreResult,
+  DIMENSION_LABELS,
+  SCORE_WEIGHTS,
+  GRADE_DESCRIPTIONS,
+} from '@/lib/scoring';
+import { RadarChart } from '@/components/charts/RadarChart';
+import { ToolList } from '@/components/tools/ToolList';
+import Giscus from '@/components/comments/Giscus';
+import { BreadcrumbSchema, FAQSchema } from '@/components/seo/Schema';
+import { NewsletterSignup } from '@/components/monetization/NewsletterSignup';
+import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { ToolScreenshot } from '@/components/content/ToolScreenshot';
+import { FAQSection } from '@/components/content/FAQSection';
+import { AuthorBio } from '@/components/author/AuthorBio';
+import { FadeIn } from '@/components/animations';
 
 const GRADE_STYLES: Record<Grade, string> = {
-  S: "bg-amber-700 text-white",
-  A: "bg-green-700 text-white",
-  B: "bg-blue-700 text-white",
-  C: "bg-yellow-600 text-white",
-  D: "bg-red-700 text-white",
-  F: "bg-zinc-500 text-white",
+  S: 'bg-amber-700 text-white',
+  A: 'bg-green-700 text-white',
+  B: 'bg-blue-700 text-white',
+  C: 'bg-yellow-600 text-white',
+  D: 'bg-red-700 text-white',
+  F: 'bg-zinc-500 text-white',
 };
 
-const DIMENSION_ORDER: ScoreDimension[] = ["functionality", "ux", "pricing", "integration", "support", "ethics"];
-
+const DIMENSION_ORDER: ScoreDimension[] = [
+  'functionality',
+  'ux',
+  'pricing',
+  'integration',
+  'support',
+  'ethics',
+];
 
 const toolScreenshotMap: Record<string, string> = {
-  "canva-magic": "/screenshots/real/webp/canva-magic.webp",
-  "chatgpt": "/screenshots/real/webp/chatgpt.webp",
-  "claude": "/screenshots/real/webp/claude.webp",
-  "copy-ai": "/screenshots/real/webp/copy-ai.webp",
-  "cursor": "/screenshots/real/webp/cursor.webp",
-  "dall-e-3": "/screenshots/real/webp/dall-e-3.webp",
-  "elevenlabs": "/screenshots/real/webp/elevenlabs.webp",
-  "figma-ai": "/screenshots/real/webp/figma-ai.webp",
-  "gemini": "/screenshots/real/webp/gemini.webp",
-  "github-copilot": "/screenshots/real/webp/github-copilot.webp",
-  "grammarly": "/screenshots/real/webp/grammarly.webp",
-  "jasper": "/screenshots/real/webp/jasper.webp",
-  "midjourney": "/screenshots/real/webp/midjourney.webp",
-  "notion-ai": "/screenshots/real/webp/notion-ai.webp",
-  "perplexity": "/screenshots/real/webp/perplexity.webp",
-  "runway": "/screenshots/real/webp/runway.webp",
-  "sora": "/screenshots/real/webp/sora.webp",
-  "stable-diffusion": "/screenshots/real/webp/stable-diffusion.webp",
-  "suno": "/screenshots/real/webp/suno.webp",
-  "windsurf": "/screenshots/real/webp/windsurf.webp",
+  'canva-magic': '/screenshots/real/webp/canva-magic.webp',
+  chatgpt: '/screenshots/real/webp/chatgpt.webp',
+  claude: '/screenshots/real/webp/claude.webp',
+  'copy-ai': '/screenshots/real/webp/copy-ai.webp',
+  cursor: '/screenshots/real/webp/cursor.webp',
+  'dall-e-3': '/screenshots/real/webp/dall-e-3.webp',
+  elevenlabs: '/screenshots/real/webp/elevenlabs.webp',
+  'figma-ai': '/screenshots/real/webp/figma-ai.webp',
+  gemini: '/screenshots/real/webp/gemini.webp',
+  'github-copilot': '/screenshots/real/webp/github-copilot.webp',
+  grammarly: '/screenshots/real/webp/grammarly.webp',
+  jasper: '/screenshots/real/webp/jasper.webp',
+  midjourney: '/screenshots/real/webp/midjourney.webp',
+  'notion-ai': '/screenshots/real/webp/notion-ai.webp',
+  perplexity: '/screenshots/real/webp/perplexity.webp',
+  runway: '/screenshots/real/webp/runway.webp',
+  sora: '/screenshots/real/webp/sora.webp',
+  'stable-diffusion': '/screenshots/real/webp/stable-diffusion.webp',
+  suno: '/screenshots/real/webp/suno.webp',
+  windsurf: '/screenshots/real/webp/windsurf.webp',
 };
-
-
 
 export const dynamicParams = false;
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   return toolsData.map((tool) => ({ slug: tool.slug }));
 }
 
-
 function truncateDescription(text: string, maxLen: number = 155): string {
   if (text.length <= maxLen) return text;
   const truncated = text.slice(0, maxLen);
   const lastSpace = truncated.lastIndexOf(' ');
-  return (lastSpace > 120 ? truncated.slice(0, lastSpace) : truncated).replace(/[\s,;:-]+$/, '') + '…';
+  return (
+    (lastSpace > 120 ? truncated.slice(0, lastSpace) : truncated).replace(/[\s,;:-]+$/, '') + '…'
+  );
 }
 
 // Truncate tool name at word/hyphen boundary for SEO title
@@ -86,10 +118,10 @@ function truncateToolName(name: string, maxLen: number = 25): string {
 
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const tool = toolsData.find((t) => t.slug === params.slug);
-  if (!tool) return { title: "Tool Not Found" };
+  if (!tool) return { title: 'Tool Not Found' };
   const { total, grade } = calculateScoreResult(tool.scores);
   const categoryFormatted = tool.category.charAt(0).toUpperCase() + tool.category.slice(1);
-  const prosSummary = tool.pros.slice(0, 2).join(", ");
+  const prosSummary = tool.pros.slice(0, 2).join(', ');
   const description = `${tool.name} by ${tool.vendor} — ${categoryFormatted} AI tool rated ${total.toFixed(1)}/10 (${grade} grade). Expert review: features, pricing, pros (${prosSummary}) & cons. Last updated ${tool.lastUpdated}. Find out if ${tool.name} is right for you.`;
   // Use tool-specific screenshot as og:image if available
 
@@ -102,7 +134,16 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   return {
     title: `${toolNameDisplay} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
     description: truncateDescription(description),
-    keywords: [tool.name, `${tool.name} review`, `${tool.name} pricing`, tool.vendor, ...tool.tags, `best ${tool.category} AI tools`, "AI tool review", "AI software comparison"],
+    keywords: [
+      tool.name,
+      `${tool.name} review`,
+      `${tool.name} pricing`,
+      tool.vendor,
+      ...tool.tags,
+      `best ${tool.category} AI tools`,
+      'AI tool review',
+      'AI software comparison',
+    ],
     alternates: {
       canonical: `https://www.aitoolcrux.com/tools/${tool.slug}`,
     },
@@ -110,11 +151,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       title: `${toolNameDisplay} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: truncateDescription(description),
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
-      type: "website",
+      type: 'website',
       publishedTime: tool.lastUpdated,
       modifiedTime: tool.lastUpdated,
-      authors: ["AIToolCrux Editorial Team"],
-      siteName: "AIToolCrux",
+      authors: ['AIToolCrux Editorial Team'],
+      siteName: 'AIToolCrux',
       images: [
         {
           url: ogImageUrl,
@@ -125,7 +166,7 @@ export async function generateMetadata({ params }: { params: { slug: string } })
       ],
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: `${toolNameDisplay} Review 2026: ${total.toFixed(1)}/10 | AIToolCrux`,
       description: truncateDescription(description),
       images: [ogImageUrl],
@@ -143,10 +184,21 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     .slice(0, 6);
 
   // Resolve screenshot URL for ToolScreenshot: real webp if available, else /api/og fallback
-  const resolvedScreenshotPath = toolScreenshotMap[tool.slug] || `/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}`;
+  const resolvedScreenshotPath =
+    toolScreenshotMap[tool.slug] ||
+    `/api/og?title=${encodeURIComponent(tool.name + ' Review 2026')}`;
 
   // 跨分类热门工具推荐 - 增加重要工具入链（P1-004）
-  const popularToolSlugs = ["chatgpt", "claude", "gemini", "midjourney", "dall-e-3", "cursor", "elevenlabs", "notion-ai"];
+  const popularToolSlugs = [
+    'chatgpt',
+    'claude',
+    'gemini',
+    'midjourney',
+    'dall-e-3',
+    'cursor',
+    'elevenlabs',
+    'notion-ai',
+  ];
   const popularTools = toolsData
     .filter((t) => popularToolSlugs.includes(t.slug) && t.slug !== tool.slug)
     .slice(0, 8);
@@ -154,20 +206,23 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   // Relevant comparison pages - hub-and-spoke internal linking (P0)
   const relevantComparisons = (comparisonsData as any[])
     .filter((c) => {
-      const hay = ((c.title || "") + " " + (c.slug || "")).toLowerCase();
+      const hay = ((c.title || '') + ' ' + (c.slug || '')).toLowerCase();
       return hay.includes(tool.slug) || hay.includes(tool.name.toLowerCase());
     })
     .slice(0, 4);
 
   // 智能Related Articles推荐：工具名匹配(50%) + 分类匹配(30%) + 标签匹配(20%)
-  const toolNameWords = tool.name.toLowerCase().split(/\s+/).filter(w => w.length > 2);
+  const toolNameWords = tool.name
+    .toLowerCase()
+    .split(/\s+/)
+    .filter((w) => w.length > 2);
   const relatedArticles = postsData
     .filter((p: any) => p.slug !== `${tool.slug}-review-2026`)
     .map((post: any) => {
       let relevance = 0;
       const postTitle = post.title.toLowerCase();
       const postTags = (post.tags || []).map((t: string) => t.toLowerCase());
-      const postCategory = (post.category || "").toLowerCase();
+      const postCategory = (post.category || '').toLowerCase();
 
       // 工具名匹配（最高权重）
       for (const word of toolNameWords) {
@@ -183,15 +238,15 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
       // 标签匹配
       const categoryKeywords: Record<string, string[]> = {
-        code: ["coding", "programming", "developer", "code", "software"],
-        chat: ["chatbot", "conversation", "assistant", "chat", "ai assistant"],
-        writing: ["writing", "content", "copywriting", "text"],
-        image: ["image", "art", "design", "visual", "generation"],
-        video: ["video", "animation", "editing", "motion"],
-        audio: ["audio", "music", "voice", "speech", "sound"],
-        productivity: ["productivity", "workflow", "automation", "efficiency"],
-        agent: ["agent", "autonomous", "automation", "workflow"],
-        search: ["search", "research", "discovery", "find"],
+        code: ['coding', 'programming', 'developer', 'code', 'software'],
+        chat: ['chatbot', 'conversation', 'assistant', 'chat', 'ai assistant'],
+        writing: ['writing', 'content', 'copywriting', 'text'],
+        image: ['image', 'art', 'design', 'visual', 'generation'],
+        video: ['video', 'animation', 'editing', 'motion'],
+        audio: ['audio', 'music', 'voice', 'speech', 'sound'],
+        productivity: ['productivity', 'workflow', 'automation', 'efficiency'],
+        agent: ['agent', 'autonomous', 'automation', 'workflow'],
+        search: ['search', 'research', 'discovery', 'find'],
       };
       const keywords = categoryKeywords[tool.category] || [];
       for (const kw of keywords) {
@@ -207,72 +262,76 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
   // Schema.org structured data - Review
   const structuredData = {
-    "@context": "https://schema.org",
-    "@type": "Review",
+    '@context': 'https://schema.org',
+    '@type': 'Review',
     itemReviewed: {
-      "@type": "SoftwareApplication",
+      '@type': 'SoftwareApplication',
       name: tool.name,
-      applicationCategory: "WebApplication",
-      operatingSystem: "Web",
-      brand: { "@type": "Organization", name: tool.vendor || tool.name },
-      image: toolScreenshotMap[tool.slug] ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}` : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review")}`,
+      applicationCategory: 'WebApplication',
+      operatingSystem: 'Web',
+      brand: { '@type': 'Organization', name: tool.vendor || tool.name },
+      image: toolScreenshotMap[tool.slug]
+        ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}`
+        : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + ' Review')}`,
       url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
       // aggregateRating removed: single editorial review (ratingCount=1) violates Google policy.
       // The reviewRating on the Review itself is the correct pattern for a single review.
       offers: tool.pricing.map((tier) => ({
-        "@type": "Offer",
+        '@type': 'Offer',
         name: tier.name,
-        price: tier.price.includes("$0") ? "0" : tier.price.replace(/[^0-9.]/g, ""),
-        priceCurrency: "USD",
-        availability: "https://schema.org/InStock",
+        price: tier.price.includes('$0') ? '0' : tier.price.replace(/[^0-9.]/g, ''),
+        priceCurrency: 'USD',
+        availability: 'https://schema.org/InStock',
       })),
     },
     reviewRating: {
-      "@type": "Rating",
+      '@type': 'Rating',
       ratingValue: total.toFixed(1),
-      bestRating: "10",
-      worstRating: "1",
+      bestRating: '10',
+      worstRating: '1',
     },
     author: {
-      "@type": "Person",
-      name: "Alex Chen",
-      jobTitle: "Senior AI Tools Reviewer",
+      '@type': 'Person',
+      name: 'Alex Chen',
+      jobTitle: 'Senior AI Tools Reviewer',
     },
     datePublished: tool.lastUpdated,
     reviewBody: tool.review || tool.description,
     name: `${tool.name} Review 2026: Expert Evaluation by AIToolCrux`,
     publisher: {
-      "@type": "Organization",
-      name: "AIToolCrux",
-      url: "https://www.aitoolcrux.com",
+      '@type': 'Organization',
+      name: 'AIToolCrux',
+      url: 'https://www.aitoolcrux.com',
     },
   };
 
   // Standalone SoftwareApplication schema - for Google pricing/software rich snippets
   // Separate from Review schema so Google can identify it as a top-level SoftwareApplication
   const softwareAppData = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
     name: tool.name,
     description: tool.description,
-    applicationCategory: "WebApplication",
-    operatingSystem: "Web",
-    brand: { "@type": "Organization", name: tool.vendor || tool.name },
-    image: toolScreenshotMap[tool.slug] ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}` : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + " Review")}`,
+    applicationCategory: 'WebApplication',
+    operatingSystem: 'Web',
+    brand: { '@type': 'Organization', name: tool.vendor || tool.name },
+    image: toolScreenshotMap[tool.slug]
+      ? `https://www.aitoolcrux.com${toolScreenshotMap[tool.slug]}`
+      : `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(tool.name + ' Review')}`,
     url: `https://www.aitoolcrux.com/tools/${tool.slug}`,
     offers: tool.pricing.map((tier) => ({
-      "@type": "Offer",
+      '@type': 'Offer',
       name: tier.name,
-      price: tier.price.includes("$0") ? "0" : tier.price.replace(/[^0-9.]/g, ""),
-      priceCurrency: "USD",
-      availability: "https://schema.org/InStock",
+      price: tier.price.includes('$0') ? '0' : tier.price.replace(/[^0-9.]/g, ''),
+      priceCurrency: 'USD',
+      availability: 'https://schema.org/InStock',
     })),
     aggregateRating: {
-      "@type": "Rating",
+      '@type': 'Rating',
       ratingValue: total.toFixed(1),
-      bestRating: "10",
-      worstRating: "1",
-      ratingCount: "1",
+      bestRating: '10',
+      worstRating: '1',
+      ratingCount: '1',
     },
   };
 
@@ -280,36 +339,41 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   const toolFAQs = [
     {
       question: `What is ${tool.name}?`,
-      answer: `${tool.name} is a ${tool.category} AI tool developed by ${tool.vendor}. ${tool.description} It is evaluated by AIToolCrux with a ${total.toFixed(1)}/10 overall score (${grade} grade) based on 6 dimensions: functionality, UX, pricing, integration, support, and ethics.`
+      answer: `${tool.name} is a ${tool.category} AI tool developed by ${tool.vendor}. ${tool.description} It is evaluated by AIToolCrux with a ${total.toFixed(1)}/10 overall score (${grade} grade) based on 6 dimensions: functionality, UX, pricing, integration, support, and ethics.`,
     },
     {
       question: `How much does ${tool.name} cost?`,
-      answer: `${tool.name} offers ${tool.pricing.length} pricing tier${tool.pricing.length > 1 ? 's' : ''}: ${tool.pricing.map(t => `${t.name} (${t.price})`).join(', ')}. ${tool.pricing.some(t => t.price?.includes('$0') || t.price?.toLowerCase().includes('free')) ? 'A free tier is available for users to try before committing to a paid plan.' : 'Paid plans start from ' + (tool.pricing[0]?.price || 'contact vendor') + '.'} Visit the official website for the most current pricing information.`
+      answer: `${tool.name} offers ${tool.pricing.length} pricing tier${tool.pricing.length > 1 ? 's' : ''}: ${tool.pricing.map((t) => `${t.name} (${t.price})`).join(', ')}. ${tool.pricing.some((t) => t.price?.includes('$0') || t.price?.toLowerCase().includes('free')) ? 'A free tier is available for users to try before committing to a paid plan.' : 'Paid plans start from ' + (tool.pricing[0]?.price || 'contact vendor') + '.'} Visit the official website for the most current pricing information.`,
     },
     {
       question: `Is ${tool.name} worth using in 2026?`,
-      answer: `Based on our comprehensive 6-dimension evaluation, ${tool.name} scored ${total.toFixed(1)}/10 (${grade} grade). It performs best in ${Object.entries(tool.scores || {}).sort((a,b) => b[1]-a[1])[0]?.[0] || 'functionality'} (${Object.entries(tool.scores || {}).sort((a,b) => b[1]-a[1])[0]?.[1] || 'N/A'}/10). We recommend it for users looking for a ${tool.category} solution. For the best fit, compare it with similar tools in our ranking.`
+      answer: `Based on our comprehensive 6-dimension evaluation, ${tool.name} scored ${total.toFixed(1)}/10 (${grade} grade). It performs best in ${Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[0] || 'functionality'} (${Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[1] || 'N/A'}/10). We recommend it for users looking for a ${tool.category} solution. For the best fit, compare it with similar tools in our ranking.`,
     },
     {
       question: `What are the best alternatives to ${tool.name}?`,
-      answer: `Top alternatives to ${tool.name} include ${relatedTools.slice(0, 3).map(t => t.name).join(', ')}. Each alternative has different strengths and pricing models. We recommend comparing features, pricing, and use cases side-by-side to find the best fit for your specific needs. Visit our comparison page to compare ${tool.name} with up to 3 other tools simultaneously.`
+      answer: `Top alternatives to ${tool.name} include ${relatedTools
+        .slice(0, 3)
+        .map((t) => t.name)
+        .join(
+          ', ',
+        )}. Each alternative has different strengths and pricing models. We recommend comparing features, pricing, and use cases side-by-side to find the best fit for your specific needs. Visit our comparison page to compare ${tool.name} with up to 3 other tools simultaneously.`,
     },
     {
       question: `Does ${tool.name} offer a free trial or free plan?`,
-      answer: `${tool.pricing.some(t => t.price?.includes('$0') || t.price?.toLowerCase().includes('free') || t.price?.toLowerCase().includes('trial')) ? 'Yes, ' + tool.name + ' offers a free tier or free trial. ' : 'You can check ' + tool.name + "'s official website for current free trial offers and promotions. "}Most AI tools offer some form of free tier or trial period. We recommend starting with the free plan to evaluate whether the tool meets your needs before upgrading to a paid subscription.`
+      answer: `${tool.pricing.some((t) => t.price?.includes('$0') || t.price?.toLowerCase().includes('free') || t.price?.toLowerCase().includes('trial')) ? 'Yes, ' + tool.name + ' offers a free tier or free trial. ' : 'You can check ' + tool.name + "'s official website for current free trial offers and promotions. "}Most AI tools offer some form of free tier or trial period. We recommend starting with the free plan to evaluate whether the tool meets your needs before upgrading to a paid subscription.`,
     },
     {
       question: `How does ${tool.name} compare to other AI tools?`,
-      answer: `${tool.name} ranks among the top ${tool.category} AI tools with a ${total.toFixed(1)}/10 overall score. Compared to competitors, it offers ${(tool.keyFeatures?.[0] || tool.pros?.[0] || 'unique features and capabilities')}. See our detailed evaluation above for a comprehensive analysis of its strengths, weaknesses, pricing, and use cases. You can also use our comparison tool to see how it stacks up against specific alternatives.`
+      answer: `${tool.name} ranks among the top ${tool.category} AI tools with a ${total.toFixed(1)}/10 overall score. Compared to competitors, it offers ${tool.keyFeatures?.[0] || tool.pros?.[0] || 'unique features and capabilities'}. See our detailed evaluation above for a comprehensive analysis of its strengths, weaknesses, pricing, and use cases. You can also use our comparison tool to see how it stacks up against specific alternatives.`,
     },
     {
       question: `Is ${tool.name} safe and trustworthy?`,
-      answer: `${tool.name} is developed by ${tool.vendor}, a company in the AI space. The tool uses standard security practices for data protection. Our ethics score for this tool is ${tool.scores?.ethics || 'N/A'}/10. As with any AI tool, we recommend reviewing their privacy policy and terms of service before inputting sensitive or confidential information. Always ensure you understand how your data is used, stored, and protected.`
+      answer: `${tool.name} is developed by ${tool.vendor}, a company in the AI space. The tool uses standard security practices for data protection. Our ethics score for this tool is ${tool.scores?.ethics || 'N/A'}/10. As with any AI tool, we recommend reviewing their privacy policy and terms of service before inputting sensitive or confidential information. Always ensure you understand how your data is used, stored, and protected.`,
     },
     {
       question: `Can ${tool.name} be used for commercial or business purposes?`,
-      answer: `Commercial use rights for ${tool.name} depend on the specific pricing plan you choose. Most paid plans allow commercial use, while free tiers may have restrictions on commercial applications. We recommend carefully reviewing the tool's official terms of service, license agreement, or contacting their support team for the most accurate and up-to-date information about commercial licensing and usage rights.`
-    }
+      answer: `Commercial use rights for ${tool.name} depend on the specific pricing plan you choose. Most paid plans allow commercial use, while free tiers may have restrictions on commercial applications. We recommend carefully reviewing the tool's official terms of service, license agreement, or contacting their support team for the most accurate and up-to-date information about commercial licensing and usage rights.`,
+    },
   ];
 
   return (
@@ -326,26 +390,29 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "/" },
-          { name: "Ranking", url: "/ranking" },
+          { name: 'Home', url: '/' },
+          { name: 'Ranking', url: '/ranking' },
           { name: tool.name, url: `/tools/${tool.slug}` },
         ]}
       />
 
       {/* FAQPage Schema - for FAQ rich snippets in Google Search */}
-      <FAQSchema faqs={toolFAQs.map(f => ({ question: f.question, answer: f.answer }))} />
+      <FAQSchema faqs={toolFAQs.map((f) => ({ question: f.question, answer: f.answer }))} />
 
       {/* Visual breadcrumb navigation */}
       <Breadcrumb
         items={[
-          { name: "Ranking", url: "/ranking" },
+          { name: 'Ranking', url: '/ranking' },
           { name: tool.category, url: `/category/${tool.category}` },
           { name: tool.name },
         ]}
         className="mb-4"
       />
 
-      <Link href="/ranking" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-zinc-600 dark:text-gray-300 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-gray-700 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all">
+      <Link
+        href="/ranking"
+        className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-zinc-600 dark:text-gray-300 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-gray-700 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all"
+      >
         <ArrowLeft className="w-4 h-4" />
         Back to Ranking
       </Link>
@@ -370,24 +437,55 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </div>
           <div className="flex-1 min-w-0">
             <div className="flex flex-wrap items-center gap-3 mb-2">
-              <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">{tool.name}</h1>
-              <span className={`px-3 py-1 rounded-lg text-sm font-bold tracking-wider ${GRADE_STYLES[grade]}`}>
+              <h1 className="text-2xl sm:text-3xl font-extrabold text-zinc-900 dark:text-white">
+                {tool.name}
+              </h1>
+              <span
+                className={`px-3 py-1 rounded-lg text-sm font-bold tracking-wider ${GRADE_STYLES[grade]}`}
+              >
                 {grade} Grade · {GRADE_DESCRIPTIONS[grade]}
               </span>
             </div>
             <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-500 dark:text-zinc-400">
-              <span className="inline-flex items-center gap-1.5"><Building2 className="w-4 h-4" />{tool.vendor}</span>
-              <span className="inline-flex items-center gap-1.5"><Clock className="w-4 h-4" />Updated {tool.lastUpdated}</span>
-              <span className="inline-flex items-center gap-1.5"><Tag className="w-4 h-4" />{tool.category}</span>
-              {tool.hasFreeTier && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">Free Tier Available</span>}
-              {(tool as any).no_credit_card && <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">No Credit Card</span>}
-              {(tool as any).free_quota && <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md text-xs font-semibold">Free: {(tool as any).free_quota}</span>}
-              {(tool as any).hidden_cost && <span className="px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-md text-xs font-semibold">Hidden cost: {(tool as any).hidden_cost}</span>}
+              <span className="inline-flex items-center gap-1.5">
+                <Building2 className="w-4 h-4" />
+                {tool.vendor}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Clock className="w-4 h-4" />
+                Updated {tool.lastUpdated}
+              </span>
+              <span className="inline-flex items-center gap-1.5">
+                <Tag className="w-4 h-4" />
+                {tool.category}
+              </span>
+              {tool.hasFreeTier && (
+                <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">
+                  Free Tier Available
+                </span>
+              )}
+              {(tool as any).no_credit_card && (
+                <span className="px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-md text-xs font-semibold">
+                  No Credit Card
+                </span>
+              )}
+              {(tool as any).free_quota && (
+                <span className="px-2 py-0.5 bg-blue-50 dark:bg-blue-900/20 text-blue-600 dark:text-blue-400 rounded-md text-xs font-semibold">
+                  Free: {(tool as any).free_quota}
+                </span>
+              )}
+              {(tool as any).hidden_cost && (
+                <span className="px-2 py-0.5 bg-amber-50 dark:bg-amber-900/20 text-amber-600 dark:text-amber-400 rounded-md text-xs font-semibold">
+                  Hidden cost: {(tool as any).hidden_cost}
+                </span>
+              )}
             </div>
           </div>
           <div className="flex flex-row sm:flex-col items-baseline sm:items-end gap-1 sm:gap-0">
             <div className="flex items-baseline gap-1">
-              <span className="text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none tabular-nums">{total.toFixed(1)}</span>
+              <span className="text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none tabular-nums">
+                {total.toFixed(1)}
+              </span>
               <span className="text-sm text-zinc-400 dark:text-zinc-500">/10</span>
             </div>
             <div className="text-xs text-zinc-400 dark:text-zinc-500">Overall Score</div>
@@ -396,16 +494,31 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         {(tool.officialUrl || tool.affiliateUrl) && (
           <div className="mt-6 pt-6 border-t border-gray-50 dark:border-zinc-800">
             {(() => {
-              const hasRecommendedPaid = Array.isArray(tool.pricing) && tool.pricing.some((t: any) => t?.recommended && t?.price && !String(t.price).includes('$0') && !String(t.price).toLowerCase().includes('free only'));
+              const hasRecommendedPaid =
+                Array.isArray(tool.pricing) &&
+                tool.pricing.some(
+                  (t: any) =>
+                    t?.recommended &&
+                    t?.price &&
+                    !String(t.price).includes('$0') &&
+                    !String(t.price).toLowerCase().includes('free only'),
+                );
               const cta = hasRecommendedPaid
                 ? `Try ${tool.name} Pro Free Trial`
-                : (tool.hasFreeTier ? `Try ${tool.name} Free` : `Start ${tool.name} Free Trial`);
+                : tool.hasFreeTier
+                  ? `Try ${tool.name} Free`
+                  : `Start ${tool.name} Free Trial`;
               const sub = hasRecommendedPaid
-                ? "We tested 12 AI tools, this is the best value for money"
-                : "Tested by our team · No credit card required for free plan";
+                ? 'We tested 12 AI tools, this is the best value for money'
+                : 'Tested by our team · No credit card required for free plan';
               return (
                 <>
-                  <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
+                  <a
+                    href={tool.affiliateUrl || tool.officialUrl}
+                    target="_blank"
+                    rel="noopener noreferrer sponsored"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+                  >
                     <ExternalLink className="w-4 h-4" />
                     {cta}
                   </a>
@@ -422,7 +535,10 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             })()}
             {tool.affiliateUrl && (
               <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
-                <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
+                <em>
+                  Disclosure: This is an affiliate link. We may earn a commission if you sign up, at
+                  no extra cost to you.
+                </em>
               </p>
             )}
           </div>
@@ -458,79 +574,128 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
 
       {/* AEO/GEO Optimization: Quick Answer - Answer First for AI Search Citation */}
       <FadeIn delay={0.1} y={20}>
-      <section className="bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8 mb-6">
-        <div className="flex items-center gap-2 mb-4">
-          <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-          <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Quick Answer</h2>
-        </div>
-        <div className="space-y-4">
-          <div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">What is {tool.name}?</h3>
-            <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">{tool.description} Developed by {tool.vendor}, it is categorized as a {tool.category} AI solution.</p>
+        <section className="bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8 mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Quick Answer</h2>
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">How good is {tool.name}?</h3>
-            <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">{tool.name} achieves a <strong>{total.toFixed(1)}/10</strong> overall score ({grade} grade) in our comprehensive 6-dimension evaluation. It performs strongest in {Object.entries(tool.scores || {}).sort((a,b) => b[1]-a[1])[0]?.[0] || "functionality"} ({Object.entries(tool.scores || {}).sort((a,b) => b[1]-a[1])[0]?.[1] || "N/A"}/10).</p>
+          <div className="space-y-4">
+            <div>
+              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                What is {tool.name}?
+              </h3>
+              <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
+                {tool.description} Developed by {tool.vendor}, it is categorized as a{' '}
+                {tool.category} AI solution.
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                How good is {tool.name}?
+              </h3>
+              <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
+                {tool.name} achieves a <strong>{total.toFixed(1)}/10</strong> overall score ({grade}{' '}
+                grade) in our comprehensive 6-dimension evaluation. It performs strongest in{' '}
+                {Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[0] ||
+                  'functionality'}{' '}
+                ({Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[1] || 'N/A'}
+                /10).
+              </p>
+            </div>
+            <div>
+              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+                Is {tool.name} free?
+              </h3>
+              <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
+                {tool.pricing.some(
+                  (t) => t.price?.includes('$0') || t.price?.toLowerCase().includes('free'),
+                )
+                  ? 'Yes, ' + tool.name + ' offers a free tier. '
+                  : tool.name +
+                    ' pricing starts at ' +
+                    (tool.pricing[0]?.price || 'contact vendor') +
+                    '. '}
+                It offers {tool.pricing.length} pricing tier{tool.pricing.length > 1 ? 's' : ''}:{' '}
+                {tool.pricing.map((t) => t.name).join(', ')}.
+              </p>
+            </div>
           </div>
-          <div>
-            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">Is {tool.name} free?</h3>
-            <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">{tool.pricing.some(t => t.price?.includes("$0") || t.price?.toLowerCase().includes("free")) ? "Yes, " + tool.name + " offers a free tier. " : tool.name + " pricing starts at " + (tool.pricing[0]?.price || "contact vendor") + ". "}It offers {tool.pricing.length} pricing tier{tool.pricing.length > 1 ? "s" : ""}: {tool.pricing.map(t => t.name).join(", ")}.</p>
-          </div>
-        </div>
-      </section>
+        </section>
       </FadeIn>
 
       {/* AEO/GEO Optimization: Key Takeaways - Structured for AI Citation */}
       <FadeIn delay={0.2} y={20}>
-      <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
-        <div className="flex items-center gap-2 mb-4">
-          <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-          <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Key Takeaways</h2>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-          <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
-              <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+        <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
+          <div className="flex items-center gap-2 mb-4">
+            <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Key Takeaways</h2>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div className="flex items-start gap-3">
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+                <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Best For</h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  {tool.useCases?.[0] || 'Users seeking ' + tool.category + ' AI solutions'}
+                </p>
+              </div>
             </div>
-            <div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Best For</h4>
-              <p className="text-zinc-600 dark:text-zinc-400 text-sm">{tool.useCases?.[0] || "Users seeking " + tool.category + " AI solutions"}</p>
+            <div className="flex items-start gap-3">
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
+                <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                  Overall Rating
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  {total.toFixed(1)}/10 ({grade} grade) - {GRADE_DESCRIPTIONS[grade]}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30">
+                <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                  Top Feature
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  {tool.keyFeatures?.[0] || tool.pros?.[0] || 'Comprehensive feature set'}
+                </p>
+              </div>
+            </div>
+            <div className="flex items-start gap-3">
+              <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30">
+                <ShieldCheck className="w-4 h-4 text-teal-600 dark:text-teal-400" />
+              </div>
+              <div>
+                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                  Ethics Score
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  {tool.scores?.ethics || 'N/A'}/10 - Evaluated for data privacy and responsible AI
+                  practices
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-emerald-100 dark:bg-emerald-900/30">
-              <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Overall Rating</h4>
-              <p className="text-zinc-600 dark:text-zinc-400 text-sm">{total.toFixed(1)}/10 ({grade} grade) - {GRADE_DESCRIPTIONS[grade]}</p>
-            </div>
+          <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
+            <p className="text-xs text-zinc-500 dark:text-zinc-400">
+              <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong>{' '}
+              {tool.lastUpdated} | <strong>Methodology:</strong> 6-dimension evaluation |{' '}
+              <Link
+                href="/methodology"
+                className="text-emerald-600 dark:text-emerald-400 hover:underline"
+              >
+                Full methodology
+              </Link>
+            </p>
           </div>
-          <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-amber-100 dark:bg-amber-900/30">
-              <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Top Feature</h4>
-              <p className="text-zinc-600 dark:text-zinc-400 text-sm">{tool.keyFeatures?.[0] || tool.pros?.[0] || "Comprehensive feature set"}</p>
-            </div>
-          </div>
-          <div className="flex items-start gap-3">
-            <div className="w-8 h-8 flex-shrink-0 flex items-center justify-center rounded-lg bg-teal-100 dark:bg-teal-900/30">
-              <ShieldCheck className="w-4 h-4 text-teal-600 dark:text-teal-400" />
-            </div>
-            <div>
-              <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Ethics Score</h4>
-              <p className="text-zinc-600 dark:text-zinc-400 text-sm">{tool.scores?.ethics || "N/A"}/10 - Evaluated for data privacy and responsible AI practices</p>
-            </div>
-          </div>
-        </div>
-        <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
-          <p className="text-xs text-zinc-500 dark:text-zinc-400">
-            <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {tool.lastUpdated} | <strong>Methodology:</strong> 6-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
-          </p>
-        </div>
-      </section>
+        </section>
       </FadeIn>
 
       {/* Author Bio - E-E-A-T Expertise & Authoritativeness signal */}
@@ -560,12 +725,19 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-sm font-medium text-zinc-700 dark:text-gray-300">
                       {DIMENSION_LABELS[dim]}
-                      <span className="ml-2 text-xs text-zinc-400 dark:text-zinc-500">Weight {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%</span>
+                      <span className="ml-2 text-xs text-zinc-400 dark:text-zinc-500">
+                        Weight {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%
+                      </span>
                     </span>
-                    <span className="text-sm font-bold text-zinc-900 dark:text-white tabular-nums">{score.toFixed(1)}</span>
+                    <span className="text-sm font-bold text-zinc-900 dark:text-white tabular-nums">
+                      {score.toFixed(1)}
+                    </span>
                   </div>
                   <div className="h-2 bg-zinc-100 dark:bg-zinc-800 rounded-full overflow-hidden">
-                    <div className="h-full rounded-full bg-emerald-500 transition-all duration-300" style={{ width: `${percent}%` }} />
+                    <div
+                      className="h-full rounded-full bg-emerald-500 transition-all duration-300"
+                      style={{ width: `${percent}%` }}
+                    />
                   </div>
                 </div>
               );
@@ -585,13 +757,20 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       <section className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
         <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6">
           <h2 className="text-lg font-bold text-emerald-600 dark:text-emerald-400 mb-4 flex items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-50 dark:bg-emerald-900/20"><Check className="w-5 h-5" /></div>
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-emerald-50 dark:bg-emerald-900/20">
+              <Check className="w-5 h-5" />
+            </div>
             Key Advantages
           </h2>
           <ul className="space-y-3">
             {tool.pros.map((pro, i) => (
-              <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
-                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">{i + 1}</span>
+              <li
+                key={i}
+                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+              >
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">
+                  {i + 1}
+                </span>
                 {pro}
               </li>
             ))}
@@ -599,13 +778,20 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         </div>
         <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6">
           <h2 className="text-lg font-bold text-red-500 dark:text-red-400 mb-4 flex items-center gap-2">
-            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20"><X className="w-5 h-5" /></div>
+            <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-red-50 dark:bg-red-900/20">
+              <X className="w-5 h-5" />
+            </div>
             Key Disadvantages
           </h2>
           <ul className="space-y-3">
             {tool.cons.map((con, i) => (
-              <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
-                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 text-red-500 dark:text-red-400 text-xs font-bold mt-0.5">!</span>
+              <li
+                key={i}
+                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+              >
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 text-red-500 dark:text-red-400 text-xs font-bold mt-0.5">
+                  !
+                </span>
                 {con}
               </li>
             ))}
@@ -638,42 +824,58 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {(tool as any).testingPeriod && (
               <div className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4">
-                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1">Testing Period</div>
-                <div className="text-sm font-semibold text-zinc-900 dark:text-white">{(tool as any).testingPeriod}</div>
+                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1">
+                  Testing Period
+                </div>
+                <div className="text-sm font-semibold text-zinc-900 dark:text-white">
+                  {(tool as any).testingPeriod}
+                </div>
               </div>
             )}
             {(tool as any).testingDetails && (
               <div className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4 md:col-span-2">
-                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-2">Testing Details</div>
+                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-2">
+                  Testing Details
+                </div>
                 {typeof (tool as any).testingDetails === 'string' ? (
-                  <div className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">{(tool as any).testingDetails}</div>
+                  <div className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
+                    {(tool as any).testingDetails}
+                  </div>
                 ) : (
                   <div className="space-y-2">
                     {(tool as any).testingDetails.testing_methodology && (
-                      <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">{(tool as any).testingDetails.testing_methodology}</p>
+                      <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
+                        {(tool as any).testingDetails.testing_methodology}
+                      </p>
                     )}
-                    {(tool as any).testingDetails.benchmark_tests && Array.isArray((tool as any).testingDetails.benchmark_tests) && (
-                      <div>
-                        <div className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-1">Benchmark Tests:</div>
-                        <ul className="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 list-disc list-inside">
-                          {(tool as any).testingDetails.benchmark_tests.slice(0, 4).map((test: string, i: number) => (
-                            <li key={i}>{test}</li>
-                          ))}
-                        </ul>
-                      </div>
-                    )}
+                    {(tool as any).testingDetails.benchmark_tests &&
+                      Array.isArray((tool as any).testingDetails.benchmark_tests) && (
+                        <div>
+                          <div className="text-xs font-semibold text-zinc-500 dark:text-zinc-400 mb-1">
+                            Benchmark Tests:
+                          </div>
+                          <ul className="text-xs text-zinc-600 dark:text-zinc-400 space-y-0.5 list-disc list-inside">
+                            {(tool as any).testingDetails.benchmark_tests
+                              .slice(0, 4)
+                              .map((test: string, i: number) => (
+                                <li key={i}>{test}</li>
+                              ))}
+                          </ul>
+                        </div>
+                      )}
                   </div>
                 )}
               </div>
             )}
           </div>
           <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-4 italic">
-            All ratings are based on hands-on testing by our editorial team. We do not accept payment for positive reviews, and affiliate relationships never influence our ratings or recommendations.
+            All ratings are based on hands-on testing by our editorial team. We do not accept
+            payment for positive reviews, and affiliate relationships never influence our ratings or
+            recommendations.
           </p>
         </section>
       )}
 
-      
       {/* Real User Experience - E-E-A-T Experience signal (first-person usage) */}
       {((tool as any).realExperience || (tool as any).usageScenarios) && (
         <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
@@ -683,38 +885,60 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </h2>
           {(tool as any).realExperience && (
             <div className="bg-emerald-50 dark:bg-emerald-900/10 border-l-4 border-emerald-500 rounded-r-xl p-4 mb-5">
-              <div className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-2 font-semibold">First-Hand Review</div>
-              <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">{(tool as any).realExperience}</p>
-            </div>
-          )}
-          {(tool as any).usageScenarios && Array.isArray((tool as any).usageScenarios) && (tool as any).usageScenarios.length > 0 && (
-            <div className="mb-5">
-              <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">Tested Use Cases</div>
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-                {(tool as any).usageScenarios.map((scenario: string, i: number) => (
-                  <div key={i} className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4 border border-zinc-100 dark:border-zinc-700/50">
-                    <div className="flex items-start gap-3">
-                      <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">{i + 1}</span>
-                      <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">{scenario}</p>
-                    </div>
-                  </div>
-                ))}
+              <div className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-2 font-semibold">
+                First-Hand Review
               </div>
+              <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
+                {(tool as any).realExperience}
+              </p>
             </div>
           )}
-          {(tool as any).notableObservations && Array.isArray((tool as any).notableObservations) && (tool as any).notableObservations.length > 0 && (
-            <div>
-              <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">Key Observations</div>
-              <ul className="space-y-2">
-                {(tool as any).notableObservations.map((obs: string, i: number) => (
-                  <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
-                    <Lightbulb className="w-4 h-4 flex-shrink-0 text-amber-500 mt-0.5" />
-                    {obs}
-                  </li>
-                ))}
-              </ul>
-            </div>
-          )}
+          {(tool as any).usageScenarios &&
+            Array.isArray((tool as any).usageScenarios) &&
+            (tool as any).usageScenarios.length > 0 && (
+              <div className="mb-5">
+                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
+                  Tested Use Cases
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {(tool as any).usageScenarios.map((scenario: string, i: number) => (
+                    <div
+                      key={i}
+                      className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4 border border-zinc-100 dark:border-zinc-700/50"
+                    >
+                      <div className="flex items-start gap-3">
+                        <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
+                          {i + 1}
+                        </span>
+                        <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
+                          {scenario}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            )}
+          {(tool as any).notableObservations &&
+            Array.isArray((tool as any).notableObservations) &&
+            (tool as any).notableObservations.length > 0 && (
+              <div>
+                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
+                  Key Observations
+                </div>
+                <ul className="space-y-2">
+                  {(tool as any).notableObservations.map((obs: string, i: number) => (
+                    <li
+                      key={i}
+                      className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+                    >
+                      <Lightbulb className="w-4 h-4 flex-shrink-0 text-amber-500 mt-0.5" />
+                      {obs}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )}
         </section>
       )}
 
@@ -723,93 +947,137 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         {/* Who Should Use This? */}
         <div className="bg-white dark:bg-zinc-900 rounded-xl border border-emerald-200 dark:border-emerald-900/50 p-6">
           <h3 className="text-base font-bold text-emerald-700 dark:text-emerald-400 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 text-sm">✓</span>
+            <span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900/30 flex items-center justify-center text-emerald-600 text-sm">
+              ✓
+            </span>
             Who Should Use This?
           </h3>
           <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
-            {tool.bestFor || (
-              tool.category === 'image' ? 'Digital artists, designers, and marketers who need high-quality AI-generated visuals for campaigns, social media, and creative projects.' :
-              tool.category === 'code' ? 'Developers and engineering teams who want to speed up coding, debugging, and code reviews with AI assistance.' :
-              tool.category === 'chat' ? 'Professionals and teams looking for an AI assistant for writing, research, brainstorming, and daily productivity tasks.' :
-              tool.category === 'audio' ? 'Content creators, podcasters, and video editors who need AI tools for voice generation, transcription, and audio editing.' :
-              tool.category === 'agent' ? 'Power users and developers who want to automate multi-step workflows with autonomous AI agents.' :
-              tool.category === 'productivity' ? 'Knowledge workers and teams who want to streamline daily tasks, summarize content, and boost productivity with AI.' :
-              "Users who want to leverage AI to save time and improve their workflow. If you're evaluating tools in this category, this one is worth trying."
-            )}
+            {tool.bestFor ||
+              (tool.category === 'image'
+                ? 'Digital artists, designers, and marketers who need high-quality AI-generated visuals for campaigns, social media, and creative projects.'
+                : tool.category === 'code'
+                  ? 'Developers and engineering teams who want to speed up coding, debugging, and code reviews with AI assistance.'
+                  : tool.category === 'chat'
+                    ? 'Professionals and teams looking for an AI assistant for writing, research, brainstorming, and daily productivity tasks.'
+                    : tool.category === 'audio'
+                      ? 'Content creators, podcasters, and video editors who need AI tools for voice generation, transcription, and audio editing.'
+                      : tool.category === 'agent'
+                        ? 'Power users and developers who want to automate multi-step workflows with autonomous AI agents.'
+                        : tool.category === 'productivity'
+                          ? 'Knowledge workers and teams who want to streamline daily tasks, summarize content, and boost productivity with AI.'
+                          : "Users who want to leverage AI to save time and improve their workflow. If you're evaluating tools in this category, this one is worth trying.")}
           </p>
         </div>
 
         {/* Who Should Skip This? */}
         <div className="bg-white dark:bg-zinc-900 rounded-xl border border-amber-200 dark:border-amber-900/50 p-6">
           <h3 className="text-base font-bold text-amber-700 dark:text-amber-400 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 text-sm">!</span>
+            <span className="w-6 h-6 rounded-full bg-amber-100 dark:bg-amber-900/30 flex items-center justify-center text-amber-600 text-sm">
+              !
+            </span>
             Who Should Skip This?
           </h3>
           <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
-            {tool.notIdealFor || (
-              tool.hasFreeTier === false ? 'Casual users who only need occasional AI help may find the pricing hard to justify. Start with a free alternative first before committing to a paid plan.' :
-              "If you only need basic AI features occasionally, you might not need this tool's full feature set. Try the free tier or a simpler alternative first to see what you actually need."
-            )}
+            {tool.notIdealFor ||
+              (tool.hasFreeTier === false
+                ? 'Casual users who only need occasional AI help may find the pricing hard to justify. Start with a free alternative first before committing to a paid plan.'
+                : "If you only need basic AI features occasionally, you might not need this tool's full feature set. Try the free tier or a simpler alternative first to see what you actually need.")}
           </p>
         </div>
 
         {/* Best Free Alternative */}
         <div className="bg-white dark:bg-zinc-900 rounded-xl border border-blue-200 dark:border-blue-900/50 p-6">
           <h3 className="text-base font-bold text-blue-700 dark:text-blue-400 mb-3 flex items-center gap-2">
-            <span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 text-sm">★</span>
+            <span className="w-6 h-6 rounded-full bg-blue-100 dark:bg-blue-900/30 flex items-center justify-center text-blue-600 text-sm">
+              ★
+            </span>
             Best Free Alternative
           </h3>
           <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed mb-3">
-            {tool.hasFreeTier ? `This tool offers a free tier that covers most basic needs. Start there before upgrading to a paid plan.` :
-            (tool.category === 'image' ? 'Try DALL-E 3 (free with ChatGPT) or Bing Image Creator — both produce solid results at no cost.' :
-            tool.category === 'code' ? 'Try GitHub Copilot free tier or Codeium — solid AI coding assistance without a monthly fee.' :
-            tool.category === 'chat' ? 'Try ChatGPT free tier or Google Gemini — both handle most everyday AI tasks for free.' :
-            tool.category === 'audio' ? 'Try ElevenLabs free tier or Google Text-to-Speech for basic voice generation at no cost.' :
-            tool.category === 'agent' ? 'Try AutoGPT or OpenAI Agents (free tier) for exploring AI agent workflows without spending.' :
-            "Check if there's a free tier or open-source alternative in this category before committing to a paid plan.")}
+            {tool.hasFreeTier
+              ? `This tool offers a free tier that covers most basic needs. Start there before upgrading to a paid plan.`
+              : tool.category === 'image'
+                ? 'Try DALL-E 3 (free with ChatGPT) or Bing Image Creator — both produce solid results at no cost.'
+                : tool.category === 'code'
+                  ? 'Try GitHub Copilot free tier or Codeium — solid AI coding assistance without a monthly fee.'
+                  : tool.category === 'chat'
+                    ? 'Try ChatGPT free tier or Google Gemini — both handle most everyday AI tasks for free.'
+                    : tool.category === 'audio'
+                      ? 'Try ElevenLabs free tier or Google Text-to-Speech for basic voice generation at no cost.'
+                      : tool.category === 'agent'
+                        ? 'Try AutoGPT or OpenAI Agents (free tier) for exploring AI agent workflows without spending.'
+                        : "Check if there's a free tier or open-source alternative in this category before committing to a paid plan."}
           </p>
-          <a href={tool.officialUrl} target="_blank" rel="noopener noreferrer" className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline">
+          <a
+            href={tool.officialUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-xs font-medium text-blue-600 dark:text-blue-400 hover:underline"
+          >
             Check free options →
           </a>
         </div>
       </section>
 
       {/* Performance Test Results - Quantitative E-E-A-T data */}
-      {(tool as any).testMetrics && Array.isArray((tool as any).testMetrics) && (tool as any).testMetrics.length > 0 && (
-        <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
-          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-            <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-            Performance Test Results
-          </h2>
-          <div className="overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead>
-                <tr className="border-b border-zinc-200 dark:border-zinc-700">
-                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">Metric</th>
-                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">Result</th>
-                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden md:table-cell">Test Method</th>
-                  <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden lg:table-cell">Comparison</th>
-                </tr>
-              </thead>
-              <tbody>
-                {(tool as any).testMetrics.map((metric: any, i: number) => (
-                  <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors">
-                    <td className="py-3 px-3 font-medium text-zinc-900 dark:text-white">{metric.metric}</td>
-                    <td className="py-3 px-3">
-                      <span className="inline-block bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full text-xs font-bold">{metric.value}</span>
-                    </td>
-                    <td className="py-3 px-3 text-zinc-600 dark:text-gray-400 text-xs hidden md:table-cell">{metric.test}</td>
-                    <td className="py-3 px-3 text-zinc-500 dark:text-zinc-500 text-xs hidden lg:table-cell">{metric.comparison}</td>
+      {(tool as any).testMetrics &&
+        Array.isArray((tool as any).testMetrics) &&
+        (tool as any).testMetrics.length > 0 && (
+          <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
+            <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
+              <TrendingUp className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+              Performance Test Results
+            </h2>
+            <div className="overflow-x-auto">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="border-b border-zinc-200 dark:border-zinc-700">
+                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
+                      Metric
+                    </th>
+                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide">
+                      Result
+                    </th>
+                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden md:table-cell">
+                      Test Method
+                    </th>
+                    <th className="text-left py-3 px-3 text-xs font-semibold text-zinc-500 dark:text-zinc-400 uppercase tracking-wide hidden lg:table-cell">
+                      Comparison
+                    </th>
                   </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-          <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-4 italic">
-            Test results are based on our independent benchmarking. Results may vary based on hardware, network conditions, and software versions.
-          </p>
-        </section>
-      )}
+                </thead>
+                <tbody>
+                  {(tool as any).testMetrics.map((metric: any, i: number) => (
+                    <tr
+                      key={i}
+                      className="border-b border-zinc-100 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-zinc-800/30 transition-colors"
+                    >
+                      <td className="py-3 px-3 font-medium text-zinc-900 dark:text-white">
+                        {metric.metric}
+                      </td>
+                      <td className="py-3 px-3">
+                        <span className="inline-block bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 px-2.5 py-1 rounded-full text-xs font-bold">
+                          {metric.value}
+                        </span>
+                      </td>
+                      <td className="py-3 px-3 text-zinc-600 dark:text-gray-400 text-xs hidden md:table-cell">
+                        {metric.test}
+                      </td>
+                      <td className="py-3 px-3 text-zinc-500 dark:text-zinc-500 text-xs hidden lg:table-cell">
+                        {metric.comparison}
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+            <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-4 italic">
+              Test results are based on our independent benchmarking. Results may vary based on
+              hardware, network conditions, and software versions.
+            </p>
+          </section>
+        )}
 
       {/* Key Features */}
       {(tool as any).keyFeatures && (tool as any).keyFeatures.length > 0 && (
@@ -820,8 +1088,13 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {(tool as any).keyFeatures.map((feature: string, i: number) => (
-              <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4">
-                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">{i + 1}</span>
+              <li
+                key={i}
+                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4"
+              >
+                <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">
+                  {i + 1}
+                </span>
                 {feature}
               </li>
             ))}
@@ -838,7 +1111,10 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </h2>
           <ul className="space-y-3">
             {(tool as any).useCases.map((useCase: string, i: number) => (
-              <li key={i} className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
+              <li
+                key={i}
+                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+              >
                 <Check className="w-5 h-5 flex-shrink-0 text-emerald-500 mt-0.5" />
                 {useCase}
               </li>
@@ -856,7 +1132,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <Users className="w-5 h-5" />
                 Best For
               </h3>
-              <p className="text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">{(tool as any).bestFor}</p>
+              <p className="text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">
+                {(tool as any).bestFor}
+              </p>
             </div>
           )}
           {(tool as any).notIdealFor && (
@@ -865,7 +1143,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <X className="w-5 h-5" />
                 Not Ideal For
               </h3>
-              <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">{(tool as any).notIdealFor}</p>
+              <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
+                {(tool as any).notIdealFor}
+              </p>
             </div>
           )}
         </section>
@@ -893,11 +1173,16 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Rated {total.toFixed(1)}/10 by our editorial team · No affiliate bias
           </p>
           {tool.affiliateUrl && tool.hasFreeTier && (
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">No credit card required · Cancel anytime</p>
+            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+              No credit card required · Cancel anytime
+            </p>
           )}
           {tool.affiliateUrl && (
             <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
-              <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you.</em>
+              <em>
+                Disclosure: This is an affiliate link. We may earn a commission if you sign up, at
+                no extra cost to you.
+              </em>
             </p>
           )}
         </section>
@@ -925,22 +1210,45 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5">Pricing Plans</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
-            <thead><tr className="border-b border-zinc-100 dark:border-zinc-800">
-              <th className="text-left py-3 px-4 font-semibold text-zinc-500 dark:text-zinc-400">Plan</th>
-              <th className="text-left py-3 px-4 font-semibold text-zinc-500 dark:text-zinc-400">Price</th>
-              <th className="text-left py-3 px-4 font-semibold text-zinc-500 dark:text-zinc-400">Description</th>
-            </tr></thead>
+            <thead>
+              <tr className="border-b border-zinc-100 dark:border-zinc-800">
+                <th className="text-left py-3 px-4 font-semibold text-zinc-500 dark:text-zinc-400">
+                  Plan
+                </th>
+                <th className="text-left py-3 px-4 font-semibold text-zinc-500 dark:text-zinc-400">
+                  Price
+                </th>
+                <th className="text-left py-3 px-4 font-semibold text-zinc-500 dark:text-zinc-400">
+                  Description
+                </th>
+              </tr>
+            </thead>
             <tbody>
               {tool.pricing.map((tier, i) => (
-                <tr key={i} className={`border-b border-gray-50 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-gray-800/50 ${tier.recommended ? "bg-emerald-50/50 dark:bg-emerald-900/10" : ""}`}>
+                <tr
+                  key={i}
+                  className={`border-b border-gray-50 dark:border-zinc-800/50 hover:bg-zinc-50 dark:hover:bg-gray-800/50 ${tier.recommended ? 'bg-emerald-50/50 dark:bg-emerald-900/10' : ''}`}
+                >
                   <td className="py-3 px-4">
                     <div className="flex items-center gap-2">
-                      <span className="font-semibold text-zinc-900 dark:text-white">{tier.name}</span>
-                      {tier.recommended && <span className="px-2 py-0.5 bg-emerald-700 text-white text-xs rounded-md font-semibold">Recommended</span>}
+                      <span className="font-semibold text-zinc-900 dark:text-white">
+                        {tier.name}
+                      </span>
+                      {tier.recommended && (
+                        <span className="px-2 py-0.5 bg-emerald-700 text-white text-xs rounded-md font-semibold">
+                          Recommended
+                        </span>
+                      )}
                     </div>
                   </td>
-                  <td className="py-3 px-4"><span className="font-bold text-emerald-600 dark:text-emerald-400">{tier.price}</span></td>
-                  <td className="py-3 px-4 text-zinc-500 dark:text-zinc-400">{tier.description ?? "-"}</td>
+                  <td className="py-3 px-4">
+                    <span className="font-bold text-emerald-600 dark:text-emerald-400">
+                      {tier.price}
+                    </span>
+                  </td>
+                  <td className="py-3 px-4 text-zinc-500 dark:text-zinc-400">
+                    {tier.description ?? '-'}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -955,20 +1263,26 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           Final Verdict & Recommendation
         </h2>
         <p className="text-sm sm:text-base text-zinc-600 dark:text-gray-300 leading-relaxed">
-          {(tool as any).verdict || `${tool.name} is a ${tool.category} AI tool by ${tool.vendor}, with an overall score of ${total.toFixed(1)}/10 and a ${grade} grade (${GRADE_DESCRIPTIONS[grade]}). ${tool.pros[0]}. It's worth noting that ${tool.cons[0]}. ${tool.hasFreeTier ? "This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade." : ""} Overall, ${total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : "overall performance is average, we recommend choosing carefully based on your requirements."}`}
+          {(tool as any).verdict ||
+            `${tool.name} is a ${tool.category} AI tool by ${tool.vendor}, with an overall score of ${total.toFixed(1)}/10 and a ${grade} grade (${GRADE_DESCRIPTIONS[grade]}). ${tool.pros[0]}. It's worth noting that ${tool.cons[0]}. ${tool.hasFreeTier ? 'This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade.' : ''} Overall, ${total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : 'overall performance is average, we recommend choosing carefully based on your requirements.'}`}
         </p>
         <div className="mt-5 flex flex-wrap items-center gap-3">
           {(tool.officialUrl || tool.affiliateUrl) && (
             <>
-            <a href={tool.affiliateUrl || tool.officialUrl} target="_blank" rel="noopener noreferrer sponsored" className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95">
-              <ExternalLink className="w-4 h-4" />
-              {tool.affiliateUrl ? `Try ${tool.name} Free →` : `Visit ${tool.name}`}
-            </a>
-            {tool.affiliateUrl && tool.hasFreeTier && (
-              <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
-                No credit card required
-              </p>
-            )}
+              <a
+                href={tool.affiliateUrl || tool.officialUrl}
+                target="_blank"
+                rel="noopener noreferrer sponsored"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+              >
+                <ExternalLink className="w-4 h-4" />
+                {tool.affiliateUrl ? `Try ${tool.name} Free →` : `Visit ${tool.name}`}
+              </a>
+              {tool.affiliateUrl && tool.hasFreeTier && (
+                <p className="text-xs text-emerald-600 dark:text-emerald-400 font-medium">
+                  No credit card required
+                </p>
+              )}
             </>
           )}
           <span className="text-xs text-zinc-500 dark:text-zinc-400 italic">
@@ -976,11 +1290,17 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </span>
         </div>
         <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">
-          ✅ Independently tested by our editorial team · 🔗 No affiliate bias · 📊 6-dimension scoring
+          ✅ Independently tested by our editorial team · 🔗 No affiliate bias · 📊 6-dimension
+          scoring
         </p>
         <div className="mt-4 flex flex-wrap gap-2">
           {tool.tags.map((tag) => (
-            <span key={tag} className="px-2.5 py-1 bg-white/70 dark:bg-zinc-900/50 text-zinc-600 dark:text-gray-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-gray-700">#{tag}</span>
+            <span
+              key={tag}
+              className="px-2.5 py-1 bg-white/70 dark:bg-zinc-900/50 text-zinc-600 dark:text-gray-300 rounded-md text-xs font-medium border border-zinc-200 dark:border-gray-700"
+            >
+              #{tag}
+            </span>
           ))}
         </div>
       </section>
@@ -997,14 +1317,23 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </h2>
           <div className="space-y-3">
             {(tool as any).alternatives.map((alt: any, i: number) => (
-              <div key={i} className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-gray-800/50 rounded-xl hover:bg-zinc-100 dark:hover:bg-gray-800 transition-colors">
+              <div
+                key={i}
+                className="flex items-center justify-between p-4 bg-zinc-50 dark:bg-gray-800/50 rounded-xl hover:bg-zinc-100 dark:hover:bg-gray-800 transition-colors"
+              >
                 <div className="flex-1">
-                  <Link href={`/tools/${alt.slug}`} className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors">
+                  <Link
+                    href={`/tools/${alt.slug}`}
+                    className="text-sm font-semibold text-zinc-900 dark:text-white hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                  >
                     {alt.name}
                   </Link>
                   <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">{alt.reason}</p>
                 </div>
-                <Link href={`/tools/${alt.slug}`} className="text-xs text-emerald-600 dark:text-emerald-400 font-medium hover:underline ml-4">
+                <Link
+                  href={`/tools/${alt.slug}`}
+                  className="text-xs text-emerald-600 dark:text-emerald-400 font-medium hover:underline ml-4"
+                >
                   Read Review →
                 </Link>
               </div>
@@ -1032,7 +1361,8 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Popular AI Tools
           </h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-5">
-            Explore the most popular AI tools across all categories, handpicked by our editorial team.
+            Explore the most popular AI tools across all categories, handpicked by our editorial
+            team.
           </p>
           <ToolList tools={popularTools} />
         </section>
@@ -1063,7 +1393,6 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           </div>
         </section>
       )}
-
 
       {/* Related Articles - internal linking to blog posts */}
       {relatedArticles.length > 0 && (
@@ -1102,13 +1431,16 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       </section>
 
       <div className="mt-8 text-center text-xs text-zinc-500 dark:text-zinc-400">
-        Scores are based on our public evaluation methodology. Affiliate link revenue does not affect scores. Last updated {tool.lastUpdated}.
+        Scores are based on our public evaluation methodology. Affiliate link revenue does not
+        affect scores. Last updated {tool.lastUpdated}.
       </div>
 
       {/* Mobile sticky CTA — thumb zone: always reachable, hidden on desktop */}
       {(tool.officialUrl || tool.affiliateUrl) && (
         <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] z-40 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
-          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400 mb-2">{total.toFixed(1)}/10 &middot; Grade {grade}</p>
+          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400 mb-2">
+            {total.toFixed(1)}/10 &middot; Grade {grade}
+          </p>
           <a
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"

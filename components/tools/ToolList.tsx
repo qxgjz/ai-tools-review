@@ -1,6 +1,6 @@
-import { PackageSearch } from "lucide-react";
-import type { Tool } from "@/types";
-import { ToolCard } from "./ToolCard";
+import { PackageSearch } from 'lucide-react';
+import type { Tool } from '@/types';
+import { ToolCard } from './ToolCard';
 
 interface ToolListProps {
   tools: Tool[];
@@ -11,9 +11,9 @@ interface ToolListProps {
 
 export function ToolList({
   tools,
-  className = "",
-  emptyTitle = "No tools found",
-  emptyDescription = "No tools match your current filters.",
+  className = '',
+  emptyTitle = 'No tools found',
+  emptyDescription = 'No tools match your current filters.',
 }: ToolListProps) {
   if (tools.length === 0) {
     return (
@@ -28,7 +28,9 @@ export function ToolList({
   }
 
   return (
-    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 ${className}`}>
+    <div
+      className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 ${className}`}
+    >
       {tools.map((tool, index) => (
         <ToolCard key={tool.id} tool={tool} index={index} />
       ))}

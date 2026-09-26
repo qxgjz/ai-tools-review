@@ -1,31 +1,38 @@
-"use client";
+'use client';
 
-import Link from "next/link";
-import { motion } from "framer-motion";
-import { ArrowUpRight, Sparkles, Star } from "lucide-react";
-import type { Tool, Grade } from "@/types";
-import { calculateScoreResult } from "@/lib/scoring";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { Progress } from "@/components/ui/progress";
+import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { ArrowUpRight, Sparkles, Star } from 'lucide-react';
+import type { Tool, Grade } from '@/types';
+import { calculateScoreResult } from '@/lib/scoring';
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
+import { Progress } from '@/components/ui/progress';
 
 const GRADE_STYLES: Record<Grade, string> = {
-  S: "bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-amber-500/30",
-  A: "bg-gradient-to-br from-emerald-400 to-emerald-600 text-white shadow-emerald-500/30",
-  B: "bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-blue-500/30",
-  C: "bg-gradient-to-br from-yellow-400 to-yellow-500 text-white shadow-yellow-500/30",
-  D: "bg-gradient-to-br from-red-400 to-red-600 text-white shadow-red-500/30",
-  F: "bg-gradient-to-br from-gray-400 to-gray-500 text-white shadow-gray-500/30",
+  S: 'bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-amber-500/30',
+  A: 'bg-gradient-to-br from-emerald-400 to-emerald-600 text-white shadow-emerald-500/30',
+  B: 'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-blue-500/30',
+  C: 'bg-gradient-to-br from-yellow-400 to-yellow-500 text-white shadow-yellow-500/30',
+  D: 'bg-gradient-to-br from-red-400 to-red-600 text-white shadow-red-500/30',
+  F: 'bg-gradient-to-br from-gray-400 to-gray-500 text-white shadow-gray-500/30',
 };
 
 const GRADE_BAR_COLORS: Record<Grade, string> = {
-  S: "from-amber-400 to-amber-600",
-  A: "from-emerald-400 to-emerald-600",
-  B: "from-blue-400 to-blue-600",
-  C: "from-yellow-400 to-yellow-500",
-  D: "from-red-400 to-red-600",
-  F: "from-gray-400 to-gray-500",
+  S: 'from-amber-400 to-amber-600',
+  A: 'from-emerald-400 to-emerald-600',
+  B: 'from-blue-400 to-blue-600',
+  C: 'from-yellow-400 to-yellow-500',
+  D: 'from-red-400 to-red-600',
+  F: 'from-gray-400 to-gray-500',
 };
 
 interface ToolCardProps {
@@ -72,7 +79,9 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
                 {/* Logo微光效果 */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400 to-indigo-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
               </div>
-              <span className={`px-2.5 py-1 rounded-lg text-sm font-bold shadow-lg ${GRADE_STYLES[grade]}`}>
+              <span
+                className={`px-2.5 py-1 rounded-lg text-sm font-bold shadow-lg ${GRADE_STYLES[grade]}`}
+              >
                 {grade}
               </span>
             </div>
@@ -104,7 +113,9 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
             <div className="w-full">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-extrabold text-gray-900 dark:text-white">{total.toFixed(1)}</span>
+                  <span className="text-2xl font-extrabold text-gray-900 dark:text-white">
+                    {total.toFixed(1)}
+                  </span>
                   <span className="text-xs text-gray-400">/10</span>
                 </div>
                 <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-500 group-hover:bg-blue-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">

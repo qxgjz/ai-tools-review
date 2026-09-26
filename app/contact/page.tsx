@@ -1,11 +1,12 @@
-import type { Metadata } from "next";
-import { Mail, MessageSquare, Clock, Globe } from "lucide-react";
+import type { Metadata } from 'next';
+import { Mail, MessageSquare, Clock, Globe } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "Contact AIToolCrux: Feedback, Partnership & Review Requests",
-  description: "Get in touch with the AIToolCrux team. Questions, feedback, partnership inquiries, and review correction requests — we respond within 24-48 hours.",
+  title: 'Contact AIToolCrux: Feedback, Partnership & Review Requests',
+  description:
+    'Get in touch with the AIToolCrux team. Questions, feedback, partnership inquiries, and review correction requests — we respond within 24-48 hours.',
   alternates: {
-    canonical: "https://www.aitoolcrux.com/contact",
+    canonical: 'https://www.aitoolcrux.com/contact',
   },
 };
 
@@ -41,10 +42,13 @@ export default function ContactPage() {
             <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-lg flex items-center justify-center">
               <MessageSquare className="w-5 h-5 text-green-600 dark:text-green-400" />
             </div>
-            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Comments & Discussions</h2>
+            <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+              Comments & Discussions
+            </h2>
           </div>
           <p className="text-gray-600 dark:text-gray-400 mb-3">
-            Join the conversation on any article using our comments section (powered by GitHub Discussions):
+            Join the conversation on any article using our comments section (powered by GitHub
+            Discussions):
           </p>
           <a
             href="https://github.com/qxgjz/ai-tools-review/discussions"
@@ -65,7 +69,8 @@ export default function ContactPage() {
           <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Response Time</h2>
         </div>
         <p className="text-gray-600 dark:text-gray-400">
-          We typically respond to emails within <strong>24-48 hours</strong>. For urgent matters, please include "URGENT" in the subject line.
+          We typically respond to emails within <strong>24-48 hours</strong>. For urgent matters,
+          please include "URGENT" in the subject line.
         </p>
       </div>
 
@@ -74,24 +79,42 @@ export default function ContactPage() {
           <div className="w-10 h-10 bg-orange-100 dark:bg-orange-900/30 rounded-lg flex items-center justify-center">
             <Globe className="w-5 h-5 text-orange-600 dark:text-orange-400" />
           </div>
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">Before You Contact Us</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-white">
+            Before You Contact Us
+          </h2>
         </div>
         <ul className="space-y-3 text-gray-600 dark:text-gray-400">
           <li className="flex gap-3">
             <span className="text-emerald-500 font-bold">•</span>
-            <span><strong>For tool-specific questions:</strong> Please check the tool's official documentation first, as we may not be able to provide technical support for third-party tools.</span>
+            <span>
+              <strong>For tool-specific questions:</strong> Please check the tool's official
+              documentation first, as we may not be able to provide technical support for
+              third-party tools.
+            </span>
           </li>
           <li className="flex gap-3">
             <span className="text-emerald-500 font-bold">•</span>
-            <span><strong>For correction requests:</strong> If you find an error in one of our reviews, please include the article URL and the specific correction needed. We review all correction requests promptly.</span>
+            <span>
+              <strong>For correction requests:</strong> If you find an error in one of our reviews,
+              please include the article URL and the specific correction needed. We review all
+              correction requests promptly.
+            </span>
           </li>
           <li className="flex gap-3">
             <span className="text-emerald-500 font-bold">•</span>
-            <span><strong>For partnership inquiries:</strong> Please include your company name, product/service, and what type of partnership you're interested in (affiliate, sponsored content, etc.).</span>
+            <span>
+              <strong>For partnership inquiries:</strong> Please include your company name,
+              product/service, and what type of partnership you're interested in (affiliate,
+              sponsored content, etc.).
+            </span>
           </li>
           <li className="flex gap-3">
             <span className="text-emerald-500 font-bold">•</span>
-            <span><strong>For affiliate program questions:</strong> Please note that we do not manage affiliate programs for the tools we review. Contact the tool's affiliate program directly for affiliate-related questions.</span>
+            <span>
+              <strong>For affiliate program questions:</strong> Please note that we do not manage
+              affiliate programs for the tools we review. Contact the tool's affiliate program
+              directly for affiliate-related questions.
+            </span>
           </li>
         </ul>
       </div>

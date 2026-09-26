@@ -1,4 +1,4 @@
-import { Sparkles, ThumbsUp, ThumbsDown, UserCheck, Clock, Zap } from "lucide-react";
+import { Sparkles, ThumbsUp, ThumbsDown, UserCheck, Clock, Zap } from 'lucide-react';
 
 interface HandsOnExperienceProps {
   toolName: string;
@@ -9,142 +9,145 @@ interface HandsOnExperienceProps {
 }
 
 // 根据Categories生成不同的使用体验场景
-const CATEGORY_SCENARIOS: Record<string, { tasks: string[]; strengths: string[]; weaknesses: string[] }> = {
+const CATEGORY_SCENARIOS: Record<
+  string,
+  { tasks: string[]; strengths: string[]; weaknesses: string[] }
+> = {
   chat: {
     tasks: [
-      "writing complex emails and reports",
-      "debugging code across multiple programming languages",
-      "researching niche topics with follow-up questions",
-      "brainstorming creative ideas for content projects",
+      'writing complex emails and reports',
+      'debugging code across multiple programming languages',
+      'researching niche topics with follow-up questions',
+      'brainstorming creative ideas for content projects',
     ],
     strengths: [
-      "context retention across long conversations",
-      "ability to handle ambiguous requests with clarifying questions",
-      "consistent output quality even for complex multi-step tasks",
+      'context retention across long conversations',
+      'ability to handle ambiguous requests with clarifying questions',
+      'consistent output quality even for complex multi-step tasks',
     ],
     weaknesses: [
-      "occasional hallucinations when asked about very recent events",
-      "usage limits on free tier during peak hours",
-      "response speed can vary depending on server load",
+      'occasional hallucinations when asked about very recent events',
+      'usage limits on free tier during peak hours',
+      'response speed can vary depending on server load',
     ],
   },
   writing: {
     tasks: [
-      "drafting long-form articles (2000+ words)",
-      "rewriting content for different tone and audience",
-      "generating social media posts across platforms",
-      "editing and proofreading existing content",
+      'drafting long-form articles (2000+ words)',
+      'rewriting content for different tone and audience',
+      'generating social media posts across platforms',
+      'editing and proofreading existing content',
     ],
     strengths: [
-      "vocabulary range and stylistic flexibility",
-      "ability to maintain consistent voice across long documents",
-      "speed of first draft generation compared to manual writing",
+      'vocabulary range and stylistic flexibility',
+      'ability to maintain consistent voice across long documents',
+      'speed of first draft generation compared to manual writing',
     ],
     weaknesses: [
-      "tendency toward generic phrasing without specific prompting",
-      "factual accuracy requires manual verification",
-      "SEO optimization needs explicit keyword guidance",
+      'tendency toward generic phrasing without specific prompting',
+      'factual accuracy requires manual verification',
+      'SEO optimization needs explicit keyword guidance',
     ],
   },
   image: {
     tasks: [
-      "creating concept art for creative projects",
-      "generating product mockups for marketing",
-      "editing and retouching existing images",
-      "designing social media graphics and banners",
+      'creating concept art for creative projects',
+      'generating product mockups for marketing',
+      'editing and retouching existing images',
+      'designing social media graphics and banners',
     ],
     strengths: [
-      "image quality and detail level",
-      "prompt understanding and adherence to style requests",
-      "speed of iteration compared to traditional design tools",
+      'image quality and detail level',
+      'prompt understanding and adherence to style requests',
+      'speed of iteration compared to traditional design tools',
     ],
     weaknesses: [
-      "text rendering in images can be inconsistent",
-      "complex compositions sometimes have anatomical errors",
-      "output variability means you may need multiple generations",
+      'text rendering in images can be inconsistent',
+      'complex compositions sometimes have anatomical errors',
+      'output variability means you may need multiple generations',
     ],
   },
   code: {
     tasks: [
-      "writing boilerplate code for new projects",
-      "debugging existing code with error messages",
-      "refactoring legacy code for modern standards",
-      "writing unit tests for existing functions",
+      'writing boilerplate code for new projects',
+      'debugging existing code with error messages',
+      'refactoring legacy code for modern standards',
+      'writing unit tests for existing functions',
     ],
     strengths: [
-      "code completion accuracy for common patterns",
-      "ability to explain code in plain language",
-      "support for multiple programming languages and frameworks",
+      'code completion accuracy for common patterns',
+      'ability to explain code in plain language',
+      'support for multiple programming languages and frameworks',
     ],
     weaknesses: [
-      "complex architecture decisions still require human judgment",
-      "generated code may have security vulnerabilities without review",
-      "context window limits for very large codebases",
+      'complex architecture decisions still require human judgment',
+      'generated code may have security vulnerabilities without review',
+      'context window limits for very large codebases',
     ],
   },
   video: {
     tasks: [
-      "creating short-form videos for social media",
-      "editing and trimming existing video content",
-      "adding captions and subtitles to videos",
-      "generating video from text scripts",
+      'creating short-form videos for social media',
+      'editing and trimming existing video content',
+      'adding captions and subtitles to videos',
+      'generating video from text scripts',
     ],
     strengths: [
-      "ease of use compared to professional video editing software",
-      "speed of video generation from text prompts",
-      "built-in templates and styles for quick creation",
+      'ease of use compared to professional video editing software',
+      'speed of video generation from text prompts',
+      'built-in templates and styles for quick creation',
     ],
     weaknesses: [
-      "output resolution and quality compared to professional tools",
-      "limited control over fine-grained editing",
-      "rendering time can be long for complex videos",
+      'output resolution and quality compared to professional tools',
+      'limited control over fine-grained editing',
+      'rendering time can be long for complex videos',
     ],
   },
   productivity: {
     tasks: [
-      "summarizing long documents and meetings",
-      "organizing notes and information",
-      "creating presentations and outlines",
-      "managing schedules and tasks",
+      'summarizing long documents and meetings',
+      'organizing notes and information',
+      'creating presentations and outlines',
+      'managing schedules and tasks',
     ],
     strengths: [
-      "time saved on document summarization and organization",
-      "integration with existing productivity workflows",
-      "consistency of output format and structure",
+      'time saved on document summarization and organization',
+      'integration with existing productivity workflows',
+      'consistency of output format and structure',
     ],
     weaknesses: [
-      "may miss nuance in complex documents",
-      "integration with third-party apps can be limited",
-      "learning curve for advanced features",
+      'may miss nuance in complex documents',
+      'integration with third-party apps can be limited',
+      'learning curve for advanced features',
     ],
   },
 };
 
 const DEFAULT_SCENARIO = {
   tasks: [
-    "testing core features across multiple use cases",
-    "comparing output quality against competitors",
-    "evaluating ease of use for beginners",
-    "assessing value for money at different price tiers",
+    'testing core features across multiple use cases',
+    'comparing output quality against competitors',
+    'evaluating ease of use for beginners',
+    'assessing value for money at different price tiers',
   ],
   strengths: [
-    "overall performance compared to alternatives in this category",
-    "user interface design and ease of navigation",
-    "customer support responsiveness and helpfulness",
+    'overall performance compared to alternatives in this category',
+    'user interface design and ease of navigation',
+    'customer support responsiveness and helpfulness',
   ],
   weaknesses: [
-    "some advanced features may be overwhelming for beginners",
-    "pricing may be high for casual users",
-    "occasional bugs or glitches in less common features",
+    'some advanced features may be overwhelming for beginners',
+    'pricing may be high for casual users',
+    'occasional bugs or glitches in less common features',
   ],
 };
 
 export function HandsOnExperience({
   toolName,
-  category = "default",
+  category = 'default',
   score = 8.0,
-  grade = "B",
-  testDuration = "30 days",
+  grade = 'B',
+  testDuration = '30 days',
 }: HandsOnExperienceProps) {
   const scenario = CATEGORY_SCENARIOS[category] || DEFAULT_SCENARIO;
   const formattedCategory = category.charAt(0).toUpperCase() + category.slice(1);
@@ -174,10 +177,11 @@ export function HandsOnExperience({
           How I Tested {toolName}
         </h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-          Over {testDuration}, I used {toolName} daily for real work tasks, including{" "}
-          {scenario.tasks.slice(0, 2).join(", ")}, and {scenario.tasks[2]}. I compared the output
-          quality, speed, and reliability against {2-3} competing tools in the {formattedCategory.toLowerCase()}{" "}
-          category. This review is based on my actual usage, not just marketing claims.
+          Over {testDuration}, I used {toolName} daily for real work tasks, including{' '}
+          {scenario.tasks.slice(0, 2).join(', ')}, and {scenario.tasks[2]}. I compared the output
+          quality, speed, and reliability against {2 - 3} competing tools in the{' '}
+          {formattedCategory.toLowerCase()} category. This review is based on my actual usage, not
+          just marketing claims.
         </p>
       </div>
 
@@ -191,7 +195,10 @@ export function HandsOnExperience({
           </h3>
           <ul className="space-y-2">
             {scenario.strengths.map((strength, index) => (
-              <li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+              <li
+                key={index}
+                className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2"
+              >
                 <span className="text-emerald-500 mt-0.5">✓</span>
                 <span className="capitalize-first">{strength}</span>
               </li>
@@ -207,7 +214,10 @@ export function HandsOnExperience({
           </h3>
           <ul className="space-y-2">
             {scenario.weaknesses.map((weakness, index) => (
-              <li key={index} className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2">
+              <li
+                key={index}
+                className="text-sm text-gray-600 dark:text-gray-400 flex items-start gap-2"
+              >
                 <span className="text-amber-500 mt-0.5">!</span>
                 <span className="capitalize-first">{weakness}</span>
               </li>
@@ -223,19 +233,24 @@ export function HandsOnExperience({
           My Verdict After {testDuration}
         </h3>
         <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-          {toolName} earns a {score.toFixed(1)}/10 ({grade} grade) in my testing. It excels at{" "}
-          {scenario.strengths[0]}, making it a strong choice for users who prioritize{" "}
-          {formattedCategory.toLowerCase()} quality and reliability. However, if you're sensitive to{" "}
-          {scenario.weaknesses[0]}, you may want to consider alternatives. Overall, {toolName}{" "}
-          delivers solid value and is worth trying with its free tier before committing to a paid plan.
+          {toolName} earns a {score.toFixed(1)}/10 ({grade} grade) in my testing. It excels at{' '}
+          {scenario.strengths[0]}, making it a strong choice for users who prioritize{' '}
+          {formattedCategory.toLowerCase()} quality and reliability. However, if you're sensitive to{' '}
+          {scenario.weaknesses[0]}, you may want to consider alternatives. Overall, {toolName}{' '}
+          delivers solid value and is worth trying with its free tier before committing to a paid
+          plan.
         </p>
       </div>
 
       {/* 透明度声明 */}
       <p className="text-xs text-gray-400 dark:text-gray-500 mt-4 italic">
-        This hands-on experience section is based on our editorial team's actual usage of {toolName}.
-        We do not accept payment for positive reviews. Some links on this page may be affiliate links,
-        but they do not influence our evaluation. See our <a href="/disclosure" className="underline">disclosure page</a> for details.
+        This hands-on experience section is based on our editorial team's actual usage of {toolName}
+        . We do not accept payment for positive reviews. Some links on this page may be affiliate
+        links, but they do not influence our evaluation. See our{' '}
+        <a href="/disclosure" className="underline">
+          disclosure page
+        </a>{' '}
+        for details.
       </p>
     </div>
   );

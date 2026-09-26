@@ -1,11 +1,11 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { Zap, BookOpen, CheckCircle2, Star, Lightbulb, Award } from "lucide-react";
-import { notFound } from "next/navigation";
-import alternativesData from "@/data/alternatives.json";
-import toolsData from "@/data/tools-index.json";
-import { FAQSchema, BreadcrumbSchema } from "@/components/seo/Schema";
-import { AffiliateCTA } from "@/components/monetization/AffiliateCTA";
+import { Metadata } from 'next';
+import Link from 'next/link';
+import { Zap, BookOpen, CheckCircle2, Star, Lightbulb, Award } from 'lucide-react';
+import { notFound } from 'next/navigation';
+import alternativesData from '@/data/alternatives.json';
+import toolsData from '@/data/tools-index.json';
+import { FAQSchema, BreadcrumbSchema } from '@/components/seo/Schema';
+import { AffiliateCTA } from '@/components/monetization/AffiliateCTA';
 
 interface Alternative {
   slug: string;
@@ -38,9 +38,7 @@ interface AlternativePage {
   faq: FAQ[];
 }
 
-
-
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   return alternativesData.map((item: AlternativePage) => ({
@@ -53,47 +51,42 @@ export async function generateMetadata({
 }: {
   params: { slug: string };
 }): Promise<Metadata> {
-  const page = alternativesData.find(
-    (item: AlternativePage) => item.slug === params.slug
-  );
+  const page = alternativesData.find((item: AlternativePage) => item.slug === params.slug);
 
   if (!page) {
     return {
-      title: "Alternatives Not Found | AIToolCrux",
+      title: 'Alternatives Not Found | AIToolCrux',
     };
   }
 
-  const shortDesc = page.description.length > 160 ? page.description.slice(0, 157).trim() + "..." : page.description;
+  const shortDesc =
+    page.description.length > 160
+      ? page.description.slice(0, 157).trim() + '...'
+      : page.description;
   return {
-    title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
+    title: page.title.length > 60 ? page.title.slice(0, 57) + '...' : page.title,
     description: shortDesc,
-    keywords: page.keywords.join(", "),
+    keywords: page.keywords.join(', '),
     alternates: {
       canonical: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
     },
     openGraph: {
-      title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
+      title: page.title.length > 60 ? page.title.slice(0, 57) + '...' : page.title,
       description: shortDesc,
       url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
-      type: "article",
-      siteName: "AIToolCrux",
+      type: 'article',
+      siteName: 'AIToolCrux',
     },
     twitter: {
-      card: "summary_large_image",
-      title: page.title.length > 60 ? page.title.slice(0, 57) + "..." : page.title,
+      card: 'summary_large_image',
+      title: page.title.length > 60 ? page.title.slice(0, 57) + '...' : page.title,
       description: shortDesc,
     },
   };
 }
 
-export default function AlternativePage({
-  params,
-}: {
-  params: { slug: string };
-}) {
-  const page = alternativesData.find(
-    (item: AlternativePage) => item.slug === params.slug
-  );
+export default function AlternativePage({ params }: { params: { slug: string } }) {
+  const page = alternativesData.find((item: AlternativePage) => item.slug === params.slug);
 
   if (!page) {
     notFound();
@@ -108,20 +101,20 @@ export default function AlternativePage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Article",
+            '@context': 'https://schema.org',
+            '@type': 'Article',
             headline: page.title,
             description: page.description,
             url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
             author: {
-              "@type": "Organization",
-              name: "AIToolCrux Editorial Team",
+              '@type': 'Organization',
+              name: 'AIToolCrux Editorial Team',
             },
-            datePublished: "2026-09-11",
-            dateModified: "2026-09-11",
+            datePublished: '2026-09-11',
+            dateModified: '2026-09-11',
             publisher: {
-              "@type": "Organization",
-              name: "AIToolCrux",
+              '@type': 'Organization',
+              name: 'AIToolCrux',
             },
           }),
         }}
@@ -129,9 +122,12 @@ export default function AlternativePage({
       <FAQSchema faqs={page.faq.map((f) => ({ question: f.question, answer: f.answer }))} />
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.aitoolcrux.com" },
-          { name: "Alternatives", url: "https://www.aitoolcrux.com/alternatives" },
-          { name: page.title.split(":")[0], url: `https://www.aitoolcrux.com/alternatives/${page.slug}` },
+          { name: 'Home', url: 'https://www.aitoolcrux.com' },
+          { name: 'Alternatives', url: 'https://www.aitoolcrux.com/alternatives' },
+          {
+            name: page.title.split(':')[0],
+            url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
+          },
         ]}
       />
 
@@ -139,11 +135,15 @@ export default function AlternativePage({
       <section className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <nav className="text-sm text-gray-500 dark:text-gray-400 mb-4">
-            <Link href="/" className="hover:text-emerald-600">Home</Link>
+            <Link href="/" className="hover:text-emerald-600">
+              Home
+            </Link>
             <span className="mx-2">/</span>
-            <Link href="/alternatives" className="hover:text-emerald-600">Alternatives</Link>
+            <Link href="/alternatives" className="hover:text-emerald-600">
+              Alternatives
+            </Link>
             <span className="mx-2">/</span>
-            <span className="text-gray-700 dark:text-gray-300">{page.title.split(":")[0]}</span>
+            <span className="text-gray-700 dark:text-gray-300">{page.title.split(':')[0]}</span>
           </nav>
           <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 dark:text-white mb-4 leading-tight">
             {page.title}
@@ -173,16 +173,48 @@ export default function AlternativePage({
           </div>
           <div className="space-y-4">
             <div>
-              <h3 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-2">What are the best {page.targetTool} alternatives?</h3>
-              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">Based on our comprehensive six-dimension evaluation, the top {page.alternatives.length} alternatives to {page.targetTool} are {page.alternatives.slice(0, 3).map(a => a.name).join(", ")}. Each alternative offers different strengths in features, pricing, and use cases.</p>
+              <h3 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-2">
+                What are the best {page.targetTool} alternatives?
+              </h3>
+              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                Based on our comprehensive six-dimension evaluation, the top{' '}
+                {page.alternatives.length} alternatives to {page.targetTool} are{' '}
+                {page.alternatives
+                  .slice(0, 3)
+                  .map((a) => a.name)
+                  .join(', ')}
+                . Each alternative offers different strengths in features, pricing, and use cases.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-2">Which alternative is best for me?</h3>
-              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">The best alternative depends on your specific needs: {page.alternatives[0]?.name} is ideal for {page.alternatives[0]?.reason || "most users"}, while {page.alternatives[1]?.name} excels at {page.alternatives[1]?.reason || "specific use cases"}. Compare features and pricing side-by-side below to find your best fit.</p>
+              <h3 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-2">
+                Which alternative is best for me?
+              </h3>
+              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                The best alternative depends on your specific needs: {page.alternatives[0]?.name} is
+                ideal for {page.alternatives[0]?.reason || 'most users'}, while{' '}
+                {page.alternatives[1]?.name} excels at{' '}
+                {page.alternatives[1]?.reason || 'specific use cases'}. Compare features and pricing
+                side-by-side below to find your best fit.
+              </p>
             </div>
             <div>
-              <h3 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-2">Are these alternatives free to use?</h3>
-              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">Most alternatives offer free tiers or free trials. {page.alternatives.filter(a => (a.pricing || "").toLowerCase().includes("free") || (a.pricing || "").includes("$0")).length} of {page.alternatives.length} tools have free options available. We recommend starting with the free plan to evaluate whether the tool meets your needs before upgrading.</p>
+              <h3 className="font-semibold text-zinc-800 dark:text-zinc-200 mb-2">
+                Are these alternatives free to use?
+              </h3>
+              <p className="text-zinc-700 dark:text-zinc-300 leading-relaxed">
+                Most alternatives offer free tiers or free trials.{' '}
+                {
+                  page.alternatives.filter(
+                    (a) =>
+                      (a.pricing || '').toLowerCase().includes('free') ||
+                      (a.pricing || '').includes('$0'),
+                  ).length
+                }{' '}
+                of {page.alternatives.length} tools have free options available. We recommend
+                starting with the free plan to evaluate whether the tool meets your needs before
+                upgrading.
+              </p>
             </div>
           </div>
         </section>
@@ -199,8 +231,15 @@ export default function AlternativePage({
                 <CheckCircle2 className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Best Overall</h4>
-                <p className="text-zinc-600 dark:text-zinc-400 text-sm">{page.alternatives[0]?.name || "Top pick"} - {page.alternatives[0]?.reason || "Best overall alternative based on our comprehensive evaluation"}.</p>
+                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">
+                  Best Overall
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  {page.alternatives[0]?.name || 'Top pick'} -{' '}
+                  {page.alternatives[0]?.reason ||
+                    'Best overall alternative based on our comprehensive evaluation'}
+                  .
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -208,8 +247,14 @@ export default function AlternativePage({
                 <Star className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Top Rated</h4>
-                <p className="text-zinc-600 dark:text-zinc-400 text-sm">{page.alternatives[0]?.rating || "N/A"}/10 average rating across {page.alternatives.length} alternatives, independently evaluated by our editorial team.</p>
+                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">
+                  Top Rated
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  {page.alternatives[0]?.rating || 'N/A'}/10 average rating across{' '}
+                  {page.alternatives.length} alternatives, independently evaluated by our editorial
+                  team.
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -217,8 +262,13 @@ export default function AlternativePage({
                 <Lightbulb className="w-4 h-4 text-amber-600 dark:text-amber-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Key Consideration</h4>
-                <p className="text-zinc-600 dark:text-zinc-400 text-sm">Evaluate features, pricing, learning curve, and integration options. The cheapest option isn&apos;t always the best value long-term.</p>
+                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">
+                  Key Consideration
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  Evaluate features, pricing, learning curve, and integration options. The cheapest
+                  option isn&apos;t always the best value long-term.
+                </p>
               </div>
             </div>
             <div className="flex items-start gap-3">
@@ -226,14 +276,26 @@ export default function AlternativePage({
                 <Award className="w-4 h-4 text-teal-600 dark:text-teal-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">Expert Verdict</h4>
-                <p className="text-zinc-600 dark:text-zinc-400 text-sm">Read detailed reviews below for each alternative, including pros, cons, pricing, and real-world use cases to make an informed decision.</p>
+                <h4 className="font-semibold text-zinc-800 dark:text-zinc-200 text-sm">
+                  Expert Verdict
+                </h4>
+                <p className="text-zinc-600 dark:text-zinc-400 text-sm">
+                  Read detailed reviews below for each alternative, including pros, cons, pricing,
+                  and real-world use cases to make an informed decision.
+                </p>
               </div>
             </div>
           </div>
           <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
             <p className="text-xs text-zinc-500 dark:text-zinc-400">
-              <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> 2026-09-11 | <strong>Methodology:</strong> Six-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
+              <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong>{' '}
+              2026-09-11 | <strong>Methodology:</strong> Six-dimension evaluation |{' '}
+              <Link
+                href="/methodology"
+                className="text-emerald-600 dark:text-emerald-400 hover:underline"
+              >
+                Full methodology
+              </Link>
             </p>
           </div>
         </section>
@@ -241,9 +303,7 @@ export default function AlternativePage({
         {/* Introduction */}
         <section className="mb-12">
           <div className="prose prose-lg dark:prose-invert max-w-none">
-            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-              {page.intro}
-            </p>
+            <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">{page.intro}</p>
           </div>
         </section>
 
@@ -256,11 +316,21 @@ export default function AlternativePage({
             <table className="w-full text-sm">
               <thead className="bg-gray-50 dark:bg-gray-800">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Rank</th>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Tool</th>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Rating</th>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Best For</th>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Pricing</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Rank
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Tool
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Rating
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Best For
+                  </th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Pricing
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -281,7 +351,9 @@ export default function AlternativePage({
                       </span>
                     </td>
                     <td className="px-4 py-3 text-gray-600 dark:text-gray-300">{alt.reason}</td>
-                    <td className="px-4 py-3 text-gray-600 dark:text-gray-300 font-medium">{alt.pricing}</td>
+                    <td className="px-4 py-3 text-gray-600 dark:text-gray-300 font-medium">
+                      {alt.pricing}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -330,25 +402,36 @@ export default function AlternativePage({
         {/* Feature Comparison Table */}
         <section className="mb-12">
           <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
-            Feature Comparison: {page.targetTool.charAt(0).toUpperCase() + page.targetTool.slice(1)} vs Alternatives
+            Feature Comparison: {page.targetTool.charAt(0).toUpperCase() + page.targetTool.slice(1)}{' '}
+            vs Alternatives
           </h2>
           <div className="overflow-x-auto rounded-xl border border-gray-200 dark:border-gray-700">
             <table className="w-full text-sm">
               <thead className="bg-gray-50 dark:bg-gray-800">
                 <tr>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Feature</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Feature
+                  </th>
                   <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
                     {page.targetTool.charAt(0).toUpperCase() + page.targetTool.slice(1)}
                   </th>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">Best Alternative</th>
+                  <th className="px-4 py-3 text-left font-semibold text-gray-900 dark:text-white">
+                    Best Alternative
+                  </th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-gray-200 dark:divide-gray-700">
                 {(page.comparisonTable as ComparisonRow[]).map((row, i) => (
                   <tr key={i} className="hover:bg-gray-50 dark:hover:bg-gray-800/50">
-                    <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">{row.feature}</td>
-                    <td className="px-4 py-3 text-gray-600 dark:text-gray-300">{row[page.targetTool] || "N/A"}</td>
-                    <td className="px-4 py-3 text-gray-600 dark:text-gray-300">{row.bestAlternative}</td>
+                    <td className="px-4 py-3 font-medium text-gray-900 dark:text-white">
+                      {row.feature}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 dark:text-gray-300">
+                      {row[page.targetTool] || 'N/A'}
+                    </td>
+                    <td className="px-4 py-3 text-gray-600 dark:text-gray-300">
+                      {row.bestAlternative}
+                    </td>
                   </tr>
                 ))}
               </tbody>
@@ -382,9 +465,7 @@ export default function AlternativePage({
                 <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {faq.answer}
-                </p>
+                <p className="text-gray-600 dark:text-gray-300 leading-relaxed">{faq.answer}</p>
               </div>
             ))}
           </div>
@@ -392,11 +473,10 @@ export default function AlternativePage({
 
         {/* Bottom CTA */}
         <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-center text-white">
-          <h2 className="text-2xl font-bold mb-3">
-            Still Not Sure Which Tool to Choose?
-          </h2>
+          <h2 className="text-2xl font-bold mb-3">Still Not Sure Which Tool to Choose?</h2>
           <p className="text-emerald-100 mb-6 max-w-xl mx-auto">
-            Use our AI tool comparison tool to compare up to 3 tools side-by-side and find the perfect fit for your needs.
+            Use our AI tool comparison tool to compare up to 3 tools side-by-side and find the
+            perfect fit for your needs.
           </p>
           <Link
             href="/compare"
@@ -404,7 +484,12 @@ export default function AlternativePage({
           >
             Compare Tools Now
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
             </svg>
           </Link>
         </section>

@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useRef, type ReactNode } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { useRef, type ReactNode } from 'react';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 interface StackingCardProps {
   children: ReactNode;
@@ -10,24 +10,19 @@ interface StackingCardProps {
   className?: string;
 }
 
-export function StackingCard({
-  children,
-  index,
-  totalCards,
-  className = "",
-}: StackingCardProps) {
+export function StackingCard({ children, index, totalCards, className = '' }: StackingCardProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const targetScale = 1 - (totalCards - 1 - index) * 0.03;
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ['start end', 'end start'],
   });
 
   const scale = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    [targetScale, targetScale, Math.max(0.9, targetScale - 0.05)]
+    [targetScale, targetScale, Math.max(0.9, targetScale - 0.05)],
   );
 
   return (
@@ -41,7 +36,7 @@ export function StackingCard({
         style={{
           scale,
           top: `${index * 28}px`,
-          position: "relative",
+          position: 'relative',
         }}
       >
         {children}
@@ -55,13 +50,6 @@ interface StackingCardsContainerProps {
   className?: string;
 }
 
-export function StackingCardsContainer({
-  children,
-  className = "",
-}: StackingCardsContainerProps) {
-  return (
-    <div className={`relative ${className}`}>
-      {children}
-    </div>
-  );
+export function StackingCardsContainer({ children, className = '' }: StackingCardsContainerProps) {
+  return <div className={`relative ${className}`}>{children}</div>;
 }

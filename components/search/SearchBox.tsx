@@ -1,20 +1,20 @@
-"use client";
+'use client';
 
-import { useState, useRef, useEffect, useCallback } from "react";
-import { useRouter } from "next/navigation";
-import Link from "next/link";
-import { Search, X, Loader2 } from "lucide-react";
-import toolsData from "@/data/tools-index.json";
-import type { Tool, Grade } from "@/types";
-import { calculateScoreResult } from "@/lib/scoring";
+import { useState, useRef, useEffect, useCallback } from 'react';
+import { useRouter } from 'next/navigation';
+import Link from 'next/link';
+import { Search, X, Loader2 } from 'lucide-react';
+import toolsData from '@/data/tools-index.json';
+import type { Tool, Grade } from '@/types';
+import { calculateScoreResult } from '@/lib/scoring';
 
 const GRADE_TEXT_COLOR: Record<Grade, string> = {
-  S: "text-amber-500 dark:text-amber-400",
-  A: "text-emerald-500 dark:text-emerald-400",
-  B: "text-blue-500 dark:text-blue-400",
-  C: "text-yellow-500 dark:text-yellow-400",
-  D: "text-red-500 dark:text-red-400",
-  F: "text-gray-500 dark:text-gray-400",
+  S: 'text-amber-500 dark:text-amber-400',
+  A: 'text-emerald-500 dark:text-emerald-400',
+  B: 'text-blue-500 dark:text-blue-400',
+  C: 'text-yellow-500 dark:text-yellow-400',
+  D: 'text-red-500 dark:text-red-400',
+  F: 'text-gray-500 dark:text-gray-400',
 };
 
 interface SearchBoxProps {
@@ -22,8 +22,11 @@ interface SearchBoxProps {
   placeholder?: string;
 }
 
-export function SearchBox({ className = "", placeholder = "Search AI tools, vendors, tags..." }: SearchBoxProps) {
-  const [query, setQuery] = useState("");
+export function SearchBox({
+  className = '',
+  placeholder = 'Search AI tools, vendors, tags...',
+}: SearchBoxProps) {
+  const [query, setQuery] = useState('');
   const [results, setResults] = useState<Tool[]>([]);
   const [isOpen, setIsOpen] = useState(false);
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -42,13 +45,15 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
       setIsSearching(false);
       return;
     }
-    const filtered = (toolsData as Tool[]).filter(
-      (tool) =>
-        tool.name.toLowerCase().includes(q) ||
-        tool.vendor.toLowerCase().includes(q) ||
-        tool.description.toLowerCase().includes(q) ||
-        tool.tags.some((tag) => tag.toLowerCase().includes(q))
-    ).slice(0, 8);
+    const filtered = (toolsData as Tool[])
+      .filter(
+        (tool) =>
+          tool.name.toLowerCase().includes(q) ||
+          tool.vendor.toLowerCase().includes(q) ||
+          tool.description.toLowerCase().includes(q) ||
+          tool.tags.some((tag) => tag.toLowerCase().includes(q)),
+      )
+      .slice(0, 8);
     setResults(filtered);
     setIsOpen(true);
     setIsSearching(false);
@@ -68,7 +73,7 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
       setIsSearching(true);
       debounceTimer.current = setTimeout(() => performSearch(value), 300);
     },
-    [performSearch]
+    [performSearch],
   );
 
   useEffect(() => {
@@ -77,8 +82,8 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
         setIsOpen(false);
       }
     };
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside);
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
   }, []);
 
   const goToSearchPage = useCallback(() => {
@@ -90,7 +95,7 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
 
   const handleKeyDown = useCallback(
     (e: React.KeyboardEvent<HTMLInputElement>) => {
-      if (e.key === "Enter") {
+      if (e.key === 'Enter') {
         e.preventDefault();
         if (selectedIndex >= 0 && results[selectedIndex]) {
           setIsOpen(false);
@@ -98,21 +103,21 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
         } else {
           goToSearchPage();
         }
-      } else if (e.key === "ArrowDown") {
+      } else if (e.key === 'ArrowDown') {
         e.preventDefault();
         setSelectedIndex((prev) => Math.min(prev + 1, results.length - 1));
-      } else if (e.key === "ArrowUp") {
+      } else if (e.key === 'ArrowUp') {
         e.preventDefault();
         setSelectedIndex((prev) => Math.max(prev - 1, -1));
-      } else if (e.key === "Escape") {
+      } else if (e.key === 'Escape') {
         setIsOpen(false);
       }
     },
-    [selectedIndex, results, goToSearchPage, router]
+    [selectedIndex, results, goToSearchPage, router],
   );
 
   const handleClear = useCallback(() => {
-    setQuery("");
+    setQuery('');
     setResults([]);
     setIsOpen(false);
     setSelectedIndex(-1);
@@ -141,7 +146,11 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
           {isSearching ? (
             <Loader2 className="w-4 h-4 text-gray-400 dark:text-gray-500 animate-spin" />
           ) : query ? (
-            <button onClick={handleClear} aria-label="Clear search" className="p-1 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors rounded">
+            <button
+              onClick={handleClear}
+              aria-label="Clear search"
+              className="p-1 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors rounded"
+            >
               <X className="w-4 h-4" />
             </button>
           ) : null}
@@ -153,8 +162,17 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
           {results.length > 0 ? (
             <>
               <div className="px-4 py-2.5 text-xs text-gray-400 dark:text-gray-500 border-b border-gray-50 dark:border-gray-800 flex items-center justify-between bg-gray-50/50 dark:bg-gray-800/50">
-                <span>Found <span className="font-semibold text-gray-600 dark:text-gray-300">{results.length}</span> matching tools</span>
-                <button onClick={goToSearchPage} className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold transition-colors">
+                <span>
+                  Found{' '}
+                  <span className="font-semibold text-gray-600 dark:text-gray-300">
+                    {results.length}
+                  </span>{' '}
+                  matching tools
+                </span>
+                <button
+                  onClick={goToSearchPage}
+                  className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold transition-colors"
+                >
                   View all →
                 </button>
               </div>
@@ -166,18 +184,26 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
                       <Link
                         href={`/tools/${tool.slug}`}
                         onClick={() => setIsOpen(false)}
-                        className={`flex items-center gap-3 px-4 py-3 transition-colors ${index === selectedIndex ? "bg-blue-50 dark:bg-blue-900/20" : "hover:bg-gray-50 dark:hover:bg-gray-800"}`}
+                        className={`flex items-center gap-3 px-4 py-3 transition-colors ${index === selectedIndex ? 'bg-blue-50 dark:bg-blue-900/20' : 'hover:bg-gray-50 dark:hover:bg-gray-800'}`}
                       >
                         <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-sm font-bold shadow-sm">
                           {tool.name.charAt(0).toUpperCase()}
                         </div>
                         <div className="flex-1 min-w-0">
-                          <div className="text-sm font-semibold text-gray-900 dark:text-white truncate">{tool.name}</div>
-                          <div className="text-xs text-gray-400 dark:text-gray-500 truncate">{tool.vendor} · {tool.category}</div>
+                          <div className="text-sm font-semibold text-gray-900 dark:text-white truncate">
+                            {tool.name}
+                          </div>
+                          <div className="text-xs text-gray-400 dark:text-gray-500 truncate">
+                            {tool.vendor} · {tool.category}
+                          </div>
                         </div>
                         <div className="text-right flex-shrink-0">
-                          <div className="text-sm font-bold text-gray-900 dark:text-white">{total.toFixed(1)}</div>
-                          <div className={`text-xs font-bold ${GRADE_TEXT_COLOR[grade]}`}>Grade {grade}</div>
+                          <div className="text-sm font-bold text-gray-900 dark:text-white">
+                            {total.toFixed(1)}
+                          </div>
+                          <div className={`text-xs font-bold ${GRADE_TEXT_COLOR[grade]}`}>
+                            Grade {grade}
+                          </div>
                         </div>
                       </Link>
                     </li>
@@ -187,8 +213,13 @@ export function SearchBox({ className = "", placeholder = "Search AI tools, vend
             </>
           ) : (
             <div className="px-4 py-8 text-center">
-              <div className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">No matching tools found</div>
-              <button onClick={goToSearchPage} className="text-xs text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold">
+              <div className="text-sm font-medium text-gray-600 dark:text-gray-300 mb-1">
+                No matching tools found
+              </div>
+              <button
+                onClick={goToSearchPage}
+                className="text-xs text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold"
+              >
                 Search "{query}" →
               </button>
             </div>

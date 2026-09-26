@@ -1,16 +1,16 @@
-import { NextResponse } from "next/server";
-import postsData from "@/data/posts.json";
+import { NextResponse } from 'next/server';
+import postsData from '@/data/posts.json';
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 export async function GET() {
-  const siteUrl = "https://www.aitoolcrux.com";
+  const siteUrl = 'https://www.aitoolcrux.com';
   const posts = postsData as any[];
 
   // 按发布日期排序（最新的在前）
   const sortedPosts = [...posts].sort(
     (a, b) =>
-      new Date(b.date || b.publishedAt).getTime() - new Date(a.date || a.publishedAt).getTime()
+      new Date(b.date || b.publishedAt).getTime() - new Date(a.date || a.publishedAt).getTime(),
   );
 
   // 生成RSS XML
@@ -18,20 +18,20 @@ export async function GET() {
     .map((post) => {
       const url = `${siteUrl}/blog/${post.slug}`;
       const pubDate = new Date(post.date || post.publishedAt).toUTCString();
-      const description = (post.excerpt || post.description || "")
-        .replace(/<[^>]*>/g, "")
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&apos;");
+      const description = (post.excerpt || post.description || '')
+        .replace(/<[^>]*>/g, '')
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
       const title = post.title
-        .replace(/&/g, "&amp;")
-        .replace(/</g, "&lt;")
-        .replace(/>/g, "&gt;")
-        .replace(/"/g, "&quot;")
-        .replace(/'/g, "&apos;");
-      const author = post.author || "AIToolCrux Editorial Team";
+        .replace(/&/g, '&amp;')
+        .replace(/</g, '&lt;')
+        .replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;')
+        .replace(/'/g, '&apos;');
+      const author = post.author || 'AIToolCrux Editorial Team';
 
       return `    <item>
       <title>${title}</title>
@@ -43,7 +43,7 @@ export async function GET() {
       <description>${description}</description>
     </item>`;
     })
-    .join("\n");
+    .join('\n');
 
   const rssContent = `<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
@@ -65,8 +65,8 @@ ${rssItems}
 
   return new NextResponse(rssContent, {
     headers: {
-      "Content-Type": "application/rss+xml; charset=utf-8",
-      "Cache-Control": "public, max-age=3600, s-maxage=3600",
+      'Content-Type': 'application/rss+xml; charset=utf-8',
+      'Cache-Control': 'public, max-age=3600, s-maxage=3600',
     },
   });
 }

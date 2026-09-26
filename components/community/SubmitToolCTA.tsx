@@ -1,5 +1,5 @@
-import Link from "next/link";
-import { Upload, Sparkles } from "lucide-react";
+import Link from 'next/link';
+import { Upload, Sparkles } from 'lucide-react';
 
 /**
  * Community Flywheel CTA block (P2-GROWTH-COMMUNITY-FLYWHEEL-001)
@@ -15,13 +15,16 @@ export function SubmitToolCTA() {
         </div>
         <div className="flex-1 min-w-0">
           <h2 className="text-xl font-bold text-zinc-900 dark:text-white mb-1 flex items-center gap-2">
-            <Sparkles className="w-5 h-5 text-emerald-600 dark:text-emerald-400" aria-hidden="true" />
+            <Sparkles
+              className="w-5 h-5 text-emerald-600 dark:text-emerald-400"
+              aria-hidden="true"
+            />
             Built an AI tool? Get it reviewed.
           </h2>
           <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
-            Submit your AI tool or project for our independent 6-dimension evaluation.
-            Top-rated tools get featured in our rankings, newsletter, and social shoutouts.
-            Free for creators — no paid placements, ever.
+            Submit your AI tool or project for our independent 6-dimension evaluation. Top-rated
+            tools get featured in our rankings, newsletter, and social shoutouts. Free for creators
+            — no paid placements, ever.
           </p>
         </div>
         <Link

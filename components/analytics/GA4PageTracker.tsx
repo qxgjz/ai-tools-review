@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useEffect, Suspense } from "react";
-import { usePathname, useSearchParams } from "next/navigation";
-import { classifyPageType } from "@/lib/page-type";
+import { useEffect, Suspense } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+import { classifyPageType } from '@/lib/page-type';
 
 declare global {
   interface Window {
@@ -32,7 +32,7 @@ function PageViewTrackerInner() {
   const searchParams = useSearchParams();
 
   useEffect(() => {
-    if (typeof window === "undefined" || !window.gtag) return;
+    if (typeof window === 'undefined' || !window.gtag) return;
     if (!pathname) return;
 
     // Build full path with query string if present
@@ -43,12 +43,12 @@ function PageViewTrackerInner() {
     const pageType = classifyPageType(pathname);
 
     // Send manual page_view event with correct path + page_type
-    window.gtag("event", "page_view", {
+    window.gtag('event', 'page_view', {
       page_path: pagePath,
       page_location: window.location.href,
       page_title: document.title,
       page_type: pageType,
-      send_to: "G-DGK601TM42",
+      send_to: 'G-DGK601TM42',
     });
   }, [pathname, searchParams]);
 

@@ -4,16 +4,16 @@
  */
 
 export type PageType =
-  | "homepage"
-  | "tool_page"
-  | "article_page"
-  | "review_page"
-  | "comparison_page"
-  | "category_page"
-  | "listing_page"
-  | "utility_page"
-  | "static_page"
-  | "unknown";
+  | 'homepage'
+  | 'tool_page'
+  | 'article_page'
+  | 'review_page'
+  | 'comparison_page'
+  | 'category_page'
+  | 'listing_page'
+  | 'utility_page'
+  | 'static_page'
+  | 'unknown';
 
 /**
  * Classify a URL pathname into a page type.
@@ -30,58 +30,65 @@ export type PageType =
  * - static_page: /about, /contact, /privacy, etc. — no monetization
  */
 export function classifyPageType(pathname: string): PageType {
-  const path = pathname.replace(/\/+$/, "") || "/";
-  const segments = path.split("/").filter(Boolean);
-  const first = segments[0] || "";
-  const second = segments[1] || "";
-  const slug = segments[segments.length - 1] || "";
+  const path = pathname.replace(/\/+$/, '') || '/';
+  const segments = path.split('/').filter(Boolean);
+  const first = segments[0] || '';
+  const second = segments[1] || '';
+  const slug = segments[segments.length - 1] || '';
 
   // Homepage
-  if (path === "/") return "homepage";
+  if (path === '/') return 'homepage';
 
   // Tool detail pages: /tools/[slug]
-  if (first === "tools" && second) return "tool_page";
+  if (first === 'tools' && second) return 'tool_page';
 
   // Blog pages: /blog/[slug]
-  if (first === "blog") {
-    if (!second) return "utility_page"; // /blog listing
-    if (second === "category" || second === "tag") return "category_page";
+  if (first === 'blog') {
+    if (!second) return 'utility_page'; // /blog listing
+    if (second === 'category' || second === 'tag') return 'category_page';
     // Distinguish review pages from articles
-    if (slug.includes("review") || slug.includes("_review") || slug.includes("-review")) {
-      return "review_page";
+    if (slug.includes('review') || slug.includes('_review') || slug.includes('-review')) {
+      return 'review_page';
     }
-    return "article_page";
+    return 'article_page';
   }
 
   // Comparison pages: /compare, /compare/[slug]
-  if (first === "compare") return "comparison_page";
+  if (first === 'compare') return 'comparison_page';
 
   // Category pages: /category/[slug], /subcategory/[slug]
-  if (first === "category" || first === "subcategory") return "category_page";
+  if (first === 'category' || first === 'subcategory') return 'category_page';
 
   // Listing pages
   if (
-    first === "alternatives" ||
-    first === "best-for" ||
-    first === "ranking" ||
-    first === "top-ai-tools-by-traffic"
+    first === 'alternatives' ||
+    first === 'best-for' ||
+    first === 'ranking' ||
+    first === 'top-ai-tools-by-traffic'
   ) {
-    return "listing_page";
+    return 'listing_page';
   }
 
   // Utility pages
-  if (first === "generator" || first === "search" || first === "sitemap") {
-    return "utility_page";
+  if (first === 'generator' || first === 'search' || first === 'sitemap') {
+    return 'utility_page';
   }
 
   // Static pages
   const staticPages = [
-    "about", "contact", "privacy", "terms", "ai-policy",
-    "disclosure", "methodology", "free-ai-tools-guide", "authors",
+    'about',
+    'contact',
+    'privacy',
+    'terms',
+    'ai-policy',
+    'disclosure',
+    'methodology',
+    'free-ai-tools-guide',
+    'authors',
   ];
-  if (staticPages.includes(first)) return "static_page";
+  if (staticPages.includes(first)) return 'static_page';
 
-  return "unknown";
+  return 'unknown';
 }
 
 /**

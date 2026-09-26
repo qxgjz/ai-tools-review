@@ -2,7 +2,7 @@
  * 六维加权评分计算引擎
  * ============================================================ */
 
-import type { Score, ScoreDimension, Grade, ScoreResult } from "@/types";
+import type { Score, ScoreDimension, Grade, ScoreResult } from '@/types';
 
 /** 六维权重配置（总和=100%） */
 export const SCORE_WEIGHTS: Record<ScoreDimension, number> = {
@@ -16,22 +16,22 @@ export const SCORE_WEIGHTS: Record<ScoreDimension, number> = {
 
 /** 六维中文标签 */
 export const DIMENSION_LABELS: Record<ScoreDimension, string> = {
-  functionality: "Functionality",
-  ux: "User Experience",
-  pricing: "Pricing & Value",
-  integration: "Integrations",
-  support: "Support & Reliability",
-  ethics: "Ethics & Transparency",
+  functionality: 'Functionality',
+  ux: 'User Experience',
+  pricing: 'Pricing & Value',
+  integration: 'Integrations',
+  support: 'Support & Reliability',
+  ethics: 'Ethics & Transparency',
 };
 
 /** 等级描述 */
 export const GRADE_DESCRIPTIONS: Record<Grade, string> = {
-  S: "Excellent",
-  A: "Great",
-  B: "Good",
-  C: "Average",
-  D: "Poor",
-  F: "Not Recommended",
+  S: 'Excellent',
+  A: 'Great',
+  B: 'Good',
+  C: 'Average',
+  D: 'Poor',
+  F: 'Not Recommended',
 };
 
 /**
@@ -55,12 +55,12 @@ export function calculateTotal(scores: Score): number {
  * 9.0+ = S | 8.0-8.9 = A | 7.0-7.9 = B | 6.0-6.9 = C | 5.0-5.9 = D | <5.0 = F
  */
 export function getGrade(total: number): Grade {
-  if (total >= 9.0) return "S";
-  if (total >= 8.0) return "A";
-  if (total >= 7.0) return "B";
-  if (total >= 6.0) return "C";
-  if (total >= 5.0) return "D";
-  return "F";
+  if (total >= 9.0) return 'S';
+  if (total >= 8.0) return 'A';
+  if (total >= 7.0) return 'B';
+  if (total >= 6.0) return 'C';
+  if (total >= 5.0) return 'D';
+  return 'F';
 }
 
 /**
@@ -68,12 +68,12 @@ export function getGrade(total: number): Grade {
  */
 export function getGradeColor(grade: Grade): string {
   const colors: Record<Grade, string> = {
-    S: "text-amber-600",
-    A: "text-emerald-600",
-    B: "text-blue-600",
-    C: "text-yellow-600",
-    D: "text-red-600",
-    F: "text-gray-500",
+    S: 'text-amber-600',
+    A: 'text-emerald-600',
+    B: 'text-blue-600',
+    C: 'text-yellow-600',
+    D: 'text-red-600',
+    F: 'text-gray-500',
   };
   return colors[grade];
 }

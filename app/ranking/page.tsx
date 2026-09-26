@@ -1,13 +1,20 @@
-﻿"use client";
+﻿'use client';
 
-import Link from "next/link";
-import { useState } from "react";
-import { ArrowLeft, Trophy, Star, ArrowRight } from "lucide-react";
-import toolsData from "@/data/tools-index.json";
-import type { Tool } from "@/types";
-import { calculateScoreResult } from "@/lib/scoring";
-import { ToolList } from "@/components/tools/ToolList";
-import { FadeIn, GradientText, StackingCard, StackingCardsContainer, GradientButton, Magnet } from "@/components/animations";
+import Link from 'next/link';
+import { useState } from 'react';
+import { ArrowLeft, Trophy, Star, ArrowRight } from 'lucide-react';
+import toolsData from '@/data/tools-index.json';
+import type { Tool } from '@/types';
+import { calculateScoreResult } from '@/lib/scoring';
+import { ToolList } from '@/components/tools/ToolList';
+import {
+  FadeIn,
+  GradientText,
+  StackingCard,
+  StackingCardsContainer,
+  GradientButton,
+  Magnet,
+} from '@/components/animations';
 
 export default function RankingPage() {
   const tools = toolsData as Tool[];
@@ -23,7 +30,10 @@ export default function RankingPage() {
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       {/* Header */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
-        <Link href="/" className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all">
+        <Link
+          href="/"
+          className="inline-flex items-center gap-2 px-4 py-2 mb-6 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-emerald-300 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 transition-all"
+        >
           <ArrowLeft className="w-4 h-4" />
           Back to Home
         </Link>
@@ -35,10 +45,14 @@ export default function RankingPage() {
               Top 10 Showcase
             </div>
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 dark:text-white mb-4">
-              AI Tool <GradientText from="#F59E0B" to="#FBBF24" className="font-black">Ranking</GradientText>
+              AI Tool{' '}
+              <GradientText from="#F59E0B" to="#FBBF24" className="font-black">
+                Ranking
+              </GradientText>
             </h1>
             <p className="text-lg text-gray-500 dark:text-gray-400 max-w-2xl mx-auto">
-              Sorted by six-dimension weighted scoring. Scroll to explore the top 10 tools in stunning card stack view.
+              Sorted by six-dimension weighted scoring. Scroll to explore the top 10 tools in
+              stunning card stack view.
             </p>
           </div>
         </FadeIn>
@@ -63,7 +77,10 @@ export default function RankingPage() {
                   </p>
                   <div className="flex flex-wrap gap-2 justify-center lg:justify-start mb-6">
                     {tool.tags?.slice(0, 3).map((tag: string) => (
-                      <span key={tag} className="px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-xs font-medium">
+                      <span
+                        key={tag}
+                        className="px-3 py-1 bg-emerald-50 dark:bg-emerald-900/20 text-emerald-600 dark:text-emerald-400 rounded-full text-xs font-medium"
+                      >
                         {tag}
                       </span>
                     ))}
@@ -80,7 +97,15 @@ export default function RankingPage() {
                 <div className="flex-shrink-0">
                   <div className="relative w-32 h-32 sm:w-40 sm:h-40">
                     <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                      <circle cx="50" cy="50" r="45" fill="none" stroke="currentColor" strokeWidth="8" className="text-gray-200 dark:text-gray-700" />
+                      <circle
+                        cx="50"
+                        cy="50"
+                        r="45"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="8"
+                        className="text-gray-200 dark:text-gray-700"
+                      />
                       <circle
                         cx="50"
                         cy="50"
@@ -109,7 +134,7 @@ export default function RankingPage() {
                     {[...Array(5)].map((_, i) => (
                       <Star
                         key={i}
-                        className={`w-5 h-5 ${i < Math.round(tool.total / 20) ? "text-amber-400 fill-amber-400" : "text-gray-300 dark:text-gray-600"}`}
+                        className={`w-5 h-5 ${i < Math.round(tool.total / 20) ? 'text-amber-400 fill-amber-400' : 'text-gray-300 dark:text-gray-600'}`}
                       />
                     ))}
                   </div>

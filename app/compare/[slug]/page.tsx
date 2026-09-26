@@ -1,5 +1,5 @@
-import { notFound } from "next/navigation";
-import Link from "next/link";
+import { notFound } from 'next/navigation';
+import Link from 'next/link';
 import {
   ArrowLeft,
   Check,
@@ -18,27 +18,23 @@ import {
   ExternalLink,
   BookOpen,
   TrendingUp,
-} from "lucide-react";
-import comparisonsData from "@/data/comparisons.json";
-import toolsData from "@/data/tools-index.json";
-import type { Tool } from "@/types";
-import { calculateScoreResult, DIMENSION_LABELS } from "@/lib/scoring";
-import { RadarChart } from "@/components/charts/RadarChart";
-import { MultiRadarChart } from "@/components/charts/MultiRadarChart";
-import { FAQSection } from "@/components/content/FAQSection";
-import { Breadcrumb } from "@/components/ui/Breadcrumb";
-import { FadeIn } from "@/components/animations";
-import {
-  BreadcrumbSchema,
-  FAQSchema,
-  ComparisonSchema,
-} from "@/components/seo/Schema";
+} from 'lucide-react';
+import comparisonsData from '@/data/comparisons.json';
+import toolsData from '@/data/tools-index.json';
+import type { Tool } from '@/types';
+import { calculateScoreResult, DIMENSION_LABELS } from '@/lib/scoring';
+import { RadarChart } from '@/components/charts/RadarChart';
+import { MultiRadarChart } from '@/components/charts/MultiRadarChart';
+import { FAQSection } from '@/components/content/FAQSection';
+import { Breadcrumb } from '@/components/ui/Breadcrumb';
+import { FadeIn } from '@/components/animations';
+import { BreadcrumbSchema, FAQSchema, ComparisonSchema } from '@/components/seo/Schema';
 
 interface ComparisonPageProps {
   params: { slug: string };
 }
 
-export const dynamic = "force-static";
+export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   return comparisonsData.map((c: any) => ({ slug: c.slug }));
@@ -48,7 +44,10 @@ export function generateMetadata({ params }: ComparisonPageProps) {
   const comparison = comparisonsData.find((c: any) => c.slug === params.slug);
   if (!comparison) return {};
 
-  const shortDesc = comparison.metaDescription.length > 160 ? comparison.metaDescription.slice(0, 157).trim() + "..." : comparison.metaDescription;
+  const shortDesc =
+    comparison.metaDescription.length > 160
+      ? comparison.metaDescription.slice(0, 157).trim() + '...'
+      : comparison.metaDescription;
   return {
     title: comparison.title,
     description: shortDesc,
@@ -56,7 +55,7 @@ export function generateMetadata({ params }: ComparisonPageProps) {
     openGraph: {
       title: comparison.title,
       description: shortDesc,
-      type: "article",
+      type: 'article',
       url: `https://www.aitoolcrux.com/compare/${comparison.slug}`,
     },
     alternates: {
@@ -100,10 +99,18 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
   ];
 
   const comparisonDimensions = [
-    { label: "Overall Score", a: scoreA?.total?.toFixed(1) || "N/A", b: scoreB?.total?.toFixed(1) || "N/A" },
-    { label: "Developer/Vendor", a: comparison.toolA.vendor, b: comparison.toolB.vendor },
-    { label: "Category", a: toolA?.category || "AI Tool", b: toolB?.category || "AI Tool" },
-    { label: "Free Tier", a: toolA?.hasFreeTier ? "Yes" : "Check website", b: toolB?.hasFreeTier ? "Yes" : "Check website" },
+    {
+      label: 'Overall Score',
+      a: scoreA?.total?.toFixed(1) || 'N/A',
+      b: scoreB?.total?.toFixed(1) || 'N/A',
+    },
+    { label: 'Developer/Vendor', a: comparison.toolA.vendor, b: comparison.toolB.vendor },
+    { label: 'Category', a: toolA?.category || 'AI Tool', b: toolB?.category || 'AI Tool' },
+    {
+      label: 'Free Tier',
+      a: toolA?.hasFreeTier ? 'Yes' : 'Check website',
+      b: toolB?.hasFreeTier ? 'Yes' : 'Check website',
+    },
   ];
 
   return (
@@ -111,9 +118,12 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
       {/* Structured Data */}
       <BreadcrumbSchema
         items={[
-          { name: "Home", url: "https://www.aitoolcrux.com" },
-          { name: "Compare", url: "https://www.aitoolcrux.com/compare" },
-          { name: `${comparison.toolA.name} vs ${comparison.toolB.name}`, url: `https://www.aitoolcrux.com/compare/${comparison.slug}` },
+          { name: 'Home', url: 'https://www.aitoolcrux.com' },
+          { name: 'Compare', url: 'https://www.aitoolcrux.com/compare' },
+          {
+            name: `${comparison.toolA.name} vs ${comparison.toolB.name}`,
+            url: `https://www.aitoolcrux.com/compare/${comparison.slug}`,
+          },
         ]}
       />
       <FAQSchema faqs={faqs.map((f) => ({ question: f.question, answer: f.answer }))} />
@@ -123,13 +133,13 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
         items={[
           {
             name: comparison.toolA.name,
-            description: toolA?.description || "",
+            description: toolA?.description || '',
             ratingValue: scoreA?.total,
             url: `https://www.aitoolcrux.com/tools/${comparison.toolA.slug}`,
           },
           {
             name: comparison.toolB.name,
-            description: toolB?.description || "",
+            description: toolB?.description || '',
             ratingValue: scoreB?.total,
             url: `https://www.aitoolcrux.com/tools/${comparison.toolB.slug}`,
           },
@@ -140,8 +150,8 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
       {/* Breadcrumb */}
       <Breadcrumb
         items={[
-          { name: "Home", url: "/" },
-          { name: "Compare", url: "/compare" },
+          { name: 'Home', url: '/' },
+          { name: 'Compare', url: '/compare' },
           { name: `${comparison.toolA.name} vs ${comparison.toolB.name}` },
         ]}
       />
@@ -235,10 +245,12 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
             </div>
             <div className="mt-6">
               <MultiRadarChart
-                tools={[
-                  toolA && { ...toolA, color: "#3b82f6" },
-                  toolB && { ...toolB, color: "#8b5cf6" },
-                ].filter(Boolean) as any[]}
+                tools={
+                  [
+                    toolA && { ...toolA, color: '#3b82f6' },
+                    toolB && { ...toolB, color: '#8b5cf6' },
+                  ].filter(Boolean) as any[]
+                }
                 size={300}
               />
             </div>
@@ -256,17 +268,29 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-zinc-200 dark:border-zinc-800">
-                <th className="text-left py-3 px-2 font-semibold text-zinc-500 dark:text-zinc-400">Feature</th>
-                <th className="text-center py-3 px-2 font-semibold text-blue-600 dark:text-blue-400">{comparison.toolA.name}</th>
-                <th className="text-center py-3 px-2 font-semibold text-purple-600 dark:text-purple-400">{comparison.toolB.name}</th>
+                <th className="text-left py-3 px-2 font-semibold text-zinc-500 dark:text-zinc-400">
+                  Feature
+                </th>
+                <th className="text-center py-3 px-2 font-semibold text-blue-600 dark:text-blue-400">
+                  {comparison.toolA.name}
+                </th>
+                <th className="text-center py-3 px-2 font-semibold text-purple-600 dark:text-purple-400">
+                  {comparison.toolB.name}
+                </th>
               </tr>
             </thead>
             <tbody>
               {comparisonDimensions.map((dim, i) => (
                 <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800/50">
-                  <td className="py-3 px-2 font-medium text-zinc-700 dark:text-zinc-300">{dim.label}</td>
-                  <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400">{dim.a}</td>
-                  <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400">{dim.b}</td>
+                  <td className="py-3 px-2 font-medium text-zinc-700 dark:text-zinc-300">
+                    {dim.label}
+                  </td>
+                  <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400">
+                    {dim.a}
+                  </td>
+                  <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400">
+                    {dim.b}
+                  </td>
                 </tr>
               ))}
             </tbody>
@@ -287,8 +311,11 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {toolA.pros?.slice(0, 4).map((pro: string, i: number) => (
-                <span key={i} className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 rounded-md text-xs">
-                  <Check className="w-3 h-3" /> {pro.length > 50 ? pro.slice(0, 50) + "..." : pro}
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 rounded-md text-xs"
+                >
+                  <Check className="w-3 h-3" /> {pro.length > 50 ? pro.slice(0, 50) + '...' : pro}
                 </span>
               ))}
             </div>
@@ -315,8 +342,11 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
             </p>
             <div className="flex flex-wrap gap-2 mb-4">
               {toolB.pros?.slice(0, 4).map((pro: string, i: number) => (
-                <span key={i} className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 rounded-md text-xs">
-                  <Check className="w-3 h-3" /> {pro.length > 50 ? pro.slice(0, 50) + "..." : pro}
+                <span
+                  key={i}
+                  className="inline-flex items-center gap-1 px-2.5 py-1 bg-emerald-50 dark:bg-emerald-950/30 text-emerald-700 dark:text-emerald-400 rounded-md text-xs"
+                >
+                  <Check className="w-3 h-3" /> {pro.length > 50 ? pro.slice(0, 50) + '...' : pro}
                 </span>
               ))}
             </div>
@@ -332,7 +362,10 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
 
       {/* FAQ Section */}
       <FadeIn delay={0.4}>
-        <FAQSection items={faqs} title={`${comparison.toolA.name} vs ${comparison.toolB.name} FAQ`} />
+        <FAQSection
+          items={faqs}
+          title={`${comparison.toolA.name} vs ${comparison.toolB.name} FAQ`}
+        />
       </FadeIn>
 
       {/* Final Verdict */}

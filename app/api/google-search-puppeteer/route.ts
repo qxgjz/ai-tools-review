@@ -5,7 +5,7 @@ import chromium from '@sparticuz/chromium';
 /**
  * Google搜索代理API - 使用Puppeteer无头浏览器渲染JavaScript页面
  * 解决Google搜索需要JavaScript渲染的问题
- * 
+ *
  * 使用方法：
  * POST /api/google-search-puppeteer
  * Body: { "query": "site:https://www.aitoolcrux.com", "type": "indexing" | "ranking" }
@@ -29,7 +29,7 @@ export async function POST(request: NextRequest) {
     if (!authHeader || authHeader !== `Bearer ${API_KEY}`) {
       return NextResponse.json(
         { error: 'Unauthorized', message: 'Invalid API key' },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -38,10 +38,7 @@ export async function POST(request: NextRequest) {
     const { query, type = 'indexing', num = 20 } = body;
 
     if (!query) {
-      return NextResponse.json(
-        { error: 'Missing query parameter' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: 'Missing query parameter' }, { status: 400 });
     }
 
     console.log(`[Google Search Puppeteer] Query: ${query}, Type: ${type}`);
@@ -52,10 +49,11 @@ export async function POST(request: NextRequest) {
       return NextResponse.json(
         {
           error: 'Failed to launch browser',
-          details: 'Check server logs for details. This may be due to Vercel Serverless memory limits or Chromium binary issues.',
+          details:
+            'Check server logs for details. This may be due to Vercel Serverless memory limits or Chromium binary issues.',
           suggestion: 'Consider using Google Custom Search JSON API or Bing search as alternative.',
         },
-        { status: 500 }
+        { status: 500 },
       );
     }
 
@@ -64,7 +62,9 @@ export async function POST(request: NextRequest) {
 
     try {
       // 设置User-Agent和视口
-      await page.setUserAgent('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36');
+      await page.setUserAgent(
+        'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+      );
       await page.setViewport({ width: 1920, height: 1080 });
 
       // 构建Google搜索URL
@@ -84,9 +84,10 @@ export async function POST(request: NextRequest) {
       // 检查是否遇到验证码
       const pageTitle = await page.title();
       const pageContent = await page.content();
-      const isCaptcha = pageContent.includes('captcha') || 
-                        pageContent.includes('unusual traffic') ||
-                        pageTitle.includes('sorry');
+      const isCaptcha =
+        pageContent.includes('captcha') ||
+        pageContent.includes('unusual traffic') ||
+        pageTitle.includes('sorry');
 
       if (isCaptcha) {
         console.log('[Google Search Puppeteer] Captcha detected, waiting...');
@@ -113,8 +114,9 @@ export async function POST(request: NextRequest) {
           });
 
           // 检查是否有"没有结果"的提示
-          const noResults = document.body.innerText.includes('did not match any documents') ||
-                           document.body.innerText.includes('No results found for');
+          const noResults =
+            document.body.innerText.includes('did not match any documents') ||
+            document.body.innerText.includes('No results found for');
 
           results.push({
             type: 'indexing_check',
@@ -123,7 +125,6 @@ export async function POST(request: NextRequest) {
             foundUrls: foundUrls.slice(0, 10),
             hasNoResultsIndicator: noResults,
           });
-
         } else {
           // 排名检查模式：提取搜索结果
           const resultElements = document.querySelectorAll('div.g, div.MjjYud');
@@ -154,8 +155,14 @@ export async function POST(request: NextRequest) {
             const allH3 = document.querySelectorAll('h3');
             const allLinks = document.querySelectorAll('a[href]');
             const filteredLinks = Array.from(allLinks)
-              .map(a => a.getAttribute('href'))
-              .filter(href => href && href.startsWith('http') && !href.includes('google.com') && !href.includes('gstatic.com'));
+              .map((a) => a.getAttribute('href'))
+              .filter(
+                (href) =>
+                  href &&
+                  href.startsWith('http') &&
+                  !href.includes('google.com') &&
+                  !href.includes('gstatic.com'),
+              );
 
             allH3.forEach((h3, index) => {
               if (index >= 20) return;
@@ -189,18 +196,16 @@ export async function POST(request: NextRequest) {
           contentLength: pageContent.length,
         },
       });
-
     } finally {
       // 关闭页面（但保留浏览器实例供下次使用）
       await page.close().catch(() => {});
       browserLastUsed = Date.now();
     }
-
   } catch (error: any) {
     console.error('[Google Search Puppeteer] Error:', error);
     return NextResponse.json(
       { error: 'Internal server error', details: error.message },
-      { status: 500 }
+      { status: 500 },
     );
   }
 }
@@ -254,7 +259,6 @@ async function getBrowser() {
       console.log('[Google Search Puppeteer] Browser launched successfully');
 
       return browserInstance;
-
     } catch (launchError: any) {
       console.error('[Google Search Puppeteer] Browser launch error details:', {
         message: launchError.message,
@@ -263,7 +267,6 @@ async function getBrowser() {
       });
       throw launchError;
     }
-
   } catch (error: any) {
     console.error('[Google Search Puppeteer] Failed to launch browser:', error);
     return null;

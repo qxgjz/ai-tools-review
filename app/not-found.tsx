@@ -1,8 +1,8 @@
-import Link from "next/link";
-import { Home, Search, ArrowLeft, TrendingUp, Sparkles, FileText } from "lucide-react";
-import tools from "@/data/tools-index.json";
-import posts from "@/data/posts.json";
-import { calculateScoreResult } from "@/lib/scoring";
+import Link from 'next/link';
+import { Home, Search, ArrowLeft, TrendingUp, Sparkles, FileText } from 'lucide-react';
+import tools from '@/data/tools-index.json';
+import posts from '@/data/posts.json';
+import { calculateScoreResult } from '@/lib/scoring';
 
 // 搜索框拆为独立客户端组件，避免整个404页变成client component导致5MB bundle
 function SearchBox() {
@@ -39,12 +39,12 @@ export default function NotFound() {
 
   // PopularCategories
   const popularCategories = [
-    { slug: "chat", name: "AI Chatbots", icon: "💬" },
-    { slug: "image", name: "AI Image", icon: "🎨" },
-    { slug: "writing", name: "AI Writing", icon: "✍️" },
-    { slug: "code", name: "AI Coding", icon: "💻" },
-    { slug: "video", name: "AI Video", icon: "🎬" },
-    { slug: "audio", name: "AI Audio", icon: "🎵" },
+    { slug: 'chat', name: 'AI Chatbots', icon: '💬' },
+    { slug: 'image', name: 'AI Image', icon: '🎨' },
+    { slug: 'writing', name: 'AI Writing', icon: '✍️' },
+    { slug: 'code', name: 'AI Coding', icon: '💻' },
+    { slug: 'video', name: 'AI Video', icon: '🎬' },
+    { slug: 'audio', name: 'AI Audio', icon: '🎵' },
   ];
 
   return (
@@ -59,8 +59,8 @@ export default function NotFound() {
             Page Not Found
           </h2>
           <p className="text-gray-600 dark:text-gray-400 max-w-md mx-auto">
-            The page you're looking for doesn't exist or has been moved.
-            Try searching or explore our popular content below.
+            The page you're looking for doesn't exist or has been moved. Try searching or explore
+            our popular content below.
           </p>
         </div>
 
@@ -135,9 +135,7 @@ export default function NotFound() {
                       {result.total.toFixed(1)}
                     </span>
                   </div>
-                  <p className="text-xs text-gray-500 dark:text-gray-400 truncate">
-                    {tool.vendor}
-                  </p>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 truncate">{tool.vendor}</p>
                 </Link>
               );
             })}

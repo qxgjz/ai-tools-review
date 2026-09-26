@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect, useRef } from "react";
-import { usePathname } from "next/navigation";
+import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 /**
  * RouteFocusManager - Accessibility: move focus to main content after client-side navigation.
@@ -34,17 +34,17 @@ export function RouteFocusManager() {
     // Small delay to allow the new page content to render
     const timer = setTimeout(() => {
       // Try h1 first (most specific page title)
-      const heading = document.querySelector("h1");
+      const heading = document.querySelector('h1');
       if (heading) {
-        heading.setAttribute("tabindex", "-1");
+        heading.setAttribute('tabindex', '-1');
         (heading as HTMLElement).focus({ preventScroll: false });
         return;
       }
 
       // Fall back to main content area
-      const main = document.getElementById("main-content");
+      const main = document.getElementById('main-content');
       if (main) {
-        main.setAttribute("tabindex", "-1");
+        main.setAttribute('tabindex', '-1');
         main.focus({ preventScroll: false });
       }
     }, 50);

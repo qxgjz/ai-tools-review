@@ -1,11 +1,11 @@
-"use client";
+'use client';
 
 interface AffiliateCTAProps {
   toolName: string;
   officialUrl?: string;
   affiliateUrl?: string;
   description?: string;
-  variant?: "inline" | "banner" | "bottom";
+  variant?: 'inline' | 'banner' | 'bottom';
   hasFreeTier?: boolean;
   freeAccess?: boolean;
 }
@@ -15,24 +15,25 @@ function trackCtaClick(toolName: string, variant: string, isAffiliate: boolean) 
   // is as fast as possible (improves INP). The link opens in a new tab,
   // so blocking the click handler wastes interactivity budget.
   const run = () => {
-    if (typeof window !== "undefined" && (window as any).va) {
-      (window as any).va.track("affiliate_cta_click", {
+    if (typeof window !== 'undefined' && (window as any).va) {
+      (window as any).va.track('affiliate_cta_click', {
         tool: toolName,
         variant: variant,
         is_affiliate: isAffiliate,
         page: window.location.pathname,
       });
     }
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.dispatchEvent(
-        new CustomEvent("cta:click", {
+        new CustomEvent('cta:click', {
           detail: { tool: toolName, variant, isAffiliate, page: window.location.pathname },
-        })
+        }),
       );
     }
   };
-  if (typeof window === "undefined") return;
-  const ric = (window as any).requestIdleCallback as ((cb: () => void, opts?: { timeout: number }) => number) | undefined;
+  if (typeof window === 'undefined') return;
+  const ric = (window as any).requestIdleCallback as
+    ((cb: () => void, opts?: { timeout: number }) => number) | undefined;
   if (ric) {
     ric(run, { timeout: 1500 });
   } else {
@@ -41,14 +42,14 @@ function trackCtaClick(toolName: string, variant: string, isAffiliate: boolean) 
 }
 
 function ctaText(toolName: string, hasFreeTier?: boolean, freeAccess?: boolean): string {
-  if (freeAccess) return "Get Free Access";
+  if (freeAccess) return 'Get Free Access';
   return hasFreeTier ? `Try ${toolName} Free` : `Start ${toolName} Free Trial`;
 }
 
 function microcopyText(freeAccess?: boolean): string {
   return freeAccess
-    ? "Official free tier · No credit card required"
-    : "✅ Tested by our team · No credit card required for free plan";
+    ? 'Official free tier · No credit card required'
+    : '✅ Tested by our team · No credit card required for free plan';
 }
 
 export function AffiliateCTA({
@@ -56,15 +57,15 @@ export function AffiliateCTA({
   officialUrl,
   affiliateUrl,
   description,
-  variant = "banner",
+  variant = 'banner',
   hasFreeTier = false,
   freeAccess = false,
 }: AffiliateCTAProps) {
-  const url = affiliateUrl || officialUrl || "#";
+  const url = affiliateUrl || officialUrl || '#';
   const isAffiliate = !!affiliateUrl;
   const microcopy = microcopyText(freeAccess);
 
-  if (variant === "inline") {
+  if (variant === 'inline') {
     return (
       <span className="inline-flex items-center gap-1">
         <a
@@ -74,7 +75,7 @@ export function AffiliateCTA({
           className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium"
           data-cta-type="affiliate"
           data-tool={toolName}
-          onClick={() => trackCtaClick(toolName, "inline", isAffiliate)}
+          onClick={() => trackCtaClick(toolName, 'inline', isAffiliate)}
         >
           {ctaText(toolName, hasFreeTier, freeAccess)}
         </a>
@@ -83,7 +84,7 @@ export function AffiliateCTA({
     );
   }
 
-  if (variant === "bottom") {
+  if (variant === 'bottom') {
     return (
       <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/30 dark:to-emerald-950/30 border border-green-200 dark:border-green-800 rounded-xl p-6 my-8">
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
@@ -103,11 +104,16 @@ export function AffiliateCTA({
               className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
               data-cta-type="affiliate"
               data-tool={toolName}
-              onClick={() => trackCtaClick(toolName, "bottom", isAffiliate)}
+              onClick={() => trackCtaClick(toolName, 'bottom', isAffiliate)}
             >
               {ctaText(toolName, hasFreeTier, freeAccess)}
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                />
               </svg>
             </a>
             <p className="text-xs text-gray-500 dark:text-gray-400">{microcopy}</p>
@@ -115,7 +121,10 @@ export function AffiliateCTA({
         </div>
         {isAffiliate && (
           <p className="text-xs text-gray-500 dark:text-gray-400 mt-3">
-            <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you. This never affects our rating or recommendation.</em>
+            <em>
+              Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no
+              extra cost to you. This never affects our rating or recommendation.
+            </em>
           </p>
         )}
       </div>
@@ -149,11 +158,16 @@ export function AffiliateCTA({
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-600 text-white rounded-lg font-bold text-sm hover:from-emerald-700 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
             data-cta-type="affiliate"
             data-tool={toolName}
-            onClick={() => trackCtaClick(toolName, "banner", isAffiliate)}
+            onClick={() => trackCtaClick(toolName, 'banner', isAffiliate)}
           >
             {ctaText(toolName, hasFreeTier, freeAccess)}
             <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
             </svg>
           </a>
           <p className="text-xs text-gray-500 dark:text-gray-400">{microcopy}</p>
@@ -161,14 +175,27 @@ export function AffiliateCTA({
       </div>
       {isAffiliate && (
         <p className="text-xs text-gray-500 dark:text-gray-400 mt-3 pt-3 border-t border-emerald-100 dark:border-emerald-900/50">
-          <em>Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no extra cost to you. This never affects our rating or recommendation.</em>
+          <em>
+            Disclosure: This is an affiliate link. We may earn a commission if you sign up, at no
+            extra cost to you. This never affects our rating or recommendation.
+          </em>
         </p>
       )}
     </div>
   );
 }
 
-export function CompareAffiliateButton({ toolName, url, hasFreeTier, freeAccess }: { toolName: string; url?: string; hasFreeTier?: boolean; freeAccess?: boolean }) {
+export function CompareAffiliateButton({
+  toolName,
+  url,
+  hasFreeTier,
+  freeAccess,
+}: {
+  toolName: string;
+  url?: string;
+  hasFreeTier?: boolean;
+  freeAccess?: boolean;
+}) {
   if (!url) return <span className="text-gray-400 text-sm">N/A</span>;
   return (
     <a
@@ -178,11 +205,16 @@ export function CompareAffiliateButton({ toolName, url, hasFreeTier, freeAccess 
       className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 hover:underline text-sm font-medium"
       data-cta-type="affiliate"
       data-tool={toolName}
-      onClick={() => trackCtaClick(toolName, "compare", true)}
+      onClick={() => trackCtaClick(toolName, 'compare', true)}
     >
-      {freeAccess ? "Free Access" : hasFreeTier ? "Try Free" : "Start Trial"}
+      {freeAccess ? 'Free Access' : hasFreeTier ? 'Try Free' : 'Start Trial'}
       <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth={2}
+          d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+        />
       </svg>
     </a>
   );

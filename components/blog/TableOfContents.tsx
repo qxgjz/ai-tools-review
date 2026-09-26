@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import { useEffect, useState, useRef } from "react";
-import { List, ChevronRight } from "lucide-react";
+import { useEffect, useState, useRef } from 'react';
+import { List, ChevronRight } from 'lucide-react';
 
 interface TocItem {
   id: string;
@@ -22,9 +22,9 @@ interface TableOfContentsProps {
  * - 点击平滑滚动到对应位置
  * - 桌面端右侧固定，移动端可折叠
  */
-export function TableOfContents({ contentHtml, className = "" }: TableOfContentsProps) {
+export function TableOfContents({ contentHtml, className = '' }: TableOfContentsProps) {
   const [headings, setHeadings] = useState<TocItem[]>([]);
-  const [activeId, setActiveId] = useState<string>("");
+  const [activeId, setActiveId] = useState<string>('');
   const [isOpen, setIsOpen] = useState(false);
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -33,25 +33,25 @@ export function TableOfContents({ contentHtml, className = "" }: TableOfContents
     if (!contentHtml) return;
 
     const parser = new DOMParser();
-    const doc = parser.parseFromString(contentHtml, "text/html");
-    const headingElements = doc.querySelectorAll("h2, h3");
+    const doc = parser.parseFromString(contentHtml, 'text/html');
+    const headingElements = doc.querySelectorAll('h2, h3');
 
     const items: TocItem[] = [];
     headingElements.forEach((heading, index) => {
-      const text = heading.textContent?.trim() || "";
+      const text = heading.textContent?.trim() || '';
       if (!text) return;
 
       // 生成URL友好的ID
       const id = text
         .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, "")
-        .replace(/\s+/g, "-")
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
         .substring(0, 50);
 
       items.push({
         id: id || `heading-${index}`,
         text,
-        level: heading.tagName === "H2" ? 2 : 3,
+        level: heading.tagName === 'H2' ? 2 : 3,
       });
     });
 
@@ -71,24 +71,24 @@ export function TableOfContents({ contentHtml, className = "" }: TableOfContents
         });
       },
       {
-        rootMargin: "-20% 0px -70% 0px",
+        rootMargin: '-20% 0px -70% 0px',
         threshold: 0,
-      }
+      },
     );
 
     // 给页面中的标题元素添加ID
     headings.forEach((item) => {
       const elements = document.querySelectorAll(`h2, h3`);
       elements.forEach((el) => {
-        const text = el.textContent?.trim() || "";
+        const text = el.textContent?.trim() || '';
         const generatedId = text
           .toLowerCase()
-          .replace(/[^a-z0-9\s-]/g, "")
-          .replace(/\s+/g, "-")
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
           .substring(0, 50);
         if (generatedId === item.id && !el.id) {
           el.id = item.id;
-          (el as HTMLElement).style.scrollMarginTop = "80px";
+          (el as HTMLElement).style.scrollMarginTop = '80px';
         }
       });
     });
@@ -105,7 +105,7 @@ export function TableOfContents({ contentHtml, className = "" }: TableOfContents
   const handleClick = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth", block: "start" });
+      element.scrollIntoView({ behavior: 'smooth', block: 'start' });
       setIsOpen(false);
     }
   };
@@ -124,14 +124,14 @@ export function TableOfContents({ contentHtml, className = "" }: TableOfContents
           Table of Contents
         </span>
         <ChevronRight
-          className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? "rotate-90" : ""}`}
+          className={`w-4 h-4 text-gray-500 transition-transform ${isOpen ? 'rotate-90' : ''}`}
         />
       </button>
 
       {/* 目录内容 */}
       <nav
         className={`${
-          isOpen ? "block" : "hidden"
+          isOpen ? 'block' : 'hidden'
         } lg:block bg-gray-50 dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800 p-4`}
       >
         <h3 className="hidden lg:flex items-center gap-2 text-xs font-semibold uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-3">
@@ -144,11 +144,11 @@ export function TableOfContents({ contentHtml, className = "" }: TableOfContents
               <button
                 onClick={() => handleClick(item.id)}
                 className={`w-full text-left text-sm py-1.5 px-2 rounded-md transition-all duration-200 ${
-                  item.level === 3 ? "pl-6" : ""
+                  item.level === 3 ? 'pl-6' : ''
                 } ${
                   activeId === item.id
-                    ? "text-emerald-600 dark:text-emerald-400 bg-blue-50 dark:bg-emerald-900/20 font-medium"
-                    : "text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800"
+                    ? 'text-emerald-600 dark:text-emerald-400 bg-blue-50 dark:bg-emerald-900/20 font-medium'
+                    : 'text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800'
                 }`}
               >
                 {item.text}

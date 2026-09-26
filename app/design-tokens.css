@@ -57,23 +57,23 @@
   --font-mono: 'Geist Mono', 'JetBrains Mono', 'Fira Code', monospace;
 
   /* Type scale - UI/UX Pro Max compliant */
-  --text-xs: 0.75rem;      /* 12px - captions, labels */
-  --text-sm: 0.875rem;     /* 14px - body small, UI labels */
-  --text-base: 1rem;       /* 16px - body (WCAG minimum) */
-  --text-lg: 1.125rem;     /* 18px - lead paragraph, large body */
-  --text-xl: 1.25rem;      /* 20px - h4, card titles */
-  --text-2xl: 1.5rem;      /* 24px - h3, section titles */
-  --text-3xl: 1.875rem;    /* 30px - h2 */
-  --text-4xl: 2.25rem;     /* 36px - h1 mobile */
-  --text-5xl: 3rem;        /* 48px - h1 desktop */
-  --text-6xl: 3.75rem;     /* 60px - hero */
+  --text-xs: 0.75rem; /* 12px - captions, labels */
+  --text-sm: 0.875rem; /* 14px - body small, UI labels */
+  --text-base: 1rem; /* 16px - body (WCAG minimum) */
+  --text-lg: 1.125rem; /* 18px - lead paragraph, large body */
+  --text-xl: 1.25rem; /* 20px - h4, card titles */
+  --text-2xl: 1.5rem; /* 24px - h3, section titles */
+  --text-3xl: 1.875rem; /* 30px - h2 */
+  --text-4xl: 2.25rem; /* 36px - h1 mobile */
+  --text-5xl: 3rem; /* 48px - h1 desktop */
+  --text-6xl: 3.75rem; /* 60px - hero */
 
   /* Line heights - UI/UX Pro Max rule */
-  --leading-tight: 1.15;   /* headings */
-  --leading-snug: 1.3;     /* short text */
-  --leading-normal: 1.5;   /* body */
+  --leading-tight: 1.15; /* headings */
+  --leading-snug: 1.3; /* short text */
+  --leading-normal: 1.5; /* body */
   --leading-relaxed: 1.65; /* long form */
-  --leading-loose: 1.85;   /* article body */
+  --leading-loose: 1.85; /* article body */
 
   /* Font weights */
   --font-normal: 400;
@@ -89,18 +89,18 @@
 
   /* === Spacing System - 4px base === */
   --space-0: 0;
-  --space-1: 0.25rem;  /* 4px */
-  --space-2: 0.5rem;   /* 8px */
-  --space-3: 0.75rem;  /* 12px */
-  --space-4: 1rem;     /* 16px */
-  --space-5: 1.25rem;  /* 20px */
-  --space-6: 1.5rem;   /* 24px */
-  --space-8: 2rem;     /* 32px */
-  --space-10: 2.5rem;  /* 40px */
-  --space-12: 3rem;    /* 48px */
-  --space-16: 4rem;    /* 64px */
-  --space-20: 5rem;    /* 80px */
-  --space-24: 6rem;    /* 96px */
+  --space-1: 0.25rem; /* 4px */
+  --space-2: 0.5rem; /* 8px */
+  --space-3: 0.75rem; /* 12px */
+  --space-4: 1rem; /* 16px */
+  --space-5: 1.25rem; /* 20px */
+  --space-6: 1.5rem; /* 24px */
+  --space-8: 2rem; /* 32px */
+  --space-10: 2.5rem; /* 40px */
+  --space-12: 3rem; /* 48px */
+  --space-16: 4rem; /* 64px */
+  --space-20: 5rem; /* 80px */
+  --space-24: 6rem; /* 96px */
 
   /* Section vertical rhythm */
   --section-padding-y: 4rem;
@@ -151,11 +151,11 @@
   --z-tooltip: 800;
 
   /* === Layout === */
-  --container-max: 80rem;     /* 1280px */
-  --container-narrow: 48rem;  /* 768px */
-  --container-wide: 96rem;    /* 1536px */
-  --header-height: 4rem;      /* 64px */
-  --touch-target: 44px;       /* WCAG minimum */
+  --container-max: 80rem; /* 1280px */
+  --container-narrow: 48rem; /* 768px */
+  --container-wide: 96rem; /* 1536px */
+  --header-height: 4rem; /* 64px */
+  --touch-target: 44px; /* WCAG minimum */
 
   /* === Breakpoints (reference only, used in media queries) === */
   --bp-sm: 640px;
@@ -198,30 +198,68 @@
 /* === Utility Classes === */
 
 /* Text colors */
-.text-accent { color: var(--accent); }
-.text-primary { color: var(--text-primary); }
-.text-secondary { color: var(--text-secondary); }
-.text-muted { color: var(--text-muted); }
+.text-accent {
+  color: var(--accent);
+}
+.text-primary {
+  color: var(--text-primary);
+}
+.text-secondary {
+  color: var(--text-secondary);
+}
+.text-muted {
+  color: var(--text-muted);
+}
 
 /* Background colors */
-.bg-accent { background-color: var(--accent); }
-.bg-surface { background-color: var(--surface); }
-.bg-muted { background-color: var(--bg-muted); }
+.bg-accent {
+  background-color: var(--accent);
+}
+.bg-surface {
+  background-color: var(--surface);
+}
+.bg-muted {
+  background-color: var(--bg-muted);
+}
 
 /* Border colors */
-.border-accent { border-color: var(--accent); }
+.border-accent {
+  border-color: var(--accent);
+}
 
 /* Hover states */
-.hover\:text-accent:hover { color: var(--accent); }
-.hover\:bg-accent:hover { background-color: var(--accent); }
+.hover\:text-accent:hover {
+  color: var(--accent);
+}
+.hover\:bg-accent:hover {
+  background-color: var(--accent);
+}
 
 /* Grade badges - solid colors, NO gradients */
-.grade-s { background-color: var(--grade-s); color: white; }
-.grade-a { background-color: var(--grade-a); color: white; }
-.grade-b { background-color: var(--grade-b); color: white; }
-.grade-c { background-color: var(--grade-c); color: white; }
-.grade-d { background-color: var(--grade-d); color: white; }
-.grade-f { background-color: var(--grade-f); color: white; }
+.grade-s {
+  background-color: var(--grade-s);
+  color: white;
+}
+.grade-a {
+  background-color: var(--grade-a);
+  color: white;
+}
+.grade-b {
+  background-color: var(--grade-b);
+  color: white;
+}
+.grade-c {
+  background-color: var(--grade-c);
+  color: white;
+}
+.grade-d {
+  background-color: var(--grade-d);
+  color: white;
+}
+.grade-f {
+  background-color: var(--grade-f);
+  color: white;
+}
 
 /* Card base - unified radius, shadow, and hover (UI/UX Pro Max rule) */
 .card-base {
@@ -229,7 +267,10 @@
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  transition: box-shadow var(--transition-normal), border-color var(--transition-normal), transform var(--transition-normal);
+  transition:
+    box-shadow var(--transition-normal),
+    border-color var(--transition-normal),
+    transform var(--transition-normal);
 }
 
 .card-base:hover {
@@ -244,7 +285,10 @@
   border-radius: var(--radius-md);
   font-weight: var(--font-medium);
   min-height: var(--touch-target);
-  transition: background-color var(--transition-fast), transform var(--transition-fast), box-shadow var(--transition-fast);
+  transition:
+    background-color var(--transition-fast),
+    transform var(--transition-fast),
+    box-shadow var(--transition-fast);
 }
 
 .btn-primary:hover {
@@ -265,7 +309,10 @@
   border-radius: var(--radius-md);
   font-weight: var(--font-medium);
   min-height: var(--touch-target);
-  transition: border-color var(--transition-fast), color var(--transition-fast), background-color var(--transition-fast);
+  transition:
+    border-color var(--transition-fast),
+    color var(--transition-fast),
+    background-color var(--transition-fast);
 }
 
 .btn-secondary:hover {
@@ -287,7 +334,7 @@ button:focus-visible,
 input:focus-visible,
 select:focus-visible,
 textarea:focus-visible,
-[role="button"]:focus-visible {
+[role='button']:focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
 }
@@ -307,18 +354,40 @@ textarea:focus-visible,
 }
 
 /* === Typography utilities === */
-.font-sans { font-family: var(--font-sans); }
-.font-mono { font-family: var(--font-mono); }
+.font-sans {
+  font-family: var(--font-sans);
+}
+.font-mono {
+  font-family: var(--font-mono);
+}
 
-.leading-tight { line-height: var(--leading-tight); }
-.leading-normal { line-height: var(--leading-normal); }
-.leading-relaxed { line-height: var(--leading-relaxed); }
-.leading-loose { line-height: var(--leading-loose); }
+.leading-tight {
+  line-height: var(--leading-tight);
+}
+.leading-normal {
+  line-height: var(--leading-normal);
+}
+.leading-relaxed {
+  line-height: var(--leading-relaxed);
+}
+.leading-loose {
+  line-height: var(--leading-loose);
+}
 
 /* === Print styles - UI/UX Pro Max rule === */
 @media print {
-  .no-print { display: none !important; }
-  body { background: white; color: black; }
-  a { text-decoration: underline; }
-  .card-base { box-shadow: none; border: 1px solid #ccc; }
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: white;
+    color: black;
+  }
+  a {
+    text-decoration: underline;
+  }
+  .card-base {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
 }

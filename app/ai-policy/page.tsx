@@ -1,12 +1,24 @@
-import { Metadata } from "next";
-import Link from "next/link";
-import { Shield, Brain, Users, CheckCircle, RefreshCw, Mail, Award, FileText, Eye, Zap } from "lucide-react";
+import { Metadata } from 'next';
+import Link from 'next/link';
+import {
+  Shield,
+  Brain,
+  Users,
+  CheckCircle,
+  RefreshCw,
+  Mail,
+  Award,
+  FileText,
+  Eye,
+  Zap,
+} from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: "AI Usage Policy & Editorial Standards | AIToolCrux",
-  description: "Learn how AIToolCrux uses AI tools responsibly in our content creation process. Our commitment to transparency, accuracy, and editorial integrity.",
+  title: 'AI Usage Policy & Editorial Standards | AIToolCrux',
+  description:
+    'Learn how AIToolCrux uses AI tools responsibly in our content creation process. Our commitment to transparency, accuracy, and editorial integrity.',
   alternates: {
-    canonical: "https://www.aitoolcrux.com/ai-policy",
+    canonical: 'https://www.aitoolcrux.com/ai-policy',
   },
 };
 
@@ -19,9 +31,7 @@ export default function AIPolicyPage() {
           <div className="inline-flex items-center justify-center w-16 h-16 bg-white/20 rounded-full mb-6">
             <Shield className="w-8 h-8" />
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            AI Usage Policy
-          </h1>
+          <h1 className="text-4xl md:text-5xl font-bold mb-4">AI Usage Policy</h1>
           <p className="text-xl text-blue-100 max-w-2xl mx-auto">
             Our commitment to transparency, accuracy, and editorial integrity in the age of AI
           </p>
@@ -43,13 +53,15 @@ export default function AIPolicyPage() {
           </h2>
           <div className="prose dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed text-lg">
-              At AIToolCrux, we believe in the responsible and transparent use of artificial intelligence.
-              As a platform dedicated to reviewing and comparing AI tools, we recognize the importance
-              of maintaining the highest editorial standards while leveraging AI to enhance our workflow.
+              At AIToolCrux, we believe in the responsible and transparent use of artificial
+              intelligence. As a platform dedicated to reviewing and comparing AI tools, we
+              recognize the importance of maintaining the highest editorial standards while
+              leveraging AI to enhance our workflow.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              This policy outlines how we use AI tools in our content creation process, the safeguards
-              we have in place to ensure accuracy, and our commitment to maintaining the trust of our readers.
+              This policy outlines how we use AI tools in our content creation process, the
+              safeguards we have in place to ensure accuracy, and our commitment to maintaining the
+              trust of our readers.
             </p>
           </div>
         </section>
@@ -73,9 +85,10 @@ export default function AIPolicyPage() {
                     Research & Hands-On Testing
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Every tool review begins with extensive research and hands-on testing by our editorial team.
-                    We spend hours using each tool, testing its features, evaluating its performance, and
-                    documenting our real-world experience. This human-led process forms the foundation of every review.
+                    Every tool review begins with extensive research and hands-on testing by our
+                    editorial team. We spend hours using each tool, testing its features, evaluating
+                    its performance, and documenting our real-world experience. This human-led
+                    process forms the foundation of every review.
                   </p>
                 </div>
               </div>
@@ -92,10 +105,10 @@ export default function AIPolicyPage() {
                     AI-Assisted Drafting
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    We may use AI language models to assist with drafting, organizing, and formatting our
-                    research findings. AI helps us structure information efficiently, but the core insights,
-                    evaluations, and recommendations always come from our human editors who have actually
-                    used the tools.
+                    We may use AI language models to assist with drafting, organizing, and
+                    formatting our research findings. AI helps us structure information efficiently,
+                    but the core insights, evaluations, and recommendations always come from our
+                    human editors who have actually used the tools.
                   </p>
                 </div>
               </div>
@@ -112,10 +125,10 @@ export default function AIPolicyPage() {
                     Human Editorial Review
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Every piece of content undergoes thorough review by our experienced editorial team.
-                    Our editors verify all claims, check for accuracy, ensure the content reflects our
-                    actual testing experience, and add their expert analysis and insights. No content is
-                    published without human approval.
+                    Every piece of content undergoes thorough review by our experienced editorial
+                    team. Our editors verify all claims, check for accuracy, ensure the content
+                    reflects our actual testing experience, and add their expert analysis and
+                    insights. No content is published without human approval.
                   </p>
                 </div>
               </div>
@@ -132,10 +145,10 @@ export default function AIPolicyPage() {
                     Fact-Checking & Verification
                   </h3>
                   <p className="text-gray-600 dark:text-gray-400">
-                    Before publication, all factual claims—including pricing, features, specifications,
-                    and comparisons—are verified against official sources and our own testing data.
-                    We maintain a rigorous fact-checking process to ensure the information we provide
-                    is accurate and up-to-date.
+                    Before publication, all factual claims—including pricing, features,
+                    specifications, and comparisons—are verified against official sources and our
+                    own testing data. We maintain a rigorous fact-checking process to ensure the
+                    information we provide is accurate and up-to-date.
                   </p>
                 </div>
               </div>
@@ -233,7 +246,9 @@ export default function AIPolicyPage() {
               <Users className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white">Human-Led Reviews</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Every review is based on real hands-on testing by our human editors.</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Every review is based on real hands-on testing by our human editors.
+                </p>
               </div>
             </div>
 
@@ -241,15 +256,21 @@ export default function AIPolicyPage() {
               <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white">Transparent Process</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">We clearly disclose how AI is used in our content creation process.</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  We clearly disclose how AI is used in our content creation process.
+                </p>
               </div>
             </div>
 
             <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
               <Shield className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">Editorial Independence</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">Our evaluations are never influenced by affiliate relationships or sponsorships.</p>
+                <h4 className="font-semibold text-gray-900 dark:text-white">
+                  Editorial Independence
+                </h4>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  Our evaluations are never influenced by affiliate relationships or sponsorships.
+                </p>
               </div>
             </div>
 
@@ -257,7 +278,9 @@ export default function AIPolicyPage() {
               <RefreshCw className="w-5 h-5 text-pink-600 flex-shrink-0 mt-0.5" />
               <div>
                 <h4 className="font-semibold text-gray-900 dark:text-white">Regular Updates</h4>
-                <p className="text-sm text-gray-600 dark:text-gray-400">We continuously update our reviews to reflect the latest features and pricing.</p>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  We continuously update our reviews to reflect the latest features and pricing.
+                </p>
               </div>
             </div>
           </div>
@@ -271,14 +294,14 @@ export default function AIPolicyPage() {
           </h2>
           <div className="prose dark:prose-invert max-w-none">
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              We strive for accuracy in everything we publish, but we recognize that mistakes can happen
-              and information can become outdated. If you find an error in our content, please let us know
-              and we will promptly review and correct it.
+              We strive for accuracy in everything we publish, but we recognize that mistakes can
+              happen and information can become outdated. If you find an error in our content,
+              please let us know and we will promptly review and correct it.
             </p>
             <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-              All corrections are clearly noted with the date of the correction and a brief explanation
-              of what was changed. We also regularly review and update our content to ensure it remains
-              accurate and relevant as AI tools evolve.
+              All corrections are clearly noted with the date of the correction and a brief
+              explanation of what was changed. We also regularly review and update our content to
+              ensure it remains accurate and relevant as AI tools evolve.
             </p>
           </div>
         </section>
