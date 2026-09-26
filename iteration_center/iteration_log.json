@@ -1,5 +1,27 @@
 [
   {
+    "timestamp": "2026-09-26 15:42:44",
+    "window": "窗口6",
+    "type": "ux_optimization",
+    "commit": "9e9bfcb6, 06436f3e, 2a29c53e",
+    "changes": [
+      "全站CTA按钮对比度修复: bg-emerald-600(3.72:1 AA失败) -> bg-emerald-700(5.15:1 AA通过)",
+      "移除CTA按钮暗色模式反效果变体 dark:bg-emerald-500 dark:hover:bg-emerald-400 (暗色模式更浅=对比度更差)",
+      "修复9处CTA hover状态: hover:bg-emerald-700(与base相同无反馈) -> hover:bg-emerald-600",
+      "修复Vercel构建阻塞: 移除next.config.mjs中experimental.ppr='incremental' (需Next.js canary, 项目用14.2.5稳定版)",
+      "补充修复3处遗漏CTA: layout.tsx skip链接focus态、BackToTop按钮、compare页面按钮",
+      "保留5处非CTA emerald-600: ToolCard装饰图标(aria-hidden)、Header logo圈、page.tsx group-hover箭头圈"
+    ],
+    "quality_gates": {
+      "3_pages_200": true,
+      "cta_contrast_wcag_aa": "5.15:1 (emerald-700 #047857 + white)",
+      "cta_touch_target": "py-3.5 >= 44px",
+      "no_bad_hover": true,
+      "no_old_cta_style": true
+    },
+    "learning": "色彩心理学与品牌色应用 (15知识点, Smashing Magazine + Refactoring UI + ColorFYI)"
+  },
+  {
     "timestamp": "2026-09-26 12:16:59",
     "window": "窗口6",
     "type": "ux_optimization",
