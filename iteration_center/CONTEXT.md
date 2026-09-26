@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-16 01:34 UTC
+> Generated: 2026-09-26 19:53 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,124 +17,145 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 91 |
+| Posts | 108 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
-1. **Dify vs Coze 2026: Which AI Agent Builder Wins?** (`dify-vs-coze-2026-comparison`)
-2. **7 Best Stable Diffusion Alternatives in 2026** (`stable-diffusion-alternatives-2026`)
-3. **6 Best MidJourney Alternatives in 2026 (Free & Paid)** (`midjourney-alternatives-2026`)
-4. **Best AI Voice Generators 2026: Top 10 Ranked** (`best-ai-voice-generators-2026`)
-5. **Best AI Resume Builders 2026: Top 10 Ranked** (`best-ai-resume-builders-2026`)
+1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Money) | AIToolCr** (`best-paid-ai-tools-worth-buying-2026`)
+2. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
+3. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
+4. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
+5. **Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
 
 ## Iteration State
 
-- Current round: 1
-- Last commit: 6fda2415
-- Last iteration: 2026-09-16
+- Current round: 77
+- Last commit: 63d2b22
+- Last iteration: 2026-09-26
 
 ## Recent Iterations
 
-- **Round 1** (6fda2415): Optimized titles/meta for 5 Top-10 ranking blog pages (stable-diffusion, dify, c; Added Popular Comparisons internal links section to /compare page (10 direct lin
+- **Round ?** (6dbbeede2d4dbdc817783c7ffe948961ccd6b882): 导入 usePathname from next/navigation; 添加 isActive(href) 辅助函数（/精确匹配，其他startsWith）; 桌面端导航：active时 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emera
+- **Round ?** (9e9bfcb6, 06436f3e, 2a29c53e): 全站CTA按钮对比度修复: bg-emerald-600(3.72:1 AA失败) -> bg-emerald-700(5.15:1 AA通过); 移除CTA按钮暗色模式反效果变体 dark:bg-emerald-500 dark:hover:bg-emerald-400 (暗色模式更浅=对比度更差); 修复9处CTA hover状态: hover:bg-emerald-700(与base相同无反
+- **Round ?** (19c4054acf3a9bec3d67dab311ff9979b9686799): FadeIn + ToolCard: add prefers-reduced-motion (framer-motion useReducedMotion ho; ToolCard: hover shadow-md -> shadow-lg, score numbers tabular-nums; Tool detail page: big score + 6 dimension scores t
+- **Round 2026-09-26** (8364a11570c4e601e78361cde90db749e512bb9d): 修复英文站残留中文UI：首页移动端快速入口芯片改为 Quick Access + AI Chat/AI Image/AI Coding/AI Writing/A; 修复英文站残留中文UI：工具详情页主CTA信任行改为 Independently tested / Transparent scoring / No paid ; 新建 iteration_center/ux_audit.md 记录全面
+- **Round 2026-09-25** (2fd76f49571d08adb0f5a97ccdeb24c79bf43715): 工具详情页主CTA下方加编辑独立信任行（✓ 编辑独立测试 · 评分透明 · 无付费排名），来源Baymard信任信号在决策点可见提升转化; 移动端首页hero下方加横向滚动快速入口芯片（热门工具/AI图像/AI编程/AI写作/AI视频/评测博客），来源NN/g可见导航发现率48% vs 汉堡21%
 
 ## GSC Data
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 4 |
-| Impressions | 908 |
-| CTR | 0.44% |
-| Avg Ranking | 22.65 |
-| Report | 2026-08-14_2026-09-12.md |
+| Clicks | 2 |
+| Impressions | 799 |
+| CTR | 0.25% |
+| Avg Ranking | 21.04 |
+| Report | 2026-08-13_2026-09-11.md |
 
 ## Audit Findings (pending)
 
-﻿# 审计发现问题汇总
+# 🚨 紧急数据分析报告 - 2026-09-26
 
-以下问题来自每周审计任务，按优先级排列。
+## 数据快照
 
-## 待解决
-
-### P1-003: 文章页/替代方案页添加Quick Answer和Key Takeaways（AEO优化）
-- **来源**: 2026-09-16 内容质量检测
-- **问题**: 文章页和替代方案页缺少Quick Answer和Key Takeaways模块，不利于AI搜索引擎（AEO）抓取
-- **建议**: 在文章开头添加Quick Answer段落和Key Takeaways列表
-- **状态**: 待解决
-
-### P1-004: 增加重要工具页内链（midjourney/cursor/elevenlabs/notion-ai入链不足）
-- **来源**: 2026-09-16 内链审计
-- **问题**: 4个核心工具页面入链数量低于平均水平
-- **建议**: 在相关文章和对比页中添加内链
-- **状态**: 待解决
-
-## 已解决
+| 指标 | 值 | 来源 |
+|------|-----|------|
+| GSC周期 | 2026-08-24 ~ 2026-09-22 (28天) | GitHub latest report |
+| GSC点击 | 9 | GSC |
+| GSC曝光 | 1922 | GSC |
+| GSC CTR | 0.47% | GSC |
+| GSC平均排名 | 25.32 | GSC |
+| GA4近7天用户 | 1140 | GA4 API |
+| GA4近7天会话 | 1156 | GA4 API |
+| GA4近7天PV | 1349 | GA4 API |
+| GA4近7天互动率 | 8.1% | GA4 API |
+| GA4近7天跳出率 | 91.9% | GA4 API |
+| 今日GA4 | 2用户/2会话 | GA4 API |
+| OpenSEO审计 | 3 critical / 12 warning / 485 info | OpenSEO MCP 9/24 |
 
 ---
 
-## 2026-09-16 结构化数据与技术SEO检查（Richie.js）
+## P0 紧急问题
 
-### P0-001: 工具详情页存在重复Review Schema
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: /tools/chatgpt 页面输出了 2 个 Review JSON-LD（一个详细 reviewBody，一个简短 summary），Google 可能判定为重复结构化数据
-- **修复建议**: 只保留 1 个 Review（详细版），删除简短 summary Review；或合并为一个
-- **状态**: 待解决
+### P0-1: GA4 Bot洪水 — 新加坡数据中心IP 95.1%会话
 
-### P0-002: SoftwareApplication 缺少 AggregateRating（GSC 历史错误未根治）
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: 工具页 SoftwareApplication schema 没有 AggregateRating 节点，但页面展示评分 8.7/10。Google 富摘要要求：要么有 AggregateRating(ratingCount/reviewCount)，要么 Review 是单一真实评论。当前 GSC 报"应指定ratingCount或reviewCount"错误
-- **修复建议**: 在 SoftwareApplication 内添加 AggregateRating：
-  `json
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "8.7",
-    "bestRating": "10",
-    "ratingCount": "1"
-  }
-  `
-- **状态**: 待解决
+**数据证据**：
+- 近7天1156会话中，新加坡1099会话(95.1%)，互动率仅6.3%，平均停留5秒
+- 09-21单日爆发1043会话(1041用户)，互动率6.0%，是正常日(10-34)的30-100倍
+- Bot流量全部来自 direct/none (1153/1156 = 99.7%)
+- Bot设备：desktop 1148/1156 (99.3%)，mobile仅8会话
+- 排除Bot后真实用户：约25-50会话/周（美国27会话互动率29.6%，中国22会话互动率68.2%/停留254秒）
+- Bot期间(9/21)互动率6.0% vs 正常期间(9/12-9/20)互动率33-83%
 
-### P1-001: applicationCategory 值不规范
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: 同一工具页三个 schema 中 applicationCategory 分别是 "chat"、"AIApplication"、"AI Tool"，值不统一且不符合 schema.org 枚举
-- **修复建议**: 统一使用 "WebApplication" 或具体的 "BusinessApplication"/"DesignApplication"
-- **状态**: 待解决
+**需要操作**（需管理员在GA4 Admin和Cloudflare Dashboard配置，API无法修改Admin设置）：
+1. GA4 Admin → Data Streams → 更多标记设置 → 启用"排除已知机器人流量"
+2. GA4创建过滤器：排除新加坡IP段（Cloudflare数据中心IP）
+3. Cloudflare WAF：对来自新加坡数据中心IP的请求启用JS Challenge
+4. 后续所有分析排除Singapore来源
 
-### P1-002: Review author 用 Organization，Google 偏好 Person
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: Review 和 Article 的 author 都是 {"@type":"Organization","name":"AIToolCrux Editorial Team"}，Google 评论富摘要偏好 Person 作者
-- **修复建议**: author 改为 {"@type":"Person","name":"Alex Chen"}（与 reviewBody 末尾的署名一致）
-- **状态**: 待解决
+### P0-2: 品牌词排名Top 10但0点击 — 标题/描述严重问题
 
-### P1-003: Offer price 字段含货币符号和空值
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: SoftwareApplication 的 offer price 是 "/month"（含），Enterprise 档 price 是空字符串 ""。Google 要求 price 是纯数字
-- **修复建议**: price 改为 "0"、"20"、"200"，空值的 Enterprise offer 直接删除或填具体价格
-- **状态**: 待解决
+**数据证据**（GSC 28天）：
 
-### P1-004: 工具详情页 og:image 使用通用默认图
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: /tools/chatgpt 的 og:image 是 API 生成的通用图（title=Best+AI+Tools...），不是工具专属图，影响社交分享点击率
-- **修复建议**: og:image 使用工具截图或专属 og 图
-- **状态**: 待解决
+| 查询词 | 曝光 | 排名 | CTR | 预期CTR(pos 5-10) |
+|--------|------|------|-----|-------------------|
+| priompt | 13 | 8.92 | 0% | 5-12% |
+| autopr | 10 | 6.9 | 0% | 5-12% |
+| creatium coach | 8 | 8.13 | 0% | 5-12% |
 
-### P2-001: 技术SEO检查通过项（无需修复）
-- robots.txt: ✅ 正确，Sitemap 已声明，爬虫规则合理
-- sitemap.xml: ✅ 748 个 URL，格式正确
-- canonical: ✅ 所有检查页面自引用正确
-- html lang: ✅ en
-- robots meta: ✅ index, follow
-- 404: ✅ 返回真实 404 状态码
-- HTTP→HTTPS: ✅ 308 重定向
-- **状态**: 已通过
+**诊断**：用户搜索品牌词时，我们排名第7-9位但0点击，说明：
+- SERP标题/描述可能不吸引人或被Google重写
+- 品牌词搜索量极小（8-13曝光/28天=约0.3-0.5次/天），统计噪声大
+- 但即使如此，排名前10的品牌词应有至少1-2次点击
 
-### P2-002: 首页 FAQPage schema 待确认
-- **来源**: 2026-09-16 Richie.js审计
-- **问题**: 首页和分类页都有 FAQPage schema，需确认页面上确实有对应的 FAQ 内容（不能是隐藏内容，否则 Google 会惩罚）
-- **修复建议**: 人工确认 FAQ 内容在页面可见
-- **状态**: 待核实
+**行动**：检查这些品牌词在Google SERP实际显示的标题和描述，对比我们的title标签，确认是否被Google重写。
 
+### P0-3: 评测页排名Top 10但0点击 — 标题模板问题
+
+**数据证据**（GSC 28天，高曝光+好排名+0点击）：
+
+| 页面 | 曝光 | 排名 | CTR | 预期CTR |
+|------|------|------|-----|---------|
+| /blog/dify_ai_review | 47 | 5.47 | 0% | 8-15% |
+| /blog/cursor_ai_review | 46 | 6.8 | 0% | 6-12% |
+| /blog/stable-diffusion-review-2026 | 51 | 8.45 | 0% | 5-10% |
+| /blog/gemini_38_flash_review | 82 | 9.61 | 0% | 3-8% |
+| /blog/openai_astra_review | 144 | 11.06 | 0.69% | 2-5% |
+
+**诊断**：这些页面排名5-11但几乎0点击，结合刚学的CTR优化知识：
+- 533个工具页用同一标题模板"[Tool] Review: Pricing, Pros, Cons"触发micro-boilerplate
+- Google可能重写了这些页面的标题为不吸引人的版本
+- titleClickSatisfaction权重9/10，低CTR会触发恶性循环
+
+**行动**：对这5个高曝光评测页检查SERP实际标题，优化为问题式标题如"Dify AI Review 2026: Is It Worth It?"
+
+---
+
+## P1 重要问题
+
+### P1-1: CTR<1%高曝光关键词（有曝光无点击）
+
+| 查询词 | 曝光 | 排名 | CTR | 问题 |
+|--------|------|------|-----|------|
+| ai tool comparison | 31 | 76.9 | 0% | 排名太靠后 |
+| pr agent | 23 | 83.48 | 0% | 排名太靠后 |
+| ai observability tools | 16 | 84.06 | 0% | 排名太靠后 |
+| ai comparison tools | 13 | 71.54 | 0% | 排名太靠后 |
+| cursor ai review | 13 | 53.62 | 0% | 排名53，接近前50 |
+| ai agent | 11 | 94.64 | 0% | 排名94，太远 |
+| ai agent tools | 10 | 81.7 | 0% | 排名靠后 |
+
+**分析**：大部分词排名在50-95，CTR<1%是正常的。但cursor ai review排名53.62，接近前50，有提升空间。
+
+### P1-2: 已收录但排名差的页面
+
+| 页面 | 曝光 | 排名 | 问题 |
+|------|------|------|------|
+| /compare | 258 | 34.4 | 最高曝光页，排名34需进前10 |
+| /category/agent | 82 | 82.94 | 分类页排名靠后 |
+| /category/code | 39 | 30.46 | 排名尚可但CTR 0% |
+| /blog/best-ai-voice-changers-2026 | 63 | 15.73 
 
 ---
 *Auto-generated by context-update workflow. Do not edit manually.*
