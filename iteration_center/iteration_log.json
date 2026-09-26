@@ -952,5 +952,24 @@
       "部署恢复后验证BreadcrumbList在category/subcategory/tools页面生效",
       "继续执行学习任务（不依赖部署）"
     ]
+  },
+  {
+    "iteration": 101,
+    "date": "2026-09-26",
+    "commit": "a0dca62",
+    "tasks_completed": [
+      "P1-SEO-FAQ-DEPRECATION-001",
+      "P1-SEO-LLMSTXT-DOWNGRADE-001",
+      "P1-SEO-DUPLICATE-TITLE-001",
+      "P1-PERF-FONT-OPTIMIZE-001",
+      "P2-QA-LHCI-SETUP",
+      "P2-QUALITY-VITEST-SETUP",
+      "P2-A11Y-AXE-CI"
+    ],
+    "summary": "Batch P1/P2 fixes: FAQ JSON-LD removal, llms.txt downgrade, Vitest init, axe-core, LHCI PR trigger",
+    "quality_gate": {
+      "tsc_passed": true,
+      "online_verified": true
+    }
   }
 ]
