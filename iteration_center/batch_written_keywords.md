@@ -12,6 +12,10 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 | 2026-09-27 | best-ai-scheduling-tools-2026 (REWRITE) | P0 commodity重写 #6 | best-ai-scheduling-tools-2026 | 2175 | Commodity Rewrite (P0) |
 | 2026-09-27 | best-ai-video-generators-2026 (REWRITE) | P0 commodity重写 #7 (thin content fix) | best-ai-video-generators-2026 | 2246 | Commodity Rewrite (P0) |
 
+| 2026-09-27 | best-ai-podcast-tools-2026 (REWRITE) | P0 commodity重写 #8 | best-ai-podcast-tools-2026 | 2136 | Commodity Rewrite (P0) |
+| 2026-09-27 | best-ai-idea-generators-2026 (REWRITE) | P0 commodity重写 #9 | best-ai-idea-generators-2026 | 2265 | Commodity Rewrite (P0) |
+| 2026-09-27 | best-ai-translation-tools-2026 (OPTIMIZE) | 全站最短1512词→2419词 | best-ai-translation-tools-2026 | 2419 | Old Article Optimization |
+
 ## P0 Comparison Pages (from compare_matrix_plan.md)
 - [x] Suno vs Udio (written 2026-09-24, Linux env)
 - [x] Perplexity vs ChatGPT (written 2026-09-24, Linux env)
@@ -27,8 +31,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - [x] best-ai-slack-bots-2026 (rewritten 2026-09-26)
 - [x] best-ai-scheduling-tools-2026 (rewritten 2026-09-27, quality_score=100/A)
 - [x] best-ai-video-generators-2026 (rewritten 2026-09-27, was 830 words thin content, now 2246 words, quality_score=100/A)
-- [ ] best-ai-podcast-tools-2026
-- [ ] best-ai-idea-generators-2026
+- [x] best-ai-podcast-tools-2026 (rewritten 2026-09-27, quality_score=100/A)
+- [x] best-ai-idea-generators-2026 (rewritten 2026-09-27, quality_score=100/A)
 - [ ] best-ai-voice-generators-2026
 - [ ] best-ai-resume-builders-2026
 - [ ] best-ai-pr-tools-2026
