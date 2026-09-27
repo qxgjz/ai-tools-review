@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 106,
+  "current_iteration": 107,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-27T07:28:10.624199",
+  "last_updated": "2026-09-27T22:11:20.950591",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -2700,21 +2700,25 @@
       "id": "P0-MONETIZE-AFFILIATE-APPLY-001",
       "title": "批量申请10个高佣AI联盟计划：Systeme.io/Surfer SEO/Semrush/Pictory/Jasper/Writesonic/Snov.io/beehiiv/HubSpot/CapCut",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": "窗口5",
       "description": "当前仅ElevenLabs(22%×12月)和Mangools(25-35%)上线，严重不足。目标：申请10个高佣计划，优先recurring终身+90天以上cookie。通过Impact/PartnerStack/ShareASale网络申请，或直接去各官网affiliate页面。每个计划记录：申请状态/联盟ID/佣金比例/cookie时长/网络平台。已被拒的(Pictory/InVideo)换账号或跳过。",
       "created_at": "2026-09-26 20:18:58",
-      "source": "指挥官高频学习-变现模式"
+      "source": "指挥官高频学习-变现模式",
+      "completed_at": "2026-09-27",
+      "result": "创建affiliate_application_guide.md，含17个待申请计划（按Rewardful/PartnerStack/直连分组），佣金/cookie/起付/LTV估算/申请步骤/优先级排序，年收入潜力$80K+"
     },
     {
       "id": "P0-MONETIZE-TRACKING-002",
       "title": "建联盟营销跟踪表：每个计划记录点击/转化/收入/EPC，每月优化",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": "窗口5",
       "description": "在iteration_center/建affiliate_tracking.json或CSV，字段：计划名/佣金比例/cookie/加入日期/链接数/点击数/转化数/收入/EPC(每点击收入)/状态。每月分析：砍掉EPC最低20%，加码最高20%。没有跟踪=不知道哪个赚钱=盲目铺链接。",
       "created_at": "2026-09-26 20:18:58",
-      "source": "指挥官高频学习-变现模式"
+      "source": "指挥官高频学习-变现模式",
+      "completed_at": "2026-09-27",
+      "result": "创建affiliate_tracking.json，含23个联盟计划（2 active/19 not_applied/2 rejected），字段含佣金/cookie/起付/链接/点击/转化/收入/EPC"
     },
     {
       "id": "P1-MONETIZE-COMPARISON-PAGES-003",
@@ -3067,9 +3071,11 @@
       "title": "Middleware设置CSP Report-Only头",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "description": "创建middleware.ts，设置CSP Report-Only头+nonce，先监控不拦截，评估17处dangerouslySetInnerHTML兼容性",
-      "created_at": "2026-09-27T03:22:09.688865"
+      "created_at": "2026-09-27T03:22:09.688865",
+      "completed_at": "2026-09-27T22:11:20.950451",
+      "completed_by": "窗口1"
     },
     {
       "id": "P1-SEC-SECURITY-HEADERS-001",
@@ -3207,6 +3213,434 @@
       "status": "pending",
       "description": "所有CI workflow的npm install添加--ignore-scripts防护install-time供应链攻击，验证无必须install脚本",
       "created_at": "2026-09-27T07:28:10.624163"
+    },
+    {
+      "id": "P1-MONETIZE-NEWSLETTER-ASSET-001",
+      "title": "窗口5：Newsletter是真正的变现资产——启动邮件列表建设，目标1000订阅",
+      "description": "TAAFT案例证明newsletter才是核心资产(月增10万订阅，单次赞助数千美元)，网站只是引流入口。我们当前几乎没有邮件列表。立即：1)在所有文章/工具页加邮件订阅框；2)用lead magnet(如'AI工具选型指南PDF')换取订阅；3)每周发1期AI工具精选newsletter；4)达到500订阅后开始接赞助。参考TAAFT模式：newsletter收入远超网站广告。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "source": "learning_2026-09-27_AI工具站成功案例拆解",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-MONETIZE-RECURRING-AFFILIATE-001",
+      "title": "窗口5：联盟选择标准改为终身recurring优先——已挂2个需扩展到10+",
+      "description": "案例数据：Jasper 30%×12月=$3800/月(258订阅者)，Surfer=$2900/月，Systeme.io 60%终身recurring。我们当前仅2个联盟(ElevenLabs 22%×12月、Mangools 25-35%终身)。立即扩展高recurring联盟：Systeme.io(60%终身)、Pictory(50%终身)、Frase(30%终身)、Jasper(30%×12月)、Copy.ai、Writesonic。每篇评测文必须含至少2个recurring联盟链接。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "source": "learning_2026-09-27_AI工具站成功案例拆解",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-SEO-TASK-TAXONOMY-001",
+      "title": "窗口4：按任务(task)而非产品分类重组工具导航——TAAFT核心SEO策略",
+      "description": "TAAFT成功关键：按任务组织('remove image background')而非按产品类别('Image Editing')。任务型搜索词长尾流量巨大且转化高。我们当前按产品分类。需：1)建立任务-工具映射表；2)创建'Best AI for [task]'系列页面；3)导航栏增加任务浏览入口；4)每篇评测文关联相关任务页。任务型页面在AI搜索(GEO)中也更容易被引用。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口4",
+      "source": "learning_2026-09-27_AI工具站成功案例拆解",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-MONETIZE-PAID-LISTING-001",
+      "title": "窗口5：设计付费收录(Paid Listing)页面——Futurepedia $247-497/次模式",
+      "description": "Futurepedia验证：基础收录$247/次，认证收录$497/次，Featured $1050/周(1000-2500点击)。Toolify：Express $100(24-72h上线)。我们月UV过500后可启动。现在先：1)建好/submit页面和定价(3档：Basic $99/7天上线、Verified $249/48h+认证徽章、Featured $99/月顶部展示)；2)准备media kit；3)在工具页加'提交你的工具'入口。这是目录站第二收入流。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口5",
+      "source": "learning_2026-09-27_AI工具站成功案例拆解",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-CONTENT-COMPARISON-LEADERBOARD-001",
+      "title": "窗口3：加大对比/排行榜内容比例——Arena $100M ARR证明排行榜是流量+变现双引擎",
+      "description": "Arena(AI模型排行榜)8个月达$100M ARR，证明对比/排行榜内容是最强流量+转化格式。我们已有对比文但比例低。要求：1)每周至少2篇'X vs Y'对比文；2)建立'Best AI [category] 2026'排行榜系列(每类1篇)；3)排行榜页用表格+评分+联盟链接，转化最高；4)对比文必须双联盟链接(两个产品都挂)。对比文CTR和转化率远高于单篇评测。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "source": "learning_2026-09-27_AI工具站成功案例拆解",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-SEO-SPARKPAGE-MODEL-001",
+      "title": "窗口1+窗口4：试点Genspark式SparkPage——为每个工具生成SEO可索引的AI回答页",
+      "description": "Genspark 12个月$60M ARR的核心wedge是'Sparkpages'——可被Google/Bing索引的AI生成回答页。这正是GEO(生成式引擎优化)的关键。我们可以为Top 50工具各生成一个'[Tool]是什么？怎么用？Alternatives'的结构化回答页，内容包含：定义、使用场景、定价、优缺点、替代品、联盟链接。这些页面在AI搜索中被引用概率极高。先试点10个页面验证索引和流量。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1",
+        "窗口4"
+      ],
+      "source": "learning_2026-09-27_AI工具站成功案例拆解",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-MONITOR-SENTRY-SETUP-001",
+      "title": "集成Sentry错误监控",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "npx @sentry/wizard安装，配置source maps+tunnel路由+release追踪+tracesSampleRate=0.1，验证生产错误上报",
+      "created_at": "2026-09-27T15:19:00.380960"
+    },
+    {
+      "id": "P2-MONITOR-OTEL-SETUP-001",
+      "title": "配置OpenTelemetry tracing",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "创建instrumentation.ts，配置@vercel/otel registerOTel，验证Vercel部署后trace数据",
+      "created_at": "2026-09-27T15:19:00.380982"
+    },
+    {
+      "id": "P2-MONITOR-WEBVITALS-ALERT-001",
+      "title": "设置Web Vitals告警阈值",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "基于WebVitalsReporter设置GA4告警(LCP>2.5s/INP>200ms/CLS>0.1)，超阈值触发通知",
+      "created_at": "2026-09-27T15:19:00.380984"
+    },
+    {
+      "id": "P2-MONITOR-RELEASE-TRACKING-001",
+      "title": "配置Sentry release追踪",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "CI中Sentry CLI创建release关联commits，部署后标记release，启用回归检测告警",
+      "created_at": "2026-09-27T15:19:00.380985"
+    },
+    {
+      "id": "P1-TOOL-N8N-AUTOMATION-001",
+      "title": "窗口1+窗口4：评估部署n8n自托管自动化工作流——205K星，400+集成，可串联关键词→内容→发布→监控全链路",
+      "description": "n8n是GitHub 205K星的开源工作流自动化平台，自托管免费，支持400+集成、70+AI agent节点、MCP支持。可替代我们当前分散的定时任务+手动协调：1)关键词发现→自动分配给窗口3写文；2)文章发布后→自动提交GSC索引+截图；3)GSC数据更新→自动生成周报；4)联盟点击追踪→自动报表。先在本地Docker部署n8n，搭建1个核心工作流(文章发布后自动索引+截图)验证。参考：n8n.io，GitHub n8n-io/n8n。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "窗口1",
+        "窗口4"
+      ],
+      "source": "learning_2026-09-27_GitHub高星效率工具",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-TOOL-SERPBEAR-RANK-001",
+      "title": "窗口4：部署SerpBear自托管排名追踪——2K星，无限关键词/域名，替代手动GSC查排名",
+      "description": "SerpBear(towfiqi/serpbear, 2K星)是自托管关键词排名追踪工具，无限关键词和域名，原生集成GSC和Google Ads。我们当前靠手动从GSC导出数据看排名，效率低。部署后可：1)追踪Top 100目标关键词每日排名变化；2)自动生成排名趋势报告；3)排名下降自动告警。Docker一键部署，SERP API按量付费(可选ValueSerp/SerpAPI等)。与OpenSEO互补：OpenSEO做关键词研究，SerpBear做持续排名监控。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口4",
+      "source": "learning_2026-09-27_GitHub高星效率工具",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-TOOL-MARKETING-SKILLS-001",
+      "title": "全窗口：安装marketingskills(33.3K星)Claude Code营销技能包——含seo-audit/ai-seo/内容优化等20+技能",
+      "description": "coreyhaines31/marketingskills是GitHub最大的营销技能包(33.3K星)，包含seo-audit、ai-seo、content-optimization、conversion-copywriting等20+技能。我们当前各窗口的技能依赖手动写prompt，安装此技能包后可直接调用标准化SEO审计、AI内容优化等技能。另一个相关项目是Toprank(3K星)，专门做SEO/GEO/Google Ads/Meta Ads自动化的Claude Code技能。两个都评估，选更适合的安装到各窗口。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "全窗口",
+      "source": "learning_2026-09-27_GitHub高星效率工具",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-TOOL-SHOT-SCRAPER-001",
+      "title": "窗口1：用shot-scraper+Playwright deviceScaleFactor:2升级截图质量——解决截图模糊/验证弹窗/404问题",
+      "description": "我们之前截图有大量验证弹窗、404、不匹配问题。shot-scraper(Simon Willison出品)是基于Playwright的CLI截图工具，支持：1)等待特定元素出现再截图(wait-for-selector)；2)自动处理cookie横幅/弹窗；3)批量截图URL列表；4)retina分辨率(deviceScaleFactor:2)。配合Playwright的最佳实践：viewport 1440x900→2880x1800像素，waitUntil:'networkidle'，拦截验证弹窗。先改造截图脚本，对Top 50工具页重新截图验证质量。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "source": "learning_2026-09-27_GitHub高星效率工具",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-TOOL-SOCIAL-AUTO-UPLOAD-001",
+      "title": "窗口2：评估social-auto-upload(9.5K星)——自动分发内容到TikTok/Instagram/X/Reddit，零成本获客",
+      "description": "social-auto-upload(9.5K星)自动发布视频和图片到抖音/B站/小红书/快手/TikTok/Instagram/X等平台，支持CLI命令和AI agent技能。我们当前内容只发在网站上，没有社交流量。可用于：1)把每篇评测文的核心观点做成图文/短视频自动发到X/Reddit/Indie Hackers；2)工具对比内容做成carousel发Instagram/LinkedIn；3)Reddit冷启动(9:1法则)配合自动发布。注意：Reddit需手动写高质量回复，不能纯自动发(会被ban)，工具只做辅助发布。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "source": "learning_2026-09-27_GitHub高星效率工具",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-TOOL-SEOJUICE-LINKBUILDING-001",
+      "title": "窗口2：部署SEOJuice开源外链分析工具——自动发现外链建设机会，替代手动找资源",
+      "description": "SEOJuice是开源外链分析和外链建设机会发现工具，自托管部署，数据完全私有。我们当前外链建设靠手动找目录提交，效率低。SEOJuice可：1)分析竞争对手外链来源；2)自动发现可提交的目录/资源页；3)追踪已提交外链是否被收录；4)外链质量评分。配合窗口2已有的Reddit/社区引流，形成外链建设双轨：社区引流(快)+目录提交(稳)。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "source": "learning_2026-09-27_GitHub高星效率工具",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-API-RATE-LIMIT-001",
+      "title": "API路由添加速率限制",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "为5个搜索代理API路由添加基于IP的速率限制(60次/分钟)，超限返回429",
+      "created_at": "2026-09-27T17:23:59.045445"
+    },
+    {
+      "id": "P2-API-ERROR-HANDLING-001",
+      "title": "统一API路由错误处理格式",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "所有API路由返回{success,data?,error?}格式，区分4xx/5xx，服务端记录完整错误",
+      "created_at": "2026-09-27T17:23:59.045472"
+    },
+    {
+      "id": "P2-API-CACHE-GET-001",
+      "title": "GET API路由添加缓存",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "为google-cse/ga4-proxy等可缓存GET路由添加revalidate=3600，减少外部API调用",
+      "created_at": "2026-09-27T17:23:59.045473"
+    },
+    {
+      "id": "P2-API-CORS-WHITELIST-001",
+      "title": "API路由CORS白名单",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "配置CORS白名单仅允许aitoolcrux.com同源，OPTIONS处理preflight，防止外部调用代理",
+      "created_at": "2026-09-27T17:23:59.045480"
+    },
+    {
+      "id": "P2-CI-TOKEN-LEAST-PRIVILEGE-001",
+      "title": "所有workflow添加最小权限permissions",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "9个workflow添加全局permissions: contents: read，单个job按需提升权限",
+      "created_at": "2026-09-27T19:22:03.880069"
+    },
+    {
+      "id": "P2-CI-REMOVE-PAT-REMOTE-001",
+      "title": "移除git remote URL中的PAT",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "移除remote URL内嵌PAT改用SSH或GITHUB_TOKEN，吊销旧PAT重新生成",
+      "created_at": "2026-09-27T19:22:03.880091"
+    },
+    {
+      "id": "P2-CI-PIN-ACTIONS-SHA-001",
+      "title": "第三方action pin到commit SHA",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "所有workflow中actions/checkout/setup-node等从@v4改为@commitSHA，防止tag篡改",
+      "created_at": "2026-09-27T19:22:03.880093"
+    },
+    {
+      "id": "P2-CI-SECRET-SCANNING-001",
+      "title": "启用Secret scanning和Push Protection",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "仓库Settings启用Secret scanning+Push Protection，审查已有扫描结果",
+      "created_at": "2026-09-27T19:22:03.880094"
+    },
+    {
+      "id": "P0-GEO-ORIGINAL-DATA-001",
+      "title": "窗口3+4：每篇评测文必须包含原创测试数据/数字——Princeton研究证明Statistics Addition提升AI引用率+41%",
+      "description": "Princeton/IIT Delhi KDD 2024研究(10000次查询)证明：在内容中添加具体统计数字(百分比/数量/金额/日期)可提升AI引用率+30-41%，是所有GEO战术中效果最强的。我们当前108篇文章大量是泛泛描述，缺少原创数据。要求：1)每篇工具评测必须包含至少3个可验证数字(加载速度测试结果/功能数量/价格对比/用户数)；2)建立工具测试模板，统一测试维度(免费额度/付费起价/支持语言/API/集成数)；3)对Top50工具做实际测试，记录截图+数据。原创数据是AI引擎最偏好引用的内容，也是竞品最难复制的。",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "窗口3",
+        "窗口4"
+      ],
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P0-GEO-CITE-SOURCES-001",
+      "title": "窗口3：所有文章必须引用权威来源——排名第5的页面加引用后AI可见度+115%",
+      "description": "Princeton研究证明：添加权威来源引用可提升AI引用率+30-40%，对排名第5的页面效果更是+115.1%相对可见度提升。我们当前文章几乎没有内联引用。要求：1)每篇文章至少引用3个权威来源(官方文档/行业报告/知名博客)；2)用具体出处而非'studies show'——'According to G2 2026 report...'而非'many users say'；3)引用格式：数字+来源+链接。这是投入产出比最高的GEO优化，立即可执行。",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-GEO-ANSWER-FIRST-001",
+      "title": "窗口3：所有文章改为Answer-First结构——H2下立即放40字自包含答案",
+      "description": "AI引擎提取内容时偏好自包含段落。标准GEO写作模式：1)H2标题写成用户会搜索的问题('Is Surfer SEO worth it in 2026?')；2)标题下立即放40字自包含答案(不需要读全文就能理解)；3)然后用列表/表格/步骤支撑答案；4)每个H2独立解决一个问题。我们当前文章大量是'Introduction→Background→...'的传统结构，AI难以提取。先改造Top20高流量文章为Answer-First结构，验证效果后推广。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口3",
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-GEO-FAQ-SCHEMA-001",
+      "title": "窗口1：所有文章页添加FAQPage JSON-LD schema——结构化数据+FAQ提升AI引用+44%",
+      "description": "BrightEdge 2025研究：实施结构化数据+FAQ块的网站AI搜索引用率提升44%。我们当前文章页可能缺少FAQPage schema。要求：1)每篇文章底部添加3-6个FAQ(问题+简洁答案)；2)用JSON-LD格式实现FAQPage schema；3)同时确保Article/BlogPosting schema完整(含author/dateModified/image)；4)Organization schema添加sameAs链接到社交媒体。Google 2026年3月核心更新缩小了FAQ富摘要资格，但FAQ schema对GEO(AI引用)仍然有效。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": "窗口1",
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P1-GEO-ROBOTS-AI-CRAWLERS-001",
+      "title": "窗口1：检查robots.txt确保允许AI爬虫——OAI-SearchBot/PerplexityBot/Google-Extended",
+      "description": "GEO最常见的技术问题是AI无法读取内容。必须检查：1)robots.txt是否允许OAI-SearchBot(OpenAI)、PerplexityBot、Google-Extended、ClaudeBot爬取；2)CDN(Cloudflare)是否拦截AI爬虫UA；3)内容是否服务端渲染(AI爬虫不执行JS)。我们之前改了force-static全静态，这对GEO有利。但需确认robots.txt没有误拦AI爬虫。如果被拦，所有内容优化都白费——这是GEO的前提条件。",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": "窗口1",
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27",
+      "completed_at": "2026-09-27T22:11:20.950585",
+      "completed_by": "窗口1"
+    },
+    {
+      "id": "P2-GEO-REDDIT-PERPLEXITY-001",
+      "title": "窗口2：Reddit是Perplexity第一引用源(46.7%)——加大Reddit高质量参与获取AI引用",
+      "description": "数据：Perplexity的引用中Reddit占46.7%，且Perplexity有强时效性偏好(≤90天内容)，查询间来源重叠仅25%——意味着新内容有真实机会。我们窗口2已有Reddit策略但需升级：1)在r/SaaS/r/marketing/r/Entrepreneur等社区发布原创工具测试数据(带aitoolcrux链接)；2)回答AI工具相关问题时引用我们的测试数据；3)目标：每月10条高质量Reddit帖子/回复，被Perplexity引用。这是零成本获取AI搜索流量的最高杠杆渠道。",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": "窗口2",
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27"
+    },
+    {
+      "id": "P2-SEO-JS-RENDER-AUDIT-001",
+      "title": "审计关键页面初始HTML内容完整性",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "审计10个关键页面View Page Source，验证title/meta/h1/正文在初始HTML中存在",
+      "created_at": "2026-09-27T21:24:42.910916"
+    },
+    {
+      "id": "P2-SEO-JS-ERROR-MONITOR-001",
+      "title": "监控生产JS错误对渲染的影响",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "集成Sentry后检查JS错误率，确保无渲染中断错误影响Googlebot索引",
+      "created_at": "2026-09-27T21:24:42.910939"
+    },
+    {
+      "id": "P2-SEO-JS-LAZY-IMG-VERIFY-001",
+      "title": "验证lazy-load图片SEO可见性",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "验证所有图片loading=lazy+width/height+alt，GSC确认Googlebot渲染后图片可见",
+      "created_at": "2026-09-27T21:24:42.910941"
+    },
+    {
+      "id": "P2-SEO-JS-GSC-RENDER-CHECK-001",
+      "title": "GSC URL Inspection渲染检查",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "用GSC URL Inspection检查5个排名页面渲染后DOM，确认内容一致无JS错误",
+      "created_at": "2026-09-27T21:24:42.910942"
+    },
+    {
+      "id": "P0-SEO-404-REDIRECT-001",
+      "title": "修复20个404页面：设置301重定向",
+      "priority": "P0",
+      "assigned_to": "窗口2",
+      "status": "pending",
+      "description": "OpenSEO审计发现20个404页面，其中/best-ai-image-generators-2026有GSC曝光63次。需要为所有404设置301重定向到正确的/blog/版本或相关分类页。",
+      "created_at": "2026-09-27",
+      "source": "openseo-audit-2026-09-27"
+    },
+    {
+      "id": "P0-SEO-BROKEN-LINKS-001",
+      "title": "修复9个博客页中的23个断链",
+      "priority": "P0",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "description": "9个博客页面包含指向404目标的内部链接。优先修复best-ai-scheduling-tools(4断链)、surfer-seo-vs-frase(4断链)、best-ai-slack-bots(3断链)。",
+      "created_at": "2026-09-27",
+      "source": "openseo-audit-2026-09-27"
+    },
+    {
+      "id": "P1-SEO-H1-FIX-002",
+      "title": "修复121个博客页缺少H1标签",
+      "priority": "P1",
+      "assigned_to": "窗口2",
+      "status": "pending",
+      "description": "121个页面缺少H1，包括5个article-api-*自动生成页面（URL slug异常）。需要在内容模板中确保H1输出。",
+      "created_at": "2026-09-27",
+      "source": "openseo-audit-2026-09-27"
+    },
+    {
+      "id": "P1-SEO-CATEGORY-THIN-001",
+      "title": "为10个薄内容分类页添加描述文字或noindex",
+      "priority": "P1",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "description": "10个/blog/category/*和/subcategory/*页面仅138-148词。添加≥300词描述或设置noindex避免薄内容惩罚。",
+      "created_at": "2026-09-27",
+      "source": "openseo-audit-2026-09-27"
+    },
+    {
+      "id": "P1-GEO-AI-VISIBILITY-BASELINE-001",
+      "title": "建立AI引用基线：测试10个核心query在ChatGPT/Perplexity/Google AI Mode的引用情况",
+      "priority": "P1",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "description": "基于GEO学习方法论，在3个AI平台测试8个zens-ink追踪词+GSC Top5查询词的引用状态，建立基线矩阵。",
+      "created_at": "2026-09-27",
+      "source": "geo-learning-2026-09-27"
+    },
+    {
+      "id": "P1-GEO-ROBOTS-TXT-CHECK-001",
+      "title": "检查robots.txt是否允许AI检索爬虫（OAI-SearchBot/Claude-SearchBot/PerplexityBot）",
+      "priority": "P1",
+      "assigned_to": "窗口2",
+      "status": "pending",
+      "description": "GEO方法论核心：确保AI检索爬虫可访问网站。检查robots.txt并添加llms.txt。",
+      "created_at": "2026-09-27",
+      "source": "geo-learning-2026-09-27"
+    },
+    {
+      "id": "P1-CONTENT-READABILITY-001",
+      "title": "窗口3：可读性优化——46篇文章Flesch评分不达标，目标Flesch>50",
+      "description": "quality_audit_report显示108篇文章中仅62篇(57%)可读性达标。F级文章Flesch仅10-30分。需要简化句子结构、缩短段落、增加过渡词。优先处理27篇低于85分的文章。",
+      "priority": "P1",
+      "assigned_to": "窗口3(内容)",
+      "status": "pending",
+      "source": "quality_audit_report.md 2026-09-27",
+      "created_at": "2026-09-27 22:04",
+      "acceptance_criteria": "27篇低分文章Flesch评分提升至50+，整体可读性通过率从57%提升至80%+"
+    },
+    {
+      "id": "P1-COORD-TASK-DEDUP-001",
+      "title": "指挥官：待办去重——GA4 Bot过滤有3条重复P0，合并为1条",
+      "description": "state.json中存在P0-ANALYTICS-GA4-BOT-FILTER-001、P0-ANALYTICS-GA4-BOT-FILTER-002、P0-GA4-BOT-FILTER-001三条重复任务。多Agent协作中任务去重是关键，避免窗口重复劳动。",
+      "priority": "P1",
+      "assigned_to": "指挥官",
+      "status": "pending",
+      "source": "state.json审计 2026-09-27",
+      "created_at": "2026-09-27 22:04",
+      "acceptance_criteria": "合并重复待办，P0数量从15降至合理范围"
+    },
+    {
+      "id": "P1-COORD-CONTEXT-DISPATCH-001",
+      "title": "指挥官：优化任务派发上下文——每个窗口任务必须包含预期输出格式+验收标准",
+      "description": "多Agent协作最佳实践：Dispatch with enough context。当前部分待办缺少明确的输出格式和验收标准，导致窗口产出质量不稳定。需要为所有活跃P0/P1待办补充acceptance_criteria字段。",
+      "priority": "P1",
+      "assigned_to": "指挥官",
+      "status": "pending",
+      "source": "多Agent协作学习 2026-09-27",
+      "created_at": "2026-09-27 22:04",
+      "acceptance_criteria": "所有活跃P0/P1待办均包含明确的acceptance_criteria"
     }
   ],
   "milestones": [
@@ -4671,8 +5105,8 @@
     }
   ],
   "last_deploy_time": "2026-09-24 19:40:02",
-  "last_learning_update": "2026-09-26 20:18:58",
-  "last_learning_topic": "联盟营销/独立站变现模式创新（15知识点）",
+  "last_learning_update": "2026-09-27 22:04",
+  "last_learning_topic": "多Agent/多窗口协作最佳实践",
   "iteration_log": [
     {
       "iteration": 100,

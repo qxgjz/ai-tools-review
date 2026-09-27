@@ -1,21 +1,21 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-09-27 03:37
+**Date:** 2026-09-27 15:24
 
 ## Summary
 
 - Total articles: 108
-- Average quality score: 86.4/100
-- Grade distribution: A=23, B=74, C=7, D=2, F=2
-- Articles below 85: 29
+- Average quality score: 86.7/100
+- Grade distribution: A=23, B=76, C=6, D=1, F=2
+- Articles below 85: 27
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 89 | 108 | 82% |
+| word_count_pass | 91 | 108 | 84% |
 | has_quick_answer | 108 | 108 | 100% |
-| first_para_pass | 79 | 108 | 73% |
+| first_para_pass | 81 | 108 | 75% |
 | has_key_takeaways | 108 | 108 | 100% |
 | has_faq | 108 | 108 | 100% |
 | has_how_we_tested | 108 | 108 | 100% |
@@ -24,9 +24,9 @@
 | has_real_screenshots | 108 | 108 | 100% |
 | readability_pass | 62 | 108 | 57% |
 | qa_density_pass | 108 | 108 | 100% |
-| title_pass | 107 | 108 | 99% |
+| title_pass | 106 | 108 | 98% |
 | has_comparison | 105 | 108 | 97% |
-| external_links_pass | 33 | 108 | 31% |
+| external_links_pass | 34 | 108 | 31% |
 
 ## Per-Article Scores
 
@@ -34,13 +34,11 @@
 |------|-------|-------|-------|-------|--------|--------|-----------|
 | best-ai-design-tools-2026 | 58 | F | 1532 | 3 | 0 | 29.7 | 0 |
 | best-ai-image-generators-2026 | 58 | F | 1263 | 5 | 0 | 10.1 | 0 |
-| best-ai-translation-tools-2026 | 63 | D | 1451 | 5 | 0 | 17.8 | 0 |
 | best-ai-audio-tools-2026 | 63 | D | 1511 | 5 | 0 | 27.1 | 0 |
 | best-ai-note-taking-tools-2026 | 72 | C | 1543 | 5 | 0 | 41.2 | 0 |
 | best-ai-email-tools-2026 | 72 | C | 1509 | 5 | 0 | 46.7 | 0 |
 | best-paid-ai-tools-worth-buying-2026 | 74 | C | 1879 | 2 | 2 | 69.0 | 0 |
 | best-ai-legal-tools-2026 | 74 | C | 3121 | 5 | 0 | 37.8 | 0 |
-| best-ai-podcast-tools-2026 | 78 | C | 1984 | 3 | 0 | 60.6 | 24 |
 | stable-diffusion-alternatives-2026 | 78 | C | 1723 | 4 | 0 | 53.6 | 15 |
 | midjourney-alternatives-2026 | 78 | C | 1706 | 4 | 0 | 49.2 | 13 |
 | canva-ai-vs-adobe-firefly-2026-compariso | 80 | B | 2438 | 8 | 0 | 37.1 | 0 |
@@ -61,6 +59,7 @@
 | best-ai-marketing-tools-2026 | 83 | B | 3390 | 5 | 0 | 54.7 | 0 |
 | best-ai-research-tools-2026 | 83 | B | 3486 | 5 | 0 | 47.5 | 0 |
 | best-ai-productivity-tools-2026 | 83 | B | 4137 | 4 | 0 | 53.5 | 0 |
+| best-ai-translation-tools-2026 | 86 | B | 2392 | 4 | 0 | 32.3 | 7 |
 | best-ai-writing-tools-2026 | 86 | B | 3645 | 7 | 3 | 36.0 | 0 |
 | midjourney-vs-dall-e-3-2026-comparison | 86 | B | 3282 | 4 | 7 | 37.2 | 0 |
 | perplexity-ai-review-2026 | 86 | B | 2099 | 6 | 2 | 38.0 | 0 |
@@ -102,6 +101,7 @@
 | ai-tools-comparison-2026 | 86 | B | 11629 | 10 | 3 | 27.9 | 0 |
 | ai-tools-for-beginners-2026 | 86 | B | 11666 | 8 | 3 | 29.4 | 0 |
 | best-ai-voice-changers-2026 | 89 | B | 2953 | 7 | 0 | 52.6 | 21 |
+| best-ai-idea-generators-2026 | 89 | B | 2234 | 4 | 0 | 47.5 | 6 |
 | best-ai-voice-generators-2026 | 89 | B | 2762 | 5 | 0 | 55.4 | 22 |
 | best-ai-resume-builders-2026 | 89 | B | 2733 | 5 | 0 | 61.8 | 22 |
 | best-ai-pr-tools-2026 | 89 | B | 2789 | 5 | 0 | 54.8 | 22 |
@@ -118,7 +118,7 @@
 | article-api-20260904-215037-elevenlabs-v | 89 | B | 3693 | 8 | 2 | 43.3 | 0 |
 | github-copilot-review-2026 | 89 | B | 13256 | 10 | 2 | 45.7 | 0 |
 | best-ai-slack-bots-2026 | 94 | A | 2443 | 8 | 0 | 65.5 | 21 |
-| best-ai-idea-generators-2026 | 94 | A | 2048 | 5 | 0 | 45.3 | 21 |
+| best-ai-podcast-tools-2026 | 94 | A | 2103 | 4 | 0 | 56.6 | 6 |
 | best-ai-meeting-assistants-2026 | 94 | A | 2777 | 5 | 0 | 43.6 | 26 |
 | best-ai-customer-support-tools-2026 | 94 | A | 2907 | 5 | 0 | 48.5 | 28 |
 | best-ai-agents-2026-ranked-reviewed | 94 | A | 3119 | 5 | 0 | 43.2 | 29 |

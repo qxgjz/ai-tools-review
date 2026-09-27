@@ -192,6 +192,75 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ## 待补充
 
+## [2026-09-27] 前端错误监控与可观测性深度实战（Sentry + OpenTelemetry + Web Vitals）
+
+### 知识点1：Sentry Next.js快速安装与自动配置
+Sentry提供Next.js专属SDK（@sentry/nextjs），一行命令安装：npx @sentry/wizard@latest -i nextjs。Wizard自动创建：①sentry.client.config.ts（客户端SDK初始化）②sentry.server.config.ts（服务器SDK初始化）③sentry.edge.config.ts（Edge Runtime SDK初始化）④app/global-error.tsx（全局错误边界）⑤next.config.mjs包装withSentryConfig（source maps上传+tunnel路由）。无需手动配置，Wizard处理所有样板代码。
+来源：https://docs.sentry.io/platforms/javascript/guides/nextjs/
+交叉验证：https://sentry.io/for/nextjs/#main-content
+
+### 知识点2：Sentry App Router错误捕获机制
+Sentry在App Router中通过多层捕获错误：①app/global-error.tsx（"use client"，捕获整个App Router的React渲染错误，调用Sentry.captureException）②app/[segment]/error.tsx（捕获特定路由段的渲染错误）③instrumentation.ts的onRequestError（捕获Route Handler和Server Action错误）④Edge/Middleware错误（sentry.edge.config.ts）。关键：global-error.tsx必须是client component，且在根布局之外渲染，捕获layout中的错误。
+来源：https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+交叉验证：https://sentry.io/for/nextjs/#main-content
+
+### 知识点3：Sentry Source Maps配置
+Source Maps是错误监控的核心（没有source maps的堆栈跟踪是压缩后的混淆代码，无法定位）。Sentry Next.js SDK自动处理：①next build时生成source maps②构建过程中自动上传到Sentry③上传后删除客户端source maps（.next/static/中的，避免暴露源码）④服务器source maps保留（.next/server/，运行时需要且不公开）。CI中设置SENTRY_AUTH_TOKEN环境变量，本地开发用.env.sentry-build-plugin（自动.gitignore）。Next.js 15.4.1+支持post-build upload模式（单次上传，更快构建）。
+来源：https://docs.sentry.io/platforms/javascript/guides/nextjs/sourcemaps/
+交叉验证：https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/build/
+
+### 知识点4：Sentry性能监控与Tracing
+Sentry性能监控通过browserTracingIntegration()启用，关键配置：①tracesSampleRate（采样率，0.0-1.0，生产建议0.1-0.2控制成本）②tracePropagationTargets（控制哪些URL传播trace header，避免第三方API泄露）③enableIncomingRequestTracing（服务器端入站请求tracing）。性能数据包括：页面加载时间、API请求耗时、路由导航耗时、Slow API检测。与错误监控关联后可看到"某个慢API导致了错误"的因果链。
+来源：https://sentry.io/for/javascript/?code=TALKPYTHON
+交叉验证：https://sentry.io/lp/error-monitoring-for-developers/?bb=261932
+
+### 知识点5：Sentry Release追踪与回归检测
+Release是Sentry的核心概念：每次部署对应一个release，关联commit、PR、部署时间。配置：①SDK init中设置release: process.env.VERCEL_GIT_COMMIT_SHA（Vercel自动注入）②Sentry CLI在CI中创建release并关联commits③部署后自动标记release已部署。好处：①回归检测（新版本错误率突增自动告警）②错误归因（哪个commit引入的bug）③修复版本追踪（错误在哪个release修复）。Vercel+Sentry集成可自动关联部署。
+来源：https://docs.sentry.io/platforms/javascript/guides/nextjs/
+交叉验证：https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/
+
+### 知识点6：Sentry Tunnel路由（Ad Blocker绕过）
+Ad Blocker（如uBlock Origin、AdGuard）会拦截直接发往sentry.io的请求，导致错误数据丢失。withSentryConfig自动配置tunnel路由：/monitoring-tunnel（或自定义路径），Sentry数据先发到自有服务器，再由服务器转发到sentry.io。因为是同源请求，ad blocker不会拦截。配置：withSentryConfig(nextConfig, { sentry: { tunnelRoute: "/monitoring-tunnel" } })。这是生产环境必须开启的配置，否则错误数据可能丢失30%+。
+来源：https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/
+交叉验证：https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/
+
+### 知识点7：Next.js instrumentation.ts可观测性入口
+instrumentation.ts是Next.js内置的可观测性入口文件，放在app根目录或src/。导出register()函数，在每次新的Next.js服务器实例启动时执行一次（仅服务器端，不在客户端运行）。用途：①初始化OpenTelemetry②初始化Sentry服务器端③启动健康检查④预热数据库连接。Next.js 15+还支持instrumentation-client.ts（客户端入口，用于浏览器端可观测性初始化）。注意：register()在Edge和Node.js运行时都会执行，需用条件判断区分。
+来源：https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation
+交叉验证：https://nextjs.org/docs/app/guides/open-telemetry
+
+### 知识点8：@vercel/otel与OpenTelemetry集成
+@vercel/otel是Vercel官方的OpenTelemetry集成包，一行代码配置：import { registerOTel } from '@vercel/otel'; export function register() { registerOTel('aitoolcrux') }。自动instrument：①Next.js路由（页面渲染、API请求）②fetch调用（外部HTTP请求）③数据库查询（如支持）④Vercel平台trace关联（与Vercel Analytics/Logs联动）。导出到Vercel OTel Collector或自定义OTLP endpoint。Next.js内置OpenTelemetry支持，无需手动配置tracer provider。
+来源：https://nextjs.org/docs/app/guides/open-telemetry
+交叉验证：https://nextjs.org/docs/15/pages/guides/instrumentation
+
+### 知识点9：OpenTelemetry核心概念
+OpenTelemetry（OTel）是CNCF毕业项目，厂商中立的可观测性标准。核心概念：①Span（操作单元，如一次API调用、一次数据库查询，有开始/结束时间和属性）②Trace（完整请求链路，由多个Span组成的有向无环图）③Exporter（数据导出器，OTLP导出到后端如Jaeger/Zipkin/Datadog）④Instrumentation（自动埋点库，无需手动添加代码）⑤Context Propagation（上下文传播，通过HTTP header传递trace ID实现分布式追踪）。Next.js内置OTel instrumentation，覆盖框架自身操作。
+来源：https://nextjs.org/docs/app/guides/open-telemetry
+交叉验证：https://opentelemetry.io/zh/docs/demo/services/frontend/
+
+### 知识点10：useReportWebVitals Hook
+useReportWebVitals是Next.js内置的Web Vitals上报hook（app/api-reference/functions/use-report-web-vitals）。在客户端组件中使用：useReportWebVitals((metric) => { analytics.track(metric.name, metric.value) })。上报的指标：LCP、INP、CLS、FCP、TTFB、FID（已废弃）。关键注意：回调函数引用必须稳定（useCallback或模块级函数），否则会重复上报。项目已有WebVitalsReporter组件实现类似功能，可迁移到官方hook或保持现有实现。
+来源：https://preview.nextjs.org/docs/app/api-reference/functions/use-report-web-vitals
+交叉验证：https://nextjs.org/docs/app/api-reference/file-conventions/instrumentation-client
+
+### 知识点11：AIToolCrux可观测性现状评估
+项目当前可观测性状态：①Web Vitals：已有components/WebVitalsReporter.tsx上报GA4（G-DGK601TM42），覆盖LCP/INP/CLS②错误监控：无Sentry或其他错误监控，生产错误只能靠用户反馈（高风险）③OpenTelemetry：无instrumentation.ts，无分布式追踪④Source Maps：未配置Sentry source maps上传⑤日志：Vercel内置Logs但无结构化日志⑥告警：无错误率告警、无性能阈值告警。最大缺口：错误监控（Sentry），这是生产站点的基本配置。
+来源：https://docs.sentry.io/platforms/javascript/guides/nextjs/
+交叉验证：https://blog.sentry.io/next-js-observability-gaps-how-to-close-them/
+
+### 知识点12：可观测性落地优先级与成本
+落地优先级（按ROI排序）：①P0 Sentry错误监控（免费版5000错误/月，5分钟安装，立即获得生产错误可见性）②P1 Sentry性能监控+Release追踪（同一次安装，配置tracesSampleRate=0.1）③P2 OpenTelemetry tracing（@vercel/otel，需Vercel Pro以上或自定义后端）④P2 Web Vitals告警（基于GA4数据设置LCP>2.5s/INP>200ms/CLS>0.1阈值告警）⑤P3 结构化日志（pino/winston+Vercel Log Drain）。成本：Sentry免费版足够个人项目，团队版$26/月起；OpenTelemetry后端可自建（Jaeger免费）或用Vercel内置。
+来源：https://sentry.io/for/nextjs/#main-content
+交叉验证：https://nextjs.org/docs/app/guides/open-telemetry
+
+### 落地计划
+1. **P1-MONITOR-SENTRY-SETUP-001**：运行npx @sentry/wizard@latest -i nextjs集成Sentry，配置source maps上传、tunnel路由（/monitoring-tunnel）、release追踪（VERCEL_GIT_COMMIT_SHA）、tracesSampleRate=0.1，验证生产错误上报。
+2. **P2-MONITOR-OTEL-SETUP-001**：创建instrumentation.ts，配置@vercel/otel registerOTel('aitoolcrux')，验证Vercel部署后trace数据可见。
+3. **P2-MONITOR-WEBVITALS-ALERT-001**：基于现有WebVitalsReporter设置GA4告警阈值（LCP>2.5s、INP>200ms、CLS>0.1），超阈值时触发通知。
+4. **P2-MONITOR-RELEASE-TRACKING-001**：配置Sentry CLI在CI中创建release并关联commits，部署后自动标记release，启用回归检测告警。
+
+
 ## [2026-09-27] 前端安全与依赖审计工具深度实战（npm audit + Snyk + Dependabot + OSV-Scanner + SBOM）
 
 ### 知识点1：npm audit基础与使用
