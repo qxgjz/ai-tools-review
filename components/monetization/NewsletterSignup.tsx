@@ -132,7 +132,7 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-6 py-3 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-700 disabled:opacity-60 inline-flex items-center justify-center gap-2 transition-colors"
+              className="px-6 py-3 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 disabled:opacity-60 inline-flex items-center justify-center gap-2 transition-colors"
             >
               {status === 'loading' && (
                 <span

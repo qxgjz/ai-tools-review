@@ -140,7 +140,7 @@ export default function AuthorsPage() {
           <div className="mt-8">
             <Link
               href="/about"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white font-bold rounded-xl hover:bg-emerald-700 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-emerald-700 text-white font-bold rounded-xl hover:bg-emerald-800 transition-colors"
             >
               Learn More About Us
               <ArrowRight className="w-4 h-4" />

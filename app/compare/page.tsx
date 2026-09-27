@@ -1102,7 +1102,7 @@ export default function ComparePage() {
                               href={tool.affiliateUrl || tool.officialUrl}
                               target="_blank"
                               rel="noopener noreferrer sponsored"
-                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-600 rounded-lg transition-colors"
+                              className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-800 rounded-lg transition-colors"
                             >
                               Try Free →
                             </a>
@@ -1279,7 +1279,7 @@ export default function ComparePage() {
                       href={tool.affiliateUrl || tool.officialUrl}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
-                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-700 transition-colors shadow-sm"
+                      className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors shadow-sm"
                     >
                       Try {tool.name} Free
                       <svg
