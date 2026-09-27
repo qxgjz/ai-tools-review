@@ -1,4 +1,82 @@
 # UI/UX设计知识库（窗口6专用）
+## 📚 学习记录 2026-09-27 21:00
+- 主题：加载状态与微交互深度版（按钮五态+骨架屏+进度指示器+微交互结构）
+- 来源：https://www.nngroup.com/articles/button-states-communicate-interaction/ , https://www.smashingmagazine.com/2016/12/best-practices-for-animated-progress-indicators/ , https://www.nngroup.com/articles/microinteractions/
+- 知识点（15条）：
+  1. NN/g 2025最新：按钮5个核心状态必须视觉可区分——enabled/disabled/hover/focus/pressed，缺任何一个都会让用户困惑或重复点击
+  2. Hover状态正确做法：背景色略微加深（NN/g明确说darkening，不是变浅！）+光标变手型；加150-200ms延迟防止鼠标划过时误触发
+  3. Focus状态（键盘导航）：必须用描边/轮廓（stroke/outline）而非仅靠颜色变化——颜色变化对色弱用户不可感知；100-150ms内出现，否则用户会多按Tab
+  4. Pressed（active）状态：100-150ms内必须出现反馈；用scale(0.97-0.98)模拟物理按压感，不要低于0.95（会看起来像坏了）；反馈延迟会导致用户重复点击
+  5. Disabled状态：去饱和/降低对比度（但仍需可读），加aria-disabled="true"让屏幕阅读器能感知；不要用完全不可读的灰色
+  6. Loading状态：在enabled样式基础上+spinner（标签左侧），完成后spinner→checkmark动画；用于需要后端验证或大文件上传的操作
+  7. 按钮样式(primary/secondary/tertiary)≠按钮状态：一个按钮只有一种样式，但可以在多种状态间切换；设计系统必须同时定义样式层级和状态变化
+  8. 微交互四要素（NN/g定义）：Trigger（触发：用户动作或系统条件）→Rules（规则：决定触发后发生什么）→Feedback（反馈：小而精准的视觉响应）→Loops&Modes（循环与模式：持续时间和重复方式）
+  9. 响应时间阈值（Jakob Nielsen）：<0.1s=即时；0.1-1s=可察觉但不打断；>1s=必须显示进度指示器，否则用户注意力开始游离
+  10. 进度指示器选择：2-10秒用indeterminate spinner（不确定时长）；>10秒必须用determinate progress bar（百分比进度条）+时间预估
+  11. 骨架屏(Skeleton Screen)优于spinner：不强调"等待"本身，而是展示内容结构+渐进加载，创造"已经在发生"的感觉，用户感知更快（Luke Wroblewski）
+  12. 骨架屏设计铁律：必须精确匹配真实内容布局（图片高度/标题行数/元数据行数）；shimmer动画2-4秒循环；低对比度灰色；预定义尺寸防CLS布局偏移
+  13. 骨架屏边界：最小显示300ms防内容闪烁(FoC)；最大显示5秒，超过则转进度条/错误态；尊重prefers-reduced-motion（禁用shimmer用静态占位）
+  14. 进度条心理学：永远不要停在99%（用户会以为卡死）；开始慢、接近结尾时加速（感知更快）；加文字解释"为什么在等"+粗略时间预估
+  15. Hover颜色变化可靠起点：HSL亮度降低10%（如#3B82F6 HSL 60%→50%=#2563EB）；这与本轮CTA修复一致——emerald-700(5.15:1)→hover emerald-800(7.2:1)，加深+对比度递增
+- 🎯 下次可落地的UI优化点：
+  - 给全站主CTA按钮统一添加 `active:scale-95`（已有部分）+ `transition-colors duration-150`（已有），并检查所有按钮是否有完整的hover/focus/active/disabled四态；当前6个文件已修复hover无反馈，但需进一步检查focus-visible焦点环是否全站统一（BackToTop已有，其他CTA可能缺失）
+
+
+## 📚 学习记录 2026-09-27 19:00
+- 主题：顶级SaaS设计拆解（深度版）— Linear/Vercel/Stripe/Notion/Raycast设计系统拆解：暗色优先、表面层级、字体即品牌、克制渐变、键盘优先、LCH色彩空间与Refactoring UI方法论
+- 来源：
+  - https://vercel.com/design/guidelines （Vercel官方Web Interface Guidelines：交互/动画/布局/内容/表单/性能/设计七大维度完整规范，Geist字体，stark technical minimalism）
+  - https://linear.app/blog/how-we-redesigned-the-linear-ui （Linear联合创始人Karri Saarinen官方重设计博客：LCH色彩空间、三变量主题系统、Inter Display、6周重设计流程）
+  - https://www.refactoringui.com/ （Refactoring UI官方：Adam Wathan & Steve Schoger，灰度优先、层级用权重/颜色而非字号、从过多留白开始）
+  - https://www.shadcn.io/design/linear （shadcn/ui Linear Design System拆解：#010102近黑底色、四级表面阶梯#0f1011→#191a1b、lavender-blue品牌色#5e6ad2）
+  - https://www.pixeldarts.com/en/post/four-design-principles-behind-stripe-linear-and-vercel （Pixeldarts: Stripe/Linear/Vercel四大设计原则——锐利字体、克制渐变、精确网格、信息密度）
+  - https://linear.app/blog/how-we-redesigned-the-linear-ui （Linear官方：用LCH替代HSL生成主题，仅需base color/accent/contrast三个变量自动生成98个token，支持高对比度无障碍主题）
+- 知识点（15条）：
+  1. Linear暗色优先设计系统：底色不用纯黑#000000（太硬），用近黑带微弱蓝调的#010102；四级表面阶梯（canvas #010102→surface-1 #0f1011→surface-2 #141516→surface-3 #18191a→surface-4 #191a1b）通过明度微差承载层级，完全不用阴影——shadcn/ui Linear Design System拆解
+  2. Linear品牌色极度克制：lavender-blue #5e6ad2仅用于品牌标识、焦点态和主CTA，全站其余地方几乎不用彩色；边框用1px半透明白rgba(255,255,255,0.05~0.1)而非实线；无圆角夸张、无阴影堆叠、无炫技效果——"No excess"是Linear设计哲学核心
+  3. Linear用LCH色彩空间替代HSL生成主题：LCH感知均匀（红色和黄色同为lightness 50时人眼看起来亮度相近），仅需3个变量（base color/accent/contrast）自动生成98个设计token；contrast变量支持自动生成高对比度主题满足无障碍需求——Linear官方重设计博客
+  4. Linear字体策略：标题用Inter Display（更有表现力的Display变体），正文用常规Inter；字间距精细微调，行高平衡；不同字体选择（Linear=Inter, Vercel=Geist, Stripe=Söhne）但同一纪律：单一字族+等宽字体补充，系统性字号/字重/间距，绝不混排装饰字体——字体即品牌锚点，换掉字体整个品牌感就变了
+  5. Vercel官方设计规范——焦点态：每个可聚焦元素必须显示可见且不被遮挡的焦点环，优先用:focus-visible（避免鼠标用户被干扰），分组控件用:focus-within；sticky header/footer/banner绝不能遮挡焦点元素；这与WCAG 2.2的2.4.11焦点不被遮挡AA级完全一致
+  6. Vercel官方设计规范——触摸目标：视觉目标<24px时必须扩大命中区域至≥24px；移动端最小44px；移动端input字体≥16px防止iOS Safari聚焦时自动缩放（或设maximum-scale=1）；用touch-action: manipulation防止双击缩放；checkbox/radio的label和控件共享一个大命中区域，无死区
+  7. Vercel官方设计规范——加载状态：spinner/skeleton加150-300ms显示延迟（避免快速响应时闪烁）和300-500ms最短可见时间；骨架屏必须精确镜像最终内容布局避免CLS；按钮加载时显示spinner并保留原始label；React Suspense自动处理延迟；乐观更新——UI立即更新，服务端响应后调和，失败时回滚或提供Undo
+  8. Vercel官方设计规范——动画铁律：永远不用transition: all，只显式列出要动画的属性（通常opacity/transform）；优先CSS > Web Animations API > JS库；只动画GPU加速属性（transform/opacity），避免触发reflow的width/height/top/left；必须支持prefers-reduced-motion；动画可被用户输入中断；自动播放>5秒的动效必须有暂停/停止/隐藏控件
+  9. Vercel官方设计规范——视觉细节：光学对齐（感知优于几何时±1px微调）；每个元素有意对齐到网格/基线/边缘/光学中心，无意外定位；文本与图标并排时调整权重/大小/间距/颜色避免冲突（细描边图标配中等字重文本时需加粗图标描边）；嵌套圆角——子元素圆角≤父元素圆角且同心；分层阴影——至少两层模拟环境光+直射光；半透明边框提升边缘清晰度
+  10. Vercel官方设计规范——交互状态对比度递增：hover/active/focus的对比度必须高于rest状态（即hover时变深/变亮而非不变）；这直接解释了为什么我们之前CTA按钮hover:bg-emerald-600（比emerald-700浅）是错误的——应该hover时对比度增加而非减少；正确模式：rest=emerald-700, hover=emerald-800（更深更高对比）
+  11. Stripe设计系统：Söhne字族+WebGL mesh-gradient hero（被无数网站模仿但从未被超越）；信息密度高但视觉层级精确——标题/副标题/正文/代码块各有独特排版处理；签名渐变mesh创造品牌识别度而不依赖单一插画风格；交互式多语言代码片段tab让开发者直接看到实现细节——目标受众是开发者，开发者信任具体性
+  12. Refactoring UI方法论——灰度优先：先在灰度模式下建立完整视觉层级（用大小/权重/对比度/间距），最后才加颜色；如果去色后页面读不出层级，什么调色板都救不了；层级用字重和颜色而非字号——初学者总想放大字号来强调，正确做法是加粗/改颜色/调间距
+  13. Refactoring UI方法论——从过多留白开始：先给每个元素太多空间，然后逐步减少直到刚好；标签是最后手段——能用图标+位置+上下文表达就别加label（但无障碍名称仍需存在）；不要在彩色背景上用灰色文字（对比度必然失败）；通过弱化次要元素来强调主要元素（de-emphasize to emphasize），而非把所有东西都加粗放大
+  14. Linear键盘优先+信息密度哲学：Command Palette (Cmd+K)和助记快捷键（S=Status, P=Priority）加速专家用户但不阻碍新手；信息密度胜过留白——用更少chrome展示更多数据，hover时揭示细节而非藏在点击后；Optimistic UI消除等待感——本地先更新，后台同步，只在真正出错时显示错误；这三点共同构成"power user tool"的体验质感
+  15. 顶级SaaS共同设计纪律（Stripe/Linear/Vercel）：①锐利几何字体（无圆润友好字体）传达"工程师打造的基础设施产品"气质；②渐变不是背景处理而是hero主角（Vercel coral-to-teal prism、Stripe mesh gradient），其余地方极度干净；③精确网格系统+严格间距尺度，每个元素有意对齐；④暗色模式作为主体验而非附加品（Linear/Vercel），设计暗色时重新思考层级而非简单反色；⑤微交互150-200ms ease-out，有craft感而非playful感，避免弹性动画和过度动画
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - CTA hover状态修正（Vercel规范第10条）：当前全站CTA标准样式`bg-emerald-700 hover:bg-emerald-600`违反"交互状态对比度递增"原则——hover时变浅（对比度从5.15:1降到3.72:1）反而降低了可感知性；正确做法：`bg-emerald-700 hover:bg-emerald-800 active:bg-emerald-900`（hover时更深，对比度从5.15:1升到7.2:1，active时更深），同时加`transition-colors duration-150`（Vercel规范：150-200ms，只动画color属性不用transition:all）；涉及全站CTA按钮约13个文件，纯className修改不改逻辑
+
+## 📚 学习记录 2026-09-27 16:00
+- 主题：Web可访问性a11y（深度版）— WCAG 2.2新标准、ARIA五规则、键盘导航、焦点态设计与屏幕阅读器最佳实践：从合规到真正可用的无障碍设计系统
+- 来源：
+  - https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/ （W3C WAI: What's New in WCAG 2.2，2023-10-05正式推荐标准，9条新增成功准则）
+  - https://www.smashingmagazine.com/2025/06/what-i-wish-someone-told-me-aria/ （Smashing Magazine: What I Wish Someone Told Me When I Was Getting Into ARIA，2025-06，Eric Bailey）
+  - https://www.w3.org/TR/WCAG/#conformance-reqs （W3C WCAG 2.2正式规范：对比度1.4.3、键盘可访问2.1.1）
+  - https://baymard.com/blog/archive （Baymard Institute: 电商可访问性研究归档——52%站点装饰性/功能性图片不可访问、55%站点信息性图片ALT文本不合格）
+  - https://smashing-media.com/2022/09/wai-aria-guide/ （Smashing Magazine: Making Sense Of WAI-ARIA — A Comprehensive Guide）
+- 知识点（15条）：
+  1. WCAG 2.2于2023年10月5日成为W3C正式推荐标准，比2.1新增9条成功准则；其中与UI/UX最相关的AA级新准则：2.4.11焦点不被遮挡（Minimum）、2.5.7拖拽动作替代、2.5.8目标尺寸最小24×24 CSS像素、3.3.8无障碍认证（不强制记忆密码）——W3C WAI
+  2. 焦点不被遮挡（2.4.11 AA级）：当组件获得键盘焦点时，不能被作者创建的内容完全隐藏——典型反面案例是sticky底部banner遮挡了Tab到的链接；解决方案是sticky元素留足padding或用scroll-margin确保焦点元素可见；AAA级2.4.12要求完全可见不被部分遮挡——W3C WCAG 2.2
+  3. 焦点外观（2.4.13 AAA级）：焦点指示器必须至少等于2 CSS像素厚的周长面积，且聚焦态与非聚焦态对比度≥3:1；很多网站用`outline: none`移除焦点环却不提供替代，这是最常见的可访问性失败之一；正确做法：`focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2`，ring颜色与背景对比度≥3:1——W3C WCAG 2.2 / Smashing
+  4. 目标尺寸（2.5.8 AA级）：指针输入目标至少24×24 CSS像素；例外包括行内链接（受行高约束）、等价控件存在、用户代理控制、必要呈现；注意这是WCAG 2.2的AA级（比2.1的2.5.5 AAA级44×44降低了门槛），但CTA按钮仍建议44×44（Apple HIG和Google Material标准）以覆盖更广用户群——W3C WCAG 2.2
+  5. ARIA第一规则：能用原生HTML元素就不用ARIA——用`<a>`做链接而非`<div role="link">`+click handler；原生元素自带键盘可操作性、焦点管理、语义通告和辅助技术支持，ARIA只是"香料"不是替代品；第二规则：不要改变原生元素的语义（如别把heading当tab用）——Smashing Magazine ARIA五规则
+  6. ARIA第三规则（铁律）：任何可交互元素必须可键盘操作——如果不能用键盘使用它，它就不可访问，句号；这意味着所有div+onClick的"按钮"必须加`tabIndex={0}`、`onKeyDown`处理Enter/Space、`role="button"`，但更简单的做法是直接用`<button>`——Smashing Magazine
+  7. ARIA第四规则：不要在可聚焦元素上用`role="presentation"`或`aria-hidden="true"`——这会让本应可交互的元素对辅助技术不可用，是严重错误；`aria-hidden="true"`只应用于纯装饰性内容（如按钮内的SVG图标），且该元素不能是可聚焦的——Smashing Magazine
+  8. ARIA第五规则：可交互元素必须有可访问名称——纯图标按钮必须加`aria-label`（如`aria-label="搜索"`），但不要在label里重复角色名（别写`aria-label="搜索按钮"`，屏幕阅读器会读成"搜索按钮，按钮"造成冗余）；有可见文本的按钮不需要aria-label，文本本身就是名称——Smashing Magazine
+  9. ARIA静默失败：错误的ARIA不会产生console错误、不会弹窗警告、不会有任何提示——`role="selectpanel"`（不存在的角色）会被忽略，元素退化为普通div；这就是为什么必须用真实辅助技术测试（NVDA/JAWS + VoiceOver），自动化工具（axe/WAVE/Pa11y）只能捕获部分问题——Smashing Magazine
+  10. ARIA只通告不赋予能力：给div加`role="button"`不会让它可点击，仍需手动加click事件、键盘处理、焦点管理、状态同步；同样改role不会改变元素原生行为（如给a加role="image"不会让alt/src生效）；这再次证明优先用原生HTML——Smashing Magazine
+  11. 动态ARIA优于硬编码：大部分ARIA是状态驱动的，应随应用状态动态切换——如手风琴用`aria-expanded={isOpen ? "true" : "false"}`配合`hidden`属性控制内容显隐；硬编码的`aria-expanded="false"`但内容实际展开是常见错误；常见动态属性：aria-expanded、aria-pressed、aria-checked、aria-selected、aria-live——Smashing Magazine
+  12. 屏幕阅读器导航模式：用户不只是Tab遍历，还会用快捷键按标题（H）、列表（L）、地标（D）、链接（K）跳转——这意味着语义化结构（h1-h6层级、`<main>`/`<nav>`/`<aside>`地标、`<ul>/<ol>`列表）比视觉布局更重要；屏幕阅读器导航时不移动视觉焦点，所以focus样式和SR体验需分别测试——LogRocket屏幕阅读器实战 / Smashing
+  13. 对比度双标准：正文文本≥4.5:1（WCAG AA 1.4.3），大文本（≥18pt或14pt加粗≈24px/18.66px）≥3:1；UI组件和图形对象（如图标、边框、焦点环）≥3:1（1.4.11 AA级）；之前CTA按钮emerald-600白底对比度3.72:1失败就是因为正文标准；emerald-700白底5.15:1通过——W3C WCAG 1.4.3/1.4.11
+  14. 键盘交互期望源自Windows XP时代：用户会本能地按Enter激活链接、Space激活按钮、Home/End跳列表首尾、Esc关闭弹窗、Tab前进/Shift+Tab后退、方向键在单选/标签页间移动；自定义组件必须支持这些按键，否则键盘用户无法使用；模态框打开时焦点应移入、Tab被陷阱在模态内、Esc关闭并将焦点返回触发元素——Smashing Magazine / WAI-ARIA APG
+  15. 测试方法论：先在Windows用NVDA（免费开源，全球屏幕阅读器用户最多）或JAWS建立基线，再用macOS VoiceOver找兼容性问题（VoiceOver常有需要冗余ARIA才能正常通告的情况），最后测iOS VoiceOver（占移动屏幕阅读器70.6%份额）；不要只依赖自动化扫描——axe能捕获约30%可访问性问题，其余需人工测试；用Playwright的`getByRole('button', {name: '编辑'})`写基于角色的测试比CSS选择器更稳定且能防止可访问性回归——Smashing Magazine / AssistivLabs
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - 全站焦点态系统升级：当前很多可交互元素（链接、卡片、按钮）依赖浏览器默认outline或无焦点样式，违反WCAG 2.4.7和2.4.13；在globals.css中添加统一的`:focus-visible`规则——`outline: 2px solid #059669; outline-offset: 2px; border-radius: 4px;`（emerald-600与白底对比度3.72:1接近3:1门槛，建议用emerald-700 #047857达5.15:1），同时确保所有sticky header/footer不遮挡Tab焦点元素（给主内容加`scroll-margin-top: 80px`）；这是纯CSS改动，不改逻辑，覆盖全站所有可交互元素
+
 ## 📚 学习记录 2026-09-27 07:00
 - 主题：高转化排版（深度版）— 阅读流畅度科学、字体节奏系统与内容型网站排版转化优化：x-height行高公式、F型扫描、模块化字阶、可读性与转化率的量化关系
 - 来源：
