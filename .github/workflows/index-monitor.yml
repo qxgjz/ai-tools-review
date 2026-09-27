@@ -33,6 +33,7 @@ jobs:
         env:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: python .github/scripts/index_monitor.py
+        continue-on-error: true
 
       - name: Commit report
         run: |

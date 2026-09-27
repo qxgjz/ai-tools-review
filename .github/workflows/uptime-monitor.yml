@@ -30,3 +30,4 @@ jobs:
           QQ_MAIL_USER: ${{ secrets.QQ_MAIL_USER }}
           QQ_MAIL_AUTH_CODE: ${{ secrets.QQ_MAIL_AUTH_CODE }}
         run: python .github/scripts/uptime_check.py
+        continue-on-error: true

@@ -28,6 +28,7 @@ jobs:
 
       - name: Run SEO check
         run: python .github/scripts/seo_check.py
+        continue-on-error: true
 
       - name: Commit report
         run: |

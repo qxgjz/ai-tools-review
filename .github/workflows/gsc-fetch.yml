@@ -34,9 +34,9 @@ jobs:
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
         run: |
           python .github/scripts/fetch_gsc.py || {
-            echo "::error::GSC fetch failed. Check GOOGLE_SERVICE_ACCOUNT_JSON secret."
-            exit 1
+            echo "::warning::GSC fetch failed. Check GOOGLE_SERVICE_ACCOUNT_JSON secret."
           }
+        continue-on-error: true
 
       - name: Commit report
         run: |

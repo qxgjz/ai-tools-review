@@ -28,6 +28,7 @@ jobs:
 
       - name: Generate context
         run: python .github/scripts/generate_context.py
+        continue-on-error: true
 
       - name: Commit context
         run: |

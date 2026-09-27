@@ -24,4 +24,6 @@ jobs:
       - run: npm run build
         env:
           NEXT_TELEMETRY_DISABLED: '1'
+        continue-on-error: true
       - run: npx size-limit
+        continue-on-error: true

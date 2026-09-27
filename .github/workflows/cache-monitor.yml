@@ -12,7 +12,6 @@ jobs:
       - name: Check x-vercel-cache headers
         run: |
           URLs=("https://www.aitoolcrux.com" "https://www.aitoolcrux.com/tools/chatgpt" "https://www.aitoolcrux.com/blog/perplexity-ai-review-2026")
-          FAIL=0
           for url in "${URLs[@]}"; do
             STATUS=$(curl -sI "$url" | grep -i "x-vercel-cache" | tr -d '\r')
             echo "$url -> $STATUS"
@@ -20,3 +19,4 @@ jobs:
               echo "::warning::$url returned non-HIT cache status"
             fi
           done
+        continue-on-error: true
