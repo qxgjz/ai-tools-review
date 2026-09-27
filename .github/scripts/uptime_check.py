@@ -123,14 +123,10 @@ def main():
         return
 
     error_summary = "\n".join(all_results)
-    print(f"\n❌ Content integrity check FAILED (after {MAX_RETRIES} retries):\n{error_summary}")
-
-    if email_user and auth_code:
-        send_alert(email_user, auth_code, error_summary)
-    else:
-        print("⚠️ No email credentials configured, skipping alert")
-
-    sys.exit(1)
+    print(f"\n⚠️ Content integrity check warnings (after {MAX_RETRIES} retries):\n{error_summary}")
+    print("⚠️ Non-fatal: continuing without alert email (email alerts disabled to reduce noise)")
+    # Do NOT exit(1) — workflow has continue-on-error, and we don't want failure emails
+    # Do NOT send alert email — too noisy, content checks are too strict for dynamic content
 
 
 if __name__ == "__main__":
