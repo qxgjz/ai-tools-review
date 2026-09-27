@@ -77,3 +77,4 @@ Recheck after 1-2 weeks for indexing improvement.
 - **P1**：在已有曝光的/blog文章页中加内链指向未曝光的分类页和工具页
 - **P1**：确保每个/blog/review文章都有"Read full review"内链指向对应/tools/页面
 - **P2**：每周持续监控，目标4周内将有曝光页面从83提升到120+
+| 2026-09-27 | -1 | -1 | N/A |  |
