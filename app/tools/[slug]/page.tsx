@@ -765,7 +765,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             {tool.pros.map((pro, i) => (
               <li
                 key={i}
-                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+                className="flex gap-3 text-base text-zinc-600 dark:text-gray-300 leading-[1.7]"
               >
                 <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">
                   {i + 1}
@@ -786,7 +786,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             {tool.cons.map((con, i) => (
               <li
                 key={i}
-                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+                className="flex gap-3 text-base text-zinc-600 dark:text-gray-300 leading-[1.7]"
               >
                 <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-red-100 dark:bg-red-900/30 text-red-500 dark:text-red-400 text-xs font-bold mt-0.5">
                   !
@@ -805,7 +805,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             <Quote className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             What is {tool.name}?
           </h2>
-          <div className="text-sm sm:text-base text-zinc-600 dark:text-gray-300 leading-relaxed space-y-4">
+          <div className="text-base text-zinc-600 dark:text-gray-300 leading-[1.7] space-y-4">
             {tool.longDescription.split('\n\n').map((paragraph: string, i: number) => (
               <p key={i}>{paragraph}</p>
             ))}
@@ -916,7 +916,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               <div className="text-xs text-emerald-600 dark:text-emerald-400 uppercase tracking-wide mb-2 font-semibold">
                 First-Hand Review
               </div>
-              <p className="text-sm text-zinc-700 dark:text-gray-300 leading-relaxed">
+              <p className="text-base text-zinc-700 dark:text-gray-300 leading-[1.7]">
                 {tool.realExperience}
               </p>
             </div>
@@ -938,7 +938,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                         <span className="flex-shrink-0 w-6 h-6 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold">
                           {i + 1}
                         </span>
-                        <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
+                        <p className="text-base text-zinc-600 dark:text-gray-300 leading-[1.7]">
                           {scenario}
                         </p>
                       </div>
@@ -958,7 +958,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   {tool.notableObservations.map((obs: string, i: number) => (
                     <li
                       key={i}
-                      className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+                      className="flex gap-3 text-base text-zinc-600 dark:text-gray-300 leading-[1.7]"
                     >
                       <Lightbulb className="w-4 h-4 flex-shrink-0 text-amber-500 mt-0.5" />
                       {obs}
@@ -980,7 +980,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </span>
             Who Should Use This?
           </h3>
-          <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-base text-zinc-600 dark:text-gray-300 leading-[1.7]">
             {tool.bestFor ||
               (tool.category === 'image'
                 ? 'Digital artists, designers, and marketers who need high-quality AI-generated visuals for campaigns, social media, and creative projects.'
@@ -1006,7 +1006,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </span>
             Who Should Skip This?
           </h3>
-          <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed">
+          <p className="text-base text-zinc-600 dark:text-gray-300 leading-[1.7]">
             {tool.notIdealFor ||
               (tool.hasFreeTier === false
                 ? 'Casual users who only need occasional AI help may find the pricing hard to justify. Start with a free alternative first before committing to a paid plan.'
@@ -1022,7 +1022,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </span>
             Best Free Alternative
           </h3>
-          <p className="text-sm text-zinc-600 dark:text-gray-300 leading-relaxed mb-3">
+          <p className="text-base text-zinc-600 dark:text-gray-300 leading-[1.7] mb-3">
             {tool.hasFreeTier
               ? `This tool offers a free tier that covers most basic needs. Start there before upgrading to a paid plan.`
               : tool.category === 'image'
@@ -1128,7 +1128,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             {tool.keyFeatures.map((feature: string, i: number) => (
               <li
                 key={i}
-                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4"
+                className="flex gap-3 text-base text-zinc-600 dark:text-gray-300 leading-[1.7] bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4"
               >
                 <span className="flex-shrink-0 w-5 h-5 flex items-center justify-center rounded-full bg-emerald-100 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 text-xs font-bold mt-0.5">
                   {i + 1}
@@ -1151,7 +1151,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             {tool.useCases.map((useCase: string, i: number) => (
               <li
                 key={i}
-                className="flex gap-3 text-sm text-zinc-600 dark:text-gray-300 leading-relaxed"
+                className="flex gap-3 text-base text-zinc-600 dark:text-gray-300 leading-[1.7]"
               >
                 <Check className="w-5 h-5 flex-shrink-0 text-emerald-500 mt-0.5" />
                 {useCase}
@@ -1170,7 +1170,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <Users className="w-5 h-5" />
                 Best For
               </h3>
-              <p className="text-sm text-emerald-800 dark:text-emerald-300 leading-relaxed">
+              <p className="text-base text-emerald-800 dark:text-emerald-300 leading-[1.7]">
                 {tool.bestFor}
               </p>
             </div>
@@ -1181,7 +1181,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <X className="w-5 h-5" />
                 Not Ideal For
               </h3>
-              <p className="text-sm text-amber-800 dark:text-amber-300 leading-relaxed">
+              <p className="text-base text-amber-800 dark:text-amber-300 leading-[1.7]">
                 {tool.notIdealFor}
               </p>
             </div>
@@ -1300,7 +1300,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           <Award className="w-5 h-5 text-amber-500" />
           Final Verdict & Recommendation
         </h2>
-        <p className="text-sm sm:text-base text-zinc-600 dark:text-gray-300 leading-relaxed">
+        <p className="text-base text-zinc-600 dark:text-gray-300 leading-[1.7]">
           {tool.verdict ||
             `${tool.name} is a ${tool.category} AI tool by ${tool.vendor}, with an overall score of ${total.toFixed(1)}/10 and a ${grade} grade (${GRADE_DESCRIPTIONS[grade]}). ${tool.pros[0]}. It's worth noting that ${tool.cons[0]}. ${tool.hasFreeTier ? 'This tool offers a free version, suitable for budget-conscious users to try before deciding whether to upgrade.' : ''} Overall, ${total >= 8 ? "it's an excellent tool worth recommending." : total >= 7 ? "it's a solid performer, suitable for users with specific needs." : 'overall performance is average, we recommend choosing carefully based on your requirements.'}`}
         </p>
