@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 108,
+  "current_iteration": 109,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-28T01:12:41.957434",
+  "last_updated": "2026-09-28T05:14:11.187501",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -3028,18 +3028,22 @@
       "title": "修复Vitest本地运行超时挂起",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "description": "排查jsdom环境初始化问题，参考Next.js官方with-vitest示例对比配置，确保npx vitest run可正常完成",
-      "created_at": "2026-09-27T01:29:22.569898"
+      "created_at": "2026-09-27T01:29:22.569898",
+      "completed_at": "2026-09-28T05:14:11.187448",
+      "completed_by": "窗口1"
     },
     {
       "id": "P1-QA-PLAYWRIGHT-INSTALL-001",
       "title": "安装@playwright/test并验证E2E测试",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "description": "将@playwright/test加入devDependencies，npm install，运行npx playwright test验证smoke.spec.ts通过",
-      "created_at": "2026-09-27T01:29:22.569939"
+      "created_at": "2026-09-27T01:29:22.569939",
+      "completed_at": "2026-09-28T05:14:11.187487",
+      "completed_by": "窗口1"
     },
     {
       "id": "P2-QA-COMPONENT-TESTS-001",
@@ -3681,6 +3685,475 @@
       "status": "pending",
       "description": "审计全站Link组件prefetch属性，关键页面prefetch=true，非关键页面prefetch=false减少带宽和Router Cache内存占用",
       "source": "learning-2026-09-27-nextjs-caching"
+    },
+    {
+      "id": "P2-PERF-SPECRULES-MODERATE-001",
+      "title": "layout.tsx添加Speculation Rules同源moderate prerender",
+      "description": "在app/layout.tsx注入<script type=speculationrules>，对所有同源链接使用moderate eagerness prerender，排除/api/、/submit、/logout、/search等动态/状态变更路径",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T01:18:10.063787",
+      "source": "learning_speculation_rules"
+    },
+    {
+      "id": "P2-PERF-SPECRULES-EAGER-001",
+      "title": "工具详情页相关工具链接eager prerender",
+      "description": "工具详情页的relatedTools/popularTools链接添加.prerender CSS类，用eager规则预渲染高置信导航目标，提升工具页间切换速度",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T01:18:10.063811",
+      "source": "learning_speculation_rules"
+    },
+    {
+      "id": "P2-PERF-SPECRULES-MEASURE-001",
+      "title": "WebVitalsReporter添加prerender命中率统计",
+      "description": "在components/analytics/WebVitalsReporter.tsx中检测document.prerendering和activationStart，统计prerender激活率、命中率和LCP改善幅度，上报GA4",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T01:18:10.063813",
+      "source": "learning_speculation_rules"
+    },
+    {
+      "id": "P2-PERF-SPECRULES-PREFETCH-001",
+      "title": "跨源外链moderate prefetch规则",
+      "description": "对文章和工具页中的跨源外链（工具官网、参考链接）使用moderate prefetch规则（非prerender），在不发送Cookie的前提下预取文档，提升外链跳转体验",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T01:18:10.063814",
+      "source": "learning_speculation_rules"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，修复article-api URL（301重定向）",
+      "assigned_to": "窗口1",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，优化4个零点击页title/meta（dify/cursor/sd/midjourney）",
+      "assigned_to": "窗口1",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，/compare页改造为索引页+具体对比页独立URL",
+      "assigned_to": "窗口1",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，搭建自动内链系统scripts/internal_linker.py",
+      "assigned_to": "窗口1",
+      "priority": "P1",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，批量添加Article+FAQPage schema标记",
+      "assigned_to": "窗口1",
+      "priority": "P1",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第7节，生成50个外链目标列表（A/B/C类）",
+      "assigned_to": "窗口2",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第7节，提交5个资源页外链",
+      "assigned_to": "窗口2",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第7节，Reddit社区参与3次（r/ChatGPT等）",
+      "assigned_to": "窗口2",
+      "priority": "P1",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第3-4节，为3个P0对比词生成Brief（ChatGPT vs Claude等）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第4节，写第1篇P0对比页（ChatGPT vs Claude 2026），严格过质量门",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第4节，补3篇旧文章Quick Answer（从qa_takeaways_gaps取）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第2-6节，本周GSC数据分析（3类页面识别+优化建议）",
+      "assigned_to": "窗口4",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第2节，关键词金字塔维护+P0词挖掘（不足50个则补充）",
+      "assigned_to": "窗口4",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第8节，扫描所有文章联盟链接（是否≥2处+rel=sponsored）",
+      "assigned_to": "窗口5",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第8节，申请3个新联盟项目（大品牌优先）",
+      "assigned_to": "窗口5",
+      "priority": "P1",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第9节，对比页设计优化（固定表头+推荐高亮+移动端）",
+      "assigned_to": "窗口6",
+      "priority": "P0",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "task": "读取TRAFFIC_GROWTH_SOP.md第9节，文章页Quick Answer突出设计+移动端体验检查",
+      "assigned_to": "窗口6",
+      "priority": "P1",
+      "source": "TRAFFIC_GROWTH_SOP",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_vs_Gemini",
+      "task": "写文章：Gemini vs Gemini（对比页）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "paa": [
+          "Are Gemini and Gemini a good match?",
+          "Can Gemini and Gemini be soulmates?",
+          "Are there two different Geminis?",
+          "Are May Geminis and June Geminis different?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_open_source_alternative",
+      "task": "写文章：Gemini open source alternative（替代方案页）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "commercial",
+        "content_type": "替代方案页",
+        "paa": [
+          "Is there an open-source version of Gemini?",
+          "What are some free alternatives to Gemini?",
+          "Which AI is fully open-source?",
+          "What can I replace Gemini with?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_app",
+      "task": "写文章：Gemini app（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 31,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [
+          "What does the Gemini app do?",
+          "Is the Gemini app good or bad?",
+          "Why is Gemini installed on my phone?",
+          "How do I uninstall the Gemini app?"
+        ],
+        "low_dr_count": 8
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_review_2026",
+      "task": "写文章：Gemini review 2026（评测页）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "commercial",
+        "content_type": "评测页",
+        "paa": [
+          "Is Gemini good for 2026?",
+          "Is Gemini better than ChatGPT 2026?",
+          "Is Gemini AI actually good?",
+          "What are the downsides of Gemini AI?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_photo",
+      "task": "写文章：Gemini photo（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 33,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [
+          "How to gemini ai photo?",
+          "Is Gemini photo free?",
+          "Can I give Gemini a picture?",
+          "Where can I find Gemini images?"
+        ],
+        "low_dr_count": 7
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_vs_ChatGPT",
+      "task": "写文章：Gemini vs ChatGPT（对比页）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 29,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "paa": [
+          "Is Gemini actually better than ChatGPT?",
+          "Is there a better AI than ChatGPT?",
+          "Is Gemini still the best AI?",
+          "How much does Gemini cost?"
+        ],
+        "low_dr_count": 9
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Google_Gemini_AI",
+      "task": "写文章：Google Gemini AI（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 35,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [
+          "Is Google Gemini AI free?",
+          "Can Gemini AI edit photos?",
+          "How do I use Gemini AI on Google?",
+          "Is Google Gemini better than ChatGPT?"
+        ],
+        "low_dr_count": 6
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_pricing",
+      "task": "写文章：Gemini pricing（定价分析页）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "transactional",
+        "content_type": "定价分析页",
+        "paa": [
+          "Is Gemini cheaper than Chatgpt?",
+          "How much does Gemini Pro cost?",
+          "Is Google Gemini worth paying for?",
+          "What is the difference between Gemini free and paid?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_for_students",
+      "task": "写文章：Gemini for students（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 29,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [
+          "Is Gemini free for students?",
+          "Is Google giving free Gemini for students?",
+          "Is Google Gemini Pro free for students?",
+          "How to get Gemini for free for a year as a student?"
+        ],
+        "low_dr_count": 9
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_how_to_use_Gemini",
+      "task": "写文章：how to use Gemini（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "informational",
+        "content_type": "信息页",
+        "paa": [
+          "How can I use Gemini AI?",
+          "Is Gemini or Chatgpt better?",
+          "How do I use Gemini on my phone?",
+          "How to generate an image on Gemini?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_tutorial",
+      "task": "写文章：Gemini tutorial（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "informational",
+        "content_type": "信息页",
+        "paa": [
+          "How to use Gemini for beginners?",
+          "Is Gemini better than Chatgpt now?",
+          "What are the best Gemini prompts?",
+          "How can I learn Gemini AI?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_free_alternative",
+      "task": "写文章：Gemini free alternative（替代方案页）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "commercial",
+        "content_type": "替代方案页",
+        "paa": [
+          "Is there another free app like Gemini?",
+          "Which AI is 100% free?",
+          "Is there a better AI than Gemini?",
+          "Which AI is truly free?"
+        ],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_AI_photo",
+      "task": "写文章：Gemini AI photo（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 31,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [
+          "How to do a Gemini AI photo?",
+          "Can Gemini generate AI photos?",
+          "Is Gemini photo free?",
+          "Can I create an AI image for free?"
+        ],
+        "low_dr_count": 8
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_Google",
+      "task": "写文章：Gemini Google（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 33,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [
+          "Is Google Gemini AI free?",
+          "What is Gemini Google used for?",
+          "Can Gemini AI edit photos?",
+          "How do I access Google's Gemini AI?"
+        ],
+        "low_dr_count": 7
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "kw_Gemini_Banana",
+      "task": "写文章：Gemini Banana（信息页）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "keyword_pipeline_Gemini",
+      "keyword_data": {
+        "kd": 27,
+        "intent": "navigational",
+        "content_type": "信息页",
+        "paa": [],
+        "low_dr_count": 10
+      },
+      "status": "pending",
+      "created_at": "2026-09-28"
     }
   ],
   "milestones": [
@@ -5145,8 +5618,8 @@
     }
   ],
   "last_deploy_time": "2026-09-24 19:40:02",
-  "last_learning_update": "2026-09-27 22:04",
-  "last_learning_topic": "多Agent/多窗口协作最佳实践",
+  "last_learning_update": "2026-09-28",
+  "last_learning_topic": "TRAFFIC_GROWTH_SOP_v1.0_标准化体系上线",
   "iteration_log": [
     {
       "iteration": 100,
