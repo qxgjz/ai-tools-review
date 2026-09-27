@@ -1251,5 +1251,51 @@
       "tsc_pass": true,
       "online_verify": "pending"
     }
+  },
+  {
+    "iteration": 108,
+    "date": "2026-09-28",
+    "timestamp": "2026-09-28T01:12:41.971378",
+    "window": "窗口1",
+    "tasks_completed": [
+      {
+        "id": "P1-GEO-FAQ-SCHEMA-001",
+        "title": "所有文章页添加FAQPage JSON-LD schema",
+        "description": "为51篇有FAQ数据的文章页添加FAQPage结构化数据，用于AI搜索优化(GEO)。Google 2026年5月已弃用FAQ富媒体结果，但AI搜索引擎(ChatGPT/Perplexity/Claude)仍依赖FAQPage提取Q&A内容。",
+        "files_modified": [
+          "app/blog/[slug]/page.tsx"
+        ],
+        "impact": "51篇文章获得FAQPage schema，提升AI搜索引用率"
+      },
+      {
+        "id": "P1-PERF-INP-3P-001",
+        "title": "评估第三方脚本策略+搜索组件添加scheduler.yield",
+        "description": "评估Umami/GA4/AdSense/Giscus第三方脚本加载策略（均已优化：afterInteractive/lazyOnload）；为SearchBox组件添加scheduler.yield()，在同步过滤533个工具前让出主线程，提升INP响应性。",
+        "files_modified": [
+          "components/search/SearchBox.tsx"
+        ],
+        "impact": "搜索输入响应性提升，INP指标改善；第三方脚本策略确认已最优"
+      }
+    ],
+    "commit": "9687bed",
+    "quality_gates": {
+      "tsc_passed": true,
+      "online_verified": true,
+      "pages_checked": [
+        "homepage 200",
+        "article 200 + FAQPage found",
+        "tool page 200"
+      ]
+    },
+    "learning": {
+      "topic": "Next.js缓存体系深度解析（四层缓存+ISR+On-Demand Revalidation）",
+      "points": 15,
+      "landing_tasks": [
+        "P2-PERF-ISR-ARTICLES-001",
+        "P2-PERF-REVALIDATE-WEBHOOK-001",
+        "P2-PERF-DATA-CACHE-TAGS-001",
+        "P2-PERF-ROUTER-CACHE-PREFETCH-001"
+      ]
+    }
   }
 ]
