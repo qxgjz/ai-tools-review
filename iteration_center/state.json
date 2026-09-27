@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-27T22:11:20.950591",
+  "last_updated": "2026-09-27T23:21:20.503701",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -3641,6 +3641,42 @@
       "source": "多Agent协作学习 2026-09-27",
       "created_at": "2026-09-27 22:04",
       "acceptance_criteria": "所有活跃P0/P1待办均包含明确的acceptance_criteria"
+    },
+    {
+      "id": "P2-PERF-ISR-ARTICLES-001",
+      "title": "文章页从SSG改为ISR（revalidate=3600）",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "将app/blog/[slug]/page.tsx添加export const revalidate = 3600，实现小时级自动刷新，减少全量构建频率",
+      "source": "learning-2026-09-27-nextjs-caching"
+    },
+    {
+      "id": "P2-PERF-REVALIDATE-WEBHOOK-001",
+      "title": "创建/api/revalidate Route Handler支持按需revalidate",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "创建app/api/revalidate/route.ts，接收secret验证后调用revalidateTag(posts/tools)，配合内容更新webhook实现按需刷新",
+      "source": "learning-2026-09-27-nextjs-caching"
+    },
+    {
+      "id": "P2-PERF-DATA-CACHE-TAGS-001",
+      "title": "为数据获取层添加cache tags",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "将posts/tools/comparisons数据从JSON import重构为fetch或unstable_cache，添加next.tags为on-demand revalidation奠定基础",
+      "source": "learning-2026-09-27-nextjs-caching"
+    },
+    {
+      "id": "P2-PERF-ROUTER-CACHE-PREFETCH-001",
+      "title": "审计Link prefetch行为优化Router Cache",
+      "priority": "P2",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "审计全站Link组件prefetch属性，关键页面prefetch=true，非关键页面prefetch=false减少带宽和Router Cache内存占用",
+      "source": "learning-2026-09-27-nextjs-caching"
     }
   ],
   "milestones": [

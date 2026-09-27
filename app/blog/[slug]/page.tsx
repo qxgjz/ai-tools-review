@@ -354,6 +354,28 @@ export default function PostPage({ params }: PostPageProps) {
               }}
             />
 
+
+            {/* FAQPage Schema - for AI search optimization (GEO), not Google rich results */}
+            {post.faq && post.faq.length > 0 && (
+              <script
+                type="application/ld+json"
+                dangerouslySetInnerHTML={{
+                  __html: JSON.stringify({
+                    '@context': 'https://schema.org',
+                    '@type': 'FAQPage',
+                    mainEntity: post.faq.slice(0, 5).map((item) => ({
+                      '@type': 'Question',
+                      name: item.question || item.q || '',
+                      acceptedAnswer: {
+                        '@type': 'Answer',
+                        text: item.answer || item.a || '',
+                      },
+                    })),
+                  }),
+                }}
+              />
+            )}
+
             {/* Article content */}
             <article
               style={

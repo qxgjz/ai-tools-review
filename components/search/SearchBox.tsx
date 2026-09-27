@@ -17,6 +17,15 @@ const GRADE_TEXT_COLOR: Record<Grade, string> = {
   F: 'text-gray-500 dark:text-gray-400',
 };
 
+
+// INP optimization: yield to main thread to keep search input responsive
+const yieldToMain = (): Promise<void> => {
+  if (typeof window !== 'undefined' && 'scheduler' in window && 'yield' in (window as any).scheduler) {
+    return (window as any).scheduler.yield();
+  }
+  return new Promise((resolve) => setTimeout(resolve, 0));
+};
+
 interface SearchBoxProps {
   className?: string;
   placeholder?: string;
@@ -37,7 +46,7 @@ export function SearchBox({
   const router = useRouter();
   const debounceTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const performSearch = useCallback((value: string) => {
+  const performSearch = useCallback(async (value: string) => {
     const q = value.toLowerCase().trim();
     if (!q) {
       setResults([]);
@@ -45,6 +54,8 @@ export function SearchBox({
       setIsSearching(false);
       return;
     }
+    // Yield to main thread before heavy filtering to keep input responsive (INP optimization)
+    await yieldToMain();
     const filtered = (toolsData as Tool[])
       .filter(
         (tool) =>
@@ -71,7 +82,7 @@ export function SearchBox({
         return;
       }
       setIsSearching(true);
-      debounceTimer.current = setTimeout(() => performSearch(value), 300);
+      debounceTimer.current = setTimeout(() => { void performSearch(value); }, 300);
     },
     [performSearch],
   );

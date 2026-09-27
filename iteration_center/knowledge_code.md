@@ -5088,3 +5088,72 @@ Reusable workflow：完整workflow（多job），在独立VM运行，通过 `on:
 2. **P2-CI-LIGHTHOUSE-MATRIX-001**：lighthouse-ci.yml改为matrix策略，对首页/文章页/工具页3个模板并行跑Lighthouse
 3. **P2-CI-CONCURRENCY-ALL-001**：为所有workflow添加concurrency配置（group含workflow名+ref，cancel-in-progress:true）
 4. **P2-CI-CACHE-UNIFY-001**：所有workflow统一用setup-node cache:npm，移除手动actions/cache
+
+
+## [2026-09-27] Next.js缓存体系深度解析（四层缓存 + ISR + On-Demand Revalidation）
+
+### 知识点1：四层缓存总览
+Next.js App Router有四层独立缓存：①Request Memoization（函数返回值，Server端，单次请求内复用，per-request生命周期）②Data Cache（数据，Server端，跨请求/部署持久化，可revalidate）③Full Route Cache（HTML+RSC payload，Server端，构建时生成静态路由，可revalidate）④Router Cache（RSC Payload，Client端，导航时减少服务器请求，会话/时间基）。四层协同工作，失效时按层级传播。
+来源：https://nextjs.org/docs/app/guides/caching
+
+### 知识点2：Request Memoization（请求记忆化）
+在单次渲染过程中，相同URL+options的fetch()自动去重（3个组件调用同一fetch只发1次请求）。非fetch函数（DB查询、ORM调用）可用React `cache()`手动包装：`export const getUser = cache(async (id) => db.user.findUnique({where:{id}}))`。生命周期为单次请求，响应完成后重置。
+来源：https://nextjs.org/docs/app/guides/caching + https://reactdevelopers.org/docs/nextjs-data/caching/
+
+### 知识点3：Data Cache（数据缓存）
+Next.js扩展原生fetch API，每个请求可设置持久化缓存语义。`cache: 'force-cache'`（静态路由默认）永久缓存直到revalidate；`cache: 'no-store'`每次请求重新获取。Vercel上使用Edge KV存储，本地自托管使用文件系统（.next/cache）。Data Cache跨部署保留（除非revalidate或重新构建）。
+来源：https://nextjs.org/docs/app/guides/caching + https://nextjs.org/docs/15/app/guides/self-hosting
+
+### 知识点4：Full Route Cache（完整路由缓存）
+构建时为静态路由生成HTML+RSC payload并缓存，请求时直接返回缓存完全跳过服务器渲染。ISR路由在首次访问时按需生成并缓存。Data Cache失效时，受影响路由的Full Route Cache自动重新渲染。动态路由（含cookies/headers/searchParams）不进入Full Route Cache。
+来源：https://nextjs.org/docs/app/guides/caching + https://itlead.org/interview-questions/nextjs/nextjs-caching-in-nextjs
+
+### 知识点5：Router Cache（路由缓存）
+客户端浏览器内存中的RSC payload缓存。`<Link>`组件在hover/进入视口时自动prefetch，导航时直接使用缓存的layout+page payload。静态页面缓存5分钟，动态页面缓存30秒。`router.refresh()`可绕过Router Cache强制重新获取。页面刷新（F5）也绕过Router Cache。
+来源：https://nextjs.org/docs/app/guides/caching + https://ethelab.com/blog/nextjs-app-router-caching/
+
+### 知识点6：fetch缓存选项
+`fetch(url, { cache: 'force-cache' | 'no-store' })`控制Data Cache行为。`next: { revalidate: false | 0 | number }`设置缓存生命周期（秒）：`false`=无限期缓存，`0`=不缓存（等同no-store），`number`=N秒后stale-while-revalidate。`next: { tags: ['posts'] }`添加缓存标签用于on-demand revalidation。
+来源：https://nextjs.org/docs/app/api-reference/functions/fetch.md
+
+### 知识点7：Time-based Revalidation（时间基重新验证）
+`next: { revalidate: 60 }`表示60秒后数据标记为stale。下次请求触发后台重新生成（stale-while-revalidate），访问者继续看到旧版本直到新版本就绪。重新生成失败时保留旧数据不变。ISR路由的`export const revalidate = 60`对整个页面生效。
+来源：https://nextjs.org/docs/app/guides/caching + https://vercel.com/docs/incremental-static-regeneration
+
+### 知识点8：On-Demand Revalidation（按需重新验证）
+两种API：①`revalidatePath('/blog', 'layout')`按路径失效（支持'page'单页或'layout'整棵子树）②`revalidateTag('posts')`按缓存标签失效（所有使用该标签的fetch数据）。在Server Actions或Route Handlers中调用，适合CMS发布webhook、内容更新后即时刷新。Vercel上通过global push pipeline原子化传播到所有CDN区域。
+来源：https://nextjs.org/docs/app/guides/incremental-static-regeneration + https://vercel.com/docs/incremental-static-regeneration/quickstart
+
+### 知识点9：revalidatePath vs revalidateTag选择
+`revalidatePath`适合知道具体路径的场景（如更新了/about页）。`revalidateTag`适合数据级失效——一个数据变更可能影响多个页面（如更新了一篇文章，首页列表、分类页、文章详情页都需要刷新）。内容站推荐用tag：给所有文章fetch打`posts`标签，更新时`revalidateTag('posts')`一次性刷新所有相关页面。
+来源：https://nextjs.org/docs/app/getting-started/revalidating + https://vercel.com/docs/incremental-static-regeneration/quickstart
+
+### 知识点10：unstable_cache（非fetch数据缓存）
+用于缓存DB查询、ORM调用、第三方SDK调用等非fetch异步函数。`unstable_cache(async () => db.post.findMany(), ['posts-key'], { tags: ['posts'], revalidate: 3600 })`。第二个参数是cache key前缀数组，第三个参数配置tags和revalidate。Next.js 16中被`"use cache"`指令替代，但Next.js 14/15仍使用unstable_cache。
+来源：https://nextjs.org/docs/15/app/getting-started/caching-and-revalidating + https://nextjs.org/docs/app/api-reference/functions/unstable_cache
+
+### 知识点11：Vercel ISR架构
+Vercel上ISR有两种触发：时间基（自动按interval）和按需（API调用）。两者都在后台执行：访问者持续看到缓存版本，Vercel生成新内容后原子化purge HTML+data payload并通过global push pipeline传播到所有CDN区域。ISR结合了SSG的性能和SSR的新鲜度，无需全量重新构建。
+来源：https://vercel.com/docs/incremental-static-regeneration
+
+### 知识点12：缓存失效传播链
+revalidateTag/revalidatePath → 标记Data Cache中对应条目为stale → 下次请求时后台重新fetch数据 → 受影响路由的Full Route Cache重新渲染 → 新HTML+RSC payload原子化替换 → Vercel CDN全局推送。Router Cache不受Data Cache失效影响（客户端独立），需`router.refresh()`或页面刷新绕过。
+来源：https://nextjs.org/docs/app/guides/caching + https://privatedevops.com/articles/nextjs-caching-layers-explained
+
+### 知识点13：动态渲染与缓存互斥
+以下情况强制动态渲染（绕过Full Route Cache和Data Cache默认缓存）：使用`cookies()`/`headers()`/`searchParams`、`export const dynamic = 'force-dynamic'`、fetch设置`cache: 'no-store'`或`revalidate: 0`。`export const dynamic = 'force-static'`可强制静态化（但如果使用了动态函数会报错）。`dynamicParams = false`对预生成路径外的参数返回404。
+来源：https://nextjs.org/docs/app/guides/caching-without-cache-components
+
+### 知识点14：Next.js 16 Cache Components（"use cache"）
+Next.js 16引入新的opt-in缓存模型：`"use cache"`指令标记组件/函数为可缓存，编译器自动生成cache key。替代之前的隐式缓存（fetch默认force-cache）。`cacheLife`替代`revalidate`，`cacheTag`替代`next.tags`，`updateTag`用于read-your-own-writes（用户立即看到变更），`revalidateTag`用于后台刷新（stale-while-revalidate）。
+来源：https://nextjs.org/blog/next-16 + https://nextjs.org/docs/app/getting-started/cache-components
+
+### 知识点15：AIToolCrux项目缓存评估与落地
+当前项目：Next.js 14.2.5 SSG全量构建（107文章+533工具页），每次push触发全量Vercel构建（2-3分钟）。可优化：①为文章/工具数据fetch添加`next: { tags: ['posts', 'tools'] }` ②创建Route Handler `/api/revalidate`接收webhook调用`revalidateTag` ③将SSG改为ISR（`export const revalidate = 3600`）实现小时级自动刷新 ④内容更新时通过webhook按需revalidate而非全量重建 ⑤注意：当前数据从本地JSON import而非fetch，需重构为fetch或unstable_cache才能利用Data Cache。
+来源：项目实际架构分析 + Next.js官方文档
+
+### 落地计划
+1. **P2-PERF-ISR-ARTICLES-001**：文章页从SSG改为ISR，添加`export const revalidate = 3600`，减少全量构建频率
+2. **P2-PERF-REVALIDATE-WEBHOOK-001**：创建`/api/revalidate` Route Handler，支持`revalidateTag('posts')`和`revalidateTag('tools')`，配合内容更新webhook
+3. **P2-PERF-DATA-CACHE-TAGS-001**：为数据获取层添加cache tags（posts/tools/comparisons），为on-demand revalidation奠定基础
+4. **P2-PERF-ROUTER-CACHE-PREFETCH-001**：审计`<Link>` prefetch行为，确保关键页面（首页/分类/热门工具）prefetch=true，非关键页面prefetch=false减少带宽
