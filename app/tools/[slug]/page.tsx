@@ -520,7 +520,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                     href={tool.affiliateUrl || tool.officialUrl}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
                   >
                     <ExternalLink className="w-4 h-4" />
                     {cta}
@@ -1202,7 +1202,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+            className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
           >
             <ExternalLink className="w-4 h-4" />
             {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}
@@ -1311,7 +1311,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 href={tool.affiliateUrl || tool.officialUrl}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
-                className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
+                className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
               >
                 <ExternalLink className="w-4 h-4" />
                 {tool.affiliateUrl ? `Try ${tool.name} Free →` : `Visit ${tool.name}`}
@@ -1485,7 +1485,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             href={tool.affiliateUrl || tool.officialUrl}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white text-sm font-semibold rounded-lg transition-colors active:scale-[0.98]"
+            className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors active:scale-[0.98]"
           >
             <ExternalLink className="w-4 h-4" />
             {tool.affiliateUrl ? `Try ${tool.name} Free` : `Visit ${tool.name}`}

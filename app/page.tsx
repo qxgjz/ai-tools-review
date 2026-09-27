@@ -166,7 +166,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
                   <Link
                     href="/ranking"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors active:scale-95"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-medium rounded-lg transition-colors active:scale-95"
                   >
                     <Trophy className="w-4 h-4" />
                     View Rankings
@@ -311,7 +311,7 @@ export default function HomePage() {
                         </div>
                         <div className="text-[10px] text-zinc-500">/10</div>
                       </div>
-                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-500 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-500 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
                         <ArrowRight className="w-3 h-3" />
                       </div>
                     </Link>
@@ -1103,7 +1103,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/generator"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-700 hover:bg-emerald-600 text-white font-medium rounded-lg transition-colors active:scale-95"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-medium rounded-lg transition-colors active:scale-95"
           >
             <Sparkles className="w-4 h-4" />
             Start Matching
