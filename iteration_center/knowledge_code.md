@@ -192,6 +192,213 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 ## 待补充
 
+## [2026-09-27] JavaScript SEO与渲染策略深度实战（CSR/SSR/SSG/ISR/PPR对SEO的影响）
+
+### 知识点1：Google处理JavaScript三阶段流程
+Google处理JavaScript网站分三个主要阶段：①Crawling（抓取）：Googlebot从抓取队列获取URL，发起HTTP请求，检查robots.txt，读取初始HTML②Rendering（渲染）：Googlebot将页面放入渲染队列（可能等待几秒到更长时间），当有足够资源时，使用最新版Chromium执行JavaScript，获取渲染后的DOM③Indexing（索引）：分析渲染后的HTML，索引内容，发现新链接加入抓取队列。关键：抓取和渲染是分离的，渲染延迟可能导致内容未被及时索引。
+来源：https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+交叉验证：https://developers.google.com/search/docs/fundamentals/how-search-works
+
+### 知识点2：Googlebot渲染能力与限制
+Googlebot使用最新版Chromium渲染页面，支持：①ES6+语法（async/await、箭头函数、模块）②Web Components③Service Worker④CSS Grid/Flexbox⑤Intersection Observer（lazy-load）。但有限制：①渲染预算（复杂JS应用可能超时，内容未完全渲染）②不等待无限期的网络请求③不执行需要用户交互的JS（如点击才加载的内容）④某些API不可用（如某些浏览器特定API）。结论：内容应在初始HTML中，不要依赖JS执行后才出现。
+来源：https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+交叉验证：https://developers.google.com/search/docs/crawling-indexing/javascript/fix-search-javascript
+
+### 知识点3：CSR（客户端渲染）对SEO的负面影响
+CSR（Client-Side Rendering）：初始HTML几乎为空壳，内容由JS在浏览器中执行后生成。对SEO的影响：①Googlebot首次抓取看不到内容（只有空div）②必须等待渲染队列和JS执行③渲染延迟可能导致内容未被索引④meta标签（title/description）由JS生成，初始HTML中没有⑤首屏内容加载慢影响CWV（LCP）。Vercel官方明确：CSR会影响SEO，某些爬虫可能不执行JS。CSR仅适合仪表盘等非内容型、需登录的页面。
+来源：https://nextjs.org/docs/15/pages/building-your-application/rendering/client-side-rendering
+交叉验证：https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
+
+### 知识点4：SSG（静态站点生成）对SEO最优
+SSG（Static Site Generation）：HTML在构建时生成，每次请求复用同一HTML。对SEO最优：①Googlebot首次抓取即看到完整内容（无需等待渲染）②meta标签在初始HTML中③CDN缓存加速（LCP更优）④无服务器渲染开销⑤构建时可预渲染所有页面。Next.js官方推荐：优先使用Static Generation而非SSR（性能原因）。内容型网站（博客、工具目录、文档）应首选SSG。限制：内容更新需重新构建（或配合ISR）。
+来源：https://nextjs.org/docs/15/pages/building-your-application/rendering
+交叉验证：https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
+
+### 知识点5：SSR（服务器端渲染）对SEO友好但有性能代价
+SSR（Server-Side Rendering）：HTML在每次请求时由服务器生成。对SEO友好：①Googlebot看到完整预渲染内容（与SSG相同）②适合高度动态内容（每次请求数据不同）。代价：①每次请求都渲染（TTFB慢，影响CWV）②无法CDN缓存（除非加Cache-Control）③服务器成本高。Vercel通过Vercel Functions实现SSR。适用场景：需实时数据、个性化内容、用户特定页面。内容型网站除非数据实时变化，否则用SSG/ISR更优。
+来源：https://vercel.com/docs/frameworks/full-stack/nextjs
+交叉验证：https://nextjs.org/learn/seo/rendering-and-ranking/rendering-strategies
+
+### 知识点6：ISR（增量静态再生）结合SSG和SSR优势
+ISR（Incremental Static Regeneration）：构建时生成静态页，后台定期重新验证更新。对SEO：①Googlebot看到静态HTML（与SSG相同，SEO友好）②内容可定期更新无需全量重建③Vercel自动处理CDN缓存、持久ISR存储、请求合并（request collapsing）④revalidate属性控制更新频率（秒）。Next.js App Router中通过fetch的next.revalidate或页面的revalidate配置。适用：内容定期更新（如工具价格、文章更新），是内容型网站的理想选择。
+来源：https://nextjs.org/docs/app/guides/incremental-static-regeneration
+交叉验证：https://vercel.com/docs/incremental-static-regeneration
+
+### 知识点7：PPR（Partial Prerendering）静态shell+动态streaming
+PPR（Partial Prerendering，Next 14+实验特性）：结合SSG和SSR，页面分为静态shell（预渲染）和动态部分（streaming流式加载）。对SEO：①初始HTML包含静态内容（Googlebot可见）②动态部分通过Suspense streaming加载③静态部分立即可索引，动态部分Googlebot渲染时获取④next.config.mjs中experimental.ppr = "incremental"启用⑤页面用React "use cache"标记可缓存部分。项目已启用ppr: "incremental"。PPR是未来渲染趋势，兼顾SEO和动态性。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/route-segment-config
+交叉验证：https://nextjs.org/docs/app/getting-started/caching
+
+### 知识点8：渲染策略选择决策矩阵
+选择渲染策略的决策因素：①内容更新频率：SSG（几乎不变）> ISR（定期更新）> SSR（实时变化）> CSR（仅交互）②SEO需求：内容型必须预渲染（SSG/ISR/SSR），非内容型可用CSR③性能：SSG最快（CDN缓存）> ISR（缓存+后台更新）> SSR（每次渲染）> CSR（客户端渲染）④个性化：SSR/CSR适合用户特定内容⑤构建时间：大量页面用SSG构建慢，可用ISR on-demand或fallback。Vercel建议：尽量用SSG和ISR，仅在需要实时数据时用SSR。
+来源：https://vercel.com/blog/how-to-choose-the-best-rendering-strategy-for-your-app
+交叉验证：https://nextjs.org/docs/15/pages/building-your-application/rendering
+
+### 知识点9：JavaScript SEO常见问题与陷阱
+常见JavaScript SEO问题：①内容依赖用户交互才加载（如"点击展开"按钮，Googlebot不点击）②无限滚动（Googlebot不滚动，后续内容不可见）③lazy-load图片但无初始尺寸（CLS问题）④JS运行时错误导致渲染中断（后续内容不生成）⑤meta标签由JS生成（初始HTML没有，Googlebot抓取阶段看不到）⑥hash路由（#/about，Googlebot可能不抓取）⑦内容在iframe中（不索引iframe内容）⑧用JS重定向（比301慢，可能不传递权重）。
+来源：https://developers.google.com/search/docs/crawling-indexing/javascript/fix-search-javascript
+交叉验证：https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+
+### 知识点10：动态渲染(Dynamic Rendering)是临时方案不推荐
+动态渲染：为Googlebot提供预渲染HTML版本，为普通用户提供CSR版本。Google官方定位：临时解决方案（workaround），不是长期最佳实践。风险：①可能被视为cloaking（伪装）——向用户和爬虫提供完全不同内容（如用户看猫页、爬虫看狗页）②维护成本高（两套渲染逻辑）③Google已能渲染JS，动态渲染必要性降低。推荐替代：预渲染（SSG/SSR/ISR）。如必须使用，确保用户和爬虫看到的内容实质相同，仅渲染方式不同。
+来源：https://developers.google.cn/search/docs/crawling-indexing/javascript/dynamic-rendering
+交叉验证：https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+
+### 知识点11：JavaScript SEO调试工具
+调试JavaScript SEO的官方工具：①Rich Results Test（测试URL渲染后DOM，查看结构化数据）②URL Inspection Tool（GSC，查看Google抓取的HTML、渲染后DOM、加载资源、JS控制台错误）③View Page Source（初始HTML，未执行JS）vs Inspect Element（渲染后DOM）——对比两者差异发现JS依赖内容④用Googlebot user agent（Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)）curl测试初始HTML⑤Lighthouse SEO审计。关键检查：初始HTML中是否有title/meta/h1/正文内容。
+来源：https://developers.google.com/search/docs/crawling-indexing/javascript/fix-search-javascript
+交叉验证：https://developers.google.com/search/docs/fundamentals/get-started-developers
+
+### 知识点12：AIToolCrux项目渲染策略与JavaScript SEO评估
+项目当前渲染策略：Next.js 14 App Router SSG（107篇文章+533工具页在构建时生成静态HTML），SEO最优。需检查的JavaScript SEO风险：①是否有CSR内容（客户端fetch加载的部分，如搜索结果、动态推荐）②meta标签是否在初始HTML中（Next.js Metadata API自动生成，应在初始HTML中）③lazy-load图片是否有alt属性和初始尺寸（防止CLS）④生产环境是否有JS错误导致渲染中断（需Sentry监控，当前未集成）⑤工具页的alternatives/relatedTools是否在初始HTML中（应是SSG预渲染）⑥PPR incremental已启用，确认动态部分不影响核心内容索引。
+来源：https://nextjs.org/docs/15/pages/building-your-application/rendering
+交叉验证：https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics
+
+### 落地计划
+1. **P2-SEO-JS-RENDER-AUDIT-001**：审计10个关键页面（首页、3篇文章、3个工具页、2个分类页、1个对比页）的初始HTML，验证title/meta/h1/正文内容是否在View Page Source中存在，对比Inspect Element差异。
+2. **P2-SEO-JS-ERROR-MONITOR-001**：集成Sentry错误监控（与P1-MONITOR-SENTRY-SETUP-001联动），检查生产环境JS错误率，确保无渲染中断错误影响Googlebot索引。
+3. **P2-SEO-JS-LAZY-IMG-VERIFY-001**：验证所有文章和工具页图片的lazy-load实现（loading="lazy" + width/height属性 + alt文本），用GSC URL Inspection确认Googlebot渲染后图片可见。
+4. **P2-SEO-JS-GSC-RENDER-CHECK-001**：用GSC URL Inspection Tool检查5个排名页面的渲染后DOM，确认Googlebot看到的内容与用户一致，无JS错误，无资源加载失败。
+
+
+## [2026-09-27] GitHub Actions OIDC无密钥认证与安全加固深度实战
+
+### 知识点1：OIDC基础概念与原理
+OpenID Connect（OIDC）是基于OAuth 2.0的身份层协议。GitHub Actions中OIDC的核心：GitHub作为OIDC Provider（令牌发行方），workflow运行时自动获取JWT格式的ID token，云提供商（AWS/GCP/Azure等）验证token签名和claims后，颁发短期访问凭证。无需在GitHub Secrets中存储长期云密钥。OIDC token是短期的（workflow运行期间有效），云访问凭证通常1小时过期，自动轮换。
+来源：https://docs.github.com/en/actions/concepts/security/about-security-hardening-with-openid-connect
+交叉验证：https://docs.github.com/en/enterprise-cloud@latest/actions/concepts/security/openid-connect
+
+### 知识点2：OIDC工作流程
+OIDC认证四步流程：①workflow设置permissions: id-token: write（允许GitHub OIDC Provider为每次run创建JWT）②action或步骤调用云提供商SDK（如aws-actions/configure-aws-credentials），请求OIDC token ③云提供商验证token签名（GitHub公钥）和claims（repo/branch/environment等）④颁发短期access token，workflow使用该token访问云资源。关键：id-token: write不授予任何资源写权限，仅允许获取OIDC token。
+来源：https://docs.github.com/en/actions/concepts/security/about-security-hardening-with-openid-connect
+交叉验证：https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-google-cloud-platform
+
+### 知识点3：OIDC相比长期密钥的优势
+OIDC五大优势：①无长期云密钥（不在GitHub Secrets存储AWS_ACCESS_KEY_ID等，减少泄露面）②自动轮换（短期token自动过期，无需手动轮换密钥）③细粒度访问控制（云提供商基于JWT claims配置信任策略，如仅允许main分支、特定environment）④审计日志（云提供商记录每次token请求和使用，可追溯）⑤减少人为失误（无需管理密钥生命周期）。GitHub官方推荐用OIDC替代长期云密钥。
+来源：https://docs.github.com/en/enterprise-cloud@latest/actions/concepts/security/openid-connect
+交叉验证：https://docs.github.com/en/actions/concepts/security/about-security-hardening-with-openid-connect
+
+### 知识点4：OIDC JWT Claims详解
+GitHub OIDC JWT包含的关键claims：①sub（subject，格式repo:owner/repo:ref:refs/heads/main或repo:owner/repo:environment:production，最常用于信任策略）②repository、repository_owner（仓库信息）③event_name（触发事件，如push/pull_request）④ref、sha（分支和commit）⑤environment（部署环境）⑥workflow、job、actor（工作流/任务/触发者）⑦repository_visibility（public/private）。云提供商基于这些claims配置条件信任，如"仅允许repo=qxgjz/ai-tools-review且environment=production的token获取部署权限"。
+来源：https://docs.github.com/en/actions/concepts/security/about-security-hardening-with-openid-connect
+交叉验证：https://docs.github.com/en/enterprise-cloud@latest/actions/concepts/security/openid-connect
+
+### 知识点5：主流云提供商OIDC配置
+各云提供商OIDC配置方式：①AWS：IAM Identity Provider（OIDC）+ IAM Role Trust Policy（条件StringLike token.actions.githubusercontent.com:sub）②GCP：Workload Identity Federation（Workload Identity Pool+Provider，属性映射sub→attribute.sub）③Azure：AD Application + Federated Credential（subject设置）④Vercel/Cloudflare：也支持OIDC集成。配置核心：在云提供商添加GitHub OIDC Provider URL（https://token.actions.githubusercontent.com），然后创建角色/服务账号并绑定信任条件。
+来源：https://docs.github.com/en/actions/how-tos/secure-your-work/security-harden-deployments/oidc-in-google-cloud-platform
+交叉验证：https://docs.github.com/en/actions/deployment/security-hardening-your-deployments/configuring-openid-connect-in-azure
+
+### 知识点6：GITHUB_TOKEN最小权限原则
+GITHUB_TOKEN是每次workflow run自动生成的短期token（自动过期），但默认权限可能过宽。最佳实践：①仓库设置中将默认GITHUB_TOKEN权限设为"只读"（Settings > Actions > General > Workflow permissions）②workflow顶层设置permissions: contents: read（全局最小权限）③单个job按需提升权限，如permissions: contents: write, pull-requests: write④不要在顶层设置过宽权限（如permissions: write-all）。项目当前9个workflow可能未显式设置permissions，使用默认权限。
+来源：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
+交叉验证：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/automatic-token-authentication
+
+### 知识点7：GITHUB_TOKEN权限范围详解
+GITHUB_TOKEN可控制的权限范围（每个可设read/write/none）：①actions（workflow运行）②checks（检查运行）③contents（仓库内容读写）④deployments（部署）⑤id-token（OIDC token）⑥issues（issue操作）⑦packages（GitHub Packages）⑧pages（GitHub Pages部署）⑨pull-requests（PR操作）⑩repository-projects（项目看板）⑪security-events（安全事件）⑫statuses（commit状态）。典型：只读检查workflow只需contents: read；提交代码的workflow需要contents: write；部署Pages需要pages: write + id-token: write。
+来源：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/automatic-token-authentication
+交叉验证：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
+
+### 知识点8：Secrets安全最佳实践
+GitHub Secrets安全要点：①敏感值（API key、token）必须存为Secrets，绝不在workflow文件硬编码②Secrets使用Libsodium密封盒加密（客户端加密，减少日志泄露风险）③用${{ secrets.NAME }}引用，不要用${{ env.NAME }}（env可能被打印）④组织级Secrets可跨仓库共享，环境级Secrets需environment审批保护⑤Secrets不会在fork PR的workflow中自动可用（安全设计）⑥Secret scanning自动检测已提交的密钥，Push Protection在push时阻断。
+来源：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
+交叉验证：https://docs.github.com/fr/get-started/learning-to-code/storing-your-secrets-safely
+
+### 知识点9：PAT vs GITHUB_TOKEN vs GitHub App
+三种认证方式对比：①GITHUB_TOKEN（内置，每次run自动生成，仓库范围，自动过期，推荐用于CI）②PAT（Personal Access Token，个人创建，长期有效，需手动轮换，范围可能过宽，不推荐在CI中使用）③GitHub App（组织级安装，细粒度权限，短期token（1h），可跨仓库，企业级推荐）。项目当前git remote URL中内嵌PAT（github_pat_11...）是安全隐患：PAT长期有效、范围可能过宽、泄露后需手动吊销。应改用GITHUB_TOKEN（git push时）或SSH密钥。
+来源：https://docs.github.com/en/rest/authentication/keeping-your-api-credentials-secure
+交叉验证：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/automatic-token-authentication
+
+### 知识点10：Workflow安全加固清单
+Workflow安全加固检查清单：①限制触发事件（避免pull_request_target配合危险操作，pull_request_target可访问secrets且运行fork代码）②pin第三方action到commit SHA（uses: actions/checkout@a5ac7e5...而非@v4，防止tag被篡改指向恶意代码）③启用Dependabot version updates for actions（自动更新action版本）④禁止从fork PR运行敏感workflow（用if: github.event.pull_request.head.repo.full_name == github.repository）⑤部署类workflow添加environment审批（Settings > Environments > Required reviewers）⑥不使用set-output（已废弃，用$GITHUB_OUTPUT）。
+来源：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
+交叉验证：https://docs.github.com/en/enterprise-server@3.9/actions/security-guides/security-hardening-for-github-actions
+
+### 知识点11：AIToolCrux项目CI/CD安全现状评估
+项目当前CI/CD安全状态：①9个workflow（lint.yml、security.yml、cache-monitor.yml、unlighthouse.yml、playwright.yml、codeql.yml、unit-tests.yml、lhci.yml等）②git remote URL内嵌PAT（高风险，PAT长期有效）③workflow可能未显式设置permissions（默认权限可能过宽）④第三方action可能使用@v4 tag而非commit SHA（tag篡改风险）⑤无environment审批保护（部署类workflow任何人可触发）⑥可能未启用Secret scanning/Push Protection⑦security.yml有npm audit但无依赖提交审查。最大风险：PAT内嵌remote URL。
+来源：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
+交叉验证：https://docs.github.com/en/rest/authentication/keeping-your-api-credentials-secure
+
+### 知识点12：CI/CD安全改进路径
+按优先级改进：①P0 移除remote URL中的PAT（改用git remote set-url使用GITHUB_TOKEN或SSH，PAT从仓库中清除并吊销重新生成）②P1 所有workflow添加permissions: contents: read（全局最小权限），单个job按需提升③P1 关键第三方action pin到commit SHA（actions/checkout、actions/setup-node、actions/upload-artifact等）④P2 启用GitHub Secret scanning + Push Protection（仓库Settings > Code security）⑤P2 部署类workflow添加environment审批（production环境需指定reviewer）⑥P3 评估OIDC替代任何云密钥（当前Vercel自动部署无需云密钥，主要是git认证）。
+来源：https://docs.github.com/en/actions/how-tos/security-for-github-actions/security-guides/security-hardening-for-github-actions
+交叉验证：https://docs.github.com/en/enterprise-cloud@latest/actions/concepts/security/openid-connect
+
+### 落地计划
+1. **P2-CI-TOKEN-LEAST-PRIVILEGE-001**：所有9个workflow添加全局permissions: contents: read，单个job按需提升（如lint只需contents:read+pull-requests:write，部署需contents:write+pages:write）。
+2. **P2-CI-REMOVE-PAT-REMOTE-001**：移除git remote URL中内嵌的PAT，改用SSH或GITHUB_TOKEN认证，吊销旧PAT并重新生成（如仍需本地使用），消除长期密钥泄露风险。
+3. **P2-CI-PIN-ACTIONS-SHA-001**：将所有workflow中第三方action从@v4/tag形式pin到具体commit SHA，防止tag被篡改指向恶意代码。
+4. **P2-CI-SECRET-SCANNING-001**：启用仓库Secret scanning和Push Protection，自动检测已提交的密钥并在push时阻断，定期审查扫描结果。
+
+
+## [2026-09-27] Next.js Route Handlers与API设计最佳实践
+
+### 知识点1：Route Handlers基础与文件约定
+Route Handlers是App Router中创建API端点的方式，使用app/api/route.ts（或route.js）文件约定。导出对应HTTP方法的异步函数：export async function GET(request: Request)、POST、PUT、DELETE、PATCH、OPTIONS、HEAD。替代Pages Router的pages/api/* API Routes。Route Handler是公开HTTP端点，任何客户端都可访问（无内置鉴权）。支持静态导出（与Pages Router的API Routes不同）。文件命名route.ts，不能是其他名称。
+来源：https://nextjs.org/docs/app/getting-started/route-handlers
+交叉验证：https://nextjs.org/docs/15/app/guides/backend-for-frontend
+
+### 知识点2：静态vs动态行为
+GET Route Handler的缓存行为：①默认动态（使用Request对象时）②可通过export const dynamic = 'force-static'强制静态缓存③使用cookies()/headers()等Dynamic Functions时自动opt-out缓存④其他HTTP方法（POST/PUT/DELETE）始终动态，不可缓存。缓存的GET响应存储在Full Route Cache中，与页面缓存共享机制。Next 15 Cache Components模型下，GET默认请求时运行，不访问uncached数据时可被预渲染。
+来源：https://nextjs.org/docs/app/building-your-application/routing/router-handlers
+交叉验证：https://nextjs.org/docs/app/getting-started/caching
+
+### 知识点3：Cache Components新模型（Next 15+）
+Next.js 15引入Cache Components新缓存模型，Route Handler行为变化：①GET Route Handler默认请求时运行（不再默认静态）②不访问uncached或runtime数据时可在构建时预渲染③use cache指令包裹uncached数据，将其纳入静态响应④dynamic = 'force-static'被use cache替代⑤generateStaticParams + use cache组合实现预渲染参数+运行时参数的数据缓存。迁移时需将force-static替换为use cache。
+来源：https://nextjs.org/docs/app/guides/migrating-to-cache-components
+交叉验证：https://nextjs.org/docs/app/getting-started/route-handlers
+
+### 知识点4：Route Segment Config选项
+route.ts支持的Segment Config：①dynamic: 'auto'|'force-dynamic'|'error'|'force-static'（控制静态/动态）②revalidate: number（ISR重新验证间隔秒数）③dynamicParams: boolean（动态参数是否允许，false=404未预渲染参数）④fetchCache: 'force-no-store'等（控制fetch缓存默认行为）⑤runtime: 'nodejs'|'edge'（运行时选择）⑥preferredRegion: 'auto'|'global'|region[]（边缘区域偏好）⑦experimental_ppr: boolean（PPR opt-in）。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/route-segment-config
+交叉验证：https://nextjs.org/docs/app/api-reference/file-conventions/route
+
+### 知识点5：NextResponse API详解
+NextResponse扩展Web Response API，提供便捷方法：①NextResponse.json(data, {status, headers})（JSON响应）②response.cookies.set(name, value)（设置cookie）③response.cookies.get(name)（读取cookie）④NextResponse.redirect(url)（重定向）⑤NextResponse.rewrite(url)（URL重写，地址栏不变）⑥NextResponse.next()（继续Middleware链）。NextRequest扩展Request，提供nextUrl（解析后的URL）、cookies、geo（地理信息）、ip等。
+来源：https://nextjs.org/docs/app/api-reference/functions/next-response
+交叉验证：https://nextjs.org/docs/app/getting-started/route-handlers-and-middleware
+
+### 知识点6：CORS配置最佳实践
+Route Handler默认同源（不设置CORS header）。跨域配置方式：①单个路由：在Response headers中设置Access-Control-Allow-Origin/Methods/Headers②OPTIONS方法处理preflight请求③Middleware统一CORS（推荐，避免每个路由重复配置）④白名单模式：const allowedOrigins = ['https://aitoolcrux.com']，检查request.headers.get('origin')是否在白名单⑤不要用'*'允许所有来源（生产环境安全风险）。项目当前API路由可能缺少CORS配置。
+来源：https://nextjs.org/docs/15/app/api-reference/file-conventions/route
+交叉验证：https://nextjs.org/docs/app/api-reference/file-conventions/middleware
+
+### 知识点7：速率限制实现
+Route Handler速率限制模式：①实现checkRateLimit(request)函数（基于IP+时间窗口计数）②在POST/PUT等写操作前检查③超限返回NextResponse.json({error: 'Rate limit exceeded'}, {status: 429})④存储可用Upstash Redis（@upstash/ratelimit）或内存Map（单实例）⑤GET只读端点可放宽限制，写操作严格限制⑥结合Vercel Edge Middleware在路由前限流（更高效）。项目5个API代理路由当前无限速，存在被滥用风险。
+来源：https://nextjs.org/docs/15/app/guides/backend-for-frontend
+交叉验证：https://nextjs.org/docs/app/api-reference/file-conventions/proxy
+
+### 知识点8：错误处理与响应格式
+Route Handler错误处理最佳实践：①try/catch包裹所有异步操作②catch中返回NextResponse.json({error: '描述', code: 'ERROR_CODE'}, {status: 500})，不向客户端暴露堆栈跟踪③服务端用console.error记录完整错误（含stack）④区分4xx（客户端错误：400参数错误、401未授权、403禁止、404不存在、429限流）和5xx（服务端错误）⑤统一响应格式：{success: boolean, data?: any, error?: {message, code}}⑥超时处理：AbortController + Promise.race设置外部API超时。
+来源：https://nextjs.org/docs/15/app/guides/backend-for-frontend
+交叉验证：https://nextjs.org/docs/app/api-reference/functions/next-response
+
+### 知识点9：动态Route Handler与generateStaticParams
+动态Route Handler（app/api/[slug]/route.ts）可结合generateStaticParams：①构建时为指定参数预生成静态响应②其余参数在请求时动态处理③配合revalidate实现ISR（增量静态再生）④Cache Components模型下，generateStaticParams + use cache实现预渲染和运行时参数的数据缓存⑤dynamicParams = false时，未在generateStaticParams中的参数返回404。适合：RSS feed按分类、sitemap按类型、API预生成常用查询。
+来源：https://nextjs.org/docs/app/api-reference/file-conventions/route
+交叉验证：https://nextjs.org/docs/app/getting-started/caching
+
+### 知识点10：数据安全与公开端点意识
+Route Handler是公开端点，安全注意：①永远不要在Route Handler中返回敏感数据（API key、内部配置）②验证请求来源（Origin header、自定义token）③Server Actions有内置Origin检查（仅同域调用），Route Handler没有④大型应用用serverActions.allowedOrigins配置安全来源列表⑤代理外部API时，不要将上游API key暴露给客户端（在服务端保存）⑥输入验证（zod等）防止注入攻击。项目ga4-proxy等路由需确认无敏感数据泄露。
+来源：https://nextjs.org/docs/app/guides/data-security
+交叉验证：https://nextjs.org/docs/15/app/guides/backend-for-frontend
+
+### 知识点11：AIToolCrux项目API路由现状评估
+项目当前API路由：①app/api/ga4-proxy/route.ts（GA4数据代理）②app/api/google-search/route.ts（Google搜索代理）③app/api/google-cse/route.ts（Google CSE代理）④app/api/searxng-search/route.ts（SearXNG搜索代理）⑤app/api/google-search-puppeteer/route.ts（Puppeteer搜索代理）⑥app/rss.xml/route.ts（RSS feed）。问题：①无速率限制（搜索代理可能被滥用）②无统一错误处理格式③CORS可能未配置白名单④GET响应未缓存（每次请求都调用外部API）⑤无超时处理（外部API慢时阻塞）⑥无请求日志。
+来源：https://nextjs.org/docs/app/building-your-application/routing/router-handlers
+交叉验证：https://nextjs.org/docs/15/app/guides/backend-for-frontend
+
+### 知识点12：API路由改进优先级
+按ROI排序的改进：①P1 速率限制（保护搜索代理不被滥用，Upstash Redis或简单内存限流）②P1 统一错误处理（所有API路由返回{success, data, error}格式，4xx/5xx区分）③P2 GET缓存（google-cse等可缓存的搜索结果加revalidate=3600，减少外部API调用）④P2 CORS白名单（限制为aitoolcrux.com同源，防止外部网站调用代理）⑤P2 超时处理（外部API调用加AbortController 10s超时）⑥P3 请求日志（记录API调用频率和错误率，接入Sentry）。注意：Next 14项目暂不迁移Cache Components，保持force-static/revalidate模式。
+来源：https://nextjs.org/docs/app/api-reference/file-conventions/route-segment-config
+交叉验证：https://nextjs.org/docs/app/guides/data-security
+
+### 落地计划
+1. **P2-API-RATE-LIMIT-001**：为5个搜索代理API路由添加速率限制（基于IP的简单限流，60次/分钟），超限返回429，保护外部API配额不被滥用。
+2. **P2-API-ERROR-HANDLING-001**：统一所有API路由错误处理，返回{success: boolean, data?, error?: {message, code}}格式，区分4xx/5xx，服务端记录完整错误日志。
+3. **P2-API-CACHE-GET-001**：为可缓存的GET API路由（google-cse、ga4-proxy）添加revalidate=3600或force-static，减少外部API调用次数和响应延迟。
+4. **P2-API-CORS-WHITELIST-001**：为API路由配置CORS白名单（仅允许aitoolcrux.com同源），OPTIONS处理preflight，防止外部网站调用代理消耗配额。
+
+
 ## [2026-09-27] 前端错误监控与可观测性深度实战（Sentry + OpenTelemetry + Web Vitals）
 
 ### 知识点1：Sentry Next.js快速安装与自动配置
@@ -4812,3 +5019,72 @@ Shift-Left Security（安全左移）是指在开发流程早期（编码、PR �
 3. 知识点6+12（SSG与Streaming权衡）→ 任务P1-PERF-ARCHITECTURE-REVIEW：评估哪些页面适合从SSG改为PPR/动态，制定迁移优先级（搜索页>对比页>列表页>详情页保持SSG）
 4. 知识点7（爬虫完整HTML）→ 验证任务：确认所有动态路由页面的爬虫访问返回完整HTML，用Googlebot User-Agent测试
 5. 知识点10（PPR与Suspense边界）→ 任务P2-PERF-PPR-ENABLE：在next.config中启用experimental.ppr，为工具详情页定义Suspense边界（静态shell+动态评分区域）
+
+
+## [2026-09-27] GitHub Actions矩阵构建与多环境部署
+
+### 知识点1：Matrix策略基础
+`jobs.<job_id>.strategy.matrix` 定义变量数组，自动生成笛卡尔积组合的job运行。例如 `os: [ubuntu-latest, windows-latest]` + `node: [18, 20]` 生成4个并行job。变量通过 `${{ matrix.variable_name }}` 引用。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+
+### 知识点2：include扩展配置
+`matrix.include` 是对象列表，用于添加新组合或为特定组合添加额外变量。例如为 `ubuntu-latest + node 22` 组合添加 `coverage: true`，仅在该组合下运行覆盖率上报。include不会修改已有组合，只追加。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+
+### 知识点3：exclude移除配置
+`matrix.exclude` 用于删除不需要的组合，支持部分匹配。例如排除 `macos-latest + node 18`（已知不兼容或无意义）。exclude必须至少部分匹配已有组合才能生效。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+
+### 知识点4：fail-fast控制失败行为
+`strategy.fail-fast: true`（默认）：任一matrix job失败，立即取消所有其他进行中的job，快速反馈但可能遗漏其他平台失败。`fail-fast: false`：所有job运行到结束，适合需要完整失败报告的场景。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+
+### 知识点5：max-parallel限制并发
+`strategy.max-parallel` 限制同时运行的matrix job数量。即使runner充足，也只运行指定数量。用于控制资源消耗、避免API限流、或遵守第三方服务并发限制。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+
+### 知识点6：Matrix与Reusable Workflow结合
+Matrix job可以调用reusable workflow，通过 `with` 将matrix变量作为input传递。例如对多个页面模板并行调用同一个Lighthouse reusable workflow，每个模板一个matrix维度。
+来源：https://docs.github.com/en/actions/how-tos/reuse-automations/reuse-workflows
+
+### 知识点7：Environments环境管理
+GitHub Environments（staging/production）支持部署保护规则。job通过 `environment: production` 引用环境，必须通过该环境的所有保护规则才能运行。环境有独立的secrets和variables。
+来源：https://docs.github.com/en/actions/deployment/targeting-different-environments
+
+### 知识点8：Deployment Protection Rules
+保护规则包括：①Required reviewers（最多6个用户/团队审批，仅需1人通过，可禁止自审）②Wait timer（延迟N分钟）③Branch deployment restrictions（仅允许特定分支部署）④Custom protection rules（GitHub Apps驱动的第三方审批，如Datadog/ServiceNow）。
+来源：https://docs.github.com/en/actions/reference/workflows-and-actions/deployments-and-environments
+
+### 知识点9：Environment Secrets
+环境级secrets仅对引用该环境的job可见，比repo级secrets更安全。生产环境的API密钥/部署凭据应设为environment secret，配合保护规则确保只有审批后才能访问。
+来源：https://docs.github.com/en/actions/deployment/targeting-different-environments
+
+### 知识点10：Reusable Workflow vs Composite Action
+Reusable workflow：完整workflow（多job），在独立VM运行，通过 `on: workflow_call` 触发，适合跨repo共享的质量门/发布流程。Composite action：多个step打包为一个step，在调用方同一VM运行，通过 `action.yml` + `runs.using: composite` 定义，适合重复的setup+cache步骤块。
+来源：https://docs.github.com/en/actions/concepts/workflows-and-actions/reusing-workflow-configurations
+
+### 知识点11：Reusable Workflow定义
+在 `.github/workflows/` 下创建YAML，`on: workflow_call`，定义 `inputs`（带type和default）和 `secrets`（可设required）。调用方用 `uses: owner/repo/.github/workflows/file.yml@ref` + `with:` + `secrets:` 调用。
+来源：https://docs.github.com/en/actions/how-tos/sharing-automations/reusing-workflows
+
+### 知识点12：Composite Action结构
+在 `.github/actions/<name>/action.yml` 定义，`runs.using: composite`，`runs.steps` 为步骤列表。支持 `inputs`（with参数）和 `outputs`（步骤间数据传递）。可在同一job内与其他step混合使用。
+来源：https://docs.github.com/en/actions/creating-actions/creating-a-composite-action
+
+### 知识点13：Concurrency与Matrix配合
+`concurrency.group` 可包含matrix变量，如 `group: ${{ github.workflow }}-${{ matrix.os }}-${{ matrix.node }}`，确保同一组合的重复push自动取消旧运行。`cancel-in-progress: true` 自动取消同组进行中的运行。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow
+
+### 知识点14：Matrix最佳实践
+①测试矩阵用 `fail-fast: false` 获取完整失败报告 ②CI矩阵用 `max-parallel` 控制并发避免资源耗尽 ③用 `exclude` 移除已知不兼容组合 ④用 `include` 为特定组合添加特殊配置 ⑤Matrix维度控制在2-3个，避免组合爆炸 ⑥对耗时操作（如E2E测试）使用matrix并行缩短总时间。
+来源：https://docs.github.com/en/actions/how-tos/writing-workflows/choosing-what-your-workflow-does/running-variations-of-jobs-in-a-workflow + https://dev.to/thesius_code_7a136ae718b7/github-actions-workflows-github-actions-patterns-best-practices-pge
+
+### 知识点15：AIToolCrux项目落地评估
+当前项目有9个workflow（lint/security/cache-monitor/unlighthouse/playwright/codeql/lighthouse-ci等），大量重复checkout+setup-node+npm ci步骤。可：①创建composite action `.github/actions/setup/action.yml` 统一setup+cache ②lighthouse-ci改为matrix策略对3个页面模板并行 ③为所有workflow添加concurrency配置 ④生产部署可考虑environment+protection rules（当前Vercel自动部署，暂不需要）。
+来源：项目实际workflow结构分析
+
+### 落地计划
+1. **P2-CI-COMPOSITE-REFACTOR-001**：创建 `.github/actions/setup/action.yml` composite action，将9个workflow重复的checkout+setup-node+npm ci抽取为一步
+2. **P2-CI-LIGHTHOUSE-MATRIX-001**：lighthouse-ci.yml改为matrix策略，对首页/文章页/工具页3个模板并行跑Lighthouse
+3. **P2-CI-CONCURRENCY-ALL-001**：为所有workflow添加concurrency配置（group含workflow名+ref，cancel-in-progress:true）
+4. **P2-CI-CACHE-UNIFY-001**：所有workflow统一用setup-node cache:npm，移除手动actions/cache

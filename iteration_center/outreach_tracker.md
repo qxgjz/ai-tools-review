@@ -75,6 +75,9 @@
 | 2026-09-26 | hello@cherry-ai.com | cherry-studio | /tools/cherry-studio | We reviewed Cherry Studio — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
 | 2026-09-26 | hello@openhands.dev | openhands | /tools/openhands | We reviewed OpenHands — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
 | 2026-09-26 | hello@langflow.org | langflow | /tools/langflow | We reviewed Langflow — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
+| 2026-09-27 | hello@vllm.ai | vllm | /tools/vllm | We reviewed vLLM — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
+| 2026-09-27 | hello@lobehub.com | lobe-chat | /tools/lobe-chat | We reviewed Lobe Chat — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
+| 2026-09-27 | hello@continue.dev | continue | /tools/continue | We reviewed Continue — featured on AIToolCrux | 已发送 | 待回复 | 待跟进 |
 
 ---
 

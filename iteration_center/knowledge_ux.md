@@ -1,4 +1,27 @@
 # UI/UX设计知识库（窗口6专用）
+## 📚 学习记录 2026-09-27 22:00
+- 主题：Web UI设计趋势2026深度版（暗色模式设计优先+Glassmorphism 2.0+微动效标准化+可访问优先色彩系统+流体排版）
+- 来源：https://www.nngroup.com/articles/dark-mode-users-issues/ , https://www.nulifedigital.co.uk/website-design-trends-2026-what-you-need-to-know/ , https://www.smashingmagazine.com/2016/12/best-practices-for-animated-progress-indicators/
+- 知识点（15条）：
+  1. NN/g用户调研：暗色模式偏好三分天下——约1/3纯暗色、1/3纯亮色、1/3根据环境切换；不要假设暗色模式是所有人的默认选择
+  2. 用户在操作系统层面思考暗色模式，而非应用层面——设置系统暗色后期望所有网站自动跟随，不需要在每个应用内单独开启
+  3. 暗色模式护眼效果被高估：研究发现暗色vs亮色的眼疲劳差异很小，屏幕亮度和环境光的影响更大；在昏暗环境中暗色确实有微小优势
+  4. 纯黑(#000)背景是暗色模式第一大坑——Material Design明确推荐#121212深灰，因为纯黑无法表达elevation层级，且OLED上纯黑像素关闭导致文字边缘光晕
+  5. 暗色模式的深度表达与亮色相反：最底层用最深色，最上层（离用户最近）用最浅色；亮色模式靠阴影表达深度，暗色模式靠颜色深浅阶梯
+  6. 暗色模式三大可读性杀手：细字体会被深色背景"吞噬"；粗体会"出血"晕开；浅色文字在深色背景上看起来比同字重的深色文字更粗——需要微调字重
+  7. 高饱和色在深色背景上可见性差且可能不达标WCAG 4.5:1；品牌主色在暗色模式中应去饱和10-20%（与Linear的LCH三变量主题系统一致）
+  8. 暗色模式中的分割线和卡片：仅靠outline不够，需要用轻微颜色差异（卡片比背景浅1-2个色阶）来区分；细线灰色分割线在极深背景上会被"吞掉"
+  9. 不要强制任何一种模式——尊重用户系统级选择；对白内障等眼部疾病患者暗色模式确实有帮助，但对其他人不是必须
+  10. Glassmorphism 2.0（2026）：从全屏滥用进化为精准外科手术式应用——只用于modal、浮动工具栏、通知面板、操作卡片；绝不用于全屏背景；backdrop-filter值需精确计算
+  11. Glassmorphism铁律：如果玻璃面板后面的背景会动态变化，必须在每一种可能状态下测试对比度；半透明叠加层会在特定状态下静默破坏WCAG对比度
+  12. 微动效在2026已从"新奇"变为"标配预期"——按钮hover缩放、表单内联验证、菜单平滑展开都是用户预期行为；但只能用transform和opacity属性（不触发重排），保持INP≤200ms
+  13. 微动效时长规范：150-300ms为自然感区间；低于150ms用户感知不到，高于300ms感觉迟钝；必须在中端Android设备上测试，不能只在旗舰机上验证
+  14. 可访问优先色彩系统（Accessible-first）：从设计token阶段就将WCAG 2.2对比度内置，每个色彩配对旁文档化对比度比值；这比事后补救节省数天工作量，且避免法律风险
+  15. 流体排版(Fluid Typography)：用CSS clamp()在320px手机到2560px桌面间无缝缩放字号，无需媒体查询断点；配合暗色模式设计优先策略，2026年tech/luxury行业55%已采用暗色优先
+- 🎯 下次可落地的UI优化点：
+  - 检查全站暗色模式（当前为浅色优先）：如果未来要加暗色模式，第一步是将所有硬编码颜色提取为CSS变量/design token，按"最底层最深、最上层最浅"原则定义5-6级surface色阶；同时将emerald品牌色在暗色模式下去饱和15%（emerald-500→emerald-400或LCH降低chroma），避免高饱和色在深色背景上对比度不足
+
+
 ## 📚 学习记录 2026-09-27 21:00
 - 主题：加载状态与微交互深度版（按钮五态+骨架屏+进度指示器+微交互结构）
 - 来源：https://www.nngroup.com/articles/button-states-communicate-interaction/ , https://www.smashingmagazine.com/2016/12/best-practices-for-animated-progress-indicators/ , https://www.nngroup.com/articles/microinteractions/

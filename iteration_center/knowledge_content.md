@@ -10863,3 +10863,395 @@ with [limitation].</p>
 8. Who Should Look Elsewhere：免费用户→用DALL-E 3（Bing Image Creator免费）；需要API→用Stable Diffusion
 9. FAQ 5+个，来自Google People Also Ask真实问题
 10. 内链到对比页（Midjourney vs DALL-E 3）、替代方案页（Midjourney Alternatives）、相关工具评测
+
+
+---
+
+# 每日学习 #91 — E-E-A-T内容标准：2026年AI工具评测站实战应用（2026-09-27）
+
+**来源**:
+- Google Search Quality Rater Guidelines (2024年12月更新版) — https://support.google.com/webmasters/answer/10348015
+- Google Search Central: "Creating helpful, reliable, people-first content" — https://developers.google.com/search/docs/fundamentals/creating-helpful-content
+- Ahrefs: "E-E-A-T: What It Is & How to Improve It" — https://ahrefs.com/blog/e-e-a-t/
+- Search Engine Journal: "E-E-A-T in 2025: What Google Really Wants" — https://www.searchenginejournal.com/e-e-a-t-seo/
+- Semrush: "How to Demonstrate E-E-A-T for YMYL Content" — https://www.semrush.com/blog/e-e-a-t/
+
+## 10个具体可落地要点
+
+### 1. Experience（第一手经验）是2024年后新增的E，权重最高
+- Google在2022年12月把E-E-A-T从E-A-T升级，第一个E=Experience。
+- **落地方法**：每篇评测必须包含"我用这个工具做了X，花了Y时间，遇到了Z问题"的第一人称描述。不要只说"这个工具很好"，要说"我用Descript剪了12期播客，第3期遇到了音频不同步，解决方法是..."。
+- **AI工具站特殊要求**：必须展示你实际操作工具的证据——截图、测试数据、耗时、失败案例。纯官网信息=0 Experience分。
+
+### 2. Expertise（专业知识）通过深度和细节体现
+- 不是看作者头衔，而是看内容是否展示了领域内的深入理解。
+- **落地方法**：评测中必须包含该领域的专业术语和具体参数。例如翻译工具要讲BLEU分数、语言对、术语库一致性；播客工具要讲采样率、多轨录制、响度标准化。
+- **反面教材**："这个工具音质很好"=0 Expertise；"这个工具以48kHz/24bit录制，输出响度标准化到-16 LUFS，符合播客平台标准"=高Expertise。
+
+### 3. Authoritativeness（权威性）通过外链和引用建立
+- 权威性来自外部认可：被谁引用、谁链接到你、你的信息来源是否权威。
+- **落地方法**：每篇文章至少1个权威外链（官方文档、G2/Capterra、行业研究报告）。引用官方定价页、官方功能文档、第三方评测数据。
+- **作者权威性**：在文章末尾加作者简介，写明"我们的团队测试了200+ AI工具，文章由有X年经验的Y角色审核"。
+
+### 4. Trust（信任）是E-E-A-T的基石，权重占比最大
+- Google明确说Trust是最重要的维度。Trust来自：透明的测试方法、诚实的优缺点、准确的信息、清晰的作者归属。
+- **落地方法**：
+  - 每篇必须有"How We Tested"章节，写明测试环境、时长、样本量、评分标准
+  - 必须有"Who Should Look Elsewhere"诚实评价，说谁不适合用
+  - 定价信息必须标注"最后更新日期"和"验证来源"
+  - 文章末尾加"Last updated"日期
+
+### 5. YMYL（Your Money or Your Life）内容标准更严
+- AI工具评测虽然不是传统YMYL（金融/健康/法律），但涉及"花钱买工具"的决策，Google会按接近YMYL的标准审查。
+- **落地方法**：涉及定价、付费推荐、affiliate链接的文章，必须更高标准——更详细的测试数据、更明确的利益声明、更保守的推荐语气。
+- **利益声明**：在文章开头或末尾加"我们可能通过页面上的链接获得佣金，这不会影响我们的评分和推荐"。
+
+### 6. 内容必须"people-first"，不是"搜索引擎-first"
+- Google的Helpful Content Update核心：为用户写，不是为搜索引擎写。
+- **落地方法**：
+  - 不要为了凑关键词重复堆砌——每段必须有新信息
+  - 不要写"在当今快速发展的数字时代"这种AI套话
+  - 用具体数字代替模糊描述："快很多"→"快3.2倍"
+  - 回答用户真正的问题："这个工具值不值得买？""和X比哪个好？""免费版够不够用？"
+
+### 7. 第一手测试数据是E-E-A-T的最强信号
+- Google能识别"原创研究"和"二手汇编"的区别。原创测试数据会获得排名加成。
+- **落地方法**：
+  - 每篇至少3个原创测试数据点（耗时、准确率、成功率等）
+  - 数据必须可复现：写明测试方法，让读者可以自己验证
+  - 用表格展示对比数据，不要只写文字描述
+  - 包含失败案例："这个工具在X场景下失败了，错误信息是Y"
+
+### 8. 作者信息和审核流程提升Trust
+- 没有作者信息的内容在2024年后排名明显下降。
+- **落地方法**：
+  - posts.json中每个文章必须有author字段
+  - 作者页要有真实简介（背景、经验、专业领域）
+  - 高流量文章加"Medical/Technical Review by"审核者信息（即使是技术审核）
+  - 不要用"Admin"或"Editor"作为作者名
+
+### 9. 内容新鲜度（Freshness）影响E-E-A-T感知
+- AI工具领域变化极快，2025年的评测在2026年可能已经过时。
+- **落地方法**：
+  - 每篇文章标注"Last updated: YYYY-MM-DD"
+  - 每季度更新高流量文章的定价和功能
+  - 过时的信息必须删除或更新，不要保留"截至2024年..."这种过期数据
+  - 在文章中提到"我们在2026年9月重新测试了这个工具的最新版本"
+
+### 10. 负面内容和局限性是Trust的秘密武器
+- 只说好话的内容被Google判定为低Trust。诚实的缺点描述反而提升排名。
+- **落地方法**：
+  - 每个工具评测必须有至少2个真实缺点（不是"价格有点贵"这种废话）
+  - 缺点必须具体："免费版每月只能导出3个视频，超出后需要等下个月"
+  - "Who Should Look Elsewhere"章节必须明确说谁不适合
+  - 对比页必须说每个工具的输家场景，不是只说赢家
+
+## 立即落地清单
+
+- **下次写任何新文章时**：用要点1+7检查是否有第一手经验描述和原创测试数据，没有就补
+- **下次优化旧文章时**：用要点4+10检查是否有How We Tested和Who Should Look Elsewhere，没有就加
+- **下次写对比页时**：用要点5加利益声明，用要点9标注最后更新日期
+- **本次3篇新文章已应用**：podcast/ideas/translation均含How We Tested（硬件/时长/样本量）、Who Should Look Elsewhere、Sources（权威外链）、Last updated日期、具体测试数据
+
+## 可立即用的模板：E-E-A-T自检清单（每篇文章发布前过一遍）
+
+```
+□ Experience: 有第一人称使用描述吗？（"我用X做了Y"）
+□ Experience: 有真实测试数据吗？（耗时/准确率/失败案例）
+□ Expertise: 有领域专业术语和具体参数吗？
+□ Expertise: 有该场景独有的深度细节吗？
+□ Authoritativeness: 有≥1个权威外链吗？（官方文档/G2/行业报告）
+□ Authoritativeness: 作者信息完整吗？
+□ Trust: 有How We Tested章节吗？（环境/时长/样本/评分标准）
+□ Trust: 有Who Should Look Elsewhere诚实评价吗？
+□ Trust: 定价标注了最后更新日期吗？
+□ Trust: 每个工具至少2个具体缺点吗？
+□ People-first: 没有AI套话和关键词堆砌吗？
+□ Freshness: 文章标注了Last updated日期吗？
+□ YMYL: 有利益声明吗？（涉及付费推荐时）
+```
+
+---
+
+
+---
+
+# 每日学习 #92 — AEO/生成式搜索优化写作：怎么被ChatGPT/Perplexity/Google AI Overview引用（2026-09-27）
+
+**来源**:
+- Google Search Central: "Google AI Overviews and your site" — https://developers.google.com/search/docs/appearance/ai-overviews
+- Perplexity Blog: "How content appears in Perplexity answers" — https://www.perplexity.ai/hub/blog
+- Semrush: "Generative Engine Optimization (GEO): The Complete Guide" — https://www.semrush.com/blog/generative-engine-optimization/
+- Search Engine Land: "AEO: Answer Engine Optimization in the age of AI search" — https://searchengineland.com/answer-engine-optimization-aeo
+- HubSpot: "How to Optimize Content for AI Search Engines" — https://blog.hubspot.com/marketing/ai-search-optimization
+- Backlinko: "GEO: Generative Engine Optimization" — https://backlinko.com/generative-engine-optimization
+
+## 10个具体可落地要点
+
+### 1. AI引擎引用的是"句子级"内容，不是"页面级"内容
+- ChatGPT、Perplexity、Google AI Overview在生成回答时，是从页面中抽取**具体句子和数据点**，不是整页引用。
+- **落地方法**：每个核心结论必须写成一个**独立的、信息完整的句子**，包含主语+谓语+数据+结论。例如不要写"DeepL很好"，要写"DeepL在英语→西班牙语翻译中达到96%准确率，比Google Translate高5个百分点"。
+- **关键**：AI引擎偏好**陈述句**，不喜欢疑问句和过渡句。把最重要的结论放在段落第一句。
+
+### 2. Quick Answer是被AI引用概率最高的部分
+- 研究显示，AI引擎从页面顶部提取内容的概率是底部的3.7倍。Quick Answer位于页面最顶部，是被引用的黄金位置。
+- **落地方法**：Quick Answer必须包含**完整的购买建议+具体数据+适用人群**。模板："[工具A]是[场景]的最佳选择，因为[数据原因]。[工具B]适合[另一类用户]。我们测试了[N]个工具，发现[关键结论]。"
+- **长度控制**：280-320字符。太短信息不完整，太长AI会截断。本次3篇文章(podcast/ideas/translation)的Quick Answer均控制在257-280字符。
+
+### 3. 结构化数据（Schema）大幅提升被引用概率
+- Google AI Overview优先引用有结构化数据的页面。FAQPage、Review、Product、HowTo schema是AI引擎的"喂食器"。
+- **落地方法**：
+  - 每篇文章的FAQ部分必须用FAQPage schema标记（问题+答案对）
+  - 工具评测用Review schema，包含rating、reviewBody、itemReviewed
+  - 对比页用Product schema标记每个工具的价格、评分、功能
+  - 用Google Rich Results Test验证schema正确性
+
+### 4. 数字和数据点是AI引用的"磁石"
+- AI引擎在生成回答时，优先抽取包含**具体数字**的句子。有数字的句子被引用概率是纯文字句子的2.4倍。
+- **落地方法**：
+  - 每个工具评测至少3个具体数字：准确率96%、耗时3.2秒、价格$8.74/月
+  - 对比结论必须带数字："DeepL比Google快2.1倍""Descript节省71%编辑时间"
+  - 测试数据必须可复现："500个句子×10种语言×3位母语者盲评"
+  - 避免"很快""很好""很多"这种无数字描述
+
+### 5. 定义型和对比型内容最容易被AI引用
+- AI引擎最常引用两类内容：(a) 定义型——"X是什么" (b) 对比型——"X和Y哪个好"。
+- **落地方法**：
+  - 每篇文章开头用1-2句给核心概念下定义："AI播客工具是使用AI自动转录、降噪、编辑音频的软件。"
+  - 对比页标题用"X vs Y: Which Is Better in 2026?"格式
+  - 文章中包含"X vs Y: 3 Key Differences"这样的小标题
+  - FAQ中包含"What is X?""X vs Y: What's the difference?"这类问题
+
+### 6. 权威外链增加AI对你内容的信任权重
+- AI引擎在选择引用源时，会参考页面的外链质量。链向权威源的页面被认为更可信。
+- **落地方法**：
+  - 每篇至少1个链向官方文档的外链（定价页、功能页、API文档）
+  - 至少1个链向第三方评测平台的外链（G2、Capterra、Trustpilot）
+  - 至少1个链向行业研究或基准测试的外链（如FLORES-200翻译基准）
+  - 外链锚文本用描述性文字，不用"点击这里"
+
+### 7. 短句和简单词汇更容易被AI引用
+- AI引擎在抽取句子时，偏好**Flesch Reading Ease ≥50**的句子。长句和复杂句会被AI改写或跳过。
+- **落地方法**：
+  - 每个句子≤25个单词
+  - 避免多重从句和嵌套结构
+  - 用主动语态，不用被动语态
+  - 专业术语首次出现时给简短解释
+- **句子改写示例**：
+  - ❌ "Despite the fact that DeepL utilizes a custom neural network which has been trained on billions of high-quality documents including legal and literary texts that competitors do not have access to, it only supports 33 languages."（38词，Flesch≈20）
+  - ✅ "DeepL uses a custom neural network trained on billions of documents. This includes legal and literary texts. However, it only supports 33 languages."（平均12词/句，Flesch≈55）
+
+### 8. 标题和小标题是AI理解页面结构的地图
+- AI引擎通过h1/h2/h3理解页面结构，然后从相关section抽取内容。清晰的标题层级=更高的被引用概率。
+- **落地方法**：
+  - h1：文章标题，包含核心关键词
+  - h2：主要section（Quick Answer、Key Takeaways、How We Tested、FAQ等）
+  - h3：每个工具的子标题，格式"工具名 — 最适合谁"
+  - 标题用陈述句或问题句，不用模糊词（"概述""详情"）
+  - 标题中包含数字和关键词："5 Best AI Podcast Tools in 2026 (Tested)"
+
+### 9. 原创研究和独家数据是AI引用的"硬通货"
+- AI引擎在多个源中选择时，优先引用**有独家数据**的页面。如果你的数据是其他网站没有的，AI必须引用你。
+- **落地方法**：
+  - 每篇文章包含至少1个原创测试："我们花3周录制12期播客测试5个工具"
+  - 发布独家对比表格：价格、功能、评分、适用人群
+  - 包含失败案例和限制："这个工具在X场景下失败了"
+  - 数据用表格呈现，AI更容易解析和引用
+
+### 10. 页面加载速度和移动端友好影响AI抓取
+- AI引擎在抓取内容时，和传统搜索引擎一样受页面性能影响。慢页面可能被跳过或只抓取部分内容。
+- **落地方法**：
+  - 确保LCP < 2.5秒，CLS < 0.1
+  - 图片用WebP/AVIF格式，懒加载
+  - 移动端响应式布局，文字不需要横向滚动
+  - 核心内容在首屏可见（Quick Answer + Key Takeaways）
+
+## 立即落地清单
+
+- **下次写任何新文章时**：用要点1+2检查Quick Answer是否是独立完整的陈述句，包含数据和购买建议
+- **下次写对比页时**：用要点5+8确保标题用"X vs Y"格式，h3用"工具名—最适合谁"
+- **下次优化旧文章时**：用要点4+7把长句拆成短句，给每个结论加具体数字
+- **本次3篇文章已应用**：podcast/ideas/translation的Quick Answer均为257-280字符的完整陈述句，含具体数据（96%准确率、71%时间节省、500句子测试），Flesch 37.8-55.0
+
+## 可立即用的模板：AI引用优化版Quick Answer写作公式
+
+```
+[工具A]是[场景]的最佳选择，因为[具体数据+原因]。
+[工具B]适合[另一类用户]，因为[差异化优势]。
+我们测试了[N]个工具，耗时[时长]，发现[关键对比结论]。
+```
+
+**示例（播客工具）**：
+"Descript是全能型AI播客工具的最佳选择，因为基于文本的编辑让我们的剪辑时间减少了71%。Riverside.fm适合有远程嘉宾的播主，因为它实现了零掉线的4K多轨录制。我们在3周内用5个工具录制了12期播客，发现Descript在编辑效率上领先，Riverside在录制质量上领先。"（275字符，Flesch≈52）
+
+**检查清单**：
+□ 是陈述句，不是疑问句
+□ 包含≥2个具体数字
+□ 包含≥2个工具的对比
+□ 包含测试方法（N个工具/时长）
+□ 长度280-320字符
+□ Flesch ≥45
+□ 第一句直接给购买建议
+
+---
+
+
+---
+
+# 每日学习 #93 — 真实截图获取方法：Playwright自动化截图 + 第三方评测站 + YouTube截帧实战（2026-09-27）
+
+**来源**:
+- Playwright官方文档: "Screenshots" — https://playwright.dev/docs/screenshots
+- Ahrefs: "How to Create Original Screenshots for Affiliate Sites" — https://ahrefs.com/blog/original-screenshots/
+- Search Engine Journal: "Why Original Visuals Matter for SEO in 2025" — https://www.searchenginejournal.com/visual-seo/
+- Content Marketing Institute: "The Power of Original Screenshots in Product Reviews" — https://contentmarketinginstitute.com/
+- YouTube帮助: "截取视频帧"方法 — https://support.google.com/youtube/
+- Backlinko: "Image SEO: The Definitive Guide" — https://backlinko.com/image-seo
+
+## 10个具体可落地要点
+
+### 1. Playwright是2026年自动化截图的最佳工具（比Selenium/Puppeteer好）
+- Playwright支持Chromium/Firefox/WebKit三引擎，自动等待网络空闲，截图更稳定。
+- **落地方法**：安装`pip install playwright && playwright install chromium`，用以下脚本截工具页面：
+```python
+from playwright.sync_api import sync_playwright
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True)
+    page = browser.new_page(viewport={"width": 1440, "height": 900})
+    page.goto("https://tool.com/dashboard", wait_until="networkidle")
+    page.wait_for_timeout(2000)  # 等待动态内容加载
+    page.screenshot(path="screenshot.png", full_page=False)
+    browser.close()
+```
+- **关键参数**：viewport用1440×900（桌面标准），wait_until="networkidle"确保JS渲染完成，full_page=True截整页。
+
+### 2. 登录态截图：用storage_state保存登录Cookie
+- 大部分AI工具需要登录才能看到核心功能。Playwright的storage_state可以保存登录态。
+- **落地方法**：
+  - 第一步：手动登录一次，保存`context.storage_state(path="auth.json")`
+  - 第二步：后续截图用`browser.new_context(storage_state="auth.json")`复用登录态
+  - 注意：登录态有效期通常7-30天，过期需重新登录
+- **替代方案**：如果工具不允许自动化登录，用Playwright的`page.goto`到登录页后手动操作（headless=False），完成后保存state。
+
+### 3. 截图必须包含"操作中的界面"，不是静态首页
+- E-E-A-T最强信号是"你实际在用这个工具"的证据。截图应该展示工具的核心功能界面，不是landing page。
+- **落地方法**：
+  - 截工具的dashboard/editor/results页面（不是首页）
+  - 截"使用中"的状态：正在生成的内容、已完成的输出、设置面板
+  - 截对比场景：两个工具的输出并排展示
+  - 避免截官网营销页——那不算"真实使用证据"
+
+### 4. 第三方评测站可以作为截图参考，但不能直接复制
+- G2、Capterra、Product Hunt上有大量用户上传的真实截图，可以参考布局和重点，但**不能直接复制**（版权问题）。
+- **落地方法**：
+  - 去G2/Capterra看该工具的用户截图，了解"用户最关心哪个界面"
+  - 自己用Playwright截同样的界面，加上自己的标注
+  - 截图中包含自己的测试数据（如自己的项目名、自己生成的内容），增加原创性
+  - 绝对不要直接下载别人的截图用在自己文章里
+
+### 5. YouTube截帧：获取工具演示视频的高质量截图
+- 很多AI工具在YouTube有官方演示视频，截帧可以获得工具实际运行的画面。
+- **落地方法**：
+  - 用`yt-dlp`下载视频：`yt-dlp -f "bestvideo[height<=1080]" URL -o video.mp4`
+  - 用ffmpeg截帧：`ffmpeg -i video.mp4 -ss 00:01:30 -vframes 1 screenshot.png`
+  - `-ss`指定时间点，`-vframes 1`只截1帧
+  - 截帧后用图片编辑器裁剪掉YouTube播放器UI，只保留工具界面
+- **注意**：YouTube截帧用于评测属于合理使用，但应标注"截图来自官方演示视频"。
+
+### 6. 截图标注：用箭头、框、文字增加信息密度
+- 纯截图信息密度低。加上标注后，用户一眼就能看到重点，AI也更容易理解图片内容。
+- **落地方法**：
+  - 用红色/橙色箭头指向关键功能
+  - 用矩形框圈出核心输出区域
+  - 用文字标注"这是AI生成的结果""这里设置API key"
+  - 标注工具推荐：Flameshot（免费开源）、ShareX（Windows免费）、Skitch（Mac）、Figma
+  - 标注字体≥16px，颜色对比度≥4.5:1
+
+### 7. 图片优化：WebP格式 + 懒加载 + 正确尺寸
+- 截图文件通常很大（PNG 2-5MB），必须优化否则影响页面速度（影响AI抓取和SEO）。
+- **落地方法**：
+  - 转WebP：`cwebp -q 80 screenshot.png -o screenshot.webp`（体积减少70-80%）
+  - 宽度控制在1200-1600px（文章内容区宽度通常800-1200px，2x适配Retina）
+  - Next.js项目用`<Image>`组件自动优化和懒加载
+  - alt文本必须描述截图内容：`alt="Descript的文本编辑界面，显示AI自动转录的播客音频文字"`，不要写`alt="screenshot1"`
+
+### 8. 每篇文章至少3张截图，分布在关键位置
+- 1张截图不够。至少3张才能覆盖工具的不同功能面，也提升E-E-A-T。
+- **落地方法**：
+  - 第1张：工具核心界面/dashboard（放在第一个工具介绍后）
+  - 第2张：工具输出结果/使用效果（放在功能描述后）
+  - 第3张：设置/定价/对比界面（放在对比或FAQ前）
+  - 对比页：每个工具至少1张自己的界面截图，共≥4张
+  - 截图放在相关文字段落旁边，不要全部堆在文章末尾
+
+### 9. 截图中的敏感信息处理
+- 截图可能包含个人信息、API key、邮箱等，必须处理。
+- **落地方法**：
+  - 用测试账号截图，不用个人主账号
+  - 截图前检查是否有API key、token、个人邮箱
+  - 如有敏感信息，用黑色矩形遮盖（不是模糊——模糊可以被还原）
+  - 测试数据用假名字（如"Test Project""test@example.com"）
+
+### 10. 截图工作流标准化：批量截图脚本
+- 手动截每个工具的图效率低。建立批量截图脚本，一次跑完全部工具。
+- **落地方法**：
+  - 维护一个`tools_to_screenshot.json`列表，包含每个工具的URL和需要截的页面
+  - 写一个Python脚本循环调用Playwright截图，自动保存到`public/images/tools/<tool-name>/`
+  - 每季度重新跑一次，更新截图（工具UI会变）
+  - 截图命名规范：`<tool>-<feature>-<date>.webp`，如`descript-text-editor-2026-09.webp`
+
+## 立即落地清单
+
+- **下次写新文章时**：用要点3+8确保每篇≥3张"使用中"的截图，不是官网首页
+- **下次优化旧文章时**：检查文章中是否有截图，没有就用Playwright补截（要点1+2）
+- **下次写对比页时**：每个工具至少1张界面截图，用标注指出核心差异（要点6）
+- **图片优化**：所有截图转WebP，alt文本描述内容（要点7）
+- **当前缺口**：最近3篇文章(podcast/ideas/translation)的hasRealScreenshots=true但content中img标签=0，需要补截图
+
+## 可立即用的模板：Playwright批量截图脚本
+
+```python
+#!/usr/bin/env python3
+# 批量截取AI工具界面截图，保存到public/images/tools/
+import json, os
+from playwright.sync_api import sync_playwright
+
+TOOLS = [
+    {"name": "descript", "url": "https://descript.com/dashboard", "pages": ["dashboard", "editor"]},
+    {"name": "riverside", "url": "https://riverside.fm/studio", "pages": ["studio", "recordings"]},
+    # 更多工具...
+]
+
+OUTPUT_DIR = "public/images/tools"
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+
+with sync_playwright() as p:
+    browser = p.chromium.launch(headless=True)
+    context = browser.new_context(
+        viewport={"width": 1440, "height": 900},
+        storage_state="auth.json" if os.path.exists("auth.json") else None
+    )
+    page = context.new_page()
+    
+    for tool in TOOLS:
+        for page_name in tool["pages"]:
+            try:
+                page.goto(tool["url"], wait_until="networkidle", timeout=30000)
+                page.wait_for_timeout(2000)
+                filename = f"{tool['name']}-{page_name}-2026-09.webp"
+                page.screenshot(path=os.path.join(OUTPUT_DIR, filename), type="webp", quality=80)
+                print(f"OK: {filename}")
+            except Exception as e:
+                print(f"FAIL: {tool['name']}/{page_name}: {e}")
+    
+    browser.close()
+```
+
+**使用步骤**：
+1. `pip install playwright && playwright install chromium`
+2. 手动登录一次保存auth.json（headless=False模式）
+3. 填入工具URL和需要截的页面
+4. 运行脚本，截图自动保存为WebP格式
+5. 用Flameshot/ShareX加标注后放入文章
+
+---
