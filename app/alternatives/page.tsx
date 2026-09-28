@@ -186,7 +186,7 @@ export default function AlternativesPage() {
         </section>
 
         {/* CTA */}
-        <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-center text-white">
+        <section className="bg-gradient-to-r from-emerald-700 to-teal-600 rounded-2xl p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-3">Can't Find What You're Looking For?</h2>
           <p className="text-emerald-100 mb-6 max-w-xl mx-auto">
             Browse our complete directory of 533+ AI tools or use our comparison tool to find the
@@ -195,7 +195,7 @@ export default function AlternativesPage() {
           <div className="flex flex-wrap justify-center gap-4">
             <Link
               href="/ranking"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-600 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-white text-emerald-700 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
             >
               Browse All Tools
             </Link>

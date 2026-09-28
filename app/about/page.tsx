@@ -294,7 +294,7 @@ export default function AboutPage() {
 
       {/* CTA */}
       <section className="text-center">
-        <div className="bg-gradient-to-br from-emerald-600 to-teal-600 rounded-3xl p-10 sm:p-12 text-white">
+        <div className="bg-gradient-to-br from-emerald-700 to-teal-600 rounded-3xl p-10 sm:p-12 text-white">
           <h2 className="text-2xl sm:text-3xl font-bold mb-4">Start Exploring AI Tools</h2>
           <p className="text-white/90 mb-8 max-w-xl mx-auto">
             Browse our directory of 540+ AI tools, read in-depth reviews, and find the perfect tool

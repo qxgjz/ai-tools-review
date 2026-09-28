@@ -472,7 +472,7 @@ export default function AlternativePage({ params }: { params: { slug: string } }
         </section>
 
         {/* Bottom CTA */}
-        <section className="bg-gradient-to-r from-emerald-600 to-teal-600 rounded-2xl p-8 text-center text-white">
+        <section className="bg-gradient-to-r from-emerald-700 to-teal-600 rounded-2xl p-8 text-center text-white">
           <h2 className="text-2xl font-bold mb-3">Still Not Sure Which Tool to Choose?</h2>
           <p className="text-emerald-100 mb-6 max-w-xl mx-auto">
             Use our AI tool comparison tool to compare up to 3 tools side-by-side and find the
@@ -480,7 +480,7 @@ export default function AlternativePage({ params }: { params: { slug: string } }
           </p>
           <Link
             href="/compare"
-            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-emerald-600 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
+            className="inline-flex items-center gap-2 px-8 py-3 bg-white text-emerald-700 rounded-lg font-bold hover:bg-emerald-50 transition-colors"
           >
             Compare Tools Now
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">

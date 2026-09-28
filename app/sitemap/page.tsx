@@ -135,7 +135,7 @@ export default function SitemapPage() {
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-950">
       {/* Page头部 */}
-      <section className="bg-gradient-to-br from-emerald-600 via-teal-600 to-cyan-600 text-white py-16 px-4">
+      <section className="bg-gradient-to-br from-emerald-700 via-teal-600 to-cyan-600 text-white py-16 px-4">
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center gap-3 mb-4">
             <div className="w-12 h-12 bg-white/20 rounded-xl flex items-center justify-center">
