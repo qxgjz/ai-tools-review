@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 110,
+  "current_iteration": 112,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-28T16:16:21.693314",
+  "last_updated": "2026-09-29 01:11:17",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -4161,9 +4161,11 @@
       "description": "在app/api/revalidate/route.ts添加Route Handler，支持revalidatePath和revalidateTag，配合webhook在tools.json/posts.json更新时触发特定页面ISR重新生成，无需全量重新部署。需配置secret token验证。",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-28T06:21:25.272805",
-      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime"
+      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime",
+      "completed_at": "2026-09-29 01:11:17",
+      "note": "创建app/api/revalidate/route.ts，支持POST/GET，secret保护，支持path/tag/all三种模式"
     },
     {
       "id": "P1-DEPLOY-SKIP-PREVIEW-GEN-001",
@@ -4622,9 +4624,11 @@
       "title": "修复9个博客页缺少H1标题问题",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "description": "OpenSEO审计发现9个博客文章页缺少H1标题: best-paid-ai-tools, dify-vs-langchain, cursor-vs-windsurf, gemini-alternatives, notion-ai-alternative等。检查Next.js文章模板H1渲染。",
-      "created": "2026-09-28 09:24"
+      "created": "2026-09-28 09:24",
+      "completed_at": "2026-09-28 22:09:12",
+      "commit": "263cb43"
     },
     {
       "id": "P2-GROWTH-SERPER-TARGETS-001",
@@ -4702,9 +4706,11 @@
       "title": "确认Ahrefs Web Analytics追踪代码已安装到网站<head>",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "description": "将<script src=\"https://analytics.ahrefs.com/analytics.js\" data-key=\"az24JooznS8RwJ/gaW5Xcg\" async></script>添加到Next.js项目的layout.tsx <head>中。然后在Ahrefs设置页点击'验证安装'。当前GA数据已导入Ahrefs，但Ahrefs自有JS采集未验证。",
-      "created": "2026-09-28 19:09"
+      "created": "2026-09-28 19:09",
+      "completed_at": "2026-09-29 01:11:17",
+      "note": "已确认安装在app/layout.tsx第146-151行，线上验证生效（key=az24JooznS8RwJ/gaW5Xcg）"
     },
     {
       "id": "P0-CONTENT-DUPLICATE-CREATIUM-001",
@@ -4749,8 +4755,88 @@
       "description": "/blog/openai_astra_review排名11.1，145次曝光仅1点击（CTR 0.7%）。这是全站曝光最高的文章页，CTR优化空间大。重写Title和Meta Description，目标CTR提升到2%+。",
       "assigned_to": "窗口1",
       "source": "窗口4 GSC深度分析 2026-09-28",
+      "status": "completed",
+      "created_at": "2026-09-28 21:35:00",
+      "completed_at": "2026-09-28 22:09:12",
+      "commit": "263cb43"
+    },
+    {
+      "id": "P0-MONETIZE-BROKEN-LINKS",
+      "title": "修复40个失效联盟链接（ElevenLabs 404/Midjourney 403/OpenAI 403等），ElevenLabs是唯一affiliateUrl工具必须立即修复",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口5-变现运营"
+      ],
       "status": "pending",
-      "created_at": "2026-09-28 21:35:00"
+      "source": "monetization_audit.md",
+      "description": "审计发现50个联盟链接中40个失效(80%)。ElevenLabs链接try.elevenlabs.io/e45ubw2ct0ag返回404——这是tools.json中唯一有affiliateUrl的工具，等于变现入口完全断了。Midjourney/OpenAI返回403可能是反爬，需核实真实可用性。",
+      "created_at": "2026-09-28T22:34:34.716219",
+      "created_by": "commander-daily-dispatch-2200"
+    },
+    {
+      "id": "P0-SEO-DUPLICATE-CREATIUM",
+      "title": "合并3篇Creatium Coach重复内容为1篇规范URL+301重定向其他2篇（合计64曝光0点击互相蚕食）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "index_monitor.md",
+      "description": "3篇Creatium Coach评测URL格式异常(article-api-20260903-...-md)，内容高度重复，合计64曝光0点击，互相蚕食排名。需合并为1篇规范URL，其他2篇301重定向。",
+      "created_at": "2026-09-28T22:34:34.716246",
+      "created_by": "commander-daily-dispatch-2200"
+    },
+    {
+      "id": "P1-CTR-COMPARE-PAGE",
+      "title": "优化/compare页面Title/Meta/内容深度（270曝光排名34 CTR仅0.7%，是最大单点优化机会）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "index_monitor.md",
+      "description": "/compare页面有270曝光（全站第2高）但排名34、CTR仅0.7%。优化标题/meta描述/内容深度，目标排名进入前20、CTR提升到2%+，可立即带来点击增长。",
+      "created_at": "2026-09-28T22:34:34.716249",
+      "created_by": "commander-daily-dispatch-2200"
+    },
+    {
+      "id": "P1-SEO-MISSING-H1",
+      "title": "修复2篇文章缺少H1标签（/blog/stable-diffusion-review-2026 和 /blog/cursor-review-2026）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "seo_check_latest.md",
+      "description": "SEO健康检查发现2篇高流量文章缺少H1标签。stable-diffusion-review有15207词、cursor-review有13331词，都是长文但H1缺失影响SEO。",
+      "created_at": "2026-09-28T22:34:34.716252",
+      "created_by": "commander-daily-dispatch-2200"
+    },
+    {
+      "id": "P1-MONETIZE-UTM-PARAMS",
+      "title": "为所有联盟链接补全UTM参数（当前0个有UTM，无法追踪转化来源）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口5-变现运营"
+      ],
+      "status": "pending",
+      "source": "monetization_audit.md",
+      "description": "51个联盟链接中0个有UTM参数，无法追踪哪个页面/哪个工具带来转化。需统一格式utm_source=aitoolcrux&utm_medium=affiliate&utm_campaign={tool}&utm_content={page}。",
+      "created_at": "2026-09-28T22:34:34.716254",
+      "created_by": "commander-daily-dispatch-2200"
+    },
+    {
+      "id": "P1-MONETIZE-NO-AFFILIATE-ARTICLES",
+      "title": "为93篇无联盟链接的高流量文章添加联盟CTA（当前105篇仅12篇有联盟链接，覆盖率11.4%）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口5-变现运营"
+      ],
+      "status": "pending",
+      "source": "monetization_audit.md",
+      "description": "105篇文章中93篇无联盟链接(88.6%)。特别是best-paid-ai-tools、cursor-vs-windsurf、gemini-alternatives等高商业意图文章完全没有变现入口。",
+      "created_at": "2026-09-28T22:34:34.716256",
+      "created_by": "commander-daily-dispatch-2200"
     }
   ],
   "milestones": [
