@@ -143,11 +143,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             src="https://cloud.umami.is/script.js"
             data-website-id="7d417a27-1151-407a-9bbb-ef8dd10189a2"
           />
-          {/* Ahrefs Web Analytics (替代GA4) */}
-          <Script
-            strategy="afterInteractive"
+          {/* Ahrefs Web Analytics (替代GA4) - 普通script标签确保SSR输出到HTML源码 */}
+          <script
             src="https://analytics.ahrefs.com/analytics.js"
             data-key="az24JooznS8RwJ/gaW5Xcg"
+            async
           />
 
           {/* Google AdSense (Auto Ads) - lazyOnload: load during browser idle, non-blocking for INP/LCP */}
