@@ -13,8 +13,6 @@ import { BackToTop } from '@/components/layout/BackToTop';
 import { RouteFocusManager } from '@/components/layout/RouteFocusManager';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import { BaiduAnalytics } from '@/components/analytics/BaiduAnalytics';
-import { GA4EventTracker } from '@/components/analytics/GA4EventTracker';
-import { GA4PageTracker } from '@/components/analytics/GA4PageTracker';
 import WebVitalsReporter from '@/components/analytics/WebVitalsReporter';
 
 export const metadata: Metadata = {
@@ -136,7 +134,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           />
           {/* 预连接关键第三方域名，优化资源加载 */}
           <link rel="preconnect" href="https://cloud.umami.is" crossOrigin="anonymous" />
-          <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+          <link rel="preconnect" href="https://analytics.ahrefs.com" crossOrigin="anonymous" />
           <link rel="dns-prefetch" href="https://giscus.app" />
           {/* Fonts self-hosted via geist/font - no external Google Fonts request needed; preconnect/dns-prefetch to fonts.googleapis.com removed to save DNS overhead */}
           {/* Umami 网站Analysis */}
@@ -145,23 +143,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             src="https://cloud.umami.is/script.js"
             data-website-id="7d417a27-1151-407a-9bbb-ef8dd10189a2"
           />
-          {/* Google Analytics 4 (GA4) */}
+          {/* Ahrefs Web Analytics (替代GA4) */}
           <Script
             strategy="afterInteractive"
-            src="https://www.googletagmanager.com/gtag/js?id=G-DGK601TM42"
+            src="https://analytics.ahrefs.com/analytics.js"
+            data-key="az24JooznS8RwJ/gaW5Xcg"
           />
-          <Script id="ga4-init" strategy="afterInteractive">
-            {`
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-DGK601TM42', {
-                page_path: window.location.pathname,
-                anonymize_ip: true,
-                send_page_view: false
-              });
-            `}
-          </Script>
 
           {/* Google AdSense (Auto Ads) - lazyOnload: load during browser idle, non-blocking for INP/LCP */}
           <Script
@@ -173,8 +160,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
           {/* 百度Statistics（未ConfigurationID时自动不加载） */}
           <BaiduAnalytics />
-          <GA4EventTracker />
-          <GA4PageTracker />
           <Header />
           <RouteFocusManager />
           <main id="main-content" className="pt-8">
