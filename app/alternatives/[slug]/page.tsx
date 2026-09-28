@@ -6,6 +6,7 @@ import alternativesData from '@/data/alternatives.json';
 import toolsData from '@/data/tools-index.json';
 import { FAQSchema, BreadcrumbSchema } from '@/components/seo/Schema';
 import { AffiliateCTA } from '@/components/monetization/AffiliateCTA';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 interface Alternative {
   slug: string;
@@ -41,6 +42,7 @@ interface AlternativePage {
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return alternativesData.map((item: AlternativePage) => ({
     slug: item.slug,
   }));

@@ -29,6 +29,7 @@ import { FAQSection } from '@/components/content/FAQSection';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { FadeIn } from '@/components/animations';
 import { BreadcrumbSchema, FAQSchema, ComparisonSchema } from '@/components/seo/Schema';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 interface ComparisonPageProps {
   params: { slug: string };
@@ -37,6 +38,7 @@ interface ComparisonPageProps {
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return comparisonsData.map((c: any) => ({ slug: c.slug }));
 }
 

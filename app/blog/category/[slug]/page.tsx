@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import posts from '@/data/posts.json';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 interface CategoryPageProps {
   params: { slug: string };
@@ -10,6 +11,7 @@ export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   const slugs = new Set(posts.map((p) => p.categorySlug).filter(Boolean));
+  if (shouldSkipStaticGen()) return [];
   return Array.from(slugs).map((slug) => ({ slug }));
 }
 

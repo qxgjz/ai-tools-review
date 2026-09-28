@@ -3,6 +3,7 @@ import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { ArrowLeft, Calendar, Clock, FileText, Award } from 'lucide-react';
 import postsData from '@/data/posts.json';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 const AUTHORS: Record<string, any> = {
   'aitoolcrux-editorial-team': {
@@ -25,6 +26,7 @@ const AUTHORS: Record<string, any> = {
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return Object.keys(AUTHORS).map((slug) => ({ slug }));
 }
 

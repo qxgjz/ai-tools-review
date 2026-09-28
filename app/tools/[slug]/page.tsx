@@ -44,6 +44,7 @@ import { ToolScreenshot } from '@/components/content/ToolScreenshot';
 import { FAQSection } from '@/components/content/FAQSection';
 import { AuthorBio } from '@/components/author/AuthorBio';
 import { FadeIn } from '@/components/animations';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: 'bg-amber-700 text-white',
@@ -89,8 +90,10 @@ const toolScreenshotMap: Record<string, string> = {
 export const dynamicParams = false;
 
 export const dynamic = 'force-static';
+export const revalidate = 3600; // ISR: revalidate every hour
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return toolsData.map((tool) => ({ slug: tool.slug }));
 }
 

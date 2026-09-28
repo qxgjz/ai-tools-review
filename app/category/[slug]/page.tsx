@@ -26,6 +26,7 @@ import { ToolList } from '@/components/tools/ToolList';
 import { CategoryToolsClient } from '@/components/tools/CategoryToolsClient';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { FadeIn, GradientText } from '@/components/animations';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 // Category detailed content for SEO topic clusters
 const CATEGORY_CONTENT: Record<
@@ -507,6 +508,7 @@ export const dynamic = 'force-static';
 
 export function generateStaticParams() {
   const categories = new Set(toolsData.map((t) => t.category));
+  if (shouldSkipStaticGen()) return [];
   return Array.from(categories).map((slug) => ({ slug }));
 }
 

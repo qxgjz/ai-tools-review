@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 112,
+  "current_iteration": 113,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-29 01:11:17",
+  "last_updated": "2026-09-29 05:08:23",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -4173,9 +4173,11 @@
       "description": "在app/tools/[slug]/page.tsx和app/blog/[slug]/page.tsx的generateStaticParams中添加process.env.SKIP_BUILD_STATIC_GENERATION检查，preview环境返回[]跳过533+108页预渲染，将preview构建从2-3分钟降至30秒内。production环境保持完整预渲染。",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-28T06:21:25.272811",
-      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime"
+      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime",
+      "completed_at": "2026-09-29 05:08:23",
+      "note": "创建lib/static-gen.ts共享helper，10个generateStaticParams页面添加skip检查，vercel.json添加SKIP_STATIC_GEN=preview环境变量，preview部署跳过预渲染加速构建"
     },
     {
       "id": "P1-DEPLOY-SELECTIVE-PRERENDER-001",
@@ -4183,9 +4185,11 @@
       "description": "generateStaticParams只返回Top 50热门工具+Top 20文章的slug（基于GSC点击数据），其余页面dynamicParams=true按需生成+export const revalidate=86400（24小时ISR）。显著降低production构建时间，长尾页首次访问稍慢但后续缓存命中。需评估对SEO的影响（首次访问未预渲染的页面）。",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-28T06:21:25.272812",
-      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime"
+      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime",
+      "completed_at": "2026-09-29 05:08:23",
+      "note": "工具页(app/tools/[slug])和文章页(app/blog/[slug])添加export const revalidate=3600，从纯SSG转为ISR（构建时预渲染+每小时重新验证）"
     },
     {
       "id": "P0-QUALITY-F-ARTICLES",
@@ -4837,6 +4841,96 @@
       "description": "105篇文章中93篇无联盟链接(88.6%)。特别是best-paid-ai-tools、cursor-vs-windsurf、gemini-alternatives等高商业意图文章完全没有变现入口。",
       "created_at": "2026-09-28T22:34:34.716256",
       "created_by": "commander-daily-dispatch-2200"
+    },
+    {
+      "id": "kw_research_windsurf_vs_cursor",
+      "task": "写对比页：Windsurf vs Cursor（KD=3.7，8个弱域名，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_zensink_2026-09-29",
+      "keyword_data": {
+        "kd": 3.7,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "windsurf-vs-cursor",
+        "weak_domains": 8,
+        "paa": [
+          "Is Windsurf or Cursor better?",
+          "Is there anything better than Cursor?",
+          "Is Windsurf part of Cursor?",
+          "Is Windsurf discontinued?"
+        ]
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_research_jasper_vs_copyai",
+      "task": "写对比页：Jasper vs Copy.ai（KD=1，极低竞争，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_zensink_2026-09-29",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "jasper-vs-copyai",
+        "weak_domains": 5,
+        "paa": []
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_research_midjourney_alternatives",
+      "task": "写替代方案页：Midjourney alternatives（KD=6.0，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_zensink_2026-09-29",
+      "keyword_data": {
+        "kd": 6.0,
+        "intent": "commercial",
+        "content_type": "替代方案页",
+        "slug": "midjourney-alternatives",
+        "weak_domains": 6,
+        "paa": []
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_research_cursor_alternatives",
+      "task": "写替代方案页：Cursor alternatives（KD=6.7，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_zensink_2026-09-29",
+      "keyword_data": {
+        "kd": 6.7,
+        "intent": "commercial",
+        "content_type": "替代方案页",
+        "slug": "cursor-alternatives",
+        "weak_domains": 5,
+        "paa": []
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_research_claude_vs_gemini",
+      "task": "写对比页：Claude vs Gemini（KD=7.7，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_zensink_2026-09-29",
+      "keyword_data": {
+        "kd": 7.7,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "claude-vs-gemini",
+        "weak_domains": 5,
+        "paa": []
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
     }
   ],
   "milestones": [

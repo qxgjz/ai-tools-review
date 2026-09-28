@@ -24,5 +24,8 @@
       ]
     }
   ],
-  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':!iteration_center/' ':!open-seo-local/'"
+  "ignoreCommand": "git diff --quiet HEAD^ HEAD -- . ':!iteration_center/' ':!open-seo-local/'",
+  "env": {
+    "SKIP_STATIC_GEN": "preview"
+  }
 }

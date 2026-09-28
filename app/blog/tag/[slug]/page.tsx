@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import posts from '@/data/posts.json';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 // Helper: convert tag name to URL-friendly slug
 function slugifyTag(name: string): string {
@@ -39,6 +40,7 @@ export function generateStaticParams() {
       );
     });
   });
+  if (shouldSkipStaticGen()) return [];
   return Array.from(tagSlugs).map((slug) => ({ slug }));
 }
 

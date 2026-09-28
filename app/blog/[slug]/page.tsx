@@ -28,6 +28,7 @@ import { ReadingProgress } from '@/components/blog/ReadingProgress';
 import { TableOfContents } from '@/components/blog/TableOfContents';
 import { PostNavigation } from '@/components/blog/PostNavigation';
 import { markdownToHtmlSafe } from '@/lib/markdown';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 // 动态Import重型Component，减少初始JS包大小
 const Giscus = nextDynamic(() => import('@/components/comments/Giscus'), {
@@ -64,8 +65,10 @@ interface PostPageProps {
 export const dynamicParams = false;
 
 export const dynamic = 'force-static';
+export const revalidate = 3600; // ISR: revalidate every hour
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return posts.map((post) => ({ slug: post.slug }));
 }
 

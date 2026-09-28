@@ -5,6 +5,7 @@ import type { Tool } from '@/types';
 import { ToolList } from '@/components/tools/ToolList';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { FadeIn } from '@/components/animations';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 type AudienceSlug = 'developers' | 'content-creators' | 'students' | 'startups' | 'writers';
 
@@ -253,6 +254,7 @@ const AUDIENCE_CONFIG: Record<
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return Object.keys(AUDIENCE_CONFIG).map((slug) => ({ audience: slug }));
 }
 

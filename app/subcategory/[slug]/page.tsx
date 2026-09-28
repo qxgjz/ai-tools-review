@@ -8,6 +8,7 @@ import { calculateScoreResult } from '@/lib/scoring';
 import { ToolList } from '@/components/tools/ToolList';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { FadeIn, GradientText } from '@/components/animations';
+import { shouldSkipStaticGen } from '@/lib/static-gen';
 
 type SubcatMeta = { name: string; parent: string; toolCount: number };
 const subcats = subcatsData as Record<string, SubcatMeta>;
@@ -15,6 +16,7 @@ const subcats = subcatsData as Record<string, SubcatMeta>;
 export const dynamic = 'force-static';
 
 export function generateStaticParams() {
+  if (shouldSkipStaticGen()) return [];
   return Object.keys(subcats)
     .filter((s) => subcats[s].toolCount > 0)
     .map((slug) => ({ slug }));
