@@ -325,11 +325,7 @@ const nextConfig = {
         destination: "/blog/openai_astra_review",
         permanent: true,
       },
-      {
-        source: "/blog/midjourney-v7-review-2026",
-        destination: "/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md",
-        permanent: true,
-      },
+
       {
         source: "/blog/canva-ai-alternatives-2026",
         destination: "/alternatives/canva-alternatives",
@@ -648,6 +644,43 @@ const nextConfig = {
         destination: "/category/image",
         permanent: true,
       },
+      // P0-0928-URL-SLUG-FIX: 301 redirect ugly article-api URLs to clean slugs
+      {
+        source: "/blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md",
+        destination: "/blog/midjourney-v7-review-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md",
+        destination: "/blog/elevenlabs-v2-review-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+        destination: "/blog/creatium-coach-review-2025",
+        permanent: true,
+      },
+      {
+        source: "/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md",
+        destination: "/blog/midjourney-v7-review-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md",
+        destination: "/blog/elevenlabs-review-2026",
+        permanent: true,
+      },
+      {
+        source: "/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md",
+        destination: "/blog/creatium-coach-review-2025",
+        permanent: true,
+      },
+      {
+        source: "/blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md",
+        destination: "/blog/creatium-coach-review-2025",
+        permanent: true,
+      },
+
       // OpenSEO fix: /tools/visme 404 -> /category/design
       {
         source: "/tools/visme",

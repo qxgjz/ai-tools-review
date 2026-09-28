@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { Shield, Award, Users, Mail, Github, ExternalLink, CheckCircle2, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About Us - AIToolCrux | Professional AI Tool Reviews',
+  title: 'About AIToolCrux: Best AI Tools Reviewed & Tested in 2026',
   description:
-    'AIToolCrux provides expert, unbiased AI tool reviews and comparisons. Our mission is to help you find the perfect AI tools with transparent, data-driven eval...',
+    'AIToolCrux independently tests and reviews the best AI tools of 2026. Compare AI chatbots, image generators, voice tools, and more with real screenshots and pricing.',
   alternates: {
     canonical: 'https://www.aitoolcrux.com/about',
   },
