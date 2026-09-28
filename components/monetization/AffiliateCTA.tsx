@@ -72,7 +72,7 @@ export function AffiliateCTA({
           href={url}
           target="_blank"
           rel="noopener noreferrer sponsored"
-          className="text-emerald-600 dark:text-emerald-400 hover:underline font-medium"
+          className="text-emerald-700 dark:text-emerald-400 hover:underline font-medium"
           data-cta-type="affiliate"
           data-tool={toolName}
           onClick={() => trackCtaClick(toolName, 'inline', isAffiliate)}
@@ -101,7 +101,7 @@ export function AffiliateCTA({
               href={url}
               target="_blank"
               rel="noopener noreferrer sponsored"
-              className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 transition-colors whitespace-nowrap shadow-sm hover:shadow-md"
               data-cta-type="affiliate"
               data-tool={toolName}
               onClick={() => trackCtaClick(toolName, 'bottom', isAffiliate)}
@@ -155,7 +155,7 @@ export function AffiliateCTA({
             href={url}
             target="_blank"
             rel="noopener noreferrer sponsored"
-            className="inline-flex items-center gap-2 px-6 py-3.5 bg-gradient-to-r from-emerald-600 to-emerald-600 text-white rounded-lg font-bold text-sm hover:from-emerald-700 hover:to-emerald-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3.5 min-h-[44px] bg-gradient-to-r from-emerald-700 to-teal-600 text-white rounded-lg font-bold text-sm hover:from-emerald-800 hover:to-teal-700 transition-all shadow-md hover:shadow-lg transform hover:-translate-y-0.5 whitespace-nowrap"
             data-cta-type="affiliate"
             data-tool={toolName}
             onClick={() => trackCtaClick(toolName, 'banner', isAffiliate)}
@@ -202,7 +202,7 @@ export function CompareAffiliateButton({
       href={url}
       target="_blank"
       rel="noopener noreferrer sponsored"
-      className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 hover:underline text-sm font-medium"
+      className="inline-flex items-center gap-1 text-emerald-700 dark:text-emerald-400 hover:underline text-sm font-medium"
       data-cta-type="affiliate"
       data-tool={toolName}
       onClick={() => trackCtaClick(toolName, 'compare', true)}
