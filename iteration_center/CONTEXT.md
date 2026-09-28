@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-27 20:10 UTC
+> Generated: 2026-09-28 22:33 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,7 +17,7 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 108 |
+| Posts | 105 |
 | Categories | N/A |
 | Comparisons | 10 |
 
@@ -37,21 +37,21 @@
 
 ## Recent Iterations
 
+- **Round ?** (98b0b77e90c88af37acd060f2cceb15a26e90b1e): 
+- **Round ?** (9d3a1eb9aadf6255501ccc9f5c3f7e21fedefd6a): Banner CTA: from-emerald-600 to-emerald-600 -> from-emerald-700 to-teal-600 (3.7; Banner CTA hover: hover:from-emerald-700 -> hover:from-emerald-800 (对比度递增); Banner CTA: 添加 min-h-[44px] + justify-cent
+- **Round ?** (a11cb36e7d146d7d2db7ccbf03a684985307b51f): CTA文案: 'Subscribe Free' -> 'Get My Free Tools' (第一人称+结果导向，避免摩擦词，Aagaard研究+90%转化); Compact变体: 按钮/输入框高度 32px -> 44px (Baymard 7mm最小触摸目标); Compact变体: 添加隐私微文案 'No spam. Unsubscribe anytime. We respect you
 - **Round ?** (0bb21db7): 
 - **Round ?** (6dbbeede2d4dbdc817783c7ffe948961ccd6b882): 导入 usePathname from next/navigation; 添加 isActive(href) 辅助函数（/精确匹配，其他startsWith）; 桌面端导航：active时 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emera
-- **Round ?** (9e9bfcb6, 06436f3e, 2a29c53e): 全站CTA按钮对比度修复: bg-emerald-600(3.72:1 AA失败) -> bg-emerald-700(5.15:1 AA通过); 移除CTA按钮暗色模式反效果变体 dark:bg-emerald-500 dark:hover:bg-emerald-400 (暗色模式更浅=对比度更差); 修复9处CTA hover状态: hover:bg-emerald-700(与base相同无反
-- **Round ?** (19c4054acf3a9bec3d67dab311ff9979b9686799): FadeIn + ToolCard: add prefers-reduced-motion (framer-motion useReducedMotion ho; ToolCard: hover shadow-md -> shadow-lg, score numbers tabular-nums; Tool detail page: big score + 6 dimension scores t
-- **Round 2026-09-26** (8364a11570c4e601e78361cde90db749e512bb9d): 修复英文站残留中文UI：首页移动端快速入口芯片改为 Quick Access + AI Chat/AI Image/AI Coding/AI Writing/A; 修复英文站残留中文UI：工具详情页主CTA信任行改为 Independently tested / Transparent scoring / No paid ; 新建 iteration_center/ux_audit.md 记录全面
 
 ## GSC Data
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 7 |
-| Impressions | 1506 |
-| CTR | 0.46% |
-| Avg Ranking | 23.87 |
-| Report | prev_gsc.md |
+| Clicks | 8 |
+| Impressions | 1581 |
+| CTR | 0.51% |
+| Avg Ranking | 23.98 |
+| Report | latest_gsc.md |
 
 ## Audit Findings (pending)
 
