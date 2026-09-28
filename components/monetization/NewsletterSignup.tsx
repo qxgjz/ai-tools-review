@@ -56,7 +56,7 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
 
   if (variant === 'compact') {
     return (
-      <div className="bg-gradient-to-r from-emerald-600 to-emerald-600 rounded-xl p-6 text-white">
+      <div className="bg-gradient-to-br from-emerald-700 to-teal-600 rounded-xl p-6 text-white shadow-lg">
         <h3 className="text-lg font-bold mb-1">Get 5 Free AI Tools Weekly</h3>
         <p className="text-emerald-100 text-sm mb-4">5 hand-picked free AI tools, no VPN needed.</p>
         {status === 'success' ? (
@@ -70,26 +70,29 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="your@email.com"
-              className="flex-1 px-3 py-2 rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-white"
+              className="flex-1 px-4 py-3 min-h-[44px] rounded-lg text-gray-900 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-emerald-700"
             />
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-4 py-2 bg-white text-emerald-600 rounded-lg font-semibold text-sm hover:bg-emerald-50 disabled:opacity-60 inline-flex items-center gap-2 transition-colors"
+              className="px-5 py-3 min-h-[44px] bg-white text-emerald-700 rounded-lg font-semibold text-sm hover:bg-emerald-50 hover:shadow-md disabled:opacity-60 inline-flex items-center justify-center gap-2 transition-all"
             >
               {status === 'loading' && (
                 <span
-                  className="w-3.5 h-3.5 border-2 border-emerald-600 border-t-transparent rounded-full animate-spin"
+                  className="w-4 h-4 border-2 border-emerald-700 border-t-transparent rounded-full animate-spin"
                   aria-hidden="true"
                 />
               )}
-              {status === 'loading' ? 'Subscribing...' : 'Subscribe Free'}
+              {status === 'loading' ? 'Sending...' : 'Get My Free Tools'}
             </button>
           </form>
         )}
         {status === 'error' && (
           <p className="text-red-200 text-xs mt-2">Please enter a valid email.</p>
         )}
+        <p className="text-emerald-100/80 text-xs mt-3">
+          No spam. Unsubscribe anytime. We respect your inbox.
+        </p>
       </div>
     );
   }
@@ -132,7 +135,7 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
             <button
               type="submit"
               disabled={status === 'loading'}
-              className="px-6 py-3 bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 disabled:opacity-60 inline-flex items-center justify-center gap-2 transition-colors"
+              className="px-6 py-3 min-h-[44px] bg-emerald-700 text-white rounded-lg font-semibold hover:bg-emerald-800 hover:shadow-lg disabled:opacity-60 inline-flex items-center justify-center gap-2 transition-all"
             >
               {status === 'loading' && (
                 <span
@@ -140,7 +143,7 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
                   aria-hidden="true"
                 />
               )}
-              {status === 'loading' ? 'Subscribing...' : 'Subscribe Free'}
+              {status === 'loading' ? 'Sending...' : 'Get My Free Tools'}
             </button>
           </form>
         )}
