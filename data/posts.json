@@ -1942,7 +1942,8 @@
     "updatedAt": "2026-08-12",
     "lastUpdated": "2026-08-12",
     "hasRealScreenshots": true,
-    "screenshotCount": 2
+    "screenshotCount": 2,
+    "metaDescription": "I used OpenAI Astra for 2 weeks across 40 real coding tasks. It beats Cursor on full-repo refactors but costs 5x more. Here's when it's actually worth..."
   },
   {
     "slug": "chatgpt-deep-review-2026",

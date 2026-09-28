@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 109,
+  "current_iteration": 110,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-28T05:14:11.187501",
+  "last_updated": "2026-09-28T16:16:21.693314",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -4154,6 +4154,603 @@
       },
       "status": "pending",
       "created_at": "2026-09-28"
+    },
+    {
+      "id": "P1-DEPLOY-ISR-ONDEMAND-001",
+      "title": "添加/api/revalidate按需重新生成路由",
+      "description": "在app/api/revalidate/route.ts添加Route Handler，支持revalidatePath和revalidateTag，配合webhook在tools.json/posts.json更新时触发特定页面ISR重新生成，无需全量重新部署。需配置secret token验证。",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T06:21:25.272805",
+      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime"
+    },
+    {
+      "id": "P1-DEPLOY-SKIP-PREVIEW-GEN-001",
+      "title": "preview部署跳过静态页预渲染加速构建",
+      "description": "在app/tools/[slug]/page.tsx和app/blog/[slug]/page.tsx的generateStaticParams中添加process.env.SKIP_BUILD_STATIC_GENERATION检查，preview环境返回[]跳过533+108页预渲染，将preview构建从2-3分钟降至30秒内。production环境保持完整预渲染。",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T06:21:25.272811",
+      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime"
+    },
+    {
+      "id": "P1-DEPLOY-SELECTIVE-PRERENDER-001",
+      "title": "工具页/文章页改为选择性预渲染+ISR",
+      "description": "generateStaticParams只返回Top 50热门工具+Top 20文章的slug（基于GSC点击数据），其余页面dynamicParams=true按需生成+export const revalidate=86400（24小时ISR）。显著降低production构建时间，长尾页首次访问稍慢但后续缓存命中。需评估对SEO的影响（首次访问未预渲染的页面）。",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created_at": "2026-09-28T06:21:25.272812",
+      "source": "学习_2026-09-28_Vercel部署优化与EdgeRuntime"
+    },
+    {
+      "id": "P0-QUALITY-F-ARTICLES",
+      "title": "重写2篇F级文章（best-ai-design-tools 58分、best-ai-image-generators 58分）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "2篇文章质量评分58分(F级)，严重拖低整体质量，需立即重写",
+      "created_at": "2026-09-28T07:51:08.386539",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-QUALITY-BELOW85",
+      "title": "优化28篇低于85分的文章质量",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "28篇文章质量分<85，需补充内容、图片、外链",
+      "created_at": "2026-09-28T07:51:08.386562",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-QUALITY-IMAGE-COVERAGE",
+      "title": "提升文章图片覆盖率从59%到90%（45篇缺图）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "仅64/109篇有图片，45篇缺真实截图",
+      "created_at": "2026-09-28T07:51:08.386565",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-QUALITY-READABILITY",
+      "title": "提升可读性通过率从58%到90%（46篇不达标）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "仅63/109篇可读性达标，Flesch分数过低",
+      "created_at": "2026-09-28T07:51:08.386566",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-QUALITY-EXT-LINKS",
+      "title": "提升外链通过率从32%到80%（74篇缺外链）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "仅35/109篇有外部链接，严重影响E-E-A-T",
+      "created_at": "2026-09-28T07:51:08.386568",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-INDEX-NOINDEX-CHECK",
+      "title": "检查/tools/midjourney、/tools/elevenlabs、/tools/notion-ai是否有noindex标签",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "index_monitor.md",
+      "description": "3个高搜索量工具页在GSC完全无曝光，可能被noindex",
+      "created_at": "2026-09-28T07:51:08.386570",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-INDEX-INDEXNOW-BATCH",
+      "title": "IndexNow批量提交Top50无曝光工具页URL",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "index_monitor.md",
+      "description": "427个页面未被Google索引，需批量提交加速收录",
+      "created_at": "2026-09-28T07:51:08.386572",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-INDEX-CATEGORY-PAGES",
+      "title": "6个分类页无曝光，加内链指向（chatbots/image-generation/video/marketing等）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "index_monitor.md",
+      "description": "分类页是流量入口，6个完全无曝光",
+      "created_at": "2026-09-28T07:51:08.386573",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-CTR-ZERO-CLICK-PAGES",
+      "title": "优化4个Top10零点击页标题和meta（dify/cursor/stable-diffusion/midjourney-v7）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "ga4_latest_data.md",
+      "description": "4个页面排名前10但CTR=0%，标题/meta严重不吸引人",
+      "created_at": "2026-09-28T07:51:08.386575",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-CTR-FUNNEL-BROKEN",
+      "title": "修复曝光→点击漏斗断裂（CTR 0.45%远低于行业2-5%）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "ga4_latest_data.md",
+      "description": "GSC 2002曝光仅9点击，全站CTR优化是最高优先级",
+      "created_at": "2026-09-28T07:51:08.386577",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-BOT-SINGAPORE-FLOOD",
+      "title": "Cloudflare WAF规则过滤新加坡数据中心Bot流量（97.5%用户是Bot）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "ga4_latest_data.md",
+      "description": "新加坡Bot洪水严重污染GA4数据，需WAF规则拦截",
+      "created_at": "2026-09-28T07:51:08.386579",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-CONVERSION-TRACKING",
+      "title": "配置GA4 Key Events转化追踪（CTA点击/外链点击/搜索）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口4-数据分析"
+      ],
+      "status": "pending",
+      "source": "ga4_latest_data.md",
+      "description": "当前0转化追踪，无法衡量业务价值",
+      "created_at": "2026-09-28T07:51:08.386580",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-MONETIZE-AFFILIATE-COVERAGE",
+      "title": "533个工具页批量添加affiliateUrl字段（当前仅1个，覆盖率0.19%）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "monetization_opportunities.md",
+      "description": "变现几乎为零的根本原因，532个工具页无联盟链接",
+      "created_at": "2026-09-28T07:51:08.386582",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-MONETIZE-CTA-COPY",
+      "title": "CTA文案从Visit Site改为场景化（Try [Tool] Free/Start Free Trial）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "monetization_opportunities.md",
+      "description": "场景化CTA可提升5-20%点击率",
+      "created_at": "2026-09-28T07:51:08.386584",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-MONETIZE-SPONSORED-ATTR",
+      "title": "所有affiliate链接加rel=sponsored属性（FTC合规）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "monetization_opportunities.md",
+      "description": "FTC合规要求，避免被Google惩罚",
+      "created_at": "2026-09-28T07:51:08.386586",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P1-MONETIZE-MANGOOLS-ADD",
+      "title": "tools.json添加Mangools工具条目+affiliateUrl",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "monetization_opportunities.md",
+      "description": "Mangools联盟已获批但不在tools.json中",
+      "created_at": "2026-09-28T07:51:08.386588",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-FORMAT-H2-ZERO",
+      "title": "修复多篇文章H2标题为0的排版问题（perplexity-review/cursor-vs-windsurf/heygen-review等）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "audit_findings.md",
+      "description": "多篇文章H2=0，严重影响SEO和可读性",
+      "created_at": "2026-09-28T07:51:08.386590",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-FORMAT-FAQ-MISSING",
+      "title": "修复多篇文章完全缺少FAQ（dify-vs-coze/cursor-vs-windsurf/best-ai-translation等）",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "audit_findings.md",
+      "description": "FAQ是精选摘要和AI引用的关键，多篇完全缺失",
+      "created_at": "2026-09-28T07:51:08.386592",
+      "created_by": "commander-daily-dispatch"
+    },
+    {
+      "id": "P0-W42-BROKEN-LINKS",
+      "title": "修复OpenSEO审计发现的23个critical断链",
+      "description": "9/27 OpenSEO审计发现23个broken-internal-link（上周为0，技术回归）。需逐个检查并修复，修复后重新审计验证critical=0。",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "OpenSEO重新审计critical broken-internal-link=0"
+    },
+    {
+      "id": "P0-W42-CTR-TITLE-REWRITE",
+      "title": "用CTR大师课公式重写4篇零点击Top10页的Title+Meta",
+      "description": "dify(5.54名/48曝光/0点击)、cursor(6.88/49/0)、stable-diffusion(8.45/51/0)、midjourney-v7(6.92/38/0)。公式：标题50-60字符+关键词前置+数字/权力词+品牌末尾；Meta 105-155字符+利益+证明+CTA。参考best-ai-voice-changers(CTR3.39%)。",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "4篇Title+Meta已更新，2-4周后GSC CTR从0%提升到>1%"
+    },
+    {
+      "id": "P0-W42-GA4-BOT-FILTER",
+      "title": "GA4设置Bot过滤器排除新加坡数据中心IP",
+      "description": "近7天97.5%用户来自新加坡(1097用户/互动6.2%/停留5秒)，为数据中心Bot。需在GA4 Admin创建内部流量过滤器，排除新加坡数据中心IP段。所有后续报告分'全量/真实用户'双口径。",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口4"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "GA4过滤器生效，真实用户口径中新加坡Bot占比<5%"
+    },
+    {
+      "id": "P1-W42-CONVERSION-TRACKING",
+      "title": "部署GA4 outbound_click转化追踪",
+      "description": "当前0 Key Events/0转化，联盟点击完全不可见。需在gtag中添加outbound click事件监听，标记为Key Event，按页面类型(工具页/文章页/对比页)统计RPM。",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "GA4中可见outbound_click事件，可按pagePath统计点击数"
+    },
+    {
+      "id": "P1-W42-ASTRA-PUSH-TOP10",
+      "title": "openai_astra_review推入Top10",
+      "description": "当前145曝光/排名11.38/1点击，距Top10最近。从/compare和/category页加内链，补充FAQ和对比表格，更新发布日期。",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口1",
+        "窗口3"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "GSC排名进入Top10，CTR>1%"
+    },
+    {
+      "id": "P1-W42-QUALITY-28-ARTICLES",
+      "title": "28篇低于85分文章质量提升（图片+外链+可读性）",
+      "description": "quality_audit显示28篇<85分。最大短板：external_links_pass仅32%、readability_pass仅58%、has_images仅59%。每篇补≥1张截图、≥3个权威外链、优化段落长度。",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "28篇质量分全部≥85，全站图片覆盖率>80%，外链通过率>60%"
+    },
+    {
+      "id": "P1-W42-ZENSINK-RETRACK",
+      "title": "zens-ink替换无效追踪词为GSC高曝光词",
+      "description": "当前8词(priompt/autopr/creatium等)全部US Top20外。移除无曝光品牌词，添加GSC有曝光的词：ai observability tools, cursor ai review, ai agent, ai comparison tools, ai tool for coding等。",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口4"
+      ],
+      "status": "pending",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "追踪列表更新为GSC有曝光的词，至少3个词进入US Top50"
+    },
+    {
+      "id": "P0-GEO-BING-ROBOTS",
+      "title": "提交Bing Webmaster Tools + 检查robots.txt允许GPTBot/PerplexityBot/ClaudeBot/Google-Extended",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口1-技术SEO"
+      ],
+      "status": "pending",
+      "source": "commander_learning_GEO_2026",
+      "description": "87% ChatGPT引用来自Bing索引。当前未确认Bing提交状态。robots.txt可能默认屏蔽AI爬虫。必须立即修复，否则对最大AI引擎不可见。",
+      "created_at": "2026-09-28T09:06:35.576214",
+      "created_by": "commander-strategic-learning"
+    },
+    {
+      "id": "P0-GEO-CONTENT-STRUCTURE",
+      "title": "109篇文章GEO改造：前30%加直接答案+每100字1个统计数据+FAQPage schema",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "commander_learning_GEO_2026",
+      "description": "44.2% LLM引用来自页面前30%，GEO三大技术(统计+引用+来源)可提升+40%到+115%可见度。当前文章开头多为背景介绍，没有直接答案。FAQ schema覆盖率低。",
+      "created_at": "2026-09-28T09:06:35.576223",
+      "created_by": "commander-strategic-learning"
+    },
+    {
+      "id": "P1-GEO-AI-REFERRAL-TRACKING",
+      "title": "配置GA4 AI Referral渠道分组(ChatGPT/Perplexity/Gemini/Claude)+每周25查询AI引用审计",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口4-数据分析"
+      ],
+      "status": "pending",
+      "source": "commander_learning_GEO_2026",
+      "description": "AI流量转化率是Google 8-9倍，ChatGPT占AI推荐流量87.4%。当前GA4无AI Referral独立追踪，无法衡量GEO效果。需建立AI引用频率(AICF)指标。",
+      "created_at": "2026-09-28T09:06:35.576224",
+      "created_by": "commander-strategic-learning"
+    },
+    {
+      "id": "P0-0928-GA4-SERVICE-ACCOUNT",
+      "title": "修复GA4服务账号认证失败(account not found)",
+      "priority": "P0",
+      "assigned_to": "用户操作",
+      "status": "pending",
+      "description": "GA4 API返回invalid_grant: account not found。检查Google Cloud项目aitoolcrux-analytics状态，重新创建服务账号ga4-api-access并授予GA4 Property 552513639查看者权限。",
+      "created": "2026-09-28 09:16"
+    },
+    {
+      "id": "P0-0928-URL-SLUG-FIX",
+      "title": "修复article-api-*丑陋URL和creatium重复内容",
+      "priority": "P0",
+      "assigned_to": "窗口1",
+      "status": "completed",
+      "description": "5个/article-api-YYYYMMDD-HHMMSS-title-md格式URL需301重定向到干净slug。creatium-coach-review有3个重复URL(64曝光)需合并。",
+      "created": "2026-09-28 09:16",
+      "completed_at": "2026-09-28 13:35:46",
+      "commit": "dd710b1"
+    },
+    {
+      "id": "P0-0928-ZERO-CLICK-TITLES",
+      "title": "重写4篇Top10零点击页Title+Meta",
+      "priority": "P0",
+      "assigned_to": "窗口1",
+      "status": "completed",
+      "description": "about(pos2.8), adobe-firefly-review(pos6.4), creatium-coach-review(pos6.4), elevenlabs-review(pos9.6)排名Top10但零点击。使用best X 2026高CTR标题格式。",
+      "created": "2026-09-28 09:16",
+      "completed_at": "2026-09-28 13:35:46",
+      "commit": "dd710b1"
+    },
+    {
+      "id": "P1-0928-ASTRA-TOP10",
+      "title": "openai_astra_review推入Top10",
+      "priority": "P1",
+      "assigned_to": "窗口1+窗口3",
+      "status": "pending",
+      "description": "当前排名11.1，145曝光。增加内链、优化内容深度、添加FAQ结构化数据，目标进入Top10。",
+      "created": "2026-09-28 09:16"
+    },
+    {
+      "id": "P1-0928-CF-TRAFFIC-SPIKE",
+      "title": "调查Cloudflare流量翻倍原因",
+      "priority": "P1",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "description": "24h流量从278MB增至558MB(+100%)，请求数微降。检查是否有大文件/图片被爬虫抓取，优化图片格式和缓存。",
+      "created": "2026-09-28 09:16"
+    },
+    {
+      "id": "P1-0928-ZENSINK-RETRACK",
+      "title": "zens-ink替换无效追踪词为GSC高曝光词",
+      "priority": "P1",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "description": "当前8词全部US Top20外。替换为: openai astra review, adobe firefly review 2026, best ai voice changers 2026, creatium coach review, elevenlabs review 2026, ai tools for beginners 2026。",
+      "created": "2026-09-28 09:16"
+    },
+    {
+      "id": "P1-0928-GA4-BOT-FILTER",
+      "title": "GA4设置Bot过滤器排除新加坡流量",
+      "priority": "P1",
+      "assigned_to": "用户操作",
+      "status": "pending",
+      "description": "97.5%流量来自新加坡(Bot)，互动率2.1%。在GA4 Admin中创建过滤器排除新加坡IP，或启用Google信号Bot过滤。",
+      "created": "2026-09-28 09:16"
+    },
+    {
+      "id": "P1-0928-MISSING-H1",
+      "title": "修复9个博客页缺少H1标题问题",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "OpenSEO审计发现9个博客文章页缺少H1标题: best-paid-ai-tools, dify-vs-langchain, cursor-vs-windsurf, gemini-alternatives, notion-ai-alternative等。检查Next.js文章模板H1渲染。",
+      "created": "2026-09-28 09:24"
+    },
+    {
+      "id": "P2-GROWTH-SERPER-TARGETS-001",
+      "title": "跟进Serper API发现的78个外链目标",
+      "description": "从78个目标中筛选write-for-us和resource page，发外联邮件",
+      "assigned_to": "窗口2",
+      "status": "pending",
+      "priority": "P2",
+      "created": "2026-09-28"
+    },
+    {
+      "id": "P2-GROWTH-TOOLSCOUT-001",
+      "title": "完成toolscout.ai注册并提交",
+      "description": "验证码已发到840754587@qq.com，登录后提交AIToolCrux",
+      "assigned_to": "窗口2",
+      "status": "in_progress",
+      "priority": "P2",
+      "created": "2026-09-28",
+      "notes": "验证码邮件未到达，待重试"
+    },
+    {
+      "id": "P2-GROWTH-REDDIT-ENGAGE-001",
+      "title": "Reddit高赞帖子参与（10个目标）",
+      "description": "在r/AI_Agents、r/vibecoding等10个帖子下提供有价值回答",
+      "assigned_to": "窗口2",
+      "status": "pending",
+      "priority": "P2",
+      "created": "2026-09-28"
+    },
+    {
+      "id": "P2-GROWTH-THERUNDOWN-001",
+      "title": "发邮件提交到therundown.ai",
+      "description": "发邮件到support@therundown.ai提交AIToolCrux",
+      "assigned_to": "窗口2",
+      "status": "pending",
+      "priority": "P2",
+      "created": "2026-09-28"
+    },
+    {
+      "id": "P1-MONETIZE-AUDIT-FIX-001",
+      "title": "修复93篇无联盟链接文章的CTA",
+      "description": "审计发现93/105篇文章无联盟链接。为Top 20高流量文章添加联盟CTA组件，优先ElevenLabs和Mangools。需要窗口1在文章模板中添加AffiliateCTA组件。",
+      "assigned_to": [
+        "窗口1",
+        "窗口5"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "P1-MONETIZE-CTA-COPY-001",
+      "title": "CTA文案优化：Get Started→Start [Tool] Free Trial",
+      "description": "审计发现38篇文章仍用通用CTA 'Get Started'，0篇用'Start Free Trial'。按用户规范：免费工具'Try [Tool] Free'，付费工具'Start [Tool] Free Trial'，按钮下加doubt remover小字。",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "P2-MONETIZE-CUSTOMGPT-001",
+      "title": "申请CustomGPT.ai联盟（30%终身recurring）",
+      "description": "CustomGPT.ai: 30% lifetime recurring, AI chatbot/自动化工具。申请链接: https://customgpt.ai/affiliate。匹配内容: AI chatbot、客户支持自动化、知识库。",
+      "assigned_to": [
+        "窗口5"
+      ],
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-09-28"
+    },
+    {
+      "id": "P1-AHREFS-TRACKING-INSTALL",
+      "title": "确认Ahrefs Web Analytics追踪代码已安装到网站<head>",
+      "priority": "P1",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "description": "将<script src=\"https://analytics.ahrefs.com/analytics.js\" data-key=\"az24JooznS8RwJ/gaW5Xcg\" async></script>添加到Next.js项目的layout.tsx <head>中。然后在Ahrefs设置页点击'验证安装'。当前GA数据已导入Ahrefs，但Ahrefs自有JS采集未验证。",
+      "created": "2026-09-28 19:09"
+    },
+    {
+      "id": "P0-CONTENT-DUPLICATE-CREATIUM-001",
+      "priority": "P0",
+      "title": "合并3篇Creatium Coach重复评测文章，清理article-api-URL污染",
+      "description": "GSC发现3篇Creatium Coach评测文章内容高度重复，URL格式为article-api-20260903-...-md，互相蚕食排名（合计64曝光0点击，排名6.4-9.8）。需合并为1篇规范URL（如/blog/creatium-coach-review），其余2篇301重定向。同时全站扫描是否有更多article-api-前缀的污染URL。",
+      "assigned_to": "窗口1",
+      "source": "窗口4 GSC深度分析 2026-09-28",
+      "status": "completed",
+      "created_at": "2026-09-28 21:35:00",
+      "completed_at": "2026-09-28 22:01:50",
+      "commit": "dd710b1",
+      "note": "已由P0-0928-URL-SLUG-FIX/P0-0928-ZERO-CLICK-TITLES覆盖完成"
+    },
+    {
+      "id": "P0-CTR-ADOBE-FIREFLY-001",
+      "priority": "P0",
+      "title": "重写adobe-firefly-review的Title和Meta Description（排名第6但0点击）",
+      "description": "/blog/adobe-firefly-review-2026平均排名6.4，33次曝光但CTR=0%。Title/Meta不吸引人，需重写：Title加数字+年份+情绪词（50-60字符），Meta Description加利益点+CTA（150-160字符）。目标CTR从0%提升到2-3%。",
+      "assigned_to": "窗口1",
+      "source": "窗口4 GSC深度分析 2026-09-28",
+      "status": "completed",
+      "created_at": "2026-09-28 21:35:00",
+      "completed_at": "2026-09-28 22:01:50",
+      "commit": "dd710b1",
+      "note": "已由P0-0928-URL-SLUG-FIX/P0-0928-ZERO-CLICK-TITLES覆盖完成"
+    },
+    {
+      "id": "P1-RANK-TRACKER-REPLACE-001",
+      "priority": "P1",
+      "title": "替换zens-ink追踪词为GSC实际有排名的长尾词",
+      "description": "当前追踪8词全部为头部大词（ai tools/best ai tools等），新站不可能进Top20。GSC显示openai astra review排名11.1（145曝光）、adobe firefly排名6.4、best ai voice changers排名16.5（68曝光），这些有实际排名的词反而没追踪。替换为：openai astra review、adobe firefly review 2026、best ai voice changers 2026、creatium coach review、elevenlabs review 2026。",
+      "assigned_to": "窗口4",
+      "source": "窗口4 zens-ink排名检查 2026-09-28",
+      "status": "pending",
+      "created_at": "2026-09-28 21:35:00"
+    },
+    {
+      "id": "P1-CTR-OPENAI-ASTRA-001",
+      "priority": "P1",
+      "title": "优化openai_astra_review的Title/Meta（145曝光仅1点击）",
+      "description": "/blog/openai_astra_review排名11.1，145次曝光仅1点击（CTR 0.7%）。这是全站曝光最高的文章页，CTR优化空间大。重写Title和Meta Description，目标CTR提升到2%+。",
+      "assigned_to": "窗口1",
+      "source": "窗口4 GSC深度分析 2026-09-28",
+      "status": "pending",
+      "created_at": "2026-09-28 21:35:00"
     }
   ],
   "milestones": [
@@ -5638,5 +6235,62 @@
       "tsc_passed": true,
       "live_verified": true
     }
-  ]
+  ],
+  "last_commander_review": "2026-09-28 08:05",
+  "commander_health_score": 5.3,
+  "last_analytics_run": "2026-09-28 09:16",
+  "ga4_api_status": "BROKEN - service account not found, superseded by Ahrefs Web Analytics",
+  "gsc_latest_clicks": 9,
+  "gsc_latest_impressions": 2002,
+  "gsc_latest_ctr": "0.45%",
+  "cloudflare_24h_requests": 7948,
+  "cloudflare_24h_traffic_mb": 558.4,
+  "zensink_top20_count": 0,
+  "openseo_audit_status": "running (621/801 pages)",
+  "openseo_audit_id": "f43799f9-0016-4ce2-9490-b44285797a99",
+  "openseo_critical": 0,
+  "openseo_warning": 24,
+  "openseo_info": 476,
+  "openseo_last_run": "2026-09-28 09:24",
+  "last_published_article": {
+    "slug": "gemini-pricing-2026",
+    "title": "Gemini Pricing 2026: Is Advanced Worth $20/Month? [Real Cost Breakdown]",
+    "published_at": "2026-09-28 11:31:31",
+    "quality_score": 100.0,
+    "grade": "A",
+    "word_count": 2926,
+    "screenshots": 3,
+    "commit": "9f7b851",
+    "indexnow_submitted": true,
+    "geo_submitted": true,
+    "verified_200": true
+  },
+  "publication_stats": {
+    "total_published": 1,
+    "last_publish": "2026-09-28 11:31:31"
+  },
+  "analytics_provider": "ahrefs_web_analytics",
+  "ahrefs": {
+    "project_name": "Aitoocrux",
+    "project_id": "10383795",
+    "data_key": "az24JooznS8RwJ/gaW5Xcg",
+    "script_tag": "<script src=\"https://analytics.ahrefs.com/analytics.js\" data-key=\"az24JooznS8RwJ/gaW5Xcg\" async></script>",
+    "dashboard_url": "https://app.ahrefs.com/web-analytics/10383795/overview",
+    "connected_google_account": "q20260809720@gmail.com",
+    "connected_ga_property": "552513639",
+    "ga_import_status": "数据已导入",
+    "tracking_code_installed": "未知（需验证）",
+    "set_date": "2026-09-28"
+  },
+  "ga4_api_fallback": "Use Ahrefs Web Analytics dashboard for traffic data until new Google Cloud project + service account is created",
+  "pending_new_google_setup": {
+    "status": "waiting_for_user",
+    "google_account": "q20260809720@gmail.com",
+    "tasks": [
+      "Create new Google Cloud project",
+      "Create new service account with GA4 viewer permissions",
+      "Set up new GSC API credentials",
+      "Reconfigure .github/scripts/fetch_gsc.py with new credentials"
+    ]
+  }
 }

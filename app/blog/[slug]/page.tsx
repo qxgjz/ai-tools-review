@@ -376,6 +376,11 @@ export default function PostPage({ params }: PostPageProps) {
               />
             )}
 
+            {/* Article H1 Title */}
+            <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white mb-6 tracking-tight leading-tight">
+              {post.title}
+            </h1>
+
             {/* Article content */}
             <article
               style={
