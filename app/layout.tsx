@@ -13,6 +13,8 @@ import { BackToTop } from '@/components/layout/BackToTop';
 import { RouteFocusManager } from '@/components/layout/RouteFocusManager';
 import { ThemeProvider } from '@/components/theme/ThemeProvider';
 import { BaiduAnalytics } from '@/components/analytics/BaiduAnalytics';
+import { GA4PageTracker } from '@/components/analytics/GA4PageTracker';
+import { GA4EventTracker } from '@/components/analytics/GA4EventTracker';
 import WebVitalsReporter from '@/components/analytics/WebVitalsReporter';
 
 export const metadata: Metadata = {
@@ -465,6 +467,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <BackToTop />
         </ThemeProvider>
         <Analytics />
+        <GA4PageTracker />
+        <GA4EventTracker />
         <WebVitalsReporter />
       </body>
     </html>
