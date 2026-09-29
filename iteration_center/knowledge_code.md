@@ -8,6 +8,7 @@
 4. **禁止提交token**：commit/push/deploy临时脚本中绝不硬编码ghp_/vcp_/cfut_ token，全部加入.gitignore
 5. **push前验证**：git diff --cached --name-only 检查是否有.py脚本被staged，有则确认不含token
 6. **Vercel构建监控**：push后等2分钟，去Vercel看部署状态是否READY，失败立即看日志修复
+7. **文章质量100分硬门（2026-09-29用户硬性要求）**：所有文章必须通过 `python scripts/quality_audit.py` 且每篇100分（14/14检查项全通过），平均分100.0，0篇低于85分。达不到100分的文章不允许发布/部署。新文章写入posts.json前必须先过quality_audit，100分才允许提交。
 
 ---
 # 知识库：核心迭代（窗口1）
@@ -191,6 +192,83 @@ P0-HEALTH-001 说 public/screenshots/ 有0个webp文件 —— 这是误报。
 
 
 ## 待补充
+
+[2026-09-28] Vercel部署优化与Edge Runtime 2026（构建加速+ISR+Functions+Fluid Compute）
+
+知识点1：Vercel构建45分钟硬超时——所有计划通用，超过即部署失败。AIToolCrux有533工具页+108文章页SSG，当前构建约2-3分钟，但若内容增长到数千页需警惕。最有效优化是将页面生成从构建时移到请求时。（来源：https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel）
+
+知识点2：构建时间两大驱动因素——页面数量（预渲染静态页数量线性增长）和每页工作量（数据获取/图片生成/重计算）。533个工具页每个都要fetch tools.json并渲染，是构建时间主要消耗。（来源：https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel）
+
+知识点3：按需生成静态页（generateStaticParams空数组）——App Router中generateStaticParams返回空数组 + dynamicParams=true，构建时跳过所有动态页预渲染，首次访问时生成。AIToolCrux的app/tools/[slug]/page.tsx和app/blog/[slug]/page.tsx已设置dynamicParams=false（全部预渲染），可改为热门页预渲染+长尾页按需生成。（来源：https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel）
+
+知识点4：SKIP_BUILD_STATIC_GENERATION环境变量——在generateStaticParams中检查process.env.SKIP_BUILD_STATIC_GENERATION，preview构建返回[]跳过预渲染加速迭代，production保留完整预渲染。Vercel preview部署可设置此变量，将preview构建从2-3分钟降至30秒内。（来源：https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel）
+
+知识点5：ISR三种降低构建时间方式——①延迟生成：页面在请求时或API调用时生成而非构建时；②持久缓存：生成的页面存储在durable storage，CDN缓存最长31天或直到revalidate；③选择性预渲染：只预渲染热门页面，其余按需生成。（来源：https://vercel.com/docs/incremental-static-regeneration）
+
+知识点6：ISR App Router配置方式——路由段导出export const revalidate = 3600（秒）；或fetch请求添加{next: {revalidate: 3600}}选项。stale-while-revalidate模式：访问者立即获得缓存响应，后台重新生成。（来源：https://vercel.com/docs/incremental-static-regeneration + https://vercel.com/docs/frameworks/full-stack/nextjs）
+
+知识点7：On-demand Revalidation——从Route Handler调用revalidatePath('/tools/chatgpt')或revalidateTag('tools')触发特定页面重新生成，无需重新部署。配合CMS/webhook可实现内容更新后即时刷新。AIToolCrux可添加/api/revalidate路由，在tools.json/posts.json更新时触发。（来源：https://vercel.com/docs/incremental-static-regeneration/quickstart）
+
+知识点8：图片按需优化——Vercel自动在首次请求时优化next/image组件（调整尺寸/格式转换/压缩），结果CDN缓存31天。构建时不生成任何优化图片，因此添加图片不增加构建时间。AIToolCrux已使用next/image，无需额外配置。（来源：https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel）
+
+知识点9：构建机器类型——Standard(4 vCPU)、Enhanced(8 vCPU)、Turbo(30 vCPU)、Elastic(自动4-30 vCPU，新付费团队默认)。CPU密集型构建（打包/类型检查）在更多vCPU上更快。AIToolCrux当前可能在Standard，可考虑升级Elastic。（来源：https://vercel.com/kb/guide/how-do-i-reduce-my-build-time-with-next-js-on-vercel）
+
+知识点10：Vercel构建缓存——自动缓存node_modules依赖（1GB保留1个月），后续部署跳过重复npm install。Next.js的.next/cache也在Vercel上自动配置共享，无需手动操作。（来源：https://nextjs.org/docs/15/pages/guides/ci-build-caching + Vercel KB）
+
+知识点11：Turborepo Remote Caching——团队共享构建缓存，基于hash的任务级缓存。首次构建30-60秒，无变更后续构建2-5秒（缓存命中），部分变更只重建受影响包。Vercel团队自动启用Remote Caching。AIToolCrux目前非monorepo，但可考虑引入Turborepo管理scripts。（来源：https://vercel.com/docs/monorepos/remote-caching + https://vercel.com/academy/production-monorepos/turborepo-basics）
+
+知识点12：Vercel Functions Fluid Compute——新执行模型，同一函数实例内支持并发执行，利用I/O等待空闲时间进行计算，减少冷启动频率、降低延迟、节省计算成本。默认启用。AIToolCrux的API路由（如/api/search、/api/revalidate）运行在Functions上，Fluid Compute自动优化。（来源：https://vercel.com/docs/functions）
+
+知识点13：Functions区域配置——Node.js runtime默认在华盛顿iad1执行。应配置在靠近数据源的区域以减少延迟。AIToolCrux无外部数据库（数据在JSON文件中随构建部署），默认区域即可；若未来接入外部API/数据库需考虑区域。（来源：https://vercel.com/docs/functions）
+
+知识点14：waitUntil后台任务API——@vercel/functions的waitUntil()允许在发送响应后继续执行异步任务（如日志记录、分析上报、webhook通知），不阻塞响应时间。AIToolCrux可在API路由中用waitUntil异步上报GSC IndexNow或分析数据。（来源：https://vercel.com/docs/functions）
+
+知识点15：Next.js 16.3 Turbopack构建缓存——默认启用filesystem caching，在.next目录保存编译器数据，后续构建复用。vercel.com构建快1.4-5.5倍（cold 21s→cached 9.2s）。AIToolCrux当前Next.js 14.2.5，升级到16.x可获得Turbopack构建加速和持久磁盘缓存。（来源：https://nextjs.org/blog/next-16-3-preview + https://vercel.com/blog/vercel-supports-next-js-16-3）
+
+落地计划：
+- P1-DEPLOY-ISR-ONDEMAND-001：添加/api/revalidate路由，支持revalidatePath/revalidateTag，在tools.json/posts.json更新时触发按需重新生成，减少全量重新部署
+- P1-DEPLOY-SKIP-PREVIEW-GEN-001：在generateStaticParams中添加SKIP_BUILD_STATIC_GENERATION检查，preview部署跳过533+108页预渲染，将preview构建从2-3分钟降至30秒内
+- P1-DEPLOY-SELECTIVE-PRERENDER-001：工具页和文章页改为选择性预渲染——只预渲染Top 50热门工具+Top 20文章，其余用ISR按需生成+revalidate=86400，显著降低production构建时间
+
+
+[2026-09-28] Speculation Rules API与预导航优化（prerender/prefetch）
+
+知识点1：Speculation Rules API基本概念——通过<script type="speculationrules">JSON指令告知浏览器预取或预渲染未来页面导航，实现接近即时的页面切换。取代旧的<link rel="prerender">，是Chrome 121+稳定API。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点2：两种规则类型——URL列表规则（"urls": [...]）适用于已知的高置信下一页面；文档规则（"where": {"href_matches": "/*"}）基于URL模式或CSS选择器（selector_matches）自动匹配页面中的链接。两者互斥，Chrome 121移除了source键。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点3：Eagerness四档控制——conservative（点击/轻触时触发）、moderate（桌面悬停200ms或pointerdown；移动端视口启发式）、eager（桌面悬停10ms；移动端进入视口50ms）、immediate（观察到规则立即触发）。document规则默认conservative，list规则默认immediate。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点4：Prefetch vs Prerender——prefetch仅加载文档及子资源到内存缓存（不执行JS渲染），成本低适合第一步；prerender完整渲染到不可见后台标签页（执行JS、加载所有子资源），激活时接近零延迟，成本高。prerender对LCP/CLS/INP均有改善。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点5：Chrome硬性限制——immediate模式：prefetch最多50个、prerender最多10个；eager/moderate/conservative：各最多2个（FIFO替换）。达到上限后新推测取消最旧的。移动端eager/moderate预取限制可能增至5。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点6：浏览器自动抑制条件——Save-Data开启、节能模式+低电量、内存不足、"预加载网页"设置关闭（uBlock Origin等扩展会关闭）、后台标签页。预渲染是"提示"而非保证，浏览器可选择不执行。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点7：跨源限制——prerender默认仅同源；同站跨源（如a.example.com→b.example.com）需目标页返回Supports-Loading-Mode: credentialed-prerender头；跨源prefetch在无Cookie时支持，有Cookie则不推测。推荐模式：同源prerender + 跨源prefetch。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点8：No-Vary-Search支持——服务器可通过No-Vary-Search头指定不影响内容的URL参数（如UTM、id），浏览器可复用仅参数不同的缓存文档。规则中可用expects_no_vary_search提示浏览器预期该头。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages）
+
+知识点9：三种实现方式——HTML内联<script type="speculationrules">（最简单，构建时/SSR注入）；JavaScript动态注入（灵活，可根据用户行为/分析数据动态决定）；HTTP Speculation-Rules头指向外部JSON文件（CDN友好，不改文档内容）。（来源：https://developer.chrome.com/docs/web-platform/implementing-speculation-rules）
+
+知识点10：渐进式部署策略——第一步：所有同源链接moderate prefetch（低风险）；第二步：升级为moderate prerender；第三步：对高置信导航路径（如分类页→工具详情页）使用eager prerender + selector_matches标记关键链接。避免一开始就用immediate document规则。（来源：https://developer.chrome.com/docs/web-platform/implementing-speculation-rules）
+
+知识点11：分析与广告兼容性——GA4和Google AdSense发布商代码已支持prerender感知，在页面激活前不记录浏览/展示。自定义分析代码需检查document.prerendering或performance.getEntriesByType("navigation")[0].activationStart > 0来延迟执行。（来源：https://developer.chrome.com/docs/web-platform/implementing-speculation-rules）
+
+知识点12：预渲染页面状态同步——预渲染页面可能在激活时已过时（如购物车数量）。用Broadcast Channel API在标签页间广播状态更新；或服务器通过Clear-Site-Data头取消预渲染。移除speculationrules脚本元素可取消推测，重新插入需await Promise.resolve()微任务。（来源：https://developer.chrome.com/docs/web-platform/implementing-speculation-rules）
+
+知识点13：衡量效果——页面内检测：document.prerendering（正在预渲染）、activationStart > 0（已从预渲染激活）。CrUX大数据：查看navigate_cache和prerender导航类型占比。命中率=激活数/推测请求数，过低说明过度推测。（来源：https://developer.chrome.com/docs/web-platform/implementing-speculation-rules）
+
+知识点14：与Next.js Link prefetch关系——Next.js <Link prefetch>使用Router Cache预取RSC payload，是框架级预取；Speculation Rules是浏览器级API，可触发完整prerender（含JS执行），实现真正的即时导航。两者可叠加：Link prefetch预取数据层 + Speculation Rules预渲染页面层。（来源：https://developer.chrome.com/docs/web-platform/prerender-pages + Next.js docs）
+
+知识点15：AIToolCrux项目落地评估——533工具页+108文章页均为SSG静态页，CDN可缓存，预渲染成本极低。推荐：layout.tsx注入moderate prerender同源链接规则（排除/api/、/submit、/logout），工具详情页的"相关工具"链接加.prerender类用eager规则。预期：同源导航LCP降至接近0，INP改善（加载在交互前完成）。需注意AdSense已prerender感知，GA4已支持。（来源：项目架构分析 + Chrome官方文档）
+
+落地计划：
+- P2-PERF-SPECRULES-MODERATE-001：在app/layout.tsx添加Speculation Rules script，同源链接moderate prerender，排除/api/、/submit、/logout、/search等动态路径
+- P2-PERF-SPECRULES-EAGER-001：工具详情页相关工具链接添加.prerender类，用eager规则预渲染高置信导航
+- P2-PERF-SPECRULES-MEASURE-001：在WebVitalsReporter中添加prerender激活检测，统计prerender命中率和LCP改善
+- P2-PERF-SPECRULES-PREFETCH-001：跨源外链（如工具官网）使用moderate prefetch规则
+
 
 ## [2026-09-27] JavaScript SEO与渲染策略深度实战（CSR/SSR/SSG/ISR/PPR对SEO的影响）
 
