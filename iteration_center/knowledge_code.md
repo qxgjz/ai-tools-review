@@ -25,7 +25,15 @@
 - real_seo_audit: 9.6/10 Grade A+（0 critical, 23 warnings）
 - GEO/AEO: 9.4/10 Grade A
 - full_audit: 753页, 0 critical, 23 warnings, GEO 100/100
-- Lighthouse: 本地无法运行（sandbox无Chrome），在GitHub Actions CI中运行
+- Lighthouse: ✅ 已解决！用Edge浏览器运行（见下方命令）
+### Lighthouse运行命令（已验证2026-09-29）
+``powershell
+$env:CHROME_PATH = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
+lighthouse https://www.aitoolcrux.com --output=json --output-path=lh-home.json --chrome-path="$env:CHROME_PATH" --quiet
+``
+注意：不要用Puppeteer Chrome（连不上），必须用Edge。
+首页基准：Performance 39, Accessibility 96, Best Practices 92, SEO 100, Agentic 100
+LCP=10.2s（需优化）, FCP=4.6s, TBT=870ms, CLS=0
 - 文章质量: 107篇，106篇满分
 
 ### 已知warnings（非阻塞，逐步修复）
