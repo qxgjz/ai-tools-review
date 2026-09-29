@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-29 05:08:23",
+  "last_updated": "2026-09-29T14:12:05.945451",
   "completed_tasks": [
     {
       "iteration": 11,
@@ -730,6 +730,20 @@
       "articles_fixed": 106,
       "screenshots_added": 27,
       "average_score": 100.0
+    },
+    {
+      "task": "审计规则升级：全量审计+部署前门禁",
+      "date": "2026-09-29",
+      "description": "创建full_audit.py(753页全量三阶段审计)、pre_deploy_gate.py(部署前增量门禁)、升级push_via_api.py v2.0(集成门禁+修复硬编码Token)、更新3个GitHub Actions workflow、更新knowledge_code.md 5条新规则",
+      "files_changed": [
+        "scripts/full_audit.py (new)",
+        "scripts/pre_deploy_gate.py (new)",
+        "push_via_api.py (v2.0)",
+        ".github/workflows/pre-deploy-audit.yml (new)",
+        ".github/workflows/lighthouse-ci.yml (updated)",
+        ".github/workflows/seo-check.yml (updated)",
+        "iteration_center/knowledge_code.md (5 new rules)"
+      ]
     }
   ],
   "next_iteration_focus": [
@@ -5273,6 +5287,20 @@
       "status": "pending",
       "priority": "P1",
       "created_at": "2026-09-29"
+    },
+    {
+      "id": "P2-GROWTH-AIHUNTER-001",
+      "title": "重试ai-hunter.io提交（服务器错误）",
+      "priority": "P2",
+      "assigned_to": "窗口2",
+      "status": "pending"
+    },
+    {
+      "id": "P2-GROWTH-FREEAIDIR-001",
+      "title": "从freeaidirectories.com筛选5个新目录提交",
+      "priority": "P2",
+      "assigned_to": "窗口2",
+      "status": "pending"
     }
   ],
   "milestones": [
@@ -6813,6 +6841,40 @@
       "Create new service account with GA4 viewer permissions",
       "Set up new GSC API credentials",
       "Reconfigure .github/scripts/fetch_gsc.py with new credentials"
+    ]
+  },
+  "audit_system": {
+    "version": "2.0",
+    "updated_at": "2026-09-29T14:21:21.160813",
+    "full_audit_script": "scripts/full_audit.py",
+    "pre_deploy_gate": "scripts/pre_deploy_gate.py",
+    "push_via_api_version": "2.0",
+    "total_pages_in_sitemap": 753,
+    "page_breakdown": {
+      "tools": 533,
+      "blog": 134,
+      "subcategory": 37,
+      "category": 17,
+      "compare": 11,
+      "alternatives": 9,
+      "other": 12
+    },
+    "audit_phases": [
+      "Phase 1: Content Quality (14 checks, all articles)",
+      "Phase 2: Technical SEO (title/meta/canonical/H1/heading/alt/JSON-LD/broken links/response time)",
+      "Phase 3: GEO/AI Citation (robots.txt AI crawlers/llms.txt/structured data)"
+    ],
+    "github_actions": [
+      "pre-deploy-audit.yml (PR blocker)",
+      "lighthouse-ci.yml (PR blocker, scheduled non-blocker)",
+      "seo-check.yml (daily full audit via full_audit.py --quick)"
+    ],
+    "rules": [
+      "All articles must be 100/100 before deploy",
+      "pre_deploy_gate.py must pass before push_via_api.py",
+      "No hardcoded tokens (use GITHUB_TOKEN env var)",
+      "Full audit runs daily via GitHub Actions",
+      "PR merge blocked if audit fails"
     ]
   }
 }

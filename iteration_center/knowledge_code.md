@@ -9,6 +9,10 @@
 5. **push前验证**：git diff --cached --name-only 检查是否有.py脚本被staged，有则确认不含token
 6. **Vercel构建监控**：push后等2分钟，去Vercel看部署状态是否READY，失败立即看日志修复
 7. **文章质量100分硬门（2026-09-29用户硬性要求）**：所有文章必须通过 `python scripts/quality_audit.py` 且每篇100分（14/14检查项全通过），平均分100.0，0篇低于85分。达不到100分的文章不允许发布/部署。新文章写入posts.json前必须先过quality_audit，100分才允许提交。
+8. **全量审计门禁（2026-09-29用户硬性要求）**：每次部署前必须运行 `python scripts/pre_deploy_gate.py`，检查所有变更涉及的页面。门禁包含：文章质量100分、TypeScript 0错误、无硬编码密钥、技术SEO检查。门禁失败则阻止部署，必须修复后重新跑门禁。
+9. **全量审计工具（2026-09-29新增）**：`python scripts/full_audit.py` 检查sitemap.xml中全部753个页面（533工具页+134博客页+37子分类+17分类+11对比+9替代+其他），三阶段：内容质量（14项）+技术SEO（title/meta/canonical/H1/heading/alt/JSON-LD/断链/响应时间）+GEO/AI引用（robots.txt AI爬虫/llms.txt/结构化数据）。支持--quick（抽样50页）、--content-only（只查文章）、--fail-on-error（有critical问题退出码1）。
+10. **push_via_api.py v2.0（2026-09-29升级）**：推送前自动跑pre_deploy_gate.py，门禁失败则阻止推送。GitHub Token改用环境变量GITHUB_TOKEN或.env文件，不再硬编码。自动检测git变更文件，不再用硬编码文件列表。紧急情况可用--skip-gate跳过（仅限紧急修复）。
+11. **GitHub Actions审计（2026-09-29升级）**：新增pre-deploy-audit.yml（PR时跑全量审计+门禁，阻断合并）；lighthouse-ci.yml在PR时阻断（定时任务不阻断）；seo-check.yml改用full_audit.py --quick每日跑全量审计。
 
 ---
 # 知识库：核心迭代（窗口1）

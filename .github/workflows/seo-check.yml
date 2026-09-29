@@ -1,4 +1,4 @@
-name: SEO Check
+name: SEO Check (Full Audit)
 
 on:
   schedule:
@@ -16,25 +16,28 @@ concurrency:
 jobs:
   seo-check:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 30
     steps:
       - name: Checkout
-        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
 
       - name: Setup Python
-        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5
+        uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: '3.11'
 
-      - name: Run SEO check
-        run: python .github/scripts/seo_check.py
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Run Full Site Audit (quick mode)
+        run: python scripts/full_audit.py --quick
         continue-on-error: true
 
       - name: Commit report
         run: |
           git config --local user.email "github-actions[bot]@users.noreply.github.com"
           git config --local user.name "github-actions[bot]"
-          git add iteration_center/seo_check_latest.md
-          git diff --staged --quiet || git commit -m "🔍 SEO check $(date -u +%Y-%m-%d)"
+          git add iteration_center/full_audit_report.md iteration_center/full_audit_results.json
+          git diff --staged --quiet || git commit -m "🔍 Full SEO audit $(date -u +%Y-%m-%d)"
           git pull --rebase origin main || true
           git push || true
