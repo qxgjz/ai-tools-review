@@ -151,7 +151,7 @@ export function SearchBox({
           aria-label="Search AI tools"
           autoComplete="off"
           spellCheck={false}
-          className="w-full pl-10 pr-10 py-2.5 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 transition-all"
+          className="w-full pl-10 pr-10 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-xl text-sm text-gray-700 dark:text-gray-200 placeholder-gray-400 dark:placeholder-gray-500 focus:outline-none focus:border-blue-400 dark:focus:border-blue-500 focus:ring-2 focus:ring-blue-100 dark:focus:ring-blue-900/30 transition-all"
         />
         <div className="absolute right-2.5 top-1/2 -translate-y-1/2">
           {isSearching ? (
@@ -160,7 +160,7 @@ export function SearchBox({
             <button
               onClick={handleClear}
               aria-label="Clear search"
-              className="p-1 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors rounded"
+              className="min-h-[44px] min-w-[44px] flex items-center justify-center text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors rounded-lg"
             >
               <X className="w-4 h-4" />
             </button>
@@ -182,7 +182,7 @@ export function SearchBox({
                 </span>
                 <button
                   onClick={goToSearchPage}
-                  className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold transition-colors"
+                  className="text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold transition-colors py-2 px-3 min-h-[44px] inline-flex items-center rounded-md"
                 >
                   View all →
                 </button>
@@ -229,7 +229,7 @@ export function SearchBox({
               </div>
               <button
                 onClick={goToSearchPage}
-                className="text-xs text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold"
+                className="text-xs text-blue-500 dark:text-blue-400 hover:text-blue-600 dark:hover:text-blue-300 font-semibold py-2 px-3 min-h-[44px] inline-flex items-center rounded-md"
               >
                 Search "{query}" →
               </button>
