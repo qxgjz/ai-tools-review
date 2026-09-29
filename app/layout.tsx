@@ -77,6 +77,14 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
   other: {
     'color-scheme': 'light dark',
     'google-adsense-account': 'ca-pub-4417371559152346',

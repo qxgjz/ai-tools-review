@@ -1,3 +1,38 @@
+﻿## 全量审计门禁规则（2026-09-29新增，违反禁止部署）
+
+**铁律**：下次任何部署（包括内容发布、代码修改、工具更新）前，必须通过全部审计工具，严禁只做部分审计。
+
+### 必须运行的审计工具（全部通过才能部署）
+1. **npx tsc --noEmit**：0错误
+2. **python scripts/pre_deploy_gate.py**（v2.0全量门禁）：
+   - 文章质量100/100
+   - TypeScript编译0错误
+   - 技术SEO（title≤60字符、meta≤160字符）
+   - SEO文件（robots.txt含AI bots、favicon存在、sitemap存在、llms.txt存在）
+   - Schema（每篇文章有FAQ、Quick Answer、Key Takeaways）
+   - 无硬编码密钥
+3. **python real_seo_audit.py**（40+规则，14个关键页面）：0 critical
+4. **python real_geo_aeo_audit.py**（AI爬虫/AEO检查）：全部AI bot配置正确
+5. **python scripts/full_audit.py --quick**（全站753页快速扫描）：0 critical
+6. **python scripts/quality_audit.py**（文章质量14项加权）：≥85分（发布要求100分）
+
+### 各窗口部署要求
+- **窗口1（技术修复）**：pre_deploy_gate + tsc + real_seo_audit
+- **窗口3（内容发布）**：quality_audit 100分 + pre_deploy_gate + full_audit --quick
+- **所有窗口**：严禁用--skip-gate，除非紧急hotfix且记录原因
+
+### 当前审计状态（2026-09-29 21:10）
+- real_seo_audit: 9.6/10 Grade A+（0 critical, 23 warnings）
+- GEO/AEO: 9.4/10 Grade A
+- full_audit: 753页, 0 critical, 23 warnings, GEO 100/100
+- Lighthouse: 本地无法运行（sandbox无Chrome），在GitHub Actions CI中运行
+- 文章质量: 107篇，106篇满分
+
+### 已知warnings（非阻塞，逐步修复）
+- favicon.svg已配置icons metadata（2026-09-29修复）
+- about page title: 已缩短至49字符（2026-09-29修复）
+- 9 slow response: Vercel冷启动，非代码问题
+- 580 heading skip: H2→H3层级跳跃，notice级
 ## ⚠️ 部署前必做检查清单（2026-09-26新增，违反必导致Vercel构建失败）
 
 **背景**：2026-09-26因GA4PageTracker.tsx新文件从未git跟踪，Vercel连续9次构建失败。以下清单每次迭代后必须全部通过：
