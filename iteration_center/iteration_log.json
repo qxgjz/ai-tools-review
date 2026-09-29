@@ -1,5 +1,31 @@
 [
   {
+    "timestamp": "2026-09-29 17:08:36",
+    "task_type": "a11y_scroll_margin_fix",
+    "window": "窗口6",
+    "description": "修复skip-link跳转后主内容被sticky header遮挡问题",
+    "details": [
+      "main#main-content添加scroll-mt-16(64px)，匹配h-16 fixed header高度",
+      "键盘用户点击skip-link后，主内容现在正确显示在header下方",
+      "TypeScript check passed (exit 0)",
+      "线上验证: 首页/工具页/文章页均200, scroll-mt-16已确认在HTML中"
+    ],
+    "files_changed": [
+      "app/layout.tsx"
+    ],
+    "commit": "2f75e89df431ca56bd566410fa1dc7ffad6b6ec6",
+    "verification_results": {
+      "tsc": "passed",
+      "online_pages_200": [
+        "/",
+        "/tools/anything-llm",
+        "/blog/best-paid-ai-tools-worth-buying-2026"
+      ],
+      "scroll_mt_confirmed_in_html": true,
+      "wcag_criterion": "2.4.1 Bypass Blocks (Level A) - skip link lands correctly"
+    }
+  },
+  {
     "timestamp": "2026-09-29 11:25:50",
     "task_type": "a11y_touch_target_fix",
     "window": "窗口6",
