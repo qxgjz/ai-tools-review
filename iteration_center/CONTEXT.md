@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-28 22:33 UTC
+> Generated: 2026-09-29 21:25 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,13 +17,13 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 105 |
+| Posts | 108 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
-1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Money) | AIToolCr** (`best-paid-ai-tools-worth-buying-2026`)
+1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...** (`best-paid-ai-tools-worth-buying-2026`)
 2. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
 3. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
 4. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
@@ -37,21 +37,21 @@
 
 ## Recent Iterations
 
+- **Round ?** (c70bff6e3544d4370b9931949c10a6f4c45e4b68): 
+- **Round ?** (2f75e89df431ca56bd566410fa1dc7ffad6b6ec6): 
+- **Round ?** (4ea2fc88d844d4b5e949bf36a998531195c6c2b4): 
 - **Round ?** (98b0b77e90c88af37acd060f2cceb15a26e90b1e): 
 - **Round ?** (9d3a1eb9aadf6255501ccc9f5c3f7e21fedefd6a): Banner CTA: from-emerald-600 to-emerald-600 -> from-emerald-700 to-teal-600 (3.7; Banner CTA hover: hover:from-emerald-700 -> hover:from-emerald-800 (对比度递增); Banner CTA: 添加 min-h-[44px] + justify-cent
-- **Round ?** (a11cb36e7d146d7d2db7ccbf03a684985307b51f): CTA文案: 'Subscribe Free' -> 'Get My Free Tools' (第一人称+结果导向，避免摩擦词，Aagaard研究+90%转化); Compact变体: 按钮/输入框高度 32px -> 44px (Baymard 7mm最小触摸目标); Compact变体: 添加隐私微文案 'No spam. Unsubscribe anytime. We respect you
-- **Round ?** (0bb21db7): 
-- **Round ?** (6dbbeede2d4dbdc817783c7ffe948961ccd6b882): 导入 usePathname from next/navigation; 添加 isActive(href) 辅助函数（/精确匹配，其他startsWith）; 桌面端导航：active时 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emera
 
 ## GSC Data
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 8 |
-| Impressions | 1581 |
-| CTR | 0.51% |
-| Avg Ranking | 23.98 |
-| Report | latest_gsc.md |
+| Clicks | 9 |
+| Impressions | 1664 |
+| CTR | 0.54% |
+| Avg Ranking | 24.51 |
+| Report | 2026-08-21_2026-09-19.md |
 
 ## Audit Findings (pending)
 
