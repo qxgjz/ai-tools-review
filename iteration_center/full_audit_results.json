@@ -1,0 +1,1294 @@
+{
+  "audit_time": "2026-09-29T22:56:04.055426",
+  "mode": "quick",
+  "content": {
+    "total_articles": 108,
+    "average_score": 100.0,
+    "perfect_count": 108,
+    "below_85_count": 0,
+    "articles": [
+      {
+        "slug": "best-paid-ai-tools-worth-buying-2026",
+        "title": "Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...",
+        "quality_score": 100.0,
+        "word_count": 2226,
+        "flesch": 68.2,
+        "internal_links": 5,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "dify-vs-langchain-2026",
+        "title": "Dify vs LangChain 2026: Which AI App Builder | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2216,
+        "flesch": 50.1,
+        "internal_links": 6,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "gemini-alternatives-2026",
+        "title": "7 Best Gemini Alternatives in 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2242,
+        "flesch": 51.2,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "cursor-vs-windsurf-2026",
+        "title": "Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2245,
+        "flesch": 47.7,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "notion-ai-vs-obsidian-2026",
+        "title": "Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2060,
+        "flesch": 47.3,
+        "internal_links": 4,
+        "external_links": 12,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "notion-ai-alternative-2026",
+        "title": "7 Best Notion AI Alternatives in 2026 (Free & | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2019,
+        "flesch": 59.3,
+        "internal_links": 4,
+        "external_links": 21,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "midjourney-vs-dalle-3-2026",
+        "title": "MidJourney vs DALL-E 3 2026: Which AI Image | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2078,
+        "flesch": 51.8,
+        "internal_links": 4,
+        "external_links": 12,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "jasper-ai-alternative-2026",
+        "title": "7 Best Jasper AI Alternatives in 2026 (Cheaper | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2015,
+        "flesch": 52.7,
+        "internal_links": 3,
+        "external_links": 21,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "chatgpt-vs-claude-2026",
+        "title": "ChatGPT vs Claude 2026: Which AI Chatbot Wins? | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2100,
+        "flesch": 53.0,
+        "internal_links": 5,
+        "external_links": 12,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-voice-changers-2026",
+        "title": "Best AI Voice Changers 2026: We Tested 7 for 10 Days — Th...",
+        "quality_score": 100.0,
+        "word_count": 2927,
+        "flesch": 52.6,
+        "internal_links": 7,
+        "external_links": 21,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-slack-bots-2026",
+        "title": "Best AI Slack Bots 2026: We Tested 12 Bots (Honest Rankings)",
+        "quality_score": 100.0,
+        "word_count": 2443,
+        "flesch": 65.5,
+        "internal_links": 8,
+        "external_links": 21,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-scheduling-tools-2026",
+        "title": "Best AI Scheduling Tools 2026: We Tested 8 Tools (Real Bo...",
+        "quality_score": 100.0,
+        "word_count": 2166,
+        "flesch": 59.9,
+        "internal_links": 3,
+        "external_links": 6,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-podcast-tools-2026",
+        "title": "Best AI Podcast Tools 2026: Top 5 for Recording, Editing...",
+        "quality_score": 100.0,
+        "word_count": 2088,
+        "flesch": 55.6,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-idea-generators-2026",
+        "title": "Best AI Idea Generators 2026: Top 5 for Startups, Content...",
+        "quality_score": 100.0,
+        "word_count": 2212,
+        "flesch": 49.7,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "dify-vs-coze-2026-comparison",
+        "title": "Dify vs Coze 2026: Which AI Agent Builder Wins? | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2006,
+        "flesch": 60.8,
+        "internal_links": 3,
+        "external_links": 6,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "stable-diffusion-alternatives-2026",
+        "title": "7 Best Stable Diffusion Alternatives in 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2030,
+        "flesch": 53.6,
+        "internal_links": 4,
+        "external_links": 15,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "midjourney-alternatives-2026",
+        "title": "6 Best MidJourney Alternatives in 2026 (Free & | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2039,
+        "flesch": 49.2,
+        "internal_links": 4,
+        "external_links": 13,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-voice-generators-2026",
+        "title": "Best AI Voice Generators 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2736,
+        "flesch": 55.4,
+        "internal_links": 5,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-resume-builders-2026",
+        "title": "Best AI Resume Builders 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2740,
+        "flesch": 61.8,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-pr-tools-2026",
+        "title": "Best AI PR Tools 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2796,
+        "flesch": 54.8,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-photo-editors-2026",
+        "title": "Best AI Photo Editors 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2766,
+        "flesch": 52.7,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-observability-tools-2026",
+        "title": "Best AI Observability Tools 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2885,
+        "flesch": 57.2,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-meeting-assistants-2026",
+        "title": "Best AI Meeting Assistants 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2801,
+        "flesch": 43.6,
+        "internal_links": 7,
+        "external_links": 26,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-logo-generators-2026",
+        "title": "Best AI Logo Generators 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2788,
+        "flesch": 62.4,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-grammar-checkers-2026",
+        "title": "Best AI Grammar Checkers 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2738,
+        "flesch": 58.2,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-customer-support-tools-2026",
+        "title": "Best AI Customer Support Tools 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2940,
+        "flesch": 48.5,
+        "internal_links": 8,
+        "external_links": 28,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-comparison-tools-2026",
+        "title": "Best AI Comparison Tools 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2968,
+        "flesch": 62.5,
+        "internal_links": 8,
+        "external_links": 20,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-chatbot-builders-2026",
+        "title": "Best AI Chatbot Builders 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2729,
+        "flesch": 63.5,
+        "internal_links": 6,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-automation-agents-2026",
+        "title": "Best AI Automation Agents 2026: Top 10 Ranked | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2852,
+        "flesch": 62.7,
+        "internal_links": 8,
+        "external_links": 22,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-agents-2026-ranked-reviewed",
+        "title": "Best AI Agents in 2026: Ranked & Reviewed | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3152,
+        "flesch": 43.2,
+        "internal_links": 8,
+        "external_links": 29,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-crm-tools-2026",
+        "title": "Best AI CRM Tools 2026: Top 10 Compared for | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2746,
+        "flesch": 49.0,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-project-management-tools-2026",
+        "title": "Best AI Project Management Tools 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2558,
+        "flesch": 48.6,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-note-taking-tools-2026",
+        "title": "Best AI Note Taking Tools 2026: 10 Apps Tested | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2147,
+        "flesch": 41.2,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-design-tools-2026",
+        "title": "Best AI Design Tools 2026: 10 Apps Tested | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2641,
+        "flesch": 48.3,
+        "internal_links": 4,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-email-tools-2026",
+        "title": "Best AI Email Tools 2026: Top 10 Reviewed & | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2119,
+        "flesch": 46.7,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-translation-tools-2026",
+        "title": "Best AI Translation Tools 2026: 10 Languages Tested & Com...",
+        "quality_score": 100.0,
+        "word_count": 2637,
+        "flesch": 40.2,
+        "internal_links": 4,
+        "external_links": 7,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-transcription-tools-2026",
+        "title": "Best AI Transcription Tools 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2868,
+        "flesch": 47.7,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-chatbots-2026",
+        "title": "Best AI Chatbots 2026: ChatGPT vs Claude vs | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3176,
+        "flesch": 53.1,
+        "internal_links": 4,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-presentation-tools-2026",
+        "title": "Best AI Presentation Tools 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3133,
+        "flesch": 49.2,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-legal-tools-2026",
+        "title": "Best AI Legal Tools 2026: Complete Comparison | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3622,
+        "flesch": 41.5,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-seo-tools-2026",
+        "title": "Best AI SEO Tools 2026: Complete Comparison of | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3263,
+        "flesch": 47.7,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-video-editors-2026",
+        "title": "Best AI Video Editors 2026: Complete Comparison | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3490,
+        "flesch": 48.6,
+        "internal_links": 6,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-marketing-tools-2026",
+        "title": "Best AI Marketing Tools 2026: Complete Comparis | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3387,
+        "flesch": 54.7,
+        "internal_links": 6,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-research-tools-2026",
+        "title": "Best AI Research Tools 2026: Complete Compariso | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3478,
+        "flesch": 47.5,
+        "internal_links": 6,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-productivity-tools-2026",
+        "title": "Best AI Productivity Tools 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 4115,
+        "flesch": 53.5,
+        "internal_links": 4,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-coding-tools-2026",
+        "title": "Best AI Coding Tools 2026: Cursor vs Copilot | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 4500,
+        "flesch": 48.9,
+        "internal_links": 5,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-image-generators-2026",
+        "title": "Best AI Image Generators 2026: Midjourney vs | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2399,
+        "flesch": 40.6,
+        "internal_links": 5,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-audio-tools-2026",
+        "title": "Best AI Audio Tools 2026: Complete Guide to | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2441,
+        "flesch": 45.1,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-video-generators-2026",
+        "title": "Best AI Video Generators 2026: We Tested 10 Tools (Real O...",
+        "quality_score": 100.0,
+        "word_count": 2246,
+        "flesch": 51.7,
+        "internal_links": 4,
+        "external_links": 8,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-writing-tools-2026",
+        "title": "Best AI Writing Tools 2026: Complete Comparison | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 4107,
+        "flesch": 43.8,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "midjourney-vs-dall-e-3-2026-comparison",
+        "title": "Midjourney vs DALL-E 3 2026: Which AI Image | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3497,
+        "flesch": 48.3,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 7,
+        "failed_checks": []
+      },
+      {
+        "slug": "perplexity-ai-review-2026",
+        "title": "Perplexity AI Review 2026: 2 Weeks, 200 Queries — Is It B...",
+        "quality_score": 100.0,
+        "word_count": 2319,
+        "flesch": 43.9,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "claude-vs-gemini-2026-comparison",
+        "title": "Claude vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2618,
+        "flesch": 45.4,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "windsurf-review-2026",
+        "title": "Windsurf Review 2026: Is It the Best Code AI | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3035,
+        "flesch": 45.7,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "cursor-vs-github-copilot-2026-comparison",
+        "title": "Cursor vs GitHub Copilot 2026: Complete Compari | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3290,
+        "flesch": 44.5,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "midjourney-vs-dalle-3-2026-comparison",
+        "title": "Midjourney vs DALL-E 3 2026: Complete Compariso | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3088,
+        "flesch": 43.8,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "chatgpt-vs-gemini-2026-comparison",
+        "title": "ChatGPT vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 2907,
+        "flesch": 43.7,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "cursor-ai-review-2026-best-ai-code-editor",
+        "title": "Cursor AI Review 2026: Is It the Best AI Code | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3238,
+        "flesch": 51.2,
+        "internal_links": 7,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "elevenlabs-v2-review-2026",
+        "title": "ElevenLabs v2 Review 2026: 3 Weeks of Testing | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3745,
+        "flesch": 42.5,
+        "internal_links": 11,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "midjourney-v7-review-2026",
+        "title": "Midjourney v7 Review 2026: The Art Director's | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 14275,
+        "flesch": 45.5,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "creatium-coach-review-2025",
+        "title": "Creatium Coach Review 2026: Best AI Business Coaching Tool?",
+        "quality_score": 100.0,
+        "word_count": 13107,
+        "flesch": 56.1,
+        "internal_links": 13,
+        "external_links": 7,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "dify_ai_review",
+        "title": "Dify AI Review: We Built 3 Apps, Is It Worth It?",
+        "quality_score": 100.0,
+        "word_count": 13394,
+        "flesch": 46.3,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "cursor_ai_review",
+        "title": "Cursor AI Review: Better Than Copilot? 3-Month Test",
+        "quality_score": 100.0,
+        "word_count": 13059,
+        "flesch": 47.1,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "gemini_38_flash_review",
+        "title": "Gemini 3.8 Flash Review: 50 Benchmarks, Is It Worth It?",
+        "quality_score": 100.0,
+        "word_count": 13098,
+        "flesch": 53.4,
+        "internal_links": 15,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "claude_fable_51_review",
+        "title": "Claude Fable 5.1 Review: Cheaper, Faster, Better?",
+        "quality_score": 100.0,
+        "word_count": 5122,
+        "flesch": 52.1,
+        "internal_links": 10,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "openai_astra_review",
+        "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is I...",
+        "quality_score": 100.0,
+        "word_count": 12471,
+        "flesch": 43.9,
+        "internal_links": 15,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "chatgpt-deep-review-2026",
+        "title": "ChatGPT Review 2026: 30 Days, 500+ Queries — Is It Still...",
+        "quality_score": 100.0,
+        "word_count": 7179,
+        "flesch": 44.9,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "ai-tools-selection-guide-2026",
+        "title": "AI Tools Selection Guide 2026: How to Choose | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 6975,
+        "flesch": 45.2,
+        "internal_links": 10,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "chatgpt-vs-claude-2026-comparison",
+        "title": "ChatGPT vs Claude 2026: Which AI Assistant is | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 3261,
+        "flesch": 44.2,
+        "internal_links": 8,
+        "external_links": 1,
+        "images": 4,
+        "failed_checks": []
+      },
+      {
+        "slug": "claude-review-2026",
+        "title": "Claude Review 2026: Best AI Assistant for | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 12567,
+        "flesch": 42.6,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "github-copilot-review-2026",
+        "title": "GitHub Copilot Review 2026: 30 Days, 500+ Completions — I...",
+        "quality_score": 100.0,
+        "word_count": 13298,
+        "flesch": 44.7,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "cursor-review-2026",
+        "title": "Cursor Review 2026: Best AI Code Editor? | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13230,
+        "flesch": 45.4,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "notion-ai-review-2026",
+        "title": "Notion AI Review 2026: Best AI Assistant for | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 15249,
+        "flesch": 40.4,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "elevenlabs-review-2026",
+        "title": "ElevenLabs Review 2026: Best AI Voice Generator & Cloning?",
+        "quality_score": 100.0,
+        "word_count": 13357,
+        "flesch": 43.6,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "midjourney-review-2026",
+        "title": "Midjourney Review 2026: Best AI Image | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13380,
+        "flesch": 41.2,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 4,
+        "failed_checks": []
+      },
+      {
+        "slug": "runway-review-2026",
+        "title": "Runway Review 2026: Best AI Video Generation | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13476,
+        "flesch": 41.2,
+        "internal_links": 12,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "jasper-review-2026",
+        "title": "Jasper Review 2026: Best AI Writing Tool for | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13709,
+        "flesch": 42.8,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "perplexity-review-2026",
+        "title": "Perplexity Review 2026: Best AI Search Engine | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 9711,
+        "flesch": 45.8,
+        "internal_links": 12,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "figma-ai-review-2026",
+        "title": "Figma AI Review 2026: Best AI Design Assistant | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13916,
+        "flesch": 47.4,
+        "internal_links": 14,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "sora-review-2026",
+        "title": "Sora Review 2026: Best AI Video Generator for | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13479,
+        "flesch": 43.2,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "stable-diffusion-review-2026",
+        "title": "Stable Diffusion 3.5 Review: 4-Week Test, Honest Verdict",
+        "quality_score": 100.0,
+        "word_count": 15289,
+        "flesch": 48.9,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "copy-ai-review-2026",
+        "title": "Copy.ai Review 2026: Best Free AI Writing Tool | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13370,
+        "flesch": 47.3,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "otter-ai-review-2026",
+        "title": "Otter.ai Review 2026: Best AI Meeting | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13652,
+        "flesch": 48.4,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "synthesia-review-2026",
+        "title": "Synthesia Review: Best AI Avatar Video Maker?",
+        "quality_score": 100.0,
+        "word_count": 13692,
+        "flesch": 46.3,
+        "internal_links": 12,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "gemini-review-2026",
+        "title": "Google Gemini Review 2026: Honest 30-Day Test | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11360,
+        "flesch": 50.4,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "dall-e-3-review-2026",
+        "title": "DALL-E 3 Review 2026: Best AI Image Generator | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13929,
+        "flesch": 45.8,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "pika-review-2026",
+        "title": "Pika Review 2026: Best Budget AI Video | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13352,
+        "flesch": 44.0,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "suno-review-2026",
+        "title": "Suno AI Review: Made 20 Songs, 3 Were Unreleasable",
+        "quality_score": 100.0,
+        "word_count": 9917,
+        "flesch": 45.9,
+        "internal_links": 9,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "microsoft-365-copilot-review-2026",
+        "title": "Microsoft 365 Copilot Review 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 15564,
+        "flesch": 44.8,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "kling-review-2026",
+        "title": "Kling AI Review 2026: Best Chinese AI Video | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11877,
+        "flesch": 43.6,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "heygen-review-2026",
+        "title": "HeyGen Review 2026: Best AI Avatar Video Tool | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 13719,
+        "flesch": 42.9,
+        "internal_links": 12,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "leonardo-ai-review-2026",
+        "title": "Leonardo AI Review 2026: Best AI Image | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 14597,
+        "flesch": 44.8,
+        "internal_links": 14,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "adobe-firefly-review-2026",
+        "title": "Adobe Firefly Review: 30-Day Test, Is It Worth It?",
+        "quality_score": 100.0,
+        "word_count": 14307,
+        "flesch": 45.6,
+        "internal_links": 14,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "writesonic-review-2026",
+        "title": "Writesonic Review 2026: Best AI Writing Tool | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 14438,
+        "flesch": 42.7,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "tabnine-review-2026",
+        "title": "Tabnine Review 2026: Best AI Code Completion | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11469,
+        "flesch": 43.8,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "ai-tools-review-guide-2026",
+        "title": "AI Tools Review Guide 2026: Six-Dimension | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 12907,
+        "flesch": 48.2,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "ai-coding-tools-comparison-2026",
+        "title": "AI Coding Tools Complete Review 2026 | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 14805,
+        "flesch": 44.0,
+        "internal_links": 11,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "replit-review-2026",
+        "title": "Replit Review 2026: Best AI-Native Cloud IDE | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11635,
+        "flesch": 41.1,
+        "internal_links": 13,
+        "external_links": 1,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-free-ai-tools-2026",
+        "title": "Best Free AI Tools in 2026: Complete Guide to | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11975,
+        "flesch": 45.6,
+        "internal_links": 11,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "ai-tools-comparison-2026",
+        "title": "AI Tools Comparison 2026: Which AI Tool is | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11942,
+        "flesch": 49.4,
+        "internal_links": 12,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "ai-tools-for-beginners-2026",
+        "title": "AI Tools for Beginners 2026: Easy Start Guide | AIToolCrux",
+        "quality_score": 100.0,
+        "word_count": 11879,
+        "flesch": 42.2,
+        "internal_links": 11,
+        "external_links": 1,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "jasper-vs-copy-ai-2026-comparison",
+        "title": "Jasper vs Copy.ai 2026: We Ran 40 Campaigns — Here's the...",
+        "quality_score": 100.0,
+        "word_count": 2234,
+        "flesch": 64.5,
+        "internal_links": 8,
+        "external_links": 2,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "canva-ai-vs-adobe-firefly-2026-comparison",
+        "title": "Canva AI vs Adobe Firefly 2026: We Tested Both for 2 Week...",
+        "quality_score": 100.0,
+        "word_count": 2883,
+        "flesch": 43.8,
+        "internal_links": 9,
+        "external_links": 1,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "surfer-seo-vs-frase-2026-comparison",
+        "title": "Surfer SEO vs Frase 2026: We Tested Both for 3 Weeks (Dat...",
+        "quality_score": 100.0,
+        "word_count": 2051,
+        "flesch": 49.9,
+        "internal_links": 3,
+        "external_links": 5,
+        "images": 1,
+        "failed_checks": []
+      },
+      {
+        "slug": "gemini-pricing-2026",
+        "title": "Gemini Pricing 2026: Is Advanced Worth $20/Month? [Real C...",
+        "quality_score": 100.0,
+        "word_count": 2856,
+        "flesch": 53.3,
+        "internal_links": 4,
+        "external_links": 5,
+        "images": 3,
+        "failed_checks": []
+      },
+      {
+        "slug": "windsurf-vs-cursor-2026",
+        "title": "Windsurf vs Cursor 2026: I Tested Both for 2 Weeks — Whic...",
+        "quality_score": 100.0,
+        "word_count": 2928,
+        "flesch": 45.2,
+        "internal_links": 3,
+        "external_links": 4,
+        "images": 4,
+        "failed_checks": []
+      },
+      {
+        "slug": "gemini-vs-chatgpt-2026",
+        "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tes...",
+        "quality_score": 100.0,
+        "word_count": 3427,
+        "flesch": 52.5,
+        "internal_links": 7,
+        "external_links": 8,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "suno-alternatives",
+        "title": "11 Best Suno Alternatives in 2026 (After Free Tier Ended)",
+        "quality_score": 100.0,
+        "word_count": 2920,
+        "flesch": 50.4,
+        "internal_links": 4,
+        "external_links": 8,
+        "images": 2,
+        "failed_checks": []
+      }
+    ]
+  },
+  "technical": {
+    "pages_audited": 20,
+    "total_issues": 7,
+    "by_severity": {
+      "notice": 6,
+      "warning": 1
+    },
+    "by_type": {
+      "Heading skip": 6,
+      "Meta too long": 1
+    },
+    "critical_issues": [],
+    "elapsed_seconds": 9.1
+  },
+  "geo": {
+    "geo_score": 100,
+    "findings": [
+      [
+        "good",
+        "robots.txt found",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: GPTBot",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: ClaudeBot",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: Claude-Web",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: PerplexityBot",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: Google-Extended",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: Applebot",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: OAI-SearchBot",
+        ""
+      ],
+      [
+        "good",
+        "llms.txt found (2764 bytes)",
+        ""
+      ],
+      [
+        "good",
+        "JSON-LD present: /",
+        ""
+      ],
+      [
+        "good",
+        "FAQPage schema: /",
+        ""
+      ],
+      [
+        "good",
+        "JSON-LD present: /tools/midjourney",
+        ""
+      ],
+      [
+        "good",
+        "FAQPage schema: /tools/midjourney",
+        ""
+      ],
+      [
+        "good",
+        "JSON-LD present: /blog/best-ai-image-generators-2026",
+        ""
+      ],
+      [
+        "good",
+        "Article schema: /blog/best-ai-image-generators-2026",
+        ""
+      ]
+    ]
+  }
+}
