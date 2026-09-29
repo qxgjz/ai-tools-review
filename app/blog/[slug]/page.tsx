@@ -1,4 +1,4 @@
-import Link from 'next/link';
+﻿import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import nextDynamic from 'next/dynamic';
 import {
@@ -103,9 +103,9 @@ export function generateMetadata({ params }: PostPageProps) {
   ];
 
   // 优化描述：确保150-160字符，包含关键词和CTA
-  let description = post.excerpt || '' || post.description || '';
-  // Strip HTML tags from description
-  description = description.replace(/<[^>]+>/g, '').trim();
+  let description = post.excerpt || post.description || '';
+  // Strip HTML tags and collapse whitespace/newlines for clean meta
+  description = description.replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim();
   if (description.length > 155) {
     description = truncateAtWord(description, 155);
   } else if (description.length < 120) {
@@ -297,7 +297,7 @@ export default function PostPage({ params }: PostPageProps) {
             />
             <ReviewSchema
               name={post.title}
-              reviewBody={post.excerpt || '' || post.description || ''}
+              reviewBody={(post.excerpt || post.description || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 300)}
               ratingValue={Math.round(avgScore * 10) / 10}
               bestRating={10}
               worstRating={1}
@@ -313,7 +313,7 @@ export default function PostPage({ params }: PostPageProps) {
                   '@context': 'https://schema.org',
                   '@type': 'Article',
                   headline: post.title,
-                  description: post.excerpt || ''.slice(0, 155),
+                  description: (post.excerpt || post.description || '').replace(/<[^>]+>/g, '').replace(/\s+/g, ' ').trim().slice(0, 155),
                   author: {
                     '@type': 'Person',
                     name: post.author || 'AIToolCrux Research Team',

@@ -209,8 +209,8 @@ def audit_page_technical(url):
             elif len(title) > 60:
                 issues.append(("warning", f"Title too long ({len(title)}): {title[:40]}", url))
 
-        # Meta description
-        desc_match = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\'](.*?)["\']', content, re.I)
+        # Meta description (use [\s\S] to match newlines in content value)
+        desc_match = re.search(r'<meta[^>]*name=["\']description["\'][^>]*content=["\']([\s\S]*?)["\']', content, re.I)
         if not desc_match:
             issues.append(("critical", "Missing meta description", url))
         else:
@@ -225,8 +225,9 @@ def audit_page_technical(url):
         if not canonical_match:
             issues.append(("warning", "Missing canonical tag", url))
         else:
-            canonical = canonical_match.group(1)
-            if canonical != url and canonical != url + "/":
+            canonical = canonical_match.group(1).rstrip('/')
+            expected = url.rstrip('/')
+            if canonical != expected:
                 issues.append(("notice", f"Canonical mismatch: {canonical}", url))
 
         # H1
