@@ -10,7 +10,7 @@ import os
 import sys
 from datetime import datetime, timedelta, timezone
 
-SITE_URL = "https://www.aitoolcrux.com/"
+SITE_URL = "sc-domain:aitoolcrux.com"
 SCOPES = ["https://www.googleapis.com/auth/webmasters.readonly"]
 OUTPUT_DIR = os.path.join(os.environ.get("GITHUB_WORKSPACE", "."), "gsc-ga4-report")
 
