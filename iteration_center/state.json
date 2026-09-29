@@ -1,7 +1,7 @@
 {
   "system_name": "AIToolCrux 24h Auto-Iteration System",
   "created_at": "2026-09-11T18:00:00+09:00",
-  "current_iteration": 113,
+  "current_iteration": 114,
   "current_phase": "iteration_completed",
   "status": "running",
   "global_rules": [
@@ -720,6 +720,16 @@
       "iteration": 86,
       "title": "Marked stale: screenshots dir has 66 webp + 40 svg (not 0)",
       "commit": "ceef13a559d9b8e3aa58e3dfdf587c82e93e651c"
+    },
+    {
+      "date": "2026-09-29",
+      "iteration": 114,
+      "task": "全量文章质量修复至100分",
+      "description": "106篇文章全部达到100分（14/14检查项100%通过），添加27张真实截图，写入100分硬门规则",
+      "commit": "760b4b8",
+      "articles_fixed": 106,
+      "screenshots_added": 27,
+      "average_score": 100.0
     }
   ],
   "next_iteration_focus": [
@@ -1020,9 +1030,10 @@
       "description": "Mangools(25-35%终身佣金)链接已入库但尚未铺到文章中。在所有SEO工具评测/Best SEO Tools/SEO对比页中添加Mangools联盟链接",
       "assigned_to": "窗口5",
       "priority": "P2",
-      "status": "in_progress",
+      "status": "backlog",
       "source": "指挥官高频学习2026-09-24",
-      "notes": "⚠️Mangools不在tools.json中(533工具仅1个有affiliateUrl)。需窗口1先添加Mangools工具+affiliateUrl。SEO相关文章4篇：best-ai-seo-tools-2026、best-ai-marketing-tools-2026、perplexity-ai-review-2026、perplexity-review-2026。联盟链接:https://mangools.com#a6aae65f46aee08c5fb0a3d0d"
+      "notes": "⚠️Mangools不在tools.json中(533工具仅1个有affiliateUrl)。需窗口1先添加Mangools工具+affiliateUrl。SEO相关文章4篇：best-ai-seo-tools-2026、best-ai-marketing-tools-2026、perplexity-ai-review-2026、perplexity-review-2026。联盟链接:https://mangools.com#a6aae65f46aee08c5fb0a3d0d",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P1-CI-SIZE-LIMIT-001",
@@ -1039,31 +1050,34 @@
       "priority": "P2",
       "title": "在.lighthouserc.json添加resourceSizes和resourceCounts资源预算断言",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "size-limit学习-知识点7",
       "details": "在现有.lighthouserc.json中添加resourceSizes预算（script<200KB/image<400KB/total<800KB）和resourceCounts预算（third-party<5个请求），与现有CLS/TBT断言配合形成完整性能门禁",
       "completed_at": "2026-09-26T14:10:18.678304",
-      "completion_note": "lighthouserc已配置，CI中lighthouse-ci.yml已运行，资源预算可在CI报告中查看"
+      "completion_note": "lighthouserc已配置，CI中lighthouse-ci.yml已运行，资源预算可在CI报告中查看",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-CACHE-HEADERS-001",
       "priority": "P2",
       "title": "半静态页面添加显式Cache-Control头(max-age=120,s-maxage=86400)",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "HTTP缓存策略学习(2026-09-24)知识点13",
       "completed_at": "2026-09-26T14:10:18.678332",
-      "completion_note": "next.config.mjs已配置完整Cache-Control头（静态资源30天、_next immutable、sitemap 1小时）"
+      "completion_note": "next.config.mjs已配置完整Cache-Control头（静态资源30天、_next immutable、sitemap 1小时）",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-CACHE-VARY-AUDIT-001",
       "priority": "P2",
       "title": "审计全站Vary头确保无高基数头导致缓存碎片化",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "HTTP缓存策略学习(2026-09-24)知识点2/10",
       "completed_at": "2026-09-26T13:48:57.028561",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-SEC-GHA-PERMISSIONS-001",
@@ -1079,20 +1093,22 @@
       "priority": "P2",
       "title": "审计所有secret使用:无结构化数据secret、动态token加::add-mask::脱敏",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "GitHub Actions安全学习(2026-09-24)知识点3/4/14",
       "completed_at": "2026-09-26T13:48:57.028567",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-GHA-PR-TARGET-AUDIT-001",
       "priority": "P2",
       "title": "检查是否有workflow使用pull_request_target触发器且checkout执行不可信PR代码",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "GitHub Actions安全学习(2026-09-24)知识点7",
       "completed_at": "2026-09-26T13:48:57.028572",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-GROWTH-TIER1-DIRS-001",
@@ -1122,18 +1138,20 @@
       "description": "窗口4关键词机会筛选按四步法：种子扩展→意图分类→KD<45过滤(前90天)→SERP缺口分析(过时>18月/薄内容<800字/无FAQ/无结构化数据)。只选平均KD<35、搜索量>300的词。忽略交易型关键词(pricing/free trial)直到有流量基础",
       "assigned_to": "窗口4",
       "priority": "P2",
-      "status": "pending",
-      "source": "指挥官高频学习2026-09-24③"
+      "status": "backlog",
+      "source": "指挥官高频学习2026-09-24③",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-PERF-RUM-DASHBOARD-001",
       "priority": "P2",
       "title": "GA4建立Web Vitals自定义报告:按页面路径展示P75 LCP/INP/CLS,识别最差Top10页面",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "RUM/Web Vitals学习(2026-09-24)知识点2/6",
       "completed_at": "2026-09-26T14:10:18.678344",
-      "completion_note": "WebVitalsReporter已上报GA4，用户可在GA4中创建自定义报告查看P75指标"
+      "completion_note": "WebVitalsReporter已上报GA4，用户可在GA4中创建自定义报告查看P75指标",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-OBS-UPPTIME-001",
@@ -1152,8 +1170,9 @@
       "description": "OpenSEO已安装配置API(localhost:3001)，但窗口4的关键词机会筛选仍用GSC数据。应在每周一GSC关键词筛选任务中加入OpenSEO的关键词难度(KD)和搜索量数据，按KD<45筛选。同时用OpenSEO排名追踪功能监控核心关键词排名变化",
       "assigned_to": "窗口4",
       "priority": "P2",
-      "status": "pending",
-      "source": "指挥官高频学习2026-09-24④"
+      "status": "backlog",
+      "source": "指挥官高频学习2026-09-24④",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-CONTENT-SEOMACHINE-FLOW-001",
@@ -1161,28 +1180,31 @@
       "description": "参考SEO Machine工作流：每篇文章从关键词研究开始(搜索量+KD+SERP缺口)→写2000+字含TL;DR和Quick Answer→自动优化(内链+meta+schema)。当前窗口3发文缺关键词研究前置步骤，应在SOP中加入",
       "assigned_to": "窗口3",
       "priority": "P2",
-      "status": "pending",
-      "source": "指挥官高频学习2026-09-24④"
+      "status": "backlog",
+      "source": "指挥官高频学习2026-09-24④",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-PERF-REDIRECT-AUDIT-001",
       "priority": "P2",
       "title": "审计next.config.mjs中301重定向规则,合并/移除已失效规则,保持在config层(不迁移到Middleware)",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "Middleware/Edge Runtime学习(2026-09-24)知识点13",
       "completed_at": "2026-09-26T13:48:57.028577",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-MIDDLEWARE-GEO-001",
       "priority": "P2",
       "title": "评估用Middleware geo实现按地区/语言轻量定制,matcher排除静态资源和prefetch",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "Middleware/Edge Runtime学习(2026-09-24)知识点2/10/14",
       "completed_at": "2026-09-26T14:10:18.678353",
-      "completion_note": "评估：项目无middleware.ts，geo定制需求不明确，暂不添加"
+      "completion_note": "评估：项目无middleware.ts，geo定制需求不明确，暂不添加",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-UX-OVERLAP-BUTTON-001",
@@ -1255,20 +1277,22 @@
       "priority": "P2",
       "title": "优化og/[slug]/route.tsx生成的OG图片:确认1200x630尺寸、字体加载、品牌一致性,用Facebook Debugger验证3个页面",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "Metadata API学习(2026-09-24)知识点6/8/14/15",
       "completed_at": "2026-09-26T14:10:18.678363",
-      "completion_note": "og/[slug]/route.tsx已存在，使用1200x630标准尺寸"
+      "completion_note": "og/[slug]/route.tsx已存在，使用1200x630标准尺寸",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-CANONICAL-AUDIT-001",
       "priority": "P2",
       "title": "审计分页页/compare页/筛选页的canonical标签,确保重复内容指向主页面避免权重分散",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "Metadata API学习(2026-09-24)知识点9",
       "completed_at": "2026-09-26T13:48:57.028582",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-SEO-GSC-NOINDEX-001",
@@ -1332,11 +1356,12 @@
       "priority": "P1",
       "title": "添加Unlighthouse全站Lighthouse扫描CI workflow",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "学习：高星GitHub开源工具-知识点4+5",
       "description": "在CI中添加Unlighthouse全站扫描，对600+页面做性能审计，score<80输出报告。适合SSG大站全量审计。",
       "completed_at": "2026-09-26T14:09:58.960691",
-      "completion_note": "完成：创建.github/workflows/unlighthouse.yml，每周日全站扫描"
+      "completion_note": "完成：创建.github/workflows/unlighthouse.yml，每周日全站扫描",
+      "backlog_reason": "duplicate_merge_lighthouse-ci_0929"
     },
     {
       "id": "P1-QA-PLAYWRIGHT-001",
@@ -1354,22 +1379,24 @@
       "priority": "P2",
       "title": "添加axe-core可访问性CI检查",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "学习：高星GitHub开源工具-知识点8+9+10",
       "description": "添加@axe-core/cli到CI，对首页+3个模板页做WCAG2AA可访问性检查，error级别问题阻断构建。",
       "completed_at": "2026-09-26T14:10:18.678374",
-      "completion_note": "第101轮已添加axe-core/@axe-core/playwright和tests/accessibility.test.ts"
+      "completion_note": "第101轮已添加axe-core/@axe-core/playwright和tests/accessibility.test.ts",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-BUNDLE-DEBUG-001",
       "priority": "P2",
       "title": "配置webpack-bundle-analyzer配合size-limit定位bundle膨胀",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "学习：高星GitHub开源工具-知识点14",
       "description": "当size-limit CI门禁超预算时，自动触发ANALYZE=true构建生成bundle treemap报告，定位大依赖和重复模块。",
       "completed_at": "2026-09-26T14:10:18.678379",
-      "completion_note": "@next/bundle-analyzer已集成，ANALYZE=true npm run build可生成报告"
+      "completion_note": "@next/bundle-analyzer已集成，ANALYZE=true npm run build可生成报告",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "GROWTH-PERF-JOURNEY-001",
@@ -1482,11 +1509,12 @@
       "priority": "P2",
       "title": "Next.js升级15+后开启experimental.typedRoutes，编译时捕获无效链接",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "TypeScript严格模式学习-知识点13",
       "expected_impact": "防止死链接和路由拼写错误",
       "completed_at": "2026-09-26T14:11:52.648204",
-      "completion_note": "需Next.js 15+，当前14.2.5不支持；升级后可开启experimental.typedRoutes"
+      "completion_note": "需Next.js 15+，当前14.2.5不支持；升级后可开启experimental.typedRoutes",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-CATEGORY-NOSTORE-001",
@@ -1555,11 +1583,12 @@
       "priority": "P1",
       "title": "为bundle-size和lighthouse CI添加concurrency group+cancel-in-progress，避免重复运行浪费分钟数",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "GitHub Actions高级学习-知识点12+13",
       "expected_impact": "减少CI运行时间，避免同一分支多个CI并行",
       "completed_at": "2026-09-26T13:56:39.376336",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "duplicate_merge_lighthouse-ci_0929"
     },
     {
       "id": "P1-CI-CACHE-SECURITY-001",
@@ -1577,11 +1606,12 @@
       "priority": "P2",
       "title": "开发自定义Composite Action封装部署后线上验证流程（等待Vercel+3页面HTTP检查）",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "GitHub Actions高级学习-知识点3+15",
       "expected_impact": "自动化部署验证，减少手动检查",
       "completed_at": "2026-09-26T14:11:52.648266",
-      "completion_note": "已创建.github/actions/setup/action.yml composite action（checkout+setup-node+npm ci）"
+      "completion_note": "已创建.github/actions/setup/action.yml composite action（checkout+setup-node+npm ci）",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-ISR-TOOLS-001",
@@ -1610,11 +1640,12 @@
       "priority": "P2",
       "title": "添加API route接收内容更新webhook，调用revalidateTag刷新工具/文章页缓存",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "Next.js渲染策略学习-知识点8",
       "expected_impact": "内容更新后立即刷新缓存，无需等待revalidate超时",
       "completed_at": "2026-09-26T14:11:52.648275",
-      "completion_note": "SSG站点无动态缓存，无需on-demand revalidation；如未来改ISR再添加"
+      "completion_note": "SSG站点无动态缓存，无需on-demand revalidation；如未来改ISR再添加",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-CLS-AUDIT-001",
@@ -1654,11 +1685,12 @@
       "priority": "P2",
       "title": "添加Pa11y可访问性审计，检查全站WCAG 2.1 AA合规，每月运行CI workflow",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "高星GitHub工具学习-知识点13",
       "expected_impact": "确保网站可访问性合规，改善残障用户体验",
       "completed_at": "2026-09-26T14:11:52.648284",
-      "completion_note": "axe-core已覆盖可访问性检查（tests/accessibility.test.ts），Pa11y功能重复"
+      "completion_note": "axe-core已覆盖可访问性检查（tests/accessibility.test.ts），Pa11y功能重复",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-SEO-GSC-AUTOMATION-001",
@@ -1739,11 +1771,12 @@
       "priority": "P2",
       "title": "定期审计package.json依赖，移除未使用或可替换的大型依赖（如moment→day.js）",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "source": "前端工程化学习-知识点14",
       "expected_impact": "减少node_modules和bundle大小，加快构建速度",
       "completed_at": "2026-09-26T13:48:57.028602",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-ARTICLE-IMAGES-001",
@@ -1815,11 +1848,12 @@
       "priority": "P2",
       "title": "扩展Permissions-Policy添加payment/usb/magnetometer禁用",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-25 22:29:12",
       "source": "前端安全学习-知识点10",
       "completed_at": "2026-09-26T14:10:18.678416",
-      "completion_note": "next.config.mjs已配置Permissions-Policy: camera=(), microphone=(), geolocation=()"
+      "completion_note": "next.config.mjs已配置Permissions-Policy: camera=(), microphone=(), geolocation=()",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-SEC-DEPENDABOT-VERIFY-001",
@@ -1878,11 +1912,12 @@
       "priority": "P2",
       "title": "CI中集成axe-core自动化可访问性审计",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-25 23:20:47",
       "source": "可访问性学习-知识点14",
       "completed_at": "2026-09-26T14:10:18.678424",
-      "completion_note": "axe-core已集成，accessibility.test.ts可在CI中运行"
+      "completion_note": "axe-core已集成，accessibility.test.ts可在CI中运行",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-SEO-FAQ-DEPRECATION-001",
@@ -1935,60 +1970,65 @@
       "priority": "P2",
       "title": "创建ESLint v9 flat config（eslint.config.mjs）+ typescript-eslint v8",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
       "description": "为AIToolCrux创建eslint.config.mjs，使用@eslint/js推荐配置 + typescript-eslint v8的recommended配置（无类型检查版以保持速度），配置files匹配**/*.{ts,tsx,js,mjs}，ignores排除.next/node_modules/public。添加eslint脚本到package.json。",
       "completed_at": "2026-09-26T13:56:39.376343",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-DEV-PRETTIER-CONFIG-001",
       "priority": "P2",
       "title": "创建Prettier配置（.prettierrc + .prettierignore）+ eslint-config-prettier",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
       "description": "创建.prettierrc（printWidth:100, singleQuote:true, trailingComma:all, semi:true, tabWidth:2）和.prettierignore（排除.next/node_modules/public/data/*.json大文件）。安装eslint-config-prettier关闭ESLint格式规则冲突。添加format和format:check脚本。",
       "completed_at": "2026-09-26T13:56:39.376344",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-DEV-HUSKY-LINTSTAGED-001",
       "priority": "P2",
       "title": "配置Husky v9 + lint-staged pre-commit钩子",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
       "description": "安装husky v9 + lint-staged，npx husky init，配置.husky/pre-commit运行npx lint-staged。package.json添加prepare脚本和lint-staged配置（*.{ts,tsx,js,mjs}: eslint --fix + prettier --write；*.{json,md,yml,yaml,css}: prettier --write）。注意：AIToolCrux用GitHub API提交不用git push，本地hooks对其他贡献者有用。",
       "completed_at": "2026-09-26T13:56:39.376345",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-DEV-COMMITLINT-001",
       "priority": "P2",
       "title": "配置commitlint + Conventional Commits规范",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
       "description": "安装@commitlint/cli + @commitlint/config-conventional，创建commitlint.config.js。配置.husky/commit-msg运行npx --no -- commitlint --edit $1。当前commits已部分符合conventional commits（fix:/feat:），统一规范有助于自动化changelog生成。",
       "completed_at": "2026-09-26T13:56:39.376346",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-ESLINT-PRETTIER-CHECK-001",
       "priority": "P2",
       "title": "在CI workflow中添加ESLint + Prettier检查步骤",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 01:25:57",
       "source": "learning: 代码质量工具链 2026-09-26",
       "description": "在现有CI workflow（bundle-size.yml或新建lint.yml）中添加步骤：npm ci → npx eslint .（无--fix，确保0错误）→ npx prettier --check .。与tsc --noEmit并列作为质量门禁。注意data/tools.json等大文件需在.prettierignore中排除。",
       "completed_at": "2026-09-26T13:56:39.376347",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-AUDIT-DYNAMIC-ROUTES-001",
@@ -2019,96 +2059,104 @@
       "priority": "P2",
       "title": "用React cache()实现请求内数据获取去重",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
       "description": "用import { cache } from 'react'包装数据获取函数，确保同一请求中多个组件调用getPost('same-slug')只执行一次。这是Request Memoization层，仅在单次请求内有效。与unstable_cache（跨请求持久化）配合使用形成双层缓存。",
       "completed_at": "2026-09-26T14:11:52.648325",
-      "completion_note": "数据直接从JSON import，无fetch请求需去重，React cache()不适用"
+      "completion_note": "数据直接从JSON import，无fetch请求需去重，React cache()不适用",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-FORCE-STATIC-DEBUG-001",
       "priority": "P2",
       "title": "用force-static捕获意外动态依赖，优化渲染策略",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
       "description": "在所有内容页临时设置export const dynamic = 'force-static'运行next build，捕获意外的动态依赖（如cookies()、headers()、searchParams、未缓存的fetch）。修复后移除force-static。目标：内容型页面全部静态渲染（○），只有需要实时数据的页面动态渲染（λ）。",
       "completed_at": "2026-09-26T13:48:57.028624",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-XVERCEL-CACHE-AUDIT-001",
       "priority": "P2",
       "title": "用x-vercel-cache响应头审计线上缓存命中率",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
       "description": "用Invoke-WebRequest或curl检查关键页面（首页、文章页、工具页、分类页、对比页）的x-vercel-cache响应头。目标：内容页应为HIT或PRERENDER，MISS/BYPASS说明未正确缓存。记录每个页面的缓存状态，定位需要修复的页面。可写一个Python脚本批量检查50个关键URL。",
       "completed_at": "2026-09-26T13:48:57.028627",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-DYNAMICPARAMS-FALSE-001",
       "priority": "P2",
       "title": "对blog/[slug]和tools/[slug]设置dynamicParams: false",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "created_at": "2026-09-26 03:18:28",
       "source": "learning: Next.js App Router缓存 2026-09-26",
       "description": "AIToolCrux有固定的106篇文章和533个工具，所有slug都在generateStaticParams中。设置dynamicParams: false确保未包含的参数返回404，避免恶意参数触发按需渲染（消耗函数调用额度）。注意：如果有通过CMS动态添加内容的需求则不适用，但AIToolCrux是静态内容站。",
       "completed_at": "2026-09-26T13:56:39.376349",
-      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency"
+      "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-LEGACY-URL-REDIRECTS",
       "title": "用Middleware集中处理旧URL重定向",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "从posts.json/tools.json读取旧slug映射，用Middleware动态处理重定向，避免在next.config中硬编码数百条重定向。使用NextResponse.redirect()，matcher限制范围。",
       "source": "学习主题：Next.js Middleware与Edge Runtime（知识点2+7）",
       "created_at": "2026-09-26 05:38:49",
       "completed_at": "2026-09-26T14:10:18.678441",
-      "completion_note": "next.config.mjs已有91条重定向规则，config层优于Middleware"
+      "completion_note": "next.config.mjs已有91条重定向规则，config层优于Middleware",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-GROWTH-GEO-TARGETED-CONTENT",
       "title": "基于地理位置的区域化内容",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "在Middleware中读取request.geo，设置x-user-country响应头，页面根据header展示区域化内容。中国用户可展示中文界面或特定推荐。Vercel自动提供geo数据。",
       "source": "学习主题：Next.js Middleware与Edge Runtime（知识点8）",
       "created_at": "2026-09-26 05:38:49",
       "completed_at": "2026-09-26T14:11:52.648335",
-      "completion_note": "无区域化内容策略，暂不需要；如未来做多语言/地区再评估"
+      "completion_note": "无区域化内容策略，暂不需要；如未来做多语言/地区再评估",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-GROWTH-AB-TESTING-CTA",
       "title": "CTA按钮A/B测试（Middleware实现）",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "用Middleware实现无闪烁A/B测试：检查cookie中的实验组，随机分配并设置cookie，NextResponse.rewrite()到对应变体页面。适合CTA文案、定价页布局实验。",
       "source": "学习主题：Next.js Middleware与Edge Runtime（知识点9）",
       "created_at": "2026-09-26 05:38:49",
       "completed_at": "2026-09-26T14:11:52.648339",
-      "completion_note": "无A/B测试基础设施和流量规模，暂不实施"
+      "completion_note": "无A/B测试基础设施和流量规模，暂不实施",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-ADMIN-AUTH-GUARD",
       "title": "管理员后台认证守卫（Middleware）",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "如果未来添加管理员后台，用Middleware做认证守卫：读取cookie中的JWT，用jose库验证，未认证则重定向到登录页。在边缘拦截，比每页检查更集中安全。",
       "source": "学习主题：Next.js Middleware与Edge Runtime（知识点10）",
       "created_at": "2026-09-26 05:38:49",
       "completed_at": "2026-09-26T14:11:52.648344",
-      "completion_note": "项目无管理员后台/面板，无需auth guard"
+      "completion_note": "项目无管理员后台/面板，无需auth guard",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-MIDDLEWARE-AUDIT",
@@ -2126,25 +2174,27 @@
       "id": "P2-UPGRADE-NEXT15-AUDIT",
       "title": "Next.js 15升级前审计：fetch缓存与异步API变更点排查",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "升级前审计所有fetch调用（标记需要cache:force-cache的）和cookies()/headers()/params使用（标记需要加await的）。Next.js 15两大破坏性变更：fetch默认不再缓存、cookies/headers/params变为异步。输出需修改的文件清单。",
       "source": "学习主题：Next.js 15与React 19（知识点1+9+10）",
       "created_at": "2026-09-26 05:42:36",
       "completed_at": "2026-09-26T13:48:57.028636",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-UX-FORM-INTERACTION",
       "title": "搜索框与筛选表单改用React 19 Actions+useActionState",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "搜索框和工具筛选表单改用Actions模式：form action属性+useActionState管理pending状态，useOptimistic实现乐观更新。替代当前的手动onSubmit+useState模式，提升交互体验和渐进增强支持。",
       "source": "学习主题：Next.js 15与React 19（知识点3+4）",
       "created_at": "2026-09-26 05:42:36",
       "completed_at": "2026-09-26T14:11:52.648351",
-      "completion_note": "需React 19+（当前React 18），升级后可改用useActionState"
+      "completion_note": "需React 19+（当前React 18），升级后可改用useActionState",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-PPR-TRIAL",
@@ -2162,144 +2212,156 @@
       "id": "P2-PERF-AFTER-ANALYTICS",
       "title": "GA4事件追踪改用after API异步执行",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "GA4EventTracker中的事件上报改用Next.js 15 after API，在响应流式传输完成后异步执行，不阻塞页面渲染。替代当前的直接调用模式，减少对关键渲染路径的影响。需升级到Next.js 15.1+（after API稳定）。",
       "source": "学习主题：Next.js 15与React 19（知识点8）",
       "created_at": "2026-09-26 05:42:36",
       "completed_at": "2026-09-26T14:11:52.648357",
-      "completion_note": "需Next.js 15+ after() API，当前14.2.5不支持；升级后可迁移"
+      "completion_note": "需Next.js 15+ after() API，当前14.2.5不支持；升级后可迁移",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-UPGRADE-NEXT15-PLAN",
       "title": "Next.js 14→15升级计划制定与开发分支测试",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "制定完整升级计划：①npm install next@15 react@19 react-dom@19 ②运行npx @next/codemod@latest upgrade ③审计fetch缓存 ④测试所有页面 ⑤逐步启用PPR。先在开发分支测试确认无破坏后再合并到main。注意Node.js >= 18.18.0要求。",
       "source": "学习主题：Next.js 15与React 19（知识点14）",
       "created_at": "2026-09-26 05:42:36",
       "completed_at": "2026-09-26T13:48:57.028640",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QUALITY-VITEST-SETUP",
       "title": "Vitest测试框架初始化与Next.js集成配置",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "安装vitest @testing-library/react @testing-library/jest-dom @testing-library/user-event jsdom，创建vitest.config.ts（environment: jsdom, setupFiles），配置setupTests.ts导入jest-dom，mock next/image/next/navigation/next/headers等Next.js特有模块。添加npm run test脚本。",
       "source": "学习主题：Vitest与React Testing Library（知识点2+14）",
       "created_at": "2026-09-26 07:28:11",
-      "completed_at": "2026-09-26T12:32:57.055821"
+      "completed_at": "2026-09-26T12:32:57.055821",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QUALITY-COMPONENT-TESTS",
       "title": "核心组件单元测试：SearchBox/BackToTop/RouteFocusManager",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "为SearchBox（搜索输入与提交）、BackToTop（滚动显示/隐藏与点击回顶）、RouteFocusManager（路由变化后聚焦h1）编写组件测试。使用getByRole/findBy等可访问性查询，遵循RTL测试行为而非实现的原则。",
       "source": "学习主题：Vitest与React Testing Library（知识点5+6+7）",
       "created_at": "2026-09-26 07:28:11",
       "completed_at": "2026-09-26T14:11:52.648364",
-      "completion_note": "低优先级，vitest已配置可后续补充组件测试"
+      "completion_note": "低优先级，vitest已配置可后续补充组件测试",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QUALITY-INTERACTION-TESTS",
       "title": "用户交互测试：搜索框输入/CTA按钮/筛选表单",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "为搜索框输入（userEvent.type）、CTA按钮点击（userEvent.click + 验证GA4事件触发）、工具筛选表单（selectOptions + 验证过滤结果）编写交互测试。使用user-event v14（userEvent.setup() + await），jest-dom匹配器断言。",
       "source": "学习主题：Vitest与React Testing Library（知识点8+9）",
       "created_at": "2026-09-26 07:28:11",
       "completed_at": "2026-09-26T14:11:52.648368",
-      "completion_note": "Playwright E2E已覆盖用户交互场景（smoke.spec.ts）"
+      "completion_note": "Playwright E2E已覆盖用户交互场景（smoke.spec.ts）",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QUALITY-COVERAGE-CI",
       "title": "Vitest覆盖率CI门禁与GitHub Actions集成",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "在GitHub Actions中添加vitest run --coverage步骤，配置v8 provider和覆盖率阈值（lines 80%/functions 80%/branches 75%），低于阈值时CI失败。覆盖率报告上传为artifact。与现有bundle-size CI并行运行。",
       "source": "学习主题：Vitest与React Testing Library（知识点13）",
       "created_at": "2026-09-26 07:28:11",
       "completed_at": "2026-09-26T14:11:52.648373",
-      "completion_note": "vitest已配置v8 coverage，unit-tests.yml可后续添加coverage门槛"
+      "completion_note": "vitest已配置v8 coverage，unit-tests.yml可后续添加coverage门槛",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QUALITY-TEST-PYRAMID",
       "title": "前端测试策略制定：单元测试优先+组件测试+E2E分层",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "制定测试金字塔策略：优先为工具函数（slugify/formatDate等）和自定义Hooks写单元测试；核心交互组件写组件测试；关键用户流程（首页→工具详情→出站点击）用Playwright E2E（已有）。每个测试独立不共享状态，测试名称描述用户行为。",
       "source": "学习主题：Vitest与React Testing Library（知识点15）",
       "created_at": "2026-09-26 07:28:11",
       "completed_at": "2026-09-26T14:10:18.678456",
-      "completion_note": "已建立：vitest单元测试（tests/）+ Playwright E2E（tests/e2e/）分层"
+      "completion_note": "已建立：vitest单元测试（tests/）+ Playwright E2E（tests/e2e/）分层",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-GHA-AUDIT",
       "title": "CI工作流安全审计：permissions最小权限与第三方Action SHA锁定",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "审计所有.github/workflows/*.yml：①检查permissions是否显式设置且遵循最小权限（不用write-all）②检查第三方action是否锁定commit SHA（非tag/branch）③检查是否有不必要的secrets暴露。输出问题清单和修复建议。",
       "source": "学习主题：GitHub Actions安全加固（知识点3+9）",
       "created_at": "2026-09-26 09:22:06",
       "completed_at": "2026-09-26T13:48:57.028644",
-      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json"
+      "completion_note": "批量审计完成，结论见iteration_center/batch_audit_results.json",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-GHA-SECRETS",
       "title": "CI脚本Secrets泄露与Shell注入风险排查",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "检查所有CI脚本：①是否有echo/print secrets值（可能绕过GitHub自动mask）②是否将不受信任输入（PR标题/正文/外部API返回）直接内联到run脚本（shell注入风险）③修复方式：通过env环境变量传递输入，用$INPUT引用。",
       "source": "学习主题：GitHub Actions安全加固（知识点10+13）",
       "created_at": "2026-09-26 09:22:06",
       "completed_at": "2026-09-26T14:10:18.678460",
-      "completion_note": "批量审计已完成：9个workflow，2个未锁定SHA（dependency-review-action, lighthouse-ci-action），其余安全"
+      "completion_note": "批量审计已完成：9个workflow，2个未锁定SHA（dependency-review-action, lighthouse-ci-action），其余安全",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-GHA-ENV",
       "title": "GitHub Environment保护规则：生产环境部署审批门控",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "创建production Environment，配置required reviewers（指定用户/团队审批）和deployment branches（仅限main分支）。将Vercel部署workflow关联到production环境，确保生产部署需要人工批准。",
       "source": "学习主题：GitHub Actions安全加固（知识点12）",
       "created_at": "2026-09-26 09:22:06",
       "completed_at": "2026-09-26T14:11:52.648381",
-      "completion_note": "GitHub repo设置项，需在GitHub UI配置Environment保护规则"
+      "completion_note": "GitHub repo设置项，需在GitHub UI配置Environment保护规则",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-GHA-CODEQL",
       "title": "CodeQL代码安全扫描与Secret Scanning启用",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "添加.github/workflows/codeql.yml，language: javascript-typescript，在push/PR时运行CodeQL扫描。启用仓库Secret Scanning和Push Protection（公开仓库免费），自动检测代码中泄露的API密钥。",
       "source": "学习主题：GitHub Actions安全加固（知识点15）",
       "created_at": "2026-09-26 09:22:06",
       "completed_at": "2026-09-26T14:11:52.648385",
-      "completion_note": "已创建.github/workflows/codeql.yml，每周一+PR触发安全扫描"
+      "completion_note": "已创建.github/workflows/codeql.yml，每周一+PR触发安全扫描",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-GHA-OIDC-PLAN",
       "title": "Vercel部署OIDC无密钥认证评估与迁移计划",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "评估将Vercel部署从API Token（长期密钥）改为OIDC无密钥认证。Vercel支持通过OIDC与GitHub Actions集成。制定迁移计划：配置Vercel项目OIDC信任、修改deploy workflow使用OIDC、移除VERCEL_TOKEN secret。",
       "source": "学习主题：GitHub Actions安全加固（知识点1+5）",
       "created_at": "2026-09-26 09:22:06",
       "completed_at": "2026-09-26T14:11:52.648390",
-      "completion_note": "Vercel部署配置项，需在Vercel项目设置中配置OIDC，当前PAT部署正常"
+      "completion_note": "Vercel部署配置项，需在Vercel项目设置中配置OIDC，当前PAT部署正常",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-ANALYTICS-GA4-BOT-FILTER-002",
@@ -2347,20 +2409,22 @@
       "title": "P2: 验证移动友好度 — PageSpeed Insights",
       "priority": "P2",
       "assigned_to": "窗口4",
-      "status": "pending",
+      "status": "backlog",
       "description": "GSC移动曝光仅220/1922(11.5%)，GA4移动会话仅8/1156(0.7%)。OpenSEO未发现mobile-specific问题。需用PageSpeed Insights API验证移动性能和移动友好度。",
       "created": "2026-09-26",
-      "evidence": "GSC: desktop 1700imp vs mobile 220imp; GA4: desktop 1148 vs mobile 8"
+      "evidence": "GSC: desktop 1700imp vs mobile 220imp; GA4: desktop 1148 vs mobile 8",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-ANALYTICS-GEO-SIGNAL-001",
       "title": "P2: 监控首个ChatGPT GEO信号",
       "priority": "P2",
       "assigned_to": "窗口4",
-      "status": "pending",
+      "status": "backlog",
       "description": "GA4发现1个来自chatgpt.com/ai-assistant的会话(09-19至09-25期间)，这是ChatGPT引用我们网站的第一个真实信号。需持续监控GEO流量来源变化。",
       "created": "2026-09-26",
-      "evidence": "GA4: chatgpt.com / ai-assistant, 1 session, 1 user"
+      "evidence": "GA4: chatgpt.com / ai-assistant, 1 session, 1 user",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P1-CONTENT-70-30-SPLIT-001",
@@ -2418,11 +2482,12 @@
       "description": "参考Indie Hackers 0→100K/5月案例：用户展示区(submit AI projects)、Twitter shoutout tagging creators、社区互动。内容不再只是我们的，是社区驱动的。先从简单的用户提交功能开始。",
       "assigned_to": "窗口6",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "source": "AI工具站成功案例学习-Community Flywheel",
       "created_at": "2026-09-26T11:20:00Z",
       "completed_at": "2026-09-26 12:16:59",
-      "completed_by": "窗口6"
+      "completed_by": "窗口6",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-ANALYTICS-WEEKLY-20MIN-001",
@@ -2430,27 +2495,30 @@
       "description": "每周一固定20分钟：1.捕获率(订阅/访客目标1.5%+)；2.欢迎序列完成率+点击率(目标50%完成/25%+点击)；3.周报联盟链接点击率(目标8%+)；4.各计划转化率(30天)。识别瓶颈数字，集中优化2-3周。",
       "assigned_to": "窗口4",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "source": "AI工具站成功案例学习-Weekly 20-Min Measurement Loop",
-      "created_at": "2026-09-26T11:20:00Z"
+      "created_at": "2026-09-26T11:20:00Z",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-QA-LHCI-SETUP",
       "title": "添加Lighthouse CI性能/SEO分数断言到GitHub Actions",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "在.github/workflows/添加lighthouse-ci.yml，对首页/工具页/文章页3个模板做性能分数断言(performance>=80, seo>=90)，生产部署后用unlighthouse-ci全站扫描",
-      "completed_at": "2026-09-26T12:32:57.055828"
+      "completed_at": "2026-09-26T12:32:57.055828",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-A11Y-AXE-CI",
       "title": "在Playwright E2E中添加axe-core无障碍断言",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "用@axe-core/playwright对首页和工具详情页检查WCAG 2.2 AA违规，violations>0则CI失败",
-      "completed_at": "2026-09-26T12:32:57.055831"
+      "completed_at": "2026-09-26T12:32:57.055831",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-PERF-LOADING-SKELETON-001",
@@ -2492,79 +2560,86 @@
       "id": "P2-PERF-PPR-ENABLE-001",
       "title": "启用PPR并为工具详情页定义Suspense边界",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "description": "在next.config中启用experimental.ppr，为工具详情页定义Suspense边界（静态shell+动态评分区域）",
       "source": "2026-09-26 Streaming学习落地计划",
       "created_at": "2026-09-26T13:39:17.480698",
       "completed_at": "2026-09-26T14:10:18.678482",
-      "completion_note": "已启用experimental.ppr=incremental，页面可通过export const experimental_ppr=true opt-in"
+      "completion_note": "已启用experimental.ppr=incremental，页面可通过export const experimental_ppr=true opt-in",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-COMPOSITE-REFACTOR-001",
       "title": "将9个workflow重复的checkout+setup-node+npm ci抽取为composite action",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GitHub Actions自定义Action知识点1+2",
-      "created_at": "2026-09-26T17:17:36.782320"
+      "created_at": "2026-09-26T17:17:36.782320",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-CONCURRENCY-ALL-001",
       "title": "为所有workflow添加concurrency配置（group含workflow名+ref，cancel-in-progress:true）",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GitHub Actions知识点4",
-      "created_at": "2026-09-26T17:17:36.782345"
+      "created_at": "2026-09-26T17:17:36.782345",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-LIGHTHOUSE-MATRIX-001",
       "title": "lighthouse-ci.yml改为matrix策略，对3个页面模板并行跑Lighthouse",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GitHub Actions知识点5",
-      "created_at": "2026-09-26T17:17:36.782347"
+      "created_at": "2026-09-26T17:17:36.782347",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-CACHE-UNIFY-001",
       "title": "所有workflow统一用setup-node cache:npm，移除手动actions/cache",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GitHub Actions知识点6",
-      "created_at": "2026-09-26T17:17:36.782348"
+      "created_at": "2026-09-26T17:17:36.782348",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-PIN-SHA-001",
       "title": "将所有第三方Action从tag改为完整commit SHA锁定",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GitHub Actions知识点10",
-      "created_at": "2026-09-26T17:17:36.782349"
+      "created_at": "2026-09-26T17:17:36.782349",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-PERMISSIONS-001",
       "title": "为所有workflow显式声明permissions最小权限",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GitHub Actions知识点9",
-      "created_at": "2026-09-26T17:17:36.782350"
+      "created_at": "2026-09-26T17:17:36.782350",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-GROWTH-REDDIT-001",
@@ -2622,79 +2697,86 @@
       "id": "P2-GROWTH-PH-LAUNCH-006",
       "title": "Product Hunt发布准备：准备素材（GIF/视频/4截图/描述），找hunter，选周二/三凌晨PST发布",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口2",
       "description": "Product Hunt是消费/设计类产品最佳发布平台。准备：1)制作30秒产品演示GIF或视频；2)4张高质量截图；3)一句话tagline；4)详细描述；5)maker comment准备好。提前2-3周联系Product Hunt hunter。发布时间：周二或周三00:01 PST。发布当天首小时激活支持者（真实用户，不买赞），回复每一条评论。",
       "created_at": "2026-09-26 17:20:35",
-      "source": "指挥官高频学习-冷启动增长"
+      "source": "指挥官高频学习-冷启动增长",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-CI-LHCI-ASSERTIONS-001",
       "title": "lighthouserc.json添加性能预算断言（LCP<2500/TBT<200/CLS<0.1/JS<300KB）",
       "priority": "P2",
-      "status": "completed",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：高星工具知识点2+9",
       "created_at": "2026-09-26T19:20:13.210522",
       "completed_at": "2026-09-26T22:17:10.984552",
-      "completion_note": ".lighthouserc.json已有断言，收紧TBT从300ms到200ms、JS体积从500KB到300KB。numberOfRuns=3已满足。LCP<2500/CLS<0.1已存在。"
+      "completion_note": ".lighthouserc.json已有断言，收紧TBT从300ms到200ms、JS体积从500KB到300KB。numberOfRuns=3已满足。LCP<2500/CLS<0.1已存在。",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-LINKINATOR-001",
       "title": "创建broken-links.yml，每周linkinator扫描全站断链输出JSON报告",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：高星工具知识点5",
-      "created_at": "2026-09-26T19:20:13.210543"
+      "created_at": "2026-09-26T19:20:13.210543",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-WEBVITALS-UPGRADE-001",
       "title": "确认WebVitalsReporter使用web-vitals v4 onINP API，验证GA4上报格式",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：高星工具知识点4",
-      "created_at": "2026-09-26T19:20:13.210545"
+      "created_at": "2026-09-26T19:20:13.210545",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-LHCI-RUNS-001",
       "title": "确认lighthouse-ci.yml numberOfRuns>=3取中位数减少波动",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：高星工具知识点10",
-      "created_at": "2026-09-26T19:20:13.210546"
+      "created_at": "2026-09-26T19:20:13.210546",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-SCHEMA-VALIDATE-001",
       "title": "创建脚本用schema.org validator API验证所有页面JSON-LD，CI运行",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：高星工具知识点11",
-      "created_at": "2026-09-26T19:20:13.210547"
+      "created_at": "2026-09-26T19:20:13.210547",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-DEV-TOOL-AUDIT-001",
       "title": "审计现有CI工具链，移除功能重叠的，补充缺失的（linkinator/schema验证）",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：高星工具知识点12",
-      "created_at": "2026-09-26T19:20:13.210548"
+      "created_at": "2026-09-26T19:20:13.210548",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-MONETIZE-AFFILIATE-APPLY-001",
@@ -2744,87 +2826,95 @@
       "id": "P2-MONETIZE-DIGITAL-PRODUCT-005",
       "title": "创建首个数字产品：AI工具对比Notion模板或prompt库，$9-29定价",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口5",
       "description": "数字产品高毛利无履约。选项A：533个AI工具的Notion对比数据库模板（含分类/价格/评分/适用场景），$19；选项B：100+高质量AI prompt库（按场景分类），$9。用Gumroad或Lemon Squeezy交付。在网站首页和文章底部推广。先做1个验证需求，再扩展。",
       "created_at": "2026-09-26 20:18:58",
-      "source": "指挥官高频学习-变现模式"
+      "source": "指挥官高频学习-变现模式",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-MONETIZE-DISPLAY-ADS-006",
       "title": "评估展示广告时机：Ezoic门槛10K sessions/月，当前流量不够时先不做",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口5",
       "description": "科技niche RPM $25-50，但Ezoic门槛10K sessions/月，Mediavine 50K。当前真实organic仅7次/周，远不够。待办：1)记录当前月sessions数；2)设定达到10K的目标日期；3)提前研究Ezoic vs Mediavine vs Raptive对比；4)流量达标后立即申请。不要现在就加广告拖慢速度。",
       "created_at": "2026-09-26 20:18:58",
-      "source": "指挥官高频学习-变现模式"
+      "source": "指挥官高频学习-变现模式",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-SEO-INDEX-MONITOR-001",
       "title": "创建URL Inspection API分层索引监控脚本，SQLite存储verdict，diff检测去索引",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GSC API知识点2+5+8",
-      "created_at": "2026-09-26T21:23:30.429699"
+      "created_at": "2026-09-26T21:23:30.429699",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-INDEXNOW-AUTO-001",
       "title": "Vercel部署后自动IndexNow批量ping新增/修改URL",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GSC API知识点4+11",
-      "created_at": "2026-09-26T21:23:30.429722"
+      "created_at": "2026-09-26T21:23:30.429722",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-GSC-SERVICE-ACCOUNT-001",
       "title": "创建Google Cloud service account并添加为GSC所有者，为自动化提供认证",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GSC API知识点7",
-      "created_at": "2026-09-26T21:23:30.429723"
+      "created_at": "2026-09-26T21:23:30.429723",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-GSC-REPORT-001",
       "title": "完善GSC报告脚本，计算索引覆盖率/新页面索引时间/去索引率",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GSC API知识点6+10",
-      "created_at": "2026-09-26T21:23:30.429724"
+      "created_at": "2026-09-26T21:23:30.429724",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-SITEMAP-SUBMIT-001",
       "title": "部署后自动通过Sitemap API提交sitemap.xml",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GSC API知识点9",
-      "created_at": "2026-09-26T21:23:30.429726"
+      "created_at": "2026-09-26T21:23:30.429726",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-AUTOMATION-SUITE-001",
       "title": "整合GSC API+web-vitals+schema validator+IndexNow为统一SEO自动化脚本",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：GSC API知识点12",
-      "created_at": "2026-09-26T21:23:30.429728"
+      "created_at": "2026-09-26T21:23:30.429728",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-GEO-LLMSTXT-001",
@@ -2867,10 +2957,11 @@
       "id": "P2-GEO-MONITOR-001",
       "title": "窗口4：建立AI引用监测——手动测试ChatGPT/Perplexity对目标query是否引用我们",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口4",
       "source": "learning: GEO前沿 2026-09-26",
-      "description": "每周用10个核心query在ChatGPT Search和Perplexity测试，记录是否被引用、引用位置、引用页面。GEO漏斗：Indexed→Retrieved→Cited→Visited，诊断断点。可用Otterly/Profound工具辅助。"
+      "description": "每周用10个核心query在ChatGPT Search和Perplexity测试，记录是否被引用、引用位置、引用页面。GEO漏斗：Indexed→Retrieved→Cited→Visited，诊断断点。可用Otterly/Profound工具辅助。",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P0-GA4-BOT-FILTER-001",
@@ -2911,34 +3002,37 @@
       "id": "P2-PERF-CLS-RESERVE-001",
       "title": "Giscus评论区和AdSense广告位添加min-height/aspect-ratio预留空间防CLS",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：CWV知识点7",
-      "created_at": "2026-09-26T22:18:55.540121"
+      "created_at": "2026-09-26T22:18:55.540121",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-RUM-ATTRIBUTION-001",
       "title": "WebVitalsReporter升级attribution build，上报最差交互元素到GA4",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：CWV知识点10+11",
-      "created_at": "2026-09-26T22:18:55.540122"
+      "created_at": "2026-09-26T22:18:55.540122",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-LHCI-TOP10-001",
       "title": "lighthouse-ci.yml从4个URL扩展到Top10高流量页",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：CWV知识点12",
-      "created_at": "2026-09-26T22:18:55.540123"
+      "created_at": "2026-09-26T22:18:55.540123",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-QA-ANY-ELIMINATE-001",
@@ -2956,121 +3050,133 @@
       "id": "P2-QA-ESLINT-STRICT-001",
       "title": "eslint.config.mjs升级strictTypeChecked，no-explicit-any从warn升级error，添加no-unsafe-*规则",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：TS严格模式知识点9",
-      "created_at": "2026-09-26T23:18:24.451596"
+      "created_at": "2026-09-26T23:18:24.451596",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QA-CATCH-UNKNOWN-001",
       "title": "审计所有API路由catch子句，确保unknown类型正确收窄处理",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：TS严格模式知识点6",
-      "created_at": "2026-09-26T23:18:24.451598"
+      "created_at": "2026-09-26T23:18:24.451598",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QA-VERBATIM-IMPORT-001",
       "title": "tsconfig开启verbatimModuleSyntax，修复类型/值导入混用",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：TS严格模式知识点12",
-      "created_at": "2026-09-26T23:18:24.451599"
+      "created_at": "2026-09-26T23:18:24.451599",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QA-DTS-THIRDPARTY-001",
       "title": "为Crisp/Speed Insights/AdSense第三方全局变量创建types/global.d.ts",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1"
       ],
       "source": "2026-09-26学习：TS严格模式知识点11",
-      "created_at": "2026-09-26T23:18:24.451600"
+      "created_at": "2026-09-26T23:18:24.451600",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-CACHE-TAGS-001",
       "title": "为API路由fetch添加cache tags",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "为gsc-data/ga4-data等fetch添加tags，支持revalidateTag按需失效",
-      "created_at": "2026-09-27T01:25:04.404928"
+      "created_at": "2026-09-27T01:25:04.404928",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-NEXT15-CACHE-001",
       "title": "Next.js 15升级前缓存准备",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "为所有需要缓存的fetch显式添加cache: force-cache，避免15升级后全部动态渲染",
-      "created_at": "2026-09-27T01:25:04.404930"
+      "created_at": "2026-09-27T01:25:04.404930",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-CACHE-DEBUG-001",
       "title": "Vercel缓存命中率调试",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "检查x-vercel-cache头，优化低命中率路由的缓存策略",
-      "created_at": "2026-09-27T01:25:04.404932"
+      "created_at": "2026-09-27T01:25:04.404932",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-QA-VITEST-FIX-001",
       "title": "修复Vitest本地运行超时挂起",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "description": "排查jsdom环境初始化问题，参考Next.js官方with-vitest示例对比配置，确保npx vitest run可正常完成",
       "created_at": "2026-09-27T01:29:22.569898",
       "completed_at": "2026-09-28T05:14:11.187448",
-      "completed_by": "窗口1"
+      "completed_by": "窗口1",
+      "backlog_reason": "duplicate_merge_testing-framework_0929"
     },
     {
       "id": "P1-QA-PLAYWRIGHT-INSTALL-001",
       "title": "安装@playwright/test并验证E2E测试",
       "priority": "P1",
       "assigned_to": "窗口1",
-      "status": "completed",
+      "status": "backlog",
       "description": "将@playwright/test加入devDependencies，npm install，运行npx playwright test验证smoke.spec.ts通过",
       "created_at": "2026-09-27T01:29:22.569939",
       "completed_at": "2026-09-28T05:14:11.187487",
-      "completed_by": "窗口1"
+      "completed_by": "窗口1",
+      "backlog_reason": "duplicate_merge_testing-framework_0929"
     },
     {
       "id": "P2-QA-COMPONENT-TESTS-001",
       "title": "为核心组件编写Vitest组件测试",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "为ToolCard/FAQSection/ComparisonChart/Breadcrumb编写Testing Library组件测试，每个至少3个用例",
-      "created_at": "2026-09-27T01:29:22.569943"
+      "created_at": "2026-09-27T01:29:22.569943",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QA-E2E-EXPAND-001",
       "title": "扩展Playwright E2E测试覆盖关键路径",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "从3个smoke测试扩展到10+个，覆盖搜索/对比页/分类导航/内链跳转",
-      "created_at": "2026-09-27T01:29:22.569944"
+      "created_at": "2026-09-27T01:29:22.569944",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-QA-COVERAGE-CI-001",
       "title": "CI中添加Vitest覆盖率阈值",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "unit-tests.yml添加v8 coverage，lines>60%阈值，html报告上传artifact",
-      "created_at": "2026-09-27T01:29:22.569946"
+      "created_at": "2026-09-27T01:29:22.569946",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-SEC-CSP-MIDDLEWARE-001",
@@ -3099,126 +3205,140 @@
       "title": "Middleware AI爬虫检测与日志",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "检测GPTBot/ClaudeBot/Google-Extended等UA，waitUntil记录访问日志，配合robots.txt和llms.txt",
-      "created_at": "2026-09-27T03:22:09.688888"
+      "created_at": "2026-09-27T03:22:09.688888",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-RATE-LIMIT-001",
       "title": "API路由速率限制",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "为/api/google-search等API路由添加基于IP的速率限制(60次/分钟)，超限返回429",
-      "created_at": "2026-09-27T03:22:09.688891"
+      "created_at": "2026-09-27T03:22:09.688891",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-NEXT15-UPGRADE-001",
       "title": "升级到Next.js 15.5 LTS+React 19",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "用codemod升级到15.5 LTS获得安全更新(当前14.2.5已不在LTS)，修复fetch缓存变化和async APIs，验证线上",
-      "created_at": "2026-09-27T04:05:42.731425"
+      "created_at": "2026-09-27T04:05:42.731425",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-TURBOPACK-TRY-001",
       "title": "验证Turbopack构建兼容性",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "尝试next build --turbopack，验证533工具页+107文章SSG构建，记录构建时间对比",
-      "created_at": "2026-09-27T04:05:42.731454"
+      "created_at": "2026-09-27T04:05:42.731454",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-REACT-COMPILER-001",
       "title": "评估React Compiler启用条件",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "Next 16升级后评估React Compiler，检查useMemo/useCallback使用情况，确定自动memoization范围",
-      "created_at": "2026-09-27T04:05:42.731455"
+      "created_at": "2026-09-27T04:05:42.731455",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-NEXT-SECURITY-UPDATE-001",
       "title": "跟进Next.js安全更新",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "2026-09-30安全更新(1 critical+2 high)，升级到15.5.27或16.3.7后验证无回归",
-      "created_at": "2026-09-27T04:05:42.731456"
+      "created_at": "2026-09-27T04:05:42.731456",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-ENG-PNPM-MIGRATE-001",
       "title": "评估从npm迁移到pnpm",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "迁移package-lock.json到pnpm-lock.yaml，预期安装速度提升40%磁盘节省50%，验证Vercel构建兼容性",
-      "created_at": "2026-09-27T05:16:54.632577"
+      "created_at": "2026-09-27T05:16:54.632577",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-ENG-TURBO-CI-001",
       "title": "评估引入Turborepo优化CI",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "配置Turborepo+Remote Cache优化9个GitHub Actions workflow，先从lint+test任务试点，预期CI时间减少30-50%",
-      "created_at": "2026-09-27T05:16:54.632601"
+      "created_at": "2026-09-27T05:16:54.632601",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-ENG-SHARED-LIB-001",
       "title": "识别可提取的共享代码",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "评估types/index.ts(Tool/Post/Comparison)和lib/工具函数提取为packages/types和packages/utils的ROI",
-      "created_at": "2026-09-27T05:16:54.632603"
+      "created_at": "2026-09-27T05:16:54.632603",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-ENG-MONOREPO-EVAL-001",
       "title": "Monorepo架构迁移全面评估",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "输出单包→Monorepo(apps/web+packages/*+tools/*)迁移成本/收益分析报告，确定迁移触发阈值",
-      "created_at": "2026-09-27T05:16:54.632604"
+      "created_at": "2026-09-27T05:16:54.632604",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-DEPENDABOT-SETUP-001",
       "title": "配置Dependabot版本和安全更新",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "创建.github/dependabot.yml，npm生态weekly版本更新(生产/开发分组)+启用Security Updates",
-      "created_at": "2026-09-27T07:28:10.624132"
+      "created_at": "2026-09-27T07:28:10.624132",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-OSV-SCANNER-CI-001",
       "title": "CI集成OSV-Scanner漏洞扫描",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "在security.yml添加google/osv-scanner-action，与npm audit互补提高漏洞覆盖率",
-      "created_at": "2026-09-27T07:28:10.624161"
+      "created_at": "2026-09-27T07:28:10.624161",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-SBOM-GENERATE-001",
       "title": "配置SBOM生成",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "配置@cyclonedx/cyclonedx-npm生成CycloneDX SBOM，构建时作为artifact存储",
-      "created_at": "2026-09-27T07:28:10.624162"
+      "created_at": "2026-09-27T07:28:10.624162",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEC-NPM-IGNORE-SCRIPTS-001",
       "title": "CI中npm install添加--ignore-scripts",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "所有CI workflow的npm install添加--ignore-scripts防护install-time供应链攻击，验证无必须install脚本",
-      "created_at": "2026-09-27T07:28:10.624163"
+      "created_at": "2026-09-27T07:28:10.624163",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-MONETIZE-NEWSLETTER-ASSET-001",
@@ -3245,20 +3365,22 @@
       "title": "窗口4：按任务(task)而非产品分类重组工具导航——TAAFT核心SEO策略",
       "description": "TAAFT成功关键：按任务组织('remove image background')而非按产品类别('Image Editing')。任务型搜索词长尾流量巨大且转化高。我们当前按产品分类。需：1)建立任务-工具映射表；2)创建'Best AI for [task]'系列页面；3)导航栏增加任务浏览入口；4)每篇评测文关联相关任务页。任务型页面在AI搜索(GEO)中也更容易被引用。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口4",
       "source": "learning_2026-09-27_AI工具站成功案例拆解",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-MONETIZE-PAID-LISTING-001",
       "title": "窗口5：设计付费收录(Paid Listing)页面——Futurepedia $247-497/次模式",
       "description": "Futurepedia验证：基础收录$247/次，认证收录$497/次，Featured $1050/周(1000-2500点击)。Toolify：Express $100(24-72h上线)。我们月UV过500后可启动。现在先：1)建好/submit页面和定价(3档：Basic $99/7天上线、Verified $249/48h+认证徽章、Featured $99/月顶部展示)；2)准备media kit；3)在工具页加'提交你的工具'入口。这是目录站第二收入流。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口5",
       "source": "learning_2026-09-27_AI工具站成功案例拆解",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P1-CONTENT-COMPARISON-LEADERBOARD-001",
@@ -3275,13 +3397,14 @@
       "title": "窗口1+窗口4：试点Genspark式SparkPage——为每个工具生成SEO可索引的AI回答页",
       "description": "Genspark 12个月$60M ARR的核心wedge是'Sparkpages'——可被Google/Bing索引的AI生成回答页。这正是GEO(生成式引擎优化)的关键。我们可以为Top 50工具各生成一个'[Tool]是什么？怎么用？Alternatives'的结构化回答页，内容包含：定义、使用场景、定价、优缺点、替代品、联盟链接。这些页面在AI搜索中被引用概率极高。先试点10个页面验证索引和流量。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": [
         "窗口1",
         "窗口4"
       ],
       "source": "learning_2026-09-27_AI工具站成功案例拆解",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-MONITOR-SENTRY-SETUP-001",
@@ -3297,27 +3420,30 @@
       "title": "配置OpenTelemetry tracing",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "创建instrumentation.ts，配置@vercel/otel registerOTel，验证Vercel部署后trace数据",
-      "created_at": "2026-09-27T15:19:00.380982"
+      "created_at": "2026-09-27T15:19:00.380982",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-MONITOR-WEBVITALS-ALERT-001",
       "title": "设置Web Vitals告警阈值",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "基于WebVitalsReporter设置GA4告警(LCP>2.5s/INP>200ms/CLS>0.1)，超阈值触发通知",
-      "created_at": "2026-09-27T15:19:00.380984"
+      "created_at": "2026-09-27T15:19:00.380984",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-MONITOR-RELEASE-TRACKING-001",
       "title": "配置Sentry release追踪",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "CI中Sentry CLI创建release关联commits，部署后标记release，启用回归检测告警",
-      "created_at": "2026-09-27T15:19:00.380985"
+      "created_at": "2026-09-27T15:19:00.380985",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P1-TOOL-N8N-AUTOMATION-001",
@@ -3337,10 +3463,11 @@
       "title": "窗口4：部署SerpBear自托管排名追踪——2K星，无限关键词/域名，替代手动GSC查排名",
       "description": "SerpBear(towfiqi/serpbear, 2K星)是自托管关键词排名追踪工具，无限关键词和域名，原生集成GSC和Google Ads。我们当前靠手动从GSC导出数据看排名，效率低。部署后可：1)追踪Top 100目标关键词每日排名变化；2)自动生成排名趋势报告；3)排名下降自动告警。Docker一键部署，SERP API按量付费(可选ValueSerp/SerpAPI等)。与OpenSEO互补：OpenSEO做关键词研究，SerpBear做持续排名监控。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口4",
       "source": "learning_2026-09-27_GitHub高星效率工具",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P1-TOOL-MARKETING-SKILLS-001",
@@ -3357,102 +3484,113 @@
       "title": "窗口1：用shot-scraper+Playwright deviceScaleFactor:2升级截图质量——解决截图模糊/验证弹窗/404问题",
       "description": "我们之前截图有大量验证弹窗、404、不匹配问题。shot-scraper(Simon Willison出品)是基于Playwright的CLI截图工具，支持：1)等待特定元素出现再截图(wait-for-selector)；2)自动处理cookie横幅/弹窗；3)批量截图URL列表；4)retina分辨率(deviceScaleFactor:2)。配合Playwright的最佳实践：viewport 1440x900→2880x1800像素，waitUntil:'networkidle'，拦截验证弹窗。先改造截图脚本，对Top 50工具页重新截图验证质量。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口1",
       "source": "learning_2026-09-27_GitHub高星效率工具",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-TOOL-SOCIAL-AUTO-UPLOAD-001",
       "title": "窗口2：评估social-auto-upload(9.5K星)——自动分发内容到TikTok/Instagram/X/Reddit，零成本获客",
       "description": "social-auto-upload(9.5K星)自动发布视频和图片到抖音/B站/小红书/快手/TikTok/Instagram/X等平台，支持CLI命令和AI agent技能。我们当前内容只发在网站上，没有社交流量。可用于：1)把每篇评测文的核心观点做成图文/短视频自动发到X/Reddit/Indie Hackers；2)工具对比内容做成carousel发Instagram/LinkedIn；3)Reddit冷启动(9:1法则)配合自动发布。注意：Reddit需手动写高质量回复，不能纯自动发(会被ban)，工具只做辅助发布。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口2",
       "source": "learning_2026-09-27_GitHub高星效率工具",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-TOOL-SEOJUICE-LINKBUILDING-001",
       "title": "窗口2：部署SEOJuice开源外链分析工具——自动发现外链建设机会，替代手动找资源",
       "description": "SEOJuice是开源外链分析和外链建设机会发现工具，自托管部署，数据完全私有。我们当前外链建设靠手动找目录提交，效率低。SEOJuice可：1)分析竞争对手外链来源；2)自动发现可提交的目录/资源页；3)追踪已提交外链是否被收录；4)外链质量评分。配合窗口2已有的Reddit/社区引流，形成外链建设双轨：社区引流(快)+目录提交(稳)。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口2",
       "source": "learning_2026-09-27_GitHub高星效率工具",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-API-RATE-LIMIT-001",
       "title": "API路由添加速率限制",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "为5个搜索代理API路由添加基于IP的速率限制(60次/分钟)，超限返回429",
-      "created_at": "2026-09-27T17:23:59.045445"
+      "created_at": "2026-09-27T17:23:59.045445",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-API-ERROR-HANDLING-001",
       "title": "统一API路由错误处理格式",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "所有API路由返回{success,data?,error?}格式，区分4xx/5xx，服务端记录完整错误",
-      "created_at": "2026-09-27T17:23:59.045472"
+      "created_at": "2026-09-27T17:23:59.045472",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-API-CACHE-GET-001",
       "title": "GET API路由添加缓存",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "为google-cse/ga4-proxy等可缓存GET路由添加revalidate=3600，减少外部API调用",
-      "created_at": "2026-09-27T17:23:59.045473"
+      "created_at": "2026-09-27T17:23:59.045473",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-API-CORS-WHITELIST-001",
       "title": "API路由CORS白名单",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "配置CORS白名单仅允许aitoolcrux.com同源，OPTIONS处理preflight，防止外部调用代理",
-      "created_at": "2026-09-27T17:23:59.045480"
+      "created_at": "2026-09-27T17:23:59.045480",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-TOKEN-LEAST-PRIVILEGE-001",
       "title": "所有workflow添加最小权限permissions",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "9个workflow添加全局permissions: contents: read，单个job按需提升权限",
-      "created_at": "2026-09-27T19:22:03.880069"
+      "created_at": "2026-09-27T19:22:03.880069",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-REMOVE-PAT-REMOTE-001",
       "title": "移除git remote URL中的PAT",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "移除remote URL内嵌PAT改用SSH或GITHUB_TOKEN，吊销旧PAT重新生成",
-      "created_at": "2026-09-27T19:22:03.880091"
+      "created_at": "2026-09-27T19:22:03.880091",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-PIN-ACTIONS-SHA-001",
       "title": "第三方action pin到commit SHA",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "所有workflow中actions/checkout/setup-node等从@v4改为@commitSHA，防止tag篡改",
-      "created_at": "2026-09-27T19:22:03.880093"
+      "created_at": "2026-09-27T19:22:03.880093",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-CI-SECRET-SCANNING-001",
       "title": "启用Secret scanning和Push Protection",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "仓库Settings启用Secret scanning+Push Protection，审查已有扫描结果",
-      "created_at": "2026-09-27T19:22:03.880094"
+      "created_at": "2026-09-27T19:22:03.880094",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-GEO-ORIGINAL-DATA-001",
@@ -3516,46 +3654,51 @@
       "title": "窗口2：Reddit是Perplexity第一引用源(46.7%)——加大Reddit高质量参与获取AI引用",
       "description": "数据：Perplexity的引用中Reddit占46.7%，且Perplexity有强时效性偏好(≤90天内容)，查询间来源重叠仅25%——意味着新内容有真实机会。我们窗口2已有Reddit策略但需升级：1)在r/SaaS/r/marketing/r/Entrepreneur等社区发布原创工具测试数据(带aitoolcrux链接)；2)回答AI工具相关问题时引用我们的测试数据；3)目标：每月10条高质量Reddit帖子/回复，被Perplexity引用。这是零成本获取AI搜索流量的最高杠杆渠道。",
       "priority": "P2",
-      "status": "pending",
+      "status": "backlog",
       "assigned_to": "窗口2",
       "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-SEO-JS-RENDER-AUDIT-001",
       "title": "审计关键页面初始HTML内容完整性",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "审计10个关键页面View Page Source，验证title/meta/h1/正文在初始HTML中存在",
-      "created_at": "2026-09-27T21:24:42.910916"
+      "created_at": "2026-09-27T21:24:42.910916",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-JS-ERROR-MONITOR-001",
       "title": "监控生产JS错误对渲染的影响",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "集成Sentry后检查JS错误率，确保无渲染中断错误影响Googlebot索引",
-      "created_at": "2026-09-27T21:24:42.910939"
+      "created_at": "2026-09-27T21:24:42.910939",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-JS-LAZY-IMG-VERIFY-001",
       "title": "验证lazy-load图片SEO可见性",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "验证所有图片loading=lazy+width/height+alt，GSC确认Googlebot渲染后图片可见",
-      "created_at": "2026-09-27T21:24:42.910941"
+      "created_at": "2026-09-27T21:24:42.910941",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-SEO-JS-GSC-RENDER-CHECK-001",
       "title": "GSC URL Inspection渲染检查",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "用GSC URL Inspection检查5个排名页面渲染后DOM，确认内容一致无JS错误",
-      "created_at": "2026-09-27T21:24:42.910942"
+      "created_at": "2026-09-27T21:24:42.910942",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P0-SEO-404-REDIRECT-001",
@@ -3655,36 +3798,40 @@
       "title": "文章页从SSG改为ISR（revalidate=3600）",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "将app/blog/[slug]/page.tsx添加export const revalidate = 3600，实现小时级自动刷新，减少全量构建频率",
-      "source": "learning-2026-09-27-nextjs-caching"
+      "source": "learning-2026-09-27-nextjs-caching",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-REVALIDATE-WEBHOOK-001",
       "title": "创建/api/revalidate Route Handler支持按需revalidate",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "创建app/api/revalidate/route.ts，接收secret验证后调用revalidateTag(posts/tools)，配合内容更新webhook实现按需刷新",
-      "source": "learning-2026-09-27-nextjs-caching"
+      "source": "learning-2026-09-27-nextjs-caching",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-DATA-CACHE-TAGS-001",
       "title": "为数据获取层添加cache tags",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "将posts/tools/comparisons数据从JSON import重构为fetch或unstable_cache，添加next.tags为on-demand revalidation奠定基础",
-      "source": "learning-2026-09-27-nextjs-caching"
+      "source": "learning-2026-09-27-nextjs-caching",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-ROUTER-CACHE-PREFETCH-001",
       "title": "审计Link prefetch行为优化Router Cache",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "description": "审计全站Link组件prefetch属性，关键页面prefetch=true，非关键页面prefetch=false减少带宽和Router Cache内存占用",
-      "source": "learning-2026-09-27-nextjs-caching"
+      "source": "learning-2026-09-27-nextjs-caching",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-SPECRULES-MODERATE-001",
@@ -3692,9 +3839,10 @@
       "description": "在app/layout.tsx注入<script type=speculationrules>，对所有同源链接使用moderate eagerness prerender，排除/api/、/submit、/logout、/search等动态/状态变更路径",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "created_at": "2026-09-28T01:18:10.063787",
-      "source": "learning_speculation_rules"
+      "source": "learning_speculation_rules",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-SPECRULES-EAGER-001",
@@ -3702,9 +3850,10 @@
       "description": "工具详情页的relatedTools/popularTools链接添加.prerender CSS类，用eager规则预渲染高置信导航目标，提升工具页间切换速度",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "created_at": "2026-09-28T01:18:10.063811",
-      "source": "learning_speculation_rules"
+      "source": "learning_speculation_rules",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-SPECRULES-MEASURE-001",
@@ -3712,9 +3861,10 @@
       "description": "在components/analytics/WebVitalsReporter.tsx中检测document.prerendering和activationStart，统计prerender激活率、命中率和LCP改善幅度，上报GA4",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "created_at": "2026-09-28T01:18:10.063813",
-      "source": "learning_speculation_rules"
+      "source": "learning_speculation_rules",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "P2-PERF-SPECRULES-PREFETCH-001",
@@ -3722,128 +3872,10 @@
       "description": "对文章和工具页中的跨源外链（工具官网、参考链接）使用moderate prefetch规则（非prerender），在不发送Cookie的前提下预取文档，提升外链跳转体验",
       "priority": "P2",
       "assigned_to": "窗口1",
-      "status": "pending",
+      "status": "backlog",
       "created_at": "2026-09-28T01:18:10.063814",
-      "source": "learning_speculation_rules"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，修复article-api URL（301重定向）",
-      "assigned_to": "窗口1",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，优化4个零点击页title/meta（dify/cursor/sd/midjourney）",
-      "assigned_to": "窗口1",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，/compare页改造为索引页+具体对比页独立URL",
-      "assigned_to": "窗口1",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，搭建自动内链系统scripts/internal_linker.py",
-      "assigned_to": "窗口1",
-      "priority": "P1",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第5节，批量添加Article+FAQPage schema标记",
-      "assigned_to": "窗口1",
-      "priority": "P1",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第7节，生成50个外链目标列表（A/B/C类）",
-      "assigned_to": "窗口2",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第7节，提交5个资源页外链",
-      "assigned_to": "窗口2",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第7节，Reddit社区参与3次（r/ChatGPT等）",
-      "assigned_to": "窗口2",
-      "priority": "P1",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第3-4节，为3个P0对比词生成Brief（ChatGPT vs Claude等）",
-      "assigned_to": "窗口3",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第4节，写第1篇P0对比页（ChatGPT vs Claude 2026），严格过质量门",
-      "assigned_to": "窗口3",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第4节，补3篇旧文章Quick Answer（从qa_takeaways_gaps取）",
-      "assigned_to": "窗口3",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第2-6节，本周GSC数据分析（3类页面识别+优化建议）",
-      "assigned_to": "窗口4",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第2节，关键词金字塔维护+P0词挖掘（不足50个则补充）",
-      "assigned_to": "窗口4",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第8节，扫描所有文章联盟链接（是否≥2处+rel=sponsored）",
-      "assigned_to": "窗口5",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第8节，申请3个新联盟项目（大品牌优先）",
-      "assigned_to": "窗口5",
-      "priority": "P1",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第9节，对比页设计优化（固定表头+推荐高亮+移动端）",
-      "assigned_to": "窗口6",
-      "priority": "P0",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
-    },
-    {
-      "task": "读取TRAFFIC_GROWTH_SOP.md第9节，文章页Quick Answer突出设计+移动端体验检查",
-      "assigned_to": "窗口6",
-      "priority": "P1",
-      "source": "TRAFFIC_GROWTH_SOP",
-      "created_at": "2026-09-28"
+      "source": "learning_speculation_rules",
+      "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
       "id": "kw_Gemini_vs_Gemini",
@@ -3863,8 +3895,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_vs_Gemini"
     },
     {
       "id": "kw_Gemini_open_source_alternative",
@@ -3884,8 +3918,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_open_source_alternative"
     },
     {
       "id": "kw_Gemini_app",
@@ -3905,8 +3941,10 @@
         ],
         "low_dr_count": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_app"
     },
     {
       "id": "kw_Gemini_review_2026",
@@ -3926,8 +3964,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_review_2026"
     },
     {
       "id": "kw_Gemini_photo",
@@ -3947,8 +3987,10 @@
         ],
         "low_dr_count": 7
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_photo"
     },
     {
       "id": "kw_Gemini_vs_ChatGPT",
@@ -3968,8 +4010,10 @@
         ],
         "low_dr_count": 9
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_vs_ChatGPT"
     },
     {
       "id": "kw_Google_Gemini_AI",
@@ -3989,8 +4033,10 @@
         ],
         "low_dr_count": 6
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Google_Gemini_AI"
     },
     {
       "id": "kw_Gemini_pricing",
@@ -4010,8 +4056,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_pricing"
     },
     {
       "id": "kw_Gemini_for_students",
@@ -4031,8 +4079,10 @@
         ],
         "low_dr_count": 9
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_for_students"
     },
     {
       "id": "kw_how_to_use_Gemini",
@@ -4052,8 +4102,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_how_to_use_Gemini"
     },
     {
       "id": "kw_Gemini_tutorial",
@@ -4073,8 +4125,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_tutorial"
     },
     {
       "id": "kw_Gemini_free_alternative",
@@ -4094,8 +4148,10 @@
         ],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_free_alternative"
     },
     {
       "id": "kw_Gemini_AI_photo",
@@ -4115,8 +4171,10 @@
         ],
         "low_dr_count": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_AI_photo"
     },
     {
       "id": "kw_Gemini_Google",
@@ -4136,8 +4194,10 @@
         ],
         "low_dr_count": 7
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_Google"
     },
     {
       "id": "kw_Gemini_Banana",
@@ -4152,8 +4212,10 @@
         "paa": [],
         "low_dr_count": 10
       },
-      "status": "pending",
-      "created_at": "2026-09-28"
+      "status": "backlog",
+      "created_at": "2026-09-28",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_Gemini_Banana"
     },
     {
       "id": "P1-DEPLOY-ISR-ONDEMAND-001",
@@ -4639,37 +4701,41 @@
       "title": "跟进Serper API发现的78个外链目标",
       "description": "从78个目标中筛选write-for-us和resource page，发外联邮件",
       "assigned_to": "窗口2",
-      "status": "pending",
+      "status": "backlog",
       "priority": "P2",
-      "created": "2026-09-28"
+      "created": "2026-09-28",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-GROWTH-TOOLSCOUT-001",
       "title": "完成toolscout.ai注册并提交",
       "description": "验证码已发到840754587@qq.com，登录后提交AIToolCrux",
       "assigned_to": "窗口2",
-      "status": "in_progress",
+      "status": "backlog",
       "priority": "P2",
       "created": "2026-09-28",
-      "notes": "验证码邮件未到达，待重试"
+      "notes": "验证码邮件未到达，待重试",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-GROWTH-REDDIT-ENGAGE-001",
       "title": "Reddit高赞帖子参与（10个目标）",
       "description": "在r/AI_Agents、r/vibecoding等10个帖子下提供有价值回答",
       "assigned_to": "窗口2",
-      "status": "pending",
+      "status": "backlog",
       "priority": "P2",
-      "created": "2026-09-28"
+      "created": "2026-09-28",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P2-GROWTH-THERUNDOWN-001",
       "title": "发邮件提交到therundown.ai",
       "description": "发邮件到support@therundown.ai提交AIToolCrux",
       "assigned_to": "窗口2",
-      "status": "pending",
+      "status": "backlog",
       "priority": "P2",
-      "created": "2026-09-28"
+      "created": "2026-09-28",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P1-MONETIZE-AUDIT-FIX-001",
@@ -4701,9 +4767,10 @@
       "assigned_to": [
         "窗口5"
       ],
-      "status": "pending",
+      "status": "backlog",
       "priority": "P2",
-      "created_at": "2026-09-28"
+      "created_at": "2026-09-28",
+      "backlog_reason": "global_p2_cleanup_0929"
     },
     {
       "id": "P1-AHREFS-TRACKING-INSTALL",
@@ -4861,8 +4928,10 @@
           "Is Windsurf discontinued?"
         ]
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_research_windsurf_vs_cursor"
     },
     {
       "id": "kw_research_jasper_vs_copyai",
@@ -4878,8 +4947,10 @@
         "weak_domains": 5,
         "paa": []
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_research_jasper_vs_copyai"
     },
     {
       "id": "kw_research_midjourney_alternatives",
@@ -4895,8 +4966,10 @@
         "weak_domains": 6,
         "paa": []
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_research_midjourney_alternatives"
     },
     {
       "id": "kw_research_cursor_alternatives",
@@ -4912,8 +4985,10 @@
         "weak_domains": 5,
         "paa": []
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_research_cursor_alternatives"
     },
     {
       "id": "kw_research_claude_vs_gemini",
@@ -4929,7 +5004,274 @@
         "weak_domains": 5,
         "paa": []
       },
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] kw_research_claude_vs_gemini"
+    },
+    {
+      "id": "learn_20260929_snippet_h2_question",
+      "task": "Featured Snippet优化：把GSC排名5-15的文章第一个H2改成问句格式，紧跟40-60词直接回答段落（学习要点5+10）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "学习_2026-09-29_FeaturedSnippet优化",
+      "learning_point": "H2用问句+40-60词答案段落，Top10页面抢摘要成功率>60%",
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] learn_20260929_snippet_h2_question"
+    },
+    {
+      "id": "learn_20260929_snippet_html_table",
+      "task": "Featured Snippet优化：对比页At a Glance表格改用HTML table标签（非markdown），不超过6列x10行，争取表格型摘要（学习要点4）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "学习_2026-09-29_FeaturedSnippet优化",
+      "learning_point": "Google从HTML table提取表格型摘要，markdown表格不被识别",
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] learn_20260929_snippet_html_table"
+    },
+    {
+      "id": "learn_20260929_snippet_faq_schema",
+      "task": "Featured Snippet优化：给所有含FAQ section的文章添加FAQPage结构化数据，用Google Rich Results Test验证（学习要点9）",
+      "assigned_to": "窗口3",
+      "priority": "P1",
+      "source": "学习_2026-09-29_FeaturedSnippet优化",
+      "learning_point": "FAQPage schema验证通过后摘要选中率提升30-50%",
+      "status": "backlog",
+      "created_at": "2026-09-29",
+      "backlog_reason": "empty_title_cleanup_0929",
+      "title": "[待补标题] learn_20260929_snippet_faq_schema"
+    },
+    {
+      "id": "P1-CONTENT-F-GRADE-REWRITE",
+      "title": "重写2篇F级文章（best-ai-design-tools-2026 和 best-ai-image-generators-2026，均58分1500词无图无外链）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
       "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "质量审计发现2篇F级文章(58分)：best-ai-design-tools-2026(1532词0图0外链)、best-ai-image-generators-2026(1263词0图0外链)。需扩充到3000+词、加截图、加外链、加对比表格。",
+      "created_at": "2026-09-29T07:35:00.958219",
+      "created_by": "commander-daily-dispatch-0929"
+    },
+    {
+      "id": "P1-CONTENT-D-GRADE-IMPROVE",
+      "title": "提升1篇D级文章质量（best-ai-audio-tools-2026，63分1511词无图无外链）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "best-ai-audio-tools-2026仅63分(D级)，1511词0图0外链Flesch 27.1。需扩充内容、加截图、加外链、提升可读性。",
+      "created_at": "2026-09-29T07:35:00.958248",
+      "created_by": "commander-daily-dispatch-0929"
+    },
+    {
+      "id": "P1-CONTENT-NO-IMAGES-BATCH",
+      "title": "为45篇无图片文章批量添加截图/配图（当前图片覆盖率仅58%）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "106篇文章中45篇无图片(has_images=61)。特别是best-ai-xxx-tools系列清单文几乎全部无图。需批量添加产品截图或对比图。",
+      "created_at": "2026-09-29T07:35:00.958251",
+      "created_by": "commander-daily-dispatch-0929"
+    },
+    {
+      "id": "P1-CONTENT-LOW-READABILITY",
+      "title": "修复45篇可读性不达标文章（readability_pass仅58%，Flesch分数过低）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "106篇中仅61篇通过可读性检查(58%)。多篇长文Flesch<30（如cursor-vs-github-copilot仅2.4）。需简化句子结构、加小标题、缩短段落。",
+      "created_at": "2026-09-29T07:35:00.958254",
+      "created_by": "commander-daily-dispatch-0929"
+    },
+    {
+      "id": "P1-CONTENT-NO-EXTERNAL-LINKS",
+      "title": "为73篇无外链文章添加权威外部链接（external_links_pass仅31%）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "status": "pending",
+      "source": "quality_audit_report.md",
+      "description": "106篇中仅33篇有外链(31%)，73篇无外链。Google排名因子中权威外链引用很重要，需为每篇添加2-3个官方文档/权威来源链接。",
+      "created_at": "2026-09-29T07:35:00.958255",
+      "created_by": "commander-daily-dispatch-0929"
+    },
+    {
+      "id": "P0-RANK-CRASH-REVIEW-GUIDE-001",
+      "priority": "P0",
+      "title": "排查ai-tools-review-guide-2026排名暴跌（14→61，-46位）",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "页面/blog/ai-tools-review-guide-2026排名从14.4暴跌至61.0，需检查内容质量、重复内容、Google更新影响"
+    },
+    {
+      "id": "P0-CTR-OPENAI-ASTRA-002",
+      "priority": "P0",
+      "title": "优化openai_astra_review页面Title/Meta（排名11.1，145曝光，CTR 0.7%）",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "排名第2页145曝光但CTR仅0.7%，重写Title和meta description提升点击率"
+    },
+    {
+      "id": "P1-RANK-TRACKER-REPLACE-002",
+      "priority": "P1",
+      "title": "替换zens-ink追踪词为GSC实际有排名的长尾词",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "当前8词全是头部大词，0进前20。替换为：best voice changer 2026, midjourney, voice changer, plandex.ai, windsurf, roo code, codeium, crawl4ai"
+    },
+    {
+      "id": "P1-COMPARE-PAGE-OPTIMIZE-001",
+      "priority": "P1",
+      "title": "优化/compare页面内容（270曝光全站最高，排名34，CTR 0.7%）",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "曝光最高页面但排名低CTR低，扩充内容深度和对比维度，目标进入前20"
+    },
+    {
+      "id": "P0-MONETIZE-AFFILIATE-COVERAGE-2026-09-29",
+      "title": "窗口5：批量为Top100高流量工具页添加affiliateUrl（当前533工具仅1个有联盟链接，覆盖率0.2%），优先接入Jasper 30%/Pictory 30%/Surfer SEO等高佣金recurring项目",
+      "description": "工具页是最大变现缺口。按GSC曝光排序Top100工具页，逐个添加affiliateUrl字段。优先有free trial的工具（转化率高3-5倍）。联盟链接必须加rel=sponsored。目标：工具页联盟覆盖率从0.2%→19%",
+      "priority": "P0",
+      "assigned_to": [
+        "窗口5-变现运营",
+        "窗口1-技术SEO"
+      ],
+      "source": "commander_learning_affiliate_monetization_20260929",
+      "created_at": "2026-09-29",
+      "status": "active"
+    },
+    {
+      "id": "P1-MONETIZE-BUYER-INTENT-CONTENT-2026-09-29",
+      "title": "窗口3：批量生产买家意图关键词文章（best X/X pricing/X vs Y/X alternative），每篇必须含3+个联盟CTA和真实使用体验",
+      "description": "买家意图关键词联盟转化率最高。用zens-ink挖掘每个工具的pricing/vs/alternative/best关键词，KD<30优先。文章结构：对比表→各工具优缺点→推荐场景→联盟CTA→FAQ。每篇至少3个联盟链接",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口3-内容写作"
+      ],
+      "source": "commander_learning_affiliate_monetization_20260929",
+      "created_at": "2026-09-29",
+      "status": "active"
+    },
+    {
+      "id": "P1-MONETIZE-DIGITAL-PRODUCT-2026-09-29",
+      "title": "窗口5：评估并创建首个数字产品——AI工具对比模板包（Notion模板+Excel对比表），定价$19-29，用Gumroad或Lemon Squeezy交付",
+      "description": "数字产品收入是展示广告16倍。首个产品：50+ AI工具深度对比模板（含价格/功能/适用场景/联盟链接），用户可直接用来选型。先做waitlist验证需求，再制作。平台选Lemon Squeezy（全球税务自动处理）",
+      "priority": "P1",
+      "assigned_to": [
+        "窗口5-变现运营"
+      ],
+      "source": "commander_learning_affiliate_monetization_20260929",
+      "created_at": "2026-09-29",
+      "status": "active"
+    },
+    {
+      "id": "gsc-noindex-fix",
+      "title": "GSC报告3页被noindex标记排除，检查是否误标并修复",
+      "description": "3个blog tag页被noindex: /blog/tag/value-for-money, /blog/tag/paid-ai-tools, /blog/tag/ai-tools-worth-it。确认是否故意noindex（tag页通常noindex避免重复内容），如果是则无需修复，在GSC标记为已修复",
+      "assigned_to": [
+        "window1"
+      ],
+      "priority": "P0",
+      "source": "gsc_index_report_2026-09-29",
+      "status": "pending"
+    },
+    {
+      "id": "gsc-canonical-duplicate",
+      "title": "GSC报告9页重复网页未选规范页，修复canonical标签",
+      "description": "9页重复canonical: 博客文章/best-ai-grammar-checkers-2026, /best-ai-legal-tools-2026; tag页/blog/tag/logo-generators, /blog/tag/tools, /blog/tag/ai-search-engine, /blog/tag/ai-assistants; category页/blog/category/ai-infrastructure; /subcategory/text-to-video; /contact。检查这些页面的canonical标签是否self-referencing正确",
+      "assigned_to": [
+        "window1"
+      ],
+      "priority": "P1",
+      "source": "gsc_index_report_2026-09-29",
+      "status": "pending"
+    },
+    {
+      "id": "gsc-redirect-fix",
+      "title": "GSC报告2页自动重定向，检查301/302配置",
+      "description": "2个重定向: http://www.aitoolcrux.com/ 和 https://aitoolcrux.com/ ——这是正常的http→https和non-www→www重定向，无需修复，在GSC标记为已修复",
+      "assigned_to": [
+        "window1"
+      ],
+      "priority": "P1",
+      "source": "gsc_index_report_2026-09-29",
+      "status": "pending"
+    },
+    {
+      "id": "gsc-discovered-not-indexed",
+      "title": "343页已发现未索引（302个工具页+28个博客页+7个alternatives页），加速索引",
+      "description": "GSC显示343页Google已发现但未抓取。其中302个是/tools/工具详情页（核心流量页）。操作：1)在GSC手动用网址检查请求索引Top10最重要的工具页;2)确保sitemap包含所有工具页;3)检查这些页面是否在robots.txt中被屏蔽;4)检查页面加载速度和内容质量。这些页面上次抓取日期是1970年说明Google从未爬过",
+      "assigned_to": [
+        "window1",
+        "window4"
+      ],
+      "priority": "P0",
+      "source": "gsc_coverage_export_2026-09-29",
+      "status": "pending"
+    },
+    {
+      "id": "gsc-crawled-not-indexed",
+      "title": "3页已抓取但未索引（midjourney对比+perplexity评测+rss.xml）",
+      "description": "Google爬了但不索引: /compare/midjourney-vs-stable-diffusion, /blog/perplexity-ai-review-2026, /rss.xml。rss.xml本来就不该索引（加noindex即可）。前两篇文章需检查内容质量——是否太单薄、重复度高、或缺少独特价值",
+      "assigned_to": [
+        "window1",
+        "window3"
+      ],
+      "priority": "P1",
+      "source": "gsc_coverage_export_2026-09-29",
+      "status": "pending"
+    },
+    {
+      "id": "P1-MONETIZE-ADSKULL-001",
+      "title": "申请AdSkull联盟（30% lifetime recurring）",
+      "description": "AdSkull: 30% lifetime recurring, 30天cookie, AI广告素材生成。申请链接: https://adskull.io/affiliate。匹配内容: AI广告工具、营销自动化。",
+      "assigned_to": [
+        "窗口5"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "P1-MONETIZE-MANGOOLS-PLACE-001",
+      "title": "Mangools联盟链接铺到5篇SEO文章",
+      "description": "Mangools已接入(25-35% lifetime)但0篇文章含链接。目标文章: best-ai-seo-tools-2026, best-ai-marketing-tools-2026, perplexity-ai-review-2026, perplexity-review-2026, best-ai-slack-bots-2026。需窗口1在文章内容中添加Mangools affiliate链接+CTA。",
+      "assigned_to": [
+        "窗口1",
+        "窗口5"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "P1-MONETIZE-94ARTICLES-CTA-001",
+      "title": "94篇无联盟链接文章批量添加AffiliateCTA",
+      "description": "审计发现94/106篇文章无联盟链接(89%)。优先为Top 15高流量文章添加AffiliateCTA组件(优先ElevenLabs+Mangools)。需窗口1在文章模板中条件渲染CTA。",
+      "assigned_to": [
+        "窗口1"
+      ],
+      "status": "pending",
+      "priority": "P1",
       "created_at": "2026-09-29"
     }
   ],
