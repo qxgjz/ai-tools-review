@@ -80,7 +80,7 @@ export async function generateMetadata({
       siteName: 'AIToolCrux',
       images: [
         {
-          url: 'https://www.aitoolcrux.com/og-default.png',
+          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(page.title.slice(0, 60))}&description=${encodeURIComponent(shortDesc.slice(0, 100))}&category=Alternatives`,
           width: 1200,
           height: 630,
           alt: page.title,
@@ -91,7 +91,7 @@ export async function generateMetadata({
       card: 'summary_large_image',
       title: page.title.length > 60 ? page.title.slice(0, 57) + '...' : page.title,
       description: shortDesc,
-      images: ['https://www.aitoolcrux.com/og-default.png'],
+      images: [`https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(page.title.slice(0, 60))}&description=${encodeURIComponent(shortDesc.slice(0, 100))}&category=Alternatives`],
     },
   };
 }
