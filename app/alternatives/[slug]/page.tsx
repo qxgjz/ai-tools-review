@@ -78,11 +78,20 @@ export async function generateMetadata({
       url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
       type: 'article',
       siteName: 'AIToolCrux',
+      images: [
+        {
+          url: 'https://www.aitoolcrux.com/og-default.png',
+          width: 1200,
+          height: 630,
+          alt: page.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: page.title.length > 60 ? page.title.slice(0, 57) + '...' : page.title,
       description: shortDesc,
+      images: ['https://www.aitoolcrux.com/og-default.png'],
     },
   };
 }
