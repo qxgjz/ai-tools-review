@@ -48,7 +48,7 @@ function PageViewTrackerInner() {
       page_location: window.location.href,
       page_title: document.title,
       page_type: pageType,
-      send_to: 'G-DGK601TM42',
+      send_to: 'G-7XYFQR3ETF',
     });
   }, [pathname, searchParams]);
 
