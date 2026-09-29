@@ -1,4 +1,4 @@
-import requests
+﻿import requests
 import re
 from urllib.parse import urljoin
 
@@ -11,7 +11,7 @@ pages_to_check = [
     ("/category/chat", "Category Page"),
     ("/tools/chatgpt", "Tool Detail Page"),
     ("/blog", "Blog List Page"),
-    ("/blog/perplexity-ai-review-2026-best-ai-search-engine", "New Article Page"),
+    ("/blog/perplexity-ai-review-2026", "New Article Page"),
     ("/methodology", "Methodology Page"),
     ("/about", "About Page"),
 ]
