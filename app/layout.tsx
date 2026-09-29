@@ -176,7 +176,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <BaiduAnalytics />
           <Header />
           <RouteFocusManager />
-          <main id="main-content" className="pt-8">
+          <main id="main-content" className="pt-8 scroll-mt-16">
             {children}
           </main>
           <footer className="mt-16 py-12 border-t border-gray-100 dark:border-gray-800 bg-white dark:bg-gray-900">
