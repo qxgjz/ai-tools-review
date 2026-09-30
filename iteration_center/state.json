@@ -3582,19 +3582,6 @@
       "created_by": "commander-daily-dispatch"
     },
     {
-      "id": "P0-CTR-FUNNEL-BROKEN",
-      "title": "修复曝光→点击漏斗断裂（CTR 0.45%远低于行业2-5%）",
-      "priority": "P0",
-      "assigned_to": [
-        "window1"
-      ],
-      "status": "pending",
-      "source": "ga4_latest_data.md",
-      "description": "GSC 2002曝光仅9点击，全站CTR优化是最高优先级",
-      "created_at": "2026-09-28T07:51:08.386577",
-      "created_by": "commander-daily-dispatch"
-    },
-    {
       "id": "P1-BOT-SINGAPORE-FLOOD",
       "title": "Cloudflare WAF规则过滤新加坡数据中心Bot流量（97.5%用户是Bot）",
       "priority": "P1",
@@ -3658,19 +3645,6 @@
       "description": "FAQ是精选摘要和AI引用的关键，多篇完全缺失",
       "created_at": "2026-09-28T07:51:08.386592",
       "created_by": "commander-daily-dispatch"
-    },
-    {
-      "id": "P0-W42-BROKEN-LINKS",
-      "title": "修复OpenSEO审计发现的23个critical断链",
-      "description": "9/27 OpenSEO审计发现23个broken-internal-link（上周为0，技术回归）。需逐个检查并修复，修复后重新审计验证critical=0。",
-      "priority": "P0",
-      "assigned_to": [
-        "window1"
-      ],
-      "status": "pending",
-      "created_at": "2026-09-28 08:05",
-      "source": "commander_weekly_review_2026-09-28",
-      "acceptance_criteria": "OpenSEO重新审计critical broken-internal-link=0"
     },
     {
       "id": "P0-W42-GA4-BOT-FILTER",
@@ -4263,39 +4237,6 @@
       "status": "active"
     },
     {
-      "id": "gsc-noindex-fix",
-      "title": "GSC报告3页被noindex标记排除，检查是否误标并修复",
-      "description": "3个blog tag页被noindex: /blog/tag/value-for-money, /blog/tag/paid-ai-tools, /blog/tag/ai-tools-worth-it。确认是否故意noindex（tag页通常noindex避免重复内容），如果是则无需修复，在GSC标记为已修复",
-      "assigned_to": [
-        "window1"
-      ],
-      "priority": "P0",
-      "source": "gsc_index_report_2026-09-29",
-      "status": "pending"
-    },
-    {
-      "id": "gsc-canonical-duplicate",
-      "title": "GSC报告9页重复网页未选规范页，修复canonical标签",
-      "description": "9页重复canonical: 博客文章/best-ai-grammar-checkers-2026, /best-ai-legal-tools-2026; tag页/blog/tag/logo-generators, /blog/tag/tools, /blog/tag/ai-search-engine, /blog/tag/ai-assistants; category页/blog/category/ai-infrastructure; /subcategory/text-to-video; /contact。检查这些页面的canonical标签是否self-referencing正确",
-      "assigned_to": [
-        "window1"
-      ],
-      "priority": "P1",
-      "source": "gsc_index_report_2026-09-29",
-      "status": "pending"
-    },
-    {
-      "id": "gsc-redirect-fix",
-      "title": "GSC报告2页自动重定向，检查301/302配置",
-      "description": "2个重定向: http://www.aitoolcrux.com/ 和 https://aitoolcrux.com/ ——这是正常的http→https和non-www→www重定向，无需修复，在GSC标记为已修复",
-      "assigned_to": [
-        "window1"
-      ],
-      "priority": "P1",
-      "source": "gsc_index_report_2026-09-29",
-      "status": "pending"
-    },
-    {
       "id": "gsc-discovered-not-indexed",
       "title": "343页已发现未索引（302个工具页+28个博客页+7个alternatives页），加速索引",
       "description": "GSC显示343页Google已发现但未抓取。其中302个是/tools/工具详情页（核心流量页）。操作：1)在GSC手动用网址检查请求索引Top10最重要的工具页;2)确保sitemap包含所有工具页;3)检查这些页面是否在robots.txt中被屏蔽;4)检查页面加载速度和内容质量。这些页面上次抓取日期是1970年说明Google从未爬过",
@@ -4307,18 +4248,6 @@
       "source": "gsc_coverage_export_2026-09-29",
       "status": "completed",
       "completed_date": "2026-09-30"
-    },
-    {
-      "id": "gsc-crawled-not-indexed",
-      "title": "3页已抓取但未索引（midjourney对比+perplexity评测+rss.xml）",
-      "description": "Google爬了但不索引: /compare/midjourney-vs-stable-diffusion, /blog/perplexity-ai-review-2026, /rss.xml。rss.xml本来就不该索引（加noindex即可）。前两篇文章需检查内容质量——是否太单薄、重复度高、或缺少独特价值",
-      "assigned_to": [
-        "window1",
-        "window3"
-      ],
-      "priority": "P1",
-      "source": "gsc_coverage_export_2026-09-29",
-      "status": "pending"
     },
     {
       "id": "P1-MONETIZE-ADSKULL-001",
@@ -4774,6 +4703,110 @@
       ],
       "source": "audit_findings_latest_20260930",
       "detail": "OpenSEO最新报告发现7个404页面，需301到对应有效页或恢复内容。"
+    },
+    {
+      "id": "kw_r6_notion_ai_vs_obsidian_ai",
+      "task": "写comparison页：Notion AI vs Obsidian AI（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "notion-ai-vs-obsidian-ai",
+      "keyword": "Notion AI vs Obsidian AI",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r6_grammarly_alternatives",
+      "task": "写alternatives页：Grammarly alternatives（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "grammarly-alternatives",
+      "keyword": "Grammarly alternatives",
+      "type": "alternatives"
+    },
+    {
+      "id": "kw_r6_roo_code_review",
+      "task": "写review页：Roo Code review（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "roo-code-review",
+      "keyword": "Roo Code review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r6_crawl4ai_review",
+      "task": "写review页：Crawl4AI review（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "crawl4ai-review",
+      "keyword": "Crawl4AI review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r6_chatgpt_vs_gemini_2026",
+      "task": "写comparison页：ChatGPT vs Gemini 2026（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "chatgpt-vs-gemini-2026",
+      "keyword": "ChatGPT vs Gemini 2026",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r6_midjourney_v7_vs_flux",
+      "task": "写comparison页：Midjourney v7 vs Flux（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "midjourney-v7-vs-flux",
+      "keyword": "Midjourney v7 vs Flux",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r6_surfer_seo_alternatives",
+      "task": "写alternatives页：Surfer SEO alternatives（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "surfer-seo-alternatives",
+      "keyword": "Surfer SEO alternatives",
+      "type": "alternatives"
+    },
+    {
+      "id": "kw_r6_elevenlabs_alternatives",
+      "task": "写alternatives页：ElevenLabs alternatives（KD低，2/3弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round6_2026-10-01",
+      "slug": "elevenlabs-alternatives",
+      "keyword": "ElevenLabs alternatives",
+      "type": "alternatives"
     }
   ],
   "milestones": [

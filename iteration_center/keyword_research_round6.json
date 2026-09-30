@@ -1,0 +1,359 @@
+{
+  "notion-ai-vs-obsidian-ai": {
+    "keyword": "Notion AI vs Obsidian AI",
+    "top_competitors": [
+      {
+        "title": "Notion vs Obsidian – All Features Compared (2026)",
+        "url": "https://productive.io/blog/notion-vs-obsidian/",
+        "domain": "productive.io"
+      },
+      {
+        "title": "Notion vs Obsidian ? : r/productivity",
+        "url": "https://www.reddit.com/r/productivity/comments/zvojcq/notion_vs_obsidian/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Notion vs Obsidian (or both?) — Trying to figure out the right PKM stack",
+        "url": "https://www.reddit.com/r/PKMS/comments/1rufgru/notion_vs_obsidian_or_both_trying_to_figure_out/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is Obsidian really better than Notion?",
+      "Why are people leaving Obsidian?",
+      "Why are people moving away from Notion?",
+      "Is Notion AI really worth it?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "chatgpt-vs-gemini-2026": {
+    "keyword": "ChatGPT vs Gemini 2026",
+    "top_competitors": [
+      {
+        "title": "Gemini or ChatGPT (10 July 2026) : r/GeminiAI",
+        "url": "https://www.reddit.com/r/GeminiAI/comments/1usrtai/gemini_or_chatgpt_10_july_2026/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Gemini vs ChatGPT: Complete Comparison 2026",
+        "url": "https://gurusup.com/blog/gemini-vs-chatgpt",
+        "domain": "gurusup.com"
+      },
+      {
+        "title": "ChatGPT vs Gemini Comparison 2026: Which Is Better?",
+        "url": "https://tech-insider.org/chatgpt-vs-gemini-2026/",
+        "domain": "tech-insider.org"
+      }
+    ],
+    "paa": [
+      "Is Gemini better than ChatGPT 2026?",
+      "Is Gemini more reliable than ChatGPT?",
+      "Is Gemini replacing ChatGPT?",
+      "Which is better, ChatGPT Go or Gemini Plus?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "midjourney-v7-vs-flux": {
+    "keyword": "Midjourney v7 vs Flux",
+    "top_competitors": [
+      {
+        "title": "Is Midjourney worth it now compared to Flux etc?",
+        "url": "https://www.reddit.com/r/midjourney/comments/1h8xk88/is_midjourney_worth_it_now_compared_to_flux_etc/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Midjourney v7 vs Flux.1: Why Choosing the Wrong One is ...",
+        "url": "https://like2byte.com/midjourney-v7-vs-flux-1-2026/",
+        "domain": "like2byte.com"
+      },
+      {
+        "title": "Midjourney vs FLUX vs Ideogram v3",
+        "url": "https://www.aimagicx.com/blog/midjourney-vs-flux-vs-ideogram-image-comparison-2026",
+        "domain": "www.aimagicx.com"
+      }
+    ],
+    "paa": [
+      "Is Flux AI actually good?",
+      "Is Midjourney still worth it?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "jasper-alternatives": {
+    "keyword": "Jasper alternatives",
+    "top_competitors": [
+      {
+        "title": "The 9 best Jasper AI alternatives in 2026 (tested and ranked)",
+        "url": "https://www.eesel.ai/blog/jasper-ai-alternatives",
+        "domain": "www.eesel.ai"
+      },
+      {
+        "title": "13 Jasper AI Alternatives You Need to Explore in 2026",
+        "url": "https://writesonic.com/blog/jasper-ai-alternatives",
+        "domain": "writesonic.com"
+      },
+      {
+        "title": "Top Jasper Alternatives & Competitors 2026",
+        "url": "https://www.gartner.com/reviews/product/jasper/alternatives",
+        "domain": "www.gartner.com"
+      }
+    ],
+    "paa": [
+      "Is Jasper AI still worth it?",
+      "Is there a free version of Jasper AI?",
+      "What is Jasper best for?",
+      "What are some alternatives to Jarvis?"
+    ],
+    "weak_domains_in_top3": 0,
+    "kd_estimate": "medium"
+  },
+  "grammarly-alternatives": {
+    "keyword": "Grammarly alternatives",
+    "top_competitors": [
+      {
+        "title": "Grammarly Alternatives? : r/productivity",
+        "url": "https://www.reddit.com/r/productivity/comments/wl1uj5/grammarly_alternatives/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "The 10 Best Grammarly Alternatives in 2026: Tested and ...",
+        "url": "https://editgpt.app/blog/10-best-grammarly-alternatives",
+        "domain": "editgpt.app"
+      },
+      {
+        "title": "grammarly alternative?",
+        "url": "https://www.reddit.com/r/AO3/comments/1ac4rsl/grammarly_alternative/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is there a better option than Grammarly?",
+      "Will I get flagged for AI if I use Grammarly?",
+      "Is Grammarly still worth it in 2026?",
+      "Is ChatGPT or Grammarly better?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "surfer-seo-alternatives": {
+    "keyword": "Surfer SEO alternatives",
+    "top_competitors": [
+      {
+        "title": "Is there any cheaper alternative to Surfer SEO? : r/bigseo",
+        "url": "https://www.reddit.com/r/bigseo/comments/1bduhh4/is_there_any_cheaper_alternative_to_surfer_seo/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "8 best Surfer SEO alternatives for agencies (2026)",
+        "url": "https://www.rankability.com/blog/surfer-seo-alternatives/",
+        "domain": "www.rankability.com"
+      },
+      {
+        "title": "13 Best Surfer SEO Alternatives for Content Optimization ...",
+        "url": "https://orchly.ai/blog/surfer-seo-alternatives/",
+        "domain": "orchly.ai"
+      }
+    ],
+    "paa": [
+      "What are some alternatives to Surfer SEO?",
+      "Is there a free version of Surfer SEO?",
+      "Is SEO dead now with AI?",
+      "Can ChatGPT do an SEO audit?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "canva-ai-alternatives": {
+    "keyword": "Canva AI alternatives",
+    "top_competitors": [
+      {
+        "title": "Truth of UI Design with Canva, and AI Alternatives I Like",
+        "url": "https://www.banani.co/blog/canva-alternatives-for-ui-design",
+        "domain": "www.banani.co"
+      },
+      {
+        "title": "9 Best Canva Alternatives in 2026, Compared by Use Case",
+        "url": "https://moda.app/blog/canva-alternative",
+        "domain": "moda.app"
+      },
+      {
+        "title": "What alternatives to Canva are available for non-AI graphic ...",
+        "url": "https://www.facebook.com/groups/1404116417142065/posts/2027559448131089/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "What AI is replacing Canva?",
+      "Is there an app like Canva that doesn't use AI?",
+      "Who is Canva's biggest competitor?",
+      "Why don't professional designers use Canva?"
+    ],
+    "weak_domains_in_top3": 0,
+    "kd_estimate": "medium"
+  },
+  "hubsopt-ai-alternatives": {
+    "keyword": "HubSpot AI alternatives",
+    "top_competitors": [
+      {
+        "title": "15 HubSpot Alternatives That Won't Break the Bank in 2026",
+        "url": "https://www.emailtooltester.com/en/blog/hubspot-alternatives/",
+        "domain": "www.emailtooltester.com"
+      },
+      {
+        "title": "​7 Best HubSpot CRM Alternatives in 2026",
+        "url": "https://blog.salesflare.com/best-hubspot-alternative",
+        "domain": "blog.salesflare.com"
+      },
+      {
+        "title": "HubSpot Alternatives: 7 CRMs for Startups & SMBs (2026)",
+        "url": "https://reevo.ai/blog/hubspot-alternatives",
+        "domain": "reevo.ai"
+      }
+    ],
+    "paa": [
+      "Why is HubSpot declining?",
+      "Who is HubSpot's biggest competitor?",
+      "Which AI does HubSpot use?",
+      "Why did Google not buy HubSpot?"
+    ],
+    "weak_domains_in_top3": 0,
+    "kd_estimate": "medium"
+  },
+  "zapier-ai-alternatives": {
+    "keyword": "Zapier AI alternatives",
+    "top_competitors": [
+      {
+        "title": "Top 10 best Zapier alternatives I've tested in 2026",
+        "url": "https://www.gumloop.com/blog/zapier-alternatives",
+        "domain": "www.gumloop.com"
+      },
+      {
+        "title": "15 Best Zapier Alternatives in 2026: Reviewed & Compared",
+        "url": "https://www.vellum.ai/blog/best-zapier-alternatives",
+        "domain": "www.vellum.ai"
+      },
+      {
+        "title": "Zapier Alternatives Nobody's Talking About (That Actually ...",
+        "url": "https://www.reddit.com/r/automation/comments/1pqm8sq/zapier_alternatives_nobodys_talking_about_that/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Are there better alternatives to Zapier?",
+      "What is the best AI automation platform?",
+      "Which is better, Zapier or Workato?",
+      "Is n8n better than Zapier?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "elevenlabs-alternatives": {
+    "keyword": "ElevenLabs alternatives",
+    "top_competitors": [
+      {
+        "title": "Alternative to Eleven Labs right now? : r/aitubers",
+        "url": "https://www.reddit.com/r/aitubers/comments/1mamcv7/alternative_to_eleven_labs_right_now/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "7 best ElevenLabs alternatives compared (2026)",
+        "url": "https://www.ringly.io/blog/elevenlabs-alternatives",
+        "domain": "www.ringly.io"
+      },
+      {
+        "title": "10 Best ElevenLabs Alternatives in 2026 (Tested & ...",
+        "url": "https://www.brilo.ai/resources/best-elevenlabs-alternative-for-ai-voice-assistance",
+        "domain": "www.brilo.ai"
+      }
+    ],
+    "paa": [
+      "Is there anything better than ElevenLabs?",
+      "Which is better, MiniMax or ElevenLabs?",
+      "Is there a free version of 11 Labs?",
+      "Is Speechify or ElevenLabs better?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "plandex-ai-review": {
+    "keyword": "Plandex AI review",
+    "top_competitors": [
+      {
+        "title": "Open source AI coding agent. Designed for large projects ...",
+        "url": "https://github.com/plandex-ai/plandex",
+        "domain": "github.com"
+      },
+      {
+        "title": "Plandex v2: an open source AI coding agent with diff ...",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1jgmbsa/plandex_v2_an_open_source_ai_coding_agent_with/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Show HN: Plandex – an AI coding engine for complex tasks",
+        "url": "https://news.ycombinator.com/item?id=39918500",
+        "domain": "news.ycombinator.com"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "roo-code-review": {
+    "keyword": "Roo Code review",
+    "top_competitors": [
+      {
+        "title": "Is Roo viable as an alternative to Claude Code in complex ...",
+        "url": "https://www.reddit.com/r/RooCode/comments/1m3qic1/is_roo_viable_as_an_alternative_to_claude_code_in/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Using Roocode as an AI-assisted programming tool, reviewing every diff, ...",
+        "url": "https://www.reddit.com/r/RooCode/comments/1nr2jg6/using_roocode_as_an_aiassisted_programming_tool/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Farewell Fuzzy Apply, Embrace Precise Context: An In-Depth Comparison ...",
+        "url": "https://forum.cursor.com/t/farewell-fuzzy-apply-embrace-precise-context-an-in-depth-comparison-of-roo-code-and-cursor/76956",
+        "domain": "forum.cursor.com"
+      }
+    ],
+    "paa": [
+      "Is Roo code shutting down?",
+      "How much does Roo code cost?",
+      "Which AI code review tool is the best?",
+      "Which is better for programming, OpenCode or Roo code?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "crawl4ai-review": {
+    "keyword": "Crawl4AI review",
+    "top_competitors": [
+      {
+        "title": "Getting Crawl4AI to work? : r/webscraping",
+        "url": "https://www.reddit.com/r/webscraping/comments/1jximz5/getting_crawl4ai_to_work/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Browser-use vs Crawl4ai",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1iyw8l6/browseruse_vs_crawl4ai/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "using crawl4ai for better website scraping ? · assafelovic gpt-researcher",
+        "url": "https://github.com/assafelovic/gpt-researcher/discussions/1078",
+        "domain": "github.com"
+      }
+    ],
+    "paa": [
+      "Is Crawl4AI free?",
+      "Which LLM is best for web scraping?",
+      "What is crawl AI?",
+      "Can I use Crawl4AI with Python?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  }
+}

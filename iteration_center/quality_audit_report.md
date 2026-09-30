@@ -1,38 +1,37 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-10-01 01:10
+**Date:** 2026-10-01 05:02
 
 ## Summary
 
-- Total articles: 140
-- Average quality score: 93.1/100
-- Grade distribution: A=108, B=3, C=16, D=9, F=4
-- Articles below 85: 32
+- Total articles: 137
+- Average quality score: 93.5/100
+- Grade distribution: A=107, B=3, C=16, D=8, F=3
+- Articles below 85: 30
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 116 | 140 | 83% |
-| has_quick_answer | 136 | 140 | 97% |
-| first_para_pass | 133 | 140 | 95% |
-| has_key_takeaways | 125 | 140 | 89% |
-| has_faq | 140 | 140 | 100% |
-| has_how_we_tested | 139 | 140 | 99% |
-| internal_links_pass | 134 | 140 | 96% |
-| has_images | 111 | 140 | 79% |
-| has_real_screenshots | 111 | 140 | 79% |
-| readability_pass | 136 | 140 | 97% |
-| qa_density_pass | 140 | 140 | 100% |
-| title_pass | 137 | 140 | 98% |
-| has_comparison | 137 | 140 | 98% |
-| external_links_pass | 124 | 140 | 89% |
+| word_count_pass | 115 | 137 | 84% |
+| has_quick_answer | 134 | 137 | 98% |
+| first_para_pass | 130 | 137 | 95% |
+| has_key_takeaways | 124 | 137 | 91% |
+| has_faq | 137 | 137 | 100% |
+| has_how_we_tested | 136 | 137 | 99% |
+| internal_links_pass | 132 | 137 | 96% |
+| has_images | 109 | 137 | 80% |
+| has_real_screenshots | 109 | 137 | 80% |
+| readability_pass | 134 | 137 | 98% |
+| qa_density_pass | 137 | 137 | 100% |
+| title_pass | 134 | 137 | 98% |
+| has_comparison | 134 | 137 | 98% |
+| external_links_pass | 123 | 137 | 90% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
-| gemini-vs-perplexity | 49 | F | 719 | 3 | 0 | 35.5 | 0 |
 | suno-alternatives-2026 | 54 | F | 978 | 0 | 1 | 39.6 | 0 |
 | claude-37-vs-gpt4o | 58 | F | 756 | 3 | 0 | 62.2 | 0 |
 | synthesia-vs-heygen | 58 | F | 700 | 3 | 0 | 43.2 | 0 |
@@ -43,7 +42,6 @@
 | midjourney-v7-vs-dall-e-3-ecommerce | 67 | D | 1960 | 3 | 0 | 44.7 | 0 |
 | quillbot-alternatives | 67 | D | 545 | 3 | 0 | 48.1 | 2 |
 | cursor-alternatives-2026 | 69 | D | 2828 | 0 | 0 | 55.5 | 0 |
-| perplexity-alternatives-2026 | 69 | D | 881 | 0 | 1 | 44.0 | 0 |
 | sudowrite-alternatives | 69 | D | 861 | 2 | 0 | 45.9 | 2 |
 | chatgpt-alternatives-2026 | 72 | C | 1960 | 5 | 0 | 60.5 | 0 |
 | runway-vs-pika-2026 | 72 | C | 1960 | 5 | 0 | 56.5 | 0 |
@@ -115,7 +113,6 @@
 | best-ai-video-generators-2026 | 100 | A | 2246 | 4 | 1 | 51.7 | 8 |
 | best-ai-writing-tools-2026 | 100 | A | 4107 | 8 | 3 | 43.8 | 1 |
 | midjourney-vs-dall-e-3-2026-comparison | 100 | A | 3497 | 7 | 7 | 48.3 | 1 |
-| perplexity-ai-review-2026 | 100 | A | 2319 | 8 | 2 | 43.9 | 1 |
 | claude-vs-gemini-2026-comparison | 100 | A | 2618 | 7 | 2 | 45.4 | 1 |
 | windsurf-review-2026 | 100 | A | 3035 | 7 | 1 | 45.7 | 1 |
 | cursor-vs-github-copilot-2026-comparison | 100 | A | 3290 | 7 | 2 | 44.5 | 1 |
