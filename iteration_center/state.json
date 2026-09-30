@@ -3582,19 +3582,6 @@
       "created_by": "commander-daily-dispatch"
     },
     {
-      "id": "P0-CTR-ZERO-CLICK-PAGES",
-      "title": "优化4个Top10零点击页标题和meta（dify/cursor/stable-diffusion/midjourney-v7）",
-      "priority": "P0",
-      "assigned_to": [
-        "window1"
-      ],
-      "status": "pending",
-      "source": "ga4_latest_data.md",
-      "description": "4个页面排名前10但CTR=0%，标题/meta严重不吸引人",
-      "created_at": "2026-09-28T07:51:08.386575",
-      "created_by": "commander-daily-dispatch"
-    },
-    {
       "id": "P0-CTR-FUNNEL-BROKEN",
       "title": "修复曝光→点击漏斗断裂（CTR 0.45%远低于行业2-5%）",
       "priority": "P0",
@@ -3631,32 +3618,6 @@
       "source": "ga4_latest_data.md",
       "description": "当前0转化追踪，无法衡量业务价值",
       "created_at": "2026-09-28T07:51:08.386580",
-      "created_by": "commander-daily-dispatch"
-    },
-    {
-      "id": "P0-MONETIZE-AFFILIATE-COVERAGE",
-      "title": "533个工具页批量添加affiliateUrl字段（当前仅1个，覆盖率0.19%）",
-      "priority": "P0",
-      "assigned_to": [
-        "window1"
-      ],
-      "status": "pending",
-      "source": "monetization_opportunities.md",
-      "description": "变现几乎为零的根本原因，532个工具页无联盟链接",
-      "created_at": "2026-09-28T07:51:08.386582",
-      "created_by": "commander-daily-dispatch"
-    },
-    {
-      "id": "P0-MONETIZE-CTA-COPY",
-      "title": "CTA文案从Visit Site改为场景化（Try [Tool] Free/Start Free Trial）",
-      "priority": "P0",
-      "assigned_to": [
-        "window1"
-      ],
-      "status": "pending",
-      "source": "monetization_opportunities.md",
-      "description": "场景化CTA可提升5-20%点击率",
-      "created_at": "2026-09-28T07:51:08.386584",
       "created_by": "commander-daily-dispatch"
     },
     {
@@ -3710,19 +3671,6 @@
       "created_at": "2026-09-28 08:05",
       "source": "commander_weekly_review_2026-09-28",
       "acceptance_criteria": "OpenSEO重新审计critical broken-internal-link=0"
-    },
-    {
-      "id": "P0-W42-CTR-TITLE-REWRITE",
-      "title": "用CTR大师课公式重写4篇零点击Top10页的Title+Meta",
-      "description": "dify(5.54名/48曝光/0点击)、cursor(6.88/49/0)、stable-diffusion(8.45/51/0)、midjourney-v7(6.92/38/0)。公式：标题50-60字符+关键词前置+数字/权力词+品牌末尾；Meta 105-155字符+利益+证明+CTA。参考best-ai-voice-changers(CTR3.39%)。",
-      "priority": "P0",
-      "assigned_to": [
-        "window1"
-      ],
-      "status": "pending",
-      "created_at": "2026-09-28 08:05",
-      "source": "commander_weekly_review_2026-09-28",
-      "acceptance_criteria": "4篇Title+Meta已更新，2-4周后GSC CTR从0%提升到>1%"
     },
     {
       "id": "P0-W42-GA4-BOT-FILTER",
@@ -4291,19 +4239,6 @@
       "description": "曝光最高页面但排名低CTR低，扩充内容深度和对比维度，目标进入前20"
     },
     {
-      "id": "P0-MONETIZE-AFFILIATE-COVERAGE-2026-09-29",
-      "title": "窗口5：批量为Top100高流量工具页添加affiliateUrl（当前533工具仅1个有联盟链接，覆盖率0.2%），优先接入Jasper 30%/Pictory 30%/Surfer SEO等高佣金recurring项目",
-      "description": "工具页是最大变现缺口。按GSC曝光排序Top100工具页，逐个添加affiliateUrl字段。优先有free trial的工具（转化率高3-5倍）。联盟链接必须加rel=sponsored。目标：工具页联盟覆盖率从0.2%→19%",
-      "priority": "P0",
-      "assigned_to": [
-        "window1",
-        "window5"
-      ],
-      "source": "commander_learning_affiliate_monetization_20260929",
-      "created_at": "2026-09-29",
-      "status": "active"
-    },
-    {
       "id": "P1-MONETIZE-BUYER-INTENT-CONTENT-2026-09-29",
       "title": "窗口3：批量生产买家意图关键词文章（best X/X pricing/X vs Y/X alternative），每篇必须含3+个联盟CTA和真实使用体验",
       "description": "买家意图关键词联盟转化率最高。用zens-ink挖掘每个工具的pricing/vs/alternative/best关键词，KD<30优先。文章结构：对比表→各工具优缺点→推荐场景→联盟CTA→FAQ。每篇至少3个联盟链接",
@@ -4828,17 +4763,6 @@
       "description": "新GA4 property 2026-09-29部署，到今天3天API仍返回0行。需检查：1)线上HTML是否包含G-7XYFQR3ETF 2)GA4PageTracker是否实际发送page_view事件 3)是否有真实用户访问。旧property的新加坡Bot问题随新property迁移已解决，但新property需启用自动Bot过滤。",
       "source": "GA4_verification_2026-09-30",
       "created": "2026-09-30"
-    },
-    {
-      "id": "P0-SCREENSHOT-DROP-001",
-      "title": "截图数从150降到101，检查截图目录是否被误删或路径变更",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "window1"
-      ],
-      "source": "commander_daily_20260930_1530",
-      "detail": "递归统计public/screenshots仅101个图片文件，9/30早为150。检查是否有清理脚本误删、文件名变更或路径迁移。"
     },
     {
       "id": "P1-404-PAGES-001",
