@@ -1,50 +1,62 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-09-30 22:21
+**Date:** 2026-10-01 01:10
 
 ## Summary
 
-- Total articles: 128
-- Average quality score: 95.6/100
-- Grade distribution: A=108, B=3, C=10, D=6, F=1
-- Articles below 85: 20
+- Total articles: 140
+- Average quality score: 93.1/100
+- Grade distribution: A=108, B=3, C=16, D=9, F=4
+- Articles below 85: 32
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 116 | 128 | 91% |
-| has_quick_answer | 128 | 128 | 100% |
-| first_para_pass | 121 | 128 | 95% |
-| has_key_takeaways | 124 | 128 | 97% |
-| has_faq | 128 | 128 | 100% |
-| has_how_we_tested | 127 | 128 | 99% |
-| internal_links_pass | 123 | 128 | 96% |
-| has_images | 111 | 128 | 87% |
-| has_real_screenshots | 111 | 128 | 87% |
-| readability_pass | 125 | 128 | 98% |
-| qa_density_pass | 128 | 128 | 100% |
-| title_pass | 125 | 128 | 98% |
-| has_comparison | 126 | 128 | 98% |
-| external_links_pass | 115 | 128 | 90% |
+| word_count_pass | 116 | 140 | 83% |
+| has_quick_answer | 136 | 140 | 97% |
+| first_para_pass | 133 | 140 | 95% |
+| has_key_takeaways | 125 | 140 | 89% |
+| has_faq | 140 | 140 | 100% |
+| has_how_we_tested | 139 | 140 | 99% |
+| internal_links_pass | 134 | 140 | 96% |
+| has_images | 111 | 140 | 79% |
+| has_real_screenshots | 111 | 140 | 79% |
+| readability_pass | 136 | 140 | 97% |
+| qa_density_pass | 140 | 140 | 100% |
+| title_pass | 137 | 140 | 98% |
+| has_comparison | 137 | 140 | 98% |
+| external_links_pass | 124 | 140 | 89% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
+| gemini-vs-perplexity | 49 | F | 719 | 3 | 0 | 35.5 | 0 |
 | suno-alternatives-2026 | 54 | F | 978 | 0 | 1 | 39.6 | 0 |
+| claude-37-vs-gpt4o | 58 | F | 756 | 3 | 0 | 62.2 | 0 |
+| synthesia-vs-heygen | 58 | F | 700 | 3 | 0 | 43.2 | 0 |
 | best-free-ai-tools-for-students-2026 | 63 | D | 1992 | 3 | 1 | 63.3 | 5 |
+| lovable-vs-boltnew | 63 | D | 806 | 3 | 0 | 52.9 | 2 |
 | cursor-vs-github-copilot-2026 | 67 | D | 1872 | 3 | 0 | 49.4 | 0 |
 | elevenlabs-vs-playht-2026 | 67 | D | 1810 | 3 | 0 | 48.7 | 0 |
 | midjourney-v7-vs-dall-e-3-ecommerce | 67 | D | 1960 | 3 | 0 | 44.7 | 0 |
+| quillbot-alternatives | 67 | D | 545 | 3 | 0 | 48.1 | 2 |
 | cursor-alternatives-2026 | 69 | D | 2828 | 0 | 0 | 55.5 | 0 |
 | perplexity-alternatives-2026 | 69 | D | 881 | 0 | 1 | 44.0 | 0 |
+| sudowrite-alternatives | 69 | D | 861 | 2 | 0 | 45.9 | 2 |
 | chatgpt-alternatives-2026 | 72 | C | 1960 | 5 | 0 | 60.5 | 0 |
 | runway-vs-pika-2026 | 72 | C | 1960 | 5 | 0 | 56.5 | 0 |
 | how-to-get-chatgpt-free-2026 | 72 | C | 1844 | 3 | 0 | 56.6 | 3 |
 | canva-pro-free-for-students | 72 | C | 1918 | 3 | 0 | 64.9 | 0 |
 | notion-ai-vs-obsidian-ai | 72 | C | 1828 | 3 | 0 | 66.3 | 0 |
 | how-to-use-cursor-for-react-development | 72 | C | 3256 | 4 | 0 | 47.1 | 0 |
+| beautiful-ai-alternatives | 72 | C | 587 | 3 | 0 | 52.5 | 2 |
+| devin-ai-review | 72 | C | 696 | 3 | 0 | 57.7 | 1 |
+| clearscope-alternatives | 72 | C | 574 | 4 | 0 | 61.9 | 2 |
+| motion-ai-alternatives | 72 | C | 560 | 3 | 0 | 55.9 | 1 |
+| runway-alternatives | 72 | C | 641 | 4 | 0 | 55.0 | 2 |
+| writesonic-alternatives | 72 | C | 571 | 5 | 0 | 54.4 | 3 |
 | elevenlabs-vs-murf-2026 | 74 | C | 2579 | 3 | 0 | 37.0 | 4 |
 | canva-ai-alternatives-2026 | 74 | C | 3946 | 4 | 0 | 28.0 | 0 |
 | claude-alternatives-2026 | 78 | C | 1452 | 3 | 0 | 60.3 | 5 |

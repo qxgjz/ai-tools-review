@@ -4641,25 +4641,6 @@
       "research_round": "round5_2026-09-30"
     },
     {
-      "id": "kw_r3_runway_alternatives",
-      "task": "写替代方案页：Runway ML alternatives（KD=1.0，8弱域名，AI视频新品类）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round3_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "runway-ml-alternatives",
-        "weak_domains": 8
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
       "id": "kw_r3_gemini_vs_perplexity",
       "task": "写对比页：Gemini vs Perplexity（KD=1.0，7弱域名）",
       "assigned_to": [
@@ -4809,44 +4790,6 @@
       "created": "2026-09-30"
     },
     {
-      "id": "kw_r4_sudowrite_alternatives",
-      "task": "写替代方案页：Sudowrite alternatives（KD=1.0，8弱域名，小说写作品类）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round4_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "sudowrite-alternatives",
-        "weak_domains": 8
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r4_writesonic_alternatives",
-      "task": "写替代方案页：Writesonic alternatives（KD=1.0，8弱域名，AI营销写作）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round4_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "writesonic-alternatives",
-        "weak_domains": 8
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
       "id": "kw_r4_motion_ai_alternatives",
       "task": "写替代方案页：Motion AI alternatives（KD=4.0，7弱域名，AI日历调度）",
       "assigned_to": [
@@ -4859,44 +4802,6 @@
         "intent": "commercial",
         "slug": "motion-ai-alternatives",
         "weak_domains": 7
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r4_clearscope_alternatives",
-      "task": "写替代方案页：Clearscope alternatives（KD=3.3，6弱域名，SEO内容优化）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round4_2026-09-30",
-      "keyword_data": {
-        "kd": 3.3,
-        "intent": "commercial",
-        "slug": "clearscope-alternatives",
-        "weak_domains": 6
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r4_quillbot_alternatives",
-      "task": "写替代方案页：QuillBot alternatives（KD=4.1，6弱域名，改写/降重）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round4_2026-09-30",
-      "keyword_data": {
-        "kd": 4.1,
-        "intent": "commercial",
-        "slug": "quillbot-alternatives",
-        "weak_domains": 6
       },
       "status": "completed",
       "created_at": "2026-09-30",
@@ -5000,7 +4905,7 @@
   "last_commit": "60292cd",
   "last_update": "2026-09-23 迭代85：Lighthouse CI workflow + IndexNow批量提交714URL + state同步清理5项",
   "last_action": "Window 3 content production: wrote Jasper vs Copy.ai comparison (3130 words) + rewrote best-ai-voice-changers (2527 words) + daily learning on niche site templates",
-  "current_round": 77,
+  "current_round": 78,
   "last_iteration_date": "2026-09-26",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
   "last_run": "2026-09-20T01:12:00+08:00",
@@ -6446,10 +6351,29 @@
       "details": "新建.github/workflows/unlighthouse-weekly.yml；每周日运行；unlighthouse-ci --site https://www.aitoolcrux.com --reporter json；配置maxRoutes:200, dynamicSampling:5, exclude:['/api/*','/_next/*'], samples:1, throttle:false；assertions: performance minScore:0.7 warn, LCP maxNumericValue:4000 warn；CI缓存.lighthouseci目录；上传报告artifact"
     }
   ],
-  "last_deploy_time": "2026-09-24 19:40:02",
+  "last_deploy_time": "2026-09-30 22:28",
   "last_learning_update": "2026-09-28",
   "last_learning_topic": "TRAFFIC_GROWTH_SOP_v1.0_标准化体系上线",
   "iteration_log": [
+    {
+      "round": 78,
+      "date": "2026-09-30 22:28",
+      "commit": "c19dd34",
+      "files_pushed": 125,
+      "tasks": [
+        "Push pending local changes (code fixes + window3 articles)",
+        "tsc --noEmit: 0 errors",
+        "quality_audit: avg 95.6, 128 articles",
+        "IndexNow: 37 URLs submitted",
+        "Vercel deploy verified: homepage/blog/tools all 200",
+        "Cloudflare HTML cache active: cf-cache-status HIT"
+      ],
+      "gate": {
+        "tsc": "pass",
+        "quality_avg": 95.6,
+        "f_level": 1
+      }
+    },
     {
       "iteration": 100,
       "date": "2026-09-26",
@@ -6562,5 +6486,7 @@
   "last_push_commit": "3b2f2ff",
   "last_push_time": "2026-09-30T13:17:00+08:00",
   "total_posts": 128,
-  "last_cycle_result": "pushed 17 new articles, fixed merge conflict, fixed F-grade article, fixed missing category fields"
+  "last_cycle_result": "pushed 17 new articles, fixed merge conflict, fixed F-grade article, fixed missing category fields",
+  "last_deploy_commit": "c19dd34",
+  "last_verified": true
 }
