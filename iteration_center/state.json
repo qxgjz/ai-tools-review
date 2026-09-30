@@ -1015,19 +1015,6 @@
       "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
-      "id": "P0-CONTENT-COMMODITY-REWRITE-001",
-      "title": "重写82篇高风险commodity content文章（Top10优先）",
-      "description": "content_originality_audit.md发现：82篇高风险文章（AI从前10名就能生成的纯功能清单/定义/通用评测），违反Google 2026年3月/5月核心更新信息增益标准。需优先重写Top10高流量文章，加原创测试数据+第一手经验+真实截图+决策表",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "content_originality_audit.md报告发现",
-      "progress": "5/10 done (best-free-ai-tools, best-ai-image-generators, best-ai-coding-tools in Linux env 2026-09-24; best-ai-voice-changers 2026-09-25; best-ai-slack-bots 2026-09-26). 5 remaining: scheduling-tools, podcast-tools, idea-generators, voice-generators, resume-builders.",
-      "last_updated": "2026-09-26"
-    },
-    {
       "id": "P1-ANALYTICS-GA4-PAGEPATH-001",
       "title": "修复GA4 pagePath追踪异常（多页面都显示/）",
       "description": "cloudflare_realtime_data.md + ga4_latest_data.md发现：多个不同标题页面的pagePath都显示'/'，Next.js动态路由配置问题。导致GA4无法按页面分析流量。需检查gtag配置中page_path参数，确保动态路由正确传递",
@@ -1703,18 +1690,6 @@
       "description": "OpenSEO审计(9/24)发现：404页面：/cursor-vs-github-copilot-2026, /how-to-use-cursor-for-react-development, /blog/best-ai-search-engines-2026。断链来自/blog/perplexity-vs-chatgpt-2026-comparison和/blog/github-copilot-review-2026。",
       "created": "2026-09-26",
       "evidence": "OpenSEO: 3 critical broken-internal-link, 3 warning broken-page 404"
-    },
-    {
-      "id": "P1-SEO-MULTIPLE-H1-001",
-      "title": "P1: 修复2个multiple H1 + 7个thin content分类页",
-      "priority": "P1",
-      "assigned_to": [
-        "window3"
-      ],
-      "status": "pending",
-      "description": "multiple H1: /blog/suno-vs-udio-2026-comparison(2个H1), /blog/perplexity-vs-chatgpt-2026-comparison(2个H1)。thin content: 7个/blog/category/页面仅138-143词。",
-      "created": "2026-09-26",
-      "evidence": "OpenSEO: 2 multiple-h1 warning, 7 thin-content"
     },
     {
       "id": "P2-ANALYTICS-MOBILE-001",
@@ -4026,19 +4001,6 @@
       "source": "index_monitor.md",
       "description": "/compare页面有270曝光（全站第2高）但排名34、CTR仅0.7%。优化标题/meta描述/内容深度，目标排名进入前20、CTR提升到2%+，可立即带来点击增长。",
       "created_at": "2026-09-28T22:34:34.716249",
-      "created_by": "commander-daily-dispatch-2200"
-    },
-    {
-      "id": "P1-SEO-MISSING-H1",
-      "title": "修复2篇文章缺少H1标签（/blog/stable-diffusion-review-2026 和 /blog/cursor-review-2026）",
-      "priority": "P1",
-      "assigned_to": [
-        "window3"
-      ],
-      "status": "pending",
-      "source": "seo_check_latest.md",
-      "description": "SEO健康检查发现2篇高流量文章缺少H1标签。stable-diffusion-review有15207词、cursor-review有13331词，都是长文但H1缺失影响SEO。",
-      "created_at": "2026-09-28T22:34:34.716252",
       "created_by": "commander-daily-dispatch-2200"
     },
     {
