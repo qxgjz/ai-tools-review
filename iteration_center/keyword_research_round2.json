@@ -1,0 +1,217 @@
+[
+  {
+    "keyword": "Lovable vs Bolt.new",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "dedicated_pages": 2,
+    "paa": []
+  },
+  {
+    "keyword": "Perplexity alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "dedicated_pages": 6,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Gamma alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "dedicated_pages": 4,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Suno alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 8,
+    "dedicated_pages": 7,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Claude 3.7 vs GPT-4o",
+    "kd": 3.7,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "dedicated_pages": 9,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Synthesia vs HeyGen",
+    "kd": 6.9,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "dedicated_pages": 10,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Jasper alternatives",
+    "kd": 11.9,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "dedicated_pages": 8,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Writer.com vs Jasper",
+    "kd": 12.9,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 4,
+    "dedicated_pages": 0,
+    "paa": []
+  },
+  {
+    "keyword": "Claude Code vs Cursor",
+    "kd": 13.3,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "dedicated_pages": 10,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Descript vs Riverside",
+    "kd": 16.3,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "dedicated_pages": 9,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "v0 vs Lovable",
+    "kd": 22.3,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "dedicated_pages": 10,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "n8n AI vs Zapier AI",
+    "kd": 22.5,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "dedicated_pages": 10,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "GitHub Copilot vs Amazon Q",
+    "kd": 28.3,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 3,
+    "dedicated_pages": 9,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Framer AI vs Webflow",
+    "kd": 30.0,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 3,
+    "dedicated_pages": 9,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  },
+  {
+    "keyword": "Make vs Zapier",
+    "kd": 33.9,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 5,
+    "dedicated_pages": 10,
+    "paa": [
+      "",
+      "",
+      "",
+      ""
+    ]
+  }
+]

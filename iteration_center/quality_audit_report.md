@@ -1,37 +1,55 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-09-29 13:26
+**Date:** 2026-09-30 13:18
 
 ## Summary
 
-- Total articles: 106
-- Average quality score: 100.0/100
-- Grade distribution: A=106, B=0, C=0, D=0, F=0
-- Articles below 85: 0
+- Total articles: 126
+- Average quality score: 96.1/100
+- Grade distribution: A=108, B=3, C=10, D=5, F=0
+- Articles below 85: 18
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 106 | 106 | 100% |
-| has_quick_answer | 106 | 106 | 100% |
-| first_para_pass | 106 | 106 | 100% |
-| has_key_takeaways | 106 | 106 | 100% |
-| has_faq | 106 | 106 | 100% |
-| has_how_we_tested | 106 | 106 | 100% |
-| internal_links_pass | 106 | 106 | 100% |
-| has_images | 106 | 106 | 100% |
-| has_real_screenshots | 106 | 106 | 100% |
-| readability_pass | 106 | 106 | 100% |
-| qa_density_pass | 106 | 106 | 100% |
-| title_pass | 106 | 106 | 100% |
-| has_comparison | 106 | 106 | 100% |
-| external_links_pass | 106 | 106 | 100% |
+| word_count_pass | 116 | 126 | 92% |
+| has_quick_answer | 126 | 126 | 100% |
+| first_para_pass | 119 | 126 | 94% |
+| has_key_takeaways | 124 | 126 | 98% |
+| has_faq | 126 | 126 | 100% |
+| has_how_we_tested | 125 | 126 | 99% |
+| internal_links_pass | 123 | 126 | 98% |
+| has_images | 109 | 126 | 87% |
+| has_real_screenshots | 109 | 126 | 87% |
+| readability_pass | 124 | 126 | 98% |
+| qa_density_pass | 126 | 126 | 100% |
+| title_pass | 123 | 126 | 98% |
+| has_comparison | 125 | 126 | 99% |
+| external_links_pass | 115 | 126 | 91% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
+| best-free-ai-tools-for-students-2026 | 63 | D | 1992 | 3 | 1 | 63.3 | 5 |
+| cursor-vs-github-copilot-2026 | 67 | D | 1872 | 3 | 0 | 49.4 | 0 |
+| elevenlabs-vs-playht-2026 | 67 | D | 1810 | 3 | 0 | 48.7 | 0 |
+| midjourney-v7-vs-dall-e-3-ecommerce | 67 | D | 1960 | 3 | 0 | 44.7 | 0 |
+| cursor-alternatives-2026 | 69 | D | 2828 | 0 | 0 | 55.5 | 0 |
+| chatgpt-alternatives-2026 | 72 | C | 1960 | 5 | 0 | 60.5 | 0 |
+| runway-vs-pika-2026 | 72 | C | 1960 | 5 | 0 | 56.5 | 0 |
+| how-to-get-chatgpt-free-2026 | 72 | C | 1844 | 3 | 0 | 56.6 | 3 |
+| canva-pro-free-for-students | 72 | C | 1918 | 3 | 0 | 64.9 | 0 |
+| notion-ai-vs-obsidian-ai | 72 | C | 1828 | 3 | 0 | 66.3 | 0 |
+| how-to-use-cursor-for-react-development | 72 | C | 3256 | 4 | 0 | 47.1 | 0 |
+| elevenlabs-vs-murf-2026 | 74 | C | 2579 | 3 | 0 | 37.0 | 4 |
+| canva-ai-alternatives-2026 | 74 | C | 3946 | 4 | 0 | 28.0 | 0 |
+| claude-alternatives-2026 | 78 | C | 1452 | 3 | 0 | 60.3 | 5 |
+| best-free-ai-tools-for-youtube-creators | 78 | C | 3224 | 3 | 0 | 51.1 | 0 |
+| otter-ai-alternatives | 80 | B | 2125 | 0 | 0 | 54.4 | 5 |
+| midjourney-free-trial-2026 | 80 | B | 2718 | 0 | 0 | 55.0 | 4 |
+| autochain-review-2026 | 83 | B | 2023 | 6 | 0 | 44.8 | 2 |
 | best-paid-ai-tools-worth-buying-2026 | 100 | A | 2226 | 5 | 2 | 68.2 | 1 |
 | dify-vs-langchain-2026 | 100 | A | 2216 | 6 | 2 | 50.1 | 1 |
 | gemini-alternatives-2026 | 100 | A | 2242 | 8 | 2 | 51.2 | 1 |
@@ -138,3 +156,5 @@
 | surfer-seo-vs-frase-2026-comparison | 100 | A | 2051 | 3 | 1 | 49.9 | 5 |
 | gemini-pricing-2026 | 100 | A | 2856 | 4 | 3 | 53.3 | 5 |
 | windsurf-vs-cursor-2026 | 100 | A | 2928 | 3 | 4 | 45.2 | 4 |
+| gemini-vs-chatgpt-2026 | 100 | A | 3427 | 7 | 2 | 52.5 | 8 |
+| suno-alternatives | 100 | A | 2920 | 4 | 2 | 50.4 | 8 |

@@ -1,0 +1,137 @@
+[
+  {
+    "keyword": "Runway ML alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 8,
+    "paa": []
+  },
+  {
+    "keyword": "ElevenLabs alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "paa": []
+  },
+  {
+    "keyword": "Otter.ai alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 8,
+    "paa": []
+  },
+  {
+    "keyword": "Gemini vs Perplexity",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "paa": []
+  },
+  {
+    "keyword": "Beautiful.ai alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 8,
+    "paa": []
+  },
+  {
+    "keyword": "Devin AI review",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "Cursor review 2026",
+    "kd": 1.2,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "ChatGPT vs Claude",
+    "kd": 3.4,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Copilot alternatives",
+    "kd": 4.6,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Granola vs Otter",
+    "kd": 5.2,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Notion AI vs Mem",
+    "kd": 8.7,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "NotebookLM alternatives",
+    "kd": 18.0,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Pika vs Runway",
+    "kd": 25.3,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "CapCut vs Premiere Pro AI",
+    "kd": 42.7,
+    "label_en": "Medium",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 1,
+    "paa": []
+  },
+  {
+    "keyword": "Adobe Firefly vs Midjourney",
+    "kd": 45.3,
+    "label_en": "Medium",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 2,
+    "paa": []
+  }
+]

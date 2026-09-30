@@ -1,15 +1,15 @@
 {
-  "audit_time": "2026-09-29T22:56:04.055426",
-  "mode": "quick",
+  "audit_time": "2026-09-29T20:51:43.381751",
+  "mode": "full",
   "content": {
-    "total_articles": 108,
-    "average_score": 100.0,
-    "perfect_count": 108,
+    "total_articles": 107,
+    "average_score": 99.94766355140186,
+    "perfect_count": 106,
     "below_85_count": 0,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
-        "title": "Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...",
+        "title": "Best Paid AI Tools Worth Buying in 2026 (No Waste of Money) | AIToolCrux",
         "quality_score": 100.0,
         "word_count": 2226,
         "flesch": 68.2,
@@ -108,7 +108,7 @@
       },
       {
         "slug": "best-ai-voice-changers-2026",
-        "title": "Best AI Voice Changers 2026: We Tested 7 for 10 Days — Th...",
+        "title": "Best AI Voice Changers 2026: We Tested 7 for 10 Days — These 3 Actually Work",
         "quality_score": 100.0,
         "word_count": 2927,
         "flesch": 52.6,
@@ -130,7 +130,7 @@
       },
       {
         "slug": "best-ai-scheduling-tools-2026",
-        "title": "Best AI Scheduling Tools 2026: We Tested 8 Tools (Real Bo...",
+        "title": "Best AI Scheduling Tools 2026: We Tested 8 Tools (Real Booking Data)",
         "quality_score": 100.0,
         "word_count": 2166,
         "flesch": 59.9,
@@ -141,7 +141,7 @@
       },
       {
         "slug": "best-ai-podcast-tools-2026",
-        "title": "Best AI Podcast Tools 2026: Top 5 for Recording, Editing...",
+        "title": "Best AI Podcast Tools 2026: Top 5 for Recording, Editing & Growth | AIToolCrux",
         "quality_score": 100.0,
         "word_count": 2088,
         "flesch": 55.6,
@@ -152,7 +152,7 @@
       },
       {
         "slug": "best-ai-idea-generators-2026",
-        "title": "Best AI Idea Generators 2026: Top 5 for Startups, Content...",
+        "title": "Best AI Idea Generators 2026: Top 5 for Startups, Content & Side Projects | A...",
         "quality_score": 100.0,
         "word_count": 2212,
         "flesch": 49.7,
@@ -394,7 +394,7 @@
       },
       {
         "slug": "best-ai-translation-tools-2026",
-        "title": "Best AI Translation Tools 2026: 10 Languages Tested & Com...",
+        "title": "Best AI Translation Tools 2026: 10 Languages Tested & Compared | AIToolCrux",
         "quality_score": 100.0,
         "word_count": 2637,
         "flesch": 40.2,
@@ -537,7 +537,7 @@
       },
       {
         "slug": "best-ai-video-generators-2026",
-        "title": "Best AI Video Generators 2026: We Tested 10 Tools (Real O...",
+        "title": "Best AI Video Generators 2026: We Tested 10 Tools (Real Output Comparison)",
         "quality_score": 100.0,
         "word_count": 2246,
         "flesch": 51.7,
@@ -570,7 +570,7 @@
       },
       {
         "slug": "perplexity-ai-review-2026",
-        "title": "Perplexity AI Review 2026: 2 Weeks, 200 Queries — Is It B...",
+        "title": "Perplexity AI Review 2026: 2 Weeks, 200 Queries — Is It Better Than Google?",
         "quality_score": 100.0,
         "word_count": 2319,
         "flesch": 43.9,
@@ -680,7 +680,7 @@
       },
       {
         "slug": "dify_ai_review",
-        "title": "Dify AI Review: We Built 3 Apps, Is It Worth It?",
+        "title": "Dify AI Review 2026: Is It Worth It? (3 Apps Tested)",
         "quality_score": 100.0,
         "word_count": 13394,
         "flesch": 46.3,
@@ -691,7 +691,7 @@
       },
       {
         "slug": "cursor_ai_review",
-        "title": "Cursor AI Review: Better Than Copilot? 3-Month Test",
+        "title": "Cursor AI Review 2026: Better Than Copilot? (3-Month Test)",
         "quality_score": 100.0,
         "word_count": 13059,
         "flesch": 47.1,
@@ -702,7 +702,7 @@
       },
       {
         "slug": "gemini_38_flash_review",
-        "title": "Gemini 3.8 Flash Review: 50 Benchmarks, Is It Worth It?",
+        "title": "Gemini 3.8 Flash Review 2026: 50 Benchmarks, Real Verdict",
         "quality_score": 100.0,
         "word_count": 13098,
         "flesch": 53.4,
@@ -713,7 +713,7 @@
       },
       {
         "slug": "claude_fable_51_review",
-        "title": "Claude Fable 5.1 Review: Cheaper, Faster, Better?",
+        "title": "Claude Fable 5.1 Review 2026: Cheaper, Faster, | AIToolCrux",
         "quality_score": 100.0,
         "word_count": 5122,
         "flesch": 52.1,
@@ -724,7 +724,7 @@
       },
       {
         "slug": "openai_astra_review",
-        "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is I...",
+        "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is It Worth $200/Month?",
         "quality_score": 100.0,
         "word_count": 12471,
         "flesch": 43.9,
@@ -735,7 +735,7 @@
       },
       {
         "slug": "chatgpt-deep-review-2026",
-        "title": "ChatGPT Review 2026: 30 Days, 500+ Queries — Is It Still...",
+        "title": "ChatGPT Review 2026: 30 Days, 500+ Queries — Is It Still the Best AI Chatbot?",
         "quality_score": 100.0,
         "word_count": 7179,
         "flesch": 44.9,
@@ -779,7 +779,7 @@
       },
       {
         "slug": "github-copilot-review-2026",
-        "title": "GitHub Copilot Review 2026: 30 Days, 500+ Completions — I...",
+        "title": "GitHub Copilot Review 2026: 30 Days, 500+ Completions — Is It Still Worth $10...",
         "quality_score": 100.0,
         "word_count": 13298,
         "flesch": 44.7,
@@ -889,7 +889,7 @@
       },
       {
         "slug": "stable-diffusion-review-2026",
-        "title": "Stable Diffusion 3.5 Review: 4-Week Test, Honest Verdict",
+        "title": "Stable Diffusion 3.5 Review 2026: 4-Week Honest Test, Is It Worth It?",
         "quality_score": 100.0,
         "word_count": 15289,
         "flesch": 48.9,
@@ -922,7 +922,7 @@
       },
       {
         "slug": "synthesia-review-2026",
-        "title": "Synthesia Review: Best AI Avatar Video Maker?",
+        "title": "Synthesia Review 2026: Best AI Avatar Video | AIToolCrux",
         "quality_score": 100.0,
         "word_count": 13692,
         "flesch": 46.3,
@@ -966,7 +966,7 @@
       },
       {
         "slug": "suno-review-2026",
-        "title": "Suno AI Review: Made 20 Songs, 3 Were Unreleasable",
+        "title": "Suno AI Review 2026: Made 20 Songs, 3 Were Unreleasable (Honest Verdict)",
         "quality_score": 100.0,
         "word_count": 9917,
         "flesch": 45.9,
@@ -1021,7 +1021,7 @@
       },
       {
         "slug": "adobe-firefly-review-2026",
-        "title": "Adobe Firefly Review: 30-Day Test, Is It Worth It?",
+        "title": "Adobe Firefly Review 2026: Best AI Image Generator for Commercial Use?",
         "quality_score": 100.0,
         "word_count": 14307,
         "flesch": 45.6,
@@ -1120,7 +1120,7 @@
       },
       {
         "slug": "jasper-vs-copy-ai-2026-comparison",
-        "title": "Jasper vs Copy.ai 2026: We Ran 40 Campaigns — Here's the...",
+        "title": "Jasper vs Copy.ai 2026: We Ran 40 Campaigns — Here's the Clear Winner",
         "quality_score": 100.0,
         "word_count": 2234,
         "flesch": 64.5,
@@ -1131,7 +1131,7 @@
       },
       {
         "slug": "canva-ai-vs-adobe-firefly-2026-comparison",
-        "title": "Canva AI vs Adobe Firefly 2026: We Tested Both for 2 Week...",
+        "title": "Canva AI vs Adobe Firefly 2026: We Tested Both for 2 Weeks (Honest Verdict)",
         "quality_score": 100.0,
         "word_count": 2883,
         "flesch": 43.8,
@@ -1142,7 +1142,7 @@
       },
       {
         "slug": "surfer-seo-vs-frase-2026-comparison",
-        "title": "Surfer SEO vs Frase 2026: We Tested Both for 3 Weeks (Dat...",
+        "title": "Surfer SEO vs Frase 2026: We Tested Both for 3 Weeks (Data-Driven Verdict)",
         "quality_score": 100.0,
         "word_count": 2051,
         "flesch": 49.9,
@@ -1153,7 +1153,7 @@
       },
       {
         "slug": "gemini-pricing-2026",
-        "title": "Gemini Pricing 2026: Is Advanced Worth $20/Month? [Real C...",
+        "title": "Gemini Pricing 2026: Is Advanced Worth $20/Month? [Real Cost Breakdown]",
         "quality_score": 100.0,
         "word_count": 2856,
         "flesch": 53.3,
@@ -1164,7 +1164,7 @@
       },
       {
         "slug": "windsurf-vs-cursor-2026",
-        "title": "Windsurf vs Cursor 2026: I Tested Both for 2 Weeks — Whic...",
+        "title": "Windsurf vs Cursor 2026: I Tested Both for 2 Weeks — Which Wins?",
         "quality_score": 100.0,
         "word_count": 2928,
         "flesch": 45.2,
@@ -1175,41 +1175,33 @@
       },
       {
         "slug": "gemini-vs-chatgpt-2026",
-        "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tes...",
-        "quality_score": 100.0,
-        "word_count": 3427,
-        "flesch": 52.5,
+        "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tested]",
+        "quality_score": 94.4,
+        "word_count": 3417,
+        "flesch": 51.7,
         "internal_links": 7,
         "external_links": 8,
-        "images": 2,
-        "failed_checks": []
-      },
-      {
-        "slug": "suno-alternatives",
-        "title": "11 Best Suno Alternatives in 2026 (After Free Tier Ended)",
-        "quality_score": 100.0,
-        "word_count": 2920,
-        "flesch": 50.4,
-        "internal_links": 4,
-        "external_links": 8,
-        "images": 2,
+        "images": 1,
         "failed_checks": []
       }
     ]
   },
   "technical": {
-    "pages_audited": 20,
-    "total_issues": 7,
+    "pages_audited": 753,
+    "total_issues": 607,
     "by_severity": {
-      "notice": 6,
-      "warning": 1
+      "warning": 23,
+      "notice": 584
     },
     "by_type": {
-      "Heading skip": 6,
-      "Meta too long": 1
+      "Slow response": 9,
+      "Title too long": 8,
+      "Meta too long": 6,
+      "Heading skip": 580,
+      "Canonical mismatch": 4
     },
     "critical_issues": [],
-    "elapsed_seconds": 9.1
+    "elapsed_seconds": 556.6
   },
   "geo": {
     "geo_score": 100,

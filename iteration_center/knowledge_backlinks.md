@@ -1,3 +1,81 @@
+
+## 2026-09-29 下午轮（窗口2）执行记录
+
+### 本轮动作
+1. **Serper API批量搜索**：7组查询，过滤后58个新外链目标（保存 serper_targets_0929_v2.json）
+   - 主要类型：write-for-us客座博客页面、资源页、目录提交页
+   - Top候选：scryai.com/write-for-us、sentisight.ai/write-for-us、cabina.ai/write-for-us、lasso-up.com、efficient.app/best/ai
+2. **品牌提及监控**：搜索"aitoolcrux"，10条结果（3自有+7外部），无未链接品牌提及可回收
+3. **free-ai-tools-directory.com**：表单完整填写（名称/URL/描述/Logo已上传），reCAPTCHA v3被拒，标记失败
+4. **ai-hunter.io**：表单完整填写，提交返回服务器错误，标记失败
+5. **aimarketing.directory**：无在线提交表单，仅邮箱，跳过
+6. **ToolJunction.io**：
+   - 注册成功（840754587@qq.com / AICrux2026!，验证码594907）
+   - Profile完善：display name=AIToolCrux, headline=AI tool reviews and comparisons, I'm a maker
+   - Main info：Name=AIToolCrux, URL=https://www.aitoolcrux.com, Category=AI Research Tools, Logo=https://www.aitoolcrux.com/logo.png
+   - About you：Founder, AIToolCrux, Bootstrapped, 目标SEO backlink
+   - Product details：描述+feature+Free+Launched+<$1k MRR
+   - **Launch Plan页：最低$99一次性（24-36h上线，永久Google索引页+Schema），Grow $199**
+   - **状态：付费目录，草稿已保存，待用户确认是否付$99**
+
+### 新增"做不通"清单（不重试）
+- free-ai-tools-directory.com：reCAPTCHA v3拒绝
+- ai-hunter.io：表单提交服务器错误
+- aimarketing.directory：无在线表单
+
+### 待用户确认
+- ToolJunction.io $99一次性（永久列表页+Schema+季度内容刷新）
+
+
+## 2026-09-29 执行记录
+
+### Serper API搜索
+- 35个过滤后新目标（排除已知失败目录）
+- 高潜力：freeaidirectories.com(450+目录聚合)、stork.ai(目录评测)、ideaproof.io(213目录列表)
+
+### 目录提交结果
+- ❌ **bestofai.io**: 仅Google登录，无邮箱注册选项，阻塞
+- ⚠️ **ai-hunter.io**: 表单完整填写但服务器返回错误，待重试
+- ❌ **aimarketing.directory**: 无在线提交表单，仅邮箱提交
+
+### 品牌提及监控
+- 10条提及（3自有 + 7外部）
+- 无未链接品牌提及可回收
+- 外部提及均为已提交目录（sideprojectors、hatchr、thehackstack等）
+
+### 新发现目录（从submitai.vercel.app聚合站）
+- AI-Hunter.io: 免费提交，服务器不稳定
+- free-ai-tools-directory.com: 待尝试
+- aimarketing.directory: 仅邮箱提交
+- GPTForge: 待尝试
+- MicroLaunch: 待尝试
+
+### 经验教训
+1. select2下拉框需要用jQuery .val().trigger('change')方式设置，不能直接type
+2. 提交前先检查页面是否有真实表单，有些目录仅展示付费方案
+3. Google-only登录的目录直接跳过，不要浪费时间
+
+
+## 2026-09-28 第三轮执行记录
+
+### 目录提交结果
+- ✅ **aisuperhub.io**: 提交成功，免费，审核90+天，可通过加反向链接加速审核
+- ✅ **credibleaitools.com**: 已提交，免费dofollow，待审核
+- ❌ **poweredbyai.app**: 仅付费方案（$11.99 Pro / $69.99 Elite），无免费计划
+- ⏳ **toolscout.ai**: 注册验证码邮件未到达，待重试
+
+### 新发现的目录
+- freeaidirectories.com: 聚合450+目录的导航站
+- submitsaas.com: 100+免费目录提交站聚合
+- aiso.blog: AI工具目录推荐列表
+- scrolllaunch.com: 免费提交目录
+
+### 经验教训
+1. poweredbyai.app的react-select类别选择器需要用find+click option方式，不能直接type
+2. aisuperhub.io的单选按钮（yes/no）是必填项，不选无法提交
+3. QQ邮箱对部分国外目录的验证码邮件可能延迟或被拦截，可考虑用Gmail替代
+4. 提交前先确认是否有免费方案，避免浪费时间填表单后发现只有付费
+
 # AIToolCrux 外链知识库
 
 > 窗口2维护，每次做外链前必读。
@@ -668,3 +746,20 @@
 ---
 
 *更多历史学习记录见下方追加部分*
+
+## 2026-09-30 本轮执行记录
+
+### Serper API搜索
+- 搜索7个query，过滤后50个新目标
+- 品牌提及监控10条（3自有+7外部），无可回收未链接提及
+
+### 目录提交尝试
+| 目录 | 结果 | 原因 |
+|------|------|------|
+| aitoolsdirectory.com/submit-tool | 失败 | 仅Fast Track付费，0个form元素 |
+| tools.launchllama.co | 部分完成 | 注册成功(840754587@qq.com/AICrux2026!)，AI预填充表单完成，选分类/定价/Terms/Free计划，upvote 5+工具，发布3条5星评价，但Step 3 gating持续要求feedback，最终提交按钮未通过 |
+
+### 账号记录
+| 网站 | 邮箱 | 密码 | 状态 |
+|------|------|------|------|
+| LaunchLlama | 840754587@qq.com | AICrux2026! | 已注册已登录，提交卡在feedback gating |

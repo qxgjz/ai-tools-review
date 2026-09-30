@@ -1,5 +1,113 @@
 # AIToolCrux 变现机会报告 - 2026-09-26 紧急优化
 
+## 新发现联盟（2026-09-29 轮）
+
+### 🔥 本轮新增（Serper API搜索）
+
+| 工具 | 佣金 | Cookie | 平台 | 起付 | 亮点 | 申请链接 |
+|------|------|--------|------|------|------|---------|
+| **AdSkull** | **30% lifetime recurring** | 30天 | 直连 | 未公开 | AI广告素材，高客单价 | https://adskull.io/affiliate |
+| **Superads** | **30-40% × 12月** | 60天 | 直连 | $50 | AI广告报告，$250均收 | https://superads.io/affiliate |
+| **AWeber** | **30% lifetime（升至40%）** | 未公开 | 直连 | 未公开 | 邮件营销，老牌SaaS | https://www.aweber.com/affiliates.htm |
+| **GetResponse** | **最高60%** | 未公开 | PartnerStack | 未公开 | 邮件营销+自动化 | https://www.getresponse.com/affiliates |
+
+### 📌 本轮申请目标（1-2个）
+
+1. **AdSkull** — 30% lifetime recurring，AI广告素材生成
+   - 匹配内容: AI广告工具、营销自动化、电商素材
+   - 申请: https://adskull.io/affiliate
+
+2. **Systeme.io**（持续跟进）— 60% lifetime recurring，$10起付，即时批准
+   - 申请: https://systeme.io/affiliate-program
+
+### 📧 AdSkull申请邮件模板
+
+Subject: Affiliate Partnership — AIToolCrux.com (AI Tool Review Site)
+
+Hi AdSkull Team,
+
+I run AIToolCrux.com, an AI tool review site with 533+ tool pages and 106+ articles covering AI marketing, advertising, and productivity tools. Our audience is marketers, ecommerce owners, and agencies actively evaluating AI ad tools.
+
+I'd like to join your affiliate program and promote AdSkull through:
+- In-depth review articles with hands-on testing
+- Comparison articles (AdSkull vs alternatives)
+- Best AI ad tools roundups
+- Newsletter recommendations
+
+Our content ranks for keywords like "best AI marketing tools" and "AI advertising tools." AdSkull would be a strong fit for our readers looking for AI-powered ad creative.
+
+Could you approve my affiliate application? Happy to share traffic stats if needed.
+
+Best regards,
+AIToolCrux Team
+https://aitoolcrux.com
+
+---
+
+
+## 新发现联盟计划（2026-09-28 变现运营轮）
+
+### 🔥 高优先级（立即申请）
+
+| 工具 | 佣金 | Cookie | 平台 | 起付 | 即时批准 | 申请链接 |
+|------|------|--------|------|------|---------|---------|
+| **CustomGPT.ai** | **30% lifetime recurring** | 未公开 | 直连/Tapfiliate | 未公开 | 高 | https://customgpt.ai/affiliate |
+| **Systeme.io** | **60% lifetime recurring** | 180天 | 直连(in-house) | $10 | ✅ 是 | https://systeme.io/affiliate-program |
+| **Taskade AI Agents** | **最高50% lifetime recurring** | 90天 | Tapfiliate | 未公开 | 高 | https://www.taskade.com/affiliates |
+| **Inkfluence AI** | **30% recurring × 12月** | 未公开 | 直连 | 未公开 | 中 | https://www.inkfluenceai.com/affiliate |
+| **Oakgen.ai** | **25% × 首6月，无上限** | 未公开 | 直连 | 未公开 | 高 | https://oakgen.ai/affiliate |
+| **HubSpot** | **30% recurring × 首年** | 180天 | Impact | $10 | 人工审核 | https://www.hubspot.com/affiliates |
+| **Softr** | **30% × 首年** | 未公开 | PartnerStack | 未公开 | 高 | https://www.softr.io/affiliates |
+| **AI STUDIOS** | **40% recurring × 6月** | 未公开 | 直连 | 未公开 | 高 | https://www.aistudios.com/affiliate |
+| **Botpress** | **30% recurring** | 90天 | Tapfiliate | 未公开 | 高 | https://botpress.com/affiliate |
+| **Zebracat AI** | **30% recurring × 12月** | 60天 | Rewardful(已激活) | $50 | ✅ 是 | https://zebracat.ai/affiliate |
+
+### 📊 收入潜力估算（保守）
+
+| 计划 | 月均推荐 | 客单价 | 佣金 | 月收入 |
+|------|---------|--------|------|--------|
+| Systeme.io (60%终身) | 5 | $49/月 | $29/月×终身 | $145/月（复利增长） |
+| CustomGPT.ai (30%终身) | 3 | $99/月 | $30/月×终身 | $90/月（复利增长） |
+| Taskade (50%终身) | 4 | $19/月 | $9.5/月×终身 | $38/月（复利增长） |
+| ElevenLabs (已有) | 2 | $22/月 | $4.8/月×12月 | $115/年 |
+| Mangools (已有) | 3 | $69/月 | $24/月×终身 | $72/月（复利增长） |
+| **合计（6个月后）** | **17** | - | - | **~$500/月** |
+
+### 🎯 本轮申请目标（1-2个大品牌）
+
+1. **Systeme.io** — 60%终身recurring，$10起付，即时批准，全品类最强佣金
+   - 申请链接: https://systeme.io/affiliate-program
+   - 匹配内容: 营销自动化、销售漏斗、在线课程、中小企业工具
+   
+2. **CustomGPT.ai** — 30%终身recurring，AI chatbot/自动化
+   - 申请链接: https://customgpt.ai/affiliate
+   - 匹配内容: AI chatbot、客户支持自动化、知识库工具
+
+### 📧 申请邮件模板（Systeme.io）
+
+Subject: Affiliate Partnership Request — AIToolCrux.com
+
+Hi Systeme.io Team,
+
+I'm the founder of AIToolCrux.com, an AI tool review and comparison site with 533+ tool pages and 105+ in-depth articles. Our audience consists of entrepreneurs, marketers, and small business owners actively looking for tools to automate their workflows.
+
+I'd love to join your affiliate program and promote Systeme.io to our audience through:
+- In-depth reviews and comparisons
+- Tutorial articles and use-case guides
+- Email newsletter recommendations
+- Social media promotions
+
+Our content already ranks for keywords like "best AI marketing tools" and "AI automation tools," and we believe Systeme.io would be a perfect fit for our readers.
+
+Could you please approve my affiliate application? I'm ready to start promoting immediately.
+
+Best regards,
+AIToolCrux Team
+https://aitoolcrux.com
+
+---
+
+
 ## 一、现状审计（Python脚本实测）
 
 ### Tools.json审计

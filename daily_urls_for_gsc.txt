@@ -1,13 +1,13 @@
 # URLs for Google Search Console manual submission
-# Generated: 2026-09-11 15:01:55
+# Generated: 2026-09-30 05:05:14
 # Total: 37 URLs
 
 https://www.aitoolcrux.com/
 https://www.aitoolcrux.com/about
 https://www.aitoolcrux.com/blog
-https://www.aitoolcrux.com/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md
-https://www.aitoolcrux.com/blog/cursor-ai-review-2026-best-ai-code-editor
-https://www.aitoolcrux.com/blog/perplexity-ai-review-2026-best-ai-search-engine
+https://www.aitoolcrux.com/blog/best-paid-ai-tools-worth-buying-2026
+https://www.aitoolcrux.com/blog/dify-vs-langchain-2026
+https://www.aitoolcrux.com/blog/gemini-alternatives-2026
 https://www.aitoolcrux.com/category/agent
 https://www.aitoolcrux.com/category/agent-framework
 https://www.aitoolcrux.com/category/agent-runtime

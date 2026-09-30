@@ -108,3 +108,58 @@
 | 已回复 | 0 |
 | 已交换链接 | 0 |
 | 回复率 | 0%（样本太小） |
+
+## 📁 目录提交记录（2026-09-28 现成工具版）
+
+| 目录 | URL | 状态 | 备注 |
+|------|-----|------|------|
+| aitools.sh | https://aitools.sh/submit-a-tool/ | ✅ 提交成功 | 免费，待审核 |
+| toolscout.ai | https://toolscout.ai/submit | ⏳ 注册中 | 邮件验证码已发，待确认 |
+| gptbot.io | https://gptbot.io/submit-ai-tool | ❌ 跳过 | $39付费提交 |
+| aidirectorynow.com | https://www.aidirectorynow.com/ | ❌ 无效 | 域名停放页 |
+| aitoolsdirectory.com | https://aitoolsdirectory.com/submit-tool | ❌ 跳过 | 仅付费Fast Track |
+| aisuperhub.io | https://www.aisuperhub.io/submit | ⏳ 需登录 | 待注册 |
+| therundown.ai | https://www.therundown.ai/submit | 📧 邮件提交 | 需发邮件到support@therundown.ai |
+
+### Serper API搜索结果
+- 外链目标：78个唯一域名（write-for-us、resource page、best AI tools list等）
+- 目录提交页目标：27个
+- 品牌提及：10条（3条自有页，7条外部）
+- Reddit相关帖子：10个
+
+### 外部品牌提及（未链接）
+- sideprojectors.com - 我们的项目页（已链接）
+- thehackstack.com - 我们的产品页（已链接）
+- hn.nuxt.dev - HN用户页（已链接）
+- 其余为同名无关账号（Instagram/TikTok）
+
+
+## 目录提交记录（2026-09-28 第三轮）
+
+| 日期 | 目录 | URL | 类型 | 费用 | 状态 | 备注 |
+|------|------|-----|------|------|------|------|
+| 2026-09-28 | credibleaitools.com | https://credibleaitools.com/submit-tool/ | dofollow | Free | 已提交，待审核 | 免费方案，完整表单已填 |
+| 2026-09-28 | poweredbyai.app | https://poweredbyai.app/submit-tool | dofollow | $11.99+ | 未提交 | 仅付费方案，无免费计划 |
+| 2026-09-28 | aisuperhub.io | https://www.aisuperhub.io/ai-tools/submit/free | unknown | Free | ✅ 提交成功 | 审核需90+天，可加反向链接加速 |
+| 2026-09-28 | toolscout.ai | https://toolscout.ai/submit | unknown | Free | 注册中 | 验证码邮件未到达QQ邮箱 |
+
+## 目录提交记录（2026-09-29）
+
+| 日期 | 目录 | URL | 类型 | 费用 | 状态 | 备注 |
+|------|------|-----|------|------|------|------|
+| 2026-09-29 | bestofai.io | https://submit.bestofai.io | unknown | Free | ❌ 阻塞 | 仅支持Google登录，无邮箱注册 |
+| 2026-09-29 | ai-hunter.io | https://ai-hunter.io/submit-a-tool/ | unknown | Free | ⚠️ 服务器错误 | 表单完整填写，提交返回"An error occurred"，待重试 |
+| 2026-09-29 | aimarketing.directory | https://aimarketing.directory/submit | unknown | Free | ❌ 无表单 | 页面无提交表单，仅邮箱aimarketingdirectory@gmail.com |
+
+### 品牌提及监控（2026-09-29）
+- 总提及：10条（自有3 + 外部7）
+- 外部提及：sideprojectors.com、hatchr.in(2)、hn.nuxt.dev、thehackstack.com、instagram.com(无关)、youtube.com(无关)
+- 未链接提及：0条（所有外部提及均为已提交目录的链接）
+
+### 2026-09-29 下午轮 目录提交记录
+| 日期 | 目录 | 状态 | 说明 |
+|---|---|---|---|
+| 09-29 | free-ai-tools-directory.com | ❌失败 | reCAPTCHA v3被拒 |
+| 09-29 | ai-hunter.io | ❌失败 | 提交返回服务器错误 |
+| 09-29 | aimarketing.directory | ⏭️跳过 | 无在线表单 |
+| 09-29 | ToolJunction.io | 💰付费待确认 | $99一次性，草稿已保存 |

@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-09-29T12:35:41.202069",
+  "urls": [
+    "https://www.aitoolcrux.com/",
+    "https://www.aitoolcrux.com/blog",
+    "https://www.aitoolcrux.com/sitemap.xml"
+  ],
+  "results": {
+    "indexnow": {
+      "status": 200,
+      "ok": true
+    }
+  }
+}

@@ -1,26 +1,27 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-09-29 22:56:04
-**Mode:** Quick
+**Date:** 2026-09-29 20:51:43
+**Mode:** Full
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 108 |
-| Avg content score | 100.0/100 |
-| Perfect articles | 108 |
+| Articles | 107 |
+| Avg content score | 99.9/100 |
+| Perfect articles | 106 |
 | Articles below 85 | 0 |
-| Pages audited | 20 |
-| Technical issues | 7 |
+| Pages audited | 753 |
+| Technical issues | 607 |
 | Critical issues | 0 |
-| Audit duration | 9.1s |
+| Audit duration | 556.6s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
 
 | Slug | Score | Words | Flesch | Links | Failed |
 |------|-------|-------|--------|-------|--------|
+| gemini-vs-chatgpt-2026 | 94 | 3417 | 51.7 | 7 | — |
 | best-paid-ai-tools-worth-buying-202 | 100 | 2226 | 68.2 | 5 | — |
 | dify-vs-langchain-2026 | 100 | 2216 | 50.1 | 6 | — |
 | gemini-alternatives-2026 | 100 | 2242 | 51.2 | 8 | — |
@@ -127,8 +128,6 @@
 | surfer-seo-vs-frase-2026-comparison | 100 | 2051 | 49.9 | 3 | — |
 | gemini-pricing-2026 | 100 | 2856 | 53.3 | 4 | — |
 | windsurf-vs-cursor-2026 | 100 | 2928 | 45.2 | 3 | — |
-| gemini-vs-chatgpt-2026 | 100 | 3427 | 52.5 | 7 | — |
-| suno-alternatives | 100 | 2920 | 50.4 | 4 | — |
 
 ## GEO / AI Citation
 
