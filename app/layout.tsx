@@ -204,7 +204,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </p>
                   <Link
                     href="/free-ai-tools-guide"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mb-4"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mb-4 py-2"
                   >
                     📚 Get Free AI Tools Guide
                   </Link>
