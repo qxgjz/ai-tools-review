@@ -142,6 +142,23 @@ const nextConfig = {
           },
         ],
       },
+      {
+        // HTML页面CDN缓存：让Cloudflare缓存1小时，减少Vercel带宽
+        source: "/:path*",
+        missing: [
+          { type: "query", key: "draftMode" },
+        ],
+        headers: [
+          {
+            key: "Cache-Control",
+            value: "public, max-age=0, must-revalidate, s-maxage=3600, stale-while-revalidate=86400",
+          },
+          {
+            key: "CDN-Cache-Control",
+            value: "public, s-maxage=3600, stale-while-revalidate=86400",
+          },
+        ],
+      },
       // 安全头
       {
         source: "/:path*",

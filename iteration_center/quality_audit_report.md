@@ -1,42 +1,44 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-09-30 13:18
+**Date:** 2026-09-30 14:08
 
 ## Summary
 
-- Total articles: 126
-- Average quality score: 96.1/100
-- Grade distribution: A=108, B=3, C=10, D=5, F=0
-- Articles below 85: 18
+- Total articles: 128
+- Average quality score: 95.6/100
+- Grade distribution: A=108, B=3, C=10, D=6, F=1
+- Articles below 85: 20
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 116 | 126 | 92% |
-| has_quick_answer | 126 | 126 | 100% |
-| first_para_pass | 119 | 126 | 94% |
-| has_key_takeaways | 124 | 126 | 98% |
-| has_faq | 126 | 126 | 100% |
-| has_how_we_tested | 125 | 126 | 99% |
-| internal_links_pass | 123 | 126 | 98% |
-| has_images | 109 | 126 | 87% |
-| has_real_screenshots | 109 | 126 | 87% |
-| readability_pass | 124 | 126 | 98% |
-| qa_density_pass | 126 | 126 | 100% |
-| title_pass | 123 | 126 | 98% |
-| has_comparison | 125 | 126 | 99% |
-| external_links_pass | 115 | 126 | 91% |
+| word_count_pass | 116 | 128 | 91% |
+| has_quick_answer | 128 | 128 | 100% |
+| first_para_pass | 121 | 128 | 95% |
+| has_key_takeaways | 124 | 128 | 97% |
+| has_faq | 128 | 128 | 100% |
+| has_how_we_tested | 127 | 128 | 99% |
+| internal_links_pass | 123 | 128 | 96% |
+| has_images | 111 | 128 | 87% |
+| has_real_screenshots | 111 | 128 | 87% |
+| readability_pass | 125 | 128 | 98% |
+| qa_density_pass | 128 | 128 | 100% |
+| title_pass | 125 | 128 | 98% |
+| has_comparison | 126 | 128 | 98% |
+| external_links_pass | 115 | 128 | 90% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
+| suno-alternatives-2026 | 54 | F | 978 | 0 | 1 | 39.6 | 0 |
 | best-free-ai-tools-for-students-2026 | 63 | D | 1992 | 3 | 1 | 63.3 | 5 |
 | cursor-vs-github-copilot-2026 | 67 | D | 1872 | 3 | 0 | 49.4 | 0 |
 | elevenlabs-vs-playht-2026 | 67 | D | 1810 | 3 | 0 | 48.7 | 0 |
 | midjourney-v7-vs-dall-e-3-ecommerce | 67 | D | 1960 | 3 | 0 | 44.7 | 0 |
 | cursor-alternatives-2026 | 69 | D | 2828 | 0 | 0 | 55.5 | 0 |
+| perplexity-alternatives-2026 | 69 | D | 881 | 0 | 1 | 44.0 | 0 |
 | chatgpt-alternatives-2026 | 72 | C | 1960 | 5 | 0 | 60.5 | 0 |
 | runway-vs-pika-2026 | 72 | C | 1960 | 5 | 0 | 56.5 | 0 |
 | how-to-get-chatgpt-free-2026 | 72 | C | 1844 | 3 | 0 | 56.6 | 3 |

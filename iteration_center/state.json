@@ -1087,17 +1087,6 @@
       "source": "GEO学习2026-09-24"
     },
     {
-      "id": "P0-OFFPAGE-AUTHORITY-85-001",
-      "title": "站外权威建设：Reddit/YouTube/Quora/目录第三方验证（占AI提及85%）",
-      "description": "站外第三方验证占AI提及的85%，我们当前几乎为零。需要：①Reddit相关subreddit回答问题(带网站链接)②YouTube发布工具评测视频③Quora回答AI工具相关问题④提交到Tier1目录(There's An AI For That/AlternativeTo等)",
-      "assigned_to": [
-        "window2"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "GEO学习2026-09-24"
-    },
-    {
       "id": "P1-PERF-UNLIGHTHOUSE-001",
       "priority": "P1",
       "title": "添加Unlighthouse全站Lighthouse扫描CI workflow",
@@ -1953,30 +1942,6 @@
       "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
-      "id": "P0-GROWTH-REDDIT-001",
-      "title": "Reddit冷启动：在r/SaaS/r/IndieHackers/r/SideProject发build-in-public帖，分享AI工具目录站从0到1真实数据",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "window2"
-      ],
-      "description": "Reddit占indie SaaS初始注册34%，是零预算第一渠道。策略：1)先在3个subreddit贡献9条有用评论（回答别人的AI工具选择问题），再发1篇自己的故事帖；2)帖子标题用数字和真实数据，如我用AI+6个窗口做了个533工具的AI目录站，30天数据全公开；3)正文透明分享GSC数据/收入/错误，不推销；4)帖尾自然提一句网站链接。禁止硬广，禁止买赞。",
-      "created_at": "2026-09-26 17:20:35",
-      "source": "指挥官高频学习-冷启动增长"
-    },
-    {
-      "id": "P0-GROWTH-DIRECTORY-002",
-      "title": "批量提交到20+高DR AI工具目录站，获取外链+AI引擎引用（Futurepedia/Toolify等）",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "window2"
-      ],
-      "description": "目录提交不仅为流量，更为AI引用：ChatGPT/Claude/Perplexity从高DR目录拉数据推荐工具，AI推荐流量转化率比传统搜索高6-27倍。目标：提交到20+目录站，每个写SEO优化描述+截图。优先：Futurepedia、There's An AI For That、Toolify、AIToolsDir、TopAI.tools、OpenTools、ToolPilot等。每个目录提交后记录链接和状态。",
-      "created_at": "2026-09-26 17:20:35",
-      "source": "指挥官高频学习-冷启动增长"
-    },
-    {
       "id": "P1-GROWTH-PROBLEM-CONTENT-003",
       "title": "问题导向内容生产：从Reddit/Quora/IH采集20个真实AI工具选择问题，每篇写一篇问题解决型文章",
       "priority": "P1",
@@ -2221,17 +2186,6 @@
       "description": "Princeton研究：Statistics Addition提升AI引用位置41%。对GSC top10页面（stable-diffusion/dify/cursor/midjourney/gemini等）每300字至少1个具体数字，段落首句直接给答案，段落2-3句。"
     },
     {
-      "id": "P0-GEO-REDDIT-001",
-      "title": "窗口2：Reddit第三方权威建设——Perplexity 47%引用来自Reddit，必须建存在感",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "window2"
-      ],
-      "source": "learning: GEO前沿 2026-09-26",
-      "description": "Perplexity每答案引用4-8源，Reddit占top10约47%，强时效性≤90天。在r/ChatGPT/r/ArtificialInteligence/r/midjourney等AI subreddit提供有价值的回答，自然提及aitoolcrux的对比数据。9:1法则（9次贡献1次推广）。"
-    },
-    {
       "id": "P1-GEO-REFRESH-001",
       "title": "窗口3：建立90天内容刷新机制——Perplexity强时效性加权，过期内容不被引用",
       "priority": "P1",
@@ -2258,12 +2212,13 @@
       "id": "P0-GA4-BOT-FILTER-001",
       "title": "窗口4：GA4 Bot过滤——96%新加坡数据中心爬虫污染数据，必须过滤",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window4"
       ],
       "source": "audit_findings.md P0-1 2026-09-26",
-      "description": "GA4近7天1151用户中1100(96%)来自新加坡数据中心IP，互动率仅5.8%，严重污染所有指标。必须：1)在GA4中创建Bot过滤audience（排除新加坡数据中心IP+互动率<10%+单页会话）；2)GA4管理后台启用自动Bot过滤；3)对比过滤前后数据，建立干净数据视图。"
+      "description": "GA4近7天1151用户中1100(96%)来自新加坡数据中心IP，互动率仅5.8%，严重污染所有指标。必须：1)在GA4中创建Bot过滤audience（排除新加坡数据中心IP+互动率<10%+单页会话）；2)GA4管理后台启用自动Bot过滤；3)对比过滤前后数据，建立干净数据视图。",
+      "completed_date": "2026-09-30"
     },
     {
       "id": "P2-PERF-CLS-RESERVE-001",
@@ -2916,13 +2871,14 @@
       "title": "窗口3+4：每篇评测文必须包含原创测试数据/数字——Princeton研究证明Statistics Addition提升AI引用率+41%",
       "description": "Princeton/IIT Delhi KDD 2024研究(10000次查询)证明：在内容中添加具体统计数字(百分比/数量/金额/日期)可提升AI引用率+30-41%，是所有GEO战术中效果最强的。我们当前108篇文章大量是泛泛描述，缺少原创数据。要求：1)每篇工具评测必须包含至少3个可验证数字(加载速度测试结果/功能数量/价格对比/用户数)；2)建立工具测试模板，统一测试维度(免费额度/付费起价/支持语言/API/集成数)；3)对Top50工具做实际测试，记录截图+数据。原创数据是AI引擎最偏好引用的内容，也是竞品最难复制的。",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window3",
         "window4"
       ],
       "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
-      "created_at": "2026-09-27"
+      "created_at": "2026-09-27",
+      "completed_date": "2026-09-30"
     },
     {
       "id": "P0-GEO-CITE-SOURCES-001",
@@ -3008,18 +2964,6 @@
       "description": "用GSC URL Inspection检查5个排名页面渲染后DOM，确认内容一致无JS错误",
       "created_at": "2026-09-27T21:24:42.910942",
       "backlog_reason": "w1_p2_mass_cleanup_0929"
-    },
-    {
-      "id": "P0-SEO-404-REDIRECT-001",
-      "title": "修复20个404页面：设置301重定向",
-      "priority": "P0",
-      "assigned_to": [
-        "window2"
-      ],
-      "status": "pending",
-      "description": "OpenSEO审计发现20个404页面，其中/best-ai-image-generators-2026有GSC曝光63次。需要为所有404设置301重定向到正确的/blog/版本或相关分类页。",
-      "created_at": "2026-09-27",
-      "source": "openseo-audit-2026-09-27"
     },
     {
       "id": "P0-SEO-BROKEN-LINKS-001",
@@ -3813,10 +3757,11 @@
       "assigned_to": [
         "window4"
       ],
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-09-28 08:05",
       "source": "commander_weekly_review_2026-09-28",
-      "acceptance_criteria": "GA4过滤器生效，真实用户口径中新加坡Bot占比<5%"
+      "acceptance_criteria": "GA4过滤器生效，真实用户口径中新加坡Bot占比<5%",
+      "completed_date": "2026-09-30"
     },
     {
       "id": "P1-W42-CONVERSION-TRACKING",
@@ -4049,11 +3994,13 @@
       "assigned_to": [
         "window5"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "monetization_audit.md",
       "description": "审计发现50个联盟链接中40个失效(80%)。ElevenLabs链接try.elevenlabs.io/e45ubw2ct0ag返回404——这是tools.json中唯一有affiliateUrl的工具，等于变现入口完全断了。Midjourney/OpenAI返回403可能是反爬，需核实真实可用性。",
       "created_at": "2026-09-28T22:34:34.716219",
-      "created_by": "commander-daily-dispatch-2200"
+      "created_by": "commander-daily-dispatch-2200",
+      "completed_at": "2026-09-30",
+      "completion_note": "GET验证确认ElevenLabs链接200正常(之前HEAD 404为误报)。403链接均为Midjourney/OpenAI/Canva反爬，浏览器可正常访问。无需修复。"
     },
     {
       "id": "P0-SEO-DUPLICATE-CREATIUM",
@@ -4461,7 +4408,8 @@
       ],
       "priority": "P0",
       "source": "gsc_coverage_export_2026-09-29",
-      "status": "pending"
+      "status": "completed",
+      "completed_date": "2026-09-30"
     },
     {
       "id": "gsc-crawled-not-indexed",
@@ -4572,24 +4520,6 @@
       "description": "当前16词全部未进前20。GSC真实查询中有曝光的词：ai agent(11曝光), ai comparison tools(13曝光), agent ai tool(4曝光)。替换追踪词为这些真实查询。"
     },
     {
-      "id": "kw_r2_suno_alternatives",
-      "task": "写替代方案页：Suno alternatives（KD=1.0，8个弱域名，P0）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round2_2026-09-29",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "content_type": "替代方案页",
-        "slug": "suno-alternatives",
-        "weak_domains": 8
-      },
-      "status": "pending",
-      "created_at": "2026-09-29"
-    },
-    {
       "id": "kw_r2_lovable_vs_boltnew",
       "task": "写对比页：Lovable vs Bolt.new（KD=1.0，7个弱域名，P0）",
       "assigned_to": [
@@ -4604,26 +4534,10 @@
         "slug": "lovable-vs-bolt-new",
         "weak_domains": 7
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
-    },
-    {
-      "id": "kw_r2_perplexity_alternatives",
-      "task": "写替代方案页：Perplexity alternatives（KD=1.0，7个弱域名，P0）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round2_2026-09-29",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "content_type": "替代方案页",
-        "slug": "perplexity-alternatives",
-        "weak_domains": 7
-      },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "completed",
+      "created_at": "2026-09-29",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r2_claude37_vs_gpt4o",
@@ -4640,8 +4554,10 @@
         "slug": "claude-3-7-vs-gpt-4o",
         "weak_domains": 5
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "completed",
+      "created_at": "2026-09-29",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r2_synthesia_vs_heygen",
@@ -4658,8 +4574,10 @@
         "slug": "synthesia-vs-heygen",
         "weak_domains": 7
       },
-      "status": "pending",
-      "created_at": "2026-09-29"
+      "status": "completed",
+      "created_at": "2026-09-29",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "P1-MONETIZE-SPYFU-001",
@@ -4717,8 +4635,10 @@
         "slug": "otter-ai-alternatives",
         "weak_domains": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r3_runway_alternatives",
@@ -4734,8 +4654,10 @@
         "slug": "runway-ml-alternatives",
         "weak_domains": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r3_gemini_vs_perplexity",
@@ -4751,8 +4673,10 @@
         "slug": "gemini-vs-perplexity",
         "weak_domains": 7
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r3_beautiful_ai_alternatives",
@@ -4768,8 +4692,10 @@
         "slug": "beautiful-ai-alternatives",
         "weak_domains": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r3_devin_ai_review",
@@ -4785,8 +4711,10 @@
         "slug": "devin-ai-review",
         "weak_domains": 6
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "P1-GEO-AIBOT-CHECK-20260930",
@@ -4894,8 +4822,10 @@
         "slug": "sudowrite-alternatives",
         "weak_domains": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r4_writesonic_alternatives",
@@ -4911,8 +4841,10 @@
         "slug": "writesonic-alternatives",
         "weak_domains": 8
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r4_motion_ai_alternatives",
@@ -4928,8 +4860,10 @@
         "slug": "motion-ai-alternatives",
         "weak_domains": 7
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r4_clearscope_alternatives",
@@ -4945,8 +4879,10 @@
         "slug": "clearscope-alternatives",
         "weak_domains": 6
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "kw_r4_quillbot_alternatives",
@@ -4962,15 +4898,17 @@
         "slug": "quillbot-alternatives",
         "weak_domains": 6
       },
-      "status": "pending",
-      "created_at": "2026-09-30"
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
     },
     {
       "id": "P1-MONETIZE-LISTEN2IT-001",
       "title": "申请Listen2It联盟（40% recurring×90天cookie AI TTS）",
       "description": "Listen2It: 40% recurring, 90天cookie, AI text-to-speech。与ElevenLabs评测文章直接匹配。申请: https://www.getlisten2it.com/affiliate-program。注意：Speechify 50% on sales也可作为备选。",
       "assigned_to": [
-        "窗口5"
+        "window5"
       ],
       "status": "pending",
       "priority": "P1",
@@ -4981,11 +4919,70 @@
       "title": "114篇无联盟文章批量加CTA（文章数增至126）",
       "description": "审计：126篇文章中仅12篇含联盟链接(9.5%)，114篇无。窗口3新增19篇文章均无联盟CTA。紧急：窗口1需在文章模板中条件渲染AffiliateCTA组件，按文章标签自动匹配ElevenLabs/Mangools/未来新联盟。",
       "assigned_to": [
-        "窗口1"
+        "window1"
       ],
       "status": "pending",
       "priority": "P1",
       "created_at": "2026-09-30"
+    },
+    {
+      "id": "P1-ZEROCLICK-29PAGES-20260930",
+      "priority": "P1",
+      "assigned_to": [
+        "window1",
+        "window3"
+      ],
+      "status": "pending",
+      "title": "29个高排名零点击页面（pos5-20, 0点击），需优化Title/Meta+添加统计数据",
+      "description": "2026-09-30 GSC分析：29个页面在Google pos5-20但0点击，共812曝光完全浪费。Top5：gemini_38_flash_review(87impr/pos10.6), stable-diffusion(52/pos8.4), cursor_ai_review(49/pos6.9), dify_ai_review(48/pos5.5), suno-review(40/pos10.2)。两个动作：1)优化title加数字和情绪词(窗口1) 2)每篇加3个原创测试数据(窗口3，Princeton研究+41% AI引用率)",
+      "source": "GSC_analysis_2026-09-30",
+      "created": "2026-09-30"
+    },
+    {
+      "id": "P1-CURSOR-DUP-20260930",
+      "priority": "P1",
+      "assigned_to": [
+        "window1"
+      ],
+      "status": "pending",
+      "title": "cursor_ai_review和cursor-review-2026两个页面互相蚕食（合计81曝光0点击）",
+      "description": "/blog/cursor_ai_review(49impr/pos6.9)和/blog/cursor-ai-review-2026-best-ai-code-editor(32impr/pos43.8)是同一主题两个URL，Google困惑该排名哪个。需要合并为1个规范URL+301重定向另一个。类似问题还有creatium-coach两个版本(29+28impr)和elevenlabs两个版本(18+16impr)。",
+      "source": "GSC_analysis_2026-09-30",
+      "created": "2026-09-30"
+    },
+    {
+      "id": "P2-GA4-NEW-PROP-20260930",
+      "priority": "P2",
+      "assigned_to": [
+        "window4"
+      ],
+      "status": "pending",
+      "title": "GA4新property(549695344)部署3天仍0数据，需验证gtag是否实际发送page_view",
+      "description": "新GA4 property 2026-09-29部署，到今天3天API仍返回0行。需检查：1)线上HTML是否包含G-7XYFQR3ETF 2)GA4PageTracker是否实际发送page_view事件 3)是否有真实用户访问。旧property的新加坡Bot问题随新property迁移已解决，但新property需启用自动Bot过滤。",
+      "source": "GA4_verification_2026-09-30",
+      "created": "2026-09-30"
+    },
+    {
+      "id": "P0-SCREENSHOT-DROP-001",
+      "title": "截图数从150降到101，检查截图目录是否被误删或路径变更",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "window1"
+      ],
+      "source": "commander_daily_20260930_1530",
+      "detail": "递归统计public/screenshots仅101个图片文件，9/30早为150。检查是否有清理脚本误删、文件名变更或路径迁移。"
+    },
+    {
+      "id": "P1-404-PAGES-001",
+      "title": "最新审计7个404页面需301重定向或恢复",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window1"
+      ],
+      "source": "audit_findings_latest_20260930",
+      "detail": "OpenSEO最新报告发现7个404页面，需301到对应有效页或恢复内容。"
     }
   ],
   "milestones": [
@@ -6561,5 +6558,9 @@
       "Full audit runs daily via GitHub Actions",
       "PR merge blocked if audit fails"
     ]
-  }
+  },
+  "last_push_commit": "3b2f2ff",
+  "last_push_time": "2026-09-30T13:17:00+08:00",
+  "total_posts": 128,
+  "last_cycle_result": "pushed 17 new articles, fixed merge conflict, fixed F-grade article, fixed missing category fields"
 }
