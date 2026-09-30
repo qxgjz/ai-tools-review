@@ -784,3 +784,23 @@
 ### state.json清理
 - 删除5个P0 window2待办（314→309）
 - P0-SEO-404-REDIRECT-001为代码任务，建议窗口1处理
+
+## 2026-09-30 第三轮执行（new-chat-22）
+
+### Serper API
+- 7个query搜索，64个唯一新目标
+- 品牌提及10条，均为已知页面（无新可回收）
+
+### 目录提交
+| 目录 | 结果 |
+|------|------|
+| aitoolshaven.com/submit | 表单已填完整（名称/邮箱/tagline/URL/backlink/description），但Free Plan要求在我方网站加badge验证，提交卡在验证步骤 |
+| epirus.vc | 上轮已提交成功 |
+
+### HN养号
+- 在GPT 6.1 Sol帖子下发布技术评论（成本效率vs模型质量，结合500+工具测试经验）
+- karma=1
+
+### 备注
+- aitoolshaven需窗口1在about页加badge后才能完成提交
+- 剩余window2 P0: 0
