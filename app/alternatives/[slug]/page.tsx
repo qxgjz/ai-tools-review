@@ -394,7 +394,7 @@ export default function AlternativePage({ params }: { params: { slug: string } }
                   </div>
                   <Link
                     href={`/tools/${alt.slug}`}
-                    className="px-4 py-2 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors"
+                    className="inline-flex items-center px-4 min-h-[44px] bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors"
                   >
                     Full Review →
                   </Link>

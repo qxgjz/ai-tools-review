@@ -383,21 +383,21 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
           <div className="mt-6 flex flex-wrap gap-3">
             <Link
               href={`/tools/${comparison.toolA.slug}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-5 min-h-[44px] bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
             >
               <ExternalLink className="w-4 h-4" />
               {comparison.toolA.name} Review
             </Link>
             <Link
               href={`/tools/${comparison.toolB.slug}`}
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-5 min-h-[44px] bg-purple-600 hover:bg-purple-500 text-white text-sm font-medium rounded-lg transition-colors"
             >
               <ExternalLink className="w-4 h-4" />
               {comparison.toolB.name} Review
             </Link>
             <Link
               href="/compare"
-              className="inline-flex items-center gap-2 px-5 py-2.5 bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg transition-colors"
+              className="inline-flex items-center gap-2 px-5 min-h-[44px] bg-zinc-200 dark:bg-zinc-700 hover:bg-zinc-300 dark:hover:bg-zinc-600 text-zinc-700 dark:text-zinc-300 text-sm font-medium rounded-lg transition-colors"
             >
               <GitCompare className="w-4 h-4" />
               Compare More Tools
