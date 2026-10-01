@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# AI bots - allow for AI search optimization
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+Sitemap: https://www.aitoolcrux.com/sitemap.xml
