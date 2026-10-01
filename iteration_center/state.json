@@ -4909,6 +4909,93 @@
       "slug": "boltnew-review",
       "keyword": "Bolt.new review",
       "type": "review"
+    },
+    {
+      "id": "kw_r9_chatgpt_vs_grok",
+      "task": "写comparison页：ChatGPT vs Grok（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round9_2026-10-02",
+      "slug": "chatgpt-vs-grok",
+      "keyword": "ChatGPT vs Grok",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r9_synthesia_alternatives",
+      "task": "写alternatives页：Synthesia alternatives（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round9_2026-10-02",
+      "slug": "synthesia-alternatives",
+      "keyword": "Synthesia alternatives",
+      "type": "alternatives"
+    },
+    {
+      "id": "kw_r9_grok_3_review",
+      "task": "写review页：Grok 3 review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round9_2026-10-02",
+      "slug": "grok-3-review",
+      "keyword": "Grok 3 review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r9_notebooklm_review",
+      "task": "写review页：NotebookLM review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round9_2026-10-02",
+      "slug": "notebooklm-review",
+      "keyword": "NotebookLM review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r9_kimi_review",
+      "task": "写review页：Kimi AI review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round9_2026-10-02",
+      "slug": "kimi-review",
+      "keyword": "Kimi AI review",
+      "type": "review"
+    },
+    {
+      "id": "P0-MIGRATE-CLOUDFLARE-001",
+      "title": "【紧急】把aitoolcrux.com从Vercel切到Cloudflare Pages（Vercel免费额度超300%被暂停，网站402）",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "window1"
+      ],
+      "source": "vercel_outage_20261002",
+      "detail": "步骤：1) 先评估app/api/google-search-puppeteer/route.ts是否前端在用，若在用改造成调用Serper API（key已在.env）；2) 项目根加wrangler.toml或用Cloudflare Pages dashboard连接GitHub qxgjz/ai-tools-review；3) build命令 npm run build，输出目录 .next；4) 在Cloudflare Pages绑定自定义域名 aitoolcrux.com，DNS从Vercel切到Cloudflare nameserver；5) 部署后验证首页/工具页/文章页/API都200；6) 完成后删除Vercel项目或暂停自动部署，避免再烧额度。"
+    },
+    {
+      "id": "P0-AUDIT-PUPPETEER-API-002",
+      "title": "【紧急】审计/app/api/google-search-puppeteer前端调用点，决定砍/迁/留",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "window1"
+      ],
+      "source": "vercel_outage_20261002",
+      "detail": "grep整个前端代码找fetch('/api/google-search-puppeteer')的调用点；如果只是数据采集脚本用的，直接砍；如果前端页面在用，改造成Serper API调用（db3bbe31d1470d3d4358896851c04030d2e76a6e）。"
     }
   ],
   "milestones": [
