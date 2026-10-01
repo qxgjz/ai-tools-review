@@ -245,37 +245,37 @@ export default function HomePage() {
                 <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   <Link
                     href="/category/chat"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
                   >
                     AI Chat
                   </Link>
                   <Link
                     href="/category/image"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
                   >
                     AI Image
                   </Link>
                   <Link
                     href="/category/code"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
                   >
                     AI Coding
                   </Link>
                   <Link
                     href="/category/writing"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
                   >
                     AI Writing
                   </Link>
                   <Link
                     href="/category/video"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
                   >
                     AI Video
                   </Link>
                   <Link
                     href="/blog"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 py-2 bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
                   >
                     Reviews
                   </Link>

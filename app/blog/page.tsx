@@ -147,7 +147,7 @@ export default function BlogPage() {
             href="/rss.xml"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg border border-orange-200 dark:border-orange-800 hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors text-sm font-medium"
+            className="inline-flex items-center gap-2 px-4 min-h-[44px] bg-orange-50 dark:bg-orange-900/20 text-orange-600 dark:text-orange-400 rounded-lg border border-orange-200 dark:border-orange-800 hover:bg-orange-100 dark:hover:bg-orange-900/30 transition-colors text-sm font-medium"
           >
             <Rss className="w-4 h-4" />
             Subscribe RSS
