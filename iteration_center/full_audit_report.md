@@ -1,27 +1,53 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-09-29 20:51:43
-**Mode:** Full
+**Date:** 2026-10-01 23:06:17
+**Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 107 |
-| Avg content score | 99.9/100 |
-| Perfect articles | 106 |
-| Articles below 85 | 0 |
-| Pages audited | 753 |
-| Technical issues | 607 |
-| Critical issues | 0 |
-| Audit duration | 556.6s |
-| GEO score | 100/100 |
+| Articles | 139 |
+| Avg content score | 93.5/100 |
+| Perfect articles | 107 |
+| Articles below 85 | 28 |
 
 ## Content Quality Details
 
 | Slug | Score | Words | Flesch | Links | Failed |
 |------|-------|-------|--------|-------|--------|
-| gemini-vs-chatgpt-2026 | 94 | 3417 | 51.7 | 7 | — |
+| midjourney-v7-vs-flux-2026 | 43 | 1204 | 39.1 | 0 | word_count_pass, first_para_pass, internal_links_pass |
+| claude-opus-4-vs-gpt-5-2026 | 49 | 1132 | 50.9 | 0 | word_count_pass, internal_links_pass, external_links_pass |
+| cursor-vs-github-copilot-2026 | 61 | 1872 | 49.4 | 3 | word_count_pass, first_para_pass, title_pass |
+| elevenlabs-vs-playht-2026 | 61 | 1810 | 48.7 | 3 | word_count_pass, first_para_pass, title_pass |
+| best-free-ai-tools-for-students-202 | 63 | 1992 | 63.3 | 3 | word_count_pass, first_para_pass |
+| lovable-vs-boltnew | 63 | 1085 | 52.9 | 3 | word_count_pass |
+| notion-ai-vs-obsidian-ai | 67 | 1828 | 66.3 | 3 | word_count_pass, title_pass, external_links_pass |
+| quillbot-alternatives | 67 | 822 | 48.5 | 3 | word_count_pass |
+| cursor-alternatives-2026 | 69 | 2828 | 55.5 | 0 | first_para_pass, internal_links_pass, external_links_pass |
+| sudowrite-alternatives | 69 | 1138 | 45.9 | 2 | word_count_pass, internal_links_pass |
+| chatgpt-alternatives-2026 | 72 | 1960 | 60.5 | 5 | word_count_pass, external_links_pass |
+| runway-vs-pika-2026 | 72 | 1960 | 56.5 | 5 | word_count_pass, external_links_pass |
+| how-to-get-chatgpt-free-2026 | 72 | 1844 | 56.6 | 3 | word_count_pass |
+| canva-pro-free-for-students | 72 | 1918 | 64.9 | 3 | word_count_pass, external_links_pass |
+| midjourney-v7-vs-dall-e-3-ecommerce | 72 | 1960 | 44.7 | 3 | word_count_pass, external_links_pass |
+| claude-alternatives-2026 | 72 | 1452 | 60.3 | 3 | word_count_pass, title_pass |
+| beautiful-ai-alternatives | 72 | 866 | 51.6 | 3 | word_count_pass |
+| devin-ai-review | 72 | 975 | 57.9 | 3 | word_count_pass |
+| clearscope-alternatives | 72 | 851 | 58.4 | 4 | word_count_pass |
+| motion-ai-alternatives | 72 | 839 | 54.9 | 3 | word_count_pass |
+| runway-alternatives | 72 | 918 | 53.5 | 4 | word_count_pass |
+| writesonic-alternatives | 72 | 848 | 52.4 | 5 | word_count_pass |
+| elevenlabs-vs-murf-2026 | 74 | 2579 | 37.0 | 3 | first_para_pass, readability_pass |
+| canva-ai-alternatives-2026 | 74 | 3946 | 28.0 | 4 | readability_pass, external_links_pass |
+| best-free-ai-tools-for-youtube-crea | 78 | 3224 | 51.1 | 3 | first_para_pass, external_links_pass |
+| how-to-use-cursor-for-react-develop | 78 | 3256 | 47.1 | 4 | first_para_pass, external_links_pass |
+| otter-ai-alternatives | 80 | 2125 | 54.4 | 0 | internal_links_pass |
+| midjourney-free-trial-2026 | 80 | 2718 | 55.0 | 0 | internal_links_pass |
+| synthesia-vs-heygen | 86 | 2057 | 36.3 | 3 | readability_pass |
+| autochain-review-2026 | 89 | 2023 | 44.8 | 6 | — |
+| claude-37-vs-gpt4o | 89 | 2140 | 50.6 | 3 | first_para_pass |
+| suno-alternatives-2026 | 94 | 2167 | 40.6 | 3 | — |
 | best-paid-ai-tools-worth-buying-202 | 100 | 2226 | 68.2 | 5 | — |
 | dify-vs-langchain-2026 | 100 | 2216 | 50.1 | 6 | — |
 | gemini-alternatives-2026 | 100 | 2242 | 51.2 | 8 | — |
@@ -73,7 +99,6 @@
 | best-ai-video-generators-2026 | 100 | 2246 | 51.7 | 4 | — |
 | best-ai-writing-tools-2026 | 100 | 4107 | 43.8 | 8 | — |
 | midjourney-vs-dall-e-3-2026-compari | 100 | 3497 | 48.3 | 7 | — |
-| perplexity-ai-review-2026 | 100 | 2319 | 43.9 | 8 | — |
 | claude-vs-gemini-2026-comparison | 100 | 2618 | 45.4 | 7 | — |
 | windsurf-review-2026 | 100 | 3035 | 45.7 | 7 | — |
 | cursor-vs-github-copilot-2026-compa | 100 | 3290 | 44.5 | 7 | — |
@@ -128,21 +153,5 @@
 | surfer-seo-vs-frase-2026-comparison | 100 | 2051 | 49.9 | 3 | — |
 | gemini-pricing-2026 | 100 | 2856 | 53.3 | 4 | — |
 | windsurf-vs-cursor-2026 | 100 | 2928 | 45.2 | 3 | — |
-
-## GEO / AI Citation
-
-- ✅ robots.txt found
-- ✅ AI crawler configured: GPTBot
-- ✅ AI crawler configured: ClaudeBot
-- ✅ AI crawler configured: Claude-Web
-- ✅ AI crawler configured: PerplexityBot
-- ✅ AI crawler configured: Google-Extended
-- ✅ AI crawler configured: Applebot
-- ✅ AI crawler configured: OAI-SearchBot
-- ✅ llms.txt found (2764 bytes)
-- ✅ JSON-LD present: /
-- ✅ FAQPage schema: /
-- ✅ JSON-LD present: /tools/midjourney
-- ✅ FAQPage schema: /tools/midjourney
-- ✅ JSON-LD present: /blog/best-ai-image-generators-2026
-- ✅ Article schema: /blog/best-ai-image-generators-2026
+| gemini-vs-chatgpt-2026 | 100 | 3427 | 52.5 | 7 | — |
+| suno-alternatives | 100 | 2920 | 50.4 | 4 | — |
