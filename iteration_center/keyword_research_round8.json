@@ -1,0 +1,341 @@
+{
+  "perplexity-vs-grok": {
+    "keyword": "Perplexity vs Grok",
+    "top_competitors": [
+      {
+        "title": "Any reason to use Perplexity over Grok 3? : r/perplexity_ai",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1ix0v3u/any_reason_to_use_perplexity_over_grok_3/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Perplexity vs Grok 2026: Which AI Wins for Research?",
+        "url": "https://aicomparison.ai/perplexity-vs-grok/",
+        "domain": "aicomparison.ai"
+      },
+      {
+        "title": "Perplexity vs Grok: The Ultimate 2026 AI Comparison",
+        "url": "https://www.clickrank.ai/perplexity-vs-grok/",
+        "domain": "www.clickrank.ai"
+      }
+    ],
+    "paa": [
+      "Is grok AI better than Perplexity?",
+      "Which is better, Gemini, Perplexity, or Grok?",
+      "Does Perplexity include Grok?",
+      "Which AI is better than Grok?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "claude-37-vs-opus": {
+    "keyword": "Claude 3.7 vs Opus",
+    "top_competitors": [
+      {
+        "title": "Claude 4 Opus is worst than Claude 3.7 Sonnet : r/ClaudeAI",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1l18fbu/changed_my_mind_claude_4_opus_is_worst_than/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Comparison nobody asked for - Claude Sonnet 3.7 vs Opus 4.5",
+        "url": "https://www.youtube.com/watch?v=hZcXPnYH6qw",
+        "domain": "www.youtube.com"
+      },
+      {
+        "title": "Claude 4.1 Opus (Reasoning) vs Claude 3.7 Sonnet (Non- ...",
+        "url": "https://artificialanalysis.ai/models/comparisons/claude-4-1-opus-thinking-vs-claude-3-7-sonnet",
+        "domain": "artificialanalysis.ai"
+      }
+    ],
+    "paa": [
+      "Are claude and Claude Opus the same thing?",
+      "Is Opus the best version of claude?",
+      "Is there any AI better than Claude Opus?",
+      "Is Claude Opus the most powerful?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "copilot-vs-gemini": {
+    "keyword": "Microsoft Copilot vs Gemini",
+    "top_competitors": [
+      {
+        "title": "Google Gemini vs Microsoft Copilot (Seeking Insight)",
+        "url": "https://www.reddit.com/r/CopilotPro/comments/1st89n2/google_gemini_vs_microsoft_copilot_seeking_insight/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "copilot vs gemini",
+        "url": "https://www.reddit.com/r/CopilotPro/comments/1jydhlv/copilot_vs_gemini/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "How does Google Gemini compare to Microsoft Copilot in terms ...",
+        "url": "https://www.gartner.com/peer-community/post/google-gemini-better-than-microsoft-copilot",
+        "domain": "www.gartner.com"
+      }
+    ],
+    "paa": [
+      "Is Gemini better or CoPilot?",
+      "What are the downsides of CoPilot?",
+      "Is CoPilot just ChatGPT?",
+      "Is CoPilot or Gemini better for Excel?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "jasper-ai-alternatives": {
+    "keyword": "Jasper AI alternatives",
+    "top_competitors": [
+      {
+        "title": "The 9 best Jasper AI alternatives in 2026 (tested and ranked)",
+        "url": "https://www.eesel.ai/blog/jasper-ai-alternatives",
+        "domain": "www.eesel.ai"
+      },
+      {
+        "title": "Jasper AI alternative : r/marketing",
+        "url": "https://www.reddit.com/r/marketing/comments/15xnwqm/jasper_ai_alternative/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Top Jasper Alternatives & Competitors 2026",
+        "url": "https://www.gartner.com/reviews/product/jasper/alternatives",
+        "domain": "www.gartner.com"
+      }
+    ],
+    "paa": [
+      "What are Jasper AI's main competitors?",
+      "Is Jasper AI still worth it?",
+      "Is there a free version of Jasper AI?",
+      "Is copy AI better than Jasper?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "copy-ai-alternatives": {
+    "keyword": "Copy.ai alternatives",
+    "top_competitors": [
+      {
+        "title": "Best Copy.ai Alternatives for SEO and Content Teams (2026)",
+        "url": "https://machined.ai/alternatives/copy-ai-alternatives",
+        "domain": "machined.ai"
+      },
+      {
+        "title": "The Best Copy.ai Alternatives in 2026",
+        "url": "https://www.airops.com/blog/copyai-alternatives",
+        "domain": "www.airops.com"
+      },
+      {
+        "title": "Copy.ai",
+        "url": "https://www.copy.ai/",
+        "domain": "www.copy.ai"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 0,
+    "kd_estimate": "medium"
+  },
+  "fireflies-ai-alternatives": {
+    "keyword": "Fireflies.ai alternatives",
+    "top_competitors": [
+      {
+        "title": "Top 9 Fireflies.ai Alternatives: Tested and Reviewed for 2026",
+        "url": "https://www.lindy.ai/blog/fireflies-ai-alternatives",
+        "domain": "www.lindy.ai"
+      },
+      {
+        "title": "Fireflies AI Alternatives Worth Considering",
+        "url": "https://www.read.ai/articles/fireflies-ai-alternatives-worth-considering",
+        "domain": "www.read.ai"
+      },
+      {
+        "title": "Best fireflies AI alternatives that creates tasks and not just ...",
+        "url": "https://www.reddit.com/r/AIAssisted/comments/1p7cw2q/best_fireflies_ai_alternatives_that_creates_tasks/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "boltnew-review": {
+    "keyword": "Bolt.new review",
+    "top_competitors": [
+      {
+        "title": "Tried Bolt.new. Felt Like a God. Then Reality Slapped Me.",
+        "url": "https://www.reddit.com/r/nocode/comments/1ii52d3/tried_boltnew_felt_like_a_god_then_reality/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Read Customer Service Reviews of bolt.new",
+        "url": "https://www.trustpilot.com/review/bolt.new",
+        "domain": "www.trustpilot.com"
+      },
+      {
+        "title": "What is Bolt.new AI: Comprehensive Review by A Pro Vibe ...",
+        "url": "https://www.prismetric.com/what-is-bolt-ai/",
+        "domain": "www.prismetric.com"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "replit-ai-review": {
+    "keyword": "Replit AI review",
+    "top_competitors": [
+      {
+        "title": "Replit is a f*cking scam.",
+        "url": "https://www.reddit.com/r/replit/comments/1on35ie/replit_is_a_fcking_scam/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Buyer Beware: Replit's AI Agent Review",
+        "url": "https://www.reddit.com/r/replit/comments/1fahuge/buyer_beware_replits_ai_agent_review/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Anyone here using Replit. What's your experience with it so far?",
+        "url": "https://www.facebook.com/groups/vibecodinglife/posts/1844172569504605/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "Is Replit AI any good?",
+      "Is Replit AI safe?",
+      "How much does Replit cost a month?",
+      "What are the downsides of Replit?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "v0-dev-review": {
+    "keyword": "v0.dev review",
+    "top_competitors": [
+      {
+        "title": "What's everyone's experience with v0.dev? Do you hate it ...",
+        "url": "https://www.reddit.com/r/vercel/comments/1lw0uyl/whats_everyones_experience_with_v0dev_do_you_hate/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "V0 by Vercel Review 2026: Is It Worth It?",
+        "url": "https://www.nocode.mba/articles/v0-review-ai-apps",
+        "domain": "www.nocode.mba"
+      },
+      {
+        "title": "Vercel v0.dev: A hands-on review",
+        "url": "https://annjose.com/blog/v0-dev-firsthand/",
+        "domain": "annjose.com"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "aider-review": {
+    "keyword": "Aider review",
+    "top_competitors": [
+      {
+        "title": "Aider code review : r/ChatGPTCoding",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1gacxll/aider_code_review/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Aider Review: A Developer's Month With This Terminal ...",
+        "url": "https://www.blott.com/blog/post/aider-review-a-developers-month-with-this-terminal-based-code-assistant",
+        "domain": "www.blott.com"
+      },
+      {
+        "title": "Augment Code vs Aider: Strengths & Drawbacks",
+        "url": "https://www.augmentcode.com/tools/augment-code-vs-aider-strengths-and-drawbacks",
+        "domain": "www.augmentcode.com"
+      }
+    ],
+    "paa": [
+      "Is there anything better than aider?",
+      "Does aider cost money?",
+      "Which is better, aider or OpenCode?",
+      "Is aider still a thing?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "plandex-review": {
+    "keyword": "Plandex review",
+    "top_competitors": [
+      {
+        "title": "Open source AI coding agent. Designed for large projects ...",
+        "url": "https://github.com/plandex-ai/plandex",
+        "domain": "github.com"
+      },
+      {
+        "title": "Plandex v2: an open source AI coding agent with diff review ...",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1jgmbsa/plandex_v2_an_open_source_ai_coding_agent_with/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Plandex Review 2026 - Vibe Coding Hub",
+        "url": "https://vibecodinghub.org/tools/plandex",
+        "domain": "vibecodinghub.org"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "codeium-review": {
+    "keyword": "Codeium review",
+    "top_competitors": [
+      {
+        "title": "Review after 1 month of Pro : r/Codeium",
+        "url": "https://www.reddit.com/r/Codeium/comments/1htimla/review_after_1_month_of_pro/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Codeium Review 2025: Why a 15-Year Dev Switched from Copilot",
+        "url": "https://www.reddit.com/r/UIUXDesignFrontier/comments/1tn1iit/codeium_review_2025_why_a_15year_dev_switched/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "How does Codeium's AI app simplify coding tasks, and what sets it apart ...",
+        "url": "https://www.quora.com/How-does-Codeiums-AI-app-simplify-coding-tasks-and-what-sets-it-apart-from-traditional-coding-methods",
+        "domain": "www.quora.com"
+      }
+    ],
+    "paa": [
+      "Is Codeium better than Copilot?",
+      "How much does Codeium cost per month?",
+      "Is Codingame worth it?",
+      "What's the best AI code generator?"
+    ],
+    "weak_domains_in_top3": 3,
+    "kd_estimate": "low"
+  },
+  "tabnine-review": {
+    "keyword": "Tabnine review",
+    "top_competitors": [
+      {
+        "title": "Tabnine Review 2025 - AI Flow Review",
+        "url": "https://aiflowreview.com/tabnine-review-2025/",
+        "domain": "aiflowreview.com"
+      },
+      {
+        "title": "Tabnine Reviews & Ratings 2026 | Gartner Peer Insights",
+        "url": "https://www.gartner.com/reviews/product/tabnine",
+        "domain": "www.gartner.com"
+      },
+      {
+        "title": "In your IDE, are you using tabnine or jetbrains ai ? : r/webdev",
+        "url": "https://www.reddit.com/r/webdev/comments/1d7tly7/in_your_ide_are_you_using_tabnine_or_jetbrains_ai/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is Tabnine better than ChatGPT?",
+      "Which is better, Tabnine or Copilot?",
+      "What is the best AI coding subscription?",
+      "Is Tabnine AI free?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  }
+}

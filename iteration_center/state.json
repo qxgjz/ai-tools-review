@@ -1054,17 +1054,6 @@
       "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
-      "id": "P1-CONTENT-DATA-DENSITY-001",
-      "title": "内容标准升级：每300字至少3个可验证数据点+答案优先结构",
-      "description": "GEO研究证明数据密度是AI引用的最强预测因子。新文章必须：①每300字至少3个具体数字(价格/百分比/日期/计数)②开头直接给答案③末尾FAQ板块。优先改造已有高流量文章",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "GEO学习2026-09-24"
-    },
-    {
       "id": "P1-SEO-AI-VISIBILITY-TRACK-001",
       "title": "建立AI可见性追踪：ChatGPT/Perplexity/Gemini引用监测",
       "description": "只优化Google错过60-80% AI可见性。需要建立多平台AI可见性追踪：定期在ChatGPT/Perplexity搜索核心关键词，记录我们网站是否被引用、引用频率、排名位置。用OpenSEO或手动脚本实现",
@@ -1198,17 +1187,6 @@
       "completed_at": "2026-09-26T14:11:52.648284",
       "completion_note": "axe-core已覆盖可访问性检查（tests/accessibility.test.ts），Pa11y功能重复",
       "backlog_reason": "w1_p2_mass_cleanup_0929"
-    },
-    {
-      "id": "P1-CONTENT-QUICK-ANSWER-001",
-      "title": "文章页/替代方案页添加Quick Answer和Key Takeaways模块(AEO优化)",
-      "description": "文章页和替代方案页缺少Quick Answer段落和Key Takeaways列表，不利于AI搜索引擎(AEO/GEO)抓取。在文章开头添加2-3句Quick Answer和3-5条Key Takeaways",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "audit_findings.md P1-003"
     },
     {
       "id": "P2-QA-DEP-AUDIT-001",
@@ -2030,18 +2008,6 @@
       "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
-      "id": "P1-MONETIZE-COMPARISON-PAGES-003",
-      "title": "创建10个高转化对比页：X vs Y格式，转化率比普通评测高2-3倍",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "window3"
-      ],
-      "description": "对比页是转化率最高的页面格式，因为用户已在决策阶段。首批10个：Jasper vs Copy.ai、ElevenLabs vs Murf、Semrush vs Mangools、Surfer SEO vs Frase、Pictory vs InVideo、Notion AI vs Mem、Canva AI vs Adobe Firefly、Midjourney vs DALL-E、Grammarly vs LanguageTool、Calendly vs Cal.com。每页：对比表+优缺点+适用人群+联盟CTA。",
-      "created_at": "2026-09-26 20:18:58",
-      "source": "指挥官高频学习-变现模式"
-    },
-    {
       "id": "P1-MONETIZE-ARTICLE-CTA-004",
       "title": "给107篇文章加上下文联盟CTA：在决策点放链接，不堆在开头",
       "priority": "P1",
@@ -2598,18 +2564,6 @@
       "source": "learning_2026-09-27_AI工具站成功案例拆解",
       "created_at": "2026-09-27",
       "backlog_reason": "global_p2_cleanup_0929"
-    },
-    {
-      "id": "P1-CONTENT-COMPARISON-LEADERBOARD-001",
-      "title": "窗口3：加大对比/排行榜内容比例——Arena $100M ARR证明排行榜是流量+变现双引擎",
-      "description": "Arena(AI模型排行榜)8个月达$100M ARR，证明对比/排行榜内容是最强流量+转化格式。我们已有对比文但比例低。要求：1)每周至少2篇'X vs Y'对比文；2)建立'Best AI [category] 2026'排行榜系列(每类1篇)；3)排行榜页用表格+评分+联盟链接，转化最高；4)对比文必须双联盟链接(两个产品都挂)。对比文CTR和转化率远高于单篇评测。",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "window3"
-      ],
-      "source": "learning_2026-09-27_AI工具站成功案例拆解",
-      "created_at": "2026-09-27"
     },
     {
       "id": "P2-SEO-SPARKPAGE-MODEL-001",
@@ -3506,19 +3460,6 @@
       "title": "[待补标题] kw_Gemini_Banana"
     },
     {
-      "id": "P0-QUALITY-F-ARTICLES",
-      "title": "重写2篇F级文章（best-ai-design-tools 58分、best-ai-image-generators 58分）",
-      "priority": "P0",
-      "assigned_to": [
-        "window3"
-      ],
-      "status": "pending",
-      "source": "quality_audit_report.md",
-      "description": "2篇文章质量评分58分(F级)，严重拖低整体质量，需立即重写",
-      "created_at": "2026-09-28T07:51:08.386539",
-      "created_by": "commander-daily-dispatch"
-    },
-    {
       "id": "P1-QUALITY-BELOW85",
       "title": "优化28篇低于85分的文章质量",
       "priority": "P1",
@@ -4104,19 +4045,6 @@
       "created_at": "2026-09-29",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] learn_20260929_snippet_faq_schema"
-    },
-    {
-      "id": "P1-CONTENT-F-GRADE-REWRITE",
-      "title": "重写2篇F级文章（best-ai-design-tools-2026 和 best-ai-image-generators-2026，均58分1500词无图无外链）",
-      "priority": "P1",
-      "assigned_to": [
-        "window3"
-      ],
-      "status": "pending",
-      "source": "quality_audit_report.md",
-      "description": "质量审计发现2篇F级文章(58分)：best-ai-design-tools-2026(1532词0图0外链)、best-ai-image-generators-2026(1263词0图0外链)。需扩充到3000+词、加截图、加外链、加对比表格。",
-      "created_at": "2026-09-29T07:35:00.958219",
-      "created_by": "commander-daily-dispatch-0929"
     },
     {
       "id": "P1-CONTENT-D-GRADE-IMPROVE",
@@ -4916,6 +4844,71 @@
       "status": "pending",
       "priority": "P1",
       "created_at": "2026-10-01"
+    },
+    {
+      "id": "kw_r8_copilot_vs_gemini",
+      "task": "写comparison页：Microsoft Copilot vs Gemini（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round8_2026-10-01",
+      "slug": "copilot-vs-gemini",
+      "keyword": "Microsoft Copilot vs Gemini",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r8_perplexity_vs_grok",
+      "task": "写comparison页：Perplexity vs Grok（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round8_2026-10-01",
+      "slug": "perplexity-vs-grok",
+      "keyword": "Perplexity vs Grok",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r8_aider_review",
+      "task": "写review页：Aider AI review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round8_2026-10-01",
+      "slug": "aider-review",
+      "keyword": "Aider AI review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r8_fireflies_ai_alternatives",
+      "task": "写alternatives页：Fireflies.ai alternatives（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round8_2026-10-01",
+      "slug": "fireflies-ai-alternatives",
+      "keyword": "Fireflies.ai alternatives",
+      "type": "alternatives"
+    },
+    {
+      "id": "kw_r8_boltnew_review",
+      "task": "写review页：Bolt.new review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round8_2026-10-01",
+      "slug": "boltnew-review",
+      "keyword": "Bolt.new review",
+      "type": "review"
     }
   ],
   "milestones": [

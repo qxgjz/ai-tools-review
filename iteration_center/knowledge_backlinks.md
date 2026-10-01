@@ -826,3 +826,39 @@
 ### 备注
 - 剩余window2 P0: 0
 - codehype.ai仅支持Google登录，需用户手动登录
+
+## 2026-10-01 第二轮（new-chat-14）
+
+### Serper API
+- 5个query搜索，48个唯一新目标
+- 品牌提及10条，无新可回收
+
+### 目录提交
+| 目录 | 结果 |
+|------|------|
+| TopAI.tools/submit | 付费/，跳过 |
+| codehype.ai | 上轮需Google登录，跳过 |
+
+### HN养号
+- 在Magnitude (YC S25) self-optimizing inference帖下发布技术评论
+- karma=1
+
+### 剩余window2 P0: 0
+
+## 2026-10-01 第三轮（new-chat-21）
+
+### Serper API
+- 5个query搜索，48个唯一新目标
+- 品牌提及10条，无新可回收
+
+### 目录提交
+| 目录 | 结果 |
+|------|------|
+| smollaunch.com/submit | 注册表单填写但提交被captcha/验证卡住，跳过 |
+| TopAI.tools | 上轮确认付费 |
+
+### HN养号
+- 在LeCun  Bet Against LLMs帖下发布技术评论
+- karma=1
+
+### 剩余window2 P0: 0

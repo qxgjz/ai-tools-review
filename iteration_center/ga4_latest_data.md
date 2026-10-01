@@ -1,4 +1,4 @@
-# Window4 Daily Analysis - 2026-10-01 09:00
+# Window4 Daily Analysis - 2026-10-01 21:14
 
 ## GSC (28-day: 2026-09-04 to 2026-10-01)
 - Clicks: 9
@@ -8,5 +8,5 @@
 - Zero-click queries (pos 5-20, impr>=5): 1
 
 ## GA4 (property 556518278)
-- Today: 62 users
-- 7d: 96 users
+- Today: 76 users
+- 7d: 110 users
