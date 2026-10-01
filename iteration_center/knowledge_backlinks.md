@@ -804,3 +804,25 @@
 ### 备注
 - aitoolshaven需窗口1在about页加badge后才能完成提交
 - 剩余window2 P0: 0
+
+## 2026-10-01 第一轮执行（new-chat-6）
+
+### Serper API
+- 7个query搜索，62个唯一新目标
+- 品牌提及10条，无新可回收
+
+### 目录提交
+| 目录 | 结果 |
+|------|------|
+| codehype.ai/submit | 表单已填完整（URL/名称/tagline/描述），但"Sign in to launch"仅Google OAuth登录，跳过 |
+| reviewmytools.com | 全部付费(-)，跳过 |
+| submitsaas.com | 付费服务(-)，跳过 |
+| aitoolshaven.com | 上轮卡在badge验证，待窗口1加badge |
+
+### HN养号
+- 在"Dots: Always-on agents"帖下发布技术评论（持久agent的上下文管理挑战）
+- karma=1
+
+### 备注
+- 剩余window2 P0: 0
+- codehype.ai仅支持Google登录，需用户手动登录

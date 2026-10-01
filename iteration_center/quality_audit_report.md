@@ -1,40 +1,37 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-10-01 05:02
+**Date:** 2026-10-01 13:24
 
 ## Summary
 
 - Total articles: 137
-- Average quality score: 93.5/100
-- Grade distribution: A=107, B=3, C=16, D=8, F=3
-- Articles below 85: 30
+- Average quality score: 94.3/100
+- Grade distribution: A=108, B=5, C=16, D=8, F=0
+- Articles below 85: 27
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 115 | 137 | 84% |
-| has_quick_answer | 134 | 137 | 98% |
-| first_para_pass | 130 | 137 | 95% |
-| has_key_takeaways | 124 | 137 | 91% |
+| word_count_pass | 118 | 137 | 86% |
+| has_quick_answer | 136 | 137 | 99% |
+| first_para_pass | 129 | 137 | 94% |
+| has_key_takeaways | 127 | 137 | 93% |
 | has_faq | 137 | 137 | 100% |
 | has_how_we_tested | 136 | 137 | 99% |
-| internal_links_pass | 132 | 137 | 96% |
-| has_images | 109 | 137 | 80% |
-| has_real_screenshots | 109 | 137 | 80% |
+| internal_links_pass | 133 | 137 | 97% |
+| has_images | 111 | 137 | 81% |
+| has_real_screenshots | 108 | 137 | 79% |
 | readability_pass | 134 | 137 | 98% |
 | qa_density_pass | 137 | 137 | 100% |
 | title_pass | 134 | 137 | 98% |
-| has_comparison | 134 | 137 | 98% |
-| external_links_pass | 123 | 137 | 90% |
+| has_comparison | 135 | 137 | 99% |
+| external_links_pass | 126 | 137 | 92% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
-| suno-alternatives-2026 | 54 | F | 978 | 0 | 1 | 39.6 | 0 |
-| claude-37-vs-gpt4o | 58 | F | 756 | 3 | 0 | 62.2 | 0 |
-| synthesia-vs-heygen | 58 | F | 700 | 3 | 0 | 43.2 | 0 |
 | best-free-ai-tools-for-students-2026 | 63 | D | 1992 | 3 | 1 | 63.3 | 5 |
 | lovable-vs-boltnew | 63 | D | 806 | 3 | 0 | 52.9 | 2 |
 | cursor-vs-github-copilot-2026 | 67 | D | 1872 | 3 | 0 | 49.4 | 0 |
@@ -62,6 +59,9 @@
 | otter-ai-alternatives | 80 | B | 2125 | 0 | 0 | 54.4 | 5 |
 | midjourney-free-trial-2026 | 80 | B | 2718 | 0 | 0 | 55.0 | 4 |
 | autochain-review-2026 | 83 | B | 2023 | 6 | 0 | 44.8 | 2 |
+| synthesia-vs-heygen | 86 | B | 2057 | 3 | 1 | 36.3 | 3 |
+| claude-37-vs-gpt4o | 89 | B | 2140 | 3 | 1 | 50.6 | 3 |
+| suno-alternatives-2026 | 94 | A | 2167 | 3 | 1 | 40.6 | 4 |
 | best-paid-ai-tools-worth-buying-2026 | 100 | A | 2226 | 5 | 2 | 68.2 | 1 |
 | dify-vs-langchain-2026 | 100 | A | 2216 | 6 | 2 | 50.1 | 1 |
 | gemini-alternatives-2026 | 100 | A | 2242 | 8 | 2 | 51.2 | 1 |

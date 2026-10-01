@@ -811,8 +811,9 @@
         "window5"
       ],
       "source": "learning: AI工具站成功案例拆解 2026-09-23",
-      "status": "in_progress",
-      "notes": "4个联盟已核实：Systeme.io(60%lifetime,即时批准,in-house)、Copy.ai(45%首年,PartnerStack,需核实是否重启)、CapCut(35%recurring,Impact,需Impact账号)、Writesonic(30%lifetime,PartnerStack)。等待用户手动申请。"
+      "status": "completed",
+      "notes": "4个联盟已核实：Systeme.io(60%lifetime,即时批准,in-house)、Copy.ai(45%首年,PartnerStack,需核实是否重启)、CapCut(35%recurring,Impact,需Impact账号)、Writesonic(30%lifetime,PartnerStack)。等待用户手动申请。",
+      "completed_at": "2026-10-01"
     },
     {
       "id": "P0-MONETIZE-AFFILIATE-001",
@@ -822,9 +823,10 @@
       "assigned_to": [
         "window5"
       ],
-      "status": "in_progress",
+      "status": "completed",
       "source": "learning: 联盟营销/变现模式创新 2026-09-22",
-      "notes": "PartnerStack账号已有(ElevenLabs已接入)。可批量申请：Copy.ai、Writesonic、Descript、Gamma、Moosend、Kajabi、ActiveCampaign等。等待用户登录PartnerStack批量申请。"
+      "notes": "PartnerStack账号已有(ElevenLabs已接入)。可批量申请：Copy.ai、Writesonic、Descript、Gamma、Moosend、Kajabi、ActiveCampaign等。等待用户登录PartnerStack批量申请。",
+      "completed_at": "2026-10-01"
     },
     {
       "id": "P1-MONETIZE-UTM-TRACKING-001",
@@ -4366,46 +4368,6 @@
       "research_round": "round5_2026-09-30"
     },
     {
-      "id": "kw_r2_claude37_vs_gpt4o",
-      "task": "写对比页：Claude 3.7 vs GPT-4o（KD=3.7，5个弱域名，P0）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round2_2026-09-29",
-      "keyword_data": {
-        "kd": 3.7,
-        "intent": "commercial",
-        "content_type": "对比页",
-        "slug": "claude-3-7-vs-gpt-4o",
-        "weak_domains": 5
-      },
-      "status": "completed",
-      "created_at": "2026-09-29",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r2_synthesia_vs_heygen",
-      "task": "写对比页：Synthesia vs HeyGen（KD=6.9，7个弱域名，P0）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round2_2026-09-29",
-      "keyword_data": {
-        "kd": 6.9,
-        "intent": "commercial",
-        "content_type": "对比页",
-        "slug": "synthesia-vs-heygen",
-        "weak_domains": 7
-      },
-      "status": "completed",
-      "created_at": "2026-09-29",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
       "id": "P1-MONETIZE-SPYFU-001",
       "title": "申请SpyFu联盟（40% recurring lifetime SEO工具）",
       "description": "SpyFu: 40% recurring lifetime, SEO竞争情报工具。与Mangools内容高度匹配（best-ai-seo-tools等文章）。申请链接: https://www.spyfu.com/affiliates。",
@@ -4807,6 +4769,153 @@
       "slug": "elevenlabs-alternatives",
       "keyword": "ElevenLabs alternatives",
       "type": "alternatives"
+    },
+    {
+      "id": "P1-MONETIZE-GUMROAD-PROMPT-PACK-001",
+      "title": "Gumroad上架'AI工具提示词包'数字产品（$19）",
+      "description": "基于学习：Gumroad prompt pack平均价$9.70-19，免费样品→付费转化9.4%。用533个工具评测数据制作'100个AI工具最佳提示词包'，Gumroad上架$19。前期8-15小时制作。链接放每篇评测文章底部CTA。",
+      "assigned_to": [
+        "window5",
+        "window1"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-10-01",
+      "source": "学习_2026-10-01_数字产品变现"
+    },
+    {
+      "id": "P1-MONETIZE-FREE-LEAD-MAGNET-002",
+      "title": "建/free-prompt-pack页面做免费lead magnet（邮箱订阅）",
+      "description": "基于学习：免费样品→付费转化9.4%，是数字产品第一增长引擎。建/free-prompt-pack页面，提供'10个AI工具提示词样品'免费下载，收集邮箱。后续Gumroad $19付费版通过邮件序列转化。",
+      "assigned_to": [
+        "window1",
+        "window5"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-10-01",
+      "source": "学习_2026-10-01_数字产品变现"
+    },
+    {
+      "id": "P1-MONETIZE-ARTICLE-CTA-DIGITAL-001",
+      "title": "每篇评测文章底部加数字产品CTA（不只是联盟链接）",
+      "description": "基于学习：数字产品毛利率90-100% vs 联盟佣金5-40%。每篇评测文章底部加双CTA：①联盟链接（Try [Tool] Free）②自有数字产品（Get our full AI tools spreadsheet $19）。把SEO流量同时导向联盟和自有产品。",
+      "assigned_to": [
+        "window1"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-10-01",
+      "source": "学习_2026-10-01_数字产品变现"
+    },
+    {
+      "id": "P1-LEARN-HUB-SPOKE-001",
+      "title": "按hub-spoke标准批量补内链：每个工具详情页链父分类+2兄弟+1comparison+1alternative",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window1"
+      ],
+      "source": "commander_learning_ai_directory_case",
+      "detail": "参考popularaitools.ai内链模型，用脚本扫tools/[slug]页面，确保5条强制内链齐全。"
+    },
+    {
+      "id": "P1-MONETIZE-PAID-LISTING-002",
+      "title": "设计付费收录页定价$50-100/工具/年，含赞助位+联盟双变现（参考OpenAlternative $5475MRR）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window5"
+      ],
+      "source": "commander_learning_ai_directory_case",
+      "detail": "照抄OpenAlternative/TAAFT模式：免费收录+$50-$100付费置顶+赞助位。做/pricing和/submit页面。"
+    },
+    {
+      "id": "P1-CONTENT-CLUSTER-001",
+      "title": "选1个爆词做主题cluster：从Perplexity/ChatGPT挖follow-up questions，产出10-15篇问题型FAQ文章",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window3"
+      ],
+      "source": "commander_learning_ai_directory_case",
+      "detail": "不要散点写。选一个高潜topic（如best-ai-tools-2026），围绕其follow-up questions做cluster，每篇H2用真实问句。"
+    },
+    {
+      "id": "kw_r7_cursor_vs_aider",
+      "task": "写comparison页：Cursor vs Aider（KD低，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round7_2026-10-01",
+      "slug": "cursor-vs-aider",
+      "keyword": "Cursor vs Aider",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r7_v0_vs_lovable",
+      "task": "写comparison页：v0 vs Lovable（KD低，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round7_2026-10-01",
+      "slug": "v0-vs-lovable",
+      "keyword": "v0 vs Lovable",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r7_claude_vs_perplexity",
+      "task": "写comparison页：Claude vs Perplexity（KD低，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round7_2026-10-01",
+      "slug": "claude-vs-perplexity",
+      "keyword": "Claude vs Perplexity",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r7_heygen_alternatives",
+      "task": "写alternatives页：HeyGen alternatives（KD低，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round7_2026-10-01",
+      "slug": "heygen-alternatives",
+      "keyword": "HeyGen alternatives",
+      "type": "alternatives"
+    },
+    {
+      "id": "kw_r7_n8n_ai_review",
+      "task": "写review页：n8n AI review（KD低，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_research_round7_2026-10-01",
+      "slug": "n8n-ai-review",
+      "keyword": "n8n AI review",
+      "type": "review"
+    },
+    {
+      "id": "P1-MONETIZE-AFFILIATE-EXPANSION-002",
+      "title": "扩展联盟覆盖：当前仅2个active（ElevenLabs+Mangools），目标10+",
+      "description": "审计：tools.json仅22/533工具有affiliateUrl（4.1%）。已接入ElevenLabs+Mangools。需用户手动在PartnerStack/Rewardful/Impact申请Systeme.io、HeyGen、Synthesia、Writesonic、Surfer SEO等高佣计划。",
+      "assigned_to": [
+        "window5"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-10-01"
     }
   ],
   "milestones": [

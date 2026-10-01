@@ -2933,3 +2933,25 @@ GSC显示以下页面排名前15但0点击或极低CTR:
 - P1: 优化autopr页面title（pos 6.9→目标pos 3）
 - P1: 优化/about页面title（pos 3零点击异常）
 - P2: 优化openai_astra_review和adobe-firefly-review的meta description
+
+## 2026-10-01 Window4 例行分析
+
+### 🚨 异常告警：新加坡Bot流量暴涨
+- 今日GA4：62用户/62会话，**全部来自新加坡**
+- 昨日：20用户（14新加坡），暴涨210%
+- 互动率0%，跳出率100%，PV仅48（62人只看了48个页面）
+- 判断：Bot攻击/爬虫批量访问，非真实用户
+
+### GSC数据（28天滚动：09-04 to 10-01）
+- 9点击 / 2035曝光 / CTR 0.44% / 平均排名25.1
+- 与昨日基本持平
+
+### 关键发现
+1. **autopr查询pos 6.9，10曝光0点击** — 持续在第1页边缘
+2. **/about页面pos 3.1，12曝光0点击** — 高排名零点击
+3. **/blog/openai_astra_review pos 10.8，157曝光1点击** — 高曝光低CTR
+4. **/blog/adobe-firefly-review-2026 pos 6.4，33曝光0点击**
+
+### 行动建议
+- P0: 确认新加坡Bot流量，需在GA4后台开启Bot过滤开关
+- P1: 优化autopr和/about页面title
