@@ -5172,6 +5172,71 @@
       "source": "migration",
       "status": "pending",
       "created": "2026-10-02"
+    },
+    {
+      "id": "kw_r12_gpt5_vs_o3",
+      "task": "写comparison页：GPT-5 vs OpenAI o3（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round12_2026-10-03",
+      "slug": "gpt5-vs-o3",
+      "keyword": "GPT-5 vs OpenAI o3",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r12_perplexity_max_review",
+      "task": "写review页：Perplexity Max review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round12_2026-10-03",
+      "slug": "perplexity-max-review",
+      "keyword": "Perplexity Max review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r12_cursor_2_review",
+      "task": "写review页：Cursor 2.0 review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round12_2026-10-03",
+      "slug": "cursor-2-review",
+      "keyword": "Cursor 2.0 review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r12_best_ai_grammar_checker",
+      "task": "写listicle页：best AI grammar checker（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round12_2026-10-03",
+      "slug": "best-ai-grammar-checker",
+      "keyword": "best AI grammar checker",
+      "type": "listicle"
+    },
+    {
+      "id": "kw_r12_claude_vs_deepseek",
+      "task": "写comparison页：Claude vs DeepSeek（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round12_2026-10-03",
+      "slug": "claude-vs-deepseek",
+      "keyword": "Claude vs DeepSeek",
+      "type": "comparison"
     }
   ],
   "milestones": [

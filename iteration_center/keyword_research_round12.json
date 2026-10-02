@@ -1,0 +1,279 @@
+{
+  "claude-vs-deepseek": {
+    "keyword": "Claude vs DeepSeek",
+    "top_competitors": [
+      {
+        "title": "Can DeepSeek become better than Claude",
+        "url": "https://www.reddit.com/r/DeepSeek/comments/1t59cgq/can_deepseek_become_better_than_claude/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "DeepSeek vs Claude: Where Each One Wins in 2026",
+        "url": "https://emergent.sh/learn/deepseek-vs-claude",
+        "domain": "emergent.sh"
+      },
+      {
+        "title": "DeepSeek vs. Claude: Which AI Model Fits Your Work?",
+        "url": "https://www.datacamp.com/blog/deepseek-vs-claude",
+        "domain": "www.datacamp.com"
+      }
+    ],
+    "paa": [
+      "Is DeepSeek better than Claude?",
+      "Why is Claude AI controversial?",
+      "Why is Claude being banned?",
+      "Which AI is better than Claude?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "gpt-5-vs-o3": {
+    "keyword": "GPT-5 vs OpenAI o3",
+    "top_competitors": [
+      {
+        "title": "GPT-5 (High) vs o3: Model Comparison",
+        "url": "https://artificialanalysis.ai/models/comparisons/gpt-5-vs-o3",
+        "domain": "artificialanalysis.ai"
+      },
+      {
+        "title": "o3 better than 5-thinking? : r/ChatGPTPro",
+        "url": "https://www.reddit.com/r/ChatGPTPro/comments/1mq97kk/o3_better_than_5thinking/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "O3 vs GPT-5 thinking",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1mp1n8u/o3_vs_gpt5_thinking/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is Chatgpt 5 thinking better than Chatgpt 5?",
+      "Is GPT o3 still available?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "gemini-vs-claude-2026": {
+    "keyword": "Gemini vs Claude 2026",
+    "top_competitors": [
+      {
+        "title": "Claude vs Gemini: Complete Comparison 2026",
+        "url": "https://gurusup.com/blog/claude-vs-gemini",
+        "domain": "gurusup.com"
+      },
+      {
+        "title": "Gemini vs ChatGPT vs Claude 2026: Ultimate AI Comparison",
+        "url": "https://yuv.ai/learn/compare/gemini-chatgpt-claude",
+        "domain": "yuv.ai"
+      },
+      {
+        "title": "ChatGPT vs Claude vs Gemini: Which AI Is Actually Best in ...",
+        "url": "https://pub.towardsai.net/chatgpt-vs-claude-vs-gemini-which-ai-is-actually-best-in-2026-59a50c70dcdb",
+        "domain": "pub.towardsai.net"
+      }
+    ],
+    "paa": [
+      "Which AI is better in 2026, ChatGPT, Claude, or Gemini?",
+      "Is Gemini getting better than Claude?",
+      "Is Gemini still the best AI?",
+      "Which is better for research, Claude or Gemini?"
+    ],
+    "weak_in_top3": 0,
+    "kd": "medium"
+  },
+  "perplexity-max-review": {
+    "keyword": "Perplexity Max review",
+    "top_competitors": [
+      {
+        "title": "Should I get Perplexity Max? (Genuine Question)",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1rnjxvm/should_i_get_perplexity_max_genuine_question/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Perplexity Review: I Used It for 2 Weeks",
+        "url": "https://aidetectplus.com/blog/perplexity-review",
+        "domain": "aidetectplus.com"
+      },
+      {
+        "title": "Perplexity Max REVIEW: Here's Why It Costs $200/Month",
+        "url": "https://www.youtube.com/watch?v=0o2TjUU8ibg",
+        "domain": "www.youtube.com"
+      }
+    ],
+    "paa": [
+      "Which is better, ChatGPT Pro or Perplexity Max?",
+      "How much does Perplexity Max cost per month?",
+      "Is Perplexity actually worth it?",
+      "What's the difference between Perplexity max and Perplexity pro?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "cursor-2-review": {
+    "keyword": "Cursor 2.0 review",
+    "top_competitors": [
+      {
+        "title": "Cursor 2.0 is amazing well done to the team",
+        "url": "https://www.reddit.com/r/cursor/comments/1ojwftu/cursor_20_is_amazing_well_done_to_the_team/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "is cursor 2.0 worth it",
+        "url": "https://www.reddit.com/r/cursor/comments/1oprvg8/is_cursor_20_worth_it/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Cursor 2.0 gives me a really bad experience",
+        "url": "https://forum.cursor.com/t/cursor-2-0-gives-me-a-really-bad-experience/140250",
+        "domain": "forum.cursor.com"
+      }
+    ],
+    "paa": [
+      "Is Cursor actually worth it?",
+      "Is there anything better than Cursor?",
+      "Is Cursor good anymore?",
+      "What is the best Cursor model right now?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "windsurf-2-review": {
+    "keyword": "Windsurf 2.0 review",
+    "top_competitors": [
+      {
+        "title": "Windsurf 2.0: Introducing the Agent Command Center and ...",
+        "url": "https://devin.ai/blog/windsurf-2-0",
+        "domain": "devin.ai"
+      },
+      {
+        "title": "Windsurf is actually great.",
+        "url": "https://www.reddit.com/r/windsurf/comments/1q3cq8x/windsurf_is_actually_great/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Windsurf 2.0 Adds Devin Review and Quick Review Workflows",
+        "url": "https://www.linkedin.com/posts/windsurf_code-review-is-moving-into-the-ide-as-agents-activity-7457867483052490752-MW4t",
+        "domain": "www.linkedin.com"
+      }
+    ],
+    "paa": [
+      "Does anyone still use Windsurf?",
+      "Is Windsurf better than Cursor 2026?",
+      "Is Windsurf discontinued?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "zapier-ai-review": {
+    "keyword": "Zapier AI review",
+    "top_competitors": [
+      {
+        "title": "My honest Zapier review after 6 months of use",
+        "url": "https://www.reddit.com/r/zapier/comments/1rcgpeu/my_honest_zapier_review_after_6_months_of_use/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Zapier Review: Boost Your Business With Easy Automation",
+        "url": "https://www.pcmag.com/reviews/zapier",
+        "domain": "www.pcmag.com"
+      },
+      {
+        "title": "Zapier Review 2026: Our Score Is 3.8/5 After Five Tests",
+        "url": "https://hackceleration.com/labs/review/zapier",
+        "domain": "hackceleration.com"
+      }
+    ],
+    "paa": [
+      "Is Zapier legit and safe?",
+      "How much does Zapier AI cost?",
+      "What is Zapier AI best used for?",
+      "Who owns Zapier AI?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "best-ai-transcription-tools": {
+    "keyword": "best AI transcription tools",
+    "top_competitors": [
+      {
+        "title": "What's the best AI for audio transcription? : r/artificial",
+        "url": "https://www.reddit.com/r/artificial/comments/1m1twyw/whats_the_best_ai_for_audio_transcription/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "The Best AI Transcription Tools for Journalists",
+        "url": "https://mediacopilot.ai/the-best-ai-transcription-tools-for-journalists-hands-on-review/",
+        "domain": "mediacopilot.ai"
+      },
+      {
+        "title": "The 3 Best Transcription Services of 2026",
+        "url": "https://www.nytimes.com/wirecutter/reviews/best-transcription-services/",
+        "domain": "www.nytimes.com"
+      }
+    ],
+    "paa": [
+      "Which AI transcriber is considered the best?",
+      "Can ChatGPT do transcription?",
+      "Is Otter AI better than Turboscribe?",
+      "Will transcriptionists be replaced by AI?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "best-ai-presentation-makers": {
+    "keyword": "best AI presentation makers",
+    "top_competitors": [
+      {
+        "title": "Best AI Presentation Makers of 2026 (with example outputs)",
+        "url": "https://plusai.com/blog/best-ai-presentation-makers/",
+        "domain": "plusai.com"
+      },
+      {
+        "title": "AI Presentation Maker: Create presentations with AI",
+        "url": "https://www.canva.com/create/ai-presentations/",
+        "domain": "www.canva.com"
+      },
+      {
+        "title": "The 8 best AI presentation makers in 2026",
+        "url": "https://zapier.com/blog/best-ai-presentation-maker/",
+        "domain": "zapier.com"
+      }
+    ],
+    "paa": [
+      "Which AI presentation maker is the best?",
+      "What is the best AI for a presentation?",
+      "What is the 5 5 5 rule in presentations?",
+      "Can ChatGPT make slides?"
+    ],
+    "weak_in_top3": 0,
+    "kd": "medium"
+  },
+  "best-ai-grammar-checker": {
+    "keyword": "best AI grammar checker",
+    "top_competitors": [
+      {
+        "title": "What's the best AI grammar checker you use?",
+        "url": "https://www.reddit.com/r/elearning/comments/1shem2l/whats_the_best_ai_grammar_checker_you_use/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "What AI grammar checkers can you recommend?",
+        "url": "https://www.reddit.com/r/ENGLISH/comments/1d2i5cd/what_ai_grammar_checkers_can_you_recommend/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Free AI Grammar Checker (no sign-up required)",
+        "url": "https://quillbot.com/grammar-check",
+        "domain": "quillbot.com"
+      }
+    ],
+    "paa": [
+      "Is ChatGPT better than Grammarly?",
+      "Is Grammarly 100% correct?",
+      "Can ChatGPT check grammar?",
+      "Which grammar checker is the most accurate?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  }
+}
