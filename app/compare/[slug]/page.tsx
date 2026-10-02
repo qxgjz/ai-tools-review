@@ -270,7 +270,7 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
             </h2>
             <button
               type="button"
-              onclick="(function(){var rows=document.querySelectorAll('.same-row');var b=document.getElementById('toggle-diffs');var hiding=b.dataset.hidden!=='true';rows.forEach(function(r){r.style.display=hiding?'none':''});b.dataset.hidden=hiding?'true':'false';b.textContent=hiding?'Show all features':'Show differences only';b.classList.toggle('bg-blue-600',hiding);b.classList.toggle('text-white',hiding);})()"
+              onClick={() => { const rows = document.querySelectorAll('.same-row'); const b = document.getElementById('toggle-diffs'); if (!b) return; const hiding = b.dataset.hidden !== 'true'; rows.forEach((r) => { (r as HTMLElement).style.display = hiding ? 'none' : ''; }); b.dataset.hidden = hiding ? 'true' : 'false'; b.textContent = hiding ? 'Show all features' : 'Show differences only'; b.classList.toggle('bg-blue-600', hiding); b.classList.toggle('text-white', hiding); }}
               id="toggle-diffs"
               data-hidden="false"
               className="px-3 py-1.5 text-xs font-medium rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors min-h-[36px]"

@@ -1,39 +1,41 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-10-02 05:07
+**Date:** 2026-10-02 12:44
 
 ## Summary
 
-- Total articles: 139
-- Average quality score: 93.5/100
-- Grade distribution: A=108, B=5, C=16, D=8, F=2
-- Articles below 85: 28
+- Total articles: 141
+- Average quality score: 92.8/100
+- Grade distribution: A=108, B=5, C=16, D=8, F=4
+- Articles below 85: 30
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 118 | 139 | 85% |
-| has_quick_answer | 138 | 139 | 99% |
-| first_para_pass | 130 | 139 | 94% |
-| has_key_takeaways | 127 | 139 | 91% |
-| has_faq | 139 | 139 | 100% |
-| has_how_we_tested | 137 | 139 | 99% |
-| internal_links_pass | 133 | 139 | 96% |
-| has_images | 111 | 139 | 80% |
-| has_real_screenshots | 108 | 139 | 78% |
-| readability_pass | 135 | 139 | 97% |
-| qa_density_pass | 139 | 139 | 100% |
-| title_pass | 135 | 139 | 97% |
-| has_comparison | 137 | 139 | 99% |
-| external_links_pass | 126 | 139 | 91% |
+| word_count_pass | 118 | 141 | 84% |
+| has_quick_answer | 140 | 141 | 99% |
+| first_para_pass | 132 | 141 | 94% |
+| has_key_takeaways | 127 | 141 | 90% |
+| has_faq | 141 | 141 | 100% |
+| has_how_we_tested | 137 | 141 | 97% |
+| internal_links_pass | 133 | 141 | 94% |
+| has_images | 111 | 141 | 79% |
+| has_real_screenshots | 108 | 141 | 77% |
+| readability_pass | 136 | 141 | 96% |
+| qa_density_pass | 141 | 141 | 100% |
+| title_pass | 137 | 141 | 97% |
+| has_comparison | 139 | 141 | 99% |
+| external_links_pass | 126 | 141 | 89% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
+| notion-ai-vs-notion-ai-salesforce-2026 | 40 | F | 427 | 0 | 0 | 35.8 | 0 |
 | midjourney-v7-vs-flux-2026 | 43 | F | 1204 | 0 | 0 | 39.1 | 0 |
 | claude-opus-4-vs-gpt-5-2026 | 49 | F | 1132 | 0 | 0 | 50.9 | 0 |
+| perplexity-vs-chatgpt-2026 | 49 | F | 461 | 0 | 0 | 48.5 | 0 |
 | cursor-vs-github-copilot-2026 | 61 | D | 1872 | 3 | 0 | 49.4 | 0 |
 | elevenlabs-vs-playht-2026 | 61 | D | 1810 | 3 | 0 | 48.7 | 0 |
 | best-free-ai-tools-for-students-2026 | 63 | D | 1992 | 3 | 1 | 63.3 | 5 |

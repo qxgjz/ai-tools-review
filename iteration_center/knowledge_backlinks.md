@@ -862,3 +862,19 @@
 - karma=1
 
 ### 剩余window2 P0: 0
+
+## 2026-10-02 第一轮（new-chat-6）
+
+### Serper API
+- 5个query搜索，48个唯一新目标
+- 品牌提及10条，无新可回收
+- 新发现getleadwave.io/list-of-ai-directories（190+目录清单，待筛选）
+
+### 目录提交
+- 无新可提交免费目录（全付费或已试过）
+
+### HN养号
+- 在Anthropic "What do you want from AI"帖下发布技术评论
+- karma=1
+
+### 剩余window2 P0: 0

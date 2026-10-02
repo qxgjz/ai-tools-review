@@ -4996,6 +4996,105 @@
       ],
       "source": "vercel_outage_20261002",
       "detail": "grep整个前端代码找fetch('/api/google-search-puppeteer')的调用点；如果只是数据采集脚本用的，直接砍；如果前端页面在用，改造成Serper API调用（db3bbe31d1470d3d4358896851c04030d2e76a6e）。"
+    },
+    {
+      "id": "P1-GROWTH-REDDIT-ANSWER-001",
+      "title": "每天在8个AI sub（r/ChatGPT, r/artificial, r/SideProject等）答20分钟问题，纯帮助不带链接，每周统计带来的referral",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window2"
+      ],
+      "source": "commander_learning_cold_start",
+      "detail": "参考IndieHackers $0营销playbook：不带链接的真实回答比硬推转化率高10倍。一周后看Cloudflare Analytics的reddit.com来源UV。"
+    },
+    {
+      "id": "P1-CONTENT-GSC-IMPRESSION-001",
+      "title": "从GSC导出排名15-50、有曝光但0点击的词，批量写专门文章针对这些词",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window3"
+      ],
+      "source": "commander_learning_cold_start",
+      "detail": "不是空想选题，是GSC里已经有曝光的词——Google已经认为你相关，补内容就能拿点击。导出后按曝光量排序，前30个词每词一篇。"
+    },
+    {
+      "id": "P1-LAUNCH-PREP-PH-001",
+      "title": "Product Hunt发布准备：攒500邮件订阅+3张产品图+10个朋友当天点赞，攒够前不发",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "window5"
+      ],
+      "source": "commander_learning_cold_start",
+      "detail": "PH只有一次机会。window5先上EmailOctopus做订阅入口，window2做产品图和hunter稿。邮件订阅到500再定发布日。"
+    },
+    {
+      "id": "kw_r10_gemini_25_vs_gpt5",
+      "task": "写comparison页：Gemini 2.5 vs GPT-5（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round10_2026-10-02",
+      "slug": "gemini-25-vs-gpt5",
+      "keyword": "Gemini 2.5 vs GPT-5",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r10_lovable_review",
+      "task": "写review页：Lovable review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round10_2026-10-02",
+      "slug": "lovable-review",
+      "keyword": "Lovable review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r10_openai_o3_review",
+      "task": "写review页：OpenAI o3 review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round10_2026-10-02",
+      "slug": "openai-o3-review",
+      "keyword": "OpenAI o3 review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r10_manus_ai_review",
+      "task": "写review页：Manus AI review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round10_2026-10-02",
+      "slug": "manus-ai-review",
+      "keyword": "Manus AI review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r10_jasper_ai_alternatives",
+      "task": "写alternatives页：Jasper AI alternatives（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round10_2026-10-02",
+      "slug": "jasper-ai-alternatives",
+      "keyword": "Jasper AI alternatives",
+      "type": "alternatives"
     }
   ],
   "milestones": [
