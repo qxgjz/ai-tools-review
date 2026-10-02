@@ -5095,6 +5095,83 @@
       "slug": "jasper-ai-alternatives",
       "keyword": "Jasper AI alternatives",
       "type": "alternatives"
+    },
+    {
+      "id": "kw_r11_grok_vs_gemini",
+      "task": "写comparison页：Grok vs Gemini（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round11_2026-10-02",
+      "slug": "grok-vs-gemini",
+      "keyword": "Grok vs Gemini",
+      "type": "comparison"
+    },
+    {
+      "id": "kw_r11_qwen_ai_review",
+      "task": "写review页：Qwen AI review（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round11_2026-10-02",
+      "slug": "qwen-ai-review",
+      "keyword": "Qwen AI review",
+      "type": "review"
+    },
+    {
+      "id": "kw_r11_best_ai_headshot_generator",
+      "task": "写listicle页：best AI headshot generator（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round11_2026-10-02",
+      "slug": "best-ai-headshot-generator",
+      "keyword": "best AI headshot generator",
+      "type": "listicle"
+    },
+    {
+      "id": "kw_r11_best_ai_slack_bots",
+      "task": "写listicle页：best AI Slack bots（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round11_2026-10-02",
+      "slug": "best-ai-slack-bots",
+      "keyword": "best AI Slack bots",
+      "type": "listicle"
+    },
+    {
+      "id": "kw_r11_deepseek_vs_gpt",
+      "task": "写comparison页：DeepSeek vs GPT（P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "round11_2026-10-02",
+      "slug": "deepseek-vs-gpt",
+      "keyword": "DeepSeek vs GPT",
+      "type": "comparison"
+    },
+    {
+      "id": "P1-RESTORE-ROUTES-001",
+      "title": "恢复og/compare/search三个路由（改为兼容静态导出）",
+      "description": "build时临时移出app/目录，需改为generateStaticParams或静态化",
+      "assigned_to": [
+        "window1"
+      ],
+      "priority": "P1",
+      "source": "migration",
+      "status": "pending",
+      "created": "2026-10-02"
     }
   ],
   "milestones": [

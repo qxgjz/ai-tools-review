@@ -1,32 +1,32 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-10-02 12:44
+**Date:** 2026-10-02 22:04
 
 ## Summary
 
-- Total articles: 141
-- Average quality score: 92.8/100
-- Grade distribution: A=108, B=5, C=16, D=8, F=4
-- Articles below 85: 30
+- Total articles: 142
+- Average quality score: 92.5/100
+- Grade distribution: A=108, B=5, C=16, D=8, F=5
+- Articles below 85: 31
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 118 | 141 | 84% |
-| has_quick_answer | 140 | 141 | 99% |
-| first_para_pass | 132 | 141 | 94% |
-| has_key_takeaways | 127 | 141 | 90% |
-| has_faq | 141 | 141 | 100% |
-| has_how_we_tested | 137 | 141 | 97% |
-| internal_links_pass | 133 | 141 | 94% |
-| has_images | 111 | 141 | 79% |
-| has_real_screenshots | 108 | 141 | 77% |
-| readability_pass | 136 | 141 | 96% |
-| qa_density_pass | 141 | 141 | 100% |
-| title_pass | 137 | 141 | 97% |
-| has_comparison | 139 | 141 | 99% |
-| external_links_pass | 126 | 141 | 89% |
+| word_count_pass | 118 | 142 | 83% |
+| has_quick_answer | 141 | 142 | 99% |
+| first_para_pass | 132 | 142 | 93% |
+| has_key_takeaways | 127 | 142 | 89% |
+| has_faq | 142 | 142 | 100% |
+| has_how_we_tested | 137 | 142 | 96% |
+| internal_links_pass | 133 | 142 | 94% |
+| has_images | 111 | 142 | 78% |
+| has_real_screenshots | 108 | 142 | 76% |
+| readability_pass | 137 | 142 | 96% |
+| qa_density_pass | 142 | 142 | 100% |
+| title_pass | 138 | 142 | 97% |
+| has_comparison | 140 | 142 | 99% |
+| external_links_pass | 126 | 142 | 89% |
 
 ## Per-Article Scores
 
@@ -34,6 +34,7 @@
 |------|-------|-------|-------|-------|--------|--------|-----------|
 | notion-ai-vs-notion-ai-salesforce-2026 | 40 | F | 427 | 0 | 0 | 35.8 | 0 |
 | midjourney-v7-vs-flux-2026 | 43 | F | 1204 | 0 | 0 | 39.1 | 0 |
+| midjourney-v7-vs-dall-e-3-2026 | 43 | F | 448 | 0 | 0 | 48.8 | 0 |
 | claude-opus-4-vs-gpt-5-2026 | 49 | F | 1132 | 0 | 0 | 50.9 | 0 |
 | perplexity-vs-chatgpt-2026 | 49 | F | 461 | 0 | 0 | 48.5 | 0 |
 | cursor-vs-github-copilot-2026 | 61 | D | 1872 | 3 | 0 | 49.4 | 0 |
