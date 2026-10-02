@@ -263,38 +263,60 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
       {/* Comparison Table */}
       <FadeIn delay={0.25}>
         <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6 mb-8 overflow-x-auto">
-          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-4 flex items-center gap-2">
-            <Target className="w-5 h-5 text-blue-500" />
-            Head-to-Head Comparison
-          </h2>
+          <div className="flex items-center justify-between mb-4 flex-wrap gap-2">
+            <h2 className="text-lg font-bold text-zinc-900 dark:text-white flex items-center gap-2">
+              <Target className="w-5 h-5 text-blue-500" />
+              Head-to-Head Comparison
+            </h2>
+            <button
+              type="button"
+              onclick="(function(){var rows=document.querySelectorAll('.same-row');var b=document.getElementById('toggle-diffs');var hiding=b.dataset.hidden!=='true';rows.forEach(function(r){r.style.display=hiding?'none':''});b.dataset.hidden=hiding?'true':'false';b.textContent=hiding?'Show all features':'Show differences only';b.classList.toggle('bg-blue-600',hiding);b.classList.toggle('text-white',hiding);})()"
+              id="toggle-diffs"
+              data-hidden="false"
+              className="px-3 py-1.5 text-xs font-medium rounded-lg border border-zinc-200 dark:border-zinc-700 text-zinc-600 dark:text-zinc-400 hover:border-blue-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors min-h-[36px]"
+            >
+              Show differences only
+            </button>
+          </div>
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-zinc-200 dark:border-zinc-800">
-                <th className="text-left py-3 px-2 font-semibold text-zinc-500 dark:text-zinc-400">
+                <th className="sticky top-16 z-10 text-left py-3 px-2 font-semibold text-zinc-500 dark:text-zinc-400 bg-white dark:bg-zinc-900">
                   Feature
                 </th>
-                <th className="text-center py-3 px-2 font-semibold text-blue-600 dark:text-blue-400">
+                <th className="sticky top-16 z-10 text-center py-3 px-2 font-semibold text-blue-600 dark:text-blue-400 bg-white dark:bg-zinc-900">
                   {comparison.toolA.name}
                 </th>
-                <th className="text-center py-3 px-2 font-semibold text-purple-600 dark:text-purple-400">
+                <th className="sticky top-16 z-10 text-center py-3 px-2 font-semibold text-purple-600 dark:text-purple-400 bg-white dark:bg-zinc-900">
                   {comparison.toolB.name}
                 </th>
               </tr>
             </thead>
             <tbody>
-              {comparisonDimensions.map((dim, i) => (
-                <tr key={i} className="border-b border-zinc-100 dark:border-zinc-800/50">
-                  <td className="py-3 px-2 font-medium text-zinc-700 dark:text-zinc-300">
-                    {dim.label}
-                  </td>
-                  <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400">
-                    {dim.a}
-                  </td>
-                  <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400">
-                    {dim.b}
-                  </td>
-                </tr>
-              ))}
+              {comparisonDimensions.map((dim, i) => {
+                const isSame = String(dim.a).trim() === String(dim.b).trim();
+                return (
+                  <tr key={i} className={`border-b border-zinc-100 dark:border-zinc-800/50 ${isSame ? 'same-row' : ''}`}>
+                    <td className="py-3 px-2 font-medium text-zinc-700 dark:text-zinc-300">
+                      {dim.label}
+                    </td>
+                    {isSame ? (
+                      <td colSpan={2} className="py-3 px-2 text-center text-zinc-400 dark:text-zinc-500 italic">
+                        {String(dim.a).trim() || 'Same'}
+                      </td>
+                    ) : (
+                      <>
+                        <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400 font-medium">
+                          {dim.a}
+                        </td>
+                        <td className="py-3 px-2 text-center text-zinc-600 dark:text-zinc-400 font-medium">
+                          {dim.b}
+                        </td>
+                      </>
+                    )}
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
