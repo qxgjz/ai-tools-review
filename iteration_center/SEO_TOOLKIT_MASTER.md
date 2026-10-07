@@ -1,6 +1,6 @@
-# AIToolCrux SEO工具链完整整合手册 v1.1
+# AIToolCrux SEO工具链完整整合手册 v1.2
 
-**最后更新**: 2026-10-08
+**最后更新**: 2026-10-08（新增llmevalkit+opengtm+CrewAI+OpenSEO）
 **原则**: 现成工具优先，不重复造轮子，实在不行才写胶水代码
 **目标**: 6个窗口+指挥官全部用上所有工具，高质量高效率完成SEO工作
 
@@ -29,6 +29,9 @@
 | **Serper API** | ✅ | GitHub Secret已配置 | Google搜索结果API |
 | **GSC API** | ✅ | GitHub Actions已验证 | 搜索控制台数据 |
 | **Lighthouse** | ✅ | GitHub Actions | 性能/SEO审计 |
+| **llmevalkit** | 6.0.2 | `pip install llmevalkit` | 78指标内容评估+幻觉检测+AI内容检测 |
+| **opengtm** | 0.1.0 | `pip install opengtm` | 9模块AEO审计+关键词研究（Google Search grounding，无幻觉） |
+| **Chroma** | 1.5.9 | `pip install chromadb` | 向量数据库，38条历史经验语义检索 |
 
 ### ❌ 手册写了但实际不可用
 
@@ -48,6 +51,10 @@
 | **SerpBear** | 2K | 排名追踪 | Docker部署，可替代手动排名检查 |
 | **SEONaut** | 717 | 技术SEO审计 | Go语言，Docker部署 |
 | **marketingskills** | 33.3K | 最大marketing skills集合 | 待评估哪些skill可复用 |
+| **CrewAI** | 52.8K | 多Agent协作框架 | ⚠️脚本已就绪，Python 3.14依赖冲突待解决 |
+| **OpenSEO** | 20.5K | 完整SEO套件 | 📋部署指南已写，当前阶段不建议部署（资源占用高） |
+| **llmevalkit** | - | 78指标AI内容评估 | ✅已接入，scripts/llmevalkit_toolkit.py |
+| **opengtm** | - | AEO审计+关键词研究 | ✅已接入，scripts/opengtm_toolkit.py |
 
 ---
 
