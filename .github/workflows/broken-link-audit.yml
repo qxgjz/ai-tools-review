@@ -1,0 +1,45 @@
+name: Broken Link Audit
+
+on:
+  schedule:
+    - cron: '0 21 * * 3'  # 每周三05:00北京时间
+  workflow_dispatch:
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      
+      - name: Install broken-link-checker
+        run: npm install -g broken-link-checker
+      
+      - name: Run broken link audit
+        run: |
+          blc https://aitoolcrux.com -ro --filter-level 3 --ordered --exclude-external=false > broken_links_report.txt 2>&1 || true
+          echo "=== Broken Link Audit Report ===" > broken_links_summary.md
+          echo "" >> broken_links_summary.md
+          echo "**扫描时间**: $(date -u '+%Y-%m-%d %H:%M UTC')" >> broken_links_summary.md
+          echo "**扫描URL**: https://aitoolcrux.com" >> broken_links_summary.md
+          echo "" >> broken_links_summary.md
+          echo "## 结果" >> broken_links_summary.md
+          echo '```' >> broken_links_summary.md
+          tail -50 broken_links_report.txt >> broken_links_summary.md
+          echo '```' >> broken_links_summary.md
+          cat broken_links_summary.md
+      
+      - name: Upload report
+        uses: actions/upload-artifact@v4
+        with:
+          name: broken-link-report
+          path: broken_links_summary.md
+      
+      - name: Send notification if broken links found
+        if: contains(steps.audit.outputs.report, 'BROKEN') || contains(steps.audit.outputs.report, 'Error')
+        run: |
+          echo "发现断链，需要修复"

@@ -1,0 +1,103 @@
+name: Keyword Research
+
+on:
+  schedule:
+    - cron: '0 21 * * 1'  # 每周一05:00北京时间
+  workflow_dispatch:
+
+jobs:
+  research:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      
+      - name: Install SEO tools
+        run: |
+          pip install zens-ink requests
+      
+      - name: Run keyword research with zens-ink + Serper
+        env:
+          SERPER_API_KEY: ${{ secrets.SERPER_API_KEY }}
+        run: |
+          python << 'PYEOF'
+          import os, json, requests
+          from datetime import datetime
+          
+          # 种子词（AI工具站核心主题）
+          seed_keywords = [
+              "best AI tools", "AI tool comparison", "AI writing assistant",
+              "AI image generator", "AI code assistant", "AI video generator",
+              "AI voice generator", "AI marketing tools", "AI productivity tools",
+              "free AI tools", "AI tools for students", "AI tools for business",
+              "ChatGPT alternatives", "Midjourney alternatives", "AI SEO tools"
+          ]
+          
+          results = []
+          headers = {'X-API-KEY': os.environ.get('SERPER_API_KEY', '')}
+          
+          for kw in seed_keywords:
+              try:
+                  # Serper搜索
+                  r = requests.post('https://google.serper.dev/search',
+                      headers=headers,
+                      json={'q': kw, 'num': 10}, timeout=15)
+                  data = r.json()
+                  
+                  # 提取PAA问题
+                  paa = data.get('peopleAlsoAsk', [])
+                  paa_questions = [item.get('question', '') for item in paa[:5]]
+                  
+                  # 提取相关搜索
+                  related = data.get('relatedSearches', [])
+                  related_queries = [item.get('query', '') for item in related[:5]]
+                  
+                  results.append({
+                      'keyword': kw,
+                      'search_volume_estimate': 'medium' if len(data.get('organic', [])) >= 8 else 'low',
+                      'top_results': len(data.get('organic', [])),
+                      'paa_questions': paa_questions,
+                      'related_queries': related_queries
+                  })
+                  print(f"✅ {kw}: {len(paa_questions)} PAA, {len(related_queries)} related")
+              except Exception as e:
+                  print(f"❌ {kw}: {e}")
+          
+          # 保存结果
+          with open('keyword_research_results.json', 'w', encoding='utf-8') as f:
+              json.dump({'date': datetime.now().isoformat(), 'keywords': results}, f, ensure_ascii=False, indent=2)
+          
+          # 生成Markdown报告
+          with open('keyword_opportunities.md', 'w', encoding='utf-8') as f:
+              f.write(f"# 关键词挖掘报告 - {datetime.now().strftime('%Y-%m-%d')}\n\n")
+              f.write(f"**种子词数量**: {len(seed_keywords)}\n")
+              f.write(f"**数据来源**: Serper API + Google PAA + Related Searches\n\n")
+              
+              for r in results:
+                  f.write(f"## {r['keyword']}\n")
+                  f.write(f"- 搜索量估计: {r['search_volume_estimate']}\n")
+                  f.write(f"- Top结果数: {r['top_results']}\n")
+                  if r['paa_questions']:
+                      f.write(f"- PAA问题:\n")
+                      for q in r['paa_questions']:
+                          f.write(f"  - {q}\n")
+                  if r['related_queries']:
+                      f.write(f"- 相关搜索:\n")
+                      for q in r['related_queries']:
+                          f.write(f"  - {q}\n")
+                  f.write("\n")
+          
+          print("\n✅ 关键词挖掘完成")
+          PYEOF
+      
+      - name: Upload results
+        uses: actions/upload-artifact@v4
+        with:
+          name: keyword-research-results
+          path: |
+            keyword_research_results.json
+            keyword_opportunities.md
