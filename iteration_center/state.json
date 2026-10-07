@@ -803,32 +803,6 @@
       "window6_status": "design_complete"
     },
     {
-      "id": "P0-MONETIZE-002",
-      "priority": "P0",
-      "title": "窗口5优先申请4个最高佣联盟",
-      "description": "Jasper AI(30%经常性)、Surfer SEO(25%+$250/单)、Copy.ai(30%)、Writesonic(30%终身)，案例中这4个贡献了60%联盟收入",
-      "assigned_to": [
-        "window5"
-      ],
-      "source": "learning: AI工具站成功案例拆解 2026-09-23",
-      "status": "completed",
-      "notes": "4个联盟已核实：Systeme.io(60%lifetime,即时批准,in-house)、Copy.ai(45%首年,PartnerStack,需核实是否重启)、CapCut(35%recurring,Impact,需Impact账号)、Writesonic(30%lifetime,PartnerStack)。等待用户手动申请。",
-      "completed_at": "2026-10-01"
-    },
-    {
-      "id": "P0-MONETIZE-AFFILIATE-001",
-      "priority": "P0",
-      "title": "窗口5：注册PartnerStack账号，批量申请高佣AI联盟计划",
-      "description": "我们目前只有ElevenLabs和Mangools两个联盟。优先在PartnerStack注册一个账号（统一管理数百个AI SaaS联盟），然后申请：Surfer SEO(25%复购)、Copy.ai(45%前12月)、Gamma(30%复购)、Writesonic(30%终身)、AdCreative.ai(30%+$2000奖励)。同时直接申请：Semrush($200/单)、Pictory(最高50%复购)、HeyGen(20-30%)、10Web.io(50%首单+20%复购)、CapCut(最高35%复购,Impact.com)。来源：2026-09-22联盟营销学习。",
-      "assigned_to": [
-        "window5"
-      ],
-      "status": "completed",
-      "source": "learning: 联盟营销/变现模式创新 2026-09-22",
-      "notes": "PartnerStack账号已有(ElevenLabs已接入)。可批量申请：Copy.ai、Writesonic、Descript、Gamma、Moosend、Kajabi、ActiveCampaign等。等待用户登录PartnerStack批量申请。",
-      "completed_at": "2026-10-01"
-    },
-    {
       "id": "P1-MONETIZE-UTM-TRACKING-001",
       "priority": "P1",
       "title": "窗口5：所有联盟链接加UTM参数 + GA4联盟点击事件追踪",
@@ -1066,7 +1040,7 @@
     },
     {
       "id": "P1-PERF-UNLIGHTHOUSE-001",
-      "priority": "P1",
+      "priority": "P2",
       "title": "添加Unlighthouse全站Lighthouse扫描CI workflow",
       "assigned_to": [
         "window1"
@@ -1076,7 +1050,8 @@
       "description": "在CI中添加Unlighthouse全站扫描，对600+页面做性能审计，score<80输出报告。适合SSG大站全量审计。",
       "completed_at": "2026-09-26T14:09:58.960691",
       "completion_note": "完成：创建.github/workflows/unlighthouse.yml，每周日全站扫描",
-      "backlog_reason": "duplicate_merge_lighthouse-ci_0929"
+      "backlog_reason": "duplicate_merge_lighthouse-ci_0929",
+      "note": "[指挥官2026-10-08降级: 非紧急技术优化，P0/P1任务完成后再做]"
     },
     {
       "id": "P2-A11Y-AXE-001",
@@ -1134,7 +1109,7 @@
     },
     {
       "id": "P1-CI-CONCURRENCY-001",
-      "priority": "P1",
+      "priority": "P2",
       "title": "为bundle-size和lighthouse CI添加concurrency group+cancel-in-progress，避免重复运行浪费分钟数",
       "assigned_to": [
         "window1"
@@ -1144,7 +1119,8 @@
       "expected_impact": "减少CI运行时间，避免同一分支多个CI并行",
       "completed_at": "2026-09-26T13:56:39.376336",
       "completion_note": "批量配置完成：dynamicParams=false、eslint flat config+no-explicit-any、prettier、commitlint、lint-staged、CI lint workflow、composite action、concurrency",
-      "backlog_reason": "duplicate_merge_lighthouse-ci_0929"
+      "backlog_reason": "duplicate_merge_lighthouse-ci_0929",
+      "note": "[指挥官2026-10-08降级: 非紧急技术优化，P0/P1任务完成后再做]"
     },
     {
       "id": "P2-CI-CUSTOM-ACTION-001",
@@ -1652,7 +1628,7 @@
       "title": "P1: 高曝光评测页排名Top10但0点击 — 标题优化",
       "priority": "P1",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "status": "pending",
       "description": "5个评测页排名Top10但CTR=0%：dify_ai_review(pos5.47/47imp), cursor_ai_review(pos6.8/46imp), stable-diffusion(pos8.45/51imp), gemini_38_flash(pos9.61/82imp), openai_astra(pos11/144imp)。533页同一标题模板触发Google micro-boilerplate重写。需优化为问题式标题。",
@@ -1902,7 +1878,7 @@
       "priority": "P1",
       "status": "pending",
       "assigned_to": [
-        "window3"
+        "window6"
       ],
       "description": "不写我们的工具很棒，写如何用AI在30分钟内做完XX。来源：r/ChatGPT、r/artificial、r/smallbusiness、Quora的AI工具话题。每篇结构：问题描述到3个解决方案对比到推荐+理由到步骤教程。目标月搜50-500、竞争低的长尾词。每篇必须有真实截图和内链。",
       "created_at": "2026-09-26 17:20:35",
@@ -2152,18 +2128,6 @@
       "backlog_reason": "global_p2_cleanup_0929"
     },
     {
-      "id": "P0-GA4-BOT-FILTER-001",
-      "title": "窗口4：GA4 Bot过滤——96%新加坡数据中心爬虫污染数据，必须过滤",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "window4"
-      ],
-      "source": "audit_findings.md P0-1 2026-09-26",
-      "description": "GA4近7天1151用户中1100(96%)来自新加坡数据中心IP，互动率仅5.8%，严重污染所有指标。必须：1)在GA4中创建Bot过滤audience（排除新加坡数据中心IP+互动率<10%+单页会话）；2)GA4管理后台启用自动Bot过滤；3)对比过滤前后数据，建立干净数据视图。",
-      "completed_date": "2026-09-30"
-    },
-    {
       "id": "P2-PERF-CLS-RESERVE-001",
       "title": "Giscus评论区和AdSense广告位添加min-height/aspect-ratio预留空间防CLS",
       "priority": "P2",
@@ -2286,7 +2250,7 @@
     {
       "id": "P1-QA-VITEST-FIX-001",
       "title": "修复Vitest本地运行超时挂起",
-      "priority": "P1",
+      "priority": "P2",
       "assigned_to": [
         "window1"
       ],
@@ -2295,12 +2259,13 @@
       "created_at": "2026-09-27T01:29:22.569898",
       "completed_at": "2026-09-28T05:14:11.187448",
       "completed_by": "窗口1",
-      "backlog_reason": "duplicate_merge_testing-framework_0929"
+      "backlog_reason": "duplicate_merge_testing-framework_0929",
+      "note": "[指挥官2026-10-08降级: 非紧急技术优化，P0/P1任务完成后再做]"
     },
     {
       "id": "P1-QA-PLAYWRIGHT-INSTALL-001",
       "title": "安装@playwright/test并验证E2E测试",
-      "priority": "P1",
+      "priority": "P2",
       "assigned_to": [
         "window1"
       ],
@@ -2309,7 +2274,8 @@
       "created_at": "2026-09-27T01:29:22.569939",
       "completed_at": "2026-09-28T05:14:11.187487",
       "completed_by": "窗口1",
-      "backlog_reason": "duplicate_merge_testing-framework_0929"
+      "backlog_reason": "duplicate_merge_testing-framework_0929",
+      "note": "[指挥官2026-10-08降级: 非紧急技术优化，P0/P1任务完成后再做]"
     },
     {
       "id": "P2-QA-COMPONENT-TESTS-001",
@@ -2798,20 +2764,6 @@
       "backlog_reason": "w1_p2_mass_cleanup_0929"
     },
     {
-      "id": "P0-GEO-ORIGINAL-DATA-001",
-      "title": "窗口3+4：每篇评测文必须包含原创测试数据/数字——Princeton研究证明Statistics Addition提升AI引用率+41%",
-      "description": "Princeton/IIT Delhi KDD 2024研究(10000次查询)证明：在内容中添加具体统计数字(百分比/数量/金额/日期)可提升AI引用率+30-41%，是所有GEO战术中效果最强的。我们当前108篇文章大量是泛泛描述，缺少原创数据。要求：1)每篇工具评测必须包含至少3个可验证数字(加载速度测试结果/功能数量/价格对比/用户数)；2)建立工具测试模板，统一测试维度(免费额度/付费起价/支持语言/API/集成数)；3)对Top50工具做实际测试，记录截图+数据。原创数据是AI引擎最偏好引用的内容，也是竞品最难复制的。",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "window3",
-        "window4"
-      ],
-      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
-      "created_at": "2026-09-27",
-      "completed_date": "2026-09-30"
-    },
-    {
       "id": "P0-GEO-CITE-SOURCES-001",
       "title": "窗口3：所有文章必须引用权威来源——排名第5的页面加引用后AI可见度+115%",
       "description": "Princeton研究证明：添加权威来源引用可提升AI引用率+30-40%，对排名第5的页面效果更是+115.1%相对可见度提升。我们当前文章几乎没有内联引用。要求：1)每篇文章至少引用3个权威来源(官方文档/行业报告/知名博客)；2)用具体出处而非'studies show'——'According to G2 2026 report...'而非'many users say'；3)引用格式：数字+来源+链接。这是投入产出比最高的GEO优化，立即可执行。",
@@ -2994,9 +2946,9 @@
       "title": "文章页从SSG改为ISR（revalidate=3600）",
       "priority": "P2",
       "assigned_to": [
-        "window1"
+        "window2"
       ],
-      "status": "backlog",
+      "status": "pending",
       "description": "将app/blog/[slug]/page.tsx添加export const revalidate = 3600，实现小时级自动刷新，减少全量构建频率",
       "source": "learning-2026-09-27-nextjs-caching",
       "backlog_reason": "w1_p2_mass_cleanup_0929"
@@ -3093,7 +3045,7 @@
       "id": "kw_Gemini_vs_Gemini",
       "task": "写文章：Gemini vs Gemini（对比页）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "source": "keyword_pipeline_Gemini",
@@ -3109,7 +3061,7 @@
         ],
         "low_dr_count": 10
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_vs_Gemini"
@@ -3143,7 +3095,7 @@
       "id": "kw_Gemini_app",
       "task": "写文章：Gemini app（信息页）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3159,7 +3111,7 @@
         ],
         "low_dr_count": 8
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_app"
@@ -3168,7 +3120,7 @@
       "id": "kw_Gemini_review_2026",
       "task": "写文章：Gemini review 2026（评测页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "source": "keyword_pipeline_Gemini",
@@ -3184,7 +3136,7 @@
         ],
         "low_dr_count": 10
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_review_2026"
@@ -3243,7 +3195,7 @@
       "id": "kw_Google_Gemini_AI",
       "task": "写文章：Google Gemini AI（信息页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3259,7 +3211,7 @@
         ],
         "low_dr_count": 6
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Google_Gemini_AI"
@@ -3268,7 +3220,7 @@
       "id": "kw_Gemini_pricing",
       "task": "写文章：Gemini pricing（定价分析页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "source": "keyword_pipeline_Gemini",
@@ -3284,7 +3236,7 @@
         ],
         "low_dr_count": 10
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_pricing"
@@ -3293,7 +3245,7 @@
       "id": "kw_Gemini_for_students",
       "task": "写文章：Gemini for students（信息页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3309,7 +3261,7 @@
         ],
         "low_dr_count": 9
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_for_students"
@@ -3318,7 +3270,7 @@
       "id": "kw_how_to_use_Gemini",
       "task": "写文章：how to use Gemini（信息页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3334,7 +3286,7 @@
         ],
         "low_dr_count": 10
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_how_to_use_Gemini"
@@ -3343,7 +3295,7 @@
       "id": "kw_Gemini_tutorial",
       "task": "写文章：Gemini tutorial（信息页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3359,7 +3311,7 @@
         ],
         "low_dr_count": 10
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_tutorial"
@@ -3418,7 +3370,7 @@
       "id": "kw_Gemini_Google",
       "task": "写文章：Gemini Google（信息页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3434,7 +3386,7 @@
         ],
         "low_dr_count": 7
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_Google"
@@ -3443,7 +3395,7 @@
       "id": "kw_Gemini_Banana",
       "task": "写文章：Gemini Banana（信息页）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P1",
       "source": "keyword_pipeline_Gemini",
@@ -3454,7 +3406,7 @@
         "paa": [],
         "low_dr_count": 10
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-28",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_Gemini_Banana"
@@ -3503,7 +3455,7 @@
       "title": "提升外链通过率从32%到80%（74篇缺外链）",
       "priority": "P1",
       "assigned_to": [
-        "window3"
+        "window6"
       ],
       "status": "pending",
       "source": "quality_audit_report.md",
@@ -3588,20 +3540,6 @@
       "description": "FAQ是精选摘要和AI引用的关键，多篇完全缺失",
       "created_at": "2026-09-28T07:51:08.386592",
       "created_by": "commander-daily-dispatch"
-    },
-    {
-      "id": "P0-W42-GA4-BOT-FILTER",
-      "title": "GA4设置Bot过滤器排除新加坡数据中心IP",
-      "description": "近7天97.5%用户来自新加坡(1097用户/互动6.2%/停留5秒)，为数据中心Bot。需在GA4 Admin创建内部流量过滤器，排除新加坡数据中心IP段。所有后续报告分'全量/真实用户'双口径。",
-      "priority": "P0",
-      "assigned_to": [
-        "window4"
-      ],
-      "status": "completed",
-      "created_at": "2026-09-28 08:05",
-      "source": "commander_weekly_review_2026-09-28",
-      "acceptance_criteria": "GA4过滤器生效，真实用户口径中新加坡Bot占比<5%",
-      "completed_date": "2026-09-30"
     },
     {
       "id": "P1-W42-CONVERSION-TRACKING",
@@ -3828,21 +3766,6 @@
       "created_at": "2026-09-28 21:35:00"
     },
     {
-      "id": "P0-MONETIZE-BROKEN-LINKS",
-      "title": "修复40个失效联盟链接（ElevenLabs 404/Midjourney 403/OpenAI 403等），ElevenLabs是唯一affiliateUrl工具必须立即修复",
-      "priority": "P0",
-      "assigned_to": [
-        "window5"
-      ],
-      "status": "completed",
-      "source": "monetization_audit.md",
-      "description": "审计发现50个联盟链接中40个失效(80%)。ElevenLabs链接try.elevenlabs.io/e45ubw2ct0ag返回404——这是tools.json中唯一有affiliateUrl的工具，等于变现入口完全断了。Midjourney/OpenAI返回403可能是反爬，需核实真实可用性。",
-      "created_at": "2026-09-28T22:34:34.716219",
-      "created_by": "commander-daily-dispatch-2200",
-      "completed_at": "2026-09-30",
-      "completion_note": "GET验证确认ElevenLabs链接200正常(之前HEAD 404为误报)。403链接均为Midjourney/OpenAI/Canva反爬，浏览器可正常访问。无需修复。"
-    },
-    {
       "id": "P0-SEO-DUPLICATE-CREATIUM",
       "title": "合并3篇Creatium Coach重复内容为1篇规范URL+301重定向其他2篇（合计64曝光0点击互相蚕食）",
       "priority": "P0",
@@ -3886,7 +3809,7 @@
       "title": "为93篇无联盟链接的高流量文章添加联盟CTA（当前105篇仅12篇有联盟链接，覆盖率11.4%）",
       "priority": "P1",
       "assigned_to": [
-        "window5"
+        "window2"
       ],
       "status": "pending",
       "source": "monetization_audit.md",
@@ -3898,7 +3821,7 @@
       "id": "kw_research_windsurf_vs_cursor",
       "task": "写对比页：Windsurf vs Cursor（KD=3.7，8个弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "source": "keyword_research_zensink_2026-09-29",
@@ -3915,7 +3838,7 @@
           "Is Windsurf discontinued?"
         ]
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-29",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_research_windsurf_vs_cursor"
@@ -3924,7 +3847,7 @@
       "id": "kw_research_jasper_vs_copyai",
       "task": "写对比页：Jasper vs Copy.ai（KD=1，极低竞争，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "source": "keyword_research_zensink_2026-09-29",
@@ -3936,7 +3859,7 @@
         "weak_domains": 5,
         "paa": []
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-29",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_research_jasper_vs_copyai"
@@ -3945,7 +3868,7 @@
       "id": "kw_research_midjourney_alternatives",
       "task": "写替代方案页：Midjourney alternatives（KD=6.0，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "source": "keyword_research_zensink_2026-09-29",
@@ -3957,7 +3880,7 @@
         "weak_domains": 6,
         "paa": []
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-29",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_research_midjourney_alternatives"
@@ -3987,7 +3910,7 @@
       "id": "kw_research_claude_vs_gemini",
       "task": "写对比页：Claude vs Gemini（KD=7.7，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "source": "keyword_research_zensink_2026-09-29",
@@ -3999,7 +3922,7 @@
         "weak_domains": 5,
         "paa": []
       },
-      "status": "backlog",
+      "status": "pending",
       "created_at": "2026-09-29",
       "backlog_reason": "empty_title_cleanup_0929",
       "title": "[待补标题] kw_research_claude_vs_gemini"
@@ -4051,7 +3974,7 @@
       "title": "提升1篇D级文章质量（best-ai-audio-tools-2026，63分1511词无图无外链）",
       "priority": "P1",
       "assigned_to": [
-        "window3"
+        "window6"
       ],
       "status": "pending",
       "source": "quality_audit_report.md",
@@ -4090,7 +4013,7 @@
       "title": "为73篇无外链文章添加权威外部链接（external_links_pass仅31%）",
       "priority": "P1",
       "assigned_to": [
-        "window3"
+        "window6"
       ],
       "status": "pending",
       "source": "quality_audit_report.md",
@@ -4167,19 +4090,6 @@
       "status": "active"
     },
     {
-      "id": "gsc-discovered-not-indexed",
-      "title": "343页已发现未索引（302个工具页+28个博客页+7个alternatives页），加速索引",
-      "description": "GSC显示343页Google已发现但未抓取。其中302个是/tools/工具详情页（核心流量页）。操作：1)在GSC手动用网址检查请求索引Top10最重要的工具页;2)确保sitemap包含所有工具页;3)检查这些页面是否在robots.txt中被屏蔽;4)检查页面加载速度和内容质量。这些页面上次抓取日期是1970年说明Google从未爬过",
-      "assigned_to": [
-        "window1",
-        "window4"
-      ],
-      "priority": "P0",
-      "source": "gsc_coverage_export_2026-09-29",
-      "status": "completed",
-      "completed_date": "2026-09-30"
-    },
-    {
       "id": "P1-MONETIZE-ADSKULL-001",
       "title": "申请AdSkull联盟（30% lifetime recurring）",
       "description": "AdSkull: 30% lifetime recurring, 30天cookie, AI广告素材生成。申请链接: https://adskull.io/affiliate。匹配内容: AI广告工具、营销自动化。",
@@ -4207,7 +4117,7 @@
       "title": "94篇无联盟链接文章批量添加AffiliateCTA",
       "description": "审计发现94/106篇文章无联盟链接(89%)。优先为Top 15高流量文章添加AffiliateCTA组件(优先ElevenLabs+Mangools)。需窗口1在文章模板中条件渲染CTA。",
       "assigned_to": [
-        "window1"
+        "window2"
       ],
       "status": "pending",
       "priority": "P1",
@@ -4276,26 +4186,6 @@
       "description": "当前16词全部未进前20。GSC真实查询中有曝光的词：ai agent(11曝光), ai comparison tools(13曝光), agent ai tool(4曝光)。替换追踪词为这些真实查询。"
     },
     {
-      "id": "kw_r2_lovable_vs_boltnew",
-      "task": "写对比页：Lovable vs Bolt.new（KD=1.0，7个弱域名，P0）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round2_2026-09-29",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "content_type": "对比页",
-        "slug": "lovable-vs-bolt-new",
-        "weak_domains": 7
-      },
-      "status": "completed",
-      "created_at": "2026-09-29",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
       "id": "P1-MONETIZE-SPYFU-001",
       "title": "申请SpyFu联盟（40% recurring lifetime SEO工具）",
       "description": "SpyFu: 40% recurring lifetime, SEO竞争情报工具。与Mangools内容高度匹配（best-ai-seo-tools等文章）。申请链接: https://www.spyfu.com/affiliates。",
@@ -4336,82 +4226,6 @@
       "title": "GSC近7天流量归零需关注",
       "description": "GSC近7天(09-22~09-29) 0点击/176曝光，对比28天累计9点击/2008曝光。曝光从日均~70降到日均~25，下降约65%。需观察是否为季节性波动还是排名下降。zens-ink 16词全部999（未进美国SERP前20）",
       "created": "2026-09-29"
-    },
-    {
-      "id": "kw_r3_otter_alternatives",
-      "task": "写替代方案页：Otter.ai alternatives（KD=1.0，8弱域名，会议转录新品类）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round3_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "otter-ai-alternatives",
-        "weak_domains": 8
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r3_gemini_vs_perplexity",
-      "task": "写对比页：Gemini vs Perplexity（KD=1.0，7弱域名）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round3_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "gemini-vs-perplexity",
-        "weak_domains": 7
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r3_beautiful_ai_alternatives",
-      "task": "写替代方案页：Beautiful.ai alternatives（KD=1.0，8弱域名，AI演示新品类）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round3_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "beautiful-ai-alternatives",
-        "weak_domains": 8
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
-      "id": "kw_r3_devin_ai_review",
-      "task": "写评测页：Devin AI review（KD=1.0，6弱域名）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round3_2026-09-30",
-      "keyword_data": {
-        "kd": 1.0,
-        "intent": "commercial",
-        "slug": "devin-ai-review",
-        "weak_domains": 6
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
     },
     {
       "id": "P1-GEO-AIBOT-CHECK-20260930",
@@ -4506,25 +4320,6 @@
       "created": "2026-09-30"
     },
     {
-      "id": "kw_r4_motion_ai_alternatives",
-      "task": "写替代方案页：Motion AI alternatives（KD=4.0，7弱域名，AI日历调度）",
-      "assigned_to": [
-        "window3"
-      ],
-      "priority": "P0",
-      "source": "keyword_research_round4_2026-09-30",
-      "keyword_data": {
-        "kd": 4.0,
-        "intent": "commercial",
-        "slug": "motion-ai-alternatives",
-        "weak_domains": 7
-      },
-      "status": "completed",
-      "created_at": "2026-09-30",
-      "completed_at": "2026-09-30",
-      "research_round": "round5_2026-09-30"
-    },
-    {
       "id": "P1-MONETIZE-LISTEN2IT-001",
       "title": "申请Listen2It联盟（40% recurring×90天cookie AI TTS）",
       "description": "Listen2It: 40% recurring, 90天cookie, AI text-to-speech。与ElevenLabs评测文章直接匹配。申请: https://www.getlisten2it.com/affiliate-program。注意：Speechify 50% on sales也可作为备选。",
@@ -4540,7 +4335,7 @@
       "title": "114篇无联盟文章批量加CTA（文章数增至126）",
       "description": "审计：126篇文章中仅12篇含联盟链接(9.5%)，114篇无。窗口3新增19篇文章均无联盟CTA。紧急：窗口1需在文章模板中条件渲染AffiliateCTA组件，按文章标签自动匹配ElevenLabs/Mangools/未来新联盟。",
       "assigned_to": [
-        "window1"
+        "window5"
       ],
       "status": "pending",
       "priority": "P1",
@@ -4598,7 +4393,7 @@
       "id": "kw_r6_notion_ai_vs_obsidian_ai",
       "task": "写comparison页：Notion AI vs Obsidian AI（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4611,7 +4406,7 @@
       "id": "kw_r6_grammarly_alternatives",
       "task": "写alternatives页：Grammarly alternatives（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4624,7 +4419,7 @@
       "id": "kw_r6_roo_code_review",
       "task": "写review页：Roo Code review（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4637,7 +4432,7 @@
       "id": "kw_r6_crawl4ai_review",
       "task": "写review页：Crawl4AI review（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4650,7 +4445,7 @@
       "id": "kw_r6_chatgpt_vs_gemini_2026",
       "task": "写comparison页：ChatGPT vs Gemini 2026（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4663,7 +4458,7 @@
       "id": "kw_r6_midjourney_v7_vs_flux",
       "task": "写comparison页：Midjourney v7 vs Flux（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4676,7 +4471,7 @@
       "id": "kw_r6_surfer_seo_alternatives",
       "task": "写alternatives页：Surfer SEO alternatives（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4689,7 +4484,7 @@
       "id": "kw_r6_elevenlabs_alternatives",
       "task": "写alternatives页：ElevenLabs alternatives（KD低，2/3弱域名，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4729,7 +4524,7 @@
       "title": "每篇评测文章底部加数字产品CTA（不只是联盟链接）",
       "description": "基于学习：数字产品毛利率90-100% vs 联盟佣金5-40%。每篇评测文章底部加双CTA：①联盟链接（Try [Tool] Free）②自有数字产品（Get our full AI tools spreadsheet $19）。把SEO流量同时导向联盟和自有产品。",
       "assigned_to": [
-        "window1"
+        "window2"
       ],
       "status": "pending",
       "priority": "P1",
@@ -4773,7 +4568,7 @@
       "id": "kw_r7_cursor_vs_aider",
       "task": "写comparison页：Cursor vs Aider（KD低，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4786,7 +4581,7 @@
       "id": "kw_r7_v0_vs_lovable",
       "task": "写comparison页：v0 vs Lovable（KD低，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4799,7 +4594,7 @@
       "id": "kw_r7_claude_vs_perplexity",
       "task": "写comparison页：Claude vs Perplexity（KD低，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4812,7 +4607,7 @@
       "id": "kw_r7_heygen_alternatives",
       "task": "写alternatives页：HeyGen alternatives（KD低，P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4825,7 +4620,7 @@
       "id": "kw_r7_n8n_ai_review",
       "task": "写review页：n8n AI review（KD低，P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4849,7 +4644,7 @@
       "id": "kw_r8_copilot_vs_gemini",
       "task": "写comparison页：Microsoft Copilot vs Gemini（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4875,7 +4670,7 @@
       "id": "kw_r8_fireflies_ai_alternatives",
       "task": "写alternatives页：Fireflies.ai alternatives（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4914,7 +4709,7 @@
       "id": "kw_r9_synthesia_alternatives",
       "task": "写alternatives页：Synthesia alternatives（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4927,7 +4722,7 @@
       "id": "kw_r9_grok_3_review",
       "task": "写review页：Grok 3 review（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -4953,7 +4748,7 @@
       "id": "kw_r9_kimi_review",
       "task": "写review页：Kimi AI review（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5022,7 +4817,7 @@
       "id": "kw_r10_gemini_25_vs_gpt5",
       "task": "写comparison页：Gemini 2.5 vs GPT-5（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5048,7 +4843,7 @@
       "id": "kw_r10_openai_o3_review",
       "task": "写review页：OpenAI o3 review（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5061,7 +4856,7 @@
       "id": "kw_r10_manus_ai_review",
       "task": "写review页：Manus AI review（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5087,7 +4882,7 @@
       "id": "kw_r11_grok_vs_gemini",
       "task": "写comparison页：Grok vs Gemini（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5139,7 +4934,7 @@
       "id": "kw_r11_deepseek_vs_gpt",
       "task": "写comparison页：DeepSeek vs GPT（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5147,18 +4942,6 @@
       "slug": "deepseek-vs-gpt",
       "keyword": "DeepSeek vs GPT",
       "type": "comparison"
-    },
-    {
-      "id": "P1-RESTORE-ROUTES-001",
-      "title": "恢复og/compare/search三个路由（改为兼容静态导出）",
-      "description": "build时临时移出app/目录，需改为generateStaticParams或静态化",
-      "assigned_to": [
-        "window1"
-      ],
-      "priority": "P1",
-      "source": "migration",
-      "status": "pending",
-      "created": "2026-10-02"
     },
     {
       "id": "kw_r12_gpt5_vs_o3",
@@ -5190,7 +4973,7 @@
       "id": "kw_r12_cursor_2_review",
       "task": "写review页：Cursor 2.0 review（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5203,7 +4986,7 @@
       "id": "kw_r12_claude_vs_deepseek",
       "task": "写comparison页：Claude vs DeepSeek（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5211,20 +4994,6 @@
       "slug": "claude-vs-deepseek",
       "keyword": "Claude vs DeepSeek",
       "type": "comparison"
-    },
-    {
-      "id": "P0-GSC-PROXY-FETCH-001",
-      "title": "修复GSC数据拉取：脚本需走代理+更新GitHub Secrets为新服务账号",
-      "description": "1) fetch_gsc.py用httplib2不读HTTPS_PROXY环境变量，需显式配proxy_info 2) GitHub Secrets GOOGLE_SERVICE_ACCOUNT_JSON还是旧账号，需换成新qx273344@gmail.com的JSON 3) 已5天无新GSC数据，指挥官日报缺流量指标",
-      "assigned_to": [
-        "window4"
-      ],
-      "priority": "P0",
-      "source": "commander_scheduling",
-      "status": "completed",
-      "created": "2026-10-03",
-      "completed_at": "2026-10-07",
-      "note": "GitHub Secret已更新为新服务账号，CI验证通过，数据恢复自动拉取"
     },
     {
       "id": "P1-REPORT-TRAFFIC-001",
@@ -5242,7 +5011,7 @@
       "id": "kw_r13_replit_ai_agent_review",
       "task": "写review页：Replit AI Agent review（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5255,7 +5024,7 @@
       "id": "kw_r13_reworkd_review",
       "task": "写review页：Reworkd AI review（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5268,7 +5037,7 @@
       "id": "kw_r13_taskade_review",
       "task": "写review页：Taskade AI review（P0）",
       "assigned_to": [
-        "window3"
+        "window5"
       ],
       "priority": "P0",
       "status": "pending",
@@ -5281,7 +5050,7 @@
       "id": "kw_r13_best_ai_website_builder_2026",
       "task": "写listicle页：best AI website builder 2026（P0）",
       "assigned_to": [
-        "window3"
+        "window2"
       ],
       "priority": "P0",
       "status": "pending",
@@ -6763,6 +6532,241 @@
       "status": "pending",
       "source": "Unlighthouse学习-知识点2/4/5/6/11/12/13/14/15",
       "details": "新建.github/workflows/unlighthouse-weekly.yml；每周日运行；unlighthouse-ci --site https://www.aitoolcrux.com --reporter json；配置maxRoutes:200, dynamicSampling:5, exclude:['/api/*','/_next/*'], samples:1, throttle:false；assertions: performance minScore:0.7 warn, LCP maxNumericValue:4000 warn；CI缓存.lighthouseci目录；上传报告artifact"
+    },
+    {
+      "id": "P0-MONETIZE-002",
+      "priority": "P0",
+      "title": "窗口5优先申请4个最高佣联盟",
+      "description": "Jasper AI(30%经常性)、Surfer SEO(25%+$250/单)、Copy.ai(30%)、Writesonic(30%终身)，案例中这4个贡献了60%联盟收入",
+      "assigned_to": [
+        "window5"
+      ],
+      "source": "learning: AI工具站成功案例拆解 2026-09-23",
+      "status": "completed",
+      "notes": "4个联盟已核实：Systeme.io(60%lifetime,即时批准,in-house)、Copy.ai(45%首年,PartnerStack,需核实是否重启)、CapCut(35%recurring,Impact,需Impact账号)、Writesonic(30%lifetime,PartnerStack)。等待用户手动申请。",
+      "completed_at": "2026-10-01"
+    },
+    {
+      "id": "P0-MONETIZE-AFFILIATE-001",
+      "priority": "P0",
+      "title": "窗口5：注册PartnerStack账号，批量申请高佣AI联盟计划",
+      "description": "我们目前只有ElevenLabs和Mangools两个联盟。优先在PartnerStack注册一个账号（统一管理数百个AI SaaS联盟），然后申请：Surfer SEO(25%复购)、Copy.ai(45%前12月)、Gamma(30%复购)、Writesonic(30%终身)、AdCreative.ai(30%+$2000奖励)。同时直接申请：Semrush($200/单)、Pictory(最高50%复购)、HeyGen(20-30%)、10Web.io(50%首单+20%复购)、CapCut(最高35%复购,Impact.com)。来源：2026-09-22联盟营销学习。",
+      "assigned_to": [
+        "window5"
+      ],
+      "status": "completed",
+      "source": "learning: 联盟营销/变现模式创新 2026-09-22",
+      "notes": "PartnerStack账号已有(ElevenLabs已接入)。可批量申请：Copy.ai、Writesonic、Descript、Gamma、Moosend、Kajabi、ActiveCampaign等。等待用户登录PartnerStack批量申请。",
+      "completed_at": "2026-10-01"
+    },
+    {
+      "id": "P0-GA4-BOT-FILTER-001",
+      "title": "窗口4：GA4 Bot过滤——96%新加坡数据中心爬虫污染数据，必须过滤",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "window4"
+      ],
+      "source": "audit_findings.md P0-1 2026-09-26",
+      "description": "GA4近7天1151用户中1100(96%)来自新加坡数据中心IP，互动率仅5.8%，严重污染所有指标。必须：1)在GA4中创建Bot过滤audience（排除新加坡数据中心IP+互动率<10%+单页会话）；2)GA4管理后台启用自动Bot过滤；3)对比过滤前后数据，建立干净数据视图。",
+      "completed_date": "2026-09-30"
+    },
+    {
+      "id": "P0-GEO-ORIGINAL-DATA-001",
+      "title": "窗口3+4：每篇评测文必须包含原创测试数据/数字——Princeton研究证明Statistics Addition提升AI引用率+41%",
+      "description": "Princeton/IIT Delhi KDD 2024研究(10000次查询)证明：在内容中添加具体统计数字(百分比/数量/金额/日期)可提升AI引用率+30-41%，是所有GEO战术中效果最强的。我们当前108篇文章大量是泛泛描述，缺少原创数据。要求：1)每篇工具评测必须包含至少3个可验证数字(加载速度测试结果/功能数量/价格对比/用户数)；2)建立工具测试模板，统一测试维度(免费额度/付费起价/支持语言/API/集成数)；3)对Top50工具做实际测试，记录截图+数据。原创数据是AI引擎最偏好引用的内容，也是竞品最难复制的。",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "window3",
+        "window4"
+      ],
+      "source": "learning_2026-09-27_GEO_AI搜索前沿趋势",
+      "created_at": "2026-09-27",
+      "completed_date": "2026-09-30"
+    },
+    {
+      "id": "P0-W42-GA4-BOT-FILTER",
+      "title": "GA4设置Bot过滤器排除新加坡数据中心IP",
+      "description": "近7天97.5%用户来自新加坡(1097用户/互动6.2%/停留5秒)，为数据中心Bot。需在GA4 Admin创建内部流量过滤器，排除新加坡数据中心IP段。所有后续报告分'全量/真实用户'双口径。",
+      "priority": "P0",
+      "assigned_to": [
+        "window4"
+      ],
+      "status": "completed",
+      "created_at": "2026-09-28 08:05",
+      "source": "commander_weekly_review_2026-09-28",
+      "acceptance_criteria": "GA4过滤器生效，真实用户口径中新加坡Bot占比<5%",
+      "completed_date": "2026-09-30"
+    },
+    {
+      "id": "P0-MONETIZE-BROKEN-LINKS",
+      "title": "修复40个失效联盟链接（ElevenLabs 404/Midjourney 403/OpenAI 403等），ElevenLabs是唯一affiliateUrl工具必须立即修复",
+      "priority": "P0",
+      "assigned_to": [
+        "window5"
+      ],
+      "status": "completed",
+      "source": "monetization_audit.md",
+      "description": "审计发现50个联盟链接中40个失效(80%)。ElevenLabs链接try.elevenlabs.io/e45ubw2ct0ag返回404——这是tools.json中唯一有affiliateUrl的工具，等于变现入口完全断了。Midjourney/OpenAI返回403可能是反爬，需核实真实可用性。",
+      "created_at": "2026-09-28T22:34:34.716219",
+      "created_by": "commander-daily-dispatch-2200",
+      "completed_at": "2026-09-30",
+      "completion_note": "GET验证确认ElevenLabs链接200正常(之前HEAD 404为误报)。403链接均为Midjourney/OpenAI/Canva反爬，浏览器可正常访问。无需修复。"
+    },
+    {
+      "id": "gsc-discovered-not-indexed",
+      "title": "343页已发现未索引（302个工具页+28个博客页+7个alternatives页），加速索引",
+      "description": "GSC显示343页Google已发现但未抓取。其中302个是/tools/工具详情页（核心流量页）。操作：1)在GSC手动用网址检查请求索引Top10最重要的工具页;2)确保sitemap包含所有工具页;3)检查这些页面是否在robots.txt中被屏蔽;4)检查页面加载速度和内容质量。这些页面上次抓取日期是1970年说明Google从未爬过",
+      "assigned_to": [
+        "window1",
+        "window4"
+      ],
+      "priority": "P0",
+      "source": "gsc_coverage_export_2026-09-29",
+      "status": "completed",
+      "completed_date": "2026-09-30"
+    },
+    {
+      "id": "kw_r2_lovable_vs_boltnew",
+      "task": "写对比页：Lovable vs Bolt.new（KD=1.0，7个弱域名，P0）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "source": "keyword_research_round2_2026-09-29",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "lovable-vs-bolt-new",
+        "weak_domains": 7
+      },
+      "status": "completed",
+      "created_at": "2026-09-29",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
+    },
+    {
+      "id": "kw_r3_otter_alternatives",
+      "task": "写替代方案页：Otter.ai alternatives（KD=1.0，8弱域名，会议转录新品类）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "source": "keyword_research_round3_2026-09-30",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "slug": "otter-ai-alternatives",
+        "weak_domains": 8
+      },
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
+    },
+    {
+      "id": "kw_r3_gemini_vs_perplexity",
+      "task": "写对比页：Gemini vs Perplexity（KD=1.0，7弱域名）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "source": "keyword_research_round3_2026-09-30",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "slug": "gemini-vs-perplexity",
+        "weak_domains": 7
+      },
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
+    },
+    {
+      "id": "kw_r3_beautiful_ai_alternatives",
+      "task": "写替代方案页：Beautiful.ai alternatives（KD=1.0，8弱域名，AI演示新品类）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "source": "keyword_research_round3_2026-09-30",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "slug": "beautiful-ai-alternatives",
+        "weak_domains": 8
+      },
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
+    },
+    {
+      "id": "kw_r3_devin_ai_review",
+      "task": "写评测页：Devin AI review（KD=1.0，6弱域名）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "source": "keyword_research_round3_2026-09-30",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "slug": "devin-ai-review",
+        "weak_domains": 6
+      },
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
+    },
+    {
+      "id": "kw_r4_motion_ai_alternatives",
+      "task": "写替代方案页：Motion AI alternatives（KD=4.0，7弱域名，AI日历调度）",
+      "assigned_to": [
+        "window3"
+      ],
+      "priority": "P0",
+      "source": "keyword_research_round4_2026-09-30",
+      "keyword_data": {
+        "kd": 4.0,
+        "intent": "commercial",
+        "slug": "motion-ai-alternatives",
+        "weak_domains": 7
+      },
+      "status": "completed",
+      "created_at": "2026-09-30",
+      "completed_at": "2026-09-30",
+      "research_round": "round5_2026-09-30"
+    },
+    {
+      "id": "P1-RESTORE-ROUTES-001",
+      "title": "恢复og/compare/search三个路由（改为兼容静态导出）",
+      "description": "build时临时移出app/目录，需改为generateStaticParams或静态化",
+      "assigned_to": [
+        "window1"
+      ],
+      "priority": "P1",
+      "source": "migration",
+      "status": "completed",
+      "created": "2026-10-02"
+    },
+    {
+      "id": "P0-GSC-PROXY-FETCH-001",
+      "title": "修复GSC数据拉取：脚本需走代理+更新GitHub Secrets为新服务账号",
+      "description": "1) fetch_gsc.py用httplib2不读HTTPS_PROXY环境变量，需显式配proxy_info 2) GitHub Secrets GOOGLE_SERVICE_ACCOUNT_JSON还是旧账号，需换成新qx273344@gmail.com的JSON 3) 已5天无新GSC数据，指挥官日报缺流量指标",
+      "assigned_to": [
+        "window4"
+      ],
+      "priority": "P0",
+      "source": "commander_scheduling",
+      "status": "completed",
+      "created": "2026-10-03",
+      "completed_at": "2026-10-07",
+      "note": "GitHub Secret已更新为新服务账号，CI验证通过，数据恢复自动拉取"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -6806,8 +6810,8 @@
       "live_verified": true
     }
   ],
-  "last_commander_review": "2026-09-28 08:05",
-  "commander_health_score": 5.3,
+  "last_commander_review": "2026-10-08T01:27:18.302187",
+  "commander_health_score": 75,
   "last_analytics_run": "2026-09-28 09:16",
   "ga4_api_status": "BROKEN - service account not found, superseded by Ahrefs Web Analytics",
   "gsc_latest_clicks": 9,
