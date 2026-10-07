@@ -1,0 +1,323 @@
+{
+  "gemini-3-vs-gpt5": {
+    "keyword": "Gemini 3 vs GPT-5",
+    "top_competitors": [
+      {
+        "title": "How does GPT 5 Pro (the $200 version) stack up to Gemini ...",
+        "url": "https://www.reddit.com/r/ChatGPTPro/comments/1p1bnpi/how_does_gpt_5_pro_the_200_version_stack_up_to/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Gemini 3.0 Pro vs GPT 5.1: Finding the best model for coding",
+        "url": "https://composio.dev/content/gemini-3-pro-vs-gpt-5-1",
+        "domain": "composio.dev"
+      },
+      {
+        "title": "Gemini 3 vs GPT 5.1: Which is Better?",
+        "url": "https://www.analyticsvidhya.com/blog/2025/11/gemini-3-vs-gpt-5-1/",
+        "domain": "www.analyticsvidhya.com"
+      }
+    ],
+    "paa": [
+      "Is Gemini 3 better than ChatGPT 5?",
+      "Why is Gemini 3 so much better?",
+      "Is GPT-5.6 better than Gemini?",
+      "Is Gemini better than ChatGPT now?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "claude-opus-45-vs-gpt5": {
+    "keyword": "Claude Opus 4.5 vs GPT-5",
+    "top_competitors": [
+      {
+        "title": "GPT 5.2 High vs Opus 4.5 Thinking - For coding which is ...",
+        "url": "https://www.reddit.com/r/cursor/comments/1pmmct8/gpt_52_high_vs_opus_45_thinking_for_coding_which/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "My Opinion: Opus 4.5 vs ChatGPT 5.2",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1q5p8d8/my_opinion_opus_45_vs_chatgpt_52/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "GPT-5 vs Claude 4.5 — which is better and when to use each? - Discussions",
+        "url": "https://forum.cursor.com/t/gpt-5-vs-claude-4-5-which-is-better-and-when-to-use-each/137211",
+        "domain": "forum.cursor.com"
+      }
+    ],
+    "paa": [
+      "Is Claude Opus better than ChatGPT 5?",
+      "Is Claude Opus or GPT-5.6 better?",
+      "Which one is better, GPT or Claude?",
+      "When to use Claude opus vs GPT?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "deepseek-v3-vs-r1": {
+    "keyword": "DeepSeek V3 vs R1",
+    "top_competitors": [
+      {
+        "title": "The Complete Guide to DeepSeek Models: V3, R1, V4 and ...",
+        "url": "https://www.bentoml.com/blog/the-complete-guide-to-deepseek-models-from-v3-to-r1-and-beyond",
+        "domain": "www.bentoml.com"
+      },
+      {
+        "title": "DeepSeek V3 vs R1: A Guide With Examples",
+        "url": "https://www.datacamp.com/blog/deepseek-r1-vs-v3",
+        "domain": "www.datacamp.com"
+      },
+      {
+        "title": "New deepseek v3 vs R1 (left is v3) : r/singularity",
+        "url": "https://www.reddit.com/r/singularity/comments/1jiqj2z/new_deepseek_v3_vs_r1_left_is_v3/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "What's the difference between DeepSeek-R1 and V3?",
+      "Which DeepSeek version is considered the best?",
+      "What is DeepSeek-V3?",
+      "What is DeepSeek-R1 used for?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "zapware-review": {
+    "keyword": "Zapware AI review",
+    "top_competitors": [
+      {
+        "title": "ZAPWARE Outdoors (@zapware_) · Catskills, NY",
+        "url": "https://www.instagram.com/zapware_/?hl=en",
+        "domain": "www.instagram.com"
+      },
+      {
+        "title": "My honest Zapier review after 6 months of use",
+        "url": "https://www.reddit.com/r/zapier/comments/1rcgpeu/my_honest_zapier_review_after_6_months_of_use/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "ZAPWARE",
+        "url": "https://zapwareoutdoors.com/",
+        "domain": "zapwareoutdoors.com"
+      }
+    ],
+    "paa": [],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "replit-ai-agent-review": {
+    "keyword": "Replit AI Agent review",
+    "top_competitors": [
+      {
+        "title": "Buyer Beware: Replit's AI Agent Review",
+        "url": "https://www.reddit.com/r/replit/comments/1fahuge/buyer_beware_replits_ai_agent_review/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Replit Review 2026: 36 Minutes to Build One App (Honest ...",
+        "url": "https://www.superblocks.com/blog/replit-review",
+        "domain": "www.superblocks.com"
+      },
+      {
+        "title": "Replit First Impression: An Honest Review After Testing It With ...",
+        "url": "https://mohessaid.medium.com/replit-first-impression-an-honest-review-after-testing-it-with-a-mobile-app-cc13f15f2013",
+        "domain": "mohessaid.medium.com"
+      }
+    ],
+    "paa": [
+      "Is Replit Agent any good?",
+      "Is Replit AI agent better than ChatGPT?",
+      "What are the downsides of Replit?",
+      "Is Replit AI agent free?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "v0-dev-review": {
+    "keyword": "v0.dev review 2026",
+    "top_competitors": [
+      {
+        "title": "V0 by Vercel Review 2026: Is It Worth It?",
+        "url": "https://www.nocode.mba/articles/v0-review-ai-apps",
+        "domain": "www.nocode.mba"
+      },
+      {
+        "title": "V0 Reviews | Read Customer Service Reviews of v0.dev",
+        "url": "https://www.trustpilot.com/review/v0.dev",
+        "domain": "www.trustpilot.com"
+      },
+      {
+        "title": "v0 by Vercel Review 2026 - Pricing, Limits, Full-Stack Picks",
+        "url": "https://www.taskade.com/blog/v0-review",
+        "domain": "www.taskade.com"
+      }
+    ],
+    "paa": [],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "bolt-new-review": {
+    "keyword": "Bolt.new review 2026",
+    "top_competitors": [
+      {
+        "title": "Bolt.new Review 2026: The AI App Builder That Thinks ...",
+        "url": "https://allaboutcookies.org/bolt-new-review",
+        "domain": "allaboutcookies.org"
+      },
+      {
+        "title": "bolt.new Reviews (2026)",
+        "url": "https://www.producthunt.com/products/bolt-new/reviews",
+        "domain": "www.producthunt.com"
+      },
+      {
+        "title": "Bolt.new Reviews 2026: Details, Pricing, & Features",
+        "url": "https://www.g2.com/products/bolt-new/reviews",
+        "domain": "www.g2.com"
+      }
+    ],
+    "paa": [],
+    "weak_in_top3": 0,
+    "kd": "medium"
+  },
+  "reworkd-review": {
+    "keyword": "Reworkd AI review",
+    "top_competitors": [
+      {
+        "title": "AgentGPT: Autonomous AI agents in your browser : r/reactjs",
+        "url": "https://www.reddit.com/r/reactjs/comments/12g9d1g/agentgpt_autonomous_ai_agents_in_your_browser/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Reworkd: The simplest way to extract web data at scale",
+        "url": "https://www.ycombinator.com/companies/reworkd",
+        "domain": "www.ycombinator.com"
+      },
+      {
+        "title": "Reworkd",
+        "url": "https://github.com/reworkd",
+        "domain": "github.com"
+      }
+    ],
+    "paa": [
+      "Which AI agent builder is the best?",
+      "What is reworkd?",
+      "Is copy AI worth paying for?",
+      "Which AI tool is best for sales?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "taskade-review": {
+    "keyword": "Taskade AI review",
+    "top_competitors": [
+      {
+        "title": "Taskade Review: Features, Pricing, and Alternatives in 2026",
+        "url": "https://www.lindy.ai/blog/taskade-review",
+        "domain": "www.lindy.ai"
+      },
+      {
+        "title": "Has anyone tried Taskade? If so, how does it compare to ...",
+        "url": "https://www.reddit.com/r/Notion/comments/iowdwh/has_anyone_tried_taskade_if_so_how_does_it/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Read Customer Service Reviews of taskade.com",
+        "url": "https://www.trustpilot.com/review/taskade.com",
+        "domain": "www.trustpilot.com"
+      }
+    ],
+    "paa": [
+      "Is taskade legit?",
+      "How much does taskade cost?",
+      "Which is better, Notion or Taskade?",
+      "What does taskade do?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "best-ai-podcast-generator": {
+    "keyword": "best AI podcast generator",
+    "top_competitors": [
+      {
+        "title": "Which tool can create such AI podcast? : r/notebooklm",
+        "url": "https://www.reddit.com/r/notebooklm/comments/1ji68zq/which_tool_can_create_such_ai_podcast/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Free AI Podcast Generator | Instant Podcast from Any Content",
+        "url": "https://monica.im/ai-podcast",
+        "domain": "monica.im"
+      },
+      {
+        "title": "Wondercraft | AI Podcast Generator",
+        "url": "https://www.wondercraft.ai/tools/ai-podcast-generator",
+        "domain": "www.wondercraft.ai"
+      }
+    ],
+    "paa": [
+      "Which AI podcast generator is the best?",
+      "Can ChatGPT generate a podcast?",
+      "What are the top 5 AI podcasts?",
+      "How much does a podcast with 5000 listeners make?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "best-ai-website-builder-2026": {
+    "keyword": "best AI website builder 2026",
+    "top_competitors": [
+      {
+        "title": "The 10 Best AI Website Builders in 2026: A Global Guide - Titan",
+        "url": "https://titan.email/best-ai-website-builders/",
+        "domain": "titan.email"
+      },
+      {
+        "title": "Best Website Builders for 2026",
+        "url": "https://launchthedamnthing.com/blog/best-website-builders",
+        "domain": "launchthedamnthing.com"
+      },
+      {
+        "title": "Best AI Website Builder 2026: 12 Tools Tested (3 Are…",
+        "url": "https://www.nxcode.io/resources/news/best-ai-website-builder-2026",
+        "domain": "www.nxcode.io"
+      }
+    ],
+    "paa": [
+      "What are the top 5 AI website builders?",
+      "What is the best AI platform in 2026?",
+      "What is the best way to build a website in 2026?",
+      "What AI can actually build a website?"
+    ],
+    "weak_in_top3": 0,
+    "kd": "medium"
+  },
+  "best-ai-seo-tools-2026": {
+    "keyword": "best AI SEO tools 2026",
+    "top_competitors": [
+      {
+        "title": "19 Best AI SEO Tools in 2026: Tested by SEO Experts",
+        "url": "https://onelittleweb.com/top-tools/best-ai-seo-tools/",
+        "domain": "onelittleweb.com"
+      },
+      {
+        "title": "We tested 15 best AI SEO tools. here's our favorite for 2026",
+        "url": "https://www.rankability.com/blog/best-ai-seo-tools/",
+        "domain": "www.rankability.com"
+      },
+      {
+        "title": "The 20 best SEO tools in 2026? I personally tested all tools",
+        "url": "https://morningscore.io/best-seo-tools/",
+        "domain": "morningscore.io"
+      }
+    ],
+    "paa": [
+      "What are the best AI SEO tools for 2026?",
+      "Is SEO still worth it in 2026?",
+      "Which AI tool is best for SEO?",
+      "Which AI tool is the best in 2026?"
+    ],
+    "weak_in_top3": 0,
+    "kd": "medium"
+  }
+}

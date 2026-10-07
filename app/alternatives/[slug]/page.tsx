@@ -78,11 +78,20 @@ export async function generateMetadata({
       url: `https://www.aitoolcrux.com/alternatives/${page.slug}`,
       type: 'article',
       siteName: 'AIToolCrux',
+      images: [
+        {
+          url: `https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(page.title.slice(0, 60))}&description=${encodeURIComponent(shortDesc.slice(0, 100))}&category=Alternatives`,
+          width: 1200,
+          height: 630,
+          alt: page.title,
+        },
+      ],
     },
     twitter: {
       card: 'summary_large_image',
       title: page.title.length > 60 ? page.title.slice(0, 57) + '...' : page.title,
       description: shortDesc,
+      images: [`https://www.aitoolcrux.com/api/og?title=${encodeURIComponent(page.title.slice(0, 60))}&description=${encodeURIComponent(shortDesc.slice(0, 100))}&category=Alternatives`],
     },
   };
 }
@@ -385,7 +394,7 @@ export default function AlternativePage({ params }: { params: { slug: string } }
                   </div>
                   <Link
                     href={`/tools/${alt.slug}`}
-                    className="px-4 py-2 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors"
+                    className="inline-flex items-center px-4 min-h-[44px] bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors"
                   >
                     Full Review →
                   </Link>

@@ -1,3 +1,6 @@
+'use client';
+
+import { useState, useMemo, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { ArrowLeft, Search, TrendingUp, PackageSearch } from 'lucide-react';
 import toolsData from '@/data/tools-index.json';
@@ -31,46 +34,50 @@ function HighlightText({ text, query }: { text: string; query: string }) {
           </mark>
         ) : (
           <span key={i}>{part}</span>
-        ),
+        )
       )}
     </>
   );
 }
 
-export default function SearchPage({ searchParams }: { searchParams: { q?: string } }) {
-  const query = searchParams.q?.trim() ?? '';
-  const q = query.toLowerCase();
-  const results = query
-    ? (toolsData.filter(
-        (tool) =>
-          tool.name.toLowerCase().includes(q) ||
-          tool.vendor.toLowerCase().includes(q) ||
-          tool.description.toLowerCase().includes(q) ||
-          tool.tags.some((tag) => tag.toLowerCase().includes(q)),
-      ) as Tool[])
-    : [];
+function SearchPageInner() {
+  const [query, setQuery] = useState('');
 
-  const hotTools = [...toolsData]
-    .map((t) => ({ ...t, total: calculateScoreResult(t.scores).total }))
-    .sort((a, b) => b.total - a.total)
-    .slice(0, 6);
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q) setQuery(q);
+  }, []);
+
+  const trimmedQuery = query.trim();
+  const q = trimmedQuery.toLowerCase();
+
+  const results = useMemo(() => {
+    if (!trimmedQuery) return [];
+    return (toolsData.filter(
+      (tool) =>
+        tool.name.toLowerCase().includes(q) ||
+        tool.vendor.toLowerCase().includes(q) ||
+        tool.description.toLowerCase().includes(q) ||
+        tool.tags.some((tag) => tag.toLowerCase().includes(q)),
+    ) as Tool[]);
+  }, [trimmedQuery, q]);
+
+  const hotTools = useMemo(
+    () =>
+      [...toolsData]
+        .map((t) => ({ ...t, total: calculateScoreResult(t.scores).total }))
+        .sort((a, b) => b.total - a.total)
+        .slice(0, 6),
+    []
+  );
+
   const hotKeywords = [
-    'ChatGPT',
-    'Claude',
-    'Gemini',
-    'Midjourney',
-    'DALL-E',
-    'GitHub Copilot',
-    'Cursor',
-    'Jasper',
-    'Writesonic',
-    'Runway',
-    'Sora',
-    'ElevenLabs',
-    'Notion AI',
-    'Perplexity',
-    'AutoGPT',
+    'ChatGPT', 'Claude', 'Gemini', 'Midjourney', 'DALL-E',
+    'GitHub Copilot', 'Cursor', 'Jasper', 'Writesonic', 'Runway',
+    'Sora', 'ElevenLabs', 'Notion AI', 'Perplexity', 'AutoGPT',
   ];
+
   const categoryShortcuts = [
     { slug: 'chat', name: 'AI Chat', icon: '💬' },
     { slug: 'writing', name: 'AI Writing', icon: '✍️' },
@@ -92,7 +99,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
         Back to Home
       </Link>
 
-      {!query && (
+      {!trimmedQuery && (
         <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-8 text-center">
           <div className="w-16 h-16 mx-auto mb-4 flex items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20">
             <Search className="w-8 h-8 text-emerald-500" />
@@ -107,15 +114,13 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
             {hotKeywords.map((kw) => (
               <Link
                 key={kw}
-                href={`/search?q=${encodeURIComponent(kw)}`}
+                href={`/search/?q=${encodeURIComponent(kw)}`}
                 className="px-3.5 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm rounded-lg border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all"
               >
                 {kw}
               </Link>
             ))}
           </div>
-
-          {/* Categories快捷入口 */}
           <div className="border-t border-gray-100 dark:border-gray-800 pt-6">
             <p className="text-sm font-medium text-gray-500 dark:text-gray-400 mb-4">
               Or browse by category
@@ -124,7 +129,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
               {categoryShortcuts.map((cat) => (
                 <Link
                   key={cat.slug}
-                  href={`/category/${cat.slug}`}
+                  href={`/category/${cat.slug}/`}
                   className="flex items-center gap-2 px-3 py-2.5 bg-gray-50 dark:bg-gray-800 rounded-lg border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all text-left"
                 >
                   <span className="text-lg">{cat.icon}</span>
@@ -138,12 +143,12 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
         </div>
       )}
 
-      {query && (
+      {trimmedQuery && (
         <>
           <div className="mb-8">
             <h2 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white mb-2">
               Search Results:{' '}
-              <span className="text-emerald-600 dark:text-emerald-400">"{query}"</span>
+              <span className="text-emerald-600 dark:text-emerald-400">"{trimmedQuery}"</span>
             </h2>
             <p className="text-sm text-gray-500 dark:text-gray-400">
               Found{' '}
@@ -159,7 +164,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                 return (
                   <Link
                     key={tool.id}
-                    href={`/tools/${tool.slug}`}
+                    href={`/tools/${tool.slug}/`}
                     className="group block bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg dark:hover:shadow-xl hover:border-emerald-200 dark:hover:border-emerald-700 hover:-translate-y-0.5 transition-all p-5 sm:p-6"
                   >
                     <div className="flex flex-col sm:flex-row sm:items-start gap-4">
@@ -171,16 +176,14 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                           <div className="text-2xl font-extrabold text-gray-900 dark:text-white">
                             {total.toFixed(1)}
                           </div>
-                          <span
-                            className={`inline-block px-2 py-0.5 rounded-md text-xs font-bold ${GRADE_STYLES[grade]}`}
-                          >
+                          <span className={`inline-block px-2 py-0.5 rounded-md text-xs font-bold ${GRADE_STYLES[grade]}`}>
                             Grade {grade}
                           </span>
                         </div>
                       </div>
                       <div className="flex-1 min-w-0">
                         <h3 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-1">
-                          <HighlightText text={tool.name} query={query} />
+                          <HighlightText text={tool.name} query={trimmedQuery} />
                         </h3>
                         <div className="flex flex-wrap items-center gap-x-4 gap-y-1 text-xs text-gray-400 dark:text-gray-500 mb-2">
                           <span>{tool.vendor}</span>
@@ -188,7 +191,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                           <span>Updated {tool.lastUpdated}</span>
                         </div>
                         <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2 mb-3">
-                          <HighlightText text={tool.description} query={query} />
+                          <HighlightText text={tool.description} query={trimmedQuery} />
                         </p>
                         <div className="flex flex-wrap gap-1.5">
                           {tool.tags.slice(0, 5).map((tag) => (
@@ -196,7 +199,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                               key={tag}
                               className="px-2 py-0.5 bg-gray-50 dark:bg-gray-800 text-gray-500 dark:text-gray-400 rounded-md text-xs font-medium border border-gray-100 dark:border-gray-800"
                             >
-                              <HighlightText text={tag} query={query} />
+                              <HighlightText text={tag} query={trimmedQuery} />
                             </span>
                           ))}
                         </div>
@@ -213,7 +216,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                   <PackageSearch className="w-10 h-10 text-gray-300 dark:text-gray-600" />
                 </div>
                 <h2 className="text-xl font-bold text-gray-700 dark:text-gray-300 mb-2">
-                  No tools found matching "{query}"
+                  No tools found matching "{trimmedQuery}"
                 </h2>
                 <p className="text-sm text-gray-400 dark:text-gray-500 mb-6">
                   Try different keywords, or browse popular tools below
@@ -222,7 +225,7 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
                   {hotKeywords.map((kw) => (
                     <Link
                       key={kw}
-                      href={`/search?q=${encodeURIComponent(kw)}`}
+                      href={`/search/?q=${encodeURIComponent(kw)}`}
                       className="px-3.5 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm rounded-lg border border-gray-100 dark:border-gray-800 hover:border-emerald-200 dark:hover:border-emerald-700 hover:text-emerald-600 dark:hover:text-emerald-400 hover:bg-emerald-50 dark:hover:bg-emerald-900/20 transition-all"
                     >
                       {kw}
@@ -240,5 +243,13 @@ export default function SearchPage({ searchParams }: { searchParams: { q?: strin
         </>
       )}
     </div>
+  );
+}
+
+export default function SearchPage() {
+  return (
+    <Suspense fallback={<div className="max-w-5xl mx-auto px-4 py-8"><div className="animate-pulse bg-gray-200 dark:bg-gray-800 h-96 rounded-2xl" /></div>}>
+      <SearchPageInner />
+    </Suspense>
   );
 }

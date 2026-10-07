@@ -1,11 +1,11 @@
-import type { Metadata } from 'next';
+﻿import type { Metadata } from 'next';
 import Link from 'next/link';
 import { Shield, Award, Users, Mail, Github, ExternalLink, CheckCircle2, Star } from 'lucide-react';
 
 export const metadata: Metadata = {
-  title: 'About AIToolCrux: Best AI Tools Reviewed & Tested in 2026',
+  title: 'About AIToolCrux: AI Tools Reviewed & Tested 2026',
   description:
-    'AIToolCrux independently tests and reviews the best AI tools of 2026. Compare AI chatbots, image generators, voice tools, and more with real screenshots and pricing.',
+    'AIToolCrux tests and reviews the best AI tools of 2026. Compare chatbots, image generators, voice tools, and more with real screenshots and pricing.',
   alternates: {
     canonical: 'https://www.aitoolcrux.com/about',
   },

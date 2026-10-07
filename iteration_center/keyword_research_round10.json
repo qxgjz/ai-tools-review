@@ -1,0 +1,195 @@
+{
+  "gpt-5-vs-claude-opus": {
+    "keyword": "GPT-5 vs Claude Opus",
+    "top_competitors": [
+      {
+        "title": "OpenAI GPT-5 vs. Claude Opus 4.1: A coding comparison",
+        "url": "https://composio.dev/content/openai-gpt-5-vs-claude-opus-4-1-a-coding-comparison",
+        "domain": "composio.dev"
+      },
+      {
+        "title": "GPT-5 performs much worse than Opus 4.1 in my use case. ...",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1mkixi1/gpt5_performs_much_worse_than_opus_41_in_my_use/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Claude Opus 5 vs ChatGPT 5.6 Sol: Which Is Better?",
+        "url": "https://myclaw.ai/blog/claude-opus-5-vs-chatgpt-5-6-sol",
+        "domain": "myclaw.ai"
+      }
+    ],
+    "paa": [
+      "Is Claude Opus better than GPT-5?",
+      "Is Claude Opus or gpt-5.6 better?",
+      "Is Claude actually better than GPT?",
+      "How good is GPT-5.5 compared to Claude?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "gemini-25-vs-gpt5": {
+    "keyword": "Gemini 2.5 vs GPT-5",
+    "top_competitors": [
+      {
+        "title": "Analysis: GPT 5 vs Gemini 2.5 Pro : r/Bard",
+        "url": "https://www.reddit.com/r/Bard/comments/1mny36p/analysis_gpt_5_vs_gemini_25_pro/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "GPT-5 Thinking vs Gemini 2.5 pro review (for scientific applications)",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1mwqqfg/gpt5_thinking_vs_gemini_25_pro_review_for/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Gemini 2.5 Pro vs. ChatGPT-5 Which AI Comes Out on Top? I recently ran ...",
+        "url": "https://www.facebook.com/groups/698593531630485/posts/1371522137670951/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "Is Gemini really better than GPT?",
+      "Is GPT-5.5 better than Gemini Pro?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "cursor-vs-windsurf-2026": {
+    "keyword": "Cursor vs Windsurf 2026",
+    "top_competitors": [
+      {
+        "title": "Windsurf vs Cursor 2026: Which AI IDE Fits Your Stack?",
+        "url": "https://www.verdent.ai/guides/windsurf-vs-cursor-2026",
+        "domain": "www.verdent.ai"
+      },
+      {
+        "title": "Windsurf vs Cursor (2026): I Tested Both — Here's the Verdict",
+        "url": "https://www.vibecodingacademy.ai/blog/windsurf-vs-cursor",
+        "domain": "www.vibecodingacademy.ai"
+      },
+      {
+        "title": "Cursor vs VS Code vs Windsurf: 2026 Comparison",
+        "url": "https://daily.dev/blog/ai-code-editor-comparison-cursor-vs-vs-code-vs-windsurf/",
+        "domain": "daily.dev"
+      }
+    ],
+    "paa": [
+      "Is Windsurf better than Cursor 2026?",
+      "Is Windsurf as good as Cursor?",
+      "Is Cursor still worth it in 2026?",
+      "Is Windsurf discontinued?"
+    ],
+    "weak_in_top3": 0,
+    "kd": "medium"
+  },
+  "jasper-ai-alternatives": {
+    "keyword": "Jasper AI alternatives",
+    "top_competitors": [
+      {
+        "title": "The 9 best Jasper AI alternatives in 2026 (tested and ranked)",
+        "url": "https://www.eesel.ai/blog/jasper-ai-alternatives",
+        "domain": "www.eesel.ai"
+      },
+      {
+        "title": "Jasper AI alternative : r/marketing",
+        "url": "https://www.reddit.com/r/marketing/comments/15xnwqm/jasper_ai_alternative/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Top Jasper Alternatives & Competitors 2026",
+        "url": "https://www.gartner.com/reviews/product/jasper/alternatives",
+        "domain": "www.gartner.com"
+      }
+    ],
+    "paa": [
+      "What are Jasper AI's main competitors?",
+      "Is Jasper AI still worth it?",
+      "Is there a free version of Jasper AI?",
+      "Is copy AI better than Jasper?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "lovable-review": {
+    "keyword": "Lovable review",
+    "top_competitors": [
+      {
+        "title": "Lovable Review 2026",
+        "url": "https://hackceleration.com/labs/review/lovable",
+        "domain": "hackceleration.com"
+      },
+      {
+        "title": "Is Lovable bad?",
+        "url": "https://www.reddit.com/r/lovable/comments/1qikfwa/is_lovable_bad/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Read Customer Service Reviews of lovable.dev",
+        "url": "https://www.trustpilot.com/review/lovable.dev",
+        "domain": "www.trustpilot.com"
+      }
+    ],
+    "paa": [
+      "Is Lovable actually worth it?",
+      "Which AI is better than Lovable?",
+      "Is Lovable legitimate?",
+      "What is the difference between Lovable and chatgpt?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "manus-ai-review": {
+    "keyword": "Manus AI review",
+    "top_competitors": [
+      {
+        "title": "Manus AI Users — What Has Your Experience Really Been ...",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1pau2f2/manus_ai_users_what_has_your_experience_really/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "My Honest Manus AI Review: Can It Win Against The AI ...",
+        "url": "https://www.lindy.ai/blog/manus-ai-review",
+        "domain": "www.lindy.ai"
+      },
+      {
+        "title": "Manus AI Review 2026: What the Autonomous…",
+        "url": "https://till-freitag.com/en/blog/manus-ai-review-en",
+        "domain": "till-freitag.com"
+      }
+    ],
+    "paa": [
+      "Is Manus AI actually good?",
+      "Is Manus AI better than gpt?",
+      "Is Manus AI safe to use?",
+      "Is there an AI better than Manus?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "openai-o3-review": {
+    "keyword": "OpenAI o3 review",
+    "top_competitors": [
+      {
+        "title": "OpenAI's o3: Over-optimization is back and weirder than ever",
+        "url": "https://www.interconnects.ai/p/openais-o3-over-optimization-is-back",
+        "domain": "www.interconnects.ai"
+      },
+      {
+        "title": "The Complete Guide to ChatGPT o3: Includes Tests vs. ...",
+        "url": "https://natesnewsletter.substack.com/p/the-complete-guide-to-chatgpt-o3",
+        "domain": "natesnewsletter.substack.com"
+      },
+      {
+        "title": "The new OpenAI model o3 scores better than 99.8% of competitive coders ...",
+        "url": "https://www.reddit.com/r/programming/comments/1hir7lb/the_new_openai_model_o3_scores_better_than_998_of/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is OpenAI retiring o3?",
+      "Is ChatGPT 3.0 safe to use?",
+      "What is the best OpenAI model right now?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  }
+}

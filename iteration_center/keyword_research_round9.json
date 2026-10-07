@@ -1,0 +1,338 @@
+{
+  "chatgpt-vs-grok": {
+    "keyword": "ChatGPT vs Grok",
+    "top_competitors": [
+      {
+        "title": "Can someone tell me what makes people think Grok is ...",
+        "url": "https://www.reddit.com/r/artificial/comments/1m6qdic/can_someone_tell_me_what_makes_people_think_grok/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "ChatGPT VS Grok",
+        "url": "https://www.reddit.com/r/ChatGPTcomplaints/comments/1w8riex/chatgpt_vs_grok/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "What are the differences between chatgpt, Gemini, and grok?",
+        "url": "https://www.quora.com/What-are-the-differences-between-chatgpt-Gemini-and-grok",
+        "domain": "www.quora.com"
+      }
+    ],
+    "paa": [
+      "Which AI is better, Grok or ChatGPT?",
+      "Why do people use Grok instead of ChatGPT?",
+      "Is Grok currently the best AI?",
+      "What AI is better than ChatGPT?"
+    ],
+    "weak_domains_in_top3": 3,
+    "kd_estimate": "low"
+  },
+  "claude-vs-copilot": {
+    "keyword": "Claude vs Microsoft Copilot",
+    "top_competitors": [
+      {
+        "title": "Copilot vs Claude",
+        "url": "https://www.donbarger.com/p/copilot-vs-claude",
+        "domain": "www.donbarger.com"
+      },
+      {
+        "title": "Claude for Microsoft 365 feels smarter than Copilot… but ...",
+        "url": "https://www.reddit.com/r/microsoft_365_copilot/comments/1t72b8d/claude_for_microsoft_365_feels_smarter_than/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Claude vs Microsoft Copilot: Which AI Assistant Is Better for ...",
+        "url": "https://www.trustedtechteam.com/blogs/microsoft-365/claude-vs-microsoft-copilot",
+        "domain": "www.trustedtechteam.com"
+      }
+    ],
+    "paa": [
+      "Why is Claude so much better than Microsoft Copilot?",
+      "What can Claude do that Copilot cannot?",
+      "Which is better for me, Claude, ChatGPT, or Copilot?",
+      "Is Microsoft Copilot cheaper than Claude?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "gemini-vs-grok": {
+    "keyword": "Gemini vs Grok",
+    "top_competitors": [
+      {
+        "title": "Grok vs gemini vs chat gpt : r/GeminiAI",
+        "url": "https://www.reddit.com/r/GeminiAI/comments/1qfyrdg/grok_vs_gemini_vs_chat_gpt/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Grok vs Gemini: Which Is Better? An Honest Comparison (2026)",
+        "url": "https://geotoolbox.ai/blog/grok-vs-gemini",
+        "domain": "geotoolbox.ai"
+      },
+      {
+        "title": "ChatGPT, Gemini or Grok? We Tested All 3 - VKTR",
+        "url": "https://www.vktr.com/ai-market/chatgpt-gemini-or-grok-we-tested-all-3-heres-what-you-should-know/",
+        "domain": "www.vktr.com"
+      }
+    ],
+    "paa": [
+      "Is Grok AI better than Gemini?",
+      "Can I use Grok instead of Gemini?",
+      "Which is better, ChatGPT or Gemini?",
+      "Which AI is better than Grok?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "midjourney-v7-alternatives": {
+    "keyword": "Midjourney v7 alternatives",
+    "top_competitors": [
+      {
+        "title": "New to AI – Looking for Alternatives to MidJourney ...",
+        "url": "https://www.reddit.com/r/midjourney/comments/1juftcu/new_to_ai_looking_for_alternatives_to_midjourney/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Is there anything out there that's better than MidJourney in terms of image ...",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1k7r4vm/is_there_anything_out_there_thats_better_than/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "What are the best free alternatives to Midjourney?",
+        "url": "https://www.quora.com/What-are-the-best-free-alternatives-to-Midjourney",
+        "domain": "www.quora.com"
+      }
+    ],
+    "paa": [
+      "Is there anything better than Midjourney?",
+      "Which free AI is best for art?",
+      "Is MidJourney the best AI image generator?",
+      "Is midjourney better than ChatGPT?"
+    ],
+    "weak_domains_in_top3": 3,
+    "kd_estimate": "low"
+  },
+  "synthesia-alternatives": {
+    "keyword": "Synthesia alternatives",
+    "top_competitors": [
+      {
+        "title": "Best Synthesia Alternatives (2026, Compared)",
+        "url": "https://www.colossyan.com/posts/best-synthesia-alternatives/",
+        "domain": "www.colossyan.com"
+      },
+      {
+        "title": "Openthesia: open source alternative similar to Synthesia",
+        "url": "https://www.reddit.com/r/opensource/comments/1cyyn4l/openthesia_open_source_alternative_similar_to/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Synthesia vs alternatives for course creation?",
+        "url": "https://www.reddit.com/r/OnlineEducation/comments/1q8ax0e/synthesia_vs_alternatives_for_course_creation/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is there anything better than Synthesia?",
+      "What is better, Synthesia or HeyGen?",
+      "Is there a free version of Synthesia?",
+      "What is a free alternative to Synthesia for learning piano?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "heygen-vs-synthesia": {
+    "keyword": "HeyGen vs Synthesia",
+    "top_competitors": [
+      {
+        "title": "HeyGen vs Synthesia: Don't Buy Until You See This.",
+        "url": "https://www.youtube.com/watch?v=VufiAgDbwlk",
+        "domain": "www.youtube.com"
+      },
+      {
+        "title": "My Hands-On Review of Synthesia vs. HeyGen: Here's the ...",
+        "url": "https://learn.g2.com/synthesia-vs-heygen",
+        "domain": "learn.g2.com"
+      },
+      {
+        "title": "HeyGen vs Synthesia : Which AI Video Generator is Best?",
+        "url": "https://www.heygen.com/alternatives/heygen-vs-synthesia",
+        "domain": "www.heygen.com"
+      }
+    ],
+    "paa": [
+      "Is HeyGen or Synthesia better?",
+      "What is better than HeyGen?",
+      "Is there anything better than Synthesia?",
+      "Is HeyGen a Chinese company?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "kimi-review": {
+    "keyword": "Kimi AI review",
+    "top_competitors": [
+      {
+        "title": "My practical take on Kimi AI: where it helps, where it ...",
+        "url": "https://www.reddit.com/r/kimi/comments/1tow7nt/my_practical_take_on_kimi_ai_where_it_helps_where/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "My Hands-On Review of Kimi K2 Thinking: The Open-Source AI That's ...",
+        "url": "https://www.reddit.com/r/LocalLLaMA/comments/1oqi4qp/my_handson_review_of_kimi_k2_thinking_the/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "What does everyone think of Kimi AI?",
+        "url": "https://www.facebook.com/groups/698593531630485/posts/1574471514042678/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "Is Kimi AI better than ChatGPT?",
+      "Is Kimi AI trustworthy?",
+      "Is Kimi AI completely free?",
+      "Is Kimi AI better than Deepseek?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "qwen-review": {
+    "keyword": "Qwen AI review",
+    "top_competitors": [
+      {
+        "title": "I've been using QWEN AI for more then a month now as ...",
+        "url": "https://www.reddit.com/r/Qwen_AI/comments/1nuca5k/ive_been_using_qwen_ai_for_more_then_a_month_now/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Hi. May I know how good is qwen based on consensus? What are it's main ...",
+        "url": "https://www.reddit.com/r/Qwen_AI/comments/1pqg9tn/hi_may_i_know_how_good_is_qwen_based_on_consensus/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Is anyone using Qwen? worth investigating / trying or no?",
+        "url": "https://www.facebook.com/groups/698593531630485/posts/1366670424822789/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "Is Qwen AI really good?",
+      "Which is better, Qwen AI or ChatGPT?",
+      "How safe is Qwen AI?",
+      "Is Qwen AI really free?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "grok-3-review": {
+    "keyword": "Grok 3 review",
+    "top_competitors": [
+      {
+        "title": "I Just Tested Grok 3 – And It's Both Terrifying and Brilliant",
+        "url": "https://latenode.com/blog/ai/llms-models/grok-3-review",
+        "domain": "latenode.com"
+      },
+      {
+        "title": "Grok 3 is amazing. : r/grok",
+        "url": "https://www.reddit.com/r/grok/comments/1iylcgb/grok_3_is_amazing/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Grok 3 & Grok 3 THINK Tested: Initial Impressions",
+        "url": "https://www.reddit.com/r/OpenAI/comments/1it24vt/grok_3_grok_3_think_tested_initial_impressions/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is Grok 3 really the best AI?",
+      "Is Grok 3 free to use?",
+      "Is Grok 3 or 4 better?",
+      "How much does it cost to use Grok-3?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "notebooklm-review": {
+    "keyword": "NotebookLM review",
+    "top_competitors": [
+      {
+        "title": "NotebookLM Review: There's Nothing Quite Like This AI Tool",
+        "url": "https://www.cnet.com/tech/services-and-software/notebooklm-review-bring-your-own-sources-to-this-ultrapractical-google-ai-tool/",
+        "domain": "www.cnet.com"
+      },
+      {
+        "title": "Is NotebookLM really as good as people think?",
+        "url": "https://www.reddit.com/r/notebooklm/comments/1pc2ysc/is_notebooklm_really_as_good_as_people_think/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Has Anyone Used NotebookLM? How Exactly Do You Use It, and How Is It ...",
+        "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1ftskuk/has_anyone_used_notebooklm_how_exactly_do_you_use/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is NotebookLM worth using?",
+      "Is NotebookLM better than chatgpt?",
+      "What are the disadvantages of NotebookLM?",
+      "Can NotebookLM be trusted?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "how-to-use-chatgpt-for-coding": {
+    "keyword": "how to use ChatGPT for coding",
+    "top_competitors": [
+      {
+        "title": "Tips for Coding with GPT (from someone who thinks it's ...",
+        "url": "https://www.reddit.com/r/ChatGPT/comments/1ktq9mh/tips_for_coding_with_gpt_from_someone_who_thinks/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "How do you use ChatGPT for coding?",
+        "url": "https://www.reddit.com/r/ChatGPT/comments/17u481o/how_do_you_use_chatgpt_for_coding/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Sourcing useful ChatGPT coding prompts to feature - Codex",
+        "url": "https://community.openai.com/t/sourcing-useful-chatgpt-coding-prompts-to-feature/1357452",
+        "domain": "community.openai.com"
+      }
+    ],
+    "paa": [
+      "Can you do coding with ChatGPT?",
+      "What is the 80/20 rule in coding?",
+      "How do I say \"I love you\" in coding?",
+      "Which ChatGPT mode is best for coding?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "how-to-use-claude-for-writing": {
+    "keyword": "how to use Claude for writing",
+    "top_competitors": [
+      {
+        "title": "How do you actually use Claude for your writing? : r/ClaudeAI",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1dpbxna/how_do_you_actually_use_claude_for_your_writing/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Use Claude Code! It's so much better at writing fiction.",
+        "url": "https://www.reddit.com/r/WritingWithAI/comments/1qj3n8m/use_claude_code_its_so_much_better_at_writing/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Build a Claude Skill for Better Writing",
+        "url": "https://www.linkedin.com/posts/petergyang_claude-skills-clearly-explained-in-15-minutes-activity-7417226522253545472-h-Wx",
+        "domain": "www.linkedin.com"
+      }
+    ],
+    "paa": [
+      "How can I effectively use Claude AI for writing?",
+      "How to get Claude to write properly?",
+      "How to get Claude to use your writing style?",
+      "What are the best Claude skills for writing?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  }
+}

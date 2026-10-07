@@ -19,7 +19,7 @@ function SearchBox() {
       </div>
       <button
         type="submit"
-        className="mt-3 w-full sm:w-auto px-6 py-2.5 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
+        className="mt-3 w-full sm:w-auto inline-flex items-center justify-center px-6 min-h-[44px] bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-700 transition-colors"
       >
         Search
       </button>

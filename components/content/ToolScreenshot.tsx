@@ -70,7 +70,7 @@ export function ToolScreenshot({
           onClick={() => setIsLightboxOpen(false)}
         >
           <button
-            className="absolute top-4 right-4 text-white/80 hover:text-white transition-colors"
+            className="absolute top-4 right-4 min-h-[44px] min-w-[44px] flex items-center justify-center text-white/80 hover:text-white transition-colors rounded-lg"
             onClick={() => setIsLightboxOpen(false)}
           >
             <X className="w-8 h-8" />

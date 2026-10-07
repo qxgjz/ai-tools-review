@@ -1,0 +1,267 @@
+{
+  "lovable-vs-boltnew": {
+    "keyword": "Lovable vs Bolt.new",
+    "type": "comparison",
+    "category": "AI app builders",
+    "top_competitors": [
+      {
+        "title": "Bolt vs Lovable 2026: We Tested Both, Here's Who Wins",
+        "url": "https://www.nocode.mba/articles/bolt-vs-lovable"
+      },
+      {
+        "title": "Loveable.dev vs Bolt.new : r/nocode",
+        "url": "https://www.reddit.com/r/nocode/comments/1hk4mq6/loveabledev_vs_boltnew/"
+      },
+      {
+        "title": "Lovable vs Bolt in 2026: I Tested Them with the Same Prompt",
+        "url": "https://www.banani.co/blog/lovable-vs-bolt-comparison"
+      }
+    ],
+    "paa": []
+  },
+  "claude-37-vs-gpt4o": {
+    "keyword": "Claude 3.7 vs GPT-4o",
+    "type": "comparison",
+    "category": "LLM comparison",
+    "top_competitors": [
+      {
+        "title": "chatgpt-4o-latest-0326 is now better than Claude Sonnet 3.7",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1jr8t65/chatgpt4olatest0326_is_now_better_than_claude/"
+      },
+      {
+        "title": "We benchmarked GPT-4.1: it's better at code reviews than Claude Sonnet ...",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1jz5x09/we_benchmarked_gpt41_its_better_at_code_reviews/"
+      },
+      {
+        "title": "Gpt-4o working better than claude 3.7 today - Discussions",
+        "url": "https://forum.cursor.com/t/gpt-4o-working-better-than-claude-3-7-today/74666"
+      }
+    ],
+    "paa": [
+      "What AI is better, GPT or Claude?",
+      "Is Claude 3 better than GPT-4?",
+      "Is Claude Sonnet better than ChatGPT?",
+      "Is GPT-4 discontinued?"
+    ]
+  },
+  "synthesia-vs-heygen": {
+    "keyword": "Synthesia vs HeyGen",
+    "type": "comparison",
+    "category": "AI video generation",
+    "top_competitors": [
+      {
+        "title": "HeyGen vs Synthesia: Don't Buy Until You See This.",
+        "url": "https://www.youtube.com/watch?v=VufiAgDbwlk"
+      },
+      {
+        "title": "My Hands-On Review of Synthesia vs. HeyGen: Here's the ...",
+        "url": "https://learn.g2.com/synthesia-vs-heygen"
+      },
+      {
+        "title": "HeyGen vs Synthesia : Which AI Video Generator is Best?",
+        "url": "https://www.heygen.com/alternatives/heygen-vs-synthesia"
+      }
+    ],
+    "paa": [
+      "Is HeyGen or Synthesia better?",
+      "Is HeyGen a Chinese company?",
+      "Is there anything better than Synthesia?",
+      "What is better than HeyGen?"
+    ]
+  },
+  "runway-alternatives": {
+    "keyword": "Runway ML alternatives",
+    "type": "alternatives",
+    "category": "AI video editing",
+    "top_competitors": [
+      {
+        "title": "Runway ML - Amazing image to video (alternatives)",
+        "url": "https://www.reddit.com/r/runwayml/comments/1fw3fyt/runway_ml_amazing_image_to_video_alternatives/"
+      },
+      {
+        "title": "Free Runway Alternative: Easier AI Video Generation",
+        "url": "https://www.crreo.ai/text-to-video/runway-alternative"
+      },
+      {
+        "title": "12 Best Runway Alternatives in 2026",
+        "url": "https://marketplace.relevanceai.com/compare/runway-alternatives"
+      }
+    ],
+    "paa": [
+      "Is there an NSFW AI image to video generator available?",
+      "Is there a free version of RunwayML?",
+      "What are some free alternatives to Runway?",
+      "Is RunwayML a good service?"
+    ]
+  },
+  "gemini-vs-perplexity": {
+    "keyword": "Gemini vs Perplexity",
+    "type": "comparison",
+    "category": "AI search",
+    "top_competitors": [
+      {
+        "title": "Gemini vs Perplexity for my 2026 : r/perplexity_ai",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1q0vchs/gemini_vs_perplexity_for_my_2026/"
+      },
+      {
+        "title": "Perplexity vs Gemini: Which AI Research Tool Is Better for ...",
+        "url": "https://fritz.ai/perplexity-vs-gemini/"
+      },
+      {
+        "title": "Gemini vs. Perplexity: Which AI Nailed My Prompts Best? ...",
+        "url": "https://learn.g2.com/perplexity-vs-gemini"
+      }
+    ],
+    "paa": [
+      "Which is better, Gemini AI or Perplexity?",
+      "Is Perplexity in trouble?",
+      "Which is better, ChatGPT or Gemini or Copilot or Perplexity?",
+      "What AI is better than Gemini?"
+    ]
+  },
+  "beautiful-ai-alternatives": {
+    "keyword": "Beautiful.ai alternatives",
+    "type": "alternatives",
+    "category": "AI presentation",
+    "top_competitors": [
+      {
+        "title": "8 Best Beautiful.ai Alternatives for AI Presentations in 2026",
+        "url": "https://plusai.com/blog/beautiful-ai-alternatives/"
+      },
+      {
+        "title": "Beautiful.ai",
+        "url": "https://www.beautiful.ai/"
+      },
+      {
+        "title": "The 8 best AI presentation makers in 2026",
+        "url": "https://zapier.com/blog/best-ai-presentation-maker/"
+      }
+    ],
+    "paa": []
+  },
+  "devin-ai-review": {
+    "keyword": "Devin AI review",
+    "type": "review",
+    "category": "AI software engineer",
+    "top_competitors": [
+      {
+        "title": "Where did Devin go? What does it say about the future of ...",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1qp82lr/where_did_devin_go_what_does_it_say_about_the/"
+      },
+      {
+        "title": "Devin review: is it a better AI coding agent than Cursor?",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1hbxkrw/devin_review_is_it_a_better_ai_coding_agent_than/"
+      },
+      {
+        "title": "What are your thoughts about Devin.Ai?",
+        "url": "https://forum.freecodecamp.org/t/what-are-your-thoughts-about-devin-ai/680021"
+      }
+    ],
+    "paa": [
+      "Does Devin AI really work?",
+      "Is Devin better than ChatGPT?",
+      "Why did Devin AI fail?",
+      "How much does it cost to use Devin AI?"
+    ]
+  },
+  "writesonic-alternatives": {
+    "keyword": "Writesonic alternatives",
+    "type": "alternatives",
+    "category": "AI writing",
+    "top_competitors": [
+      {
+        "title": "Top 8 Writesonic Alternatives To Try in 2026",
+        "url": "https://writesonic.com/blog/writesonic-alternatives"
+      },
+      {
+        "title": "9 Best Writesonic Alternatives for Content Writing (With Reviews)",
+        "url": "https://leapshq.com/blog/writesonic-alternatives"
+      },
+      {
+        "title": "7 best Writesonic alternatives for SEO content optimization",
+        "url": "https://www.rankability.com/blog/writesonic-alternatives/"
+      }
+    ],
+    "paa": [
+      "What are some alternatives to Writesonic?",
+      "Which AI writing tool is better, Jasper or Writesonic?",
+      "Which is the best free AI for writing?",
+      "How good is Writesonic?"
+    ]
+  },
+  "motion-ai-alternatives": {
+    "keyword": "Motion AI alternatives",
+    "type": "alternatives",
+    "category": "AI calendar scheduling",
+    "top_competitors": [
+      {
+        "title": "Any alternatives for Motion App? : r/productivity",
+        "url": "https://www.reddit.com/r/productivity/comments/yv8dos/any_alternatives_for_motion_app/"
+      },
+      {
+        "title": "8 Best Motion Alternatives in 2026",
+        "url": "https://codegen.com/alternatives/motion/"
+      },
+      {
+        "title": "13 Motion App Alternatives: Tried and Tested in 2026 - Morgen",
+        "url": "https://www.morgen.so/blog-posts/12-motion-app-alternatives"
+      }
+    ],
+    "paa": [
+      "What are some alternatives to Motion AI?",
+      "Is there a free version of Motion AI?",
+      "Is motion AI actually good?",
+      "What's better than motion muse AI?"
+    ]
+  },
+  "clearscope-alternatives": {
+    "keyword": "Clearscope alternatives",
+    "type": "alternatives",
+    "category": "SEO content optimization",
+    "top_competitors": [
+      {
+        "title": "8 best Clearscope alternatives for content optimization",
+        "url": "https://www.rankability.com/blog/clearscope-alternatives/"
+      },
+      {
+        "title": "The 9 Best Clearscope Alternatives in 2026 - Alex Birkett",
+        "url": "https://alexbirkett.com/clearscope-alternatives/"
+      },
+      {
+        "title": "Clearscope Alternatives",
+        "url": "https://metamonster.ai/vs/clearscope/"
+      }
+    ],
+    "paa": [
+      "How much does Clearscope cost?",
+      "What are the 5 best SEO tools?",
+      "Is Clearscope free?",
+      "Who are AirOps' main competitors?"
+    ]
+  },
+  "quillbot-alternatives": {
+    "keyword": "QuillBot alternatives",
+    "type": "alternatives",
+    "category": "AI paraphrasing",
+    "top_competitors": [
+      {
+        "title": "7 Best Quillbot Alternatives for AI Paraphrasing and ...",
+        "url": "https://editgpt.app/blog/best-quillbot-alternatives"
+      },
+      {
+        "title": "Quillbot Alternatives : r/ArtificialInteligence",
+        "url": "https://www.reddit.com/r/ArtificialInteligence/comments/1i1qhio/quillbot_alternatives/"
+      },
+      {
+        "title": "Quillbot alternative",
+        "url": "https://www.reddit.com/r/copywriting/comments/1rq6vge/quillbot_alternative/"
+      }
+    ],
+    "paa": [
+      "Is there anything better than Quillbot?",
+      "Is using Quillbot illegal?",
+      "What are some other apps similar to Quillbot?",
+      "Is Grammarly better or Quillbot?"
+    ]
+  }
+}

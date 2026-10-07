@@ -1,0 +1,137 @@
+[
+  {
+    "keyword": "Sudowrite alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 8,
+    "paa": []
+  },
+  {
+    "keyword": "Writesonic alternatives",
+    "kd": 1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 8,
+    "paa": []
+  },
+  {
+    "keyword": "Clearscope alternatives",
+    "kd": 3.3,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "Motion AI alternatives",
+    "kd": 4.0,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 7,
+    "paa": []
+  },
+  {
+    "keyword": "QuillBot alternatives",
+    "kd": 4.1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "Reclaim AI alternatives",
+    "kd": 7.7,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "Anyword alternatives",
+    "kd": 10.1,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 6,
+    "paa": []
+  },
+  {
+    "keyword": "Figma AI alternatives",
+    "kd": 17.8,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Grammarly alternatives",
+    "kd": 19.9,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 4,
+    "paa": []
+  },
+  {
+    "keyword": "ClickUp AI alternatives",
+    "kd": 21.0,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 3,
+    "paa": []
+  },
+  {
+    "keyword": "Poe alternatives",
+    "kd": 22.8,
+    "label_en": "Very Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Surfer SEO alternatives",
+    "kd": 28.2,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P0",
+    "weak_domains": 4,
+    "paa": []
+  },
+  {
+    "keyword": "MarketMuse alternatives",
+    "kd": 31.3,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 5,
+    "paa": []
+  },
+  {
+    "keyword": "Asana AI alternatives",
+    "kd": 32.7,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 3,
+    "paa": []
+  },
+  {
+    "keyword": "Character AI alternatives",
+    "kd": 33.2,
+    "label_en": "Easy",
+    "intent": "commercial",
+    "priority": "P1",
+    "weak_domains": 4,
+    "paa": []
+  }
+]

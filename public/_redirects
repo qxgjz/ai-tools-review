@@ -1,0 +1,89 @@
+# Cloudflare Pages redirects
+# /tools list -> /ranking
+/tools/ /ranking/ 301
+/tools /ranking/ 301
+
+# Blog 301s
+/blog/stable-diffusion-review /blog/stable-diffusion-review-2026/ 301
+/blog/chatgpt-deep-review-2 /blog/chatgpt-deep-review-2026/ 301
+/blog/chatgpt-vs-claude-2026 /blog/chatgpt-vs-claude-2026-comparison/ 301
+/blog/dify-review /blog/dify-vs-langchain-2026/ 301
+/blog/cursor-review /blog/cursor-vs-windsurf-2026/ 301
+/blog/midjourney-review /blog/midjourney-vs-dalle-3-2026/ 301
+/blog/gemini-review /blog/gemini-alternatives-2026/ 301
+/blog/notion-ai-review /blog/notion-ai-vs-obsidian-ai/ 301
+/blog/elevenlabs-review /blog/best-ai-voice-generators-2026/ 301
+
+# Category slugs
+/blog/category/productivity /blog/category/ai-productivity/ 301
+/blog/category/writing /blog/category/ai-writing/ 301
+/blog/category/image /blog/category/ai-image/ 301
+/blog/category/agent /blog/category/ai-agents/ 301
+/blog/category/tools /blog/category/ai-tools/ 301
+/blog/category/coding /blog/category/ai-coding/ 301
+/blog/category/code /blog/category/ai-coding/ 301
+/blog/category/chat /blog/category/ai-chat/ 301
+/blog/category/search /blog/category/ai-search/ 301
+/blog/category/design /blog/category/ai-design/ 301
+/blog/category/video /blog/category/ai-video/ 301
+/blog/category/audio /blog/category/ai-audio/ 301
+/blog/category/marketing /blog/category/ai-marketing/ 301
+/blog/category/research /blog/category/ai-productivity/ 301
+
+# Tool slug fixes
+/tools/murf /tools/murf-ai/ 301
+/tools/luma /tools/luma-dream-machine/ 301
+/tools/kling /tools/kling-ai/ 301
+/tools/wellsaid /tools/wellsaid-labs/ 301
+/tools/soundraw /category/audio/ 301
+/tools/playht /category/audio/ 301
+/tools/aiva /category/audio/ 301
+/tools/mubert /category/audio/ 301
+/tools/udio /category/audio/ 301
+/tools/obsidian /category/productivity/ 301
+/tools/google /category/chat/ 301
+/tools/hemingway /category/writing/ 301
+/tools/amazon-q /category/code/ 301
+/tools/languagetool /category/writing/ 301
+/tools/prowritingaid /category/writing/ 301
+/tools/designs-ai /category/image/ 301
+/tools/adobe-express /tools/adobe-firefly/ 301
+/tools/galileo /category/chat/ 301
+/tools/amazon-polly /category/audio/ 301
+/tools/amazon-q-developer /category/code/ 301
+/tools/anthropic-claude /category/chat/ 301
+/tools/anytype /category/productivity/ 301
+/tools/bolt-new /category/code/ 301
+/tools/capacities /category/productivity/ 301
+/tools/closerscopy /category/writing/ 301
+/tools/coda /category/productivity/ 301
+/tools/coqui /category/audio/ 301
+/tools/craft /category/productivity/ 301
+/tools/figma /category/design/ 301
+/tools/firefly /category/design/ 301
+/tools/frase /category/writing/ 301
+/tools/getimg /category/image/ 301
+/tools/google-text-to-speech /category/audio/ 301
+/tools/heptabase /category/productivity/ 301
+/tools/ink /category/productivity/ 301
+/tools/jetbrains-ai /category/code/ 301
+/tools/llama /category/chat/ 301
+/tools/logseq /category/productivity/ 301
+/tools/lumen5 /category/video/ 301
+/tools/mem-ai /category/productivity/ 301
+/tools/mutable-ai /category/image/ 301
+/tools/natural-reader /category/audio/ 301
+/tools/playground /category/image/ 301
+/tools/recraft /category/image/ 301
+/tools/reflect /category/productivity/ 301
+/tools/replit-agent /category/code/ 301
+/tools/resemble-ai /category/audio/ 301
+/tools/snappa /category/design/ 301
+/tools/stencil /category/design/ 301
+/tools/surfer /category/writing/ 301
+/tools/tana /category/productivity/ 301
+/tools/tensor-art /category/image/ 301
+/tools/visme /category/design/ 301
+
+# Root category redirect
+/category/ / 301

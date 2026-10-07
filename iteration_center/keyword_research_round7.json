@@ -1,0 +1,440 @@
+{
+  "perplexity-vs-gemini": {
+    "keyword": "Perplexity vs Gemini",
+    "top_competitors": [
+      {
+        "title": "Gemini vs Perplexity for my 2026 : r/perplexity_ai",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1q0vchs/gemini_vs_perplexity_for_my_2026/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Perplexity vs Gemini: Which AI Research Tool Is Better for ...",
+        "url": "https://fritz.ai/perplexity-vs-gemini/",
+        "domain": "fritz.ai"
+      },
+      {
+        "title": "Gemini vs. Perplexity: Which AI Nailed My Prompts Best? ...",
+        "url": "https://learn.g2.com/perplexity-vs-gemini",
+        "domain": "learn.g2.com"
+      }
+    ],
+    "paa": [
+      "Which is better, ChatGPT or Gemini or Copilot or Perplexity?",
+      "Does Perplexity use Google Gemini?",
+      "Is Perplexity likely to fail?",
+      "Is there a better AI than Gemini?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "claude-vs-perplexity": {
+    "keyword": "Claude vs Perplexity",
+    "top_competitors": [
+      {
+        "title": "Claude VS Perplexity : r/perplexity_ai",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1t20ffn/claude_vs_perplexity/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "I Put Perplexity vs. Claude to the Test: Here's My Verdict",
+        "url": "https://learn.g2.com/perplexity-vs-claude",
+        "domain": "learn.g2.com"
+      },
+      {
+        "title": "🤖 Claude vs Perplexity: The Definitive AI Comparison for ...",
+        "url": "https://ai.plainenglish.io/claude-vs-perplexity-the-definitive-ai-comparison-for-modern-content-and-research-be3a361a0e5e",
+        "domain": "ai.plainenglish.io"
+      }
+    ],
+    "paa": [
+      "Is Claude or Perplexity more accurate?",
+      "Why is Claude controversial?",
+      "Did Jeff Bezos invest in Perplexity?",
+      "Which AI is better, Claude or Perplexity?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "cursor-vs-aider": {
+    "keyword": "Cursor vs Aider",
+    "top_competitors": [
+      {
+        "title": "Cursor vs Aider vs VSCode + Copilot: Which AI Coding ...",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1ilg9zl/cursor_vs_aider_vs_vscode_copilot_which_ai_coding/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Cursor vs Aider",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1fog697/cursor_vs_aider/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "AI Coding (\"vibe coding\") does not mean just using Cursor. | Ben Dixon",
+        "url": "https://www.linkedin.com/posts/talkingquickly_ai-coding-vibe-coding-does-not-mean-just-activity-7327998489613811713-aSqP",
+        "domain": "www.linkedin.com"
+      }
+    ],
+    "paa": [
+      "Is there anything better than Cursor?",
+      "Is Aider an effective AI tool?",
+      "Is Cursor or VS Code better with Copilot?",
+      "Which is better, Aider or OpenCode?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "v0-vs-lovable": {
+    "keyword": "v0 vs Lovable",
+    "top_competitors": [
+      {
+        "title": "v0 or Lovable?",
+        "url": "https://www.reddit.com/r/lovable/comments/1pioutd/v0_or_lovable/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Why Vercel V0 Quality is the worst compared to lovable.dev and bolt.new?",
+        "url": "https://www.reddit.com/r/nextjs/comments/1huxty4/why_vercel_v0_quality_is_the_worst_compared_to/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "v0 or lovable? Which is better at Vibe Coding?",
+        "url": "https://www.facebook.com/groups/vibecodinglife/posts/1965722830682911/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "Is there a better AI tool than Lovable?",
+      "Is v0 still worth it?",
+      "Which is better, Replit or v0?",
+      "Which is better, v0 or Bolt?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "notion-ai-alternatives": {
+    "keyword": "Notion AI alternatives",
+    "top_competitors": [
+      {
+        "title": "Is there any alternative to Notion or is it really the best one ...",
+        "url": "https://www.reddit.com/r/Notion/comments/1r3njwq/is_there_any_alternative_to_notion_or_is_it/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "My favorite Notion alternatives",
+        "url": "https://medium.com/@danielasgharian/my-favorite-notion-alternatives-0f47b4cc7dae",
+        "domain": "medium.com"
+      },
+      {
+        "title": "The 10 Best Notion Alternatives 2026",
+        "url": "https://slite.com/learn/best-notion-alternatives",
+        "domain": "slite.com"
+      }
+    ],
+    "paa": [
+      "Is there something like Notion without AI?",
+      "Why are people moving away from Notion?",
+      "Is there a better option than Notion?",
+      "Is Notion still relevant in 2026?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "midjourney-alternatives": {
+    "keyword": "Midjourney alternatives",
+    "top_competitors": [
+      {
+        "title": "The 8 best Midjourney alternatives (Free & Paid) in 2026",
+        "url": "https://www.eesel.ai/blog/midjourney-alternatives",
+        "domain": "www.eesel.ai"
+      },
+      {
+        "title": "New to AI – Looking for Alternatives to MidJourney ...",
+        "url": "https://www.reddit.com/r/midjourney/comments/1juftcu/new_to_ai_looking_for_alternatives_to_midjourney/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Is there anything out there that's better than MidJourney in terms of image ...",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1k7r4vm/is_there_anything_out_there_thats_better_than/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is there anything better than Midjourney?",
+      "Which AI image generator is best for generating NSFW content?",
+      "Is there a free version of Midjourney AI?",
+      "Is Midjourney the best AI image generator?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "pika-alternatives": {
+    "keyword": "Pika alternatives",
+    "top_competitors": [
+      {
+        "title": "Best Pika Alternatives for AI Video Creation (2026)",
+        "url": "https://pexo.ai/blog/best-pika-alternatives-9400",
+        "domain": "pexo.ai"
+      },
+      {
+        "title": "Best Pika Art Alternatives 2026: Top Free AI Video Tools for ...",
+        "url": "https://www.lumeflow.ai/ai-tips/pika-art-alternatives/",
+        "domain": "www.lumeflow.ai"
+      },
+      {
+        "title": "7 Best Pika Alternatives (2026) | ngram.com",
+        "url": "https://www.ngram.com/blog/pika-alternatives-beyond-clips",
+        "domain": "www.ngram.com"
+      }
+    ],
+    "paa": [
+      "What are some good alternatives to Pika AI?",
+      "Is there a free version of Pika AI?",
+      "What is Pika used for?",
+      "What is the Pika AI tool?"
+    ],
+    "weak_domains_in_top3": 0,
+    "kd_estimate": "medium"
+  },
+  "heygen-alternatives": {
+    "keyword": "HeyGen alternatives",
+    "top_competitors": [
+      {
+        "title": "The 6 Best HeyGen Alternatives in 2026 (Tried & Tested)",
+        "url": "https://www.synthesia.io/post/heygen-alternatives-competitors",
+        "domain": "www.synthesia.io"
+      },
+      {
+        "title": "HeyGen alternatives : r/generativeAI",
+        "url": "https://www.reddit.com/r/generativeAI/comments/1ohcxyg/heygen_alternatives/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "HeyGen Alternatives in 2026: 4 Better AI Video Tools for ...",
+        "url": "https://www.arcade.software/post/heygen-alternatives",
+        "domain": "www.arcade.software"
+      }
+    ],
+    "paa": [
+      "What is better than HeyGen AI?",
+      "Is HeyGen a Chinese company?",
+      "What is better, Synthesia or HeyGen?",
+      "What are some free and open-source alternatives to HeyGen?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "suno-alternatives": {
+    "keyword": "Suno alternatives",
+    "top_competitors": [
+      {
+        "title": "What are the alternatives to Suno? : r/SunoAI",
+        "url": "https://www.reddit.com/r/SunoAI/comments/1p7zesj/what_are_the_alternatives_to_suno/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Best Suno AI Alternatives 2026: My Top 11 Picks",
+        "url": "https://tad.ai/hub/best-suno-alternatives",
+        "domain": "tad.ai"
+      },
+      {
+        "title": "Better Than Suno: The Best AI Music Generator Right Now",
+        "url": "https://www.youtube.com/watch?v=BkdGHA1Ackw&xstg=CAMSBhUD_LL2Hw%3D%3D",
+        "domain": "www.youtube.com"
+      }
+    ],
+    "paa": [
+      "Is anything better than Suno AI?",
+      "Is there any app like Suno AI?",
+      "Is Suno being sued?",
+      "Is Suno or Udio better?"
+    ],
+    "weak_domains_in_top3": 2,
+    "kd_estimate": "low"
+  },
+  "dify-alternatives": {
+    "keyword": "Dify alternatives",
+    "top_competitors": [
+      {
+        "title": "Best Dify Alternatives for AI Workflow Automation",
+        "url": "https://www.getdynamiq.ai/post/best-dify-alternatives-for-ai-workflow-automation",
+        "domain": "www.getdynamiq.ai"
+      },
+      {
+        "title": "7 best Dify alternatives for agentic workflows in 2026",
+        "url": "https://www.gumloop.com/blog/dify-alternatives",
+        "domain": "www.gumloop.com"
+      },
+      {
+        "title": "Can anyone compare n8n vs. Langflow vs. Dify vs. SimAI & ...",
+        "url": "https://www.reddit.com/r/n8n/comments/1q1dgg3/can_anyone_compare_n8n_vs_langflow_vs_dify_vs/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "What are some alternatives to Dify?",
+      "Which is better for AI integration, Dify or n8n?",
+      "Can I use Dify for free?",
+      "Can Dify be self-hosted?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "zapier-ai-alternatives": {
+    "keyword": "Zapier AI alternatives",
+    "top_competitors": [
+      {
+        "title": "8 Best Zapier Alternatives in 2026: Free, Open Source & AI ...",
+        "url": "https://composio.dev/content/zapier-alternatives",
+        "domain": "composio.dev"
+      },
+      {
+        "title": "Zapier Alternatives Nobody's Talking About (That Actually ...",
+        "url": "https://www.reddit.com/r/automation/comments/1pqm8sq/zapier_alternatives_nobodys_talking_about_that/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "15 Best Zapier Alternatives in 2026: Reviewed & Compared",
+        "url": "https://www.vellum.ai/blog/best-zapier-alternatives",
+        "domain": "www.vellum.ai"
+      }
+    ],
+    "paa": [
+      "Are there better alternatives to Zapier?",
+      "What is the best AI automation platform?",
+      "Which is better, Zapier or Workato?",
+      "Is n8n better than Zapier?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "hubsopt-ai-alternatives": {
+    "keyword": "HubSpot AI alternatives",
+    "top_competitors": [
+      {
+        "title": "15 HubSpot Alternatives That Won't Break the Bank in 2026",
+        "url": "https://www.emailtooltester.com/en/blog/hubspot-alternatives/",
+        "domain": "www.emailtooltester.com"
+      },
+      {
+        "title": "​7 Best HubSpot CRM Alternatives in 2026",
+        "url": "https://blog.salesflare.com/best-hubspot-alternative",
+        "domain": "blog.salesflare.com"
+      },
+      {
+        "title": "HubSpot Alternatives: 7 CRMs for Startups & SMBs (2026)",
+        "url": "https://reevo.ai/blog/hubspot-alternatives",
+        "domain": "reevo.ai"
+      }
+    ],
+    "paa": [
+      "Why is HubSpot declining?",
+      "Who is HubSpot's biggest competitor?",
+      "Does HubSpot have an AI tool?",
+      "Why did Google not buy HubSpot?"
+    ],
+    "weak_domains_in_top3": 0,
+    "kd_estimate": "medium"
+  },
+  "boltnew-review": {
+    "keyword": "Bolt.new review",
+    "top_competitors": [
+      {
+        "title": "Tried Bolt.new. Felt Like a God. Then Reality Slapped Me.",
+        "url": "https://www.reddit.com/r/nocode/comments/1ii52d3/tried_boltnew_felt_like_a_god_then_reality/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Read Customer Service Reviews of bolt.new",
+        "url": "https://www.trustpilot.com/review/bolt.new",
+        "domain": "www.trustpilot.com"
+      },
+      {
+        "title": "What is Bolt.new AI: Comprehensive Review by A Pro Vibe ...",
+        "url": "https://www.prismetric.com/what-is-bolt-ai/",
+        "domain": "www.prismetric.com"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "v0-dev-review": {
+    "keyword": "v0.dev review",
+    "top_competitors": [
+      {
+        "title": "What's everyone's experience with v0.dev? Do you hate it ...",
+        "url": "https://www.reddit.com/r/vercel/comments/1lw0uyl/whats_everyones_experience_with_v0dev_do_you_hate/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "V0 by Vercel Review 2026: Is It Worth It?",
+        "url": "https://www.nocode.mba/articles/v0-review-ai-apps",
+        "domain": "www.nocode.mba"
+      },
+      {
+        "title": "Vercel v0.dev: A hands-on review",
+        "url": "https://annjose.com/blog/v0-dev-firsthand/",
+        "domain": "annjose.com"
+      }
+    ],
+    "paa": [],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "aider-review": {
+    "keyword": "Aider AI review",
+    "top_competitors": [
+      {
+        "title": "Augment Code vs Aider: Strengths & Drawbacks",
+        "url": "https://www.augmentcode.com/tools/augment-code-vs-aider-strengths-and-drawbacks",
+        "domain": "www.augmentcode.com"
+      },
+      {
+        "title": "Aider Review: A Developer's Month With This Terminal ...",
+        "url": "https://www.blott.com/blog/post/aider-review-a-developers-month-with-this-terminal-based-code-assistant",
+        "domain": "www.blott.com"
+      },
+      {
+        "title": "What's your take on Aider? : r/ChatGPTCoding",
+        "url": "https://www.reddit.com/r/ChatGPTCoding/comments/1ik16y6/whats_your_take_on_aider/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Which is better, Aider or OpenCode?",
+      "Is aider AI free?",
+      "What is aider AI?",
+      "Is aider still a thing?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  },
+  "n8n-ai-review": {
+    "keyword": "n8n AI review",
+    "top_competitors": [
+      {
+        "title": "AI Tool Review from a Python Developer: The N8N ...",
+        "url": "https://python.plainenglish.io/ai-tool-review-from-a-python-developer-the-n8n-experience-3aee57c429d4",
+        "domain": "python.plainenglish.io"
+      },
+      {
+        "title": "Your honest thoughts on n8n from an experienced dev ...",
+        "url": "https://www.reddit.com/r/ExperiencedDevs/comments/1mepfd4/your_honest_thoughts_on_n8n_from_an_experienced/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "My n8n review after using it for half a year",
+        "url": "https://coffeebytes.dev/en/opinion/my-n8n-review-after-using-it-for-half-a-year/",
+        "domain": "coffeebytes.dev"
+      }
+    ],
+    "paa": [
+      "Is n8n actually good?",
+      "Is n8n becoming obsolete?",
+      "Is anything better than n8n?",
+      "Is n8n really AI?"
+    ],
+    "weak_domains_in_top3": 1,
+    "kd_estimate": "medium"
+  }
+}

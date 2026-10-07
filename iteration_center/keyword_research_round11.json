@@ -1,0 +1,226 @@
+{
+  "grok-vs-gemini": {
+    "keyword": "Grok vs Gemini",
+    "top_competitors": [
+      {
+        "title": "Grok vs gemini vs chat gpt : r/GeminiAI",
+        "url": "https://www.reddit.com/r/GeminiAI/comments/1qfyrdg/grok_vs_gemini_vs_chat_gpt/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Grok vs Gemini: Which Is Better? An Honest Comparison (2026)",
+        "url": "https://geotoolbox.ai/blog/grok-vs-gemini",
+        "domain": "geotoolbox.ai"
+      },
+      {
+        "title": "Grok 3 vs. Google Gemini, ChatGPT & Deepseek: What Sets It Apart?",
+        "url": "https://www.reddit.com/r/ChatGPT/comments/1j2xn6c/grok_3_vs_google_gemini_chatgpt_deepseek_what/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is Grok AI better than Gemini?",
+      "Can I use Grok instead of Gemini?",
+      "Which AI app is better than Grok?",
+      "What's better than Gemini AI?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "claude-opus-vs-gpt5": {
+    "keyword": "Claude Opus vs GPT-5",
+    "top_competitors": [
+      {
+        "title": "OpenAI GPT-5 vs. Claude Opus 4.1: A coding comparison",
+        "url": "https://composio.dev/content/openai-gpt-5-vs-claude-opus-4-1-a-coding-comparison",
+        "domain": "composio.dev"
+      },
+      {
+        "title": "GPT-5 performs much worse than Opus 4.1 in my use case. ...",
+        "url": "https://www.reddit.com/r/ClaudeAI/comments/1mkixi1/gpt5_performs_much_worse_than_opus_41_in_my_use/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Claude Opus 4.1 vs GPT 5.0 - The Winner Will SHOCK You!",
+        "url": "https://www.youtube.com/watch?v=SCAJA6kHgqY",
+        "domain": "www.youtube.com"
+      }
+    ],
+    "paa": [
+      "Is Claude Opus better than GPT-5?",
+      "Is Claude Opus or GPT-5.6 better?",
+      "Is Claude actually better than GPT?",
+      "Is Claude Opus better than GPT-5.5 Think Deeper?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "deepseek-vs-gpt": {
+    "keyword": "DeepSeek vs GPT",
+    "top_competitors": [
+      {
+        "title": "when people say deepseek is 'better' than chatgpt, what do ...",
+        "url": "https://www.reddit.com/r/GPT3/comments/1ign4wr/when_people_say_deepseek_is_better_than_chatgpt/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "DeepSeek vs ChatGPT: Which AI Model is Best in 2026",
+        "url": "https://www.voiceflow.com/blog/deepseek-vs-chatgpt",
+        "domain": "www.voiceflow.com"
+      },
+      {
+        "title": "DeepSeek vs ChatGPT for Coding: I Tested Both for Real ...",
+        "url": "https://blog.stackademic.com/deepseek-vs-chatgpt-for-coding-i-tested-both-for-real-projects-cb801ee9a016",
+        "domain": "blog.stackademic.com"
+      }
+    ],
+    "paa": [
+      "Is DeepSeek as good as ChatGPT?",
+      "Is there a better AI than DeepSeek?",
+      "Is DeepSeek more ethical than ChatGPT?",
+      "Which is better, ChatGPT Plus or DeepSeek?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "qwen-ai-review": {
+    "keyword": "Qwen AI review",
+    "top_competitors": [
+      {
+        "title": "I've been using QWEN AI for more then a month now as ...",
+        "url": "https://www.reddit.com/r/Qwen_AI/comments/1nuca5k/ive_been_using_qwen_ai_for_more_then_a_month_now/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Qwen3.5 Real-World Experiences: What are you actually using it for? Let's ...",
+        "url": "https://www.reddit.com/r/Qwen_AI/comments/1rbvakh/qwen35_realworld_experiences_what_are_you/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "Is anyone using Qwen? worth investigating / trying or no?",
+        "url": "https://www.facebook.com/groups/698593531630485/posts/1366670424822789/",
+        "domain": "www.facebook.com"
+      }
+    ],
+    "paa": [
+      "Is Qwen AI any good?",
+      "Is Qwen AI safe to use?",
+      "Which is better, Qwen AI or ChatGPT?",
+      "Is Qwen AI really free?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "perplexity-enterprise-review": {
+    "keyword": "Perplexity Enterprise review",
+    "top_competitors": [
+      {
+        "title": "Perplexity Review: I Used It for 2 Weeks",
+        "url": "https://aidetectplus.com/blog/perplexity-review",
+        "domain": "aidetectplus.com"
+      },
+      {
+        "title": "My Experience with Perplexity Pro (so far) : r/perplexity_ai",
+        "url": "https://www.reddit.com/r/perplexity_ai/comments/1n8ov7e/my_experience_with_perplexity_pro_so_far/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "My In-Depth Perplexity AI Review: Is Pro Worth It in 2026?",
+        "url": "https://learn.g2.com/perplexity-ai-review",
+        "domain": "learn.g2.com"
+      }
+    ],
+    "paa": [
+      "Is Perplexity Enterprise worth it?",
+      "What is the difference between Perplexity pro and enterprise?",
+      "What is the downside of Perplexity?",
+      "Is Perplexity actually worth it?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "best-ai-voice-generator": {
+    "keyword": "best AI voice generator",
+    "top_competitors": [
+      {
+        "title": "Free AI Voice Generator | 10000+ Voices in 70+ Languages",
+        "url": "https://elevenlabs.io/ai-voice-generator",
+        "domain": "elevenlabs.io"
+      },
+      {
+        "title": "What's the best AI voice generator? : r/artificial",
+        "url": "https://www.reddit.com/r/artificial/comments/1t3l8pa/whats_the_best_ai_voice_generator/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "The 8 best AI voice generators in 2026",
+        "url": "https://zapier.com/blog/best-ai-voice-generator/",
+        "domain": "zapier.com"
+      }
+    ],
+    "paa": [
+      "Which AI voice generator is best?",
+      "Which AI is best for voice talking?",
+      "Which AI voice is most realistic?",
+      "Can ChatGPT generate voice?"
+    ],
+    "weak_in_top3": 1,
+    "kd": "medium"
+  },
+  "best-ai-headshot-generator": {
+    "keyword": "best AI headshot generator",
+    "top_competitors": [
+      {
+        "title": "The best AI headshot generator in 2026 — an honest review",
+        "url": "https://laurentiu-raducu.medium.com/the-best-ai-headshot-generator-an-honest-review-104950aa0da9",
+        "domain": "laurentiu-raducu.medium.com"
+      },
+      {
+        "title": "Best AI headshot tool for consistent look/feel across ...",
+        "url": "https://www.reddit.com/r/b2bmarketing/comments/1nuf6he/best_ai_headshot_tool_for_consistent_lookfeel/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "3 Best Professional AI Headshot Generators (2026)",
+        "url": "https://clementinedesign.studio/blog/the-best-3-ai-professional-linkedin-headshot-generators-with-results-xxag9",
+        "domain": "clementinedesign.studio"
+      }
+    ],
+    "paa": [
+      "What is the best AI generator for headshots?",
+      "Can ChatGPT give me a professional headshot?",
+      "Do AI headshots actually work?",
+      "How to create a good headshot with AI?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  },
+  "best-ai-slack-bots": {
+    "keyword": "best AI Slack bots",
+    "top_competitors": [
+      {
+        "title": "Slack AI Features & AI Assistants",
+        "url": "https://slack.com/features/ai",
+        "domain": "slack.com"
+      },
+      {
+        "title": "Which AI agent platform has the best Slack integration?",
+        "url": "https://www.reddit.com/r/AI_Agents/comments/1n3b93q/which_ai_agent_platform_has_the_best_slack/",
+        "domain": "www.reddit.com"
+      },
+      {
+        "title": "best slack bots for remote teams?",
+        "url": "https://www.reddit.com/r/Slack/comments/1mq0o2m/best_slack_bots_for_remote_teams/",
+        "domain": "www.reddit.com"
+      }
+    ],
+    "paa": [
+      "Is there an AI bot available for Slack?",
+      "What are the top 5 AI bots?",
+      "Which is the most accurate AI bot?",
+      "What AI does Elon Musk use?"
+    ],
+    "weak_in_top3": 2,
+    "kd": "low"
+  }
+}

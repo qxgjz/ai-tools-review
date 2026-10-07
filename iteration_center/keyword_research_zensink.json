@@ -1,0 +1,238 @@
+{
+  "generated_at": "2026-09-29 03:13",
+  "total": 15,
+  "p0": 14,
+  "p1": 1,
+  "keywords": [
+    {
+      "keyword": "Jasper vs Copy.ai",
+      "kd": 1,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [],
+      "weak_domains": 5,
+      "dedicated_pages": 5
+    },
+    {
+      "keyword": "Windsurf vs Cursor",
+      "kd": 3.7,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is Windsurf or Cursor better?",
+        "Is there anything better than Cursor?",
+        "Is Windsurf part of Cursor?",
+        "Is Windsurf discontinued?"
+      ],
+      "weak_domains": 8,
+      "dedicated_pages": 10
+    },
+    {
+      "keyword": "Midjourney alternatives",
+      "kd": 6.0,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "替代方案页",
+      "paa": [
+        "Is there anything better than Midjourney?",
+        "Which AI image generator is best for generating NSFW content?",
+        "Is there a free version of Midjourney AI?",
+        "Is Midjourney the best AI image generator?"
+      ],
+      "weak_domains": 6,
+      "dedicated_pages": 8
+    },
+    {
+      "keyword": "Cursor alternatives",
+      "kd": 6.7,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "替代方案页",
+      "paa": [
+        "Is there any better tool than Cursor?",
+        "Is Cursor obsolete?",
+        "Which is better, copilot or Cursor?",
+        "Is windsurf or Cursor better?"
+      ],
+      "weak_domains": 5,
+      "dedicated_pages": 9
+    },
+    {
+      "keyword": "Claude vs Gemini",
+      "kd": 7.7,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is Claude still better than Gemini?",
+        "Why is Claude being banned?",
+        "Is anything better than Claude?",
+        "Is Claude more ethical than ChatGPT?"
+      ],
+      "weak_domains": 5,
+      "dedicated_pages": 8
+    },
+    {
+      "keyword": "ElevenLabs vs Murf",
+      "kd": 9.1,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is murf ai better than ElevenLabs?",
+        "Which AI voice generator is the best?",
+        "Which is better, ElevenLabs or Speechify?",
+        "Who owns Murf AI?"
+      ],
+      "weak_domains": 6,
+      "dedicated_pages": 9
+    },
+    {
+      "keyword": "Notion AI vs Obsidian",
+      "kd": 13.8,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is Obsidian really better than Notion?",
+        "Why are people leaving Obsidian?",
+        "Why are people moving away from Notion?",
+        "Which is better, Obsidian or Notion, in 2026?"
+      ],
+      "weak_domains": 7,
+      "dedicated_pages": 10
+    },
+    {
+      "keyword": "Suno vs Udio",
+      "kd": 14.7,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is Udio as good as Suno?",
+        "Is anything better than Suno AI?",
+        "Is Udio free like Suno?",
+        "Is Udio being sued?"
+      ],
+      "weak_domains": 6,
+      "dedicated_pages": 10
+    },
+    {
+      "keyword": "ChatGPT alternatives",
+      "kd": 19.3,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "替代方案页",
+      "paa": [
+        "Is there any better AI than ChatGPT?",
+        "Is there an ethical alternative to ChatGPT?",
+        "What are the top 3 AI right now?",
+        "Which AI does Elon Musk use?"
+      ],
+      "weak_domains": 5,
+      "dedicated_pages": 8
+    },
+    {
+      "keyword": "Canva AI alternatives",
+      "kd": 20.4,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "替代方案页",
+      "paa": [
+        "What AI is replacing Canva?",
+        "Is there an app like Canva that doesn't use AI?",
+        "Who is Canva's biggest competitor?",
+        "Why don't professional designers use Canva?"
+      ],
+      "weak_domains": 4,
+      "dedicated_pages": 9
+    },
+    {
+      "keyword": "Claude alternatives",
+      "kd": 21.1,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "替代方案页",
+      "paa": [
+        "Is there any AI better than Claude?",
+        "What to replace Claude with?",
+        "What are the top 3 AI right now?",
+        "Is Claude actually the best AI?"
+      ],
+      "weak_domains": 5,
+      "dedicated_pages": 9
+    },
+    {
+      "keyword": "Midjourney vs DALL-E 3",
+      "kd": 24.7,
+      "label": "Very Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Which is better for me, DALL-E 3 or Midjourney?",
+        "Is DALL-E being discontinued?",
+        "Is Midjourney still the best image generator?",
+        "Is there anything better than Midjourney?"
+      ],
+      "weak_domains": 4,
+      "dedicated_pages": 4
+    },
+    {
+      "keyword": "Cursor vs GitHub Copilot",
+      "kd": 27.0,
+      "label": "Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is GitHub Copilot better than Cursor?",
+        "Which tool is better in 2026, Cursor or GitHub Copilot?",
+        "Is Cursor the best AI coder?",
+        "Does Cursor allow GitHub Copilot?"
+      ],
+      "weak_domains": 4,
+      "dedicated_pages": 10
+    },
+    {
+      "keyword": "Perplexity vs ChatGPT",
+      "kd": 27.8,
+      "label": "Easy",
+      "intent": "commercial",
+      "priority": "P0",
+      "content_type": "对比页",
+      "paa": [
+        "Is Perplexity AI better than ChatGPT?",
+        "Why is Perplexity not popular?",
+        "Why is Perplexity so famous?",
+        "Is there any AI stronger than ChatGPT?"
+      ],
+      "weak_domains": 5,
+      "dedicated_pages": 10
+    },
+    {
+      "keyword": "Dify review 2026",
+      "kd": 37.2,
+      "label": "Easy",
+      "intent": "commercial",
+      "priority": "P1",
+      "content_type": "评测页",
+      "paa": [],
+      "weak_domains": 4,
+      "dedicated_pages": 8
+    }
+  ]
+}

@@ -77,6 +77,14 @@ export const metadata: Metadata = {
     follow: true,
     googleBot: { index: true, follow: true, 'max-image-preview': 'large', 'max-snippet': -1 },
   },
+  icons: {
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: 'any' },
+    ],
+    shortcut: '/favicon.ico',
+    apple: '/favicon.svg',
+  },
   other: {
     'color-scheme': 'light dark',
     'google-adsense-account': 'ca-pub-4417371559152346',
@@ -196,7 +204,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </p>
                   <Link
                     href="/free-ai-tools-guide"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mb-4"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mb-4 py-2"
                   >
                     📚 Get Free AI Tools Guide
                   </Link>
@@ -206,7 +214,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       href="https://github.com/qxgjz/ai-tools-review"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      className="min-h-[44px] min-w-[44px] bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
                       aria-label="GitHub"
                     >
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -217,7 +225,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       href="https://twitter.com/aitoolcrux"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      className="min-h-[44px] min-w-[44px] bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
                       aria-label="Twitter/X"
                     >
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
@@ -228,7 +236,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                       href="https://www.linkedin.com/company/aitoolcrux"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="w-8 h-8 bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      className="min-h-[44px] min-w-[44px] bg-gray-100 dark:bg-gray-800 rounded-lg flex items-center justify-center text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700 hover:text-gray-900 dark:hover:text-white transition-colors"
                       aria-label="LinkedIn"
                     >
                       <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">

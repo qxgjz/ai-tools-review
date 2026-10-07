@@ -1,3 +1,47 @@
+# GEO/AI搜索优化完整方法论 — 2026-09-30
+
+**学习主题**: GEO（Generative Engine Optimization）/ AI搜索优化
+**学习来源**:
+1. Ahrefs: "How to Optimize for AI Search" (Mateusz Makosiewicz, 2026-09-25)
+2. Semrush: "How to optimize for AI search results in 2026" (2026-05)
+3. Princeton/Georgia Tech study (Aggarwal et al., KDD 2024)
+4. Kevin Indig research on AI citation patterns
+
+## 核心知识点（15个）
+
+### 一、技术基础
+1. **AI搜索仍依赖传统SEO基础**：Google明确表示AI Overviews仍基于核心搜索系统。内容仍需可爬取、可索引、有用。
+2. **AI Bot可访问性是前提**：检查robots.txt、noindex、WAF/CDN规则、Cloudflare AI Crawl Control。404/499/5xx会阻止AI引用。
+3. **AI系统忽略JSON-LD和隐藏Markup**：Ahrefs测试发现5大AI系统只依赖可见HTML文本。重要信息必须以可见文本出现。
+
+### 二、内容结构
+4. **BLUF原则**：每个section开头1-2句直接给结论，再展开。AI按chunk提取，自包含段落更易被引用。
+5. **位置效应**：44.2%的AI引用来自页面前30%。最重要的事实放开头。
+6. **原子化内容**：每个section自成一体，单独摘取仍能完整表达观点。
+7. **问题式标题**：用"How to X"代替模糊标题，首段完整回答问题。
+
+### 三、内容质量信号
+8. **具体性=可信度**：用具体名称、日期、数字、产品。被引用段落包含更多命名实体和确定性语言。
+9. **统计数据加成（+33%）**：Princeton研究：添加统计数据提升AI可见度33%，添加引用提升41%——GEO最有效单一技术。
+10. **原创数据最难替代**：AI倾向引用原创调查、基准数据、工作流、专家判断。
+11. **表格/FAQ/摘要**：结构化元素让AI更容易提取自包含段落。
+
+### 四、时效性与一致性
+12. **新鲜度偏好**：AI引用URL平均比Google有机结果新25.7%。79%的ChatGPT引用列表在同年更新。
+13. **事实一致性**：不同页面价格/功能矛盾时AI会困惑，需维护事实源文件。
+
+### 五、监控与测试
+14. **AI引用监控**：跟踪Share of Voice across ChatGPT/Perplexity/Gemini/AI Overviews。
+15. **在AI平台测试主题**：用受众真实问题问AI，记录谁被引用。竞品被引用而你没有=内容缺口。
+
+## 怎么落地
+- GSC分析：高排名零点击页检查BLUF和具体数字
+- 关键词挖掘：用ChatGPT/Perplexity测试Top 10关键词看AI引用谁
+- 审计：检查Cloudflare AI Crawl Control是否阻止GPTBot/PerplexityBot
+- 内容优化：高曝光页添加统计数据，问题式标题重写
+
+---
+
 # 长尾词挖掘完整方法论 — 2026-09-28
 
 **学习主题**: 长尾词挖掘技巧（Long-Tail Keyword Research & Mining）

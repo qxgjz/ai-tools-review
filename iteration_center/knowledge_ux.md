@@ -1,4 +1,30 @@
 # UI/UX设计知识库（窗口6专用）
+
+## 📚 学习记录 2026-10-02 06:00
+- 主题：对比页/对比表设计（Comparison Table UX）
+- 来源：
+  - https://www.nngroup.com/articles/comparison-tables/
+  - https://www.nngroup.com/articles/lawn-mower-pattern/
+  - https://baymard.com/research/ecommerce-product-lists (Comparison Tool guidelines)
+- 知识点（14条）：
+  1. 对比表服务于补偿性决策（compensatory decision-making）：用户在5-7个选项中权衡利弊时使用；超过5个应先用筛选器缩小范围
+  2. 静态对比表≤5个选项；动态表建议3-4个；移动端最多2个或改用Tab切换
+  3. 标准布局：产品为列、属性为行、行标签在左、列标签在上——不要翻转布局让用户重新学习
+  4. 列头必须sticky（fixed headers）：人类短期记忆有限，长表滚动时用户会忘记哪列是哪个产品
+  5. 内容一致性是最大问题：缺失/不完整/不一致的属性数据会让对比表完全失效；宁可少列也不要半数据
+  6. 支持扫描：简短文本（避免完整句子）、每列一致对齐、行边框/背景色区分行
+  7. 颜色编码辅助区分：每列checkmark用不同颜色或列背景浅色，但保持对比度不降低可读性
+  8. 属性要有意义：把技术参数翻译成用户能感知的参照（如"2.7oz ≈ 一个鸡蛋重量"）
+  9. 给用户控制权：提供"只显示差异"开关、可折叠行、可隐藏列
+  10. 割草机模式（Lawn Mower Pattern）：用户视线从左上→右→下一行右→左→下，逐行扫描；设计不应打断此模式
+  11. 单元格应自解释：用户可能先读单元格再看行标签，如果单元格不看标签就不懂意义，会打断扫描
+  12. Yes/No和checkmark行应分组排列，不要散落在文本行之间
+  13. 共享属性用合并单元格或"只显示差异"功能，避免用户在重复内容间来回扫视
+  14. 禁止术语不解释：jargon必须有tooltip或内联定义；空单元格/placeholder应集中在表尾而非散落在扫描路径中
+- 🎯 下次可落地的UI优化点（必须输出1个具体、可执行、窗口6能直接改的优化）：
+  - 在/compare页对比表添加sticky列头（sticky top-16 z-10 bg-white dark:bg-gray-900），长表滚动时产品名始终可见
+
+
 ## 📚 学习记录 2026-09-28 01:00
 - 主题：CRO转化率优化深度版（CTA按钮设计+EAS表单简化框架+信任信号+焦虑消除+表单转化）
 - 来源：https://baymard.com/learn/button-design , https://www.nngroup.com/articles/eas-framework-simplify-forms/ , https://www.nngroup.com/articles/4-principles-reduce-cognitive-load/

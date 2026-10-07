@@ -1,34 +1,48 @@
 {
-  "audit_time": "2026-09-11T17:43:31.415191",
+  "audit_time": "2026-10-03T19:36:14.799397",
   "hub_pages_crawled": 12,
-  "total_internal_links_found": 834,
-  "unique_pages_linked": 394,
+  "total_internal_links_found": 1062,
+  "unique_pages_linked": 448,
   "orphan_pages": [
+    "/tools/midjourney",
+    "/tools/cursor",
     "/tools/perplexity",
     "/tools/dall-e",
+    "/tools/elevenlabs",
+    "/tools/notion-ai",
     "/tools/canva",
-    "/methodology"
+    "/blog/chatgpt-vs-claude-2026-comparison",
+    "/alternatives/chatgpt-alternatives",
+    "/alternatives/midjourney-alternatives",
+    "/methodology",
+    "/about"
   ],
   "link_distribution": {},
   "anchor_text_analysis": {
     "brand": 12,
     "short": 52,
-    "moderate": 291,
-    "descriptive": 479
+    "moderate": 438,
+    "descriptive": 560
   },
   "content_clusters": {},
-  "score": 53.91021582733813,
+  "score": 57.05920903954802,
   "findings": [
-    "Low inbound links: /tools/midjourney - only 1 link(s)",
-    "Low inbound links: /tools/cursor - only 1 link(s)",
+    "Low inbound links: /tools/chatgpt - only 1 link(s)",
+    "Orphan page: /tools/midjourney - no inbound links from hub pages",
+    "Orphan page: /tools/cursor - no inbound links from hub pages",
+    "Low inbound links: /tools/gemini - only 1 link(s)",
+    "Low inbound links: /tools/claude - only 1 link(s)",
     "Orphan page: /tools/perplexity - no inbound links from hub pages",
     "Orphan page: /tools/dall-e - no inbound links from hub pages",
-    "Low inbound links: /tools/elevenlabs - only 1 link(s)",
-    "Low inbound links: /tools/notion-ai - only 1 link(s)",
+    "Orphan page: /tools/elevenlabs - no inbound links from hub pages",
+    "Orphan page: /tools/notion-ai - no inbound links from hub pages",
     "Orphan page: /tools/canva - no inbound links from hub pages",
-    "Low inbound links: /alternatives/chatgpt-alternatives - only 1 link(s)",
-    "Low inbound links: /alternatives/midjourney-alternatives - only 1 link(s)",
-    "Orphan page: /methodology - no inbound links from hub pages"
+    "Orphan page: /blog/chatgpt-vs-claude-2026-comparison - no inbound links from hub pages",
+    "Orphan page: /alternatives/chatgpt-alternatives - no inbound links from hub pages",
+    "Orphan page: /alternatives/midjourney-alternatives - no inbound links from hub pages",
+    "Orphan page: /methodology - no inbound links from hub pages",
+    "Orphan page: /about - no inbound links from hub pages",
+    "Content cluster gap: /category/chat doesn't link to /blog/chatgpt-vs-claude-2026-comparison"
   ],
   "recommendations": [
     "Add Quick Answer/Key Takeaways sections to all article pages (improves AEO and provides natural internal link opportunities)",

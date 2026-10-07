@@ -633,7 +633,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
       )}
       <Link
         href="/"
-        className="inline-flex items-center gap-2 px-4 py-2 mb-4 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
+        className="inline-flex items-center gap-2 px-4 min-h-[44px] mb-4 text-sm font-medium text-gray-600 dark:text-gray-300 bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-700 shadow-sm hover:border-blue-300 dark:hover:border-blue-700 hover:text-blue-600 dark:hover:text-blue-400 transition-all"
       >
         <ArrowLeft className="w-4 h-4" />
         Back to Home
@@ -692,7 +692,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
                 <Link
                   key={slug}
                   href={`/subcategory/${slug}`}
-                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                  className="inline-flex items-center gap-2 px-4 min-h-[44px] rounded-full bg-white dark:bg-gray-900 border border-gray-200 dark:border-gray-700 text-sm text-gray-700 dark:text-gray-300 hover:border-emerald-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
                 >
                   {info.name}
                   <span className="text-xs text-gray-400">({info.toolCount})</span>

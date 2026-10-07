@@ -163,27 +163,27 @@ export default function PostPage({ params }: PostPageProps) {
   }
 
   // 智能Related Articles推荐：Tags重叠度(60%) + Categories匹配(25%) + 标题关键词相似度(15%)
-  const calculateRelevance = (a: typeof post, b: typeof post): number => {
+  const calculateRelevance = (a: any, b: any): number => {
     let score = 0;
     // Tags重叠度（权重60%）
     const tagsA = a.tags || [];
     const tagsB = b.tags || [];
-    const commonTags = tagsA.filter((t) => tagsB.includes(t));
+    const commonTags = tagsA.filter((t: string) => tagsB.includes(t));
     const tagOverlap = tagsA.length > 0 ? commonTags.length / Math.min(tagsA.length, 4) : 0;
     score += tagOverlap * 60;
     // Categories匹配（权重25%）
-    if (a.category === b.category) score += 25;
-    else if (a.categorySlug === b.categorySlug) score += 20;
+    if (a.category && a.category === b.category) score += 25;
+    else if (a.categorySlug && a.categorySlug === b.categorySlug) score += 20;
     // 标题关键词相似度（权重15%）
     const wordsA = a.title
       .toLowerCase()
       .split(/\s+/)
-      .filter((w) => w.length > 3);
+      .filter((w: string) => w.length > 3);
     const wordsB = b.title
       .toLowerCase()
       .split(/\s+/)
-      .filter((w) => w.length > 3);
-    const commonWords = wordsA.filter((w) => wordsB.includes(w));
+      .filter((w: string) => w.length > 3);
+    const commonWords = wordsA.filter((w: string) => wordsB.includes(w));
     const wordOverlap = wordsA.length > 0 ? commonWords.length / Math.min(wordsA.length, 6) : 0;
     score += wordOverlap * 15;
     return score;
