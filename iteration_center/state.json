@@ -5301,6 +5301,153 @@
       "priority": "P2",
       "assigned_to": "窗口2",
       "status": "pending"
+    },
+    {
+      "id": "P0-TRAFFIC-DROP-7D-001",
+      "priority": "P0",
+      "title": "排查近7天GSC流量归零（0点击/176曝光，排名从25.4降至31.8）",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "近7天0点击，28天9点击全部来自前3周。排名下滑6.4位。需检查是否Google算法更新或内容问题，监控未来3天数据。"
+    },
+    {
+      "id": "P0-ZERO-CLICK-PAGES-BATCH-002",
+      "priority": "P0",
+      "title": "批量优化11个高排名零点击页的Title和Meta Description",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "11个页面排名5-20但CTR<1%，包括openai_astra_review(145曝光), adobe-firefly(33), 3篇creatium coach重复内容(64), midjourney(38), chatgpt-deep-review(19)等。重写Title提升CTR。"
+    },
+    {
+      "id": "P1-OPPORTUNITY-PAGES-7D-001",
+      "priority": "P1",
+      "title": "优化7个机会页面（pos15-50, 曝光>10）目标进入前15",
+      "assigned_to": "窗口3",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "/compare(270曝光pos34), best-ai-voice-changers(68曝光pos16.5), ai-tools-for-beginners(30曝光pos16.2), claude-vs-gemini(25曝光pos18.1), chatgpt-vs-claude(17曝光pos25.2)等。扩充内容深度+增加内链。"
+    },
+    {
+      "id": "P1-GA4-DEPLOY-NEW-MEASUREMENT-001",
+      "priority": "P1",
+      "title": "部署新GA4 measurement_id G-7XYFQR3ETF到网站（property 549695344当前0数据）",
+      "assigned_to": "窗口1",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "新GA4 property已创建但measurement_id未部署，API返回0行数据。如需GA4数据，在layout.tsx添加gtag.js。当前已有Ahrefs Web Analytics。"
+    },
+    {
+      "id": "P2-RANK-TRACKER-REALIGN-003",
+      "priority": "P2",
+      "title": "重新校准zens-ink追踪词为GSC真实有曝光查询",
+      "assigned_to": "窗口4",
+      "status": "pending",
+      "created": "2026-09-29",
+      "description": "当前16词全部未进前20。GSC真实查询中有曝光的词：ai agent(11曝光), ai comparison tools(13曝光), agent ai tool(4曝光)。替换追踪词为这些真实查询。"
+    },
+    {
+      "id": "kw_r2_suno_alternatives",
+      "task": "写替代方案页：Suno alternatives（KD=1.0，8个弱域名，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_round2_2026-09-29",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "content_type": "替代方案页",
+        "slug": "suno-alternatives",
+        "weak_domains": 8
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_r2_lovable_vs_boltnew",
+      "task": "写对比页：Lovable vs Bolt.new（KD=1.0，7个弱域名，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_round2_2026-09-29",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "lovable-vs-bolt-new",
+        "weak_domains": 7
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_r2_perplexity_alternatives",
+      "task": "写替代方案页：Perplexity alternatives（KD=1.0，7个弱域名，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_round2_2026-09-29",
+      "keyword_data": {
+        "kd": 1.0,
+        "intent": "commercial",
+        "content_type": "替代方案页",
+        "slug": "perplexity-alternatives",
+        "weak_domains": 7
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_r2_claude37_vs_gpt4o",
+      "task": "写对比页：Claude 3.7 vs GPT-4o（KD=3.7，5个弱域名，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_round2_2026-09-29",
+      "keyword_data": {
+        "kd": 3.7,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "claude-3-7-vs-gpt-4o",
+        "weak_domains": 5
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "kw_r2_synthesia_vs_heygen",
+      "task": "写对比页：Synthesia vs HeyGen（KD=6.9，7个弱域名，P0）",
+      "assigned_to": "窗口3",
+      "priority": "P0",
+      "source": "keyword_research_round2_2026-09-29",
+      "keyword_data": {
+        "kd": 6.9,
+        "intent": "commercial",
+        "content_type": "对比页",
+        "slug": "synthesia-vs-heygen",
+        "weak_domains": 7
+      },
+      "status": "pending",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "P1-MONETIZE-SPYFU-001",
+      "title": "申请SpyFu联盟（40% recurring lifetime SEO工具）",
+      "description": "SpyFu: 40% recurring lifetime, SEO竞争情报工具。与Mangools内容高度匹配（best-ai-seo-tools等文章）。申请链接: https://www.spyfu.com/affiliates。",
+      "assigned_to": [
+        "窗口5"
+      ],
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-09-29"
+    },
+    {
+      "id": "P2-MONETIZE-RAPIDNATIVE-001",
+      "title": "申请RapidNative联盟（30% recurring AI app builder）",
+      "description": "RapidNative: 30% recurring, AI app builder/no-code平台。申请: https://www.rapidnative.com/affiliates。匹配内容: AI no-code、app builder。",
+      "assigned_to": [
+        "窗口5"
+      ],
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-09-29"
     }
   ],
   "milestones": [

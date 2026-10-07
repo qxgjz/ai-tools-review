@@ -1,37 +1,38 @@
 # AIToolCrux Content Quality Audit Report (v2)
 
-**Date:** 2026-09-29 13:26
+**Date:** 2026-09-29 14:39
 
 ## Summary
 
-- Total articles: 106
-- Average quality score: 100.0/100
-- Grade distribution: A=106, B=0, C=0, D=0, F=0
+- Total articles: 107
+- Average quality score: 99.9/100
+- Grade distribution: A=107, B=0, C=0, D=0, F=0
 - Articles below 85: 0
 
 ## Category Pass Rates
 
 | Category | Pass | Total | Rate |
 |----------|------|-------|------|
-| word_count_pass | 106 | 106 | 100% |
-| has_quick_answer | 106 | 106 | 100% |
-| first_para_pass | 106 | 106 | 100% |
-| has_key_takeaways | 106 | 106 | 100% |
-| has_faq | 106 | 106 | 100% |
-| has_how_we_tested | 106 | 106 | 100% |
-| internal_links_pass | 106 | 106 | 100% |
-| has_images | 106 | 106 | 100% |
-| has_real_screenshots | 106 | 106 | 100% |
-| readability_pass | 106 | 106 | 100% |
-| qa_density_pass | 106 | 106 | 100% |
-| title_pass | 106 | 106 | 100% |
-| has_comparison | 106 | 106 | 100% |
-| external_links_pass | 106 | 106 | 100% |
+| word_count_pass | 107 | 107 | 100% |
+| has_quick_answer | 107 | 107 | 100% |
+| first_para_pass | 107 | 107 | 100% |
+| has_key_takeaways | 107 | 107 | 100% |
+| has_faq | 107 | 107 | 100% |
+| has_how_we_tested | 107 | 107 | 100% |
+| internal_links_pass | 107 | 107 | 100% |
+| has_images | 107 | 107 | 100% |
+| has_real_screenshots | 106 | 107 | 99% |
+| readability_pass | 107 | 107 | 100% |
+| qa_density_pass | 107 | 107 | 100% |
+| title_pass | 107 | 107 | 100% |
+| has_comparison | 107 | 107 | 100% |
+| external_links_pass | 107 | 107 | 100% |
 
 ## Per-Article Scores
 
 | Slug | Score | Grade | Words | Links | Images | Flesch | Ext Links |
 |------|-------|-------|-------|-------|--------|--------|-----------|
+| gemini-vs-chatgpt-2026 | 94 | A | 3417 | 7 | 1 | 51.7 | 8 |
 | best-paid-ai-tools-worth-buying-2026 | 100 | A | 2226 | 5 | 2 | 68.2 | 1 |
 | dify-vs-langchain-2026 | 100 | A | 2216 | 6 | 2 | 50.1 | 1 |
 | gemini-alternatives-2026 | 100 | A | 2242 | 8 | 2 | 51.2 | 1 |
