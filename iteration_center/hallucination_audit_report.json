@@ -1,0 +1,1712 @@
+{
+  "total": 145,
+  "hallucinated_count": 0,
+  "low_score_count": 0,
+  "average_score": 100.0,
+  "hallucinated_articles": [],
+  "low_score_articles": [],
+  "all_results": [
+    {
+      "slug": "best-paid-ai-tools-worth-buying-2026",
+      "title": "Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 15805
+    },
+    {
+      "slug": "dify-vs-langchain-2026",
+      "title": "Dify vs LangChain 2026: Which AI App Builder | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 16376
+    },
+    {
+      "slug": "gemini-alternatives-2026",
+      "title": "7 Best Gemini Alternatives in 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 16705
+    },
+    {
+      "slug": "cursor-vs-windsurf-2026",
+      "title": "Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 16424
+    },
+    {
+      "slug": "notion-ai-vs-obsidian-2026",
+      "title": "Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 14861
+    },
+    {
+      "slug": "notion-ai-alternative-2026",
+      "title": "7 Best Notion AI Alternatives in 2026 (Free & | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 14678
+    },
+    {
+      "slug": "midjourney-vs-dalle-3-2026",
+      "title": "MidJourney vs DALL-E 3 2026: Which AI Image | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 14550
+    },
+    {
+      "slug": "jasper-ai-alternative-2026",
+      "title": "7 Best Jasper AI Alternatives in 2026 (Cheaper | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 15272
+    },
+    {
+      "slug": "chatgpt-vs-claude-2026",
+      "title": "ChatGPT vs Claude 2026: Which AI Chatbot Wins? | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 15066
+    },
+    {
+      "slug": "best-ai-voice-changers-2026",
+      "title": "Best AI Voice Changers 2026: We Tested 7 for 10 Days — Th...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 20697
+    },
+    {
+      "slug": "best-ai-slack-bots-2026",
+      "title": "Best AI Slack Bots 2026: We Tested 12 Bots (Honest Rankings)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 16820
+    },
+    {
+      "slug": "best-ai-scheduling-tools-2026",
+      "title": "Best AI Scheduling Tools 2026: We Tested 8 Tools (Real Bo...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 14409
+    },
+    {
+      "slug": "best-ai-podcast-tools-2026",
+      "title": "Best AI Podcast Tools 2026: Top 5 for Recording, Editing...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 13916
+    },
+    {
+      "slug": "best-ai-idea-generators-2026",
+      "title": "Best AI Idea Generators 2026: Top 5 for Startups, Content...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 14995
+    },
+    {
+      "slug": "dify-vs-coze-2026-comparison",
+      "title": "Dify vs Coze 2026: Which AI Agent Builder Wins? | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 13661
+    },
+    {
+      "slug": "stable-diffusion-alternatives-2026",
+      "title": "7 Best Stable Diffusion Alternatives in 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 14845
+    },
+    {
+      "slug": "midjourney-alternatives-2026",
+      "title": "6 Best MidJourney Alternatives in 2026 (Free & | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 14751
+    },
+    {
+      "slug": "best-ai-voice-generators-2026",
+      "title": "Best AI Voice Generators 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 19307
+    },
+    {
+      "slug": "best-ai-resume-builders-2026",
+      "title": "Best AI Resume Builders 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 19182
+    },
+    {
+      "slug": "best-ai-pr-tools-2026",
+      "title": "Best AI PR Tools 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 20014
+    },
+    {
+      "slug": "best-ai-photo-editors-2026",
+      "title": "Best AI Photo Editors 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 19476
+    },
+    {
+      "slug": "best-ai-observability-tools-2026",
+      "title": "Best AI Observability Tools 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 20307
+    },
+    {
+      "slug": "best-ai-meeting-assistants-2026",
+      "title": "Best AI Meeting Assistants 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 20524
+    },
+    {
+      "slug": "best-ai-logo-generators-2026",
+      "title": "Best AI Logo Generators 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 19444
+    },
+    {
+      "slug": "best-ai-grammar-checkers-2026",
+      "title": "Best AI Grammar Checkers 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 19546
+    },
+    {
+      "slug": "best-ai-customer-support-tools-2026",
+      "title": "Best AI Customer Support Tools 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 20963
+    },
+    {
+      "slug": "best-ai-comparison-tools-2026",
+      "title": "Best AI Comparison Tools 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 20723
+    },
+    {
+      "slug": "best-ai-chatbot-builders-2026",
+      "title": "Best AI Chatbot Builders 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 19099
+    },
+    {
+      "slug": "best-ai-automation-agents-2026",
+      "title": "Best AI Automation Agents 2026: Top 10 Ranked | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 19902
+    },
+    {
+      "slug": "best-ai-agents-2026-ranked-reviewed",
+      "title": "Best AI Agents in 2026: Ranked & Reviewed | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 23366
+    },
+    {
+      "slug": "best-ai-crm-tools-2026",
+      "title": "Best AI CRM Tools 2026: Top 10 Compared for | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 19031
+    },
+    {
+      "slug": "best-ai-project-management-tools-2026",
+      "title": "Best AI Project Management Tools 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 18173
+    },
+    {
+      "slug": "best-ai-note-taking-tools-2026",
+      "title": "Best AI Note Taking Tools 2026: 10 Apps Tested | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 15076
+    },
+    {
+      "slug": "best-ai-design-tools-2026",
+      "title": "Best AI Design Tools 2026: 10 Apps Tested | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 18107
+    },
+    {
+      "slug": "best-ai-email-tools-2026",
+      "title": "Best AI Email Tools 2026: Top 10 Reviewed & | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 15053
+    },
+    {
+      "slug": "best-ai-translation-tools-2026",
+      "title": "Best AI Translation Tools 2026: 10 Languages Tested & Com...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 18814
+    },
+    {
+      "slug": "best-ai-transcription-tools-2026",
+      "title": "Best AI Transcription Tools 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 20469
+    },
+    {
+      "slug": "best-ai-chatbots-2026",
+      "title": "Best AI Chatbots 2026: ChatGPT vs Claude vs | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 21472
+    },
+    {
+      "slug": "best-ai-presentation-tools-2026",
+      "title": "Best AI Presentation Tools 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 21812
+    },
+    {
+      "slug": "best-ai-legal-tools-2026",
+      "title": "Best AI Legal Tools 2026: Complete Comparison | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 25243
+    },
+    {
+      "slug": "best-ai-seo-tools-2026",
+      "title": "Best AI SEO Tools 2026: Complete Comparison of | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 22618
+    },
+    {
+      "slug": "best-ai-video-editors-2026",
+      "title": "Best AI Video Editors 2026: Complete Comparison | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 23923
+    },
+    {
+      "slug": "best-ai-marketing-tools-2026",
+      "title": "Best AI Marketing Tools 2026: Complete Comparis | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 24439
+    },
+    {
+      "slug": "best-ai-research-tools-2026",
+      "title": "Best AI Research Tools 2026: Complete Compariso | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 25335
+    },
+    {
+      "slug": "best-ai-productivity-tools-2026",
+      "title": "Best AI Productivity Tools 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.02% < 0.5%"
+      ],
+      "content_length": 29137
+    },
+    {
+      "slug": "best-ai-coding-tools-2026",
+      "title": "Best AI Coding Tools 2026: Cursor vs Copilot | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.02% < 0.5%"
+      ],
+      "content_length": 31258
+    },
+    {
+      "slug": "best-ai-image-generators-2026",
+      "title": "Best AI Image Generators 2026: Midjourney vs | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.01% < 0.5%"
+      ],
+      "content_length": 52629
+    },
+    {
+      "slug": "best-ai-audio-tools-2026",
+      "title": "Best AI Audio Tools 2026: Complete Guide to | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.01% < 0.5%"
+      ],
+      "content_length": 54732
+    },
+    {
+      "slug": "best-ai-video-generators-2026",
+      "title": "Best AI Video Generators 2026: We Tested 10 Tools (Real O...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 15043
+    },
+    {
+      "slug": "best-ai-writing-tools-2026",
+      "title": "Best AI Writing Tools 2026: Complete Comparison | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.02% < 0.5%"
+      ],
+      "content_length": 29312
+    },
+    {
+      "slug": "midjourney-vs-dall-e-3-2026-comparison",
+      "title": "Midjourney vs DALL-E 3 2026: Which AI Image | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 27258
+    },
+    {
+      "slug": "claude-vs-gemini-2026-comparison",
+      "title": "Claude vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 20251
+    },
+    {
+      "slug": "windsurf-review-2026",
+      "title": "Windsurf Review 2026: Is It the Best Code AI | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 21466
+    },
+    {
+      "slug": "cursor-vs-github-copilot-2026-comparison",
+      "title": "Cursor vs GitHub Copilot 2026: Complete Compari | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 23523
+    },
+    {
+      "slug": "midjourney-vs-dalle-3-2026-comparison",
+      "title": "Midjourney vs DALL-E 3 2026: Complete Compariso | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 21893
+    },
+    {
+      "slug": "chatgpt-vs-gemini-2026-comparison",
+      "title": "ChatGPT vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 20846
+    },
+    {
+      "slug": "cursor-ai-review-2026-best-ai-code-editor",
+      "title": "Cursor AI Review 2026: Is It the Best AI Code | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 22428
+    },
+    {
+      "slug": "elevenlabs-v2-review-2026",
+      "title": "ElevenLabs v2 Review 2026: 3 Weeks of Testing | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 25951
+    },
+    {
+      "slug": "midjourney-v7-review-2026",
+      "title": "Midjourney v7 Review 2026: The Art Director's | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.01% < 0.5%"
+      ],
+      "content_length": 102482
+    },
+    {
+      "slug": "creatium-coach-review-2025",
+      "title": "Creatium Coach Review 2026: Best AI Business Coaching Tool?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.02% < 0.5%"
+      ],
+      "content_length": 94074
+    },
+    {
+      "slug": "dify_ai_review",
+      "title": "Dify AI Review 2026: Best Open-Source LLMOps?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 96484
+    },
+    {
+      "slug": "cursor_ai_review",
+      "title": "Cursor AI Review: Better Than Copilot? 3-Month Test",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 93895
+    },
+    {
+      "slug": "gemini_38_flash_review",
+      "title": "Gemini 3.8 Flash Review: 50 Benchmarks, Is It Worth It?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 94880
+    },
+    {
+      "slug": "claude_fable_51_review",
+      "title": "Claude Fable 5.1 Review: Cheaper, Faster, Better?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 38605
+    },
+    {
+      "slug": "openai_astra_review",
+      "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is I...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 90617
+    },
+    {
+      "slug": "chatgpt-deep-review-2026",
+      "title": "ChatGPT Review 2026: 30 Days, 500+ Queries — Is It Still...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 51880
+    },
+    {
+      "slug": "ai-tools-selection-guide-2026",
+      "title": "AI Tools Selection Guide 2026: How to Choose | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 50546
+    },
+    {
+      "slug": "chatgpt-vs-claude-2026-comparison",
+      "title": "ChatGPT vs Claude 2026: Which AI Assistant is | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 25239
+    },
+    {
+      "slug": "claude-review-2026",
+      "title": "Claude Review 2026: Best AI Assistant for | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 88807
+    },
+    {
+      "slug": "github-copilot-review-2026",
+      "title": "GitHub Copilot Review 2026: 30 Days, 500+ Completions — I...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 94940
+    },
+    {
+      "slug": "cursor-review-2026",
+      "title": "Cursor Review 2026: Best AI Code Editor? | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 93363
+    },
+    {
+      "slug": "notion-ai-review-2026",
+      "title": "Notion AI Review 2026: Best AI Assistant for | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 106837
+    },
+    {
+      "slug": "elevenlabs-review-2026",
+      "title": "ElevenLabs Review 2026: Best AI Voice Generator & Cloning?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 95125
+    },
+    {
+      "slug": "midjourney-review-2026",
+      "title": "Midjourney Review 2026: Best AI Image | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 95209
+    },
+    {
+      "slug": "runway-review-2026",
+      "title": "Runway Review 2026: Best AI Video Generation | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 94543
+    },
+    {
+      "slug": "jasper-review-2026",
+      "title": "Jasper Review 2026: Best AI Writing Tool for | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 96686
+    },
+    {
+      "slug": "perplexity-review-2026",
+      "title": "Perplexity Review 2026: Best AI Search Engine | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 68509
+    },
+    {
+      "slug": "figma-ai-review-2026",
+      "title": "Figma AI Review 2026: Best AI Design Assistant | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 98441
+    },
+    {
+      "slug": "sora-review-2026",
+      "title": "Sora Review 2026: Best AI Video Generator for | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 94293
+    },
+    {
+      "slug": "stable-diffusion-review-2026",
+      "title": "Stable Diffusion 2026 Guide: Best Models & Setup",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 107436
+    },
+    {
+      "slug": "copy-ai-review-2026",
+      "title": "Copy.ai Review 2026: Best Free AI Writing Tool | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 94178
+    },
+    {
+      "slug": "otter-ai-review-2026",
+      "title": "Otter.ai Review 2026: Best AI Meeting | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 97060
+    },
+    {
+      "slug": "synthesia-review-2026",
+      "title": "Synthesia Review: Best AI Avatar Video Maker?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 97431
+    },
+    {
+      "slug": "gemini-review-2026",
+      "title": "Google Gemini Review 2026: Honest 30-Day Test | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 82297
+    },
+    {
+      "slug": "dall-e-3-review-2026",
+      "title": "DALL-E 3 Review 2026: Best AI Image Generator | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 96009
+    },
+    {
+      "slug": "pika-review-2026",
+      "title": "Pika Review 2026: Best Budget AI Video | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 93436
+    },
+    {
+      "slug": "suno-review-2026",
+      "title": "Suno AI Review: Made 20 Songs, 3 Were Unreleasable",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 68026
+    },
+    {
+      "slug": "microsoft-365-copilot-review-2026",
+      "title": "Microsoft 365 Copilot Review 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 111371
+    },
+    {
+      "slug": "kling-review-2026",
+      "title": "Kling AI Review 2026: Best Chinese AI Video | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 85400
+    },
+    {
+      "slug": "heygen-review-2026",
+      "title": "HeyGen Review 2026: Best AI Avatar Video Tool | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 97132
+    },
+    {
+      "slug": "leonardo-ai-review-2026",
+      "title": "Leonardo AI Review 2026: Best AI Image | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 102876
+    },
+    {
+      "slug": "adobe-firefly-review-2026",
+      "title": "Adobe Firefly Review: 30-Day Test, Is It Worth It?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 101557
+    },
+    {
+      "slug": "writesonic-review-2026",
+      "title": "Writesonic Review 2026: Best AI Writing Tool | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 102266
+    },
+    {
+      "slug": "tabnine-review-2026",
+      "title": "Tabnine Review 2026: Best AI Code Completion | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 83158
+    },
+    {
+      "slug": "ai-tools-review-guide-2026",
+      "title": "AI Tools Review Guide 2026: Six-Dimension | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 92868
+    },
+    {
+      "slug": "ai-coding-tools-comparison-2026",
+      "title": "AI Coding Tools Complete Review 2026 | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 110025
+    },
+    {
+      "slug": "replit-review-2026",
+      "title": "Replit Review 2026: Best AI-Native Cloud IDE | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 83912
+    },
+    {
+      "slug": "best-free-ai-tools-2026",
+      "title": "Best Free AI Tools in 2026: Complete Guide to | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 84855
+    },
+    {
+      "slug": "ai-tools-comparison-2026",
+      "title": "AI Tools Comparison 2026: Which AI Tool is | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 84412
+    },
+    {
+      "slug": "ai-tools-for-beginners-2026",
+      "title": "AI Tools for Beginners 2026: Easy Start Guide | AIToolCrux",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 83900
+    },
+    {
+      "slug": "jasper-vs-copy-ai-2026-comparison",
+      "title": "Jasper vs Copy.ai 2026: We Ran 40 Campaigns — Here's the...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 21478
+    },
+    {
+      "slug": "canva-ai-vs-adobe-firefly-2026-comparison",
+      "title": "Canva AI vs Adobe Firefly 2026: We Tested Both for 2 Week...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 19224
+    },
+    {
+      "slug": "surfer-seo-vs-frase-2026-comparison",
+      "title": "Surfer SEO vs Frase 2026: We Tested Both for 3 Weeks (Dat...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 13852
+    },
+    {
+      "slug": "gemini-pricing-2026",
+      "title": "Gemini Pricing 2026: Is Advanced Worth $20/Month? [Real C...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 18502
+    },
+    {
+      "slug": "windsurf-vs-cursor-2026",
+      "title": "Windsurf vs Cursor 2026: I Tested Both for 2 Weeks — Whic...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 20170
+    },
+    {
+      "slug": "gemini-vs-chatgpt-2026",
+      "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tes...",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 25074
+    },
+    {
+      "slug": "suno-alternatives",
+      "title": "11 Best Suno Alternatives in 2026 (After Free Tier Ended)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 24661
+    },
+    {
+      "slug": "otter-ai-alternatives",
+      "title": "7 Best Otter.ai Alternatives in 2026 (After Price Hike)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少FAQ部分",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 16529
+    },
+    {
+      "slug": "autochain-review-2026",
+      "title": "AutoChain Review 2026: Lightweight LLM Agent Builder",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 13272
+    },
+    {
+      "slug": "chatgpt-alternatives-2026",
+      "title": "7 Best ChatGPT Alternatives in 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1990词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 12637
+    },
+    {
+      "slug": "runway-vs-pika-2026",
+      "title": "Runway vs Pika 2026: AI Video Showdown",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1957词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 12395
+    },
+    {
+      "slug": "best-free-ai-tools-for-students-2026",
+      "title": "Best Free AI Tools for Students 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.10% < 0.5%"
+      ],
+      "content_length": 12173
+    },
+    {
+      "slug": "cursor-vs-github-copilot-2026",
+      "title": "Cursor vs GitHub Copilot 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1943词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 12001
+    },
+    {
+      "slug": "elevenlabs-vs-playht-2026",
+      "title": "ElevenLabs vs Play.ht 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1927词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 12438
+    },
+    {
+      "slug": "how-to-get-chatgpt-free-2026",
+      "title": "How to Get ChatGPT Free in 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1904词 < 2000词",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 11573
+    },
+    {
+      "slug": "canva-pro-free-for-students",
+      "title": "Canva Pro Free for Students 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.10% < 0.5%"
+      ],
+      "content_length": 11873
+    },
+    {
+      "slug": "midjourney-v7-vs-dall-e-3-ecommerce",
+      "title": "Midjourney v7 vs DALL-E 3: Ecommerce Pick",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1951词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 11942
+    },
+    {
+      "slug": "claude-alternatives-2026",
+      "title": "7 Claude Alternatives in 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1531词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 9545
+    },
+    {
+      "slug": "notion-ai-vs-obsidian-ai",
+      "title": "Notion AI vs Obsidian AI 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1908词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.16% < 0.5%"
+      ],
+      "content_length": 11207
+    },
+    {
+      "slug": "best-free-ai-tools-for-youtube-creators",
+      "title": "Best Free AI Tools for YouTube Creators",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.06% < 0.5%"
+      ],
+      "content_length": 19726
+    },
+    {
+      "slug": "elevenlabs-vs-murf-2026",
+      "title": "ElevenLabs vs Murf: Which Is Right for Voiceover in 2026?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 16926
+    },
+    {
+      "slug": "cursor-alternatives-2026",
+      "title": "Cursor Alternatives 2026: 6 Tools We Tested",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 17379
+    },
+    {
+      "slug": "midjourney-free-trial-2026",
+      "title": "Midjourney Free Trial 2026: How to Start",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.04% < 0.5%"
+      ],
+      "content_length": 16534
+    },
+    {
+      "slug": "canva-ai-alternatives-2026",
+      "title": "Canva AI Alternatives 2026: 7 Tools That Work",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 25371
+    },
+    {
+      "slug": "how-to-use-cursor-for-react-development",
+      "title": "How to Use Cursor for React in 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "缺少截图/图片",
+        "关键词密度过低: 0.03% < 0.5%"
+      ],
+      "content_length": 21486
+    },
+    {
+      "slug": "suno-alternatives-2026",
+      "title": "5 Best Suno Alternatives in 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 15226
+    },
+    {
+      "slug": "lovable-vs-boltnew",
+      "title": "Lovable vs Bolt.new 2026: We Built the Same App on Both",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1062词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.19% < 0.5%"
+      ],
+      "content_length": 7822
+    },
+    {
+      "slug": "claude-37-vs-gpt4o",
+      "title": "Claude 3.7 Sonnet vs GPT-4o 2026: Side-by-Side Benchmarks",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1983词 < 2000词",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 15794
+    },
+    {
+      "slug": "synthesia-vs-heygen",
+      "title": "Synthesia vs HeyGen 2026: We Tested Both on the Same Script",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1977词 < 2000词",
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 15796
+    },
+    {
+      "slug": "beautiful-ai-alternatives",
+      "title": "7 Best Beautiful.ai Alternatives in 2026 (Free & Paid)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 831词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.24% < 0.5%"
+      ],
+      "content_length": 6611
+    },
+    {
+      "slug": "devin-ai-review",
+      "title": "Devin AI Review 2026: Is It Worth It?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 941词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.21% < 0.5%"
+      ],
+      "content_length": 6887
+    },
+    {
+      "slug": "clearscope-alternatives",
+      "title": "6 Best Clearscope Alternatives in 2026 (Cheaper & Better)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 815词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.25% < 0.5%"
+      ],
+      "content_length": 6466
+    },
+    {
+      "slug": "motion-ai-alternatives",
+      "title": "7 Best Motion AI Alternatives in 2026 (Free & Paid)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 786词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.25% < 0.5%"
+      ],
+      "content_length": 6299
+    },
+    {
+      "slug": "quillbot-alternatives",
+      "title": "7 Best QuillBot Alternatives in 2026",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 791词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.25% < 0.5%"
+      ],
+      "content_length": 6341
+    },
+    {
+      "slug": "runway-alternatives",
+      "title": "8 Best Runway ML Alternatives in 2026 (Tested & Ranked)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 865词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.35% < 0.5%"
+      ],
+      "content_length": 6764
+    },
+    {
+      "slug": "sudowrite-alternatives",
+      "title": "7 Best Sudowrite Alternatives in 2026 (For Novel Writers)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1086词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.28% < 0.5%"
+      ],
+      "content_length": 8439
+    },
+    {
+      "slug": "writesonic-alternatives",
+      "title": "8 Best Writesonic Alternatives in 2026 (Ranked by Use Case)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 813词 < 2000词",
+        "缺少FAQ部分",
+        "缺少截图/图片",
+        "关键词密度过低: 0.25% < 0.5%"
+      ],
+      "content_length": 6607
+    },
+    {
+      "slug": "midjourney-v7-vs-flux-2026",
+      "title": "Midjourney v7 vs Flux 2026: Which AI Wins?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1172词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 9035
+    },
+    {
+      "slug": "claude-opus-4-vs-gpt-5-2026",
+      "title": "Claude Opus 4 vs GPT-5: Which LLM Wins 2026?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 1070词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 8252
+    },
+    {
+      "slug": "perplexity-vs-chatgpt-2026",
+      "title": "Perplexity AI vs ChatGPT 2026: Which Wins?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 436词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 3629
+    },
+    {
+      "slug": "notion-ai-vs-notion-ai-salesforce-2026",
+      "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 417词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 3478
+    },
+    {
+      "slug": "midjourney-v7-vs-dall-e-3-2026",
+      "title": "Midjourney v7 vs DALL-E 3 2026: Which Wins?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 426词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 3358
+    },
+    {
+      "slug": "notion-ai-vs-salesforce-2026",
+      "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "字数不足: 447词 < 2000词",
+        "缺少截图/图片",
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 3685
+    },
+    {
+      "slug": "aider-review",
+      "title": "Aider AI Review 2026: Is the Open-Source Coding Agent Worth ",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.00% < 0.5%"
+      ],
+      "content_length": 13211
+    },
+    {
+      "slug": "best-ai-grammar-checker",
+      "title": "8 Best AI Grammar Checkers in 2026 (Tested & Compared)",
+      "score": 100,
+      "hallucination": false,
+      "ai_probability": 0.0,
+      "warnings": [
+        "关键词密度过低: 0.05% < 0.5%"
+      ],
+      "content_length": 14606
+    }
+  ]
+}

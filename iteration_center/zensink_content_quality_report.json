@@ -1,0 +1,3162 @@
+{
+  "total": 145,
+  "valid": 145,
+  "average_score": 53.0,
+  "pass_count": 12,
+  "fail_count": 133,
+  "score_ranges": {
+    "90-100": 0,
+    "80-89": 0,
+    "70-79": 12,
+    "60-69": 31,
+    "50-59": 33,
+    "<50": 69
+  },
+  "common_failed_checks": {
+    "BLUF up front": 145,
+    "Outbound source links >= 2": 104,
+    "H2 sections >= 3": 68,
+    "Question-format heading": 97,
+    "Title 20-65 chars": 145,
+    "Description 70-160 chars": 145,
+    "Date signal": 145,
+    "Internal links >= 2": 24,
+    "Vague-word density < 3/1k": 9,
+    "FAQ block present": 38,
+    "Lists or tables": 21
+  },
+  "low_quality_articles": [
+    {
+      "slug": "midjourney-v7-vs-flux-2026",
+      "title": "Midjourney v7 vs Flux 2026: Which AI Wins?",
+      "score": 23,
+      "word_count": 1143,
+      "fact_density": 60.4,
+      "vague_density": 3.5,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 9035
+    },
+    {
+      "slug": "chatgpt-vs-claude-2026-comparison",
+      "title": "ChatGPT vs Claude 2026: Which AI Assistant is | AIToolCrux",
+      "score": 28,
+      "word_count": 2969,
+      "fact_density": 75.8,
+      "vague_density": 3.0,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25239
+    },
+    {
+      "slug": "claude-37-vs-gpt4o",
+      "title": "Claude 3.7 Sonnet vs GPT-4o 2026: Side-by-Side Benchmarks",
+      "score": 28,
+      "word_count": 1942,
+      "fact_density": 78.3,
+      "vague_density": 2.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15794
+    },
+    {
+      "slug": "synthesia-vs-heygen",
+      "title": "Synthesia vs HeyGen 2026: We Tested Both on the Same Script",
+      "score": 28,
+      "word_count": 1904,
+      "fact_density": 62.5,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15796
+    },
+    {
+      "slug": "motion-ai-alternatives",
+      "title": "7 Best Motion AI Alternatives in 2026 (Free & Paid)",
+      "score": 28,
+      "word_count": 783,
+      "fact_density": 57.5,
+      "vague_density": 3.8,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6299
+    },
+    {
+      "slug": "quillbot-alternatives",
+      "title": "7 Best QuillBot Alternatives in 2026",
+      "score": 28,
+      "word_count": 765,
+      "fact_density": 58.8,
+      "vague_density": 3.9,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6341
+    },
+    {
+      "slug": "runway-alternatives",
+      "title": "8 Best Runway ML Alternatives in 2026 (Tested & Ranked)",
+      "score": 28,
+      "word_count": 838,
+      "fact_density": 74.0,
+      "vague_density": 3.6,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6764
+    },
+    {
+      "slug": "writesonic-alternatives",
+      "title": "8 Best Writesonic Alternatives in 2026 (Ranked by Use Case)",
+      "score": 28,
+      "word_count": 786,
+      "fact_density": 62.3,
+      "vague_density": 3.8,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6607
+    },
+    {
+      "slug": "otter-ai-alternatives",
+      "title": "7 Best Otter.ai Alternatives in 2026 (After Price Hike)",
+      "score": 33,
+      "word_count": 2059,
+      "fact_density": 83.5,
+      "vague_density": 3.4,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16529
+    },
+    {
+      "slug": "claude-opus-4-vs-gpt-5-2026",
+      "title": "Claude Opus 4 vs GPT-5: Which LLM Wins 2026?",
+      "score": 33,
+      "word_count": 1023,
+      "fact_density": 142.7,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 8252
+    },
+    {
+      "slug": "perplexity-vs-chatgpt-2026",
+      "title": "Perplexity AI vs ChatGPT 2026: Which Wins?",
+      "score": 33,
+      "word_count": 432,
+      "fact_density": 60.2,
+      "vague_density": 2.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3629
+    },
+    {
+      "slug": "notion-ai-vs-notion-ai-salesforce-2026",
+      "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+      "score": 33,
+      "word_count": 425,
+      "fact_density": 32.9,
+      "vague_density": 0.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3478
+    },
+    {
+      "slug": "midjourney-v7-vs-dall-e-3-2026",
+      "title": "Midjourney v7 vs DALL-E 3 2026: Which Wins?",
+      "score": 33,
+      "word_count": 409,
+      "fact_density": 85.6,
+      "vague_density": 0.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3358
+    },
+    {
+      "slug": "notion-ai-vs-salesforce-2026",
+      "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+      "score": 33,
+      "word_count": 457,
+      "fact_density": 39.4,
+      "vague_density": 2.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3685
+    },
+    {
+      "slug": "cursor-vs-windsurf-2026",
+      "title": "Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux",
+      "score": 38,
+      "word_count": 2124,
+      "fact_density": 35.3,
+      "vague_density": 3.3,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16424
+    },
+    {
+      "slug": "claude-vs-gemini-2026-comparison",
+      "title": "Claude vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+      "score": 38,
+      "word_count": 2430,
+      "fact_density": 60.5,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20251
+    },
+    {
+      "slug": "elevenlabs-v2-review-2026",
+      "title": "ElevenLabs v2 Review 2026: 3 Weeks of Testing | AIToolCrux",
+      "score": 38,
+      "word_count": 3583,
+      "fact_density": 40.2,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25951
+    },
+    {
+      "slug": "midjourney-v7-review-2026",
+      "title": "Midjourney v7 Review 2026: The Art Director's | AIToolCrux",
+      "score": 38,
+      "word_count": 13768,
+      "fact_density": 16.1,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 102482
+    },
+    {
+      "slug": "cursor_ai_review",
+      "title": "Cursor AI Review: Better Than Copilot? 3-Month Test",
+      "score": 38,
+      "word_count": 12629,
+      "fact_density": 20.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 93895
+    },
+    {
+      "slug": "openai_astra_review",
+      "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is I...",
+      "score": 38,
+      "word_count": 12071,
+      "fact_density": 20.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 90617
+    },
+    {
+      "slug": "gemini-vs-chatgpt-2026",
+      "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tes...",
+      "score": 38,
+      "word_count": 3265,
+      "fact_density": 48.1,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25074
+    },
+    {
+      "slug": "suno-alternatives",
+      "title": "11 Best Suno Alternatives in 2026 (After Free Tier Ended)",
+      "score": 38,
+      "word_count": 2711,
+      "fact_density": 65.3,
+      "vague_density": 1.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 24661
+    },
+    {
+      "slug": "lovable-vs-boltnew",
+      "title": "Lovable vs Bolt.new 2026: We Built the Same App on Both",
+      "score": 38,
+      "word_count": 1063,
+      "fact_density": 39.5,
+      "vague_density": 2.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 7822
+    },
+    {
+      "slug": "beautiful-ai-alternatives",
+      "title": "7 Best Beautiful.ai Alternatives in 2026 (Free & Paid)",
+      "score": 38,
+      "word_count": 825,
+      "fact_density": 50.9,
+      "vague_density": 2.4,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6611
+    },
+    {
+      "slug": "clearscope-alternatives",
+      "title": "6 Best Clearscope Alternatives in 2026 (Cheaper & Better)",
+      "score": 38,
+      "word_count": 786,
+      "fact_density": 70.0,
+      "vague_density": 2.5,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6466
+    },
+    {
+      "slug": "sudowrite-alternatives",
+      "title": "7 Best Sudowrite Alternatives in 2026 (For Novel Writers)",
+      "score": 38,
+      "word_count": 1050,
+      "fact_density": 74.3,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 8439
+    },
+    {
+      "slug": "dify-vs-langchain-2026",
+      "title": "Dify vs LangChain 2026: Which AI App Builder | AIToolCrux",
+      "score": 43,
+      "word_count": 2133,
+      "fact_density": 24.8,
+      "vague_density": 2.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16376
+    },
+    {
+      "slug": "creatium-coach-review-2025",
+      "title": "Creatium Coach Review 2026: Best AI Business Coaching Tool?",
+      "score": 43,
+      "word_count": 12825,
+      "fact_density": 10.9,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94074
+    },
+    {
+      "slug": "dify_ai_review",
+      "title": "Dify AI Review 2026: Best Open-Source LLMOps?",
+      "score": 43,
+      "word_count": 12932,
+      "fact_density": 16.7,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 96484
+    },
+    {
+      "slug": "gemini_38_flash_review",
+      "title": "Gemini 3.8 Flash Review: 50 Benchmarks, Is It Worth It?",
+      "score": 43,
+      "word_count": 12595,
+      "fact_density": 24.7,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94880
+    }
+  ],
+  "all_results": [
+    {
+      "slug": "best-paid-ai-tools-worth-buying-2026",
+      "title": "Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...",
+      "score": 48,
+      "word_count": 2115,
+      "fact_density": 72.3,
+      "vague_density": 1.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15805
+    },
+    {
+      "slug": "dify-vs-langchain-2026",
+      "title": "Dify vs LangChain 2026: Which AI App Builder | AIToolCrux",
+      "score": 43,
+      "word_count": 2133,
+      "fact_density": 24.8,
+      "vague_density": 2.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16376
+    },
+    {
+      "slug": "gemini-alternatives-2026",
+      "title": "7 Best Gemini Alternatives in 2026 | AIToolCrux",
+      "score": 48,
+      "word_count": 2128,
+      "fact_density": 39.9,
+      "vague_density": 2.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16705
+    },
+    {
+      "slug": "cursor-vs-windsurf-2026",
+      "title": "Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux",
+      "score": 38,
+      "word_count": 2124,
+      "fact_density": 35.3,
+      "vague_density": 3.3,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16424
+    },
+    {
+      "slug": "notion-ai-vs-obsidian-2026",
+      "title": "Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux",
+      "score": 73,
+      "word_count": 2033,
+      "fact_density": 47.2,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14861
+    },
+    {
+      "slug": "notion-ai-alternative-2026",
+      "title": "7 Best Notion AI Alternatives in 2026 (Free & | AIToolCrux",
+      "score": 68,
+      "word_count": 1918,
+      "fact_density": 53.7,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14678
+    },
+    {
+      "slug": "midjourney-vs-dalle-3-2026",
+      "title": "MidJourney vs DALL-E 3 2026: Which AI Image | AIToolCrux",
+      "score": 73,
+      "word_count": 1978,
+      "fact_density": 67.7,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14550
+    },
+    {
+      "slug": "jasper-ai-alternative-2026",
+      "title": "7 Best Jasper AI Alternatives in 2026 (Cheaper | AIToolCrux",
+      "score": 68,
+      "word_count": 2003,
+      "fact_density": 73.4,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15272
+    },
+    {
+      "slug": "chatgpt-vs-claude-2026",
+      "title": "ChatGPT vs Claude 2026: Which AI Chatbot Wins? | AIToolCrux",
+      "score": 73,
+      "word_count": 2096,
+      "fact_density": 52.5,
+      "vague_density": 1.4,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15066
+    },
+    {
+      "slug": "best-ai-voice-changers-2026",
+      "title": "Best AI Voice Changers 2026: We Tested 7 for 10 Days — Th...",
+      "score": 68,
+      "word_count": 2781,
+      "fact_density": 84.1,
+      "vague_density": 1.4,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20697
+    },
+    {
+      "slug": "best-ai-slack-bots-2026",
+      "title": "Best AI Slack Bots 2026: We Tested 12 Bots (Honest Rankings)",
+      "score": 73,
+      "word_count": 2352,
+      "fact_density": 82.1,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16820
+    },
+    {
+      "slug": "best-ai-scheduling-tools-2026",
+      "title": "Best AI Scheduling Tools 2026: We Tested 8 Tools (Real Bo...",
+      "score": 73,
+      "word_count": 2026,
+      "fact_density": 92.3,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14409
+    },
+    {
+      "slug": "best-ai-podcast-tools-2026",
+      "title": "Best AI Podcast Tools 2026: Top 5 for Recording, Editing...",
+      "score": 68,
+      "word_count": 1926,
+      "fact_density": 79.4,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 13916
+    },
+    {
+      "slug": "best-ai-idea-generators-2026",
+      "title": "Best AI Idea Generators 2026: Top 5 for Startups, Content...",
+      "score": 68,
+      "word_count": 2064,
+      "fact_density": 76.1,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14995
+    },
+    {
+      "slug": "dify-vs-coze-2026-comparison",
+      "title": "Dify vs Coze 2026: Which AI Agent Builder Wins? | AIToolCrux",
+      "score": 73,
+      "word_count": 1895,
+      "fact_density": 40.6,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 13661
+    },
+    {
+      "slug": "stable-diffusion-alternatives-2026",
+      "title": "7 Best Stable Diffusion Alternatives in 2026 | AIToolCrux",
+      "score": 73,
+      "word_count": 1981,
+      "fact_density": 66.6,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14845
+    },
+    {
+      "slug": "midjourney-alternatives-2026",
+      "title": "6 Best MidJourney Alternatives in 2026 (Free & | AIToolCrux",
+      "score": 73,
+      "word_count": 1970,
+      "fact_density": 58.9,
+      "vague_density": 2.5,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14751
+    },
+    {
+      "slug": "best-ai-voice-generators-2026",
+      "title": "Best AI Voice Generators 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2717,
+      "fact_density": 53.7,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19307
+    },
+    {
+      "slug": "best-ai-resume-builders-2026",
+      "title": "Best AI Resume Builders 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2668,
+      "fact_density": 57.3,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19182
+    },
+    {
+      "slug": "best-ai-pr-tools-2026",
+      "title": "Best AI PR Tools 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2759,
+      "fact_density": 55.5,
+      "vague_density": 1.4,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20014
+    },
+    {
+      "slug": "best-ai-photo-editors-2026",
+      "title": "Best AI Photo Editors 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2714,
+      "fact_density": 57.8,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19476
+    },
+    {
+      "slug": "best-ai-observability-tools-2026",
+      "title": "Best AI Observability Tools 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2785,
+      "fact_density": 50.6,
+      "vague_density": 1.4,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20307
+    },
+    {
+      "slug": "best-ai-meeting-assistants-2026",
+      "title": "Best AI Meeting Assistants 2026 | AIToolCrux",
+      "score": 68,
+      "word_count": 2659,
+      "fact_density": 51.9,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20524
+    },
+    {
+      "slug": "best-ai-logo-generators-2026",
+      "title": "Best AI Logo Generators 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2682,
+      "fact_density": 60.0,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19444
+    },
+    {
+      "slug": "best-ai-grammar-checkers-2026",
+      "title": "Best AI Grammar Checkers 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2649,
+      "fact_density": 57.8,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19546
+    },
+    {
+      "slug": "best-ai-customer-support-tools-2026",
+      "title": "Best AI Customer Support Tools 2026 | AIToolCrux",
+      "score": 68,
+      "word_count": 2756,
+      "fact_density": 59.5,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20963
+    },
+    {
+      "slug": "best-ai-comparison-tools-2026",
+      "title": "Best AI Comparison Tools 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2891,
+      "fact_density": 45.7,
+      "vague_density": 1.4,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20723
+    },
+    {
+      "slug": "best-ai-chatbot-builders-2026",
+      "title": "Best AI Chatbot Builders 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2669,
+      "fact_density": 53.2,
+      "vague_density": 1.9,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19099
+    },
+    {
+      "slug": "best-ai-automation-agents-2026",
+      "title": "Best AI Automation Agents 2026: Top 10 Ranked | AIToolCrux",
+      "score": 68,
+      "word_count": 2776,
+      "fact_density": 53.7,
+      "vague_density": 1.4,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19902
+    },
+    {
+      "slug": "best-ai-agents-2026-ranked-reviewed",
+      "title": "Best AI Agents in 2026: Ranked & Reviewed | AIToolCrux",
+      "score": 68,
+      "word_count": 3026,
+      "fact_density": 52.5,
+      "vague_density": 0.7,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 23366
+    },
+    {
+      "slug": "best-ai-crm-tools-2026",
+      "title": "Best AI CRM Tools 2026: Top 10 Compared for | AIToolCrux",
+      "score": 58,
+      "word_count": 2540,
+      "fact_density": 57.5,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19031
+    },
+    {
+      "slug": "best-ai-project-management-tools-2026",
+      "title": "Best AI Project Management Tools 2026 | AIToolCrux",
+      "score": 58,
+      "word_count": 2390,
+      "fact_density": 55.6,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 18173
+    },
+    {
+      "slug": "best-ai-note-taking-tools-2026",
+      "title": "Best AI Note Taking Tools 2026: 10 Apps Tested | AIToolCrux",
+      "score": 58,
+      "word_count": 2022,
+      "fact_density": 45.0,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15076
+    },
+    {
+      "slug": "best-ai-design-tools-2026",
+      "title": "Best AI Design Tools 2026: 10 Apps Tested | AIToolCrux",
+      "score": 58,
+      "word_count": 2540,
+      "fact_density": 33.9,
+      "vague_density": 2.4,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 18107
+    },
+    {
+      "slug": "best-ai-email-tools-2026",
+      "title": "Best AI Email Tools 2026: Top 10 Reviewed & | AIToolCrux",
+      "score": 58,
+      "word_count": 2006,
+      "fact_density": 59.8,
+      "vague_density": 3.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15053
+    },
+    {
+      "slug": "best-ai-translation-tools-2026",
+      "title": "Best AI Translation Tools 2026: 10 Languages Tested & Com...",
+      "score": 68,
+      "word_count": 2443,
+      "fact_density": 89.2,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 18814
+    },
+    {
+      "slug": "best-ai-transcription-tools-2026",
+      "title": "Best AI Transcription Tools 2026 | AIToolCrux",
+      "score": 58,
+      "word_count": 2583,
+      "fact_density": 69.3,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20469
+    },
+    {
+      "slug": "best-ai-chatbots-2026",
+      "title": "Best AI Chatbots 2026: ChatGPT vs Claude vs | AIToolCrux",
+      "score": 58,
+      "word_count": 2902,
+      "fact_density": 50.3,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 21472
+    },
+    {
+      "slug": "best-ai-presentation-tools-2026",
+      "title": "Best AI Presentation Tools 2026 | AIToolCrux",
+      "score": 58,
+      "word_count": 2877,
+      "fact_density": 48.7,
+      "vague_density": 1.7,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 21812
+    },
+    {
+      "slug": "best-ai-legal-tools-2026",
+      "title": "Best AI Legal Tools 2026: Complete Comparison | AIToolCrux",
+      "score": 58,
+      "word_count": 3370,
+      "fact_density": 37.4,
+      "vague_density": 1.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25243
+    },
+    {
+      "slug": "best-ai-seo-tools-2026",
+      "title": "Best AI SEO Tools 2026: Complete Comparison of | AIToolCrux",
+      "score": 58,
+      "word_count": 2989,
+      "fact_density": 52.9,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 22618
+    },
+    {
+      "slug": "best-ai-video-editors-2026",
+      "title": "Best AI Video Editors 2026: Complete Comparison | AIToolCrux",
+      "score": 58,
+      "word_count": 3183,
+      "fact_density": 51.8,
+      "vague_density": 1.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 23923
+    },
+    {
+      "slug": "best-ai-marketing-tools-2026",
+      "title": "Best AI Marketing Tools 2026: Complete Comparis | AIToolCrux",
+      "score": 63,
+      "word_count": 3149,
+      "fact_density": 64.1,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 24439
+    },
+    {
+      "slug": "best-ai-research-tools-2026",
+      "title": "Best AI Research Tools 2026: Complete Compariso | AIToolCrux",
+      "score": 63,
+      "word_count": 3243,
+      "fact_density": 57.4,
+      "vague_density": 1.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25335
+    },
+    {
+      "slug": "best-ai-productivity-tools-2026",
+      "title": "Best AI Productivity Tools 2026 | AIToolCrux",
+      "score": 63,
+      "word_count": 3879,
+      "fact_density": 61.6,
+      "vague_density": 1.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 29137
+    },
+    {
+      "slug": "best-ai-coding-tools-2026",
+      "title": "Best AI Coding Tools 2026: Cursor vs Copilot | AIToolCrux",
+      "score": 63,
+      "word_count": 4155,
+      "fact_density": 55.1,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 31258
+    },
+    {
+      "slug": "best-ai-image-generators-2026",
+      "title": "Best AI Image Generators 2026: Midjourney vs | AIToolCrux",
+      "score": 58,
+      "word_count": 2314,
+      "fact_density": 35.9,
+      "vague_density": 2.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 52629
+    },
+    {
+      "slug": "best-ai-audio-tools-2026",
+      "title": "Best AI Audio Tools 2026: Complete Guide to | AIToolCrux",
+      "score": 48,
+      "word_count": 2287,
+      "fact_density": 52.9,
+      "vague_density": 3.1,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 54732
+    },
+    {
+      "slug": "best-ai-video-generators-2026",
+      "title": "Best AI Video Generators 2026: We Tested 10 Tools (Real O...",
+      "score": 73,
+      "word_count": 1979,
+      "fact_density": 175.8,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15043
+    },
+    {
+      "slug": "best-ai-writing-tools-2026",
+      "title": "Best AI Writing Tools 2026: Complete Comparison | AIToolCrux",
+      "score": 58,
+      "word_count": 3812,
+      "fact_density": 61.6,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 29312
+    },
+    {
+      "slug": "midjourney-vs-dall-e-3-2026-comparison",
+      "title": "Midjourney vs DALL-E 3 2026: Which AI Image | AIToolCrux",
+      "score": 58,
+      "word_count": 3132,
+      "fact_density": 79.8,
+      "vague_density": 2.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 27258
+    },
+    {
+      "slug": "claude-vs-gemini-2026-comparison",
+      "title": "Claude vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+      "score": 38,
+      "word_count": 2430,
+      "fact_density": 60.5,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20251
+    },
+    {
+      "slug": "windsurf-review-2026",
+      "title": "Windsurf Review 2026: Is It the Best Code AI | AIToolCrux",
+      "score": 63,
+      "word_count": 2804,
+      "fact_density": 75.2,
+      "vague_density": 1.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 21466
+    },
+    {
+      "slug": "cursor-vs-github-copilot-2026-comparison",
+      "title": "Cursor vs GitHub Copilot 2026: Complete Compari | AIToolCrux",
+      "score": 58,
+      "word_count": 3102,
+      "fact_density": 44.2,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 23523
+    },
+    {
+      "slug": "midjourney-vs-dalle-3-2026-comparison",
+      "title": "Midjourney vs DALL-E 3 2026: Complete Compariso | AIToolCrux",
+      "score": 63,
+      "word_count": 2826,
+      "fact_density": 63.7,
+      "vague_density": 2.5,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 21893
+    },
+    {
+      "slug": "chatgpt-vs-gemini-2026-comparison",
+      "title": "ChatGPT vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
+      "score": 58,
+      "word_count": 2760,
+      "fact_density": 43.8,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20846
+    },
+    {
+      "slug": "cursor-ai-review-2026-best-ai-code-editor",
+      "title": "Cursor AI Review 2026: Is It the Best AI Code | AIToolCrux",
+      "score": 63,
+      "word_count": 3047,
+      "fact_density": 61.7,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 22428
+    },
+    {
+      "slug": "elevenlabs-v2-review-2026",
+      "title": "ElevenLabs v2 Review 2026: 3 Weeks of Testing | AIToolCrux",
+      "score": 38,
+      "word_count": 3583,
+      "fact_density": 40.2,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25951
+    },
+    {
+      "slug": "midjourney-v7-review-2026",
+      "title": "Midjourney v7 Review 2026: The Art Director's | AIToolCrux",
+      "score": 38,
+      "word_count": 13768,
+      "fact_density": 16.1,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 102482
+    },
+    {
+      "slug": "creatium-coach-review-2025",
+      "title": "Creatium Coach Review 2026: Best AI Business Coaching Tool?",
+      "score": 43,
+      "word_count": 12825,
+      "fact_density": 10.9,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94074
+    },
+    {
+      "slug": "dify_ai_review",
+      "title": "Dify AI Review 2026: Best Open-Source LLMOps?",
+      "score": 43,
+      "word_count": 12932,
+      "fact_density": 16.7,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 96484
+    },
+    {
+      "slug": "cursor_ai_review",
+      "title": "Cursor AI Review: Better Than Copilot? 3-Month Test",
+      "score": 38,
+      "word_count": 12629,
+      "fact_density": 20.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 93895
+    },
+    {
+      "slug": "gemini_38_flash_review",
+      "title": "Gemini 3.8 Flash Review: 50 Benchmarks, Is It Worth It?",
+      "score": 43,
+      "word_count": 12595,
+      "fact_density": 24.7,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94880
+    },
+    {
+      "slug": "claude_fable_51_review",
+      "title": "Claude Fable 5.1 Review: Cheaper, Faster, Better?",
+      "score": 43,
+      "word_count": 4774,
+      "fact_density": 52.2,
+      "vague_density": 1.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 38605
+    },
+    {
+      "slug": "openai_astra_review",
+      "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is I...",
+      "score": 38,
+      "word_count": 12071,
+      "fact_density": 20.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 90617
+    },
+    {
+      "slug": "chatgpt-deep-review-2026",
+      "title": "ChatGPT Review 2026: 30 Days, 500+ Queries — Is It Still...",
+      "score": 48,
+      "word_count": 6969,
+      "fact_density": 16.5,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 51880
+    },
+    {
+      "slug": "ai-tools-selection-guide-2026",
+      "title": "AI Tools Selection Guide 2026: How to Choose | AIToolCrux",
+      "score": 48,
+      "word_count": 6748,
+      "fact_density": 16.4,
+      "vague_density": 1.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 50546
+    },
+    {
+      "slug": "chatgpt-vs-claude-2026-comparison",
+      "title": "ChatGPT vs Claude 2026: Which AI Assistant is | AIToolCrux",
+      "score": 28,
+      "word_count": 2969,
+      "fact_density": 75.8,
+      "vague_density": 3.0,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25239
+    },
+    {
+      "slug": "claude-review-2026",
+      "title": "Claude Review 2026: Best AI Assistant for | AIToolCrux",
+      "score": 48,
+      "word_count": 12110,
+      "fact_density": 23.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 88807
+    },
+    {
+      "slug": "github-copilot-review-2026",
+      "title": "GitHub Copilot Review 2026: 30 Days, 500+ Completions — I...",
+      "score": 48,
+      "word_count": 12859,
+      "fact_density": 19.8,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94940
+    },
+    {
+      "slug": "cursor-review-2026",
+      "title": "Cursor Review 2026: Best AI Code Editor? | AIToolCrux",
+      "score": 48,
+      "word_count": 12811,
+      "fact_density": 16.2,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 93363
+    },
+    {
+      "slug": "notion-ai-review-2026",
+      "title": "Notion AI Review 2026: Best AI Assistant for | AIToolCrux",
+      "score": 48,
+      "word_count": 14787,
+      "fact_density": 15.0,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 106837
+    },
+    {
+      "slug": "elevenlabs-review-2026",
+      "title": "ElevenLabs Review 2026: Best AI Voice Generator & Cloning?",
+      "score": 53,
+      "word_count": 12894,
+      "fact_density": 20.6,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 95125
+    },
+    {
+      "slug": "midjourney-review-2026",
+      "title": "Midjourney Review 2026: Best AI Image | AIToolCrux",
+      "score": 48,
+      "word_count": 12886,
+      "fact_density": 21.2,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 95209
+    },
+    {
+      "slug": "runway-review-2026",
+      "title": "Runway Review 2026: Best AI Video Generation | AIToolCrux",
+      "score": 48,
+      "word_count": 12992,
+      "fact_density": 21.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94543
+    },
+    {
+      "slug": "jasper-review-2026",
+      "title": "Jasper Review 2026: Best AI Writing Tool for | AIToolCrux",
+      "score": 48,
+      "word_count": 13263,
+      "fact_density": 22.1,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 96686
+    },
+    {
+      "slug": "perplexity-review-2026",
+      "title": "Perplexity Review 2026: Best AI Search Engine | AIToolCrux",
+      "score": 43,
+      "word_count": 9353,
+      "fact_density": 19.8,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 68509
+    },
+    {
+      "slug": "figma-ai-review-2026",
+      "title": "Figma AI Review 2026: Best AI Design Assistant | AIToolCrux",
+      "score": 48,
+      "word_count": 13537,
+      "fact_density": 15.0,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 98441
+    },
+    {
+      "slug": "sora-review-2026",
+      "title": "Sora Review 2026: Best AI Video Generator for | AIToolCrux",
+      "score": 48,
+      "word_count": 13026,
+      "fact_density": 20.0,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94293
+    },
+    {
+      "slug": "stable-diffusion-review-2026",
+      "title": "Stable Diffusion 2026 Guide: Best Models & Setup",
+      "score": 48,
+      "word_count": 14777,
+      "fact_density": 15.9,
+      "vague_density": 0.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 107436
+    },
+    {
+      "slug": "copy-ai-review-2026",
+      "title": "Copy.ai Review 2026: Best Free AI Writing Tool | AIToolCrux",
+      "score": 48,
+      "word_count": 13134,
+      "fact_density": 20.7,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 94178
+    },
+    {
+      "slug": "otter-ai-review-2026",
+      "title": "Otter.ai Review 2026: Best AI Meeting | AIToolCrux",
+      "score": 48,
+      "word_count": 13410,
+      "fact_density": 18.3,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 97060
+    },
+    {
+      "slug": "synthesia-review-2026",
+      "title": "Synthesia Review: Best AI Avatar Video Maker?",
+      "score": 53,
+      "word_count": 13235,
+      "fact_density": 20.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 97431
+    },
+    {
+      "slug": "gemini-review-2026",
+      "title": "Google Gemini Review 2026: Honest 30-Day Test | AIToolCrux",
+      "score": 48,
+      "word_count": 11033,
+      "fact_density": 16.7,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 82297
+    },
+    {
+      "slug": "dall-e-3-review-2026",
+      "title": "DALL-E 3 Review 2026: Best AI Image Generator | AIToolCrux",
+      "score": 48,
+      "word_count": 13140,
+      "fact_density": 25.6,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 96009
+    },
+    {
+      "slug": "pika-review-2026",
+      "title": "Pika Review 2026: Best Budget AI Video | AIToolCrux",
+      "score": 48,
+      "word_count": 12891,
+      "fact_density": 23.1,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 93436
+    },
+    {
+      "slug": "suno-review-2026",
+      "title": "Suno AI Review: Made 20 Songs, 3 Were Unreleasable",
+      "score": 48,
+      "word_count": 9517,
+      "fact_density": 24.0,
+      "vague_density": 1.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 68026
+    },
+    {
+      "slug": "microsoft-365-copilot-review-2026",
+      "title": "Microsoft 365 Copilot Review 2026 | AIToolCrux",
+      "score": 48,
+      "word_count": 15018,
+      "fact_density": 21.2,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 111371
+    },
+    {
+      "slug": "kling-review-2026",
+      "title": "Kling AI Review 2026: Best Chinese AI Video | AIToolCrux",
+      "score": 48,
+      "word_count": 11503,
+      "fact_density": 17.7,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 85400
+    },
+    {
+      "slug": "heygen-review-2026",
+      "title": "HeyGen Review 2026: Best AI Avatar Video Tool | AIToolCrux",
+      "score": 48,
+      "word_count": 13243,
+      "fact_density": 23.6,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 97132
+    },
+    {
+      "slug": "leonardo-ai-review-2026",
+      "title": "Leonardo AI Review 2026: Best AI Image | AIToolCrux",
+      "score": 48,
+      "word_count": 14119,
+      "fact_density": 17.7,
+      "vague_density": 0.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 102876
+    },
+    {
+      "slug": "adobe-firefly-review-2026",
+      "title": "Adobe Firefly Review: 30-Day Test, Is It Worth It?",
+      "score": 48,
+      "word_count": 13884,
+      "fact_density": 16.7,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 101557
+    },
+    {
+      "slug": "writesonic-review-2026",
+      "title": "Writesonic Review 2026: Best AI Writing Tool | AIToolCrux",
+      "score": 48,
+      "word_count": 13939,
+      "fact_density": 18.8,
+      "vague_density": 0.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 102266
+    },
+    {
+      "slug": "tabnine-review-2026",
+      "title": "Tabnine Review 2026: Best AI Code Completion | AIToolCrux",
+      "score": 48,
+      "word_count": 11143,
+      "fact_density": 15.6,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 83158
+    },
+    {
+      "slug": "ai-tools-review-guide-2026",
+      "title": "AI Tools Review Guide 2026: Six-Dimension | AIToolCrux",
+      "score": 48,
+      "word_count": 12596,
+      "fact_density": 16.4,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 92868
+    },
+    {
+      "slug": "ai-coding-tools-comparison-2026",
+      "title": "AI Coding Tools Complete Review 2026 | AIToolCrux",
+      "score": 48,
+      "word_count": 14458,
+      "fact_density": 21.6,
+      "vague_density": 0.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 110025
+    },
+    {
+      "slug": "replit-review-2026",
+      "title": "Replit Review 2026: Best AI-Native Cloud IDE | AIToolCrux",
+      "score": 48,
+      "word_count": 11266,
+      "fact_density": 15.3,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 83912
+    },
+    {
+      "slug": "best-free-ai-tools-2026",
+      "title": "Best Free AI Tools in 2026: Complete Guide to | AIToolCrux",
+      "score": 48,
+      "word_count": 11741,
+      "fact_density": 8.9,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 84855
+    },
+    {
+      "slug": "ai-tools-comparison-2026",
+      "title": "AI Tools Comparison 2026: Which AI Tool is | AIToolCrux",
+      "score": 48,
+      "word_count": 11699,
+      "fact_density": 8.5,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 84412
+    },
+    {
+      "slug": "ai-tools-for-beginners-2026",
+      "title": "AI Tools for Beginners 2026: Easy Start Guide | AIToolCrux",
+      "score": 48,
+      "word_count": 11634,
+      "fact_density": 8.7,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 83900
+    },
+    {
+      "slug": "jasper-vs-copy-ai-2026-comparison",
+      "title": "Jasper vs Copy.ai 2026: We Ran 40 Campaigns — Here's the...",
+      "score": 58,
+      "word_count": 1991,
+      "fact_density": 124.1,
+      "vague_density": 2.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 21478
+    },
+    {
+      "slug": "canva-ai-vs-adobe-firefly-2026-comparison",
+      "title": "Canva AI vs Adobe Firefly 2026: We Tested Both for 2 Week...",
+      "score": 58,
+      "word_count": 2679,
+      "fact_density": 62.3,
+      "vague_density": 1.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19224
+    },
+    {
+      "slug": "surfer-seo-vs-frase-2026-comparison",
+      "title": "Surfer SEO vs Frase 2026: We Tested Both for 3 Weeks (Dat...",
+      "score": 73,
+      "word_count": 1894,
+      "fact_density": 104.0,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 13852
+    },
+    {
+      "slug": "gemini-pricing-2026",
+      "title": "Gemini Pricing 2026: Is Advanced Worth $20/Month? [Real C...",
+      "score": 73,
+      "word_count": 2644,
+      "fact_density": 93.8,
+      "vague_density": 1.9,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 18502
+    },
+    {
+      "slug": "windsurf-vs-cursor-2026",
+      "title": "Windsurf vs Cursor 2026: I Tested Both for 2 Weeks — Whic...",
+      "score": 73,
+      "word_count": 2734,
+      "fact_density": 66.6,
+      "vague_density": 1.8,
+      "issues": [
+        "BLUF up front",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 20170
+    },
+    {
+      "slug": "gemini-vs-chatgpt-2026",
+      "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tes...",
+      "score": 38,
+      "word_count": 3265,
+      "fact_density": 48.1,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25074
+    },
+    {
+      "slug": "suno-alternatives",
+      "title": "11 Best Suno Alternatives in 2026 (After Free Tier Ended)",
+      "score": 38,
+      "word_count": 2711,
+      "fact_density": 65.3,
+      "vague_density": 1.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 24661
+    },
+    {
+      "slug": "otter-ai-alternatives",
+      "title": "7 Best Otter.ai Alternatives in 2026 (After Price Hike)",
+      "score": 33,
+      "word_count": 2059,
+      "fact_density": 83.5,
+      "vague_density": 3.4,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16529
+    },
+    {
+      "slug": "autochain-review-2026",
+      "title": "AutoChain Review 2026: Lightweight LLM Agent Builder",
+      "score": 63,
+      "word_count": 1893,
+      "fact_density": 30.6,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 13272
+    },
+    {
+      "slug": "chatgpt-alternatives-2026",
+      "title": "7 Best ChatGPT Alternatives in 2026",
+      "score": 53,
+      "word_count": 1817,
+      "fact_density": 65.5,
+      "vague_density": 1.7,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 12637
+    },
+    {
+      "slug": "runway-vs-pika-2026",
+      "title": "Runway vs Pika 2026: AI Video Showdown",
+      "score": 53,
+      "word_count": 1802,
+      "fact_density": 66.6,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 12395
+    },
+    {
+      "slug": "best-free-ai-tools-for-students-2026",
+      "title": "Best Free AI Tools for Students 2026",
+      "score": 58,
+      "word_count": 1884,
+      "fact_density": 62.6,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 12173
+    },
+    {
+      "slug": "cursor-vs-github-copilot-2026",
+      "title": "Cursor vs GitHub Copilot 2026",
+      "score": 53,
+      "word_count": 1746,
+      "fact_density": 69.9,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 12001
+    },
+    {
+      "slug": "elevenlabs-vs-playht-2026",
+      "title": "ElevenLabs vs Play.ht 2026",
+      "score": 48,
+      "word_count": 1723,
+      "fact_density": 74.3,
+      "vague_density": 1.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 12438
+    },
+    {
+      "slug": "how-to-get-chatgpt-free-2026",
+      "title": "How to Get ChatGPT Free in 2026",
+      "score": 58,
+      "word_count": 1768,
+      "fact_density": 61.7,
+      "vague_density": 1.7,
+      "issues": [
+        "BLUF up front",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 11573
+    },
+    {
+      "slug": "canva-pro-free-for-students",
+      "title": "Canva Pro Free for Students 2026",
+      "score": 48,
+      "word_count": 1810,
+      "fact_density": 48.1,
+      "vague_density": 2.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 11873
+    },
+    {
+      "slug": "midjourney-v7-vs-dall-e-3-ecommerce",
+      "title": "Midjourney v7 vs DALL-E 3: Ecommerce Pick",
+      "score": 53,
+      "word_count": 1739,
+      "fact_density": 92.0,
+      "vague_density": 1.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 11942
+    },
+    {
+      "slug": "claude-alternatives-2026",
+      "title": "7 Claude Alternatives in 2026",
+      "score": 63,
+      "word_count": 1379,
+      "fact_density": 85.6,
+      "vague_density": 1.5,
+      "issues": [
+        "BLUF up front",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 9545
+    },
+    {
+      "slug": "notion-ai-vs-obsidian-ai",
+      "title": "Notion AI vs Obsidian AI 2026",
+      "score": 53,
+      "word_count": 1736,
+      "fact_density": 54.1,
+      "vague_density": 2.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 11207
+    },
+    {
+      "slug": "best-free-ai-tools-for-youtube-creators",
+      "title": "Best Free AI Tools for YouTube Creators",
+      "score": 53,
+      "word_count": 2995,
+      "fact_density": 64.8,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 19726
+    },
+    {
+      "slug": "elevenlabs-vs-murf-2026",
+      "title": "ElevenLabs vs Murf: Which Is Right for Voiceover in 2026?",
+      "score": 63,
+      "word_count": 2398,
+      "fact_density": 76.7,
+      "vague_density": 1.7,
+      "issues": [
+        "BLUF up front",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16926
+    },
+    {
+      "slug": "cursor-alternatives-2026",
+      "title": "Cursor Alternatives 2026: 6 Tools We Tested",
+      "score": 58,
+      "word_count": 2646,
+      "fact_density": 49.9,
+      "vague_density": 1.1,
+      "issues": [
+        "BLUF up front",
+        "Internal links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 17379
+    },
+    {
+      "slug": "midjourney-free-trial-2026",
+      "title": "Midjourney Free Trial 2026: How to Start",
+      "score": 58,
+      "word_count": 2488,
+      "fact_density": 84.8,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "Internal links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 16534
+    },
+    {
+      "slug": "canva-ai-alternatives-2026",
+      "title": "Canva AI Alternatives 2026: 7 Tools That Work",
+      "score": 53,
+      "word_count": 3579,
+      "fact_density": 60.4,
+      "vague_density": 1.7,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 25371
+    },
+    {
+      "slug": "how-to-use-cursor-for-react-development",
+      "title": "How to Use Cursor for React in 2026",
+      "score": 53,
+      "word_count": 2975,
+      "fact_density": 66.9,
+      "vague_density": 1.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 21486
+    },
+    {
+      "slug": "suno-alternatives-2026",
+      "title": "5 Best Suno Alternatives in 2026",
+      "score": 53,
+      "word_count": 2074,
+      "fact_density": 55.0,
+      "vague_density": 1.0,
+      "issues": [
+        "BLUF up front",
+        "Internal links >= 2",
+        "Question-format heading",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15226
+    },
+    {
+      "slug": "lovable-vs-boltnew",
+      "title": "Lovable vs Bolt.new 2026: We Built the Same App on Both",
+      "score": 38,
+      "word_count": 1063,
+      "fact_density": 39.5,
+      "vague_density": 2.8,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 7822
+    },
+    {
+      "slug": "claude-37-vs-gpt4o",
+      "title": "Claude 3.7 Sonnet vs GPT-4o 2026: Side-by-Side Benchmarks",
+      "score": 28,
+      "word_count": 1942,
+      "fact_density": 78.3,
+      "vague_density": 2.6,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15794
+    },
+    {
+      "slug": "synthesia-vs-heygen",
+      "title": "Synthesia vs HeyGen 2026: We Tested Both on the Same Script",
+      "score": 28,
+      "word_count": 1904,
+      "fact_density": 62.5,
+      "vague_density": 2.1,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 15796
+    },
+    {
+      "slug": "beautiful-ai-alternatives",
+      "title": "7 Best Beautiful.ai Alternatives in 2026 (Free & Paid)",
+      "score": 38,
+      "word_count": 825,
+      "fact_density": 50.9,
+      "vague_density": 2.4,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6611
+    },
+    {
+      "slug": "devin-ai-review",
+      "title": "Devin AI Review 2026: Is It Worth It?",
+      "score": 43,
+      "word_count": 904,
+      "fact_density": 77.4,
+      "vague_density": 2.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6887
+    },
+    {
+      "slug": "clearscope-alternatives",
+      "title": "6 Best Clearscope Alternatives in 2026 (Cheaper & Better)",
+      "score": 38,
+      "word_count": 786,
+      "fact_density": 70.0,
+      "vague_density": 2.5,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6466
+    },
+    {
+      "slug": "motion-ai-alternatives",
+      "title": "7 Best Motion AI Alternatives in 2026 (Free & Paid)",
+      "score": 28,
+      "word_count": 783,
+      "fact_density": 57.5,
+      "vague_density": 3.8,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6299
+    },
+    {
+      "slug": "quillbot-alternatives",
+      "title": "7 Best QuillBot Alternatives in 2026",
+      "score": 28,
+      "word_count": 765,
+      "fact_density": 58.8,
+      "vague_density": 3.9,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6341
+    },
+    {
+      "slug": "runway-alternatives",
+      "title": "8 Best Runway ML Alternatives in 2026 (Tested & Ranked)",
+      "score": 28,
+      "word_count": 838,
+      "fact_density": 74.0,
+      "vague_density": 3.6,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6764
+    },
+    {
+      "slug": "sudowrite-alternatives",
+      "title": "7 Best Sudowrite Alternatives in 2026 (For Novel Writers)",
+      "score": 38,
+      "word_count": 1050,
+      "fact_density": 74.3,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 8439
+    },
+    {
+      "slug": "writesonic-alternatives",
+      "title": "8 Best Writesonic Alternatives in 2026 (Ranked by Use Case)",
+      "score": 28,
+      "word_count": 786,
+      "fact_density": 62.3,
+      "vague_density": 3.8,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "Question-format heading",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 6607
+    },
+    {
+      "slug": "midjourney-v7-vs-flux-2026",
+      "title": "Midjourney v7 vs Flux 2026: Which AI Wins?",
+      "score": 23,
+      "word_count": 1143,
+      "fact_density": 60.4,
+      "vague_density": 3.5,
+      "issues": [
+        "BLUF up front",
+        "Vague-word density < 3/1k",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 9035
+    },
+    {
+      "slug": "claude-opus-4-vs-gpt-5-2026",
+      "title": "Claude Opus 4 vs GPT-5: Which LLM Wins 2026?",
+      "score": 33,
+      "word_count": 1023,
+      "fact_density": 142.7,
+      "vague_density": 2.9,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 8252
+    },
+    {
+      "slug": "perplexity-vs-chatgpt-2026",
+      "title": "Perplexity AI vs ChatGPT 2026: Which Wins?",
+      "score": 33,
+      "word_count": 432,
+      "fact_density": 60.2,
+      "vague_density": 2.3,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3629
+    },
+    {
+      "slug": "notion-ai-vs-notion-ai-salesforce-2026",
+      "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+      "score": 33,
+      "word_count": 425,
+      "fact_density": 32.9,
+      "vague_density": 0.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3478
+    },
+    {
+      "slug": "midjourney-v7-vs-dall-e-3-2026",
+      "title": "Midjourney v7 vs DALL-E 3 2026: Which Wins?",
+      "score": 33,
+      "word_count": 409,
+      "fact_density": 85.6,
+      "vague_density": 0.0,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3358
+    },
+    {
+      "slug": "notion-ai-vs-salesforce-2026",
+      "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+      "score": 33,
+      "word_count": 457,
+      "fact_density": 39.4,
+      "vague_density": 2.2,
+      "issues": [
+        "BLUF up front",
+        "Outbound source links >= 2",
+        "Internal links >= 2",
+        "H2 sections >= 3",
+        "FAQ block present",
+        "Lists or tables",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 3685
+    },
+    {
+      "slug": "aider-review",
+      "title": "Aider AI Review 2026: Is the Open-Source Coding Agent Worth ",
+      "score": 63,
+      "word_count": 1883,
+      "fact_density": 74.3,
+      "vague_density": 1.6,
+      "issues": [
+        "BLUF up front",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 13211
+    },
+    {
+      "slug": "best-ai-grammar-checker",
+      "title": "8 Best AI Grammar Checkers in 2026 (Tested & Compared)",
+      "score": 63,
+      "word_count": 1896,
+      "fact_density": 85.4,
+      "vague_density": 2.6,
+      "issues": [
+        "BLUF up front",
+        "FAQ block present",
+        "Title 20-65 chars",
+        "Description 70-160 chars",
+        "Date signal"
+      ],
+      "content_length": 14606
+    }
+  ]
+}
