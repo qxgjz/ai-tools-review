@@ -39,7 +39,8 @@ jobs:
       - name: Deploy to Cloudflare Pages
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-        run: npx wrangler pages deploy out --project-name=aitoolcrux --branch=main
+          CLOUDFLARE_ACCOUNT_ID: 8f173e72c551bbb5ebfc3bb54c878112
+        run: npx wrangler pages deploy out --project-name=aitoolcrux --branch=main --account-id=8f173e72c551bbb5ebfc3bb54c878112
 
       - name: Wait for propagation
         run: sleep 45
