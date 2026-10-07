@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-09-28 22:33 UTC
+> Generated: 2026-10-07 22:01 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,13 +17,13 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 105 |
+| Posts | 145 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
-1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Money) | AIToolCr** (`best-paid-ai-tools-worth-buying-2026`)
+1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...** (`best-paid-ai-tools-worth-buying-2026`)
 2. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
 3. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
 4. **Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux** (`cursor-vs-windsurf-2026`)
@@ -31,137 +31,177 @@
 
 ## Iteration State
 
-- Current round: 77
-- Last commit: 63d2b22
+- Current round: 78
+- Last commit: 60292cd
 - Last iteration: 2026-09-26
 
 ## Recent Iterations
 
-- **Round ?** (98b0b77e90c88af37acd060f2cceb15a26e90b1e): 
-- **Round ?** (9d3a1eb9aadf6255501ccc9f5c3f7e21fedefd6a): Banner CTA: from-emerald-600 to-emerald-600 -> from-emerald-700 to-teal-600 (3.7; Banner CTA hover: hover:from-emerald-700 -> hover:from-emerald-800 (对比度递增); Banner CTA: 添加 min-h-[44px] + justify-cent
-- **Round ?** (a11cb36e7d146d7d2db7ccbf03a684985307b51f): CTA文案: 'Subscribe Free' -> 'Get My Free Tools' (第一人称+结果导向，避免摩擦词，Aagaard研究+90%转化); Compact变体: 按钮/输入框高度 32px -> 44px (Baymard 7mm最小触摸目标); Compact变体: 添加隐私微文案 'No spam. Unsubscribe anytime. We respect you
-- **Round ?** (0bb21db7): 
-- **Round ?** (6dbbeede2d4dbdc817783c7ffe948961ccd6b882): 导入 usePathname from next/navigation; 添加 isActive(href) 辅助函数（/精确匹配，其他startsWith）; 桌面端导航：active时 text-emerald-700 dark:text-emerald-400 bg-emerald-50 dark:bg-emera
+- **Round ?** (9b2f90d182e7fd7f27c6dad62bdcb5bf0ea728cc): 
+- **Round ?** (312cee4c4f3f8dfdc0dd0c23092a61ffadd78653): 
+- **Round ?** (bcab6d1d4166256cb689f77ab72869504ecc395b): 
+- **Round ?** (73e4f1dc4cac3a20e4458913153c2401b90de7fe): 
+- **Round ?** (26dbdd44476b396be07dbaf387355d9680e142d7): 
 
 ## GSC Data
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 8 |
-| Impressions | 1581 |
-| CTR | 0.51% |
-| Avg Ranking | 23.98 |
-| Report | latest_gsc.md |
+| Clicks | 2 |
+| Impressions | 799 |
+| CTR | 0.25% |
+| Avg Ranking | 21.04 |
+| Report | 2026-08-13_2026-09-11.md |
 
 ## Audit Findings (pending)
 
+# 排版与FAQ审计报告
+生成时间: 2026-09-28 02:13:17
+抽样文章数: 10 / 108
 
----
+## 1. Perplexity Review 2026: Best AI Search Engine | AIToolCrux
+- slug: perplexity-review-2026
+- 字数: 67473
+- 标题: H1=0, H2=0, H3=0
+- 必要章节关键词: []
+- 图片数: 3
+- Meta描述长度: 156字符
+- 内链数: 12
+- **排版问题: 3个**
+  - 字数过多(67473字，建议拆分)
+  - H2标题过少(0个，建议≥3个分节)
+  - 必要章节不足(仅找到0个关键词)
+- FAQ: 数组=4个, faqCount字段=0
+- FAQ: 通过
 
-## OpenSEO全站审计对比 — 2026-09-27 (auditId: fe647625-f39c-44da-8cd5-8d5a16e67d54)
+## 2. Dify vs Coze 2026: Which AI Agent Builder Wins? | AIToolCrux
+- slug: dify-vs-coze-2026-comparison
+- 字数: 11523
+- 标题: H1=15, H2=15, H3=4
+- 必要章节关键词: []
+- 图片数: 0
+- Meta描述长度: 160字符
+- 内链数: 3
+- **排版问题: 3个**
+  - 字数过多(11523字，建议拆分)
+  - 必要章节不足(仅找到0个关键词)
+  - 无图片(建议至少1张截图/示意图)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+  - 完全缺少FAQ
 
-### 审计摘要对比
+## 3. Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux
+- slug: cursor-vs-windsurf-2026
+- 字数: 13968
+- 标题: H1=0, H2=0, H3=0
+- 必要章节关键词: []
+- 图片数: 2
+- Meta描述长度: 148字符
+- 内链数: 4
+- **排版问题: 3个**
+  - 字数过多(13968字，建议拆分)
+  - H2标题过少(0个，建议≥3个分节)
+  - 必要章节不足(仅找到0个关键词)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+  - 完全缺少FAQ
 
-| 指标 | 本次(9/27) | 上次(9/26) | 变化 |
-|------|-----------|-----------|------|
-| Critical | **23** | 0 | **↑23 新增** |
-| Warning | 153 | 135 | ↑18 |
-| Info | 324(返回上限500) | 365 | ↓41 |
-| 总问题类型 | 10种 | 8种 | +2 |
+## 4. HeyGen Review 2026: Best AI Avatar Video Tool | AIToolCrux
+- slug: heygen-review-2026
+- 字数: 95781
+- 标题: H1=0, H2=0, H3=0
+- 必要章节关键词: []
+- 图片数: 2
+- Meta描述长度: 154字符
+- 内链数: 9
+- **排版问题: 3个**
+  - 字数过多(95781字，建议拆分)
+  - H2标题过少(0个，建议≥3个分节)
+  - 必要章节不足(仅找到0个关键词)
+- FAQ: 数组=4个, faqCount字段=0
+- FAQ: 通过
 
-### P0 - Critical: 23个断链（新增，上次0个）
+## 5. Best AI Translation Tools 2026: 10 Languages Tested & Compar
+- slug: best-ai-translation-tools-2026
+- 字数: 17038
+- 标题: H1=26, H2=26, H3=10
+- 必要章节关键词: []
+- 图片数: 0
+- Meta描述长度: 197字符
+- 内链数: 4
+- **排版问题: 4个**
+  - 字数过多(17038字，建议拆分)
+  - 必要章节不足(仅找到0个关键词)
+  - 无图片(建议至少1张截图/示意图)
+  - meta description过长(197字符，建议≤155)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+  - 完全缺少FAQ
 
-**根因**: 20个页面返回404，被9个博客页内部链接引用。存在URL路径不一致（根路径vs /blog/路径）。
+## 6. Best AI Project Management Tools 2026 | AIToolCrux
+- slug: best-ai-project-management-tools-2026
+- 字数: 17759
+- 标题: H1=24, H2=24, H3=16
+- 必要章节关键词: []
+- 图片数: 0
+- Meta描述长度: 160字符
+- 内链数: 5
+- **排版问题: 3个**
+  - 字数过多(17759字，建议拆分)
+  - 必要章节不足(仅找到0个关键词)
+  - 无图片(建议至少1张截图/示意图)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+  - 完全缺少FAQ
 
-**404目标URL清单（20个）**:
-1. `/best-ai-coding-tools-2026` (根路径404，但/blog/版本存在)
-2. `/best-ai-content-creation-tools-2026`
-3. `/best-ai-email-tools-2026`
-4. `/best-ai-image-generators-2026`
-5. `/best-ai-note-taking-tools-2026`
-6. `/best-ai-productivity-tools-2026`
-7. `/best-ai-seo-tools-2026`
-8. `/canva-ai-vs-adobe-firefly-2026-comparison` (根路径404)
-9. `/cursor-vs-github-copilot-2026`
-10. `/cursor-vs-github-copilot-2026-comparison`
-11. `/how-to-use-cursor-for-react-development`
-12. `/jasper-vs-copy-ai-2026-comparison`
-13. `/midjourney-vs-dall-e-3-2026-comparison`
-14. `/notion-ai-vs-obsidian-2026`
-15. `/blog/ai-tools-for-content-creation`
-16. `/blog/best-ai-animation-tools-2026`
-17. `/blog/elevenlabs-vs-murf-2026`
-18. `/blog/perplexity-vs-chatgpt-2026`
-19. `/blog/runway-vs-pika-vs-sora`
-20. `/blog/suno-vs-udio-2026`
+## 7. Best AI Automation Agents 2026: Top 10 Ranked | AIToolCrux
+- slug: best-ai-automation-agents-2026
+- 字数: 19676
+- 标题: H1=24, H2=24, H3=15
+- 必要章节关键词: []
+- 图片数: 0
+- Meta描述长度: 159字符
+- 内链数: 5
+- **排版问题: 3个**
+  - 字数过多(19676字，建议拆分)
+  - 必要章节不足(仅找到0个关键词)
+  - 无图片(建议至少1张截图/示意图)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+  - 完全缺少FAQ
 
-**含断链的源页面（9个）**:
-- /blog/best-ai-scheduling-tools-2026 (4个断链)
-- /blog/surfer-seo-vs-frase-2026-comparison (4个断链)
-- /blog/best-ai-slack-bots-2026 (3个断链)
-- /blog/best-ai-video-generators-2026 (3个断链)
-- /blog/canva-ai-vs-adobe-firefly-2026-comparison (3个断链)
-- /blog/github-copilot-review-2026 (2个断链)
-- /blog/best-ai-podcast-tools-2026 (2个断链)
-- /blog/best-ai-translation-tools-2026 (1个断链)
-- /blog/best-ai-idea-generators-2026 (1个断链)
+## 8. Best AI Voice Generators 2026: Top 10 Ranked | AIToolCrux
+- slug: best-ai-voice-generators-2026
+- 字数: 19314
+- 标题: H1=25, H2=25, H3=15
+- 必要章节关键词: []
+- 图片数: 0
+- Meta描述长度: 160字符
+- 内链数: 5
+- **排版问题: 3个**
+  - 字数过多(19314字，建议拆分)
+  - 必要章节不足(仅找到0个关键词)
+  - 无图片(建议至少1张截图/示意图)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+  - 完全缺少FAQ
 
-**行动建议**: 
-1. 立即为20个404页面设置301重定向到正确的/blog/版本或相关分类页
-2. 修复9个源页面中的内部链接，指向正确URL
-3. 检查URL路由规则：根路径best-ai-*和comparison页应重定向到/blog/对应页
-
-### P1 - Warning: 121个页面缺少H1（↑1）
-
-主要集中在博客文章页，包括5个article-api-*自动生成页面（URL格式异常）。
-**行动建议**: 窗口3在批量生成内容时确保H1标签正确输出；修复article-api-*页面的URL slug。
-
-### P1 - Warning: 10个薄内容分类页（↑2）
-
-全部为/blog/category/*和/subcategory/*页面，字数仅138-148词。
-**行动建议**: 为分类页添加描述性介绍文字（≥300词），或设置noindex。
-
-### P2 - Info: 582个标题层级跳跃（↑27）
-
-全站系统性问题，H1直接跳到H3。
-**行动建议**: 模板层面修复，确保H2→H3层级正确。
-
-### 正面变化
-- slow-response: 13→1（服务器性能改善）
-- noindex-page: 17（稳定）
-- canonicalized-page: 15（稳定，搜索页正确canonicalize）
-
-### GSC交叉验证
-- 404页面中 `/best-ai-image-generators-2026` 在GSC中有63曝光/2点击（CTR 3.17%）→ 该页面曾有流量，404会导致排名丢失
-- `/blog/best-ai-voice-changers-2026` 排名16.47但不在404列表 → 正常
-- 建议优先恢复有GSC曝光的404页面
-
-
-
----
-
-# 🔴 2026-09-27 数据分析异常发现（窗口4完整分析轮）
-
-**分析时间**: 2026-09-27 21:45 CST
-**数据来源**: GA4 API(近7天) + GSC(8/26-9/24) + Cloudflare(24h) + zens-ink(美国Top20)
-
----
-
-## P0 异常
-
-### P0-1: 新加坡Bot流量仍占97.5%，数据污染持续
-- **严重度**: 🔴 P0 紧急
-- **数据**: 新加坡1097用户/1099会话，占总用户97.5%，互动率6.2%，停留5秒
-- **趋势**: 从上轮96.1%略升至97.5%，Bot洪水未消退
-- **影响**: 所有GA4指标（互动率/停留/跳出率）被Bot严重扭曲，无法判断真实用户行为
-- **建议**: 
-  1. 立即在GA4 Admin中创建Bot过滤规则（排除新加坡数据中心IP段）
-  2. 在Cloudflare中添加新加坡数据中心IP的WAF规则或JS Challenge
-  3. 创建"排除Bot"分段，所有报告默认使用该分段
-- **关联任务**: P0-GA4-BOT-FILTER-001 (pending，需用户手动操作GA4 Admin)
-
-### P0-2: 4个高排名页面零点击，CTR严重异常
-- **严重度
+## 9. Best AI Idea Generators 2026: Top 5 for Startups, Content & 
+- slug: best-ai-idea-generators-2026
+- 字数: 14857
+- 标题: H1=25, H2=25, H3=10
+- 必要章节关键词: []
+- 图片数: 0
+- Meta描述长度: 190字符
+- 内链数: 4
+- **排版问题: 4个**
+  - 字数过多(14857字，建议拆分)
+  - 必要章节不足(仅找到0个关键词)
+  - 无图片(建议至少1张截图/示意图)
+  - meta description过长(190字符，建议≤155)
+- FAQ: 数组=0个, faqCount字段=0
+- **FAQ问题: 1个**
+ 
 
 ---
 *Auto-generated by context-update workflow. Do not edit manually.*
