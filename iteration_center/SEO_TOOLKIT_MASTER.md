@@ -1,8 +1,53 @@
-# AIToolCrux SEO工具链完整整合手册 v1.0
+# AIToolCrux SEO工具链完整整合手册 v1.1
 
-**最后更新**: 2026-09-28
+**最后更新**: 2026-10-08
 **原则**: 现成工具优先，不重复造轮子，实在不行才写胶水代码
 **目标**: 6个窗口+指挥官全部用上所有工具，高质量高效率完成SEO工作
+
+---
+
+## ⚠️ 工具真实状态验证（2026-10-08实测）
+
+> 指挥官职责：每次使用工具前必须验证真实状态，禁止凭手册记忆调用。以下为实测结果。
+
+### ✅ 真实可用的工具
+
+| 工具 | 真实版本 | 验证方式 | 用途 |
+|------|---------|---------|------|
+| **broken-link-checker** | 0.7.8 | `npx broken-link-checker --version` | 断链审计 |
+| **zens-ink** | 1.4.10 | `pip install zens-ink`（刚补装） | 关键词竞争度、搜索意图、SEO审计 |
+| **Crawl4AI** | ✅ | `import crawl4ai` | AI网页爬虫 |
+| **trafilatura** | ✅ | `import trafilatura` | 网页正文提取 |
+| **textstat** | ✅ | `import textstat` | 可读性评分 |
+| **openserp** | ✅ | `import openserp` | 多引擎SERP |
+| **playwright** | ✅ | `import playwright` | 浏览器自动化 |
+| **googleapiclient** | ✅ | `import googleapiclient` | GSC/GA4 API |
+| **nltk** | ✅ | `import nltk` | 自然语言处理 |
+| **tiktoken** | ✅ | `import tiktoken` | token计数 |
+| **rank_bm25** | ✅ | `import rank_bm25` | 相关性排序 |
+| **courlan** | ✅ | `import courlan` | URL清洗 |
+| **Serper API** | ✅ | GitHub Secret已配置 | Google搜索结果API |
+| **GSC API** | ✅ | GitHub Actions已验证 | 搜索控制台数据 |
+| **Lighthouse** | ✅ | GitHub Actions | 性能/SEO审计 |
+
+### ❌ 手册写了但实际不可用
+
+| 工具 | 手册写的状态 | 真实状态 | 原因 |
+|------|------------|---------|------|
+| **OpenSEO** | v0.1.9 ✅运行中 localhost:3001 | ❌未运行 | Docker服务未启动，需手动启动 |
+| **playwright-stealth** | 2.0.3 ✅ | ❓未验证 | 需确认是否安装 |
+| **patchright** | ✅ | ❓未验证 | 需确认是否安装 |
+
+### 🔄 待评估接入的高星GitHub项目（指挥官主动发现）
+
+| 项目 | Stars | 用途 | 评估状态 |
+|------|-------|------|---------|
+| **OpenClaw** | 310K+ | AI agent框架，有SEO skills | 已被OpenAI收购，接入复杂，暂缓 |
+| **Claude SEO** | 4.9K | 26子技能+19agent+34命令 | 方法论可参考，豆包可借鉴其审计流程 |
+| **every-app/open-seo** | 4.3K | 自托管SEO栈+MCP server | 有MCP server，AI agent可直接调用，待评估 |
+| **SerpBear** | 2K | 排名追踪 | Docker部署，可替代手动排名检查 |
+| **SEONaut** | 717 | 技术SEO审计 | Go语言，Docker部署 |
+| **marketingskills** | 33.3K | 最大marketing skills集合 | 待评估哪些skill可复用 |
 
 ---
 
