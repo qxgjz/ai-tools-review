@@ -1,5 +1,5 @@
 {
-  "audit_time": "2026-10-07T23:33:15.764492",
+  "audit_time": "2026-10-08T23:43:39.209291",
   "mode": "quick",
   "content": {
     "total_articles": 145,
@@ -1715,121 +1715,17 @@
   },
   "technical": {
     "pages_audited": 20,
-    "total_issues": 27,
+    "total_issues": 7,
     "by_severity": {
-      "critical": 20,
       "notice": 6,
       "warning": 1
     },
     "by_type": {
-      "Broken internal link": 19,
       "Heading skip": 6,
-      "HTTP 404": 1,
       "Meta too long": 1
     },
-    "critical_issues": [
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/blog/dify-vs-langchain-2026"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/blog/best-paid-ai-tools-worth-buying-2026"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/tools/claude"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/tools/chatgpt"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/tools/gemini"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/tools/dall-e-3"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/tools/midjourney"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/blog/cursor-vs-windsurf-2026"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/blog/notion-ai-vs-obsidian-2026"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/blog/gemini-alternatives-2026"
-      ],
-      [
-        "critical",
-        "HTTP 404",
-        "https://www.aitoolcrux.com/compare"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/category/chat"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/category/writing"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/category/code"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/category/image"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/category/productivity"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/ranking"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/free-ai-tools-guide"
-      ],
-      [
-        "critical",
-        "Broken internal link: /favicon.ico (404)",
-        "https://www.aitoolcrux.com/generator"
-      ]
-    ],
-    "elapsed_seconds": 2.5
+    "critical_issues": [],
+    "elapsed_seconds": 3.7
   },
   "geo": {
     "geo_score": 100,
@@ -1876,7 +1772,7 @@
       ],
       [
         "good",
-        "llms.txt found (2812 bytes)",
+        "llms.txt found (2764 bytes)",
         ""
       ],
       [

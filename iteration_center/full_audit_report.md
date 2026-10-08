@@ -1,6 +1,6 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-07 23:33:15
+**Date:** 2026-10-08 23:43:39
 **Mode:** Quick
 
 ## Summary
@@ -12,9 +12,9 @@
 | Perfect articles | 107 |
 | Articles below 85 | 32 |
 | Pages audited | 20 |
-| Technical issues | 27 |
-| Critical issues | 20 |
-| Audit duration | 2.5s |
+| Technical issues | 7 |
+| Critical issues | 0 |
+| Audit duration | 3.7s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -167,29 +167,6 @@
 | gemini-vs-chatgpt-2026 | 100 | 3427 | 52.5 | 7 | — |
 | suno-alternatives | 100 | 2920 | 50.4 | 4 | — |
 
-## Critical Technical Issues
-
-- `/blog/dify-vs-langchain-2026`: Broken internal link: /favicon.ico (404)
-- `/`: Broken internal link: /favicon.ico (404)
-- `/blog/best-paid-ai-tools-worth-buying-2026`: Broken internal link: /favicon.ico (404)
-- `/tools/claude`: Broken internal link: /favicon.ico (404)
-- `/tools/chatgpt`: Broken internal link: /favicon.ico (404)
-- `/tools/gemini`: Broken internal link: /favicon.ico (404)
-- `/tools/dall-e-3`: Broken internal link: /favicon.ico (404)
-- `/tools/midjourney`: Broken internal link: /favicon.ico (404)
-- `/blog/cursor-vs-windsurf-2026`: Broken internal link: /favicon.ico (404)
-- `/blog/notion-ai-vs-obsidian-2026`: Broken internal link: /favicon.ico (404)
-- `/blog/gemini-alternatives-2026`: Broken internal link: /favicon.ico (404)
-- `/compare`: HTTP 404
-- `/category/chat`: Broken internal link: /favicon.ico (404)
-- `/category/writing`: Broken internal link: /favicon.ico (404)
-- `/category/code`: Broken internal link: /favicon.ico (404)
-- `/category/image`: Broken internal link: /favicon.ico (404)
-- `/category/productivity`: Broken internal link: /favicon.ico (404)
-- `/ranking`: Broken internal link: /favicon.ico (404)
-- `/free-ai-tools-guide`: Broken internal link: /favicon.ico (404)
-- `/generator`: Broken internal link: /favicon.ico (404)
-
 ## GEO / AI Citation
 
 - ✅ robots.txt found
@@ -200,7 +177,7 @@
 - ✅ AI crawler configured: Google-Extended
 - ✅ AI crawler configured: Applebot
 - ✅ AI crawler configured: OAI-SearchBot
-- ✅ llms.txt found (2812 bytes)
+- ✅ llms.txt found (2764 bytes)
 - ✅ JSON-LD present: /
 - ✅ FAQPage schema: /
 - ✅ JSON-LD present: /tools/midjourney
