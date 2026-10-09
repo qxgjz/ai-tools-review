@@ -507,8 +507,21 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-09-30T05:05:36.969918",
+  "last_updated": "2026-10-09T13:25:00+08:00",
   "completed_tasks": [
+    {
+      "id": "POLISH-2026-10-09-R1",
+      "priority": "P1",
+      "title": "打磨师首轮：优化3篇最低分文章至>=70分",
+      "description": "优化 midjourney-v7-vs-flux-2026 (23→100), chatgpt-vs-claude-2026-comparison (28→90), claude-37-vs-gpt4o (28→100)",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "completed_at": "2026-10-09T13:25:00+08:00",
+      "result": "3/3 articles passed zens-ink content_qc >=70. Also discovered batch_zensink_final.py bug: strips HTML before scoring, causing false negatives across 133/145 articles.",
+      "log": "window_logs/polisher_2026-10-09.md"
+    },
     {
       "iteration": 11,
       "date": "2026-09-12",
@@ -747,6 +760,17 @@
     }
   ],
   "next_iteration_focus": [
+    {
+      "id": "P1-TOOL-ZENSINK-MD2HTML-001",
+      "priority": "P1",
+      "title": "修复 batch_zensink_final.py：写.html而非.md，避免HTML剥标签导致误判",
+      "description": "当前脚本把所有HTML标签剥掉再写.md，zens-ink对.md用markdown解析器，导致h2/link/frontmatter全丢失，133/145篇被误判不及格。改为写.html让zens-ink走HTML解析器直接读原始标签。",
+      "status": "pending",
+      "assigned_to": [
+        "polisher"
+      ],
+      "created_at": "2026-10-09T13:25:00+08:00"
+    },
     {
       "id": "P0-RANK-CRASH-REVIEW-GUIDE-001",
       "priority": "P0",
@@ -1435,6 +1459,110 @@
       "status": "pending",
       "created": "2026-10-08",
       "description": "所有新文章发布前必须通过：1) zens-ink content_qc >=70分 2) llmevalkit幻觉检测通过 3) 字数>=2000词 4) 有FAQ 5) 有BLUF开头 6) 有至少2个外链。不通过不发布，从源头杜绝低质量内容。"
+    },
+    {
+      "id": "P0-TRAFFIC-CLIFF-20260924-001",
+      "priority": "P0",
+      "title": "9/24曝光断崖-92.3%，疑似HCU惩罚：立即停批量发新文，集中修复145篇缺BLUF/104篇缺外链/69篇<50分文章以解除算法惩罚",
+      "assigned_to": [
+        "commander",
+        "window5",
+        "window3"
+      ],
+      "status": "pending",
+      "created": "2026-10-09",
+      "description": "GSC Daily Trend 实算：9/24当天曝光从79跌到1（-98.7%），之后11天日均仅8.5。技术排查已排除robots/sitemap/Cloudflare。根因指向9月Helpful Content Update。当前所有'继续发新文'的动作优先级应让位于'内容质量修复'。",
+      "evidence_source": "gsc-ga4-report/analyst_insight_2026-10-09.md + audit_findings.md"
+    },
+    {
+      "id": "P1-GA4-REBUILD-001",
+      "priority": "P1",
+      "title": "重建GA4服务账号（当前BROKEN，无法度量真实用户行为和转化）",
+      "assigned_to": [
+        "commander"
+      ],
+      "status": "pending",
+      "created": "2026-10-09",
+      "description": "state.json显示ga4_api_status=BROKEN，Key events连续两个周期为0。无法回答哪些关键词带来有价值访问。需新建Google Cloud项目+服务账号+GA4属性授权。",
+      "evidence_source": "state.json ga4_api_status / pending_new_google_setup"
+    },
+    {
+      "id": "P1-QUERY-FILTER-RULE-001",
+      "priority": "P1",
+      "title": "所有GSC关键词分析必须过滤含'-site:'操作符的查询（SEO工具污染，非真实用户）",
+      "assigned_to": [
+        "analyst"
+      ],
+      "status": "pending",
+      "created": "2026-10-09",
+      "description": "Top 20查询中12+条含-site:排除操作符，是Ahrefs/Semrush/Openseo爬取。后续所有关键词报告、机会筛选、排名分析都必须先过滤这些查询，否则决策失真。",
+      "evidence_source": "gsc-ga4-report/2026-09-06_2026-10-05.md Top Queries"
+    },
+    {
+      "id": "ux_p0_render_blocking_scripts_2026-10-09",
+      "title": "P0: 首页24个render-blocking脚本（无async/defer），严重拖慢LCP和移动端加载",
+      "description": "UX巡检发现：首页36个script标签中仅12个async，0个defer，24个同步阻塞渲染。移动端首页加载1.7s，TTFB 0.82s。需将非关键脚本加defer，关键脚本内联或preload。",
+      "priority": "P0",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit",
+      "created_at": "2026-10-09",
+      "evidence": "scripts total=36, render-blocking=24, mobile homepage time=1.70s, TTFB=0.82s"
+    },
+    {
+      "id": "ux_p0_no_img_tags_2026-10-09",
+      "title": "P0: 首页和Blog列表页0个<img>标签，图片可能未正确渲染或用CSS背景",
+      "description": "UX巡检发现：首页HTML 494KB但<img>标签数为0，Blog列表页也为0。若用next/image组件应渲染出img标签。需确认图片是否加载、alt文本是否存在，这影响SEO图片索引和LCP。",
+      "priority": "P0",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit",
+      "created_at": "2026-10-09",
+      "evidence": "homepage imgs=0, blog list imgs=0, next-image class imgs=0"
+    },
+    {
+      "id": "ux_p1_tools_redirect_2026-10-09",
+      "title": "P1: /tools路径301重定向到/ranking/，需确认是否有意及canonical设置",
+      "description": "UX巡检发现：/tools返回301到/ranking/，而/blog、/alternatives、/about均为308加尾斜杠。需确认/tools是否为旧路径，是否已设置canonical，避免SEO权重分散。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit",
+      "created_at": "2026-10-09",
+      "evidence": "/tools -> 301 -> /ranking/, /blog -> 308 -> /blog/"
+    },
+    {
+      "id": "ux_p1_html_size_2026-10-09",
+      "title": "P1: 首页HTML 494KB偏大，移动端性能需优化",
+      "description": "UX巡检发现：首页HTML 494KB（含内联脚本），移动端加载1.7s。建议拆分内联脚本、减少首页SSR数据量、启用边缘缓存。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit",
+      "created_at": "2026-10-09",
+      "evidence": "homepage HTML size=494KB, mobile load=1.70s"
+    },
+    {
+      "id": "ux_p1_404_uncached_2026-10-09",
+      "title": "P1: 404页面响应时间不稳定（1.0s-2.2s），疑似无CDN缓存",
+      "description": "UX巡检发现：404页面首次检测2.2s，第二次1.0s，TTFB 0.73s。404页面应有静态缓存，不应动态渲染。需配置Cloudflare缓存规则。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit",
+      "created_at": "2026-10-09",
+      "evidence": "404 page time: first=2.23s, second=1.00s, TTFB=0.73s"
+    },
+    {
+      "id": "ux_p1_cta_missing_2026-10-09",
+      "title": "P1: 首页CTA按钮检测为0，需确认转化路径是否可见",
+      "description": "UX巡检发现：首页class含cta/button/btn/primary的链接为0。可能是CSS类名不匹配，但需确认首页是否有明确的行动号召按钮，影响转化率。",
+      "priority": "P1",
+      "assigned_to": "window6",
+      "status": "pending",
+      "source": "ux_audit",
+      "created_at": "2026-10-09",
+      "evidence": "cta button links detected=0 on homepage"
     }
   ],
   "milestones": [
@@ -1451,7 +1579,7 @@
   "latest_commit": "112d5eb",
   "last_commit": "60292cd",
   "last_update": "2026-09-23 迭代85：Lighthouse CI workflow + IndexNow批量提交714URL + state同步清理5项",
-  "last_action": "Window 3 content production: wrote Jasper vs Copy.ai comparison (3130 words) + rewrote best-ai-voice-changers (2527 words) + daily learning on niche site templates",
+  "last_action": "UX audit run by window6/体验官",
   "current_round": 78,
   "last_iteration_date": "2026-09-26",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -6902,11 +7030,11 @@
   ],
   "last_commander_review": "2026-10-08T01:27:18.302187",
   "commander_health_score": 75,
-  "last_analytics_run": "2026-09-28 09:16",
+  "last_analytics_run": "2026-10-09 15:00 (SOP cron)",
   "ga4_api_status": "BROKEN - service account not found, superseded by Ahrefs Web Analytics",
   "gsc_latest_clicks": 9,
-  "gsc_latest_impressions": 2002,
-  "gsc_latest_ctr": "0.45%",
+  "gsc_latest_impressions": 2095,
+  "gsc_latest_ctr": "0.43%",
   "cloudflare_24h_requests": 7948,
   "cloudflare_24h_traffic_mb": 558.4,
   "zensink_top20_count": 0,
