@@ -529,6 +529,44 @@ export default function MethodologyPage() {
         </div>
       </section>
 
+      {/* Dimension Weight Comparison Table - AEO/GEO structured comparison for AI citation */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+          <Scale className="w-7 h-7 text-emerald-600" />
+          Dimension Weight Comparison
+        </h2>
+        <p className="text-gray-600 dark:text-gray-400 mb-8">
+          How our six evaluation dimensions compare in weight and impact on the final score:
+        </p>
+        <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 overflow-hidden">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="bg-gray-50 dark:bg-gray-800">
+                <th className="text-left px-6 py-4 font-semibold text-gray-900 dark:text-white">Dimension</th>
+                <th className="text-left px-6 py-4 font-semibold text-gray-900 dark:text-white">Weight</th>
+                <th className="text-left px-6 py-4 font-semibold text-gray-900 dark:text-white">Focus</th>
+              </tr>
+            </thead>
+            <tbody>
+              {[
+                { name: 'Functionality & Output Quality', weight: '25%', focus: 'Feature completeness, output accuracy, real-world performance' },
+                { name: 'User Experience', weight: '20%', focus: 'Onboarding, interface intuitiveness, mobile responsiveness' },
+                { name: 'Pricing & Value', weight: '20%', focus: 'Free tier, price vs. feature set, pricing transparency' },
+                { name: 'Integrations & Developer Experience', weight: '15%', focus: 'API quality, SDKs, third-party integrations' },
+                { name: 'Support & Reliability', weight: '10%', focus: 'Response time, uptime, self-service resources' },
+                { name: 'Ethics & Transparency', weight: '10%', focus: 'Data privacy, AI safety, affiliate disclosure' },
+              ].map((row) => (
+                <tr key={row.name} className="border-t border-gray-100 dark:border-gray-800">
+                  <td className="px-6 py-4 text-gray-900 dark:text-white font-medium">{row.name}</td>
+                  <td className="px-6 py-4 text-blue-600 dark:text-blue-400 font-bold">{row.weight}</td>
+                  <td className="px-6 py-4 text-gray-600 dark:text-gray-300">{row.focus}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       {/* Grade Scale */}
       <section className="mb-16">
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">

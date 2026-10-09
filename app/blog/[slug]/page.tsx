@@ -522,6 +522,83 @@ export default function PostPage({ params }: PostPageProps) {
               </Link>
             </section>
 
+            {/* Related Tools - internal linking to tool pages (P1-2 内链优化) */}
+            {relatedTools.length > 0 && (
+              <section className="mb-16">
+                <div className="flex items-end justify-between mb-6">
+                  <div>
+                    <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                      Explore Related Tools
+                    </h2>
+                    <p className="text-sm text-gray-500 dark:text-gray-400">
+                      Deep-dive reviews of similar AI tools, ranked by our six-dimension scores
+                    </p>
+                  </div>
+                  <Link
+                    href="/ranking"
+                    className="hidden sm:inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline"
+                  >
+                    View all rankings
+                    <ArrowRight className="w-4 h-4" />
+                  </Link>
+                </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {relatedTools.slice(0, 6).map((rt) => (
+                    <Link
+                      key={rt.slug}
+                      href={`/tools/${rt.slug}`}
+                      className="group block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-5 hover:shadow-lg dark:hover:shadow-xl hover:border-emerald-300 dark:hover:border-emerald-700 transition-all duration-200"
+                    >
+                      <div className="flex items-center gap-2 mb-2">
+                        <span className="text-xs px-2 py-0.5 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-600 dark:text-emerald-400 rounded-full">
+                          {rt.category || 'AI Tool'}
+                        </span>
+                        {rt.scores && (
+                          <span className="text-xs text-gray-400">
+                            {(rt.scores as Record<string, number>).functionality
+                              ? `${Object.values(rt.scores as Record<string, number>).reduce((a: number, b: number) => a + b, 0) / Object.values(rt.scores as Record<string, number>).length}/10`
+                              : ''}
+                          </span>
+                        )}
+                      </div>
+                      <h3 className="text-sm font-bold text-gray-900 dark:text-white mb-2 line-clamp-2 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                        {rt.name}
+                      </h3>
+                      <p className="text-xs text-gray-500 dark:text-gray-400 line-clamp-2 mb-3">
+                        {rt.description}
+                      </p>
+                      <span className="text-xs text-emerald-600 dark:text-emerald-400 opacity-0 group-hover:opacity-100 transition-opacity">
+                        Read review →
+                      </span>
+                    </Link>
+                  ))}
+                </div>
+                {/* Category links - internal linking to category pages */}
+                {post.category && (
+                  <div className="mt-6 flex flex-wrap gap-2">
+                    <span className="text-xs text-gray-500 dark:text-gray-400 mt-0.5">
+                      More in:
+                    </span>
+                    <Link
+                      href={`/category/${post.categorySlug || ''}`}
+                      className="text-xs px-3 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                    >
+                      {post.category}
+                    </Link>
+                    {['Chatbots', 'Image Generation', 'Video Generation'].map((cat) => (
+                      <Link
+                        key={cat}
+                        href={`/category/${cat.toLowerCase().replace(/\s+/g, '-')}`}
+                        className="text-xs px-3 py-1.5 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 rounded-full hover:bg-emerald-50 dark:hover:bg-emerald-900/30 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                      >
+                        {cat}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </section>
+            )}
+
             {/* Related Articles - 智能推荐 */}
             {relatedPosts.length > 0 && (
               <section className="mb-16">
