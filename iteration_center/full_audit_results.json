@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-08T23:43:39.209291",
+  "audit_time": "2026-10-09T23:10:27.149291",
   "mode": "quick",
   "content": {
-    "total_articles": 145,
-    "average_score": 92.05103448275864,
-    "perfect_count": 107,
-    "below_85_count": 32,
+    "total_articles": 149,
+    "average_score": 92.74228187919466,
+    "perfect_count": 108,
+    "below_85_count": 29,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -746,13 +746,13 @@
       },
       {
         "slug": "chatgpt-vs-claude-2026-comparison",
-        "title": "ChatGPT vs Claude 2026: Which AI Assistant is | AIToolCrux",
+        "title": "ChatGPT vs Claude 2026: Which AI Assistant Wins?",
         "quality_score": 100.0,
-        "word_count": 3261,
-        "flesch": 44.2,
-        "internal_links": 8,
-        "external_links": 1,
-        "images": 4,
+        "word_count": 2244,
+        "flesch": 47.7,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 2,
         "failed_checks": []
       },
       {
@@ -1186,15 +1186,15 @@
       },
       {
         "slug": "otter-ai-alternatives",
-        "title": "7 Best Otter.ai Alternatives in 2026 (After Price Hike)",
+        "title": "7 Best Otter.ai Alternatives in 2026 (Tested After the Price Hike)",
         "quality_score": 80.0,
-        "word_count": 2125,
-        "flesch": 54.4,
-        "internal_links": 0,
-        "external_links": 5,
-        "images": 0,
+        "word_count": 2205,
+        "flesch": 48.2,
+        "internal_links": 4,
+        "external_links": 3,
+        "images": 3,
         "failed_checks": [
-          "internal_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1314,7 +1314,7 @@
         "title": "Midjourney v7 vs DALL-E 3: Ecommerce Pick",
         "quality_score": 72.2,
         "word_count": 1960,
-        "flesch": 44.7,
+        "flesch": 44.6,
         "internal_links": 3,
         "external_links": 0,
         "images": 0,
@@ -1371,7 +1371,7 @@
         "title": "ElevenLabs vs Murf: Which Is Right for Voiceover in 2026?",
         "quality_score": 74.4,
         "word_count": 2579,
-        "flesch": 37.0,
+        "flesch": 36.0,
         "internal_links": 3,
         "external_links": 4,
         "images": 0,
@@ -1385,7 +1385,7 @@
         "title": "Cursor Alternatives 2026: 6 Tools We Tested",
         "quality_score": 68.9,
         "word_count": 2828,
-        "flesch": 55.5,
+        "flesch": 55.6,
         "internal_links": 0,
         "external_links": 0,
         "images": 0,
@@ -1400,7 +1400,7 @@
         "title": "Midjourney Free Trial 2026: How to Start",
         "quality_score": 80.0,
         "word_count": 2718,
-        "flesch": 55.0,
+        "flesch": 54.9,
         "internal_links": 0,
         "external_links": 4,
         "images": 0,
@@ -1463,12 +1463,12 @@
       {
         "slug": "claude-37-vs-gpt4o",
         "title": "Claude 3.7 Sonnet vs GPT-4o 2026: Side-by-Side Benchmarks",
-        "quality_score": 88.9,
-        "word_count": 2140,
-        "flesch": 50.6,
+        "quality_score": 94.4,
+        "word_count": 2182,
+        "flesch": 52.0,
         "internal_links": 3,
-        "external_links": 3,
-        "images": 1,
+        "external_links": 5,
+        "images": 2,
         "failed_checks": [
           "first_para_pass"
         ]
@@ -1477,13 +1477,13 @@
         "slug": "synthesia-vs-heygen",
         "title": "Synthesia vs HeyGen 2026: We Tested Both on the Same Script",
         "quality_score": 85.6,
-        "word_count": 2057,
-        "flesch": 36.3,
-        "internal_links": 3,
+        "word_count": 2260,
+        "flesch": 41.1,
+        "internal_links": 5,
         "external_links": 3,
-        "images": 1,
+        "images": 2,
         "failed_checks": [
-          "readability_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1527,41 +1527,41 @@
       },
       {
         "slug": "motion-ai-alternatives",
-        "title": "7 Best Motion AI Alternatives in 2026 (Free & Paid)",
-        "quality_score": 72.2,
-        "word_count": 839,
-        "flesch": 54.9,
-        "internal_links": 3,
-        "external_links": 1,
-        "images": 0,
+        "title": "7 Best Motion AI Alternatives in 2026 (Free & Paid, Tested)",
+        "quality_score": 85.6,
+        "word_count": 2291,
+        "flesch": 50.8,
+        "internal_links": 7,
+        "external_links": 3,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
         "slug": "quillbot-alternatives",
-        "title": "7 Best QuillBot Alternatives in 2026",
-        "quality_score": 66.7,
-        "word_count": 822,
-        "flesch": 48.5,
-        "internal_links": 3,
-        "external_links": 2,
-        "images": 0,
+        "title": "7 Best QuillBot Alternatives in 2026 (Tested for Grammar, Tone & Humanizing)",
+        "quality_score": 85.6,
+        "word_count": 2235,
+        "flesch": 46.4,
+        "internal_links": 6,
+        "external_links": 4,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
         "slug": "runway-alternatives",
         "title": "8 Best Runway ML Alternatives in 2026 (Tested & Ranked)",
-        "quality_score": 72.2,
-        "word_count": 918,
-        "flesch": 53.5,
-        "internal_links": 4,
+        "quality_score": 85.6,
+        "word_count": 2180,
+        "flesch": 62.9,
+        "internal_links": 9,
         "external_links": 2,
-        "images": 0,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1581,31 +1581,27 @@
       {
         "slug": "writesonic-alternatives",
         "title": "8 Best Writesonic Alternatives in 2026 (Ranked by Use Case)",
-        "quality_score": 72.2,
-        "word_count": 848,
-        "flesch": 52.4,
-        "internal_links": 5,
-        "external_links": 3,
-        "images": 0,
+        "quality_score": 85.6,
+        "word_count": 2338,
+        "flesch": 51.2,
+        "internal_links": 18,
+        "external_links": 2,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
         "slug": "midjourney-v7-vs-flux-2026",
         "title": "Midjourney v7 vs Flux 2026: Which AI Wins?",
-        "quality_score": 43.3,
-        "word_count": 1204,
-        "flesch": 39.1,
-        "internal_links": 0,
-        "external_links": 0,
-        "images": 0,
+        "quality_score": 94.4,
+        "word_count": 2146,
+        "flesch": 40.8,
+        "internal_links": 6,
+        "external_links": 5,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "first_para_pass",
-          "internal_links_pass",
-          "readability_pass",
-          "external_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1692,7 +1688,7 @@
         "title": "Aider AI Review 2026: Is the Open-Source Coding Agent Worth It?",
         "quality_score": 94.4,
         "word_count": 2024,
-        "flesch": 47.9,
+        "flesch": 47.8,
         "internal_links": 4,
         "external_links": 4,
         "images": 3,
@@ -1710,22 +1706,66 @@
         "failed_checks": [
           "readability_pass"
         ]
+      },
+      {
+        "slug": "n8n-review-2026",
+        "title": "n8n Review 2026: The Best Self-Hosted AI Workflow Automation Platform?",
+        "quality_score": 100.0,
+        "word_count": 2841,
+        "flesch": 50.2,
+        "internal_links": 16,
+        "external_links": 5,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "best-ai-agents-2026",
+        "title": "Best AI Agents 2026: 15 Autonomous Tools That Actually Work",
+        "quality_score": 91.1,
+        "word_count": 2474,
+        "flesch": 57.0,
+        "internal_links": 10,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "ai-agent-vs-chatbot-2026",
+        "title": "AI Agent vs Chatbot: What is the Difference in 2026?",
+        "quality_score": 82.2,
+        "word_count": 2078,
+        "flesch": 49.3,
+        "internal_links": 8,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": []
+      },
+      {
+        "slug": "how-to-build-an-ai-agent",
+        "title": "How to Build an AI Agent: Step-by-Step Guide (No Code Required)",
+        "quality_score": 82.2,
+        "word_count": 2132,
+        "flesch": 60.7,
+        "internal_links": 11,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": []
       }
     ]
   },
   "technical": {
     "pages_audited": 20,
-    "total_issues": 7,
+    "total_issues": 13,
     "by_severity": {
-      "notice": 6,
-      "warning": 1
+      "notice": 11,
+      "warning": 2
     },
     "by_type": {
-      "Heading skip": 6,
-      "Meta too long": 1
+      "Heading skip": 11,
+      "Meta too long": 2
     },
     "critical_issues": [],
-    "elapsed_seconds": 3.7
+    "elapsed_seconds": 2.6
   },
   "geo": {
     "geo_score": 100,

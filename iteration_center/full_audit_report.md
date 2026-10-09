@@ -1,20 +1,20 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-08 23:43:39
+**Date:** 2026-10-09 23:10:27
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 145 |
-| Avg content score | 92.1/100 |
-| Perfect articles | 107 |
-| Articles below 85 | 32 |
+| Articles | 149 |
+| Avg content score | 92.7/100 |
+| Perfect articles | 108 |
+| Articles below 85 | 29 |
 | Pages audited | 20 |
-| Technical issues | 7 |
+| Technical issues | 13 |
 | Critical issues | 0 |
-| Audit duration | 3.7s |
+| Audit duration | 2.6s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -23,7 +23,6 @@
 |------|-------|-------|--------|-------|--------|
 | notion-ai-vs-salesforce-2026 | 34 | 463 | 36.2 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | notion-ai-vs-notion-ai-salesforce-2 | 40 | 427 | 35.8 | 0 | word_count_pass, internal_links_pass, readability_pass |
-| midjourney-v7-vs-flux-2026 | 43 | 1204 | 39.1 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | midjourney-v7-vs-dall-e-3-2026 | 43 | 448 | 48.8 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | claude-opus-4-vs-gpt-5-2026 | 49 | 1132 | 50.9 | 0 | word_count_pass, internal_links_pass, external_links_pass |
 | perplexity-vs-chatgpt-2026 | 49 | 461 | 48.5 | 0 | word_count_pass, internal_links_pass, external_links_pass |
@@ -32,33 +31,37 @@
 | best-free-ai-tools-for-students-202 | 63 | 1992 | 63.3 | 3 | word_count_pass, first_para_pass |
 | lovable-vs-boltnew | 63 | 1085 | 52.9 | 3 | word_count_pass |
 | notion-ai-vs-obsidian-ai | 67 | 1828 | 66.3 | 3 | word_count_pass, title_pass, external_links_pass |
-| quillbot-alternatives | 67 | 822 | 48.5 | 3 | word_count_pass |
-| cursor-alternatives-2026 | 69 | 2828 | 55.5 | 0 | first_para_pass, internal_links_pass, external_links_pass |
+| cursor-alternatives-2026 | 69 | 2828 | 55.6 | 0 | first_para_pass, internal_links_pass, external_links_pass |
 | sudowrite-alternatives | 69 | 1138 | 45.9 | 2 | word_count_pass, internal_links_pass |
 | chatgpt-alternatives-2026 | 72 | 1960 | 60.5 | 5 | word_count_pass, external_links_pass |
 | runway-vs-pika-2026 | 72 | 1960 | 56.5 | 5 | word_count_pass, external_links_pass |
 | how-to-get-chatgpt-free-2026 | 72 | 1844 | 56.6 | 3 | word_count_pass |
 | canva-pro-free-for-students | 72 | 1918 | 64.9 | 3 | word_count_pass, external_links_pass |
-| midjourney-v7-vs-dall-e-3-ecommerce | 72 | 1960 | 44.7 | 3 | word_count_pass, external_links_pass |
+| midjourney-v7-vs-dall-e-3-ecommerce | 72 | 1960 | 44.6 | 3 | word_count_pass, external_links_pass |
 | claude-alternatives-2026 | 72 | 1452 | 60.3 | 3 | word_count_pass, title_pass |
 | beautiful-ai-alternatives | 72 | 866 | 51.6 | 3 | word_count_pass |
 | devin-ai-review | 72 | 975 | 57.9 | 3 | word_count_pass |
 | clearscope-alternatives | 72 | 851 | 58.4 | 4 | word_count_pass |
-| motion-ai-alternatives | 72 | 839 | 54.9 | 3 | word_count_pass |
-| runway-alternatives | 72 | 918 | 53.5 | 4 | word_count_pass |
-| writesonic-alternatives | 72 | 848 | 52.4 | 5 | word_count_pass |
-| elevenlabs-vs-murf-2026 | 74 | 2579 | 37.0 | 3 | first_para_pass, readability_pass |
+| elevenlabs-vs-murf-2026 | 74 | 2579 | 36.0 | 3 | first_para_pass, readability_pass |
 | canva-ai-alternatives-2026 | 74 | 3946 | 28.0 | 4 | readability_pass, external_links_pass |
 | best-free-ai-tools-for-youtube-crea | 78 | 3224 | 51.1 | 3 | first_para_pass, external_links_pass |
 | how-to-use-cursor-for-react-develop | 78 | 3256 | 47.1 | 4 | first_para_pass, external_links_pass |
-| otter-ai-alternatives | 80 | 2125 | 54.4 | 0 | internal_links_pass |
-| midjourney-free-trial-2026 | 80 | 2718 | 55.0 | 0 | internal_links_pass |
-| synthesia-vs-heygen | 86 | 2057 | 36.3 | 3 | readability_pass |
+| otter-ai-alternatives | 80 | 2205 | 48.2 | 4 | first_para_pass |
+| midjourney-free-trial-2026 | 80 | 2718 | 54.9 | 0 | internal_links_pass |
+| ai-agent-vs-chatbot-2026 | 82 | 2078 | 49.3 | 8 | — |
+| how-to-build-an-ai-agent | 82 | 2132 | 60.7 | 11 | — |
+| synthesia-vs-heygen | 86 | 2260 | 41.1 | 5 | first_para_pass |
+| motion-ai-alternatives | 86 | 2291 | 50.8 | 7 | first_para_pass |
+| quillbot-alternatives | 86 | 2235 | 46.4 | 6 | first_para_pass |
+| runway-alternatives | 86 | 2180 | 62.9 | 9 | first_para_pass |
+| writesonic-alternatives | 86 | 2338 | 51.2 | 18 | first_para_pass |
 | best-ai-grammar-checker | 86 | 2049 | 32.7 | 4 | readability_pass |
 | autochain-review-2026 | 89 | 2023 | 44.8 | 6 | — |
-| claude-37-vs-gpt4o | 89 | 2140 | 50.6 | 3 | first_para_pass |
+| best-ai-agents-2026 | 91 | 2474 | 57.0 | 10 | — |
 | suno-alternatives-2026 | 94 | 2167 | 40.6 | 3 | — |
-| aider-review | 94 | 2024 | 47.9 | 4 | — |
+| claude-37-vs-gpt4o | 94 | 2182 | 52.0 | 3 | first_para_pass |
+| midjourney-v7-vs-flux-2026 | 94 | 2146 | 40.8 | 6 | first_para_pass |
+| aider-review | 94 | 2024 | 47.8 | 4 | — |
 | best-paid-ai-tools-worth-buying-202 | 100 | 2226 | 68.2 | 5 | — |
 | dify-vs-langchain-2026 | 100 | 2216 | 50.1 | 6 | — |
 | gemini-alternatives-2026 | 100 | 2242 | 51.2 | 8 | — |
@@ -126,7 +129,7 @@
 | openai_astra_review | 100 | 12471 | 43.9 | 15 | — |
 | chatgpt-deep-review-2026 | 100 | 7179 | 44.9 | 8 | — |
 | ai-tools-selection-guide-2026 | 100 | 6975 | 45.2 | 10 | — |
-| chatgpt-vs-claude-2026-comparison | 100 | 3261 | 44.2 | 8 | — |
+| chatgpt-vs-claude-2026-comparison | 100 | 2244 | 47.7 | 4 | — |
 | claude-review-2026 | 100 | 12567 | 42.6 | 13 | — |
 | github-copilot-review-2026 | 100 | 13298 | 44.7 | 13 | — |
 | cursor-review-2026 | 100 | 13230 | 45.4 | 13 | — |
@@ -166,6 +169,7 @@
 | windsurf-vs-cursor-2026 | 100 | 2928 | 45.2 | 3 | — |
 | gemini-vs-chatgpt-2026 | 100 | 3427 | 52.5 | 7 | — |
 | suno-alternatives | 100 | 2920 | 50.4 | 4 | — |
+| n8n-review-2026 | 100 | 2841 | 50.2 | 16 | — |
 
 ## GEO / AI Citation
 
