@@ -2,6 +2,7 @@ import Link from 'next/link';
 import posts from '@/data/posts.json';
 import { BlogListClient } from '@/components/blog/BlogListClient';
 import { Rss } from 'lucide-react';
+import { getPostCoverImage } from '@/lib/screenshot';
 
 export const metadata = {
   title: 'Blog - AI Tool Reviews & Comparisons',
@@ -125,6 +126,11 @@ const collectionSchema = {
 export default function BlogPage() {
   const allPosts = posts as any[];
   const featuredPosts = allPosts.filter((p) => p.featured);
+  // 为每篇文章提取首图作为封面（真实截图，SEO图片索引）
+  const withCover = (p: any) => ({
+    ...p,
+    image: getPostCoverImage(p.content) || null,
+  });
 
   return (
     <>
@@ -167,6 +173,17 @@ export default function BlogPage() {
                   href={`/blog/${post.slug}`}
                   className="block bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl border border-emerald-100 dark:border-emerald-900/30 p-6 hover:shadow-lg hover:border-emerald-200 dark:hover:border-emerald-800 transition-all"
                 >
+                  {withCover(post).image && (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={withCover(post).image}
+                      alt={`${post.title} screenshot`}
+                      width={640}
+                      height={360}
+                      loading="lazy"
+                      className="w-full h-40 object-cover rounded-lg mb-4"
+                    />
+                  )}
                   <div className="flex items-center gap-2 mb-3">
                     <span className="text-xs font-medium text-amber-600 dark:text-amber-400 bg-amber-50 dark:bg-amber-900/20 px-2 py-1 rounded">
                       Featured
@@ -211,7 +228,7 @@ export default function BlogPage() {
                 publishedAt,
                 readTime,
                 featured,
-                image,
+                content,
               }) => ({
                 slug,
                 title,
@@ -224,7 +241,7 @@ export default function BlogPage() {
                 publishedAt,
                 readTime,
                 featured,
-                image,
+                image: getPostCoverImage(content) || null,
               }),
             )}
           />

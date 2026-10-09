@@ -22,6 +22,13 @@ import {
   Layers,
   TrendingUp,
   FileText,
+  Database,
+  Brain,
+  Activity,
+  Library,
+  Wrench,
+  Network,
+  Cpu,
 } from 'lucide-react';
 import toolsData from '@/data/tools-index.json';
 import postsData from '@/data/posts.json';
@@ -30,6 +37,7 @@ import { FadeIn } from '@/components/animations';
 import { SubmitToolCTA } from '@/components/community/SubmitToolCTA';
 import { calculateScoreResult } from '@/lib/scoring';
 import { OrganizationSchema } from '@/components/seo/Schema';
+import { getToolScreenshot } from '@/lib/screenshot';
 
 // Dynamic import heavy components
 const ToolList = dynamic(() => import('@/components/tools/ToolList').then((m) => m.ToolList), {
@@ -54,6 +62,13 @@ const CATEGORIES = [
   { slug: 'search', name: 'AI Search', icon: SearchIcon },
   { slug: 'agent', name: 'AI Agent', icon: Bot },
   { slug: 'design', name: 'AI Design', icon: Palette },
+  { slug: 'agent-framework', name: 'Agent Frameworks', icon: Network },
+  { slug: 'agent-runtime', name: 'Agent Runtimes', icon: Cpu },
+  { slug: 'dev-tools', name: 'AI Dev Tools', icon: Wrench },
+  { slug: 'rag', name: 'RAG & Retrieval', icon: Library },
+  { slug: 'database', name: 'AI Databases', icon: Database },
+  { slug: 'memory', name: 'AI Memory', icon: Brain },
+  { slug: 'observability', name: 'AI Observability', icon: Activity },
 ];
 
 const METHODOLOGY = [
@@ -97,8 +112,19 @@ const METHODOLOGY = [
 
 export default function HomePage() {
   const tools = toolsData as Tool[];
+  // 瘦身：只保留 ToolCard 需要的字段，避免把 longDescription 等重字段序列化进 RSC payload（HTML 体积-200KB+）
   const topTools = [...tools]
-    .map((t) => ({ ...t, total: calculateScoreResult(t.scores).total }))
+    .map((t) => ({
+      id: t.id,
+      slug: t.slug,
+      name: t.name,
+      vendor: t.vendor,
+      category: t.category,
+      description: t.description,
+      scores: t.scores,
+      total: calculateScoreResult(t.scores).total,
+      screenshot: getToolScreenshot(t.slug),
+    }))
     .sort((a, b) => b.total - a.total)
     .slice(0, 8);
 
@@ -220,8 +246,20 @@ export default function HomePage() {
                     >
                       <div className="flex items-center gap-2 mb-2">
                         <span className="text-xs font-bold text-emerald-400">#{i + 1}</span>
-                        <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-sm">
-                          {tool.name.charAt(0).toUpperCase()}
+                        <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-sm overflow-hidden">
+                          {tool.screenshot ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={tool.screenshot}
+                              alt={`${tool.name} screenshot`}
+                              width={32}
+                              height={32}
+                              loading="lazy"
+                              className="w-8 h-8 object-cover"
+                            />
+                          ) : (
+                            tool.name.charAt(0).toUpperCase()
+                          )}
                         </div>
                       </div>
                       <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
@@ -296,8 +334,20 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center gap-4 p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group"
                     >
-                      <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-lg">
-                        {tool.name.charAt(0).toUpperCase()}
+                      <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-lg overflow-hidden">
+                        {tool.screenshot ? (
+                          // eslint-disable-next-line @next/next/no-img-element
+                          <img
+                            src={tool.screenshot}
+                            alt={`${tool.name} screenshot`}
+                            width={40}
+                            height={40}
+                            loading="lazy"
+                            className="w-10 h-10 object-cover"
+                          />
+                        ) : (
+                          tool.name.charAt(0).toUpperCase()
+                        )}
                       </div>
                       <div className="flex-1 min-w-0">
                         <div className="font-semibold text-white group-hover:text-emerald-400 transition-colors truncate">

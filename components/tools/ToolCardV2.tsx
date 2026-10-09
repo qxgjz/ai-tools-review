@@ -73,8 +73,20 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
             {/* 头部：Logo + 等级 */}
             <div className="flex items-start justify-between">
               <div className="relative">
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-xl font-extrabold shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                  {tool.name.charAt(0).toUpperCase()}
+                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-xl font-extrabold shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
+                  {tool.screenshot ? (
+                    // eslint-disable-next-line @next/next/no-img-element
+                    <img
+                      src={tool.screenshot}
+                      alt={`${tool.name} screenshot`}
+                      width={48}
+                      height={48}
+                      loading="lazy"
+                      className="w-12 h-12 object-cover"
+                    />
+                  ) : (
+                    tool.name.charAt(0).toUpperCase()
+                  )}
                 </div>
                 {/* Logo微光效果 */}
                 <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400 to-indigo-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />

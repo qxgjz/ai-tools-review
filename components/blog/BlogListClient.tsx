@@ -18,6 +18,7 @@ interface Post {
   publishedAt: string;
   readTime: number;
   featured: boolean;
+  image?: string | null;
 }
 
 interface BlogListClientProps {
@@ -179,6 +180,17 @@ export function BlogListClient({ posts }: BlogListClientProps) {
               href={`/blog/${post.slug}`}
               className="block bg-white dark:bg-gray-900 rounded-lg border border-gray-200 dark:border-gray-800 p-6 hover:shadow-md dark:hover:shadow-lg hover:border-blue-200 dark:hover:border-blue-800 transition-all"
             >
+              {post.image && (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={post.image}
+                  alt={`${post.title} screenshot`}
+                  width={640}
+                  height={360}
+                  loading="lazy"
+                  className="w-full h-40 object-cover rounded-lg mb-4"
+                />
+              )}
               <div className="flex items-center gap-2 mb-2">
                 <span className="text-xs font-medium text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 px-2 py-1 rounded">
                   {post.category}

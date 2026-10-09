@@ -42,11 +42,14 @@ export interface Tool {
   vendor: string;
   description: string;
   scores: Score;
+  /** 真实截图URL（服务端计算，存在则返回 /screenshots/real/webp/{slug}.webp） */
+  screenshot?: string | null;
   pros: string[];
   cons: string[];
   pricing: PricingTier[];
   tags: string[];
   hasFreeTier: boolean;
+  freeAccess?: boolean;
   officialUrl?: string;
   affiliateUrl?: string;
   lastUpdated: string;
@@ -81,6 +84,22 @@ export interface Tool {
   usageScenarios?: string[];
   notableObservations?: string[];
   testMetrics?: Array<{ name?: string; value?: string; score?: number; metric?: string; test?: string; comparison?: string }>;
+}
+
+/**
+ * 工具卡片精简数据（列表页瘦身用）
+ * 只含 ToolCard/ToolCardV2 渲染所需字段，避免把 longDescription/pros/cons 等重字段
+ * 序列化进 RSC payload（显著减小 HTML 体积）
+ */
+export interface ToolCardItem {
+  id: string;
+  slug: string;
+  name: string;
+  vendor: string;
+  category: string;
+  description: string;
+  scores: Score;
+  screenshot?: string | null;
 }
 
 /** 文章数据 */

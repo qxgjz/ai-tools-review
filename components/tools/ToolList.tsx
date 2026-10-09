@@ -1,9 +1,9 @@
 import { PackageSearch } from 'lucide-react';
-import type { Tool } from '@/types';
+import type { ToolCardItem } from '@/types';
 import { ToolCard } from './ToolCard';
 
 interface ToolListProps {
-  tools: Tool[];
+  tools: ToolCardItem[];
   className?: string;
   emptyTitle?: string;
   emptyDescription?: string;

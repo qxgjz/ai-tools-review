@@ -3,7 +3,7 @@
 import Link from 'next/link';
 import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
-import type { Tool, Grade } from '@/types';
+import type { ToolCardItem, Grade } from '@/types';
 import { calculateScoreResult } from '@/lib/scoring';
 
 // Grade styles - solid colors, NO gradients (Taste Skill + UI/UX Pro Max rule)
@@ -17,7 +17,7 @@ const GRADE_STYLES: Record<Grade, string> = {
 };
 
 interface ToolCardProps {
-  tool: Tool;
+  tool: ToolCardItem;
   index?: number;
 }
 
@@ -49,8 +49,20 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
 
           {/* Header: Logo + Grade */}
           <div className="flex items-start justify-between mb-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xl font-bold transition-colors group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 group-hover:text-emerald-600 dark:group-hover:text-emerald-400">
-              {tool.name.charAt(0).toUpperCase()}
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xl font-bold transition-colors group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 overflow-hidden">
+              {tool.screenshot ? (
+                // eslint-disable-next-line @next/next/no-img-element
+                <img
+                  src={tool.screenshot}
+                  alt={`${tool.name} screenshot`}
+                  width={48}
+                  height={48}
+                  loading="lazy"
+                  className="w-12 h-12 object-cover"
+                />
+              ) : (
+                tool.name.charAt(0).toUpperCase()
+              )}
             </div>
             <div className="flex items-center gap-2">
               {isFeatured && (
