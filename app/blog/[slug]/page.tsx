@@ -260,7 +260,7 @@ export default function PostPage({ params }: PostPageProps) {
     }, [])
     .slice(0, 12);
 
-  const tool = tools.find((t) => t.slug === toolSlug);
+  const tool = tools.find((t) => t.slug === toolSlug) as Tool | undefined;
   const toolName = tool?.name || 'this AI tool';
   const officialUrl = tool?.officialUrl || undefined;
   const affiliateUrl = tool?.affiliateUrl || undefined;
@@ -269,7 +269,7 @@ export default function PostPage({ params }: PostPageProps) {
   const avgScore = tool?.scores
     ? Object.values(tool.scores).reduce((a, b) => a + (typeof b === 'number' ? b : 0), 0) /
       Object.keys(tool.scores).filter(
-        (k) => typeof (tool.scores as Record<string, number>)[k] === 'number',
+        (k) => typeof (tool.scores as unknown as Record<string, number>)[k] === 'number',
       ).length
     : 7.5;
 
@@ -410,6 +410,21 @@ export default function PostPage({ params }: PostPageProps) {
           first-letter:text-5xl first-letter:font-bold first-letter:float-left first-letter:mr-3 first-letter:leading-none first-letter:text-emerald-600 dark:first-letter:text-emerald-400 first-letter:mt-1"
               dangerouslySetInnerHTML={markdownToHtmlSafe(post.content || '')}
             />
+
+            {/* Affiliate CTA - 决策点转化 */}
+            {tool && (
+              <div className="mb-10">
+                <AffiliateCTA
+                  toolName={toolName}
+                  officialUrl={officialUrl}
+                  affiliateUrl={affiliateUrl}
+                  description={`Ready to try ${toolName}? Get the full experience with the latest features and pricing.`}
+                  variant="banner"
+                  hasFreeTier={tool.hasFreeTier}
+                  freeAccess={tool.freeAccess}
+                />
+              </div>
+            )}
 
             {/* Free AI Tools Guide cross-link */}
             <section className="mb-16">

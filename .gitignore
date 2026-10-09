@@ -105,3 +105,10 @@ verify_optimization.py
 verify_taste_deep.py
 verify_taste_optimization.py
 write_cta.py
+
+# service account secrets
+.secrets/
+*.json
+!package.json
+!tsconfig.json
+
