@@ -507,8 +507,20 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-09 12:46:31 JST",
+  "last_updated": "2026-10-09T19:30:00+08:00",
   "completed_tasks": [
+    {
+      "id": "POLISH-2026-10-09-R2",
+      "priority": "P1",
+      "title": "R2: 优化 synthesia-vs-heygen / motion-ai-alt / quillbot-alt 到>=90",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "completed_at": "2026-10-09T19:30:00+08:00",
+      "result": "28->100, 28->90, 28->90",
+      "log": "window_logs/polisher_2026-10-09_r2.md"
+    },
     {
       "id": "POLISH-2026-10-09-R1",
       "priority": "P1",
@@ -773,6 +785,87 @@
     }
   ],
   "next_iteration_focus": [
+    {
+      "id": "P1-TOOL-OPENSERP-001",
+      "task": "分析师：用openserp批量查询Top50关键词的真实排名（Google），对比GSC数据，找出排名虚高/虚低的页面。",
+      "assigned_to": "analyst",
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_tool_audit_2026-10-09",
+      "created_at": "2026-10-09"
+    },
+    {
+      "id": "P1-TOOL-LIGHTHOUSE-001",
+      "task": "体验官：用npx lighthouse对首页+3个工具页做性能/SEO/可访问性审计，输出报告，Performance<70的P0修复。",
+      "assigned_to": "ux",
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_tool_audit_2026-10-09",
+      "created_at": "2026-10-09"
+    },
+    {
+      "id": "P1-TOOL-LLMEVALKIT-001",
+      "task": "打磨师：用scripts/llmevalkit_toolkit.py对已发布文章做全量幻觉检测+内容评分，<70分的标记重写。context必须用全文，不能用前1/3（已修复误报）。",
+      "assigned_to": "polisher",
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_tool_audit_2026-10-09",
+      "created_at": "2026-10-09"
+    },
+    {
+      "id": "P0-TOOL-CRAWL4AI-001",
+      "task": "Crawl4AI因Windows长路径装不上。用trafilatura+requests替代做网页正文提取，JS渲染用playwright。不要在脚本里import crawl4ai。",
+      "assigned_to": "architect",
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_tool_audit_2026-10-09",
+      "created_at": "2026-10-09"
+    },
+    {
+      "id": "P0-TOOL-FIX-001",
+      "task": "工具链大修复已完成：16/17工具真实可用。各窗口必须真正调用工具执行，禁止回退AI硬写。每次执行前先import验证工具可用。",
+      "assigned_to": "all_windows",
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_tool_audit_2026-10-09",
+      "created_at": "2026-10-09"
+    },
+    {
+      "id": "P1-TOOL-CONTRADICTION-FP-001",
+      "priority": "P1",
+      "title": "ContradictionDetector纯规则模式误报率100%",
+      "description": "全文自对照(answer=context=全文)时，表格vs正文重复陈述被误判为negation_flip/antonym，23/23全误报。建议llmevalkit_toolkit加后处理：if context==answer skip contradiction。",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "source": "hallucination_audit_report",
+      "created_at": "2026-10-09T15:00:00+09:00",
+      "status": "pending"
+    },
+    {
+      "id": "P1-CONTENT-CAUSAL-CLAIMS-001",
+      "priority": "P1",
+      "title": "3处因果断言缺来源（causal detector标记）",
+      "description": "claude-37篇'Claude leads on nuanced translation'、midjourney篇'each generation takes 40-60 min'、chatgpt篇'thinking parameter allocates...'——补一句官方benchmark或文档链接。",
+      "assigned_to": [
+        "内容生产窗口"
+      ],
+      "source": "hallucination_audit_report",
+      "created_at": "2026-10-09T15:00:00+09:00",
+      "status": "pending"
+    },
+    {
+      "id": "P1-CONTENT-KWD-DENSITY-001",
+      "priority": "P1",
+      "title": "4篇草稿关键词密度0.0-0.13% < 0.5%",
+      "description": "midjourney/chatgpt-vs-claude/claude-37/n8n 四篇发布稿里主关键词出现次数不足。窗口3发布前在正文自然多提2-3次主关键词，不要堆砌。",
+      "assigned_to": [
+        "内容生产窗口"
+      ],
+      "source": "hallucination_audit_report",
+      "created_at": "2026-10-09T15:00:00+09:00",
+      "status": "pending"
+    },
     {
       "id": "P1-TOOL-ZENSINK-MD2HTML-001",
       "priority": "P1",
@@ -7217,5 +7310,13 @@
     "archived": 277,
     "p0_count": 4,
     "p1_count": 46
-  }
+  },
+  "drafts_ready_to_publish": [
+    "2026-10-09-midjourney-v7-vs-flux-2026_REWRITE.md",
+    "2026-10-09-chatgpt-vs-claude-2026-comparison_REWRITE.md",
+    "2026-10-09-claude-37-vs-gpt4o_REWRITE.md",
+    "2026-10-09-n8n-review-2026_DRAFT.md"
+  ],
+  "last_tool_audit": "2026-10-09",
+  "tool_audit_result": "18 tools available, 1 unavailable (Crawl4AI, trafilatura替代)"
 }
