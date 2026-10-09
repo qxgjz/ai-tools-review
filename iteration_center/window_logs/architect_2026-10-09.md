@@ -157,3 +157,58 @@
   - 第3次：200, 3.36s（比之前 12-15s 改善）
   - 连续测试：HIT 稳定，但传输速度 4.8s-15s 波动
 - **剩余瓶颈**：边缘缓存命中后仍慢 → 边缘节点到用户传输慢 + 首页 HTML 478KB 偏大。建议后续优化首页 HTML 体积（RSC payload 瘦身、减少内联数据）
+
+---
+
+## GEO 技术检查轮（21:00 定时触发）
+
+### GEO/AEO 审计结果（real_geo_aeo_audit.py）
+- 总体 GEO/AEO Readiness：**9.3/10 Grade A**（AI 搜索就绪）
+- AI Crawler Accessibility：**10/10**（11 个 AI 爬虫全配置可访问：GPTBot/ClaudeBot/Claude-Web/PerplexityBot/Google-Extended/Applebot/Amazonbot/Bytespider/meta-externalagent/OAI-SearchBot）
+- llms.txt：**10/10**（llms.txt 2.7KB + llms-full.txt 456KB/7608 行，覆盖全部 533 工具页 0 缺失）
+- AEO Content Optimization：9.1/10；GEO Content Structure：8.1/10
+- 页面级 AEO：/methodology 7.5（实测 7/8 缺 FAQ 段）、首页 8.75（实测 8/8 全过，报告值系旧缓存偏差）、chatgpt-vs-claude 文章 10、chatgpt-alternatives 10
+
+### 全站 SEO 审计（seo_audit_full.py）
+- sitemap 驱动 796 个 URL，10 workers 并发爬取
+- 首次运行卡在爬取阶段（550/796 后进程消失），重跑进行中（本轮窗口内未完成全量，报告输出至 iteration_center/_seo_audit_run2.txt）
+
+### Lighthouse 抽查 3 页（npx lighthouse，CHROME_PATH=Edge）
+| 页面 | SEO 评分 |
+|---|---|
+| https://aitoolcrux.com/（首页） | **1.0 满分**（无失败项） |
+| /blog/best-paid-ai-tools-worth-buying-2026 | **1.0 满分** |
+| /blog/dify-vs-langchain-2026 | **1.0 满分** |
+
+### 处理的 GEO 技术问题（2 个）
+1. **博客模板补 AEO 段**（add_aeo_to_blog.py 因匹配模式过时未生效，手工按脚本内容模板插入）：app/blog/[slug]/page.tsx 在 H1 后新增 Quick Answer（3 问答 answer-first 结构）+ Key Takeaways（Best For/Our Rating/Top Insight/Expert Verdict）+ Source/Last updated/Methodology 引用行 → 146 篇文章全部受益
+2. **/methodology 补 FAQ**：新增 FAQ 可见段（3 问：评分方式/独立性/更新频率）+ FAQPage JSON-LD schema（Question+Answer 结构）→ AEO 从 7/8 提到 8/8
+
+### 线上验证（浏览器实测，绕过 CDN 缓存）
+- https://aitoolcrux.com/methodology/：FAQ 段 ✓ + Quick Answer ✓
+- https://aitoolcrux.com/blog/best-paid-ai-tools-worth-buying-2026/：Quick Answer ✓ + Key Takeaways ✓
+- https://aitoolcrux.com/ranking/：正常渲染（Gemini #1 等排名内容，浏览器实测无超时；curl 000 系本机网络路径问题）
+
+### 待办处理（5 条架构师 pending）
+| 任务 | 处理 |
+|---|---|
+| 收录P0-1 | completed：3 个 tag 页 curl 实测返回 `<meta name="robots" content="noindex, follow"/>` |
+| 收录P0-2 | completed：submit_indexnow_daily.py 改造为 Top50 高价值工具页，IndexNow 返回 **200**，77 URL 提交成功 |
+| 收录P0-3 | completed：posts.json 146 条仅 1 篇 creatium，无重复 |
+| 收录P1-2 | pending：内链优化（保留下一轮） |
+| 收录P1-3 | pending：compare 页优化（保留下一轮，commit 8da5bad 已做 Meta 部分） |
+
+### GEO 审计发现写入 state.json（source=geo_audit_2026-10-09）
+- GEO-AEO-001（P1，内容类→window2/创作家）：/methodology 补 FAQ 段落（已由架构师本轮技术修复，待创作家内容深化）
+- GEO-AEO-002（P2，内容类→window2/创作家）：全站加专家引言与统计研究数据
+
+### 门控与部署
+- `npx tsc --noEmit`：通过（2 次，0 error）
+- `npm run build`：通过（2 次，exit 0）
+- commit `922076d`：5 files changed, 209 insertions(+), 27 deletions(-)
+- push origin main：成功（deb5cfb..922076d）
+- 线上 200：home ✓ / 404 ✓ / methodology 308→200（浏览器实测内容上线）
+
+### 本轮剩余
+- SEO 审计全量完成（后台继续跑，结果落 _seo_audit_run2.txt + seo_audit_full_20260917.md）
+- P1-2 内链优化、P1-3 compare 页深度优化留待下一轮
