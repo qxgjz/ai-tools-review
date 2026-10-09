@@ -38,3 +38,6 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - [ ] best-ai-pr-tools-2026
 - [ ] best-ai-photo-editors-2026
 - [ ] best-ai-observability-tools-2026
+| 2026-10-10 | best AI agents 2026 | P0 | best-ai-agents-2026 | 2417 | Keyword New (P0) |
+| 2026-10-10 | AI agent vs chatbot | P0 | ai-agent-vs-chatbot-2026 | 2049 | Keyword New (P0) |
+| 2026-10-10 | how to build an AI agent | P0 | how-to-build-an-ai-agent | 2070 | Keyword New (P0) |
