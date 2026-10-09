@@ -954,24 +954,30 @@
     {
       "task": "收录P1-3: 优化/compare页面Title/Meta/内容深度（当前270曝光但排名34，CTR仅0.7%），目标排名进前20。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "window3"
       ],
       "source": "index_monitor_2026-09-28",
-      "created_at": "2026-10-09"
+      "created_at": "2026-10-09",
+      "completed_at": "2026-10-10T00:44:14",
+      "updated_at": "2026-10-10T00:44:14",
+      "completion_note": "架构师GEO轮修复：/compare Meta Description 194→158字符（≤160）；methodology 新增 Dimension Weight Comparison 表格（AEO Check7 通过，7/8→8/8）；Lighthouse 3页SEO满分。commit 753683e 已部署线上验证200。"
     },
     {
       "task": "收录P1-2: 内链优化：在已曝光的/blog文章页加内链指向未曝光的工具页和分类页（chatbots/image-generation/video），每个工具页至少1条站内入链。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "window3"
       ],
       "source": "index_monitor_2026-09-28",
-      "created_at": "2026-10-09"
+      "created_at": "2026-10-09",
+      "completed_at": "2026-10-10T00:44:14",
+      "updated_at": "2026-10-10T00:44:14",
+      "completion_note": "架构师GEO轮修复：blog模板新增 Explore Related Tools 区块（渲染相关工具页 /tools/ 内链，最多6个，评分展示）+ 分类页内链（当前文章分类 + Chatbots/Image Generation/Video Generation），146篇文章全部受益。commit 753683e 已部署线上验证200。"
     },
     {
       "task": "收录P1-1: 为Top10头部工具页（midjourney/elevenlabs/notion-ai等）添加独特内容解决模板化：每页写200字差异化首段（真实使用体验+版本数据）+2条FAQ，避免与竞品页雷同。",
@@ -1530,6 +1536,30 @@
       ],
       "source": "geo_audit_2026-10-09",
       "created_at": "2026-10-09"
+    },
+    {
+      "id": "geo_aeo_home_author_table_2026-10-10",
+      "priority": "P1",
+      "task": "GEO/AEO：首页缺少独立 Comparison 对比内容（当前依赖FAQ中的comparisons字样），建议在首页 Top Picks 区域增加可引用的对比表格（工具A vs 工具B 评分/价格/适用场景），提升AI搜索引擎结构化引用。",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T00:44:14"
+    },
+    {
+      "id": "geo_aeo_methodology_expert_2026-10-10",
+      "priority": "P2",
+      "task": "GEO/AEO：/methodology 已补 Comparison 表格（架构师修复），建议内容侧补充专家引言与一手测试数据引用（如\"我们在14天测试中记录X个问题\"），进一步增强AI引擎对方法论页的引用。",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T00:44:14"
     }
   ],
   "milestones": [
