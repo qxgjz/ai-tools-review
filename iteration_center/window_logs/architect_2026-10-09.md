@@ -93,3 +93,34 @@
 
 1. **Cloudflare WAF SG 规则**：token（cfut_ 开头）只有读取权限，创建被 403 拒绝。需用户在 CF 控制台 → Security → WAF → Custom rules 手动添加：expression `(ip.geoip.country eq "SG")`，action `Managed Challenge`。或提供更高权限 token。
 2. **n8n 部署**：本机无 Docker，无法本地自托管；如需启用需安装 Docker 或改用 n8n.cloud 托管版。
+
+---
+
+## P0 故障排查：网站响应极慢（2026-10-09 傍晚，用户触发排查）
+
+### 现象
+- 首页 / blog / compare 均返回 200 但 total=12-15s（curl 超时），下载速度仅 12-43KB/s
+- TTFB 基本正常（0.97-3.74s），但响应体传输极慢且不稳定（21KB-473KB 不等）
+- static webp / sitemap.xml / robots.txt 等小文件也慢（2.4KB 用 4.8s，5KB 用 10s）
+- favicon 404 响应快（0.93s）——边缘直接返回，无需回源
+
+### 排查过程
+1. DNS 正常：解析到 Cloudflare IP（172.67.184.10 / 104.21.75.243）
+2. 浏览器 UA 复测也慢 → 排除 Bot 拦截
+3. pages.dev 原始域名（aitoolcrux-d2a.pages.dev）也慢 → 排除 Cloudflare CDN 代理层问题
+4. 小文件也慢 → 排除文件大小问题
+5. 404 快 / 200 慢 → 边缘缓存命中快，回源 Pages 慢
+6. GitHub Actions：3af369b Deploy to Cloudflare Pages success，部署验证通过（只查 200 不查速度）
+7. Cloudflare 状态页：今日仅 AMS（阿姆斯特丹）维护已完成，无亚太节点故障报告
+8. _headers 配置：仅 /404.html 和 /screenshots/real/webp/* 有缓存规则，**HTML 页面无缓存** → 每次请求回源 Pages
+
+### 结论
+- **根因**：Cloudflare Pages 源站服务异常（亚太区域回源慢），非代码问题
+- **加剧因素**：HTML 页面未配置 Cloudflare 缓存，所有请求回源，放大了 Pages 源站慢的影响
+- **部署状态**：正常（3af369b success，tsc/build 通过）
+
+### 缓解建议（待用户确认）
+1. 在 `public/_headers` 加 HTML 缓存规则：`/*` 或特定页面 `Cache-Control: public, max-age=300`（5分钟），减少回源
+2. 或在 Cloudflare 控制台配置 Cache Rule：缓存全站 HTML，Edge TTL 300s
+3. 监控 Cloudflare 状态页，等待 Pages 平台恢复
+4. 如持续超过 1 小时，考虑回滚到 8da5bad 之前的部署（但平台问题回滚无效）
