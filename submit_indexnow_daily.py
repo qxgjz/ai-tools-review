@@ -17,14 +17,7 @@ with open('data/tools.json', 'r', encoding='utf-8') as f:
 # 构建URL列表
 urls = []
 
-# 1. 最新3篇文章
-print("=== Latest Articles ===")
-for post in posts[:3]:
-    url = f"{SITE_URL}/blog/{post['slug']}"
-    urls.append(url)
-    print(f"  + {url}")
-
-# 2. Top10工具页（按评分排序）
+# 1. Top50 高价值工具页（P0-2: 无曝光高价值工具优先，按评分排序补充到50）
 def get_score(tool):
     scores = tool.get('scores', {})
     if not scores:
@@ -32,10 +25,36 @@ def get_score(tool):
     numeric_scores = [v for v in scores.values() if isinstance(v, (int, float))]
     return sum(numeric_scores) / len(numeric_scores) if numeric_scores else 0
 
+priority_slugs = ['midjourney', 'elevenlabs', 'notion-ai', 'gpt-4', 'github-copilot',
+                  'sora', 'gemini', 'claude', 'chatgpt', 'stable-diffusion', 'copilot',
+                  'dall-e', 'perplexity', 'runway', 'leonardo', 'midjourney-alternatives']
+
 sorted_tools = sorted(tools, key=get_score, reverse=True)
-print("\n=== Top 10 Tools ===")
-for tool in sorted_tools[:10]:
+selected = []
+seen = set()
+for slug in priority_slugs:
+    for t in tools:
+        if t.get('slug') == slug and slug not in seen:
+            selected.append(t)
+            seen.add(slug)
+            break
+for t in sorted_tools:
+    if t.get('slug') not in seen:
+        selected.append(t)
+        seen.add(t.get('slug'))
+    if len(selected) >= 50:
+        break
+
+print(f"\n=== Top {len(selected)} 高价值工具页 ===")
+for tool in selected:
     url = f"{SITE_URL}/tools/{tool['slug']}"
+    urls.append(url)
+    print(f"  + {url}")
+
+# 2. 最新3篇文章
+print("\n=== Latest Articles ===")
+for post in posts[:3]:
+    url = f"{SITE_URL}/blog/{post['slug']}"
     urls.append(url)
     print(f"  + {url}")
 

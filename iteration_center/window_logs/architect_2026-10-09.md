@@ -124,3 +124,36 @@
 2. 或在 Cloudflare 控制台配置 Cache Rule：缓存全站 HTML，Edge TTL 300s
 3. 监控 Cloudflare 状态页，等待 Pages 平台恢复
 4. 如持续超过 1 小时，考虑回滚到 8da5bad 之前的部署（但平台问题回滚无效）
+
+### 缓解措施已执行（commit cb6de3c）
+- `public/_headers` 新增：
+  - `/*` → `Cache-Control: public, max-age=300`（HTML 浏览器缓存 5 分钟）
+  - `/api/*` → `Cache-Control: no-store`（API 不缓存）
+  - `/_next/*` → `Cache-Control: public, max-age=31536000, immutable`（静态资源长期缓存）
+- tsc pass + build pass + push success（97b5eab..cb6de3c）
+- 线上验证：`Cache-Control: public, max-age=300` 已生效
+- **但** `cf-cache-status: DYNAMIC`——Cloudflare 默认不缓存 HTML，边缘仍每次回源 Pages
+- Pages 源站 TTFB 波动 1.7s-11.8s，仍不稳定
+
+### 仍需用户操作（Cloudflare 控制台，API token 无编辑权限 403）
+1. 进入 Cloudflare Dashboard → Caching → Cache Rules
+2. 创建规则：
+   - Rule name: `Cache HTML Pages`
+   - When: `URI Path` `does not start with` `/api/`
+   - Then: `Eligible for cache` → Edge TTL `300` seconds
+   - Browser TTL: `Respect existing headers`
+3. 或用 Page Rule：`aitoolcrux.com/*` → Cache Level = Cache Everything, Edge Cache TTL = 5 minutes
+4. 配置后 cf-cache-status 应变为 HIT/MISS，边缘缓存命中后不再回源
+
+### Cache Rule 已配置完成（浏览器操作）
+- 发现已有 "Cache HTML" 规则，但匹配条件仅 `http.host eq "www.aitoolcrux.com"`，主域名 `aitoolcrux.com` 不匹配 → 这是 cf-cache-status: DYNAMIC 的根因
+- 修改表达式为：`(http.host eq "www.aitoolcrux.com") or (http.host eq "aitoolcrux.com")`
+- 缓存资格：符合缓存条件 ✓
+- 边缘 TTL：respect_origin（使用源站 Cache-Control 头）✓
+- 保存成功，规则验证通过
+- 线上验证：
+  - 第1次：cf-cache-status: MISS（回源）
+  - 第2次：cf-cache-status: HIT, Age: 13（边缘缓存命中）
+  - 第3次：200, 3.36s（比之前 12-15s 改善）
+  - 连续测试：HIT 稳定，但传输速度 4.8s-15s 波动
+- **剩余瓶颈**：边缘缓存命中后仍慢 → 边缘节点到用户传输慢 + 首页 HTML 478KB 偏大。建议后续优化首页 HTML 体积（RSC payload 瘦身、减少内联数据）

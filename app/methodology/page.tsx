@@ -285,6 +285,43 @@ export default function MethodologyPage() {
         }}
       />
 
+      {/* FAQ Schema for AEO/GEO - enables rich answers in AI & search engines */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            '@context': 'https://schema.org',
+            '@type': 'FAQPage',
+            mainEntity: [
+              {
+                '@type': 'Question',
+                name: 'How are AI tools scored on AIToolCrux?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Every tool is evaluated on a transparent six-dimension framework: Functionality & Output Quality (25%), User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%), and Ethics & Transparency (10%). Each tool is hands-on tested with 10+ standardized scenarios, repeated 3+ times for consistency, and verified by our editorial team.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'Are AIToolCrux reviews independent and unbiased?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Yes. AIToolCrux is 100% independent — we accept no paid placements or sponsored reviews. Every tool is tested with the same methodology, and affiliate links are clearly disclosed per FTC guidelines. Affiliate commissions never influence scores or rankings.',
+                },
+              },
+              {
+                '@type': 'Question',
+                name: 'How often are reviews updated?',
+                acceptedAnswer: {
+                  '@type': 'Answer',
+                  text: 'Reviews are updated quarterly, or sooner when a major product change, pricing shift, or feature release affects our evaluation. Each review page displays its last updated date.',
+                },
+              },
+            ],
+          }),
+        }}
+      />
+
       {/* Hero */}
       {/* AEO/GEO Optimization: Quick Answer & Key Takeaways */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-16">
@@ -598,6 +635,41 @@ export default function MethodologyPage() {
                 product changes occur. Each review shows the last updated date.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ - AEO/GEO Optimization for AI Search Citation */}
+      <section className="mb-16">
+        <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+          <BookOpen className="w-6 h-6 text-emerald-600 dark:text-emerald-400" />
+          Frequently Asked Questions
+        </h2>
+        <div className="space-y-4">
+          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How are AI tools scored on AIToolCrux?</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Every tool is evaluated on a transparent six-dimension framework: Functionality & Output Quality (25%),
+              User Experience (20%), Price vs. Value (20%), Integrations & Developers (15%), Support & Reliability (10%),
+              and Ethics & Transparency (10%). Each tool is hands-on tested with 10+ standardized scenarios, repeated
+              3+ times for consistency, and verified by our editorial team before a final 1-10 score is assigned.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">Are AIToolCrux reviews independent and unbiased?</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Yes. AIToolCrux is 100% independent — we accept no paid placements or sponsored reviews. Every tool is
+              tested with the same methodology, and affiliate links are clearly disclosed per FTC guidelines. Affiliate
+              commissions never influence scores, rankings, or editorial conclusions.
+            </p>
+          </div>
+          <div className="bg-white dark:bg-gray-900 rounded-xl border border-gray-200 dark:border-gray-800 p-5">
+            <h3 className="font-semibold text-gray-900 dark:text-white mb-2">How often are reviews updated?</h3>
+            <p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed">
+              Reviews are updated quarterly, or sooner when a major product change, pricing shift, or feature release
+              affects our evaluation. Each review page displays its last updated date so readers can assess freshness
+              at a glance.
+            </p>
           </div>
         </div>
       </section>
