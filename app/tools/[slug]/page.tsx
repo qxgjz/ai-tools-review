@@ -186,6 +186,19 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
     .filter((t) => t.category === tool.category && t.slug !== tool.slug)
     .slice(0, 6);
 
+  // 精简工具卡片数据（避免完整工具对象序列化进 RSC payload，降低 HTML 体积）
+  const toCardItem = (t: Tool) => ({
+    id: t.id,
+    slug: t.slug,
+    name: t.name,
+    vendor: t.vendor || '',
+    category: t.category,
+    description: t.description || '',
+    scores: t.scores,
+    screenshot: t.screenshot || null,
+  });
+  const relatedCardItems = relatedTools.map(toCardItem);
+
   // Resolve screenshot URL for ToolScreenshot: real webp if available, else /api/og fallback
   const resolvedScreenshotPath =
     toolScreenshotMap[tool.slug] ||
@@ -205,6 +218,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
   const popularTools = toolsData
     .filter((t) => popularToolSlugs.includes(t.slug) && t.slug !== tool.slug)
     .slice(0, 8);
+  const popularCardItems = popularTools.map(toCardItem);
 
   // Relevant comparison pages - hub-and-spoke internal linking (P0)
   const relevantComparisons = (comparisonsData as any[])
@@ -1392,12 +1406,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             <Sparkles className="w-5 h-5 text-teal-600 dark:text-teal-400" />
             Similar Tools Recommended
           </h2>
-          <ToolList tools={relatedTools} />
+          <ToolList tools={relatedCardItems} />
         </section>
       )}
 
       {/* 跨分类热门工具推荐 - P1-004 增加重要工具入链 (below fold - cv-auto) */}
-      {popularTools.length > 0 && (
+      {popularCardItems.length > 0 && (
         <section className="cv-auto bg-gradient-to-br from-amber-50 to-orange-50 dark:from-amber-950/20 dark:to-orange-950/20 rounded-2xl border border-amber-100 dark:border-amber-900/50 shadow-sm p-6 mb-6">
           <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-5 flex items-center gap-2">
             <TrendingUp className="w-5 h-5 text-amber-600 dark:text-amber-400" />
@@ -1407,7 +1421,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Explore the most popular AI tools across all categories, handpicked by our editorial
             team.
           </p>
-          <ToolList tools={popularTools} />
+          <ToolList tools={popularCardItems} />
         </section>
       )}
 
