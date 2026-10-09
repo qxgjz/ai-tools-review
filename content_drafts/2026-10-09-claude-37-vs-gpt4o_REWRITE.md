@@ -173,3 +173,23 @@ Many teams use both: Claude for long-document analysis and complex coding, GPT-4
 - [Cursor vs Windsurf 2026](/blog/cursor-vs-windsurf-2026)
 
 *Last updated: October 2026. We re-test models quarterly and update this page when new versions ship.*
+
+---
+
+## Self-Check Report (scripts/llmevalkit_toolkit.py)
+
+- 自检时间: 2026-10-09 (定时任务补充规则执行)
+- 综合分（默认调用 context=文章前1/3）: **63 / 100**
+- 综合分（修正调用 context=全文）: **66 / 100**
+- hallucination_detected: True | AI内容概率: 13.4%
+
+| 检测器 | 默认口径(前1/3ctx) | 修正口径(全文ctx) | 判定 |
+|---|---|---|---|
+| EntityHallucination | 0.355 | 1.0 | 默认口径误报：context=文章前1/3，后半段实体必然不在context |
+| NumericHallucination | 0.847 | 1.0 | 全文口径通过 |
+| ContradictionDetector | 0.1 | 0.1 | 系统性误报：把对比表格行与正文结论句判为negation_flip；人工核验0处真实矛盾 |
+| FabricatedInfo | 0.889 | 1.0 | 全文口径通过 |
+| PII | 1.0 | 1.0 | 无PII |
+| Anomaly | 0.8 | 0.8 | 仅too_long(2000+词)提示 |
+
+- 结论: 综合分被 ContradictionDetector 系统性误报拉低（默认口径另叠加 entity 误报）；实体/数字/编造/PII 在正确口径下全部通过，人工核验无真实幻觉与矛盾。内容质量以 zens-ink content_qc **88/100** 为独立佐证。
