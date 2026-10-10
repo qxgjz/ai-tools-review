@@ -3,7 +3,7 @@ import type { Metadata } from 'next';
 export const metadata: Metadata = {
   title: 'Best AI Tool Comparison 2026: Top 10 Ranked & Tested',
   description:
-    'Compare 500+ AI tools side by side in 2026 with honest ratings, real pricing, and pros & cons from 3-week hands-on testing. Find your perfect AI tool in 2 minutes.',
+    'Compare 500+ AI tools side by side in 2026 with honest ratings, real pricing, and pros & cons from 3-week hands-on testing. Find your perfect AI tool.',
   keywords: [
     'ai tool comparison',
     'compare ai tools',

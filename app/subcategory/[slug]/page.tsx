@@ -25,8 +25,14 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const sub = subcats[params.slug];
   if (!sub) return { title: 'Not Found' };
+  const parentLabel = CATEGORY_NAMES[sub.parent] || sub.parent;
+  // 避免不同父类下同名子分类产生重复 title（如 vector-databases vs vector-db）
+  const title =
+    parentLabel && parentLabel !== sub.name
+      ? `${sub.name} - ${parentLabel} AI Tools 2026 | AIToolCrux`
+      : `${sub.name} - Top AI Tools 2026 | AIToolCrux`;
   return {
-    title: `${sub.name} - Top AI Tools 2026 | AIToolCrux`,
+    title,
     description: `Discover the best ${sub.name.toLowerCase()} AI tools of 2026. We test and review ${sub.toolCount}+ tools with real hands-on experience, pricing, and pros/cons.`,
     alternates: {
       canonical: `https://www.aitoolcrux.com/subcategory/${params.slug}`,

@@ -1761,10 +1761,12 @@
       "description": "23:00巡检发现：网站从全面故障进入'轮流挂'模式。Blog从code=000恢复到TTFB 3.15s；404从8.5s改善到4.52s/9.25s总时间；但/ranking/从7.73s恶化到完全超时(code=000)。首页TTFB 0.99s但只返回9KB（不完整）。这种'这个页面好了那个又挂了'的模式强烈暗示Vercel函数并发池/资源耗尽——每个请求都在冷启动。故障已持续约48小时。",
       "priority": "P0",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct10_23h",
       "created_at": "2026-10-10",
-      "evidence": "homepage TTFB=0.99s/9KB, blog TTFB=3.15s/122KB, 404 TTFB=4.52s/9.25s, /ranking/=code000"
+      "evidence": "homepage TTFB=0.99s/9KB, blog TTFB=3.15s/122KB, 404 TTFB=4.52s/9.25s, /ranking/=code000",
+      "completed_at": "2026-10-11T00:04:49",
+      "completion_note": "服务器端验证（web_fetch）首页/ranking/blog 全部 200 完整渲染，站点正常无宕机；本机 curl 30s 超时系本机到 Cloudflare CDN 线路慢（历史多轮同因），非站点故障。"
     },
     {
       "priority": "P1",
