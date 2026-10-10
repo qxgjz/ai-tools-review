@@ -41,3 +41,6 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 | 2026-10-10 | best AI agents 2026 | P0 | best-ai-agents-2026 | 2417 | Keyword New (P0) |
 | 2026-10-10 | AI agent vs chatbot | P0 | ai-agent-vs-chatbot-2026 | 2049 | Keyword New (P0) |
 | 2026-10-10 | how to build an AI agent | P0 | how-to-build-an-ai-agent | 2070 | Keyword New (P0) |
+| 2026-10-10 | what is an ai agent | Low | what-is-an-ai-agent | 2126 | 新文章 |
+| 2026-10-10 | best ai voice changer for content creators | Medium | best-ai-voice-changers-content-creators | 2038 | 新文章 |
+| 2026-10-10 | best ai coding tools for beginners | Medium | best-ai-coding-tools-beginners | 2053 | 新文章 |
