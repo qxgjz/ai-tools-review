@@ -47,3 +47,7 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 | 2026-10-10 | best ai tools for beginners 2026 | P1 | best-ai-tools-for-beginners-2026 | 2346 | New Article (keyword todo) |
 | 2026-10-10 | agenta ai review | P1 | agenta-ai-review-2026 | 2287 | New Article (keyword todo) |
 | 2026-10-10 | cursor vs windsurf (rewrite 38->73) | P1 rewrite | cursor-vs-windsurf-2026 | 2245 | Low-score Rewrite |
+
+| 2026-10-11 | claude vs gemini 2026 (REWRITE, 38->73) | N/A (rewrite) | claude-vs-gemini-2026-comparison | 2120 | Commodity Rewrite (P1) |
+| 2026-10-11 | gemini vs chatgpt 2026 (REWRITE, 38->73) | N/A (rewrite) | gemini-vs-chatgpt-2026 | 2135 | Commodity Rewrite (P1) |
+| 2026-10-11 | elevenlabs v2 review 2026 (REWRITE, 38->73) | N/A (rewrite) | elevenlabs-v2-review-2026 | 2110 | Commodity Rewrite (P1) |
