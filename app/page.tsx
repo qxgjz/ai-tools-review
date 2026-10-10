@@ -129,6 +129,8 @@ export default function HomePage() {
     .slice(0, 8);
 
   const latestPosts = postsData.slice(0, 6);
+  const heroTool = topTools.find((t) => t.screenshot);
+  const floatingTools = topTools.filter((t) => t.screenshot && t.slug !== heroTool?.slug).slice(0, 2);
 
   return (
     <div className="min-h-screen">
@@ -167,17 +169,17 @@ export default function HomePage() {
             {/* Left: Content (7 cols) - left-aligned, NOT centered */}
             <div className="lg:col-span-7">
               <FadeIn delay={0.1} y={20}>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-emerald-500/10 border border-emerald-500/20 rounded-full text-sm sm:text-base mb-6">
-                  <Sparkles className="w-3.5 h-3.5 text-emerald-400" />
-                  <span className="text-emerald-300">Independent AI Tool Reviews</span>
+                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-sm sm:text-base mb-6">
+                  <Sparkles className="w-3.5 h-3.5 text-primary" />
+                  <span className="text-primary">Independent AI Tool Reviews</span>
                 </div>
               </FadeIn>
 
               <FadeIn delay={0.2} y={30}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold mb-6 leading-[1.1] tracking-tight">
+                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 leading-[1.1] tracking-tight">
                   Find the best AI tools,
                   <br />
-                  <span className="text-emerald-400">tested and ranked.</span>
+                  <span className="text-primary">tested and ranked.</span>
                 </h1>
               </FadeIn>
 
@@ -192,7 +194,7 @@ export default function HomePage() {
                 <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
                   <Link
                     href="/ranking"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-medium rounded-lg transition-colors active:scale-95"
+                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors active:scale-95"
                   >
                     <Trophy className="w-4 h-4" />
                     View Rankings
@@ -242,10 +244,10 @@ export default function HomePage() {
                     <Link
                       key={tool.slug}
                       href={`/tools/${tool.slug}`}
-                      className="flex-shrink-0 w-56 snap-start p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 transition-all active:scale-[0.98]"
+                      className="flex-shrink-0 w-56 snap-start p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-primary/40 transition-all active:scale-[0.98]"
                     >
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-xs font-bold text-emerald-400">#{i + 1}</span>
+                        <span className="text-xs font-bold text-primary">#{i + 1}</span>
                         <div className="w-8 h-8 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-sm overflow-hidden">
                           {tool.screenshot ? (
                             // eslint-disable-next-line @next/next/no-img-element
@@ -265,7 +267,7 @@ export default function HomePage() {
                       <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
                       <div className="text-xs text-zinc-500 truncate mb-2">{tool.vendor}</div>
                       <div className="flex items-baseline gap-1">
-                        <span className="text-emerald-400 font-bold text-lg tabular-nums">
+                        <span className="text-primary font-bold text-lg tabular-nums">
                           {tool.total.toFixed(1)}
                         </span>
                         <span className="text-xs text-zinc-600">/10</span>
@@ -283,37 +285,37 @@ export default function HomePage() {
                 <div className="flex gap-2 overflow-x-auto pb-1 -mx-4 px-4 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
                   <Link
                     href="/category/chat"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-primary/40 hover:text-primary transition-colors"
                   >
                     AI Chat
                   </Link>
                   <Link
                     href="/category/image"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-primary/40 hover:text-primary transition-colors"
                   >
                     AI Image
                   </Link>
                   <Link
                     href="/category/code"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-primary/40 hover:text-primary transition-colors"
                   >
                     AI Coding
                   </Link>
                   <Link
                     href="/category/writing"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-primary/40 hover:text-primary transition-colors"
                   >
                     AI Writing
                   </Link>
                   <Link
                     href="/category/video"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-primary/40 hover:text-primary transition-colors"
                   >
                     AI Video
                   </Link>
                   <Link
                     href="/blog"
-                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-emerald-500/50 hover:text-emerald-400 transition-colors"
+                    className="flex-shrink-0 inline-flex items-center gap-1.5 px-3.5 min-h-[44px] bg-zinc-900/60 border border-zinc-800 rounded-full text-xs font-medium text-zinc-300 hover:border-primary/40 hover:text-primary transition-colors"
                   >
                     Reviews
                   </Link>
@@ -321,58 +323,78 @@ export default function HomePage() {
               </div>
             </div>
 
-            {/* Right: Top 3 Tools showcase - real data, no fake UI (Taste Skill rule) */}
+            {/* Right: Real tool UI screenshot - designkey rule: 真实工具截图 1.2x，禁用抽象插画 */}
             <div className="lg:col-span-5 hidden lg:block">
               <FadeIn delay={0.3} y={30}>
-                <div className="space-y-3">
-                  <div className="text-xs font-medium text-zinc-500 uppercase tracking-wider mb-2">
-                    Top 3 Rated Tools
-                  </div>
-                  {topTools.slice(0, 3).map((tool, i) => (
-                    <Link
-                      key={tool.slug}
-                      href={`/tools/${tool.slug}`}
-                      className="flex items-center gap-4 p-4 bg-zinc-900/50 border border-zinc-800 rounded-xl hover:border-emerald-500/50 hover:bg-zinc-900 transition-all group"
-                    >
-                      <div className="w-10 h-10 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-800 text-zinc-300 font-bold text-lg overflow-hidden">
-                        {tool.screenshot ? (
-                          // eslint-disable-next-line @next/next/no-img-element
+                <div className="relative noise-overlay">
+                  {/* 主截图：真实工具界面 1.2x 放大 */}
+                  {heroTool && (
+                    <Link href={`/tools/${heroTool.slug}`} className="block group">
+                      <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 transition-colors duration-200 group-hover:border-white/20">
+                        <div className="aspect-[4/3] overflow-hidden bg-zinc-900">
+                          {/* eslint-disable-next-line @next/next/no-img-element */}
                           <img
-                            src={tool.screenshot}
-                            alt={`${tool.name} screenshot`}
-                            width={40}
-                            height={40}
-                            loading="lazy"
-                            className="w-10 h-10 object-cover"
+                            src={heroTool.screenshot!}
+                            alt={`${heroTool.name} interface - real screenshot`}
+                            className="w-full h-full object-cover object-top"
+                            style={{ transform: 'scale(1.2)' }}
+                            loading="eager"
                           />
-                        ) : (
-                          tool.name.charAt(0).toUpperCase()
-                        )}
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <div className="font-semibold text-white group-hover:text-emerald-400 transition-colors truncate">
-                          {tool.name}
                         </div>
-                        <div className="text-xs text-zinc-500 truncate">{tool.vendor}</div>
-                      </div>
-                      <div className="text-right">
-                        <div className="text-xl font-bold text-emerald-400 tabular-nums">
-                          {tool.total.toFixed(1)}
+                        <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-zinc-950/70 to-transparent pointer-events-none" />
+                        <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 bg-gradient-to-t from-zinc-950/85 to-transparent pointer-events-none">
+                          <div>
+                            <div className="text-sm font-semibold text-white">{heroTool.name}</div>
+                            <div className="text-xs text-zinc-400">{heroTool.vendor}</div>
+                          </div>
+                          <div className="flex items-baseline gap-1">
+                            <span className="text-2xl font-semibold text-white tabular-nums">
+                              {heroTool.total.toFixed(1)}
+                            </span>
+                            <span className="text-xs text-zinc-500">/10</span>
+                          </div>
                         </div>
-                        <div className="text-[10px] text-zinc-500">/10</div>
-                      </div>
-                      <div className="w-6 h-6 flex items-center justify-center rounded-full bg-zinc-800 text-zinc-500 group-hover:bg-emerald-700 group-hover:text-white transition-colors">
-                        <ArrowRight className="w-3 h-3" />
                       </div>
                     </Link>
-                  ))}
-                  <Link
-                    href="/ranking"
-                    className="flex items-center justify-center gap-2 text-sm text-emerald-400 hover:text-emerald-300 transition-colors pt-2"
-                  >
-                    View all {tools.length} rankings
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
+                  )}
+
+                  {/* 浮动评分卡：真实数据 */}
+                  <div className="grid grid-cols-2 gap-4 mt-4">
+                    {floatingTools.map((tool) => (
+                      <Link
+                        key={tool.slug}
+                        href={`/tools/${tool.slug}`}
+                        className="flex items-center gap-3 p-3 bg-white/10 backdrop-blur border border-white/10 rounded-lg hover:border-white/25 hover:bg-white/15 transition-all duration-150 ease-standard group"
+                      >
+                        <div className="w-9 h-9 flex-shrink-0 flex items-center justify-center rounded-lg bg-zinc-800 text-white text-sm font-semibold overflow-hidden">
+                          {tool.screenshot ? (
+                            // eslint-disable-next-line @next/next/no-img-element
+                            <img
+                              src={tool.screenshot}
+                              alt=""
+                              width={36}
+                              height={36}
+                              loading="lazy"
+                              className="w-9 h-9 object-cover"
+                            />
+                          ) : (
+                            tool.name.charAt(0).toUpperCase()
+                          )}
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <div className="text-sm font-semibold text-white truncate group-hover:text-primary transition-colors">
+                            {tool.name}
+                          </div>
+                          <div className="text-[10px] text-zinc-500 truncate">{tool.vendor}</div>
+                        </div>
+                        <div className="text-right">
+                          <div className="text-base font-semibold text-white tabular-nums">
+                            {tool.total.toFixed(1)}
+                          </div>
+                        </div>
+                      </Link>
+                    ))}
+                  </div>
                 </div>
               </FadeIn>
             </div>
@@ -385,10 +407,10 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Quick Answer */}
-          <div className="bg-gradient-to-br from-emerald-50 to-teal-50 dark:from-emerald-950/30 dark:to-teal-950/30 rounded-2xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8">
+          <div className="bg-gradient-to-br from-primary/[0.06] to-teal-50 dark:from-primary/10 dark:to-teal-950/20 rounded-2xl border border-primary/15 p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
-              <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Quick Answer</h2>
+              <Zap className="w-5 h-5 text-primary" />
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Quick Answer</h2>
             </div>
             <div className="space-y-4">
               <div>
@@ -419,8 +441,8 @@ export default function HomePage() {
           {/* Key Takeaways */}
           <div className="bg-white dark:bg-gray-900 rounded-2xl border border-gray-100 dark:border-gray-800 shadow-sm p-6 sm:p-8">
             <div className="flex items-center gap-2 mb-4">
-              <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-              <h2 className="text-xl font-bold text-gray-900 dark:text-white">Key Takeaways</h2>
+              <BookOpen className="w-5 h-5 text-primary" />
+              <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Key Takeaways</h2>
             </div>
             <div className="space-y-3">
               {[
@@ -432,8 +454,8 @@ export default function HomePage() {
                 '100% independent — no paid placements, affiliate links clearly disclosed',
               ].map((item, i) => (
                 <div key={i} className="flex items-start gap-3">
-                  <div className="w-5 h-5 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                    <span className="text-primary text-xs font-bold">
                       {i + 1}
                     </span>
                   </div>
@@ -448,7 +470,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-20 lg:py-24">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
               Browse by Category
             </h2>
             <p className="text-zinc-500 dark:text-zinc-400">
@@ -465,12 +487,12 @@ export default function HomePage() {
               <Link
                 key={cat.slug}
                 href={`/category/${cat.slug}`}
-                className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-sm transition-all"
+                className="group p-4 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-sm transition-all"
               >
-                <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors mb-3">
+                <div className="w-9 h-9 flex items-center justify-center rounded-lg bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:bg-primary/10 group-hover:text-primary transition-colors mb-3">
                   <Icon className="w-4.5 h-4.5" />
                 </div>
-                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
+                <h3 className="text-sm font-semibold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
                   {cat.name}
                 </h3>
                 <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">{count} tools</p>
@@ -483,7 +505,7 @@ export default function HomePage() {
       {/* === POPULAR TOOLS BY CATEGORY - Internal link optimization === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
             Popular Tools by Category
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -495,7 +517,7 @@ export default function HomePage() {
           {/* Image Generation */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <ImageIcon className="w-4 h-4 text-primary" />
               AI Image Generation
             </h3>
             <div className="space-y-2">
@@ -510,7 +532,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -522,7 +544,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/image"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all image tools
               <ArrowRight className="w-3 h-3" />
@@ -532,7 +554,7 @@ export default function HomePage() {
           {/* AI Coding */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Code className="w-4 h-4 text-primary" />
               AI Coding Tools
             </h3>
             <div className="space-y-2">
@@ -547,7 +569,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -559,7 +581,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/code"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all coding tools
               <ArrowRight className="w-3 h-3" />
@@ -569,7 +591,7 @@ export default function HomePage() {
           {/* AI Audio */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Music className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Music className="w-4 h-4 text-primary" />
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
@@ -584,7 +606,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -596,7 +618,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/audio"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all audio tools
               <ArrowRight className="w-3 h-3" />
@@ -606,7 +628,7 @@ export default function HomePage() {
           {/* AI Productivity */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Briefcase className="w-4 h-4 text-primary" />
               AI Productivity
             </h3>
             <div className="space-y-2">
@@ -621,7 +643,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -633,7 +655,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/productivity"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
@@ -643,7 +665,7 @@ export default function HomePage() {
           {/* AI Chat */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <MessageSquare className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <MessageSquare className="w-4 h-4 text-primary" />
               AI Chat & Assistants
             </h3>
             <div className="space-y-2">
@@ -658,7 +680,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -670,7 +692,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/chat"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all chat tools
               <ArrowRight className="w-3 h-3" />
@@ -680,7 +702,7 @@ export default function HomePage() {
           {/* AI Writing */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <PenTool className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <PenTool className="w-4 h-4 text-primary" />
               AI Writing & Content
             </h3>
             <div className="space-y-2">
@@ -695,7 +717,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -707,7 +729,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/writing"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all writing tools
               <ArrowRight className="w-3 h-3" />
@@ -717,7 +739,7 @@ export default function HomePage() {
           {/* AI Video */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Video className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Video className="w-4 h-4 text-primary" />
               AI Video Generation
             </h3>
             <div className="space-y-2">
@@ -732,7 +754,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -744,7 +766,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/video"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all video tools
               <ArrowRight className="w-3 h-3" />
@@ -754,7 +776,7 @@ export default function HomePage() {
           {/* AI Search */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <SearchIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <SearchIcon className="w-4 h-4 text-primary" />
               AI Search & Research
             </h3>
             <div className="space-y-2">
@@ -769,7 +791,7 @@ export default function HomePage() {
                       href={`/tools/${tool.slug}`}
                       className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors"
                     >
-                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">
+                      <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
                       <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
@@ -781,7 +803,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/category/search"
-              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80"
             >
               View all search tools
               <ArrowRight className="w-3 h-3" />
@@ -793,7 +815,7 @@ export default function HomePage() {
       {/* === POPULAR TOOLS BY CATEGORY - Internal link optimization === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
             Popular Tools by Category
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -805,7 +827,7 @@ export default function HomePage() {
           {/* Image Generation */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <ImageIcon className="w-4 h-4 text-primary" />
               AI Image Generation
             </h3>
             <div className="space-y-2">
@@ -813,13 +835,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all image tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -828,7 +850,7 @@ export default function HomePage() {
           {/* AI Coding */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Code className="w-4 h-4 text-primary" />
               AI Coding Tools
             </h3>
             <div className="space-y-2">
@@ -836,13 +858,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all coding tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -851,7 +873,7 @@ export default function HomePage() {
           {/* AI Audio */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Music className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Music className="w-4 h-4 text-primary" />
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
@@ -859,13 +881,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all audio tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -874,7 +896,7 @@ export default function HomePage() {
           {/* AI Productivity */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Briefcase className="w-4 h-4 text-primary" />
               AI Productivity
             </h3>
             <div className="space-y-2">
@@ -882,13 +904,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -899,7 +921,7 @@ export default function HomePage() {
       {/* === POPULAR TOOLS BY CATEGORY - Internal link optimization === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
             Popular Tools by Category
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -911,7 +933,7 @@ export default function HomePage() {
           {/* Image Generation */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <ImageIcon className="w-4 h-4 text-primary" />
               AI Image Generation
             </h3>
             <div className="space-y-2">
@@ -919,13 +941,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all image tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -934,7 +956,7 @@ export default function HomePage() {
           {/* AI Coding */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Code className="w-4 h-4 text-primary" />
               AI Coding Tools
             </h3>
             <div className="space-y-2">
@@ -942,13 +964,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all coding tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -957,7 +979,7 @@ export default function HomePage() {
           {/* AI Audio */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Music className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Music className="w-4 h-4 text-primary" />
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
@@ -965,13 +987,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all audio tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -980,7 +1002,7 @@ export default function HomePage() {
           {/* AI Productivity */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Briefcase className="w-4 h-4 text-primary" />
               AI Productivity
             </h3>
             <div className="space-y-2">
@@ -988,13 +1010,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1005,7 +1027,7 @@ export default function HomePage() {
       {/* === POPULAR TOOLS BY CATEGORY - Internal link optimization === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
             Popular Tools by Category
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -1017,7 +1039,7 @@ export default function HomePage() {
           {/* Image Generation */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <ImageIcon className="w-4 h-4 text-primary" />
               AI Image Generation
             </h3>
             <div className="space-y-2">
@@ -1025,13 +1047,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all image tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1040,7 +1062,7 @@ export default function HomePage() {
           {/* AI Coding */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Code className="w-4 h-4 text-primary" />
               AI Coding Tools
             </h3>
             <div className="space-y-2">
@@ -1048,13 +1070,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all coding tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1063,7 +1085,7 @@ export default function HomePage() {
           {/* AI Audio */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Music className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Music className="w-4 h-4 text-primary" />
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
@@ -1071,13 +1093,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all audio tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1086,7 +1108,7 @@ export default function HomePage() {
           {/* AI Productivity */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Briefcase className="w-4 h-4 text-primary" />
               AI Productivity
             </h3>
             <div className="space-y-2">
@@ -1094,13 +1116,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1111,7 +1133,7 @@ export default function HomePage() {
       {/* === POPULAR TOOLS BY CATEGORY - Internal link optimization === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
             Popular Tools by Category
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -1123,7 +1145,7 @@ export default function HomePage() {
           {/* Image Generation */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <ImageIcon className="w-4 h-4 text-primary" />
               AI Image Generation
             </h3>
             <div className="space-y-2">
@@ -1131,13 +1153,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all image tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1146,7 +1168,7 @@ export default function HomePage() {
           {/* AI Coding */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Code className="w-4 h-4 text-primary" />
               AI Coding Tools
             </h3>
             <div className="space-y-2">
@@ -1154,13 +1176,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all coding tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1169,7 +1191,7 @@ export default function HomePage() {
           {/* AI Audio */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Music className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Music className="w-4 h-4 text-primary" />
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
@@ -1177,13 +1199,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all audio tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1192,7 +1214,7 @@ export default function HomePage() {
           {/* AI Productivity */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Briefcase className="w-4 h-4 text-primary" />
               AI Productivity
             </h3>
             <div className="space-y-2">
@@ -1200,13 +1222,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1217,7 +1239,7 @@ export default function HomePage() {
       {/* === POPULAR TOOLS BY CATEGORY - Internal link optimization === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-12 lg:py-16">
         <div className="mb-8">
-          <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+          <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
             Popular Tools by Category
           </h2>
           <p className="text-zinc-500 dark:text-zinc-400">
@@ -1229,7 +1251,7 @@ export default function HomePage() {
           {/* Image Generation */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <ImageIcon className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <ImageIcon className="w-4 h-4 text-primary" />
               AI Image Generation
             </h3>
             <div className="space-y-2">
@@ -1237,13 +1259,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/image" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all image tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1252,7 +1274,7 @@ export default function HomePage() {
           {/* AI Coding */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Code className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Code className="w-4 h-4 text-primary" />
               AI Coding Tools
             </h3>
             <div className="space-y-2">
@@ -1260,13 +1282,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/code" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all coding tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1275,7 +1297,7 @@ export default function HomePage() {
           {/* AI Audio */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Music className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Music className="w-4 h-4 text-primary" />
               AI Audio & Voice
             </h3>
             <div className="space-y-2">
@@ -1283,13 +1305,13 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/audio" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all audio tools
               <ArrowRight className="w-3 h-3" />
             </Link>
@@ -1298,7 +1320,7 @@ export default function HomePage() {
           {/* AI Productivity */}
           <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-5">
             <h3 className="text-sm font-semibold text-zinc-900 dark:text-white mb-3 flex items-center gap-2">
-              <Briefcase className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
+              <Briefcase className="w-4 h-4 text-primary" />
               AI Productivity
             </h3>
             <div className="space-y-2">
@@ -1306,17 +1328,81 @@ export default function HomePage() {
                 const total = calculateScoreResult(tool.scores).total;
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
-                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-emerald-600 dark:hover:text-emerald-400 font-medium">{tool.name}</span>
+                    <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
                     <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
             </div>
-            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300">
+            <Link href="/category/productivity" className="mt-3 inline-flex items-center gap-1 text-xs font-medium text-primary hover:text-primary/80">
               View all productivity tools
               <ArrowRight className="w-3 h-3" />
             </Link>
           </div>
+        </div>
+      </section>
+
+      {/* === TOP 3 COMPARISON TABLE (AEO/GEO: structured comparison for AI citation) === */}
+      <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
+        <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
+          <div>
+            <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
+              2026 Top 3 AI Tools Compared
+            </h2>
+            <p className="text-zinc-500 dark:text-zinc-400">
+              Head-to-head scores, pricing tier and best use case for this year&apos;s top-rated
+              tools
+            </p>
+          </div>
+          <Link
+            href="/ranking"
+            className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80"
+          >
+            Full Rankings
+            <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
+          </Link>
+        </div>
+        <div className="overflow-x-auto rounded-2xl border border-zinc-200 dark:border-zinc-800 shadow-sm">
+          <table className="w-full text-left text-sm min-w-[720px]">
+            <thead>
+              <tr className="bg-zinc-50 dark:bg-zinc-900 text-zinc-500 dark:text-zinc-400">
+                <th className="px-5 py-4 font-semibold">Tool</th>
+                <th className="px-5 py-4 font-semibold">Overall Score</th>
+                <th className="px-5 py-4 font-semibold">Category</th>
+                <th className="px-5 py-4 font-semibold">Vendor</th>
+                <th className="px-5 py-4 font-semibold">Best For</th>
+              </tr>
+            </thead>
+            <tbody>
+              {topTools.slice(0, 3).map((tool, i) => (
+                <tr
+                  key={tool.slug}
+                  className={
+                    i % 2 === 0
+                      ? 'bg-white dark:bg-zinc-950'
+                      : 'bg-zinc-50/60 dark:bg-zinc-900/40'
+                  }
+                >
+                  <td className="px-5 py-4">
+                    <Link
+                      href={`/tools/${tool.slug}`}
+                      className="font-semibold text-zinc-900 dark:text-white hover:text-primary"
+                    >
+                      {tool.name}
+                    </Link>
+                  </td>
+                  <td className="px-5 py-4 font-mono font-semibold text-primary">
+                    {tool.total.toFixed(1)}/10
+                  </td>
+                  <td className="px-5 py-4 text-zinc-600 dark:text-zinc-300 capitalize">
+                    {tool.category}
+                  </td>
+                  <td className="px-5 py-4 text-zinc-600 dark:text-zinc-300">{tool.vendor}</td>
+                  <td className="px-5 py-4 text-zinc-600 dark:text-zinc-300">{tool.description}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
         </div>
       </section>
 
@@ -1325,7 +1411,7 @@ export default function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
             <div>
-              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
                 Top Rated AI Tools
               </h2>
               <p className="text-zinc-500 dark:text-zinc-400">
@@ -1334,7 +1420,7 @@ export default function HomePage() {
             </div>
             <Link
               href="/ranking"
-              className="group inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80"
             >
               View All Rankings
               <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -1351,7 +1437,7 @@ export default function HomePage() {
           {/* Left: Sticky header */}
           <div className="lg:col-span-4">
             <div className="lg:sticky lg:top-24">
-              <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-4">
+              <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-4">
                 How We Score
               </h2>
               <p className="text-zinc-500 dark:text-zinc-400 mb-6 leading-relaxed">
@@ -1360,7 +1446,7 @@ export default function HomePage() {
               </p>
               <Link
                 href="/methodology"
-                className="group inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80"
               >
                 Full Methodology
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -1386,7 +1472,7 @@ export default function HomePage() {
                         <h3 className="text-base font-semibold text-zinc-900 dark:text-white">
                           {item.title}
                         </h3>
-                        <span className="text-sm font-bold text-emerald-600 dark:text-emerald-400 flex-shrink-0">
+                        <span className="text-sm font-bold text-primary flex-shrink-0">
                           {item.weight}
                         </span>
                       </div>
@@ -1408,7 +1494,7 @@ export default function HomePage() {
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
               <div>
-                <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+                <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
                   Latest Reviews & Guides
                 </h2>
                 <p className="text-zinc-500 dark:text-zinc-400">
@@ -1417,7 +1503,7 @@ export default function HomePage() {
               </div>
               <Link
                 href="/blog"
-                className="group inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+                className="group inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80"
               >
                 All Articles
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-0.5 transition-transform" />
@@ -1429,16 +1515,16 @@ export default function HomePage() {
                 <Link
                   key={post.slug}
                   href={`/blog/${post.slug}`}
-                  className="group flex flex-col bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 hover:shadow-md transition-all overflow-hidden"
+                  className="group flex flex-col bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-md transition-all overflow-hidden"
                 >
-                  <div className="h-36 relative overflow-hidden bg-gradient-to-br from-emerald-500/10 via-zinc-100 to-zinc-200 dark:from-emerald-900/20 dark:via-zinc-800 dark:to-zinc-900">
+                  <div className="h-36 relative overflow-hidden bg-gradient-to-br from-primary/10 via-zinc-100 to-zinc-200 dark:from-primary/20 dark:via-zinc-800 dark:to-zinc-900">
                     {/* Decorative gradient orbs */}
-                    <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-emerald-400/20 blur-2xl" />
-                    <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-emerald-600/15 blur-xl" />
+                    <div className="absolute -top-8 -right-8 w-24 h-24 rounded-full bg-primary/20 blur-2xl" />
+                    <div className="absolute -bottom-6 -left-6 w-20 h-20 rounded-full bg-primary/15 blur-xl" />
                     {/* Icon */}
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="w-14 h-14 flex items-center justify-center rounded-2xl bg-white/80 dark:bg-zinc-900/80 backdrop-blur-sm shadow-md">
-                        <PenTool className="w-7 h-7 text-emerald-600 dark:text-emerald-400" />
+                        <PenTool className="w-7 h-7 text-primary" />
                       </div>
                     </div>
                     {/* Category badge */}
@@ -1449,7 +1535,7 @@ export default function HomePage() {
                     </div>
                   </div>
                   <div className="p-5 flex-1 flex flex-col">
-                    <h3 className="text-base font-semibold text-zinc-900 dark:text-white group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-2 mb-2">
+                    <h3 className="text-base font-semibold text-zinc-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2 mb-2">
                       {post.title}
                     </h3>
                     <p className="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-2 flex-1 mb-4">
@@ -1457,7 +1543,7 @@ export default function HomePage() {
                     </p>
                     <div className="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500">
                       <span>{post.date || post.publishedAt}</span>
-                      <span className="inline-flex items-center gap-1 text-emerald-600 dark:text-emerald-400 font-medium group-hover:gap-2 transition-all">
+                      <span className="inline-flex items-center gap-1 text-primary font-medium group-hover:gap-2 transition-all">
                         Read
                         <ArrowRight className="w-3 h-3" />
                       </span>
@@ -1474,7 +1560,7 @@ export default function HomePage() {
       <section className="bg-zinc-50 dark:bg-zinc-900/50 py-16 lg:py-20">
         <div className="max-w-7xl mx-auto px-4 sm:px-6">
           <div className="text-center mb-12">
-            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-3">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-3">
               The AI Tool Landscape in 2026
             </h2>
             <p className="text-zinc-500 dark:text-zinc-400 max-w-2xl mx-auto">
@@ -1491,7 +1577,7 @@ export default function HomePage() {
               { value: '3+', label: 'Weeks Testing Per Tool', desc: 'Hands-on benchmarking' },
             ].map((stat, i) => (
               <div key={i} className="text-center">
-                <div className="text-3xl sm:text-4xl font-bold text-emerald-600 dark:text-emerald-400 mb-2">
+                <div className="text-3xl sm:text-4xl font-bold text-primary mb-2">
                   {stat.value}
                 </div>
                 <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-1">
@@ -1504,7 +1590,7 @@ export default function HomePage() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
-              <TrendingUp className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+              <TrendingUp className="w-8 h-8 text-primary mb-4" />
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
                 Rapid Market Growth
               </h3>
@@ -1515,7 +1601,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
-              <Layers className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+              <Layers className="w-8 h-8 text-primary mb-4" />
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
                 Consolidation Trend
               </h3>
@@ -1526,7 +1612,7 @@ export default function HomePage() {
               </p>
             </div>
             <div className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6">
-              <Shield className="w-8 h-8 text-emerald-600 dark:text-emerald-400 mb-4" />
+              <Shield className="w-8 h-8 text-primary mb-4" />
               <h3 className="text-lg font-semibold text-zinc-900 dark:text-white mb-2">
                 Ethics & Transparency
               </h3>
@@ -1541,7 +1627,7 @@ export default function HomePage() {
           <div className="mt-10 text-center">
             <Link
               href="/blog"
-              className="inline-flex items-center gap-2 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:text-emerald-700 dark:hover:text-emerald-300"
+              className="inline-flex items-center gap-2 text-sm font-medium text-primary hover:text-primary/80"
             >
               Read our latest AI industry analysis
               <ArrowRight className="w-4 h-4" />
@@ -1554,7 +1640,7 @@ export default function HomePage() {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
         <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-10 gap-4">
           <div>
-            <h2 className="text-2xl sm:text-3xl font-bold text-zinc-900 dark:text-white mb-2">
+            <h2 className="text-2xl sm:text-3xl font-semibold text-zinc-900 dark:text-white mb-2">
               Frequently Asked Questions
             </h2>
             <p className="text-zinc-500 dark:text-zinc-400">
@@ -1595,8 +1681,8 @@ export default function HomePage() {
               className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6"
             >
               <h3 className="text-base font-semibold text-zinc-900 dark:text-white mb-3 flex items-start gap-3">
-                <span className="w-6 h-6 rounded-full bg-emerald-100 dark:bg-emerald-900 flex items-center justify-center flex-shrink-0 mt-0.5">
-                  <span className="text-emerald-700 dark:text-emerald-300 text-xs font-bold">
+                <span className="w-6 h-6 rounded-full bg-primary/10 dark:bg-primary/20 flex items-center justify-center flex-shrink-0 mt-0.5">
+                  <span className="text-primary text-xs font-bold">
                     Q
                   </span>
                 </span>
@@ -1674,7 +1760,7 @@ export default function HomePage() {
       {/* === CTA SECTION - Clean, no gradient === */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 py-16 lg:py-20">
         <div className="bg-zinc-900 rounded-2xl p-10 sm:p-14 text-center text-white">
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold mb-4">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold mb-4">
             Not sure which AI tool to choose?
           </h2>
           <p className="text-zinc-400 mb-8 max-w-xl mx-auto">
@@ -1683,7 +1769,7 @@ export default function HomePage() {
           </p>
           <Link
             href="/generator"
-            className="inline-flex items-center gap-2 px-8 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white font-medium rounded-lg transition-colors active:scale-95"
+            className="inline-flex items-center gap-2 px-8 py-3.5 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors active:scale-95"
           >
             <Sparkles className="w-4 h-4" />
             Start Matching
