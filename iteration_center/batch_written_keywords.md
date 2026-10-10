@@ -44,3 +44,6 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 | 2026-10-10 | what is an ai agent | Low | what-is-an-ai-agent | 2126 | 新文章 |
 | 2026-10-10 | best ai voice changer for content creators | Medium | best-ai-voice-changers-content-creators | 2038 | 新文章 |
 | 2026-10-10 | best ai coding tools for beginners | Medium | best-ai-coding-tools-beginners | 2053 | 新文章 |
+| 2026-10-10 | best ai tools for beginners 2026 | P1 | best-ai-tools-for-beginners-2026 | 2346 | New Article (keyword todo) |
+| 2026-10-10 | agenta ai review | P1 | agenta-ai-review-2026 | 2287 | New Article (keyword todo) |
+| 2026-10-10 | cursor vs windsurf (rewrite 38->73) | P1 rewrite | cursor-vs-windsurf-2026 | 2245 | Low-score Rewrite |
