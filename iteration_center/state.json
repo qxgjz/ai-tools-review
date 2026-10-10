@@ -1770,7 +1770,7 @@
     },
     {
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "task": "Title过短（29字符）x2: /blog/claude-alternatives-2026, /blog/notion-ai-vs-obsidian-ai — 补足至 45-60 字符",
       "assigned_to": [
         "window1",
@@ -1778,11 +1778,13 @@
       ],
       "source": "seo_audit_2026-10-10",
       "created_at": "2026-10-10T22:54:04",
-      "id": "P1-seo_audit_2026-10-10-63"
+      "id": "P1-seo_audit_2026-10-10-63",
+      "completed_at": "2026-10-11T00:31:49",
+      "completion_note": "Title过短x2 已修复：claude-alternatives-2026（29->52字符）、notion-ai-vs-obsidian-ai（29->59字符），线上验证 title 已更新。"
     },
     {
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "task": "/compare Meta Description过长 163字符 — 压缩至 <=160",
       "assigned_to": [
         "window1",
@@ -1790,11 +1792,13 @@
       ],
       "source": "seo_audit_2026-10-10",
       "created_at": "2026-10-10T22:54:04",
-      "id": "P1-seo_audit_2026-10-10-65"
+      "id": "P1-seo_audit_2026-10-10-65",
+      "completed_at": "2026-10-11T00:31:49",
+      "completion_note": "/compare Meta 163->150字符，线上验证生效。"
     },
     {
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "task": "/compare/perplexity-vs-chatgpt Title过长 65字符 — 压缩至 <=60",
       "assigned_to": [
         "window1",
@@ -1802,11 +1806,13 @@
       ],
       "source": "seo_audit_2026-10-10",
       "created_at": "2026-10-10T22:54:04",
-      "id": "P1-seo_audit_2026-10-10-67"
+      "id": "P1-seo_audit_2026-10-10-67",
+      "completed_at": "2026-10-11T00:31:49",
+      "completion_note": "perplexity-vs-chatgpt title 65->57字符（Search-First vs Chat-First AI），线上验证生效。"
     },
     {
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "task": "重复Title x2组: notion-ai-vs-salesforce-2026 / notion-ai-vs-notion-ai-salesforce-2026; subcategory/vector-databases / subcategory/vector-db — 需区分",
       "assigned_to": [
         "window1",
@@ -1814,7 +1820,9 @@
       ],
       "source": "seo_audit_2026-10-10",
       "created_at": "2026-10-10T22:54:04",
-      "id": "P1-seo_audit_2026-10-10-69"
+      "id": "P1-seo_audit_2026-10-10-69",
+      "completed_at": "2026-10-11T00:31:49",
+      "completion_note": "重复Title x2组已修复：notion-ai-vs-notion-ai-salesforce-2026 差异化（CRM AI Compared）；subcategory 模板 title 加父类 label 区分（vector-databases=RAG / vector-db=Database），线上验证生效。"
     },
     {
       "priority": "P2",
@@ -1839,6 +1847,19 @@
       "source": "seo_audit_2026-10-10",
       "created_at": "2026-10-10T22:54:04",
       "id": "P2-seo_audit_2026-10-10-73"
+    },
+    {
+      "id": "tech_title_meta_fix_2026-10-11",
+      "priority": "P1",
+      "task": "Title/Meta 批量修复：2短title补足、compare Meta 163->150、perplexity title 65->57、重复Title x2组差异化（posts.json/comparisons.json/compare layout/subcategory模板）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "arch_round_2026-10-11",
+      "status": "completed",
+      "completed_at": "2026-10-11T00:31:49",
+      "created_at": "2026-10-11T00:31:49"
     }
   ],
   "milestones": [
