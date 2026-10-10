@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-09T23:10:27.149291",
+  "audit_time": "2026-10-10T22:26:17.044411",
   "mode": "quick",
   "content": {
-    "total_articles": 149,
-    "average_score": 92.74228187919466,
-    "perfect_count": 108,
-    "below_85_count": 29,
+    "total_articles": 154,
+    "average_score": 92.09025974025977,
+    "perfect_count": 107,
+    "below_85_count": 34,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -42,14 +42,16 @@
       },
       {
         "slug": "cursor-vs-windsurf-2026",
-        "title": "Cursor vs Windsurf 2026: Which AI Code Editor | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 2245,
-        "flesch": 47.7,
-        "internal_links": 7,
-        "external_links": 1,
+        "title": "Cursor vs Windsurf 2026: Which AI Code Editor Is Better?",
+        "quality_score": 71.1,
+        "word_count": 2202,
+        "flesch": 41.2,
+        "internal_links": 4,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "notion-ai-vs-obsidian-2026",
@@ -713,7 +715,7 @@
       },
       {
         "slug": "openai_astra_review",
-        "title": "OpenAI Astra Review 2026: 2 Weeks, 40 Coding Tasks — Is I...",
+        "title": "OpenAI Astra Review 2026: 40 Coding Tasks, Worth $200/mo?",
         "quality_score": 100.0,
         "word_count": 12471,
         "flesch": 43.9,
@@ -1010,7 +1012,7 @@
       },
       {
         "slug": "adobe-firefly-review-2026",
-        "title": "Adobe Firefly Review: 30-Day Test, Is It Worth It?",
+        "title": "Adobe Firefly Review 2026: 40+ Photos Edited, Honest Rating",
         "quality_score": 100.0,
         "word_count": 14307,
         "flesch": 45.6,
@@ -1325,22 +1327,21 @@
       },
       {
         "slug": "claude-alternatives-2026",
-        "title": "7 Claude Alternatives in 2026",
-        "quality_score": 72.2,
+        "title": "7 Best Claude Alternatives in 2026: Top Picks Tested",
+        "quality_score": 77.8,
         "word_count": 1452,
         "flesch": 60.3,
         "internal_links": 3,
         "external_links": 5,
         "images": 0,
         "failed_checks": [
-          "word_count_pass",
-          "title_pass"
+          "word_count_pass"
         ]
       },
       {
         "slug": "notion-ai-vs-obsidian-ai",
-        "title": "Notion AI vs Obsidian AI 2026",
-        "quality_score": 66.7,
+        "title": "Notion AI vs Obsidian AI 2026: Which Note-Taking Tool Wins?",
+        "quality_score": 72.2,
         "word_count": 1828,
         "flesch": 66.3,
         "internal_links": 3,
@@ -1348,7 +1349,6 @@
         "images": 0,
         "failed_checks": [
           "word_count_pass",
-          "title_pass",
           "external_links_pass"
         ]
       },
@@ -1464,10 +1464,10 @@
         "slug": "claude-37-vs-gpt4o",
         "title": "Claude 3.7 Sonnet vs GPT-4o 2026: Side-by-Side Benchmarks",
         "quality_score": 94.4,
-        "word_count": 2182,
+        "word_count": 2224,
         "flesch": 52.0,
         "internal_links": 3,
-        "external_links": 5,
+        "external_links": 9,
         "images": 2,
         "failed_checks": [
           "first_para_pass"
@@ -1595,10 +1595,10 @@
         "slug": "midjourney-v7-vs-flux-2026",
         "title": "Midjourney v7 vs Flux 2026: Which AI Wins?",
         "quality_score": 94.4,
-        "word_count": 2146,
+        "word_count": 2173,
         "flesch": 40.8,
         "internal_links": 6,
-        "external_links": 5,
+        "external_links": 8,
         "images": 2,
         "failed_checks": [
           "first_para_pass"
@@ -1608,35 +1608,34 @@
         "slug": "claude-opus-4-vs-gpt-5-2026",
         "title": "Claude Opus 4 vs GPT-5: Which LLM Wins 2026?",
         "quality_score": 48.9,
-        "word_count": 1132,
-        "flesch": 50.9,
-        "internal_links": 0,
-        "external_links": 0,
+        "word_count": 1163,
+        "flesch": 49.0,
+        "internal_links": 2,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
-          "internal_links_pass",
-          "external_links_pass"
+          "first_para_pass",
+          "internal_links_pass"
         ]
       },
       {
         "slug": "perplexity-vs-chatgpt-2026",
         "title": "Perplexity AI vs ChatGPT 2026: Which Wins?",
-        "quality_score": 48.9,
-        "word_count": 461,
-        "flesch": 48.5,
-        "internal_links": 0,
-        "external_links": 0,
+        "quality_score": 54.4,
+        "word_count": 487,
+        "flesch": 44.1,
+        "internal_links": 2,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
-          "internal_links_pass",
-          "external_links_pass"
+          "internal_links_pass"
         ]
       },
       {
         "slug": "notion-ai-vs-notion-ai-salesforce-2026",
-        "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
+        "title": "Notion AI vs Salesforce Einstein 2026: CRM AI Compared",
         "quality_score": 40.0,
         "word_count": 427,
         "flesch": 35.8,
@@ -1653,17 +1652,16 @@
       {
         "slug": "midjourney-v7-vs-dall-e-3-2026",
         "title": "Midjourney v7 vs DALL-E 3 2026: Which Wins?",
-        "quality_score": 43.3,
-        "word_count": 448,
-        "flesch": 48.8,
-        "internal_links": 0,
-        "external_links": 0,
+        "quality_score": 48.9,
+        "word_count": 483,
+        "flesch": 45.4,
+        "internal_links": 2,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
           "first_para_pass",
-          "internal_links_pass",
-          "external_links_pass"
+          "internal_links_pass"
         ]
       },
       {
@@ -1734,7 +1732,7 @@
         "title": "AI Agent vs Chatbot: What is the Difference in 2026?",
         "quality_score": 82.2,
         "word_count": 2078,
-        "flesch": 49.3,
+        "flesch": 49.4,
         "internal_links": 8,
         "external_links": 4,
         "images": 2,
@@ -1745,27 +1743,94 @@
         "title": "How to Build an AI Agent: Step-by-Step Guide (No Code Required)",
         "quality_score": 82.2,
         "word_count": 2132,
-        "flesch": 60.7,
+        "flesch": 60.6,
         "internal_links": 11,
         "external_links": 4,
         "images": 2,
         "failed_checks": []
+      },
+      {
+        "slug": "what-is-an-ai-agent",
+        "title": "What Is an AI Agent? A Simple Guide for 2026 (With Real Examples)",
+        "quality_score": 76.7,
+        "word_count": 2150,
+        "flesch": 59.1,
+        "internal_links": 12,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-voice-changers-content-creators",
+        "title": "Best AI Voice Changers for Content Creators 2026 (Ranked)",
+        "quality_score": 74.4,
+        "word_count": 1788,
+        "flesch": 52.6,
+        "internal_links": 6,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-coding-tools-beginners",
+        "title": "Best AI Coding Tools for Beginners 2026 (No Experience Needed)",
+        "quality_score": 85.6,
+        "word_count": 2111,
+        "flesch": 53.6,
+        "internal_links": 4,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-tools-for-beginners-2026",
+        "title": "Best AI Tools for Beginners 2026 (Without a Tech Background)",
+        "quality_score": 71.1,
+        "word_count": 2261,
+        "flesch": 57.2,
+        "internal_links": 5,
+        "external_links": 9,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "agenta-ai-review-2026",
+        "title": "Agenta AI Review 2026: Is This the Best Open-Source Agent Builder?",
+        "quality_score": 62.2,
+        "word_count": 2247,
+        "flesch": 39.2,
+        "internal_links": 5,
+        "external_links": 6,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
       }
     ]
   },
   "technical": {
     "pages_audited": 20,
-    "total_issues": 13,
+    "total_issues": 12,
     "by_severity": {
       "notice": 11,
-      "warning": 2
+      "warning": 1
     },
     "by_type": {
       "Heading skip": 11,
-      "Meta too long": 2
+      "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 2.6
+    "elapsed_seconds": 2.3
   },
   "geo": {
     "geo_score": 100,
