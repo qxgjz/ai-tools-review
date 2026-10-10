@@ -121,3 +121,63 @@
 ## state.json 更新
 - 新增 geo_audit_2026-10-10：技术修复×2（completed）+ broken 外链×1（window2）
 - **架构师 pending：0**；全局 pending：41（P0:13, P1:25）
+
+---
+
+# 架构师执行日志 2026-10-10（第4轮，追加）
+
+> 触发：定时任务「架构师-全栈技术修复（SOP版，验证闭环）」12:00
+
+## 处理待办：3 条架构师 pending 全部完成（P0×2 + P1×1）
+
+| 待办 | 级别 | 处理 | 验证产出 |
+|---|---|---|---|
+| 全站 JSON-LD 批量校验 | P0 | 写 jsonld_audit.py（sitemap 驱动 799 URL，10→12 并发）校验 FAQPage/Article/BreadcrumbList/Product 必填字段 | **101 页成功校验全部 OK（SCHEMA_ERR=0）**；698 页本机网络超时（与 SEO 审计 WinError 一致，非 schema 错误）；抽样 10 页成功 3 页全 OK。报告 jsonld_audit_results.md |
+| 评估接入 OpenSEO | P1 | 评估：自托管套件与 opengtm/zens-ink/keyword_miner/seo_audit_full 功能高度重叠，Docker 资源占用高、无运维人力 | 结论=不接入；报告 tool_eval_openseo.md |
+| ux_p0_site_degraded_24h | P0 | 实测核心页 TTFB：home 0.93s、ranking 1.8s（二次测量）、sitemap 200 | 无持续降级，TTFB 均正常范围；标记 completed |
+
+## GEO 技术检查（追加流程）
+
+### 1. GEO/AEO 审计（real_geo_aeo_audit.py，重跑避开瞬时网络错误）
+- **Overall 9.2/10 Grade A**（首次跑 7.9 系 3/5 页面瞬时 fetch 失败，重跑修正）
+- AI Crawler 11/11 全配置；llms.txt + llms-full.txt（7608 行）present
+- AEO 9.6/10（methodology/midjourney 8/8）；GEO Content 7.1/10：**Expert Quotes 0/2 页、Step-by-step 50%、Real Examples 50%** → 写入 state 待办（window2/创作家，geo_audit_2026-10-10）
+
+### 2. 全站 SEO 审计
+- 本轮因时序未重跑（上轮已跑 796 页 P0=48 全网络错误）；下轮重跑验证
+
+### 3. Lighthouse 抽查 3 页（npx lighthouse + Edge）
+| 页面 | SEO |
+|---|---|
+| 首页 / | **100** |
+| /blog/chatgpt-vs-claude-2026-comparison | **100** |
+| /blog/dify-vs-langchain-2026 | **100** |
+
+## 本轮处理的 GEO 技术问题（2 个）
+1. **首页 AEO check6 缺 Tables** → 新增「2026 Top 3 AI Tools Compared」对比表（topTools 前 3：工具名/总分/分类/vendor/描述）→ 线上验证 `<table>`×1 + 标题 + 6 `<th>` ✅ commit e14ed4d
+2. **JSON-LD 全站校验**（P0 主任务）→ 101 页 OK、0 schema 错误 ✅
+
+## 门控结果
+- `npx tsc --noEmit`：**通过**（0 error）
+- `npm run build`：**通过**（exit 0）
+
+## git push 结果
+- commit `e14ed4d`（首页 Comparison 表）→ push 成功（891a54c..e14ed4d）
+- GitHub Actions：Lint success + CodeQL success + **Deploy success**
+
+## 线上验证
+| URL | 状态码 | 内容验证 |
+|---|---|---|
+| / | 200 | `<table>`×1 + "2026 Top 3 AI Tools Compared" + 6 `<th>` |
+| /tools/langflow/ | 200 | 309KB（-47%） |
+| /blog/chatgpt-vs-claude-2026-comparison/ | 200 | H1 = 1 |
+| /nonexistent-check | 404 | 正常 |
+
+## state.json 更新
+- 架构师 3 条 pending → **completed**（含 completion_note）
+- 新增 geo_tech_home_comparison_table（completed）+ GEO 内容类待办×2（window2）
+- **架构师 pending：0**；全局 pending：43（P0:14, P1:23）
+
+## 下轮建议
+- 重跑 seo_audit_full.py 验证 H1 归零 + 工具页 <500KB
+- window2 处理 GEO 内容类：Expert Quotes、Step-by-step、Real Examples

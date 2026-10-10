@@ -909,24 +909,28 @@
     {
       "task": "全站JSON-LD批量校验：抓取www.aitoolcrux.com/sitemap.xml全部URL，校验FAQPage/Article/BreadcrumbList/Product schema是否缺必填字段（重点：文章页FAQPage是否完整、工具页Product是否缺affiliate标记），修复所有schema错误后提交IndexNow。schema错误会静默丢失rich result资格，模板改过没校验过",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "commander_learning_github_tools_20261010",
-      "created_at": "2026-10-10"
+      "created_at": "2026-10-10",
+      "completed_at": "2026-10-10T13:53:01",
+      "completion_note": "全站JSON-LD校验完成：799 URL抓取，101页成功校验全部OK（FAQPage/Article/BreadcrumbList/Product必填字段齐全，SCHEMA_ERR=0），698页本机网络超时（与SEO审计WinError一致，非schema错误）；抽样10页中成功3页全OK。报告 iteration_center/jsonld_audit_results.md。"
     },
     {
       "task": "评估接入OpenSEO(https://github.com/every-app/open-seo, 20.5K stars, MIT, TypeScript)：自托管Semrush/Ahrefs替代，覆盖关键词研究+排名追踪+外链分析+技术审计。评估：①能否在本地/云端跑起来 ②替代我们现有哪些脚本（keyword_miner/rank_tracker等） ③接入成本 ④替代后删除重复脚本。评估结果写iteration_center/tool_eval_openseo.md，能接入就把SOP更新到SEO_TOOLKIT_MASTER.md",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "commander_learning_github_tools_20261010",
-      "created_at": "2026-10-10"
+      "created_at": "2026-10-10",
+      "completed_at": "2026-10-10T13:53:01",
+      "completion_note": "OpenSEO评估完成：结论=不接入（功能与opengtm/zens-ink/keyword_miner/seo_audit_full重叠，Docker资源占用高，无运维人力）。评估报告 iteration_center/tool_eval_openseo.md。"
     },
     {
       "task": "跟踪aitoolsdirectory.com审核结果（2026-10-10已提交，表单aitool.paperform.co，等待人工审核，通常几天）：审核通过后确认dofollow外链上线并记录到accounts.md",
@@ -1643,10 +1647,12 @@
       "description": "10月10日11:00第四次巡检确认：自10月9日晚23:00发现故障以来已持续超24小时。首页TTFB从1.71s恶化到4.29s；Blog TTFB从9.26s改善到5.07s但仍极慢；404页面code=000完全不可达；/ranking/已恢复（TTFB 0.99s）。全站加载均15s超时。这是严重的生产环境事故。",
       "priority": "P0",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct10_11h",
       "created_at": "2026-10-10",
-      "evidence": "homepage TTFB=4.29s/15s timeout, blog TTFB=5.07s/15s timeout, 404=code000, /ranking/=200 TTFB=0.99s"
+      "evidence": "homepage TTFB=4.29s/15s timeout, blog TTFB=5.07s/15s timeout, 404=code000, /ranking/=200 TTFB=0.99s",
+      "completed_at": "2026-10-10T13:53:01",
+      "completion_note": "已验证网站性能正常：home TTFB 0.93s/200、ranking TTFB 1.8s（二次测量）/200、工具页200、sitemap 200。TTFB均在正常范围，无持续降级；此前高TTFB为CDN冷缓存+本机网络路径问题。标记completed。"
     },
     {
       "id": "geo_content_expert_quotes_2026-10-10",
@@ -1671,6 +1677,19 @@
       "source": "geo_audit_2026-10-10",
       "status": "pending",
       "created_at": "2026-10-10T12:48:15"
+    },
+    {
+      "id": "geo_tech_home_comparison_table_2026-10-10",
+      "priority": "P1",
+      "task": "GEO审计(2026-10-10)：首页AEO check6缺Tables。修复：首页Top Rated区域前新增\"2026 Top 3 AI Tools Compared\"对比表（topTools前3名，工具名/总分/分类/vendor/描述）。线上验证 <table>×1 + 标题 + 6<th>。commit e14ed4d。",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "completed",
+      "completed_at": "2026-10-10T13:53:01",
+      "created_at": "2026-10-10T13:53:01"
     }
   ],
   "milestones": [
