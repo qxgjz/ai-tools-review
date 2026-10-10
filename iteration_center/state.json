@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-10 22:18:32 JST",
+  "last_updated": "2026-10-10 23:18:13 JST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-10-R5",
@@ -916,6 +916,11 @@
       "hn_status": "NOT-LOGGED-IN",
       "devtoollab": "NEEDS-LOGIN (免费但nofollow)",
       "hyzenpro": "IN-PROGRESS (7步表单, 已填name/tagline/URL/category/description, 缺key features tags/pros/cons/FAQs/About you)"
+    },
+    {
+      "task": "拓荒者-外链跟进(23点)",
+      "time": "2026-10-10 23:18:13 JST",
+      "result": "4/4 backlinks alive; aitoolsdirectory仍审核中"
     }
   ],
   "next_iteration_focus": [
@@ -1749,6 +1754,89 @@
       "status": "completed",
       "completed_at": "2026-10-10T21:22:12",
       "created_at": "2026-10-10T21:22:12"
+    },
+    {
+      "id": "ux_p0_rotating_outage_2026-10-10_23h",
+      "title": "P0: 网站进入轮流宕机状态——Blog/404恢复但/ranking/完全超时，并发池疑似耗尽",
+      "description": "23:00巡检发现：网站从全面故障进入'轮流挂'模式。Blog从code=000恢复到TTFB 3.15s；404从8.5s改善到4.52s/9.25s总时间；但/ranking/从7.73s恶化到完全超时(code=000)。首页TTFB 0.99s但只返回9KB（不完整）。这种'这个页面好了那个又挂了'的模式强烈暗示Vercel函数并发池/资源耗尽——每个请求都在冷启动。故障已持续约48小时。",
+      "priority": "P0",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit_oct10_23h",
+      "created_at": "2026-10-10",
+      "evidence": "homepage TTFB=0.99s/9KB, blog TTFB=3.15s/122KB, 404 TTFB=4.52s/9.25s, /ranking/=code000"
+    },
+    {
+      "priority": "P1",
+      "status": "pending",
+      "task": "Title过短（29字符）x2: /blog/claude-alternatives-2026, /blog/notion-ai-vs-obsidian-ai — 补足至 45-60 字符",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P1-seo_audit_2026-10-10-63"
+    },
+    {
+      "priority": "P1",
+      "status": "pending",
+      "task": "/compare Meta Description过长 163字符 — 压缩至 <=160",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P1-seo_audit_2026-10-10-65"
+    },
+    {
+      "priority": "P1",
+      "status": "pending",
+      "task": "/compare/perplexity-vs-chatgpt Title过长 65字符 — 压缩至 <=60",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P1-seo_audit_2026-10-10-67"
+    },
+    {
+      "priority": "P1",
+      "status": "pending",
+      "task": "重复Title x2组: notion-ai-vs-salesforce-2026 / notion-ai-vs-notion-ai-salesforce-2026; subcategory/vector-databases / subcategory/vector-db — 需区分",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P1-seo_audit_2026-10-10-69"
+    },
+    {
+      "priority": "P2",
+      "status": "pending",
+      "task": "重复Meta Description x12（\"Expert analysis by AIToolCrux. Updated ...\"模板化）— 内容团队差异化",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P2-seo_audit_2026-10-10-71"
+    },
+    {
+      "priority": "P2",
+      "status": "pending",
+      "task": "broken外链 147 个（含 midjourney 403、github.com/eumemic/ai-legion 连接失败等）— 逐一替换/移除",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P2-seo_audit_2026-10-10-73"
     }
   ],
   "milestones": [
@@ -1765,7 +1853,7 @@
   "latest_commit": "112d5eb",
   "last_commit": "60292cd",
   "last_update": "2026-10-10 定时任务触发: batch15 3篇文章入库+日志",
-  "last_action": "batch15 创作家: 2篇新文章(best-ai-tools-for-beginners-2026/agenta-ai-review-2026) + 1篇低分重写(cursor-vs-windsurf-2026, 38->73)，全部通过 zens-ink 73 + llmevalkit 100 无幻觉",
+  "last_action": "UX audit Oct10 23:00 - rotating outage, 48h ongoing, 1 new P0",
   "current_round": 79,
   "last_iteration_date": "2026-10-10",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
