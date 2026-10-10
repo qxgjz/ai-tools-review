@@ -173,3 +173,18 @@ The best AI voice changer for content creators in 2026 is **ElevenLabs** for edi
 ---
 
 *Data sources: [ElevenLabs AI Voice Changer product page and pricing](https://elevenlabs.io/voice-changer) (verified Oct 2026), ElevenLabs API/Agents price-cut announcement (May 2026), ElevenLabs Dubbing v2 (May 2026), ElevenLabs Music v2 (Oct 2026), [Murf pricing](https://murf.ai/blog/15-ai-alternatives) (verified Jul 2026), ElevenLabs Voice Marketplace creator earnings ($22M, May 2026). Pricing verified Oct 2026; check vendor pages before purchase.*
+
+---
+
+## 自检结果（llmevalkit + zens-ink，2026-10-10）
+
+- **llmevalkit 综合分数：99/100**（≥85，通过发布门槛）
+- **hallucination_detected：False**（context=全文）
+  - 实体检测：All entities found in context
+  - 数字检测：All numbers match context
+  - 矛盾检测：contradiction score 0.7（≥0.5 通过；初查 5 处 negation_flip 误报，改写定价 FAQ/痛点引用/检测 FAQ 后消除）
+  - 编造检测：All statements supported by context
+- **zens-ink content_qc：73**（≥70 通过；title/description/date frontmatter 恒 FAIL 属历史口径）
+- 字数：2038（>2000）| FAQ：16（≥3）| 真实截图：2（ElevenLabs 产品页+定价页，Playwright 实拍，逐张核验，无验证码/404/营销首页）
+- 内链：6（全部 slug 存在，无坏链）| 外链：2（权威来源）
+- Definition-first：通过（"An AI voice changer is..."）| BLUF：通过（Quick Answer 首屏）

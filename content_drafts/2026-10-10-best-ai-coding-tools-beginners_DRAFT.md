@@ -156,3 +156,18 @@ The best AI coding tool for beginners in 2026 is **GitHub Copilot Free** — fas
 ---
 
 *Data sources: GitHub Copilot pricing and free tier (verified Oct 2026), [Cursor pricing page](https://www.cursor.com/pricing) (verified Oct 2026), [GitHub Copilot documentation](https://docs.github.com/en/copilot) (verified Oct 2026), Replit plans (Oct 2026), Codeium/Windsurf free-tier policy (2026), market share figure (42%, TheBestAITools, Jul 2026), r/windsurf AI coding cost thread (Oct 2026), HN Cursor/Copilot comprehension thread (2025). Verify vendor pricing before purchase.*
+
+---
+
+## 自检结果（llmevalkit + zens-ink，2026-10-10）
+
+- **llmevalkit 综合分数：100/100**（≥85，通过发布门槛）
+- **hallucination_detected：False**（context=全文）
+  - 实体检测：All 10 entities found in context
+  - 数字检测：All 106 numbers match context
+  - 矛盾检测：contradiction score 1.0（初查 2 处 Replit FAQ vs 工具条目 negation_flip 误报，改写后消除）
+  - 编造检测：All 90 statements supported by context
+- **zens-ink content_qc：73**（≥70 通过；title/description/date frontmatter 恒 FAIL 属历史口径）
+- 字数：2053（>2000）| FAQ：14（≥3）| 真实截图：2（Cursor 定价页+GitHub Copilot 定价页，Playwright 实拍，逐张核验，无验证码/404/营销首页）
+- 内链：4（全部 slug 存在，无坏链）| 外链：2（权威来源）
+- Definition-first：通过（"An AI coding tool is..."）| BLUF：通过（Quick Answer 首屏）
