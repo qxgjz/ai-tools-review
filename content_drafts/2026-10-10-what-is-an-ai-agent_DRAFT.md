@@ -150,7 +150,6 @@ An AI agent is a goal-driven system with autonomy: it plans, uses tools, and act
 
 *Data sources: OpenAI ChatGPT Agent announcement (Sep 5, 2026) and [ChatGPT pricing](https://openai.com/chatgpt/pricing/), [Claude pricing](https://claude.com/pricing), [n8n AI Agent docs](https://docs.n8n.io/advanced-ai/) and [n8n workflows](https://n8n.io/workflows/) (verified Oct 2026), Anthropic model pricing update (Haiku 5.5, via Ti Media, Oct 2026), Heeya (Apr 2026), CodeGenes (May 2026), ChatbotScape (May 2026), TechShark (Aug 2026). Definitions and examples synthesized from these sources; verify vendor claims before purchase.*
 
----
 
 ## 自检结果（llmevalkit + zens-ink，2026-10-10）
 

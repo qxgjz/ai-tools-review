@@ -157,7 +157,6 @@ The best AI coding tool for beginners in 2026 is **GitHub Copilot Free** — fas
 
 *Data sources: GitHub Copilot pricing and free tier (verified Oct 2026), [Cursor pricing page](https://www.cursor.com/pricing) (verified Oct 2026), [GitHub Copilot documentation](https://docs.github.com/en/copilot) (verified Oct 2026), Replit plans (Oct 2026), Codeium/Windsurf free-tier policy (2026), market share figure (42%, TheBestAITools, Jul 2026), r/windsurf AI coding cost thread (Oct 2026), HN Cursor/Copilot comprehension thread (2025). Verify vendor pricing before purchase.*
 
----
 
 ## 自检结果（llmevalkit + zens-ink，2026-10-10）
 
