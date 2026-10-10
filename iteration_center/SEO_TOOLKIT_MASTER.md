@@ -1,53 +1,53 @@
-# AIToolCrux SEO工具链完整整合手册 v1.2
+# AIToolCrux SEO工具链完整整合手册 v1.3
 
-**最后更新**: 2026-10-08（新增llmevalkit+opengtm+CrewAI+OpenSEO）
+**最后更新**: 2026-10-09（工具真实状态大修复：之前17个写✅的工具只有5个真装，现已补装16个）
 **原则**: 现成工具优先，不重复造轮子，实在不行才写胶水代码
 **目标**: 6个窗口+指挥官全部用上所有工具，高质量高效率完成SEO工作
 
 ---
 
-## ⚠️ 工具真实状态验证（2026-10-08实测）
+## ⚠️ 工具真实状态验证（2026-10-09 实测，指挥官修复）
 
-> 指挥官职责：每次使用工具前必须验证真实状态，禁止凭手册记忆调用。以下为实测结果。
+> **重大修复记录**：2026-10-09发现手册v1.2写"✅已安装"的17个工具中，实际只有5个真装了（zens-ink/tiktoken/llmevalkit/opengtm/chromadb），其余12个根本不存在。这是各窗口按手册调用全部失败、只能回退AI硬写的根源。现已批量补装16个工具。
 
-### ✅ 真实可用的工具
+### ✅ 真实可用的工具（18个，2026-10-09实测）
 
 | 工具 | 真实版本 | 验证方式 | 用途 |
 |------|---------|---------|------|
+| **zens-ink** | 1.4.10 | `import zens_ink` | 关键词竞争度、搜索意图、SEO审计 |
+| **tiktoken** | 0.14.0 | `import tiktoken` | token计数 |
+| **llmevalkit** | 6.0.2（显示6.0.0，元数据bug） | `import llmevalkit` | 13模块78指标内容评估+幻觉检测+AI内容检测 |
+| **opengtm** | 0.1.0 | `import opengtm` | 9模块AEO审计+关键词研究（Google Search grounding） |
+| **chromadb** | 1.5.9 | `import chromadb` | 向量数据库，历史经验语义检索 |
+| **textstat** | 0.7.13 | `import textstat` | 可读性评分（Flesch/Kincaid等） |
+| **openserp** | 0.2.7 | `import openserp` | 多引擎SERP（Google/Baidu/Bing/Yandex） |
+| **playwright** | ok | `import playwright` + `playwright install chromium` | 浏览器自动化、截图、JS渲染 |
+| **nltk** | 3.10.3 | `import nltk` | 自然语言处理、分词、词性标注 |
+| **rank_bm25** | ok | `import rank_bm25` | 相关性排序 |
+| **courlan** | 1.4.0 | `import courlan` | URL清洗、规范化 |
+| **trafilatura** | 2.3.1 | `import trafilatura` | 网页正文提取、元数据解析 |
+| **google-api-python-client** | 2.201.0 | `import googleapiclient` | GSC API、YouTube API |
+| **google-analytics-data** | 0.23.3 | `import google.analytics.data_v1beta` | GA4 Data API |
+| **playwright-stealth** | ok | `import playwright_stealth` | 反检测浏览器 |
+| **patchright** | ok | `import patchright` | Playwright补丁版，反检测 |
 | **broken-link-checker** | 0.7.8 | `npx broken-link-checker --version` | 断链审计 |
-| **zens-ink** | 1.4.10 | `pip install zens-ink`（刚补装） | 关键词竞争度、搜索意图、SEO审计 |
-| **Crawl4AI** | ✅ | `import crawl4ai` | AI网页爬虫 |
-| **trafilatura** | ✅ | `import trafilatura` | 网页正文提取 |
-| **textstat** | ✅ | `import textstat` | 可读性评分 |
-| **openserp** | ✅ | `import openserp` | 多引擎SERP |
-| **playwright** | ✅ | `import playwright` | 浏览器自动化 |
-| **googleapiclient** | ✅ | `import googleapiclient` | GSC/GA4 API |
-| **nltk** | ✅ | `import nltk` | 自然语言处理 |
-| **tiktoken** | ✅ | `import tiktoken` | token计数 |
-| **rank_bm25** | ✅ | `import rank_bm25` | 相关性排序 |
-| **courlan** | ✅ | `import courlan` | URL清洗 |
-| **Serper API** | ✅ | GitHub Secret已配置 | Google搜索结果API |
-| **GSC API** | ✅ | GitHub Actions已验证 | 搜索控制台数据 |
-| **Lighthouse** | ✅ | GitHub Actions | 性能/SEO审计 |
-| **llmevalkit** | 6.0.2 | `pip install llmevalkit` | 78指标内容评估+幻觉检测+AI内容检测 |
-| **opengtm** | 0.1.0 | `pip install opengtm` | 9模块AEO审计+关键词研究（Google Search grounding，无幻觉） |
-| **Chroma** | 1.5.9 | `pip install chromadb` | 向量数据库，38条历史经验语义检索 |
+| **lighthouse** | 13.5.0 | `npx lighthouse --version` | 性能/SEO/可访问性审计 |
 
-### ❌ 手册写了但实际不可用
+### ❌ 不可用（有替代方案）
 
-| 工具 | 手册写的状态 | 真实状态 | 原因 |
-|------|------------|---------|------|
-| **OpenSEO** | v0.1.9 ✅运行中 localhost:3001 | ❌未运行 | Docker服务未启动，需手动启动 |
-| **playwright-stealth** | 2.0.3 ✅ | ❓未验证 | 需确认是否安装 |
-| **patchright** | ✅ | ❓未验证 | 需确认是否安装 |
+| 工具 | 手册写的状态 | 真实状态 | 原因 | 替代方案 |
+|------|------------|---------|------|---------|
+| **Crawl4AI** | ✅ | ❌未安装 | Windows长路径限制（unclecode-litellm依赖链路径超长） | **trafilatura+requests**（已装，可做正文提取）；如需JS渲染用playwright |
+| **OpenSEO** | v0.1.9 ✅运行中 | ❌未运行 | Docker服务未启动 | opengtm（已装，功能重叠） |
 
-### 🔄 待评估接入的高星GitHub项目（指挥官主动发现）
+### 🔑 API凭证状态
 
-| 项目 | Stars | 用途 | 评估状态 |
-|------|-------|------|---------|
-| **OpenClaw** | 310K+ | AI agent框架，有SEO skills | 已被OpenAI收购，接入复杂，暂缓 |
-| **Claude SEO** | 4.9K | 26子技能+19agent+34命令 | 方法论可参考，豆包可借鉴其审计流程 |
-| **every-app/open-seo** | 4.3K | 自托管SEO栈+MCP server | 有MCP server，AI agent可直接调用，待评估 |
+| API | 状态 | 说明 |
+|-----|------|------|
+| **Serper API** | ✅已配置 | GitHub Secret `SERPER_API_KEY` |
+| **GSC API** | ✅已配置 | Service Account JSON，资源 `sc-domain:aitoolcrux.com` |
+| **GA4 API** | ✅已配置 | Measurement ID `G-7XYFQR3ETF`，Property `549695344` |
+| **GitHub API** | ✅已配置 | Token用于提交、Actions触发 |
 | **SerpBear** | 2K | 排名追踪 | Docker部署，可替代手动排名检查 |
 | **SEONaut** | 717 | 技术SEO审计 | Go语言，Docker部署 |
 | **marketingskills** | 33.3K | 最大marketing skills集合 | 待评估哪些skill可复用 |
@@ -123,6 +123,7 @@
 | 脚本 | 大小 | 功能 | 用法 |
 |------|------|------|------|
 | `iteration_center/keyword_miner.py` | 10KB | 关键词机会挖掘 | `python iteration_center/keyword_miner.py` |
+| `data/tools.lite.json` | 0.8MB | tools.json 精简版（移出 review/long_description 等长文本字段，-90%），PowerShell/Node 解析失败时用此文件 | `python -c "import json; json.load(open('data/tools.lite.json'))"` |
 
 #### 修复类（按问题选择）
 
