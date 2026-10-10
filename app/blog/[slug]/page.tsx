@@ -109,7 +109,9 @@ export function generateMetadata({ params }: PostPageProps) {
   if (description.length > 155) {
     description = truncateAtWord(description, 155);
   } else if (description.length < 120) {
-    description = `${description} Expert analysis by AIToolCrux. Updated ${(post.date || post.publishedAt || '2026').slice(0, 10)}.`;
+    // 用文章专属 title 做差异化，避免同批文章产生完全相同的 meta description
+    const uniqueTail = `Read our hands-on ${post.title} review — real test data, pricing, and verdicts. Updated ${(post.date || post.publishedAt || '2026').slice(0, 10)}.`;
+    description = `${description} ${uniqueTail}`.replace(/\s+/g, ' ').trim();
     if (description.length > 155) {
       description = truncateAtWord(description, 155);
     }

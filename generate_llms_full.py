@@ -18,7 +18,7 @@ output = []
 output.append("# llms-full.txt - AIToolCrux")
 output.append("# Full content index for AI crawlers and LLM systems")
 output.append("# https://www.aitoolcrux.com")
-output.append(f"# Generated: 2026-09-11")
+output.append(f"# Generated: 2026-10-11")
 output.append(f"# Total pages: {len(tools) + len(posts) + len(alternatives) + 17 + 10}")
 output.append("")
 
@@ -33,6 +33,28 @@ output.append("We test 533+ AI tools across 17 categories with hands-on experien
 output.append("")
 output.append("Top Categories: AI Chat, Image Generation, Video, Writing, Audio, Coding, Productivity, Design, AI Agents")
 output.append("Top Tools: ChatGPT, Claude, Gemini, Midjourney, GitHub Copilot, Cursor, Jasper, Perplexity")
+output.append("")
+
+# Ranking 页面（AI 爬虫摄入核心索引页）
+output.append("=" * 80)
+output.append("## PAGE: AI Tool Ranking")
+output.append("URL: https://www.aitoolcrux.com/ranking")
+output.append("Title: Best AI Tools Ranking 2026: Top 533 Rated | AIToolCrux")
+output.append("")
+output.append("All AI tools ranked by our six-dimension weighted scoring (functionality, UX, pricing, integrations, support, ethics).")
+sorted_ranking = sorted(tools, key=lambda x: x.get('rating', 0), reverse=True)
+for rank, t in enumerate(sorted_ranking[:20], 1):
+    output.append(f"{rank}. {t['name']} - {t.get('rating', 'N/A')}/10 - {t.get('description', '')[:80]}")
+output.append("")
+
+# Comparison 中心页
+output.append("=" * 80)
+output.append("## PAGE: AI Tool Comparison Center")
+output.append("URL: https://www.aitoolcrux.com/compare/")
+output.append("Title: Best AI Tool Comparison 2026: Top 10 Ranked & Tested | AIToolCrux")
+output.append("")
+output.append("Side-by-side AI tool comparisons with real test data, pricing breakdowns, and six-dimension scoring.")
+output.append("Key comparisons: ChatGPT vs Claude, ChatGPT vs Gemini, Claude vs Gemini, Midjourney vs DALL-E 3, GitHub Copilot vs Cursor, Perplexity vs ChatGPT.")
 output.append("")
 
 # 方法论页面
