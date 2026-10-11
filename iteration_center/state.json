@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-11",
+  "last_updated": "2026-10-12 02:03:10 JST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-11-R7",
@@ -983,6 +983,11 @@
       "task": "拓荒者-外链跟进(23点)",
       "time": "2026-10-11 23:07:05 JST",
       "result": "4/4 backlinks alive; aitoolsdirectory=仍审核(~41h)"
+    },
+    {
+      "task": "拓荒者-外链调研第七轮",
+      "time": "2026-10-12 02:03:10 JST",
+      "result": "Serper 6组: 竞品0+Dev.to10+新目录10+资源页10"
     }
   ],
   "next_iteration_focus": [
@@ -2086,6 +2091,72 @@
       "evidence": "homepage TTFB=1.07s/35KB, blog=code000, 404=code000, /ranking/=code000",
       "completed_at": "2026-10-12T00:48:33",
       "completion_note": "同上：三核心页服务器端全部完整渲染；UX 巡检使用的本机抓取不可达（curl size=0/ReadTimeout），已多轮证实为链路问题。本轮列表 JS 减半进一步降低页面加载对网络的依赖。"
+    },
+    {
+      "id": "GROWTH-DIR-V7-2026-10-12",
+      "priority": "P2",
+      "title": "调研2个第七轮新目录站",
+      "description": "筛选免费、无需登录的目录站",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "created": "2026-10-12 02:03:10 JST"
+    },
+    {
+      "id": "GROWTH-RESOURCE-PITCH-2026-10-12",
+      "priority": "P1",
+      "title": "向3个'best AI tools 2026'资源页发邮件推荐AIToolCrux",
+      "description": "资源页收录是高质量外链",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "created": "2026-10-12 02:03:10 JST"
+    },
+    {
+      "id": "PERF-LCP-IMAGE-2026-10-12",
+      "priority": "P0",
+      "task": "LCP 图片优化：博客/工具页首图加 fetchpriority=high + 去 loading=lazy + head 加 preload（web.dev：73% 移动页 LCP 是图片，35% LCP 图不在初始 HTML 导致发现延迟 1290ms）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "pending",
+      "created_at": "2026-10-12T05:03:04"
+    },
+    {
+      "id": "PERF-CLS-MEDIA-2026-10-12",
+      "priority": "P1",
+      "task": "CLS 修复：全站 img/video/iframe 补显式 width/height 或 CSS aspect-ratio（博客模板 + 工具页截图），CLS 预算 <=0.1",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "pending",
+      "created_at": "2026-10-12T05:03:04"
+    },
+    {
+      "id": "PERF-CACHE-BFCACHE-2026-10-12",
+      "priority": "P1",
+      "task": "缓存与 bfcache：Cloudflare Pages _headers 为 HTML 设短期 Cache-Control 并确认无 no-store/unload 监听（bfcache 免费性能，2022 年 CLS 最大改善来源）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "pending",
+      "created_at": "2026-10-12T05:03:04"
+    },
+    {
+      "id": "PERF-BUNDLE-AUDIT-2026-10-12",
+      "priority": "P1",
+      "task": "bundle 二次审计：webpack-bundle-analyzer 找剩余大 chunk + coverage 找未用 JS（tree-shaking 前提：ES6 import/显式导入/sideEffects；code splitting 分离非首屏代码）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "pending",
+      "created_at": "2026-10-12T05:03:04"
     }
   ],
   "milestones": [
