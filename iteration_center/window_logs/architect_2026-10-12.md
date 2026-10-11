@@ -55,3 +55,50 @@
 ## 说明
 - 本机 curl/Python/Lighthouse 到 Cloudflare 持续超时（多轮同因），线上验证统一服务器端 web_fetch + 本地构建产物
 - UX 巡检 72h 故障报告（code=000/0字节/35KB）经服务器端三页完整渲染证伪，站点无故障；本轮 JS 减半属主动加固
+
+---
+
+# 架构师执行日志 2026-10-12（第11轮·追加）
+
+> 触发：定时任务「架构师-全栈技术修复（SOP版，验证闭环）」当日第 2 次触发
+> 本轮：架构师待办=0，主动审计发现并真实修复 **17 条 SEO P1**（全站 SEO 审计 804 页，P0=458 中 457 为本机网络伪故障）
+
+## 处理真实问题：17 条 P1 全部修复（构建产物逐项验证）
+
+| 问题类型 | 数量 | 修复 | 验证（out/ 构建产物） |
+|---|---|---|---|
+| 双 H1（博客页） | 5 | posts.json content 首行 `# `→`## `（cursor-vs-windsurf、claude-vs-gemini、elevenlabs-v2-review、lovable-vs-boltnew、beautiful-ai-alternatives） | 5 页 H1 数=1 ✅ |
+| subcategory Title 过长（61-70） | 9 | 模板改**动态同名判定**：仅同名子分类（Vector Databases 组）加父类防重；其余 `{name} AI Tools | AIToolCrux`（去 2026/父类） | 9 页 title 40-46 字符 ✅ |
+| 博客 Title 过短（26/29） | 2 | title 加长：Cursor vs GitHub Copilot→56、ElevenLabs vs Play.ht→60 | ✅ |
+| 页面 >500KB | 1 | category 页 RSC 精简：CategoryToolsClient 传入 cardTools（轻字段+pricing+lastUpdated，去 pros/cons/description 重字段） | /category/agent-framework **531→477KB** ✅ |
+| 本站 404 内链 | 1 | _redirects 加 `/cursor-ai-review → /blog/cursor-vs-windsurf-2026/ 301` | 线上 301 完整渲染 ✅ |
+
+## GEO 技术检查
+| 项 | 结果 |
+|---|---|
+| real_geo_aeo_audit.py | **9.17/10**（上轮 8.04）；AI crawler **11/11**；llms.txt 10/10 + llms-full.txt 10/10 |
+| AEO 页面 | 7 页全部 8/8 满分（/、/tools/chatgpt、/tools/midjourney、/tools/cursor、/blog/chatgpt-vs-claude-2026-comparison、/alternatives/chatgpt-alternatives、/methodology） |
+| seo_audit_full.py | 804 页 P0=458（457 网络伪故障）、P1=17（本轮全修）、P2=0 |
+| Lighthouse | 本机网络不可达（历史同因），SEO 结构改动经构建产物验证 |
+
+## 门控结果
+- `npx tsc --noEmit` **通过** + `npm run build` **通过**
+
+## git push 结果
+| commit | 状态 |
+|---|---|
+| d2eb30b（17 条 P1 修复 + category 精简 + 301） | ✅ Deploy success |
+
+## 线上验证（服务器端 web_fetch）
+| URL | 结果 |
+|---|---|
+| /subcategory/prompt-engineering/ | title = **Prompt Engineering Tools AI Tools \| AIToolCrux（46 字符）** ✅ |
+| /cursor-ai-review | **301→完整渲染 Cursor vs Windsurf 2026**（Quick Answer + 对比表 + FAQ + CTA）✅ |
+
+## state.json
+- 架构师待办=0（无 status 变更）；全局 pending 75（P0:26, P1:42）
+- 本轮 17 条 P1 为主动审计发现+全修，无遗留待办写入
+
+## 说明
+- P0=458 中 457 条均为本机→Cloudflare 线路超时/SSL 重置伪故障（多轮同因），真实 P0=1（页面大小）已修
+- subcategory title 用动态同名判定（而非全局去掉父类），保住第 6 轮修的重复 title 防回归
