@@ -8325,7 +8325,8 @@
       "screenshots": 8,
       "internal_links_ok": true,
       "git": "8b687e9",
-      "online_200": "pending-verify"
+      "online_200": true,
+      "deploy": "success"
     }
   ],
   "last_commander_review": "2026-10-09",
