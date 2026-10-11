@@ -161,3 +161,4 @@ Recheck after 1-2 weeks for indexing improvement.
 
 ---
 *报告生成时间：2026-09-28 | 下次监控：2026-10-05*
+| 2026-10-11 | 100 | -1 | 85 | 📈 +85 new indexed |
