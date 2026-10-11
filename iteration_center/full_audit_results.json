@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-10T22:26:17.044411",
+  "audit_time": "2026-10-11T22:48:24.260857",
   "mode": "quick",
   "content": {
     "total_articles": 154,
-    "average_score": 92.09025974025977,
-    "perfect_count": 107,
-    "below_85_count": 34,
+    "average_score": 91.13181818181825,
+    "perfect_count": 101,
+    "below_85_count": 40,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -572,14 +572,16 @@
       },
       {
         "slug": "claude-vs-gemini-2026-comparison",
-        "title": "Claude vs Gemini 2026: Complete 8-Dimension | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 2618,
-        "flesch": 45.4,
-        "internal_links": 7,
-        "external_links": 1,
+        "title": "Claude vs Gemini 2026: Which AI Assistant Is Actually Better?",
+        "quality_score": 71.1,
+        "word_count": 2259,
+        "flesch": 53.0,
+        "internal_links": 5,
+        "external_links": 3,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "windsurf-review-2026",
@@ -638,29 +640,34 @@
       },
       {
         "slug": "elevenlabs-v2-review-2026",
-        "title": "ElevenLabs v2 Review 2026: 3 Weeks of Testing | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 3745,
-        "flesch": 42.5,
-        "internal_links": 11,
-        "external_links": 1,
+        "title": "ElevenLabs v2 Review 2026: Is It Worth the Subscription?",
+        "quality_score": 62.2,
+        "word_count": 2233,
+        "flesch": 36.6,
+        "internal_links": 4,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
       },
       {
         "slug": "midjourney-v7-review-2026",
-        "title": "Midjourney v7 Review 2026: The Art Director's | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 14275,
-        "flesch": 45.5,
-        "internal_links": 13,
-        "external_links": 1,
-        "images": 1,
-        "failed_checks": []
+        "title": "Midjourney v7 Review 2026: The Art Director's AI, Tested",
+        "quality_score": 71.1,
+        "word_count": 2359,
+        "flesch": 43.3,
+        "internal_links": 15,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "creatium-coach-review-2025",
-        "title": "Creatium Coach Review 2026: Best AI Business Coaching Tool?",
+        "title": "Creatium Coach Review: Is This AI Coach Worth $99/mo?",
         "quality_score": 100.0,
         "word_count": 13107,
         "flesch": 56.1,
@@ -673,23 +680,25 @@
         "slug": "dify_ai_review",
         "title": "Dify AI Review 2026: Best Open-Source LLMOps?",
         "quality_score": 100.0,
-        "word_count": 13394,
-        "flesch": 46.3,
-        "internal_links": 13,
+        "word_count": 13413,
+        "flesch": 47.0,
+        "internal_links": 14,
         "external_links": 1,
-        "images": 3,
+        "images": 2,
         "failed_checks": []
       },
       {
         "slug": "cursor_ai_review",
-        "title": "Cursor AI Review: Better Than Copilot? 3-Month Test",
-        "quality_score": 100.0,
-        "word_count": 13059,
-        "flesch": 47.1,
-        "internal_links": 13,
-        "external_links": 1,
+        "title": "Cursor AI Review 2026: Better Than Copilot? 3-Month Test",
+        "quality_score": 71.1,
+        "word_count": 2276,
+        "flesch": 44.6,
+        "internal_links": 10,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "gemini_38_flash_review",
@@ -706,16 +715,16 @@
         "slug": "claude_fable_51_review",
         "title": "Claude Fable 5.1 Review: Cheaper, Faster, Better?",
         "quality_score": 100.0,
-        "word_count": 5122,
-        "flesch": 52.1,
+        "word_count": 5254,
+        "flesch": 52.7,
         "internal_links": 10,
-        "external_links": 1,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
       {
         "slug": "openai_astra_review",
-        "title": "OpenAI Astra Review 2026: 40 Coding Tasks, Worth $200/mo?",
+        "title": "OpenAI Astra Review 2026: 40 Tasks, Is $200/mo Worth It?",
         "quality_score": 100.0,
         "word_count": 12471,
         "flesch": 43.9,
@@ -1012,7 +1021,7 @@
       },
       {
         "slug": "adobe-firefly-review-2026",
-        "title": "Adobe Firefly Review 2026: 40+ Photos Edited, Honest Rating",
+        "title": "Adobe Firefly Review: I Edited 40+ Photos, Here's the Truth",
         "quality_score": 100.0,
         "word_count": 14307,
         "flesch": 45.6,
@@ -1166,25 +1175,29 @@
       },
       {
         "slug": "gemini-vs-chatgpt-2026",
-        "title": "Gemini vs ChatGPT 2026: Which AI Is Actually Better? [Tes...",
-        "quality_score": 100.0,
-        "word_count": 3427,
-        "flesch": 52.5,
-        "internal_links": 7,
-        "external_links": 8,
+        "title": "Gemini vs ChatGPT 2026: Which AI Assistant Is Actually Better?",
+        "quality_score": 80.0,
+        "word_count": 2288,
+        "flesch": 51.3,
+        "internal_links": 5,
+        "external_links": 3,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "suno-alternatives",
-        "title": "11 Best Suno Alternatives in 2026 (After Free Tier Ended)",
-        "quality_score": 100.0,
-        "word_count": 2920,
-        "flesch": 50.4,
-        "internal_links": 4,
-        "external_links": 8,
+        "title": "Best Suno Alternatives in 2026: 9 Tools Tested After the Free Tier Ended",
+        "quality_score": 71.1,
+        "word_count": 2401,
+        "flesch": 45.8,
+        "internal_links": 12,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "otter-ai-alternatives",
@@ -1254,8 +1267,8 @@
       },
       {
         "slug": "cursor-vs-github-copilot-2026",
-        "title": "Cursor vs GitHub Copilot 2026",
-        "quality_score": 61.1,
+        "title": "Cursor vs GitHub Copilot 2026: Best AI Coding Assistant?",
+        "quality_score": 66.7,
         "word_count": 1872,
         "flesch": 49.4,
         "internal_links": 3,
@@ -1264,14 +1277,13 @@
         "failed_checks": [
           "word_count_pass",
           "first_para_pass",
-          "title_pass",
           "external_links_pass"
         ]
       },
       {
         "slug": "elevenlabs-vs-playht-2026",
-        "title": "ElevenLabs vs Play.ht 2026",
-        "quality_score": 61.1,
+        "title": "ElevenLabs vs Play.ht 2026: Best AI Voice Generator Compared",
+        "quality_score": 66.7,
         "word_count": 1810,
         "flesch": 48.7,
         "internal_links": 3,
@@ -1280,7 +1292,6 @@
         "failed_checks": [
           "word_count_pass",
           "first_para_pass",
-          "title_pass",
           "external_links_pass"
         ]
       },
@@ -1450,14 +1461,14 @@
       {
         "slug": "lovable-vs-boltnew",
         "title": "Lovable vs Bolt.new 2026: We Built the Same App on Both",
-        "quality_score": 63.3,
-        "word_count": 1085,
-        "flesch": 52.9,
-        "internal_links": 3,
+        "quality_score": 71.1,
+        "word_count": 2143,
+        "flesch": 54.0,
+        "internal_links": 9,
         "external_links": 2,
-        "images": 0,
+        "images": 4,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1489,14 +1500,14 @@
       {
         "slug": "beautiful-ai-alternatives",
         "title": "7 Best Beautiful.ai Alternatives in 2026 (Free & Paid)",
-        "quality_score": 72.2,
-        "word_count": 866,
-        "flesch": 51.6,
-        "internal_links": 3,
-        "external_links": 2,
-        "images": 0,
+        "quality_score": 65.6,
+        "word_count": 2180,
+        "flesch": 53.2,
+        "internal_links": 9,
+        "external_links": 3,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1516,10 +1527,10 @@
         "slug": "clearscope-alternatives",
         "title": "6 Best Clearscope Alternatives in 2026 (Cheaper & Better)",
         "quality_score": 72.2,
-        "word_count": 851,
-        "flesch": 58.4,
-        "internal_links": 4,
-        "external_links": 2,
+        "word_count": 948,
+        "flesch": 50.8,
+        "internal_links": 6,
+        "external_links": 5,
         "images": 0,
         "failed_checks": [
           "word_count_pass"
@@ -1567,15 +1578,14 @@
       {
         "slug": "sudowrite-alternatives",
         "title": "7 Best Sudowrite Alternatives in 2026 (For Novel Writers)",
-        "quality_score": 68.9,
-        "word_count": 1138,
-        "flesch": 45.9,
-        "internal_links": 2,
-        "external_links": 2,
-        "images": 0,
+        "quality_score": 71.1,
+        "word_count": 2195,
+        "flesch": 42.1,
+        "internal_links": 10,
+        "external_links": 3,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "internal_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1636,17 +1646,16 @@
       {
         "slug": "notion-ai-vs-notion-ai-salesforce-2026",
         "title": "Notion AI vs Salesforce Einstein 2026: CRM AI Compared",
-        "quality_score": 40.0,
-        "word_count": 427,
-        "flesch": 35.8,
-        "internal_links": 0,
-        "external_links": 0,
+        "quality_score": 45.6,
+        "word_count": 545,
+        "flesch": 33.6,
+        "internal_links": 2,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
           "internal_links_pass",
-          "readability_pass",
-          "external_links_pass"
+          "readability_pass"
         ]
       },
       {
@@ -1667,18 +1676,17 @@
       {
         "slug": "notion-ai-vs-salesforce-2026",
         "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
-        "quality_score": 34.4,
-        "word_count": 463,
-        "flesch": 36.2,
-        "internal_links": 0,
-        "external_links": 0,
+        "quality_score": 40.0,
+        "word_count": 560,
+        "flesch": 34.7,
+        "internal_links": 2,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
           "first_para_pass",
           "internal_links_pass",
-          "readability_pass",
-          "external_links_pass"
+          "readability_pass"
         ]
       },
       {
@@ -1830,7 +1838,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 2.3
+    "elapsed_seconds": 11.7
   },
   "geo": {
     "geo_score": 100,
