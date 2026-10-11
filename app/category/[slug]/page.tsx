@@ -576,6 +576,19 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   const sortedTools = [...tools].sort(
     (a, b) => calculateScoreResult(b.scores).total - calculateScoreResult(a.scores).total,
   );
+  // 精简工具卡片数据（CategoryToolsClient 只需轻字段 + pricing/lastUpdated，避免全字段序列化进 RSC payload）
+  const cardTools = sortedTools.map((t) => ({
+    id: t.id,
+    slug: t.slug,
+    name: t.name,
+    vendor: t.vendor || '',
+    category: t.category,
+    description: t.description || '',
+    scores: t.scores,
+    screenshot: t.screenshot || null,
+    pricing: t.pricing,
+    lastUpdated: t.lastUpdated,
+  }));
 
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 py-8">
@@ -703,7 +716,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
         );
       })()}
 
-      <CategoryToolsClient tools={sortedTools} />
+      <CategoryToolsClient tools={cardTools as unknown as Tool[]} />
 
       {/* Category detailed content - SEO topic cluster */}
       {CATEGORY_CONTENT[params.slug] && (

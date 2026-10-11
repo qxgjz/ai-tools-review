@@ -26,11 +26,11 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   const sub = subcats[params.slug];
   if (!sub) return { title: 'Not Found' };
   const parentLabel = CATEGORY_NAMES[sub.parent] || sub.parent;
-  // 避免不同父类下同名子分类产生重复 title（如 vector-databases vs vector-db）
-  const title =
-    parentLabel && parentLabel !== sub.name
-      ? `${sub.name} - ${parentLabel} AI Tools 2026 | AIToolCrux`
-      : `${sub.name} - Top AI Tools 2026 | AIToolCrux`;
+  // 仅同名子分类（如 vector-databases vs vector-db）加父类防重复 title；其余保持简洁（≤60 字符）
+  const isDuplicateName = Object.values(subcats).filter((s) => s.name === sub.name).length > 1;
+  const title = isDuplicateName
+    ? `${sub.name} - ${parentLabel} AI Tools | AIToolCrux`
+    : `${sub.name} AI Tools | AIToolCrux`;
   return {
     title,
     description: `Discover the best ${sub.name.toLowerCase()} AI tools of 2026. We test and review ${sub.toolCount}+ tools with real hands-on experience, pricing, and pros/cons.`,
