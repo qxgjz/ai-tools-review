@@ -59,3 +59,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - lovable-vs-boltnew | Lovable vs Bolt.new 2026: We Built the Same App on Both | kw: lovable vs bolt.new
 - beautiful-ai-alternatives | 7 Best Beautiful.ai Alternatives in 2026 (Free & Paid) | kw: beautiful.ai alternatives
 - sudowrite-alternatives | 7 Best Sudowrite Alternatives in 2026 (For Novel Writers) | kw: sudowrite alternatives
+
+## batch19 (2026-10-12) - rewrite
+- clearscope-alternatives | 6 Best Clearscope Alternatives in 2026 (Cheaper & Better) | kw: clearscope alternatives | 73 | 2098 | 2 screenshots
+- gemini_38_flash_review | Gemini 3.8 Flash Review 2026: Speed, Pricing, and Is It Worth It? | kw: gemini 3.8 flash review | 73 | 2088 | 2 screenshots
+- dify-vs-langchain-2026 | Dify vs LangChain 2026: Which AI App Builder Should You Choose? | kw: dify vs langchain | 73 | 2061 | 2 screenshots
