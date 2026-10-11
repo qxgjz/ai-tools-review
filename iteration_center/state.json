@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 44,
+  "total_articles_generated": 47,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -8301,6 +8301,31 @@
       "iteration": "batch17",
       "date": "2026-10-11",
       "summary": "重写 cursor_ai_review / midjourney-v7-review-2026 / suno-alternatives (38->73); 重拍并核验 midjourney-plans/midjourney-home/suno-pricing 截图; posts.json 3条更新; articles 41->44"
+    },
+    {
+      "batch": "batch18",
+      "date": "2026-10-11",
+      "window": "window2/creator",
+      "action": "rewrite 3 low-score articles",
+      "slugs": [
+        "lovable-vs-boltnew",
+        "beautiful-ai-alternatives",
+        "sudowrite-alternatives"
+      ],
+      "zens_ink": [
+        73,
+        73,
+        73
+      ],
+      "llmevalkit": [
+        100,
+        100,
+        100
+      ],
+      "screenshots": 8,
+      "internal_links_ok": true,
+      "git": null,
+      "online_200": false
     }
   ],
   "last_commander_review": "2026-10-09",

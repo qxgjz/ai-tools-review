@@ -54,3 +54,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 | 2026-10-11 | batch17 | cursor_ai_review | Cursor AI review 2026 | REWRITE | 73 |
 | 2026-10-11 | batch17 | midjourney-v7-review-2026 | Midjourney v7 review 2026 | REWRITE | 73 |
 | 2026-10-11 | batch17 | suno-alternatives | best Suno alternatives 2026 | REWRITE | 73 |
+
+## batch18 (2026-10-11) - rewrite
+- lovable-vs-boltnew | Lovable vs Bolt.new 2026: We Built the Same App on Both | kw: lovable vs bolt.new
+- beautiful-ai-alternatives | 7 Best Beautiful.ai Alternatives in 2026 (Free & Paid) | kw: beautiful.ai alternatives
+- sudowrite-alternatives | 7 Best Sudowrite Alternatives in 2026 (For Novel Writers) | kw: sudowrite alternatives
