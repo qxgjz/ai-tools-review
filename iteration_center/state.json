@@ -1961,8 +1961,8 @@
     }
   ],
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
-  "latest_commit": "684c6de",
-  "last_commit": "684c6de",
+  "latest_commit": "aa7aa2d",
+  "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
   "last_action": "UX audit Oct11 11:00 - partial recovery after 60h, 1 new P0",
   "current_round": 79,
