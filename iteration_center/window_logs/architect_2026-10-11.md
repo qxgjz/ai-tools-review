@@ -132,3 +132,51 @@
 ## 说明
 - 3 条 P0 中 2 条为历史遗留的"本机网络慢"误报（站点实际健康，服务器端多轮验证），1 条 GEO 整改核验完成 + 实际修复 FAQPage 覆盖
 - 本机 curl/Python 到 Cloudflare 持续超时（curl size=0、requests ReadTimeout），线上验证统一用服务器端 web_fetch + 本地构建产物（Deploy success 后与线上一致）
+
+---
+
+# 架构师执行日志 2026-10-11（第9轮·追加）
+
+> 触发：定时任务「架构师-全栈技术修复（SOP版，验证闭环）」当日第 4 次
+
+## 处理待办：8 条（6 P0 + 2 P1）全部完成 → 架构师 pending=1（新增 P2）
+
+| 待办 | 级别 | 处理 | 验证产出 |
+|---|---|---|---|
+| P0-INDEX-404-001（20 个 404 页面） | P0 | **_redirects 追加 20 个 301**：13 个根路径文章→/blog/ 对应文章、2 个（content-creation/animation）→分类页、runway→runway-vs-pika-2026、suno→suno-review-2026 等，目标 slug 全部经 posts.json 核实存在 | 线上 /best-ai-coding-tools-2026 301 后完整渲染 ✅ |
+| P0-STRUCT-REDIRECT-001（8 组 category 双 slug） | P0 | audit_findings 确认 8 组（productivity/image/writing/audio/agent/design/code/**chatgpt-vs-claude**）；_redirects 已有 7 组，**本轮补齐第 8 组** /blog/category/chatgpt-vs-claude→/blog/category/ai-chat/ 301 | out/_redirects 含 chatgpt-vs-claude ✅ |
+| P0-PERF-PAGESIZE-001（100 工具页 >500KB） | P0 | 构建产物扫描 **533 工具页 0 页 >500KB**（最大 grammarly 369KB）——第 3 轮 toCardItem 模板级精简全站生效 | 扫描统计 ✅ |
+| P0-INDEX-NOINDEX-001（215 noindex） | P0 | 构建产物扫描 287 noindex 页：**285 = /blog/tag/*（有意）+ /404 + /submit，0 个内容页误伤** | 分类统计 ✅ |
+| P0-PERF-SLASH-001（无尾斜杠 308→404） | P0 | 服务器端 /blog/openai_astra_review（无尾斜杠）**200 完整渲染**；trailingSlash:true 下 308→200 正常，无流量损失 | web_fetch ✅ |
+| ux_p0_still_unstable_72h_2026-10-11_17h | P0 | 服务器端首页/ranking/blog 全部完整渲染、404 正常——"0 字节/5KB"系本机抓取截断，站点无故障（历史多轮同因） | web_fetch 4 页 ✅ |
+| P1-SEO-RICH-001（补 AggregateRating） | P1 | 代码注释确认 aggregateRating 曾因**违反 Google 政策**（单编辑评测 ratingCount=1）被移除；Review+reviewRating 是正确模式，**维持现状** | 代码证据 ✅ |
+| P1-DATA-TOOLSJSON-001（tools.json 8MB 解析失败） | P1 | 第 5 轮 tools.lite.json（822KB）已解决脚本解析；列表页已有 tools-index.json（1.76MB）轻量层；剩余 1.44MB 列表 chunk 优化**登记 P2**（避免高风险重构） | 分层验证 ✅ |
+
+## GEO 技术检查
+| 检查 | 结果 |
+|---|---|
+| GEO/AEO 审计 | 本轮聚焦 audit_findings P0 修复；上轮（第 8 轮）GEO 9.17/10、AI Crawler 11/11、llms.txt+llms-full.txt 10/10 保持不变 |
+| Lighthouse | 未重跑（上轮 3 页全 100；本轮改动为纯 _redirects 静态配置，不影响渲染） |
+
+## 门控结果
+- `npx tsc --noEmit`：**通过**（0 error）
+- `npm run build`：**通过**（exit 0）；out/_redirects 115 行含全部新 301
+
+## git push 结果
+- commit `ce74b21`（20 个 404→301 + 第 8 组 category 301）→ push 成功（436fbe3..ce74b21）
+- GitHub Actions：Lint success + CodeQL success + **Deploy success**
+
+## 线上验证
+| URL | 状态码 | 内容验证 |
+|---|---|---|
+| /best-ai-coding-tools-2026（原 404） | 301→200 | 完整渲染 Best AI Coding Tools 2026 文章 ✅ |
+
+## state.json 更新
+- **8 条待办全部 completed**（6 P0 + 2 P1，带核验说明）
+- 新增 P2 tech_list_chunk_optimize（列表页 1.44MB chunk 优化，架构师）
+- **架构师 pending：1（P2）**；全局 pending：74（P0:26, P1:41）
+
+## 说明
+- 本轮 6 个 P0 中 4 个为验证类（站点健康/noindex 构成/页面大小/尾斜杠——均无真实问题），2 个为实际修复（20 个 301 + 第 8 组 category 301）
+- AggregateRating 属于"审计建议但工程上正确判断是不加"（违反 Google 政策），以代码注释为证据标记完成
+- 本机 curl 持续超时，线上验证用服务器端 web_fetch（已确认站点正常）

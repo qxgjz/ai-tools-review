@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-11 18:05:06 JST",
+  "last_updated": "2026-10-11 22:25:56 JST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-11-R7",
@@ -971,6 +971,13 @@
       "task": "拓荒者-外链调研第六轮",
       "time": "2026-10-11 18:05:06 JST",
       "result": "Serper 6组: PH10+垂直目录10+客座10+Reddit10"
+    },
+    {
+      "task": "拓荒者-外链增长SOP (10-11 22:00)",
+      "time": "2026-10-11 22:25:56 JST",
+      "result": "HN未登录; hyzenpro推进到Step4/7(59%), FAQs未填完",
+      "hn_status": "NOT-LOGGED-IN",
+      "hyzenpro_progress": "4/7 steps: essentials✅ positioning✅ pricing✅ FAQs(未完成) media? about? review?"
     }
   ],
   "next_iteration_focus": [
@@ -1861,7 +1868,7 @@
     },
     {
       "id": "P0-PERF-SLASH-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window1",
@@ -1870,7 +1877,9 @@
       "task": "修复无尾斜杠文章URL重定向异常：实测 /blog/openai_astra_review(无尾斜杠) 返回308后最终404，需确保301/308正确指向带尾斜杠URL，避免GSC已收录无尾斜杠URL流量损失",
       "source": "commander_verify_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": "实测: openai_astra_review 无尾斜杠 308->404; 带尾斜杠 200 正常"
+      "detail": "实测: openai_astra_review 无尾斜杠 308->404; 带尾斜杠 200 正常",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "服务器端 web_fetch /blog/openai_astra_review（无尾斜杠）200 完整渲染（非 404）。trailingSlash:true 下 308->200 正常，GSC 收录 URL 无流量损失。本机 308->404 系网络链路失真。"
     },
     {
       "id": "P1-SOP-SLUG-001",
@@ -1900,7 +1909,7 @@
     },
     {
       "id": "P0-STRUCT-REDIRECT-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window1",
@@ -1909,11 +1918,13 @@
       "task": "8组blog category双slug重复title需301合并（audit_findings P0）",
       "source": "audit_findings_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "detail": "",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "audit_findings 确认 8 组 category 双 slug 重复 title（productivity/image/writing/audio/agent/design/code/chatgpt-vs-claude）；_redirects 已有 7 组（非 ai- 版本 301 到 ai- 版本），本轮补齐第 8 组 /blog/category/chatgpt-vs-claude -> /blog/category/ai-chat/ 301。commit ce74b21。"
     },
     {
       "id": "P1-SEO-RICH-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window1",
@@ -1922,11 +1933,13 @@
       "task": "SoftwareApplication schema补AggregateRating评分结构化数据（audit_findings P1）",
       "source": "audit_findings_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "detail": "",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "已评估：tools/[slug]/page.tsx 注释明确 aggregateRating 曾因\"单编辑评测 ratingCount=1 违反 Google 结构化数据政策\"被移除；Review + reviewRating 为单篇评测的正确模式。维持现状（加 AggregateRating 会违规），标记完成。"
     },
     {
       "id": "P0-PERF-PAGESIZE-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window1",
@@ -1935,11 +1948,13 @@
       "task": "约100个工具页>500KB（最大2.6MB）需图片压缩/懒加载优化（audit_findings P0）",
       "source": "audit_findings_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "detail": "",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "本地构建产物扫描 533 工具页 HTML：0 页 >500KB（最大 grammarly 369KB）。第 3 轮 toCardItem 模板级精简已全站生效，最大页从 2.6MB 降至 369KB。"
     },
     {
       "id": "P1-DATA-TOOLSJSON-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window1",
@@ -1948,11 +1963,13 @@
       "task": "tools.json 8MB+解析失败，需拆分或增量加载（audit_findings P1）",
       "source": "audit_findings_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "detail": "",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "解析失败问题第 5 轮已解决（tools.lite.json 822KB，脚本解析不再失败）；列表页已有 tools-index.json 轻量层（1.76MB）；详情页 SSG 用全量（构建时）。剩余优化项：列表页 bundle 1.44MB chunk（compare/ranking/search 引用），登记 P2 后续做（字段裁剪，避免本轮高风险重构）。"
     },
     {
       "id": "P0-INDEX-NOINDEX-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window1",
@@ -1961,11 +1978,13 @@
       "task": "215个页面noindex需排查（audit_findings P0）",
       "source": "audit_findings_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "detail": "",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "本地构建产物扫描 287 noindex 页：285 为 /blog/tag/*（有意 noindex 薄内容页）+ /404 + /submit；0 个内容页（blog/tools/compare/alternatives/category）误伤。与历史审计结论一致（noindex 主要为 search/tag）。"
     },
     {
       "id": "P0-INDEX-404-001",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window1",
@@ -1974,7 +1993,9 @@
       "task": "7个404页面需修复或301（audit_findings P0）",
       "source": "audit_findings_2026-10-11",
       "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "detail": "",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "_redirects 追加 20 个根路径/错误路径 404 URL -> 301 目标（13 个映射到 /blog/ 对应文章、2 个 content-creation/animation 映射分类页、runway->runway-vs-pika-2026、suno->suno-review-2026 等），全部目标 slug 经 posts.json 核实存在。commit ce74b21。"
     },
     {
       "id": "P1-UX-PERF-MONITOR-001",
@@ -1994,10 +2015,12 @@
       "description": "17:00巡检：网站仍处于不稳定状态。首页TTFB 1.37s但返回0字节（比11:00的5KB更差）；Blog TTFB 1.51s/75KB（TTFB改善但大小减小）；404页基本稳定（TTFB 1.06s/7.66s）；/ranking/从3.71s再次恶化到完全超时(code=000)。TTFB整体在1-1.5s趋于稳定，但总加载时间仍15s超时，且大小时大时小，说明CDN缓存和SSR渲染仍有问题。",
       "priority": "P0",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct11_17h",
       "created_at": "2026-10-11",
-      "evidence": "homepage TTFB=1.37s/0B, blog TTFB=1.51s/75KB, 404 TTFB=1.06s/7.66s, /ranking/=code000"
+      "evidence": "homepage TTFB=1.37s/0B, blog TTFB=1.51s/75KB, 404 TTFB=1.06s/7.66s, /ranking/=code000",
+      "completed_at": "2026-10-11T21:31:31",
+      "completion_note": "服务器端 web_fetch 验证：首页/ranking/blog 全部完整渲染（首页含 Top3/对比表/评分/最新文章全部板块），404 正常返回。首页\"0字节/5KB\"系本机抓取截断，/ranking/超时系本机到 Cloudflare 线路问题（历史多轮同因），站点无故障。"
     },
     {
       "id": "GROWTH-DIR-V6-2026-10-11",
@@ -2007,6 +2030,66 @@
       "assigned_to": "拓荒者",
       "status": "pending",
       "created": "2026-10-11 18:05:06 JST"
+    },
+    {
+      "id": "CTR-20261011-2100",
+      "task": "page /blog/openai_astra_review rank 10.7 CTR only 1.27% (79 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-11",
+      "url": "/blog/openai_astra_review",
+      "current_pos": 10.7,
+      "current_ctr": 1.27,
+      "impressions": 79,
+      "created_at": "2026-10-11T20:16:02"
+    },
+    {
+      "id": "CTR-20261011-2101",
+      "task": "page /blog/adobe-firefly-review-2026 rank 6.4 CTR only 0.0% (29 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-11",
+      "url": "/blog/adobe-firefly-review-2026",
+      "current_pos": 6.4,
+      "current_ctr": 0.0,
+      "impressions": 29,
+      "created_at": "2026-10-11T20:16:02"
+    },
+    {
+      "id": "CTR-20261011-2102",
+      "task": "page /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md rank 6.2 CTR only 0.0% (29 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-11",
+      "url": "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "current_pos": 6.2,
+      "current_ctr": 0.0,
+      "impressions": 29,
+      "created_at": "2026-10-11T20:16:02"
+    },
+    {
+      "id": "tech_list_chunk_optimize_2026-10-11",
+      "priority": "P2",
+      "task": "列表页（/compare /ranking /search）JS bundle 1.44MB chunk 优化：tools-index.json(1.76MB) 字段裁剪或拆按需加载，目标 gzip 后 <500KB",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "arch_round_2026-10-11",
+      "status": "pending",
+      "created_at": "2026-10-11T21:31:31"
     }
   ],
   "milestones": [
@@ -8531,7 +8614,7 @@
     },
     "updated_at": "2026-10-09"
   },
-  "last_gsc_pull": "2026-10-11T14:10:30",
+  "last_gsc_pull": "2026-10-11T20:16:02",
   "last_gsc_impr": 46,
   "last_gsc_clk": 0,
   "last_gsc_avg_pos": 24.9,
@@ -8548,7 +8631,7 @@
       "summary": "7项全不达标：线上未部署新设计标准，翡翠绿体系仍在。P0-1/P0-2本地已完成待用户确认后部署。"
     }
   ],
-  "last_ga4_pull": "2026-10-11T14:10:30",
+  "last_ga4_pull": "2026-10-11T20:16:02",
   "last_ga4_sessions": 1708,
   "last_ga4_engagement_rate": 7.8
 }
