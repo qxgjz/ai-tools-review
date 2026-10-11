@@ -87,3 +87,28 @@
 
 # Root category redirect
 /category/ / 301
+
+# Missing category slug (8th dup-title group)
+/blog/category/chatgpt-vs-claude /blog/category/ai-chat/ 301
+
+# Root-path article 404s -> /blog/ versions (audit_findings P0-INDEX-404-001, 20 URLs)
+/best-ai-coding-tools-2026 /blog/best-ai-coding-tools-2026/ 301
+/best-ai-content-creation-tools-2026 /blog/category/ai-writing/ 301
+/best-ai-email-tools-2026 /blog/best-ai-email-tools-2026/ 301
+/best-ai-image-generators-2026 /blog/best-ai-image-generators-2026/ 301
+/best-ai-note-taking-tools-2026 /blog/best-ai-note-taking-tools-2026/ 301
+/best-ai-productivity-tools-2026 /blog/best-ai-productivity-tools-2026/ 301
+/best-ai-seo-tools-2026 /blog/best-ai-seo-tools-2026/ 301
+/canva-ai-vs-adobe-firefly-2026-comparison /blog/canva-ai-vs-adobe-firefly-2026-comparison/ 301
+/cursor-vs-github-copilot-2026 /blog/cursor-vs-github-copilot-2026/ 301
+/cursor-vs-github-copilot-2026-comparison /blog/cursor-vs-github-copilot-2026/ 301
+/how-to-use-cursor-for-react-development /blog/how-to-use-cursor-for-react-development/ 301
+/jasper-vs-copy-ai-2026-comparison /blog/jasper-vs-copy-ai-2026-comparison/ 301
+/midjourney-vs-dall-e-3-2026-comparison /blog/midjourney-vs-dall-e-3-2026-comparison/ 301
+/notion-ai-vs-obsidian-2026 /blog/notion-ai-vs-obsidian-2026/ 301
+/blog/ai-tools-for-content-creation /blog/category/ai-writing/ 301
+/blog/best-ai-animation-tools-2026 /blog/category/ai-video/ 301
+/blog/elevenlabs-vs-murf-2026 /blog/elevenlabs-vs-murf-2026/ 301
+/blog/perplexity-vs-chatgpt-2026 /blog/perplexity-vs-chatgpt-2026/ 301
+/blog/runway-vs-pika-vs-sora /blog/runway-vs-pika-2026/ 301
+/blog/suno-vs-udio-2026 /blog/suno-review-2026/ 301
