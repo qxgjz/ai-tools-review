@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 53,
+  "total_articles_generated": 56,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -2084,14 +2084,16 @@
     },
     {
       "id": "P1-GSC-URL-VERIFY-20261012",
-      "task": "GSC收录补齐（冷启动第7知识点落地）：10个手动提交URL的验证仍未启动（用户侧GSC后台操作），需在GSC「网址检查」中对这10个URL执行验证/请求收录，确保533工具页+博客页覆盖收录（前14天唯一目标=被索引，我们已过此期但仍未验证10个URL）；指挥官每日调度时跟踪该用户侧待办",
+      "task": "用户已在GSC验证：midjourney/elevenlabs/notion-ai/github-copilot/cursor/sora/category-video 共7个已收录。剩余待提交正确URL：/tools/chatgpt、/tools/gpt-4o、/category/chat、/category/image、/category/video（若video未查）+确认gemini请求已生效。注意：原清单中 gpt-4/chatbots/image-generation/marketing 为错误slug（页面404不存在），已从待办移除。【已完成】用户已提交全部正确URL：chatgpt/gpt-4o/category-chat/category-image已请求收录；gemini已请求；7个（midjourney/elevenlabs/notion-ai/github-copilot/cursor/sora/category-video）已收录。2026-10-12用户确认。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "指挥官"
       ],
       "source": "commander_learning_cold_start_growth_20261012",
-      "created_at": "2026-10-12"
+      "created_at": "2026-10-12",
+      "updated_at": "2026-10-12T18:50:00",
+      "completed_at": "2026-10-12T19:00:00"
     },
     {
       "id": "GA4-20261012-000",
@@ -2281,6 +2283,50 @@
       "status": "pending",
       "source": "gsc_index_check_20261012",
       "created_at": "2026-10-12T18:20:00"
+    },
+    {
+      "id": "P1-INDEX-ERR-REDIRECT-20261012",
+      "task": "修复GSC收录错误：①9个重复网页未选规范（筛选后每条设canonical）②9个网页自动重定向（从上次3个新增到9个，重点排查新发布文章/301/trailing slash问题）③1个重定向错误。修复后到GSC验证状态变绿",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "gsc_index_screenshot_20261012",
+      "created_at": "2026-10-12T18:35:00"
+    },
+    {
+      "id": "P1-INDEX-NOINDEX-404-20261012",
+      "task": "处理GSC收录标记：①5个被noindex排除的页面逐一检查是否应收录（不该noindex的移除标签）②2个404页面修复或301到相关页",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "gsc_index_screenshot_20261012",
+      "created_at": "2026-10-12T18:35:00"
+    },
+    {
+      "id": "P0-INDEXNOW-BATCH-20261012",
+      "task": "用IndexNow批量提交400个已发现未编入索引页面（优先Top50高价值工具页+全部文章页+分类页），key文件确认在站内，提交后监控GSC抓取时间变化",
+      "priority": "P0",
+      "assigned_to": [
+        "增长黑客"
+      ],
+      "status": "pending",
+      "source": "gsc_index_screenshot_20261012",
+      "created_at": "2026-10-12T18:35:00"
+    },
+    {
+      "id": "P1-FIX-BAD-URL-LIST-20261012",
+      "task": "修正iteration_center/index_monitor.md和knowledge_analytics.md中错误URL清单：gpt-4→/tools/chatgpt与/tools/gpt-4o（真实slug）、chatbots→/category/chat、image-generation→/category/image、marketing分类不存在（本地category=marketing为0个工具，删除该条或说明）。确保后续窗口不再引用404 URL做手动提交",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "gsc_manual_verify_20261012",
+      "created_at": "2026-10-12T18:50:00"
     }
   ],
   "milestones": [
@@ -8994,6 +9040,24 @@
       "git": "d8809aa pushed",
       "online_200": "suno-review-2026/elevenlabs-review-2026/dify_ai_review all 200",
       "deploy": "success"
+    },
+    {
+      "batch": "batch21",
+      "date": "2026-10-12",
+      "window": "window2",
+      "action": "rewrite 3 low-score articles (devin-ai-review 68, claude-opus-4-vs-gpt-5-2026 68, perplexity-vs-chatgpt-2026 68) to SOP standard; screenshots verified one-by-one (devin-home/devin-pricing/perplexity-pricing newly captured, claude-pricing/chatgpt-pricing reused)",
+      "slugs": [
+        "devin-ai-review",
+        "claude-opus-4-vs-gpt-5-2026",
+        "perplexity-vs-chatgpt-2026"
+      ],
+      "zens_ink": "73/73/73",
+      "llmevalkit": "100/100/100",
+      "screenshots": "2 per article, all verified one-by-one",
+      "internal_links_ok": true,
+      "git": "pending push",
+      "online_200": "pending",
+      "deploy": "pending"
     }
   ],
   "last_commander_review": "2026-10-09",

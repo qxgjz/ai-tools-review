@@ -69,3 +69,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - suno-review-2026 | Suno AI Review 2026: Pricing, Features, and Is It Worth It? | kw: suno ai review | 73 | 2159 | 2 screenshots
 - elevenlabs-review-2026 | ElevenLabs Review 2026: Best AI Voice Generator & Cloning? | kw: elevenlabs review | 73 | 2125 | 2 screenshots
 - dify_ai_review | Dify AI Review 2026: Best Open-Source LLMOps? | kw: dify ai review | 73 | 2143 | 2 screenshots
+
+## batch21 (2026-10-12) - rewrite
+- devin-ai-review | Devin AI Review 2026: Pricing, Features, and Is It Worth It? | kw: devin ai review | 73 | 2128 | 2 screenshots
+- claude-opus-4-vs-gpt-5-2026 | Claude Opus 4 vs GPT-5: Which LLM Wins 2026? | kw: claude opus 4 vs gpt 5 | 73 | 2131 | 2 screenshots
+- perplexity-vs-chatgpt-2026 | Perplexity AI vs ChatGPT 2026: Which Wins? | kw: perplexity vs chatgpt | 73 | 2161 | 2 screenshots
