@@ -64,3 +64,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - clearscope-alternatives | 6 Best Clearscope Alternatives in 2026 (Cheaper & Better) | kw: clearscope alternatives | 73 | 2098 | 2 screenshots
 - gemini_38_flash_review | Gemini 3.8 Flash Review 2026: Speed, Pricing, and Is It Worth It? | kw: gemini 3.8 flash review | 73 | 2088 | 2 screenshots
 - dify-vs-langchain-2026 | Dify vs LangChain 2026: Which AI App Builder Should You Choose? | kw: dify vs langchain | 73 | 2061 | 2 screenshots
+
+## batch20 (2026-10-12) - rewrite
+- suno-review-2026 | Suno AI Review 2026: Pricing, Features, and Is It Worth It? | kw: suno ai review | 73 | 2159 | 2 screenshots
+- elevenlabs-review-2026 | ElevenLabs Review 2026: Best AI Voice Generator & Cloning? | kw: elevenlabs review | 73 | 2125 | 2 screenshots
+- dify_ai_review | Dify AI Review 2026: Best Open-Source LLMOps? | kw: dify ai review | 73 | 2143 | 2 screenshots
