@@ -8,6 +8,10 @@ import subcategories from '@/data/subcategories.json';
 // 网站基础 URL（部署后替换为你的域名）
 const BASE_URL = 'https://www.aitoolcrux.com';
 
+// 站点启用 trailingSlash（next.config.js trailingSlash:true），sitemap 必须提交带尾斜杠的规范 URL，
+// 否则 Google 抓取无尾斜杠 URL 会遇到 301 → GSC 报 redirect/redirect_error。
+const withSlash = (p: string) => (p === '/' || p.endsWith('/') ? p : `${p}/`);
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // 静态页面
   const staticPages: MetadataRoute.Sitemap = [
@@ -18,85 +22,85 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 1,
     },
     {
-      url: `${BASE_URL}/ranking`,
+      url: `${BASE_URL}${withSlash('/ranking')}`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.95,
     },
     {
-      url: `${BASE_URL}/compare`,
+      url: `${BASE_URL}${withSlash('/compare')}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.85,
     },
     {
-      url: `${BASE_URL}/free-ai-tools-guide`,
+      url: `${BASE_URL}${withSlash('/free-ai-tools-guide')}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/generator`,
+      url: `${BASE_URL}${withSlash('/generator')}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.7,
     },
     {
-      url: `${BASE_URL}/blog`,
+      url: `${BASE_URL}${withSlash('/blog')}`,
       lastModified: new Date(),
       changeFrequency: 'daily',
       priority: 0.9,
     },
     {
-      url: `${BASE_URL}/authors`,
+      url: `${BASE_URL}${withSlash('/authors')}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${BASE_URL}/about`,
+      url: `${BASE_URL}${withSlash('/about')}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${BASE_URL}/contact`,
+      url: `${BASE_URL}${withSlash('/contact')}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.4,
     },
     {
-      url: `${BASE_URL}/disclosure`,
+      url: `${BASE_URL}${withSlash('/disclosure')}`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${BASE_URL}/privacy`,
+      url: `${BASE_URL}${withSlash('/privacy')}`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${BASE_URL}/terms`,
+      url: `${BASE_URL}${withSlash('/terms')}`,
       lastModified: new Date(),
       changeFrequency: 'yearly',
       priority: 0.3,
     },
     {
-      url: `${BASE_URL}/methodology`,
+      url: `${BASE_URL}${withSlash('/methodology')}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.6,
     },
     {
-      url: `${BASE_URL}/ai-policy`,
+      url: `${BASE_URL}${withSlash('/ai-policy')}`,
       lastModified: new Date(),
       changeFrequency: 'monthly',
       priority: 0.5,
     },
     {
-      url: `${BASE_URL}/alternatives`,
+      url: `${BASE_URL}${withSlash('/alternatives')}`,
       lastModified: new Date(),
       changeFrequency: 'weekly',
       priority: 0.8,
@@ -105,7 +109,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 工具详情页
   const toolPages: MetadataRoute.Sitemap = tools.map((tool) => ({
-    url: `${BASE_URL}/tools/${tool.slug}`,
+    url: `${BASE_URL}${withSlash(`/tools/${tool.slug}`)}`,
     lastModified: new Date(tool.lastUpdated),
     changeFrequency: 'weekly',
     priority: 0.8,
@@ -114,7 +118,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // 分类页（从工具数据中提取唯一分类）
   const categories = [...new Set(tools.map((t) => t.category))];
   const categoryPages: MetadataRoute.Sitemap = categories.map((cat) => ({
-    url: `${BASE_URL}/category/${cat}`,
+    url: `${BASE_URL}${withSlash(`/category/${cat}`)}`,
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 0.7,
@@ -147,7 +151,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
 
     return {
-      url: `${BASE_URL}/blog/${post.slug}`,
+      url: `${BASE_URL}${withSlash(`/blog/${post.slug}`)}`,
       lastModified: new Date(post.date || new Date().toISOString()),
       changeFrequency,
       priority,
@@ -168,7 +172,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ...new Set(posts.map((p) => p.categorySlug).filter((s): s is string => Boolean(s))),
   ].filter((slug) => !aliasSlugs.has(slug));
   const blogCategoryPages: MetadataRoute.Sitemap = blogCategories.map((cat) => ({
-    url: `${BASE_URL}/blog/category/${cat}`,
+    url: `${BASE_URL}${withSlash(`/blog/category/${cat}`)}`,
     lastModified: new Date(),
     changeFrequency: 'daily',
     priority: 0.65,
@@ -176,7 +180,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 替代方案详情页
   const alternativePages: MetadataRoute.Sitemap = alternatives.map((alt) => ({
-    url: `${BASE_URL}/alternatives/${alt.slug}`,
+    url: `${BASE_URL}${withSlash(`/alternatives/${alt.slug}`)}`,
     lastModified: new Date(),
     changeFrequency: 'weekly',
     priority: 0.75,
@@ -184,7 +188,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // 对比页
   const comparisonPages: MetadataRoute.Sitemap = comparisons.map((comp: any) => ({
-    url: `${BASE_URL}/compare/${comp.slug}`,
+    url: `${BASE_URL}${withSlash(`/compare/${comp.slug}`)}`,
     lastModified: new Date('2026-09-13'),
     changeFrequency: 'weekly',
     priority: 0.85,
@@ -194,7 +198,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   const subcategoryPages: MetadataRoute.Sitemap = Object.entries(subcategories)
     .filter(([, meta]) => (meta as any).toolCount > 0)
     .map(([slug]) => ({
-      url: `${BASE_URL}/subcategory/${slug}`,
+      url: `${BASE_URL}${withSlash(`/subcategory/${slug}`)}`,
       lastModified: new Date(),
       changeFrequency: 'weekly' as const,
       priority: 0.65,
