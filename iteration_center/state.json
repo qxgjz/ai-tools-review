@@ -507,8 +507,18 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-12 14:10:42 JST",
+  "last_updated": "2026-10-12 18:03:05 JST",
   "completed_tasks": [
+    {
+      "id": "POLISH-2026-10-12-R9",
+      "priority": "P0",
+      "title": "R9: 5 CTR titles + 3 low articles fixed",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "result": "5 CTR (gemini/cursor/sd/dify/suno); adobe-firefly 55->100, canva-student 55->95, 11labs-vs-playht 55->80"
+    },
     {
       "id": "POLISH-2026-10-12-R8",
       "priority": "P1",
@@ -1020,6 +1030,11 @@
       "task": "拓荒者-外链增长SOP (10-12 14:00)",
       "time": "2026-10-12 14:10:42 JST",
       "result": "HN未登录; saner.ai联系邮箱contact@saner.ai已找到, 待发邮件"
+    },
+    {
+      "task": "拓荒者-外链调研第九轮",
+      "time": "2026-10-12 18:03:05 JST",
+      "result": "Serper 6组: 新目录7+客座10+toolify10+聚合10"
     }
   ],
   "next_iteration_focus": [
@@ -1942,57 +1957,6 @@
       "created": "2026-10-11 18:05:06 JST"
     },
     {
-      "id": "CTR-20261011-2100",
-      "task": "page /blog/openai_astra_review rank 10.7 CTR only 1.27% (79 impr), optimize title/meta",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "ctr_optimization_2026-10-11",
-      "url": "/blog/openai_astra_review",
-      "current_pos": 10.7,
-      "current_ctr": 1.27,
-      "impressions": 79,
-      "created_at": "2026-10-11T20:16:02",
-      "completed_at": "2026-10-12T13:30:00+08:00"
-    },
-    {
-      "id": "CTR-20261011-2101",
-      "task": "page /blog/adobe-firefly-review-2026 rank 6.4 CTR only 0.0% (29 impr), optimize title/meta",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "ctr_optimization_2026-10-11",
-      "url": "/blog/adobe-firefly-review-2026",
-      "current_pos": 6.4,
-      "current_ctr": 0.0,
-      "impressions": 29,
-      "created_at": "2026-10-11T20:16:02",
-      "completed_at": "2026-10-12T13:30:00+08:00"
-    },
-    {
-      "id": "CTR-20261011-2102",
-      "task": "page /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md rank 6.2 CTR only 0.0% (29 impr), optimize title/meta",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "ctr_optimization_2026-10-11",
-      "url": "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
-      "current_pos": 6.2,
-      "current_ctr": 0.0,
-      "impressions": 29,
-      "created_at": "2026-10-11T20:16:02",
-      "completed_at": "2026-10-12T13:30:00+08:00"
-    },
-    {
       "id": "GROWTH-DIR-V7-2026-10-12",
       "priority": "P2",
       "title": "调研2个第七轮新目录站",
@@ -2009,62 +1973,6 @@
       "assigned_to": "拓荒者",
       "status": "pending",
       "created": "2026-10-12 02:03:10 JST"
-    },
-    {
-      "id": "PERF-LCP-IMAGE-2026-10-12",
-      "priority": "P0",
-      "task": "LCP 图片优化：博客/工具页首图加 fetchpriority=high + 去 loading=lazy + head 加 preload（web.dev：73% 移动页 LCP 是图片，35% LCP 图不在初始 HTML 导致发现延迟 1290ms）",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "completed",
-      "created_at": "2026-10-12T05:03:04",
-      "completed_at": "2026-10-12T12:33:19",
-      "completion_note": "lib/markdown.ts 首图 eager+fetchpriority=high+width/height；ToolScreenshot priority prop；工具页首截图 priority。构建产物验证：blog首图 fetchpriority=high width=1200 height=675，后续图 lazy"
-    },
-    {
-      "id": "PERF-CLS-MEDIA-2026-10-12",
-      "priority": "P1",
-      "task": "CLS 修复：全站 img/video/iframe 补显式 width/height 或 CSS aspect-ratio（博客模板 + 工具页截图），CLS 预算 <=0.1",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "completed",
-      "created_at": "2026-10-12T05:03:04",
-      "completed_at": "2026-10-12T12:33:19",
-      "completion_note": "globals.css prose img 加 aspect-ratio:16/9+object-fit:cover；markdown渲染img全部补 width=1200 height=675；构建产物验证通过"
-    },
-    {
-      "id": "PERF-CACHE-BFCACHE-2026-10-12",
-      "priority": "P1",
-      "task": "缓存与 bfcache：Cloudflare Pages _headers 为 HTML 设短期 Cache-Control 并确认无 no-store/unload 监听（bfcache 免费性能，2022 年 CLS 最大改善来源）",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "completed",
-      "created_at": "2026-10-12T05:03:04",
-      "completed_at": "2026-10-12T12:33:19",
-      "completion_note": "_headers 已有 HTML Cache-Control: max-age=300 + /404.html 缓存；app/ 无 unload/beforeunload 监听；仅 /api/* no-store（静态页不受影响）"
-    },
-    {
-      "id": "PERF-BUNDLE-AUDIT-2026-10-12",
-      "priority": "P1",
-      "task": "bundle 二次审计：webpack-bundle-analyzer 找剩余大 chunk + coverage 找未用 JS（tree-shaking 前提：ES6 import/显式导入/sideEffects；code splitting 分离非首屏代码）",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "completed",
-      "created_at": "2026-10-12T05:03:04",
-      "completed_at": "2026-10-12T12:33:19",
-      "completion_note": "chunk 最大仍 642KB 无回归；First Load JS shared 87.4KB；工具页 169KB/子分类 140KB；lucide/framer-motion 按需引入；@next/bundle-analyzer 未 wire 到 next.config.mjs（记录为后续项）"
     },
     {
       "id": "GROWTH-HYZENPRO-CHECK-2026-10-12",
@@ -2113,19 +2021,6 @@
       "created_at": "2026-10-12T06:50:00"
     },
     {
-      "id": "P1-POLISH-BATCH-20261012",
-      "task": "批量打磨：创作家pending中有多篇待质量提升文章，打磨师按关键词/痛点优先级批量打磨>=5篇（用真实slug+zens-ink复查>=70分）",
-      "assigned_to": [
-        "打磨师",
-        "window5"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "commander_coord_20261012",
-      "created_at": "2026-10-12T06:50:00",
-      "completed_at": "2026-10-12T13:30:00+08:00"
-    },
-    {
       "id": "P1-PAIN-NEW-20261012",
       "task": "拓荒者新选题：继续从Reddit/HN/G2挖掘AI工具新痛点，本轮产出>=3个P0+5个P1痛点并写state待办",
       "assigned_to": [
@@ -2135,20 +2030,6 @@
       "status": "pending",
       "source": "commander_coord_20261012",
       "created_at": "2026-10-12T06:50:00"
-    },
-    {
-      "id": "P0-PSEO-DEDUP-20261012",
-      "task": "pSEO全量去重：对全部533工具页检查H1/导语/FAQ是否差异化（防止重复模板被Google判为重复内容），列表页/工具页模板需保证intro和FAQ按工具动态生成",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "commander_weekly_review_20261012",
-      "created_at": "2026-10-12",
-      "completed_at": "2026-10-12T12:33:19",
-      "completion_note": "533工具 slug/name/description/pricing/scores 全唯一零缺失；H1=name动态、导语=动态模板(含rating/vendor/category/pros)、8个FAQ全插入工具特有字段(差异化确认)"
     },
     {
       "id": "P1-GEO-THREE-20261012",
@@ -2279,19 +2160,6 @@
       "created": "2026-10-12 10:02:04 JST"
     },
     {
-      "id": "ux_p1_recovery_progress_2026-10-12",
-      "title": "P1: 网站恢复进展明显——首页恢复到359KB，Blog/ranking恢复，但404页仍完全超时",
-      "description": "10月12日11:00巡检：故障持续约96小时后，恢复进展明显。首页从昨晚35KB恢复到359KB（接近正常494KB）；Blog从code=000恢复到TTFB 4.56s/184KB；/ranking/从code=000恢复到TTFB 1.40s/84KB。仅剩404页面完全超时(code=000)。所有页面总加载仍15s超时，但页面大小和可用性在持续改善。建议继续观察，重点关注404页面何时恢复。",
-      "priority": "P1",
-      "assigned_to": "window1",
-      "status": "completed",
-      "source": "ux_audit_oct12_11h",
-      "created_at": "2026-10-12",
-      "evidence": "homepage TTFB=1.93s/359KB, blog TTFB=4.56s/184KB, 404=code000, /ranking/ TTFB=1.40s/84KB",
-      "completed_at": "2026-10-12T12:33:19",
-      "completion_note": "服务器端 web_fetch 404页有响应(HTTP 404 正常返回，非code=000超时)；首页/blog/ranking 恢复确认；线路问题证伪"
-    },
-    {
       "id": "GROWTH-SANER-EMAIL-2026-10-12",
       "priority": "P1",
       "title": "发邮件给contact@saner.ai推荐AIToolCrux",
@@ -2299,6 +2167,120 @@
       "assigned_to": "拓荒者",
       "status": "pending",
       "created": "2026-10-12 14:10:42 JST"
+    },
+    {
+      "id": "P0-CTR-TITLE-BATCH-20261012",
+      "task": "CTR批量优化（audit_findings P0-2/P1-1遗留+GSC 10-12 仍有高曝光零点击页）：对GSC top_pages 中排名<=20且CTR<1%的页面批量重写title/meta（含数字+年份+情感词），目标全站CTR 0.45%→1%+；参考best-ai-voice-changers-2026 CTR 2.9%的'best X 2026'格式",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "source": "audit_findings.md",
+      "created_at": "2026-10-12",
+      "completed_at": "2026-10-12T19:30:00+08:00"
+    },
+    {
+      "id": "P1-ANALYTICS-KEYEVENT-20261012",
+      "task": "转化追踪落地（audit_findings P1-3）：GA4创建affiliate_link_click自定义事件+自定义维度(affiliate_network/offer_id/placement)并标记Key Event；验证联盟链接点击可追踪（GTM或gtag配置）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "source": "audit_findings.md",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P1-H1-MISSING-20261012",
+      "task": "H1缺失修复（audit_findings 9-27：121页缺H1，含5个article-api-*自动页）：创作家/打磨师批量检查并补H1（每页唯一H1），架构师核查模板层H1输出；同时301处理article-api-*丑陋URL",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家",
+        "window5",
+        "打磨师"
+      ],
+      "source": "audit_findings.md",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P1-THIN-CATEGORY-20261012",
+      "task": "薄内容分类页修复（audit_findings 9-27：10个分类页138-148词）：为/blog/category/*和/subcategory/*添加>=300词介绍性文字，或设置noindex（二选一按价值判断）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window3",
+        "创作家"
+      ],
+      "source": "audit_findings.md",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P0-URGE-W2-20261012",
+      "task": "催办：window2当前37条pending(P0=16)严重超载，完成率<50%；本周优先消化P0-COMMUNITY-REDDIT(Reddit暖号)、P0-BACKLINK-15(外链5-15域名)、新目录提交3条；目录批量提交类任务可移交拓荒者分担，window2聚焦社区渠道+编辑链接",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "增长黑客"
+      ],
+      "source": "commander_coord_20261012",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P0-URGE-CREATOR-20261012",
+      "task": "催办：创作家当前36条pending(P0=15)严重超载，完成率<50%；本周按GSC/关键词优先级批量出文>=5篇（优先ai agent词簇：best-ai-agents-2026/ai-agent-vs-chatbot/how-to-build-an-ai-agent），每篇2000字+FAQ+引用真实用户评论，写完必须交打磨师审计",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "创作家",
+        "window3"
+      ],
+      "source": "commander_coord_20261012",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "ux_p1_still_fluctuating_2026-10-12_17h",
+      "title": "P1: 网站仍在波动——404页恢复了，但Blog TTFB飙到14.7s，/ranking/又完全超时",
+      "description": "17:00巡检：网站仍在不稳定波动中。好消息：404页面从code=000恢复到404/TTFB 1.47s（持续不可达约48小时后首次恢复）。坏消息：Blog从184KB/TTFB 4.56s恶化到951B/TTFB 14.7s（接近完全超时）；/ranking/从84KB/TTFB 1.40s再次完全超时(code=000)；首页从359KB降到110KB。仍是轮流宕机模式，但404的恢复说明整体在缓慢好转。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit_oct12_17h",
+      "created_at": "2026-10-12",
+      "evidence": "homepage TTFB=3.89s/110KB, blog TTFB=14.71s/951B, 404=404 TTFB=1.47s, /ranking/=code000"
+    },
+    {
+      "id": "GROWTH-DIR-V9-2026-10-12",
+      "priority": "P2",
+      "title": "调研2个第九轮新免费目录",
+      "description": "筛选免费、无需登录、编辑审核的目录站",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "created": "2026-10-12 18:03:05 JST"
+    },
+    {
+      "id": "GROWTH-GUEST-2026-10-12",
+      "priority": "P1",
+      "title": "向2个接受guest post的AI博客投稿",
+      "description": "客座博客=高质量外链+精准流量",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "created": "2026-10-12 18:03:05 JST"
+    },
+    {
+      "id": "P1-GSC-SITEMAP-INDEXED-20261012",
+      "task": "给GSC自动化workflow增加sitemaps indexed拉取：在cmd_sched_gsc脚本中调用webmasters.sitemaps.list，把每个sitemap的submitted/indexed/覆盖率写入gsc-ga4-report/live_pull文件新增字段coverage，确保每天自动产出收录数（当前本地直连Google API超时，只能靠GitHub Actions拉取）",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "gsc_index_check_20261012",
+      "created_at": "2026-10-12T18:20:00"
     }
   ],
   "milestones": [
@@ -2315,7 +2297,7 @@
   "latest_commit": "d8809aa",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
-  "last_action": "UX audit Oct12 11:00 - recovery progress, homepage 359KB, 1 new P1",
+  "last_action": "UX audit Oct12 17:00 - still fluctuating, 404 recovered, 1 new P1",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -8668,6 +8650,163 @@
       "completion_note": "同上：三核心页服务器端全部完整渲染；UX 巡检使用的本机抓取不可达（curl size=0/ReadTimeout），已多轮证实为链路问题。本轮列表 JS 减半进一步降低页面加载对网络的依赖。",
       "archived_at": "2026-10-12T06:40:00",
       "verification": "2026-10-12早间线上复测通过：/ranking/200 /tools/midjourney/200 369KB /blog/best-ai-search-engines-2026 200 首页200 464KB 无尾斜杠301生效 tools-index拆分落地(870KB)"
+    },
+    {
+      "id": "CTR-20261011-2100",
+      "task": "page /blog/openai_astra_review rank 10.7 CTR only 1.27% (79 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "ctr_optimization_2026-10-11",
+      "url": "/blog/openai_astra_review",
+      "current_pos": 10.7,
+      "current_ctr": 1.27,
+      "impressions": 79,
+      "created_at": "2026-10-11T20:16:02",
+      "completed_at": "2026-10-12T13:30:00+08:00",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "CTR-20261011-2101",
+      "task": "page /blog/adobe-firefly-review-2026 rank 6.4 CTR only 0.0% (29 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "ctr_optimization_2026-10-11",
+      "url": "/blog/adobe-firefly-review-2026",
+      "current_pos": 6.4,
+      "current_ctr": 0.0,
+      "impressions": 29,
+      "created_at": "2026-10-11T20:16:02",
+      "completed_at": "2026-10-12T13:30:00+08:00",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "CTR-20261011-2102",
+      "task": "page /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md rank 6.2 CTR only 0.0% (29 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "ctr_optimization_2026-10-11",
+      "url": "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "current_pos": 6.2,
+      "current_ctr": 0.0,
+      "impressions": 29,
+      "created_at": "2026-10-11T20:16:02",
+      "completed_at": "2026-10-12T13:30:00+08:00",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "PERF-LCP-IMAGE-2026-10-12",
+      "priority": "P0",
+      "task": "LCP 图片优化：博客/工具页首图加 fetchpriority=high + 去 loading=lazy + head 加 preload（web.dev：73% 移动页 LCP 是图片，35% LCP 图不在初始 HTML 导致发现延迟 1290ms）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "lib/markdown.ts 首图 eager+fetchpriority=high+width/height；ToolScreenshot priority prop；工具页首截图 priority。构建产物验证：blog首图 fetchpriority=high width=1200 height=675，后续图 lazy",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "PERF-CLS-MEDIA-2026-10-12",
+      "priority": "P1",
+      "task": "CLS 修复：全站 img/video/iframe 补显式 width/height 或 CSS aspect-ratio（博客模板 + 工具页截图），CLS 预算 <=0.1",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "globals.css prose img 加 aspect-ratio:16/9+object-fit:cover；markdown渲染img全部补 width=1200 height=675；构建产物验证通过",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "PERF-CACHE-BFCACHE-2026-10-12",
+      "priority": "P1",
+      "task": "缓存与 bfcache：Cloudflare Pages _headers 为 HTML 设短期 Cache-Control 并确认无 no-store/unload 监听（bfcache 免费性能，2022 年 CLS 最大改善来源）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "_headers 已有 HTML Cache-Control: max-age=300 + /404.html 缓存；app/ 无 unload/beforeunload 监听；仅 /api/* no-store（静态页不受影响）",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "PERF-BUNDLE-AUDIT-2026-10-12",
+      "priority": "P1",
+      "task": "bundle 二次审计：webpack-bundle-analyzer 找剩余大 chunk + coverage 找未用 JS（tree-shaking 前提：ES6 import/显式导入/sideEffects；code splitting 分离非首屏代码）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "架构师学习_前端性能优化_2026-10-12",
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "chunk 最大仍 642KB 无回归；First Load JS shared 87.4KB；工具页 169KB/子分类 140KB；lucide/framer-motion 按需引入；@next/bundle-analyzer 未 wire 到 next.config.mjs（记录为后续项）",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "P1-POLISH-BATCH-20261012",
+      "task": "批量打磨：创作家pending中有多篇待质量提升文章，打磨师按关键词/痛点优先级批量打磨>=5篇（用真实slug+zens-ink复查>=70分）",
+      "assigned_to": [
+        "打磨师",
+        "window5"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "commander_coord_20261012",
+      "created_at": "2026-10-12T06:50:00",
+      "completed_at": "2026-10-12T13:30:00+08:00",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "P0-PSEO-DEDUP-20261012",
+      "task": "pSEO全量去重：对全部533工具页检查H1/导语/FAQ是否差异化（防止重复模板被Google判为重复内容），列表页/工具页模板需保证intro和FAQ按工具动态生成",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "commander_weekly_review_20261012",
+      "created_at": "2026-10-12",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "533工具 slug/name/description/pricing/scores 全唯一零缺失；H1=name动态、导语=动态模板(含rating/vendor/category/pros)、8个FAQ全插入工具特有字段(差异化确认)",
+      "archived_at": "2026-10-12T13:40:00+08:00"
+    },
+    {
+      "id": "ux_p1_recovery_progress_2026-10-12",
+      "title": "P1: 网站恢复进展明显——首页恢复到359KB，Blog/ranking恢复，但404页仍完全超时",
+      "description": "10月12日11:00巡检：故障持续约96小时后，恢复进展明显。首页从昨晚35KB恢复到359KB（接近正常494KB）；Blog从code=000恢复到TTFB 4.56s/184KB；/ranking/从code=000恢复到TTFB 1.40s/84KB。仅剩404页面完全超时(code=000)。所有页面总加载仍15s超时，但页面大小和可用性在持续改善。建议继续观察，重点关注404页面何时恢复。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "completed",
+      "source": "ux_audit_oct12_11h",
+      "created_at": "2026-10-12",
+      "evidence": "homepage TTFB=1.93s/359KB, blog TTFB=4.56s/184KB, 404=code000, /ranking/ TTFB=1.40s/84KB",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "服务器端 web_fetch 404页有响应(HTTP 404 正常返回，非code=000超时)；首页/blog/ranking 恢复确认；线路问题证伪",
+      "archived_at": "2026-10-12T13:40:00+08:00"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -9059,7 +9198,7 @@
     },
     "updated_at": "2026-10-09"
   },
-  "last_gsc_pull": "2026-10-12T08:16:41",
+  "last_gsc_pull": "2026-10-12T14:40:27",
   "last_gsc_impr": 46,
   "last_gsc_clk": 0,
   "last_gsc_avg_pos": 24.9,
@@ -9076,7 +9215,7 @@
       "summary": "7项全不达标：线上未部署新设计标准，翡翠绿体系仍在。P0-1/P0-2本地已完成待用户确认后部署。"
     }
   ],
-  "last_ga4_pull": "2026-10-12T08:16:41",
+  "last_ga4_pull": "2026-10-12T14:40:27",
   "last_ga4_sessions": 1708,
   "last_ga4_engagement_rate": 7.8
 }
