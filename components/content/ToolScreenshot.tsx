@@ -10,6 +10,8 @@ interface ToolScreenshotProps {
   className?: string;
   /** Optional resolved screenshot URL. If provided, used instead of the default /screenshots/{slug}.svg */
   screenshotUrl?: string;
+  /** If true, the screenshot is treated as a priority (above-the-fold) image: eager + fetchpriority=high */
+  priority?: boolean;
 }
 
 export function ToolScreenshot({
@@ -18,6 +20,7 @@ export function ToolScreenshot({
   vendor,
   className = '',
   screenshotUrl,
+  priority = false,
 }: ToolScreenshotProps) {
   const [isLightboxOpen, setIsLightboxOpen] = useState(false);
   const [imageError, setImageError] = useState(false);
@@ -49,7 +52,8 @@ export function ToolScreenshot({
           alt={`${toolName} screenshot - ${vendor || 'AIToolCrux'}`}
           className="w-full h-auto object-cover"
           onError={() => setImageError(true)}
-          loading="lazy"
+          loading={priority ? 'eager' : 'lazy'}
+          fetchPriority={priority ? 'high' : undefined}
           width={1200}
           height={675}
         />

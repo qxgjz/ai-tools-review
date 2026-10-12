@@ -1257,6 +1257,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           toolName={tool.name}
           vendor={tool.vendor}
           screenshotUrl={resolvedScreenshotPath}
+          priority
         />
       </section>
 

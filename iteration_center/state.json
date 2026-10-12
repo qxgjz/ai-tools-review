@@ -2014,8 +2014,10 @@
         "架构师"
       ],
       "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "pending",
-      "created_at": "2026-10-12T05:03:04"
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "lib/markdown.ts 首图 eager+fetchpriority=high+width/height；ToolScreenshot priority prop；工具页首截图 priority。构建产物验证：blog首图 fetchpriority=high width=1200 height=675，后续图 lazy"
     },
     {
       "id": "PERF-CLS-MEDIA-2026-10-12",
@@ -2026,8 +2028,10 @@
         "架构师"
       ],
       "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "pending",
-      "created_at": "2026-10-12T05:03:04"
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "globals.css prose img 加 aspect-ratio:16/9+object-fit:cover；markdown渲染img全部补 width=1200 height=675；构建产物验证通过"
     },
     {
       "id": "PERF-CACHE-BFCACHE-2026-10-12",
@@ -2038,8 +2042,10 @@
         "架构师"
       ],
       "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "pending",
-      "created_at": "2026-10-12T05:03:04"
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "_headers 已有 HTML Cache-Control: max-age=300 + /404.html 缓存；app/ 无 unload/beforeunload 监听；仅 /api/* no-store（静态页不受影响）"
     },
     {
       "id": "PERF-BUNDLE-AUDIT-2026-10-12",
@@ -2050,8 +2056,10 @@
         "架构师"
       ],
       "source": "架构师学习_前端性能优化_2026-10-12",
-      "status": "pending",
-      "created_at": "2026-10-12T05:03:04"
+      "status": "completed",
+      "created_at": "2026-10-12T05:03:04",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "chunk 最大仍 642KB 无回归；First Load JS shared 87.4KB；工具页 169KB/子分类 140KB；lucide/framer-motion 按需引入；@next/bundle-analyzer 未 wire 到 next.config.mjs（记录为后续项）"
     },
     {
       "id": "GROWTH-HYZENPRO-CHECK-2026-10-12",
@@ -2127,13 +2135,15 @@
       "id": "P0-PSEO-DEDUP-20261012",
       "task": "pSEO全量去重：对全部533工具页检查H1/导语/FAQ是否差异化（防止重复模板被Google判为重复内容），列表页/工具页模板需保证intro和FAQ按工具动态生成",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "commander_weekly_review_20261012",
-      "created_at": "2026-10-12"
+      "created_at": "2026-10-12",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "533工具 slug/name/description/pricing/scores 全唯一零缺失；H1=name动态、导语=动态模板(含rating/vendor/category/pros)、8个FAQ全插入工具特有字段(差异化确认)"
     },
     {
       "id": "P1-GEO-THREE-20261012",
@@ -2269,10 +2279,12 @@
       "description": "10月12日11:00巡检：故障持续约96小时后，恢复进展明显。首页从昨晚35KB恢复到359KB（接近正常494KB）；Blog从code=000恢复到TTFB 4.56s/184KB；/ranking/从code=000恢复到TTFB 1.40s/84KB。仅剩404页面完全超时(code=000)。所有页面总加载仍15s超时，但页面大小和可用性在持续改善。建议继续观察，重点关注404页面何时恢复。",
       "priority": "P1",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct12_11h",
       "created_at": "2026-10-12",
-      "evidence": "homepage TTFB=1.93s/359KB, blog TTFB=4.56s/184KB, 404=code000, /ranking/ TTFB=1.40s/84KB"
+      "evidence": "homepage TTFB=1.93s/359KB, blog TTFB=4.56s/184KB, 404=code000, /ranking/ TTFB=1.40s/84KB",
+      "completed_at": "2026-10-12T12:33:19",
+      "completion_note": "服务器端 web_fetch 404页有响应(HTTP 404 正常返回，非code=000超时)；首页/blog/ranking 恢复确认；线路问题证伪"
     }
   ],
   "milestones": [

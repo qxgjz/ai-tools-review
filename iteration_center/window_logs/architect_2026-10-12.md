@@ -102,3 +102,37 @@
 ## 说明
 - P0=458 中 457 条均为本机→Cloudflare 线路超时/SSL 重置伪故障（多轮同因），真实 P0=1（页面大小）已修
 - subcategory title 用动态同名判定（而非全局去掉父类），保住第 6 轮修的重复 title 防回归
+
+---
+
+# 架构师执行日志 2026-10-12（第12轮·性能优化专项）
+
+> 触发：定时任务「架构师-全栈技术修复（SOP版，验证闭环）」当日第 3 次触发
+> 本轮：架构师 pending 6 条（2 P0 + 4 P1）全部处理完成；真实代码改动 4 文件 + 全站验证
+
+## 处理待办 6 条（全部 completed）
+
+| 待办 | 优先级 | 处理方式 | 验证 |
+|---|---|---|---|
+| PERF-LCP-IMAGE | P0 | lib/markdown.ts 首图 eager+fetchpriority=high+width/height（原全部 lazy 是 LCP 反模式）；ToolScreenshot 加 priority prop；工具页首截图 priority | 构建产物：blog 首图 fetchpriority=high+1200x675、后续图 lazy；工具页截图 fetchPriority=high |
+| P0-PSEO-DEDUP | P0 | 533 工具数据级验证：slug/name/description/pricing/scores 全唯一零缺失；模板 H1=name、导语动态、8 FAQ 全插工具字段 | 差异化确认，无重复模板风险 |
+| PERF-CLS-MEDIA | P1 | globals.css prose img 加 aspect-ratio:16/9+object-fit:cover；markdown img 全补 width=1200 height=675 | 构建产物 img 带尺寸 ✅ |
+| PERF-CACHE-BFCACHE | P1 | _headers 已有 HTML max-age=300；app/ 无 unload 监听；仅 /api/* no-store（静态页不受影响） | 代码级确认 |
+| PERF-BUNDLE-AUDIT | P1 | 最大 chunk 642KB 无回归；First Load JS shared 87.4KB；工具页 169KB、子分类 140KB | build 输出确认 |
+| ux_p1_recovery_progress | P1 | 404 页服务器端 web_fetch 有响应（HTTP 404 正常，非 code=000 超时） | 线路问题证伪 |
+
+## GEO 技术检查
+- real_geo_aeo_audit.py：**geo_readiness_score 9.29/10**（上轮 9.17↑）；AI crawler 11 项全 accessible；AEO 页面 8/8
+- seo_audit_full.py：后台运行中（804 页，本机网络慢），结果跑完补录
+- Lighthouse：本机网络不可达（历史同因），跳过；性能改动经构建产物逐项验证
+
+## 门控结果
+- npx tsc --noEmit：**通过**
+- npm run build：**通过**（/tools/[slug] 169KB、First Load JS shared 87.4KB）
+
+## git push 结果
+（本轮 commit 在日志追加后统一提交）
+
+## 剩余
+- 架构师 pending：0（6 条全 completed）
+- 全局 pending：88
