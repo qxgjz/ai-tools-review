@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-10-11 20:58 UTC
+> Generated: 2026-10-12 23:38 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,14 +17,14 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 154 |
+| Posts | 156 |
 | Categories | N/A |
 | Comparisons | 10 |
 
 ## Recent Posts
 
 1. **Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...** (`best-paid-ai-tools-worth-buying-2026`)
-2. **Dify vs LangChain 2026: Which AI App Builder | AIToolCrux** (`dify-vs-langchain-2026`)
+2. **Dify vs LangChain 2026: Which AI App Builder Should You Choose?** (`dify-vs-langchain-2026`)
 3. **7 Best Gemini Alternatives in 2026 | AIToolCrux** (`gemini-alternatives-2026`)
 4. **Cursor vs Windsurf 2026: Which AI Code Editor Is Better?** (`cursor-vs-windsurf-2026`)
 5. **Notion AI vs Obsidian 2026: Which Note-Taking | AIToolCrux** (`notion-ai-vs-obsidian-2026`)
