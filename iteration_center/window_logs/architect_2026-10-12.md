@@ -136,3 +136,8 @@
 ## 剩余
 - 架构师 pending：0（6 条全 completed）
 - 全局 pending：88
+
+## seo_audit_full.py 补录（12:02 完成）
+- 804 页；P0=458（457 为本机网络失败 WinError 10035/10054/StreamReset 伪故障，历史同因）
+- P1=17（**旧数据**：与第 11 轮已修条目完全一致；线上 web_fetch 复核 /blog/cursor-vs-windsurf-2026 单 H1、/subcategory/prompt-engineering/ title=46 字符均确认已修复）
+- 结论：无新增真实 SEO 问题；审计脚本在本机网络环境下抓取不可靠（多轮同因）
