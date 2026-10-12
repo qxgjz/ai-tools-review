@@ -29,6 +29,7 @@ import { TableOfContents } from '@/components/blog/TableOfContents';
 import { PostNavigation } from '@/components/blog/PostNavigation';
 import { markdownToHtmlSafe } from '@/lib/markdown';
 import { shouldSkipStaticGen } from '@/lib/static-gen';
+import type { TocItem } from '@/components/blog/TableOfContents';
 
 // 动态Import重型Component，减少初始JS包大小
 const Giscus = nextDynamic(() => import('@/components/comments/Giscus'), {
@@ -79,6 +80,30 @@ function truncateAtWord(text: string, maxLen: number): string {
   const lastSpace = truncated.lastIndexOf(' ');
   const result = lastSpace > maxLen * 0.6 ? truncated.slice(0, lastSpace) : truncated;
   return result.replace(/[\s,;:\-–—]+$/, '') + '...';
+}
+
+// 服务端从 Markdown 提取 h2/h3 标题（id 规则与 lib/markdown.ts 生成的标题 id 一致），
+// 避免把整篇正文 contentHtml 传给客户端组件导致 RSC payload 膨胀
+function extractTocHeadings(markdown: string): TocItem[] {
+  if (!markdown) return [];
+  const items: TocItem[] = [];
+  const lines = markdown.split('\n');
+  for (const line of lines) {
+    const m = line.match(/^(#{2,3})\s+(.+)$/);
+    if (!m) continue;
+    const level = m[1].length;
+    let text = m[2].trim();
+    text = text.replace(/[`*_~]/g, '').replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').trim();
+    if (!text) continue;
+    const id =
+      text
+        .toLowerCase()
+        .replace(/[^a-z0-9\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .substring(0, 50) || `heading-${level}`;
+    items.push({ id, text, level });
+  }
+  return items;
 }
 
 export function generateMetadata({ params }: PostPageProps) {
@@ -695,7 +720,7 @@ export default function PostPage({ params }: PostPageProps) {
           {/* 右侧边栏 - 目录（桌面端固定） */}
           <aside className="hidden lg:block w-64 flex-shrink-0">
             <div className="sticky top-24">
-              <TableOfContents contentHtml={post.content || ''} />
+              <TableOfContents headings={extractTocHeadings(post.content || '')} />
             </div>
           </aside>
         </div>

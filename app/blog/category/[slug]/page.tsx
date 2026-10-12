@@ -17,7 +17,9 @@ export function generateStaticParams() {
 
 export function generateMetadata({ params }: CategoryPageProps) {
   const categoryPosts = posts.filter((p) => p.categorySlug === params.slug);
-  const categoryName = categoryPosts.length > 0 ? categoryPosts[0].category : params.slug;
+  // 用全部文章的分类集合做差异化 title，避免不同 slug 产生相同 title（SEO 重复）
+  const cats = Array.from(new Set(categoryPosts.map((p) => p.category).filter(Boolean)));
+  const categoryName = cats.join(' & ') || params.slug;
   const articleCount = categoryPosts.length;
   return {
     title: `${categoryName} AI Tools Reviews | AIToolCrux`,

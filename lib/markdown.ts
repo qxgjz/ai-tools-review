@@ -18,6 +18,21 @@ export function markdownToHtml(markdown: string): string {
     // Convert h1 to h2: pages already have their own H1, content should not add another
     html = html.replace(/<h1(\s+[^>]*?)>/g, '<h2$1>');
     html = html.replace(/<\/h1>/g, '</h2>');
+    // Add stable ids to h2/h3 so TOC scroll-spy and anchor links work without client-side DOM parsing
+    html = html.replace(
+      /<h([23])(\s+[^>]*?)?>([\s\S]*?)<\/h\1>/g,
+      (match, level, attrs, inner) => {
+        const text = inner.replace(/<[^>]+>/g, '').trim();
+        const id = text
+          .toLowerCase()
+          .replace(/[^a-z0-9\s-]/g, '')
+          .replace(/\s+/g, '-')
+          .substring(0, 50) || `heading-${level}`;
+        const attrsWithId = attrs || '';
+        const finalAttrs = /id=/.test(attrsWithId) ? attrsWithId : ` id="${id}"${attrsWithId}`;
+        return `<h${level}${finalAttrs}>${inner}</h${level}>`;
+      },
+    );
     // Performance: first image stays eager (LCP element must not be lazy - web.dev top-cwv),
     // later images get lazy. Add explicit dimensions to prevent CLS (all site screenshots are 16:9).
     let imgIndex = 0;

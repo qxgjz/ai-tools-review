@@ -1,62 +1,29 @@
 'use client';
 
-import { useEffect, useState, useRef } from 'react';
+import { useEffect, useState } from 'react';
 import { List, ChevronRight } from 'lucide-react';
 
-interface TocItem {
+export interface TocItem {
   id: string;
   text: string;
   level: number;
 }
 
 interface TableOfContentsProps {
-  contentHtml: string;
+  headings: TocItem[];
   className?: string;
 }
 
 /**
  * TableOfContents - 文章目录组件
- * 基于GitHub高星博客项目最佳实践：
- * - 自动从HTML内容提取h2/h3标题
+ * - 标题列表由服务端从 Markdown 提取传入（避免全量正文进 RSC payload）
  * - 滚动时高亮当前章节
  * - 点击平滑滚动到对应位置
  * - 桌面端右侧固定，移动端可折叠
  */
-export function TableOfContents({ contentHtml, className = '' }: TableOfContentsProps) {
-  const [headings, setHeadings] = useState<TocItem[]>([]);
+export function TableOfContents({ headings, className = '' }: TableOfContentsProps) {
   const [activeId, setActiveId] = useState<string>('');
   const [isOpen, setIsOpen] = useState(false);
-  const contentRef = useRef<HTMLDivElement>(null);
-
-  // 从HTML中提取标题并生成ID
-  useEffect(() => {
-    if (!contentHtml) return;
-
-    const parser = new DOMParser();
-    const doc = parser.parseFromString(contentHtml, 'text/html');
-    const headingElements = doc.querySelectorAll('h2, h3');
-
-    const items: TocItem[] = [];
-    headingElements.forEach((heading, index) => {
-      const text = heading.textContent?.trim() || '';
-      if (!text) return;
-
-      // 生成URL友好的ID
-      const id = text
-        .toLowerCase()
-        .replace(/[^a-z0-9\s-]/g, '')
-        .replace(/\s+/g, '-')
-        .substring(0, 50);
-
-      items.push({
-        id: id || `heading-${index}`,
-        text,
-        level: heading.tagName === 'H2' ? 2 : 3,
-      });
-    });
-
-    setHeadings(items);
-  }, [contentHtml]);
 
   // 滚动监听 - 高亮当前章节
   useEffect(() => {
@@ -76,24 +43,7 @@ export function TableOfContents({ contentHtml, className = '' }: TableOfContents
       },
     );
 
-    // 给页面中的标题元素添加ID
-    headings.forEach((item) => {
-      const elements = document.querySelectorAll(`h2, h3`);
-      elements.forEach((el) => {
-        const text = el.textContent?.trim() || '';
-        const generatedId = text
-          .toLowerCase()
-          .replace(/[^a-z0-9\s-]/g, '')
-          .replace(/\s+/g, '-')
-          .substring(0, 50);
-        if (generatedId === item.id && !el.id) {
-          el.id = item.id;
-          (el as HTMLElement).style.scrollMarginTop = '80px';
-        }
-      });
-    });
-
-    // 观察所有标题元素
+    // 正文标题 id 由服务端 markdownToHtml 生成（与 headings 中 id 同规则）
     headings.forEach((item) => {
       const el = document.getElementById(item.id);
       if (el) observer.observe(el);
