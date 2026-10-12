@@ -73,3 +73,56 @@
 1. **GSC 检查视图程序化输入在当前版本全失效**（9 方案：dispatchKeyEvent 逐字符、native setter+input/change、JS 合成 click、Input.insertText+鼠标点击、JS KeyboardEvent、带 url 参数导航被重定向回总览）。替代通道：**GSC「编制索引」报告面板**（search-console/index）可直接读各错误状态的具体 URL 清单，且数据为官方索引状态，比逐个检查更权威。
 2. **sitemap URL 必须与 trailingSlash 配置一致**——无尾斜杠 sitemap URL 会让 Google 每次抓取都遇到 301，GSC 持续报 redirect/redirect_error（即使线上页面 200 正常）。
 3. seo_audit_full.py 在本机网络下 41/46 问题为伪故障，判断真实问题必须区分网络错误与内容错误。
+
+---
+
+# 架构师执行日志 2026-10-13（第 15 轮）
+
+**触发**：「架构师-全栈技术修复（SOP版，验证闭环）」定时任务（TaskID 13724013998850）
+**本轮起点**：架构师 pending 1 条（P2-BLOG-PAGE-SIZE-20261012），无 P0/P1
+
+## 一、GEO 技术检查（追加要求）
+
+| 工具 | 结果 |
+|---|---|
+| real_geo_aeo_audit.py | **9.17/10 Grade A**；AI crawler 11 项全 accessible；llms.txt(2.7KB) + llms-full.txt(560KB/8846行) 就位；7 个核心页面 AEO 优化全 10/10 |
+| iteration_center/seo_audit_full.py | 804 URL / 总问题 151 / **P0=0**（上轮 41 条网络伪故障已消失）P1=4：页面>500KB 3 页（agent 分类 + 2 篇博客）+ 重复 Title 1 组 |
+| Lighthouse | 本机网络伪故障未运行；以服务器端 web_fetch + 构建产物验证替代 |
+
+## 二、GEO 技术问题处理（3 个达标）
+
+1. **博客页 RSC payload 瘦身（P2-BLOG-PAGE-SIZE 完成）**：
+   - 根因：`TableOfContents contentHtml={post.content}` 把整篇正文（108KB markdown）作为 props 传给客户端组件 → RSC payload 334KB
+   - 修复：服务端 `extractTocHeadings()` 提取标题数组；`lib/markdown.ts` 给 h2/h3 生成稳定 id（锚点/滚动高亮可用）；TableOfContents 改收 headings 数组
+   - 效果：microsoft-365-copilot-review-2026 **508.8→397KB**、ai-coding-tools-comparison-2026 **510.3→397KB**（均 <500KB）；payload 334→218KB；h2 29 个/h3 40 个带 id，TOC 正常
+2. **重复 Title 修复**：/blog/category/chat 与 /blog/category/ai-chatbots 同 title（categoryPosts[0].category 相同）；改用分类集合 join 差异化 → "AI Chatbots & AI Chat" vs "AI Chatbots"
+3. **IndexNow/结构数据**：GEO 审计确认 llms.txt/llms-full.txt/AI crawler 全达标（无缺失）
+
+## 三、门控与部署
+
+| 项 | 结果 |
+|---|---|
+| npx tsc --noEmit | 0 错误 |
+| npm run build | 0 错误 |
+| git push | 69d346b（4 files：TableOfContents.tsx / markdown.ts / blog[slug] / blog category[slug]）|
+| GitHub Actions | 69d346b 全 success（Unit Tests / Lint / CodeQL / **Deploy to Cloudflare Pages**）|
+
+## 四、线上验证
+
+| URL | 状态 |
+|---|---|
+| /blog/microsoft-365-copilot-review-2026/ | ✅ 200 完整渲染（Quick Answer/正文/评分） |
+| /blog/ai-coding-tools-comparison-2026/ | ✅ 构建产物 397KB <500KB |
+| sitemap 尾斜杠（上轮修复） | ✅ 保持生效 |
+
+## 五、state.json 更新
+
+- P2-BLOG-PAGE-SIZE-20261012 → completed（根因+修复+效果全记录）
+- 新增 P2-CATEGORY-AGENT-SIZE-20261013（/category/agent/ 682.7KB：根因=agent 分类 175 工具卡片全量渲染，非代码缺陷；优化方向=分页/折叠/卡片精简专项）
+- 剩余架构师 pending：P2-CATEGORY-AGENT-SIZE（1 条）；全局 pending 111（P0:37 P1:63 P2:11）
+
+## 六、踩坑记录（供指挥官学习）
+
+1. **RSC payload 膨胀根因多为「把服务端数据全量传给客户端组件」**：TableOfContents 接收 contentHtml 是典型反例——客户端组件只需要提取后的 toc 数组，服务端应先提取再传 props。
+2. **重复 Title 的检测盲区**：两个不同 slug 的分类页若 `[0].category` 相同则 title 相同；应聚合全部文章的 category 集合做差异化。
+3. **seo_audit 报告滞后**：审计脚本读取的是运行时刻的 out/，代码修改后需重新 build 再跑审计，否则报告显示旧大小。
