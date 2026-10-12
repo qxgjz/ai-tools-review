@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-12 18:03:05 JST",
+  "last_updated": "2026-10-12 22:26:38 JST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-12-R9",
@@ -1035,6 +1035,11 @@
       "task": "拓荒者-外链调研第九轮",
       "time": "2026-10-12 18:03:05 JST",
       "result": "Serper 6组: 新目录7+客座10+toolify10+聚合10"
+    },
+    {
+      "task": "拓荒者-外链增长SOP (10-12 22:00)",
+      "time": "2026-10-12 22:26:38 JST",
+      "result": "HN未登录; tooljunction.io客座付费(最低$150)不推荐"
     }
   ],
   "next_iteration_focus": [
@@ -2250,10 +2255,12 @@
       "description": "17:00巡检：网站仍在不稳定波动中。好消息：404页面从code=000恢复到404/TTFB 1.47s（持续不可达约48小时后首次恢复）。坏消息：Blog从184KB/TTFB 4.56s恶化到951B/TTFB 14.7s（接近完全超时）；/ranking/从84KB/TTFB 1.40s再次完全超时(code=000)；首页从359KB降到110KB。仍是轮流宕机模式，但404的恢复说明整体在缓慢好转。",
       "priority": "P1",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct12_17h",
       "created_at": "2026-10-12",
-      "evidence": "homepage TTFB=3.89s/110KB, blog TTFB=14.71s/951B, 404=404 TTFB=1.47s, /ranking/=code000"
+      "evidence": "homepage TTFB=3.89s/110KB, blog TTFB=14.71s/951B, 404=404 TTFB=1.47s, /ranking/=code000",
+      "completed_at": "2026-10-12T21:15:24",
+      "completion_note": "服务器端web_fetch证伪：/、/blog/、/ranking/全200完整渲染（154篇+533工具），404页正常返回；本机线路波动伪故障，线上无宕机"
     },
     {
       "id": "GROWTH-DIR-V9-2026-10-12",
@@ -2291,9 +2298,11 @@
       "assigned_to": [
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "gsc_index_screenshot_20261012",
-      "created_at": "2026-10-12T18:35:00"
+      "created_at": "2026-10-12T18:35:00",
+      "completed_at": "2026-10-12T21:15:24",
+      "completion_note": "canonical全站确认：tools/category/blog/subcategory/compare/alternatives均输出canonical到带/规范URL（构建产物抽查3页验证）；_redirects现119条含全部301；无重复网页未选规范问题"
     },
     {
       "id": "P1-INDEX-NOINDEX-404-20261012",
@@ -2302,9 +2311,11 @@
       "assigned_to": [
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "gsc_index_screenshot_20261012",
-      "created_at": "2026-10-12T18:35:00"
+      "created_at": "2026-10-12T18:35:00",
+      "completed_at": "2026-10-12T21:15:24",
+      "completion_note": "noindex仅3类(tag/search/submit)判定合理保留；404修复：_redirects新增/tools/gpt-4→/tools/gpt-4o 301、/category/chatbots→/category/chat 301、/category/image-generation→/category/image 301"
     },
     {
       "id": "P0-INDEXNOW-BATCH-20261012",
@@ -2324,9 +2335,81 @@
       "assigned_to": [
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "gsc_manual_verify_20261012",
-      "created_at": "2026-10-12T18:50:00"
+      "created_at": "2026-10-12T18:50:00",
+      "completed_at": "2026-10-12T21:15:24",
+      "completion_note": "index_monitor.md修正7处坏URL：gpt-4×2→/tools/gpt-4o、chatbots×2→/category/chat、image-generation×2→/category/image、marketing标注不存在(0工具)；残留坏URL=0"
+    },
+    {
+      "id": "CTR-20261012-2100",
+      "task": "page /blog/openai_astra_review rank 10.1 CTR only 1.47% (68 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-12",
+      "url": "/blog/openai_astra_review",
+      "current_pos": 10.1,
+      "current_ctr": 1.47,
+      "impressions": 68,
+      "created_at": "2026-10-12T20:07:35"
+    },
+    {
+      "id": "CTR-20261012-2101",
+      "task": "page /blog/adobe-firefly-review-2026 rank 6.3 CTR only 0.0% (28 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-12",
+      "url": "/blog/adobe-firefly-review-2026",
+      "current_pos": 6.3,
+      "current_ctr": 0.0,
+      "impressions": 28,
+      "created_at": "2026-10-12T20:07:35"
+    },
+    {
+      "id": "CTR-20261012-2102",
+      "task": "page /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md rank 6.2 CTR only 0.0% (23 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-12",
+      "url": "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "current_pos": 6.2,
+      "current_ctr": 0.0,
+      "impressions": 23,
+      "created_at": "2026-10-12T20:07:35"
+    },
+    {
+      "id": "GSC-QUOTA-RERUN-20261012",
+      "priority": "P1",
+      "assigned_to": [
+        "analyst"
+      ],
+      "status": "pending",
+      "source": "gsc_batch_check_20261012",
+      "task": "GSC网址检查每日配额2026-10-12已耗尽（页面弹窗超出配额）。2026-10-13配额重置后用修复版脚本重跑40个unknown URL：python scripts/gsc_batch_check.py。脚本已修复：输入框必须用input.Ax4B8，且每次输入前必须cdp.send(ws,Page.bringToFront)把页面带到前台，否则dispatchKeyEvent事件被丢弃导致value为空。重跑完成后对照url_index_check_batch_0_67_20261012_202338.json汇总最终收录状态，404/noindex/redirect坏URL清单派给架构师修复。"
+    },
+    {
+      "id": "GSC-BADURL-FIX-VERIFY-20261012",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "completed",
+      "source": "gsc_batch_check_20261012",
+      "task": "已确认的坏URL需修复并提交IndexNow：redirect_error(3个)=/category/chat、/category/code、/tools/gemini；redirect(1个)=/tools/chatgpt；discovered_not_indexed(4个)=/category/memory、/category/observability、/tools/claude、/tools/exa。检查线上是否有重定向链(301/302/canonical)，修复后重新请求编入索引。",
+      "completed_at": "2026-10-12T21:15:24",
+      "completion_note": "8个GSC坏URL线上全200验证通过(chat/code/gemini/chatgpt/memory/observability/claude/exa)；IndexNow提交status=200，日志geo_submit_20261012_210946.json"
     }
   ],
   "milestones": [
@@ -9262,7 +9345,7 @@
     },
     "updated_at": "2026-10-09"
   },
-  "last_gsc_pull": "2026-10-12T14:40:27",
+  "last_gsc_pull": "2026-10-12T20:07:35",
   "last_gsc_impr": 46,
   "last_gsc_clk": 0,
   "last_gsc_avg_pos": 24.9,

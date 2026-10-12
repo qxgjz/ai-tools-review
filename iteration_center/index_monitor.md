@@ -57,12 +57,12 @@ Recheck after 1-2 weeks for indexing improvement.
 | P0 | /tools/midjourney | 工具页 | 高搜索量词但无曝光，可能未索引或被noindex | 检查meta robots标签，IndexNow提交，从/category/design加内链 |
 | P0 | /tools/elevenlabs | 工具页 | 同midjourney，高搜索量工具 | 同上，从/blog/elevenlabs-review-2026加内链 |
 | P0 | /tools/notion-ai | 工具页 | 同 | 从/blog/notion-ai-vs-obsidian-2026加内链 |
-| P1 | /category/chatbots | 分类页 | 分类页未被GSC收录 | 从/blog文章页加内链指向 |
-| P1 | /category/image-generation | 分类页 | 同 | 同上 |
+| P1 | /category/chat | 分类页 | 分类页未被GSC收录 | 从/blog文章页加内链指向 |
+| P1 | /category/image | 分类页 | 同 | 同上 |
 | P1 | /category/video | 分类页 | 同 | 同上 |
-| P1 | /category/marketing | 分类页 | 同 | 同上 |
+| P1 | /category/marketing（分类不存在，本地0工具，删除） | 分类页 | 同 | 同上 |
 | P1 | /tools/cursor | 工具页 | 已有/blog/cursor-ai-review文章但/tools/cursor本身无曝光 | 确保/blog文章内链指向/tools/cursor |
-| P2 | /tools/gpt-4 | 工具页 | 高搜索量但无曝光 | 检查是否noindex，IndexNow提交 |
+| P2 | /tools/gpt-4o | 工具页 | 高搜索量但无曝光 | 检查是否noindex，IndexNow提交 |
 | P2 | /tools/github-copilot | 工具页 | 同 | 同上 |
 
 ### 关键发现
@@ -127,10 +127,10 @@ Recheck after 1-2 weeks for indexing improvement.
 | P0 | /tools/midjourney | 工具页 | 高搜索量词，Serper site:前10页未出现，GSC无曝光 | 检查noindex标签，IndexNow提交，从/blog/midjourney-v7-review加内链 |
 | P0 | /tools/elevenlabs | 工具页 | 高搜索量词，有/blog/elevenlabs-review但/tools/elevenlabs无曝光 | 确保评测文章内链指向/tools/elevenlabs，IndexNow提交 |
 | P0 | /tools/notion-ai | 工具页 | 高搜索量词，无GSC曝光 | 检查meta robots，从相关博客文章加内链 |
-| P1 | /tools/gpt-4 | 工具页 | 头部工具词，无曝光 | IndexNow提交，优化页面内容 |
+| P1 | /tools/gpt-4o | 工具页 | 头部工具词，无曝光 | IndexNow提交，优化页面内容 |
 | P1 | /tools/github-copilot | 工具页 | 头部工具词，无曝光 | 同上 |
-| P1 | /category/chatbots | 分类页 | 分类页未被GSC收录展示 | 从/blog文章加内链指向分类页 |
-| P1 | /category/image-generation | 分类页 | 分类页无曝光 | 确保工具页有面包屑导航回分类页 |
+| P1 | /category/chat | 分类页 | 分类页未被GSC收录展示 | 从/blog文章加内链指向分类页 |
+| P1 | /category/image | 分类页 | 分类页无曝光 | 确保工具页有面包屑导航回分类页 |
 | P1 | /category/video | 分类页 | 分类页无曝光 | 同上 |
 | P2 | /tools/sora | 工具页 | 热门AI工具，无曝光 | IndexNow提交，内容优化 |
 | P2 | /tools/gemini | 工具页 | 头部工具词，无曝光 | 同上 |
@@ -162,3 +162,62 @@ Recheck after 1-2 weeks for indexing improvement.
 ---
 *报告生成时间：2026-09-28 | 下次监控：2026-10-05*
 | 2026-10-11 | 100 | -1 | 85 | 📈 +85 new indexed |
+
+
+---
+
+## 2026-10-12 周索引报告
+
+### 基本数据
+- **日期：** 2026-10-12（GSC 报告日 2026-10-09，快照拉取 2026-10-12）
+- **GSC 已编入页面数：** 477
+- **GSC 未编入页面数：** 428（含 discovered_not_indexed 400 / duplicate 9 / auto_redirect 9 / noindex 5 / not_found 2 / redirect_error 1 / crawled_not_indexed 2）
+- **GSC 已知 URL 总数：** 905
+- **Sitemap URL总数：** 804（上周 752，+52，+6.9%）
+- **索引覆盖率（已编入/sitemap）：** 59.3%
+- **环比：** 9/18 site: 基线 343 → 现 GSC 官方 477（口径不同：site: 查询 vs GSC 索引报告，仅作方向性参考；估算增长约 +39%）
+- **GSC 曝光（10-03~10-09 周）：** 41 次曝光 / 0 点击
+- **28天窗口 Top 查询：** best voice changer 2026（点击1）、ai agent（曝光5）
+
+### 68 个重点 URL 批量实测（2026-10-12，AdsPower CDP 直连 GSC 网址检查）
+| 状态 | 数量 | 明细 |
+|------|-----:|------|
+| 已收录 indexed | 20 | midjourney/dall-e-3/windsurf/copy-ai/notion-ai/runway/pika/suno/perplexity/figma-ai/canva-magic/auto-gpt/worldmonitor/llama-index/ragflow/promptfoo/milvus/chroma/faiss/mem0 |
+| 已发现未编入 discovered_not_indexed | 4 | /category/memory、/category/observability、/tools/claude、/tools/exa |
+| 重定向错误 redirect_error | 3 | /category/chat、/category/code、/tools/gemini |
+| 重定向 redirect | 1 | /tools/chatgpt |
+| 未知 unknown（配额耗尽） | 40 | 待 2026-10-13 配额重置后重跑 |
+
+### 趋势判断
+- ✅ **无连续下降**：GSC 官方已编入 477，较 9 月 site: 估算基线（343-370）方向性增长约 +29%~39%
+- ✅ **内容持续扩充**：Sitemap 752→804（+52），博客文章 105→184
+- ⚠️ **未编入中 93.5% 为"已发现未编入"（400/428）**：Google 已发现这些 URL 但尚未抓取编入，是当前最大收录杠杆，需 IndexNow 提交 + 内链 + 抓取推动
+- ⚠️ **重定向异常 4 个**：/category/chat、/category/code、/tools/gemini（redirect_error）、/tools/chatgpt（redirect），影响对应高价值词收录
+- ⚠️ **曝光仍极低**：周曝光 41 次 / 0 点击，覆盖 905 已知 URL 中仅少数获得展示
+
+### Top 10 未收录/异常重要页面
+| 优先级 | 页面 | 类型 | 状态 | 建议 |
+|--------|------|------|------|------|
+| P0 | /tools/gemini | 工具页 | redirect_error | 修复重定向链，检查 301/canonical，修复后 IndexNow 提交 |
+| P0 | /tools/chatgpt | 工具页 | redirect | 确认是否规范 301 到唯一 URL，避免被判定重定向异常 |
+| P0 | /category/chat | 分类页 | redirect_error | 修复分类重定向，检查面包屑/规范链接 |
+| P0 | /category/code | 分类页 | redirect_error | 同上 |
+| P1 | /category/memory | 分类页 | discovered_not_indexed | IndexNow 提交 + 从博客页加内链 |
+| P1 | /category/observability | 分类页 | discovered_not_indexed | 同上 |
+| P1 | /tools/claude | 工具页 | discovered_not_indexed | 同上 |
+| P1 | /tools/exa | 工具页 | discovered_not_indexed | 同上 |
+| P1 | /tools/midjourney | 工具页 | 无曝光（历史） | 持续监控，确保无 noindex |
+| P1 | /tools/elevenlabs | 工具页 | 无曝光（历史） | 持续监控 |
+
+### 优化建议
+- **P0**：架构师修复 4 个重定向异常 URL（/tools/gemini、/tools/chatgpt、/category/chat、/category/code），修复后请求编入索引
+- **P0**：分析师 2026-10-13 配额重置后重跑 40 个 unknown URL（脚本已修复 bringToFront）
+- **P1**：增长黑客对 400 个 discovered_not_indexed 中的高价值页面（工具页 Top50）批量 IndexNow 提交
+- **P1**：创作家在已曝光博客文章中加入指向未收录分类页/工具页的内链
+- **P2**：持续每周监控，下次监控 2026-10-19
+
+### 数据来源说明
+- GSC 已编入/未编入：AdsPower CDP 直连 GSC 索引报告页实测快照（indexing_snapshot_20261012.json）
+- Sitemap：线上 https://www.aitoolcrux.com/sitemap.xml 实时统计（804 URL）
+- 68 URL 状态：url_index_check_batch_0_67_20261012_202338.json
+- GSC 曝光：gsc-ga4-report/live_pull_20261012_2007.json

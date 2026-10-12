@@ -141,3 +141,30 @@
 - 804 页；P0=458（457 为本机网络失败 WinError 10035/10054/StreamReset 伪故障，历史同因）
 - P1=17（**旧数据**：与第 11 轮已修条目完全一致；线上 web_fetch 复核 /blog/cursor-vs-windsurf-2026 单 H1、/subcategory/prompt-engineering/ title=46 字符均确认已修复）
 - 结论：无新增真实 SEO 问题；审计脚本在本机网络环境下抓取不可靠（多轮同因）
+
+---
+
+## 第 13 轮（21:05 触发，架构师 cron 0 1,5,13,22）
+
+### 待办处理：5 条 P1（GSC 收录/URL 专项）全 completed
+1. **ux_p1_still_fluctuating_2026-10-12_17h**：服务器端 web_fetch 证伪——/、/blog/（154 篇完整渲染）、/ranking/（533 工具完整渲染）、404 页全正常响应。17:00 报告为**本机线路波动伪故障**（多轮同因），线上无宕机。
+2. **P1-INDEX-ERR-REDIRECT-20261012**：canonical 全站确认——tools/category/blog/subcategory/compare/alternatives/静态页均输出 canonical 到带 / 规范 URL；构建产物抽查 /tools/chatgpt、/category/chat、/blog/agenta-ai-review-2026 三页 canonical 均正确。_redirects 现 119 条。
+3. **P1-INDEX-NOINDEX-404-20261012**：noindex 仅 3 类（/blog/tag/*、/search、/submit）均判定合理保留（低价值/表单页）；2 个 404 页面修复：_redirects 新增 /tools/gpt-4→/tools/gpt-4o 301、/category/chatbots→/category/chat 301、/category/image-generation→/category/image 301。
+4. **P1-FIX-BAD-URL-LIST-20261012**：index_monitor.md 修正 7 处坏 URL（gpt-4×2→/tools/gpt-4o、chatbots×2→/category/chat、image-generation×2→/category/image、marketing 标注"分类不存在0工具删除"）；残留坏 URL=0。knowledge_analytics.md / audit_findings.md 复核无此类坏 URL。
+5. **GSC-BADURL-FIX-VERIFY-20261012**：8 个 GSC 坏 URL 服务器端全 200 验证通过（/category/chat、/category/code、/tools/gemini、/tools/chatgpt、/category/memory、/category/observability、/tools/claude、/tools/exa）；IndexNow 批量提交 status=200（日志 iteration_center/geo_logs/geo_submit_20261012_210946.json）。
+
+### 门控结果
+- npx tsc --noEmit：**通过（exit 0）**
+- npm run build：待跑（commit 前）
+- GEO 审计：**9.17/10**（AI crawler 11/11 accessible score=10；llms.txt+llms-full.txt 就位；7 核心页 AEO 8/8）
+- GEO 技术问题处理 ≥2：①IndexNow 提交 8 URL（GSC 收录修复）②_redirects 补 3 条 301（消除 404/重定向错误链）③index_monitor.md 坏 URL 修正
+
+### 线上验证
+- 首页 / 200、/blog/ 200、/ranking/ 200、/category/chat/ 200、/category/code/ 200、/tools/gemini/ 200、/tools/chatgpt/ 200、/category/memory/ 200、/category/observability/ 200（服务器端 web_fetch 全部完整渲染）
+
+### state.json 更新
+- 5 条 P1 → completed（status/completed_at/completion_note 全字段）
+- 全局 pending 106 → 101（P0:32 P1:60）
+
+### git push 结果
+（本轮 commit 在日志追加后统一提交）
