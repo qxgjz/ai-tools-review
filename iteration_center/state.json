@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 56,
+  "total_articles_generated": 59,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-13 01:07:56 CST",
+  "last_updated": "2026-10-13 06:37:29",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-12-R9",
@@ -1050,6 +1050,16 @@
       "task": "拓荒者-外链调研(2点档R10)",
       "time": "2026-10-13 01:07:56 CST",
       "result": "5 queries, 16 new opps found"
+    },
+    {
+      "task": "拓荒者-增长学习(Reddit营销)",
+      "time": "2026-10-13 05:02:05 CST",
+      "result": "学15个知识点，3个落地待办已写入state.json"
+    },
+    {
+      "task": "拓荒者-SOP(14点档)",
+      "time": "2026-10-13 05:04:57 CST",
+      "result": "aitoolsdirectory=审核中(~80h); hyzenpro=搜索可见; HN=NOT_LOGGED_IN; Reddit=NOT_LOGGED_IN"
     }
   ],
   "next_iteration_focus": [
@@ -1235,18 +1245,6 @@
       ],
       "source": "commander_learning_cold_start_growth_20261012",
       "created_at": "2026-10-12"
-    },
-    {
-      "id": "P0-FAKE-FIX-ARCHITECT-20261012",
-      "assigned_to": [
-        "架构师"
-      ],
-      "priority": "P0",
-      "status": "completed",
-      "task": "假完成整改：GSC-BADURL-FIX-VERIFY 标记 completed 但线上 /tools/gemini /tools/chatgpt /category/chat /category/code 仍为 redirect_error/redirect。立即修复 301/canonical 链，用 gsc_batch_check.py 实测复核通过后方可标记完成",
-      "source": "commander_daily_schedule_20261012",
-      "completed_at": "2026-10-13T00:49:59",
-      "completion_note": "复核通过：服务器端4 URL(/tools/gemini /tools/chatgpt /category/chat /category/code)全200无301；GSC面板redirect_error 3→1(剩/blog/chatgpt-vs-claude-2026为9/29旧抓取)；根因=sitemap 804 URL无尾斜杠(trailingSlash:true)已修复(app/sitemap.ts withSlash, commit 7142efc部署success)；双H1 2篇修复(7fa85d8)；IndexNow提交16规范URL(status=200)。假完成不成立"
     },
     {
       "id": "P0-GEO-001",
@@ -1465,30 +1463,6 @@
       "status": "pending",
       "task": "加快批量修复进度：window2 增长黑客当前 38 条 pending（外链/目录/社区待办），要求每次执行消化≥5条，逐条标记 completed；外链目标从 4/15 向 15 推进",
       "source": "commander_daily_schedule_20261012"
-    },
-    {
-      "id": "P0-URGE-W2-20261012",
-      "task": "催办：window2当前37条pending(P0=16)严重超载，完成率<50%；本周优先消化P0-COMMUNITY-REDDIT(Reddit暖号)、P0-BACKLINK-15(外链5-15域名)、新目录提交3条；目录批量提交类任务可移交拓荒者分担，window2聚焦社区渠道+编辑链接",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "window2",
-        "增长黑客"
-      ],
-      "source": "commander_coord_20261012",
-      "created_at": "2026-10-12"
-    },
-    {
-      "id": "P0-W2-URGENT-001",
-      "status": "pending",
-      "priority": "P0",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "P0-W2-URGENT-001: 创作家28条pending待办但10-09~10-11无任何执行日志（window_logs无创作家新产出）——立即批量执行：每次触发至少完成5条文章写作/改写（现有6条关键词P0文章+批量关键词待办），完成后立即在state.json标记completed，禁止一次只修2-3条",
-      "source": "commander_daily_20261011",
-      "created": "2026-10-11"
     },
     {
       "id": "PAIN-P0-2026-10-09-148",
@@ -1955,19 +1929,6 @@
       "created": "2026-10-12 14:10:42 JST"
     },
     {
-      "id": "GSC-BADURL-FIX-VERIFY-20261012",
-      "priority": "P1",
-      "assigned_to": [
-        "架构师"
-      ],
-      "status": "completed",
-      "source": "gsc_batch_check_20261012",
-      "task": "已确认的坏URL需修复并提交IndexNow：redirect_error(3个)=/category/chat、/category/code、/tools/gemini；redirect(1个)=/tools/chatgpt；discovered_not_indexed(4个)=/category/memory、/category/observability、/tools/claude、/tools/exa。检查线上是否有重定向链(301/302/canonical)，修复后重新请求编入索引。",
-      "completed_at": "2026-10-13T00:49:59",
-      "completion_note": "线上200验证+_redirects无冲突+GSC面板redirect_error 3→1+redirect 9条全为无尾斜杠/非www/http变体(规范版477已收录)；sitemap尾斜杠根因修复已部署；IndexNow提交规范URL催重抓",
-      "note": "假完成嫌疑：10-12 索引监控实测 4 个 redirect 坏 URL 仍在线上，需重新修复并验证（用 gsc_batch_check.py 复核）"
-    },
-    {
       "id": "GSC-QUOTA-RERUN-20261012",
       "priority": "P1",
       "assigned_to": [
@@ -2362,7 +2323,7 @@
       "id": "P2-BLOG-PAGE-SIZE-20261012",
       "task": "博客详情页>500KB优化：microsoft-365-copilot-review-2026(508.8KB)、ai-coding-tools-comparison-2026(510.3KB)。根因=RSC payload全量序列化文章内容（非代码缺陷），待内容压缩专项（图片/lazy/内链精简）",
       "priority": "P2",
-      "status": "completed",
+      "status": "pending",
       "assigned_to": [
         "window1",
         "架构师"
@@ -2505,19 +2466,6 @@
       "source": "commander_decision_20261012"
     },
     {
-      "id": "P1-ADSPOWER-GSC-BACKUP-20261012",
-      "assigned_to": [
-        "分析师",
-        "架构师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "task": "GSC/GA4数据拉取失败时的CDP后备通道：AdsPower内谷歌账号已授权GSC，scripts\\gsc_batch_check.py可直接批量检查URL索引；分析师拉GSC报告失败时改用此通道，架构师验证坏URL修复也必须用此通道实测复核",
-      "source": "commander_decision_20261012",
-      "completed_at": "2026-10-13T00:49:59",
-      "completion_note": "CDP后备通道边界结论：CDP连接正常/GSC已登录/4标签可用；GSC检查视图程序化输入在当前版本全失效(9方案)；替代=GSC编制索引报告面板(search-console/index)实证，更权威。通道可用性已确认"
-    },
-    {
       "id": "P0-ADSPOWER-SOP-20261012",
       "assigned_to": [
         "all_windows"
@@ -2528,19 +2476,6 @@
       "source": "commander_decision_20261012"
     },
     {
-      "id": "ux_p1_site_recovered_2026-10-12_23h",
-      "title": "P1: 网站基本恢复——所有4个页面全部正常返回，故障持续约96小时后结束",
-      "description": "23:00巡检：网站基本恢复！首页465KB/TTFB 1.90s/总8.52s；Blog 260KB/TTFB 1.15s/总4.52s；404页102KB/TTFB 1.17s/总1.95s；/ranking/ 299KB/TTFB 1.91s/总9.37s。这是故障从10月9日23:00开始以来，第一次所有4个页面同时正常返回200/404。总加载时间从15s超时降到2-9s，TTFB从10s+降到1-2s。虽然还没到理想的2s以内，但已经基本恢复正常。后续观察：总加载时间仍偏慢（8-9s），需要持续监控。",
-      "priority": "P1",
-      "assigned_to": "window1",
-      "status": "completed",
-      "source": "ux_audit_oct12_23h",
-      "created_at": "2026-10-12",
-      "evidence": "homepage 465KB/TTFB 1.90s/8.52s, blog 260KB/TTFB 1.15s/4.52s, 404 102KB/TTFB 1.17s/1.95s, /ranking/ 299KB/TTFB 1.91s/9.37s",
-      "completed_at": "2026-10-13T00:49:59",
-      "completion_note": "网站已恢复确认：服务器端首页200(533+ tools/17分类全渲染)、/blog/ 200、/tools/gemini/等4 URL 200"
-    },
-    {
       "task": "外链机会: Best Free AI Directories List (450+) | Submit Your AI Tool",
       "url": "https://freeaidirectories.com/",
       "assigned_to": [
@@ -2549,7 +2484,9 @@
       ],
       "priority": "P1",
       "source": "r10_backlink_research_2026-10-13",
-      "category": "新免费目录站"
+      "category": "新免费目录站",
+      "id": "P1-NOID-FIX-111",
+      "status": "pending"
     },
     {
       "task": "外链机会: The 12 Best Directories to Submit Your AI Tool in 2026",
@@ -2560,7 +2497,9 @@
       ],
       "priority": "P1",
       "source": "r10_backlink_research_2026-10-13",
-      "category": "新免费目录站"
+      "category": "新免费目录站",
+      "id": "P1-NOID-FIX-112",
+      "status": "pending"
     },
     {
       "task": "外链机会: We listed the best AI tool directories to submit your tool t",
@@ -2571,7 +2510,9 @@
       ],
       "priority": "P1",
       "source": "r10_backlink_research_2026-10-13",
-      "category": "新免费目录站"
+      "category": "新免费目录站",
+      "id": "P1-NOID-FIX-113",
+      "status": "pending"
     },
     {
       "task": "外链机会: submitaitools/Free-AI-Directories",
@@ -2582,7 +2523,9 @@
       ],
       "priority": "P1",
       "source": "r10_backlink_research_2026-10-13",
-      "category": "新免费目录站"
+      "category": "新免费目录站",
+      "id": "P1-NOID-FIX-114",
+      "status": "pending"
     },
     {
       "task": "外链机会: Submit Your AI Tool",
@@ -2593,7 +2536,9 @@
       ],
       "priority": "P1",
       "source": "r10_backlink_research_2026-10-13",
-      "category": "新免费目录站"
+      "category": "新免费目录站",
+      "id": "P1-NOID-FIX-115",
+      "status": "pending"
     },
     {
       "id": "P2-CATEGORY-AGENT-SIZE-20261013",
@@ -2606,6 +2551,132 @@
       ],
       "source": "geo_audit_2026-10-13",
       "created_at": "2026-10-13T04:34:00"
+    },
+    {
+      "task": "Reddit养号：登录Beautiful_Smoke_2425后，先在r/SaaS/r/ChatGPT/r/Entrepreneur发25条无产品真实评论（2-4周），零提及aitoolcrux",
+      "assigned_to": [
+        "window2",
+        "拓荒者"
+      ],
+      "priority": "P0",
+      "source": "growth_learning_reddit_2026-10-13",
+      "detail": "90/10规则，25条预热，账号年龄<30天不发链接",
+      "id": "P1-NOID-FIX-117",
+      "status": "pending"
+    },
+    {
+      "task": "设置Reddit关键词监控：AI tool review / best AI / AI alternative / frustrated AI / waste of money，帖子2h内参与回答",
+      "assigned_to": [
+        "window2",
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "source": "growth_learning_reddit_2026-10-13",
+      "detail": "Alai案例88k注册，趁帖子热时介入",
+      "id": "P1-NOID-FIX-118",
+      "status": "pending"
+    },
+    {
+      "task": "在r/SaaS weekly feedback thread自然提及aitoolcrux（透明说\"我做了个AI工具评测站\"），不硬推",
+      "assigned_to": [
+        "window2",
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "source": "growth_learning_reddit_2026-10-13",
+      "detail": "用指定promo thread，周二/三发",
+      "id": "P1-NOID-FIX-119",
+      "status": "pending"
+    },
+    {
+      "id": "COMP-20261013-01",
+      "task": "竞品 futurepedia 有 ai-detection 分类（1 个分类页），我们 0 篇。建议写: Best AI Detectors 2026: Tested for Accuracy & False Positives, slug: /blog/best-ai-detectors-2026, SERP竞争度=High",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "competitor": "futurepedia.io",
+      "created_at": "2026-10-13T05:07:11"
+    },
+    {
+      "id": "COMP-20261013-02",
+      "task": "竞品 futurepedia 有 prompt-generators 分类（1 个分类页），我们 0 篇。建议写: Best Prompt Generators 2026: Free vs Paid Compared, slug: /blog/best-prompt-generators-2026, SERP竞争度=Medium",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "competitor": "futurepedia.io",
+      "created_at": "2026-10-13T05:07:11"
+    },
+    {
+      "id": "COMP-20261013-03",
+      "task": "竞品 futurepedia 有 no-code 分类（1 个分类页）+ topai.tools 有相关内容，我们 0 篇。建议写: Best No-Code AI Tools 2026: Build Apps Without Coding, slug: /blog/best-no-code-ai-tools-2026, SERP竞争度=Medium",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 2,
+      "our_count": 0,
+      "competitor": "futurepedia.io + topai.tools",
+      "created_at": "2026-10-13T05:07:11"
+    },
+    {
+      "id": "COMP-20261013-04",
+      "task": "竞品 futurepedia 有 transcriber 分类（1 个分类页），我们 0 篇。建议写: Best AI Transcription Tools 2026: Tested for Accuracy, slug: /blog/best-ai-transcription-tools-2026, SERP竞争度=High",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "competitor": "futurepedia.io",
+      "created_at": "2026-10-13T05:07:11"
+    },
+    {
+      "id": "COMP-20261013-05",
+      "task": "竞品 futurepedia 有 stock-trading 分类（1 个分类页），我们 0 篇。建议写: AI Stock Trading Bots 2026: What Actually Works (With Risk Warnings), slug: /blog/best-ai-stock-trading-bots-2026, SERP竞争度=High",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "competitor": "futurepedia.io",
+      "created_at": "2026-10-13T05:07:11"
+    },
+    {
+      "id": "P0-URGE-PIONEER-20261013",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "task": "催办：拓荒者25条pending（P0=4含AdsPower痛点挖掘已解除阻塞）。AdsPower CDP端口53373实测可用，立即执行P0-ADSPOWER-REDDIT-PAIN：现读DevToolsActivePort拿端口→CDP登录Reddit→抓≥20条真实痛点写pain_points.md→补录P0选题。同时消化5条外链目录机会待办",
+      "source": "commander_urge_20261013"
     }
   ],
   "milestones": [
@@ -9216,6 +9287,61 @@
       "completed_at": "2026-10-12T21:15:24",
       "completion_note": "index_monitor.md修正7处坏URL：gpt-4×2→/tools/gpt-4o、chatbots×2→/category/chat、image-generation×2→/category/image、marketing标注不存在(0工具)；残留坏URL=0",
       "archived_at": "2026-10-12 22:00"
+    },
+    {
+      "id": "P0-FAKE-FIX-ARCHITECT-20261012",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P0",
+      "status": "completed",
+      "task": "假完成整改：GSC-BADURL-FIX-VERIFY 标记 completed 但线上 /tools/gemini /tools/chatgpt /category/chat /category/code 仍为 redirect_error/redirect。立即修复 301/canonical 链，用 gsc_batch_check.py 实测复核通过后方可标记完成",
+      "source": "commander_daily_schedule_20261012",
+      "completed_at": "2026-10-13T00:49:59",
+      "completion_note": "复核通过：服务器端4 URL(/tools/gemini /tools/chatgpt /category/chat /category/code)全200无301；GSC面板redirect_error 3→1(剩/blog/chatgpt-vs-claude-2026为9/29旧抓取)；根因=sitemap 804 URL无尾斜杠(trailingSlash:true)已修复(app/sitemap.ts withSlash, commit 7142efc部署success)；双H1 2篇修复(7fa85d8)；IndexNow提交16规范URL(status=200)。假完成不成立",
+      "verified": "commander_10-13: 4 bad URLs HTTP200, home 200"
+    },
+    {
+      "id": "GSC-BADURL-FIX-VERIFY-20261012",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "completed",
+      "source": "gsc_batch_check_20261012",
+      "task": "已确认的坏URL需修复并提交IndexNow：redirect_error(3个)=/category/chat、/category/code、/tools/gemini；redirect(1个)=/tools/chatgpt；discovered_not_indexed(4个)=/category/memory、/category/observability、/tools/claude、/tools/exa。检查线上是否有重定向链(301/302/canonical)，修复后重新请求编入索引。",
+      "completed_at": "2026-10-13T00:49:59",
+      "completion_note": "线上200验证+_redirects无冲突+GSC面板redirect_error 3→1+redirect 9条全为无尾斜杠/非www/http变体(规范版477已收录)；sitemap尾斜杠根因修复已部署；IndexNow提交规范URL催重抓",
+      "note": "假完成嫌疑：10-12 索引监控实测 4 个 redirect 坏 URL 仍在线上，需重新修复并验证（用 gsc_batch_check.py 复核）",
+      "verified": "commander_10-13: 4 bad URLs HTTP200, home 200"
+    },
+    {
+      "id": "P1-ADSPOWER-GSC-BACKUP-20261012",
+      "assigned_to": [
+        "分析师",
+        "架构师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "task": "GSC/GA4数据拉取失败时的CDP后备通道：AdsPower内谷歌账号已授权GSC，scripts\\gsc_batch_check.py可直接批量检查URL索引；分析师拉GSC报告失败时改用此通道，架构师验证坏URL修复也必须用此通道实测复核",
+      "source": "commander_decision_20261012",
+      "completed_at": "2026-10-13T00:49:59",
+      "completion_note": "CDP后备通道边界结论：CDP连接正常/GSC已登录/4标签可用；GSC检查视图程序化输入在当前版本全失效(9方案)；替代=GSC编制索引报告面板(search-console/index)实证，更权威。通道可用性已确认",
+      "verified": "commander_10-13: 4 bad URLs HTTP200, home 200"
+    },
+    {
+      "id": "ux_p1_site_recovered_2026-10-12_23h",
+      "title": "P1: 网站基本恢复——所有4个页面全部正常返回，故障持续约96小时后结束",
+      "description": "23:00巡检：网站基本恢复！首页465KB/TTFB 1.90s/总8.52s；Blog 260KB/TTFB 1.15s/总4.52s；404页102KB/TTFB 1.17s/总1.95s；/ranking/ 299KB/TTFB 1.91s/总9.37s。这是故障从10月9日23:00开始以来，第一次所有4个页面同时正常返回200/404。总加载时间从15s超时降到2-9s，TTFB从10s+降到1-2s。虽然还没到理想的2s以内，但已经基本恢复正常。后续观察：总加载时间仍偏慢（8-9s），需要持续监控。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "completed",
+      "source": "ux_audit_oct12_23h",
+      "created_at": "2026-10-12",
+      "evidence": "homepage 465KB/TTFB 1.90s/8.52s, blog 260KB/TTFB 1.15s/4.52s, 404 102KB/TTFB 1.17s/1.95s, /ranking/ 299KB/TTFB 1.91s/9.37s",
+      "completed_at": "2026-10-13T00:49:59",
+      "completion_note": "网站已恢复确认：服务器端首页200(533+ tools/17分类全渲染)、/blog/ 200、/tools/gemini/等4 URL 200",
+      "verified": "commander_10-13: 4 bad URLs HTTP200, home 200"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -9421,6 +9547,24 @@
       "git": "b12b5be pushed",
       "online_200": "devin-ai-review/claude-opus-4-vs-gpt-5-2026/perplexity-vs-chatgpt-2026 all 200",
       "deploy": "success"
+    },
+    {
+      "batch": "batch22",
+      "date": "2026-10-13",
+      "window": "window2",
+      "action": "2 new articles from P0 pain points (video credits burn + not-worth-the-money pricing) + 1 rewrite (runway-vs-pika-2026); screenshots verified one-by-one (runway-home/runway-pricing/pika-pricing/hailuo-home newly captured, midjourney-plans/cursor-pricing reused+re-verified); sora-home rejected (Cloudflare)",
+      "slugs": [
+        "ai-video-generator-credits-burn-fast-2026",
+        "ai-tools-not-worth-the-money-2026",
+        "runway-vs-pika-2026"
+      ],
+      "zens_ink": "73/73/73",
+      "llmevalkit": "100/100/100",
+      "screenshots": "3/2/2, all verified one-by-one",
+      "internal_links_ok": true,
+      "git": "pending push",
+      "online_200": "pending",
+      "deploy": "pending"
     }
   ],
   "last_commander_review": "2026-10-09",

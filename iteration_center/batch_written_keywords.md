@@ -74,3 +74,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - devin-ai-review | Devin AI Review 2026: Pricing, Features, and Is It Worth It? | kw: devin ai review | 73 | 2128 | 2 screenshots
 - claude-opus-4-vs-gpt-5-2026 | Claude Opus 4 vs GPT-5: Which LLM Wins 2026? | kw: claude opus 4 vs gpt 5 | 73 | 2131 | 2 screenshots
 - perplexity-vs-chatgpt-2026 | Perplexity AI vs ChatGPT 2026: Which Wins? | kw: perplexity vs chatgpt | 73 | 2161 | 2 screenshots
+
+## batch22 (2026-10-13) - 2 new + 1 rewrite
+- ai-video-generator-credits-burn-fast-2026 | Why AI Video Generators Burn Through Credits Fast in 2026 | kw: ai video generator credits | 73 | 2463 | 3 screenshots | NEW (pain point P0 #2)
+- ai-tools-not-worth-the-money-2026 | AI Tools Not Worth the Money in 2026: Honest Pricing Review | kw: ai tools not worth the money | 73 | 2295 | 2 screenshots | NEW (pain point P0 #1)
+- runway-vs-pika-2026 | Runway vs Pika 2026: Which AI Video Generator Wins? | kw: runway vs pika | 73 | 2142 | 2 screenshots | REWRITE
