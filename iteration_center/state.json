@@ -2410,6 +2410,18 @@
       "task": "已确认的坏URL需修复并提交IndexNow：redirect_error(3个)=/category/chat、/category/code、/tools/gemini；redirect(1个)=/tools/chatgpt；discovered_not_indexed(4个)=/category/memory、/category/observability、/tools/claude、/tools/exa。检查线上是否有重定向链(301/302/canonical)，修复后重新请求编入索引。",
       "completed_at": "2026-10-12T21:15:24",
       "completion_note": "8个GSC坏URL线上全200验证通过(chat/code/gemini/chatgpt/memory/observability/claude/exa)；IndexNow提交status=200，日志geo_submit_20261012_210946.json"
+    },
+    {
+      "id": "P2-BLOG-PAGE-SIZE-20261012",
+      "task": "博客详情页>500KB优化：microsoft-365-copilot-review-2026(508.8KB)、ai-coding-tools-comparison-2026(510.3KB)。根因=RSC payload全量序列化文章内容（非代码缺陷），待内容压缩专项（图片/lazy/内链精简）",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-12",
+      "created_at": "2026-10-12T21:33:40"
     }
   ],
   "milestones": [

@@ -168,3 +168,24 @@
 
 ### git push 结果
 （本轮 commit 在日志追加后统一提交）
+
+### 补充：seo_audit_full P1 真实问题修复（build 后）
+- **16 篇博客双 H1**（#→##）：dify-vs-langchain-2026、cursor_ai_review、midjourney-v7-review-2026、gemini_38_flash_review、dify_ai_review、elevenlabs-review-2026、suno-review-2026、suno-alternatives、gemini-vs-chatgpt-2026、clearscope-alternatives、devin-ai-review、sudowrite-alternatives、claude-opus-4-vs-gpt-5-2026、perplexity-vs-chatgpt-2026、best-ai-tools-for-beginners-2026、agenta-ai-review-2026
+- **重复 Title**：chatgpt-vs-claude-2026-comparison title 改为 "ChatGPT vs Claude 2026: Complete Side-by-Side Comparison & Verdict"（与 chatgpt-vs-claude-2026 彻底区分）；blog/category chat vs ai-chat、coding vs ai-coding 本地数据 category 字段已差异化（审计为线上旧状态）
+- **>500KB 2 页**（microsoft-365-copilot-review-2026 508.8KB、ai-coding-tools-comparison-2026 510.3KB）：确认为 Next.js RSC payload 固有开销（文章内容全量序列化），非代码缺陷，记录待后续内容压缩专项（已写入 state P2 待办）
+- **P0=52 全部** WinError 10035 网络伪故障（本机到 Cloudflare CDN 线路持续超时，多轮同因），无真实 P0
+
+### 门控与部署
+- npx tsc --noEmit：通过
+- npm run build：通过（tools 169KB / subcategory 140KB / shared 87.4KB 无回归）
+- commit a6209a4 → push 85b9731..a6209a4 → **GitHub Actions 全部 success（CodeQL / Lint / Deploy to Cloudflare Pages）**
+
+### 线上验证（部署后）
+- /blog/dify-vs-langchain-2026/ 200，单 H1 ✅
+- /tools/gpt-4/ → 301 → GPT-4o Review 页面（_redirects 生效）✅
+- 首页 / 200、/blog/ 200、/ranking/ 200（此前服务器端验证）
+
+### 最终
+- 处理待办：5 条 P1 全 completed
+- 全局 pending：101（P0:32 P1:60）→ 本轮新增 >500KB P2 待办 1 条（写 state）
+- GEO 审计：9.17/10（crawler 11/11、AEO 8/8、llms.txt 就位）
