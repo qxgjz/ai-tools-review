@@ -1,0 +1,69 @@
+﻿
+============================================================
+  futurepedia.io
+============================================================
+  Total pages: 631
+  Languages: {'root': 631}
+
+  Content patterns [ALL] (631 unique):
+      1x  newsletter
+      1x  resources
+      1x  ai-tools
+      1x  ai-innovations
+      1x  ai-innovations/leaderboard
+      1x  tutorials
+      1x  courses
+      1x  ai-education-platform
+      1x  learning-paths
+      1x  disclosure
+      1x  terms-of-service
+      1x  update-a-tool
+      1x  cancellation-policy
+      1x  contact
+      1x  resources/ai-evolution
+      1x  resources/automation
+      1x  resources/ai-glossary
+      1x  resources/ai-fundamentals
+      1x  resources/26-principles-to-master-the-art-of-prompting
+      1x  resources/llm-comparison
+      1x  ai-tools/3D-generator/best
+      1x  ai-tools/text-generators/best
+      1x  ai-tools/art-generators/best
+      1x  ai-tools/image-generators/best
+      1x  ai-tools/chatbots/best
+
+============================================================
+  topai.tools
+============================================================
+python :   [warn] no sitemap found for https://topai.tools/sitemap.xml
+所在位置 行:2 字符: 1
++ python -m zens_ink.competitor_gap --url https://www.aitoolcrux.com/si ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (  [warn] no sit...ols/sitemap.xml:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  Total pages: 0
+  No URLs found — sitemap may be blocked.
+
+============================================================
+  Cross-site comparison
+============================================================
+
+  Shared topics (0):
+
+  Unique to futurepedia.io (631):
+    ai-education-platform
+    ai-innovations
+    ai-innovations/leaderboard
+    ai-tools
+    ai-tools/3D-generator
+    ai-tools/3D-generator/best
+    ai-tools/ai-agents
+    ai-tools/ai-detection
+    ai-tools/art
+    ai-tools/art-generators/best
+    ai-tools/audio-editing
+    ai-tools/audio-generators
+    ai-tools/automations
+    ai-tools/avatar-generator
+    ai-tools/business

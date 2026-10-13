@@ -1,0 +1,13 @@
+﻿NEGATION_WORDS: {"won't", "haven't", "didn't", "isn't", "n't", 'cannot', "couldn't", "aren't", "wasn't", 'no', 'neither', 'nowhere', "doesn't", 'not', "can't", "mustn't", "shouldn't", "wouldn't", "hadn't", "hasn't", "don't", 'nor', 'nothing', 'nobody', 'never', 'none', "weren't"}
+sent38 full:
+## The Best AI Tools for Beginners by Use Case
+
+| What you want to do | Best free tool | Why |
+|---|---|---|
+| General questions and research | ChatGPT (free) | Unlimited GPT-6 chats, deep research, no setup |
+| Writing long documents and essays | Claude (free) | Fewer hallucinations, better structure, Artifacts |
+| Social media graphics and posters | Canva (free) | 250k+ templates, 20 AI images/day |
+| Notes, wiki, project tracking | Notion (free) | Unlimited pages, AI add-on at $10/mo |
+| Grammar and writing polish | Grammarly (free) | Catches basic errors in every text field |
+| Summarizing
+neg words hit: {'no'}

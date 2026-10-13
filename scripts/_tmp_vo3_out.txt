@@ -1,0 +1,9 @@
+﻿best-ai-tools-for-beginners-2026 | HTTP 200 | selfcheck: True | zensink: True | FAQ: True | len: 207932
+agenta-ai-review-2026 | HTTP 200 | selfcheck: True | zensink: True | FAQ: True | len: 208307
+https://www.aitoolcrux.com/blog/cursor-vs-windsurf-2026/ ERR The read operation timed out
+/screenshots/real/webp/agenta-home.webp -> 200
+/screenshots/real/webp/agenta-pricing.webp -> 200
+/screenshots/real/webp/chatgpt-pricing.webp -> 200
+/screenshots/real/webp/claude-pricing.webp -> 200
+/screenshots/real/webp/windsurf-pricing.webp -> ERR <urlopen error _ssl.c:1015: The handshake operation timed out>
+/screenshots/real/webp/cursor-pricing.webp -> 200

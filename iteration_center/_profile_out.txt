@@ -1,0 +1,102 @@
+﻿python : C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\iteration_center\_user_profile.py:21: Deprecatio
+nWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware ob
+jects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+所在位置 行:1 字符: 1
++ python "C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\通明街\Do...(datetime.UTC).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  end = datetime.utcnow().date() - timedelta(days=1)  # 昨天，数据更完整
+[window] 2026-09-11 ~ 2026-10-08 (28d)
+
+=== Device Category ===
+  desktop | 1630 | 1625 | 96 | 1401 | 7.7916714055214724
+  mobile | 82 | 80 | 38 | 194 | 55.388620682926835
+
+=== Country (top 15) ===
+  Singapore | 1466 | 1464 | 61
+  United States | 110 | 110 | 33
+  China | 56 | 55 | 18
+  France | 10 | 10 | 3
+  Brazil | 6 | 6 | 0
+  Netherlands | 6 | 6 | 0
+  Germany | 5 | 5 | 2
+  Iran | 4 | 4 | 1
+  Japan | 4 | 2 | 1
+  Poland | 4 | 4 | 1
+  Russia | 4 | 4 | 0
+  United Kingdom | 4 | 4 | 2
+  Türkiye | 3 | 2 | 3
+  Bangladesh | 2 | 2 | 2
+  Belgium | 2 | 1 | 1
+
+=== Traffic Source x Medium ===
+  (direct) | (none) | 1680 | 1673 | 112
+  chatgpt.com | ai-assistant | 28 | 26 | 19
+  (not set) | (not set) | 3 | 3 | 0
+  bing | organic | 3 | 3 | 3
+
+=== Browser ===
+  Chrome | 1670 | 117
+  Safari | 16 | 4
+  Android Webview | 15 | 5
+  Edge | 6 | 5
+  Opera | 2 | 1
+  Firefox | 1 | 1
+  Samsung Internet | 1 | 1
+
+=== Page Path (top 20 by pageviews) ===
+  / | 104 | 85 | 32
+  /blog/suno-alternatives/ | 40 | 40 | 23
+  /blog/perplexity-ai-review-2026 | 33 | 33 | 1
+  /blog/ | 15 | 5 | 4
+  /blog/stable-diffusion-alternatives-2026/ | 13 | 15 | 2
+  /blog/best-ai-video-generators-2026/ | 12 | 14 | 3
+  /blog/best-ai-productivity-tools-2026/ | 11 | 13 | 1
+  /blog/midjourney-alternatives-2026/ | 11 | 15 | 1
+  /tools/midjourney/ | 10 | 10 | 4
+  /blog/best-ai-image-generators-2026/ | 9 | 12 | 5
+  /blog/suno-alternatives-2026/ | 9 | 11 | 1
+  /blog/dify-vs-coze-2026-comparison/ | 8 | 9 | 1
+  /blog | 7 | 3 | 3
+  /blog/midjourney-free-trial-2026/ | 7 | 10 | 0
+  /blog/midjourney-v7-vs-flux-2026/ | 7 | 10 | 1
+  /blog/notion-ai-review-2026/ | 7 | 7 | 2
+  /blog/perplexity-vs-chatgpt-2026/ | 7 | 8 | 2
+  /blog/best-ai-customer-support-tools-2026/ | 6 | 7 | 1
+  /blog/cursor-vs-windsurf-2026/ | 6 | 7 | 0
+  /blog/elevenlabs-review-2026/ | 6 | 9 | 2
+
+=== New vs Returning ===
+  new | 1705 | 1704 | 131 | 10.075139740762461
+  returning | 5 | 4 | 3 | 12.8356058
+  (not set) | 1 | 1 | 0 | 0
+
+=== Hour of Day ===
+  6 | 792 | 55
+  5 | 93 | 6
+  2 | 74 | 3
+  19 | 51 | 1
+  11 | 50 | 3
+  18 | 47 | 10
+  7 | 46 | 3
+  17 | 42 | 3
+  21 | 41 | 6
+  8 | 40 | 2
+  10 | 39 | 2
+  14 | 39 | 0
+  9 | 38 | 2
+  15 | 37 | 8
+  3 | 36 | 3
+  0 | 35 | 4
+  13 | 35 | 3
+  20 | 31 | 3
+  12 | 30 | 5
+  16 | 29 | 2
+  22 | 28 | 3
+  23 | 26 | 3
+  4 | 18 | 1
+  1 | 17 | 6
+
+[DONE]

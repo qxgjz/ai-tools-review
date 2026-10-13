@@ -1,6 +1,6 @@
 # URLs for Google Search Console manual submission
-# Generated: 2026-10-01 13:33:31
-# Total: 37 URLs
+# Generated: 2026-10-09 22:02:00
+# Total: 77 URLs
 
 https://www.aitoolcrux.com/
 https://www.aitoolcrux.com/about
@@ -29,13 +29,53 @@ https://www.aitoolcrux.com/methodology
 https://www.aitoolcrux.com/privacy
 https://www.aitoolcrux.com/ranking
 https://www.aitoolcrux.com/terms
+https://www.aitoolcrux.com/tools/adobe-firefly
+https://www.aitoolcrux.com/tools/agentscope
 https://www.aitoolcrux.com/tools/anything-llm
+https://www.aitoolcrux.com/tools/auto-gpt
 https://www.aitoolcrux.com/tools/chatgpt
 https://www.aitoolcrux.com/tools/claude
+https://www.aitoolcrux.com/tools/codex
 https://www.aitoolcrux.com/tools/composio
+https://www.aitoolcrux.com/tools/continue
 https://www.aitoolcrux.com/tools/dify
+https://www.aitoolcrux.com/tools/elevenlabs
+https://www.aitoolcrux.com/tools/firecrawl
+https://www.aitoolcrux.com/tools/flowise
 https://www.aitoolcrux.com/tools/gemini
+https://www.aitoolcrux.com/tools/gemini-advanced
 https://www.aitoolcrux.com/tools/gemini-cli
+https://www.aitoolcrux.com/tools/github-copilot
 https://www.aitoolcrux.com/tools/goose
+https://www.aitoolcrux.com/tools/gpt-4o
+https://www.aitoolcrux.com/tools/gpt-researcher
+https://www.aitoolcrux.com/tools/grammarly
+https://www.aitoolcrux.com/tools/inspector
+https://www.aitoolcrux.com/tools/langchain4j
+https://www.aitoolcrux.com/tools/langflow
+https://www.aitoolcrux.com/tools/langroid
+https://www.aitoolcrux.com/tools/librechat
+https://www.aitoolcrux.com/tools/litellm
+https://www.aitoolcrux.com/tools/mastra
+https://www.aitoolcrux.com/tools/mcp-go
+https://www.aitoolcrux.com/tools/microsoft-365-copilot
+https://www.aitoolcrux.com/tools/midjourney
 https://www.aitoolcrux.com/tools/n8n
+https://www.aitoolcrux.com/tools/notion-ai
+https://www.aitoolcrux.com/tools/open-webui
+https://www.aitoolcrux.com/tools/openai-python
+https://www.aitoolcrux.com/tools/openai-translator
+https://www.aitoolcrux.com/tools/perplexity
+https://www.aitoolcrux.com/tools/promptfoo
 https://www.aitoolcrux.com/tools/ragflow
+https://www.aitoolcrux.com/tools/repomix
+https://www.aitoolcrux.com/tools/runway
+https://www.aitoolcrux.com/tools/scrapegraph-ai
+https://www.aitoolcrux.com/tools/sora
+https://www.aitoolcrux.com/tools/stable-diffusion
+https://www.aitoolcrux.com/tools/steel-browser
+https://www.aitoolcrux.com/tools/text-generation-webui
+https://www.aitoolcrux.com/tools/unsloth
+https://www.aitoolcrux.com/tools/vllm
+https://www.aitoolcrux.com/tools/voltagent
+https://www.aitoolcrux.com/tools/windmill

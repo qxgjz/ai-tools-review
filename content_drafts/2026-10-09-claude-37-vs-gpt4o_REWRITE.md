@@ -5,7 +5,7 @@
 
 ## Quick Answer
 
-**Bottom line:** Claude 3.7 Sonnet leads on long-context coding (200K tokens) and nuanced writing; GPT-4o wins on real-time multimodal and speed. For coding agents and long-document analysis, choose Claude 3.7; for vision-heavy tasks and real-time voice, choose GPT-4o. Both cost approximately $3 per million input tokens, making them the most competitive flagship models of 2026.
+**Bottom line:** Claude 3.7 Sonnet leads on long-context coding (200K tokens) and nuanced writing; GPT-4o wins on real-time multimodal and speed. For coding agents and long-document analysis, choose Claude 3.7; for vision-heavy tasks and real-time voice, choose GPT-4o. Claude 3.7 costs $3/M input and $15/M output; GPT-4o costs $2.50/M input and $10/M output — GPT-4o is roughly 20% cheaper on input and 33% cheaper on output.
 
 In our September 2026 tests, Claude 3.7 Sonnet scored 72.9% on SWE-bench Verified versus GPT-4o's 67.1%, while GPT-4o delivered responses 40% faster on simple tasks with native audio support. The choice is workload-dependent: Claude for depth and reasoning, GPT-4o for speed and multimodal input.
 
@@ -35,7 +35,7 @@ In our September 2026 tests, Claude 3.7 Sonnet scored 72.9% on SWE-bench Verifie
 
 ## What Is Claude 3.7 Sonnet?
 
-Claude 3.7 Sonnet, released by Anthropic in early 2026, is the company's hybrid reasoning model: it combines instant responses with an "extended thinking" mode that allocates additional computation before answering. Its defining feature is the 200K-token context window, which lets it process entire codebases, research papers, or legal contracts in a single prompt without chunking.
+Claude 3.7 Sonnet, released by Anthropic in February 2025, is the company's hybrid reasoning model: it combines instant responses with an "extended thinking" mode that allocates additional computation before answering. Its defining feature is the 200K-token context window, which lets it process entire codebases, research papers, or legal contracts in a single prompt without chunking.
 
 Claude 3.7 is positioned for professional workloads — coding assistants, agentic workflows, long-document analysis — where reliability and accuracy outweigh raw speed. Anthropic reports 72.9% on SWE-bench Verified, and independent leaderboards confirm its lead on reasoning-heavy benchmarks. Source: [Anthropic](https://www.anthropic.com/news).
 

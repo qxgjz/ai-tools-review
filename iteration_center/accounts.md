@@ -130,3 +130,19 @@
 - 用户名: aitoolcrux
 - 状态: 已注册已验证，提交表单已填但backlink验证失败，待网站加badge后提交
 - 注册日期: 2026-09-18
+
+### 15. AIToolsDirectory.com (aitoolsdirectory.com)
+- 网址: https://aitoolsdirectory.com
+- 提交表单: https://aitool.paperform.co/
+- 邮箱: 840754587@qq.com
+- X handle: @aitoolcrux
+- 提交时间: 2026-10-10 06:12:32 JST
+- 状态: 已提交，等待人工审核（成功页 /tool-submitted）
+- 备注: 免费目录，手动审核，要求原创描述（不能AI生成，不能第一人称）
+
+## 16. hyzenpro.com
+- URL: https://hyzenpro.com/submit-ai-tool/
+- 提交时间: 2026-10-12 06:11:43 JST
+- 状态: 已提交，等编辑审核（5个工作日）
+- 邮箱: 840754587@qq.com
+- 免费，无需登录，编辑审核制

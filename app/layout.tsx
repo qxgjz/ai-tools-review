@@ -4,10 +4,13 @@ import Link from 'next/link';
 import { Analytics } from '@vercel/analytics/next';
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
+import '@fontsource/space-grotesk/400.css';
+import '@fontsource/space-grotesk/500.css';
+import '@fontsource/space-grotesk/600.css';
+import '@fontsource/space-grotesk/700.css';
 import './globals.css';
 
 // 全局缓存配置：静态页面默认1小时缓存
-import './design-tokens.css';
 import { Header } from '@/components/layout/Header';
 import { BackToTop } from '@/components/layout/BackToTop';
 import { RouteFocusManager } from '@/components/layout/RouteFocusManager';
@@ -102,7 +105,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 transition-colors duration-200`}
+        className={`${GeistSans.variable} ${GeistMono.variable} min-h-screen bg-background text-foreground transition-colors duration-200`}
+        style={{
+          ['--font-sans' as string]: GeistSans.style.fontFamily,
+          ['--font-display' as string]: `'Space Grotesk', ${GeistSans.style.fontFamily}, sans-serif`,
+        }}
       >
         <ThemeProvider>
           {/* Skip to main content - a11y: keyboard users bypass repeated nav */}
@@ -204,7 +211,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                   </p>
                   <Link
                     href="/free-ai-tools-guide"
-                    className="inline-flex items-center gap-1 text-sm font-medium text-emerald-600 dark:text-emerald-400 hover:underline mb-4 py-2"
+                    className="inline-flex items-center gap-1 text-sm font-medium text-primary hover:underline mb-4 py-2"
                   >
                     📚 Get Free AI Tools Guide
                   </Link>
@@ -255,7 +262,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/ranking"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Tool Rankings
                       </Link>
@@ -263,7 +270,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/compare"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Compare Tools
                       </Link>
@@ -271,7 +278,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/generator"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Tool Matcher
                       </Link>
@@ -279,7 +286,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/blog"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Blog & Reviews
                       </Link>
@@ -287,7 +294,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/sitemap"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Sitemap
                       </Link>
@@ -304,7 +311,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/category/chat"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Chat
                       </Link>
@@ -312,7 +319,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/category/writing"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Writing
                       </Link>
@@ -320,7 +327,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/category/image"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Image
                       </Link>
@@ -328,7 +335,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/category/code"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Coding
                       </Link>
@@ -336,7 +343,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/category/video"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Video
                       </Link>
@@ -344,7 +351,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/category/audio"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Audio
                       </Link>
@@ -361,7 +368,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/about"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         About Us
                       </Link>
@@ -369,7 +376,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/privacy"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Privacy Policy
                       </Link>
@@ -377,7 +384,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/terms"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Terms of Service
                       </Link>
@@ -385,7 +392,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/ai-policy"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Policy
                       </Link>
@@ -393,7 +400,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/disclosure"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Affiliate Disclosure
                       </Link>
@@ -401,7 +408,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                     <li>
                       <Link
                         href="/contact"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Contact Us
                       </Link>
@@ -411,7 +418,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         href="/sitemap.xml"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         XML Sitemap
                       </a>
@@ -421,7 +428,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         href="/rss.xml"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         RSS Feed
                       </a>
@@ -431,7 +438,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         href="/robots.txt"
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Robots.txt
                       </a>
@@ -441,7 +448,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         href="https://dang.ai"
                         target="_blank"
                         rel="dofollow noopener noreferrer"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         AI Tools Directory (Dang.ai)
                       </a>
@@ -451,7 +458,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                         href="https://www.agenthunter.io"
                         target="_blank"
                         rel="dofollow noopener noreferrer"
-                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-emerald-600 dark:hover:text-emerald-400 transition-colors"
+                        className="text-sm text-gray-500 dark:text-gray-400 hover:text-primary transition-colors"
                       >
                         Featured AI Agent (AgentHunter)
                       </a>

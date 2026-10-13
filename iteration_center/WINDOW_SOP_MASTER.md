@@ -349,6 +349,65 @@ Step 7: 写执行日志到window_logs/ux_{日期}.md
 
 ---
 
+## 窗口7：设计师（视觉质感/设计系统）【2026-10-09新增】
+
+### 职责
+- 网站视觉质感第一责任人，**消除AI廉价感**
+- 设计系统（tokens/色板/字体/间距/动效）的建立与维护
+- 页面布局、Bento网格、卡片设计、真实截图运用
+- **标准来源：commander_design_research_20261009（Linear/Vercel/shadcn/ui/Stripe真实解剖，禁止AI拍脑袋）**
+- **组件铁律：页面组件一律用shadcn/ui（ui.shadcn.com，60k+ stars，已装依赖+9个基础组件），禁止手写重复组件；缺组件用 npx shadcn add 拉取，不自己写**
+
+### 每次触发执行流程
+```
+Step 1: 读state.json → 找assigned_to=窗口7/设计师的pending任务
+Step 2: 读 state.json 里 design_standard 字段（真实标准值，来源=顶级公司案例）
+Step 3: 按P0→P1顺序执行，每个任务严格对照标准值
+Step 4: 改完跑 npx tsc --noEmit 通过后，【强制预览】：npm run dev 本地起服务，用浏览器截图改后的页面（首页/工具页/文章页），把截图发给用户确认效果
+Step 5: 【用户确认后才部署】用户说"可以"再 git push，等60秒部署，curl线上200验证
+Step 6: 截图对比（改前/改后），确认无AI廉价感
+Step 7: 更新state.json（完成标记completed）
+Step 8: 写执行日志到window_logs/designer_{日期}.md
+```
+> 🔴 **部署铁律（2026-10-09新增）：任何设计改动必须先本地预览截图给用户确认，未确认禁止 push 上线。**
+
+### 设计标准速查（必须严格按此值执行，不许自由发挥）
+| 维度 | 标准值 | 来源 |
+|------|--------|------|
+| 背景三层 | #ffffff→#fafafa→#f4f4f5 | Linear/Vercel |
+| 强调色 | #5E6AD2蓝紫（禁用默认蓝#3b82f6） | Linear |
+| 文字层级 | rgba(0,0,0,0.90/0.60/0.45) | Linear |
+| 边框 | rgba(0,0,0,0.08)，hover 0.12 | Vercel |
+| 状态色 | done#10B981/progress#F59E0B/cancel#EF4444 | Linear |
+| 标题字体 | Space Grotesk 负字距-0.5~-2.4px | Vercel模式 |
+| 正文 | Inter 16px 行高1.5 | thegrain |
+| 权重 | 只用400/500/600 | Vercel |
+| 圆角 | 8-12px统一 | shadcn |
+| 间距 | 8pt网格，section padding 80-120px | Vercel |
+| 动效 | 100/150/250ms + cubic-bezier(0.16,1,0.3,1) | Linear |
+| Bento | 每section≤8卡，gap精确16/24px | thegrain |
+| 噪点 | 4% SVG overlay | thegrain |
+| hero | 真实工具UI截图1.2x，标题≤12词 | designkey |
+
+### 廉价感检查清单（逐页审计）
+- ❌ 默认蓝#3b82f6 → 必须换#5E6AD2
+- ❌ 卡片等大平铺无层级 → 必须bento非对称
+- ❌ 无噪点/纯平涂 → 必须4%噪点
+- ❌ section无留白 → 必须80-120px
+- ❌ 图标风格不统一 → 统一同一图标库
+- ❌ 动效时长随意 → 必须100/150/250ms
+- ❌ 标题字距未收紧 → 必须负字距
+
+### 验收标准
+- ✅ 每项改动都能在标准速查表找到对应值
+- ✅ 无廉价感清单中的任何一项
+- ✅ 代码已push，线上200
+- ✅ 有改前/改后截图对比
+- ✅ state.json中该任务status=completed
+- ✅ 执行日志已写
+
+---
+
 ## 指挥官（战略调度）
 
 ### 职责

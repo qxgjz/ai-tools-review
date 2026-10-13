@@ -6,13 +6,13 @@ import { ArrowUpRight, Sparkles } from 'lucide-react';
 import type { ToolCardItem, Grade } from '@/types';
 import { calculateScoreResult } from '@/lib/scoring';
 
-// Grade styles - solid colors, NO gradients (Taste Skill + UI/UX Pro Max rule)
+// Grade styles - solid colors, NO gradients (design_standard 状态色体系)
 const GRADE_STYLES: Record<Grade, string> = {
-  S: 'bg-amber-700 text-white',
-  A: 'bg-green-700 text-white',
-  B: 'bg-blue-700 text-white',
-  C: 'bg-yellow-800 text-white',
-  D: 'bg-red-700 text-white',
+  S: 'bg-[#b45309] text-white',
+  A: 'bg-[#15803d] text-white',
+  B: 'bg-[#5E6AD2] text-white',
+  C: 'bg-[#a16207] text-white',
+  D: 'bg-[#b91c1c] text-white',
   F: 'bg-zinc-500 text-white',
 };
 
@@ -40,16 +40,16 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
       <Link
         href={`/tools/${tool.slug}`}
         prefetch={false}
-        className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-emerald-500 focus-visible:ring-offset-2 rounded-xl"
+        className="block h-full focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 rounded-xl"
         aria-label={`${tool.name} review - rated ${total.toFixed(1)}/10, Grade ${grade}. Click to read full review.`}
       >
-        <div className="relative h-full flex flex-col p-5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-emerald-500/60 dark:hover:border-emerald-500/60 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 overflow-hidden">
+        <div className="relative h-full flex flex-col p-5 bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 hover:border-primary/40 dark:hover:border-primary/40 hover:shadow-lg hover:-translate-y-0.5 transition-all duration-200 overflow-hidden">
           {/* Subtle top accent line on hover */}
-          <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-emerald-500 to-emerald-400 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+          <div className="absolute top-0 left-0 right-0 h-0.5 bg-gradient-to-r from-primary to-primary/60 transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
 
           {/* Header: Logo + Grade */}
           <div className="flex items-start justify-between mb-4">
-            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xl font-bold transition-colors group-hover:bg-emerald-100 dark:group-hover:bg-emerald-900/30 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 overflow-hidden">
+            <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-zinc-100 dark:bg-zinc-800 text-zinc-700 dark:text-zinc-300 text-xl font-bold transition-colors group-hover:bg-primary/10 dark:group-hover:bg-primary/20 group-hover:text-primary dark:group-hover:text-primary overflow-hidden">
               {tool.screenshot ? (
                 // eslint-disable-next-line @next/next/no-img-element
                 <img
@@ -85,7 +85,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
 
           {/* Name + Vendor */}
           <div className="mb-3">
-            <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors line-clamp-1">
+            <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-primary transition-colors line-clamp-1">
               {tool.name}
             </h3>
             <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">{tool.vendor}</p>
@@ -119,7 +119,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
               </div>
               <div
                 aria-hidden="true"
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-emerald-700 group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-primary group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95"
               >
                 <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
               </div>

@@ -1,0 +1,106 @@
+﻿=== 2026-10-10-best-ai-tools-for-beginners-2026_DRAFT.md
+{
+ "content_length": 13444,
+ "keyword": "best ai tools for beginners 2026",
+ "checks": {
+  "hallucination": {
+   "entity": {
+    "score": 1.0,
+    "reason": "All 27 entities found in context"
+   },
+   "numeric": {
+    "score": 1.0,
+    "reason": "All 113 numbers match context"
+   },
+   "contradiction": {
+    "score": 0.0,
+    "reason": "8 contradiction(s) detected"
+   },
+   "fabricated": {
+    "score": 1.0,
+    "reason": "All 92 statements supported by context"
+   }
+  },
+  "ai_content": {
+   "score": 0.8528,
+   "ai_probability": 0.1472
+  },
+  "pii": {
+   "score": 1.0,
+   "details": "{'pii_found': [], 'pii_count': 0, 'methods_used': ['pattern']}"
+  },
+  "anomaly": {
+   "score": 0.8,
+   "details": "{'anomalies': [{'type': 'too_long', 'detail': '2184 words'}], 'count': 1}"
+  }
+ },
+ "warnings": [
+  "幻觉风险: contradiction 分数偏低（与外部参考不符）",
+  "缺少FAQ部分",
+  "关键词密度过低: 0.05% < 0.5%"
+ ],
+ "score": 65,
+ "hallucination_detected": true,
+ "ai_content_probability": 0.1472,
+ "recommendations": [
+  "核实文章中所有数据、实体、引用来源，删除无法验证的信息",
+  "添加FAQ部分，回答5-8个常见问题"
+ ],
+ "keyword_density": "0.05%",
+ "word_count": 2184,
+ "char_count": 13444
+}
+
+=== 2026-10-10-agenta-ai-review-2026_DRAFT.md
+{
+ "content_length": 13796,
+ "keyword": "agenta ai review open source agent builder",
+ "checks": {
+  "hallucination": {
+   "entity": {
+    "score": 1.0,
+    "reason": "All 23 entities found in context"
+   },
+   "numeric": {
+    "score": 1.0,
+    "reason": "All 75 numbers match context"
+   },
+   "contradiction": {
+    "score": 0.4,
+    "reason": "2 contradiction(s) detected"
+   },
+   "fabricated": {
+    "score": 1.0,
+    "reason": "All 82 statements supported by context"
+   }
+  },
+  "ai_content": {
+   "score": 0.8622,
+   "ai_probability": 0.13780000000000003
+  },
+  "pii": {
+   "score": 1.0,
+   "details": "{'pii_found': [], 'pii_count': 0, 'methods_used': ['pattern']}"
+  },
+  "anomaly": {
+   "score": 0.8,
+   "details": "{'anomalies': [{'type': 'too_long', 'detail': '2160 words'}], 'count': 1}"
+  }
+ },
+ "warnings": [
+  "幻觉风险: contradiction 分数偏低（与外部参考不符）",
+  "缺少FAQ部分",
+  "关键词密度过低: 0.00% < 0.5%"
+ ],
+ "score": 67,
+ "hallucination_detected": true,
+ "ai_content_probability": 0.13780000000000003,
+ "recommendations": [
+  "核实文章中所有数据、实体、引用来源，删除无法验证的信息",
+  "添加FAQ部分，回答5-8个常见问题"
+ ],
+ "keyword_density": "0.00%",
+ "word_count": 2160,
+ "char_count": 13796
+}
+

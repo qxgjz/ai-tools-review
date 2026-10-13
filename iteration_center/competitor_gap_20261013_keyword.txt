@@ -1,0 +1,33 @@
+﻿
+============================================================
+  futurepedia.io
+============================================================
+  Total pages: 631
+  Languages: {'root': 631}
+
+  Content patterns [ALL] (631 unique):
+      1x  newsletter
+      1x  resources
+      1x  ai-tools
+      1x  ai-innovations
+      1x  ai-innovations/leaderboard
+      1x  tutorials
+      1x  courses
+      1x  ai-education-platform
+      1x  learning-paths
+      1x  disclosure
+      1x  terms-of-service
+      1x  update-a-tool
+      1x  cancellation-policy
+      1x  contact
+      1x  resources/ai-evolution
+      1x  resources/automation
+      1x  resources/ai-glossary
+      1x  resources/ai-fundamentals
+      1x  resources/26-principles-to-master-the-art-of-prompting
+      1x  resources/llm-comparison
+      1x  ai-tools/3D-generator/best
+      1x  ai-tools/text-generators/best
+      1x  ai-tools/art-generators/best
+      1x  ai-tools/image-generators/best
+      1x  ai-tools/chatbots/best

@@ -10,21 +10,79 @@ const config: Config = {
   theme: {
     extend: {
       fontFamily: {
-        sans: ["Inter", "system-ui", "-apple-system", "BlinkMacSystemFont", "Segoe UI", "Roboto", "sans-serif"],
+        sans: [
+          "var(--font-sans)",
+          "system-ui",
+          "-apple-system",
+          "BlinkMacSystemFont",
+          "Segoe UI",
+          "Roboto",
+          "sans-serif",
+        ],
+        display: [
+          "var(--font-display)",
+          "var(--font-sans)",
+          "system-ui",
+          "sans-serif",
+        ],
       },
       colors: {
+        border: "var(--border)",
+        input: "var(--input)",
+        ring: "var(--ring)",
+        background: "var(--background)",
+        foreground: "var(--foreground)",
         primary: {
-          50: "#eff6ff",
-          100: "#dbeafe",
-          200: "#bfdbfe",
-          300: "#93c5fd",
-          400: "#60a5fa",
-          500: "#3b82f6",
-          600: "#2563eb",
-          700: "#1d4ed8",
-          800: "#1e40af",
-          900: "#1e3a8a",
+          DEFAULT: "var(--primary)",
+          foreground: "var(--primary-foreground)",
         },
+        secondary: {
+          DEFAULT: "var(--secondary)",
+          foreground: "var(--secondary-foreground)",
+        },
+        destructive: {
+          DEFAULT: "var(--destructive)",
+          foreground: "var(--destructive-foreground)",
+        },
+        muted: {
+          DEFAULT: "var(--muted)",
+          foreground: "var(--muted-foreground)",
+        },
+        accent: {
+          DEFAULT: "var(--accent)",
+          foreground: "var(--accent-foreground)",
+        },
+        popover: {
+          DEFAULT: "var(--popover)",
+          foreground: "var(--popover-foreground)",
+        },
+        card: {
+          DEFAULT: "var(--card)",
+          foreground: "var(--card-foreground)",
+        },
+        status: {
+          done: "#10B981",
+          progress: "#F59E0B",
+          cancel: "#EF4444",
+        },
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      boxShadow: {
+        /* 阴影即边框：shadcn/Linear 模式 */
+        "border-1": "0 0 0 1px rgba(0,0,0,0.08)",
+        "border-1-hover": "0 0 0 1px rgba(0,0,0,0.12)",
+      },
+      transitionDuration: {
+        micro: "100ms",
+        standard: "150ms",
+        page: "250ms",
+      },
+      transitionTimingFunction: {
+        standard: "cubic-bezier(0.16,1,0.3,1)",
       },
       animation: {
         "fade-in": "fadeIn 0.5s ease-out",

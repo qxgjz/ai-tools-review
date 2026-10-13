@@ -1,0 +1,69 @@
+﻿[1] listing sites...
+    accessible sites: 1
+      - sc-domain:aitoolcrux.com  permission=siteFullUser
+
+[2] using site: sc-domain:aitoolcrux.com
+python : C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\iteration_center\_pull_gsc_via_proxy.py:42: Depr
+ecationWarning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aw
+are objects to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+所在位置 行:2 字符: 1
++ python "iteration_center\_pull_gsc_via_proxy.py" 2>&1 | Out-File -Enc ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\通明街\Do...(datetime.UTC).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  end = datetime.utcnow().date() - timedelta(days=3)
+[3] daily trend 2026-10-01 ~ 2026-10-07
+    date          clk   impr     ctr    pos
+    2026-10-01      0      1   0.00%    3.0
+    2026-10-02      0      9   0.00%   12.2
+    2026-10-03      0     14   0.00%   77.9
+    2026-10-04      0      8   0.00%    6.9
+    2026-10-05      0      8   0.00%    7.0
+    2026-10-06      0      6   0.00%    7.5
+C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\iteration_center\_pull_gsc_via_proxy.py:56: DeprecationWa
+rning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware objec
+ts to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+  qend = datetime.utcnow().date() - timedelta(days=3)
+
+[4] top queries 2026-09-10 ~ 2026-10-07
+    query                                                                  clk  impr   pos
+    best voice changer 2026                                                  1     1   4.0
+    "midjourney"                                                             0     1   8.0
+    "voice changer"                                                          0     1   6.0
+    affiliate transparency in software reviews                               0     1  84.0
+    agency agents                                                            0     1  68.0
+    agent ai helper                                                          0     2  89.0
+    agent ai online                                                          0     2  70.5
+    agent ai tool                                                            0     3  76.7
+    agent ai tools                                                           0     1  79.0
+    agenta                                                                   0     3  56.0
+    agenta ai                                                                0     1  64.0
+    agents agency                                                            0     1  76.0
+    ai agent                                                                 0     9  94.2
+    ai agent automation                                                      0     4  66.5
+    ai agent free                                                            0     1  79.0
+    ai agent free online                                                     0     1  68.0
+    ai agent online                                                          0     1  72.0
+    ai agent reviews                                                         0     1  75.0
+    ai agent services                                                        0     2  96.5
+    ai agent software                                                        0     2  86.0
+
+[5] top pages 2026-09-10 ~ 2026-10-07
+    /blog/best-ai-voice-changers-2026                            clk=2 impr=68 pos=16.5
+    /                                                            clk=1 impr=4 pos=1.2
+    /blog/openai_astra_review                                    clk=1 impr=86 pos=11.2
+    /category/writing                                            clk=1 impr=2 pos=85.5
+    /compare                                                     clk=1 impr=190 pos=39.2
+    /tools/ailice                                                clk=1 impr=2 pos=44.5
+    /tools/wrenai                                                clk=1 impr=4 pos=21.8
+    /about                                                       clk=0 impr=12 pos=3.2
+    /ai-policy                                                   clk=0 impr=2 pos=4.0
+    /alternatives/cursor-alternatives                            clk=0 impr=2 pos=1.0
+    /blog/adobe-firefly-review-2026                              clk=0 impr=31 pos=6.6
+    /blog/ai-coding-tools-comparison-2026                        clk=0 impr=12 pos=30.8
+    /blog/ai-tools-comparison-2026                               clk=0 impr=1 pos=6.0
+    /blog/ai-tools-for-beginners-2026                            clk=0 impr=25 pos=30.1
+    /blog/ai-tools-review-guide-2026                             clk=0 impr=5 pos=132.0
+
+[OK] raw data saved: C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\gsc-ga4-report\live_pull_20261010_0809.json

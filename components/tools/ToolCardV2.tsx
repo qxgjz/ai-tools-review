@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Sparkles, Star } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import type { Tool, Grade } from '@/types';
 import { calculateScoreResult } from '@/lib/scoring';
 import {
@@ -14,25 +14,25 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Progress } from '@/components/ui/progress';
 
+/* 等级徽章：纯色状态色（无渐变），design_standard 状态色体系 */
 const GRADE_STYLES: Record<Grade, string> = {
-  S: 'bg-gradient-to-br from-amber-400 to-amber-600 text-white shadow-amber-500/30',
-  A: 'bg-gradient-to-br from-emerald-400 to-emerald-600 text-white shadow-emerald-500/30',
-  B: 'bg-gradient-to-br from-blue-400 to-blue-600 text-white shadow-blue-500/30',
-  C: 'bg-gradient-to-br from-yellow-400 to-yellow-500 text-white shadow-yellow-500/30',
-  D: 'bg-gradient-to-br from-red-400 to-red-600 text-white shadow-red-500/30',
-  F: 'bg-gradient-to-br from-gray-400 to-gray-500 text-white shadow-gray-500/30',
+  S: 'bg-[#b45309] text-white',
+  A: 'bg-[#15803d] text-white',
+  B: 'bg-[#5E6AD2] text-white',
+  C: 'bg-[#a16207] text-white',
+  D: 'bg-[#b91c1c] text-white',
+  F: 'bg-[#52525b] text-white',
 };
 
 const GRADE_BAR_COLORS: Record<Grade, string> = {
-  S: 'from-amber-400 to-amber-600',
-  A: 'from-emerald-400 to-emerald-600',
-  B: 'from-blue-400 to-blue-600',
-  C: 'from-yellow-400 to-yellow-500',
-  D: 'from-red-400 to-red-600',
-  F: 'from-gray-400 to-gray-500',
+  S: 'bg-[#b45309]',
+  A: 'bg-[#15803d]',
+  B: 'bg-[#5E6AD2]',
+  C: 'bg-[#a16207]',
+  D: 'bg-[#b91c1c]',
+  F: 'bg-[#52525b]',
 };
 
 interface ToolCardProps {
@@ -49,20 +49,15 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
     <motion.div
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.4, delay: Math.min(index * 0.05, 0.5) }}
+      transition={{ duration: 0.25, delay: Math.min(index * 0.05, 0.5), ease: [0.16, 1, 0.3, 1] }}
       className="h-full group"
     >
       <Link href={`/tools/${tool.slug}`} className="block h-full">
-        <Card className="relative h-full flex flex-col overflow-hidden hover:shadow-xl hover:shadow-blue-500/10 dark:hover:shadow-blue-500/20 hover:border-blue-200 dark:hover:border-blue-800 hover:-translate-y-1.5 transition-all duration-300">
-          {/* 微光悬停效果 */}
-          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none">
-            <div className="absolute -top-1/2 -left-1/2 w-full h-full bg-gradient-to-br from-blue-500/5 via-transparent to-transparent rotate-45 transform translate-x-full group-hover:translate-x-0 transition-transform duration-1000" />
-          </div>
-
+        <Card className="relative h-full flex flex-col overflow-hidden rounded-lg border hover:border-[rgba(0,0,0,0.12)] hover:shadow-md dark:hover:border-white/20 transition-all duration-150 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1">
           {/* FeaturedTags */}
           {isFeatured && (
             <div className="absolute top-3 right-3 z-10">
-              <Badge className="bg-gradient-to-r from-amber-400 to-orange-500 text-white border-0 shadow-lg shadow-amber-500/30">
+              <Badge className="bg-[#F59E0B] text-white border-0">
                 <Sparkles className="w-3 h-3 mr-1" />
                 TOP
               </Badge>
@@ -72,27 +67,23 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
           <CardHeader className="pb-4">
             {/* 头部：Logo + 等级 */}
             <div className="flex items-start justify-between">
-              <div className="relative">
-                <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white text-xl font-extrabold shadow-lg shadow-blue-500/30 group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300 overflow-hidden">
-                  {tool.screenshot ? (
-                    // eslint-disable-next-line @next/next/no-img-element
-                    <img
-                      src={tool.screenshot}
-                      alt={`${tool.name} screenshot`}
-                      width={48}
-                      height={48}
-                      loading="lazy"
-                      className="w-12 h-12 object-cover"
-                    />
-                  ) : (
-                    tool.name.charAt(0).toUpperCase()
-                  )}
-                </div>
-                {/* Logo微光效果 */}
-                <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-blue-400 to-indigo-500 opacity-0 group-hover:opacity-20 blur-md transition-opacity duration-300" />
+              <div className="w-12 h-12 flex items-center justify-center rounded-lg bg-secondary text-foreground text-lg font-semibold overflow-hidden">
+                {tool.screenshot ? (
+                  // eslint-disable-next-line @next/next/no-img-element
+                  <img
+                    src={tool.screenshot}
+                    alt={`${tool.name} screenshot`}
+                    width={48}
+                    height={48}
+                    loading="lazy"
+                    className="w-12 h-12 object-cover"
+                  />
+                ) : (
+                  tool.name.charAt(0).toUpperCase()
+                )}
               </div>
               <span
-                className={`px-2.5 py-1 rounded-lg text-sm font-bold shadow-lg ${GRADE_STYLES[grade]}`}
+                className={`px-2.5 py-1 rounded-md text-sm font-semibold ${GRADE_STYLES[grade]}`}
               >
                 {grade}
               </span>
@@ -100,7 +91,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
 
             {/* 名称 + 厂商 */}
             <div className="mt-4">
-              <CardTitle className="text-base group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors line-clamp-1">
+              <CardTitle className="text-base font-semibold tracking-tight group-hover:text-primary transition-colors line-clamp-1">
                 {tool.name}
               </CardTitle>
               <CardDescription className="mt-0.5 text-xs">{tool.vendor}</CardDescription>
@@ -108,7 +99,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
 
             {/* CategoriesTags */}
             <div className="mt-2">
-              <Badge variant="outline" className="text-xs">
+              <Badge variant="outline" className="text-xs font-normal">
                 {tool.category}
               </Badge>
             </div>
@@ -116,7 +107,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
 
           <CardContent className="flex-1">
             {/* 描述 */}
-            <p className="text-sm text-gray-500 dark:text-gray-400 leading-relaxed line-clamp-2">
+            <p className="text-sm text-foreground/60 leading-relaxed line-clamp-2">
               {tool.description}
             </p>
           </CardContent>
@@ -125,17 +116,21 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
             <div className="w-full">
               <div className="flex items-center justify-between mb-2">
                 <div className="flex items-baseline gap-1">
-                  <span className="text-2xl font-extrabold text-gray-900 dark:text-white">
+                  <span className="text-2xl font-semibold tracking-tight text-foreground tabular-nums">
                     {total.toFixed(1)}
                   </span>
-                  <span className="text-xs text-gray-400">/10</span>
+                  <span className="text-xs text-foreground/45">/10</span>
                 </div>
-                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-gray-50 dark:bg-gray-800 text-gray-400 dark:text-gray-500 group-hover:bg-blue-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                <div className="w-8 h-8 flex items-center justify-center rounded-full bg-secondary text-foreground/45 group-hover:bg-primary group-hover:text-white group-hover:scale-110 transition-all duration-150">
                   <ArrowUpRight className="w-4 h-4" />
                 </div>
               </div>
-              {/* Rating进度条 - 使用shadcn/ui Progress */}
-              <Progress value={scorePercent} className="h-1.5" />
+              {/* Rating进度条 - shadcn/ui Progress */}
+              <Progress
+                value={scorePercent}
+                className="h-1.5"
+                indicatorClassName={GRADE_BAR_COLORS[grade]}
+              />
             </div>
           </CardFooter>
         </Card>

@@ -1,0 +1,57 @@
+﻿python : C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\iteration_center\_pull_today.py:21: DeprecationW
+arning: datetime.datetime.utcnow() is deprecated and scheduled for removal in a future version. Use timezone-aware obje
+cts to represent datetimes in UTC: datetime.datetime.now(datetime.UTC).
+所在位置 行:1 字符: 1
++ python "C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (C:\Users\通明街\Do...(datetime.UTC).:String) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+  today = datetime.utcnow().date()
+[today UTC] 2026-10-09  [yesterday] 2026-10-08
+
+=== TODAY (2026-10-09 ~ 2026-10-09) ===
+  sessions: 49
+  totalUsers: 49
+  newUsers: 49
+  engagedSessions: 3
+  screenPageViews: 37
+  avgDuration: 3.2616226734693878
+  --- landing pages ---
+                                                sess=13 engaged=0
+  /blog/elevenlabs-vs-playht-2026               sess=2 engaged=0
+  /blog/notion-ai-vs-obsidian-2026              sess=2 engaged=0
+  /blog/suno-alternatives                       sess=2 engaged=2
+  /tools/dify                                   sess=2 engaged=0
+  /blog/ai-tools-review-guide-2026              sess=1 engaged=0
+  /blog/ai-tools-selection-guide-2026           sess=1 engaged=0
+  /blog/aider-review                            sess=1 engaged=0
+  /blog/best-ai-comparison-tools-2026           sess=1 engaged=0
+  /blog/best-ai-design-tools-2026               sess=1 engaged=0
+  --- traffic sources ---
+  (direct)                  (none)          sess=47
+  (data not available)      (data not available) sess=1
+  (not set)                 (not set)       sess=1
+  chatgpt.com               ai-assistant    sess=1
+
+=== YESTERDAY (2026-10-08 ~ 2026-10-08) ===
+  sessions: 108
+  totalUsers: 108
+  newUsers: 107
+  engagedSessions: 7
+  screenPageViews: 94
+  avgDuration: 3.4276650370370367
+  --- landing pages ---
+                                                sess=36 engaged=0
+  /                                             sess=10 engaged=3
+  /blog/perplexity-ai-review-2026               sess=3 engaged=0
+  /blog/suno-alternatives                       sess=3 engaged=1
+  /blog/suno-alternatives-2026                  sess=3 engaged=0
+  /blog/beautiful-ai-alternatives               sess=2 engaged=0
+  /blog/best-ai-customer-support-tools-2026     sess=2 engaged=1
+  /blog/best-ai-video-generators-2026           sess=2 engaged=1
+  /blog/elevenlabs-review-2026                  sess=2 engaged=1
+  /blog/midjourney-v7-vs-flux-2026              sess=2 engaged=0
+  --- traffic sources ---
+  (direct)                  (none)          sess=107
+  chatgpt.com               ai-assistant    sess=1

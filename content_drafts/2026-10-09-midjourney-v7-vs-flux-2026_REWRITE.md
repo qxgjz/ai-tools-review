@@ -14,7 +14,7 @@
 - Midjourney v7 leads on artistic quality, winning 62% of blind aesthetic comparisons against Flux 1.1 Pro.
 - Flux 1.1 Pro dominates text rendering: 89% legible text versus 34% for Midjourney in our tests.
 - Flux is 3-4x faster via API (5-15 seconds versus 30-60 seconds) and supports local deployment.
-- Midjourney costs $10-60 per month with commercial rights on Pro plans; Flux starts at $0.03 per image via API.
+- Midjourney costs $10-60 per month with commercial rights on Pro plans; Flux starts at $0.04 per image via API.
 - Neither tool is universally better: creative teams use Midjourney for polished art and Flux for text-heavy commercial work.
 
 ## What Is Midjourney v7?
@@ -65,7 +65,7 @@ Flux follows prompt instructions literally. If you specify "a red sports car on 
 
 | Plan | Midjourney v7 | Flux 1.1 Pro |
 |---|---|---|
-| Entry | $10/month (200 gen) | $0.03/gen via API |
+| Entry | $10/month (200 gen) | $0.04/gen via API |
 | Mid tier | $30/month (900 gen) | $10/month (Pro via Replicate) |
 | Commercial use | Pro+ only ($60+) | All tiers |
 | API access | No | Yes |
@@ -120,7 +120,7 @@ Flux also supports control features that Midjourney lacks in the same form: conf
 For a marketing team generating 500 images monthly:
 
 - **Midjourney Pro ($60/month)**: 900 fast generations, includes commercial rights. Sufficient for most creative teams.
-- **Flux via Replicate (~$15/month)**: $0.03 per image × 500 = $15. Cheaper but requires manual API integration.
+- **Flux via Replicate (~$20/month)**: $0.04 per image × 500 = $20. Cheaper but requires manual API integration.
 - **Flux local deployment ($0 marginal cost)**: One-time GPU investment (~$1,500 for a capable desktop), then unlimited generation. Best for teams generating 2,000+ images monthly.
 
 The total cost of ownership depends on engineering time. Flux's API route shifts work to developers; Midjourney keeps everything inside a consumer product. A solo designer with no developer resources will find Midjourney cheaper in practice despite the higher subscription price, because no integration work is required.

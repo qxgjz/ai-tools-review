@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AIToolCrux 设计提案 v1.0 — 3个设计方向 + 功能规划</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --accent:#5E6AD2; --accent-soft:rgba(94,106,210,.08);
+    --line:rgba(0,0,0,.08); --line-strong:rgba(0,0,0,.12);
+    --t1:rgba(0,0,0,.9); --t2:rgba(0,0,0,.6); --t3:rgba(0,0,0,.45);
+    --bg:#ffffff; --bg2:#fafafa; --bg3:#f4f4f5;
+    --radius:12px;
+    --ease:cubic-bezier(.16,1,.3,1);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:'Inter',system-ui,sans-serif;color:var(--t1);background:var(--bg);line-height:1.5;font-size:16px}
+  h1,h2,h3,h4{font-family:'Space Grotesk',sans-serif;letter-spacing:-.025em;line-height:1.15;font-weight:600}
+  .container{max-width:1200px;margin:0 auto;padding:0 24px}
+  /* ===== 顶部 ===== */
+  .topbar{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.85);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  .topbar-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .topbar .brand{display:flex;align-items:center;gap:8px;font-family:'Space Grotesk';font-weight:600;font-size:18px;letter-spacing:-.02em}
+  .logo-dot{width:10px;height:10px;border-radius:3px;background:var(--accent);display:inline-block}
+  .topbar nav{display:flex;gap:24px;font-size:14px;font-weight:500}
+  .topbar nav a{color:var(--t2);text-decoration:none;transition:color 150ms var(--ease)}
+  .topbar nav a:hover{color:var(--accent)}
+  /* ===== Hero 提案头 ===== */
+  .proposal-hero{background:var(--bg2);border-bottom:1px solid var(--line);padding:96px 0 80px}
+  .proposal-hero .tag{display:inline-flex;align-items:center;gap:6px;font-size:13px;font-weight:500;color:var(--accent);background:var(--accent-soft);border:1px solid rgba(94,106,210,.2);padding:6px 14px;border-radius:999px;margin-bottom:20px}
+  .proposal-hero h1{font-size:52px;letter-spacing:-.04em;margin-bottom:16px;max-width:640px}
+  .proposal-hero p{color:var(--t2);font-size:17px;max-width:620px;margin-bottom:24px}
+  .meta-row{display:flex;flex-wrap:wrap;gap:12px}
+  .meta-chip{font-size:13px;color:var(--t2);border:1px solid var(--line);border-radius:8px;padding:6px 12px;background:var(--bg)}
+  /* ===== 通用 section ===== */
+  section.block{padding:80px 0;border-bottom:1px solid var(--line)}
+  section.block.alt{background:var(--bg2)}
+  .sec-head{margin-bottom:40px}
+  .sec-head .kicker{font-size:13px;font-weight:600;color:var(--accent);text-transform:uppercase;letter-spacing:.05em;margin-bottom:8px}
+  .sec-head h2{font-size:32px;letter-spacing:-.03em;margin-bottom:8px}
+  .sec-head p{color:var(--t2);max-width:560px}
+  /* ===== 方向切换 ===== */
+  .dir-tabs{display:flex;gap:10px;margin-bottom:32px;flex-wrap:wrap}
+  .dir-tab{border:1px solid var(--line);background:var(--bg);border-radius:10px;padding:12px 18px;cursor:pointer;font-size:14px;font-weight:500;color:var(--t2);transition:all 150ms var(--ease);font-family:'Inter'}
+  .dir-tab:hover{border-color:var(--line-strong)}
+  .dir-tab.active{background:var(--accent);border-color:var(--accent);color:#fff}
+  .dir-tab small{display:block;font-size:11px;font-weight:400;opacity:.7;margin-top:2px}
+  .dir-panel{display:none}
+  .dir-panel.active{display:block;animation:fadeIn 250ms var(--ease)}
+  @keyframes fadeIn{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+  /* ===== 浏览器框 ===== */
+  .browser{background:#fff;border:1px solid var(--line);border-radius:16px;overflow:hidden;box-shadow:0 24px 48px -24px rgba(0,0,0,.25)}
+  .browser-bar{display:flex;align-items:center;gap:8px;padding:12px 16px;border-bottom:1px solid var(--line);background:var(--bg2)}
+  .b-dot{width:10px;height:10px;border-radius:50%;background:#e4e4e7}
+  .b-dot:first-child{background:#ff5f57}.b-dot:nth-child(2){background:#febc2e}.b-dot:nth-child(3){background:#28c840}
+  .b-url{margin-left:12px;font-size:12px;color:var(--t3);background:var(--bg);border:1px solid var(--line);border-radius:6px;padding:4px 12px;flex:1}
+  /* ===== Mockup A: Clarity 极简 ===== */
+  .mk-a{background:var(--bg);font-family:'Inter',sans-serif}
+  .mk-a .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid var(--line);max-width:1200px;margin:0 auto}
+  .mk-a .nav-links{display:flex;gap:28px;font-size:14px;color:var(--t2)}
+  .mk-a .nav-links b{color:var(--t1);font-weight:600}
+  .mk-a .btn{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:8px 16px;font-size:14px;font-weight:500;cursor:pointer;transition:background 150ms var(--ease)}
+  .mk-a .btn:hover{background:#4f5bc4}
+  .mk-a .hero{max-width:1200px;margin:0 auto;padding:96px 40px 80px;display:grid;grid-template-columns:1.1fr .9fr;gap:64px;align-items:center}
+  .mk-a .hero h1{font-size:52px;letter-spacing:-.04em;line-height:1.05}
+  .mk-a .hero h1 em{color:var(--accent);font-style:normal}
+  .mk-a .hero p{color:var(--t2);font-size:17px;margin:20px 0 32px;max-width:440px}
+  .mk-a .cta-row{display:flex;gap:12px}
+  .mk-a .btn-outline{border:1px solid var(--line-strong);border-radius:8px;padding:10px 18px;font-size:14px;font-weight:500;background:#fff;color:var(--t1);cursor:pointer}
+  .mk-a .shot-wrap{position:relative;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 24px 48px -24px rgba(0,0,0,.2)}
+  .mk-a .shot-wrap img{display:block;width:100%;transform:scale(1.2);transform-origin:top}
+  .mk-a .shot-cap{position:absolute;left:16px;bottom:16px;background:rgba(255,255,255,.92);border:1px solid var(--line);border-radius:8px;padding:10px 14px;font-size:13px}
+  .mk-a .stat-row{max-width:1200px;margin:0 auto;padding:0 40px 80px;display:flex;gap:48px}
+  .mk-a .stat b{font-size:28px;font-family:'Space Grotesk';letter-spacing:-.02em}
+  .mk-a .stat span{display:block;font-size:13px;color:var(--t3)}
+  .mk-a .sec{padding:80px 40px}
+  .mk-a .sec-h{max-width:1200px;margin:0 auto 40px}
+  .mk-a .sec-h h2{font-size:32px;letter-spacing:-.03em}
+  .mk-a .sec-h p{color:var(--t2);margin-top:6px}
+  .mk-a .bento{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .mk-a .b-card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:20px;transition:all 150ms var(--ease)}
+  .mk-a .b-card:hover{border-color:var(--line-strong);box-shadow:0 12px 24px -16px rgba(0,0,0,.2)}
+  .mk-a .b-card.wide{grid-column:span 2;grid-row:span 2;display:flex;flex-direction:column}
+  .mk-a .b-card .logo{width:40px;height:40px;border-radius:10px;background:var(--bg3);margin-bottom:14px;overflow:hidden}
+  .mk-a .b-card .logo img{width:100%;height:100%;object-fit:cover}
+  .mk-a .b-card h4{font-size:15px;margin-bottom:4px}
+  .mk-a .b-card .vendor{font-size:12px;color:var(--t3);margin-bottom:10px}
+  .mk-a .b-card .desc{font-size:13px;color:var(--t2)}
+  .mk-a .b-card .score{display:flex;align-items:baseline;gap:4px;margin-top:auto;padding-top:12px}
+  .mk-a .b-card .score b{font-size:22px;font-family:'Space Grotesk'}
+  .mk-a .b-card .score span{font-size:12px;color:var(--t3)}
+  .mk-a .grade{display:inline-block;font-size:11px;font-weight:600;color:#fff;border-radius:6px;padding:2px 8px;margin-left:6px}
+  .mk-a .noise{position:relative}
+  .mk-a .noise::after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.04;mix-blend-mode:overlay;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+  /* ===== Mockup B: Contrast 锐利 ===== */
+  .mk-b{background:#fff;font-family:'Inter',sans-serif}
+  .mk-b .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;border-bottom:1px solid #000;max-width:1200px;margin:0 auto}
+  .mk-b .nav-links{display:flex;gap:28px;font-size:14px;font-weight:500}
+  .mk-b .btn{border-radius:0;background:#000;color:#fff;padding:9px 18px;font-size:14px;font-weight:500;border:none;cursor:pointer}
+  .mk-b .hero{background:#0a0a0a;color:#fff;padding:104px 40px 96px}
+  .mk-b .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}
+  .mk-b .hero h1{font-size:60px;letter-spacing:-.045em;line-height:1.0}
+  .mk-b .hero h1 em{color:#8a94e8;font-style:normal}
+  .mk-b .hero p{color:rgba(255,255,255,.6);font-size:17px;margin:20px 0 32px;max-width:420px}
+  .mk-b .btn-accent{background:var(--accent);border:none;color:#fff;padding:11px 20px;border-radius:0;font-weight:500;cursor:pointer}
+  .mk-b .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.25);color:#fff;padding:10px 18px;border-radius:0;cursor:pointer}
+  .mk-b .shot-frame{border:1px solid rgba(255,255,255,.15);border-radius:4px;overflow:hidden;background:#111}
+  .mk-b .shot-frame img{width:100%;display:block}
+  .mk-b .shot-frame .cap{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;font-size:13px;color:rgba(255,255,255,.8);background:#111;border-top:1px solid rgba(255,255,255,.1)}
+  .mk-b .cap b{font-size:20px;font-family:'Space Grotesk'}
+  .mk-b .sec{padding:88px 40px;border-bottom:1px solid #000}
+  .mk-b .sec-h{max-width:1200px;margin:0 auto 40px;display:flex;align-items:flex-end;justify-content:space-between}
+  .mk-b .sec-h h2{font-size:40px;letter-spacing:-.04em}
+  .mk-b .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:#000}
+  .mk-b .card{background:#fff;padding:28px;min-height:180px;display:flex;flex-direction:column}
+  .mk-b .card h4{font-size:17px;margin-bottom:4px}
+  .mk-b .card .vendor{font-size:12px;color:rgba(0,0,0,.5);margin-bottom:12px}
+  .mk-b .card .desc{font-size:13px;color:rgba(0,0,0,.6);flex:1}
+  .mk-b .card .score b{font-size:26px;font-family:'Space Grotesk'}
+  .mk-b .card .score span{font-size:12px;color:rgba(0,0,0,.45)}
+  .mk-b .tick{display:inline-block;width:8px;height:8px;background:var(--accent);margin-right:8px}
+  /* ===== Mockup C: Vivid 活力 ===== */
+  .mk-c{background:#fff;font-family:'Inter',sans-serif}
+  .mk-c .nav{display:flex;align-items:center;justify-content:space-between;padding:20px 40px;max-width:1200px;margin:0 auto}
+  .mk-c .nav-links{display:flex;gap:24px;font-size:14px;color:var(--t2);font-weight:500}
+  .mk-c .btn{background:linear-gradient(135deg,#5E6AD2,#8B5CF6);color:#fff;border:none;border-radius:12px;padding:9px 18px;font-size:14px;font-weight:600;cursor:pointer;box-shadow:0 8px 20px -8px rgba(94,106,210,.5)}
+  .mk-c .hero{max-width:1200px;margin:0 auto;padding:88px 40px 72px;text-align:center;position:relative}
+  .mk-c .hero::before{content:'';position:absolute;inset:-40px 0 0;z-index:0;background:radial-gradient(600px 300px at 50% 0%,rgba(94,106,210,.08),transparent)}
+  .mk-c .hero-inner{position:relative;z-index:1}
+  .mk-c .hero h1{font-size:48px;letter-spacing:-.035em}
+  .mk-c .hero h1 em{background:linear-gradient(135deg,#5E6AD2,#8B5CF6);-webkit-background-clip:text;background-clip:text;color:transparent;font-style:normal}
+  .mk-c .hero p{color:var(--t2);font-size:17px;max-width:480px;margin:16px auto 28px}
+  .mk-c .cat-chips{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
+  .mk-c .chip{font-size:13px;font-weight:500;padding:8px 16px;border-radius:999px;border:1px solid var(--line);background:#fff;color:var(--t1)}
+  .mk-c .chip.hot{background:var(--accent-soft);border-color:rgba(94,106,210,.25);color:var(--accent)}
+  .mk-c .sec{padding:72px 40px}
+  .mk-c .sec-h{max-width:1200px;margin:0 auto 32px;text-align:center}
+  .mk-c .sec-h h2{font-size:30px;letter-spacing:-.03em}
+  .mk-c .grid{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  .mk-c .card{border:1px solid var(--line);border-radius:16px;padding:24px;background:#fff;transition:all 150ms var(--ease)}
+  .mk-c .card:hover{transform:translateY(-4px);box-shadow:0 20px 40px -20px rgba(94,106,210,.35);border-color:rgba(94,106,210,.3)}
+  .mk-c .card .cat-tag{display:inline-block;font-size:11px;font-weight:600;color:var(--accent);background:var(--accent-soft);border-radius:6px;padding:3px 8px;margin-bottom:12px}
+  .mk-c .card h4{font-size:16px}
+  .mk-c .card .vendor{font-size:12px;color:var(--t3);margin:2px 0 10px}
+  .mk-c .card .desc{font-size:13px;color:var(--t2);margin-bottom:14px}
+  .mk-c .score-pill{display:inline-flex;align-items:center;gap:6px;font-weight:600;font-size:16px;font-family:'Space Grotesk'}
+  .mk-c .score-pill .dot{width:8px;height:8px;border-radius:50%}
+  /* ===== 表格 ===== */
+  table{width:100%;border-collapse:collapse;font-size:14px}
+  th,td{text-align:left;padding:12px 16px;border-bottom:1px solid var(--line);vertical-align:top}
+  th{font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.04em;color:var(--t3);background:var(--bg2)}
+  td .ok{color:#15803d;font-weight:600}
+  td .bad{color:#b91c1c;font-weight:600}
+  td code{font-size:12px;background:var(--bg3);border-radius:4px;padding:2px 6px}
+  /* ===== 模块树 ===== */
+  .mod-tree{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .mod-card{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--bg)}
+  .mod-card h4{font-size:15px;margin-bottom:10px;display:flex;align-items:center;gap:8px}
+  .mod-card ul{list-style:none}
+  .mod-card li{font-size:13px;color:var(--t2);padding:5px 0;padding-left:16px;position:relative}
+  .mod-card li::before{content:'';position:absolute;left:0;top:12px;width:6px;height:6px;border-radius:2px;background:var(--accent);opacity:.6}
+  .mod-card ul ul li{padding-left:24px;font-size:12px;color:var(--t3)}
+  .mod-card ul ul li::before{opacity:.3}
+  /* ===== 路线图 ===== */
+  .roadmap{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .rm{border:1px solid var(--line);border-radius:var(--radius);padding:20px;background:var(--bg);position:relative}
+  .rm .phase{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--accent);margin-bottom:8px}
+  .rm h4{font-size:16px;margin-bottom:10px}
+  .rm ul{list-style:none}
+  .rm li{font-size:13px;color:var(--t2);padding:4px 0;padding-left:16px;position:relative}
+  .rm li::before{content:'→';position:absolute;left:0;color:var(--accent);font-size:12px;top:4px}
+  .rm.done{border-color:rgba(16,185,129,.4);background:rgba(16,185,129,.04)}
+  .rm.done .phase{color:#15803d}
+  /* ===== 结论 ===== */
+  .rec{background:linear-gradient(135deg,rgba(94,106,210,.08),rgba(139,92,246,.05));border:1px solid rgba(94,106,210,.25);border-radius:16px;padding:32px;margin-top:32px}
+  .rec h3{font-size:22px;margin-bottom:12px}
+  .rec p{color:var(--t2);font-size:15px;margin-bottom:8px}
+  footer{padding:48px 0;text-align:center;color:var(--t3);font-size:13px;border-top:1px solid var(--line)}
+  @media(max-width:900px){.mk-a .hero,.mk-b .hero-inner{grid-template-columns:1fr}.mk-a .bento,.mk-b .grid,.mk-c .grid,.mod-tree,.roadmap{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="container topbar-inner">
+    <div class="brand"><span class="logo-dot"></span>AIToolCrux · 设计提案</div>
+    <nav>
+      <a href="#status">现状诊断</a>
+      <a href="#directions">3个设计方向</a>
+      <a href="#system">设计系统</a>
+      <a href="#features">功能全景</a>
+      <a href="#modules">模块规划</a>
+      <a href="#roadmap">路线图</a>
+    </nav>
+  </div>
+</div>
+
+<!-- ===== 提案头 ===== -->
+<div class="proposal-hero">
+  <div class="container">
+    <div class="tag">WINDOW 7 · DESIGN PROPOSAL v1.0 · 2026-10-09</div>
+    <h1>AIToolCrux 视觉升级提案<br>3个方向 · 全站规划</h1>
+    <p>基于 design_standard v1.0（Linear / Vercel / shadcn / Stripe 真实解剖）。目标是消除 AI 工具站的"模板廉价感"，做出有质感的现代 SaaS 级设计。所有预览用真实工具数据与真实界面截图渲染，非示意图。</p>
+    <div class="meta-row">
+      <span class="meta-chip">强调色 #5E6AD2</span>
+      <span class="meta-chip">标题 Space Grotesk</span>
+      <span class="meta-chip">正文 Inter 16px / 1.5</span>
+      <span class="meta-chip">圆角 8–12px</span>
+      <span class="meta-chip">动效 100/150/250ms</span>
+      <span class="meta-chip">Bento ≤8卡 / gap 16·24px</span>
+    </div>
+  </div>
+</div>
+
+<!-- ===== 现状诊断 ===== -->
+<section class="block" id="status">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">01 · 现状诊断</div>
+      <h2>线上实测：7项廉价感清单 0/7 达标</h2>
+      <p>2026-10-09 定时巡检抓取线上三页（首页 / 工具页 / 博客页）逐元素 computed style 实测。</p>
+    </div>
+    <table>
+      <thead><tr><th>检查项</th><th>标准值</th><th>线上实测</th><th>状态</th></tr></thead>
+      <tbody>
+        <tr><td>① 背景分层</td><td><code>#fff → #fafafa → #f4f4f5</code></td><td>body 白 + section 混用 zinc-50/gray-50，无三层语义</td><td><span class="bad">✗</span></td></tr>
+        <tr><td>② 文字层级</td><td><code>rgba(0,0,0,.90/.60/.45)</code></td><td>gray-900/500/400（#18181b/#6b7280/#9ca3af）</td><td><span class="bad">✗</span></td></tr>
+        <tr><td>③ 边框</td><td><code>rgba(0,0,0,.08)</code></td><td>border-zinc-200（#e4e4e7）</td><td><span class="bad">✗</span></td></tr>
+        <tr><td>④ 强调色</td><td><code>#5E6AD2</code></td><td>emerald #059669 体系（实测 rgb(5,150,105)）</td><td><span class="bad">✗ 最严重</span></td></tr>
+        <tr><td>⑤ 间距</td><td><code>section 80–120px</code></td><td>首页多数 section 64px（py-12 lg:py-16）</td><td><span class="bad">✗</span></td></tr>
+        <tr><td>⑥ 动效</td><td><code>100/150/250ms</code></td><td>0.15s / 0.2s / 0.3s（0.2s、0.3s 非标准）</td><td><span class="bad">✗</span></td></tr>
+        <tr><td>⑦ 组件一致性</td><td><code>Space Grotesk 600 / 负字距 / 噪点 / bento</code></td><td>h2 字重700、标题 Geist、无噪点、卡片等大平铺</td><td><span class="bad">✗</span></td></tr>
+      </tbody>
+    </table>
+    <p style="margin-top:16px;color:var(--t2);font-size:14px">✓ 唯一亮点：全站未出现默认蓝 <code>#3b82f6</code>（0 处违规）。已登记待办：<code>design_daily_check_2026-10-09</code>（P1），部署新设计系统后复检。</p>
+  </div>
+</section>
+
+<!-- ===== 3个设计方向 ===== -->
+<section class="block alt" id="directions">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">02 · 设计方向</div>
+      <h2>三个可选方向（高保真首页预览）</h2>
+      <p>切换查看。每个方向都是完整首页 mockup：导航 + hero + 工具 Bento + 数据。点击下方标签切换。</p>
+    </div>
+
+    <div class="dir-tabs">
+      <button class="dir-tab active" data-dir="a">方向 A · Clarity<small>Linear 极简 · 浅色 · 推荐</small></button>
+      <button class="dir-tab" data-dir="b">方向 B · Contrast<small>Vercel 锐利 · 深色 hero</small></button>
+      <button class="dir-tab" data-dir="c">方向 C · Vivid<small>Stripe 活力 · 品牌彩色</small></button>
+    </div>
+
+    <!-- ===== 方向 A ===== -->
+    <div class="dir-panel active" id="dir-a">
+      <div class="browser">
+        <div class="browser-bar"><span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span><span class="b-url">https://www.aitoolcrux.com</span></div>
+        <div class="mk-a noise">
+          <div class="nav">
+            <div style="font-family:'Space Grotesk';font-weight:600;font-size:18px;letter-spacing:-.02em">AIToolCrux</div>
+            <div class="nav-links"><b>Home</b><span>Ranking</span><span>Compare</span><span>Matcher</span><span>Blog</span></div>
+            <button class="btn">Submit a tool</button>
+          </div>
+          <div class="hero">
+            <div>
+              <div style="display:inline-flex;gap:6px;align-items:center;font-size:13px;font-weight:500;color:var(--accent);background:var(--accent-soft);border:1px solid rgba(94,106,210,.2);padding:6px 14px;border-radius:999px;margin-bottom:20px">● Independent AI Tool Reviews</div>
+              <h1>Find the best AI tools, <em>tested and ranked.</em></h1>
+              <p>533+ AI tools evaluated across six dimensions: features, UX, pricing, integrations, support, and ethics. No paid placements, no affiliate bias.</p>
+              <div class="cta-row">
+                <button class="btn" style="padding:11px 22px">View Rankings →</button>
+                <button class="btn-outline">AI Tool Matcher</button>
+              </div>
+            </div>
+            <div class="shot-wrap">
+              <img src="/public/screenshots/real/webp/gemini.webp" alt="Gemini real interface">
+              <div class="shot-cap"><b style="font-family:'Space Grotesk'">Gemini</b> · Google · <b style="font-family:'Space Grotesk'">8.9</b>/10</div>
+            </div>
+          </div>
+          <div class="stat-row">
+            <div class="stat"><b>533+</b><span>Tools Reviewed</span></div>
+            <div class="stat"><b>6</b><span>Score Dimensions</span></div>
+            <div class="stat"><b>100%</b><span>Independent</span></div>
+          </div>
+          <div class="sec" style="background:var(--bg2);border-top:1px solid var(--line)">
+            <div class="sec-h"><h2>Top Rated Tools</h2><p>Sorted by six-dimension composite score</p></div>
+            <div class="bento">
+              <div class="b-card wide">
+                <div class="logo"><img src="/public/screenshots/real/webp/chatgpt.webp" alt=""></div>
+                <h4>ChatGPT</h4><div class="vendor">OpenAI</div>
+                <div class="desc">Best-in-class reasoning, tool use, and multimodal. The default choice for most teams.</div>
+                <div class="score"><b>8.7</b><span>/10</span><span class="grade" style="background:#15803d">A</span></div>
+              </div>
+              <div class="b-card">
+                <div class="logo"><img src="/public/screenshots/real/webp/claude.webp" alt=""></div>
+                <h4>Claude</h4><div class="vendor">Anthropic</div>
+                <div class="desc">Superior long-context writing and analysis.</div>
+                <div class="score"><b>8.6</b><span>/10</span><span class="grade" style="background:#5E6AD2">B</span></div>
+              </div>
+              <div class="b-card">
+                <div class="logo"><img src="/public/screenshots/real/webp/cursor-code-editor.webp" alt=""></div>
+                <h4>Cursor</h4><div class="vendor">Anysphere</div>
+                <div class="desc">AI-native code editor with deep context.</div>
+                <div class="score"><b>8.0</b><span>/10</span><span class="grade" style="background:#5E6AD2">B</span></div>
+              </div>
+              <div class="b-card">
+                <div class="logo"><img src="/public/screenshots/midjourney-v8-interface.webp" alt=""></div>
+                <h4>Midjourney</h4><div class="vendor">Midjourney</div>
+                <div class="desc">Best image quality for artistic directions.</div>
+                <div class="score"><b>7.2</b><span>/10</span><span class="grade" style="background:#a16207">C</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;font-size:14px;color:var(--t2)">
+        <b>要点</b>：三层浅色背景 · 蓝紫 #5E6AD2 · Space Grotesk 负字距标题 · 1px 边框即阴影 · 4% 噪点 · bento 2×2 非对称（2 大卡为视觉起点）· section 留白 80–120px · 真实截图 hero 1.2x。
+      </div>
+    </div>
+
+    <!-- ===== 方向 B ===== -->
+    <div class="dir-panel" id="dir-b">
+      <div class="browser">
+        <div class="browser-bar"><span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span><span class="b-url">https://www.aitoolcrux.com</span></div>
+        <div class="mk-b">
+          <div class="nav">
+            <div style="font-family:'Space Grotesk';font-weight:600;font-size:18px;letter-spacing:-.02em">AIToolCrux</div>
+            <div class="nav-links"><b>Home</b><span>Ranking</span><span>Compare</span><span>Matcher</span><span>Blog</span></div>
+            <button class="btn">Submit a tool</button>
+          </div>
+          <div class="hero">
+            <div class="hero-inner">
+              <div>
+                <h1>Find the best AI tools, <em>tested & ranked.</em></h1>
+                <p>533+ AI tools evaluated across six dimensions with transparent weighting. No paid placements.</p>
+                <div style="display:flex;gap:12px">
+                  <button class="btn-accent">View Rankings →</button>
+                  <button class="btn-ghost">AI Tool Matcher</button>
+                </div>
+              </div>
+              <div class="shot-frame">
+                <img src="/public/screenshots/real/webp/chatgpt.webp" alt="ChatGPT real interface">
+                <div class="cap"><span><span class="tick"></span>ChatGPT · OpenAI</span><b>8.7 <span style="font-size:12px;font-weight:400;color:rgba(255,255,255,.5)">/10</span></b></div>
+              </div>
+            </div>
+          </div>
+          <div class="sec">
+            <div class="sec-h">
+              <h2>Top Rated Tools</h2>
+              <span style="font-size:14px;color:rgba(0,0,0,.5)">6-dimension composite score →</span>
+            </div>
+            <div class="grid">
+              <div class="card"><span class="tick" style="display:inline-block;margin-bottom:10px"></span><h4>ChatGPT</h4><div class="vendor">OpenAI</div><div class="desc">Best-in-class reasoning and multimodal.</div><div class="score"><b>8.7</b> <span>/10</span></div></div>
+              <div class="card"><span class="tick" style="display:inline-block;margin-bottom:10px"></span><h4>Claude</h4><div class="vendor">Anthropic</div><div class="desc">Superior long-context writing.</div><div class="score"><b>8.6</b> <span>/10</span></div></div>
+              <div class="card"><span class="tick" style="display:inline-block;margin-bottom:10px"></span><h4>Gemini</h4><div class="vendor">Google</div><div class="desc">Deep Google ecosystem integration.</div><div class="score"><b>8.9</b> <span>/10</span></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;font-size:14px;color:var(--t2)">
+        <b>要点</b>：深色 hero 冲击力（#0a0a0a）+ 浅色内容区 · 超大标题 60px · 黑白硬边框分割（Vercel 网格式）· 蓝紫只作点缀 · 动效干脆 150ms · 信息密度高，偏"工具/开发者"气质。
+      </div>
+    </div>
+
+    <!-- ===== 方向 C ===== -->
+    <div class="dir-panel" id="dir-c">
+      <div class="browser">
+        <div class="browser-bar"><span class="b-dot"></span><span class="b-dot"></span><span class="b-dot"></span><span class="b-url">https://www.aitoolcrux.com</span></div>
+        <div class="mk-c">
+          <div class="nav">
+            <div style="font-family:'Space Grotesk';font-weight:600;font-size:18px;letter-spacing:-.02em">AIToolCrux</div>
+            <div class="nav-links"><b>Home</b><span>Ranking</span><span>Compare</span><span>Matcher</span><span>Blog</span></div>
+            <button class="btn">Submit a tool</button>
+          </div>
+          <div class="hero">
+            <div class="hero-inner">
+              <div style="font-size:13px;font-weight:600;color:var(--accent);margin-bottom:14px">✨ 533+ tools · 6 dimensions · weekly updates</div>
+              <h1>Find the best AI tools, <em>tested & ranked.</em></h1>
+              <p>Independent reviews across six dimensions. Every tool hands-on tested with standardized benchmarks.</p>
+              <div class="cta-row" style="justify-content:center;display:flex;gap:12px;margin-bottom:24px">
+                <button class="btn" style="padding:11px 22px">View Rankings →</button>
+                <button class="btn" style="background:#18181b;background-image:none;box-shadow:none">AI Tool Matcher</button>
+              </div>
+              <div class="cat-chips">
+                <span class="chip hot">AI Chat</span><span class="chip hot">AI Image</span><span class="chip">AI Coding</span><span class="chip">AI Video</span><span class="chip">AI Audio</span><span class="chip">AI Agent</span><span class="chip">AI Search</span><span class="chip">AI Office</span>
+              </div>
+            </div>
+          </div>
+          <div class="sec" style="background:linear-gradient(180deg,#fff,#fafafa)">
+            <div class="sec-h"><h2>Top Rated Tools</h2><p>Sorted by six-dimension composite score</p></div>
+            <div class="grid">
+              <div class="card"><span class="cat-tag">AI Chat</span><h4>ChatGPT</h4><div class="vendor">OpenAI</div><div class="desc">Best-in-class reasoning, tool use, and multimodal output.</div><span class="score-pill"><span class="dot" style="background:#10B981"></span>8.7/10</span></div>
+              <div class="card"><span class="cat-tag">AI Chat</span><h4>Claude</h4><div class="vendor">Anthropic</div><div class="desc">Superior long-context writing and analysis.</div><span class="score-pill"><span class="dot" style="background:#10B981"></span>8.6/10</span></div>
+              <div class="card"><span class="cat-tag">AI Chat</span><h4>Gemini</h4><div class="vendor">Google</div><div class="desc">Deep Google ecosystem integration.</div><span class="score-pill"><span class="dot" style="background:#10B981"></span>8.9/10</span></div>
+              <div class="card"><span class="cat-tag">AI Coding</span><h4>Cursor</h4><div class="vendor">Anysphere</div><div class="desc">AI-native code editor with deep context.</div><span class="score-pill"><span class="dot" style="background:#F59E0B"></span>8.0/10</span></div>
+              <div class="card"><span class="cat-tag">AI Image</span><h4>Midjourney</h4><div class="vendor">Midjourney</div><div class="desc">Best image quality for artistic directions.</div><span class="score-pill"><span class="dot" style="background:#F59E0B"></span>7.2/10</span></div>
+              <div class="card"><span class="cat-tag">AI Audio</span><h4>ElevenLabs</h4><div class="vendor">ElevenLabs</div><div class="desc">Most natural text-to-speech voices.</div><span class="score-pill"><span class="dot" style="background:#F59E0B"></span>7.8/10</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:16px;font-size:14px;color:var(--t2)">
+        <b>要点</b>：品牌感更强 · 蓝紫渐变微点缀 + 彩色分类胶囊 · 圆角 16px · 卡片 hover 浮起 · 状态色徽章（绿=done / 琥珀=progress）· 偏"消费级/大众"气质。
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ===== 设计系统 ===== -->
+<section class="block" id="system">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">03 · 设计系统</div>
+      <h2>Token 一览（design_standard v1.0）</h2>
+      <p>所有页面组件必须取这些 token，禁止拍脑袋取值。</p>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:16px">
+      <div class="mod-card"><h4>🎨 色彩</h4><ul>
+        <li>强调色 <code>#5E6AD2</code></li><li>背景 <code>#fff→#fafafa→#f4f4f5</code></li><li>文字 <code>rgba(0,0,0,.9/.6/.45)</code></li><li>边框 <code>rgba(0,0,0,.08)</code> hover <code>.12</code></li><li>状态 done <code>#10B981</code> / progress <code>#F59E0B</code> / cancel <code>#EF4444</code></li><li>禁用 <code>#3b82f6</code> 默认蓝</li></ul></div>
+      <div class="mod-card"><h4>🔤 字体</h4><ul>
+        <li>标题 Space Grotesk 600</li><li>字距 <code>-0.5~-2.4px</code></li><li>正文 Inter 16px / 1.5</li><li>权重仅 400/500/600</li></ul></div>
+      <div class="mod-card"><h4>📐 布局</h4><ul>
+        <li>8pt 网格</li><li>section 留白 80–120px</li><li>卡片 gap 16 / 24px</li><li>max-width 1200px</li><li>Bento ≤8 卡/区</li><li>圆角 8–12px</li></ul></div>
+      <div class="mod-card"><h4>⚡ 动效 & 质感</h4><ul>
+        <li>100 / 150 / 250ms</li><li>easing <code>cubic-bezier(.16,1,.3,1)</code></li><li>4% SVG 噪点 overlay</li><li>阴影即边框</li><li>hero 真实截图 1.2x</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 功能全景 ===== -->
+<section class="block alt" id="features">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">04 · 功能全景</div>
+      <h2>已有功能 vs 规划新增</h2>
+      <p>基于代码实测（app/ 目录 40+ 页面）整理。</p>
+    </div>
+    <table>
+      <thead><tr><th>模块</th><th>已有（代码实测）</th><th>规划新增（设计/UX角度）</th></tr></thead>
+      <tbody>
+        <tr><td>工具目录</td><td>533+ 工具 · 6 维评分（25/20/20/15/10/10）· S–F 等级 · 评分卡 · 分类 16+ · 子分类 · 作者/更新日期</td><td>评分雷达图可视化 · 测试细节卡 · 截图画廊（多图）· 收藏/稍后读</td></tr>
+        <tr><td>搜索发现</td><td>站内搜索框（工具/厂商/标签）· 分类页 · Best-for 页 · Top-by-traffic 页</td><td>筛选器（价格/免费层/评分/分类多维过滤）· 搜索联想 · 结果排序</td></tr>
+        <tr><td>对比</td><td>/compare 工具对比页（270 曝光、排名34）</td><td>并排表格升级 · 胜者徽章 · 评分差异可视化 · 维度雷达对比</td></tr>
+        <tr><td>匹配器</td><td>/generator AI Tool Matcher（表单推荐）</td><td>对话式导购（AI 追问需求）· 结果卡片化 · 分享结果</td></tr>
+        <tr><td>内容</td><td>博客 · 分类/标签 · 作者页 · 快速回答（AEO）· FAQ schema · RSS · 免费工具指南 · 方法论页</td><td>文章 TOC 升级 · 内文截图规范 · 阅读进度 · 相关文章推荐</td></tr>
+        <tr><td>转化</td><td>联盟披露 · AffiliateCTA · Newsletter 订阅 · Submit a tool · AdSlot</td><td>CTA 一致性规范 · 订阅区块设计统一 · 提交工具流程优化</td></tr>
+        <tr><td>信任/合规</td><td>方法论 · 关于 · 联系 · 隐私 · 条款 · AI 政策 · 披露 · Giscus 评论</td><td>评分口径展示页 · 数据来源标注规范</td></tr>
+        <tr><td>平台</td><td>暗色模式 · OG 图 · sitemap/robots · GA4/百度/Umami/Ahrefs · WebVitals · 多语言（中英 meta）</td><td>暗色模式按标准校准 · i18n 深化 · 性能预算（LCP&lt;2.5s / INP&lt;200ms）· WCAG AA</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ===== 模块规划 ===== -->
+<section class="block" id="modules">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">05 · 模块规划</div>
+      <h2>信息架构 & 页面模块</h2>
+    </div>
+    <div class="mod-tree">
+      <div class="mod-card"><h4>🏠 首页</h4><ul>
+        <li>Hero（真实截图墙 1.2x）</li><li>快速回答（AEO）</li><li>分类墙（16+ 分类）</li><li>Top 工具 Bento（≤8 卡）</li><li>方法论摘要</li><li>最新文章</li><li>CTA + 社区</li></ul></div>
+      <div class="mod-card"><h4>🔧 工具页</h4><ul>
+        <li>评分总览（6 维 + 等级）</li><li>优劣势</li><li>定价 / 免费层</li><li>实测细节</li><li>截图画廊</li><li>替代品</li><li>FAQ</li><li>评论 + 相关工具</li></ul></div>
+      <div class="mod-card"><h4>📰 文章页</h4><ul>
+        <li>TOC 目录</li><li>Quick Answer</li><li>正文（prose 规范）</li><li>对比表格</li><li>FAQ（schema）</li><li>CTA</li><li>相关文章</li></ul></div>
+      <div class="mod-card"><h4>⚖️ 对比页</h4><ul>
+        <li>并排评分表</li><li>维度对比</li><li>胜者卡</li><li>购买/试用 CTA</li><li>相关对比链接</li></ul></div>
+      <div class="mod-card"><h4>🔍 发现</h4><ul>
+        <li>排名页（全量排序）</li><li>分类 / 子分类页</li><li>Best-for 场景页</li><li>Traffic Top 榜</li><li>筛选器（规划）</li></ul></div>
+      <div class="mod-card"><h4>🤖 匹配器</h4><ul>
+        <li>表单推荐（现有）</li><li>对话导购（规划）</li><li>结果卡</li></ul></div>
+      <div class="mod-card"><h4>👤 信任层</h4><ul>
+        <li>方法论</li><li>关于 / 作者</li><li>披露 / 隐私 / 条款</li><li>评论（Giscus）</li></ul></div>
+      <div class="mod-card"><h4>📣 增长层</h4><ul>
+        <li>Newsletter</li><li>Submit a tool</li><li>RSS / sitemap</li><li>OG 社交卡</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== 路线图 ===== -->
+<section class="block alt" id="roadmap">
+  <div class="container">
+    <div class="sec-head">
+      <div class="kicker">06 · 路线图</div>
+      <h2>分阶段实施</h2>
+      <p>每阶段改完必须本地预览截图 → 用户确认 → 才部署。</p>
+    </div>
+    <div class="roadmap">
+      <div class="rm done"><div class="phase">Phase 1 · 本周</div><h4>设计系统 + 首页</h4><ul>
+        <li>shadcn 体系接入（已本地完成）</li><li>首页 hero 真实截图 + bento（已本地完成）</li><li>强调色全线切 #5E6AD2（已本地完成）</li><li>待用户确认后部署</li></ul></div>
+      <div class="rm"><div class="phase">Phase 2 · 下周</div><h4>工具页 + 文章页</h4><ul>
+        <li>评分卡 6 维可视化</li><li>正文排版统一（16px/1.5）</li><li>表格/引用/代码块规范</li><li>Top10 流量工具页先改</li></ul></div>
+      <div class="rm"><div class="phase">Phase 3</div><h4>全站收敛</h4><ul>
+        <li>自写组件→shadcn 替换</li><li>动效/噪点全覆盖</li><li>暗色模式校准</li><li>间距统一 80–120px</li></ul></div>
+      <div class="rm"><div class="phase">Phase 4</div><h4>新功能</h4><ul>
+        <li>工具筛选器</li><li>收藏夹</li><li>对话式导购</li><li>性能/无障碍达标</li></ul></div>
+    </div>
+    <div class="rec">
+      <h3>推荐：方向 A（Clarity · Linear 极简）</h3>
+      <p><b>理由</b>：1) 与"专业评测"定位最匹配——克制、可信、SaaS 级；2) 与 design_standard 标准值完全一致，改动最小、落地最快；3) 对比类内容（表格/评分）在浅色极简下可读性最佳；4) Linear/Vercel 风格在 AI 工具站中已被证明转化友好。</p>
+      <p><b>取舍</b>：方向 C（Vivid）更有记忆点但偏离"权威评测"气质、圆角 16px 超标准；方向 B（Contrast）冲击力强但深色 hero 与广告位/联盟披露兼容性略差。A 为主、可吸收 C 的状态色徽章作为点缀。</p>
+    </div>
+  </div>
+</section>
+
+<footer>AIToolCrux Design Proposal v1.0 · Window 7 · 2026-10-09 · 真实数据 + 真实截图渲染</footer>
+
+<script>
+  document.querySelectorAll('.dir-tab').forEach((btn) => {
+    btn.addEventListener('click', () => {
+      document.querySelectorAll('.dir-tab').forEach((b) => b.classList.remove('active'));
+      document.querySelectorAll('.dir-panel').forEach((p) => p.classList.remove('active'));
+      btn.classList.add('active');
+      document.getElementById('dir-' + btn.dataset.dir).classList.add('active');
+    });
+  });
+</script>
+</body>
+</html>

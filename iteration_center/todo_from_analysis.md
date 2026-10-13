@@ -92,3 +92,23 @@
 ### P2 - 持续监控
 5. **索引增长目标**：4周内将有曝光页面从83提升到120+
 6. **Sitemap变化**：从770降至714（-56），窗口1确认是否有页面被误删
+
+
+---
+
+## 索引监控待办建议（2026-10-12）
+
+### P0（架构师）
+1. **修复重定向异常 URL**：/category/chat、/category/code、/tools/gemini（redirect_error）、/tools/chatgpt（redirect）。检查 301/302/canonical 链是否规范，修复后提交 IndexNow 请求编入索引。
+
+### P0（分析师）
+2. **重跑 40 个 unknown URL**：GSC 网址检查配额 2026-10-12 已耗尽，2026-10-13 配额重置后运行 `python scripts/gsc_batch_check.py`（脚本已修复：输入框用 input.Ax4B8 + 每次输入前 Page.bringToFront）。结果对照 url_index_check_batch_0_67_20261012_202338.json 汇总最终收录状态。
+
+### P1（增长黑客）
+3. **批量 IndexNow 提交 discovered_not_indexed 高价值页面**：对 400 个"已发现未编入"中 /tools/ 高价值工具页 Top50 提交 IndexNow。
+
+### P1（创作家）
+4. **内链推动未收录页面**：在已有曝光的 /blog/ 文章中，加入指向 /category/memory、/category/observability、/tools/claude、/tools/exa 的自然内链。
+
+### P2（持续）
+5. **每周索引监控**：下次 2026-10-19，直接用 GSC 索引报告页快照口径对比。

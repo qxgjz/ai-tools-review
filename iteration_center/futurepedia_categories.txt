@@ -1,0 +1,5 @@
+3D-generator	1
+text-generators	1
+art-generators	1
+image-generators	1
+chatbots	1

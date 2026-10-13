@@ -1,0 +1,35 @@
+﻿has_negation source:
+def _has_negation(sentence):
+    """Check if sentence contains negation."""
+    words = set(sentence.lower().split())
+    return bool(words & NEGATION_WORDS) or "n't" in sentence.lower()
+
+num sentences: 92
+4 neg= False | ## What Is the Best AI Tool for Beginners in 2026?
+12 neg= False | Here is how the major free tiers stack up in 2026:
+
+| Tool | Free tier (2026) | Paid entry | Best for |
+|---|-
+25 neg= False | ## Do Beginners Actually Need to Pay for AI in 2026?
+38 neg= True | ## The Best AI Tools for Beginners by Use Case
+
+| What you want to do | Best free tool | Why |
+|---|---|---|
+|
+52 neg= False | ## 5 Common Beginner Mistakes to Avoid in 2026
+
+**Mistake 1: Buying a subscription on day one.** The single mo
+60 neg= False | Using all three costs nothing.
+66 neg= False | ## Frequently Asked Questions
+
+### What is the easiest AI tool to learn for a complete beginner?
+70 neg= False | ### Is the free version of ChatGPT really free in 2026?
+73 neg= False | ### Which is better for beginners, ChatGPT or Claude?
+76 neg= False | ### Do I need to pay for AI tools as a beginner?
+79 neg= False | ### What is the cheapest paid AI plan worth buying in 2026?
+82 neg= False | ## Conclusion
+
+For beginners in 2026, the best move is to start completely free: ChatGPT for general tasks, Cl
+87 neg= False | ## CTA
+
+Ready to start?

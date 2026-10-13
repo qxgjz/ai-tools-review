@@ -1,0 +1,2 @@
+﻿has method: evaluate
+  -> evaluate : name='contradiction_detector' score=1.0 reason='Empty output' details={}

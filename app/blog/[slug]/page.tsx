@@ -479,7 +479,7 @@ export default function PostPage({ params }: PostPageProps) {
               </div>
               <div className="mt-6 pt-4 border-t border-gray-100 dark:border-gray-800">
                 <p className="text-xs text-gray-500 dark:text-gray-400">
-                  <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {post.publishedAt || "2026"} | <strong>Methodology:</strong> Six-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
+                  <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong> {post.updatedAt || post.lastUpdated || post.publishedAt || "2026"} | <strong>Methodology:</strong> Six-dimension evaluation | <Link href="/methodology" className="text-emerald-600 dark:text-emerald-400 hover:underline">Full methodology</Link>
                 </p>
               </div>
             </section>
