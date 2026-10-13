@@ -1,16 +1,16 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-13 01:16:04
+**Date:** 2026-10-13 23:15:32
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 156 |
-| Avg content score | 90.1/100 |
+| Articles | 162 |
+| Avg content score | 88.9/100 |
 | Perfect articles | 95 |
-| Articles below 85 | 46 |
+| Articles below 85 | 52 |
 | Pages audited | 20 |
 | Technical issues | 11 |
 | Critical issues | 0 |
@@ -24,12 +24,18 @@
 | notion-ai-vs-salesforce-2026 | 40 | 560 | 34.7 | 2 | word_count_pass, first_para_pass, internal_links_pass |
 | notion-ai-vs-notion-ai-salesforce-2 | 46 | 545 | 33.6 | 2 | word_count_pass, internal_links_pass, readability_pass |
 | midjourney-v7-vs-dall-e-3-2026 | 49 | 483 | 45.4 | 2 | word_count_pass, first_para_pass, internal_links_pass |
+| best-ai-text-to-speech-tools-2026 | 53 | 2344 | 38.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
+| best-ai-avatar-generators-2026 | 53 | 2331 | 34.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | elevenlabs-v2-review-2026 | 62 | 2233 | 36.6 | 4 | first_para_pass, readability_pass |
 | runway-vs-pika-2026 | 62 | 2416 | 33.6 | 4 | first_para_pass, readability_pass |
 | devin-ai-review | 62 | 2345 | 38.4 | 16 | first_para_pass, readability_pass |
 | perplexity-vs-chatgpt-2026 | 62 | 2410 | 35.5 | 20 | first_para_pass, readability_pass |
 | agenta-ai-review-2026 | 62 | 2247 | 39.2 | 5 | first_para_pass, readability_pass |
 | ai-video-generator-credits-burn-fas | 62 | 2748 | 37.5 | 5 | first_para_pass, readability_pass |
+| best-ai-music-generators-2026 | 62 | 2581 | 41.9 | 0 | first_para_pass, internal_links_pass |
+| best-ai-spreadsheet-tools-2026 | 62 | 2400 | 55.7 | 0 | first_para_pass, internal_links_pass |
+| best-ai-sql-generators-2026 | 62 | 2497 | 49.1 | 0 | first_para_pass, internal_links_pass |
+| best-ai-sales-assistants-2026 | 62 | 2426 | 47.4 | 0 | first_para_pass, internal_links_pass |
 | best-free-ai-tools-for-students-202 | 63 | 1992 | 63.3 | 3 | word_count_pass, first_para_pass |
 | beautiful-ai-alternatives | 66 | 2180 | 53.2 | 9 | first_para_pass |
 | cursor-vs-github-copilot-2026 | 67 | 1872 | 49.4 | 3 | word_count_pass, first_para_pass, external_links_pass |
@@ -139,7 +145,7 @@
 | claude_fable_51_review | 100 | 5254 | 52.7 | 10 | — |
 | openai_astra_review | 100 | 12602 | 43.9 | 18 | — |
 | chatgpt-deep-review-2026 | 100 | 7179 | 44.9 | 8 | — |
-| ai-tools-selection-guide-2026 | 100 | 6975 | 45.2 | 10 | — |
+| ai-tools-selection-guide-2026 | 100 | 7092 | 45.9 | 12 | — |
 | chatgpt-vs-claude-2026-comparison | 100 | 2244 | 47.7 | 4 | — |
 | claude-review-2026 | 100 | 12567 | 42.6 | 13 | — |
 | github-copilot-review-2026 | 100 | 13298 | 44.7 | 13 | — |
@@ -148,7 +154,7 @@
 | midjourney-review-2026 | 100 | 13380 | 41.2 | 13 | — |
 | runway-review-2026 | 100 | 13476 | 41.2 | 12 | — |
 | jasper-review-2026 | 100 | 13709 | 42.8 | 13 | — |
-| perplexity-review-2026 | 100 | 9711 | 45.8 | 12 | — |
+| perplexity-review-2026 | 100 | 9809 | 47.5 | 15 | — |
 | figma-ai-review-2026 | 100 | 13916 | 47.4 | 14 | — |
 | sora-review-2026 | 100 | 13479 | 43.2 | 13 | — |
 | stable-diffusion-review-2026 | 100 | 15289 | 48.9 | 13 | — |
@@ -165,12 +171,12 @@
 | adobe-firefly-review-2026 | 100 | 14413 | 46.9 | 17 | — |
 | writesonic-review-2026 | 100 | 14438 | 42.7 | 13 | — |
 | tabnine-review-2026 | 100 | 11469 | 43.8 | 13 | — |
-| ai-tools-review-guide-2026 | 100 | 12907 | 48.2 | 13 | — |
-| ai-coding-tools-comparison-2026 | 100 | 14805 | 44.0 | 11 | — |
+| ai-tools-review-guide-2026 | 100 | 13007 | 49.3 | 16 | — |
+| ai-coding-tools-comparison-2026 | 100 | 14898 | 44.6 | 14 | — |
 | replit-review-2026 | 100 | 11635 | 41.1 | 13 | — |
 | best-free-ai-tools-2026 | 100 | 11975 | 45.6 | 11 | — |
-| ai-tools-comparison-2026 | 100 | 11942 | 49.4 | 12 | — |
-| ai-tools-for-beginners-2026 | 100 | 11879 | 42.2 | 11 | — |
+| ai-tools-comparison-2026 | 100 | 12064 | 50.0 | 15 | — |
+| ai-tools-for-beginners-2026 | 100 | 12012 | 44.9 | 14 | — |
 | jasper-vs-copy-ai-2026-comparison | 100 | 2234 | 64.5 | 8 | — |
 | canva-ai-vs-adobe-firefly-2026-comp | 100 | 2883 | 43.8 | 9 | — |
 | surfer-seo-vs-frase-2026-comparison | 100 | 2051 | 49.9 | 3 | — |
