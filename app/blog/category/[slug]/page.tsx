@@ -21,9 +21,20 @@ export function generateMetadata({ params }: CategoryPageProps) {
   const cats = Array.from(new Set(categoryPosts.map((p) => p.category).filter(Boolean)));
   const categoryName = cats.join(' & ') || params.slug;
   const articleCount = categoryPosts.length;
+  // SEO 长度规范：title ≤60 字符、description ≤155 字符；截断但保留关键词与站点标识
+  const fullTitle = `${categoryName} AI Tools Reviews | AIToolCrux`;
+  const title =
+    fullTitle.length > 60
+      ? `${fullTitle.slice(0, 56).replace(/[|&\s]+$/, '')}...`
+      : fullTitle;
+  const fullDescription = `Read ${articleCount} expert ${categoryName} AI articles and reviews on AIToolCrux. In-depth guides, comparisons, and testing results.`;
+  const description =
+    fullDescription.length > 155
+      ? `${fullDescription.slice(0, 152).trimEnd()}...`
+      : fullDescription;
   return {
-    title: `${categoryName} AI Tools Reviews | AIToolCrux`,
-    description: `Read ${articleCount} expert ${categoryName} AI articles and reviews on AIToolCrux. In-depth guides, comparisons, and testing results.`,
+    title,
+    description,
     alternates: {
       canonical: `https://www.aitoolcrux.com/blog/category/${params.slug}`,
     },

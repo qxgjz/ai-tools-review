@@ -15,8 +15,11 @@ export function markdownToHtml(markdown: string): string {
   if (!markdown) return '';
   try {
     let html = marked.parse(markdown) as string;
-    // Convert h1 to h2: pages already have their own H1, content should not add another
-    html = html.replace(/<h1(\s+[^>]*?)>/g, '<h2$1>');
+    // Convert h1 to h2: pages already have their own H1, content should not add another.
+    // Match <h1> with or without attributes (marked emits bare <h1> when no id/class is set);
+    // the previous /\s+/ variant left bare <h1> unconverted while </h1> became </h2>,
+    // producing malformed <h1>...</h2> pairs that auditors count as a second H1.
+    html = html.replace(/<h1([^>]*)>/g, '<h2$1>');
     html = html.replace(/<\/h1>/g, '</h2>');
     // Add stable ids to h2/h3 so TOC scroll-spy and anchor links work without client-side DOM parsing
     html = html.replace(
