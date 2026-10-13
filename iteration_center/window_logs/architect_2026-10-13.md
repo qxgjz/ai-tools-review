@@ -126,3 +126,65 @@
 1. **RSC payload 膨胀根因多为「把服务端数据全量传给客户端组件」**：TableOfContents 接收 contentHtml 是典型反例——客户端组件只需要提取后的 toc 数组，服务端应先提取再传 props。
 2. **重复 Title 的检测盲区**：两个不同 slug 的分类页若 `[0].category` 相同则 title 相同；应聚合全部文章的 category 集合做差异化。
 3. **seo_audit 报告滞后**：审计脚本读取的是运行时刻的 out/，代码修改后需重新 build 再跑审计，否则报告显示旧大小。
+
+---
+
+# 架构师执行日志 2026-10-13（第 16 轮）
+
+**触发**：「架构师-全栈技术修复（SOP版，验证闭环）」定时任务（TaskID 13724013998850）
+**本轮起点**：架构师 pending 4 条（P0:1 / P2:3），全局 pending 128（P0:42 P1:71 P2:15）
+
+## 一、待办处理
+
+| 待办 | 优先级 | 处理 | 证据 |
+|---|---|---|---|
+| P0-GEO-CRAWLERS-20261013 | P0 | ✅ 完成 | robots.txt AI crawlers 全放行 + Last Updated 时间戳 + 线上验证（见下） |
+| P2-BLOG-PAGE-SIZE-20261012 | P2 | ✅ 线上复核完成 | 上轮修复（397KB）本轮线上复核 200 + <500KB |
+| ux_p2_site_fully_recovered_2026-10-13 | P2 | ✅ 完成 | 巡检结论确认（首页/文章页 200，无新增 UX 问题） |
+| P2-CATEGORY-AGENT-SIZE-20261013 | P2 | ⏭ 留后续 | 内容量专项（agent 分类 175 工具卡片，需分页/折叠方案） |
+
+## 二、P0-GEO-CRAWLERS 详情
+
+1. **robots.txt AI crawlers 放行（✅ 已确认）**：
+   - 权威源 `app/robots.ts`：GPTBot / OAI-SearchBot / ChatGPT-User / ClaudeBot / Claude-Web / Claude-SearchBot / Claude-User / PerplexityBot / Perplexity-User / Bytespider / Google-Extended / Applebot / Amazonbot / meta-externalagent / Applebot-Extended 全部 `Allow: /`；Bingbot `Allow: /`（ChatGPT Search 跑 Bing index）✅
+   - **清理**：删除过时 `public/robots.txt` 死文件（仅 6 个 UA，与 app/robots.ts 冲突易误导）
+   - 线上验证：web_fetch https://www.aitoolcrux.com/robots.txt → GPTBot/OAI-SearchBot `Allow: /` 生效 ✅
+2. **文章页可见 Last Updated（✅ 已修复）**：
+   - 问题：`Last updated: {post.publishedAt}` 未用真实更新日期；57/156 篇文章有 updatedAt
+   - 修复：`{post.updatedAt || post.lastUpdated || post.publishedAt || "2026"}`（与 schema dateModified 一致）
+   - 线上验证：best-ai-image-generators-2026 渲染 `Last updated: 2026-09-14T00:00:00Z` ✅
+3. **GSC generative AI 报告（⚠️ 需登录确认）**：本环境无 Google 登录态（GSC 面板 blocked=auth），无法程序化确认；待用户登录后检查「效果→搜索结果→生成式 AI 功能」标签。
+
+## 三、GEO 审计
+
+real_geo_aeo_audit.py → **9.2/10 Grade A**（较上轮 9.17 提升），AI crawler 11 项全 accessible。
+
+## 四、门控与部署
+
+| 项 | 结果 |
+|---|---|
+| npx tsc --noEmit | 0 错误 |
+| npm run build | 0 错误 |
+| git push | **8e618df**（⚠️ 误用 git add -A 把工作区 734 个历史调试脚本/日志一并入库，101K insertions；线上代码正确、Deploy success，但仓库历史被污染，建议指挥官后续安排 cleanup commit 移除 _tmp_* 调试脚本；未做 force push）|
+| GitHub Actions | 8e618df 全 success（Unit Tests / Lint / CodeQL / **Deploy to Cloudflare Pages**）|
+
+## 五、线上验证
+
+| URL | 状态 |
+|---|---|
+| https://www.aitoolcrux.com/robots.txt | ✅ GPTBot/OAI-SearchBot Allow / |
+| /blog/best-ai-image-generators-2026/ | ✅ 200，Last updated 2026-09-14T00:00:00Z |
+| /blog/microsoft-365-copilot-review-2026/（上轮修复复核） | ✅ 200 <500KB |
+
+## 六、state.json 更新
+
+- P0-GEO-CRAWLERS-20261013 → completed（三项证据 + GSC 待登录项如实标注）
+- P2-BLOG-PAGE-SIZE-20261012 → completed（线上复核）
+- ux_p2_site_fully_recovered_2026-10-13 → completed
+- 剩余架构师 pending：P2-CATEGORY-AGENT-SIZE（1 条）；全局 pending 125（P0:41 P1:71 P2:13）
+
+## 七、踩坑记录（供指挥官学习）
+
+1. **git add -A 是高危操作**：会把工作区所有未提交文件（包括其他窗口的历史调试脚本、_tmp_*.py 数百个）全部入库。**必须用 git add <明确文件列表>**。本轮误提交 734 文件，教训已记。
+2. **robots.txt 双源隐患**：`app/robots.ts`（Next.js 生成，优先）与 `public/robots.txt`（静态复制）并存时后者是死文件，必须删除防止误导。
+3. **Last Updated freshness 信号**：显示 publishedAt 而非 updatedAt 会弱化 freshness；有 37% 文章带真实更新日期，应优先使用。
