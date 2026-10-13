@@ -507,8 +507,28 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-13 13:03:30 CST",
+  "last_updated": "2026-10-13 17:06:56 CST",
   "completed_tasks": [
+    {
+      "id": "POLISH-2026-10-13-R11",
+      "priority": "P1",
+      "title": "R11: HTML->MD fix 3 articles (60->100)",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "result": "ai-tools-for-beginners 60->100, ai-tools-review-guide 60->100, ai-tools-selection-guide 60->100"
+    },
+    {
+      "id": "POLISH-2026-10-13-R10",
+      "priority": "P0",
+      "title": "R10: 5 CTR titles + 3 low articles fixed",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "result": "5 CTR (adobe-firefly/creatium/openai-astra/voice-changers/elevenlabs); perplexity 55->100, ai-coding-compare 60->100, ai-tools-compare 60->100"
+    },
     {
       "id": "POLISH-2026-10-13-R10",
       "priority": "P0",
@@ -1090,6 +1110,11 @@
       "task": "拓荒者-外链增长SOP(14点档)",
       "time": "2026-10-13 13:03:30 CST",
       "result": "4/4 backlinks alive; HN NOT-LOGGED-IN; Reddit NOT-LOGGED-IN; 9 new directory candidates found"
+    },
+    {
+      "task": "拓荒者-外链调研R12(18点档)",
+      "time": "2026-10-13 17:06:56 CST",
+      "result": "5 queries, 24 new opportunities found, 5 added to state.json"
     }
   ],
   "next_iteration_focus": [
@@ -1663,14 +1688,15 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-12",
       "url": "/blog/openai_astra_review",
       "current_pos": 10.1,
       "current_ctr": 1.47,
       "impressions": 68,
       "created_at": "2026-10-12T20:07:35",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "CTR-20261012-2101",
@@ -1680,14 +1706,15 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-12",
       "url": "/blog/adobe-firefly-review-2026",
       "current_pos": 6.3,
       "current_ctr": 0.0,
       "impressions": 28,
       "created_at": "2026-10-12T20:07:35",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "CTR-20261012-2102",
@@ -1697,14 +1724,15 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-12",
       "url": "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
       "current_pos": 6.2,
       "current_ctr": 0.0,
       "impressions": 23,
       "created_at": "2026-10-12T20:07:35",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "GA4-20261010-002",
@@ -2356,7 +2384,7 @@
       "id": "P2-BLOG-PAGE-SIZE-20261012",
       "task": "博客详情页>500KB优化：microsoft-365-copilot-review-2026(508.8KB)、ai-coding-tools-comparison-2026(510.3KB)。根因=RSC payload全量序列化文章内容（非代码缺陷），待内容压缩专项（图片/lazy/内链精简）",
       "priority": "P2",
-      "status": "completed",
+      "status": "archived",
       "assigned_to": [
         "window1",
         "架构师"
@@ -2364,7 +2392,8 @@
       "source": "geo_audit_2026-10-12",
       "created_at": "2026-10-12T21:33:40",
       "completed_at": "2026-10-13T12:42:12",
-      "completion_note": "上轮已修复(508.8->397KB)，本轮线上复核确认：/blog/microsoft-365-copilot-review-2026/ 与 /blog/ai-coding-tools-comparison-2026/ 均200且<500KB。commit 69d346b部署生效。"
+      "completion_note": "上轮已修复(508.8->397KB)，本轮线上复核确认：/blog/microsoft-365-copilot-review-2026/ 与 /blog/ai-coding-tools-comparison-2026/ 均200且<500KB。commit 69d346b部署生效。",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "priority": "P2",
@@ -2717,11 +2746,12 @@
         "window1"
       ],
       "priority": "P0",
-      "status": "completed",
+      "status": "archived",
       "task": "GEO基础设施：检查并放行AI crawlers——robots.txt确认GPTBot/OAI-SearchBot/PerplexityBot/ClaudeBot/Google-Extended/Bingbot均允许（ChatGPT Search跑Bing index，87%引用来自Bing top结果）；每篇文章页加可见Last Updated时间戳（freshness强信号）；确认Search Console已启用generative AI features报告",
       "source": "commander_learning_2026SEO_GEO_20261013",
       "completed_at": "2026-10-13T12:42:12",
-      "completion_note": "robots.txt已确认AI crawlers全放行(app/robots.ts权威源:GPTBot/OAI-SearchBot/ChatGPT-User/ClaudeBot/PerplexityBot/Google-Extended/Bingbot均Allow /，线上robots.txt验证通过)；删除过时public/robots.txt死文件；文章页可见Last Updated改用updatedAt(freshness强信号，57/156篇有真实更新日期，验证best-ai-image-generators-2026渲染2026-09-14T00:00:00Z)；GSC generative AI报告需登录态确认(本环境无登录，待人工或CDP会话确认)。commit 8e618df已部署，线上200。GEO审计9.2/10。"
+      "completion_note": "robots.txt已确认AI crawlers全放行(app/robots.ts权威源:GPTBot/OAI-SearchBot/ChatGPT-User/ClaudeBot/PerplexityBot/Google-Extended/Bingbot均Allow /，线上robots.txt验证通过)；删除过时public/robots.txt死文件；文章页可见Last Updated改用updatedAt(freshness强信号，57/156篇有真实更新日期，验证best-ai-image-generators-2026渲染2026-09-14T00:00:00Z)；GSC generative AI报告需登录态确认(本环境无登录，待人工或CDP会话确认)。commit 8e618df已部署，线上200。GEO审计9.2/10。",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "P0-GEO-ARTICLE-REWORK-20261013",
@@ -2753,14 +2783,15 @@
         "打磨师"
       ],
       "priority": "P0",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-13",
       "url": "https://www.aitoolcrux.com/blog/adobe-firefly-review-2026",
       "position": 5.2,
       "ctr": 0.0,
       "impressions": 26,
       "created_at": "2026-10-13T08:01:55",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "CTR-20261013-02",
@@ -2770,14 +2801,15 @@
         "打磨师"
       ],
       "priority": "P0",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-13",
       "url": "https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
       "position": 6.3,
       "ctr": 0.0,
       "impressions": 20,
       "created_at": "2026-10-13T08:01:55",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "CTR-20261013-03",
@@ -2787,14 +2819,15 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-13",
       "url": "https://www.aitoolcrux.com/blog/best-ai-voice-changers-2026",
       "position": 16.5,
       "ctr": 2.9,
       "impressions": 68,
       "created_at": "2026-10-13T08:01:55",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "CTR-20261013-04",
@@ -2804,14 +2837,15 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "archived",
       "source": "ctr_optimization_2026-10-13",
       "url": "https://www.aitoolcrux.com/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md",
       "position": 5.6,
       "ctr": 0.0,
       "impressions": 5,
       "created_at": "2026-10-13T08:01:55",
-      "completed_at": "2026-10-13T13:30:00+08:00"
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "id": "KW-20261013-01",
@@ -2870,7 +2904,8 @@
       ],
       "priority": "P1",
       "source": "r11_backlink_research_2026-10-13",
-      "category": "PH/BetaList近期launch"
+      "category": "PH/BetaList近期launch",
+      "status": "pending"
     },
     {
       "task": "外链机会: Artificial Intelligence",
@@ -2881,7 +2916,8 @@
       ],
       "priority": "P1",
       "source": "r11_backlink_research_2026-10-13",
-      "category": "PH/BetaList近期launch"
+      "category": "PH/BetaList近期launch",
+      "status": "pending"
     },
     {
       "task": "外链机会: The best AI agents in 2026",
@@ -2892,7 +2928,8 @@
       ],
       "priority": "P1",
       "source": "r11_backlink_research_2026-10-13",
-      "category": "PH/BetaList近期launch"
+      "category": "PH/BetaList近期launch",
+      "status": "pending"
     },
     {
       "task": "外链机会: Submit AI Tool for Review — Write For Us",
@@ -2903,7 +2940,8 @@
       ],
       "priority": "P1",
       "source": "r11_backlink_research_2026-10-13",
-      "category": "AI评测博客投稿"
+      "category": "AI评测博客投稿",
+      "status": "pending"
     },
     {
       "task": "外链机会: Write For Us",
@@ -2914,7 +2952,8 @@
       ],
       "priority": "P1",
       "source": "r11_backlink_research_2026-10-13",
-      "category": "AI评测博客投稿"
+      "category": "AI评测博客投稿",
+      "status": "pending"
     },
     {
       "id": "ux_p2_site_fully_recovered_2026-10-13",
@@ -2922,12 +2961,13 @@
       "description": "10月13日11:00巡检：网站完全恢复正常！首页465KB/TTFB 0.87s/总1.73s；Blog 261KB/TTFB 0.81s/总1.49s；404页102KB/TTFB 0.81s/总1.09s；/ranking/ 299KB/TTFB 0.83s/总1.67s。所有页面总加载时间都在2s以内，TTFB都在0.8s左右，与10月9日基线水平相当甚至更好。故障从10月9日23:00持续到10月12日23:00约96小时，经过24小时观察后确认完全恢复。无新增UX问题，网站运行正常。",
       "priority": "P2",
       "assigned_to": "window1",
-      "status": "completed",
+      "status": "archived",
       "source": "ux_audit_oct13_11h",
       "created_at": "2026-10-13",
       "evidence": "homepage 465KB/TTFB 0.87s/1.73s, blog 261KB/TTFB 0.81s/1.49s, 404 102KB/TTFB 0.81s/1.09s, /ranking/ 299KB/TTFB 0.83s/1.67s",
       "completed_at": "2026-10-13T12:42:12",
-      "completion_note": "巡检结论确认：网站完全恢复(首页465KB/TTFB 0.87s/1.73s等evidence)，本轮线上复核首页/文章页均200，无新增UX问题。"
+      "completion_note": "巡检结论确认：网站完全恢复(首页465KB/TTFB 0.87s/1.73s等evidence)，本轮线上复核首页/文章页均200，无新增UX问题。",
+      "archived_at": "2026-10-13 14:40:06"
     },
     {
       "task": "用户痛点[ChatGPT越更新越烂（降智），用户大规模退订]，建议写文章[Is ChatGPT Getting Worse in 2026? Why Users Are Canceling Plus Subscriptions]，正文必须引用用户原话做H2/FAQ",
@@ -2938,7 +2978,8 @@
       "priority": "P0",
       "source": "pain_point_mining_2026-10-13",
       "verified": true,
-      "sources_count": 3
+      "sources_count": 3,
+      "status": "pending"
     },
     {
       "task": "用户痛点[ChatGPT Pro $200/月太贵，输出不匹配价格]，建议写文章[Is ChatGPT Pro $200/Month Worth It in 2026? Honest Review & Cheaper Alternatives]，正文必须引用用户原话做H2/FAQ",
@@ -2949,7 +2990,8 @@
       "priority": "P0",
       "source": "pain_point_mining_2026-10-13",
       "verified": true,
-      "sources_count": 2
+      "sources_count": 2,
+      "status": "pending"
     },
     {
       "task": "用户痛点[AI写作/对话工具幻觉多，关键场景不可靠]，建议写文章[AI Tools Hallucinate Too Much in 2026: Which Ones Are Actually Reliable for Work?]，正文必须引用用户原话做H2/FAQ",
@@ -2960,25 +3002,121 @@
       "priority": "P0",
       "source": "pain_point_mining_2026-10-13",
       "verified": true,
-      "sources_count": 2
+      "sources_count": 2,
+      "status": "pending"
     },
     {
       "task": "目录站提交候选: Best Free AI Directories List (450+) | Submit Your (https://freeaidirectories.com/)",
       "assigned_to": "拓荒者",
       "priority": "P1",
-      "source": "sop_1400_scan_2026-10-13"
+      "source": "sop_1400_scan_2026-10-13",
+      "status": "pending"
     },
     {
       "task": "目录站提交候选: Submit Your AI Tool — Free AI Tool Directory Listi (https://toolscout.ai/submit)",
       "assigned_to": "拓荒者",
       "priority": "P1",
-      "source": "sop_1400_scan_2026-10-13"
+      "source": "sop_1400_scan_2026-10-13",
+      "status": "pending"
     },
     {
       "task": "目录站提交候选: submitaitools/Free-AI-Directories (https://github.com/submitaitools/Free-AI-Directories)",
       "assigned_to": "拓荒者",
       "priority": "P1",
-      "source": "sop_1400_scan_2026-10-13"
+      "source": "sop_1400_scan_2026-10-13",
+      "status": "pending"
+    },
+    {
+      "id": "CTR-20261013-01",
+      "task": "页面 [https://www.aitoolcrux.com/blog/adobe-firefly-review-2026] 排名 [5.2] 但 CTR 仅 [0.0]%，优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/adobe-firefly-review-2026",
+      "position": 5.2,
+      "ctr": 0,
+      "impressions": 26,
+      "created_at": "2026-10-13T14:05:05",
+      "completed_at": "2026-10-13T13:30:00+08:00"
+    },
+    {
+      "id": "CTR-20261013-02",
+      "task": "页面 [https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md] 排名 [6.3] 但 CTR 仅 [0.0]%，优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "position": 6.3,
+      "ctr": 0,
+      "impressions": 20,
+      "created_at": "2026-10-13T14:05:05",
+      "completed_at": "2026-10-13T13:30:00+08:00"
+    },
+    {
+      "id": "CTR-20261013-03",
+      "task": "页面 [https://www.aitoolcrux.com/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md] 排名 [5.6] 但 CTR 仅 [0.0]%，优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md",
+      "position": 5.6,
+      "ctr": 0,
+      "impressions": 5,
+      "created_at": "2026-10-13T14:05:05",
+      "completed_at": "2026-10-13T13:30:00+08:00"
+    },
+    {
+      "id": "ux_p1_still_unstable_2026-10-13_17h",
+      "title": "P1: 网站仍不稳定——早上11:00刚确认完全恢复，17:00 Blog和404又完全超时",
+      "description": "17:00巡检：网站仍在波动中。早上11:00所有页面都正常（TTFB 0.8s，总时间1-2s），但6小时后Blog和404又完全超时(code=000)。首页TTFB 0.96s正常但总时间15s超时；/ranking/ TTFB从0.83s升到2.54s，总时间8.8s。/tools→/ranking/ 301重定向仍存在（未修复）。说明后端函数实例还没真正稳定，可能还有并发池问题。建议：继续观察，明天如果仍波动需要架构师介入查Vercel日志。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit_oct13_17h",
+      "created_at": "2026-10-13",
+      "evidence": "homepage TTFB=0.96s/15s超时, blog=code000, 404=code000, /ranking/ TTFB=2.54s/8.8s, /tools→/ranking/ 301 still exists"
+    },
+    {
+      "task": "外链机会[客座博客]: 12 Best AI Tools for Bloggers in 2026 (Tested on R -> https://storyflow.so/blog/best-ai-tools-for-bloggers-2026",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "backlink_research_r12_2026-10-13"
+    },
+    {
+      "task": "外链机会[客座博客]: What are the best AI writing tools for bloggers in -> https://www.quora.com/What-are-the-best-AI-writing-tools-for-bloggers-in-2026",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "backlink_research_r12_2026-10-13"
+    },
+    {
+      "task": "外链机会[客座博客]: 7 Best AI Blog Post Generators for 2026 (Tested &  -> https://aioseo.com/best-ai-blog-post-generators/",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "backlink_research_r12_2026-10-13"
+    },
+    {
+      "task": "外链机会[客座博客]: 27 Best AI Writing Tools in 2026 (Tested & Reviewe -> https://www.emailvendorselection.com/best-ai-writing-tools/",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "backlink_research_r12_2026-10-13"
+    },
+    {
+      "task": "外链机会[客座博客]: Best AI Tools for Content Creation in 2026 (Full R -> https://adsy.com/blog/ai-content-creation-tools-2026",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "backlink_research_r12_2026-10-13"
     }
   ],
   "milestones": [
@@ -2995,7 +3133,7 @@
   "latest_commit": "26dfe59",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
-  "last_action": "UX audit Oct13 11:00 - FULLY RECOVERED, all pages <2s, 1 new P2",
+  "last_action": "UX audit Oct13 17:00 - still unstable, blog+404 timeout again, 1 new P1",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -9644,6 +9782,174 @@
       "completed_at": "2026-10-13T00:49:59",
       "completion_note": "网站已恢复确认：服务器端首页200(533+ tools/17分类全渲染)、/blog/ 200、/tools/gemini/等4 URL 200",
       "verified": "commander_10-13: 4 bad URLs HTTP200, home 200"
+    },
+    {
+      "id": "CTR-20261012-2100",
+      "task": "page /blog/openai_astra_review rank 10.1 CTR only 1.47% (68 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-12",
+      "url": "/blog/openai_astra_review",
+      "current_pos": 10.1,
+      "current_ctr": 1.47,
+      "impressions": 68,
+      "created_at": "2026-10-12T20:07:35",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "CTR-20261012-2101",
+      "task": "page /blog/adobe-firefly-review-2026 rank 6.3 CTR only 0.0% (28 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-12",
+      "url": "/blog/adobe-firefly-review-2026",
+      "current_pos": 6.3,
+      "current_ctr": 0.0,
+      "impressions": 28,
+      "created_at": "2026-10-12T20:07:35",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "CTR-20261012-2102",
+      "task": "page /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md rank 6.2 CTR only 0.0% (23 impr), optimize title/meta",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-12",
+      "url": "/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "current_pos": 6.2,
+      "current_ctr": 0.0,
+      "impressions": 23,
+      "created_at": "2026-10-12T20:07:35",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "P2-BLOG-PAGE-SIZE-20261012",
+      "task": "博客详情页>500KB优化：microsoft-365-copilot-review-2026(508.8KB)、ai-coding-tools-comparison-2026(510.3KB)。根因=RSC payload全量序列化文章内容（非代码缺陷），待内容压缩专项（图片/lazy/内链精简）",
+      "priority": "P2",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-12",
+      "created_at": "2026-10-12T21:33:40",
+      "completed_at": "2026-10-13T12:42:12",
+      "completion_note": "上轮已修复(508.8->397KB)，本轮线上复核确认：/blog/microsoft-365-copilot-review-2026/ 与 /blog/ai-coding-tools-comparison-2026/ 均200且<500KB。commit 69d346b部署生效。",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "P0-GEO-CRAWLERS-20261013",
+      "assigned_to": [
+        "window1"
+      ],
+      "priority": "P0",
+      "status": "archived",
+      "task": "GEO基础设施：检查并放行AI crawlers——robots.txt确认GPTBot/OAI-SearchBot/PerplexityBot/ClaudeBot/Google-Extended/Bingbot均允许（ChatGPT Search跑Bing index，87%引用来自Bing top结果）；每篇文章页加可见Last Updated时间戳（freshness强信号）；确认Search Console已启用generative AI features报告",
+      "source": "commander_learning_2026SEO_GEO_20261013",
+      "completed_at": "2026-10-13T12:42:12",
+      "completion_note": "robots.txt已确认AI crawlers全放行(app/robots.ts权威源:GPTBot/OAI-SearchBot/ChatGPT-User/ClaudeBot/PerplexityBot/Google-Extended/Bingbot均Allow /，线上robots.txt验证通过)；删除过时public/robots.txt死文件；文章页可见Last Updated改用updatedAt(freshness强信号，57/156篇有真实更新日期，验证best-ai-image-generators-2026渲染2026-09-14T00:00:00Z)；GSC generative AI报告需登录态确认(本环境无登录，待人工或CDP会话确认)。commit 8e618df已部署，线上200。GEO审计9.2/10。",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "CTR-20261013-01",
+      "task": "页面 https://www.aitoolcrux.com/blog/adobe-firefly-review-2026 排名 5.2 但 CTR 仅 0.0%（26次曝光），优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P0",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/adobe-firefly-review-2026",
+      "position": 5.2,
+      "ctr": 0.0,
+      "impressions": 26,
+      "created_at": "2026-10-13T08:01:55",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "CTR-20261013-02",
+      "task": "页面 https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md 排名 6.3 但 CTR 仅 0.0%（20次曝光），优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P0",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "position": 6.3,
+      "ctr": 0.0,
+      "impressions": 20,
+      "created_at": "2026-10-13T08:01:55",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "CTR-20261013-03",
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-voice-changers-2026 排名 16.5 但 CTR 仅 2.9%（68次曝光），优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/best-ai-voice-changers-2026",
+      "position": 16.5,
+      "ctr": 2.9,
+      "impressions": 68,
+      "created_at": "2026-10-13T08:01:55",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "CTR-20261013-04",
+      "task": "页面 https://www.aitoolcrux.com/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md 排名 5.6 但 CTR 仅 0.0%（5次曝光），优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ctr_optimization_2026-10-13",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md",
+      "position": 5.6,
+      "ctr": 0.0,
+      "impressions": 5,
+      "created_at": "2026-10-13T08:01:55",
+      "completed_at": "2026-10-13T13:30:00+08:00",
+      "archived_at": "2026-10-13 14:40:06"
+    },
+    {
+      "id": "ux_p2_site_fully_recovered_2026-10-13",
+      "title": "P2: 网站完全恢复——所有页面TTFB 0.8s，总时间1-2s，达到正常基线水平",
+      "description": "10月13日11:00巡检：网站完全恢复正常！首页465KB/TTFB 0.87s/总1.73s；Blog 261KB/TTFB 0.81s/总1.49s；404页102KB/TTFB 0.81s/总1.09s；/ranking/ 299KB/TTFB 0.83s/总1.67s。所有页面总加载时间都在2s以内，TTFB都在0.8s左右，与10月9日基线水平相当甚至更好。故障从10月9日23:00持续到10月12日23:00约96小时，经过24小时观察后确认完全恢复。无新增UX问题，网站运行正常。",
+      "priority": "P2",
+      "assigned_to": "window1",
+      "status": "archived",
+      "source": "ux_audit_oct13_11h",
+      "created_at": "2026-10-13",
+      "evidence": "homepage 465KB/TTFB 0.87s/1.73s, blog 261KB/TTFB 0.81s/1.49s, 404 102KB/TTFB 0.81s/1.09s, /ranking/ 299KB/TTFB 0.83s/1.67s",
+      "completed_at": "2026-10-13T12:42:12",
+      "completion_note": "巡检结论确认：网站完全恢复(首页465KB/TTFB 0.87s/1.73s等evidence)，本轮线上复核首页/文章页均200，无新增UX问题。",
+      "archived_at": "2026-10-13 14:40:06"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
