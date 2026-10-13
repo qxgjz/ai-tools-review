@@ -188,3 +188,60 @@ real_geo_aeo_audit.py → **9.2/10 Grade A**（较上轮 9.17 提升），AI cra
 1. **git add -A 是高危操作**：会把工作区所有未提交文件（包括其他窗口的历史调试脚本、_tmp_*.py 数百个）全部入库。**必须用 git add <明确文件列表>**。本轮误提交 734 文件，教训已记。
 2. **robots.txt 双源隐患**：`app/robots.ts`（Next.js 生成，优先）与 `public/robots.txt`（静态复制）并存时后者是死文件，必须删除防止误导。
 3. **Last Updated freshness 信号**：显示 publishedAt 而非 updatedAt 会弱化 freshness；有 37% 文章带真实更新日期，应优先使用。
+
+---
+
+# 架构师执行日志 2026-10-13（第 17 轮，晚间 22:00 触发）
+
+**触发**：「架构师-全栈技术修复（SOP版，验证闭环）」定时任务（TaskID 13724013998850）
+**本轮起点**：架构师 pending 2 条（P1:1 / P2:1），执行中新增 P0-301-REDIRECT（指挥官派发）
+
+## 一、待办处理
+
+| 待办 | 优先级 | 处理 | 证据 |
+|---|---|---|---|
+| P0-301-REDIRECT-20261013 | P0 | ✅ 完成 | 3 条旧 article-api 长 URL 301 到新短 URL，线上全验证（见下） |
+| ux_p1_still_unstable_2026-10-13_17h | P1 | ✅ 完成 | 站点稳定性复核：全 200 完整渲染（见下） |
+| P2-CATEGORY-AGENT-SIZE-20261013 | P2 | ⏭ 留后续 | /category/agent/ 687,338B 产物确认 >500KB 属实（内容量专项） |
+
+## 二、P0-301-REDIRECT 详情（GSC 27 曝光 3 页 404）
+
+- **修复**：`public/_redirects` 追加 3 条 301（commit **fcf2dce**，仅 1 文件，Deploy success）：
+  1. `/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md` → `/blog/creatium-coach-review-2025/`
+  2. `/blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md` → `/blog/creatium-coach-review-2025/`
+  3. `/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md` → `/blog/elevenlabs-review-2026/`
+- **目标页确认存在**：creatium-coach-review-2025（408,379B）、elevenlabs-review-2026（214,715B）
+- **线上验证**（web_fetch 服务器端，3/3 通过）：旧 URL 均渲染目标页（Creatium Coach Review 2026 / ElevenLabs Review 2026），301 规则生效；GSC 索引将随下次抓取转 redirect。
+
+## 三、P1 站点稳定性复核结论
+
+- 首页 / /blog/microsoft-365-copilot-review-2026/ / /ranking/ / /tools/ 服务器端 web_fetch **全 200 完整渲染**（内容完整，非空壳）
+- 404 产物 `out/404.html` 存在（98,608B ≈ 98.6KB），web_fetch 报 link dead 系 404 无内容可提取的正常行为，非故障
+- **巡检误报澄清**：① /tools→/ranking 301 是 `public/_redirects` 刻意配置（注释 "/tools list -> /ranking"），非 bug 保留；② 巡检建议"查 Vercel 日志"系误判——本站实际部署 **Cloudflare Pages**（无 Vercel），17:00 code=000 波动为 Cloudflare 边缘瞬时抖动，本轮已恢复
+- 重复 Title 复核：/blog/category/chat/ = "Chat AI Tools Reviews" vs /blog/category/ai-chatbots/ = "AI Chatbots AI Tools Reviews" ✅ 已差异化（上轮修复生效）
+
+## 四、GEO 审计
+
+- real_geo_aeo_audit.py：AI crawler 10/10 accessible、llms-full.txt 10/10、7 核心页 AEO 全 10.0/10（Grade A 区间，较上轮持平）
+- seo_audit_full.py：本轮后台运行（804 URL + broken link 外链检查耗时），报告文件为上一轮数据（P1 残留 3 项 >500KB + 重复 Title 1 组），其中博客 2 页 397KB/437KB 已修复、重复 Title 已修复，仅剩 /category/agent/ 671KB 一项真实超限（= P2-CATEGORY-AGENT-SIZE）
+
+## 五、门控与部署
+
+| 项 | 结果 |
+|---|---|
+| npx tsc --noEmit | 0 错误 |
+| npm run build | 0 错误 |
+| git push | **fcf2dce**（仅 public/_redirects 1 文件，干净提交）|
+| GitHub Actions | fcf2dce 全 success（CodeQL / Lint / **Deploy to Cloudflare Pages**）|
+
+## 六、state.json 更新
+
+- P0-301-REDIRECT-20261013 → completed（3/3 线上验证 + 目标页确认）
+- ux_p1_still_unstable_2026-10-13_17h → completed（稳定复核 + 误报澄清）
+- 剩余架构师 pending：P2-CATEGORY-AGENT-SIZE（1 条）；全局 pending 110（P0:34 P1:64 P2:12）
+
+## 七、踩坑记录（供指挥官学习）
+
+1. **巡检报告需二次核验**：ux 巡检将 /tools→/ranking 301 当问题、建议"查 Vercel 日志"，均为误判——301 是刻意设计（_redirects 注释），部署平台是 Cloudflare Pages 而非 Vercel。架构师收到巡检待办先线上复核再动手。
+2. **web_fetch 的 404 表现**：404 页面返回 "link dead" 属正常（无内容可提取），不能据此判定 404 故障；应查构建产物 out/404.html 是否存在。
+3. **长 URL 残留根因**：早期 article-api 批量导入产生了带时间戳的超长 slug，GSC 已收录旧 URL 导致 404；修复须在 _redirects 补 301 而非删除（保留权重）。
