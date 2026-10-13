@@ -16,6 +16,9 @@ interface CategoryToolsClientProps {
 export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
   const [sortBy, setSortBy] = useState<SortOption>('rating');
   const [priceFilter, setPriceFilter] = useState<PriceFilter>('all');
+  // 分页折叠：首屏渲染前 N 张卡片，其余点 Load More 分批渲染（数据仍在客户端，筛选/排序作用于全量）
+  const PAGE_SIZE = 24;
+  const [visibleCount, setVisibleCount] = useState(PAGE_SIZE);
 
   // 判断Tools的定价模式
   const getPriceMode = (tool: Tool): 'free' | 'freemium' | 'paid' => {
@@ -74,6 +77,13 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
     return result;
   }, [tools, sortBy, priceFilter]);
 
+  // 分页切片：排序/筛选变化时重置可见数量
+  const visibleTools = filteredAndSortedTools.slice(0, visibleCount);
+  const resetPagination = (fn: () => void) => {
+    setVisibleCount(PAGE_SIZE);
+    fn();
+  };
+
   const priceFilters: { value: PriceFilter; label: string }[] = [
     { value: 'all', label: 'All' },
     { value: 'free', label: 'Free' },
@@ -99,7 +109,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
             {priceFilters.map((filter) => (
               <button
                 key={filter.value}
-                onClick={() => setPriceFilter(filter.value)}
+                onClick={() => resetPagination(() => setPriceFilter(filter.value))}
                 className={`px-3 py-1.5 text-sm rounded-lg font-medium transition-all ${
                   priceFilter === filter.value
                     ? 'bg-blue-600 text-white'
@@ -118,7 +128,7 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Sort:</span>
           <select
             value={sortBy}
-            onChange={(e) => setSortBy(e.target.value as SortOption)}
+            onChange={(e) => resetPagination(() => setSortBy(e.target.value as SortOption))}
             className="px-3 py-1.5 text-sm rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-300 focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             {sortOptions.map((option) => (
@@ -158,12 +168,22 @@ export function CategoryToolsClient({ tools }: CategoryToolsClientProps) {
         )}
       </div>
 
-      {/* Tools列Table */}
+      {/* Tools列Table（分页折叠渲染） */}
       <ToolList
-        tools={filteredAndSortedTools}
+        tools={visibleTools}
         emptyTitle="No tools found"
         emptyDescription="Try adjusting your filters or sorting options."
       />
+      {filteredAndSortedTools.length > visibleCount && (
+        <div className="mt-6 flex justify-center">
+          <button
+            onClick={() => setVisibleCount((v) => v + PAGE_SIZE)}
+            className="inline-flex items-center justify-center px-6 min-h-[44px] text-sm font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 hover:bg-blue-100 dark:hover:bg-blue-900/30 border border-blue-200 dark:border-blue-800 rounded-xl transition-colors"
+          >
+            Load More ({filteredAndSortedTools.length - visibleCount} more tools)
+          </button>
+        </div>
+      )}
     </div>
   );
 }
