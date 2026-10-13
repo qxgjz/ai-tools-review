@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-11T22:48:24.260857",
+  "audit_time": "2026-10-13T01:16:04.340018",
   "mode": "quick",
   "content": {
-    "total_articles": 154,
-    "average_score": 91.13181818181825,
-    "perfect_count": 101,
-    "below_85_count": 40,
+    "total_articles": 156,
+    "average_score": 90.05512820512828,
+    "perfect_count": 95,
+    "below_85_count": 46,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -20,14 +20,16 @@
       },
       {
         "slug": "dify-vs-langchain-2026",
-        "title": "Dify vs LangChain 2026: Which AI App Builder | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 2216,
-        "flesch": 50.1,
-        "internal_links": 6,
-        "external_links": 1,
+        "title": "Dify vs LangChain 2026: Which AI App Builder Should You Choose?",
+        "quality_score": 71.1,
+        "word_count": 2282,
+        "flesch": 40.5,
+        "internal_links": 13,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "gemini-alternatives-2026",
@@ -667,29 +669,31 @@
       },
       {
         "slug": "creatium-coach-review-2025",
-        "title": "Creatium Coach Review: Is This AI Coach Worth $99/mo?",
-        "quality_score": 100.0,
-        "word_count": 13107,
-        "flesch": 56.1,
-        "internal_links": 13,
-        "external_links": 7,
-        "images": 1,
+        "title": "Creatium Coach Review 2026: Pricing & Honest Verdict",
+        "quality_score": 94.4,
+        "word_count": 13226,
+        "flesch": 55.7,
+        "internal_links": 16,
+        "external_links": 9,
+        "images": 0,
         "failed_checks": []
       },
       {
         "slug": "dify_ai_review",
-        "title": "Dify AI Review 2026: Best Open-Source LLMOps?",
-        "quality_score": 100.0,
-        "word_count": 13413,
-        "flesch": 47.0,
-        "internal_links": 14,
-        "external_links": 1,
+        "title": "Dify AI Review 2026: Best Open-Source AI App Builder?",
+        "quality_score": 71.1,
+        "word_count": 2405,
+        "flesch": 43.2,
+        "internal_links": 23,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "cursor_ai_review",
-        "title": "Cursor AI Review 2026: Better Than Copilot? 3-Month Test",
+        "title": "Cursor AI Review 2026: Is the $20/mo Plan Worth It?",
         "quality_score": 71.1,
         "word_count": 2276,
         "flesch": 44.6,
@@ -702,14 +706,16 @@
       },
       {
         "slug": "gemini_38_flash_review",
-        "title": "Gemini 3.8 Flash Review: 50 Benchmarks, Is It Worth It?",
-        "quality_score": 100.0,
-        "word_count": 13098,
-        "flesch": 53.4,
-        "internal_links": 15,
-        "external_links": 1,
-        "images": 1,
-        "failed_checks": []
+        "title": "Gemini 3.8 Flash Review 2026: Speed, Price & Verdict",
+        "quality_score": 71.1,
+        "word_count": 2323,
+        "flesch": 51.6,
+        "internal_links": 14,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "claude_fable_51_review",
@@ -724,12 +730,12 @@
       },
       {
         "slug": "openai_astra_review",
-        "title": "OpenAI Astra Review 2026: 40 Tasks, Is $200/mo Worth It?",
+        "title": "OpenAI Astra Review: 40 Coding Tasks, Pros, Cons & Verdict",
         "quality_score": 100.0,
-        "word_count": 12471,
+        "word_count": 12602,
         "flesch": 43.9,
-        "internal_links": 15,
-        "external_links": 1,
+        "internal_links": 18,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
@@ -757,7 +763,7 @@
       },
       {
         "slug": "chatgpt-vs-claude-2026-comparison",
-        "title": "ChatGPT vs Claude 2026: Which AI Assistant Wins?",
+        "title": "ChatGPT vs Claude 2026: Complete Side-by-Side Comparison & Verdict",
         "quality_score": 100.0,
         "word_count": 2244,
         "flesch": 47.7,
@@ -813,13 +819,15 @@
       {
         "slug": "elevenlabs-review-2026",
         "title": "ElevenLabs Review 2026: Best AI Voice Generator & Cloning?",
-        "quality_score": 100.0,
-        "word_count": 13357,
-        "flesch": 43.6,
-        "internal_links": 13,
-        "external_links": 1,
-        "images": 3,
-        "failed_checks": []
+        "quality_score": 71.1,
+        "word_count": 2346,
+        "flesch": 46.4,
+        "internal_links": 16,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "midjourney-review-2026",
@@ -889,7 +897,7 @@
       },
       {
         "slug": "stable-diffusion-review-2026",
-        "title": "Stable Diffusion 2026 Guide: Best Models & Setup",
+        "title": "Stable Diffusion Review 2026: Best Models & Free Setup",
         "quality_score": 100.0,
         "word_count": 15289,
         "flesch": 48.9,
@@ -966,14 +974,16 @@
       },
       {
         "slug": "suno-review-2026",
-        "title": "Suno AI Review: Made 20 Songs, 3 Were Unreleasable",
-        "quality_score": 100.0,
-        "word_count": 9917,
-        "flesch": 45.9,
-        "internal_links": 9,
-        "external_links": 1,
-        "images": 1,
-        "failed_checks": []
+        "title": "Suno AI Review 2026: Is the $10/mo Pro Plan Worth It?",
+        "quality_score": 71.1,
+        "word_count": 2404,
+        "flesch": 46.0,
+        "internal_links": 15,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "microsoft-365-copilot-review-2026",
@@ -1021,12 +1031,12 @@
       },
       {
         "slug": "adobe-firefly-review-2026",
-        "title": "Adobe Firefly Review: I Edited 40+ Photos, Here's the Truth",
+        "title": "Adobe Firefly Review 2026: Pricing, Pros, Cons & Options",
         "quality_score": 100.0,
-        "word_count": 14307,
-        "flesch": 45.6,
-        "internal_links": 14,
-        "external_links": 1,
+        "word_count": 14413,
+        "flesch": 46.9,
+        "internal_links": 17,
+        "external_links": 3,
         "images": 1,
         "failed_checks": []
       },
@@ -1178,7 +1188,7 @@
         "title": "Gemini vs ChatGPT 2026: Which AI Assistant Is Actually Better?",
         "quality_score": 80.0,
         "word_count": 2288,
-        "flesch": 51.3,
+        "flesch": 51.4,
         "internal_links": 5,
         "external_links": 3,
         "images": 2,
@@ -1239,16 +1249,16 @@
       },
       {
         "slug": "runway-vs-pika-2026",
-        "title": "Runway vs Pika 2026: AI Video Showdown",
-        "quality_score": 72.2,
-        "word_count": 1960,
-        "flesch": 56.5,
-        "internal_links": 5,
-        "external_links": 0,
-        "images": 0,
+        "title": "Runway vs Pika 2026: Which AI Video Generator Wins?",
+        "quality_score": 62.2,
+        "word_count": 2416,
+        "flesch": 33.6,
+        "internal_links": 4,
+        "external_links": 3,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "external_links_pass"
+          "first_para_pass",
+          "readability_pass"
         ]
       },
       {
@@ -1283,16 +1293,15 @@
       {
         "slug": "elevenlabs-vs-playht-2026",
         "title": "ElevenLabs vs Play.ht 2026: Best AI Voice Generator Compared",
-        "quality_score": 66.7,
-        "word_count": 1810,
+        "quality_score": 72.2,
+        "word_count": 1871,
         "flesch": 48.7,
-        "internal_links": 3,
-        "external_links": 0,
+        "internal_links": 5,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
-          "first_para_pass",
-          "external_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1311,16 +1320,13 @@
       {
         "slug": "canva-pro-free-for-students",
         "title": "Canva Pro Free for Students 2026",
-        "quality_score": 72.2,
-        "word_count": 1918,
-        "flesch": 64.9,
-        "internal_links": 3,
-        "external_links": 0,
+        "quality_score": 88.9,
+        "word_count": 2020,
+        "flesch": 64.5,
+        "internal_links": 5,
+        "external_links": 2,
         "images": 0,
-        "failed_checks": [
-          "word_count_pass",
-          "external_links_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "midjourney-v7-vs-dall-e-3-ecommerce",
@@ -1512,28 +1518,29 @@
       },
       {
         "slug": "devin-ai-review",
-        "title": "Devin AI Review 2026: Is It Worth It?",
-        "quality_score": 72.2,
-        "word_count": 975,
-        "flesch": 57.9,
-        "internal_links": 3,
-        "external_links": 1,
-        "images": 0,
+        "title": "Devin AI Review 2026: Pricing, Features, and Is It Worth It?",
+        "quality_score": 62.2,
+        "word_count": 2345,
+        "flesch": 38.4,
+        "internal_links": 16,
+        "external_links": 2,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass",
+          "readability_pass"
         ]
       },
       {
         "slug": "clearscope-alternatives",
         "title": "6 Best Clearscope Alternatives in 2026 (Cheaper & Better)",
-        "quality_score": 72.2,
-        "word_count": 948,
-        "flesch": 50.8,
-        "internal_links": 6,
-        "external_links": 5,
-        "images": 0,
+        "quality_score": 71.1,
+        "word_count": 2277,
+        "flesch": 44.6,
+        "internal_links": 7,
+        "external_links": 4,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1617,30 +1624,28 @@
       {
         "slug": "claude-opus-4-vs-gpt-5-2026",
         "title": "Claude Opus 4 vs GPT-5: Which LLM Wins 2026?",
-        "quality_score": 48.9,
-        "word_count": 1163,
-        "flesch": 49.0,
-        "internal_links": 2,
+        "quality_score": 71.1,
+        "word_count": 2394,
+        "flesch": 41.8,
+        "internal_links": 20,
         "external_links": 2,
-        "images": 0,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "first_para_pass",
-          "internal_links_pass"
+          "first_para_pass"
         ]
       },
       {
         "slug": "perplexity-vs-chatgpt-2026",
         "title": "Perplexity AI vs ChatGPT 2026: Which Wins?",
-        "quality_score": 54.4,
-        "word_count": 487,
-        "flesch": 44.1,
-        "internal_links": 2,
+        "quality_score": 62.2,
+        "word_count": 2410,
+        "flesch": 35.5,
+        "internal_links": 20,
         "external_links": 2,
-        "images": 0,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "internal_links_pass"
+          "first_para_pass",
+          "readability_pass"
         ]
       },
       {
@@ -1802,7 +1807,7 @@
         "title": "Best AI Tools for Beginners 2026 (Without a Tech Background)",
         "quality_score": 71.1,
         "word_count": 2261,
-        "flesch": 57.2,
+        "flesch": 57.3,
         "internal_links": 5,
         "external_links": 9,
         "images": 2,
@@ -1823,22 +1828,49 @@
           "first_para_pass",
           "readability_pass"
         ]
+      },
+      {
+        "slug": "ai-video-generator-credits-burn-fast-2026",
+        "title": "Why AI Video Generators Burn Through Credits Fast in 2026",
+        "quality_score": 62.2,
+        "word_count": 2748,
+        "flesch": 37.5,
+        "internal_links": 5,
+        "external_links": 3,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "ai-tools-not-worth-the-money-2026",
+        "title": "AI Tools Not Worth the Money in 2026: Honest Pricing Review",
+        "quality_score": 71.1,
+        "word_count": 2545,
+        "flesch": 49.1,
+        "internal_links": 8,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
       }
     ]
   },
   "technical": {
     "pages_audited": 20,
-    "total_issues": 12,
+    "total_issues": 11,
     "by_severity": {
-      "notice": 11,
+      "notice": 10,
       "warning": 1
     },
     "by_type": {
-      "Heading skip": 11,
+      "Heading skip": 10,
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 11.7
+    "elapsed_seconds": 3.5
   },
   "geo": {
     "geo_score": 100,
