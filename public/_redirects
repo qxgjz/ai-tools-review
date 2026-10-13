@@ -117,3 +117,8 @@
 /tools/gpt-4 /tools/gpt-4o 301
 /category/chatbots /category/chat 301
 /category/image-generation /category/image 301
+
+# P0-301-REDIRECT-20261013: GSC 27曝光3页404旧长URL → 新短URL
+/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md /blog/elevenlabs-review-2026/ 301
