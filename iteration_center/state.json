@@ -2992,7 +2992,7 @@
     }
   ],
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
-  "latest_commit": "32c70c9",
+  "latest_commit": "26dfe59",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
   "last_action": "UX audit Oct13 11:00 - FULLY RECOVERED, all pages <2s, 1 new P2",
@@ -9882,9 +9882,9 @@
       "llmevalkit": "100/100/100",
       "screenshots": "3/3/3, all verified one-by-one",
       "internal_links_ok": true,
-      "git": "pending push",
-      "online_200": "pending",
-      "deploy": "pending"
+      "git": "26dfe59 pushed",
+      "online_200": "best-ai-music-generators-2026/best-ai-text-to-speech-tools-2026/best-ai-avatar-generators-2026 all 200",
+      "deploy": "success"
     }
   ],
   "last_commander_review": "2026-10-09",
