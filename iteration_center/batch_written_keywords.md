@@ -79,3 +79,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - ai-video-generator-credits-burn-fast-2026 | Why AI Video Generators Burn Through Credits Fast in 2026 | kw: ai video generator credits | 73 | 2463 | 3 screenshots | NEW (pain point P0 #2)
 - ai-tools-not-worth-the-money-2026 | AI Tools Not Worth the Money in 2026: Honest Pricing Review | kw: ai tools not worth the money | 73 | 2295 | 2 screenshots | NEW (pain point P0 #1)
 - runway-vs-pika-2026 | Runway vs Pika 2026: Which AI Video Generator Wins? | kw: runway vs pika | 73 | 2142 | 2 screenshots | REWRITE
+
+## batch23 (2026-10-13) - 3 new (analyst keywords P0)
+- best-ai-music-generators-2026 | Best AI Music Generators 2026: Suno vs Udio vs Soundraw Tested | kw: best ai music generators | 85 | 2425 | 3 screenshots | NEW
+- best-ai-text-to-speech-tools-2026 | Best AI Text-to-Speech Tools 2026: ElevenLabs vs Murf vs Cartesia | kw: best ai text to speech tools | 85 | 2136 | 3 screenshots | NEW
+- best-ai-avatar-generators-2026 | Best AI Avatar Generators 2026: HeyGen vs Synthesia vs D-ID | kw: best ai avatar generators | 85 | 2142 | 3 screenshots | NEW
