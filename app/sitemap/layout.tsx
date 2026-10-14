@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Sitemap | AIToolCrux',
+  title: 'AI Tools Sitemap: Browse 500+ AI Tool Reviews | AIToolCrux',
   description:
     'Browse all AI tools, reviews, comparisons, and guides on AIToolCrux. Find your way around our complete directory of 500+ AI tools.',
   alternates: {
