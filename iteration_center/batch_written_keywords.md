@@ -89,3 +89,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - best-ai-spreadsheet-tools-2026 | Best AI Spreadsheet Tools 2026: Excel Copilot vs Google Sheets AI | kw: best ai spreadsheet tools | 80 | 2244 | 3 screenshots | NEW
 - best-ai-sql-generators-2026 | Best AI SQL Generators 2026: From Natural Language to Query | kw: best ai sql generators | 80 | 2322 | 3 screenshots | NEW
 - best-ai-sales-assistants-2026 | Best AI Sales Assistants 2026: Boost Outreach & Close More | kw: best ai sales assistants | 85 | 2276 | 3 screenshots | NEW
+
+## batch25 (2026-10-14) - 3 articles (analyst keywords P1 + rewrite-upgrade)
+- best-ai-summarizer-tools-2026 | Best AI Summarizer Tools 2026: Meetings, Calls, Videos | kw: best ai summarizer tools | 80 | 2124 | 3 screenshots | NEW
+- best-ai-copywriting-tools-2026 | Best AI Copywriting Tools 2026 for Marketing Teams | kw: best ai copywriting tools | 80 | 2109 | 3 screenshots | NEW
+- best-ai-presentation-tools-2026 | Best AI Presentation Tools 2026: Gamma vs SlidesAI | kw: best ai presentation tools (P2) | 80 | 2031 | 3 screenshots | REWRITE-UPGRADE

@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 65,
+  "total_articles_generated": 68,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-14 01:00:57 CST",
+  "last_updated": "2026-10-14 10:14:39 CST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-13-R11",
@@ -1130,20 +1130,19 @@
       "task": "拓荒者-外链调研R13(02点档)",
       "time": "2026-10-14 01:00:57 CST",
       "result": "5 queries, 24 new opps, 5 added to state.json"
+    },
+    {
+      "task": "拓荒者-外链增长SOP(06点档)",
+      "time": "2026-10-14 05:02:45 CST",
+      "result": "4/4 backlinks alive; HN NOT-LOGGED-IN; Reddit NOT-LOGGED-IN; aitoolsdirectory found=False (~120h, 接近5工作日上限); hyzenpro found=False; R13 free dirs accessible=5/6"
+    },
+    {
+      "task": "拓荒者-R13免注册目录实际提交验证",
+      "time": "2026-10-14 10:14:39 CST",
+      "result": "6个目录全部有门槛：gptbot($39付费)/bestofai(Google登录)/ai-hunter(SSL错误)/insidr(已填待确认)/tipseason(缺URL需登录)/agentic(需vendor注册)。无1个真正免注册即时审核。R13'免注册目录'标签需修正。"
     }
   ],
   "next_iteration_focus": [
-    {
-      "task": "P0-INDEX-001: 通过IndexNow批量提交Top 50无曝光工具页URL（midjourney/elevenlabs/notion-ai等），提交后验证API响应",
-      "assigned_to": [
-        "window2",
-        "增长黑客"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "created_at": "2026-10-10",
-      "source": "index_monitor.md"
-    },
     {
       "id": "COMP-20261009-001",
       "task": "竞品分析发现内容缺口: AI Agents 专门分类页和内容集群。竞品有 567-620, 我们 0。建议写 Best AI Agents 2026: Tested & Compared (6维度实测), SERP竞争度=High",
@@ -1633,20 +1632,32 @@
       "created_at": "2026-10-13T09:03:16"
     },
     {
-      "id": "P0-301-REDIRECT-20261013",
-      "title": "旧article-api长URL 301重定向到新短URL（GSC 27曝光3页404）",
-      "task": "在Cloudflare Pages/_redirects配置301：1) /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md -> /blog/creatium-coach-review-2025/  2) /blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md -> /blog/creatium-coach-review-2025/（或确认该页为草稿则GSC移除） 3) /blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md -> /blog/elevenlabs-review-2026/。部署后用curl -I验证3个旧URL返回301，GSC索引状态转redirect后提交新URL收录。",
+      "id": "LEARN-20261014-04",
+      "task": "内容策略：43.8%的ChatGPT引用来自'best X'列表文章。确保每个主要类别都有一篇全面的best-of文章（10-15个工具起步），定期更新",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
       "priority": "P0",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - best-of listicles",
+      "knowledge": "best X listicles是AI引用最常见的内容格式（43.8%）",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-05",
+      "task": "技术检查：确认所有博客内容是服务器渲染（SSR/SSG），不是客户端JS渲染。ChatGPT browse工具无法抓取lazy-loaded内容",
       "assigned_to": [
         "window1",
         "架构师"
       ],
-      "status": "completed",
-      "source": "commander_dispatch_20261013_night",
-      "created_at": "2026-10-13T21:40:00",
-      "updated_at": "2026-10-13T21:40:00",
-      "completed_at": "2026-10-13T22:14:28",
-      "completion_note": "3条旧article-api长URL已在public/_redirects配置301到新短URL(commit fcf2dce,Deploy success)。线上服务器端web_fetch验证：1)article-api-...creatium-coach-review-2025-is-this-...-md→/blog/creatium-coach-review-2025/渲染Creatium Coach Review 2026页✅ 2)article-api-...creatium-coach-review-2025-a-handy-way-...-md→同目标✅ 3)article-api-...elevenlabs-review-2026-...-md→/blog/elevenlabs-review-2026/渲染ElevenLabs Review 2026页✅。目标页均存在(creatium 408KB/elevenlabs 215KB产物)。GSC 27曝光404将随301生效转为redirect，新URL收录待GSC下次抓取。"
+      "priority": "P0",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - crawlable content",
+      "knowledge": "ChatGPT browse工具对JS渲染内容支持差，静态生成优先",
+      "created_at": "2026-10-14T05:01:39"
     },
     {
       "id": "COMP-20261009-002",
@@ -2456,17 +2467,127 @@
       "source": "commander_learning_2026SEO_GEO_20261013"
     },
     {
-      "id": "ux_p1_still_unstable_2026-10-13_17h",
-      "title": "P1: 网站仍不稳定——早上11:00刚确认完全恢复，17:00 Blog和404又完全超时",
-      "description": "17:00巡检：网站仍在波动中。早上11:00所有页面都正常（TTFB 0.8s，总时间1-2s），但6小时后Blog和404又完全超时(code=000)。首页TTFB 0.96s正常但总时间15s超时；/ranking/ TTFB从0.83s升到2.54s，总时间8.8s。/tools→/ranking/ 301重定向仍存在（未修复）。说明后端函数实例还没真正稳定，可能还有并发池问题。建议：继续观察，明天如果仍波动需要架构师介入查Vercel日志。",
+      "id": "SEO-AUDIT-20261014-BROKEN-LINKS",
+      "task": "全站broken外链188条待核（812 URL审计）：403反爬类(ProductHunt/G2/Midjourney等实际活链)、404死链(bing.com/images/create等)、timeout类(jina.ai/mistral等)需人工核实替换或移除",
       "priority": "P1",
-      "assigned_to": "window1",
-      "status": "completed",
-      "source": "ux_audit_oct13_17h",
-      "created_at": "2026-10-13",
-      "evidence": "homepage TTFB=0.96s/15s超时, blog=code000, 404=code000, /ranking/ TTFB=2.54s/8.8s, /tools→/ranking/ 301 still exists",
-      "completed_at": "2026-10-13T22:14:28",
-      "completion_note": "第17轮复核：站点已恢复稳定。服务器端web_fetch验证首页/博客/ranking/tools全200完整渲染；404产物out/404.html存在(98.6KB,web_fetch link dead为404无内容可提取的正常行为)；/tools→/ranking 301为public/_redirects刻意配置(注释\"/tools list -> /ranking\")非bug保留；巡检所指\"Vercel日志\"系误判——本站实际部署Cloudflare Pages无Vercel，17:00波动为Cloudflare边缘瞬时抖动已恢复。重复Title已线上确认修复(chat=\"Chat AI Tools Reviews\" vs ai-chatbots=\"AI Chatbots AI Tools Reviews\")。"
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "seo_audit_20261014",
+      "created_at": "2026-10-14T04:28:23",
+      "completion_note": "详细清单见iteration_center/seo_audit_full_20260917.md Broken外链节；403类勿当死链删除（反爬拒绝bot），仅处理确认404/timed out目标失效的链接。"
+    },
+    {
+      "id": "LEARN-20261014-01",
+      "task": "GEO优化：把所有博客文章的H2标题改成问句格式（如'How Much Does X Cost?'），紧跟40-60字直接答案。普林斯顿GEO研究证实此举提升AI引用率30-40%",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - answer-first structure",
+      "knowledge": "每个H2是问题，首段直接给答案（40-60字），AI引擎更容易提取引用",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-02",
+      "task": "GEO优化：每篇文章添加FAQPage schema markup（结构化数据），让AI引擎更容易识别Q&A内容",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - schema markup",
+      "knowledge": "FAQPage、Article、Person、Organization schema让内容对AI机器可读",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-03",
+      "task": "GEO优化：文章中每个关键声明都要带具体数字+来源（如'Our survey of 200 users found...'），Perplexity重度偏好带数据的引用",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - quantified claims",
+      "knowledge": "具体统计+命名来源+年份 = Perplexity引用磁铁，提升30-40%引用率",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-06",
+      "task": "GSC分析方法升级：计算Opportunity Score = Impressions × (Expected CTR for position - Actual CTR)，按分数排序找最高ROI优化点",
+      "assigned_to": [
+        "分析师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GSC - opportunity score method",
+      "knowledge": "预期CTR基准：pos 5=6%, pos 8=3%, pos 12=1.5%",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-07",
+      "task": "GSC分析方法升级：按Pages tab→Queries tab筛选，找出每个页面实际排名但没针对性优化的关键词，扩展内容覆盖",
+      "assigned_to": [
+        "分析师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GSC - page-level keyword analysis",
+      "knowledge": "单页关键词分析发现意外排名词，指导内容扩展",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-08",
+      "task": "内容更新策略：Perplexity重度偏好新鲜内容。给高价值页面加'Last Updated'日期并定期刷新（至少每月一次）",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - freshness signal",
+      "knowledge": "Perplexity给最近更新的页面更高权重，新鲜度是直接排名因子",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "UX-PERF-RECHECK-20261014",
+      "title": "UX性能复查：确认是否回到完全稳定（无code=000/超时）",
+      "task": "11:00巡检：检查blog/404/首页响应，若仍出现code=000或完全超时，必须架构师介入查Cloudflare/后端日志；若全部<2s则标记稳定，归档本轮性能波动记录。",
+      "priority": "P1",
+      "assigned_to": [
+        "ux",
+        "window1"
+      ],
+      "status": "pending",
+      "source": "commander_dispatch_20261014_morning",
+      "created_at": "2026-10-14T10:05:00",
+      "updated_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "GROWTH-AITOOLS-CONTACT-20261014",
+      "title": "aitoolsdirectory提交~120h未过审：发邮件催办",
+      "task": "aitoolsdirectory.com 提交已达约120小时（5个工作日上限），审核未通过且无反馈。找该目录站提交页/联系邮箱，用英文写简短催办邮件（附提交URL https://www.aitoolcrux.com 与提交日期2026-10-09），请求加快审核或说明拒绝原因；结果写入growth日志。",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "增长黑客"
+      ],
+      "status": "pending",
+      "source": "commander_dispatch_20261014_morning",
+      "created_at": "2026-10-14T10:15:00",
+      "updated_at": "2026-10-14T10:15:00"
     },
     {
       "id": "GROWTH-DIR-V5-2026-10-11",
@@ -2575,20 +2696,6 @@
       "created_at": "2026-10-12T21:45:39"
     },
     {
-      "id": "P2-CATEGORY-AGENT-SIZE-20261013",
-      "task": "/category/agent/ 682.7KB>500KB：根因=agent分类工具数大(175工具卡片全量渲染，非代码缺陷)。优化方向=分页/折叠/卡片精简专项",
-      "priority": "P2",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "geo_audit_2026-10-13",
-      "created_at": "2026-10-13T04:34:00",
-      "completed_at": "2026-10-14T00:20:31",
-      "completion_note": "/category/agent/ 671KB->311.2KB(-54%)：CategoryToolsClient分页折叠(首屏24卡+Load More按钮,数据全量保留排序/筛选作用于全量)。commit f075a83 Deploy success,线上web_fetch验证:Showing 146 of 146 tools+Load More (122 more tools)正常渲染,子分类/Guide/FAQ完整。"
-    },
-    {
       "id": "COMP-20261013-04",
       "task": "竞品 futurepedia 有 transcriber 分类（1 个分类页），我们 0 篇。建议写: Best AI Transcription Tools 2026: Tested for Accuracy, slug: /blog/best-ai-transcription-tools-2026, SERP竞争度=High",
       "assigned_to": [
@@ -2621,88 +2728,10 @@
       "created_at": "2026-10-13T05:07:11"
     },
     {
-      "id": "ux_p2_wave_good_2026-10-13_23h",
-      "title": "P2: 波动中的好时段——所有页面TTFB正常（0.8-1.0s），总时间3-4s",
-      "description": "23:00巡检：波动中的好时段。首页464KB/TTFB 0.81s/总3.48s；Blog 265KB/TTFB 0.94s/总1.96s；404页102KB/TTFB 0.94s/总3.27s；/ranking/ 295KB/TTFB 1.02s/总4.30s。TTFB都在正常区间，总时间从15s超时降到3-4s。但还没到11:00那么快（1-2s），说明网站仍在波动中，只是这次是好的时段。整体趋势向好——波动幅度在收窄。",
-      "priority": "P2",
-      "assigned_to": "window1",
-      "status": "completed",
-      "source": "ux_audit_oct13_23h",
-      "created_at": "2026-10-13",
-      "evidence": "homepage TTFB=0.81s/3.48s, blog TTFB=0.94s/1.96s, 404 TTFB=0.94s/3.27s, /ranking/ TTFB=1.02s/4.30s",
-      "completed_at": "2026-10-14T00:20:31",
-      "completion_note": "复核完成:线上web_fetch验证首页(200完整渲染Top3+分类区)/ranking/(200渲染Top10+Complete Ranking)/blog均正常,页面稳定无故障;TTFB 0.8-1.0s为正常区间,与23:00巡检结论一致。"
-    },
-    {
-      "task": "外链机会[评测站]: Free AI Product Review Generator -> https://quillbot.com/ai-writing-tools/ai-product-review-generator",
+      "task": "发邮件给hello@agentic.ai提交aitoolcrux（mailto方式）；发邮件确认insidr.ai提交是否成功",
       "assigned_to": "拓荒者",
       "priority": "P1",
-      "source": "backlink_research_r13_2026-10-14"
-    },
-    {
-      "task": "外链机会[评测站]: Product Review Monitoring, Management and Big Data -> https://www.reviews.ai/",
-      "assigned_to": "拓荒者",
-      "priority": "P1",
-      "source": "backlink_research_r13_2026-10-14"
-    },
-    {
-      "task": "外链机会[评测站]: Best AI Review Response Generator For Ecommerce 20 -> https://www.yotpo.com/blog/best-ai-review-response-generator/",
-      "assigned_to": "拓荒者",
-      "priority": "P1",
-      "source": "backlink_research_r13_2026-10-14"
-    },
-    {
-      "task": "外链机会[评测站]: Free Product Review Generator — Pros/Cons, Verdict -> https://www.junia.ai/templates/product-review-generator",
-      "assigned_to": "拓荒者",
-      "priority": "P1",
-      "source": "backlink_research_r13_2026-10-14"
-    },
-    {
-      "task": "外链机会[汇总博客]: The best AI productivity tools in 2026 -> https://zapier.com/blog/best-ai-productivity-tools/",
-      "assigned_to": "拓荒者",
-      "priority": "P1",
-      "source": "backlink_research_r13_2026-10-14"
-    },
-    {
-      "id": "SEO-AUDIT-20261014-DUAL-H1",
-      "task": "全站双H1根因修复：lib/markdown.ts h1->h2 正则漏转无属性<h1>，产生<h1>...</h2>畸形对，审计计为第二H1",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "seo_audit_20261014",
-      "created_at": "2026-10-14T04:28:23",
-      "completed_at": "2026-10-14T04:28:23",
-      "completion_note": "根因=正则/<h1(\\s+[^>]*?)>/g不匹配无属性<h1>，闭合</h1>却已转</h2>→畸形标签。改/<h1([^>]*)>/g后162篇博客全部单H1（本地产物验证0非单H1）。commit 414bd45 Deploy success，线上/blog/runway-vs-pika-2026/渲染正常。"
-    },
-    {
-      "id": "SEO-AUDIT-20261014-CATEGORY-META",
-      "task": "博客分类页Title/Meta过长（8页，title 63-95字符/meta 170字符）：categoryName用分类并集拼接导致",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "seo_audit_20261014",
-      "created_at": "2026-10-14T04:28:23",
-      "completed_at": "2026-10-14T04:28:23",
-      "completion_note": "generateMetadata加长度截断（title≤60、desc≤155保留关键词）。37个category页全部合规（本地产物验证0超长）。commit 414bd45 Deploy success，线上/blog/category/ai-tools/ title已截断渲染。"
-    },
-    {
-      "id": "SEO-AUDIT-20261014-BROKEN-LINKS",
-      "task": "全站broken外链188条待核（812 URL审计）：403反爬类(ProductHunt/G2/Midjourney等实际活链)、404死链(bing.com/images/create等)、timeout类(jina.ai/mistral等)需人工核实替换或移除",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "source": "seo_audit_20261014",
-      "created_at": "2026-10-14T04:28:23",
-      "completion_note": "详细清单见iteration_center/seo_audit_full_20260917.md Broken外链节；403类勿当死链删除（反爬拒绝bot），仅处理确认404/timed out目标失效的链接。"
+      "source": "r13_dir_validation_2026-10-14"
     }
   ],
   "milestones": [
@@ -9576,6 +9605,96 @@
       "created_at": "2026-10-13T14:05:05",
       "completed_at": "2026-10-13T13:30:00+08:00",
       "archived_at": "2026-10-13T21:40:00"
+    },
+    {
+      "id": "P0-301-REDIRECT-20261013",
+      "title": "旧article-api长URL 301重定向到新短URL（GSC 27曝光3页404）",
+      "task": "在Cloudflare Pages/_redirects配置301：1) /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md -> /blog/creatium-coach-review-2025/  2) /blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md -> /blog/creatium-coach-review-2025/（或确认该页为草稿则GSC移除） 3) /blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md -> /blog/elevenlabs-review-2026/。部署后用curl -I验证3个旧URL返回301，GSC索引状态转redirect后提交新URL收录。",
+      "priority": "P0",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "archived",
+      "source": "commander_dispatch_20261013_night",
+      "created_at": "2026-10-13T21:40:00",
+      "updated_at": "2026-10-13T21:40:00",
+      "completed_at": "2026-10-13T22:14:28",
+      "completion_note": "3条旧article-api长URL已在public/_redirects配置301到新短URL(commit fcf2dce,Deploy success)。线上服务器端web_fetch验证：1)article-api-...creatium-coach-review-2025-is-this-...-md→/blog/creatium-coach-review-2025/渲染Creatium Coach Review 2026页✅ 2)article-api-...creatium-coach-review-2025-a-handy-way-...-md→同目标✅ 3)article-api-...elevenlabs-review-2026-...-md→/blog/elevenlabs-review-2026/渲染ElevenLabs Review 2026页✅。目标页均存在(creatium 408KB/elevenlabs 215KB产物)。GSC 27曝光404将随301生效转为redirect，新URL收录待GSC下次抓取。",
+      "archived_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "ux_p1_still_unstable_2026-10-13_17h",
+      "title": "P1: 网站仍不稳定——早上11:00刚确认完全恢复，17:00 Blog和404又完全超时",
+      "description": "17:00巡检：网站仍在波动中。早上11:00所有页面都正常（TTFB 0.8s，总时间1-2s），但6小时后Blog和404又完全超时(code=000)。首页TTFB 0.96s正常但总时间15s超时；/ranking/ TTFB从0.83s升到2.54s，总时间8.8s。/tools→/ranking/ 301重定向仍存在（未修复）。说明后端函数实例还没真正稳定，可能还有并发池问题。建议：继续观察，明天如果仍波动需要架构师介入查Vercel日志。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "archived",
+      "source": "ux_audit_oct13_17h",
+      "created_at": "2026-10-13",
+      "evidence": "homepage TTFB=0.96s/15s超时, blog=code000, 404=code000, /ranking/ TTFB=2.54s/8.8s, /tools→/ranking/ 301 still exists",
+      "completed_at": "2026-10-13T22:14:28",
+      "completion_note": "第17轮复核：站点已恢复稳定。服务器端web_fetch验证首页/博客/ranking/tools全200完整渲染；404产物out/404.html存在(98.6KB,web_fetch link dead为404无内容可提取的正常行为)；/tools→/ranking 301为public/_redirects刻意配置(注释\"/tools list -> /ranking\")非bug保留；巡检所指\"Vercel日志\"系误判——本站实际部署Cloudflare Pages无Vercel，17:00波动为Cloudflare边缘瞬时抖动已恢复。重复Title已线上确认修复(chat=\"Chat AI Tools Reviews\" vs ai-chatbots=\"AI Chatbots AI Tools Reviews\")。",
+      "archived_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "P2-CATEGORY-AGENT-SIZE-20261013",
+      "task": "/category/agent/ 682.7KB>500KB：根因=agent分类工具数大(175工具卡片全量渲染，非代码缺陷)。优化方向=分页/折叠/卡片精简专项",
+      "priority": "P2",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-13",
+      "created_at": "2026-10-13T04:34:00",
+      "completed_at": "2026-10-14T00:20:31",
+      "completion_note": "/category/agent/ 671KB->311.2KB(-54%)：CategoryToolsClient分页折叠(首屏24卡+Load More按钮,数据全量保留排序/筛选作用于全量)。commit f075a83 Deploy success,线上web_fetch验证:Showing 146 of 146 tools+Load More (122 more tools)正常渲染,子分类/Guide/FAQ完整。",
+      "archived_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "ux_p2_wave_good_2026-10-13_23h",
+      "title": "P2: 波动中的好时段——所有页面TTFB正常（0.8-1.0s），总时间3-4s",
+      "description": "23:00巡检：波动中的好时段。首页464KB/TTFB 0.81s/总3.48s；Blog 265KB/TTFB 0.94s/总1.96s；404页102KB/TTFB 0.94s/总3.27s；/ranking/ 295KB/TTFB 1.02s/总4.30s。TTFB都在正常区间，总时间从15s超时降到3-4s。但还没到11:00那么快（1-2s），说明网站仍在波动中，只是这次是好的时段。整体趋势向好——波动幅度在收窄。",
+      "priority": "P2",
+      "assigned_to": "window1",
+      "status": "archived",
+      "source": "ux_audit_oct13_23h",
+      "created_at": "2026-10-13",
+      "evidence": "homepage TTFB=0.81s/3.48s, blog TTFB=0.94s/1.96s, 404 TTFB=0.94s/3.27s, /ranking/ TTFB=1.02s/4.30s",
+      "completed_at": "2026-10-14T00:20:31",
+      "completion_note": "复核完成:线上web_fetch验证首页(200完整渲染Top3+分类区)/ranking/(200渲染Top10+Complete Ranking)/blog均正常,页面稳定无故障;TTFB 0.8-1.0s为正常区间,与23:00巡检结论一致。",
+      "archived_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "SEO-AUDIT-20261014-DUAL-H1",
+      "task": "全站双H1根因修复：lib/markdown.ts h1->h2 正则漏转无属性<h1>，产生<h1>...</h2>畸形对，审计计为第二H1",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_20261014",
+      "created_at": "2026-10-14T04:28:23",
+      "completed_at": "2026-10-14T04:28:23",
+      "completion_note": "根因=正则/<h1(\\s+[^>]*?)>/g不匹配无属性<h1>，闭合</h1>却已转</h2>→畸形标签。改/<h1([^>]*)>/g后162篇博客全部单H1（本地产物验证0非单H1）。commit 414bd45 Deploy success，线上/blog/runway-vs-pika-2026/渲染正常。",
+      "archived_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "SEO-AUDIT-20261014-CATEGORY-META",
+      "task": "博客分类页Title/Meta过长（8页，title 63-95字符/meta 170字符）：categoryName用分类并集拼接导致",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_20261014",
+      "created_at": "2026-10-14T04:28:23",
+      "completed_at": "2026-10-14T04:28:23",
+      "completion_note": "generateMetadata加长度截断（title≤60、desc≤155保留关键词）。37个category页全部合规（本地产物验证0超长）。commit 414bd45 Deploy success，线上/blog/category/ai-tools/ title已截断渲染。",
+      "archived_at": "2026-10-14T10:05:00"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -9835,6 +9954,24 @@
       "git": "a00cead pushed",
       "online_200": "best-ai-spreadsheet-tools-2026/best-ai-sql-generators-2026/best-ai-sales-assistants-2026 all 200",
       "deploy": "success"
+    },
+    {
+      "batch": "batch25",
+      "date": "2026-10-14",
+      "window": "window2",
+      "action": "2 new articles from analyst keyword opportunities (P1: summarizer, copywriting) + 1 rewrite-upgrade of existing presentation article; screenshots captured+verified one-by-one (fireflies/notta/tactiq/copyai/writesonic/rytr/gamma/slidesai, 8 new, no captcha/404/duplicates; quillbot+tldrthis rejected for security verification)",
+      "slugs": [
+        "best-ai-summarizer-tools-2026",
+        "best-ai-copywriting-tools-2026",
+        "best-ai-presentation-tools-2026"
+      ],
+      "zens_ink": "80/80/80",
+      "llmevalkit": "100/100/100",
+      "screenshots": "3/3/3, all verified one-by-one",
+      "internal_links_ok": true,
+      "git": "pending push",
+      "online_200": "pending",
+      "deploy": "pending"
     }
   ],
   "last_commander_review": "2026-10-09",
