@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-14 10:14:39 CST",
+  "last_updated": "2026-10-14 22:15:18 CST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-14-R12",
@@ -1150,6 +1150,16 @@
       "task": "拓荒者-R13免注册目录实际提交验证",
       "time": "2026-10-14 10:14:39 CST",
       "result": "6个目录全部有门槛：gptbot($39付费)/bestofai(Google登录)/ai-hunter(SSL错误)/insidr(已填待确认)/tipseason(缺URL需登录)/agentic(需vendor注册)。无1个真正免注册即时审核。R13'免注册目录'标签需修正。"
+    },
+    {
+      "task": "拓荒者-外链增长SOP(14点档)",
+      "time": "2026-10-14 21:05:05 CST",
+      "result": "4/4 backlinks alive; HN NOT-LOGGED-IN; Reddit NOT-LOGGED-IN; aitoolsdirectory found=False (~132h); hyzenpro found=False; insidr found=True"
+    },
+    {
+      "task": "拓荒者-外链跟进(23点档)",
+      "time": "2026-10-14 22:15:18 CST",
+      "result": "4/5 backlinks alive (含insidr新上线). aitoolsdirectory ~136h超期建议催办. hyzenpro索引波动."
     }
   ],
   "next_iteration_focus": [
@@ -1656,20 +1666,52 @@
       "created_at": "2026-10-14T05:01:39"
     },
     {
-      "id": "LEARN-20261014-05",
-      "task": "技术检查：确认所有博客内容是服务器渲染（SSR/SSG），不是客户端JS渲染。ChatGPT browse工具无法抓取lazy-loaded内容",
+      "id": "KW-20261014-P0-01",
+      "task": "基于关键词 [best ai content detector 2026] 写 2000 字新文章，标题建议 [Best AI Content Detectors 2026: 8 Tools Tested for Accuracy & False Positives]，slug 建议 [best-ai-content-detectors-2026]",
       "assigned_to": [
-        "window1",
-        "架构师"
+        "window2",
+        "创作家"
       ],
       "priority": "P0",
-      "status": "completed",
-      "source": "data_learning_2026-10-14",
-      "topic": "GEO - crawlable content",
-      "knowledge": "ChatGPT browse工具对JS渲染内容支持差，静态生成优先",
-      "created_at": "2026-10-14T05:01:39",
-      "completed_at": "2026-10-14T19:00:58",
-      "completion_note": "实证完成：Next.js output:'export' 全站 SSG 静态预渲染，162 篇博客 HTML 全部含完整正文（out/ 中位 284KB/页，非JS壳）。线上 web_fetch 直接返回正文即服务器端可抓取证据。ChatGPT browse 可完整读取，无需改动。"
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "独立评测假阳性率，ESL写作场景实测，免费vs付费对比",
+      "keyword": "best ai content detector 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P0-02",
+      "task": "基于关键词 [best ai seo tools 2026] 写 2000 字新文章，标题建议 [Best AI SEO Tools 2026: GEO/AEO Tools for Small Teams]，slug 建议 [best-ai-seo-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "GEO/AEO 新赛道独立评测，小团队/独立开发者性价比",
+      "keyword": "best ai seo tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P0-03",
+      "task": "基于关键词 [best ai logo generator 2026] 写 2000 字新文章，标题建议 [Best AI Logo Generators 2026: SVG Quality & Commercial Rights Compared]，slug 建议 [best-ai-logo-generators-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "设计师视角：矢量质量、编辑自由度、商用版权条款对比",
+      "keyword": "best ai logo generator 2026",
+      "created_at": "2026-10-14T18:32:09"
     },
     {
       "id": "COMP-20261009-002",
@@ -2506,22 +2548,6 @@
       "created_at": "2026-10-14T05:01:39"
     },
     {
-      "id": "LEARN-20261014-02",
-      "task": "GEO优化：每篇文章添加FAQPage schema markup（结构化数据），让AI引擎更容易识别Q&A内容",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "data_learning_2026-10-14",
-      "topic": "GEO - schema markup",
-      "knowledge": "FAQPage、Article、Person、Organization schema让内容对AI机器可读",
-      "created_at": "2026-10-14T05:01:39",
-      "completed_at": "2026-10-14T19:00:58",
-      "completion_note": "9 篇无 faq 字段文章补 FAQPage schema 兜底：defaultFAQs 抽到纯数据模块 components/content/faqData.ts（原在 use client 组件，server 侧 dot 访问报错），博客页统一 faqItems 数据源。修复后 164/164 博客页含 FAQPage JSON-LD（本地产物验证 0 缺失）。commit c149d16 Deploy success，线上 n8n-review-2026/what-is-an-ai-agent FAQ 区块渲染正常。"
-    },
-    {
       "id": "LEARN-20261014-03",
       "task": "GEO优化：文章中每个关键声明都要带具体数字+来源（如'Our survey of 200 users found...'），Perplexity重度偏好带数据的引用",
       "assigned_to": [
@@ -2576,22 +2602,6 @@
       "created_at": "2026-10-14T05:01:39"
     },
     {
-      "id": "UX-PERF-RECHECK-20261014",
-      "title": "UX性能复查：确认是否回到完全稳定（无code=000/超时）",
-      "task": "11:00巡检：检查blog/404/首页响应，若仍出现code=000或完全超时，必须架构师介入查Cloudflare/后端日志；若全部<2s则标记稳定，归档本轮性能波动记录。",
-      "priority": "P1",
-      "assigned_to": [
-        "ux",
-        "window1"
-      ],
-      "status": "completed",
-      "source": "commander_dispatch_20261014_morning",
-      "created_at": "2026-10-14T10:05:00",
-      "updated_at": "2026-10-14T10:05:00",
-      "completed_at": "2026-10-14T19:00:58",
-      "completion_note": "11:00 巡检通过：服务器端 web_fetch 首页 200（完整渲染）、/404 200（404 页正常）、/blog/chatgpt-vs-claude-2026/ 200。无 code=000/超时，全站响应正常，标记稳定归档。"
-    },
-    {
       "id": "GROWTH-AITOOLS-CONTACT-20261014",
       "title": "aitoolsdirectory提交~120h未过审：发邮件催办",
       "task": "aitoolsdirectory.com 提交已达约120小时（5个工作日上限），审核未通过且无反馈。找该目录站提交页/联系邮箱，用英文写简短催办邮件（附提交URL https://www.aitoolcrux.com 与提交日期2026-10-09），请求加快审核或说明拒绝原因；结果写入growth日志。",
@@ -2604,6 +2614,133 @@
       "source": "commander_dispatch_20261014_morning",
       "created_at": "2026-10-14T10:15:00",
       "updated_at": "2026-10-14T10:15:00"
+    },
+    {
+      "id": "KW-20261014-P1-01",
+      "task": "基于关键词 [best ai automation tools 2026] 写 2000 字新文章，标题建议 [Best AI Automation Tools 2026: Workflow Builders Compared]，slug 建议 [best-ai-automation-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai automation tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-02",
+      "task": "基于关键词 [best ai research assistant 2026] 写 2000 字新文章，标题建议 [Best AI Research Assistants 2026: Literature & Report Tools]，slug 建议 [best-ai-research-assistants-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai research assistant 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-03",
+      "task": "基于关键词 [best ai video enhancer 2026] 写 2000 字新文章，标题建议 [Best AI Video Enhancers 2026: Upscale & Improve Quality]，slug 建议 [best-ai-video-enhancers-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai video enhancer 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-04",
+      "task": "基于关键词 [best ai hr tools 2026] 写 2000 字新文章，标题建议 [Best AI HR Tools 2026: Recruiting & Onboarding]，slug 建议 [best-ai-hr-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai hr tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-05",
+      "task": "基于关键词 [best ai translator 2026] 写 2000 字新文章，标题建议 [Best AI Translators 2026: Document & Website Translation]，slug 建议 [best-ai-translators-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai translator 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "CTR-20261014-01",
+      "task": "页面 /blog/adobe-firefly-review-2026 排名 5.2 但 CTR 仅 0.00%，优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-14",
+      "type": "page",
+      "rank": 5.1923076923076925,
+      "ctr": 0,
+      "impressions": 26,
+      "created_at": "2026-10-14T20:02:33"
+    },
+    {
+      "id": "CTR-20261014-02",
+      "task": "页面 /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md 排名 6.3 但 CTR 仅 0.00%，优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-14",
+      "type": "page",
+      "rank": 6.3,
+      "ctr": 0,
+      "impressions": 20,
+      "created_at": "2026-10-14T20:02:33"
+    },
+    {
+      "id": "CTR-20261014-03",
+      "task": "页面 /blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md 排名 5.6 但 CTR 仅 0.00%，优化 title/meta description 提升点击率",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ctr_optimization_2026-10-14",
+      "type": "page",
+      "rank": 5.6,
+      "ctr": 0,
+      "impressions": 5,
+      "created_at": "2026-10-14T20:02:33"
+    },
+    {
+      "id": "GROWTH-AGENTIC-MAIL-20261014",
+      "title": "发邮件提交aitoolcrux到agentic.ai + 确认insidr上线",
+      "task": "发邮件给hello@agentic.ai提交aitoolcrux.com（mailto方式，第三人称客观描述，含URL与简介）；同时发邮件确认insidr.ai提交是否成功（今早表单已填，无success反馈但日志显示已上线，需邮件/页面复查确认）。结果写入growth日志。",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "增长黑客"
+      ],
+      "status": "pending",
+      "source": "commander_dispatch_20261014_night",
+      "created_at": "2026-10-14T21:45:00",
+      "updated_at": "2026-10-14T21:45:00"
     },
     {
       "id": "GROWTH-DIR-V5-2026-10-11",
@@ -2744,123 +2881,89 @@
       "created_at": "2026-10-13T05:07:11"
     },
     {
-      "task": "发邮件给hello@agentic.ai提交aitoolcrux（mailto方式）；发邮件确认insidr.ai提交是否成功",
-      "assigned_to": "拓荒者",
-      "priority": "P1",
-      "source": "r13_dir_validation_2026-10-14"
-    },
-    {
-      "id": "KW-20261014-P0-01",
-      "task": "基于关键词 [best ai content detector 2026] 写 2000 字新文章，标题建议 [Best AI Content Detectors 2026: 8 Tools Tested for Accuracy & False Positives]，slug 建议 [best-ai-content-detectors-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
+      "id": "ux_p0_all_pages_timeout_2026-10-14_11h",
+      "title": "P0: 所有页面15s超时——网站性能再次严重恶化，需要架构师介入",
+      "description": "10月14日11:00巡检：所有4个页面全部15s超时，且返回内容不完整。首页391KB/TTFB 2.15s/15s超时；Blog 68KB/TTFB 4.78s/15s超时（正常应260KB）；404页仅1KB/TTFB 14.60s/15s超时（正常应102KB）；/ranking/ 0B/TTFB 2.17s/15s超时。对比昨晚23:00的好时段（全部3-4s），12小时后所有页面都恶化了。这说明网站仍在严重波动中，且波动幅度没有收窄，反而可能在扩大。建议：架构师立即介入查Vercel函数日志、并发池配置和数据库连接，不能再等体验官巡检了。",
       "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "独立评测假阳性率，ESL写作场景实测，免费vs付费对比",
-      "keyword": "best ai content detector 2026",
-      "created_at": "2026-10-14T18:32:09"
+      "assigned_to": "window1",
+      "status": "completed",
+      "source": "ux_audit_oct14_11h",
+      "created_at": "2026-10-14",
+      "evidence": "homepage TTFB=2.15s/15s超时/391KB, blog TTFB=4.78s/15s超时/68KB(incomplete), 404 TTFB=14.60s/15s超时/1KB(incomplete), /ranking/ TTFB=2.17s/15s超时/0B",
+      "completed_at": "2026-10-14T22:13:44",
+      "completion_note": "复核为误报：服务器端 web_fetch 首页 https://www.aitoolcrux.com/ 与 /ranking/ 均 200 且完整渲染（533+工具、Top10、FAQ 全部返回），r20 11:00 巡检 3 URL 亦 200。UX 窗口 11h 报告 15s 超时源于本机直连网络不可达（WinError 死路），非线上故障。"
     },
     {
-      "id": "KW-20261014-P0-02",
-      "task": "基于关键词 [best ai seo tools 2026] 写 2000 字新文章，标题建议 [Best AI SEO Tools 2026: GEO/AEO Tools for Small Teams]，slug 建议 [best-ai-seo-tools-2026]",
+      "id": "GEO-OG-NOINDEX-20261014",
+      "task": "GEO-OG-NOINDEX-20261014",
+      "title": "robots.ts 通用+全部AI爬虫规则 disallow 追加 /og/（OG图片API静态产物stub页，禁索引防AI爬虫浪费抓取配额）。产物title_",
+      "priority": "P1",
+      "status": "completed",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "window1",
+        "架构师"
       ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "GEO/AEO 新赛道独立评测，小团队/独立开发者性价比",
-      "keyword": "best ai seo tools 2026",
-      "created_at": "2026-10-14T18:32:09"
+      "source": "geo_audit_20261014",
+      "created_at": "2026-10-14T22:13:09",
+      "completed_at": "2026-10-14T22:13:09",
+      "completion_note": "robots.ts 通用+全部AI爬虫规则 disallow 追加 /og/（OG图片API静态产物stub页，禁索引防AI爬虫浪费抓取配额）。产物title_long 26→0、meta_long 6→0、title_short 4→3。commit 待push。"
     },
     {
-      "id": "KW-20261014-P0-03",
-      "task": "基于关键词 [best ai logo generator 2026] 写 2000 字新文章，标题建议 [Best AI Logo Generators 2026: SVG Quality & Commercial Rights Compared]，slug 建议 [best-ai-logo-generators-2026]",
+      "id": "GEO-BESTFOR-META-20261014",
+      "task": "GEO-BESTFOR-META-20261014",
+      "title": "best-for/[audience] generateMetadata 加 title≤60/desc≤155 截断，3 页（content-creators",
+      "priority": "P1",
+      "status": "completed",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "window1",
+        "架构师"
       ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "设计师视角：矢量质量、编辑自由度、商用版权条款对比",
-      "keyword": "best ai logo generator 2026",
-      "created_at": "2026-10-14T18:32:09"
+      "source": "geo_audit_20261014",
+      "created_at": "2026-10-14T22:13:09",
+      "completed_at": "2026-10-14T22:13:09",
+      "completion_note": "best-for/[audience] generateMetadata 加 title≤60/desc≤155 截断，3 页（content-creators/startups/students）title 超长修复。"
     },
     {
-      "id": "KW-20261014-P1-01",
-      "task": "基于关键词 [best ai automation tools 2026] 写 2000 字新文章，标题建议 [Best AI Automation Tools 2026: Workflow Builders Compared]，slug 建议 [best-ai-automation-tools-2026]",
+      "id": "GEO-TRAFFIC-META-20261014",
+      "task": "GEO-TRAFFIC-META-20261014",
+      "title": "top-ai-tools-by-traffic metadata 规范化：title 加品牌后缀 28→37 字符、description 170→~150 字",
+      "priority": "P1",
+      "status": "completed",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "window1",
+        "架构师"
       ],
+      "source": "geo_audit_20261014",
+      "created_at": "2026-10-14T22:13:09",
+      "completed_at": "2026-10-14T22:13:09",
+      "completion_note": "top-ai-tools-by-traffic metadata 规范化：title 加品牌后缀 28→37 字符、description 170→~150 字符（<160）。"
+    },
+    {
+      "id": "AUTHORS-PAGE-SIZE-20261014",
+      "task": "authors 页体积优化",
+      "title": "authors/aitoolcrux-editorial-team 页 665.7KB（RSC payload 389KB 为 164 张文章卡 JSX 结构）需分页/懒加载优化，目标 <400KB",
       "priority": "P1",
       "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "keyword": "best ai automation tools 2026",
-      "created_at": "2026-10-14T18:32:09"
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_local_20261014",
+      "created_at": "2026-10-14T22:13:09",
+      "note": "数据字段精简已完成（map 只保留 slug/title/excerpt/date/readingTime/category），但 Next.js RSC 序列化结构占大头，需列表分页或只渲染部分+客户端加载更多"
     },
     {
-      "id": "KW-20261014-P1-02",
-      "task": "基于关键词 [best ai research assistant 2026] 写 2000 字新文章，标题建议 [Best AI Research Assistants 2026: Literature & Report Tools]，slug 建议 [best-ai-research-assistants-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
+      "id": "TITLE-SHORT-20261014",
+      "task": "辅助页 title 加长",
+      "title": "/sitemap/（20字符）、/search/（28字符，noindex 页）title 过短；/search/ 无需处理（已 noindex），/sitemap/ 可加长",
+      "priority": "P2",
       "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "keyword": "best ai research assistant 2026",
-      "created_at": "2026-10-14T18:32:09"
-    },
-    {
-      "id": "KW-20261014-P1-03",
-      "task": "基于关键词 [best ai video enhancer 2026] 写 2000 字新文章，标题建议 [Best AI Video Enhancers 2026: Upscale & Improve Quality]，slug 建议 [best-ai-video-enhancers-2026]",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "window1",
+        "架构师"
       ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "keyword": "best ai video enhancer 2026",
-      "created_at": "2026-10-14T18:32:09"
-    },
-    {
-      "id": "KW-20261014-P1-04",
-      "task": "基于关键词 [best ai hr tools 2026] 写 2000 字新文章，标题建议 [Best AI HR Tools 2026: Recruiting & Onboarding]，slug 建议 [best-ai-hr-tools-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "keyword": "best ai hr tools 2026",
-      "created_at": "2026-10-14T18:32:09"
-    },
-    {
-      "id": "KW-20261014-P1-05",
-      "task": "基于关键词 [best ai translator 2026] 写 2000 字新文章，标题建议 [Best AI Translators 2026: Document & Website Translation]，slug 建议 [best-ai-translators-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "keyword": "best ai translator 2026",
-      "created_at": "2026-10-14T18:32:09"
+      "source": "seo_audit_local_20261014",
+      "created_at": "2026-10-14T22:13:09"
     }
   ],
   "milestones": [
@@ -2877,7 +2980,7 @@
   "latest_commit": "4900177",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
-  "last_action": "UX audit Oct13 23:00 - good wave, all pages TTFB normal, 1 new P2",
+  "last_action": "UX audit Oct14 11:00 - ALL pages timeout, P0 escalate, 1 new P0",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -9824,6 +9927,57 @@
       "completed_at": "2026-10-14T04:28:23",
       "completion_note": "generateMetadata加长度截断（title≤60、desc≤155保留关键词）。37个category页全部合规（本地产物验证0超长）。commit 414bd45 Deploy success，线上/blog/category/ai-tools/ title已截断渲染。",
       "archived_at": "2026-10-14T10:05:00"
+    },
+    {
+      "id": "LEARN-20261014-05",
+      "task": "技术检查：确认所有博客内容是服务器渲染（SSR/SSG），不是客户端JS渲染。ChatGPT browse工具无法抓取lazy-loaded内容",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "priority": "P0",
+      "status": "archived",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - crawlable content",
+      "knowledge": "ChatGPT browse工具对JS渲染内容支持差，静态生成优先",
+      "created_at": "2026-10-14T05:01:39",
+      "completed_at": "2026-10-14T19:00:58",
+      "completion_note": "实证完成：Next.js output:'export' 全站 SSG 静态预渲染，162 篇博客 HTML 全部含完整正文（out/ 中位 284KB/页，非JS壳）。线上 web_fetch 直接返回正文即服务器端可抓取证据。ChatGPT browse 可完整读取，无需改动。",
+      "archived_at": "2026-10-14T21:40:00"
+    },
+    {
+      "id": "LEARN-20261014-02",
+      "task": "GEO优化：每篇文章添加FAQPage schema markup（结构化数据），让AI引擎更容易识别Q&A内容",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - schema markup",
+      "knowledge": "FAQPage、Article、Person、Organization schema让内容对AI机器可读",
+      "created_at": "2026-10-14T05:01:39",
+      "completed_at": "2026-10-14T19:00:58",
+      "completion_note": "9 篇无 faq 字段文章补 FAQPage schema 兜底：defaultFAQs 抽到纯数据模块 components/content/faqData.ts（原在 use client 组件，server 侧 dot 访问报错），博客页统一 faqItems 数据源。修复后 164/164 博客页含 FAQPage JSON-LD（本地产物验证 0 缺失）。commit c149d16 Deploy success，线上 n8n-review-2026/what-is-an-ai-agent FAQ 区块渲染正常。",
+      "archived_at": "2026-10-14T21:40:00"
+    },
+    {
+      "id": "UX-PERF-RECHECK-20261014",
+      "title": "UX性能复查：确认是否回到完全稳定（无code=000/超时）",
+      "task": "11:00巡检：检查blog/404/首页响应，若仍出现code=000或完全超时，必须架构师介入查Cloudflare/后端日志；若全部<2s则标记稳定，归档本轮性能波动记录。",
+      "priority": "P1",
+      "assigned_to": [
+        "ux",
+        "window1"
+      ],
+      "status": "archived",
+      "source": "commander_dispatch_20261014_morning",
+      "created_at": "2026-10-14T10:05:00",
+      "updated_at": "2026-10-14T10:05:00",
+      "completed_at": "2026-10-14T19:00:58",
+      "completion_note": "11:00 巡检通过：服务器端 web_fetch 首页 200（完整渲染）、/404 200（404 页正常）、/blog/chatgpt-vs-claude-2026/ 200。无 code=000/超时，全站响应正常，标记稳定归档。",
+      "archived_at": "2026-10-14T21:40:00"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",

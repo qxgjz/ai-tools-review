@@ -190,3 +190,63 @@ GEO/技术问题处理 2 个（双 H1 根因 + category metadata），另 1 个�
 - SEO-AUDIT-20261014-BROKEN-LINKS（P1，window2/创作家）：broken 外链 188 条待人工核实
 - r16 仓库历史污染（8e618df git add -A 734 文件）：未 force push，留痕
 - GSC generative AI 报告：无 Google 登录态 blocked=auth，待用户登录确认
+
+---
+
+# 架构师执行日志 2026-10-14（第 21 轮，定时触发）
+
+**触发**：「架构师-全栈技术修复（SOP版，验证闭环）」定时任务（TaskID 13724013998850）
+**本轮起点**：架构师 pending 0（r20 已清）；GEO 技术检查为强制动作
+
+## 一、GEO/AEO 审计（现成工具）
+
+- `python real_geo_aeo_audit.py`：**6.6/10 Grade B**；AI crawler 10/10 accessible（GPTBot/ClaudeBot/PerplexityBot/Google-Extended/Applebot/Amazonbot/Bytespider/meta-externalagent/OAI-SearchBot/Claude-Web）；结果存 real_geo_aeo_audit_results.json
+- `seo_audit_full.py`：线上 sitemap 抓取超时（本机直连死路，r19 同因）→ 改用**本地产物 out/ 审计**（scripts/_audit_local_r21.py，1122 HTML，含 HTML 实体解码修正——首轮把 &amp; 计长误报 26 个 title 超长，解码后真实 3 个）
+
+## 二、本地全站审计结果（1122 HTML）
+
+| 指标 | 修复前 | 修复后 |
+|---|---|---|
+| title_long (>60) | 26（误报口径）/ 3（真实） | **0** |
+| meta_long (>160) | 6（误报口径）/ 1（真实） | **0** |
+| title_short | 4 | 3（/og/ /search/ /sitemap/，前两者已禁索引/无害） |
+| h1_not1 | 0 | 0（r19 保持） |
+| no_schema | 1（/og/） | 1（已 robots 禁索引） |
+| no_alt_imgs | 0 | 0 |
+| big_pages | 1（authors 665.7KB） | 1（标记遗留 P1） |
+
+## 三、GEO 技术问题处理（3 个）
+
+1. **/og/ 禁索引（GEO-OG-NOINDEX-20261014）**：OG 图片 API 静态导出 stub 页（187B，无 schema/meta）。robots.ts 通用规则 + 全部 12 条 AI 爬虫规则 disallow 追加 '/og/'——防 AI 爬虫与搜索引擎抓取无意义页面。
+2. **best-for metadata 超长（GEO-BESTFOR-META-20261014）**：generateMetadata 加 title≤60/desc≤155 截断，3 页（content-creators/startups/students）title 61-64→≤60。
+3. **top-ai-tools-by-traffic metadata 规范化（GEO-TRAFFIC-META-20261014）**：title 加品牌后缀 28→37 字符、description 170→<160 字符。
+
+附：**authors 页数据字段精简**（AUTHORS-PAGE-SIZE-20261014 P1 部分处理）：posts filter 后 map 只保留 slug/title/excerpt/date/readingTime/category，避免 26KB×164 完整对象进 payload；实测 Next.js RSC 只序列化引用字段，payload 389KB 大头为 164 张卡 JSX 结构，**分页优化标记遗留 P1**。
+
+## 四、P0 复核：ux_p0_all_pages_timeout（误报闭环）
+
+- UX 窗口 11h 报"所有页面 15s 超时"。服务器端 web_fetch 复核：首页 200 完整渲染（533+ 工具/分类/FAQ）、/ranking/ 200 完整渲染（Top10+533 排名）→ **线上正常，无超时**
+- 根因：UX 窗口本机直连网络不可达（WinError 死路，多轮同因）→ 误报
+- 处理：标记 completed（附复核证据）
+
+## 五、门控与部署
+
+| 项 | 结果 |
+|---|---|
+| npx tsc --noEmit | 0 错误（首轮 authors 页 TS2339 publishedAt，map 精简后渲染区改 post.date 通过） |
+| npm run build | 0 错误 |
+| git push | **06d068d**（robots.ts + best-for + top-ai-tools + authors + 审计脚本） |
+| GitHub Actions | 待确认（Lint/Unit Tests/CodeQL/Deploy） |
+| 线上验证 | 待确认 |
+
+## 六、state.json 更新
+
+- 3 条 GEO 技术修复标记 completed（GEO-OG-NOINDEX / GEO-BESTFOR-META / GEO-TRAFFIC-META）
+- P0 ux_p0_all_pages_timeout 复核误报标记 completed
+- 新增待办：AUTHORS-PAGE-SIZE-20261014（P1，架构师）、TITLE-SHORT-20261014（P2，架构师）
+
+## 七、踩坑记录
+
+1. **HTML 实体计数误报**：审计 title/desc 长度必须 html.unescape 后再计——`&amp;` 使 56 字符 title 在 HTML 源显示 75 字符，首轮误报 26 个 title 超长（真实 3 个）。教训：审计脚本先解码实体。
+2. **本机网络死路换通道**：seo_audit_full.py 线上抓取超时是环境问题非脚本问题——改用本地产物 out/ 审计（1122 HTML 全量），产出等价规则检查。
+3. **Next.js RSC 只序列化被引用字段**：数据层 map 精简对体积影响有限，RSC payload 大头是 JSX 结构序列化（164 卡 389KB），体积优化需分页/惰性渲染而非砍数据字段。
