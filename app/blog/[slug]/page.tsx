@@ -22,7 +22,8 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { AuthorBio } from '@/components/author/AuthorBio';
 import { SourceReferences } from '@/components/seo/SourceReferences';
 import { HandsOnExperience } from '@/components/content/HandsOnExperience';
-import { FAQSection, defaultFAQs } from '@/components/content/FAQSection';
+import { FAQSection } from '@/components/content/FAQSection';
+import { defaultFAQs } from '@/components/content/faqData';
 import { ToolScreenshot } from '@/components/content/ToolScreenshot';
 import { ReadingProgress } from '@/components/blog/ReadingProgress';
 import { TableOfContents } from '@/components/blog/TableOfContents';
@@ -305,6 +306,15 @@ export default function PostPage({ params }: PostPageProps) {
   const previousPost = currentIndex > 0 ? posts[currentIndex - 1] : undefined;
   const nextPost = currentIndex < posts.length - 1 ? posts[currentIndex + 1] : undefined;
 
+  // FAQ数据源统一：post.faq 缺失时用 defaultFAQs 兜底（可见区块与 FAQPage schema 保持一致）
+  const faqItems =
+    post.faq && post.faq.length > 0
+      ? post.faq.map((item: { q?: string; a?: string; question?: string; answer?: string }) => ({
+          question: item.question || item.q || '',
+          answer: item.answer || item.a || '',
+        }))
+      : defaultFAQs;
+
   return (
     <>
       {/* 阅读进度条 */}
@@ -386,19 +396,19 @@ export default function PostPage({ params }: PostPageProps) {
 
 
             {/* FAQPage Schema - for AI search optimization (GEO), not Google rich results */}
-            {post.faq && post.faq.length > 0 && (
+            {faqItems.length > 0 && (
               <script
                 type="application/ld+json"
                 dangerouslySetInnerHTML={{
                   __html: JSON.stringify({
                     '@context': 'https://schema.org',
                     '@type': 'FAQPage',
-                    mainEntity: post.faq.slice(0, 5).map((item) => ({
+                    mainEntity: faqItems.slice(0, 5).map((item) => ({
                       '@type': 'Question',
-                      name: item.question || item.q || '',
+                      name: item.question,
                       acceptedAnswer: {
                         '@type': 'Answer',
-                        text: item.answer || item.a || '',
+                        text: item.answer,
                       },
                     })),
                   }),
@@ -692,16 +702,7 @@ export default function PostPage({ params }: PostPageProps) {
             {/* FAQ Section - visible accordion for users (JSON-LD removed: Google deprecated FAQ rich results May 2026) */}
             <section className="mb-16">
               <FAQSection
-                items={
-                  post.faq && post.faq.length > 0
-                    ? post.faq.map(
-                        (item: { q?: string; a?: string; question?: string; answer?: string }) => ({
-                          question: item.q || item.question || '',
-                          answer: item.a || item.answer || '',
-                        }),
-                      )
-                    : defaultFAQs
-                }
+                items={faqItems}
                 title="Frequently Asked Questions"
               />
             </section>
