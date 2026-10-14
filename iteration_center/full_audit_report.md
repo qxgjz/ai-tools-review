@@ -1,16 +1,16 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-13 23:15:32
+**Date:** 2026-10-14 22:14:18
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 162 |
-| Avg content score | 88.9/100 |
-| Perfect articles | 95 |
-| Articles below 85 | 52 |
+| Articles | 164 |
+| Avg content score | 88.3/100 |
+| Perfect articles | 93 |
+| Articles below 85 | 55 |
 | Pages audited | 20 |
 | Technical issues | 11 |
 | Critical issues | 0 |
@@ -26,6 +26,8 @@
 | midjourney-v7-vs-dall-e-3-2026 | 49 | 483 | 45.4 | 2 | word_count_pass, first_para_pass, internal_links_pass |
 | best-ai-text-to-speech-tools-2026 | 53 | 2344 | 38.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-avatar-generators-2026 | 53 | 2331 | 34.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
+| best-ai-summarizer-tools-2026 | 57 | 2260 | 48.7 | 0 | first_para_pass, internal_links_pass |
+| best-ai-presentation-tools-2026 | 62 | 2152 | 50.1 | 0 | first_para_pass, internal_links_pass |
 | elevenlabs-v2-review-2026 | 62 | 2233 | 36.6 | 4 | first_para_pass, readability_pass |
 | runway-vs-pika-2026 | 62 | 2416 | 33.6 | 4 | first_para_pass, readability_pass |
 | devin-ai-review | 62 | 2345 | 38.4 | 16 | first_para_pass, readability_pass |
@@ -36,6 +38,7 @@
 | best-ai-spreadsheet-tools-2026 | 62 | 2400 | 55.7 | 0 | first_para_pass, internal_links_pass |
 | best-ai-sql-generators-2026 | 62 | 2497 | 49.1 | 0 | first_para_pass, internal_links_pass |
 | best-ai-sales-assistants-2026 | 62 | 2426 | 47.4 | 0 | first_para_pass, internal_links_pass |
+| best-ai-copywriting-tools-2026 | 62 | 2232 | 52.4 | 0 | first_para_pass, internal_links_pass |
 | best-free-ai-tools-for-students-202 | 63 | 1992 | 63.3 | 3 | word_count_pass, first_para_pass |
 | beautiful-ai-alternatives | 66 | 2180 | 53.2 | 9 | first_para_pass |
 | cursor-vs-github-copilot-2026 | 67 | 1872 | 49.4 | 3 | word_count_pass, first_para_pass, external_links_pass |
@@ -66,13 +69,13 @@
 | best-ai-voice-changers-content-crea | 74 | 1788 | 52.6 | 6 | word_count_pass, first_para_pass |
 | what-is-an-ai-agent | 77 | 2150 | 59.1 | 12 | first_para_pass |
 | claude-alternatives-2026 | 78 | 1452 | 60.3 | 3 | word_count_pass |
-| best-free-ai-tools-for-youtube-crea | 78 | 3224 | 51.1 | 3 | first_para_pass, external_links_pass |
 | how-to-use-cursor-for-react-develop | 78 | 3256 | 47.1 | 4 | first_para_pass, external_links_pass |
 | gemini-vs-chatgpt-2026 | 80 | 2288 | 51.4 | 5 | first_para_pass |
 | otter-ai-alternatives | 80 | 2205 | 48.2 | 4 | first_para_pass |
 | midjourney-free-trial-2026 | 80 | 2718 | 54.9 | 0 | internal_links_pass |
 | ai-agent-vs-chatbot-2026 | 82 | 2078 | 49.4 | 8 | — |
 | how-to-build-an-ai-agent | 82 | 2132 | 60.6 | 11 | — |
+| best-free-ai-tools-for-youtube-crea | 83 | 3325 | 51.4 | 5 | first_para_pass |
 | synthesia-vs-heygen | 86 | 2260 | 41.1 | 5 | first_para_pass |
 | motion-ai-alternatives | 86 | 2291 | 50.8 | 7 | first_para_pass |
 | quillbot-alternatives | 86 | 2235 | 46.4 | 6 | first_para_pass |
@@ -83,12 +86,12 @@
 | autochain-review-2026 | 89 | 2023 | 44.8 | 6 | — |
 | canva-pro-free-for-students | 89 | 2020 | 64.5 | 5 | — |
 | best-ai-agents-2026 | 91 | 2474 | 57.0 | 10 | — |
+| best-paid-ai-tools-worth-buying-202 | 94 | 2333 | 68.3 | 7 | — |
 | creatium-coach-review-2025 | 94 | 13226 | 55.7 | 16 | — |
 | suno-alternatives-2026 | 94 | 2167 | 40.6 | 3 | — |
 | claude-37-vs-gpt4o | 94 | 2224 | 52.0 | 3 | first_para_pass |
 | midjourney-v7-vs-flux-2026 | 94 | 2173 | 40.8 | 6 | first_para_pass |
 | aider-review | 94 | 2024 | 47.8 | 4 | — |
-| best-paid-ai-tools-worth-buying-202 | 100 | 2226 | 68.2 | 5 | — |
 | gemini-alternatives-2026 | 100 | 2242 | 51.2 | 8 | — |
 | notion-ai-vs-obsidian-2026 | 100 | 2060 | 47.3 | 4 | — |
 | notion-ai-alternative-2026 | 100 | 2019 | 59.3 | 4 | — |
@@ -124,7 +127,6 @@
 | best-ai-translation-tools-2026 | 100 | 2637 | 40.2 | 4 | — |
 | best-ai-transcription-tools-2026 | 100 | 2868 | 47.7 | 8 | — |
 | best-ai-chatbots-2026 | 100 | 3176 | 53.1 | 4 | — |
-| best-ai-presentation-tools-2026 | 100 | 3133 | 49.2 | 8 | — |
 | best-ai-legal-tools-2026 | 100 | 3622 | 41.5 | 8 | — |
 | best-ai-seo-tools-2026 | 100 | 3263 | 47.7 | 8 | — |
 | best-ai-video-editors-2026 | 100 | 3490 | 48.6 | 6 | — |
@@ -174,7 +176,7 @@
 | ai-tools-review-guide-2026 | 100 | 13007 | 49.3 | 16 | — |
 | ai-coding-tools-comparison-2026 | 100 | 14898 | 44.6 | 14 | — |
 | replit-review-2026 | 100 | 11635 | 41.1 | 13 | — |
-| best-free-ai-tools-2026 | 100 | 11975 | 45.6 | 11 | — |
+| best-free-ai-tools-2026 | 100 | 12100 | 46.2 | 14 | — |
 | ai-tools-comparison-2026 | 100 | 12064 | 50.0 | 15 | — |
 | ai-tools-for-beginners-2026 | 100 | 12012 | 44.9 | 14 | — |
 | jasper-vs-copy-ai-2026-comparison | 100 | 2234 | 64.5 | 8 | — |

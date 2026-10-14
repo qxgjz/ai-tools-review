@@ -1,21 +1,21 @@
 {
-  "audit_time": "2026-10-13T23:15:32.550337",
+  "audit_time": "2026-10-14T22:14:18.172604",
   "mode": "quick",
   "content": {
-    "total_articles": 162,
-    "average_score": 88.91358024691365,
-    "perfect_count": 95,
-    "below_85_count": 52,
+    "total_articles": 164,
+    "average_score": 88.32317073170739,
+    "perfect_count": 93,
+    "below_85_count": 55,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
         "title": "Best Paid AI Tools Worth Buying in 2026 (No Waste of Mone...",
-        "quality_score": 100.0,
-        "word_count": 2226,
-        "flesch": 68.2,
-        "internal_links": 5,
-        "external_links": 1,
-        "images": 2,
+        "quality_score": 94.4,
+        "word_count": 2333,
+        "flesch": 68.3,
+        "internal_links": 7,
+        "external_links": 4,
+        "images": 0,
         "failed_checks": []
       },
       {
@@ -431,14 +431,17 @@
       },
       {
         "slug": "best-ai-presentation-tools-2026",
-        "title": "Best AI Presentation Tools 2026 | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 3133,
-        "flesch": 49.2,
-        "internal_links": 8,
-        "external_links": 1,
-        "images": 1,
-        "failed_checks": []
+        "title": "Best AI Presentation Tools 2026: Gamma vs SlidesAI",
+        "quality_score": 62.2,
+        "word_count": 2152,
+        "flesch": 50.1,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
       },
       {
         "slug": "best-ai-legal-tools-2026",
@@ -1099,10 +1102,10 @@
         "slug": "best-free-ai-tools-2026",
         "title": "Best Free AI Tools in 2026: Complete Guide to | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 11975,
-        "flesch": 45.6,
-        "internal_links": 11,
-        "external_links": 1,
+        "word_count": 12100,
+        "flesch": 46.2,
+        "internal_links": 14,
+        "external_links": 4,
         "images": 3,
         "failed_checks": []
       },
@@ -1372,15 +1375,14 @@
       {
         "slug": "best-free-ai-tools-for-youtube-creators",
         "title": "Best Free AI Tools for YouTube Creators",
-        "quality_score": 77.8,
-        "word_count": 3224,
-        "flesch": 51.1,
-        "internal_links": 3,
-        "external_links": 0,
+        "quality_score": 83.3,
+        "word_count": 3325,
+        "flesch": 51.4,
+        "internal_links": 5,
+        "external_links": 3,
         "images": 0,
         "failed_checks": [
-          "first_para_pass",
-          "external_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1934,6 +1936,34 @@
         "quality_score": 62.2,
         "word_count": 2426,
         "flesch": 47.4,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-summarizer-tools-2026",
+        "title": "Best AI Summarizer Tools 2026: Meetings, Calls, Videos",
+        "quality_score": 56.7,
+        "word_count": 2260,
+        "flesch": 48.7,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-copywriting-tools-2026",
+        "title": "Best AI Copywriting Tools 2026 for Marketing Teams",
+        "quality_score": 62.2,
+        "word_count": 2232,
+        "flesch": 52.4,
         "internal_links": 0,
         "external_links": 3,
         "images": 3,
