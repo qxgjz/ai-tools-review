@@ -250,3 +250,8 @@ GEO/技术问题处理 2 个（双 H1 根因 + category metadata），另 1 个�
 1. **HTML 实体计数误报**：审计 title/desc 长度必须 html.unescape 后再计——`&amp;` 使 56 字符 title 在 HTML 源显示 75 字符，首轮误报 26 个 title 超长（真实 3 个）。教训：审计脚本先解码实体。
 2. **本机网络死路换通道**：seo_audit_full.py 线上抓取超时是环境问题非脚本问题——改用本地产物 out/ 审计（1122 HTML 全量），产出等价规则检查。
 3. **Next.js RSC 只序列化被引用字段**：数据层 map 精简对体积影响有限，RSC payload 大头是 JSX 结构序列化（164 卡 389KB），体积优化需分页/惰性渲染而非砍数据字段。
+## 八、部署与线上验证（补）
+
+- GitHub Actions 06d068d：Lint success / CodeQL success / **Deploy to Cloudflare Pages success**；state+log commit 22e5993 push 成功
+- 线上验证：best-for/startups title 截断生效（`Best AI Tools for Startups 2026: Product, Marketing & Ope...` ≤60）；首页/ranking 200 完整渲染
+- **robots.txt CDN 缓存说明**：本地产物 out/robots.txt 已含 /og/ Disallow（已核验），线上 robots.txt 暂未显示 /og/——best-for 页同 commit 已线上生效证明代码部署成功，robots.txt 为 Cloudflare CDN 缓存旧版（txt 默认 TTL 较长），会自然过期后生效，无需额外动作
