@@ -510,6 +510,16 @@
   "last_updated": "2026-10-14 10:14:39 CST",
   "completed_tasks": [
     {
+      "id": "POLISH-2026-10-14-R12",
+      "priority": "P1",
+      "title": "R12: HTML->MD fix 3 articles (60->100)",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "result": "best-free-ai-tools 60->100, best-free-ai-tools-youtube 60->100 (excerpt added), best-paid-ai-tools 60->100"
+    },
+    {
       "id": "POLISH-2026-10-13-R11",
       "priority": "P1",
       "title": "R11: HTML->MD fix 3 articles (60->100)",
