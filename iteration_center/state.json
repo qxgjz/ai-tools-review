@@ -2943,27 +2943,31 @@
       "task": "authors 页体积优化",
       "title": "authors/aitoolcrux-editorial-team 页 665.7KB（RSC payload 389KB 为 164 张文章卡 JSX 结构）需分页/懒加载优化，目标 <400KB",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "seo_audit_local_20261014",
       "created_at": "2026-10-14T22:13:09",
-      "note": "数据字段精简已完成（map 只保留 slug/title/excerpt/date/readingTime/category），但 Next.js RSC 序列化结构占大头，需列表分页或只渲染部分+客户端加载更多"
+      "note": "数据字段精简已完成（map 只保留 slug/title/excerpt/date/readingTime/category），但 Next.js RSC 序列化结构占大头，需列表分页或只渲染部分+客户端加载更多",
+      "completed_at": "2026-10-15T00:27:38",
+      "completion_note": "分页60/页×3页+紧凑单行：665.8KB->271.9KB（RSC 389->166.5KB），达成<400KB；143篇全覆盖；tsc/build 0错；commit 7d71de3"
     },
     {
       "id": "TITLE-SHORT-20261014",
       "task": "辅助页 title 加长",
       "title": "/sitemap/（20字符）、/search/（28字符，noindex 页）title 过短；/search/ 无需处理（已 noindex），/sitemap/ 可加长",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "seo_audit_local_20261014",
-      "created_at": "2026-10-14T22:13:09"
+      "created_at": "2026-10-14T22:13:09",
+      "completed_at": "2026-10-15T00:27:38",
+      "completion_note": "/sitemap/ title 20->58字符<=60；/search/已noindex不处理；commit 7d71de3"
     }
   ],
   "milestones": [
