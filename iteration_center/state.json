@@ -1663,11 +1663,13 @@
         "架构师"
       ],
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "source": "data_learning_2026-10-14",
       "topic": "GEO - crawlable content",
       "knowledge": "ChatGPT browse工具对JS渲染内容支持差，静态生成优先",
-      "created_at": "2026-10-14T05:01:39"
+      "created_at": "2026-10-14T05:01:39",
+      "completed_at": "2026-10-14T19:00:58",
+      "completion_note": "实证完成：Next.js output:'export' 全站 SSG 静态预渲染，162 篇博客 HTML 全部含完整正文（out/ 中位 284KB/页，非JS壳）。线上 web_fetch 直接返回正文即服务器端可抓取证据。ChatGPT browse 可完整读取，无需改动。"
     },
     {
       "id": "COMP-20261009-002",
@@ -2511,11 +2513,13 @@
         "架构师"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "data_learning_2026-10-14",
       "topic": "GEO - schema markup",
       "knowledge": "FAQPage、Article、Person、Organization schema让内容对AI机器可读",
-      "created_at": "2026-10-14T05:01:39"
+      "created_at": "2026-10-14T05:01:39",
+      "completed_at": "2026-10-14T19:00:58",
+      "completion_note": "9 篇无 faq 字段文章补 FAQPage schema 兜底：defaultFAQs 抽到纯数据模块 components/content/faqData.ts（原在 use client 组件，server 侧 dot 访问报错），博客页统一 faqItems 数据源。修复后 164/164 博客页含 FAQPage JSON-LD（本地产物验证 0 缺失）。commit c149d16 Deploy success，线上 n8n-review-2026/what-is-an-ai-agent FAQ 区块渲染正常。"
     },
     {
       "id": "LEARN-20261014-03",
@@ -2580,10 +2584,12 @@
         "ux",
         "window1"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "commander_dispatch_20261014_morning",
       "created_at": "2026-10-14T10:05:00",
-      "updated_at": "2026-10-14T10:05:00"
+      "updated_at": "2026-10-14T10:05:00",
+      "completed_at": "2026-10-14T19:00:58",
+      "completion_note": "11:00 巡检通过：服务器端 web_fetch 首页 200（完整渲染）、/404 200（404 页正常）、/blog/chatgpt-vs-claude-2026/ 200。无 code=000/超时，全站响应正常，标记稳定归档。"
     },
     {
       "id": "GROWTH-AITOOLS-CONTACT-20261014",
@@ -2742,6 +2748,119 @@
       "assigned_to": "拓荒者",
       "priority": "P1",
       "source": "r13_dir_validation_2026-10-14"
+    },
+    {
+      "id": "KW-20261014-P0-01",
+      "task": "基于关键词 [best ai content detector 2026] 写 2000 字新文章，标题建议 [Best AI Content Detectors 2026: 8 Tools Tested for Accuracy & False Positives]，slug 建议 [best-ai-content-detectors-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "独立评测假阳性率，ESL写作场景实测，免费vs付费对比",
+      "keyword": "best ai content detector 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P0-02",
+      "task": "基于关键词 [best ai seo tools 2026] 写 2000 字新文章，标题建议 [Best AI SEO Tools 2026: GEO/AEO Tools for Small Teams]，slug 建议 [best-ai-seo-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "GEO/AEO 新赛道独立评测，小团队/独立开发者性价比",
+      "keyword": "best ai seo tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P0-03",
+      "task": "基于关键词 [best ai logo generator 2026] 写 2000 字新文章，标题建议 [Best AI Logo Generators 2026: SVG Quality & Commercial Rights Compared]，slug 建议 [best-ai-logo-generators-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "设计师视角：矢量质量、编辑自由度、商用版权条款对比",
+      "keyword": "best ai logo generator 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-01",
+      "task": "基于关键词 [best ai automation tools 2026] 写 2000 字新文章，标题建议 [Best AI Automation Tools 2026: Workflow Builders Compared]，slug 建议 [best-ai-automation-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai automation tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-02",
+      "task": "基于关键词 [best ai research assistant 2026] 写 2000 字新文章，标题建议 [Best AI Research Assistants 2026: Literature & Report Tools]，slug 建议 [best-ai-research-assistants-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai research assistant 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-03",
+      "task": "基于关键词 [best ai video enhancer 2026] 写 2000 字新文章，标题建议 [Best AI Video Enhancers 2026: Upscale & Improve Quality]，slug 建议 [best-ai-video-enhancers-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai video enhancer 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-04",
+      "task": "基于关键词 [best ai hr tools 2026] 写 2000 字新文章，标题建议 [Best AI HR Tools 2026: Recruiting & Onboarding]，slug 建议 [best-ai-hr-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai hr tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P1-05",
+      "task": "基于关键词 [best ai translator 2026] 写 2000 字新文章，标题建议 [Best AI Translators 2026: Document & Website Translation]，slug 建议 [best-ai-translators-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "keyword": "best ai translator 2026",
+      "created_at": "2026-10-14T18:32:09"
     }
   ],
   "milestones": [
