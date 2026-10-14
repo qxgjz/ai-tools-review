@@ -46,10 +46,20 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
   const author = AUTHORS[params.slug];
   if (!author) notFound();
 
-  const posts = (postsData as any[]).filter(
-    (p) =>
-      p.author?.includes(author.name.split(' ')[0]) || p.author === 'AIToolCrux Editorial Team',
-  );
+  // 精简字段：避免把每篇完整 content/faq（~26KB×164）塞进 RSC payload 导致页面体积暴涨
+  const posts = (postsData as any[])
+    .filter(
+      (p) =>
+        p.author?.includes(author.name.split(' ')[0]) || p.author === 'AIToolCrux Editorial Team',
+    )
+    .map((p) => ({
+      slug: p.slug,
+      title: p.title,
+      excerpt: p.excerpt,
+      date: p.date || p.publishedAt,
+      readingTime: p.readingTime,
+      category: p.category,
+    }));
 
   return (
     <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
@@ -128,7 +138,7 @@ export default function AuthorPage({ params }: { params: { slug: string } }) {
                     <div className="flex items-center gap-4 text-xs text-gray-400 dark:text-gray-500">
                       <span className="inline-flex items-center gap-1">
                         <Calendar className="w-3 h-3" />
-                        {post.date || post.publishedAt}
+                        {post.date}
                       </span>
                       {post.readingTime && (
                         <span className="inline-flex items-center gap-1">

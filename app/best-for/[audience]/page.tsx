@@ -261,13 +261,18 @@ export function generateStaticParams() {
 export async function generateMetadata({ params }: { params: { audience: string } }) {
   const config = AUDIENCE_CONFIG[params.audience as AudienceSlug];
   if (!config) return {};
+  // SEO 长度规范：title ≤60、description ≤155，超长截断（保留关键词前缀）
+  const truncate = (s: string, n: number) =>
+    s.length > n ? `${s.slice(0, n - 3).trimEnd()}...` : s;
+  const metaTitle = truncate(config.metaTitle, 60);
+  const metaDescription = truncate(config.metaDescription, 155);
   return {
-    title: config.metaTitle,
-    description: config.metaDescription,
+    title: metaTitle,
+    description: metaDescription,
     alternates: { canonical: `https://www.aitoolcrux.com/best-for/${params.audience}` },
     openGraph: {
-      title: config.metaTitle,
-      description: config.metaDescription,
+      title: metaTitle,
+      description: metaDescription,
       type: 'article',
       url: `https://www.aitoolcrux.com/best-for/${params.audience}`,
     },

@@ -3,9 +3,9 @@ import Link from 'next/link';
 import trafficData from '@/data/traffic-ranking.json';
 
 export const metadata: Metadata = {
-  title: 'Top AI Tools by Traffic 2026',
+  title: 'Top AI Tools by Traffic 2026 | AIToolCrux',
   description:
-    'Discover the most visited AI tools in 2026 ranked by monthly web traffic. We analyze 50+ leading AI tools with estimated monthly visits, growth rates, and honest reviews.',
+    'The most visited AI tools in 2026 ranked by monthly web traffic. 50+ leading tools with estimated visits, growth rates, and honest reviews.',
   openGraph: {
     title: 'Top AI Tools by Traffic 2026 | AIToolCrux',
     description: 'The most visited AI tools ranked by monthly traffic. Updated weekly.',

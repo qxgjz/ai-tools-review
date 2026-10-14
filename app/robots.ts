@@ -9,6 +9,7 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
         disallow: [
           '/api/',
+          '/og/',
           '/cdn-cgi/',
           '/_next/',
           '/admin',
@@ -66,79 +67,79 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'GPTBot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'ClaudeBot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Claude-Web',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'PerplexityBot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Bytespider',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       // 更多AI爬虫配置（有助于AI搜索和引用）
       {
         userAgent: 'Google-Extended',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Applebot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Amazonbot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'meta-externalagent',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       // AI search/research crawlers added 2026-09-20 (GEO optimization)
       {
         userAgent: 'OAI-SearchBot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'ChatGPT-User',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Claude-SearchBot',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Claude-User',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Perplexity-User',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'Applebot-Extended',
         allow: '/',
-        disallow: ['/api/', '/cdn-cgi/', '/admin', '/private'],
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       // 禁止恶意/资源消耗大的爬虫
       {
