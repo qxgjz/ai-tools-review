@@ -1,20 +1,20 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-14 22:14:18
+**Date:** 2026-10-15 22:10:05
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 164 |
-| Avg content score | 88.3/100 |
+| Articles | 167 |
+| Avg content score | 87.8/100 |
 | Perfect articles | 93 |
-| Articles below 85 | 55 |
+| Articles below 85 | 58 |
 | Pages audited | 20 |
 | Technical issues | 11 |
 | Critical issues | 0 |
-| Audit duration | 3.5s |
+| Audit duration | 10.2s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -27,6 +27,9 @@
 | best-ai-text-to-speech-tools-2026 | 53 | 2344 | 38.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-avatar-generators-2026 | 53 | 2331 | 34.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-summarizer-tools-2026 | 57 | 2260 | 48.7 | 0 | first_para_pass, internal_links_pass |
+| best-ai-content-detectors-2026 | 57 | 2357 | 46.5 | 0 | first_para_pass, internal_links_pass |
+| best-ai-automation-tools-2026 | 57 | 2353 | 48.0 | 0 | first_para_pass, internal_links_pass |
+| best-ai-video-enhancers-2026 | 57 | 2246 | 45.9 | 0 | first_para_pass, internal_links_pass |
 | best-ai-presentation-tools-2026 | 62 | 2152 | 50.1 | 0 | first_para_pass, internal_links_pass |
 | elevenlabs-v2-review-2026 | 62 | 2233 | 36.6 | 4 | first_para_pass, readability_pass |
 | runway-vs-pika-2026 | 62 | 2416 | 33.6 | 4 | first_para_pass, readability_pass |

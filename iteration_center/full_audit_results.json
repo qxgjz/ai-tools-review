@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-14T22:14:18.172604",
+  "audit_time": "2026-10-15T22:10:05.406462",
   "mode": "quick",
   "content": {
-    "total_articles": 164,
-    "average_score": 88.32317073170739,
+    "total_articles": 167,
+    "average_score": 87.75508982035937,
     "perfect_count": 93,
-    "below_85_count": 55,
+    "below_85_count": 58,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -1971,6 +1971,48 @@
           "first_para_pass",
           "internal_links_pass"
         ]
+      },
+      {
+        "slug": "best-ai-content-detectors-2026",
+        "title": "Best AI Content Detectors 2026: 8 Tools Tested for Accuracy",
+        "quality_score": 56.7,
+        "word_count": 2357,
+        "flesch": 46.5,
+        "internal_links": 0,
+        "external_links": 4,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-automation-tools-2026",
+        "title": "Best AI Automation Tools 2026: Workflow Builders Compared",
+        "quality_score": 56.7,
+        "word_count": 2353,
+        "flesch": 48.0,
+        "internal_links": 0,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-video-enhancers-2026",
+        "title": "Best AI Video Enhancers 2026: Upscale & Improve Quality",
+        "quality_score": 56.7,
+        "word_count": 2246,
+        "flesch": 45.9,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
       }
     ]
   },
@@ -1986,7 +2028,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 3.5
+    "elapsed_seconds": 10.2
   },
   "geo": {
     "geo_score": 100,
