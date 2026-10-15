@@ -71,7 +71,7 @@ const AUDIENCE_CONFIG: Record<
     title: 'Best AI Tools for Content Creators',
     description:
       'AI tools for YouTubers, podcasters, designers, and social media creators — from scriptwriting to editing.',
-    metaTitle: 'Best AI Tools for Content Creators 2026: Video, Audio & Design',
+    metaTitle: 'Best AI Tools for Content Creators 2026: Video & Design',
     metaDescription:
       'The best AI tools for content creators in 2026. From video editing and voice synthesis to design and scriptwriting — compare top tools with pricing and reviews.',
     intro:
@@ -115,7 +115,7 @@ const AUDIENCE_CONFIG: Record<
     title: 'Best Free AI Tools for Students',
     description:
       'Free and affordable AI tools for studying, writing papers, coding, research, and productivity in 2026.',
-    metaTitle: 'Best Free AI Tools for Students 2026: Study, Write & Research',
+    metaTitle: 'Best Free AI Tools for Students 2026: Study & Research',
     metaDescription:
       'Top free AI tools for students in 2026. ChatGPT free, Claude, Perplexity, Notion AI, and more — best study assistants, writing tools, and research helpers.',
     intro:
@@ -164,7 +164,7 @@ const AUDIENCE_CONFIG: Record<
     title: 'Best AI Tools for Startups',
     description:
       'Essential AI tools for founders and small teams — from product development to marketing, sales, and operations.',
-    metaTitle: 'Best AI Tools for Startups 2026: Product, Marketing & Operations',
+    metaTitle: 'Best AI Tools for Startups 2026: Product & Marketing',
     metaDescription:
       'The best AI tools for startups in 2026. Build faster with AI coding, market smarter with AI content, and automate operations — all on a budget.',
     intro:
