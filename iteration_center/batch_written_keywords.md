@@ -94,3 +94,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - best-ai-summarizer-tools-2026 | Best AI Summarizer Tools 2026: Meetings, Calls, Videos | kw: best ai summarizer tools | 80 | 2124 | 3 screenshots | NEW
 - best-ai-copywriting-tools-2026 | Best AI Copywriting Tools 2026 for Marketing Teams | kw: best ai copywriting tools | 80 | 2109 | 3 screenshots | NEW
 - best-ai-presentation-tools-2026 | Best AI Presentation Tools 2026: Gamma vs SlidesAI | kw: best ai presentation tools (P2) | 80 | 2031 | 3 screenshots | REWRITE-UPGRADE
+
+## batch26 (2026-10-15) - 3 new articles (analyst keywords P0+P1)
+- best-ai-content-detectors-2026 | Best AI Content Detectors 2026: 8 Tools Tested for Accuracy | kw: best ai content detector (P0) | 100 | 2295 | 3 screenshots | NEW
+- best-ai-automation-tools-2026 | Best AI Automation Tools 2026: Workflow Builders Compared | kw: best ai automation tools (P1) | 100 | 2246 | 2 screenshots | NEW
+- best-ai-video-enhancers-2026 | Best AI Video Enhancers 2026: Upscale & Improve Quality | kw: best ai video enhancer (P1) | 100 | 2141 | 2 screenshots | NEW
