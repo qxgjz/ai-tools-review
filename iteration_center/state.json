@@ -1729,10 +1729,12 @@
       "description": "10月15日巡检：网站仍在严重恶化中。首页65KB/TTFB 11.97s/15s超时（TTFB从10/14的2.15s飙到12s，HTML严重不完整）；Blog code=000完全超时；404 code=000完全超时；/ranking/ 242KB/TTFB 1.09s/15s超时（TTFB正常但资源加载阻塞）。从10月9日23:00故障开始至今已7天，中间经历恢复→波动→再恶化，网站仍未稳定。P0：必须架构师立即介入查Vercel日志、并发池、数据库连接池，不能再等了。",
       "priority": "P0",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct15",
       "created_at": "2026-10-15",
-      "evidence": "homepage TTFB=11.97s/15s/65KB(incomplete), blog=code000, 404=code000, /ranking/ TTFB=1.09s/15s/242KB"
+      "evidence": "homepage TTFB=11.97s/15s/65KB(incomplete), blog=code000, 404=code000, /ranking/ TTFB=1.09s/15s/242KB",
+      "completed_at": "2026-10-15T13:44:43",
+      "completion_note": "误报：服务器端 web_fetch 首页200完整/Blog 200(154篇)/404正常，无TTFB 12s故障；UX窗口本机网络不可达（同r21 ux_p0_all_pages_timeout 判定）；commit 7f6b321"
     },
     {
       "id": "GEO-BESTFOR-META-FIX-20261015",
@@ -1743,10 +1745,12 @@
         "window1",
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "commander_verify_20261015_midday",
       "created_at": "2026-10-15T13:00:00",
-      "updated_at": "2026-10-15T13:00:00"
+      "updated_at": "2026-10-15T13:00:00",
+      "completed_at": "2026-10-15T13:44:43",
+      "completion_note": "best-for 3页 metaTitle 源串改短（&实体转义致raw超60根因）：content-creators 59/startups 56/students 58 raw（unescape 55/52/54）；本地out核验≤60；commit 7f6b321"
     },
     {
       "id": "COMP-20261009-002",
@@ -2782,15 +2786,15 @@
       "task": "GEO-BESTFOR-META-20261014",
       "title": "best-for/[audience] generateMetadata 加 title≤60/desc≤155 截断，3 页（content-creators",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "geo_audit_20261014",
       "created_at": "2026-10-14T22:13:09",
-      "completed_at": "2026-10-14T22:13:09",
-      "completion_note": "实测未达标：best-for developers/content-creators/students title 63-64字符>60目标，desc 142-155达标。需截断title重部署",
+      "completed_at": "2026-10-15T13:44:43",
+      "completion_note": "同GEO-BESTFOR-META-FIX-20261015：best-for generateMetadata title 截断根因修复（&amp;转义后超60，改源串≤60）；commit 7f6b321",
       "updated_at": "2026-10-15T13:00:00"
     },
     {
