@@ -3000,6 +3000,36 @@
       "our_count": 0,
       "competitor": "futurepedia.io",
       "created_at": "2026-10-13T05:07:11"
+    },
+    {
+      "id": "GEO-PAGED-TITLE-20261015",
+      "task": "GEO审计发现：authors分页页 title 超长（68字符）需截断",
+      "title": "Authors分页页 title 截断至52字符",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-15",
+      "created_at": "2026-10-15T13:38:02",
+      "completed_at": "2026-10-15T13:38:02",
+      "completion_note": "app/authors/[slug]/page/[page]/page.tsx metadata title改为\"AIToolCrux Editorial Team - AI Tool Reviews (Page N)\"=52字符；本地审计 title_long 2->0；commit c046bde"
+    },
+    {
+      "id": "GEO-OG-STUB-20261015",
+      "task": "GEO审计发现：/og/ stub页 title过短22+无meta+无schema",
+      "title": "/og/ stub 页 metadata 补全（title/description/noindex/JSON-LD）",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-15",
+      "created_at": "2026-10-15T13:38:02",
+      "completed_at": "2026-10-15T13:38:02",
+      "completion_note": "public/og/index.html 加完整title(47字符)+meta description+robots noindex+CollectionPage JSON-LD；本地审计 no_meta 1->0、no_schema 1->0；commit c046bde"
     }
   ],
   "milestones": [
