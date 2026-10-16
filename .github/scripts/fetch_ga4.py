@@ -113,7 +113,7 @@ def main():
             {"name": "engagedSessions"},
             {"name": "keyEvents"},
         ],
-        "orderBys": [{"dimension": {"dimensionName": "date", "orderType": "ASCENDING"}}],
+        "orderBys": [{"dimension": {"dimensionName": "date", "orderType": "ALPHANUMERIC"}}],
     }
     daily_resp = ga4_run_report(token, daily_body)
     daily = rows_to_dicts(daily_resp)
