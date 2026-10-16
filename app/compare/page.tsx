@@ -1,17 +1,32 @@
 ﻿'use client';
 
-import { useState, useMemo } from 'react';
+import { useState, useMemo, useEffect } from 'react';
 import Link from 'next/link';
-import tools from '@/data/tools-index.json';
 import type { Tool } from '@/types';
 import { calculateScoreResult, DIMENSION_LABELS, GRADE_DESCRIPTIONS } from '@/lib/scoring';
-import { RadarChart } from '@/components/charts/RadarChart';
-import { MultiRadarChart } from '@/components/charts/MultiRadarChart';
 import { AffiliateCTA } from '@/components/monetization/AffiliateCTA';
+import dynamicImport from 'next/dynamic';
+const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
+const MultiRadarChart = dynamicImport(() => import('@/components/charts/MultiRadarChart').then((m) => m.MultiRadarChart), { ssr: false });
 
 export default function ComparePage() {
   const [selectedSlugs, setSelectedSlugs] = useState<string[]>([]);
   const [searchQuery, setSearchQuery] = useState('');
+  const [tools, setTools] = useState<Tool[]>([]);
+  const [dataLoading, setDataLoading] = useState(true);
+
+  useEffect(() => {
+    fetch('/data/tools-index.json')
+      .then((r) => {
+        if (!r.ok) throw new Error('failed to load tool data');
+        return r.json();
+      })
+      .then((d: Tool[]) => {
+        setTools(d);
+        setDataLoading(false);
+      })
+      .catch(() => setDataLoading(false));
+  }, []);
 
   const selectedTools = useMemo(
     () => tools.filter((t) => selectedSlugs.includes(t.slug)),
@@ -717,6 +732,11 @@ export default function ComparePage() {
         />
 
         {/* Tools列Table */}
+        {dataLoading ? (
+          <div className="py-8 text-center text-sm text-gray-500 dark:text-gray-400">
+            Loading {533}+ tools…
+          </div>
+        ) : (
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 max-h-64 overflow-y-auto">
           {filteredTools.map((tool) => {
             const isSelected = selectedSlugs.includes(tool.slug);
@@ -769,6 +789,7 @@ export default function ComparePage() {
             );
           })}
         </div>
+        )}
       </div>
 
       {/* Compare结果 */}

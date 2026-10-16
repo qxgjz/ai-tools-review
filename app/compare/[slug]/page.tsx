@@ -23,13 +23,15 @@ import comparisonsData from '@/data/comparisons.json';
 import toolsData from '@/data/tools-index.json';
 import type { Tool } from '@/types';
 import { calculateScoreResult, DIMENSION_LABELS } from '@/lib/scoring';
-import { RadarChart } from '@/components/charts/RadarChart';
-import { MultiRadarChart } from '@/components/charts/MultiRadarChart';
+import dynamicImport from 'next/dynamic';
 import { FAQSection } from '@/components/content/FAQSection';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { FadeIn } from '@/components/animations';
 import { BreadcrumbSchema, FAQSchema, ComparisonSchema } from '@/components/seo/Schema';
 import { shouldSkipStaticGen } from '@/lib/static-gen';
+
+const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
+const MultiRadarChart = dynamicImport(() => import('@/components/charts/MultiRadarChart').then((m) => m.MultiRadarChart), { ssr: false });
 
 interface ComparisonPageProps {
   params: { slug: string };

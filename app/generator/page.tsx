@@ -21,7 +21,8 @@ import {
   type GeneratorResult,
   type ScenarioType,
 } from '@/lib/generator';
-import { RadarChart } from '@/components/charts/RadarChart';
+import dynamicImport from 'next/dynamic';
+const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: 'bg-gradient-to-br from-amber-400 to-amber-600 text-white',
