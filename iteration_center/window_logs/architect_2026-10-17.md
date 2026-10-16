@@ -28,14 +28,21 @@
 - commit 已本地完成：**message** `seo(r27): normalize blog category slugs (comparison->comparisons, guide->guides) + 301 redirects; tsc+build pass`（files: data/posts.json、data/posts.json.bak_r27、public/_redirects、scripts/_norm_cats_r27.py、scripts/_check_cats_r27.py、scripts/_verify_r27.py）
 - **push 阻塞**：github.com:443 TCP 直连不可达（`Test-NetConnection github.com 443 → False`；系统代理 ProxyEnable=0；git push 连续 5 次失败：Connection reset ×2 → Could not connect to server ×3，含 `-c http.version=HTTP/1.1` 变体）。`ssh.github.com:443` 可达（Test-NetConnection True）但主机无 SSH key、无 gh CLI → SSH 通道不可用。**部署未触发，线上未更新**。
 
-## 线上验证（本轮部署未发生）
+## 线上验证（本轮部署未发生 → 后续 push 成功并部署）
 
-- 本轮修改**未上线**（push 阻塞）。线上验证为上一部署状态：llms.txt/llms-full.txt/robots.txt/sitemap.xml 均 200（见上）。
-- 下轮恢复指引：网络恢复后直接 `git -c http.proxy= -c https.proxy= push origin main`（commit 已本地就绪）→ 查 GitHub Actions Deploy success → web_fetch 验证 `/blog/category/comparisons/` 200 + `/blog/category/comparison` 301 → 更新 state 待办 GEO-SLUG-NORM-R27 为 completed。
+- 首段 push 连续 5 次失败后（github.com:443 不可达），网络恢复后 push 成功：`b74afea..506cb48 main -> main`（含两个 commit：分类规范化 + 日志/state）。
+- GitHub Actions：**Deploy to Cloudflare Pages → conclusion=success**（head=506cb48）。
+- 服务器端 web_fetch 线上验证（部署后）：
+  - `https://www.aitoolcrux.com/blog/category/comparisons/` → **200**（11 篇文章，含规范化后的 ai-tools-comparison-2026、ai-coding-tools-comparison-2026、surfer-seo-vs-frase-2026-comparison）✅
+  - `https://www.aitoolcrux.com/blog/category/comparison`（旧 URL）→ **301 跟随到 comparisons**（返回内容一致）✅
+  - `https://www.aitoolcrux.com/blog/category/guides/` → **200**（4 篇文章：Selection Guide/AI Tools Review Guide/Best Free/Beginners）✅
+  - `https://www.aitoolcrux.com/blog/category/guide`（旧 URL）→ **301 跟随到 guides** ✅
+- state.json：`GEO-SLUG-NORM-R27` → **status=completed + completed_at**（completion_note 记录 push sha、Deploy success、线上 200/301 验证）；架构师 pending 剩余 **0**。
 
-## state.json 更新
+## state.json 更新（终态）
 
 - 新增待办 `GEO-SLUG-NORM-R27`（P1，assigned_to=["window1","架构师"]，source="geo_audit_2026-10-17"）："blog category slug 单复数规范化（comparison→comparisons、guide→guides，6篇）+ _redirects 301；本地已修复且 tsc+build 门控通过、产物验证通过；**待 push 部署+线上验证**（github.com 网络阻塞）"。
+- **终态：GEO-SLUG-NORM-R27 已完成**（completed_at 2026-10-17T00:30:00，note 含 push sha 506cb48、Deploy success、线上 200/301 验证明细）。架构师 pending 清零。
 
 ## 观察项（跨轮）
 

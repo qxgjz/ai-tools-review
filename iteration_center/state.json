@@ -3176,14 +3176,15 @@
       "task": "GEO技术修复-分类slug规范化部署",
       "title": "blog category slug 单复数规范化部署（comparison→comparisons、guide→guides，6篇）+ _redirects 301；本地已修复且 tsc+build 门控通过、产物验证通过；待 push 部署+线上验证（github.com 网络阻塞）",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "geo_audit_2026-10-17",
       "created_at": "2026-10-17T00:15:00",
-      "completion_note": "push 阻塞于 github.com:443 不可达（5次重试+HTTP/1.1；ssh.github.com:443 可达但无SSH key）；commit 已本地就绪"
+      "completion_note": "分类slug规范化已上线：push 506cb48 → Deploy to Cloudflare Pages success；线上 /blog/category/comparisons/ 与 /blog/category/guides/ 200（11/4篇文章），旧 URL /blog/category/comparison 与 /guide 301 跟随成功；sitemap 去重（out 无单数分类）",
+      "completed_at": "2026-10-17T00:30:00"
     }
   ],
   "milestones": [
