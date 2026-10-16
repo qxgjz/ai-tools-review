@@ -2869,10 +2869,12 @@
       "description": "10月15日17:00巡检：轮流宕机模式仍在继续。首页code=000完全超时（上午还能返回65KB）；Blog恢复200/6.53s/TTFB 3.49s/267KB（上午完全超时）；404仍code=000完全超时；/ranking/ 200/15s超时/TTFB 1.08s/76KB（大小从上午的242KB降到76KB，更不完整了）。典型的函数实例池耗尽——每个时段只有部分页面能抢到实例。",
       "priority": "P1",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct15_17h",
       "created_at": "2026-10-15",
-      "evidence": "homepage=code000, blog=200/6.53s/TTFB 3.49s/267KB, 404=code000, /ranking/=200/15s/TTFB 1.08s/76KB"
+      "evidence": "homepage=code000, blog=200/6.53s/TTFB 3.49s/267KB, 404=code000, /ranking/=200/15s/TTFB 1.08s/76KB",
+      "completed_at": "2026-10-16T16:01:48",
+      "completion_note": "误报：服务器端 web_fetch 首页200完整(533+工具/Quick Answer/FAQ全渲染)、/blog/ 200完整(154篇+Featured)均正常，无\"轮流宕机\"；UX窗口本机网络不可达误判（同r23 ux_p0 判定）；commit 6c3d9d5"
     },
     {
       "id": "AFF-CMP-PAGES-20261016",
