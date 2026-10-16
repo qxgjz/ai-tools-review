@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 77,
+  "total_articles_generated": 80,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-17 01:03:41 CST",
+  "last_updated": "2026-10-17 05:10:49 CST",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-16-PM-R14",
@@ -1462,19 +1462,6 @@
       "created_at": "2026-10-12T06:50:00"
     },
     {
-      "id": "P0-TOOL-FIX-001",
-      "task": "工具链大修复已完成：16/17工具真实可用。各窗口必须真正调用工具执行，禁止回退AI硬写。每次执行前先import验证工具可用。",
-      "assigned_to": [
-        "架构师"
-      ],
-      "priority": "P0",
-      "status": "completed",
-      "source": "commander_tool_audit_2026-10-09",
-      "created_at": "2026-10-09",
-      "completed_at": "2026-10-16T23:37:08",
-      "completion_note": "工具链11/11真实import验证通过：本轮实测环境仅3/11可用，pip补装8个缺失工具(opengtm/trafilatura/courlan/textstat/nltk/rank-bm25/chromadb/openserp)后重验11/11全OK；无代码改动"
-    },
-    {
       "id": "P0-URGE-CREATOR-20261012",
       "task": "催办：创作家当前36条pending(P0=15)严重超载，完成率<50%；本周按GSC/关键词优先级批量出文>=5篇（优先ai agent词簇：best-ai-agents-2026/ai-agent-vs-chatbot/how-to-build-an-ai-agent），每篇2000字+FAQ+引用真实用户评论，写完必须交打磨师审计",
       "priority": "P0",
@@ -1769,20 +1756,6 @@
       "updated_at": "2026-10-16T22:10:00"
     },
     {
-      "id": "P0-URL-MD-SUFFIX-20261016",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "架构师"
-      ],
-      "source": "commander_diagnose_20261016",
-      "task": "处理带-md后缀的垃圾URL（证据：GSC page维度出现大量 /blog/article-api-20260903-171438-...-md 这类URL，30+条各有4-38曝光但0点击，sitemap.xml共823条URL中0条含-md后缀=这些URL不在sitemap但仍被索引）。动作：1) 全站扫描找出所有 article-api-*-md 实际存在的页面；2) 确认这些页面是历史markdown文件名误作URL生成，内容与正常博客重复的删除+301到正常URL，无价值内容的直接404；3) 提交后重新核对GSC索引。验收：GSC中-md URL曝光数归零。",
-      "created_at": "2026-10-16T22:10:00",
-      "updated_at": "2026-10-16T22:10:00",
-      "completed_at": "2026-10-16T23:37:08",
-      "completion_note": "已复现确认-md垃圾URL不在当前站点：out/无-md产物、sitemap/_redirects/posts.json均无、线上web_fetch返回404死链；垃圾URL已清除，GSC曝光归零待Google重新爬取自然移除，无代码可改"
-    },
-    {
       "id": "P0-URGE-BATCH-W2-20261016",
       "priority": "P0",
       "status": "pending",
@@ -1805,6 +1778,64 @@
       "task": "加快批量修复进度+产出消化（指挥官催办：今日完成率0%，创作家62条pending未消化；今日batch27/28声称产出6篇新文章但state.json无对应completed记录）。动作：1) 按P0→P1排序一次重写/新写≥5篇；2) 每篇文章完成后立即在state.json对应待办标记completed；3) 新文章必须加入iteration_center/posts.json并在zensink_content_quality_report.json留痕。验收：本窗口今日新增completed≥5条。",
       "created_at": "2026-10-16T22:20:00",
       "updated_at": "2026-10-16T22:20:00"
+    },
+    {
+      "id": "CF-20261017-001",
+      "task": "已确认2026-10-03 893 sessions为headless采集器扫站（CF当日请求15428、GA4仅记893且engaged仅7.4%=执行JS的机器流量，真人engaged应40%+；CF侧每日8k-23k请求只有~100能进GA4）。动作：开启Cloudflare Logpush（HTTP请求日志，免费）或换Zone Analytics全权限token，拿到UA/路径明细，点名具体爬虫(GPTBot/CCBot/Amazonbot等)，写入iteration_center/并更新state.json的bot_traffic_pct",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_cf_probe_2026-10-17",
+      "data_verified": true,
+      "cf_evidence": {
+        "2026-10-03_requests": 15428,
+        "2026-10-03_ga4_sessions": 893,
+        "engaged_pct": 7.4,
+        "daily_requests_range": "8000-23000"
+      },
+      "created_at": "2026-10-17T01:00:00",
+      "related_todo": "GA4-20261010-000",
+      "completed_at": "2026-10-17T02:00:00",
+      "completion_note": "完成可落地部分：CF GraphQL httpRequests1dGroups 拉取 10/3-10/10 每日请求/页面/唯一数，bot_traffic_pct=92.6（GA4 engaged 反向；CF 非页面请求占比 70.5%），分析报告 iteration_center/cf_bot_analysis_2026-10-17.md。UA点名部分阻塞：现有 CF token 无 httpRequestsAdaptiveGroups（UA/路径维度）与 Logpush 权限（403）→ 需指挥官提供 Zone Analytics 全权限 token 或 dashboard 开启 Logpush（见报告行动项）",
+      "blocked_reason": "Logpush 403/无AdaptiveGroups权限，无法点名具体爬虫；等待用户提供全权限token或Dashboard开Logpush"
+    },
+    {
+      "id": "P0-URGE-W2-CREATOR-20261017",
+      "task": "待办完成率11.8%远低于50%。创作家66条pending为全站最重负载且本轮0完成，本周内批量解决：每次触发至少完成5条（禁止一次只做2-3条），按P0→P1排序，完成立即在state.json标记completed由指挥官清理验收。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander-daily-schedule 2026-10-17",
+      "created_at": "2026-10-17T06:40:00"
+    },
+    {
+      "id": "P0-FAKE-FIX-GROWTH-20261017",
+      "task": "假完成整改：拓荒者12条外链任务（R14-01/R16-01~03/R17-01~04/R18）标记completed但无backlinks_tracking记录、无completion_note，已重开pending。需逐条补齐提交证据（截图/确认邮件/URL）或明确记录\"不适合\"原因，禁止无证据标completed。",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander-daily-schedule 2026-10-17",
+      "created_at": "2026-10-17T06:40:00"
+    },
+    {
+      "id": "CF-20261017-005",
+      "task": "CF爬虫点名阻塞项：架构师已产出bot_traffic_pct=92.6+分析报告，但现有token无Logpush/AdaptiveGroups权限无法点名具体爬虫。需指挥官/用户提供：①CF Dashboard开启Logpush（HTTP请求日志，免费）或 ②Zone Analytics全权限API token（Analytics:Read+Logpush:Edit）或 ③Dashboard手动导出UA Top列表；拿到后继续点名GPTBot/CCBot等。",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "cf_bot_analysis_2026-10-17",
+      "created_at": "2026-10-17T06:40:00",
+      "blocks": [
+        "CF-20261017-001"
+      ]
     },
     {
       "id": "COMP-20261009-002",
@@ -2737,7 +2768,12 @@
       "status": "pending",
       "source": "growth_r14_20261015",
       "created_at": "2026-10-15T13:10:00",
-      "updated_at": "2026-10-15T13:10:00"
+      "updated_at": "2026-10-15T13:10:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, 资源清单页, 联系邮箱hello@inpulza.com; 下一步=邮件客观提名收录进best-ai-tools-2026清单(已转新待办)",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "id": "GROWTH-R14-02-20261015",
@@ -2750,7 +2786,8 @@
       "status": "pending",
       "source": "growth_r14_20261015",
       "created_at": "2026-10-15T13:10:00",
-      "updated_at": "2026-10-15T13:10:00"
+      "updated_at": "2026-10-15T13:10:00",
+      "blocker_note": "阻塞: URLError被墙, 需代理7890恢复后复测"
     },
     {
       "id": "GROWTH-R14-03-20261015",
@@ -2763,7 +2800,8 @@
       "status": "pending",
       "source": "growth_r14_20261015",
       "created_at": "2026-10-15T13:10:00",
-      "updated_at": "2026-10-15T13:10:00"
+      "updated_at": "2026-10-15T13:10:00",
+      "blocker_note": "阻塞: URLError被墙, 需代理; YouTube播放列表无直接外链入口, 价值低"
     },
     {
       "id": "GROWTH-R14-04-20261015",
@@ -2776,7 +2814,8 @@
       "status": "pending",
       "source": "growth_r14_20261015",
       "created_at": "2026-10-15T13:10:00",
-      "updated_at": "2026-10-15T13:10:00"
+      "updated_at": "2026-10-15T13:10:00",
+      "blocker_note": "阻塞: URLError被墙, 需代理; IG reel非外链渠道"
     },
     {
       "id": "GROWTH-R14-05-20261015",
@@ -2789,7 +2828,8 @@
       "status": "pending",
       "source": "growth_r14_20261015",
       "created_at": "2026-10-15T13:10:00",
-      "updated_at": "2026-10-15T13:10:00"
+      "updated_at": "2026-10-15T13:10:00",
+      "blocker_note": "阻塞: URLError被墙, 需代理; IG帖非外链渠道"
     },
     {
       "id": "AFF-CMP-PAGES-20261016",
@@ -2855,20 +2895,6 @@
       "updated_at": "2026-10-16T21:30:00"
     },
     {
-      "id": "P1-PERF-COMPARE-20261016",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "架构师"
-      ],
-      "source": "commander_diagnose_20261016",
-      "task": "页面性能优化（证据：走代理实测 /compare 4.2s、/blog/openai_astra_review 5.7s、首页2.8s，全部超2秒LCP红线；/compare是GSC曝光第一大页面272次曝光）。动作：1) 对/compare和openai_astra_review跑Lighthouse；2) 图片懒加载+压缩、首屏JS裁剪、字体子集化；3) 目标LCP<2.5s。验收：Lighthouse Performance≥80。",
-      "created_at": "2026-10-16T22:10:00",
-      "updated_at": "2026-10-16T22:10:00",
-      "completed_at": "2026-10-16T23:37:08",
-      "completion_note": "/compare首屏优化完成：RadarChart/MultiRadarChart改dynamicImport(ssr:false)于4个页面+tools-index数据改客户端fetch(public/data/tools-index.json)；首屏传输1803KB->879KB(-51%)，642KB共享chunk从首屏移除；tsc+build过；commit c183beb/97e9af0/d4b48e5已push"
-    },
-    {
       "id": "P1-CONTENT-REAL-KW-20261016",
       "priority": "P1",
       "status": "pending",
@@ -2879,21 +2905,6 @@
       "task": "内容转向真实搜索词（证据：唯一有真实点击的博客是 best-ai-voice-changers-2026（2次点击/68曝光/pos16.5）+ openai_astra_review（1次/160曝光/pos10.8），其余全部0点击）。动作：1) 用OpenSEO research_keywords拉best ai tools相关真实词（volume≥400/KD≤35）；2) 优先扩写 best-ai-voice-changers 同主题系列（类似词：ai voice changer free、ai voice changer for gaming等）提升排名进前10；3) 产出2篇新选题。验收：新增2篇含真实搜索量的文章草稿。",
       "created_at": "2026-10-16T22:10:00",
       "updated_at": "2026-10-16T22:10:00"
-    },
-    {
-      "id": "ux_p1_ttfb_recovered_but_total_timeout_2026-10-16_17h",
-      "title": "P1: TTFB恢复正常但总时间仍15s超时——页面内容不完整，疑似资源加载阻塞",
-      "description": "10月16日17:00巡检：模式发生变化。TTFB全部降到1-2s正常区间（首页1.85s/Blog 1.12s/404 1.18s//ranking/ 1.18s），但所有页面总时间仍15s超时，且返回内容不完整：首页仅4.8KB（正常465KB）、Blog 63KB（正常260KB）、404 5KB（正常102KB）、/ranking/ 267KB（接近正常）。404页面从连续24h+完全超时中恢复。新模式：后端响应快了，但HTML骨架返回后资源加载/渲染被截断，疑似JS/CSS资源阻塞或流式渲染中断。建议架构师检查资源加载链路。",
-      "priority": "P1",
-      "assigned_to": [
-        "架构师"
-      ],
-      "status": "completed",
-      "source": "ux_audit_oct16_17h",
-      "created_at": "2026-10-16",
-      "evidence": "homepage TTFB=1.85s/15s/4.8KB, blog TTFB=1.12s/15s/63KB, 404 TTFB=1.18s/15s/5KB, /ranking/ TTFB=1.18s/15s/267KB",
-      "completed_at": "2026-10-16T23:37:08",
-      "completion_note": "服务器端web_fetch验证/compare/完整渲染（QuickAnswer/Top10表格/FAQ/选择器全在），判定疑误报（UX本机网络不可达模式，同r23-r25连续多轮）"
     },
     {
       "id": "P1-QC-VERIFY-6ARTICLES-20261016",
@@ -2918,6 +2929,34 @@
       "task": "待办负载分流协调（window2累计75条/P0 27条、创作家62条/P0 23条均超10条P0红线）。动作：1) window2把10条P2外链机会类待办移交给window4/分析师代为归档整理（只整理不执行外链动作）；2) 创作家把5条P2工具列表类内容移交给window5/打磨师（同批处理）；3) 移交后双方在window_logs记录交接清单。验收：交接完成后window2、创作家各自P0<10。",
       "created_at": "2026-10-16T22:20:00",
       "updated_at": "2026-10-16T22:20:00"
+    },
+    {
+      "id": "SEO-20261017-004",
+      "task": "主打唯一有点击词'best voice changer 2026'（pos 4，GSC唯一产生点击）：优化/blog/best-ai-voice-changers-2026页面标题/首段答案/FAQ+加2条相关外链（Reddit r/voicemod类讨论+工具站联盟），目标2周内从pos 4升到pos 1-2拿自然流量",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "gsc_analysis_2026-10-17",
+      "data_verified": true,
+      "created_at": "2026-10-17T01:00:00"
+    },
+    {
+      "task": "邮件提名inpulza: 发hello@inpulza.com, 第三人称客观介绍aitoolcrux(独立AI工具评测/对比站)请求收录进 https://inpulza.com/resources/best-ai-tools-2026 清单, 附官网URL与一句话简介, 不硬推",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "sop0100_eval_2026-10-17",
+      "status": "pending",
+      "id": "TODO-MISSINGID-25179-20261017"
+    },
+    {
+      "task": "邮件提名contentforce: 发team@contentforce.ai, 客观说明aitoolcrux作为AI工具实测对比资源, 请求列入best-ai-tools清单, 附https://www.aitoolcrux.com",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "source": "sop0100_eval_2026-10-17",
+      "status": "pending",
+      "id": "TODO-MISSINGID-46945-20261017"
     },
     {
       "id": "GROWTH-DIR-V5-2026-10-11",
@@ -3061,7 +3100,12 @@
       "id": "GROWTH-R16-01-20261016",
       "status": "pending",
       "created_at": "2026-10-16T15:32:00",
-      "updated_at": "2026-10-16T15:32:00"
+      "updated_at": "2026-10-16T15:32:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, 内容博客含submit引导; 需guest pitch, 非免登收录, 留作客座线索",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R16: 评估并行动 Best AI Tools 2026: Complete List — https://blog.contentforce.ai/best-ai-tools/",
@@ -3073,7 +3117,12 @@
       "id": "GROWTH-R16-02-20261016",
       "status": "pending",
       "created_at": "2026-10-16T15:32:00",
-      "updated_at": "2026-10-16T15:32:00"
+      "updated_at": "2026-10-16T15:32:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, 联系team@contentforce.ai; 下一步=邮件提名(已转新待办)",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R16: 评估并行动 Best Free AI Directories List (450+) | Submit Your AI Tool — https://freeaidirectories.com/",
@@ -3085,7 +3134,12 @@
       "id": "GROWTH-R16-03-20261016",
       "status": "pending",
       "created_at": "2026-10-16T15:32:00",
-      "updated_at": "2026-10-16T15:32:00"
+      "updated_at": "2026-10-16T15:32:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, 329KB纯目录合集清单, 本站无直接提交表单; 价值=从中筛免费子目录(R16-03与R18重复已去重)",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R16: 评估并行动 I built a free AI tools directory where anyone can submit .. — https://www.reddit.com/r/SideProject/comments/1rwbzs5/i_built_a_free_ai_tools_directory_where_anyone/",
@@ -3097,7 +3151,8 @@
       "id": "GROWTH-R16-04-20261016",
       "status": "pending",
       "created_at": "2026-10-16T15:32:00",
-      "updated_at": "2026-10-16T15:32:00"
+      "updated_at": "2026-10-16T15:32:00",
+      "blocker_note": "阻塞: URLError被墙+未登录, 需代理且Reddit登录态"
     },
     {
       "task": "R16: 评估并行动 Where to submit your AI tool — measured, not copy-pasted — https://www.stork.ai/where-to-submit-your-ai-tool",
@@ -3109,7 +3164,8 @@
       "id": "GROWTH-R16-05-20261016",
       "status": "pending",
       "created_at": "2026-10-16T15:32:00",
-      "updated_at": "2026-10-16T15:32:00"
+      "updated_at": "2026-10-16T15:32:00",
+      "blocker_note": "阻塞: HTTP 403 Cloudflare反爬, 需浏览器(CDP未监听); R16-05与R18重复去重"
     },
     {
       "task": "R17: 评估并行动 2026 AI Tool Tier List: Must Use, Recommended, and Avoid — https://www.linkedin.com/posts/aiforseo_which-ai-tools-are-worth-your-time-in-2026-activity-7467772043040792578-e6YO",
@@ -3121,7 +3177,12 @@
       "id": "GROWTH-R17-01-20261016",
       "status": "pending",
       "created_at": "2026-10-16T21:30:00",
-      "updated_at": "2026-10-16T21:30:00"
+      "updated_at": "2026-10-16T21:30:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估关闭: HTTP 451登录/法律墙, 纯HTTP不可达, 需LinkedIn浏览器账号互动, 本HTTP分支关闭",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R17: 评估并行动 AI Hiring Tools Can Yield Racial Bias and Systemic Rejection — https://www.linkedin.com/safety/go/?url=https%3A%2F%2Fhai%2Estanford%2Eedu%2Fnews%2Fai-hiring-tools-can-yield-racial-bias-and-systemic-rejection&urlhash=VJk1&mt=9MzYkfhQpCU128kxZhy0pRxhPbsgDcMDqNhH0Cm2Hpta3GseIiGqrN7yd7mD0mb3BvJc6P_Xw-sOX5KzRL4OpyLqbD1XlqmGydjBQXukyk4t3kxAjzCTOTmXqjqdvYfNt5uLHdMkrmRaD-kM38fqKdpDI3AZCdR-&isSdui=true",
@@ -3133,7 +3194,12 @@
       "id": "GROWTH-R17-02-20261016",
       "status": "pending",
       "created_at": "2026-10-16T21:30:00",
-      "updated_at": "2026-10-16T21:30:00"
+      "updated_at": "2026-10-16T21:30:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估关闭: 该链为LinkedIn安全跳转至stanford文章, 非目标外链, 误收录, 关闭",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R17: 评估并行动 Top 50 AI Tools for Productivity and Automation — https://www.linkedin.com/posts/rushika-rai-a58345254_if-you-want-to-stay-ahead-in-2026-you-need-activity-7421625294735941632-iCH6",
@@ -3145,7 +3211,12 @@
       "id": "GROWTH-R17-03-20261016",
       "status": "pending",
       "created_at": "2026-10-16T21:30:00",
-      "updated_at": "2026-10-16T21:30:00"
+      "updated_at": "2026-10-16T21:30:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估关闭: HTTP 451登录墙, 纯HTTP不可达, 需LinkedIn浏览器账号, 关闭",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R17: 评估并行动 Ranking 29 AI Tools: Which Ones to Use in 2026 — https://www.linkedin.com/posts/aniksingal_most-people-are-paying-for-ai-tools-they-activity-7500520192079417344-jq3e",
@@ -3157,7 +3228,12 @@
       "id": "GROWTH-R17-04-20261016",
       "status": "pending",
       "created_at": "2026-10-16T21:30:00",
-      "updated_at": "2026-10-16T21:30:00"
+      "updated_at": "2026-10-16T21:30:00",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估关闭: HTTP 451登录墙, 纯HTTP不可达, 需LinkedIn浏览器账号, 关闭",
+      "probe": "2026-10-17 SOP0100 直连",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R17: 评估并行动 AI Industry Advertising — https://business.quora.com/industries/artificial-intelligence",
@@ -3169,114 +3245,109 @@
       "id": "GROWTH-R17-05-20261016",
       "status": "pending",
       "created_at": "2026-10-16T21:30:00",
-      "updated_at": "2026-10-16T21:30:00"
-    },
-    {
-      "id": "GEO-SLUG-NORM-R27",
-      "task": "GEO技术修复-分类slug规范化部署",
-      "title": "blog category slug 单复数规范化部署（comparison→comparisons、guide→guides，6篇）+ _redirects 301；本地已修复且 tsc+build 门控通过、产物验证通过；待 push 部署+线上验证（github.com 网络阻塞）",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "geo_audit_2026-10-17",
-      "created_at": "2026-10-17T00:15:00",
-      "completion_note": "分类slug规范化已上线：push 506cb48 → Deploy to Cloudflare Pages success；线上 /blog/category/comparisons/ 与 /blog/category/guides/ 200（11/4篇文章），旧 URL /blog/category/comparison 与 /guide 301 跟随成功；sitemap 去重（out 无单数分类）",
-      "completed_at": "2026-10-17T00:30:00"
-    },
-    {
-      "id": "CF-20261017-001",
-      "task": "已确认2026-10-03 893 sessions为headless采集器扫站（CF当日请求15428、GA4仅记893且engaged仅7.4%=执行JS的机器流量，真人engaged应40%+；CF侧每日8k-23k请求只有~100能进GA4）。动作：开启Cloudflare Logpush（HTTP请求日志，免费）或换Zone Analytics全权限token，拿到UA/路径明细，点名具体爬虫(GPTBot/CCBot/Amazonbot等)，写入iteration_center/并更新state.json的bot_traffic_pct",
-      "assigned_to": [
-        "架构师"
-      ],
-      "priority": "P0",
-      "status": "completed",
-      "source": "commander_cf_probe_2026-10-17",
-      "data_verified": true,
-      "cf_evidence": {
-        "2026-10-03_requests": 15428,
-        "2026-10-03_ga4_sessions": 893,
-        "engaged_pct": 7.4,
-        "daily_requests_range": "8000-23000"
-      },
-      "created_at": "2026-10-17T01:00:00",
-      "related_todo": "GA4-20261010-000",
-      "completed_at": "2026-10-17T02:00:00",
-      "completion_note": "完成可落地部分：CF GraphQL httpRequests1dGroups 拉取 10/3-10/10 每日请求/页面/唯一数，bot_traffic_pct=92.6（GA4 engaged 反向；CF 非页面请求占比 70.5%），分析报告 iteration_center/cf_bot_analysis_2026-10-17.md。UA点名部分阻塞：现有 CF token 无 httpRequestsAdaptiveGroups（UA/路径维度）与 Logpush 权限（403）→ 需指挥官提供 Zone Analytics 全权限 token 或 dashboard 开启 Logpush（见报告行动项）"
-    },
-    {
-      "id": "CF-20261017-002",
-      "task": "robots.txt限制已知AI爬虫(GPTBot/CCBot/Amazonbot/ClaudeBot/PerplexityBot) + Cloudflare开启Bot Fight Mode，减少每日8k-23k无效爬虫请求、省CF配额；执行后对比7天请求量变化并记录到state.json",
-      "assigned_to": [
-        "架构师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "commander_cf_probe_2026-10-17",
-      "data_verified": true,
-      "created_at": "2026-10-17T01:00:00",
-      "completed_at": "2026-10-17T02:00:00",
-      "completion_note": "app/robots.ts 新增 8 个高消耗采集爬虫限制（CCBot/PetalBot/SeznamBot/YisouSpider/facebookexternalhit/ia_archiver/DotBot/MegaIndex.ru/Barkrowler），保留全部 AI 搜索 bot 允许（GEO 不倒退）；Bot Fight Mode 需 CF dashboard 手动开启（API token 无权限），已在日志记录行动项"
-    },
-    {
-      "id": "GA4-20261017-003",
-      "task": "修复GA4 '(not set)'落地页缺失（28天437 sessions无有效landing，占18%）：检查埋点是否缺page_location参数、是否有AMP/跳转页/iframe导致g.js没读到路径；修复后在GA4 Realtime验证落地页100%可识别",
-      "assigned_to": [
-        "架构师"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "ga4_analysis_2026-10-17",
-      "data_verified": true,
-      "created_at": "2026-10-17T01:00:00",
-      "related_todo": "GA4-20261010-001",
-      "completed_at": "2026-10-17T02:00:00",
-      "completion_note": "根因：layout gtag config send_page_view:false + GA4PageTracker 首屏 useEffect 早于 gtag.js(afterInteractive) 就绪 → 首屏 page_view 丢失 → landing (not set)。修复：GA4PageTracker 首屏轮询等待 gtag 就绪（10×200ms）后发送 page_view（带 page_location/page_path/page_title/page_type）。tsc+build 通过"
-    },
-    {
-      "id": "SEO-20261017-004",
-      "task": "主打唯一有点击词'best voice changer 2026'（pos 4，GSC唯一产生点击）：优化/blog/best-ai-voice-changers-2026页面标题/首段答案/FAQ+加2条相关外链（Reddit r/voicemod类讨论+工具站联盟），目标2周内从pos 4升到pos 1-2拿自然流量",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "gsc_analysis_2026-10-17",
-      "data_verified": true,
-      "created_at": "2026-10-17T01:00:00"
+      "updated_at": "2026-10-16T21:30:00",
+      "blocker_note": "阻塞: URLError被墙, 需代理; Quora回答需账号"
     },
     {
       "task": "R18: 评估并行动 Best Free AI Directories List (450+) | Submit Your AI Tool — https://freeaidirectories.com/",
       "assigned_to": "拓荒者",
       "priority": "P2",
-      "source": "r18_2026-10-17"
+      "source": "r18_2026-10-17",
+      "status": "pending",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, 329KB纯目录合集清单, 本站无直接提交表单; 价值=从中筛免费子目录(R16-03与R18重复已去重)",
+      "probe": "2026-10-17 SOP0100 直连",
+      "id": "GROWTH-R18-01-20261017",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R18: 评估并行动 submitaitools/Free-AI-Directories: A curated collection ... — https://github.com/submitaitools/Free-AI-Directories",
       "assigned_to": "拓荒者",
       "priority": "P2",
-      "source": "r18_2026-10-17"
+      "source": "r18_2026-10-17",
+      "status": "pending",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, GitHub awesome合集; 下一步=提PR收录aitoolcrux(已转新待办)",
+      "probe": "2026-10-17 SOP0100 直连",
+      "id": "GROWTH-R18-02-20261017",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R18: 评估并行动 Where to submit your AI tool — measured, not copy-pasted — https://www.stork.ai/where-to-submit-your-ai-tool",
       "assigned_to": "拓荒者",
       "priority": "P2",
-      "source": "r18_2026-10-17"
+      "source": "r18_2026-10-17",
+      "blocker_note": "阻塞: HTTP 403 Cloudflare反爬, 需浏览器(CDP未监听); R16-05与R18重复去重",
+      "id": "TODO-MISSINGID-8388-20261017",
+      "status": "pending",
+      "ghost_fixed": true
     },
     {
       "task": "R18: 评估并行动 Submit Your AI Tool — Free AI Tool Directory Listing — https://toolscout.ai/submit",
       "assigned_to": "拓荒者",
       "priority": "P2",
-      "source": "r18_2026-10-17"
+      "source": "r18_2026-10-17",
+      "status": "pending",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活但为JS渲染表单, 纯HTTP读不到字段; 联系contact@toolscout.ai; 需浏览器或邮件提交(已转新待办)",
+      "probe": "2026-10-17 SOP0100 直连",
+      "id": "GROWTH-R18-03-20261017",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
     },
     {
       "task": "R18: 评估并行动 213 AI Tool Directories to Submit To (2026) — https://ideaproof.io/launch-directories/type/ai-tools",
       "assigned_to": "拓荒者",
       "priority": "P2",
-      "source": "r18_2026-10-17"
+      "source": "r18_2026-10-17",
+      "status": "pending",
+      "completed_at": "2026-10-17 05:10:29 CST",
+      "evaluation": "评估完成: 200存活, 213个AI目录清单页, 无直接表单; 价值=批量筛免费可提交子目录",
+      "probe": "2026-10-17 SOP0100 直连",
+      "id": "GROWTH-R18-04-20261017",
+      "need_rework": true,
+      "reopen_reason": "无tracking记录/无completion_note，无法验证真实提交；需补提交证据或记录\"不适合\"原因"
+    },
+    {
+      "task": "GitHub PR: 向 github.com/submitaitools/Free-AI-Directories 提PR, 在免费AI目录清单收录aitoolcrux.com(需本地git+代理)",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "sop0100_eval_2026-10-17",
+      "status": "pending",
+      "id": "TODO-MISSINGID-2806-20261017"
+    },
+    {
+      "task": "toolscout提交: 浏览器打开toolscout.ai/submit填JS表单, 或邮件contact@toolscout.ai提交aitoolcrux(CDP恢复后执行)",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "sop0100_eval_2026-10-17",
+      "status": "pending",
+      "id": "TODO-MISSINGID-63091-20261017"
+    },
+    {
+      "id": "P0-COMPARE-RANK-DROP-20261017",
+      "task": "/compare 排名持续下滑：10天内从pos33.8掉到38.8、曝光272→212（分析师10-09实时API确认），非波动是被算法降权。需分析根因（内容重复/内链不足/与功能页争词）并制定回升方案：标题/描述优化+内链建设+明确与/ai-tools等页关键词分工",
+      "assigned_to": [
+        "架构师",
+        "分析师"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "analyst_live_insight_2026-10-09",
+      "created_at": "2026-10-17T06:50:00"
+    },
+    {
+      "id": "P1-CF-DASHBOARD-ACTIONS-20261017",
+      "task": "用户侧CF操作（架构师r28留痕）：①Cloudflare Dashboard Purge Cache（线上robots.txt无参版仍是旧缓存，含/og/ Disallow的新版已部署但边缘未更新）②Dashboard开启Bot Fight Mode（API无权限）③可选：Dashboard Analytics手动导出UA Top列表补爬虫点名",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "cf_bot_analysis_2026-10-17",
+      "created_at": "2026-10-17T06:50:00"
     }
   ],
   "milestones": [
@@ -10537,6 +10608,120 @@
       "completed_at": "2026-10-16T16:01:48",
       "completion_note": "误报：服务器端 web_fetch 首页200完整(533+工具/Quick Answer/FAQ全渲染)、/blog/ 200完整(154篇+Featured)均正常，无\"轮流宕机\"；UX窗口本机网络不可达误判（同r23 ux_p0 判定）；commit 6c3d9d5",
       "archived_at": "2026-10-16T21:30:00"
+    },
+    {
+      "id": "P0-TOOL-FIX-001",
+      "task": "工具链大修复已完成：16/17工具真实可用。各窗口必须真正调用工具执行，禁止回退AI硬写。每次执行前先import验证工具可用。",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P0",
+      "status": "archived",
+      "source": "commander_tool_audit_2026-10-09",
+      "created_at": "2026-10-09",
+      "completed_at": "2026-10-16T23:37:08",
+      "completion_note": "工具链11/11真实import验证通过：本轮实测环境仅3/11可用，pip补装8个缺失工具(opengtm/trafilatura/courlan/textstat/nltk/rank-bm25/chromadb/openserp)后重验11/11全OK；无代码改动",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
+    },
+    {
+      "id": "P0-URL-MD-SUFFIX-20261016",
+      "priority": "P0",
+      "status": "archived",
+      "assigned_to": [
+        "架构师"
+      ],
+      "source": "commander_diagnose_20261016",
+      "task": "处理带-md后缀的垃圾URL（证据：GSC page维度出现大量 /blog/article-api-20260903-171438-...-md 这类URL，30+条各有4-38曝光但0点击，sitemap.xml共823条URL中0条含-md后缀=这些URL不在sitemap但仍被索引）。动作：1) 全站扫描找出所有 article-api-*-md 实际存在的页面；2) 确认这些页面是历史markdown文件名误作URL生成，内容与正常博客重复的删除+301到正常URL，无价值内容的直接404；3) 提交后重新核对GSC索引。验收：GSC中-md URL曝光数归零。",
+      "created_at": "2026-10-16T22:10:00",
+      "updated_at": "2026-10-16T22:10:00",
+      "completed_at": "2026-10-16T23:37:08",
+      "completion_note": "已复现确认-md垃圾URL不在当前站点：out/无-md产物、sitemap/_redirects/posts.json均无、线上web_fetch返回404死链；垃圾URL已清除，GSC曝光归零待Google重新爬取自然移除，无代码可改",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
+    },
+    {
+      "id": "P1-PERF-COMPARE-20261016",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "架构师"
+      ],
+      "source": "commander_diagnose_20261016",
+      "task": "页面性能优化（证据：走代理实测 /compare 4.2s、/blog/openai_astra_review 5.7s、首页2.8s，全部超2秒LCP红线；/compare是GSC曝光第一大页面272次曝光）。动作：1) 对/compare和openai_astra_review跑Lighthouse；2) 图片懒加载+压缩、首屏JS裁剪、字体子集化；3) 目标LCP<2.5s。验收：Lighthouse Performance≥80。",
+      "created_at": "2026-10-16T22:10:00",
+      "updated_at": "2026-10-16T22:10:00",
+      "completed_at": "2026-10-16T23:37:08",
+      "completion_note": "/compare首屏优化完成：RadarChart/MultiRadarChart改dynamicImport(ssr:false)于4个页面+tools-index数据改客户端fetch(public/data/tools-index.json)；首屏传输1803KB->879KB(-51%)，642KB共享chunk从首屏移除；tsc+build过；commit c183beb/97e9af0/d4b48e5已push",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
+    },
+    {
+      "id": "ux_p1_ttfb_recovered_but_total_timeout_2026-10-16_17h",
+      "title": "P1: TTFB恢复正常但总时间仍15s超时——页面内容不完整，疑似资源加载阻塞",
+      "description": "10月16日17:00巡检：模式发生变化。TTFB全部降到1-2s正常区间（首页1.85s/Blog 1.12s/404 1.18s//ranking/ 1.18s），但所有页面总时间仍15s超时，且返回内容不完整：首页仅4.8KB（正常465KB）、Blog 63KB（正常260KB）、404 5KB（正常102KB）、/ranking/ 267KB（接近正常）。404页面从连续24h+完全超时中恢复。新模式：后端响应快了，但HTML骨架返回后资源加载/渲染被截断，疑似JS/CSS资源阻塞或流式渲染中断。建议架构师检查资源加载链路。",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "archived",
+      "source": "ux_audit_oct16_17h",
+      "created_at": "2026-10-16",
+      "evidence": "homepage TTFB=1.85s/15s/4.8KB, blog TTFB=1.12s/15s/63KB, 404 TTFB=1.18s/15s/5KB, /ranking/ TTFB=1.18s/15s/267KB",
+      "completed_at": "2026-10-16T23:37:08",
+      "completion_note": "服务器端web_fetch验证/compare/完整渲染（QuickAnswer/Top10表格/FAQ/选择器全在），判定疑误报（UX本机网络不可达模式，同r23-r25连续多轮）",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
+    },
+    {
+      "id": "GEO-SLUG-NORM-R27",
+      "task": "GEO技术修复-分类slug规范化部署",
+      "title": "blog category slug 单复数规范化部署（comparison→comparisons、guide→guides，6篇）+ _redirects 301；本地已修复且 tsc+build 门控通过、产物验证通过；待 push 部署+线上验证（github.com 网络阻塞）",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-17",
+      "created_at": "2026-10-17T00:15:00",
+      "completion_note": "分类slug规范化已上线：push 506cb48 → Deploy to Cloudflare Pages success；线上 /blog/category/comparisons/ 与 /blog/category/guides/ 200（11/4篇文章），旧 URL /blog/category/comparison 与 /guide 301 跟随成功；sitemap 去重（out 无单数分类）",
+      "completed_at": "2026-10-17T00:30:00",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
+    },
+    {
+      "id": "CF-20261017-002",
+      "task": "robots.txt限制已知AI爬虫(GPTBot/CCBot/Amazonbot/ClaudeBot/PerplexityBot) + Cloudflare开启Bot Fight Mode，减少每日8k-23k无效爬虫请求、省CF配额；执行后对比7天请求量变化并记录到state.json",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "commander_cf_probe_2026-10-17",
+      "data_verified": true,
+      "created_at": "2026-10-17T01:00:00",
+      "completed_at": "2026-10-17T02:00:00",
+      "completion_note": "app/robots.ts 新增 8 个高消耗采集爬虫限制（CCBot/PetalBot/SeznamBot/YisouSpider/facebookexternalhit/ia_archiver/DotBot/MegaIndex.ru/Barkrowler），保留全部 AI 搜索 bot 允许（GEO 不倒退）；Bot Fight Mode 需 CF dashboard 手动开启（API token 无权限），已在日志记录行动项",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
+    },
+    {
+      "id": "GA4-20261017-003",
+      "task": "修复GA4 '(not set)'落地页缺失（28天437 sessions无有效landing，占18%）：检查埋点是否缺page_location参数、是否有AMP/跳转页/iframe导致g.js没读到路径；修复后在GA4 Realtime验证落地页100%可识别",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ga4_analysis_2026-10-17",
+      "data_verified": true,
+      "created_at": "2026-10-17T01:00:00",
+      "related_todo": "GA4-20261010-001",
+      "completed_at": "2026-10-17T02:00:00",
+      "completion_note": "根因：layout gtag config send_page_view:false + GA4PageTracker 首屏 useEffect 早于 gtag.js(afterInteractive) 就绪 → 首屏 page_view 丢失 → landing (not set)。修复：GA4PageTracker 首屏轮询等待 gtag 就绪（10×200ms）后发送 page_view（带 page_location/page_path/page_title/page_type）。tsc+build 通过",
+      "archived_at": "2026-10-17T06:40:00",
+      "verified": "architect_log_r24-r28_evidence"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -10868,9 +11053,27 @@
       "git": "b43f7a9 pushed",
       "online_200": "all 3 online 200",
       "deploy": "success"
+    },
+    {
+      "batch": "batch29",
+      "date": "2026-10-17",
+      "window": "window2",
+      "action": "3 new articles from keyword opportunities (P2: stock-trading, real-estate, prompt-generators); screenshots captured+verified one-by-one (trade-ideas/composer for stock; housecanary/structurely for real-estate; jasper/copy.ai for prompts; trendspider+flowgpt+listingai+promptbase blocked by Cloudflare, replaced)",
+      "slugs": [
+        "best-ai-stock-trading-tools-2026",
+        "best-ai-real-estate-tools-2026",
+        "best-ai-prompt-generators-2026"
+      ],
+      "zens_ink": "100/100/100",
+      "llmevalkit": "100/100/100",
+      "screenshots": "2/2/2, all verified one-by-one",
+      "internal_links_ok": true,
+      "git": "pending push",
+      "online_200": "pending",
+      "deploy": "pending"
     }
   ],
-  "last_commander_review": "2026-10-09",
+  "last_commander_review": "2026-10-17T06:40:00",
   "commander_health_score": 60,
   "last_analytics_run": "2026-10-09 23:00 (LIVE GSC+GA4 via proxy, 28d window)",
   "ga4_api_status": "LIVE OK. property=properties/556518278. 1603 sessions / 127 engaged / ER=7.9%.",
@@ -10983,7 +11186,7 @@
   ],
   "last_tool_audit": "2026-10-09",
   "tool_audit_result": "18 tools available, 1 unavailable (Crawl4AI, trafilatura替代)",
-  "todo_completion_rate": "14.1%",
+  "todo_completion_rate": "待清理后计算（见调度输出）",
   "last_schedule": "2026-10-09",
   "live_gsc_pull_script": "iteration_center/_pull_gsc_via_proxy.py",
   "ga4_live_pull_script": "iteration_center/_pull_ga4_via_proxy.py",

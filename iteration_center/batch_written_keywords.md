@@ -109,3 +109,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - best-ai-translators-2026 | Best AI Translators 2026: Document & Website Translation Tools | kw: best ai translator (P1) | 100 | 2128 | 3 screenshots | NEW
 - best-ai-hr-tools-2026 | Best AI HR Tools 2026: Recruiting & Onboarding Software | kw: best ai hr tools (P1) | 100 | 2056 | 2 screenshots | NEW
 - best-ai-ecommerce-tools-2026 | Best AI E-commerce Tools 2026: From Store Setup to Support | kw: best ai ecommerce tools (P2) | 100 | 2008 | 2 screenshots | NEW
+
+## batch29 (2026-10-17) - 3 new articles (keyword opportunities P2 x3)
+- best-ai-stock-trading-tools-2026 | Best AI Stock Trading Bots 2026: Platforms, Fees & Performance | kw: best ai stock trading tools 2026 (P2) | 100 | 2414 | 2 screenshots | NEW
+- best-ai-real-estate-tools-2026 | Best AI Real Estate Tools 2026: Listing, Lead Gen & Valuation | kw: best ai real estate tools 2026 (P2) | 100 | 2171 | 2 screenshots | NEW
+- best-ai-prompt-generators-2026 | Best AI Prompt Generators 2026: Free & Paid Compared | kw: best ai prompt generator 2026 (P2) | 100 | 2105 | 2 screenshots | NEW
