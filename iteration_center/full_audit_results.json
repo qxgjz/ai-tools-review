@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-15T22:10:05.406462",
+  "audit_time": "2026-10-16T22:01:35.817991",
   "mode": "quick",
   "content": {
-    "total_articles": 167,
-    "average_score": 87.75508982035937,
+    "total_articles": 173,
+    "average_score": 86.95317919075153,
     "perfect_count": 93,
-    "below_85_count": 58,
+    "below_85_count": 63,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -746,10 +746,10 @@
         "slug": "chatgpt-deep-review-2026",
         "title": "ChatGPT Review 2026: 30 Days, 500+ Queries — Is It Still...",
         "quality_score": 100.0,
-        "word_count": 7179,
-        "flesch": 44.9,
-        "internal_links": 8,
-        "external_links": 1,
+        "word_count": 7296,
+        "flesch": 48.0,
+        "internal_links": 10,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
@@ -779,10 +779,10 @@
         "slug": "claude-review-2026",
         "title": "Claude Review 2026: Best AI Assistant for | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 12567,
-        "flesch": 42.6,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 12668,
+        "flesch": 42.4,
+        "internal_links": 17,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
@@ -801,11 +801,11 @@
         "slug": "cursor-review-2026",
         "title": "Cursor Review 2026: Best AI Code Editor? | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 13230,
-        "flesch": 45.4,
-        "internal_links": 13,
-        "external_links": 1,
-        "images": 3,
+        "word_count": 13330,
+        "flesch": 44.3,
+        "internal_links": 17,
+        "external_links": 3,
+        "images": 2,
         "failed_checks": []
       },
       {
@@ -913,10 +913,10 @@
         "slug": "copy-ai-review-2026",
         "title": "Copy.ai Review 2026: Best Free AI Writing Tool | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 13370,
-        "flesch": 47.3,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 13471,
+        "flesch": 47.4,
+        "internal_links": 17,
+        "external_links": 3,
         "images": 1,
         "failed_checks": []
       },
@@ -1239,16 +1239,13 @@
       {
         "slug": "chatgpt-alternatives-2026",
         "title": "7 Best ChatGPT Alternatives in 2026",
-        "quality_score": 72.2,
-        "word_count": 1960,
-        "flesch": 60.5,
-        "internal_links": 5,
-        "external_links": 0,
+        "quality_score": 88.9,
+        "word_count": 2056,
+        "flesch": 59.9,
+        "internal_links": 7,
+        "external_links": 3,
         "images": 0,
-        "failed_checks": [
-          "word_count_pass",
-          "external_links_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "runway-vs-pika-2026",
@@ -1430,15 +1427,14 @@
       {
         "slug": "canva-ai-alternatives-2026",
         "title": "Canva AI Alternatives 2026: 7 Tools That Work",
-        "quality_score": 74.4,
-        "word_count": 3946,
-        "flesch": 28.0,
-        "internal_links": 4,
-        "external_links": 0,
+        "quality_score": 80.0,
+        "word_count": 4047,
+        "flesch": 28.4,
+        "internal_links": 6,
+        "external_links": 3,
         "images": 0,
         "failed_checks": [
-          "readability_pass",
-          "external_links_pass"
+          "readability_pass"
         ]
       },
       {
@@ -2013,22 +2009,103 @@
           "first_para_pass",
           "internal_links_pass"
         ]
+      },
+      {
+        "slug": "best-ai-research-assistants-2026",
+        "title": "Best AI Research Assistants 2026: Literature & Report Tools",
+        "quality_score": 60.0,
+        "word_count": 2393,
+        "flesch": 30.1,
+        "internal_links": 4,
+        "external_links": 4,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-no-code-ai-tools-2026",
+        "title": "Best No-Code AI Tools 2026: Build Apps Without Coding",
+        "quality_score": 74.4,
+        "word_count": 2303,
+        "flesch": 48.3,
+        "internal_links": 4,
+        "external_links": 4,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-website-builders-2026",
+        "title": "Best AI Website Builders 2026: Fastest Way to Launch",
+        "quality_score": 74.4,
+        "word_count": 2237,
+        "flesch": 40.6,
+        "internal_links": 4,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-translators-2026",
+        "title": "\"Best AI Translators 2026: Document & Website Translation Tools\"",
+        "quality_score": 60.0,
+        "word_count": 2328,
+        "flesch": 46.8,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-hr-tools-2026",
+        "title": "\"Best AI HR Tools 2026: Recruiting & Onboarding Software\"",
+        "quality_score": 45.6,
+        "word_count": 2275,
+        "flesch": 37.8,
+        "internal_links": 4,
+        "external_links": 8,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-ecommerce-tools-2026",
+        "title": "\"Best AI E-commerce Tools 2026: From Store Setup to Support\"",
+        "quality_score": 51.1,
+        "word_count": 2237,
+        "flesch": 38.2,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
       }
     ]
   },
   "technical": {
     "pages_audited": 20,
-    "total_issues": 11,
+    "total_issues": 5,
     "by_severity": {
-      "notice": 10,
+      "notice": 4,
       "warning": 1
     },
     "by_type": {
-      "Heading skip": 10,
+      "Heading skip": 4,
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 10.2
+    "elapsed_seconds": 2.6
   },
   "geo": {
     "geo_score": 100,
@@ -2071,6 +2148,11 @@
       [
         "good",
         "AI crawler configured: OAI-SearchBot",
+        ""
+      ],
+      [
+        "good",
+        "AI crawler configured: CCBot",
         ""
       ],
       [

@@ -1,20 +1,20 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-15 22:10:05
+**Date:** 2026-10-16 22:01:35
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 167 |
-| Avg content score | 87.8/100 |
+| Articles | 173 |
+| Avg content score | 87.0/100 |
 | Perfect articles | 93 |
-| Articles below 85 | 58 |
+| Articles below 85 | 63 |
 | Pages audited | 20 |
-| Technical issues | 11 |
+| Technical issues | 5 |
 | Critical issues | 0 |
-| Audit duration | 10.2s |
+| Audit duration | 2.6s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -23,13 +23,17 @@
 |------|-------|-------|--------|-------|--------|
 | notion-ai-vs-salesforce-2026 | 40 | 560 | 34.7 | 2 | word_count_pass, first_para_pass, internal_links_pass |
 | notion-ai-vs-notion-ai-salesforce-2 | 46 | 545 | 33.6 | 2 | word_count_pass, internal_links_pass, readability_pass |
+| best-ai-hr-tools-2026 | 46 | 2275 | 37.8 | 4 | first_para_pass, readability_pass |
 | midjourney-v7-vs-dall-e-3-2026 | 49 | 483 | 45.4 | 2 | word_count_pass, first_para_pass, internal_links_pass |
+| best-ai-ecommerce-tools-2026 | 51 | 2237 | 38.2 | 4 | first_para_pass, readability_pass |
 | best-ai-text-to-speech-tools-2026 | 53 | 2344 | 38.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-avatar-generators-2026 | 53 | 2331 | 34.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-summarizer-tools-2026 | 57 | 2260 | 48.7 | 0 | first_para_pass, internal_links_pass |
 | best-ai-content-detectors-2026 | 57 | 2357 | 46.5 | 0 | first_para_pass, internal_links_pass |
 | best-ai-automation-tools-2026 | 57 | 2353 | 48.0 | 0 | first_para_pass, internal_links_pass |
 | best-ai-video-enhancers-2026 | 57 | 2246 | 45.9 | 0 | first_para_pass, internal_links_pass |
+| best-ai-research-assistants-2026 | 60 | 2393 | 30.1 | 4 | first_para_pass, readability_pass |
+| best-ai-translators-2026 | 60 | 2328 | 46.8 | 4 | first_para_pass |
 | best-ai-presentation-tools-2026 | 62 | 2152 | 50.1 | 0 | first_para_pass, internal_links_pass |
 | elevenlabs-v2-review-2026 | 62 | 2233 | 36.6 | 4 | first_para_pass, readability_pass |
 | runway-vs-pika-2026 | 62 | 2416 | 33.6 | 4 | first_para_pass, readability_pass |
@@ -62,20 +66,21 @@
 | claude-opus-4-vs-gpt-5-2026 | 71 | 2394 | 41.8 | 20 | first_para_pass |
 | best-ai-tools-for-beginners-2026 | 71 | 2261 | 57.3 | 5 | first_para_pass |
 | ai-tools-not-worth-the-money-2026 | 71 | 2545 | 49.1 | 8 | first_para_pass |
-| chatgpt-alternatives-2026 | 72 | 1960 | 60.5 | 5 | word_count_pass, external_links_pass |
 | elevenlabs-vs-playht-2026 | 72 | 1871 | 48.7 | 5 | word_count_pass, first_para_pass |
 | how-to-get-chatgpt-free-2026 | 72 | 1844 | 56.6 | 3 | word_count_pass |
 | midjourney-v7-vs-dall-e-3-ecommerce | 72 | 1960 | 44.6 | 3 | word_count_pass, external_links_pass |
 | notion-ai-vs-obsidian-ai | 72 | 1828 | 66.3 | 3 | word_count_pass, external_links_pass |
 | elevenlabs-vs-murf-2026 | 74 | 2579 | 36.0 | 3 | first_para_pass, readability_pass |
-| canva-ai-alternatives-2026 | 74 | 3946 | 28.0 | 4 | readability_pass, external_links_pass |
 | best-ai-voice-changers-content-crea | 74 | 1788 | 52.6 | 6 | word_count_pass, first_para_pass |
+| best-no-code-ai-tools-2026 | 74 | 2303 | 48.3 | 4 | first_para_pass |
+| best-ai-website-builders-2026 | 74 | 2237 | 40.6 | 4 | first_para_pass |
 | what-is-an-ai-agent | 77 | 2150 | 59.1 | 12 | first_para_pass |
 | claude-alternatives-2026 | 78 | 1452 | 60.3 | 3 | word_count_pass |
 | how-to-use-cursor-for-react-develop | 78 | 3256 | 47.1 | 4 | first_para_pass, external_links_pass |
 | gemini-vs-chatgpt-2026 | 80 | 2288 | 51.4 | 5 | first_para_pass |
 | otter-ai-alternatives | 80 | 2205 | 48.2 | 4 | first_para_pass |
 | midjourney-free-trial-2026 | 80 | 2718 | 54.9 | 0 | internal_links_pass |
+| canva-ai-alternatives-2026 | 80 | 4047 | 28.4 | 6 | readability_pass |
 | ai-agent-vs-chatbot-2026 | 82 | 2078 | 49.4 | 8 | — |
 | how-to-build-an-ai-agent | 82 | 2132 | 60.6 | 11 | — |
 | best-free-ai-tools-for-youtube-crea | 83 | 3325 | 51.4 | 5 | first_para_pass |
@@ -87,6 +92,7 @@
 | best-ai-grammar-checker | 86 | 2049 | 32.7 | 4 | readability_pass |
 | best-ai-coding-tools-beginners | 86 | 2111 | 53.6 | 4 | first_para_pass |
 | autochain-review-2026 | 89 | 2023 | 44.8 | 6 | — |
+| chatgpt-alternatives-2026 | 89 | 2056 | 59.9 | 7 | — |
 | canva-pro-free-for-students | 89 | 2020 | 64.5 | 5 | — |
 | best-ai-agents-2026 | 91 | 2474 | 57.0 | 10 | — |
 | best-paid-ai-tools-worth-buying-202 | 94 | 2333 | 68.3 | 7 | — |
@@ -149,12 +155,12 @@
 | cursor-ai-review-2026-best-ai-code- | 100 | 3238 | 51.2 | 7 | — |
 | claude_fable_51_review | 100 | 5254 | 52.7 | 10 | — |
 | openai_astra_review | 100 | 12602 | 43.9 | 18 | — |
-| chatgpt-deep-review-2026 | 100 | 7179 | 44.9 | 8 | — |
+| chatgpt-deep-review-2026 | 100 | 7296 | 48.0 | 10 | — |
 | ai-tools-selection-guide-2026 | 100 | 7092 | 45.9 | 12 | — |
 | chatgpt-vs-claude-2026-comparison | 100 | 2244 | 47.7 | 4 | — |
-| claude-review-2026 | 100 | 12567 | 42.6 | 13 | — |
+| claude-review-2026 | 100 | 12668 | 42.4 | 17 | — |
 | github-copilot-review-2026 | 100 | 13298 | 44.7 | 13 | — |
-| cursor-review-2026 | 100 | 13230 | 45.4 | 13 | — |
+| cursor-review-2026 | 100 | 13330 | 44.3 | 17 | — |
 | notion-ai-review-2026 | 100 | 15249 | 40.4 | 13 | — |
 | midjourney-review-2026 | 100 | 13380 | 41.2 | 13 | — |
 | runway-review-2026 | 100 | 13476 | 41.2 | 12 | — |
@@ -163,7 +169,7 @@
 | figma-ai-review-2026 | 100 | 13916 | 47.4 | 14 | — |
 | sora-review-2026 | 100 | 13479 | 43.2 | 13 | — |
 | stable-diffusion-review-2026 | 100 | 15289 | 48.9 | 13 | — |
-| copy-ai-review-2026 | 100 | 13370 | 47.3 | 13 | — |
+| copy-ai-review-2026 | 100 | 13471 | 47.4 | 17 | — |
 | otter-ai-review-2026 | 100 | 13652 | 48.4 | 13 | — |
 | synthesia-review-2026 | 100 | 13692 | 46.3 | 12 | — |
 | gemini-review-2026 | 100 | 11360 | 50.4 | 13 | — |
@@ -199,6 +205,7 @@
 - ✅ AI crawler configured: Google-Extended
 - ✅ AI crawler configured: Applebot
 - ✅ AI crawler configured: OAI-SearchBot
+- ✅ AI crawler configured: CCBot
 - ✅ llms.txt found (2764 bytes)
 - ✅ JSON-LD present: /
 - ✅ FAQPage schema: /
