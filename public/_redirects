@@ -122,3 +122,7 @@
 /blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md /blog/creatium-coach-review-2025/ 301
 /blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md /blog/creatium-coach-review-2025/ 301
 /blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md /blog/elevenlabs-review-2026/ 301
+
+# architect r27: blog category slug normalization (singular -> plural) 301
+/blog/category/comparison /blog/category/comparisons 301
+/blog/category/guide /blog/category/guides 301
