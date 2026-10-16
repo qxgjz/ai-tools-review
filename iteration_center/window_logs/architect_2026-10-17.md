@@ -49,3 +49,41 @@
 - 线上 robots.txt 仍缺 `/og/` Disallow（本地 app/robots.ts 含 /og/，线上为旧版——Cloudflare 边缘缓存，r21 起多轮留痕，本轮再次确认）。
 - 其余近义 categorySlug（ai-image-generation/ai-image-generators/ai-image、ai-writing-tools/ai-writing、ai-chatbots/ai-chat、ai-assistants、ai-development、seo-tools、sales、code/coding/writing、tools/agent/ai-tools 等）为语义级差异，合并风险高于收益（会改变既有索引页语义），本轮只做最低风险单复数合并，其余留待指挥官评估。
 - UX 窗口"网站故障"误报模式（其本机网络不可达）r23-r26 连续，建议指挥官侧改服务器端验证通道。
+
+---
+
+# r28（2026-10-17 追加小节）
+
+## 本轮执行摘要
+
+- 读 state.json（Python）：架构师 pending = 3（**P0 CF-20261017-001** + P1 CF-20261017-002 + P1 GA4-20261017-003），全部处理 → completed。
+- GEO 审计（追加要求）：`python real_geo_aeo_audit.py` → **9.17/10**（r27 为 4.3）。本机网络恢复后 crawler/llms 项成功：**AI Crawler Accessibility 10/10**（11 crawler 全 accessible）、**llms.txt 10/10**（llms.txt 2764B + llms-full.txt 579KB/9036 行）。无新内容类缺口。
+
+## P0 CF-20261017-001（爬虫识别/点名）— completed（部分阻塞）
+
+- **可落地部分完成**：CF GraphQL `httpRequests1dGroups` 拉取 10/3-10/10 每日（requests/pageViews/uniques）：10-03 15428/4557/3185、10-04 12688/2288/2615、10-05 16023/3187/2831、10-06 8991/1620/2262、10-07 8739/1903/2082、10-08 11739/4219/2971、10-09 19277/6566/4742、10-10 18296/5941/3988。
+- **bot_traffic_pct = 92.6** 写入 state.json（GA4 engaged 反向口径；CF 非页面请求占比 70.5%）；分析报告 `iteration_center/cf_bot_analysis_2026-10-17.md`。
+- **阻塞（如实记录）**：现有 CF token 无 `httpRequestsAdaptiveGroups`（UA/路径维度）且 Logpush API **403** → 无法点名具体爬虫。行动项：需指挥官提供 Zone Analytics 全权限 token 或 Dashboard 开启 Logpush / 手动导出 UA Top。
+
+## P1 CF-20261017-002（robots 限制采集爬虫）— completed
+
+- `app/robots.ts` 新增 **8 个高消耗采集爬虫 Disallow:/**：CCBot/PetalBot/SeznamBot/YisouSpider/facebookexternalhit/ia_archiver/DotBot/MegaIndex.ru/Barkrowler。
+- **保留全部 15+ AI 搜索 bot 允许**（GEO 不倒退）。Bot Fight Mode 需 CF Dashboard 手动开启（API 无权限），行动项记录在案。
+- 产物验证：out/robots.txt 含 CCBot/PetalBot 且 GPTBot 允许 ✅。
+
+## P1 GA4-20261017-003（landing page (not set) 修复）— completed
+
+- **根因**：layout gtag `send_page_view:false` + 已有 GA4PageTracker 首屏 useEffect 早于 gtag.js（afterInteractive）就绪且 `if (!window.gtag) return` 直接放弃 → 首屏 page_view 丢失 → landing (not set)（437 sessions，18%）。
+- **修复（不重复造轮子）**：项目已有 `components/analytics/GA4PageTracker.tsx` 且已挂载，未新建组件；增强首屏逻辑：**轮询等待 gtag 就绪（10×200ms=2s）后发送 page_view**（带 page_location/page_path/page_title/page_type）。后续路由变化直接发送。
+- 补充说明：(not set) 另一来源是 headless 机器流量不发 page_view（92.6%），由 CF-20261017-001/002 间接缓解。
+
+## 门控 / Git / 部署 / 线上验证
+
+- tsc TSC_EXIT=0（首版临时组件与已有 gtag 类型声明冲突，已删除改增强现有组件）；build BUILD_EXIT=0。
+- push：**53a0349..b588e96 main -> main**（含 merge 远端领先 5 commit，stash -u 处理未跟踪冲突）；Deploy to Cloudflare Pages **success**（head=b588e96）。
+- 线上验证：`robots.txt?v=r28` → **最新版全内容**（8 采集爬虫 Disallow:/ + 15+ AI bot 允许 + /og/ Disallow）；无参 `robots.txt` → **CF 边缘缓存旧版**（与 /og/ 多轮留痕同根因，需 Dashboard Purge Cache）。
+
+## state.json / 剩余
+
+- 3 条待办 → completed；新增 `bot_traffic_pct=92.6`（+note）；架构师 pending 剩余 **0**。
+- 行动项：① CF Dashboard Purge Cache（robots.txt 无参版）② 提供 CF 全权限 token 补 UA 点名 ③ CF Dashboard 开启 Bot Fight Mode ④ GA4 (not set) 下降需 24-48h 后复核。
