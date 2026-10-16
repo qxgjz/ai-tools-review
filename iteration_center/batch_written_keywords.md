@@ -99,3 +99,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - best-ai-content-detectors-2026 | Best AI Content Detectors 2026: 8 Tools Tested for Accuracy | kw: best ai content detector (P0) | 100 | 2295 | 3 screenshots | NEW
 - best-ai-automation-tools-2026 | Best AI Automation Tools 2026: Workflow Builders Compared | kw: best ai automation tools (P1) | 100 | 2246 | 2 screenshots | NEW
 - best-ai-video-enhancers-2026 | Best AI Video Enhancers 2026: Upscale & Improve Quality | kw: best ai video enhancer (P1) | 100 | 2141 | 2 screenshots | NEW
+
+## batch27 (2026-10-16) - 3 new articles (analyst keywords P1)
+- best-ai-research-assistants-2026 | Best AI Research Assistants 2026: Literature & Report Tools | kw: best ai research assistant (P1) | 100 | 2199 | 3 screenshots | NEW
+- best-no-code-ai-tools-2026 | Best No-Code AI Tools 2026: Build Apps Without Coding | kw: best ai no code tools (P1) | 100 | 2115 | 3 screenshots | NEW
+- best-ai-website-builders-2026 | Best AI Website Builders 2026: Fastest Way to Launch | kw: best ai website builder (P1) | 100 | 2032 | 2 screenshots | NEW
