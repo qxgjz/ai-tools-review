@@ -202,9 +202,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
                 {/* 品牌列 */}
                 <div className="col-span-2 md:col-span-1">
-                  <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-4">
+                  <div className="text-lg font-bold text-gray-900 dark:text-white mb-4">
                     AIToolCrux
-                  </h3>
+                  </div>
                   <p className="text-sm text-gray-500 dark:text-gray-400 mb-4">
                     Independent AI tool reviews and comparisons. Find the perfect AI tool for your
                     needs.
@@ -255,9 +255,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 {/* 主要Page列 */}
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
                     Explore
-                  </h4>
+                  </div>
                   <ul className="space-y-2">
                     <li>
                       <Link
@@ -304,9 +304,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 {/* PopularCategories列 */}
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
                     Categories
-                  </h4>
+                  </div>
                   <ul className="space-y-2">
                     <li>
                       <Link
@@ -361,9 +361,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 
                 {/* 资源列 */}
                 <div>
-                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
+                  <div className="text-sm font-semibold text-gray-900 dark:text-white uppercase tracking-wider mb-4">
                     Resources
-                  </h4>
+                  </div>
                   <ul className="space-y-2">
                     <li>
                       <Link

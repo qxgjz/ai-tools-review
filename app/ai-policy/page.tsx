@@ -245,7 +245,7 @@ export default function AIPolicyPage() {
             <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
               <Users className="w-5 h-5 text-blue-600 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">Human-Led Reviews</h4>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Human-Led Reviews</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Every review is based on real hands-on testing by our human editors.
                 </p>
@@ -255,7 +255,7 @@ export default function AIPolicyPage() {
             <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
               <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">Transparent Process</h4>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Transparent Process</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   We clearly disclose how AI is used in our content creation process.
                 </p>
@@ -265,9 +265,9 @@ export default function AIPolicyPage() {
             <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
               <Shield className="w-5 h-5 text-purple-600 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">
+                <h3 className="font-semibold text-gray-900 dark:text-white">
                   Editorial Independence
-                </h4>
+                </h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   Our evaluations are never influenced by affiliate relationships or sponsorships.
                 </p>
@@ -277,7 +277,7 @@ export default function AIPolicyPage() {
             <div className="flex items-start gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700">
               <RefreshCw className="w-5 h-5 text-pink-600 flex-shrink-0 mt-0.5" />
               <div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">Regular Updates</h4>
+                <h3 className="font-semibold text-gray-900 dark:text-white">Regular Updates</h3>
                 <p className="text-sm text-gray-600 dark:text-gray-400">
                   We continuously update our reviews to reflect the latest features and pricing.
                 </p>

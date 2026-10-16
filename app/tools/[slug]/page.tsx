@@ -34,11 +34,12 @@ import {
   SCORE_WEIGHTS,
   GRADE_DESCRIPTIONS,
 } from '@/lib/scoring';
-import { RadarChart } from '@/components/charts/RadarChart';
 import { ToolList } from '@/components/tools/ToolList';
 import Giscus from '@/components/comments/Giscus';
 import { BreadcrumbSchema, FAQSchema } from '@/components/seo/Schema';
 import { NewsletterSignup } from '@/components/monetization/NewsletterSignup';
+import dynamicImport from 'next/dynamic';
+const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { ToolScreenshot } from '@/components/content/ToolScreenshot';
 import { FAQSection } from '@/components/content/FAQSection';
@@ -656,7 +657,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <Check className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Best For</h4>
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">Best For</h3>
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm">
                   {tool.useCases?.[0] || 'Users seeking ' + tool.category + ' AI solutions'}
                 </p>
@@ -667,9 +668,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <Award className="w-4 h-4 text-emerald-600 dark:text-emerald-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
                   Overall Rating
-                </h4>
+                </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm">
                   {total.toFixed(1)}/10 ({grade} grade) - {GRADE_DESCRIPTIONS[grade]}
                 </p>
@@ -680,9 +681,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <Sparkles className="w-4 h-4 text-amber-600 dark:text-amber-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
                   Top Feature
-                </h4>
+                </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm">
                   {tool.keyFeatures?.[0] || tool.pros?.[0] || 'Comprehensive feature set'}
                 </p>
@@ -693,9 +694,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 <ShieldCheck className="w-4 h-4 text-teal-600 dark:text-teal-400" />
               </div>
               <div>
-                <h4 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
+                <h3 className="font-semibold text-gray-800 dark:text-gray-200 text-sm">
                   Ethics Score
-                </h4>
+                </h3>
                 <p className="text-zinc-600 dark:text-zinc-400 text-sm">
                   {tool.scores?.ethics || 'N/A'}/10 - Evaluated for data privacy and responsible AI
                   practices
