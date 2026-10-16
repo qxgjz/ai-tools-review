@@ -38,14 +38,14 @@ import { ToolList } from '@/components/tools/ToolList';
 import Giscus from '@/components/comments/Giscus';
 import { BreadcrumbSchema, FAQSchema } from '@/components/seo/Schema';
 import { NewsletterSignup } from '@/components/monetization/NewsletterSignup';
-import dynamicImport from 'next/dynamic';
-const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { ToolScreenshot } from '@/components/content/ToolScreenshot';
 import { FAQSection } from '@/components/content/FAQSection';
 import { AuthorBio } from '@/components/author/AuthorBio';
 import { FadeIn } from '@/components/animations';
 import { shouldSkipStaticGen } from '@/lib/static-gen';
+import dynamicImport from 'next/dynamic';
+const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
 
 const GRADE_STYLES: Record<Grade, string> = {
   S: 'bg-amber-700 text-white',
