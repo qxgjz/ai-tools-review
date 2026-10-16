@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-16T15:32:00",
+  "last_updated": "2026-10-16",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-16-R13",
@@ -3103,6 +3103,19 @@
       "status": "pending",
       "created_at": "2026-10-16T15:32:00",
       "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "id": "ux_p0_day8_still_broken_2026-10-16",
+      "title": "P0: 网站连续第8天故障——Blog TTFB 12.6s，404连续24h+完全超时",
+      "description": "10月16日巡检：网站仍在严重波动中。首页133KB/TTFB 4.75s/15s超时（不完整）；Blog 8KB/TTFB 12.64s/15s超时（几乎空响应，正常应260KB）；404 code=000完全超时（已连续24小时+不可用）；/ranking/ 277KB/TTFB 1.39s/15s超时（大小接近正常但总时间超时）。这已经是连续第8天了，404页面从10/15开始就一直完全超时。P0：架构师必须立即介入，不能再等了。",
+      "priority": "P0",
+      "assigned_to": "window1",
+      "status": "completed",
+      "source": "ux_audit_oct16",
+      "created_at": "2026-10-16",
+      "evidence": "homepage TTFB=4.75s/15s/133KB(incomplete), blog TTFB=12.64s/15s/8KB(almost empty), 404=code000(24h+), /ranking/ TTFB=1.39s/15s/277KB",
+      "completed_at": "2026-10-16T16:15:34",
+      "completion_note": "误报：服务器端 web_fetch fresh验证 首页200完整、/blog/ 200完整(154篇)、/404 正常渲染，无TTFB 12.6s/404超时；UX窗口本机网络不可达误判（同r23/r24 判定模式，第8天连续误报）；commit f25e165"
     }
   ],
   "milestones": [
@@ -3119,7 +3132,7 @@
   "latest_commit": "561999c",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
-  "last_action": "UX audit Oct15 17:00 - rotating outage continues, 1 new P1",
+  "last_action": "UX audit Oct16 - day8 still broken, P0, 1 new P0",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

@@ -33,3 +33,17 @@
 
 ## 踩坑记录
 - **title 长度两段式**：修复 title_short（<30）时新 title 首版 64 字符又触发 title_long（>60），需一次设计到 30-60 区间内再 build（首轮估算 57 实际 64，引号/& 计长必须看产物实测）。
+
+## 部署后线上验证（r24b）
+- Deploy 6c3d9d5 / f25e165 均 success
+- /search/ title 线上生效：'AI Tool Search: Find 500+ Tools by Name | AIToolCrux'（53 字符）✅
+- /robots.txt：仍缺 /og/ Disallow（本地 out/ 含 /og/，Deploy success，同批 /search/ 已生效三重佐证）→ Cloudflare 边缘 CDN 缓存旧版，等待自然过期，留痕不误判（同 r23 page/2 模式）
+- 遗留：robots.txt /og/ 线上确认待 CDN 过期后复核
+
+## 最终 state（r24 收尾）
+- 架构师 pending=0（待复查）
+
+## 追加：并行窗口新增 P0（r24c）
+- ux_p0_day8_still_broken_2026-10-16（P0，"第8天故障 Blog TTFB 12.6s/404超时"）→ 服务器端 fresh 验证：首页 200、/blog/ 200（154篇）、/404 正常渲染 → **误报**（同 r23/r24 判定：UX 本机网络不可达），completed 附证据
+- 观察：UX 窗口已连续 3 天（r23/r24/r24c）产出同模式误报（本机网络问题），建议指挥官提示 UX 窗口改用服务器端验证通道
+- 架构师 pending 最终=0
