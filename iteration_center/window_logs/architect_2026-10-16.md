@@ -116,3 +116,11 @@
 - git pathspec 中 [slug] 是 glob 字符类，add 动态路由文件用引号仍可能不匹配，需显式验证 git status
 - const 声明不能夹在 import 语句中间（SWC 处理异常导致 dynamic 未生效）
 - export const dynamic='force-static' 与 next/dynamic 导入同名冲突，用 dynamicImport 别名
+
+### r26 部署与线上验证（收尾）
+- GitHub Actions：**Deploy to Cloudflare Pages 057b9a7 = success**（性能优化代码已上线）；8b6a3c7（state/日志）部署进行中
+- 线上验证（服务器端 web_fetch）：
+  - https://www.aitoolcrux.com/compare/ 完整渲染（Top10表格/FAQ/选择器全在）✅
+  - https://www.aitoolcrux.com/data/tools-index.json 返回 200 完整 533 工具数据（旧版无此文件，确证新代码部署生效）✅
+  - -md 垃圾 URL 404 死链 ✅
+- 剩余架构师 pending：0（P0=0/P1=0/P2=0），4 条待办全部 completed
