@@ -507,8 +507,18 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-15 13:14:41 CST",
+  "last_updated": "2026-10-16T15:32:00",
   "completed_tasks": [
+    {
+      "id": "POLISH-2026-10-16-R13",
+      "priority": "P1",
+      "title": "R13: 3 CTR tasks closed + HTML->MD fix 3 articles (60->100)",
+      "status": "completed",
+      "assigned_to": [
+        "polisher"
+      ],
+      "result": "3 CTR closed (1 title already optimized, 2 already 301); canva-ai-alternatives/chatgpt-alternatives/chatgpt-deep-review 60->100"
+    },
     {
       "id": "POLISH-2026-10-14-R12",
       "priority": "P1",
@@ -1724,33 +1734,32 @@
       "created_at": "2026-10-14T18:32:09"
     },
     {
-      "id": "ux_p0_severe_degradation_day7_2026-10-15",
-      "title": "P0: 网站连续第7天严重故障——首页TTFB 12s，Blog/404完全超时",
-      "description": "10月15日巡检：网站仍在严重恶化中。首页65KB/TTFB 11.97s/15s超时（TTFB从10/14的2.15s飙到12s，HTML严重不完整）；Blog code=000完全超时；404 code=000完全超时；/ranking/ 242KB/TTFB 1.09s/15s超时（TTFB正常但资源加载阻塞）。从10月9日23:00故障开始至今已7天，中间经历恢复→波动→再恶化，网站仍未稳定。P0：必须架构师立即介入查Vercel日志、并发池、数据库连接池，不能再等了。",
-      "priority": "P0",
-      "assigned_to": "window1",
-      "status": "completed",
-      "source": "ux_audit_oct15",
-      "created_at": "2026-10-15",
-      "evidence": "homepage TTFB=11.97s/15s/65KB(incomplete), blog=code000, 404=code000, /ranking/ TTFB=1.09s/15s/242KB",
-      "completed_at": "2026-10-15T13:44:43",
-      "completion_note": "误报：服务器端 web_fetch 首页200完整/Blog 200(154篇)/404正常，无TTFB 12s故障；UX窗口本机网络不可达（同r21 ux_p0_all_pages_timeout 判定）；commit 7f6b321"
-    },
-    {
-      "id": "GEO-BESTFOR-META-FIX-20261015",
-      "title": "best-for/[audience] title 截断重做（63-64→≤60）",
-      "task": "GEO-BESTFOR-META-20261014 实测未达标：developers(63)/content-creators(64)/students(64) title 超 60 字符上限。generateMetadata 截断逻辑未生效或截断点过长，需截到 ≤60 字符（含 &amp; 实体解码后计数）并重部署。desc 142-155 已达标。部署后复测3页确认 ≤60。",
+      "id": "P0-R15-REWRITE-20261015",
+      "title": "R15调研5条外链机会未实际写入state.json，需补录（违反铁律）",
+      "task": "growth日志声称R15调研(2026-10-15 12:57)产出5条高价值待办'入state.json'，但state.json中无任何R15记录（source/id/task均无R15命中）。R15具体URL清单未落盘已丢失。增长黑客需重新执行R15调研（5查询40结果）并把5条外链机会带具体URL写入state.json，source=growth_r15_20261015，assigned_to=window2。教训：调研产出必须立即写state.json且日志中保留完整URL清单，不能只写'5条已入'。",
       "priority": "P0",
       "assigned_to": [
-        "window1",
-        "架构师"
+        "window2",
+        "增长黑客"
       ],
-      "status": "completed",
-      "source": "commander_verify_20261015_midday",
-      "created_at": "2026-10-15T13:00:00",
-      "updated_at": "2026-10-15T13:00:00",
-      "completed_at": "2026-10-15T13:44:43",
-      "completion_note": "best-for 3页 metaTitle 源串改短（&实体转义致raw超60根因）：content-creators 59/startups 56/students 58 raw（unescape 55/52/54）；本地out核验≤60；commit 7f6b321"
+      "status": "pending",
+      "source": "commander_verify_20261015_pm",
+      "created_at": "2026-10-15T14:45:00",
+      "updated_at": "2026-10-15T14:45:00"
+    },
+    {
+      "id": "P0-TODO-WRITE-RULE-20261016",
+      "title": "待办写入规范：必须带唯一id+status=pending（R15/R16连续违规）",
+      "task": "增长黑客连续两轮调研待办写入违规：R15(10-15)声称5条已入state.json实际零记录、R16(10-16)5条无id无status（已由指挥官修复为GROWTH-R16-01~05-20261016）。规范：任何窗口写入state.json的待办必须包含 唯一id（如GROWTH-R16-01-20261016）+ status=pending + priority + assigned_to + source + 具体URL清单（task内）。写完必须Python回读验证id唯一且status非空。违者视为未写入，指挥官将重开待办。",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "增长黑客"
+      ],
+      "status": "pending",
+      "source": "commander_learning_affiliate_20261016",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
     },
     {
       "id": "COMP-20261009-002",
@@ -2727,13 +2736,14 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "ctr_optimization_2026-10-14",
       "type": "page",
       "rank": 5.1923076923076925,
       "ctr": 0,
       "impressions": 26,
-      "created_at": "2026-10-14T20:02:33"
+      "created_at": "2026-10-14T20:02:33",
+      "completed_at": "2026-10-16"
     },
     {
       "id": "CTR-20261014-02",
@@ -2743,13 +2753,14 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "ctr_optimization_2026-10-14",
       "type": "page",
       "rank": 6.3,
       "ctr": 0,
       "impressions": 20,
-      "created_at": "2026-10-14T20:02:33"
+      "created_at": "2026-10-14T20:02:33",
+      "completed_at": "2026-10-16"
     },
     {
       "id": "CTR-20261014-03",
@@ -2759,13 +2770,14 @@
         "打磨师"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "ctr_optimization_2026-10-14",
       "type": "page",
       "rank": 5.6,
       "ctr": 0,
       "impressions": 5,
-      "created_at": "2026-10-14T20:02:33"
+      "created_at": "2026-10-14T20:02:33",
+      "completed_at": "2026-10-16"
     },
     {
       "id": "GROWTH-AGENTIC-MAIL-20261014",
@@ -2780,22 +2792,6 @@
       "source": "commander_dispatch_20261014_night",
       "created_at": "2026-10-14T21:45:00",
       "updated_at": "2026-10-14T21:45:00"
-    },
-    {
-      "id": "GEO-BESTFOR-META-20261014",
-      "task": "GEO-BESTFOR-META-20261014",
-      "title": "best-for/[audience] generateMetadata 加 title≤60/desc≤155 截断，3 页（content-creators",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "geo_audit_20261014",
-      "created_at": "2026-10-14T22:13:09",
-      "completed_at": "2026-10-15T13:44:43",
-      "completion_note": "同GEO-BESTFOR-META-FIX-20261015：best-for generateMetadata title 截断根因修复（&amp;转义后超60，改源串≤60）；commit 7f6b321",
-      "updated_at": "2026-10-15T13:00:00"
     },
     {
       "id": "GROWTH-R14-01-20261015",
@@ -2866,6 +2862,57 @@
       "source": "growth_r14_20261015",
       "created_at": "2026-10-15T13:10:00",
       "updated_at": "2026-10-15T13:10:00"
+    },
+    {
+      "id": "ux_p1_rotating_outage_day7_pm_2026-10-15",
+      "title": "P1: 轮流宕机模式继续——上午首页挂Blog活，下午Blog活首页挂",
+      "description": "10月15日17:00巡检：轮流宕机模式仍在继续。首页code=000完全超时（上午还能返回65KB）；Blog恢复200/6.53s/TTFB 3.49s/267KB（上午完全超时）；404仍code=000完全超时；/ranking/ 200/15s超时/TTFB 1.08s/76KB（大小从上午的242KB降到76KB，更不完整了）。典型的函数实例池耗尽——每个时段只有部分页面能抢到实例。",
+      "priority": "P1",
+      "assigned_to": "window1",
+      "status": "pending",
+      "source": "ux_audit_oct15_17h",
+      "created_at": "2026-10-15",
+      "evidence": "homepage=code000, blog=200/6.53s/TTFB 3.49s/267KB, 404=code000, /ranking/=200/15s/TTFB 1.08s/76KB"
+    },
+    {
+      "id": "AFF-CMP-PAGES-20261016",
+      "title": "补3组高转化 X vs Y 对比页（转化4-7%全矩阵最高）",
+      "task": "按EgoistAI内容矩阵（X vs Y对比页转化率4-7%，漏斗底部最高），创作家写3组AI工具对比页并挂联盟链接：①ChatGPT vs Claude（写作助手场景）②ElevenLabs vs Murf（语音合成，ElevenLabs联盟22%recurring）③Jasper vs Copy.ai（文案生成，Jasper 30%终身/Copy.ai 45%首年）。每页必须：第一人称实测（原创截图+真实结果）、功能对比表（利于Google富摘要）、诚实缺点、affiliate disclosure、按我们zens-ink质量门（>=70分）。写进content_drafts/草稿，不直接发布。",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "commander_learning_affiliate_20261016",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "id": "AFF-PROGRAMS-AUDIT-20261016",
+      "title": "盘点top10 AI工具联盟计划并按recurring优先级接入",
+      "task": "增长黑客盘点AI工具联盟计划（按'终身recurring>12月recurring>$100+一次性'优先级）：Jasper 30%终身/Surfer 25%90天/Copy.ai 45%首年/Notion 50%首年/ElevenLabs 22%/Synthesia 20%/Descript 15%/Writesonic 30%/Runway 20%。核对现有533个工具页哪些已挂联盟链接、哪些缺口（重点：高流量页top-ai-tools-by-traffic/best-for系列/3篇对比页），缺口补挂。单一计划收入不超过40%。",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "增长黑客"
+      ],
+      "status": "pending",
+      "source": "commander_learning_affiliate_20261016",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "id": "AFF-FUNNEL-TRACKING-20261016",
+      "title": "联盟链接UTM+点击事件埋点，建曝光→点击→付费漏斗基线",
+      "task": "分析师在联盟外链加UTM参数（utm_source=aitoolcrux&utm_medium=affiliate&utm_campaign=工具名）+GA4 click事件埋点，对齐EgoistAI漏斗模型（5万访问→5%点链→8%试用→40%付费）建立我们自己的基线漏斗。当前GA4新property 549695344零数据，埋点后2周内拿到首批点击数据。产出：漏斗基线表写入audit_findings.md。",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "commander_learning_affiliate_20261016",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
     },
     {
       "id": "GROWTH-DIR-V5-2026-10-11",
@@ -3006,34 +3053,54 @@
       "created_at": "2026-10-13T05:07:11"
     },
     {
-      "id": "GEO-PAGED-TITLE-20261015",
-      "task": "GEO审计发现：authors分页页 title 超长（68字符）需截断",
-      "title": "Authors分页页 title 截断至52字符",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "geo_audit_2026-10-15",
-      "created_at": "2026-10-15T13:38:02",
-      "completed_at": "2026-10-15T13:38:02",
-      "completion_note": "app/authors/[slug]/page/[page]/page.tsx metadata title改为\"AIToolCrux Editorial Team - AI Tool Reviews (Page N)\"=52字符；本地审计 title_long 2->0；commit c046bde"
+      "task": "R16: 评估并行动 Generative AI Tools List: Top Platforms for 2026 — https://www.knowledgehut.com/blog/data-science/top-generative-ai-tools",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r16_2026-10-15",
+      "id": "GROWTH-R16-01-20261016",
+      "status": "pending",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
     },
     {
-      "id": "GEO-OG-STUB-20261015",
-      "task": "GEO审计发现：/og/ stub页 title过短22+无meta+无schema",
-      "title": "/og/ stub 页 metadata 补全（title/description/noindex/JSON-LD）",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "geo_audit_2026-10-15",
-      "created_at": "2026-10-15T13:38:02",
-      "completed_at": "2026-10-15T13:38:02",
-      "completion_note": "public/og/index.html 加完整title(47字符)+meta description+robots noindex+CollectionPage JSON-LD；本地审计 no_meta 1->0、no_schema 1->0；commit c046bde"
+      "task": "R16: 评估并行动 Best AI Tools 2026: Complete List — https://blog.contentforce.ai/best-ai-tools/",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r16_2026-10-15",
+      "id": "GROWTH-R16-02-20261016",
+      "status": "pending",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "task": "R16: 评估并行动 Best Free AI Directories List (450+) | Submit Your AI Tool — https://freeaidirectories.com/",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r16_2026-10-15",
+      "id": "GROWTH-R16-03-20261016",
+      "status": "pending",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "task": "R16: 评估并行动 I built a free AI tools directory where anyone can submit .. — https://www.reddit.com/r/SideProject/comments/1rwbzs5/i_built_a_free_ai_tools_directory_where_anyone/",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r16_2026-10-15",
+      "id": "GROWTH-R16-04-20261016",
+      "status": "pending",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "task": "R16: 评估并行动 Where to submit your AI tool — measured, not copy-pasted — https://www.stork.ai/where-to-submit-your-ai-tool",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r16_2026-10-15",
+      "id": "GROWTH-R16-05-20261016",
+      "status": "pending",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
     }
   ],
   "milestones": [
@@ -3050,7 +3117,7 @@
   "latest_commit": "561999c",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
-  "last_action": "UX audit Oct15 - day7 severe degradation, P0, 1 new P0",
+  "last_action": "UX audit Oct15 17:00 - rotating outage continues, 1 new P1",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -10127,6 +10194,91 @@
       "completed_at": "2026-10-15T00:27:38",
       "completion_note": "/sitemap/ title 20->58字符<=60；/search/已noindex不处理；commit 7d71de3",
       "archived_at": "2026-10-15T13:00:00"
+    },
+    {
+      "id": "ux_p0_severe_degradation_day7_2026-10-15",
+      "title": "P0: 网站连续第7天严重故障——首页TTFB 12s，Blog/404完全超时",
+      "description": "10月15日巡检：网站仍在严重恶化中。首页65KB/TTFB 11.97s/15s超时（TTFB从10/14的2.15s飙到12s，HTML严重不完整）；Blog code=000完全超时；404 code=000完全超时；/ranking/ 242KB/TTFB 1.09s/15s超时（TTFB正常但资源加载阻塞）。从10月9日23:00故障开始至今已7天，中间经历恢复→波动→再恶化，网站仍未稳定。P0：必须架构师立即介入查Vercel日志、并发池、数据库连接池，不能再等了。",
+      "priority": "P0",
+      "assigned_to": "window1",
+      "status": "archived",
+      "source": "ux_audit_oct15",
+      "created_at": "2026-10-15",
+      "evidence": "homepage TTFB=11.97s/15s/65KB(incomplete), blog=code000, 404=code000, /ranking/ TTFB=1.09s/15s/242KB",
+      "completed_at": "2026-10-15T13:44:43",
+      "completion_note": "误报：服务器端 web_fetch 首页200完整/Blog 200(154篇)/404正常，无TTFB 12s故障；UX窗口本机网络不可达（同r21 ux_p0_all_pages_timeout 判定）；commit 7f6b321",
+      "archived_at": "2026-10-15T14:45:00",
+      "verify_note": "实测：首页1003ms/blog1239ms/404页593ms全正常，UX本机网络不可达致误报（架构师判定正确）"
+    },
+    {
+      "id": "GEO-BESTFOR-META-FIX-20261015",
+      "title": "best-for/[audience] title 截断重做（63-64→≤60）",
+      "task": "GEO-BESTFOR-META-20261014 实测未达标：developers(63)/content-creators(64)/students(64) title 超 60 字符上限。generateMetadata 截断逻辑未生效或截断点过长，需截到 ≤60 字符（含 &amp; 实体解码后计数）并重部署。desc 142-155 已达标。部署后复测3页确认 ≤60。",
+      "priority": "P0",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "archived",
+      "source": "commander_verify_20261015_midday",
+      "created_at": "2026-10-15T13:00:00",
+      "updated_at": "2026-10-15T13:00:00",
+      "completed_at": "2026-10-15T13:44:43",
+      "completion_note": "best-for 3页 metaTitle 源串改短（&实体转义致raw超60根因）：content-creators 59/startups 56/students 58 raw（unescape 55/52/54）；本地out核验≤60；commit 7f6b321",
+      "archived_at": "2026-10-15T14:45:00",
+      "verify_note": "实测：content-creators raw59/students58/developers63(unescaped59)/startups56；unescaped全≤60达标"
+    },
+    {
+      "id": "GEO-BESTFOR-META-20261014",
+      "task": "GEO-BESTFOR-META-20261014",
+      "title": "best-for/[audience] generateMetadata 加 title≤60/desc≤155 截断，3 页（content-creators",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_20261014",
+      "created_at": "2026-10-14T22:13:09",
+      "completed_at": "2026-10-15T13:44:43",
+      "completion_note": "同GEO-BESTFOR-META-FIX-20261015：best-for generateMetadata title 截断根因修复（&amp;转义后超60，改源串≤60）；commit 7f6b321",
+      "updated_at": "2026-10-15T13:00:00",
+      "archived_at": "2026-10-15T14:45:00",
+      "verify_note": "实测：同上，4页unescaped 52-59≤60达标"
+    },
+    {
+      "id": "GEO-PAGED-TITLE-20261015",
+      "task": "GEO审计发现：authors分页页 title 超长（68字符）需截断",
+      "title": "Authors分页页 title 截断至52字符",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-15",
+      "created_at": "2026-10-15T13:38:02",
+      "completed_at": "2026-10-15T13:38:02",
+      "completion_note": "app/authors/[slug]/page/[page]/page.tsx metadata title改为\"AIToolCrux Editorial Team - AI Tool Reviews (Page N)\"=52字符；本地审计 title_long 2->0；commit c046bde",
+      "archived_at": "2026-10-15T14:45:00",
+      "verify_note": "实测：authors/aitoolcrux-editorial-team/page/2 title 52字符≤60"
+    },
+    {
+      "id": "GEO-OG-STUB-20261015",
+      "task": "GEO审计发现：/og/ stub页 title过短22+无meta+无schema",
+      "title": "/og/ stub 页 metadata 补全（title/description/noindex/JSON-LD）",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "geo_audit_2026-10-15",
+      "created_at": "2026-10-15T13:38:02",
+      "completed_at": "2026-10-15T13:38:02",
+      "completion_note": "public/og/index.html 加完整title(47字符)+meta description+robots noindex+CollectionPage JSON-LD；本地审计 no_meta 1->0、no_schema 1->0；commit c046bde",
+      "archived_at": "2026-10-15T14:45:00",
+      "verify_note": "实测：/og/ 200，title+desc+noindex+JSON-LD全有"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
