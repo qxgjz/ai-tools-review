@@ -27,7 +27,7 @@ jobs:
           python-version: '3.11'
 
       - name: Install deps
-        run: pip install requests PyJWT
+        run: pip install requests PyJWT cryptography
 
       - name: Fetch GA4 data
         env:
