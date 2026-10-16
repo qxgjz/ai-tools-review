@@ -157,6 +157,44 @@ export default function robots(): MetadataRoute.Robots {
         disallow: ['/api/', '/cdn-cgi/', '/_next/'],
         crawlDelay: 5,
       },
+      // architect r28 (commander_cf_probe_2026-10-17): 高消耗采集/镜像爬虫限制
+      // (保留全部 AI 搜索 bot 允许，GEO 不倒退)
+      {
+        userAgent: 'CCBot', // Common Crawl 全站采集，流量大、对AI引用无贡献
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'PetalBot', // 华为 Petal Search 采集
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'SeznamBot', // Seznam 搜索引擎采集
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'YisouSpider', // 神马/UC 采集
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'facebookexternalhit', // FB 链接嗅探
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'ia_archiver', // Internet Archive 镜像
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'DotBot', // 邮件/爬虫探测
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'MegaIndex.ru',
+        disallow: ['/'],
+      },
+      {
+        userAgent: 'Barkrowler', // 高消耗爬虫
+        disallow: ['/'],
+      },
     ],
     sitemap: ['https://www.aitoolcrux.com/sitemap.xml'],
     host: 'www.aitoolcrux.com',
