@@ -82,3 +82,37 @@
 ## state
 - 架构师 pending=0（本轮无 state 待办，GEO 修复直接完成，日志留痕）
 
+
+## r26 (2026-10-16 23:xx) 架构师-全栈技术修复 + GEO技术检查
+
+### 处理待办 4 条（P0x2 + P1x2），全部收尾
+1. **P0-TOOL-FIX-001** completed：本轮实测工具链仅 3/11 可用（zens_ink/llmevalkit/playwright），pip 补装 8 个缺失（opengtm-0.1.0/trafilatura-2.3.1/courlan-1.4.0/textstat-0.7.13/nltk-3.10.3/rank-bm25-0.2.2/chromadb-1.5.9/openserp-0.2.7，版本对齐手册 v1.3），重验 11/11 import 全 OK。
+2. **P0-URL-MD-SUFFIX-20261016** completed：复现确认 -md 垃圾 URL 已不在站点（out/ 无产物、sitemap/_redirects/posts.json 均无、线上 https://www.aitoolcrux.com/blog/article-api-20260903-171438-test-md web_fetch 返回死链 404）。垃圾 URL 已清除，GSC 曝光归零需等 Google 重爬自然移除，无代码可改。
+3. **P1-PERF-COMPARE-20261016** completed：/compare 首屏优化落地 —— RadarChart/MultiRadarChart 改 dynamicImport(ssr:false) 于 4 页（compare/page、compare/[slug]/page、generator/page、tools/[slug]/page，const 声明移至 import 区末尾、dynamicImport 别名规避 export const dynamic 冲突）；tools-index.json(533 工具/642KB 共享 chunk 3310) 改客户端 fetch（public/data/tools-index.json，git -f 提交，.gitignore 忽略 *.json）。**产物验证：/compare 首屏传输 1803KB→879KB（-51%），HTML 376KB→93KB，642KB chunk 从首屏移除，Top10 表格/FAQ/选择器完整，page chunk 含 fetch 路径**。门控 tsc+build 全过。commit c183beb+97e9af0+d4b48e5（rebase 后 push 057b9a7）。
+4. **ux_p1_ttfb_recovered_but_total_timeout_2026-10-16_17h** completed：服务器端 web_fetch /compare/ 完整渲染（QuickAnswer/KeyTakeaways/Top10表格/FAQx2/选择器全在），判定疑误报（UX 本机网络不可达，r23-r26 连续模式）。
+
+### 门控结果
+- npx tsc --noEmit：PASS（曾遇 compare/[slug] dynamic 与 export const dynamic='force-static' 冲突、const 夹 import 中间致 SWC 异常，均已修复）
+- npm run build：PASS（BUILD_EXIT=0）
+
+### git push 结果
+- push origin main 成功（直连，代理 127.0.0.1:7890 不可达→git -c http.proxy= -c https.proxy= 绕过）；rebase 4 个远程提交无冲突；c9dcf04..057b9a7
+- GitHub Actions：057b9a7 Lint/CodeQL/Deploy 进行中（待确认 success）
+
+### 线上验证
+- /compare/：完整渲染（web_fetch）✅
+- -md URL：404 死链（web_fetch link dead）✅
+- Deploy to Cloudflare Pages 状态：待 Actions 完成
+
+### GEO 技术检查
+- 本轮审计 real_geo_aeo_audit 结果文件被 .gitignore 忽略（*.json），未纳入 commit（历史窗口产物）
+
+### state.json 更新
+- 4 条待办 status=completed + completed_at + completion_note（scripts/_update_state_r26.py）
+- 剩余架构师 P0/P1 待办：待查（下一轮）
+
+### 教训/备注
+- public/ 下 *.json 被 .gitignore 忽略，需 git add -f 提交数据文件（tools-index.json 870KB）
+- git pathspec 中 [slug] 是 glob 字符类，add 动态路由文件用引号仍可能不匹配，需显式验证 git status
+- const 声明不能夹在 import 语句中间（SWC 处理异常导致 dynamic 未生效）
+- export const dynamic='force-static' 与 next/dynamic 导入同名冲突，用 dynamicImport 别名
