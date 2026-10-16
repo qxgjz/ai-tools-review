@@ -47,3 +47,38 @@
 - ux_p0_day8_still_broken_2026-10-16（P0，"第8天故障 Blog TTFB 12.6s/404超时"）→ 服务器端 fresh 验证：首页 200、/blog/ 200（154篇）、/404 正常渲染 → **误报**（同 r23/r24 判定：UX 本机网络不可达），completed 附证据
 - 观察：UX 窗口已连续 3 天（r23/r24/r24c）产出同模式误报（本机网络问题），建议指挥官提示 UX 窗口改用服务器端验证通道
 - 架构师 pending 最终=0
+
+# architect 2026-10-16（r25）
+
+## 起点
+- 架构师 pending=0；全局 pending=140（P0:39/P1:85/P2:16）
+
+## GEO/SEO 审计（cron 强制）
+1. `real_geo_aeo_audit.py`：geo_readiness 6.6/10（llms.txt 10/10 + llms-full.txt 满分、AEO 抽查 /tools/cursor /blog/chatgpt-vs-claude-2026-comparison /methodology 各 8/8 满分、findings 空；crawler 项为空=本机网络不可达口径波动，同 r21 6.6 模式，非真实回退）
+2. 本地 out/ 审计（`_audit_local_r21.py`）：首轮 MemoryError×2（系统内存仅剩 1.1GB），等待释放后成功 → **1133 HTML 全绿**（9 项规则 0 问题；比 r24 多 6 篇=内容窗口新增）
+3. llms-full.txt 覆盖核验（GEO recommendation #7）：**发现 10 篇最新文章缺失**（best-ai-video-enhancers / best-ai-automation-tools / best-ai-content-detectors / best-ai-copywriting-tools / best-ai-sales-assistants / best-ai-summarizer-tools / best-ai-avatar-generators / best-ai-music-generators / best-ai-spreadsheet-tools / agenta-ai-review）——根因：llms-full.txt 为 2026-10-11 旧版，未含其后新增文章
+4. /alternatives/ 索引页核验：缺 Quick Answer（answer-first 结构，AI 引用缺失）
+
+## GEO 技术问题处理（≥2，全部完成）
+| # | 问题 | 根因 | 修复 | 验证 |
+|---|---|---|---|---|
+| 1 | llms-full.txt 缺 10 篇最新文章（AI 爬虫无法引用） | 生成脚本未重跑，文件为旧版 | `python generate_llms_full.py` 重生成（173 篇全收录，566KB/8959 行） | 10/10 slug 均在 out/llms-full.txt ✅ |
+| 2 | /alternatives/ 索引页缺 Quick Answer | 页面无 answer-first 段 | app/alternatives/page.tsx Hero 后插入 Quick Answer（8 指南/40+ 替代产品/对比维度，AI 引用友好） | out/alternatives Quick Answer 存在 + 审计全绿 ✅ |
+
+## 门控 / 部署 / 线上
+| 项 | 结果 |
+|---|---|
+| tsc | 0 错误 |
+| build | 0 错误 |
+| 本地审计 | 1133 HTML 全绿 |
+| push | **c8ba19b**（GEO fixes） |
+| Actions / 线上 | 待确认 |
+
+## 踩坑记录
+- **低内存环境运行审计**：系统内存仅剩 1.1GB 时 `_audit_local_r21.py` 连续 MemoryError（open().read() OOM）；等待内存释放后重跑成功，勿在低内存时反复重试
+- **llms-full.txt 静态生成**：`generate_llms_full.py` 读 data/posts.json（当前 173 篇）生成 public/llms-full.txt；内容窗口新增文章后若不重跑，llms-full.txt 会过期漏收——应纳入内容发布 SOP 或 cron 触发
+- **跨窗口未提交改动**：工作区存在大量其他窗口产物（audit_findings/backlink/keyword/growth/ux 等），commit 时只 add 自己的文件，禁止 git add -A（r16 教训）
+
+## state
+- 架构师 pending=0（本轮无 state 待办，GEO 修复直接完成，日志留痕）
+
