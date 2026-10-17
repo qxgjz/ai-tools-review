@@ -298,7 +298,7 @@ export default function AlternativePage({ params }: { params: { slug: string } }
             </div>
           </div>
           <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
-            <p className="text-xs text-zinc-500 dark:text-zinc-400">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400">
               <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong>{' '}
               2026-09-11 | <strong>Methodology:</strong> Six-dimension evaluation |{' '}
               <Link

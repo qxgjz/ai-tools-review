@@ -208,7 +208,7 @@ export default function HomePage() {
                     AI Tool Matcher
                   </Link>
                 </div>
-                <p className="text-xs text-zinc-500 mt-3">
+                <p className="text-xs text-zinc-600 mt-3">
                   Updated daily · No paid rankings · 100% editorially independent
                 </p>
               </FadeIn>
@@ -218,17 +218,17 @@ export default function HomePage() {
                 <div className="flex flex-wrap items-center gap-8">
                   <div>
                     <div className="text-2xl font-bold text-white">{tools.length}+</div>
-                    <div className="text-sm text-zinc-500">Tools Reviewed</div>
+                    <div className="text-sm text-zinc-600">Tools Reviewed</div>
                   </div>
                   <div className="w-px h-10 bg-zinc-800" />
                   <div>
                     <div className="text-2xl font-bold text-white">6</div>
-                    <div className="text-sm text-zinc-500">Score Dimensions</div>
+                    <div className="text-sm text-zinc-600">Score Dimensions</div>
                   </div>
                   <div className="w-px h-10 bg-zinc-800" />
                   <div>
                     <div className="text-2xl font-bold text-white">100%</div>
-                    <div className="text-sm text-zinc-500">Independent</div>
+                    <div className="text-sm text-zinc-600">Independent</div>
                   </div>
                 </div>
               </FadeIn>
@@ -265,7 +265,7 @@ export default function HomePage() {
                         </div>
                       </div>
                       <div className="text-sm font-semibold text-white truncate">{tool.name}</div>
-                      <div className="text-xs text-zinc-500 truncate mb-2">{tool.vendor}</div>
+                      <div className="text-xs text-zinc-600 truncate mb-2">{tool.vendor}</div>
                       <div className="flex items-baseline gap-1">
                         <span className="text-primary font-bold text-lg tabular-nums">
                           {tool.total.toFixed(1)}
@@ -345,13 +345,13 @@ export default function HomePage() {
                         <div className="absolute inset-x-0 bottom-0 flex items-end justify-between p-4 bg-gradient-to-t from-zinc-950/85 to-transparent pointer-events-none">
                           <div>
                             <div className="text-sm font-semibold text-white">{heroTool.name}</div>
-                            <div className="text-xs text-zinc-400">{heroTool.vendor}</div>
+                            <div className="text-xs text-zinc-600">{heroTool.vendor}</div>
                           </div>
                           <div className="flex items-baseline gap-1">
                             <span className="text-2xl font-semibold text-white tabular-nums">
                               {heroTool.total.toFixed(1)}
                             </span>
-                            <span className="text-xs text-zinc-500">/10</span>
+                            <span className="text-xs text-zinc-600">/10</span>
                           </div>
                         </div>
                       </div>
@@ -385,7 +385,7 @@ export default function HomePage() {
                           <div className="text-sm font-semibold text-white truncate group-hover:text-primary transition-colors">
                             {tool.name}
                           </div>
-                          <div className="text-[10px] text-zinc-500 truncate">{tool.vendor}</div>
+                          <div className="text-[10px] text-zinc-600 truncate">{tool.vendor}</div>
                         </div>
                         <div className="text-right">
                           <div className="text-base font-semibold text-white tabular-nums">
@@ -495,7 +495,7 @@ export default function HomePage() {
                 <h3 className="text-sm font-semibold text-zinc-900 dark:text-white group-hover:text-primary transition-colors">
                   {cat.name}
                 </h3>
-                <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-0.5">{count} tools</p>
+                <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-0.5">{count} tools</p>
               </Link>
             );
           })}
@@ -535,7 +535,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -572,7 +572,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -609,7 +609,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -646,7 +646,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -683,7 +683,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -720,7 +720,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -757,7 +757,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -794,7 +794,7 @@ export default function HomePage() {
                       <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">
                         {tool.name}
                       </span>
-                      <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">
+                      <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">
                         {total.toFixed(1)}
                       </span>
                     </Link>
@@ -836,7 +836,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -859,7 +859,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -882,7 +882,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -905,7 +905,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -942,7 +942,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -965,7 +965,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -988,7 +988,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1011,7 +1011,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1048,7 +1048,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1071,7 +1071,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1094,7 +1094,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1117,7 +1117,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1154,7 +1154,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1177,7 +1177,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1200,7 +1200,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1223,7 +1223,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1260,7 +1260,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1283,7 +1283,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1306,7 +1306,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1329,7 +1329,7 @@ export default function HomePage() {
                 return (
                   <Link key={tool.slug} href={`/tools/${tool.slug}`} className="flex items-center justify-between py-1.5 hover:bg-zinc-50 dark:hover:bg-zinc-800/50 px-2 -mx-2 rounded transition-colors">
                     <span className="text-sm text-zinc-700 dark:text-zinc-300 hover:text-primary font-medium">{tool.name}</span>
-                    <span className="text-xs text-zinc-400 dark:text-zinc-500 font-mono">{total.toFixed(1)}</span>
+                    <span className="text-xs text-zinc-600 dark:text-zinc-400 font-mono">{total.toFixed(1)}</span>
                   </Link>
                 );
               })}
@@ -1476,7 +1476,7 @@ export default function HomePage() {
                           {item.weight}
                         </span>
                       </div>
-                      <p className="text-sm text-zinc-500 dark:text-zinc-400 leading-relaxed">
+                      <p className="text-sm text-zinc-600 dark:text-zinc-400 leading-relaxed">
                         {item.desc}
                       </p>
                     </div>
@@ -1538,10 +1538,10 @@ export default function HomePage() {
                     <h3 className="text-base font-semibold text-zinc-900 dark:text-white group-hover:text-primary transition-colors line-clamp-2 mb-2">
                       {post.title}
                     </h3>
-                    <p className="text-sm text-zinc-500 dark:text-zinc-400 line-clamp-2 flex-1 mb-4">
+                    <p className="text-sm text-zinc-600 dark:text-zinc-400 line-clamp-2 flex-1 mb-4">
                       {post.excerpt}
                     </p>
-                    <div className="flex items-center justify-between text-xs text-zinc-400 dark:text-zinc-500">
+                    <div className="flex items-center justify-between text-xs text-zinc-600 dark:text-zinc-400">
                       <span>{post.date || post.publishedAt}</span>
                       <span className="inline-flex items-center gap-1 text-primary font-medium group-hover:gap-2 transition-all">
                         Read
@@ -1583,7 +1583,7 @@ export default function HomePage() {
                 <div className="text-sm font-semibold text-zinc-900 dark:text-white mb-1">
                   {stat.label}
                 </div>
-                <div className="text-xs text-zinc-500 dark:text-zinc-500">{stat.desc}</div>
+                <div className="text-xs text-zinc-600 dark:text-zinc-400">{stat.desc}</div>
               </div>
             ))}
           </div>

@@ -467,7 +467,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 {grade} Grade · {GRADE_DESCRIPTIONS[grade]}
               </span>
             </div>
-            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-500 dark:text-zinc-400">
+            <div className="flex flex-wrap items-center gap-x-5 gap-y-2 text-sm text-zinc-600 dark:text-zinc-400">
               <span className="inline-flex items-center gap-1.5">
                 <Building2 className="w-4 h-4" />
                 {tool.vendor}
@@ -507,9 +507,9 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               <span className="text-4xl sm:text-5xl font-extrabold text-emerald-600 dark:text-emerald-400 leading-none tabular-nums">
                 {total.toFixed(1)}
               </span>
-              <span className="text-sm text-zinc-400 dark:text-zinc-500">/10</span>
+              <span className="text-sm text-zinc-600 dark:text-zinc-400">/10</span>
             </div>
-            <div className="text-xs text-zinc-400 dark:text-zinc-500">Overall Score</div>
+            <div className="text-xs text-zinc-600 dark:text-zinc-400">Overall Score</div>
           </div>
         </div>
         {(tool.officialUrl || tool.affiliateUrl) && (
@@ -555,7 +555,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               );
             })()}
             {tool.affiliateUrl && (
-              <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-2">
+              <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
                 <em>
                   Disclosure: This is an affiliate link. We may earn a commission if you sign up, at
                   no extra cost to you.
@@ -586,7 +586,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                 Live screenshot
               </div>
             </div>
-            <figcaption className="text-xs text-zinc-500 dark:text-zinc-400 mt-2 text-center">
+            <figcaption className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 text-center">
               {tool.name} — main interface, captured and reviewed by our editorial team
             </figcaption>
           </figure>
@@ -705,7 +705,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </div>
           </div>
           <div className="mt-6 pt-4 border-t border-zinc-100 dark:border-zinc-800">
-            <p className="text-xs text-zinc-500 dark:text-zinc-400">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400">
               <strong>Source:</strong> AIToolCrux Editorial Team | <strong>Last updated:</strong>{' '}
               {tool.lastUpdated} | <strong>Methodology:</strong> 6-dimension evaluation |{' '}
               <Link
@@ -742,7 +742,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                   <div className="flex items-center justify-between mb-1.5">
                     <span className="text-sm font-medium text-zinc-700 dark:text-gray-300">
                       {DIMENSION_LABELS[dim]}
-                      <span className="ml-2 text-xs text-zinc-400 dark:text-zinc-500">
+                      <span className="ml-2 text-xs text-zinc-600 dark:text-zinc-400">
                         Weight {(SCORE_WEIGHTS[dim] * 100).toFixed(0)}%
                       </span>
                     </span>
@@ -841,7 +841,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {tool.testingPeriod && (
               <div className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4">
-                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-1">
+                <div className="text-xs text-zinc-600 dark:text-zinc-400 uppercase tracking-wide mb-1">
                   Testing Period
                 </div>
                 <div className="text-sm font-semibold text-zinc-900 dark:text-white">
@@ -851,7 +851,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             )}
             {tool.testingDetails && (
               <div className="bg-zinc-50 dark:bg-gray-800/50 rounded-xl p-4 md:col-span-2">
-                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-2">
+                <div className="text-xs text-zinc-600 dark:text-zinc-400 uppercase tracking-wide mb-2">
                   Testing Details
                 </div>
                 {typeof tool.testingDetails === 'string' ? (
@@ -914,7 +914,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               </div>
             )}
           </div>
-          <p className="text-sm text-zinc-500 dark:text-zinc-400 mt-4 italic">
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mt-4 italic">
             All ratings are based on hands-on testing by our editorial team. We do not accept
             payment for positive reviews, and affiliate relationships never influence our ratings or
             recommendations.
@@ -943,7 +943,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Array.isArray(tool.usageScenarios) &&
             tool.usageScenarios.length > 0 && (
               <div className="mb-5">
-                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
+                <div className="text-xs text-zinc-600 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
                   Tested Use Cases
                 </div>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
@@ -969,7 +969,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             Array.isArray(tool.notableObservations) &&
             tool.notableObservations.length > 0 && (
               <div>
-                <div className="text-xs text-zinc-500 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
+                <div className="text-xs text-zinc-600 dark:text-zinc-400 uppercase tracking-wide mb-3 font-semibold">
                   Key Observations
                 </div>
                 <ul className="space-y-2">
@@ -1119,7 +1119,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                       <td className="py-3 px-3 text-zinc-600 dark:text-gray-400 text-xs hidden md:table-cell">
                         {metric.test || metric.value}
                       </td>
-                      <td className="py-3 px-3 text-zinc-500 dark:text-zinc-500 text-xs hidden lg:table-cell">
+                      <td className="py-3 px-3 text-zinc-600 dark:text-zinc-400 text-xs hidden lg:table-cell">
                         {metric.comparison}
                       </td>
                     </tr>
@@ -1128,7 +1128,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               </tbody>
             </table>
           </div>
-          <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-4 italic">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-4 italic">
             Test results are based on our independent benchmarking. Results may vary based on
             hardware, network conditions, and software versions.
           </p>
@@ -1225,16 +1225,16 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             <ExternalLink className="w-4 h-4" />
             {tool.hasFreeTier ? `Try ${tool.name} Free` : `Start ${tool.name} Free Trial`}
           </a>
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-3">
             Rated {total.toFixed(1)}/10 by our editorial team · No affiliate bias
           </p>
           {tool.affiliateUrl && tool.hasFreeTier && (
-            <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-1">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-1">
               No credit card required · Cancel anytime
             </p>
           )}
           {tool.affiliateUrl && (
-            <p className="text-xs text-zinc-400 dark:text-zinc-500 mt-2">
+            <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-2">
               <em>
                 Disclosure: This is an affiliate link. We may earn a commission if you sign up, at
                 no extra cost to you.
@@ -1342,11 +1342,11 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               )}
             </>
           )}
-          <span className="text-xs text-zinc-500 dark:text-zinc-400 italic">
+          <span className="text-xs text-zinc-600 dark:text-zinc-400 italic">
             Score: {total.toFixed(1)}/10 · Grade: {grade} · Last updated: {tool.lastUpdated}
           </span>
         </div>
-        <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-3">
+        <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-3">
           ✅ Independently tested by our editorial team · 🔗 No affiliate bias · 📊 6-dimension
           scoring
         </p>
@@ -1386,7 +1386,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
                     >
                       {alt.name}
                     </Link>
-                    <p className="text-xs text-zinc-500 dark:text-zinc-400 mt-0.5">{alt.reason}</p>
+                    <p className="text-xs text-zinc-600 dark:text-zinc-400 mt-0.5">{alt.reason}</p>
                   </div>
                   <Link
                     href={`/tools/${alt.slug}`}
@@ -1489,7 +1489,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <Giscus />
       </section>
 
-      <div className="mt-8 text-center text-xs text-zinc-500 dark:text-zinc-400">
+      <div className="mt-8 text-center text-xs text-zinc-600 dark:text-zinc-400">
         Scores are based on our public evaluation methodology. Affiliate link revenue does not
         affect scores. Last updated {tool.lastUpdated}.
       </div>
@@ -1497,7 +1497,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       {/* Mobile sticky CTA — thumb zone: always reachable, hidden on desktop */}
       {(tool.officialUrl || tool.affiliateUrl) && (
         <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white dark:bg-zinc-900 border-t border-zinc-200 dark:border-zinc-800 p-3 pb-[max(0.75rem,env(safe-area-inset-bottom))] z-40 shadow-[0_-4px_12px_rgba(0,0,0,0.08)]">
-          <p className="text-center text-xs text-zinc-500 dark:text-zinc-400 mb-2">
+          <p className="text-center text-xs text-zinc-600 dark:text-zinc-400 mb-2">
             {total.toFixed(1)}/10 &middot; Grade {grade}
           </p>
           <a

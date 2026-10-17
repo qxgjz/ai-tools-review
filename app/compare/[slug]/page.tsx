@@ -228,7 +228,7 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
                   <div className="text-sm font-semibold text-zinc-900 dark:text-white">
                     {comparison.toolA.name}
                   </div>
-                  <div className="text-xs text-zinc-500 dark:text-zinc-400">
+                  <div className="text-xs text-zinc-600 dark:text-zinc-400">
                     {scoreA.grade} Grade
                   </div>
                 </Link>
@@ -241,7 +241,7 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
                   <div className="text-sm font-semibold text-zinc-900 dark:text-white">
                     {comparison.toolB.name}
                   </div>
-                  <div className="text-xs text-zinc-500 dark:text-zinc-400">
+                  <div className="text-xs text-zinc-600 dark:text-zinc-400">
                     {scoreB.grade} Grade
                   </div>
                 </Link>
@@ -408,7 +408,7 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
         </div>
       </FadeIn>
 
-      <div className="mt-8 text-center text-xs text-zinc-400 dark:text-zinc-500">
+      <div className="mt-8 text-center text-xs text-zinc-600 dark:text-zinc-400">
         Last updated September 13, 2026. Scores based on our public evaluation methodology.
         Affiliate links may earn us a commission at no extra cost to you.
       </div>

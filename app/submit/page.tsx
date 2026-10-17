@@ -189,7 +189,7 @@ export default function SubmitPage() {
             )}
           </button>
 
-          <p className="text-xs text-zinc-500 dark:text-zinc-400 text-center">
+          <p className="text-xs text-zinc-600 dark:text-zinc-400 text-center">
             Free for creators. We do not accept paid placements. All reviews follow our public
             6-dimension methodology.
           </p>

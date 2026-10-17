@@ -88,7 +88,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
             <h3 className="text-base font-semibold text-zinc-900 dark:text-zinc-100 group-hover:text-primary transition-colors line-clamp-1">
               {tool.name}
             </h3>
-            <p className="mt-0.5 text-xs text-zinc-500 dark:text-zinc-400">{tool.vendor}</p>
+            <p className="mt-0.5 text-xs text-zinc-600 dark:text-zinc-400">{tool.vendor}</p>
           </div>
 
           {/* Category tag */}
@@ -110,7 +110,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
                 <span className="text-xl font-bold text-zinc-900 dark:text-zinc-100 tabular-nums">
                   {total.toFixed(1)}
                 </span>
-                <span className="text-xs text-zinc-500 dark:text-zinc-400">/10</span>
+                <span className="text-xs text-zinc-600 dark:text-zinc-400">/10</span>
                 <span
                   className={`px-1.5 py-0.5 rounded text-[10px] font-bold tracking-wider ${GRADE_STYLES[grade]}`}
                 >
@@ -119,7 +119,7 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
               </div>
               <div
                 aria-hidden="true"
-                className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-400 dark:text-zinc-500 group-hover:bg-primary group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95"
+                className="w-11 h-11 flex items-center justify-center rounded-full bg-zinc-100 dark:bg-zinc-800 text-zinc-600 dark:text-zinc-400 group-hover:bg-primary group-hover:text-white transition-all duration-200 group-hover:scale-105 active:scale-95"
               >
                 <ArrowUpRight className="w-4 h-4" aria-hidden="true" />
               </div>
