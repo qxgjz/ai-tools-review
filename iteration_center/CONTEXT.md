@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-10-16 19:58 UTC
+> Generated: 2026-10-17 19:26 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -17,7 +17,7 @@
 | Metric | Value |
 |--------|-------|
 | Tools | 533 |
-| Posts | 173 |
+| Posts | 182 |
 | Categories | N/A |
 | Comparisons | 10 |
 
