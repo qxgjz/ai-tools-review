@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 83,
+  "total_articles_generated": 86,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -11834,6 +11834,24 @@
       "git": "blocked: PAT revoked (leaked in repo history, GitHub auto-revoked) - commit f70961d local only",
       "online_200": "not verified - push blocked",
       "deploy": "not triggered - push blocked"
+    },
+    {
+      "batch": "batch31",
+      "date": "2026-10-17",
+      "window": "window2",
+      "action": "3 new pain-point articles (P0#3 hallucinations -> ai-tools-hallucinate-least-2026, P1#6 writing voice -> ai-writing-tools-match-your-voice-2026, P1#8 rate limits -> ai-tools-generous-rate-limits-2026); screenshots reused from verified webp set",
+      "slugs": [
+        "ai-tools-hallucinate-least-2026",
+        "ai-writing-tools-match-your-voice-2026",
+        "ai-tools-generous-rate-limits-2026"
+      ],
+      "zens_ink": "100/100/100",
+      "llmevalkit": "100/100/100",
+      "screenshots": "2/2/2, all verified webp",
+      "internal_links_ok": true,
+      "git": "pending push",
+      "online_200": "pending",
+      "deploy": "pending"
     }
   ],
   "last_commander_review": "2026-10-17T06:40:00",

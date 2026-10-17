@@ -119,3 +119,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - best-ai-3d-generators-2026 | Best AI 3D Generators 2026: 7 Tools Compared | kw: best ai 3d generators 2026 (P2) | 100 | 2779 | 2 screenshots | NEW
 - is-chatgpt-getting-worse-2026 | Is ChatGPT Getting Worse in 2026? Why Users Are Canceling Plus | kw: is chatgpt getting worse 2026 (pain P0#1) | 100 | 2326 | 2 screenshots | NEW
 - chatgpt-pro-200-worth-it-2026 | Is ChatGPT Pro $200/Month Worth It in 2026? Honest Review | kw: chatgpt pro 200 worth it 2026 (pain P0#2) | 100 | 2124 | 2 screenshots | NEW
+
+## batch31 (2026-10-17) - 3 new articles (pain-point driven)
+- ai-tools-hallucinate-least-2026 | Which AI Tools Hallucinate Least in 2026? 7 Tested | pain P0#3 hallucination reliability | 100 | 2039 | 2 screenshots | NEW
+- ai-writing-tools-match-your-voice-2026 | AI Writing Tools That Actually Sound Like You (2026 Tested) | pain P1#6 writing voice | 100 | 2091 | 2 screenshots | NEW
+- ai-tools-generous-rate-limits-2026 | Which AI Tools Have the Most Generous Rate Limits in 2026? | pain P1#8 rate limits | 100 | 2085 | 2 screenshots | NEW
