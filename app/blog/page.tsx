@@ -83,7 +83,7 @@ const collectionSchema = {
     {
       '@type': 'Article',
       headline: 'Midjourney v7 Review 2026: Is It Still the Best AI Image...',
-      url: 'https://www.aitoolcrux.com/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md',
+      url: 'https://www.aitoolcrux.com/blog/midjourney-v7-review-2026',
       datePublished: '2026-09-04',
       author: {
         '@type': 'Organization',
@@ -93,7 +93,7 @@ const collectionSchema = {
     {
       '@type': 'Article',
       headline: 'ElevenLabs v2 Review 2026: 3 Weeks of Testing the AI...',
-      url: 'https://www.aitoolcrux.com/blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md',
+      url: 'https://www.aitoolcrux.com/blog/elevenlabs-v2-review-2026',
       datePublished: '2026-09-04',
       author: {
         '@type': 'Organization',
@@ -103,7 +103,7 @@ const collectionSchema = {
     {
       '@type': 'Article',
       headline: 'Creatium Coach Review (2025): An Honest Look at This AI...',
-      url: 'https://www.aitoolcrux.com/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md',
+      url: 'https://www.aitoolcrux.com/blog/creatium-coach-review-2025',
       datePublished: '2026-09-04',
       author: {
         '@type': 'Organization',
@@ -113,7 +113,7 @@ const collectionSchema = {
     {
       '@type': 'Article',
       headline: "Midjourney v7 Review 2026: The Art Director's AI That...",
-      url: 'https://www.aitoolcrux.com/blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md',
+      url: 'https://www.aitoolcrux.com/blog/midjourney-v7-review-2026',
       datePublished: '2026-09-03',
       author: {
         '@type': 'Organization',

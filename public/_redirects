@@ -131,3 +131,10 @@
 # Eliminates 404-as-outage false positives (UX probe "ranking=000" hit this dead URL)
 /rankings /ranking 301
 /rankings/ /ranking/ 301
+
+# architect r31 P0-003 (CMD-20261018-003): remaining article-api-* ugly URLs -> canonical slugs
+# (creatium-coach 3rd dup + midjourney 2 dups + elevenlabs v2), eliminate self-cannibalization
+/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md /blog/midjourney-v7-review-2026/ 301
+/blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md /blog/midjourney-v7-review-2026/ 301
+/blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md /blog/elevenlabs-v2-review-2026/ 301
