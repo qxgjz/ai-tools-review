@@ -56,3 +56,10 @@
 **修复**：`public/_headers` `/*` Cache-Control 改 `max-age=300, stale-while-revalidate=3600`（1h）——保留对 000 的缓解（300s 内缓存命中），新内容最长 1h 收敛。
 **验证**：build=0；out/_headers 含 stale-while-revalidate=3600；commit 522cb6b push（baf815d..522cb6b）成功；Deploy 排队中（本日志记录时 in_progress）。
 **跨轮观察项**：无参 robots.txt 与本次细分页旧缓存均为 CF 边缘行为，Dashboard Purge Cache 可立即收敛（需指挥官/人工）；SWR=3600 生效后新部署内容 ≤1h 自动收敛。
+
+### 追加修复 2：完美缓存方案 max-age=0 + SWR=60（commit 78371d4）
+**背景**：用户追问"没有完美解决方案吗"——SWR=3600 仍有 1h 收敛窗口，且细分页旧缓存条目（旧 SWR 86400）在 30 分钟+后仍未回源刷新（周末凌晨流量低，CF 后台刷新调度慢）。
+**关键新认知**：**Cloudflare 默认忽略查询字符串（standardize query strings）**——`?v=r31d` 与无参 URL 是同一缓存键，?v= 从未真正绕过 CF 边缘缓存（此前 /compare?v=r31 拿到新版是恰逢后台刷新完成，非 query 绕过）。验证手段需改用：①CF Pages API 部署列表确认内容已上线 ②对比 robots.txt 等已收敛文件 ③等 CF 后台刷新。
+**修复**：`public/_headers` `/*` Cache-Control 改 `public, max-age=0, stale-while-revalidate=60`——内容部署后下一次请求即回源呈现（不再有 300s/1h 窗口），SWR 60s 仅作源站故障兜底；静态资源（/_next/* immutable、/screenshots 86400）不变。r30 的 000 根因（/rankings 死链 301）已修，缓存缓冲不再是必需。
+**验证**：build=0；out/_headers 含 max-age=0+SWR60；commit 78371d4 push（08453b8..78371d4）成功；Deploy 78371d4 completed success（Lint/CodeQL 亦 success）；线上无参 robots.txt=新版、/compare title=新版（新规则已在边缘生效）。
+**残余**：10 个细分页（148KB×10）旧缓存条目仍服务旧版——内容已上线（git show 3a82856 确认代码 +34 行 More 区块 + CF API 确认 522cb6b 部署），系 CF 边缘旧条目未回源；query 无法绕过（CF 忽略 query）；最长 24h 强制收敛；如需立即全量呈现只能 CF Dashboard Purge Everything（人工，token 无 Cache Purge 权限已证 401）。新 max-age=0 规则生效后此类问题不再发生。
