@@ -3266,6 +3266,62 @@
       ],
       "completed_at": "2026-10-17",
       "completion_note": "假完成整改完成：改用服务器端web_fetch逐页验证（10页全绿），真实Lighthouse尝试（本机NO_FCP，附10:18真实报告），已写ux日志；纠正前两轮本机curl误报"
+    },
+    {
+      "id": "P1-CI-CWV-PIPELINE-001",
+      "task": "改造Lighthouse CI让体验官定时任务能读到真实CWV：现状 lighthouse-ci.yml 仅周一06:00UTC跑、unlighthouse仅周日，且artifact=0/job日志空，本机经GitHub API取不到机器可读的Performance/LCP/INP/CLS。要求：①lighthouse-ci.yml改为每日定时(对齐巡检时段或至少每日)；②把每页Lighthouse JSON分数(performance score+LCP+INP+CLS)通过actions/upload-artifact长期保留(如retention 90天)或commit回仓库性能报告文件；③体验官窗口随后可用GitHub API直接拉取真实CWV，不再依赖本机lighthouse(本机到海外NO_FCP)。",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "ux_cwv_recheck_20261018",
+      "created_at": "2026-10-18T00:51:00"
+    },
+    {
+      "id": "CMD-20261018-001",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": "window3(内容创作)",
+      "source": "commander_diagnosis_20261018",
+      "task": "SEO聚焦批量产文：复制best-ai-voice-changers-2026成功模式(28天68曝光/位置16.5/唯一有流量页面)，按同一结构(AEO Quick Answer+Key Takeaways+对比表)批量生产20篇 Best AI X 2026 列表文，每篇≥2000词含FAQ，写进content_drafts/",
+      "url": "https://www.aitoolcrux.com/blog/best-ai-voice-changers-2026"
+    },
+    {
+      "id": "CMD-20261018-002",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": "window2(外链拓荒)",
+      "source": "commander_diagnosis_20261018",
+      "task": "外链从0到1：28天关键词全排50-86位=域名权重极低，本周必出10条真实外链(HARO答问/高DR目录提交/Reddit+Quora真实价值回复/相关博客客座)，完成后记录到backlinks_tracking.md并提交URL供指挥官验收",
+      "url": ""
+    },
+    {
+      "id": "CMD-20261018-003",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": "window1(前端架构)",
+      "source": "commander_diagnosis_20261018",
+      "task": "消除URL分裂与自相蚕食：①GSC出现http://www.aitoolcrux.com被索引，验证Cloudflare强制HTTPS+301(非www->www)；②article-api-*丑陋URL文章(5个,creatium-coach重复3篇/midjourney重复)全部301到规范slug或删除，消除重复内容蚕食",
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md"
+    },
+    {
+      "id": "CMD-20261018-004",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": "指挥官/全窗口",
+      "source": "commander_diagnosis_20261018",
+      "task": "修复记账闭环：所有窗口每次执行完毕必须回写state.json对应待办为completed(含completion_note)，SOP强制加此步骤；下轮调度按真实产出重算完成率，完成率仍<50%则暂停该窗口新任务分配",
+      "url": ""
+    },
+    {
+      "id": "CMD-20261018-005",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": "window1(前端架构)",
+      "source": "commander_diagnosis_20261018",
+      "task": "验证CF缓存修复上线：r31追加的max-age=0+SWR=60(commit 78371d4)必须确认部署成功且线上新文章≤1h可见(用无参URL跨轮curl验证)，修复SWR=86400导致的24h内容延迟问题",
+      "url": ""
     }
   ],
   "milestones": [
@@ -11990,9 +12046,9 @@
       "llmevalkit": "100/100/100",
       "screenshots": "2/2/2, all verified",
       "internal_links_ok": true,
-      "git": "blocked: PAT revoked (leaked in repo history, GitHub auto-revoked) - commit f70961d local only",
-      "online_200": "not verified - push blocked",
-      "deploy": "not triggered - push blocked"
+      "git": "pushed: f70961d (remote main == local HEAD 08453b8)",
+      "online_200": "verified: 200 x3 (2026-10-18)",
+      "deploy": "deployed via Cloudflare Pages"
     },
     {
       "batch": "batch31",
@@ -12008,9 +12064,9 @@
       "llmevalkit": "100/100/100",
       "screenshots": "2/2/2, all verified webp",
       "internal_links_ok": true,
-      "git": "blocked: PAT revoked (leaked in repo history) + github.com unreachable - commit c7104d5 local only",
-      "online_200": "not verified - push blocked",
-      "deploy": "not triggered - push blocked"
+      "git": "pushed: c7104d5 (remote main == local HEAD 08453b8)",
+      "online_200": "verified: 200 x3 (2026-10-18)",
+      "deploy": "deployed via Cloudflare Pages"
     }
   ],
   "last_commander_review": "2026-10-17T06:40:00",
