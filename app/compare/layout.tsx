@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Best AI Tool Comparison 2026: Top 10 Ranked & Tested',
+  title: 'AI Tools Comparison 2026: ChatGPT vs Claude vs Gemini',
   description:
     'Compare 500+ AI tools side by side in 2026 with honest ratings, real pricing, and pros & cons from 3-week hands-on testing. Find your perfect AI tool.',
   keywords: [
@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     canonical: 'https://www.aitoolcrux.com/compare/',
   },
   openGraph: {
-    title: 'Best AI Tool Comparison 2026: Top 10 Ranked & Tested',
+    title: 'AI Tools Comparison 2026: ChatGPT vs Claude vs Gemini',
     description:
       'Compare the best AI tools side by side. Features, pricing, ratings, and detailed six-dimension analysis for 500+ AI tools — tested hands-on for 3+ weeks.',
     url: 'https://www.aitoolcrux.com/compare/',
@@ -36,7 +36,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Best AI Tool Comparison 2026: Top 10 Ranked & Tested',
+    title: 'AI Tools Comparison 2026: ChatGPT vs Claude vs Gemini',
     description:
       'Compare the best AI tools side by side. Features, pricing, ratings, and detailed six-dimension analysis — tested hands-on for 3+ weeks.',
   },

@@ -408,6 +408,40 @@ export default function ComparisonPage({ params }: ComparisonPageProps) {
         </div>
       </FadeIn>
 
+      {/* More AI Tool Comparisons - internal linking cluster */}
+      <FadeIn delay={0.5}>
+        <div className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-200 dark:border-zinc-800 p-6 mb-8">
+          <h2 className="text-lg font-bold text-zinc-900 dark:text-white mb-2 flex items-center gap-2">
+            <GitCompare className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+            More AI Tool Comparisons
+          </h2>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
+            Compare more popular AI tools head-to-head with real test data and honest verdicts.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+            {comparisonsData
+              .filter((c: any) => c.slug !== comparison.slug)
+              .map((c: any) => (
+                <Link
+                  key={c.slug}
+                  href={`/compare/${c.slug}`}
+                  className="p-3 rounded-lg border border-zinc-200 dark:border-zinc-700 hover:border-emerald-400 dark:hover:border-emerald-600 hover:bg-emerald-50 dark:hover:bg-emerald-900/10 transition-colors text-sm font-medium text-zinc-700 dark:text-zinc-300"
+                >
+                  {c.title}
+                </Link>
+              ))}
+          </div>
+          <div className="mt-4">
+            <Link
+              href="/compare"
+              className="inline-flex items-center gap-1.5 text-sm text-emerald-600 dark:text-emerald-400 font-medium hover:underline"
+            >
+              View all AI tool comparisons <ExternalLink className="w-3.5 h-3.5" />
+            </Link>
+          </div>
+        </div>
+      </FadeIn>
+
       <div className="mt-8 text-center text-xs text-zinc-600 dark:text-zinc-400">
         Last updated September 13, 2026. Scores based on our public evaluation methodology.
         Affiliate links may earn us a commission at no extra cost to you.
