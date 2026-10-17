@@ -4,7 +4,7 @@
   X-Frame-Options: SAMEORIGIN
   Referrer-Policy: strict-origin-when-cross-origin
   Permissions-Policy: camera=(), microphone=(), geolocation=(), interest-cohort=()
-  Cache-Control: public, max-age=300, stale-while-revalidate=3600
+  Cache-Control: public, max-age=0, stale-while-revalidate=60
 
 /api/*
   Cache-Control: no-store
