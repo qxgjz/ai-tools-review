@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-16T22:01:35.817991",
+  "audit_time": "2026-10-17T21:24:21.223290",
   "mode": "quick",
   "content": {
-    "total_articles": 173,
-    "average_score": 86.95317919075153,
-    "perfect_count": 93,
-    "below_85_count": 63,
+    "total_articles": 182,
+    "average_score": 85.87032967032975,
+    "perfect_count": 92,
+    "below_85_count": 72,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -34,12 +34,12 @@
       {
         "slug": "gemini-alternatives-2026",
         "title": "7 Best Gemini Alternatives in 2026 | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 2242,
-        "flesch": 51.2,
+        "quality_score": 94.4,
+        "word_count": 2303,
+        "flesch": 51.0,
         "internal_links": 8,
-        "external_links": 1,
-        "images": 2,
+        "external_links": 2,
+        "images": 0,
         "failed_checks": []
       },
       {
@@ -112,7 +112,7 @@
       },
       {
         "slug": "best-ai-voice-changers-2026",
-        "title": "Best AI Voice Changers 2026: We Tested 7 for 10 Days",
+        "title": "Best AI Voice Changers 2026: Real-Time Voice Tools Compared",
         "quality_score": 100.0,
         "word_count": 2927,
         "flesch": 52.6,
@@ -790,9 +790,9 @@
         "slug": "github-copilot-review-2026",
         "title": "GitHub Copilot Review 2026: 30 Days, 500+ Completions — I...",
         "quality_score": 100.0,
-        "word_count": 13298,
-        "flesch": 44.7,
-        "internal_links": 13,
+        "word_count": 13318,
+        "flesch": 43.2,
+        "internal_links": 16,
         "external_links": 1,
         "images": 2,
         "failed_checks": []
@@ -880,10 +880,10 @@
         "slug": "figma-ai-review-2026",
         "title": "Figma AI Review 2026: Best AI Design Assistant | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 13916,
-        "flesch": 47.4,
-        "internal_links": 14,
-        "external_links": 1,
+        "word_count": 13953,
+        "flesch": 47.5,
+        "internal_links": 15,
+        "external_links": 2,
         "images": 1,
         "failed_checks": []
       },
@@ -946,21 +946,21 @@
         "slug": "gemini-review-2026",
         "title": "Google Gemini Review 2026: Honest 30-Day Test | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 11360,
-        "flesch": 50.4,
-        "internal_links": 13,
-        "external_links": 1,
-        "images": 2,
+        "word_count": 11393,
+        "flesch": 51.2,
+        "internal_links": 14,
+        "external_links": 2,
+        "images": 1,
         "failed_checks": []
       },
       {
         "slug": "dall-e-3-review-2026",
         "title": "DALL-E 3 Review 2026: Best AI Image Generator | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 13929,
-        "flesch": 45.8,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 13970,
+        "flesch": 45.5,
+        "internal_links": 14,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
@@ -1111,7 +1111,7 @@
       },
       {
         "slug": "ai-tools-comparison-2026",
-        "title": "AI Tools Comparison 2026: Which AI Tool is | AIToolCrux",
+        "title": "AI Tools Comparison 2026: Best Tools Compared Side by Side",
         "quality_score": 100.0,
         "word_count": 12064,
         "flesch": 50.0,
@@ -1278,16 +1278,15 @@
       {
         "slug": "cursor-vs-github-copilot-2026",
         "title": "Cursor vs GitHub Copilot 2026: Best AI Coding Assistant?",
-        "quality_score": 66.7,
-        "word_count": 1872,
-        "flesch": 49.4,
+        "quality_score": 72.2,
+        "word_count": 1967,
+        "flesch": 48.3,
         "internal_links": 3,
-        "external_links": 0,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
           "word_count_pass",
-          "first_para_pass",
-          "external_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -2090,6 +2089,124 @@
           "first_para_pass",
           "readability_pass"
         ]
+      },
+      {
+        "slug": "best-ai-stock-trading-tools-2026",
+        "title": "\"Best AI Stock Trading Bots 2026: Platforms, Fees & Performance\"",
+        "quality_score": 60.0,
+        "word_count": 2657,
+        "flesch": 46.0,
+        "internal_links": 4,
+        "external_links": 3,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-real-estate-tools-2026",
+        "title": "\"Best AI Real Estate Tools 2026: Listing, Lead Gen & Valuation\"",
+        "quality_score": 45.6,
+        "word_count": 2410,
+        "flesch": 36.7,
+        "internal_links": 3,
+        "external_links": 3,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-prompt-generators-2026",
+        "title": "\"Best AI Prompt Generators 2026: Free & Paid Compared\"",
+        "quality_score": 60.0,
+        "word_count": 2356,
+        "flesch": 54.3,
+        "internal_links": 3,
+        "external_links": 3,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-3d-generators-2026",
+        "title": "\"Best AI 3D Generators 2026: 7 Tools Compared\"",
+        "quality_score": 65.6,
+        "word_count": 3237,
+        "flesch": 52.7,
+        "internal_links": 4,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "is-chatgpt-getting-worse-2026",
+        "title": "\"Is ChatGPT Getting Worse in 2026? Why Users Are Canceling Plus\"",
+        "quality_score": 65.6,
+        "word_count": 2655,
+        "flesch": 42.1,
+        "internal_links": 3,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "chatgpt-pro-200-worth-it-2026",
+        "title": "\"Is ChatGPT Pro $200/Month Worth It in 2026? Honest Review\"",
+        "quality_score": 65.6,
+        "word_count": 2452,
+        "flesch": 54.0,
+        "internal_links": 4,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-tools-hallucinate-least-2026",
+        "title": "\"Which AI Tools Hallucinate Least in 2026? 7 Tested\"",
+        "quality_score": 74.4,
+        "word_count": 2427,
+        "flesch": 49.8,
+        "internal_links": 7,
+        "external_links": 10,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-writing-tools-match-your-voice-2026",
+        "title": "\"AI Writing Tools That Actually Sound Like You (2026 Tested)\"",
+        "quality_score": 74.4,
+        "word_count": 2447,
+        "flesch": 49.1,
+        "internal_links": 4,
+        "external_links": 24,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-tools-generous-rate-limits-2026",
+        "title": "\"Which AI Tools Have the Most Generous Rate Limits in 2026?\"",
+        "quality_score": 74.4,
+        "word_count": 2426,
+        "flesch": 58.0,
+        "internal_links": 6,
+        "external_links": 15,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
       }
     ]
   },
@@ -2105,7 +2222,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 2.6
+    "elapsed_seconds": 2.2
   },
   "geo": {
     "geo_score": 100,
