@@ -11849,9 +11849,9 @@
       "llmevalkit": "100/100/100",
       "screenshots": "2/2/2, all verified webp",
       "internal_links_ok": true,
-      "git": "pending push",
-      "online_200": "pending",
-      "deploy": "pending"
+      "git": "blocked: PAT revoked (leaked in repo history) + github.com unreachable - commit c7104d5 local only",
+      "online_200": "not verified - push blocked",
+      "deploy": "not triggered - push blocked"
     }
   ],
   "last_commander_review": "2026-10-17T06:40:00",
