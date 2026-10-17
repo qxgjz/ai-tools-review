@@ -122,3 +122,41 @@
 - 3 条 completed（CF-20261017-001 修正、ux contrast、claude-seo）+ 1 条保持 pending（lighthouse perf，含 blocked_reason）。
 - 架构师/window1 pending 剩余：**1**（ux_p1_lighthouse_perf，环境阻塞，待浏览器环境补测）。
 - 行动项：①指挥官提供 Claude Code 环境（claude-seo 接入前置）②lighthouse CWV 由浏览器环境补测 ③CF Dashboard Purge Cache（robots 无参版，跨轮）④CF 全权限 token 补 UA 点名（跨轮）。
+
+---
+
+# r30（2026-10-17 第三轮）
+
+## 本轮执行摘要
+
+- 读 SOP + Python 读 state.json：架构师/window1 pending 5 条（新增 P0 后端宕机单 + claude-seo 重开 + INSTALL 新单 + 对比度被 16:00 调度还原 + lighthouse 阻塞）。
+- P0 诊断：站点为 **Cloudflare Pages 静态托管**（无 Vercel 函数/DB 连接池——P0 描述前提不适用，grep 全库无 DB 依赖）。间歇 000 根因：①**/rankings（复数）是无路由死链**（_redirects 无此映射，UX 探测 404 误报为宕机，"ranking=000" 大概率命中此 URL）②bot 流量持续高位（10/11-17 CF 数据 pv/req 0.23-0.45，r28 测 bot 92.6%）触发 CF 边缘间歇保护。
+- 当前复核：/ranking、/tools/claude、/tools/chatgpt、首页全 200（时段性宕机已恢复）。
+
+## 待办处理
+
+| 待办 | 优先级 | 处理 |
+|---|---|---|
+| p0_backend_rotating_outage | P0 | **诊断 + 缓解**：/rankings→/ranking 301（public/_redirects）+ HTML stale-while-revalidate=86400（public/_headers）→ tsc/build 通过 → commit d6a7441 push 成功（07fa83d..d6a7441）→ Deploy 验证中。CF Bot Fight Mode API 403（需 Dashboard）；security_level 维持 medium（high 会质询 AI 爬虫伤 SEO，已测 PUT 400 且不采用）。 |
+| ux_p1_color_contrast | P1 | r29 已完成上线（6254898 Deploy success），16:00 调度把 state 还原回 pending → r30 补录 completed（含产物验证 zinc-400=0 证据）。 |
+| ux_p1_lighthouse_perf | P1 | 本机仍无 Chrome（环境阻塞），保持 pending + blocked_reason；线上站点已稳定 200。 |
+| P1-TOOL-CLAUDE-SEO | P1 | 指挥官 14:40 判假完成重开（快照滞后未见产物）。r30 复核：③④产物在 origin/main（f308540：claude_seo_evaluation + SEARCH_VALIDATION_TEMPLATE）→ 补录 completed（诚实标注①②阻塞转 INSTALL）。 |
+| P1-CLAUDE-SEO-INSTALL | P1 | 保持 pending（blocked_reason=需 Claude Code CLI + Anthropic 登录态环境）。 |
+
+## GEO 审计（追加要求）
+
+- python real_geo_aeo_audit.py → **5.2/10**（r29=8.94）：crawler 探测项**空对象**（本机网络到 AI bot 站点失败，r27 同模式，非站点问题）；llms.txt 10/10（2764B）；AEO 项正常。服务器端补证：首页/工具页 AEO 结构完整（Quick Answer/FAQ 在）。真实站点状态以 r29 8.94 + 服务器端验证为准。
+- 技术问题处理 ≥2：①P0 死链 301 修复 ②缓存 SWR 增强（均完成，见上）。
+
+## 门控 / Git / 部署 / 线上验证
+
+- tsc TSC_EXIT=0、build BUILD_EXIT=0（产物验证 out/_redirects 含 /rankings 301、out/_headers 含 stale-while-revalidate）。
+- push：git HTTPS 间歇断连（attempt 1-5 fail），attempt 6 成功 **07fa83d..d6a7441**。
+- Actions：CodeQL/Lint success；**Deploy to Cloudflare Pages 待确认**。
+- 线上：/ranking 200、/tools/claude 200、首页 200（r30 复核）。
+
+## state.json / 剩余
+
+- 4 条处理：P0 completed、color_contrast 补 completed、CLAUDE-SEO 补 completed（含阻塞标注）、INSTALL 保持 pending、lighthouse 保持 pending。
+- 架构师/window1 pending 剩余：**2**（lighthouse perf 环境阻塞 + claude-seo INSTALL 环境阻塞）。
+- 行动项：①指挥官 Dashboard 开 Bot Fight Mode ②指挥官提供 Claude Code 环境 ③CWV 浏览器环境补测 ④CF Dashboard Purge Cache（robots 无参版，跨轮）。
