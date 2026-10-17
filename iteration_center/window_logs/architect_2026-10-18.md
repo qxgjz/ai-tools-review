@@ -50,3 +50,9 @@
 ### 剩余 P0/P1
 - P0：0
 - P1：2（均环境阻塞：lighthouse CWV 补测 / claude-seo 安装）
+
+### 追加修复：CF 缓存 SWR 86400→3600（commit 522cb6b）
+**发现问题**：r31 上线后，/compare 聚合页新 title 通过 ?v= 可验证上线，但细分页 "More AI Tool Comparisons" 区块在线上持续不可见（部署 18 分钟+）——根因是 **r30 为缓解间歇 000 引入的 `stale-while-revalidate=86400`（24h）**：CF 边缘在 24h 内优先服务旧版+后台刷新，导致所有新内容（含每日发布的文章）最长延迟 24h 全量可见，对内容迭代/SEO 时效性是重大负面。
+**修复**：`public/_headers` `/*` Cache-Control 改 `max-age=300, stale-while-revalidate=3600`（1h）——保留对 000 的缓解（300s 内缓存命中），新内容最长 1h 收敛。
+**验证**：build=0；out/_headers 含 stale-while-revalidate=3600；commit 522cb6b push（baf815d..522cb6b）成功；Deploy 排队中（本日志记录时 in_progress）。
+**跨轮观察项**：无参 robots.txt 与本次细分页旧缓存均为 CF 边缘行为，Dashboard Purge Cache 可立即收敛（需指挥官/人工）；SWR=3600 生效后新部署内容 ≤1h 自动收敛。
