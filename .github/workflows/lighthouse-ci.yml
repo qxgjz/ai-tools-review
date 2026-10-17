@@ -2,7 +2,7 @@ name: Lighthouse CI
 
 on:
   schedule:
-    - cron: "0 6 * * 1" # Every Monday 06:00 UTC
+    - cron: "0 6 * * *" # Every day 06:00 UTC (14:00 Beijing)
   workflow_dispatch:
   pull_request:
     branches: [main]
@@ -14,7 +14,7 @@ on:
       - '.lighthouserc.json'
 
 permissions:
-  contents: read
+  contents: write
 
 concurrency:
   group: lighthouse-ci
@@ -41,10 +41,33 @@ jobs:
           temporaryPublicStorage: true
           configPath: "./.lighthouserc.json"
 
+      - name: Extract CWV summary
+        if: always()
+        run: |
+          mkdir -p gsc-ga4-report/cwv
+          node -e "
+          const fs=require('fs'), path=require('path');
+          const out={generatedAt:new Date().toISOString(), pages:[]};
+          function walk(d){ if(!fs.existsSync(d)) return; for(const e of fs.readdirSync(d,{withFileTypes:true})){ const p=path.join(d,e.name); if(e.isDirectory()) walk(p); else if(e.name.endsWith('.report.json')){ try{ const j=JSON.parse(fs.readFileSync(p,'utf8')); const a=j.audits||{}; out.pages.push({ url:(j.finalDisplayedUrl||j.finalUrl||p).replace('https://www.aitoolcrux.com',''), performance:j.categories&&j.categories.performance?Math.round(j.categories.performance.score*100):null, lcp:a['largest-contentful-paint']&&a['largest-contentful-paint'].displayValue||null, inp:a['interaction-to-next-paint']&&a['interaction-to-next-paint'].displayValue||null, cls:a['cumulative-layout-shift']&&a['cumulative-layout-shift'].displayValue||null }); }catch(e){ console.error('parse fail', p); } } } }
+          walk('.lighthouseci');
+          fs.writeFileSync('gsc-ga4-report/cwv/cwv_latest.json', JSON.stringify(out,null,2));
+          console.log('CWV_PAGES='+out.pages.length);
+          for(const pg of out.pages) console.log(pg.url, 'perf='+pg.performance, 'lcp='+pg.lcp, 'inp='+pg.inp, 'cls='+pg.cls);
+          "
+
+      - name: Commit CWV report
+        if: always()
+        run: |
+          git config user.name "lighthouse-ci"
+          git config user.email "actions@github.com"
+          git add gsc-ga4-report/cwv/cwv_latest.json
+          git commit -m "ci(cwv): daily lighthouse CWV report (performance/LCP/INP/CLS)" || echo "no changes to commit"
+          git push || echo "push skipped/failed"
+
       - name: Upload Lighthouse reports
         uses: actions/upload-artifact@v4
         if: always()
         with:
           name: lighthouse-reports
           path: .lighthouseci
-          retention-days: 30
+          retention-days: 90
