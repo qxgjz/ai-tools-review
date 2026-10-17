@@ -114,3 +114,8 @@ Records all batch-written articles for keyword rotation. Skip keywords already l
 - best-ai-stock-trading-tools-2026 | Best AI Stock Trading Bots 2026: Platforms, Fees & Performance | kw: best ai stock trading tools 2026 (P2) | 100 | 2414 | 2 screenshots | NEW
 - best-ai-real-estate-tools-2026 | Best AI Real Estate Tools 2026: Listing, Lead Gen & Valuation | kw: best ai real estate tools 2026 (P2) | 100 | 2171 | 2 screenshots | NEW
 - best-ai-prompt-generators-2026 | Best AI Prompt Generators 2026: Free & Paid Compared | kw: best ai prompt generator 2026 (P2) | 100 | 2105 | 2 screenshots | NEW
+
+## batch30 (2026-10-17) - 3 new articles (1 kw opportunity P2 + 2 pain-point)
+- best-ai-3d-generators-2026 | Best AI 3D Generators 2026: 7 Tools Compared | kw: best ai 3d generators 2026 (P2) | 100 | 2779 | 2 screenshots | NEW
+- is-chatgpt-getting-worse-2026 | Is ChatGPT Getting Worse in 2026? Why Users Are Canceling Plus | kw: is chatgpt getting worse 2026 (pain P0#1) | 100 | 2326 | 2 screenshots | NEW
+- chatgpt-pro-200-worth-it-2026 | Is ChatGPT Pro $200/Month Worth It in 2026? Honest Review | kw: chatgpt pro 200 worth it 2026 (pain P0#2) | 100 | 2124 | 2 screenshots | NEW
