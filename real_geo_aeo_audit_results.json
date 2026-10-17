@@ -1,12 +1,12 @@
 {
-  "audit_time": "2026-10-17T04:08:45.865086",
+  "audit_time": "2026-10-17T12:34:05.039968",
   "base_url": "https://www.aitoolcrux.com",
   "ai_crawler_accessibility": {
-    "accessible": 11,
-    "blocked": 0,
+    "accessible": 10,
+    "blocked": 1,
     "not_configured": 0,
     "total": 11,
-    "score": 10.0
+    "score": 9.09090909090909
   },
   "llms_txt_status": {
     "llms.txt": {
@@ -22,17 +22,7 @@
     }
   },
   "aeo_optimization": {
-    "/": {
-      "score": 10.0,
-      "checks_passed": 8,
-      "total_checks": 8
-    },
     "/tools/chatgpt": {
-      "score": 10.0,
-      "checks_passed": 8,
-      "total_checks": 8
-    },
-    "/tools/midjourney": {
       "score": 10.0,
       "checks_passed": 8,
       "total_checks": 8
@@ -47,18 +37,13 @@
       "checks_passed": 8,
       "total_checks": 8
     },
-    "/alternatives/chatgpt-alternatives": {
-      "score": 10.0,
-      "checks_passed": 8,
-      "total_checks": 8
-    },
     "/methodology": {
       "score": 10.0,
       "checks_passed": 8,
       "total_checks": 8
     }
   },
-  "geo_readiness_score": 9.166666666666666,
+  "geo_readiness_score": 8.93939393939394,
   "findings": [
     "GPTBot is configured and accessible",
     "ClaudeBot is configured and accessible",
@@ -69,7 +54,8 @@
     "Amazonbot is configured and accessible",
     "Bytespider is configured and accessible",
     "meta-externalagent is configured and accessible",
-    "OAI-SearchBot is configured and accessible"
+    "OAI-SearchBot is configured and accessible",
+    "CCBot is BLOCKED in robots.txt (Disallow: /)"
   ],
   "recommendations": []
 }

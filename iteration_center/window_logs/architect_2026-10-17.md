@@ -87,3 +87,38 @@
 
 - 3 条待办 → completed；新增 `bot_traffic_pct=92.6`（+note）；架构师 pending 剩余 **0**。
 - 行动项：① CF Dashboard Purge Cache（robots.txt 无参版）② 提供 CF 全权限 token 补 UA 点名 ③ CF Dashboard 开启 Bot Fight Mode ④ GA4 (not set) 下降需 24-48h 后复核。
+
+---
+
+# r29（2026-10-17 追加小节）
+
+## 本轮执行摘要
+
+- 读 SOP + Python 读 state.json：架构师/window1 待办 4 条（P0 CF-20261017-001 状态残留 + P1 x3）。
+- GEO 审计：real_geo_aeo_audit.py → geo_readiness_score=**8.94/10**（r28=9.17）。crawler 10/11 accessible + CCBot BLOCKED（r28 主动 Disallow，采集爬虫限制取舍，AI 搜索直连 bot GPTBot/OAI-SearchBot/PerplexityBot/ClaudeBot/Applebot 等 10 项全 accessible）；llms.txt 10/10、llms-full.txt 10/10；AEO 4 页 10/10。无新内容类缺口（recommendations=[]）。
+
+## 待办处理
+
+| 待办 | 优先级 | 处理 |
+|---|---|---|
+| CF-20261017-001 | P0 | 复核 r28 完成记录完整（bot_traffic_pct=92.6 + 报告在），状态残留 pending → 修正 completed（UA 点名阻塞不变） |
+| ux_p1_color_contrast_137nodes | P1 | **代码修复**：WCAG AA 提亮 71 处（text-zinc-400/500→text-zinc-600、dark:text-zinc-500→dark:text-zinc-400），app/page.tsx 41、tools/[slug] 22、compare/[slug] 3、ToolCard 3、alternatives 1、submit 1；tsc+build 过；push 6254898 Deploy success；产物验证 out/index.html text-zinc-400=0 |
+| ux_p1_lighthouse_perf | P1 | **环境阻塞如实记录**：本机无 Chrome 可执行文件（lighthouse chrome-launcher 启动失败），Performance 无法出分；线上首页/tools/chatgpt 服务器端 web_fetch 200。保持 pending + blocked_reason，CWV 需浏览器环境补测 |
+| P1-TOOL-CLAUDE-SEO | P1 | **评估完成**（claude_seo_evaluation_2026-10-17.md）：GitHub 实测 19.1k stars/MIT；安装+跑审计阻塞（无 Claude Code CLI + 无 Anthropic 登录态，需指挥官提供环境）；可落地：SEARCH_VALIDATION_TEMPLATE.md（4 项可证伪验收方法论，供指挥官验收各窗口）+ OpenSEO 对比结论 |
+
+## GEO 技术处理（≥2）
+
+1. **a11y 对比度修复 71 处**（技术问题，自修，已上线）。
+2. **CCBot blocked 权衡确认**：GEO 审计扣 1 分（crawler 9.09）系 r28 主动 Disallow CCBot（Common Crawl 高消耗采集爬虫）——AI 搜索实时抓取 bot 全 accessible，AI 搜索可见性不受影响，维持决策并在日志记录。
+
+## 门控 / Git / 部署 / 线上验证
+
+- tsc TSC_EXIT=0、build BUILD_EXIT=0。
+- push：b0e9632..**6254898** main -> main（仅 add 自己 6 文件，未动他人改动）；Actions 4 workflow 全 success，**Deploy to Cloudflare Pages success**。
+- 线上：首页 200（Quick Answer/Key Takeaways/FAQ 完整）、/tools/chatgpt/ 200（Overall Score + 6 维分）。产物 out/index.html 验证 text-zinc-400=0、text-zinc-600 存在。
+
+## state.json / 剩余
+
+- 3 条 completed（CF-20261017-001 修正、ux contrast、claude-seo）+ 1 条保持 pending（lighthouse perf，含 blocked_reason）。
+- 架构师/window1 pending 剩余：**1**（ux_p1_lighthouse_perf，环境阻塞，待浏览器环境补测）。
+- 行动项：①指挥官提供 Claude Code 环境（claude-seo 接入前置）②lighthouse CWV 由浏览器环境补测 ③CF Dashboard Purge Cache（robots 无参版，跨轮）④CF 全权限 token 补 UA 点名（跨轮）。

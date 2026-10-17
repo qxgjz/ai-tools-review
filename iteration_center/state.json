@@ -1808,7 +1808,7 @@
         "架构师"
       ],
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_cf_probe_2026-10-17",
       "data_verified": true,
       "cf_evidence": {
@@ -1819,8 +1819,8 @@
       },
       "created_at": "2026-10-17T01:00:00",
       "related_todo": "GA4-20261010-000",
-      "completed_at": "2026-10-17T02:00:00",
-      "completion_note": "完成可落地部分：CF GraphQL httpRequests1dGroups 拉取 10/3-10/10 每日请求/页面/唯一数，bot_traffic_pct=92.6（GA4 engaged 反向；CF 非页面请求占比 70.5%），分析报告 iteration_center/cf_bot_analysis_2026-10-17.md。UA点名部分阻塞：现有 CF token 无 httpRequestsAdaptiveGroups（UA/路径维度）与 Logpush 权限（403）→ 需指挥官提供 Zone Analytics 全权限 token 或 dashboard 开启 Logpush（见报告行动项）",
+      "completed_at": "2026-10-17T12:40:26",
+      "completion_note": "r28 已完成（bot_traffic_pct=92.6 + cf_bot_analysis_2026-10-17.md）；r29 复核确认完成记录完整，状态残留修正。UA 点名阻塞不变：需全权限 CF token 或 Dashboard Logpush。",
       "blocked_reason": "Logpush 403/无AdaptiveGroups权限，无法点名具体爬虫；等待用户提供全权限token或Dashboard开Logpush"
     },
     {
@@ -3442,9 +3442,11 @@
         "架构师"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_learning_GitHub_trending_20261017",
-      "created_at": "2026-10-17T08:10:00"
+      "created_at": "2026-10-17T08:10:00",
+      "completion_note": "r29: claude-seo 评估完成（iteration_center/claude_seo_evaluation_2026-10-17.md，GitHub 实测 19.1k stars）。安装/跑审计阻塞：本机无 Claude Code CLI + 无 Anthropic 登录态（需指挥官提供环境）。可落地部分完成：①可证伪验收方法论固化为 iteration_center/SEARCH_VALIDATION_TEMPLATE.md（供指挥官验收各窗口）②与 OpenSEO 对比结论：可作为免费补充但需 Claude Code 环境，OpenSEO 保持主通道。",
+      "completed_at": "2026-10-17T12:40:26"
     },
     {
       "id": "P1-TOOL-ELMO-20261017",
@@ -3622,10 +3624,12 @@
       "description": "lighthouse实测首页accessibility=96，唯一失败项color-contrast：137个低对比节点，集中在卡片meta行 <p class='text-xs text-zinc-400 dark:text-zinc-500'>。需把辅助文字提亮到WCAG AA（浅色≥4.5:1，深色模式zinc-500偏暗）。",
       "priority": "P1",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct17_lighthouse",
       "created_at": "2026-10-17",
-      "evidence": "lighthouse a11y=96, color-contrast=0, 137 fail nodes, zinc-400/zinc-500 text-xs"
+      "evidence": "lighthouse a11y=96, color-contrast=0, 137 fail nodes, zinc-400/zinc-500 text-xs",
+      "completion_note": "r29: WCAG AA 提亮 71 处（text-zinc-400/500 -> text-zinc-600，dark:text-zinc-500 -> dark:text-zinc-400），涉及 app/page.tsx(41)/tools/[slug](22)/compare/[slug](3)/ToolCard(3)/alternatives(1)/submit(1)；tsc+build 通过；push 6254898 Deploy success；产物 out/index.html 验证 text-zinc-400=0。",
+      "completed_at": "2026-10-17T12:40:26"
     },
     {
       "id": "ux_p1_lighthouse_perf_blocked_recheck_after_recovery_2026-10-17",
@@ -3636,7 +3640,8 @@
       "status": "pending",
       "source": "ux_audit_oct17_lighthouse",
       "created_at": "2026-10-17",
-      "evidence": "LanternError missing metric scores for frame; SEO92/a11y96/BP92"
+      "evidence": "LanternError missing metric scores for frame; SEO92/a11y96/BP92",
+      "blocked_reason": "r29 实测本机无 Chrome 可执行文件（lighthouse chrome-launcher 启动失败），无法出 Performance 分；线上首页/tools/chatgpt 服务器端 web_fetch 200 正常。CWV 需在浏览器环境（UX 窗口 lighthouse 可出分）补测或 CrUX/GA4 CWV 通道"
     }
   ],
   "milestones": [
