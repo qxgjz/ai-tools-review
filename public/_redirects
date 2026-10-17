@@ -126,3 +126,8 @@
 # architect r27: blog category slug normalization (singular -> plural) 301
 /blog/category/comparison /blog/category/comparisons 301
 /blog/category/guide /blog/category/guides 301
+
+# architect r30 (P0-20261017 outage): /rankings (plural) has no route -> 301 to /ranking
+# Eliminates 404-as-outage false positives (UX probe "ranking=000" hit this dead URL)
+/rankings /ranking 301
+/rankings/ /ranking/ 301
