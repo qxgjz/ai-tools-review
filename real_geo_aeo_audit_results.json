@@ -1,5 +1,5 @@
 {
-  "audit_time": "2026-10-18T00:10:32.160884",
+  "audit_time": "2026-10-18T04:02:54.924736",
   "base_url": "https://www.aitoolcrux.com",
   "ai_crawler_accessibility": {
     "accessible": 10,
@@ -22,7 +22,32 @@
     }
   },
   "aeo_optimization": {
+    "/": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/tools/chatgpt": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/tools/midjourney": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/tools/cursor": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
     "/blog/chatgpt-vs-claude-2026-comparison": {
+      "score": 10.0,
+      "checks_passed": 8,
+      "total_checks": 8
+    },
+    "/alternatives/chatgpt-alternatives": {
       "score": 10.0,
       "checks_passed": 8,
       "total_checks": 8
@@ -33,7 +58,7 @@
       "total_checks": 8
     }
   },
-  "geo_readiness_score": 9.058441558441558,
+  "geo_readiness_score": 8.93939393939394,
   "findings": [
     "GPTBot is configured and accessible",
     "ClaudeBot is configured and accessible",
