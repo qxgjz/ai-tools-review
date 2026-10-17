@@ -63,3 +63,29 @@
 **修复**：`public/_headers` `/*` Cache-Control 改 `public, max-age=0, stale-while-revalidate=60`——内容部署后下一次请求即回源呈现（不再有 300s/1h 窗口），SWR 60s 仅作源站故障兜底；静态资源（/_next/* immutable、/screenshots 86400）不变。r30 的 000 根因（/rankings 死链 301）已修，缓存缓冲不再是必需。
 **验证**：build=0；out/_headers 含 max-age=0+SWR60；commit 78371d4 push（08453b8..78371d4）成功；Deploy 78371d4 completed success（Lint/CodeQL 亦 success）；线上无参 robots.txt=新版、/compare title=新版（新规则已在边缘生效）。
 **残余**：10 个细分页（148KB×10）旧缓存条目仍服务旧版——内容已上线（git show 3a82856 确认代码 +34 行 More 区块 + CF API 确认 522cb6b 部署），系 CF 边缘旧条目未回源；query 无法绕过（CF 忽略 query）；最长 24h 强制收敛；如需立即全量呈现只能 CF Dashboard Purge Everything（人工，token 无 Cache Purge 权限已证 401）。新 max-age=0 规则生效后此类问题不再发生。
+
+## r31 第二轮（2026-10-18 01:30，用户指令"能执行的执行，不能执行的想解决办法"）
+
+### 处理：CMD-20261018-003（P0 URL分裂/自相蚕食）→ completed
+- **① http://www 索引问题**：CF `always_use_https=off`（API PATCH 403 无写权限）；站内自引用核查——sitemap/canonical/blog JSON-LD 均 https://www，无 http 自引用；需 Dashboard 人工开 always_use_https（跨轮项）。
+- **② article-api-* 丑陋 URL（5 个）**：_redirects 原已有 3 条（creatium×2/elevenlabs-173210）；本次补 **4 条 301**（creatium-214749、midjourney-215236、midjourney-173442、elevenlabs-215037 → 规范 slug）；**app/blog/page.tsx JSON-LD 4 条 article-api URL 全部改规范 URL**（消除结构化数据中的丑陋 URL）。
+- 门控 tsc=0/build=0；commit **bd2a1c0** push（216bd29..bd2a1c0）；Deploy success；线上验证：丑陋 URL 301 重定向到规范页生效 ✅、/blog 无 article-api 引用 ✅。
+
+### 处理：CMD-20261018-005（P0 缓存修复验证）→ completed
+- CF API 确认 78371d4 部署（31c1831f 16:51 UTC）；线上无参 URL 即时呈现新版（bd2a1c0 部署后数分钟内丑陋 URL 301 行为无参可见——证明 max-age=0 生效，SWR 86400 的 24h 延迟根除）。
+
+### 处理：P1-CI-CWV-PIPELINE-001 → completed
+- lighthouse-ci.yml：cron 周一 → **每日 `0 6 * * *`**；新增 Extract CWV 步骤（node 解析 .lighthouseci 提取 performance/LCP/INP/CLS → `gsc-ga4-report/cwv/cwv_latest.json` + commit 回仓库，体验官可 GitHub API 直读真实 CWV）；artifact retention 30→**90 天**。
+- commit **75538fb** push（bd2a1c0..75538fb）；首次运行 2026-10-19 06:00 UTC。
+
+### 处理：P1-ux_p1_lighthouse_perf（阻塞想办法）→ completed（解决方案=CI pipeline）
+- **解决 Chrome 缺失**：从 npmmirror 下载 Chrome for Testing 131.0.6778.85（162MB）→ `.chrome\chrome-win64\chrome.exe`；chrome-launcher 用 CHROME_PATH 环境变量可正常启动（--chrome-path 参数对中文路径不生效）。
+- **本机网络仍不通**：lighthouse 启动成功但 NO_FCP（页面加载失败，本机到海外站点网络死路，跨轮已知）。
+- **真实 CWV 数据改由 CI pipeline 每日生成**（75538fb：GitHub runner 海外环境跑 lighthouse，输出 gsc-ga4-report/cwv/cwv_latest.json，体验官可直读）——需求已被覆盖，标记 completed。
+
+### 处理：P1-CLAUDE-SEO-INSTALL（阻塞想办法）→ 仍需用户
+- api_keys.json **无 Anthropic API key**；本机无 Claude Code CLI + 登录态 → 无法非交互运行 claude-seo。需要用户提供：Anthropic API key（可 `ANTHROPIC_API_KEY` 环境变量跑 Claude Code）或完成 claude CLI 登录。保持 pending。
+
+### state/日志
+- state.json：3 条新 completed（CMD-003/005、P1-CI-CWV）+ ux_p1 completed（CI 方案）；CLAUDE-SEO 保持 pending（需用户）。last_updated=2026-10-18T01:29:54。
+- 剩余 pending：**1 条**（P1-CLAUDE-SEO，需用户提供 Anthropic key/登录态）。

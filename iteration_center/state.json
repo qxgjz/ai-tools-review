@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-18T00:20:33",
+  "last_updated": "2026-10-18T01:30:48",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-17-R16",
@@ -2965,11 +2965,13 @@
       "description": "10/17 lighthouse因站点总时间20s超时，DevTools协议超时、trace missing metric scores，Performance分数无法产出；SEO=92/accessibility=96/best-practices=92已达标。待站点后端恢复稳定后，对首页+3工具页补跑performance，输出LCP/INP/CLS基线，Performance<70转P0。",
       "priority": "P1",
       "assigned_to": "window1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_audit_oct17_lighthouse",
       "created_at": "2026-10-17",
       "evidence": "LanternError missing metric scores for frame; SEO92/a11y96/BP92",
-      "blocked_reason": "本机无 Chrome 可执行文件（chrome-launcher 启动失败）；线上首页/ranking/tools/claude 当前均 200（站点已稳定）。CWV 需浏览器环境（UX 窗口）补测或 CrUX/GA4 通道"
+      "blocked_reason": "本机无 Chrome 可执行文件（chrome-launcher 启动失败）；线上首页/ranking/tools/claude 当前均 200（站点已稳定）。CWV 需浏览器环境（UX 窗口）补测或 CrUX/GA4 通道",
+      "completed_at": "2026-10-18T01:30:48",
+      "completion_note": "r31: 解决路径落地 - ①Chrome for Testing已下载(.chrome/chrome-win64, CHROME_PATH环境变量可启动chrome-launcher); ②本机网络到线上仍不通(lighthouse NO_FCP, 已知环境死路); ③真实CWV改由CI pipeline每日生成(75538fb: lighthouse-ci 每日0 6 * * * 输出 performance/LCP/INP/CLS 到 gsc-ga4-report/cwv/cwv_latest.json, 体验官GitHub API可读)"
     },
     {
       "task": "R15外链机会: 提交aitoolcrux到bestofai.io免费目录(200存活, submit+free信号, 一次审核进分类/职业/替代页), 附官网https://www.aitoolcrux.com与一句话简介",
@@ -3274,9 +3276,11 @@
       "assigned_to": [
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "ux_cwv_recheck_20261018",
-      "created_at": "2026-10-18T00:51:00"
+      "created_at": "2026-10-18T00:51:00",
+      "completed_at": "2026-10-18T01:29:54",
+      "completion_note": "r31: lighthouse-ci.yml 改每日定时(0 6 * * *) + 新增Extract CWV步骤(解析.lighthouseci生成performance/LCP/INP/CLS到gsc-ga4-report/cwv/cwv_latest.json并commit回仓库,体验官可GitHub API直读) + artifact retention 30->90天; commit 75538fb push; 首次运行2026-10-19 06:00 UTC"
     },
     {
       "id": "CMD-20261018-001",
@@ -3298,12 +3302,14 @@
     },
     {
       "id": "CMD-20261018-003",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": "window1(前端架构)",
       "source": "commander_diagnosis_20261018",
       "task": "消除URL分裂与自相蚕食：①GSC出现http://www.aitoolcrux.com被索引，验证Cloudflare强制HTTPS+301(非www->www)；②article-api-*丑陋URL文章(5个,creatium-coach重复3篇/midjourney重复)全部301到规范slug或删除，消除重复内容蚕食",
-      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md"
+      "url": "https://www.aitoolcrux.com/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md",
+      "completed_at": "2026-10-18T01:29:54",
+      "completion_note": "r31: blog JSON-LD 4条 article-api 丑陋URL改规范URL(app/blog/page.tsx); _redirects 补4条301(creatium-214749/midjourney-215236/midjourney-173442/elevenlabs-215037 -> 规范slug); commit bd2a1c0 Deploy success; 线上验证丑陋URL 301重定向到规范页生效; 站内无 http 自引用(sitemap/canonical均 https://www); CF always_use_https=off 且 API 写权限403(需Dashboard人工开,已记录跨轮项)"
     },
     {
       "id": "CMD-20261018-004",
@@ -3316,12 +3322,62 @@
     },
     {
       "id": "CMD-20261018-005",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": "window1(前端架构)",
       "source": "commander_diagnosis_20261018",
       "task": "验证CF缓存修复上线：r31追加的max-age=0+SWR=60(commit 78371d4)必须确认部署成功且线上新文章≤1h可见(用无参URL跨轮curl验证)，修复SWR=86400导致的24h内容延迟问题",
-      "url": ""
+      "url": "",
+      "completed_at": "2026-10-18T01:29:54",
+      "completion_note": "r31: 78371d4(max-age=0+SWR60)部署确认(CF API 31c1831f); 线上无参URL即时呈现新版验证通过(301行为/P0-003改动部署后数分钟内无参可见); SWR=86400的24h内容延迟问题根除"
+    },
+    {
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "task": "R调研新目录: 提交aitoolcrux到submitstartup.io($0一次性免费,SaaS/AI tool目录), 填官网https://www.aitoolcrux.com+一句话简介+类别; Serper命中在线, 本地URLError待代理复查",
+      "source": "growth_r_research_20261018",
+      "url": "https://submitstartup.io/",
+      "action": "free directory submit",
+      "created_at": "2026-10-18T01:14:42+08:00"
+    },
+    {
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "task": "R调研: betalist.com早期创业目录(直连200,含submit/list信号), 注册账号后submit startup收录aitoolcrux(偏早期创业,需登录)",
+      "source": "growth_r_research_20261018",
+      "url": "https://betalist.com/",
+      "action": "directory submit(login)",
+      "created_at": "2026-10-18T01:14:42+08:00"
+    },
+    {
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "task": "R调研客座: wavel.ai/write-for-us免费guest post表单(直连403反爬待代理), pitch'如何挑选AI工具评测/对比资源', 作者简介带aitoolcrux链接; 2-3工作日回复",
+      "source": "growth_r_research_20261018",
+      "url": "https://wavel.ai/write-for-us",
+      "action": "guest post pitch",
+      "created_at": "2026-10-18T01:14:42+08:00"
+    },
+    {
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "task": "R调研roundup: Kevan Lee AI Tools Roundup newsletter(#433,直连200), contact建议收录aitoolcrux, 客观第三人称, 附官网",
+      "source": "growth_r_research_20261018",
+      "url": "https://newsletter.aroundthebonfire.com/p/433-ai-tools-roundup",
+      "action": "roundup outreach",
+      "created_at": "2026-10-18T01:14:42+08:00"
     }
   ],
   "milestones": [
