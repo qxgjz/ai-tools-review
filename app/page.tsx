@@ -183,6 +183,25 @@ export default function HomePage() {
                 </h1>
               </FadeIn>
 
+              {/* Quick Answer - AEO Optimization */}
+              <FadeIn delay={0.25} y={20}>
+                <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800 p-5 mb-8 max-w-xl">
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="inline-flex items-center justify-center w-5 h-5 bg-emerald-500 text-white text-xs font-bold rounded-full">
+                      Q
+                    </span>
+                    <h2 className="font-bold text-gray-900 dark:text-white">Quick Answer</h2>
+                  </div>
+                  <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                    The <strong>best AI tool in 2026</strong> is <strong>ChatGPT</strong> for
+                    general-purpose tasks, <strong>Claude</strong> for writing and analysis, and{' '}
+                    <strong>Midjourney</strong> for image generation. AIToolCrux tested 533+ tools
+                    across six dimensions — features, UX, pricing, integrations, support, and ethics
+                    — to rank them without paid placements.
+                  </p>
+                </div>
+              </FadeIn>
+
               <FadeIn delay={0.3} y={20}>
                 <p className="text-lg text-zinc-400 mb-8 max-w-xl leading-relaxed">
                   {tools.length}+ AI tools evaluated across six dimensions: features, UX, pricing,
