@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-18T10:06:11",
+  "last_updated": "2026-10-18T12:27:59",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-18-R17",
@@ -2673,30 +2673,36 @@
       "title": "修复 /compare 无尾斜杠 URL 重定向与 GSC 旧 404 记录（提交 compare/ 规范版并确保 301）",
       "assigned_to": "window1",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_diagnosis_20261018",
       "created": "2026-10-18",
-      "detail": "GSC inspect: /compare 404（2026-10-04 旧抓取，现线上正常，URL 实际为 /compare/）；确保无斜杠版本 301 到 /compare/，重提收录"
+      "detail": "GSC inspect: /compare 404（2026-10-04 旧抓取，现线上正常，URL 实际为 /compare/）；确保无斜杠版本 301 到 /compare/，重提收录",
+      "completed_at": "2026-10-18T12:27:59",
+      "completion_note": "r32: public/_redirects 追加 /compare /compare/ 301 (commit 15c25d9 Deploy success); 线上 /compare 正常无404; GSC旧404记录将被301吸收(Google重访后更新)"
     },
     {
       "id": "CF-20261017-002",
       "title": "robots.ts 增加 CCBot/PetalBot/SeznamBot/YisouSpider/facebookexternalhit/ia_archiv 屏蔽（cf_bot_analysis 报告）",
       "assigned_to": "window1",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "cf_bot_analysis_2026-10-17",
       "created": "2026-10-18",
-      "detail": "高消耗采集爬虫屏蔽，降低CF 24h请求/traffic"
+      "detail": "高消耗采集爬虫屏蔽，降低CF 24h请求/traffic",
+      "completed_at": "2026-10-18T12:19:31",
+      "completion_note": "r32验证: app/robots.ts已实现(r28) - CCBot/PetalBot/SeznamBot/YisouSpider/facebookexternalhit/ia_archiver/DotBot/MegaIndex/Barkrowler Disallow:/ + GPTBot/ClaudeBot/PerplexityBot等AI bot允许; 已上线线上robots.txt生效; 补标completed"
     },
     {
       "id": "GA4-20261017-003",
       "title": "修复 GA4 page_view 埋点缺失（send_page_view:false 且无手动 pageview → landing page (not set)）",
       "assigned_to": "window1",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "cf_bot_analysis_2026-10-17",
       "created": "2026-10-18",
-      "detail": "新增路由级 page_view 发送，修复 landing page (not set)"
+      "detail": "新增路由级 page_view 发送，修复 landing page (not set)",
+      "completed_at": "2026-10-18T12:19:31",
+      "completion_note": "r32验证: components/analytics/GA4PageTracker.tsx已实现(r28 b588e96上线) - send_page_view:false + 首屏轮询gtag就绪2s + pathname变化手动page_view; 补标completed"
     },
     {
       "id": "CONTENT-AIO-STRUCT-20261018",
@@ -2713,10 +2719,12 @@
       "title": "首页与/compare页加结构化quick-answer：H1下直接给出答案段(纯文本可引用)，便于Google AI Overview全文摘要",
       "assigned_to": "window1",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_learning_AI工具站案例",
       "created": "2026-10-18",
-      "detail": "AI Overview会做全站摘要；首页标题下加1-2句直接答案，compare页表格上方加结论段；改动量小"
+      "detail": "AI Overview会做全站摘要；首页标题下加1-2句直接答案，compare页表格上方加结论段；改动量小",
+      "completed_at": "2026-10-18T12:27:59",
+      "completion_note": "r32: 首页H1下新增Quick Answer答案段(ChatGPT/Claude/Midjourney+533+工具六维评估, 纯文本可引用, AI Overview友好); compare页原有Quick Answer已存在无需改; commit 15c25d9 Deploy success; 验证: build产物含卡片 + CF预览URL(63eb8610)直抓含Quick Answer; 主域www边缘缓存收敛中(最大60s SWR, 无需人工)"
     },
     {
       "id": "GROWTH-DIR-V5-2026-10-11",
@@ -3188,9 +3196,11 @@
       "assigned_to": [
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "ux_cwv_recheck_20261018",
-      "created_at": "2026-10-18T10:06:11"
+      "created_at": "2026-10-18T10:06:11",
+      "completed_at": "2026-10-18T12:19:31",
+      "completion_note": "r32验证: .github/workflows/lighthouse-ci.yml(75538fb部署, workflow active)已完整实现 - 每日cron(0 6 * * *)+Extract CWV步骤(解析.lighthouseci->gsc-ga4-report/cwv/cwv_latest.json)+Commit回仓库+upload-artifact retention 90天; 体验官经GitHub API读仓库文件即可(无需artifact权限); 首次scheduled run 2026-10-18 06:00 UTC; 补标completed"
     },
     {
       "id": "GROWTH-AITOOLS-CONTACT-20261014",

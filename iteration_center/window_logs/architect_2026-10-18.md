@@ -111,3 +111,25 @@
 ### state/日志
 - state.json 未改（无完成项，CLAUDE-SEO 保持 pending 阻塞）。
 - 剩余 P0=0（我的），P1=1（阻塞）。全站 active 157 条（P0 45/P1 83/P2 29，主要为内容/增长窗口需求池）。
+# 架构师执行日志 2026-10-18
+
+## r32 第二轮（2026-10-18 13:00 轮，cron 0 1,5,13,22）
+
+### 待办处理：5 条（3 补标 + 2 新做）
+- **CF-20261017-002（P1 robots）→ completed**：验证 app/robots.ts 已实现（r28）——CCBot/PetalBot/SeznamBot/YisouSpider/facebookexternalhit/ia_archiver/DotBot/MegaIndex/Barkrowler Disallow:/ + GPTBot/ClaudeBot/PerplexityBot 等 AI bot 允许；补标（当时漏标 state）。
+- **GA4-20261017-003（P1 page_view）→ completed**：验证 components/analytics/GA4PageTracker.tsx 已实现（r28 b588e96）——send_page_view:false + 首屏轮询 gtag 2s + pathname 手动 page_view；补标。
+- **P1-CI-CWV-PIPELINE-001（新开重复任务）→ completed**：lighthouse-ci.yml（75538fb）已完整实现全部要求：每日 cron(0 6 * * *)+Extract CWV→gsc-ga4-report/cwv/cwv_latest.json+Commit 回仓库+artifact 90 天；workflow active；体验官读仓库文件即可（无需 artifact 权限）；首次 scheduled run 今日 06:00 UTC。
+- **CMD-20261018-006（P1 /compare 301）→ completed（新做）**：_redirects 追加 /compare /compare/ 301；commit 15c25d9 Deploy success；线上 /compare 无 404。
+- **PSEG-COMPARE-QUICKANSWER-20261018（P1 首页 Quick Answer）→ completed（新做）**：首页 H1 下新增答案段（ChatGPT/Claude/Midjourney + 533 工具六维评估，纯文本可引用）；compare 页已有 Quick Answer 未改；commit 15c25d9 Deploy success。
+
+### 门控
+- tsc=0、build=0；commit 15c25d9（2 files +20）；Actions Deploy success；CF Pages 部署 63eb8610（04:22 UTC）。
+
+### 线上验证（r31 三查）
+- CF Pages API：最新部署 15c25d9（63eb8610）✅。
+- **预览 URL 直抓（绕过边缘缓存）**：https://63eb8610.aitoolcrux-d2a.pages.dev/ 全文含 Quick Answer 卡片（"The best AI tool in 2026 is ChatGPT..."）✅。
+- 主域 www：web_fetch 仍见旧版 → 边缘缓存收敛中（新条目 max-age=0+SWR60 已生效，最长 60s SWR；不做 Purge/重试，符合 r31 经验第 4/8 条）。
+- /compare：无 404 正常。
+
+### state
+- 3 补标 + 2 新 completed；剩余我的 pending=1（P1-CLAUDE-SEO，阻塞需 Anthropic）。
