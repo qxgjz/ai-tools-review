@@ -168,20 +168,16 @@ export default function HomePage() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left: Content (7 cols) - left-aligned, NOT centered */}
             <div className="lg:col-span-7">
-              <FadeIn delay={0.1} y={20}>
-                <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-sm sm:text-base mb-6">
-                  <Sparkles className="w-3.5 h-3.5 text-primary" />
-                  <span className="text-primary">Independent AI Tool Reviews</span>
-                </div>
-              </FadeIn>
+              <div className="inline-flex items-center gap-2 px-3 py-1.5 bg-primary/10 border border-primary/20 rounded-full text-sm sm:text-base mb-6">
+                <Sparkles className="w-3.5 h-3.5 text-primary" />
+                <span className="text-primary">Independent AI Tool Reviews</span>
+              </div>
 
-              <FadeIn delay={0.2} y={30}>
-                <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 leading-[1.1] tracking-tight">
-                  Find the best AI tools,
-                  <br />
-                  <span className="text-primary">tested and ranked.</span>
-                </h1>
-              </FadeIn>
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-semibold mb-6 leading-[1.1] tracking-tight">
+                Find the best AI tools,
+                <br />
+                <span className="text-primary">tested and ranked.</span>
+              </h1>
 
               {/* Quick Answer - AEO Optimization (static render: must be the LCP element, no FadeIn animation delay) */}
               <div className="bg-gradient-to-r from-emerald-50 to-teal-50 dark:from-emerald-900/20 dark:to-teal-900/20 rounded-xl border border-emerald-100 dark:border-emerald-800 p-5 mb-8 max-w-xl">
@@ -200,55 +196,49 @@ export default function HomePage() {
                 </p>
               </div>
 
-              <FadeIn delay={0.3} y={20}>
-                <p className="text-lg text-zinc-400 mb-8 max-w-xl leading-relaxed">
-                  {tools.length}+ AI tools evaluated across six dimensions: features, UX, pricing,
-                  integrations, support, and ethics. No paid placements, no affiliate bias.
-                </p>
-              </FadeIn>
+              <p className="text-lg text-zinc-400 mb-8 max-w-xl leading-relaxed">
+                {tools.length}+ AI tools evaluated across six dimensions: features, UX, pricing,
+                integrations, support, and ethics. No paid placements, no affiliate bias.
+              </p>
 
-              <FadeIn delay={0.4} y={20}>
-                <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
-                  <Link
-                    href="/ranking"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors active:scale-95"
-                  >
-                    <Trophy className="w-4 h-4" />
-                    View Rankings
-                    <ArrowRight className="w-4 h-4" />
-                  </Link>
-                  <Link
-                    href="/generator"
-                    className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium rounded-lg transition-colors active:scale-95"
-                  >
-                    <Sparkles className="w-4 h-4" />
-                    AI Tool Matcher
-                  </Link>
-                </div>
-                <p className="text-xs text-zinc-600 mt-3">
-                  Updated daily · No paid rankings · 100% editorially independent
-                </p>
-              </FadeIn>
+              <div className="flex flex-col sm:flex-row items-start gap-4 mb-10">
+                <Link
+                  href="/ranking"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-primary hover:bg-primary/90 text-white font-medium rounded-lg transition-colors active:scale-95"
+                >
+                  <Trophy className="w-4 h-4" />
+                  View Rankings
+                  <ArrowRight className="w-4 h-4" />
+                </Link>
+                <Link
+                  href="/generator"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-transparent border border-zinc-700 hover:border-zinc-500 text-zinc-300 hover:text-white font-medium rounded-lg transition-colors active:scale-95"
+                >
+                  <Sparkles className="w-4 h-4" />
+                  AI Tool Matcher
+                </Link>
+              </div>
+              <p className="text-xs text-zinc-600 mt-3">
+                Updated daily · No paid rankings · 100% editorially independent
+              </p>
 
               {/* Stats - left aligned, not centered */}
-              <FadeIn delay={0.5} y={20}>
-                <div className="flex flex-wrap items-center gap-8">
-                  <div>
-                    <div className="text-2xl font-bold text-white">{tools.length}+</div>
-                    <div className="text-sm text-zinc-600">Tools Reviewed</div>
-                  </div>
-                  <div className="w-px h-10 bg-zinc-800" />
-                  <div>
-                    <div className="text-2xl font-bold text-white">6</div>
-                    <div className="text-sm text-zinc-600">Score Dimensions</div>
-                  </div>
-                  <div className="w-px h-10 bg-zinc-800" />
-                  <div>
-                    <div className="text-2xl font-bold text-white">100%</div>
-                    <div className="text-sm text-zinc-600">Independent</div>
-                  </div>
+              <div className="flex flex-wrap items-center gap-8">
+                <div>
+                  <div className="text-2xl font-bold text-white">{tools.length}+</div>
+                  <div className="text-sm text-zinc-600">Tools Reviewed</div>
                 </div>
-              </FadeIn>
+                <div className="w-px h-10 bg-zinc-800" />
+                <div>
+                  <div className="text-2xl font-bold text-white">6</div>
+                  <div className="text-sm text-zinc-600">Score Dimensions</div>
+                </div>
+                <div className="w-px h-10 bg-zinc-800" />
+                <div>
+                  <div className="text-2xl font-bold text-white">100%</div>
+                  <div className="text-sm text-zinc-600">Independent</div>
+                </div>
+              </div>
 
               {/* Mobile Top3 horizontal scroll (P0-UX-MOBILE-HERO-001) */}
               {/* Removed FadeIn wrapper: whileInView opacity:0 caused invisible cards on mobile */}

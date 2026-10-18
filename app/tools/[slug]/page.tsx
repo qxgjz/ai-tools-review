@@ -42,7 +42,6 @@ import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { ToolScreenshot } from '@/components/content/ToolScreenshot';
 import { FAQSection } from '@/components/content/FAQSection';
 import { AuthorBio } from '@/components/author/AuthorBio';
-import { FadeIn } from '@/components/animations';
 import { shouldSkipStaticGen } from '@/lib/static-gen';
 import dynamicImport from 'next/dynamic';
 const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
@@ -566,87 +565,82 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         )}
       </section>
 
-      {/* Product screenshot hero (16:9) — only when real screenshot exists */}
+      {/* Product screenshot hero (16:9) — only when real screenshot exists. Static render: LCP element must paint immediately, no FadeIn opacity:0 delay */}
       {toolScreenshotMap[tool.slug] && (
-        <FadeIn delay={0.15} y={20}>
-          <figure className="mb-6">
-            <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg">
-              <div className="aspect-video w-full">
-                <Image
-                  src={toolScreenshotMap[tool.slug]}
-                  alt={`Screenshot of ${tool.name} interface and main dashboard`}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, 800px"
-                  priority
-                />
-              </div>
-              <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/90 dark:bg-zinc-900/90 backdrop-blur rounded-md text-xs font-medium text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
-                <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
-                Live screenshot
-              </div>
+        <figure className="mb-6">
+          <div className="relative rounded-2xl overflow-hidden border border-zinc-200 dark:border-zinc-800 shadow-lg">
+            <div className="aspect-video w-full">
+              <Image
+                src={toolScreenshotMap[tool.slug]}
+                alt={`Screenshot of ${tool.name} interface and main dashboard`}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, 800px"
+                priority
+              />
             </div>
-            <figcaption className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 text-center">
-              {tool.name} — main interface, captured and reviewed by our editorial team
-            </figcaption>
-          </figure>
-        </FadeIn>
+            <div className="absolute top-3 right-3 inline-flex items-center gap-1.5 px-2.5 py-1 bg-white/90 dark:bg-zinc-900/90 backdrop-blur rounded-md text-xs font-medium text-zinc-600 dark:text-zinc-300 border border-zinc-200 dark:border-zinc-700">
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-500" aria-hidden="true" />
+              Live screenshot
+            </div>
+          </div>
+          <figcaption className="text-xs text-zinc-600 dark:text-zinc-400 mt-2 text-center">
+            {tool.name} — main interface, captured and reviewed by our editorial team
+          </figcaption>
+        </figure>
       )}
 
-      {/* AEO/GEO Optimization: Quick Answer - Answer First for AI Search Citation */}
-      <FadeIn delay={0.1} y={20}>
-        <section className="bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8 mb-6">
-          <div className="flex items-center gap-2 mb-4">
-            <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
-            <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Quick Answer</h2>
+      {/* AEO/GEO Optimization: Quick Answer - Answer First for AI Search Citation (static render, no FadeIn) */}
+      <section className="bg-emerald-50 dark:bg-emerald-950/20 rounded-xl border border-emerald-100 dark:border-emerald-900/50 p-6 sm:p-8 mb-6">
+        <div className="flex items-center gap-2 mb-4">
+          <Zap className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
+          <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Quick Answer</h2>
+        </div>
+        <div className="space-y-4">
+          <div>
+            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              What is {tool.name}?
+            </h3>
+            <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
+              {tool.description} Developed by {tool.vendor}, it is categorized as a{' '}
+              {tool.category} AI solution.
+            </p>
           </div>
-          <div className="space-y-4">
-            <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                What is {tool.name}?
-              </h3>
-              <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
-                {tool.description} Developed by {tool.vendor}, it is categorized as a{' '}
-                {tool.category} AI solution.
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                How good is {tool.name}?
-              </h3>
-              <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
-                {tool.name} achieves a <strong>{total.toFixed(1)}/10</strong> overall score ({grade}{' '}
-                grade) in our comprehensive 6-dimension evaluation. It performs strongest in{' '}
-                {Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[0] ||
-                  'functionality'}{' '}
-                ({Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[1] || 'N/A'}
-                /10).
-              </p>
-            </div>
-            <div>
-              <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
-                Is {tool.name} free?
-              </h3>
-              <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
-                {tool.pricing.some(
-                  (t) => t.price?.includes('$0') || t.price?.toLowerCase().includes('free'),
-                )
-                  ? 'Yes, ' + tool.name + ' offers a free tier. '
-                  : tool.name +
-                    ' pricing starts at ' +
-                    (tool.pricing[0]?.price || 'contact vendor') +
-                    '. '}
-                It offers {tool.pricing.length} pricing tier{tool.pricing.length > 1 ? 's' : ''}:{' '}
-                {tool.pricing.map((t) => t.name).join(', ')}.
-              </p>
-            </div>
+          <div>
+            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              How good is {tool.name}?
+            </h3>
+            <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
+              {tool.name} achieves a <strong>{total.toFixed(1)}/10</strong> overall score ({grade}{' '}
+              grade) in our comprehensive 6-dimension evaluation. It performs strongest in{' '}
+              {Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[0] ||
+                'functionality'}{' '}
+              ({Object.entries(tool.scores || {}).sort((a, b) => b[1] - a[1])[0]?.[1] || 'N/A'}
+              /10).
+            </p>
           </div>
-        </section>
-      </FadeIn>
+          <div>
+            <h3 className="font-semibold text-gray-800 dark:text-gray-200 mb-2">
+              Is {tool.name} free?
+            </h3>
+            <p className="text-zinc-700 dark:text-gray-300 leading-relaxed">
+              {tool.pricing.some(
+                (t) => t.price?.includes('$0') || t.price?.toLowerCase().includes('free'),
+              )
+                ? 'Yes, ' + tool.name + ' offers a free tier. '
+                : tool.name +
+                  ' pricing starts at ' +
+                  (tool.pricing[0]?.price || 'contact vendor') +
+                  '. '}
+              It offers {tool.pricing.length} pricing tier{tool.pricing.length > 1 ? 's' : ''}:{' '}
+              {tool.pricing.map((t) => t.name).join(', ')}.
+            </p>
+          </div>
+        </div>
+      </section>
 
-      {/* AEO/GEO Optimization: Key Takeaways - Structured for AI Citation */}
-      <FadeIn delay={0.2} y={20}>
-        <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
+      {/* AEO/GEO Optimization: Key Takeaways - Structured for AI Citation (static render, no FadeIn) */}
+      <section className="bg-white dark:bg-zinc-900 rounded-xl border border-zinc-200 dark:border-zinc-800 p-6 sm:p-8 mb-6">
           <div className="flex items-center gap-2 mb-4">
             <BookOpen className="w-5 h-5 text-emerald-600 dark:text-emerald-400" />
             <h2 className="text-xl font-bold text-zinc-900 dark:text-white">Key Takeaways</h2>
@@ -717,7 +711,6 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             </p>
           </div>
         </section>
-      </FadeIn>
 
       {/* Author Bio - E-E-A-T Expertise & Authoritativeness signal */}
       {typeof tool.author === 'object' && tool.author && (
