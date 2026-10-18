@@ -2,7 +2,7 @@ name: Lighthouse CI
 
 on:
   schedule:
-    - cron: "0 6 * * *" # Every day 06:00 UTC (14:00 Beijing)
+    - cron: "0 6,18 * * *" # 06:00 & 18:00 UTC daily (double-run: one failure retries 12h later)
   workflow_dispatch:
   pull_request:
     branches: [main]
@@ -35,7 +35,7 @@ jobs:
           urls: |
             https://www.aitoolcrux.com/
             https://www.aitoolcrux.com/tools/midjourney
-            https://www.aitoolcrux.com/blog/perplexity-ai-review-2026
+            https://www.aitoolcrux.com/blog/perplexity-review-2026
             https://www.aitoolcrux.com/compare
           uploadArtifacts: true
           temporaryPublicStorage: true
@@ -60,7 +60,7 @@ jobs:
         run: |
           git config user.name "lighthouse-ci"
           git config user.email "actions@github.com"
-          git add gsc-ga4-report/cwv/cwv_latest.json
+          git add -f gsc-ga4-report/cwv/cwv_latest.json  # -f: file is *.json-ignored by .gitignore:111
           git commit -m "ci(cwv): daily lighthouse CWV report (performance/LCP/INP/CLS)" || echo "no changes to commit"
           git push || echo "push skipped/failed"
 
