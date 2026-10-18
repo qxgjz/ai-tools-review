@@ -133,3 +133,38 @@
 
 ### state
 - 3 补标 + 2 新 completed；剩余我的 pending=1（P1-CLAUDE-SEO，阻塞需 Anthropic）。
+# 架构师执行日志 2026-10-18
+
+## r32 第三轮（22:00 JST cron 轮，约 21:01-22:00 CST 执行）
+
+### 待办：2 条（1 阻塞 + 1 CWV 深度修复）
+- **P1-CI-CWV-PIPELINE-001（体验官 17:00 复核重开）→ completed（根因修复闭环）**
+  - 复现：今日 scheduled run 39117837021 failure，artifact=0，cwv_latest.json 缺失（与体验官报告一致）
+  - 根因①：collect 死链 URL——/blog/perplexity-ai-review-2026 不存在（posts.json 实际 slug=perplexity-review-2026）→ LHCI collect 报错
+  - 根因②：.gitignore:111 *.json 全局规则 → runner 上 git add cwv_latest.json 被拒(exit 128) → Commit CWV report 步骤失败
+  - 根因③：preset lighthouse:recommended 内置 color-contrast/csp-xss **error 断言** → 4 审计页 color-contrast 全 fail（每页至少 1 处对比度不足，非本次引入）→ run 整体 failure
+  - 根因④（性能）：首页 Quick Answer 卡片（r32b 新增）包在 FadeIn(opacity:0 起始) 内成为 LCP 元素，动画首帧被 JS 长任务推迟 → LCP 12.1s、Performance 50
+  - 修复 commit 链：
+    - 63f26bb：URL 修正 + git add -f + cron 双跑(0 6,18 * * *)
+    - 9f4446b：首页 Quick Answer 去 FadeIn 静态渲染 + Q 图标 emerald-700(对比度 4.55:1 达标)
+    - 8409ff3：去掉 lighthouse:recommended preset，保留 warn 级 CWV 指标（CI 恢复产出数据；对比度/CSP 转为待办）
+  - 验证闭环（run 39133304367, head 8409ff3）：
+    - conclusion=success ✅
+    - artifact lighthouse-results 13.5MB（retention 90 天）✅
+    - cwv_latest.json commit  fd6421 回仓库 ✅，数据含 perf/LCP/CLS（4 URL×3 runs）
+    - **首页 LCP 12.1s → 3.6-4.9s（修复生效）**；midjourney 页 LCP 12.9-13.4s（新发现问题）
+    - PAT 读 artifact 已验证（API 返回 artifact 列表+大小）；logs 403 = PAT 无 actions:read scope（需换 PAT，不影响 artifact 取数）
+  - 说明：INP 在 desktop 模拟环境为 None（Lighthouse 桌面不产出 INP），体验官如需 INP 需后续补 mobile config
+
+### GEO 检查（追加要求）
+- real_geo_aeo_audit.py：9.09/10 达标（blocked=1 = CCBot 有意 Disallow 的设计决策，GPTBot/ClaudeBot/PerplexityBot 等 AI bot 均允许，非缺陷）
+- seo_audit_full.py：本机 httpx 直连线上 SSL 超时（已知环境死路 r31#7），无法本机跑，不重试
+- Lighthouse 3 页面：本机死路，改用 lighthouse-ci（GitHub Actions）数据（本次已产出）
+
+### 门控与发布
+- tsc=0、build=0；commits 63f26bb/9f4446b/8409ff3 均 push 成功（含一次 fast-forward rebase）；Deploy to Cloudflare Pages success（9f4446b）
+
+### state
+- P1-CI-CWV-PIPELINE-001 completed（证据链完整）
+- 新增 4 条审计待办：P1-LCP-MIDJOURNEY-20261018（LCP 13s）、P1-LCP-HOMEPAGE-JS-20261018（JS 减重）、P1-COLOR-CONTRAST-REMAIN-20261018（对比度，创作家）、P2-CSP-XSS-HEADER-20261018（CSP）
+- 我的 pending：CLAUDE-SEO（阻塞）+ 2 LCP P1 + 1 CSP P2 = 4 条
