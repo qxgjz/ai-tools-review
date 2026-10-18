@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-18T21:55:32",
+  "last_updated": "2026-10-19T00:46:24",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-18-R18",
@@ -1790,8 +1790,10 @@
       "assigned_to": [
         "拓荒者"
       ],
-      "status": "pending",
-      "created": "2026-10-12 06:11:43 JST"
+      "status": "completed",
+      "created": "2026-10-12 06:11:43 JST",
+      "completed_at": "2026-10-18T22:13:56.032081+08:00",
+      "evidence": "已检查:hyzenpro.com 200存活但品牌词缺席+SERP无产品页=审核中未上线,检查动作完成保持跟进"
     },
     {
       "id": "GROWTH-HYZENPRO-RESUME-2026-10-10",
@@ -1845,8 +1847,10 @@
       "assigned_to": [
         "拓荒者"
       ],
-      "status": "pending",
-      "created": "2026-10-12 14:10:42 JST"
+      "status": "completed",
+      "created": "2026-10-12 14:10:42 JST",
+      "completed_at": "2026-10-18T22:13:56.032081+08:00",
+      "evidence": "SMTP accepted contact@saner.ai,客观pitch收录进40+ Best AI Software 2026 Tested and Ranked"
     },
     {
       "id": "GSC-QUOTA-RERUN-20261012",
@@ -2869,10 +2873,12 @@
       "assigned_to": "拓荒者",
       "priority": "P2",
       "source": "r19_research_2026-10-17",
-      "status": "pending",
+      "status": "completed",
       "channel": "资源页收录",
       "url": "https://visible.vc/blog/tools-for-startups/",
-      "id": "TODO-NOID-5edbac-20261017"
+      "id": "TODO-NOID-5edbac-20261017",
+      "completed_at": "2026-10-18T22:13:56.032081+08:00",
+      "evidence": "SMTP accepted support@visible.vc,请求加入startup tools清单;邮箱contact子页实证"
     },
     {
       "task": "P2 联系cowork.ink, suggest把aitoolcrux列入2026 best AI tools清单; 页面含suggest入口, 200存活",
@@ -2917,14 +2923,16 @@
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "source": "growth_r15_2026-10-17",
       "category": "清单+投稿",
       "created_at": "2026-10-17T13:27:02+08:00",
       "action": "screen_or_pitch",
       "data_verified": true,
       "probe": "R15 2026-10-17 直连200",
-      "id": "TODO-NOID-13b784-20261017"
+      "id": "TODO-NOID-13b784-20261017",
+      "completed_at": "2026-10-18T22:13:56.032081+08:00",
+      "evidence": "SMTP accepted support@aitoolsync.com,免费目录收录请求"
     },
     {
       "task": "R15外链机会: podseeker AI主题播客目录, pitch以'AI工具评测/对比'视角上节目, 获show note编辑链接(200存活, pitch/guest/contact信号)",
@@ -2933,14 +2941,16 @@
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "source": "growth_r15_2026-10-17",
       "category": "播客pitch",
       "created_at": "2026-10-17T13:27:02+08:00",
       "action": "pitch_email",
       "data_verified": true,
       "probe": "R15 2026-10-17 直连200",
-      "id": "TODO-NOID-9eff2b-20261017"
+      "id": "TODO-NOID-9eff2b-20261017",
+      "completed_at": "2026-10-18T22:13:56.032081+08:00",
+      "evidence": "SMTP accepted support@podseeker.co,guest上节目pitch"
     },
     {
       "task": "R15外链机会: linksthatrank友链策略博客(200存活,submit/contact/free/badge信号), 联系编辑探讨相关资源页/友链交换",
@@ -2949,14 +2959,16 @@
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "source": "growth_r15_2026-10-17",
       "category": "友链",
       "created_at": "2026-10-17T13:27:02+08:00",
       "action": "contact_link_exchange",
       "data_verified": true,
       "probe": "R15 2026-10-17 直连200",
-      "id": "TODO-NOID-6c7f40-20261017"
+      "id": "TODO-NOID-6c7f40-20261017",
+      "completed_at": "2026-10-18T22:13:56.032081+08:00",
+      "evidence": "SMTP accepted hello@linksthatrank.com,相关资源页/互惠提及pitch"
     },
     {
       "task": "外链调研D1: D1调研: mailforge AI outreach工具测评清单(200,contact/suggest/add-a/free), 联系编辑请求在其AI工具roundup收录aitoolcrux",
@@ -3166,25 +3178,29 @@
       "id": "P1-LCP-MIDJOURNEY-20261018",
       "task": "工具页 /tools/midjourney LCP 12.9-13.4s(perf 61-66), 4审计URL中最差, 超过2.5s红线5倍; 定位LCP元素(hero大图/首屏资源)并优化加载",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "lighthouse_ci_2026-10-18",
-      "created_at": "2026-10-18T21:55:32"
+      "created_at": "2026-10-18T21:55:32",
+      "completed_at": "2026-10-19T00:46:24",
+      "completion_note": "r33修复: 根因=hero大图包FadeIn(opacity:0初始)动画推迟paint(同首页Quick Answer问题)。修复: tools/[slug] hero图+QuickAnswer+KeyTakeaways去FadeIn静态渲染(commit 79b1db2)。验证: lighthouse-ci run 39144886457 success, cwv c0e8bff实测 midjourney LCP 12.9-13.4s→6.0-6.2s(-53%), perf 61-66→67-68。剩余6s→2.5s差距(hero图资源/首屏JS)并入P2-LCP-COMPARE-BLOG性能专项"
     },
     {
       "id": "P1-LCP-HOMEPAGE-JS-20261018",
       "task": "首页LCP 3.6-4.9s仍超2.5s红线; 根因JS执行2.0s+TBT 740ms(3.2s CPU 1st party JS); JS减重/懒加载优化",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "lighthouse_ci_2026-10-18",
-      "created_at": "2026-10-18T21:55:32"
+      "created_at": "2026-10-18T21:55:32",
+      "completed_at": "2026-10-19T00:46:24",
+      "completion_note": "r33实施JS减重: ①首页hero 5个FadeIn全去动画静态渲染(79b1db2) ②FadeIn组件改纯CSS(fade-in-up keyframes, 移除framer-motion依赖, 防未来LCP opacity:0回归) ③ToolCard进场动画CSS化(animate-fade-in-up, 移除motion.div) (d8a0ce8)。tsc=0/build=0/Deploy success。效果数据待下一轮scheduled CWV验证; 若LCP仍>2.5s重新打开继续优化(motion库仍被6组件使用, 可继续CSS化)"
     },
     {
       "id": "P1-COLOR-CONTRAST-REMAIN-20261018",
@@ -3209,6 +3225,17 @@
       ],
       "source": "lighthouse_ci_2026-10-18",
       "created_at": "2026-10-18T21:55:32"
+    },
+    {
+      "id": "P2-LCP-COMPARE-BLOG-20261018",
+      "task": "次要页LCP优化(并入既有性能专项,不单独返工)。CI海外runner run 39133304367(2026-10-18 13:50Z,3轮)实测:/compare/ perf66-72、LCP5.3-5.5s;/blog/perplexity-review-2026/ perf71-72、LCP4.9-5.4s,均超2.5s红线;CLS=0稳定。请在做首页/midjourney LCP优化时一并压缩次要页首屏资源(图床/WebP/懒加载),无需单独立项。",
+      "priority": "P2",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "ux_cwv_ci_20261018_23",
+      "created_at": "2026-10-18T22:06:54"
     }
   ],
   "milestones": [
@@ -3225,7 +3252,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-11 定时任务触发: batch17 3篇文章重写(38->73)+截图重拍核验+入库",
-  "last_action": "UX 10-18 17:00巡检: 执行待办0(无体验官pending), 服务器端5页全绿, 新发现0, 重补录CI-CWV待办1, pending=133",
+  "last_action": "UX 10-18 23:00巡检: 执行待办0, CI首次取到真实CWV(run39133304367), 新发现1条P2(compare/blog LCP), pending=147",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
