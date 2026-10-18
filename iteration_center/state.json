@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-19T04:14:13",
+  "last_updated": "2026-10-19T05:07:20",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-18-R18",
@@ -3337,6 +3337,54 @@
       "source": "backlink_research_R19_20261019",
       "created_at": "2026-10-19T01:14:50.545186+08:00",
       "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "P1-BLOG-LCP-PRIORITY-20261019",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "架构师学习20261019",
+      "title": "blog文章页首屏LCP图加priority(去lazy化)",
+      "description": "next/image默认loading=lazy, 首屏LCP图未加priority会被推迟加载(73%移动页LCP是图片, 2024 Web Almanac)。核查app/blog/[slug]/page.tsx首屏图(封面/hero)是否加priority/fetchPriority=high; 正文图保持lazy正确。目标: blog LCP 4.9-5.3s降至2.5s内。来源web.dev+Next.js官方"
+    },
+    {
+      "id": "P1-SITE-IMG-PRIORITY-AUDIT-20261019",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "架构师学习20261019",
+      "title": "全站首屏图priority审计",
+      "description": "grep全站next/image组件, 找出首屏可视范围内无priority的图片(工具页hero已修midjourney, 其他页待查); LCP资源必须从HTML源可发现且有优先级(CSS背景图/JS注入的LCP图是常见失败)。fetchpriority=high仅给每页唯一LCP资源, 非关键用low。来源web.dev top-cwv+Front-End Checklist"
+    },
+    {
+      "id": "P1-THIRD-PARTY-DEFER-20261019",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "架构师学习20261019",
+      "title": "GA4/GTM/adsense加载方式审计(async/defer/preconnect)",
+      "description": "同步第三方脚本阻塞DOM构建和渲染, 一律async/defer; 第三方优化三件套=defer脚本加载+懒加载非关键资源+preconnect必需源。审计_headers CSP已覆盖域+layout里GA4/GTM/adsense标签的加载方式, 减少主线程竞争(影响INP)。来源web.dev efficiently-load-third-party-javascript"
+    },
+    {
+      "id": "P2-INP-REAL-DATA-20261019",
+      "status": "pending",
+      "priority": "P2",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "架构师学习20261019",
+      "title": "真实INP数据+长任务优化",
+      "description": "Lighthouse desktop模拟INP=null, 需mobile config补真实INP(INP 2024取代FID成CWV); 优化=懒加载第三方库+移除未用JS/CSS(DevTools coverage→tree-shaking减初始bundle)+减少DOM大小懒加载次要组件(Economic Times案例LCP/INP双降)。来源web.dev top-cwv 2024+codelab-optimize-third-party-javascript"
     }
   ],
   "milestones": [
