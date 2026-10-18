@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-17T21:24:21.223290",
+  "audit_time": "2026-10-18T21:26:08.816095",
   "mode": "quick",
   "content": {
-    "total_articles": 182,
-    "average_score": 85.87032967032975,
-    "perfect_count": 92,
-    "below_85_count": 72,
+    "total_articles": 188,
+    "average_score": 85.84202127659584,
+    "perfect_count": 91,
+    "below_85_count": 78,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -834,14 +834,16 @@
       },
       {
         "slug": "midjourney-review-2026",
-        "title": "Midjourney Review 2026: Best AI Image | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 13380,
-        "flesch": 41.2,
-        "internal_links": 13,
-        "external_links": 1,
-        "images": 4,
-        "failed_checks": []
+        "title": "Midjourney Review 2026: Best AI Image Generator, Tested",
+        "quality_score": 91.1,
+        "word_count": 13427,
+        "flesch": 39.8,
+        "internal_links": 14,
+        "external_links": 2,
+        "images": 3,
+        "failed_checks": [
+          "readability_pass"
+        ]
       },
       {
         "slug": "runway-review-2026",
@@ -858,10 +860,10 @@
         "slug": "jasper-review-2026",
         "title": "Jasper Review 2026: Best AI Writing Tool for | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 13709,
-        "flesch": 42.8,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 13744,
+        "flesch": 42.3,
+        "internal_links": 14,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
@@ -1001,12 +1003,12 @@
       },
       {
         "slug": "kling-review-2026",
-        "title": "Kling AI Review 2026: Best Chinese AI Video | AIToolCrux",
+        "title": "Kling AI Review 2026: Best AI Video Generator, Tested",
         "quality_score": 100.0,
-        "word_count": 11877,
-        "flesch": 43.6,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 11913,
+        "flesch": 43.3,
+        "internal_links": 14,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
@@ -1014,21 +1016,21 @@
         "slug": "heygen-review-2026",
         "title": "HeyGen Review 2026: Best AI Avatar Video Tool | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 13719,
-        "flesch": 42.9,
-        "internal_links": 12,
-        "external_links": 1,
+        "word_count": 13754,
+        "flesch": 44.7,
+        "internal_links": 13,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
       {
         "slug": "leonardo-ai-review-2026",
-        "title": "Leonardo AI Review 2026: Best AI Image | AIToolCrux",
+        "title": "Leonardo AI Review 2026: Best AI Image Generator, Tested",
         "quality_score": 100.0,
-        "word_count": 14597,
-        "flesch": 44.8,
-        "internal_links": 14,
-        "external_links": 1,
+        "word_count": 14636,
+        "flesch": 46.1,
+        "internal_links": 15,
+        "external_links": 2,
         "images": 3,
         "failed_checks": []
       },
@@ -1439,15 +1441,14 @@
       {
         "slug": "how-to-use-cursor-for-react-development",
         "title": "How to Use Cursor for React in 2026",
-        "quality_score": 77.8,
-        "word_count": 3256,
-        "flesch": 47.1,
+        "quality_score": 83.3,
+        "word_count": 3305,
+        "flesch": 47.7,
         "internal_links": 4,
-        "external_links": 0,
+        "external_links": 2,
         "images": 0,
         "failed_checks": [
-          "first_para_pass",
-          "external_links_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -1647,48 +1648,42 @@
       },
       {
         "slug": "notion-ai-vs-notion-ai-salesforce-2026",
-        "title": "Notion AI vs Salesforce Einstein 2026: CRM AI Compared",
-        "quality_score": 45.6,
-        "word_count": 545,
-        "flesch": 33.6,
-        "internal_links": 2,
-        "external_links": 2,
-        "images": 0,
+        "title": "Notion AI vs Salesforce Einstein 2026: Best CRM AI",
+        "quality_score": 80.0,
+        "word_count": 2015,
+        "flesch": 46.0,
+        "internal_links": 5,
+        "external_links": 4,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "internal_links_pass",
-          "readability_pass"
+          "first_para_pass"
         ]
       },
       {
         "slug": "midjourney-v7-vs-dall-e-3-2026",
-        "title": "Midjourney v7 vs DALL-E 3 2026: Which Wins?",
-        "quality_score": 48.9,
-        "word_count": 483,
-        "flesch": 45.4,
-        "internal_links": 2,
-        "external_links": 2,
-        "images": 0,
+        "title": "Midjourney vs DALL-E 3 in 2026: Which Image AI Should You Use?",
+        "quality_score": 71.1,
+        "word_count": 2131,
+        "flesch": 36.1,
+        "internal_links": 5,
+        "external_links": 27,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
           "first_para_pass",
-          "internal_links_pass"
+          "readability_pass"
         ]
       },
       {
         "slug": "notion-ai-vs-salesforce-2026",
-        "title": "Notion AI vs Salesforce Einstein 2026: Which Wins?",
-        "quality_score": 40.0,
-        "word_count": 560,
-        "flesch": 34.7,
-        "internal_links": 2,
-        "external_links": 2,
-        "images": 0,
+        "title": "Notion AI vs Salesforce Einstein 2026: Which Wins for Your Team?",
+        "quality_score": 80.0,
+        "word_count": 2124,
+        "flesch": 44.0,
+        "internal_links": 5,
+        "external_links": 11,
+        "images": 2,
         "failed_checks": [
-          "word_count_pass",
-          "first_para_pass",
-          "internal_links_pass",
-          "readability_pass"
+          "first_para_pass"
         ]
       },
       {
@@ -2206,6 +2201,85 @@
         "images": 2,
         "failed_checks": [
           "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-tools-horrible-customer-support-2026",
+        "title": "AI Tools With the Worst Customer Support in 2026 (Real User Reports)",
+        "quality_score": 74.4,
+        "word_count": 2173,
+        "flesch": 43.5,
+        "internal_links": 5,
+        "external_links": 17,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-fitness-apps-2026",
+        "title": "Best AI Fitness Apps 2026: 10 Apps Tested & Compared",
+        "quality_score": 74.4,
+        "word_count": 2224,
+        "flesch": 57.5,
+        "internal_links": 3,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-tools-hallucinate-too-much-2026",
+        "title": "AI Tools Hallucinate Too Much in 2026: Which Are Reliable?",
+        "quality_score": 80.0,
+        "word_count": 2329,
+        "flesch": 46.4,
+        "internal_links": 4,
+        "external_links": 12,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-gaming-tools-2026",
+        "title": "Best AI Gaming Tools 2026: Game Dev & NPC Tools Compared",
+        "quality_score": 65.6,
+        "word_count": 2893,
+        "flesch": 50.8,
+        "internal_links": 4,
+        "external_links": 7,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-social-media-tools-2026",
+        "title": "Best AI Social Media Tools 2026: Scheduling & Content Compared",
+        "quality_score": 65.6,
+        "word_count": 2123,
+        "flesch": 48.8,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-subscription-cancellation-guide-2026",
+        "title": "Cancel AI Subscriptions Without Getting Charged: 2026 Guide",
+        "quality_score": 56.7,
+        "word_count": 2305,
+        "flesch": 39.4,
+        "internal_links": 4,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
         ]
       }
     ]
