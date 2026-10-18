@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-19T00:46:24",
+  "last_updated": "2026-10-19T04:14:13",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-18-R18",
@@ -3218,13 +3218,15 @@
       "id": "P2-CSP-XSS-HEADER-20261018",
       "task": "无CSP header, Lighthouse csp-xss audit失败(新audit); 需为Next.js静态站设计安全CSP(注意inline script/GA4兼容), 验证不破坏功能",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "lighthouse_ci_2026-10-18",
-      "created_at": "2026-10-18T21:55:32"
+      "created_at": "2026-10-18T21:55:32",
+      "completed_at": "2026-10-19T04:14:13",
+      "completion_note": "r34修复: CSP从Report-Only升级为强制执行(Content-Security-Policy头), 移除unsafe-eval, 白名单继承自生产验证过的report-only(GA4/GTM/giscus/umami/adsense全覆盖)。commit 400a7e4, tsc=0/build=0/Deploy success(39161891869), 线上/compare页面验证正常渲染。说明: 静态站+Next inline scripts+GA4需保留unsafe-inline(无nonce方案), Lighthouse csp-xss audit不会满分属技术约束, 纵深防御已生效(外部恶意域脚本被拦)"
     },
     {
       "id": "P2-LCP-COMPARE-BLOG-20261018",
@@ -3235,7 +3237,106 @@
       ],
       "status": "pending",
       "source": "ux_cwv_ci_20261018_23",
-      "created_at": "2026-10-18T22:06:54"
+      "created_at": "2026-10-18T22:06:54",
+      "progress_note": "r34部分完成: compare页根因修复——原全client组件+运行时fetch(/data/tools-index.json 870KB), LCP被客户端JS阻塞; 改server wrapper(fs读JSON直出SSR)+CompareClient接收initialTools。线上验证: /compare HTML直出Top10表格+FAQ(之前为loading骨架)。commit 400a7e4, Deploy success。剩余: blog页LCP 4.9-5.3s未处理(根因待CWV trace数据: 疑似图片lazy/首屏JS), 下轮结合scheduled CWV复核继续"
+    },
+    {
+      "id": "R19-businessfirms-co",
+      "task": "[外链调研R19/客座] BusinessFirms AI write-for-us: 邮箱businessfirms.co@gmail.com, pitch'独立AI工具评测方法论/如何对比AI工具', author bio带aitoolcrux链接; 代理GET 200含write-for-us/guest/submit信号",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "url": "https://businessfirms.co/write-for-us-ai",
+      "channel": "客座博客",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "R19-rework-com",
+      "task": "[外链调研R19/资源页收录] resources.rework.com Best AI Tools 2026 Top25清单: 代理GET 200含submit/suggest/contact信号, 请求把aitoolcrux作为独立评测/对比资源加入; 无邮箱先找contact页",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "url": "https://resources.rework.com/tools/ai-tools/best-ai-tools-2026",
+      "channel": "资源页roundup",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "R19-saasclub-io",
+      "task": "[外链调研R19/社区推荐] saasclub.io/suggest: SaaS社区guest+工具suggest入口, 代理GET 200含guest/submit/suggest/contact信号, 以独立AI评测站身份suggest收录/嘉宾; 无邮箱走suggest表单",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "url": "https://saasclub.io/suggest/",
+      "channel": "社区推荐/guest",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "R19-sitepoint-com",
+      "task": "[外链调研R19/客座] SitePoint write-for-us大媒体门槛高,代理GET 200,仅作备选; pitch技术向AI工具评测方法,需通过其投稿表单审核",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "url": "https://www.sitepoint.com/write-for-us/",
+      "channel": "客座博客(高门槛)",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "R19-edtechmagazine-com",
+      "task": "[外链调研R19/教育资源页] EdTech Magazine高教AI工具学生指南: 代理GET 200含contact/signal, pitch把aitoolcrux作为学生选AI工具的对比参考; 无邮箱走联系表单",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "url": "https://edtechmagazine.com/higher/article/2026/02/best-ai-tools-college-students-guide-higher-ed-perfcon",
+      "channel": "资源页roundup",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "R19-iu-org",
+      "task": "[外链调研R19/教育资源页] iu.org学生AI工具清单: 代理GET 200,联系邮箱为通用招生contact-international@iu.org弱相关,仅备选pitch; 优先找编辑部直接入口",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "url": "https://www.iu.org/blog/ai-and-education/best-ai-tools-for-students/",
+      "channel": "资源页roundup",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "R19-shipboost-io",
+      "task": "[外链调研R19/工具目录] shipboost.io: 代理GET 200含submit/free信号,邮箱support@shipboost.io, 请求收录/相关AI工具互链; 评估其dofollow质量",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "url": "https://shipboost.io/tools/free-ai-directory-listing-generator",
+      "channel": "目录/工具互链",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
     }
   ],
   "milestones": [

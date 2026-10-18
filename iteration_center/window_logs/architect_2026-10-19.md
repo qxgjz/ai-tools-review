@@ -33,3 +33,32 @@
 - 2 条 P1 completed（LCP-MIDJOURNEY / LCP-HOMEPAGE-JS，含证据链）
 - 我的剩余 pending：3 条（CLAUDE-SEO 阻塞 + 2 P2）
 - 全站 ACTIVE 139 条（绝大多数为内容类 assigned 创作家/打磨师）
+
+## r34（2026-10-19 04:00 JST cron 轮）
+
+### 待办处理：3 条我的 pending（无 P0）
+- **P2-CSP-XSS-HEADER-20261018 → completed**
+  - 现状核查：CSP 实为 Report-Only（非强制）——Lighthouse csp-xss 判失败
+  - 修复（commit 400a7e4）：升级为强制 Content-Security-Policy + 移除 unsafe-eval；白名单继承自生产验证过的 report-only（GA4/GTM/giscus/umami/adsense 全覆盖）
+  - 验证：tsc=0/build=0/Deploy success（39161891869）；线上 /compare 正常渲染
+  - 说明：静态站 + Next inline scripts + GA4 需保留 unsafe-inline（无 nonce 方案），Lighthouse csp-xss 不会满分属技术约束；纵深防御已生效
+
+- **P2-LCP-COMPARE-BLOG-20261018 → 部分完成（保持 pending）**
+  - 根因：compare 页是全 client 组件 + 运行时 fetch /data/tools-index.json（870KB）→ LCP 被客户端 JS 阻塞（LCP 5.3s）
+  - 修复（commit 400a7e4）：app/compare/page.tsx 改 server wrapper（fs 读 JSON SSR 直出）+ 新建 components/compare/CompareClient.tsx（接收 initialTools props，dataLoading 初始 false，fetch 保留作兜底）
+  - 验证：线上 /compare HTML **直出 Top 10 表格 + FAQ**（之前为 loading 骨架）→ LCP 元素不再依赖 client JS
+  - 剩余：blog 页 LCP 4.9-5.3s 未处理（疑似图片 lazy/首屏 JS，需 CWV trace 数据），下轮结合 scheduled CWV 复核继续
+
+- **P1-CLAUDE-SEO-INSTALL-20261017**：保持阻塞（需 Anthropic key），未重复尝试
+
+### GEO 检查（追加要求）
+- real_geo_aeo_audit.py：**8.9/10（A 级）**——10 个 AI bot 全 accessible（GPTBot/ClaudeBot/Claude-Web/PerplexityBot/Google-Extended/Applebot/Amazonbot/Bytespider/meta-externalagent/OAI-SearchBot）；无 not_configured/blocked 缺陷 → 无新增待办
+- seo_audit_full.py：本机 SSL 超时已知死路，不重试；Lighthouse 本机死路，用 GitHub Actions 数据
+
+### 门控与发布
+- tsc=0 / build=0；commit 400a7e4 push 成功；Deploy success（39161891869）
+- 线上验证：web_fetch disable_cache /compare → SSR 直出内容确认
+
+### state
+- P2-CSP → completed；P2-LCP-COMPARE-BLOG → pending（progress 注明 compare 已修/blog 待下轮）
+- 我的剩余 pending：2 条（CLAUDE-SEO 阻塞 + LCP-COMPARE-BLOG blog 部分）
