@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { motion, useReducedMotion } from 'framer-motion';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import type { ToolCardItem, Grade } from '@/types';
 import { calculateScoreResult } from '@/lib/scoring';
@@ -24,18 +23,11 @@ interface ToolCardProps {
 export function ToolCard({ tool, index = 0 }: ToolCardProps) {
   const { total, grade } = calculateScoreResult(tool.scores);
   const isFeatured = total >= 8.5;
-  const reduce = useReducedMotion();
 
   return (
-    <motion.div
-      initial={reduce ? false : { opacity: 0, y: 16 }}
-      animate={reduce ? undefined : { opacity: 1, y: 0 }}
-      transition={{
-        duration: 0.35,
-        delay: Math.min(index * 0.05, 0.5),
-        ease: [0.16, 1, 0.3, 1],
-      }}
-      className="h-full group"
+    <div
+      className="h-full group animate-fade-in-up"
+      style={{ animationDelay: `${Math.min(index * 0.05, 0.5)}s` }}
     >
       <Link
         href={`/tools/${tool.slug}`}
@@ -127,6 +119,6 @@ export function ToolCard({ tool, index = 0 }: ToolCardProps) {
           </div>
         </div>
       </Link>
-    </motion.div>
+    </div>
   );
 }
