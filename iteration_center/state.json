@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 87,
+  "total_articles_generated": 89,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -2384,16 +2384,20 @@
       "assigned_to": "拓荒者",
       "priority": "P1",
       "source": "sop0100_eval_2026-10-17",
-      "status": "pending",
-      "id": "TODO-MISSINGID-25179-20261017"
+      "status": "completed",
+      "id": "TODO-MISSINGID-25179-20261017",
+      "completed_at": "2026-10-18T13:14:50.022266+08:00",
+      "evidence": "SMTP accepted via smtp.qq.com to hello@inpulza.com at 2026-10-18T13:13:01.072066+08:00; third-person nomination/follow-up; evidence g_mail_sent.json"
     },
     {
       "task": "邮件提名contentforce: 发team@contentforce.ai, 客观说明aitoolcrux作为AI工具实测对比资源, 请求列入best-ai-tools清单, 附https://www.aitoolcrux.com",
       "assigned_to": "拓荒者",
       "priority": "P1",
       "source": "sop0100_eval_2026-10-17",
-      "status": "pending",
-      "id": "TODO-MISSINGID-46945-20261017"
+      "status": "completed",
+      "id": "TODO-MISSINGID-46945-20261017",
+      "completed_at": "2026-10-18T13:14:50.022266+08:00",
+      "evidence": "SMTP accepted via smtp.qq.com to team@contentforce.ai at 2026-10-18T13:13:46.278835+08:00; third-person nomination/follow-up; evidence g_mail_sent.json"
     },
     {
       "id": "P1-CF-DASHBOARD-ACTIONS-20261017",
@@ -2851,8 +2855,10 @@
       "assigned_to": "拓荒者",
       "priority": "P2",
       "source": "sop0100_eval_2026-10-17",
-      "status": "pending",
-      "id": "TODO-MISSINGID-63091-20261017"
+      "status": "completed",
+      "id": "TODO-MISSINGID-63091-20261017",
+      "completed_at": "2026-10-18T13:14:50.022266+08:00",
+      "evidence": "SMTP accepted via smtp.qq.com to contact@toolscout.ai at 2026-10-18T13:13:01.072066+08:00; third-person nomination/follow-up; evidence g_mail_sent.json"
     },
     {
       "task": "P2 提交aitoolcrux到credibleaitools.com, 免费提交仅收$1一次性反垃圾验证费, 页面含submit/badge/free信号",
@@ -2980,13 +2986,15 @@
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "source": "growth_d1_2026-10-17",
       "category": "客座博客",
       "created_at": "2026-10-17T17:16:52+08:00",
       "action": "submit_or_pitch",
       "data_verified": true,
-      "probe": "D1 2026-10-17 直连200"
+      "probe": "D1 2026-10-17 直连200",
+      "completed_at": "2026-10-18T13:16:45.765033+08:00",
+      "evidence": "SMTP accepted to info@akram-ali.com at 2026-10-18T13:16:45.765033+08:00; guest-post pitch sent via SMTP; original AI-tool comparison checklist angle, bio link to site; evidence g_mail_sent.json"
     },
     {
       "task": "外链调研D1: D1调研: mitti(SafetyCulture)免费AI工具清单页(200,submit/contact/free), 邮件/表单请求把aitoolcrux列入免费工具清单",
@@ -2995,13 +3003,15 @@
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "source": "growth_d1_2026-10-17",
       "category": "资源页收录",
       "created_at": "2026-10-17T17:16:52+08:00",
       "action": "submit_or_pitch",
       "data_verified": true,
-      "probe": "D1 2026-10-17 直连200"
+      "probe": "D1 2026-10-17 直连200",
+      "completed_at": "2026-10-18T13:16:45.765033+08:00",
+      "evidence": "SMTP accepted to support@mitti.com at 2026-10-18T13:16:45.765033+08:00; list suggestion email sent via SMTP for free AI tools list; evidence g_mail_sent.json"
     },
     {
       "task": "外链调研D1: D1调研: mailforge AI outreach工具测评清单(200,contact/suggest/add-a/free), 联系编辑请求在其AI工具roundup收录aitoolcrux",
@@ -3035,12 +3045,14 @@
       "assigned_to": [
         "拓荒者"
       ],
-      "status": "pending",
+      "status": "completed",
       "task": "R调研roundup: Kevan Lee AI Tools Roundup newsletter(#433,直连200), contact建议收录aitoolcrux, 客观第三人称, 附官网",
       "source": "growth_r_research_20261018",
       "url": "https://newsletter.aroundthebonfire.com/p/433-ai-tools-roundup",
       "action": "roundup outreach",
-      "created_at": "2026-10-18T01:14:42+08:00"
+      "created_at": "2026-10-18T01:14:42+08:00",
+      "completed_at": "2026-10-18T13:16:45.765033+08:00",
+      "evidence": "SMTP accepted to hello@kevanlee.com at 2026-10-18T13:16:45.765033+08:00; roundup #433 suggestion email sent via SMTP, third-person, URL attached; evidence g_mail_sent.json"
     },
     {
       "id": "GROWTH-RR-01-20261018",
@@ -3210,10 +3222,12 @@
       "assigned_to": [
         "拓荒者"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "commander_dispatch_20261014_morning",
       "created_at": "2026-10-14T10:15:00",
-      "updated_at": "2026-10-14T10:15:00"
+      "updated_at": "2026-10-14T10:15:00",
+      "completed_at": "2026-10-18T13:14:50.022266+08:00",
+      "evidence": "SMTP accepted via smtp.qq.com to hello@aitoolsdirectory.com at 2026-10-18T13:13:46.278835+08:00; third-person nomination/follow-up; evidence g_mail_sent.json"
     },
     {
       "id": "P1-QC-VERIFY-6ARTICLES-20261016",
