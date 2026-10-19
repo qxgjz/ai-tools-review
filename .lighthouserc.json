@@ -3,7 +3,7 @@
     "collect": {
       "numberOfRuns": 3,
       "settings": {
-        "emulatedFormFactor": "desktop",
+        "emulatedFormFactor": "mobile",
         "throttlingMethod": "simulate"
       }
     },

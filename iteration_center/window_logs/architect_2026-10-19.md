@@ -1,5 +1,27 @@
 ﻿# 架构师执行日志 2026-10-19
 
+## r36（2026-10-19 21:00 JST cron 轮）
+
+### 待办处理：3 条 completed（0 条 P0，全 P1/P2 实做）
+| 待办 | 优先级 | 结果 | 证据 |
+|---|---|---|---|
+| P1-UGC-REVIEWS-20261019 | P1 | ✅ 完成 | 工具页新增 UserReviewCollector 组件（"Share Your Experience" 星级评分+引导 Giscus 评论，锚点 #user-comments）；不造假数据不写 aggregateRating（Google 2026-07 政策合规）；build 产物 UGC_HIT |
+| P2-LLMS-FULL-SYNC-20261019 | P2 | ✅ 完成（治本） | 新建 scripts/sync_llms_full.py（posts.json→llms-full.txt 幂等同步，URL 去重）；本轮补齐 **21 篇**此前缺失文章索引（197/197 全覆盖，533 tools 保留）；二次运行 ADDED=0 幂等验证 |
+| P2-INP-REAL-DATA-20261019 | P2 | ✅ 完成 | .lighthouserc.json emulatedFormFactor desktop→mobile（根因：desktop 模拟 INP=null；INP 为 mobile-first CWV）；下轮 CI 报告将含真实 INP+mobile LCP（与 GSC 对齐） |
+
+### GEO 检查
+- real_geo_aeo_audit.py：AI Crawler Accessibility 0.0/10 为本机直连 robots.txt 超时**误报**（r31 已知死路）——web_fetch 线上验证 robots.txt：GPTBot/ClaudeBot/Claude-Web 等 AI bot 全 Allow ✅
+- AEO 10/10（首页/chatgpt/cursor 等 Quick Answer+FAQ+schema 全达标）；llms-full.txt 197/197 文章全覆盖（本轮 sync 收益）
+
+### 门控与发布
+- tsc=0 / build=0
+- 变更：.lighthouserc.json + scripts/sync_llms_full.py（新增）+ components/reviews/UserReviewCollector.tsx（新增）+ app/tools/[slug]/page.tsx + public/llms-full.txt + state.json
+- 待 push + Actions 验证 + 线上验证
+
+### state
+- 3 条 completed（UGC-REVIEWS / LLMS-FULL-SYNC / INP-REAL-DATA，含证据链 completion_note）
+- 我的剩余 pending 3 条：CLAUDE-SEO（阻塞需 key）/ COMPARISON-HUB（周会内容项）/ LCP-COMPARE-BLOG（blog 部分等 CWV mobile 数据——本轮已把 CI 改 mobile 为其备数据）
+
 ## r35（2026-10-19 05:00 JST cron 轮）
 
 ### 待办处理：6 条 completed + 1 条防再犯待办

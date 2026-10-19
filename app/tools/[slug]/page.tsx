@@ -41,6 +41,7 @@ import { NewsletterSignup } from '@/components/monetization/NewsletterSignup';
 import { Breadcrumb } from '@/components/ui/Breadcrumb';
 import { ToolScreenshot } from '@/components/content/ToolScreenshot';
 import { FAQSection } from '@/components/content/FAQSection';
+import { UserReviewCollector } from '@/components/reviews/UserReviewCollector';
 import { AuthorBio } from '@/components/author/AuthorBio';
 import { shouldSkipStaticGen } from '@/lib/static-gen';
 import dynamicImport from 'next/dynamic';
@@ -1477,8 +1478,11 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
         <NewsletterSignup variant="compact" />
       </div>
 
+      {/* UGC review collector — real user feedback as AI citation fuel */}
+      <UserReviewCollector toolName={tool.name} />
+
       {/* Comments section */}
-      <section className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 sm:p-8">
+      <section id="user-comments" className="bg-white dark:bg-zinc-900 rounded-2xl border border-zinc-100 dark:border-zinc-800 shadow-sm p-6 sm:p-8">
         <Giscus />
       </section>
 
