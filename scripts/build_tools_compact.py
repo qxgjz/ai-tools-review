@@ -2,6 +2,7 @@
 保留 generator 推荐算法 + 结果卡片渲染所需字段：id/slug/name/vendor/category/scores/hasFreeTier。
 用途：避免 generator 页（'use client'）把全量 tools.json（~9.6MB）打包进客户端 JS。
 用法：python scripts/build_tools_compact.py  （tools.json 更新后需重跑）
+注意：.gitignore 忽略 data/*.json，提交生成的 tools-compact.json 必须用 git add -f data/tools-compact.json
 """
 import json, os, sys, io
 sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
