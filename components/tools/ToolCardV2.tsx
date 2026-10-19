@@ -1,7 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import { motion } from 'framer-motion';
 import { ArrowUpRight, Sparkles } from 'lucide-react';
 import type { Tool, Grade } from '@/types';
 import { calculateScoreResult } from '@/lib/scoring';
@@ -46,12 +45,7 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
   const isFeatured = total >= 8.5;
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 20 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.25, delay: Math.min(index * 0.05, 0.5), ease: [0.16, 1, 0.3, 1] }}
-      className="h-full group"
-    >
+    <div className="h-full group">
       <Link href={`/tools/${tool.slug}`} className="block h-full">
         <Card className="relative h-full flex flex-col overflow-hidden rounded-lg border hover:border-[rgba(0,0,0,0.12)] hover:shadow-md dark:hover:border-white/20 transition-all duration-150 ease-[cubic-bezier(0.16,1,0.3,1)] hover:-translate-y-1">
           {/* FeaturedTags */}
@@ -135,6 +129,6 @@ export function ToolCardV2({ tool, index = 0 }: ToolCardProps) {
           </CardFooter>
         </Card>
       </Link>
-    </motion.div>
+    </div>
   );
 }

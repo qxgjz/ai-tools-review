@@ -1,7 +1,6 @@
 'use client';
 
-import { useRef, type ReactNode } from 'react';
-import { motion, useScroll, useTransform } from 'framer-motion';
+import type { ReactNode } from 'react';
 
 interface StackingCardProps {
   children: ReactNode;
@@ -11,36 +10,23 @@ interface StackingCardProps {
 }
 
 export function StackingCard({ children, index, totalCards, className = '' }: StackingCardProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const targetScale = 1 - (totalCards - 1 - index) * 0.03;
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start end', 'end start'],
-  });
-
-  const scale = useTransform(
-    scrollYProgress,
-    [0, 0.5, 1],
-    [targetScale, targetScale, Math.max(0.9, targetScale - 0.05)],
-  );
 
   return (
     <div
-      ref={containerRef}
       className="h-[85vh] sticky top-24 md:top-32 flex items-start justify-center"
       style={{ zIndex: index + 10 }}
     >
-      <motion.div
+      <div
         className={`w-full max-w-6xl ${className}`}
         style={{
-          scale,
+          transform: `scale(${targetScale})`,
           top: `${index * 28}px`,
           position: 'relative',
         }}
       >
         {children}
-      </motion.div>
+      </div>
     </div>
   );
 }

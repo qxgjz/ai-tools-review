@@ -1,6 +1,5 @@
 'use client';
 
-import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 interface GradientTextProps {
@@ -52,32 +51,28 @@ export function GradientButton({
     outlineOffset: '-3px',
   };
 
-  const classes = `inline-flex items-center gap-2 px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-white text-xs sm:text-sm md:text-base font-medium uppercase tracking-widest rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg ${className}`;
+  const classes = `inline-flex items-center gap-2 px-8 py-3 sm:px-10 sm:py-3.5 md:px-12 md:py-4 text-white text-xs sm:text-sm md:text-base font-medium uppercase tracking-widest rounded-full transition-all duration-300 hover:scale-105 hover:shadow-lg active:scale-[0.98] ${className}`;
 
   if (href) {
     return (
-      <motion.a
+      <a
         href={href}
         className={classes}
         style={baseStyle}
-        whileHover={{ scale: 1.05 }}
-        whileTap={{ scale: 0.98 }}
       >
         {children}
-      </motion.a>
+      </a>
     );
   }
 
   return (
-    <motion.button
+    <button
       type={type}
       onClick={onClick}
       className={classes}
       style={baseStyle}
-      whileHover={{ scale: 1.05 }}
-      whileTap={{ scale: 0.98 }}
     >
       {children}
-    </motion.button>
+    </button>
   );
 }

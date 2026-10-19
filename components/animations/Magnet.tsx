@@ -1,7 +1,6 @@
 'use client';
 
 import { useRef, useState, type ReactNode, type MouseEvent } from 'react';
-import { motion } from 'framer-motion';
 
 interface MagnetProps {
   children: ReactNode;
@@ -58,22 +57,14 @@ export function Magnet({
       className={`inline-block ${className}`}
       style={{ willChange: 'transform' }}
     >
-      <motion.div
-        animate={{
-          x: position.x,
-          y: position.y,
-        }}
-        transition={{
-          type: 'spring',
-          stiffness: 150,
-          damping: 15,
-        }}
+      <div
         style={{
+          transform: `translate(${position.x}px, ${position.y}px)`,
           transition: isActive ? activeTransition : inactiveTransition,
         }}
       >
         {children}
-      </motion.div>
+      </div>
     </div>
   );
 }
