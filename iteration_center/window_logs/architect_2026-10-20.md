@@ -1,5 +1,41 @@
 # 架构师执行日志 2026-10-20
 
+## r38（2026-10-20 第二次 cron 轮，generator JS 治本 + comparison hub）
+
+### 待办处理：2 条 completed（均实做）
+| 待办 | 结果 | 核心 |
+|---|---|---|
+| P2-GENERATOR-JS-20261020 | ✅ completed | generator 页 JS 7.6MB→139KB（-98%） |
+| P1-COMPARISON-HUB-20261019 | ✅ completed | /compare/ 页新增对比文章 hub 区块（10 条） |
+
+### P2-GENERATOR-JS（复现→根因→修复→验证）
+- 复现：out/_next/static/chunks/app/generator/page-*.js = 7.6MB
+- 根因：app/generator/page.tsx 'use client' → lib/generator.ts import 全量 data/tools.json（533 工具 8.05MB，review 6.5KB/工具等长字段 36% 全被打进客户端）
+- 修复：
+  1. 新建 scripts/build_tools_compact.py：从 tools.json 派生 data/tools-compact.json（仅 id/slug/name/vendor/category/scores/hasFreeTier，117.7KB，-99%）
+  2. lib/generator.ts：改 import tools-compact.json + 定义 CompactTool 接口；GeneratorResult.tool: CompactTool
+  3. page.tsx 无改动（只用 id/name/vendor/slug/scores，类型自动跟随）
+- 验证：tsc=0 / build=0；generator page chunk 7.6MB→139.0KB；generator/index.html 76.2KB 存在
+
+### P1-COMPARISON-HUB（周会项技术部分）
+- 现状：/alternatives/ 已是 hub（8 篇）；/compare/ 只是对比工具页，未列出 10 篇对比文章
+- 修复：app/compare/page.tsx 新增 Popular Comparison Articles hub 区块（server 端读 data/comparisons.json 程序化渲染 10 条：chatgpt-vs-claude/midjourney-vs-dall-e-3/github-copilot-vs-cursor/chatgpt-vs-gemini/claude-vs-gemini/midjourney-vs-stable-diffusion/jasper-vs-copy-ai/notion-ai-vs-grammarly/runway-vs-sora/perplexity-vs-chatgpt）
+- 验证：build 后 out/compare/index.html 含标题 + 10 条 /compare/* 链接；tsc=0 / build=0
+
+### GEO 例行（追加要求，2 个技术问题已处理）
+- 技术问题 1：generator 页 7.6MB JS（AI 爬虫抓取资源占用）→ 已瘦身 139KB
+- 技术问题 2：compare 对比内容无 hub 内链枢纽 → 已新增 hub 区块
+- 线上验证：robots.txt（GPTBot/ClaudeBot/PerplexityBot/OAI-SearchBot/ChatGPT-User/Claude-SearchBot/Claude-User/Perplexity-User/Applebot-Extended 全 Allow，Sitemap 指向正确）；sitemap.xml 200 含工具页/首页
+- GEO 内容类待办（P0-GEO-001 等 10 条）assigned 创作家，非本窗口范围
+
+### state 与后续
+- P2-GENERATOR-JS / P1-COMPARISON-HUB → completed（各含 completion_note + data_verified）
+- 剩余 pending 1 条：P1-CLAUDE-SEO-INSTALL-20261017（阻塞：需 Anthropic key / Claude Code 环境，解除前不重试）
+
+---
+
+# 架构师执行日志 2026-10-20（同日第二次，r38 段见上）
+
 ## r37（2026-10-20 架构师 cron 轮，全站 LCP 治本）
 
 ### 待办处理：1 条 completed + 1 条新增

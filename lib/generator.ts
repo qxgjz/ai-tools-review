@@ -1,10 +1,24 @@
 /* ============================================================
  * 评测生成器核心计算逻辑
+ * 使用 data/tools-compact.json（精简字段，~118KB）替代全量
+ * tools.json（~8MB），避免 'use client' 页把全量数据打包进 JS。
+ * tools.json 更新后需重跑: python scripts/build_tools_compact.py
  * ============================================================ */
 
-import toolsData from '@/data/tools.json';
-import type { Tool, ScoreDimension } from '@/types';
+import toolsData from '@/data/tools-compact.json';
+import type { Score, ScoreDimension } from '@/types';
 import { calculateScoreResult, DIMENSION_LABELS } from '@/lib/scoring';
+
+/** generator 页所需的精简工具结构（字段裁剪集见 build_tools_compact.py） */
+export interface CompactTool {
+  id: string;
+  slug: string;
+  name: string;
+  vendor: string;
+  category: string;
+  scores: Score;
+  hasFreeTier: boolean;
+}
 
 export type ScenarioType = 'writing' | 'design' | 'coding' | 'video' | 'office' | 'other';
 
@@ -14,7 +28,7 @@ export interface GeneratorInput {
 }
 
 export interface GeneratorResult {
-  tool: Tool;
+  tool: CompactTool;
   matchScore: number;
   rank: number;
   recommendationReason: string;
@@ -68,7 +82,7 @@ export function generateRecommendations(
     ...(SCENARIO_DIMENSION_BOOST[scenario] || []),
   ]);
 
-  const results: GeneratorResult[] = (toolsData as Tool[]).map((tool) => {
+  const results: GeneratorResult[] = (toolsData as CompactTool[]).map((tool) => {
     const scoreResult = calculateScoreResult(tool.scores);
     let matchScore = scoreResult.total * 5;
     let priorityBonus = 0;
@@ -108,7 +122,7 @@ export function generateRecommendations(
 }
 
 function generateReason(
-  tool: Tool,
+  tool: CompactTool,
   total: number,
   matchedDims: ScoreDimension[],
   scenario: ScenarioType,
