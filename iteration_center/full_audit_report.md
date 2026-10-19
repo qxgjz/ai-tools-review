@@ -1,20 +1,20 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-18 21:26:08
+**Date:** 2026-10-19 22:53:27
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 188 |
-| Avg content score | 85.8/100 |
+| Articles | 197 |
+| Avg content score | 84.7/100 |
 | Perfect articles | 91 |
-| Articles below 85 | 78 |
+| Articles below 85 | 87 |
 | Pages audited | 20 |
 | Technical issues | 5 |
 | Critical issues | 0 |
-| Audit duration | 2.2s |
+| Audit duration | 2.7s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -23,6 +23,9 @@
 |------|-------|-------|--------|-------|--------|
 | best-ai-hr-tools-2026 | 46 | 2275 | 37.8 | 4 | first_para_pass, readability_pass |
 | best-ai-real-estate-tools-2026 | 46 | 2410 | 36.7 | 3 | first_para_pass, readability_pass |
+| best-ai-personal-assistants-2026 | 49 | 1925 | 53.7 | 0 | word_count_pass, first_para_pass, internal_links_pass |
+| best-ai-education-tools-2026 | 49 | 1945 | 49.3 | 0 | word_count_pass, first_para_pass, internal_links_pass |
+| best-ai-interior-design-tools-2026 | 49 | 1967 | 43.8 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | best-ai-ecommerce-tools-2026 | 51 | 2237 | 38.2 | 4 | first_para_pass, readability_pass |
 | best-ai-text-to-speech-tools-2026 | 53 | 2344 | 38.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-avatar-generators-2026 | 53 | 2331 | 34.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
@@ -31,6 +34,7 @@
 | best-ai-automation-tools-2026 | 57 | 2353 | 48.0 | 0 | first_para_pass, internal_links_pass |
 | best-ai-video-enhancers-2026 | 57 | 2246 | 45.9 | 0 | first_para_pass, internal_links_pass |
 | ai-subscription-cancellation-guide- | 57 | 2305 | 39.4 | 4 | first_para_pass, readability_pass |
+| best-ai-story-generators-2026 | 57 | 2414 | 37.5 | 5 | first_para_pass, readability_pass |
 | best-ai-research-assistants-2026 | 60 | 2393 | 30.1 | 4 | first_para_pass, readability_pass |
 | best-ai-translators-2026 | 60 | 2328 | 46.8 | 4 | first_para_pass |
 | best-ai-stock-trading-tools-2026 | 60 | 2657 | 46.0 | 4 | first_para_pass |
@@ -54,6 +58,8 @@
 | chatgpt-pro-200-worth-it-2026 | 66 | 2452 | 54.0 | 4 | first_para_pass |
 | best-ai-gaming-tools-2026 | 66 | 2893 | 50.8 | 4 | first_para_pass |
 | best-ai-social-media-tools-2026 | 66 | 2123 | 48.8 | 4 | first_para_pass |
+| best-ai-travel-planners-2026 | 66 | 2145 | 48.7 | 5 | first_para_pass |
+| best-ai-health-apps-2026 | 66 | 2175 | 47.8 | 3 | first_para_pass |
 | cursor-alternatives-2026 | 69 | 2828 | 55.6 | 0 | first_para_pass, internal_links_pass, external_links_pass |
 | dify-vs-langchain-2026 | 71 | 2282 | 40.5 | 13 | first_para_pass |
 | cursor-vs-windsurf-2026 | 71 | 2202 | 41.2 | 4 | first_para_pass |
@@ -72,6 +78,9 @@
 | midjourney-v7-vs-dall-e-3-2026 | 71 | 2131 | 36.1 | 5 | first_para_pass, readability_pass |
 | best-ai-tools-for-beginners-2026 | 71 | 2261 | 57.3 | 5 | first_para_pass |
 | ai-tools-not-worth-the-money-2026 | 71 | 2545 | 49.1 | 8 | first_para_pass |
+| best-ai-fashion-assistants-2026 | 71 | 2158 | 52.4 | 4 | first_para_pass |
+| best-ai-gift-idea-generators-2026 | 71 | 2462 | 49.5 | 5 | first_para_pass |
+| best-ai-cartoon-generators-2026 | 71 | 2321 | 54.6 | 5 | first_para_pass |
 | cursor-vs-github-copilot-2026 | 72 | 1967 | 48.3 | 3 | word_count_pass, first_para_pass |
 | elevenlabs-vs-playht-2026 | 72 | 1871 | 48.7 | 5 | word_count_pass, first_para_pass |
 | how-to-get-chatgpt-free-2026 | 72 | 1844 | 56.6 | 3 | word_count_pass |
@@ -177,20 +186,20 @@
 | claude-review-2026 | 100 | 12668 | 42.4 | 17 | — |
 | github-copilot-review-2026 | 100 | 13318 | 43.2 | 16 | — |
 | cursor-review-2026 | 100 | 13330 | 44.3 | 17 | — |
-| notion-ai-review-2026 | 100 | 15249 | 40.4 | 13 | — |
-| runway-review-2026 | 100 | 13476 | 41.2 | 12 | — |
+| notion-ai-review-2026 | 100 | 15287 | 42.3 | 14 | — |
+| runway-review-2026 | 100 | 13500 | 40.5 | 13 | — |
 | jasper-review-2026 | 100 | 13744 | 42.3 | 14 | — |
 | perplexity-review-2026 | 100 | 9809 | 47.5 | 15 | — |
 | figma-ai-review-2026 | 100 | 13953 | 47.5 | 15 | — |
-| sora-review-2026 | 100 | 13479 | 43.2 | 13 | — |
+| sora-review-2026 | 100 | 13506 | 42.4 | 14 | — |
 | stable-diffusion-review-2026 | 100 | 15289 | 48.9 | 13 | — |
 | copy-ai-review-2026 | 100 | 13471 | 47.4 | 17 | — |
-| otter-ai-review-2026 | 100 | 13652 | 48.4 | 13 | — |
+| otter-ai-review-2026 | 100 | 13683 | 49.6 | 14 | — |
 | synthesia-review-2026 | 100 | 13692 | 46.3 | 12 | — |
 | gemini-review-2026 | 100 | 11393 | 51.2 | 14 | — |
 | dall-e-3-review-2026 | 100 | 13970 | 45.5 | 14 | — |
-| pika-review-2026 | 100 | 13352 | 44.0 | 13 | — |
-| microsoft-365-copilot-review-2026 | 100 | 15564 | 44.8 | 13 | — |
+| pika-review-2026 | 100 | 13385 | 43.7 | 14 | — |
+| microsoft-365-copilot-review-2026 | 100 | 15603 | 44.8 | 14 | — |
 | kling-review-2026 | 100 | 11913 | 43.3 | 14 | — |
 | heygen-review-2026 | 100 | 13754 | 44.7 | 13 | — |
 | leonardo-ai-review-2026 | 100 | 14636 | 46.1 | 15 | — |

@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-18T21:26:08.816095",
+  "audit_time": "2026-10-19T22:53:27.247129",
   "mode": "quick",
   "content": {
-    "total_articles": 188,
-    "average_score": 85.84202127659584,
+    "total_articles": 197,
+    "average_score": 84.7015228426397,
     "perfect_count": 91,
-    "below_85_count": 78,
+    "below_85_count": 87,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -112,7 +112,7 @@
       },
       {
         "slug": "best-ai-voice-changers-2026",
-        "title": "Best AI Voice Changers 2026: Real-Time Voice Tools Compared",
+        "title": "Best AI Voice Changers 2026: Free & Real-Time Tools Compared",
         "quality_score": 100.0,
         "word_count": 2927,
         "flesch": 52.6,
@@ -810,13 +810,13 @@
       },
       {
         "slug": "notion-ai-review-2026",
-        "title": "Notion AI Review 2026: Best AI Assistant for | AIToolCrux",
+        "title": "Notion AI Review 2026: Best Notion Assistant, Tested",
         "quality_score": 100.0,
-        "word_count": 15249,
-        "flesch": 40.4,
-        "internal_links": 13,
-        "external_links": 1,
-        "images": 2,
+        "word_count": 15287,
+        "flesch": 42.3,
+        "internal_links": 14,
+        "external_links": 2,
+        "images": 1,
         "failed_checks": []
       },
       {
@@ -847,12 +847,12 @@
       },
       {
         "slug": "runway-review-2026",
-        "title": "Runway Review 2026: Best AI Video Generation | AIToolCrux",
+        "title": "Runway Review 2026: Best AI Video Generator, Tested",
         "quality_score": 100.0,
-        "word_count": 13476,
-        "flesch": 41.2,
-        "internal_links": 12,
-        "external_links": 1,
+        "word_count": 13500,
+        "flesch": 40.5,
+        "internal_links": 13,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
@@ -891,12 +891,12 @@
       },
       {
         "slug": "sora-review-2026",
-        "title": "Sora Review 2026: Best AI Video Generator for | AIToolCrux",
+        "title": "Sora Review 2026: Best AI Video Generator for Pros, Tested",
         "quality_score": 100.0,
-        "word_count": 13479,
-        "flesch": 43.2,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 13506,
+        "flesch": 42.4,
+        "internal_links": 14,
+        "external_links": 2,
         "images": 1,
         "failed_checks": []
       },
@@ -924,12 +924,12 @@
       },
       {
         "slug": "otter-ai-review-2026",
-        "title": "Otter.ai Review 2026: Best AI Meeting | AIToolCrux",
+        "title": "Otter.ai Review 2026: Best AI Meeting Assistant, Tested",
         "quality_score": 100.0,
-        "word_count": 13652,
-        "flesch": 48.4,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 13683,
+        "flesch": 49.6,
+        "internal_links": 14,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
@@ -968,12 +968,12 @@
       },
       {
         "slug": "pika-review-2026",
-        "title": "Pika Review 2026: Best Budget AI Video | AIToolCrux",
+        "title": "Pika Review 2026: Best Budget AI Video Generator, Tested",
         "quality_score": 100.0,
-        "word_count": 13352,
-        "flesch": 44.0,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 13385,
+        "flesch": 43.7,
+        "internal_links": 14,
+        "external_links": 2,
         "images": 2,
         "failed_checks": []
       },
@@ -992,11 +992,11 @@
       },
       {
         "slug": "microsoft-365-copilot-review-2026",
-        "title": "Microsoft 365 Copilot Review 2026 | AIToolCrux",
+        "title": "Microsoft 365 Copilot Review 2026: Worth It for Teams?",
         "quality_score": 100.0,
-        "word_count": 15564,
+        "word_count": 15603,
         "flesch": 44.8,
-        "internal_links": 13,
+        "internal_links": 14,
         "external_links": 1,
         "images": 2,
         "failed_checks": []
@@ -1036,7 +1036,7 @@
       },
       {
         "slug": "adobe-firefly-review-2026",
-        "title": "Adobe Firefly Review 2026: Is It Worth the Free Tier?",
+        "title": "Adobe Firefly Review 2026: Free AI Image Generator, Tested",
         "quality_score": 100.0,
         "word_count": 14413,
         "flesch": 46.9,
@@ -2281,6 +2281,130 @@
           "first_para_pass",
           "readability_pass"
         ]
+      },
+      {
+        "slug": "best-ai-travel-planners-2026",
+        "title": "Best AI Travel Planners 2026: 7 Apps Tested & Compared",
+        "quality_score": 65.6,
+        "word_count": 2145,
+        "flesch": 48.7,
+        "internal_links": 5,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-health-apps-2026",
+        "title": "Best AI Health Apps 2026: 9 Apps Tested for Real Results",
+        "quality_score": 65.6,
+        "word_count": 2175,
+        "flesch": 47.8,
+        "internal_links": 3,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-fashion-assistants-2026",
+        "title": "Best AI Fashion Assistants 2026: Try-On & Styling Tools",
+        "quality_score": 71.1,
+        "word_count": 2158,
+        "flesch": 52.4,
+        "internal_links": 4,
+        "external_links": 6,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-gift-idea-generators-2026",
+        "title": "Best AI Gift Idea Generators 2026: 7 Free & Paid Tools Tested",
+        "quality_score": 71.1,
+        "word_count": 2462,
+        "flesch": 49.5,
+        "internal_links": 5,
+        "external_links": 5,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-cartoon-generators-2026",
+        "title": "Best AI Cartoon Generators 2026: Photos to Cartoons Fast",
+        "quality_score": 71.1,
+        "word_count": 2321,
+        "flesch": 54.6,
+        "internal_links": 5,
+        "external_links": 5,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-story-generators-2026",
+        "title": "Best AI Story Generators 2026: Fiction & Script Tools",
+        "quality_score": 56.7,
+        "word_count": 2414,
+        "flesch": 37.5,
+        "internal_links": 5,
+        "external_links": 11,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-personal-assistants-2026",
+        "title": "Best AI Personal Assistants 2026: 8 Tools Tested & Ranked",
+        "quality_score": 48.9,
+        "word_count": 1925,
+        "flesch": 53.7,
+        "internal_links": 0,
+        "external_links": 4,
+        "images": 0,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-education-tools-2026",
+        "title": "Best AI Education Tools 2026: For Teachers & Students",
+        "quality_score": 48.9,
+        "word_count": 1945,
+        "flesch": 49.3,
+        "internal_links": 0,
+        "external_links": 4,
+        "images": 0,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-interior-design-tools-2026",
+        "title": "Best AI Interior Design Tools 2026: Redesign Rooms Fast",
+        "quality_score": 48.9,
+        "word_count": 1967,
+        "flesch": 43.8,
+        "internal_links": 0,
+        "external_links": 6,
+        "images": 0,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass",
+          "internal_links_pass"
+        ]
       }
     ]
   },
@@ -2296,7 +2420,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 2.2
+    "elapsed_seconds": 2.7
   },
   "geo": {
     "geo_score": 100,
