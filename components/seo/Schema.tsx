@@ -48,6 +48,7 @@ export function ReviewSchema({
       '@type': 'SoftwareApplication',
       name: itemReviewed || name,
       applicationCategory: 'WebApplication',
+      operatingSystem: 'Web',
     },
     publisher: {
       '@type': 'Organization',
