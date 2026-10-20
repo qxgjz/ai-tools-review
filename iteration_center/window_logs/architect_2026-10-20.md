@@ -33,6 +33,13 @@
 - 2 条 P0 completed（各含证据链 completion_note + data_verified）
 - 剩余 pending 5 条（全 P1）：CLAUDE-SEO-INSTALL（阻塞）/ CLAUDE-SEO-V241 / LCP-REALDATA / ENV-DOCKER-GO / MIDJOURNEY-LCP
 
+### 补充：P1-MIDJOURNEY-LCP 根因排查（本地资源层面）
+- midjourney 页 JS chunks 全正常：不引用 657KB tools 全量 chunk（3310 为 ranking/search 等其他页用），最大本地 chunk 仅 172KB（fd9d1056 共享）
+- framer-motion 确认删净（package.json 无依赖 + 源码 0 处 import）；657KB chunk 中 "framer"/"motion" 字符串 = 工具名 Framer AI / Motion 数据，非库代码
+- RadarChart 为自绘 SVG 组件（dynamicImport ssr:false 懒加载，无 recharts 依赖）；HTML 365KB 正常
+- 结论：midjourney 页 LCP 8.4s（CI 模拟）无法在本地资源层面解释，嫌疑 = 页面长 / Live screenshot 大图 / 真实环境差异 → 已把排查结论写入 P1-LCP-REALDATA desc 供下轮（CRUX/RUM 或现场 Lighthouse）
+- 首页 LCP 主因已由 P0-HOME-DUP 覆盖（重复区块 -525 行），待 CWV 复测
+
 ---
 
 # 架构师执行日志 2026-10-20（同日第四轮，r40 段见上）

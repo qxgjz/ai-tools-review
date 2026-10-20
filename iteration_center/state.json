@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-20T21:11:24+08:00",
+  "last_updated": "2026-10-20T21:28:02+08:00",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-20-R22",
@@ -2913,7 +2913,7 @@
     {
       "id": "P1-LCP-REALDATA-20261020",
       "title": "midjourney页真实环境LCP定位（CI模拟8.4s异常，需RUM/CRUX确认）",
-      "description": "r37去framer-motion后CI模拟LCP仍超红线（首页3.3-6.6s/midjourney 7.8-8.4s）。模拟throttling方差大，需CRUX(RUM)真实数据确认midjourney页LCP根因（大图/第三方脚本），超红线则优化。",
+      "description": "r39追加。r40初步排查(midjourney页): ①JS chunks全正常——midjourney页不引用657KB tools全量chunk(3310为ranking/search等其他页用), 最大本地chunk仅172KB(fd9d1056共享); ②framer-motion确认已删净(package.json无依赖+源码0处import), 657KB chunk的\"framer/motion\"字符串=工具名Framer AI/Motion数据, 非库代码; ③RadarChart为自绘SVG组件(dynamicImport ssr:false懒加载, 无recharts依赖); ④HTML 365KB正常。结论: midjourney页LCP 8.4s(CI模拟)无法在本地资源层面解释, 嫌疑=页面长/Live screenshot大图/真实环境差异, 需CRUX(RUM)或现场Lighthouse确认。首页LCP主因已由P0-HOME-DUP修复(重复区块-525行)覆盖, 待CWV复测。",
       "priority": "P1",
       "assigned_to": [
         "架构师"
