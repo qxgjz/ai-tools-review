@@ -1,5 +1,43 @@
 # 架构师执行日志 2026-10-20
 
+## r39（2026-10-20 第三次 cron 轮，P0 复核关闭 + schema E-E-A-T 修复）
+
+### 待办处理：3 条 completed（1 P0 + 2 P1）+ 1 条追加
+| 待办 | 结果 | 核心 |
+|---|---|---|
+| P0-GHA-FAIL-404-FIX-20261020 | ✅ 带证据复核关闭 | Actions 当前全绿 + 3 篇 404 线上 200 |
+| P1-SCHEMA-NEST-AUDIT-20261020 | ✅ 修复 | author Person E-E-A-T 补全 + 删违规 aggregateRating |
+| P1-PERF-RECHECK-20261020 | ✅ 复核完成 | r37 后 CI 模拟 LCP 仍超红线，追加 REALDATA 待办 |
+| P1-LCP-REALDATA-20261020 | ➕ 新增 | midjourney 页真实环境 LCP 定位 |
+
+### P0-GHA-FAIL-404（带证据复核，非代码修复）
+- Actions：最近 50 条 failure run 全 ≤10-18；10-19/10-20 全部 success（最新 8a93189 四 job 全 success + Deploy success 04:04Z）；10-18 Deploy 失败 8409ff3 为历史一次性（后续 3 次部署全 success，通道已恢复）
+- 3 篇 404 复验：/blog/best-ai-travel-planners-2026/ + /blog/best-ai-health-apps-2026/ + /blog/best-ai-fashion-assistants-2026/ 线上全部 200 + Quick Answer 直出
+- health_report.md 引用为 09-16 旧数据（周报补录时未同步 r35 关闭）
+- 结论：无现存故障
+
+### P1-SCHEMA-NEST-AUDIT（审计 + 修复）
+- 审计：ReviewSchema.itemReviewed / ComparisonSchema.about / 工具页 itemReviewed 的 SoftwareApplication 嵌套（name/applicationCategory/operatingSystem/offers）全部达标 ✅
+- 修复 4 处 author Person E-E-A-T（knowsAbout + sameAs + url）：
+  1. components/seo/Schema.tsx ReviewSchema.author
+  2. components/seo/Schema.tsx ComparisonSchema.author
+  3. app/tools/[slug]/page.tsx structuredData.author（Alex Chen）
+  4. app/blog/[slug]/page.tsx 内联 Article author
+- **Bug 修复**：工具页 softwareAppData 删除违规残留 aggregateRating（ratingCount=1，违反 Google 2026-07 政策——Review 与 Schema.tsx 均已删，此为本轮发现遗漏）
+- 验证：tsc=0 / build=0；产物 out/tools/midjourney 无 aggregateRating+有 knowsAbout；out/blog/perplexity-review-2026 + out/compare/chatgpt-vs-claude 均有 knowsAbout+sameAs
+
+### P1-PERF-RECHECK（r37 修复后 CWV 复核）
+- 报告 2026-10-19T22:02Z（r37 部署 16:22Z 之后）：模拟环境 LCP 仍超红线——首页 3.3/6.6/4.7s、perplexity-review 5.4/5.7/6.2s、compare 5.8/6.6/5.7s、midjourney 8.4/7.8/8.2s（红线 2.5s）
+- 结论：framer-motion 移除未在 CI 模拟 LCP 体现（模拟 throttling 方差大）；midjourney 8.4s 异常需真实环境确认 → 追加 P1-LCP-REALDATA
+
+### state 与后续
+- 3 条 completed（各含证据链 completion_note）；追加 P1-LCP-REALDATA-20261020
+- 剩余 pending 3 条：CLAUDE-SEO-INSTALL / CLAUDE-SEO-V241（均阻塞需 Anthropic key + Claude Code 环境）/ LCP-REALDATA（下轮）
+
+---
+
+# 架构师执行日志 2026-10-20（同日第三次，r39 段见上）
+
 ## r38（2026-10-20 第二次 cron 轮，generator JS 治本 + comparison hub）
 
 ### 待办处理：2 条 completed（均实做）

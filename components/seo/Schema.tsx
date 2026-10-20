@@ -42,6 +42,12 @@ export function ReviewSchema({
       '@type': 'Person',
       name: author,
       jobTitle: 'Senior AI Tools Reviewer',
+      url: 'https://www.aitoolcrux.com/about',
+      knowsAbout: ['AI tools', 'Artificial intelligence', 'Software reviews', 'Technology'],
+      sameAs: [
+        'https://github.com/qxgjz/ai-tools-review',
+        'https://www.linkedin.com/company/aitoolcrux',
+      ],
     },
     datePublished: datePublished,
     itemReviewed: {
@@ -302,6 +308,12 @@ export function ComparisonSchema({
       '@type': 'Person',
       name: author,
       jobTitle: 'Senior AI Tools Reviewer',
+      url: 'https://www.aitoolcrux.com/about',
+      knowsAbout: ['AI tools', 'Artificial intelligence', 'Software reviews', 'Technology'],
+      sameAs: [
+        'https://github.com/qxgjz/ai-tools-review',
+        'https://www.linkedin.com/company/aitoolcrux',
+      ],
     },
     datePublished: datePublished,
     publisher: {

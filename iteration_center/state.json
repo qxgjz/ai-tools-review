@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-20 10:27:04",
+  "last_updated": "2026-10-20T12:23:36+08:00",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-20-R21",
@@ -1817,9 +1817,12 @@
       "title": "修复 GitHub Actions 失败 + 3篇404（周报标注本周最大问题），修复后跑CI验证",
       "priority": "P0",
       "assigned_to": "架构师",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_weekly_review_20261020",
-      "evidence": "commander_weekly_review.md 六、下周策略：GitHub Actions失败修复+3篇404修复（架构师+创作家）"
+      "evidence": "commander_weekly_review.md 六、下周策略：GitHub Actions失败修复+3篇404修复（架构师+创作家）",
+      "completed_at": "2026-10-20T12:23:36+08:00",
+      "completion_note": "带证据复核关闭（r35已关闭同源问题，本轮复验确认现状全绿）: ①Actions最近50条failure run全<=10-18，10-19/10-20全部success（最新8a93189四job全success+Deploy success，2026-10-20T04:04Z）；②10-18 Deploy failure 8409ff3为历史一次性（10-19起3次部署2cf1284/8a93189全success，通道已恢复）；③3篇404复验：/blog/best-ai-travel-planners-2026/ + /blog/best-ai-health-apps-2026/ + /blog/best-ai-fashion-assistants-2026/ 线上全部200+内容完整（Quick Answer直出）；④健康报告引用为09-16旧数据。无现存故障，无需代码改动。",
+      "data_verified": true
     },
     {
       "id": "P0-GEO-ELMO-TRACKER-20261020",
@@ -2867,9 +2870,12 @@
       "title": "SoftwareApplication schema 嵌套审计 + author Person schema（AI引用18-25%流量杠杆）",
       "priority": "P1",
       "assigned_to": "架构师",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_weekly_review_20261020",
-      "evidence": "commander_weekly_review.md：AI引用18-25%流量"
+      "evidence": "commander_weekly_review.md：AI引用18-25%流量",
+      "completed_at": "2026-10-20T12:23:36+08:00",
+      "completion_note": "SoftwareApplication嵌套审计通过 + author Person E-E-A-T补全（AI引用18-25%杠杆）: 审计: ReviewSchema.itemReviewed(SoftwareApplication含name/applicationCategory/operatingSystem)✅、ComparisonSchema.about✅、工具页structuredData.itemReviewed(含brand/image/url/offers)✅; 修复: ①components/seo/Schema.tsx ReviewSchema+ComparisonSchema author补 knowsAbout+sameAs+url; ②app/tools/[slug]/page.tsx structuredData.author(Alex Chen)补同款+**删除违规残留aggregateRating(ratingCount=1, Google 2026-07政策)**; ③app/blog/[slug]/page.tsx内联Article author补同款。验证: tsc=0 build=0; out/tools/midjourney无aggregateRating+有knowsAbout; out/blog/perplexity-review-2026+out/compare/chatgpt-vs-claude均有knowsAbout+sameAs。",
+      "data_verified": true
     },
     {
       "id": "P1-CTR-12WORDS-20261020",
@@ -3539,11 +3545,25 @@
         "架构师"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "ux_ci_cwv_20261020",
       "data_verified": true,
       "evidence_run": "39331663508",
-      "created_at": "2026-10-20T10:27:04"
+      "created_at": "2026-10-20T10:27:04",
+      "completed_at": "2026-10-20T12:23:36+08:00",
+      "completion_note": "r37 LCP修复后CI复核(报告2026-10-19T22:02Z,修复后): 模拟环境LCP仍超红线——首页3.3/6.6/4.7s、perplexity-review 5.4/5.7/6.2s、compare 5.8/6.6/5.7s、midjourney 8.4/7.8/8.2s(红线2.5s)。结论: framer-motion移除(JS -124KB)未在CI模拟LCP体现(模拟throttling方差大,非真实用户); midjourney页8.4s异常需真实环境(RUM/CRUX)确认。追加待办: P1-LCP-REALDATA-20261020(midjourney页真实环境LCP定位+大图优化)。"
+    },
+    {
+      "id": "P1-LCP-REALDATA-20261020",
+      "title": "midjourney页真实环境LCP定位（CI模拟8.4s异常，需RUM/CRUX确认）",
+      "description": "r37去framer-motion后CI模拟LCP仍超红线（首页3.3-6.6s/midjourney 7.8-8.4s）。模拟throttling方差大，需CRUX(RUM)真实数据确认midjourney页LCP根因（大图/第三方脚本），超红线则优化。",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "r39_perf_recheck_20261020",
+      "created_at": "2026-10-20T12:23:36+08:00"
     }
   ],
   "milestones": [
@@ -3560,7 +3580,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-20 06:56:09",
-  "last_action": "ux-window: appended P1-PERF-RECHECK-20261020 (CI CWV回落复核) to 架构师; UX_EXACT pending=0, no UX todo completed",
+  "last_action": "r39: P0-GHA-FAIL-404 closed(verified) + P1-SCHEMA-NEST completed(author E-E-A-T+删违规aggregateRating) + P1-PERF-RECHECK completed(CI LCP仍超红线,追加REALDATA待办)",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

@@ -315,6 +315,12 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       '@type': 'Person',
       name: 'Alex Chen',
       jobTitle: 'Senior AI Tools Reviewer',
+      url: 'https://www.aitoolcrux.com/about',
+      knowsAbout: ['AI tools', 'Artificial intelligence', 'Software reviews', 'Technology'],
+      sameAs: [
+        'https://github.com/qxgjz/ai-tools-review',
+        'https://www.linkedin.com/company/aitoolcrux',
+      ],
     },
     datePublished: tool.lastUpdated,
     reviewBody: tool.review || tool.description,
@@ -347,13 +353,6 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
       priceCurrency: 'USD',
       availability: 'https://schema.org/InStock',
     })),
-    aggregateRating: {
-      '@type': 'Rating',
-      ratingValue: total.toFixed(1),
-      bestRating: '10',
-      worstRating: '1',
-      ratingCount: '1',
-    },
   };
 
   // Generate FAQ structured data for FAQPage rich snippet

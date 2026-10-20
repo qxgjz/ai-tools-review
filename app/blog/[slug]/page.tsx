@@ -356,6 +356,11 @@ export default function PostPage({ params }: PostPageProps) {
                     name: post.author || 'AIToolCrux Research Team',
                     jobTitle: 'Senior AI Tools Reviewer',
                     url: 'https://www.aitoolcrux.com/about',
+                    knowsAbout: ['AI tools', 'Artificial intelligence', 'Software reviews', 'Technology'],
+                    sameAs: [
+                      'https://github.com/qxgjz/ai-tools-review',
+                      'https://www.linkedin.com/company/aitoolcrux',
+                    ],
                   },
                   datePublished: post.date || post.publishedAt,
                   dateModified: post.updatedAt || post.lastUpdated || post.date || post.publishedAt,
