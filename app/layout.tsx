@@ -154,11 +154,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <link rel="preconnect" href="https://analytics.ahrefs.com" crossOrigin="anonymous" />
           <link rel="dns-prefetch" href="https://giscus.app" />
           {/* Fonts self-hosted via geist/font - no external Google Fonts request needed; preconnect/dns-prefetch to fonts.googleapis.com removed to save DNS overhead */}
-          {/* Umami 网站Analysis */}
-          <Script
-            strategy="afterInteractive"
+          {/* Umami 网站Analysis - 原生 async（r41: 避免 Next afterInteractive 自动 preload 抢占 LCP/关键资源带宽） */}
+          <script
             src="https://cloud.umami.is/script.js"
             data-website-id="7d417a27-1151-407a-9bbb-ef8dd10189a2"
+            async
           />
           {/* Ahrefs Web Analytics */}
           <script
@@ -167,10 +167,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
             async
           />
 
-          {/* Google Analytics 4 (G-7XYFQR3ETF) */}
-          <Script
+          {/* Google Analytics 4 (G-7XYFQR3ETF) - 原生 async（r41: 同 umami，去 preload 降带宽优先级） */}
+          <script
             src="https://www.googletagmanager.com/gtag/js?id=G-7XYFQR3ETF"
-            strategy="afterInteractive"
+            async
           />
           <Script id="ga4-init" strategy="afterInteractive">
             {`
