@@ -138,4 +138,9 @@
 /blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md /blog/midjourney-v7-review-2026/ 301
 /blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md /blog/midjourney-v7-review-2026/ 301
 /blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md /blog/elevenlabs-v2-review-2026/ 301
+
+# polisher R21 (P1-CTR-12WORDS-20261020): restore 3 GSC-live ugly-URL 301s (171438/173022 creatium, 173210 elevenlabs)
+/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md /blog/elevenlabs-review-2026/ 301
 /compare /compare/ 301
