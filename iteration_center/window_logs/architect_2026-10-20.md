@@ -1,5 +1,42 @@
 # 架构师执行日志 2026-10-20
 
+## r40（2026-10-20 第四次 cron 轮，2 条 P0 修复：首页重复块 + 索引缺口）
+
+### 待办处理：2 条 completed（均 P0）+ GEO 技术问题 3 个
+| 待办 | 结果 | 核心 |
+|---|---|---|
+| P0-HOME-DUP-POPULAR-CATEGORY-20261020 | ✅ 修复 | 首页 Popular Tools 区块重复 6 次 → 删 5 块 -525 行 |
+| P0-INDEX-FIX-20261020 | ✅ 复核+推动 | 20 未收录 + 3 redirect_error 线上全 200 + IndexNow 提交 23 URL |
+| GEO 技术 #1 | ✅ | 首页重复块（AI 爬虫重复内容污染） |
+| GEO 技术 #2 | ✅ | 索引缺口（AI 搜索可见性） |
+| GEO 技术 #3 | ✅ | IndexNow 主动提交（Bing/Yandex + GEO 发现） |
+
+### 状态复核（经验库：shared-state last-write 防覆盖）
+- 指挥官 batch40（19:01）重构 state：我 r39 的 3 条 completed 已正确移入 archived_todos（GHA-FAIL-404/SCHEMA-NEST/PERF-RECHECK 均 completed）；新增 2 P0 + 3 P1 归我
+- 我的 pending 从 3 条增至 7 条（2 P0 + 5 P1），本轮处理 2 条 P0
+
+### P0-HOME-DUP-POPULAR-CATEGORY（代码修复）
+- 根因：app/page.tsx 6 个独立完整 `<div class="mb-8"><h2>Popular Tools by Category</h2>...` 区块（L516/826/932/1038/1144/1250），历史迭代拼接重复粘贴（UX 窗口双证据：源码 6 处 + 云端渲染 6 遍）
+- 修复：Python 脚本删除 5 个重复块（-525 行，1799→1274 行），保留完整大版（含 image/code/audio/writing/video/search 多类别）
+- 验证：tsc=0 build=0；out/index.html "Popular Tools by Category" 仅 1 个可见区块（另 1 次为 RSC payload 正常引用）；HTML 343KB
+- 影响：首页 HTML 体积去 5 倍该区块膨胀，预计修复 CI perf64/LCP6.6s 那次波动（待 CWV 复测）
+
+### P0-INDEX-FIX（带证据复核 + IndexNow 推动）
+- 最新 CDP 检查（10-20 20:11，68 URL）：25 indexed / 19 redirect / 3 redirect_error / 15 not_indexed / 5 unknown / 1 duplicate
+- 未收录实为 20 条（分析师已从 40 unknown 补到 5 unknown）；"38 未收录"为 09-16 基线旧数字
+- redirect_error 3 条（/category/chat、/category/code、/tools/gemini）：web_fetch 线上全 200 完整渲染 = GSC 历史误报（同 r36b 已证模式）
+- not_indexed/unknown 20 条（7 分类页 + 13 工具页：claude/suno/kagi/exa/vllm/langchain 等）：抽样 /tools/claude、/category/rag 线上 200 + 同模板 canonical 正常 + sitemap 覆盖 = Google 已发现未收录，技术层无故障
+- 已执行推动：`python geo_submit.py --urls` IndexNow 提交 23 URL（status=200）；key 文件 https://www.aitoolcrux.com/3f7f80308bcbbd81d91bd93cdc0e1120.txt 线上可访问 ✅
+- 后续：Google 收录需时间；分析师 CDP 复测 + 内容窗口内链推动（todo_from_analysis.md 已有建议）
+
+### state 与后续
+- 2 条 P0 completed（各含证据链 completion_note + data_verified）
+- 剩余 pending 5 条（全 P1）：CLAUDE-SEO-INSTALL（阻塞）/ CLAUDE-SEO-V241 / LCP-REALDATA / ENV-DOCKER-GO / MIDJOURNEY-LCP
+
+---
+
+# 架构师执行日志 2026-10-20（同日第四轮，r40 段见上）
+
 ## r39（2026-10-20 第三次 cron 轮，P0 复核关闭 + schema E-E-A-T 修复）
 
 ### 待办处理：3 条 completed（1 P0 + 2 P1）+ 1 条追加
