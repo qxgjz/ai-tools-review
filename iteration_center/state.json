@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 110,
+  "total_articles_generated": 113,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -1853,6 +1853,26 @@
       "reopen_reason": "打磨师R22仅改scripts/_tmp_r22临时文件(88分)，线上out/blog index.txt仍48分且无官方外链，整改未落地"
     },
     {
+      "id": "P0-INDEX-FIX-20261020",
+      "title": "修复38个未收录URL的索引问题（GSC redirect_error/已发现未编入），修复后CDP复测；头部工具页chatgpt/claude/gemini/midjourney/perplexity全未收录为曝光断崖根因",
+      "priority": "P0",
+      "assigned_to": "架构师",
+      "status": "pending",
+      "source": "report_audit_20261021_index_monitor",
+      "created_at": "2026-10-21T06:40",
+      "evidence": "url_index_check_batch_0_67_20261020_201116.json 38/68未收录；audit_findings P0-INDEXMON-CDP"
+    },
+    {
+      "id": "P0-CTR-VERIFY-20261021",
+      "title": "验证4篇排名前10文章(CTR=0%)的Title/Meta优化是否真正上线：P0-CTR-001虽标记completed但audit_findings显示CTR仍0%，需回读线上title+GSC复查，未生效则重做",
+      "priority": "P0",
+      "assigned_to": "打磨师",
+      "status": "pending",
+      "source": "report_audit_20261021_audit_findings",
+      "created_at": "2026-10-21T06:42",
+      "evidence": "audit_findings P0-DATA-001: 4篇排名前10文章CTR=0%（最大机会被浪费）"
+    },
+    {
       "id": "COMP-20261009-002",
       "task": "竞品分析发现内容缺口: Tool Playbooks / 分步教程。竞品有 29+ courses, 1000+ lessons, 我们 0。建议写 How to Build an AI Agent Without Coding (5 Platforms Compared), SERP竞争度=Medium-Low",
       "assigned_to": [
@@ -2924,6 +2944,54 @@
       "created_at": "2026-10-20T21:36"
     },
     {
+      "id": "GEO-CONTENT-PATTERNS-20261021",
+      "title": "GEO内容结构优化：工具页/文章补 Expert Quotes（0/2）、Step-by-step（1/2）、Real Examples（1/2）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-21",
+      "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
+    },
+    {
+      "id": "P1-AI-CRAWLER-VISIBILITY-20261021",
+      "task": "核查AI爬虫对aitoolcrux.com的可达性：Cloudflare/服务器日志过滤GPTBot|OAI-SearchBot|PerplexityBot|ClaudeBot|Bytespider|DeepSeekBot UA，确认AI模型能否爬取内容（引用前置条件）；同时验证llms.txt/llms-full.txt在线可访问、CCBot放行状态（GEO审计遗留）",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_learning_20261021",
+      "data_verified": true,
+      "created_at": "2026-10-21T05:04:00"
+    },
+    {
+      "id": "P1-GA4-AI-CHANNEL-20261021",
+      "task": "GA4权限恢复后配置自定义渠道分组「AI Search」：source regex chatgpt|openai|perplexity|claude|anthropic|gemini|copilot|grok|you\\.com|phind，置顶于Referral之上（GA4自上而下匹配），季度复查regex；核查referral exclusion未误排除AI域名",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_learning_20261021",
+      "data_verified": true,
+      "created_at": "2026-10-21T05:04:00"
+    },
+    {
+      "id": "P1-REDIRECT-ERROR-DIAG-20261021",
+      "task": "实测3个redirect_error URL（/category/chat、/category/code、/tools/gemini）重定向链根因：用Lighthouse/curl -I逐跳检查链长/循环/目标状态码，输出诊断给P0-INDEX-FIX架构师参考",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_learning_20261021",
+      "data_verified": true,
+      "created_at": "2026-10-21T05:04:00"
+    },
+    {
       "id": "GROWTH-DIR-V5-2026-10-11",
       "priority": "P2",
       "title": "调研2个第五轮新发现目录站",
@@ -3406,32 +3474,6 @@
       "contact": "无邮箱(表单)"
     },
     {
-      "id": "RR20261020-C07",
-      "status": "completed",
-      "priority": "P2",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "外链收录: tooldirs.com 工具目录(submit) (目录收录) 渠道=support@tooldirs.com 证据: 首页404,submit页有add your/feature/free信号,邮箱待验证",
-      "source": "rr_survey_20261020",
-      "created_at": "2026-10-20T17:20:58.951473+08:00",
-      "completed_at": "2026-10-20T22:16:18.051575+08:00",
-      "evidence": "SMTP accepted support@tooldirs.com 目录收录(2026-10-20跟进档,站点200已验活)"
-    },
-    {
-      "id": "RR20261020-C08",
-      "status": "completed",
-      "priority": "P2",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "外链收录: auraplusplus.com 提交页 (目录收录) 渠道=hi@auraplusplus.com 证据: contact/feature/submit信号,相关性一般",
-      "source": "rr_survey_20261020",
-      "created_at": "2026-10-20T17:20:58.951473+08:00",
-      "completed_at": "2026-10-20T22:16:18.051575+08:00",
-      "evidence": "SMTP accepted hi@auraplusplus.com 目录收录(2026-10-20跟进档,站点200已验活)"
-    },
-    {
       "id": "RR20261020-C09",
       "status": "pending",
       "priority": "P2",
@@ -3465,63 +3507,6 @@
       "created_at": "2026-10-20T17:20:58.951473+08:00"
     },
     {
-      "id": "RR23-LMS-20261020",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "外链收录: listmysaas.xyz 免费SaaS目录收录, SMTP accepted founder@listmysaas.xyz(200,free/directory/submit信号)",
-      "source": "rr_followup_20261020",
-      "completed_at": "2026-10-20T22:16:18.051575+08:00",
-      "evidence": "SMTP accepted founder@listmysaas.xyz 目录收录, 站点代理GET 200验活"
-    },
-    {
-      "id": "GEO-CONTENT-PATTERNS-20261021",
-      "title": "GEO内容结构优化：工具页/文章补 Expert Quotes（0/2）、Step-by-step（1/2）、Real Examples（1/2）",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "source": "geo_audit_2026-10-21",
-      "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
-    },
-    {
-      "id": "RR24-01",
-      "task": "[P1][外链调研20261020] toolmato.org 客座投稿(Write for Us)（客座博客）：https://toolmato.org/write-for-us；渠道=partnerships@toolmato.org；证据：代理GET 200,write-for-us/contributor/guest/free信号,无付费价格;以独立AI工具对比评测角度pitch,作者简介带aitoolcrux链接;可直接SMTP发pitch",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
-    },
-    {
-      "id": "RR24-02",
-      "task": "[P1][外链调研20261020] freeapihub.com 免费AI/API工具目录收录（目录收录）：https://freeapihub.com/ai-tools；渠道=partners@freeapihub.com；证据：代理GET 200,free/submit/suggest/feature信号;$15-19.99为premium档不付费,只请求免费收录位;发收录请求",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
-    },
-    {
-      "id": "RR24-03",
-      "task": "[P2][外链调研20261020] allaitoolhub.com AI工具hub收录（目录收录(待核免费)）：https://allaitoolhub.com/；渠道=hello@allaitoolhub.com；证据：200,submit/free/premium信号,$29.99 premium为主;先邮件问是否有免费档再决定,不直接付费",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
-    },
-    {
       "id": "RR24-04",
       "task": "[P2][外链调研20261020] aitoolsdailyhub.com 目录提交（目录收录(表单)）：https://aitoolsdailyhub.com/submit-a-tool/；渠道=无公开邮箱(login/表单)；证据：200,free/login信号,无公开邮箱;走站内表单提交,排期复查",
       "priority": "P2",
@@ -3530,40 +3515,8 @@
         "拓荒者"
       ],
       "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
-    },
-    {
-      "id": "RR24-05",
-      "task": "[P2][外链调研20261020] aitoolhunt.co AI工具finder收录（目录收录(付费倾向)）：https://aitoolhunt.co/；渠道=support@aitoolhunt.co；证据：200,submit/dofollow信号但$7-20付费+register;问是否有免费dofollow档,零预算不投付费",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
-    },
-    {
-      "id": "RR24-06",
-      "task": "[P2][外链调研20261020] myaihub.ai 1000+ AI工具目录收录（目录收录(付费倾向)）：https://www.myaihub.ai/all-tools；渠道=info@myaihub.ai；证据：200,submit/contact/feature/form,$10-13付费;先问免费档,表单/邮件通道,排期复查",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
-    },
-    {
-      "id": "RR24-07",
-      "task": "[P2][外链调研20261020] jamwithai.com contributor客座（客座博客(待核付费)）：https://jamwithai.com/write-for-us/；渠道=partnership@jamwithai.com；证据：200,contributor但页面含paid信号无具体价;先核实是否付费投稿,免费才pitch,不盲目发",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
+      "created_at": "2026-10-21",
+      "title": "aitoolsdailyhub表单提交 (表单类无邮箱)"
     },
     {
       "id": "RR24-08",
@@ -3574,7 +3527,32 @@
         "拓荒者"
       ],
       "source": "backlink_research_serper_20261021",
-      "created_at": "2026-10-21"
+      "created_at": "2026-10-21",
+      "title": "topbots表单提交 (表单类无邮箱)"
+    },
+    {
+      "id": "P2-GSC-AI-MODE-BASELINE-20261021",
+      "task": "GSC Performance增加AI Overview/AI Mode外观过滤基线（若live_pull脚本支持search_appearance维度则直接加；否则记录为窗口1开发项）；用「位置1且CTR<2%」模式筛选AI Overview候选页（zero-click信号）",
+      "priority": "P2",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_learning_20261021",
+      "data_verified": true,
+      "created_at": "2026-10-21T05:04:00"
+    },
+    {
+      "id": "P2-LLM-REFERRAL-BASELINE-20261021",
+      "task": "GA4权限恢复后拉取source/medium含AI域名（chatgpt.com/perplexity.ai/claude.ai/gemini.google.com/copilot.microsoft.com）会话基线，按行业基准2-6%有机流量占比校准AI引荐流量规模",
+      "priority": "P2",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_learning_20261021",
+      "data_verified": true,
+      "created_at": "2026-10-21T05:04:00"
     }
   ],
   "milestones": [
@@ -14287,6 +14265,131 @@
       "title": "修复38个未收录URL索引问题（GSC索引缺口）",
       "completion_note": "带证据复核+IndexNow推动: ①最新CDP检查(10-20 20:11) 68 URL: 25 indexed/19 redirect/3 redirect_error/15 not_indexed/5 unknown/1 duplicate；未收录实为20条(非38, 分析师已补数据40 unknown→5 unknown)。②redirect_error 3条(/category/chat,/category/code,/tools/gemini)线上web_fetch全200完整渲染=GSC历史误报(同r36b已证模式)。③not_indexed/unknown 20条(7分类页+13工具页如claude/suno/kagi/exa)线上抽样200+canonical正常+sitemap覆盖=Google已发现未收录,技术层无故障。④已执行推动: geo_submit.py IndexNow提交23 URL(status=200), key文件线上可访问。⑤后续: Google收录需时间,分析师CDP复测+内容窗口内链推动。",
       "archived_at": "2026-10-20T21:35"
+    },
+    {
+      "id": "RR20261020-C07",
+      "status": "completed",
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "外链收录: tooldirs.com 工具目录(submit) (目录收录) 渠道=support@tooldirs.com 证据: 首页404,submit页有add your/feature/free信号,邮箱待验证",
+      "source": "rr_survey_20261020",
+      "created_at": "2026-10-20T17:20:58.951473+08:00",
+      "completed_at": "2026-10-20T22:16:18.051575+08:00",
+      "evidence": "SMTP accepted support@tooldirs.com 目录收录(2026-10-20跟进档,站点200已验活)",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR20261020-C08",
+      "status": "completed",
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "外链收录: auraplusplus.com 提交页 (目录收录) 渠道=hi@auraplusplus.com 证据: contact/feature/submit信号,相关性一般",
+      "source": "rr_survey_20261020",
+      "created_at": "2026-10-20T17:20:58.951473+08:00",
+      "completed_at": "2026-10-20T22:16:18.051575+08:00",
+      "evidence": "SMTP accepted hi@auraplusplus.com 目录收录(2026-10-20跟进档,站点200已验活)",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR23-LMS-20261020",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "外链收录: listmysaas.xyz 免费SaaS目录收录, SMTP accepted founder@listmysaas.xyz(200,free/directory/submit信号)",
+      "source": "rr_followup_20261020",
+      "completed_at": "2026-10-20T22:16:18.051575+08:00",
+      "evidence": "SMTP accepted founder@listmysaas.xyz 目录收录, 站点代理GET 200验活",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR24-01",
+      "task": "[P1][外链调研20261020] toolmato.org 客座投稿(Write for Us)（客座博客）：https://toolmato.org/write-for-us；渠道=partnerships@toolmato.org；证据：代理GET 200,write-for-us/contributor/guest/free信号,无付费价格;以独立AI工具对比评测角度pitch,作者简介带aitoolcrux链接;可直接SMTP发pitch",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21",
+      "completed_at": "2026-10-21T05:08:15.170097+08:00",
+      "evidence": "SMTP accepted -> partnerships@toolmato.org (site HTTP 200); sent 2026-10-21T05:08:15.170097+08:00; ledger g_mail_sent.json",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR24-02",
+      "task": "[P1][外链调研20261020] freeapihub.com 免费AI/API工具目录收录（目录收录）：https://freeapihub.com/ai-tools；渠道=partners@freeapihub.com；证据：代理GET 200,free/submit/suggest/feature信号;$15-19.99为premium档不付费,只请求免费收录位;发收录请求",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21",
+      "completed_at": "2026-10-21T05:08:15.170097+08:00",
+      "evidence": "SMTP accepted -> partners@freeapihub.com (site HTTP 200); sent 2026-10-21T05:08:15.170097+08:00; ledger g_mail_sent.json",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR24-03",
+      "task": "[P2][外链调研20261020] allaitoolhub.com AI工具hub收录（目录收录(待核免费)）：https://allaitoolhub.com/；渠道=hello@allaitoolhub.com；证据：200,submit/free/premium信号,$29.99 premium为主;先邮件问是否有免费档再决定,不直接付费",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21",
+      "completed_at": "2026-10-21T05:08:15.170097+08:00",
+      "evidence": "SMTP accepted -> hello@allaitoolhub.com (site HTTP 200); sent 2026-10-21T05:08:15.170097+08:00; ledger g_mail_sent.json",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR24-05",
+      "task": "[P2][外链调研20261020] aitoolhunt.co AI工具finder收录（目录收录(付费倾向)）：https://aitoolhunt.co/；渠道=support@aitoolhunt.co；证据：200,submit/dofollow信号但$7-20付费+register;问是否有免费dofollow档,零预算不投付费",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21",
+      "completed_at": "2026-10-21T05:08:15.170097+08:00",
+      "evidence": "SMTP accepted -> support@aitoolhunt.co (site HTTP 200); sent 2026-10-21T05:08:15.170097+08:00; ledger g_mail_sent.json",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR24-06",
+      "task": "[P2][外链调研20261020] myaihub.ai 1000+ AI工具目录收录（目录收录(付费倾向)）：https://www.myaihub.ai/all-tools；渠道=info@myaihub.ai；证据：200,submit/contact/feature/form,$10-13付费;先问免费档,表单/邮件通道,排期复查",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21",
+      "completed_at": "2026-10-21T05:08:15.170097+08:00",
+      "evidence": "SMTP accepted -> info@myaihub.ai (site HTTP 200); sent 2026-10-21T05:08:15.170097+08:00; ledger g_mail_sent.json",
+      "archived_at": "2026-10-21T06:35"
+    },
+    {
+      "id": "RR24-07",
+      "task": "[P2][外链调研20261020] jamwithai.com contributor客座（客座博客(待核付费)）：https://jamwithai.com/write-for-us/；渠道=partnership@jamwithai.com；证据：200,contributor但页面含paid信号无具体价;先核实是否付费投稿,免费才pitch,不盲目发",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21",
+      "completed_at": "2026-10-21T05:08:15.170097+08:00",
+      "evidence": "SMTP accepted -> partnership@jamwithai.com (site HTTP 200); sent 2026-10-21T05:08:15.170097+08:00; ledger g_mail_sent.json",
+      "archived_at": "2026-10-21T06:35"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
