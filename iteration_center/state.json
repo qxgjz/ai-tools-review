@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-21T00:22:12+08:00",
+  "last_updated": "2026-10-21T04:11:21+08:00",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-20-R22",
@@ -2883,7 +2883,7 @@
     {
       "id": "P1-LCP-REALDATA-20261020",
       "title": "midjourney页真实环境LCP定位（CI模拟8.4s异常，需RUM/CRUX确认）",
-      "description": "r39追加。r40初步排查(midjourney页): ①JS chunks全正常——midjourney页不引用657KB tools全量chunk(3310为ranking/search等其他页用), 最大本地chunk仅172KB(fd9d1056共享); ②framer-motion确认已删净(package.json无依赖+源码0处import), 657KB chunk的\"framer/motion\"字符串=工具名Framer AI/Motion数据, 非库代码; ③RadarChart为自绘SVG组件(dynamicImport ssr:false懒加载, 无recharts依赖); ④HTML 365KB正常。结论: midjourney页LCP 8.4s(CI模拟)无法在本地资源层面解释, 嫌疑=页面长/Live screenshot大图/真实环境差异, 需CRUX(RUM)或现场Lighthouse确认。首页LCP主因已由P0-HOME-DUP修复(重复区块-525行)覆盖, 待CWV复测。\nr41(10-21)：CWV 最新=10-20T10:58Z（r40 首页去重前基线）：首页 LCP 5.0/4.4/4.4s、perplexity-review 4.8/5.1/4.9s、compare 4.6/4.8/4.4s、midjourney 5.6/5.8/5.8s——全站超2.5s红线为系统性JS/HTML负担（共享chunk 540KB+HTML 300-365KB）。r41 已修第三方preload抢带宽（umami+gtag async化）；下轮 CWV 应反映 首页去重+r40 preload 修复。真实环境 RUM 仍建议（现场 Lighthouse）。",
+      "description": "r39追加。r40初步排查(midjourney页): ①JS chunks全正常——midjourney页不引用657KB tools全量chunk(3310为ranking/search等其他页用), 最大本地chunk仅172KB(fd9d1056共享); ②framer-motion确认已删净(package.json无依赖+源码0处import), 657KB chunk的\"framer/motion\"字符串=工具名Framer AI/Motion数据, 非库代码; ③RadarChart为自绘SVG组件(dynamicImport ssr:false懒加载, 无recharts依赖); ④HTML 365KB正常。结论: midjourney页LCP 8.4s(CI模拟)无法在本地资源层面解释, 嫌疑=页面长/Live screenshot大图/真实环境差异, 需CRUX(RUM)或现场Lighthouse确认。首页LCP主因已由P0-HOME-DUP修复(重复区块-525行)覆盖, 待CWV复测。\nr41(10-21)：CWV 最新=10-20T10:58Z（r40 首页去重前基线）：首页 LCP 5.0/4.4/4.4s、perplexity-review 4.8/5.1/4.9s、compare 4.6/4.8/4.4s、midjourney 5.6/5.8/5.8s——全站超2.5s红线为系统性JS/HTML负担（共享chunk 540KB+HTML 300-365KB）。r41 已修第三方preload抢带宽（umami+gtag async化）；下轮 CWV 应反映 首页去重+r40 preload 修复。真实环境 RUM 仍建议（现场 Lighthouse）。\n[r42 2026-10-21] CWV 字段确认：lcp 为字符串字段（如 \"5.0 s\"），CI 报告 perf 分数 midjourney 76/72/73、首页 48/81/81；无新报告，系统性 JS/HTML 减重为下一杠杆。",
       "priority": "P1",
       "assigned_to": [
         "架构师"
@@ -2912,7 +2912,7 @@
       "source": "commander_daily_20261020",
       "created_at": "2026-10-20T14:30",
       "evidence": "ux_2026-10-20: CI海外runner LCP 7.8/8.4/8.2s",
-      "description": "\nr41(10-21)：CWV(10-20T10:58Z) LCP 5.6/5.8/5.8s（r39 8.4s时代已过）；图片层已闭环（webp 152KB+preload+fetchPriority=high+无大chunk）；r41 已修第三方 analytics preload（umami+gtag 改原生async，preload 4→2）——下轮 CI CWV 复测后评估是否继续（目标<4s，剩余主因为系统性 JS/HTML 负担）。"
+      "description": "\nr41(10-21)：CWV(10-20T10:58Z) LCP 5.6/5.8/5.8s（r39 8.4s时代已过）；图片层已闭环（webp 152KB+preload+fetchPriority=high+无大chunk）；r41 已修第三方 analytics preload（umami+gtag 改原生async，preload 4→2）——下轮 CI CWV 复测后评估是否继续（目标<4s，剩余主因为系统性 JS/HTML 负担）。\n[r42 2026-10-21] CWV 仍为 10-20T10:58Z 基线（无新报告），r41 preload 修复效果待下轮 CI 双跑；线上 7a7ebb2 已部署且首页新版已收敛。"
     },
     {
       "id": "P1-HN-ENGAGE-20261020",
@@ -3486,7 +3486,95 @@
         "创作家"
       ],
       "source": "geo_audit_2026-10-21",
-      "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。"
+      "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
+    },
+    {
+      "id": "RR24-01",
+      "task": "[P1][外链调研20261020] toolmato.org 客座投稿(Write for Us)（客座博客）：https://toolmato.org/write-for-us；渠道=partnerships@toolmato.org；证据：代理GET 200,write-for-us/contributor/guest/free信号,无付费价格;以独立AI工具对比评测角度pitch,作者简介带aitoolcrux链接;可直接SMTP发pitch",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-02",
+      "task": "[P1][外链调研20261020] freeapihub.com 免费AI/API工具目录收录（目录收录）：https://freeapihub.com/ai-tools；渠道=partners@freeapihub.com；证据：代理GET 200,free/submit/suggest/feature信号;$15-19.99为premium档不付费,只请求免费收录位;发收录请求",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-03",
+      "task": "[P2][外链调研20261020] allaitoolhub.com AI工具hub收录（目录收录(待核免费)）：https://allaitoolhub.com/；渠道=hello@allaitoolhub.com；证据：200,submit/free/premium信号,$29.99 premium为主;先邮件问是否有免费档再决定,不直接付费",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-04",
+      "task": "[P2][外链调研20261020] aitoolsdailyhub.com 目录提交（目录收录(表单)）：https://aitoolsdailyhub.com/submit-a-tool/；渠道=无公开邮箱(login/表单)；证据：200,free/login信号,无公开邮箱;走站内表单提交,排期复查",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-05",
+      "task": "[P2][外链调研20261020] aitoolhunt.co AI工具finder收录（目录收录(付费倾向)）：https://aitoolhunt.co/；渠道=support@aitoolhunt.co；证据：200,submit/dofollow信号但$7-20付费+register;问是否有免费dofollow档,零预算不投付费",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-06",
+      "task": "[P2][外链调研20261020] myaihub.ai 1000+ AI工具目录收录（目录收录(付费倾向)）：https://www.myaihub.ai/all-tools；渠道=info@myaihub.ai；证据：200,submit/contact/feature/form,$10-13付费;先问免费档,表单/邮件通道,排期复查",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-07",
+      "task": "[P2][外链调研20261020] jamwithai.com contributor客座（客座博客(待核付费)）：https://jamwithai.com/write-for-us/；渠道=partnership@jamwithai.com；证据：200,contributor但页面含paid信号无具体价;先核实是否付费投稿,免费才pitch,不盲目发",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
+    },
+    {
+      "id": "RR24-08",
+      "task": "[P2][外链调研20261020] topbots.com Expert Contributor（客座博客(表单)）：https://www.topbots.com/guest-writer-editorial-content-guidelines/；渠道=无公开邮箱(表单)；证据：200,contributor/guest/write-for-us/free信号,无公开邮箱;走contributor表单,门槛中高,备选",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021",
+      "created_at": "2026-10-21"
     }
   ],
   "milestones": [
@@ -3503,7 +3591,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-20 19:01:17",
-  "last_action": "r41: perf(layout) analytics preload→async; GEO audit 7.8/10 closed (llms verified); CWV 5.6-5.8s midjourney",
+  "last_action": "r42: GEO audit re-run 8.9/10 Grade A (llms-full 597KB verified, AEO 10/10), CWV no new report, online health OK",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
