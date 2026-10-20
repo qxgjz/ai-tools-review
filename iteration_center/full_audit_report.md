@@ -1,20 +1,20 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-19 22:53:27
+**Date:** 2026-10-20 22:14:41
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 197 |
-| Avg content score | 84.7/100 |
+| Articles | 206 |
+| Avg content score | 84.1/100 |
 | Perfect articles | 91 |
-| Articles below 85 | 87 |
+| Articles below 85 | 96 |
 | Pages audited | 20 |
 | Technical issues | 5 |
 | Critical issues | 0 |
-| Audit duration | 2.7s |
+| Audit duration | 1.5s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -52,6 +52,7 @@
 | best-ai-sales-assistants-2026 | 62 | 2426 | 47.4 | 0 | first_para_pass, internal_links_pass |
 | best-ai-copywriting-tools-2026 | 62 | 2232 | 52.4 | 0 | first_para_pass, internal_links_pass |
 | best-free-ai-tools-for-students-202 | 63 | 1992 | 63.3 | 3 | word_count_pass, first_para_pass |
+| free-ai-voice-changers-2026 | 63 | 1993 | 55.6 | 5 | word_count_pass, first_para_pass |
 | beautiful-ai-alternatives | 66 | 2180 | 53.2 | 9 | first_para_pass |
 | best-ai-3d-generators-2026 | 66 | 3237 | 52.7 | 4 | first_para_pass |
 | is-chatgpt-getting-worse-2026 | 66 | 2655 | 42.1 | 3 | first_para_pass |
@@ -61,6 +62,9 @@
 | best-ai-travel-planners-2026 | 66 | 2145 | 48.7 | 5 | first_para_pass |
 | best-ai-health-apps-2026 | 66 | 2175 | 47.8 | 3 | first_para_pass |
 | cursor-alternatives-2026 | 69 | 2828 | 55.6 | 0 | first_para_pass, internal_links_pass, external_links_pass |
+| chatgpt-for-beginners-guide-2026 | 69 | 1971 | 61.1 | 5 | word_count_pass, first_para_pass |
+| best-ai-agent-tools-2026 | 69 | 1994 | 47.4 | 5 | word_count_pass, first_para_pass |
+| best-ai-video-editors-for-beginners | 69 | 1987 | 52.3 | 5 | word_count_pass, first_para_pass |
 | dify-vs-langchain-2026 | 71 | 2282 | 40.5 | 13 | first_para_pass |
 | cursor-vs-windsurf-2026 | 71 | 2202 | 41.2 | 4 | first_para_pass |
 | claude-vs-gemini-2026-comparison | 71 | 2259 | 53.0 | 5 | first_para_pass |
@@ -95,6 +99,11 @@
 | ai-tools-generous-rate-limits-2026 | 74 | 2426 | 58.0 | 6 | first_para_pass |
 | ai-tools-horrible-customer-support- | 74 | 2173 | 43.5 | 5 | first_para_pass |
 | best-ai-fitness-apps-2026 | 74 | 2224 | 57.5 | 3 | first_para_pass |
+| claude-code-vs-cursor-2026 | 74 | 2038 | 61.7 | 5 | first_para_pass |
+| best-vibe-coding-tools-2026 | 74 | 2026 | 55.2 | 5 | first_para_pass |
+| open-source-ai-voice-changers-2026 | 74 | 2028 | 53.9 | 5 | first_para_pass |
+| best-ai-voice-cloning-tools-2026 | 74 | 2045 | 45.5 | 5 | first_para_pass |
+| ai-voice-changer-for-discord-2026 | 74 | 2058 | 46.4 | 5 | first_para_pass |
 | what-is-an-ai-agent | 77 | 2150 | 59.1 | 12 | first_para_pass |
 | claude-alternatives-2026 | 78 | 1452 | 60.3 | 3 | word_count_pass |
 | gemini-vs-chatgpt-2026 | 80 | 2288 | 51.4 | 5 | first_para_pass |
@@ -195,7 +204,7 @@
 | stable-diffusion-review-2026 | 100 | 15289 | 48.9 | 13 | — |
 | copy-ai-review-2026 | 100 | 13471 | 47.4 | 17 | — |
 | otter-ai-review-2026 | 100 | 13683 | 49.6 | 14 | — |
-| synthesia-review-2026 | 100 | 13692 | 46.3 | 12 | — |
+| synthesia-review-2026 | 100 | 13723 | 47.3 | 13 | — |
 | gemini-review-2026 | 100 | 11393 | 51.2 | 14 | — |
 | dall-e-3-review-2026 | 100 | 13970 | 45.5 | 14 | — |
 | pika-review-2026 | 100 | 13385 | 43.7 | 14 | — |
@@ -204,8 +213,8 @@
 | heygen-review-2026 | 100 | 13754 | 44.7 | 13 | — |
 | leonardo-ai-review-2026 | 100 | 14636 | 46.1 | 15 | — |
 | adobe-firefly-review-2026 | 100 | 14413 | 46.9 | 17 | — |
-| writesonic-review-2026 | 100 | 14438 | 42.7 | 13 | — |
-| tabnine-review-2026 | 100 | 11469 | 43.8 | 13 | — |
+| writesonic-review-2026 | 100 | 14552 | 47.7 | 14 | — |
+| tabnine-review-2026 | 100 | 11500 | 43.7 | 14 | — |
 | ai-tools-review-guide-2026 | 100 | 13007 | 49.3 | 16 | — |
 | ai-coding-tools-comparison-2026 | 100 | 14898 | 44.6 | 14 | — |
 | replit-review-2026 | 100 | 11635 | 41.1 | 13 | — |

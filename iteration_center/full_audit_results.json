@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-19T22:53:27.247129",
+  "audit_time": "2026-10-20T22:14:41.464279",
   "mode": "quick",
   "content": {
-    "total_articles": 197,
-    "average_score": 84.7015228426397,
+    "total_articles": 206,
+    "average_score": 84.1174757281555,
     "perfect_count": 91,
-    "below_85_count": 87,
+    "below_85_count": 96,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -935,12 +935,12 @@
       },
       {
         "slug": "synthesia-review-2026",
-        "title": "Synthesia Review: Best AI Avatar Video Maker?",
+        "title": "Synthesia Review 2026: Best AI Avatar Video Maker, Tested",
         "quality_score": 100.0,
-        "word_count": 13692,
-        "flesch": 46.3,
-        "internal_links": 12,
-        "external_links": 1,
+        "word_count": 13723,
+        "flesch": 47.3,
+        "internal_links": 13,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
@@ -1047,23 +1047,23 @@
       },
       {
         "slug": "writesonic-review-2026",
-        "title": "Writesonic Review 2026: Best AI Writing Tool | AIToolCrux",
+        "title": "Writesonic Review 2026: Best AI Writing Tool, Tested",
         "quality_score": 100.0,
-        "word_count": 14438,
-        "flesch": 42.7,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 14552,
+        "flesch": 47.7,
+        "internal_links": 14,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
       {
         "slug": "tabnine-review-2026",
-        "title": "Tabnine Review 2026: Best AI Code Completion | AIToolCrux",
+        "title": "Tabnine Review 2026: Best AI Code Completion, Tested",
         "quality_score": 100.0,
-        "word_count": 11469,
-        "flesch": 43.8,
-        "internal_links": 13,
-        "external_links": 1,
+        "word_count": 11500,
+        "flesch": 43.7,
+        "internal_links": 14,
+        "external_links": 3,
         "images": 2,
         "failed_checks": []
       },
@@ -1124,7 +1124,7 @@
       },
       {
         "slug": "ai-tools-for-beginners-2026",
-        "title": "AI Tools for Beginners 2026: Easy Start Guide | AIToolCrux",
+        "title": "AI Tools for Beginners 2026: Easy No-Code Starter Guide",
         "quality_score": 100.0,
         "word_count": 12012,
         "flesch": 44.9,
@@ -2405,6 +2405,127 @@
           "first_para_pass",
           "internal_links_pass"
         ]
+      },
+      {
+        "slug": "claude-code-vs-cursor-2026",
+        "title": "Claude Code vs Cursor 2026: Which AI Coding Agent?",
+        "quality_score": 74.4,
+        "word_count": 2038,
+        "flesch": 61.7,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-vibe-coding-tools-2026",
+        "title": "Best Vibe Coding Tools 2026: Replit, Cursor, Lovable Tested",
+        "quality_score": 74.4,
+        "word_count": 2026,
+        "flesch": 55.2,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "open-source-ai-voice-changers-2026",
+        "title": "5 Open-Source AI Voice Changers 2026 (Local & Private)",
+        "quality_score": 74.4,
+        "word_count": 2028,
+        "flesch": 53.9,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-voice-cloning-tools-2026",
+        "title": "Best AI Voice Cloning Tools 2026: Tested & Compared",
+        "quality_score": 74.4,
+        "word_count": 2045,
+        "flesch": 45.5,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "free-ai-voice-changers-2026",
+        "title": "7 Free AI Voice Changers Online 2026 (No Sign-Up)",
+        "quality_score": 63.3,
+        "word_count": 1993,
+        "flesch": 55.6,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 0,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "ai-voice-changer-for-discord-2026",
+        "title": "Best AI Voice Changers for Discord 2026: Real-Time Tested",
+        "quality_score": 74.4,
+        "word_count": 2058,
+        "flesch": 46.4,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "chatgpt-for-beginners-guide-2026",
+        "title": "ChatGPT for Complete Beginners 2026: Free Tier Starter Guide",
+        "quality_score": 68.9,
+        "word_count": 1971,
+        "flesch": 61.1,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-agent-tools-2026",
+        "title": "Best AI Agent Tools 2026: Frameworks vs Ready-Made Agents",
+        "quality_score": 68.9,
+        "word_count": 1994,
+        "flesch": 47.4,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-video-editors-for-beginners-2026",
+        "title": "Best AI Video Editors for Beginners 2026: Easy & Free Picks",
+        "quality_score": 68.9,
+        "word_count": 1987,
+        "flesch": 52.3,
+        "internal_links": 5,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "word_count_pass",
+          "first_para_pass"
+        ]
       }
     ]
   },
@@ -2420,7 +2541,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 2.7
+    "elapsed_seconds": 1.5
   },
   "geo": {
     "geo_score": 100,
