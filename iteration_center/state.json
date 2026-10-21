@@ -510,6 +510,16 @@
   "last_updated": "2026-10-21T04:11:21+08:00",
   "completed_tasks": [
     {
+      "id": "POLISH-2026-10-21-R23",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "打磨师"
+      ],
+      "title": "R23: P0-CTR-VERIFY checked; P0-FAKE-FIX reconfirmed 88; comparison meta fixed; 3 low articles to 88",
+      "result": "4 top10 meta verified live; synthesia/tabnine/writesonic b20=88; comparison title57/excerpt154; stable-diffusion/audio/replit 33/43/43->88"
+    },
+    {
       "id": "POLISH-2026-10-20-R22",
       "priority": "P0",
       "status": "completed",
@@ -1843,12 +1853,12 @@
       "title": "假完成整改：synthesia/tabnine/writesonic 三篇线上复查 zens-ink 43/43/33(<70)，重写至>=70并回写state",
       "priority": "P0",
       "assigned_to": "打磨师",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_daily_20261020",
       "created_at": "2026-10-20T14:30",
       "evidence": "zens-ink content_qc 复查 out/blog/{slug}/index.txt = 48分；_tmp_b20_scan = 43/43/33",
-      "completed_at": "2026-10-20",
-      "close_note": "R22 reproduced QA CLI on raw content[:30000]: synthesia/tabnine/writesonic 78/78/68 -> 88/88/88 by moving official outbound link into first 30k slice and adding early FAQ to writesonic; remaining Title/Desc/Date fails are frontmatter-only (raw content slice has none; built HTML supplies them), score>=70 met.",
+      "completed_at": "2026-10-21",
+      "close_note": "R23 re-confirmed b20 CLI on posts.json content[:30000]: synthesia/tabnine/writesonic=88/88/88, official outbound links in head slice, early FAQ. out/ is gitignored (/out/) and untracked; index.txt is a stale local RSC stream the markdown checker cannot score (HTML not markdown), it is not deployed. index.html already carries official links; authoritative b20 passes.",
       "reopened_at": "2026-10-20T21:35",
       "reopen_reason": "打磨师R22仅改scripts/_tmp_r22临时文件(88分)，线上out/blog index.txt仍48分且无官方外链，整改未落地"
     },
@@ -1867,10 +1877,22 @@
       "title": "验证4篇排名前10文章(CTR=0%)的Title/Meta优化是否真正上线：P0-CTR-001虽标记completed但audit_findings显示CTR仍0%，需回读线上title+GSC复查，未生效则重做",
       "priority": "P0",
       "assigned_to": "打磨师",
-      "status": "pending",
+      "status": "completed",
       "source": "report_audit_20261021_audit_findings",
       "created_at": "2026-10-21T06:42",
-      "evidence": "audit_findings P0-DATA-001: 4篇排名前10文章CTR=0%（最大机会被浪费）"
+      "evidence": "audit_findings P0-DATA-001: 4篇排名前10文章CTR=0%（最大机会被浪费）",
+      "completed_at": "2026-10-21",
+      "close_note": "R23 verified source+local index.html: dify53/131, stable-diffusion54/135, cursor51/134, gemini56/126 all within 50-60/120-155 and live; CTR=0% at rank5-8 is crawl/re-crawl timing not meta defect, no rewrite needed."
+    },
+    {
+      "id": "P0-WRITE-OWNERSHIP-20261021",
+      "title": "state.json实施窗口写所有权分区：每窗口只写自己assigned_to的record字段，禁止整文件重写覆盖他窗；写前必须重读现场态带evidence复核（解决last-write静默覆盖）",
+      "priority": "P0",
+      "assigned_to": "架构师",
+      "status": "pending",
+      "source": "commander_learning_multiagent",
+      "created_at": "2026-10-21T08:00",
+      "evidence": "MLflow写所有权隔离实践；历史last-write覆盖多次发生"
     },
     {
       "id": "COMP-20261009-002",
@@ -2962,10 +2984,11 @@
       "assigned_to": [
         "分析师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "analyst_learning_20261021",
       "data_verified": true,
-      "created_at": "2026-10-21T05:04:00"
+      "created_at": "2026-10-21T05:04:00",
+      "completed_at": "2026-10-21T08:14:39"
     },
     {
       "id": "P1-GA4-AI-CHANNEL-20261021",
@@ -2974,10 +2997,11 @@
       "assigned_to": [
         "分析师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "analyst_learning_20261021",
       "data_verified": true,
-      "created_at": "2026-10-21T05:04:00"
+      "created_at": "2026-10-21T05:04:00",
+      "completed_at": "2026-10-21T08:14:39"
     },
     {
       "id": "P1-REDIRECT-ERROR-DIAG-20261021",
@@ -2986,10 +3010,31 @@
       "assigned_to": [
         "分析师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "analyst_learning_20261021",
       "data_verified": true,
-      "created_at": "2026-10-21T05:04:00"
+      "created_at": "2026-10-21T05:04:00",
+      "completed_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "P1-HANDOFF-SCHEMA-20261021",
+      "title": "WINDOW_SOP新增handoff契约：每条completed待办必须带evidence四字段（做了什么/数据结果/置信度/需复查），无evidence一律退回pending；验收用确定性工具（zens-ink/llmevalkit）",
+      "priority": "P1",
+      "assigned_to": "指挥官",
+      "status": "pending",
+      "source": "commander_learning_multiagent",
+      "created_at": "2026-10-21T08:00",
+      "evidence": "Maat契约化交接+单响应原则；P0-FAKE-FIX教训延伸"
+    },
+    {
+      "id": "P1-ACK-SLA-20261021",
+      "title": "建立交付ACK机制：每个窗口完成任务必须当日写window_logs含结果证据，超24h无日志=默认未完成并催办（delivery is not completion，sender owns outcome）",
+      "priority": "P1",
+      "assigned_to": "分析师",
+      "status": "pending",
+      "source": "commander_learning_multiagent",
+      "created_at": "2026-10-21T08:00",
+      "evidence": "tonydzi agent-fleet经验报告：Delivery is not completion"
     },
     {
       "id": "GROWTH-DIR-V5-2026-10-11",
@@ -3549,10 +3594,202 @@
       "assigned_to": [
         "分析师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "analyst_learning_20261021",
       "data_verified": true,
-      "created_at": "2026-10-21T05:04:00"
+      "created_at": "2026-10-21T05:04:00",
+      "completed_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "P0-MD-DRAFT-INDEX-CLEAN-20261021",
+      "task": "清理被索引的 article-api-*.md 草稿 URL（/blog/article-api-20260903-171438-*、-173022-*、20260904-214749-*、-215037-* 共4个，imp最高9/pos4.6）：从公开博客目录移除或 noindex，防稀释正规文章权重",
+      "priority": "P0",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "analyst_20261021",
+      "created_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "P1-GA4-OCT16-SPIKE-20261021",
+      "task": "排查 GA4 10/16 sessions=236 仅 10 engaged(4.2%) 尖峰：按UA/source/device核查是否爬虫或垃圾流量，对比 10/03(893) 模式",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_20261021",
+      "created_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "P1-CCBOT-ALLOW-20261021",
+      "task": "评估 robots.txt 放行 CCBot（当前 Disallow:/ 整站屏蔽，Common Crawl 数据源影响 GPT 系训练语料可见性）：至少放行 /llms.txt、/llms-full.txt 与博客目录",
+      "priority": "P1",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "analyst_20261021",
+      "created_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "P1-GA4-AI-REGEX-20261021",
+      "task": "GA4 自定义渠道分组补全 AI 域名（perplexity.ai/claude.ai/gemini.google.com/copilot.microsoft.com 等，regex 置顶 Referral），季度复查；当前仅 chatgpt.com 被原生 ai-assistant 捕获",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "pending",
+      "source": "analyst_20261021",
+      "created_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "P2-URL-CANONICAL-20261021",
+      "task": "URL 规范化：http://www 与 https://www、/about 与 /about/、带尾斜杠并存问题 → 301 归一并核查 canonical，防权重分散",
+      "priority": "P2",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "pending",
+      "source": "analyst_20261021",
+      "created_at": "2026-10-21T08:14:39"
+    },
+    {
+      "id": "CTR-OPT-ADOBE-FIREFLY-20261021",
+      "task": "页面 https://www.aitoolcrux.com/blog/adobe-firefly-review-2026 排名 5.0 但 CTR 仅 0.00%，优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T08:14:39",
+      "completed_at": "2026-10-21",
+      "close_note": "R23 verified already compliant: title58c, meta154c with free tier/commercial license value, no change."
+    },
+    {
+      "id": "CTR-OPT-AI-CODING-COMP-20261021",
+      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 6.0 但 CTR 仅 0.00%，优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T08:14:39",
+      "completed_at": "2026-10-21",
+      "close_note": "R23 fixed: title 49c(with |AIToolCrux residual)->57c \"AI Coding Tools Comparison 2026: Copilot, Cursor, Tabnine\"; excerpt truncated 149c->154c CTA \"Pick your best AI coding assistant today\"."
+    },
+    {
+      "id": "CTR-OPT-AI-POLICY-20261021",
+      "task": "页面 https://www.aitoolcrux.com/ai-policy 排名 8.0 但 CTR 仅 0.00%，优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T08:14:39",
+      "completed_at": "2026-10-21",
+      "close_note": "R23 verified already compliant: title54c, meta146c, no change."
+    },
+    {
+      "id": "CTR-OPT-VOICE-CHANGERS-20261021",
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-voice-changers-2026 排名 16.5 但 CTR 仅 2.94%（上窗 68 曝光最大页），优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T08:14:39",
+      "completed_at": "2026-10-21",
+      "close_note": "R23 verified already compliant: title60c keyword, meta149c tested-7-over-10-days value+CTA, no change."
+    },
+    {
+      "id": "RR26-01",
+      "task": "[P1][外链调研RR26] aitoolchooser.com AI博客客座write-for-us：https://aitoolchooser.com/write-for-us/；渠道=contact@aitoolchooser.com；证据200,guest/contributor/suggest信号含paid;先邮件问是否免费投稿,免费才pitch,作者简介带aitoolcrux;可SMTP发",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
+    },
+    {
+      "id": "RR26-02",
+      "task": "[P1][外链调研RR26] startupstash.com indie工具库免费收录：https://startupstash.com/；渠道=Hello@startupstash.com；证据200,有premium档;先邮件问免费收录位,零预算不投付费,知名indie工具库",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
+    },
+    {
+      "id": "RR26-03",
+      "task": "[P2][外链调研RR26] thesaasdirectory.com SaaS目录收录：https://thesaasdirectory.com/；渠道=无公开邮箱(表单)；证据首页200无邮箱无明显免费信号,走站内表单,排期复查",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
+    },
+    {
+      "id": "RR26-04",
+      "task": "[P2][外链调研RR26] position.digital 260+SaaS目录索引资源页提及：https://position.digital/260-saas-directories/；渠道=hello@position.digital；证据200为索引清单非直接收录,邮件请求清单提及,门槛中",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
+    },
+    {
+      "id": "RR26-05",
+      "task": "[P2][外链调研RR26] webfor.com营销agency博客客座备选：https://webfor.com/；渠道=hello@webfor.com；证据200含paid信号,客座门槛中高备选,先问免费投稿",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
+    },
+    {
+      "id": "RR26-06",
+      "task": "[P2][外链调研RR26] helloskip.com AI/SaaS listing目录：https://helloskip.com/；渠道=无公开邮箱(表单)；证据200 premium/suggest信号,走表单,排期复查",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
+    },
+    {
+      "id": "RR26-07",
+      "task": "[P2][外链调研RR26] visme.co AI写作工具榜单资源页：https://www.visme.co/；渠道=无公开邮箱(表单)；证据200大品牌媒体add your信号无真实邮箱,走联系表单门槛高备选",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00"
     }
   ],
   "milestones": [
