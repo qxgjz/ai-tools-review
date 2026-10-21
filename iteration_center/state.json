@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-22T00:22:59+08:00",
+  "last_updated": "2026-10-22T04:17:11+08:00",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-21-R24",
@@ -2362,7 +2362,7 @@
       "source": "commander_daily_2026-10-17",
       "created_at": "2026-10-17T14:40:00",
       "blocked_reason": "需指挥官提供 Claude Code CLI + Anthropic 登录态环境后安装 plugin 跑全站审计；阻塞解除前保持 pending",
-      "evidence": "r45 复核：仍阻塞（api_keys.json 无 Anthropic key），不重复尝试，待用户提供。"
+      "evidence": "r46 复核：仍阻塞（无 Anthropic key），不重复尝试。"
     },
     {
       "id": "P1-CLAUDE-SEO-V241-20261020",
@@ -2371,7 +2371,7 @@
       "assigned_to": "架构师",
       "status": "pending",
       "source": "commander_learning_github_trending_20261020",
-      "evidence": "r45 复核：与 INSTALL 联动，Anthropic key 未提供，保持 pending。",
+      "evidence": "r46 复核：与 INSTALL 联动，Anthropic key 未提供，保持 pending。",
       "created_at": "2026-10-20T08:02:09.063309"
     },
     {
@@ -2465,7 +2465,7 @@
       "status": "pending",
       "source": "analyst_20261021",
       "created_at": "2026-10-21T14:06:53",
-      "evidence": "r44 能力边界确认：CF Free 无自定义 WAF API（410）；browser_check=on+security_level=medium 已启用；GA4 internal 排除需 Admin 人工；r45 复核无新能力（CF Free 计划功能未变），清洗剩余动作=用户 Dashboard/Admin 人工。"
+      "evidence": "r46 复核：CF Free 能力无变化；GA4 internal 排除仍待用户 Admin 人工。"
     },
     {
       "id": "P1-GEO-003",
@@ -2559,7 +2559,7 @@
       "status": "pending",
       "source": "r39_perf_recheck_20261020",
       "created_at": "2026-10-20T12:23:36+08:00",
-      "evidence": "r45: CWV 仍为 10-21 11:12Z（1cbd14f 纯 state/日志 commit 无 Deploy，无新 Lighthouse CI，预期非故障）；真实用户 LCP 需 CrUX API——api_keys.json 无 CrUX key（阻塞项），待提供后可查 origin 级 RUM LCP；midjourney 5.8-6.0s 仍是 CI 模拟数据。"
+      "evidence": "r46: CWV 仍 10-21 11:12Z（无新 Deploy，无新 CI 预期）；api_keys.json 无 CrUX key 仍阻塞（待用户提供）；本地 out/ 12:35 build 与线上经 CF API 部署列表+GitHub commit 链（c2ab3b3）复核一致。"
     },
     {
       "id": "P1-LISTING-PRICING-20261019",
@@ -2588,7 +2588,7 @@
       "status": "pending",
       "source": "commander_daily_20261020",
       "created_at": "2026-10-20T14:30",
-      "evidence": "r45: CWV 无新报告（同 LCP-REALDATA 原因）；图片层已闭环（webp 152KB+preload+fetchPriority=high）、第三方 preload 4→2（r41）、framer-motion 已删净（r40）；LCP 5.8-6.0s 剩余主因为系统性 JS/HTML 负担，需一次带代码改动的部署触发新 CI 才能评估下一轮减重，本轮无合适安全改动，保持推进。",
+      "evidence": "r46: CWV 无新报告（无代码部署，预期）；剩余主因系统性 JS/HTML 负担待带代码改动部署触发新 CI；本轮 GEO 审计聚焦无新代码改动。",
       "description": "\nr41(10-21)：CWV(10-20T10:58Z) LCP 5.6/5.8/5.8s（r39 8.4s时代已过）；图片层已闭环（webp 152KB+preload+fetchPriority=high+无大chunk）；r41 已修第三方 analytics preload（umami+gtag 改原生async，preload 4→2）——下轮 CI CWV 复测后评估是否继续（目标<4s，剩余主因为系统性 JS/HTML 负担）。\n[r42 2026-10-21] CWV 仍为 10-20T10:58Z 基线（无新报告），r41 preload 修复效果待下轮 CI 双跑；线上 7a7ebb2 已部署且首页新版已收敛。"
     },
     {
@@ -3082,7 +3082,7 @@
       "status": "pending",
       "source": "analyst_20261021",
       "created_at": "2026-10-21T08:14:39",
-      "evidence": "r44 核查：全站 1202 页 canonical 1201 有（og/ noindex 无害、404 noindex 无害）；trailingSlash+_redirects 已覆盖斜杠；CF always_use_https=off（PATCH 403）→ 待用户 Dashboard 开启（人工项）；r45 复核 canonical 结构无回归，无需代码改动。"
+      "evidence": "r46 复核：canonical 结构无回归；http→https 仍待用户 CF Dashboard 开启（人工项沿用）。"
     },
     {
       "priority": "P2",
@@ -3576,6 +3576,118 @@
       "created_at": "2026-10-21T22:10:32.768237+08:00",
       "completed_at": "2026-10-21T22:10:32.768237+08:00",
       "evidence": "SMTP accepted to info@brilliantdirectories.com (free_listing) ts=2026-10-21T22:09:12.324086+08:00"
+    },
+    {
+      "id": "RR32-OPP-011bq",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] AI目录免费收录 @011bq.com (email: info@011bq.com); 200, free/submit/suggest/contribute/directory信号全",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://011bq.com/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "info@011bq.com"
+    },
+    {
+      "id": "RR32-OPP-techexploria",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] 客座博客write-for-us @techexploria.com (email: techexploriablog@gmail.com); 200, write-for-us/guest/contribute信号全",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://techexploria.com/write-for-us/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "techexploriablog@gmail.com"
+    },
+    {
+      "id": "RR32-OPP-toastdesign",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] 资源页/AI对比指南pitch列入 @toastdesign.co.uk (email: hello@toastdesign.co.uk); 200, AI tools comparison guide, guest/pitch/suggest",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://toastdesign.co.uk/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "hello@toastdesign.co.uk"
+    },
+    {
+      "id": "RR32-OPP-techpolicy",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] 客座/贡献投稿 @techpolicy.press (email: justin@techpolicy.press); 200, contributor guidelines,偏政策科技",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://techpolicy.press/contribute/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "justin@techpolicy.press"
+    },
+    {
+      "id": "RR32-OPP-kortex",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] launch目录/200提交清单 @kortex-notebooklm.com (email: kortexnotebooklm@gmail.com); 200, free/feature/contact",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://kortex-notebooklm.com/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "kortexnotebooklm@gmail.com"
+    },
+    {
+      "id": "RR32-OPP-crossmind",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] indie hackers AI roundup pitch @crossmind.io (email: nova-yu@crossmind.io); 200, Best AI Tools for Indie Hackers list",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://crossmind.io/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "nova-yu@crossmind.io"
+    },
+    {
+      "id": "RR32-OPP-quoleady",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] SaaS guest post @quoleady.com (form: 站内表单,无公开邮箱); 200, guest信号,走表单无人值守保持pending",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://quoleady.com/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "form",
+      "contact": "站内表单,无公开邮箱"
+    },
+    {
+      "id": "GEO-CONTENT-EXPERT-QUOTES-20261022",
+      "priority": "P1",
+      "title": "GEO Content 6.7/10：补 Expert Quotes（0%）、Step-by-step（33%）、Real Examples（33%）",
+      "description": "GEO 审计（real_geo_aeo_audit.py 2026-10-22）GEO Content Structure 66.7/100：Expert Quotes 0/3 页、Step By Step 1/3、Real Examples 1/3。AI 引擎偏好引用含专家引述/步骤/实例的数据密集型内容。",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "geo_audit_2026-10-22",
+      "created_at": "2026-10-22T04:17:11+08:00",
+      "evidence": "real_geo_aeo_audit.py 2026-10-22T04:10Z：GEO Content Score 66.7/100（Expert Quotes 0%、Step By Step 33%、Real Examples 33%）；AEO 10/10、llms.txt 10/10、crawler 9.1/10 已达标。"
     }
   ],
   "milestones": [
@@ -3592,7 +3704,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-20 19:01:17",
-  "last_action": "r45: GEO 9.09/10 A(CCBot设计在位,llms.txt线上200); CWV 无新报告(无Deploy预期); CrUX key 缺失(LCP-REALDATA阻塞项); Actions Uptime/Cache healthy",
+  "last_action": "r46: GEO 8.9/10 A(GEO Content 6.7 开创作家新单); 线上 robots.txt 缺 CCBot Allow=边缘缓存旧条目(commit 链已证 c2ab3b3 含 r43 allow, 非故障); CWV 无新报告; CrUX key 仍缺失",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

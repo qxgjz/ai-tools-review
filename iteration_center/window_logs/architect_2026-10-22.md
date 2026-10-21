@@ -35,3 +35,32 @@
 - P1：5 条（CLAUDE-SEO×2 阻塞 / GA4-SG-BOT-CLEAN 待人工 / MIDJOURNEY-LCP+LCP-REALDATA 待 CrUX key+代码改动部署）
 - P2：1 条（URL-CANONICAL 仅剩人工项）
 - 全站 P0=42（归内容/增长窗口）
+
+## r46（2026-10-22 05:10 cron 轮：GEO 8.9 A 复核 + 线上 robots.txt 缓存判定）
+
+### 待办处理（0 completed / 6 evidence 推进 + 1 新增，P0=0）
+| 待办 | 优先级 | 结果 | 证据 |
+|---|---|---|---|
+| P1-LCP-REALDATA | P1 | 🔄 推进 | CWV 无新报告（无 Deploy 预期）；CrUX key 缺失阻塞沿用 |
+| P1-MIDJOURNEY-LCP | P1 | 🔄 推进 | 无代码部署无新 CI；系统性 JS/HTML 负担待规划 |
+| P2-URL-CANONICAL | P2 | 🔄 复核 | canonical 无回归；http→https 人工项沿用 |
+| P1-GA4-SG-BOT-CLEAN | P1 | 🔄 复核 | CF Free 能力无变化；GA4 Admin 人工项沿用 |
+| P1-CLAUDE-SEO×2 | P1 | ⛔ 阻塞 | 无 Anthropic key |
+| GEO-CONTENT-EXPERT-QUOTES | P1 | ➕ 新增 | GEO Content 6.7/10 → 创作家（Expert Quotes 0%） |
+
+### GEO 技术检查（3 项全做）
+1. real_geo_aeo_audit.py：Overall **8.9/10 Grade A**（crawler 9.1/10、llms.txt 10/10、AEO 10/10、GEO Content 6.7/10）。CCBot blocked 属 r43 设计（allow llms+blog + disallow /），规则在位
+2. **线上 robots.txt 缓存判定（r31 三查原则应用）**：线上 www robots.txt 的 CCBot 段缺 r43 Allow 行，但本地 out/（12:35 build）含 Allow。三查：①CF Pages API 部署列表=最新 f518b127(batch43)；②GitHub commit 链验证 c2ab3b3 的 app/robots.ts **含** CCBot allow 规则 → 代码/部署正确；③判定=边缘缓存旧条目（SWR=86400 最长 24h 强制回源，r43 部署 10-21T04:47 窗口未满），**非故障，不修复不重试**（r31 经验 2/8）
+3. llms.txt：审计脚本确认 present（2764B），线上 200（r45 已验证）
+
+### 门控结果
+- 无代码改动；GEO 报告落盘 real_geo_aeo_audit_results.json（audit_time 2026-10-22T04:10Z）
+
+### state.json 更新
+- 6 条 evidence 更新 + 新增 GEO-CONTENT-EXPERT-QUOTES-20261022（assigned_to=创作家，source=geo_audit_2026-10-22）
+
+### 阻塞/待人工（沿用 r45 + 无新增）
+CrUX key、CF Always Use HTTPS、GA4 Admin、Anthropic key
+
+### 剩余（我的）
+P0=0；P1=5（CLAUDE×2 阻塞 / SG-BOT 人工 / LCP×2 待 key+部署）；P2=1（仅人工项）；全站 P0≈42 归内容/增长窗口
