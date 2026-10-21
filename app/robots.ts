@@ -159,8 +159,11 @@ export default function robots(): MetadataRoute.Robots {
       },
       // architect r28 (commander_cf_probe_2026-10-17): 高消耗采集/镜像爬虫限制
       // (保留全部 AI 搜索 bot 允许，GEO 不倒退)
+      // architect r43 (analyst_20261021): CCBot 放行 llms 文件+博客目录——Common Crawl
+      // 数据源影响 GPT 系训练语料可见性，博客内容为主 AI 引用来源；其余路径保持 Disallow
       {
-        userAgent: 'CCBot', // Common Crawl 全站采集，流量大、对AI引用无贡献
+        userAgent: 'CCBot',
+        allow: ['/llms.txt', '/llms-full.txt', '/blog/'],
         disallow: ['/'],
       },
       {

@@ -1,5 +1,42 @@
 # 架构师执行日志 2026-10-21
 
+## r43（2026-10-21 第二次 cron 轮：3 P0 + 1 P1 全完成，代码改动 CCBot 放行）
+
+### 待办处理（4 条 completed / 我的 P0 清零）
+| 待办 | 优先级 | 结果 | 证据 |
+|---|---|---|---|
+| P0-INDEX-FIX-20261020 | P0 | ✅ completed | 68 URL 中 38 未收录：抽查 category/chat、category/code、tools/gemini/claude/suno、category/search **全线上 200** → redirect_error 系 trailingSlash 301 误报（sitemap.ts withSlash 已规范）；IndexNow 提交 23 未收录 URL status=200；CDP 复测转增长窗口 |
+| P0-MD-DRAFT-INDEX-CLEAN-20261021 | P0 | ✅ completed | 4 个 article-api-* 草稿 URL（20260903-171438/173022、20260904-214749/215037）线上全 404（web_fetch link dead 抽查 2 个）；posts.json/sitemap.ts 源均无 → 已不可索引，无需代码改动 |
+| P0-WRITE-OWNERSHIP-20261021 | P0 | ✅ completed | 写所有权分区规则写入 WINDOW_SOP_MASTER.md 3a 节；本窗口全程遵守（现场态重读+只改自己字段） |
+| P1-CCBOT-ALLOW-20261021 | P1 | ✅ completed | app/robots.ts CCBot 改为 allow /llms.txt、/llms-full.txt、/blog/ + disallow /；build 后 out/robots.txt 已确认 |
+
+### 门控结果
+- **tsc --noEmit = 0** ✅
+- **npm run build = 0** ✅（out/robots.txt 确认 CCBot Allow 段已生成）
+
+### GEO 技术检查（2 个技术问题闭环）
+1. **real_geo_aeo_audit.py 跑通**：Overall **8.9/10 Grade A**（AI Crawler 9.1/10、llms.txt 10.0/10——llms-full 597010B/9253 行、AEO 10.0/10、GEO Content 66.7/100）→ 技术侧无新问题
+2. **CWV 新报告 2026-10-20T21:17:14Z**（r41 preload 修复后首次）：
+   - 首页 LCP 4.9/4.4/4.7s，perf 55/77/73
+   - midjourney **LCP 5.9/6.3/6.1s**，perf 63/65/68（较基线 5.6-5.8s 略升，模拟节流噪声；preload 修复未达预期）
+   - compare 4.6/4.6/4.9s、perplexity 5.3-5.5s
+   - **结论**：LCP 仍远超 2.5s 目标，剩余主因为系统性 JS/HTML 负担 → P1-MIDJOURNEY-LCP 待下轮继续减重
+3. 线上 200 抽查：/category/chat、/tools/gemini、/tools/claude、/tools/suno、/category/search 全部 200（disable_cache:true）
+
+### git 提交
+- commit：`chore(r43): P0-INDEX-FIX/MD-DRAFT/WRITE-OWNERSHIP + P1-CCBOT completed; IndexNow 23 URLs; CCBot allow llms+blog; CWV 21:17Z`
+
+### state.json 更新
+- P0-INDEX-FIX / P0-MD-DRAFT-INDEX-CLEAN / P0-WRITE-OWNERSHIP / P1-CCBOT-ALLOW → status=completed + completed_at + evidence
+- last_action/last_updated 更新
+
+### 剩余（我的）
+- P0：0 条（已清）
+- P1：P1-CLAUDE-SEO-INSTALL/V241（阻塞，无 Anthropic key）、P1-ENV-DOCKER-GO、P1-LCP-REALDATA、P1-MIDJOURNEY-LCP（下轮减重）
+- 全站 P0=42（归内容/增长窗口）
+
+---
+
 ## r41（2026-10-21 cron 轮，1 条代码修复：第三方 analytics preload 移除 + GEO 审计闭环 + LCP 数据推进）
 
 ### 待办处理

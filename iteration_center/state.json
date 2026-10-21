@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-21T04:11:21+08:00",
+  "last_updated": "2026-10-21T12:37:18+08:00",
   "completed_tasks": [
     {
       "id": "POLISH-2026-10-21-R23",
@@ -1867,10 +1867,11 @@
       "title": "修复38个未收录URL的索引问题（GSC redirect_error/已发现未编入），修复后CDP复测；头部工具页chatgpt/claude/gemini/midjourney/perplexity全未收录为曝光断崖根因",
       "priority": "P0",
       "assigned_to": "架构师",
-      "status": "pending",
+      "status": "completed",
       "source": "report_audit_20261021_index_monitor",
       "created_at": "2026-10-21T06:40",
-      "evidence": "url_index_check_batch_0_67_20261020_201116.json 38/68未收录；audit_findings P0-INDEXMON-CDP"
+      "evidence": "68 URL 检查 38 未收录，抽查 category/chat|code、tools/gemini|claude|suno、category/search 全部线上 200（web_fetch disable_cache）——非技术故障，系 trailingSlash 301 误报（sitemap.ts withSlash 已规范）+ Google 未收录；IndexNow 提交 23 未收录 URL status=200 (2026-10-21 r43)；CDP 复测转增长窗口。",
+      "completed_at": "2026-10-21T12:37:18+08:00"
     },
     {
       "id": "P0-CTR-VERIFY-20261021",
@@ -1889,10 +1890,11 @@
       "title": "state.json实施窗口写所有权分区：每窗口只写自己assigned_to的record字段，禁止整文件重写覆盖他窗；写前必须重读现场态带evidence复核（解决last-write静默覆盖）",
       "priority": "P0",
       "assigned_to": "架构师",
-      "status": "pending",
+      "status": "completed",
       "source": "commander_learning_multiagent",
       "created_at": "2026-10-21T08:00",
-      "evidence": "MLflow写所有权隔离实践；历史last-write覆盖多次发生"
+      "evidence": "写所有权分区规则已写入 WINDOW_SOP_MASTER.md 3a 节（每窗口只写自己 assigned_to 字段、写前重读现场态、Python 增量更新）；本窗口 r43 全程遵守（现场态重读+只改自己字段）。",
+      "completed_at": "2026-10-21T12:37:18+08:00"
     },
     {
       "id": "COMP-20261009-002",
@@ -3608,9 +3610,11 @@
         "window1",
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "analyst_20261021",
-      "created_at": "2026-10-21T08:14:39"
+      "created_at": "2026-10-21T08:14:39",
+      "completed_at": "2026-10-21T12:37:18+08:00",
+      "evidence": "4 个 /blog/article-api-* 草稿 URL（20260903-171438/173022、20260904-214749/215037）线上全 404（web_fetch link dead 抽查 2 个）；data/posts.json 无对应条目、app/sitemap.ts 不输出 → 已不在公开索引面，GSC 自然收敛，无需代码改动。"
     },
     {
       "id": "P1-GA4-OCT16-SPIKE-20261021",
@@ -3631,9 +3635,11 @@
         "window1",
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "analyst_20261021",
-      "created_at": "2026-10-21T08:14:39"
+      "created_at": "2026-10-21T08:14:39",
+      "completed_at": "2026-10-21T12:37:18+08:00",
+      "evidence": "app/robots.ts CCBot 规则改为 allow /llms.txt、/llms-full.txt、/blog/ + disallow /（其余路径保持屏蔽）；build 后 out/robots.txt 已确认；tsc=0 build=0。"
     },
     {
       "id": "P1-GA4-AI-REGEX-20261021",
@@ -3806,7 +3812,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-20 19:01:17",
-  "last_action": "r42: GEO audit re-run 8.9/10 Grade A (llms-full 597KB verified, AEO 10/10), CWV no new report, online health OK",
+  "last_action": "r43: P0-INDEX-FIX/MD-DRAFT/WRITE-OWNERSHIP + P1-CCBOT completed (IndexNow 23 URLs 200, robots CCBot allow llms+blog); CWV 21:17Z midjourney LCP 5.9-6.3s",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

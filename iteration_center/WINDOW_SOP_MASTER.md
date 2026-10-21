@@ -1,6 +1,7 @@
-# AIToolCrux 窗口标准操作手册 (SOP) v2.0
+# AIToolCrux 窗口标准操作手册 (SOP) v2.1
 
-**最后更新**: 2026-10-08
+**最后更新**: 2026-10-18
+**新增**: GitHub MCP 通道（OAuth 已授权，各窗口可直接调用）——详见下方「🔧 GitHub 通道（2026-10-18 新增）」
 **核心原则**: 每个窗口拿到任务不用动脑，按SOP一步步执行，做完必须用专业工具验证，验证通过才算完成。
 **目标**: 问题越来越少，流量越来越多，每天主要是内容更新+质量把控。
 
@@ -28,6 +29,12 @@
 - 指挥官每次调度会把completed的移到archived_todos
 - **禁止待办一直pending不处理**
 
+### 3a. state.json 写所有权分区铁律（2026-10-21 新增，P0-WRITE-OWNERSHIP）
+- 每窗口只写自己 assigned_to 含本窗口名的 record 字段，禁止整文件重写覆盖他窗改动
+- 写前必须重读 state.json 现场态（用 Python 读+带 evidence 复核），禁止凭记忆/旧摘要构造 patch
+- 更新方式：Python json.load → 修改自己字段 → json.dump；diff 只含自己的改动
+- 若发现他窗改动被覆盖，先恢复现场态，再只叠加自己的字段
+
 ### 4. 禁止事项
 - ❌ 禁止说"我会做"但不实际执行
 - ❌ 禁止凭记忆说"已经修好了"，必须回读验证
@@ -35,6 +42,18 @@
 - ❌ 禁止一次领10个任务只做2个，领多少做多少
 - ❌ 禁止把P2任务当P0做，严格按优先级
 - ❌ 禁止发布没通过QC检查的内容
+
+---
+
+## 🔧 GitHub 通道（2026-10-18 新增，OAuth 已授权）
+
+所有窗口可直接用 GitHub MCP 工具（豆包已授权，无需本地 git/SSH/PAT）：
+- **取 schema**：先 `tool_search` 搜 `github_oauth <操作名>`（如 `github_oauth create_or_update_file`），取回参数定义后再调用，禁止猜参数
+- **工具前缀**：`mcp__github_oauth__*`（search_repositories / get_file_contents / create_or_update_file / create_repository / issue_write / push_files 等）
+- **已知可用账号**：qxgjz；**外链仓库**：qxgjz/aitoolcrux-ai-tools-reviews（DR96 dofollow，README+ARTICLES.md 已 ≥18 条指向 www.aitoolcrux.com 的锚文本链接）
+- **外链用途**：创建新 repo（每个 repo 都是独立 DR96 dofollow 外链，README 至少 5 条锚文本 + 6 topics + homepage 指向站点）；每个工具类目可建独立 repo（如 ai-writing-tools-reviews、ai-coding-assistants-reviews）
+- **代码用途**：窗口1 提交代码、创建/更新文件、建 PR、查 commit；窗口2/5 可把文章同步到 GitHub 仓库做内容外链
+- **注意**：GitHub MCP 通道与本地 git 通道互补——本地 git 用于项目仓库部署，GitHub MCP 用于外链 repo 批量建设
 
 ---
 
@@ -201,8 +220,15 @@ Step 6: 写执行日志到window_logs/growth_{日期}.md
 
 ### 外链优先级清单
 1. **高优先级（dofollow+高权重）**：Product Hunt、Hacker News、Reddit、Medium、Dev.to
-2. **中优先级（AI工具目录）**：There's An AI For That、Futurepedia、AI Tool Hunt、TopAI.tools
-3. **低优先级（普通目录）**：其他小型目录
+2. **高优先级（GitHub repo 批量建）**：每个工具类目建独立 repo（DR96 dofollow），README≥5锚文本+6 topics+homepage指向站点；已建示例 qxgjz/aitoolcrux-ai-tools-reviews
+3. **中优先级（AI工具目录）**：There's An AI For That、Futurepedia、AI Tool Hunt、TopAI.tools
+4. **低优先级（普通目录）**：其他小型目录
+
+### 工具清单（GitHub 通道优先，OAuth 已授权）
+| 工具 | 用途 | 调用方式 |
+|------|------|---------|
+| GitHub MCP | 批量建外链 repo | `tool_search` 搜 `github_oauth create_repository` 取 schema → `mcp__github_oauth__create_repository` |
+| GitHub MCP | 写 README/ARTICLES 锚文本 | `mcp__github_oauth__create_or_update_file`（owner=qxgjz） |
 
 ### 验收标准
 - ✅ 本次至少提交10个外链
