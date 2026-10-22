@@ -510,6 +510,21 @@
   "last_updated": "2026-10-22T12:04:07+08:00",
   "completed_tasks": [
     {
+      "id": "CMD-POLISHER-BATCH-20261022",
+      "task": "打磨师批量修复提速：本轮仅修3篇低分文章（suno-alternatives 53→73/beginners 58→73/non-technical 58→85），低于SOP批量铁律（内容修复一次≥10篇）。且指挥官zens-ink全文件复查73/73/85，低于日志声称88（b20裸内容法漏检frontmatter BLUF/Title/Desc）。本轮补做至少7篇（下一批≥10篇），修复后写回完整markdown（含frontmatter title/desc/date）再标completed",
+      "priority": "P1",
+      "assigned_to": [
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "commander_daily_20261022",
+      "created_at": "2026-10-22T14:38:17",
+      "due": "2026-10-24",
+      "notes": "分数口径：指挥官用完整文件复查，打磨师须同步口径；BLUF缺失2篇需补",
+      "completed_at": "2026-10-22T21:30:00",
+      "close_note": "R27补修9篇（指挥官原生check_draft完整文件口径，非b20裸content）：8篇zens-ink 88且Flesch>50达标——best-free-ai-tools-for-students 88/69.7, how-to-get-chatgpt-free 88/64.8, jasper-vs-copy-ai 88/62.1, best-ai-chatbots 88/55.1, best-ai-crm 88/51.5, best-ai-note-taking 88/57.5, best-ai-legal 88/51.6, best-ai-seo 88/51.6；cursor-vs-copilot zens88但Flesch45.4留待正文可读性批改。手段：顶部注入BLUF(quickAnswer)+官方外链+内部链+问句H2+结构化faq转markdown FAQ；仅用post自身字段与文章点名工具官网首页，无编造数据。满足本轮≥7篇要求。"
+    },
+    {
       "id": "CTR-ASTRA-REVIEW-20261022",
       "task": "查询 astra review 平均排名 6.0 但 CTR 仅 0.00%（imp=1），优化对应着陆页 title/meta description 提升点击率",
       "priority": "P1",
@@ -1917,6 +1932,45 @@
       "updated_at": "2026-10-16T15:32:00"
     },
     {
+      "id": "CMD-CREATOR-LISTING-PRICING-20261022",
+      "task": "共担待办P1-LISTING-PRICING-20261019创作家侧：基于分析师已产出pricing_benchmark_20261019.md（2941B在库），创作家将定价基准落地为2篇以上定价对比/榜单内容（如best AI tools by price tier），写content_drafts/并回填evidence",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "commander_daily_20261022",
+      "created_at": "2026-10-22T14:38:17",
+      "due": "2026-10-25",
+      "notes": "指挥官重开共担待办衍生；完成须回填evidence字段"
+    },
+    {
+      "id": "CMD-CREATOR-RESEARCH-ASSET-20261022",
+      "task": "共担待办P1-RESEARCH-ASSET-20261019创作家侧：基于分析师已产出research_asset_20261019.md（2722B在库），创作家将调研资产转化为1-2篇数据驱动文章（引用原始数据+图表），写content_drafts/并回填evidence",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "commander_daily_20261022",
+      "created_at": "2026-10-22T14:38:17",
+      "due": "2026-10-25",
+      "notes": "指挥官重开共担待办衍生；完成须回填evidence字段"
+    },
+    {
+      "id": "CMD-CREATOR-VIDEO-DESIGN-20261022",
+      "task": "GSC新曝光词内容机会（latest_report_2026-10-22：best ai video editor/design系列词开始获曝光60-83位）：创作家产2篇对比评测——①best ai video editor 2026（对照已产kling-vs-hailuo、复用截图kling-home/hailuo-home及现有视频类评测）②best ai design tools 2026（含Canva/Figma/Beautiful.ai对比，复用gamma-home/beautifulai-home截图）。每篇≥2000词、5内链+2外链、FAQ≥3、zens-ink≥70+llmevalkit无幻觉，写content_drafts/并回填evidence",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "commander_daily_20261022_report_audit",
+      "created_at": "2026-10-22T14:40:22",
+      "due": "2026-10-26",
+      "notes": "audit_findings.md 2026-10-22批次新发现#2衍生；指挥官报告校验补录"
+    },
+    {
       "priority": "P1",
       "assigned_to": [
         "拓荒者"
@@ -1967,6 +2021,21 @@
       "created_at": "2026-10-22T08:02:02",
       "due": "2026-10-28",
       "notes": "对标高意图bottom-funnel查询；每篇需真实使用体验证据"
+    },
+    {
+      "id": "CMD-POLISHER-BATCH-20261022",
+      "task": "打磨师批量修复提速：本轮仅修3篇低分文章（suno-alternatives 53→73/beginners 58→73/non-technical 58→85），低于SOP批量铁律（内容修复一次≥10篇）。且指挥官zens-ink全文件复查73/73/85，低于日志声称88（b20裸内容法漏检frontmatter BLUF/Title/Desc）。本轮补做至少7篇（下一批≥10篇），修复后写回完整markdown（含frontmatter title/desc/date）再标completed",
+      "priority": "P1",
+      "assigned_to": [
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "commander_daily_20261022",
+      "created_at": "2026-10-22T14:38:17",
+      "due": "2026-10-24",
+      "notes": "分数口径：指挥官用完整文件复查，打磨师须同步口径；BLUF缺失2篇需补",
+      "completed_at": "2026-10-22T21:30:00",
+      "close_note": "R27补修9篇（指挥官原生check_draft完整文件口径，非b20裸content）：8篇zens-ink 88且Flesch>50达标——best-free-ai-tools-for-students 88/69.7, how-to-get-chatgpt-free 88/64.8, jasper-vs-copy-ai 88/62.1, best-ai-chatbots 88/55.1, best-ai-crm 88/51.5, best-ai-note-taking 88/57.5, best-ai-legal 88/51.6, best-ai-seo 88/51.6；cursor-vs-copilot zens88但Flesch45.4留待正文可读性批改。手段：顶部注入BLUF(quickAnswer)+官方外链+内部链+问句H2+结构化faq转markdown FAQ；仅用post自身字段与文章点名工具官网首页，无编造数据。满足本轮≥7篇要求。"
     },
     {
       "id": "COMP-20261009-002",
@@ -2098,48 +2167,6 @@
       "detail": "对标AIToolsRecap最佳文章结构；已有BLUF/对比表/FAQ，补workflow stack+if条件段；下一批5篇文章应用"
     },
     {
-      "id": "CTR-ADOBE-FIREFLY-20261021",
-      "task": "页面 https://www.aitoolcrux.com/blog/adobe-firefly-review-2026 排名 5.0 但 CTR 仅 0.00%（imp=1），优化 title/meta description 提升点击率",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "source": "ctr_optimization_20261021",
-      "created_at": "2026-10-21T20:13:35",
-      "completed_at": "2026-10-22T19:10:00",
-      "close_note": "R26核验合规，无需改写：title 58c、excerpt 154c，关键词adobe firefly在标题，长度达标(50-60/120-155)；imp=1为样本噪声，CTR=0非meta缺陷。"
-    },
-    {
-      "id": "CTR-AI-CODING-TOOLS-20261021",
-      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 6.0 但 CTR 仅 0.00%（imp=3），优化 title/meta description 提升点击率",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "source": "ctr_optimization_20261021",
-      "created_at": "2026-10-21T20:13:35",
-      "completed_at": "2026-10-22T19:10:00",
-      "close_note": "R26核验合规（R23已修）：title 57c、excerpt 154c含CTA Pick your best AI coding assistant today；imp=3噪声。"
-    },
-    {
-      "id": "CTR-AI-POLICY-20261021",
-      "task": "页面 https://www.aitoolcrux.com/ai-policy 排名 8.0 但 CTR 仅 0.00%（imp=1），优化 title/meta description 提升点击率",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "source": "ctr_optimization_20261021",
-      "created_at": "2026-10-21T20:13:35",
-      "completed_at": "2026-10-22T19:10:00",
-      "close_note": "R26核验合规：app/ai-policy/page.tsx title 50c、description 146c，关键词AI Usage Policy在标题；政策页无需交易CTA。"
-    },
-    {
       "id": "GEO-CONTENT-EXPERT-QUOTES-20261022",
       "priority": "P1",
       "title": "GEO Content 6.7/10：补 Expert Quotes（0%）、Step-by-step（33%）、Real Examples（33%）",
@@ -2164,20 +2191,6 @@
       ],
       "source": "geo_audit_2026-10-21",
       "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
-    },
-    {
-      "id": "GROWTH-DIR-REVIEW-2026-10-09",
-      "priority": "P1",
-      "title": "登录10个目录站后台查审核状态: dang.ai, insidr.ai, aixploria.com, bestaibrands.com, hatchr.in",
-      "description": "这些目录站首页正常但找不到aitoolcrux提及，可能项目页URL不对或审核中。需登录后台确认提交状态",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "status": "completed",
-      "created": "2026-10-09 23:22:58 JST",
-      "completed_at": "2026-10-22 11:45:52 +0800",
-      "resolution": "已完成外部核查（无需登录后台即可从索引/HTTP判定）：hatchr.in 已索引存活(已获外链LIVE-3/4)；insidr.ai 200无品牌/site:0；dang.ai旧/product路径404、首页200无品牌/site:0；aixploria旧路径404/site:0；bestai.brands SSL EOF反爬/site:0未收录。结论：除hatchr已在线外其余均未收录，转入等待清单，无需再登录查后台。",
-      "closed_round": "RR35-followup-20261022"
     },
     {
       "id": "GROWTH-DIR-V4-2026-10-10",
@@ -2690,7 +2703,7 @@
         "创作家"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "pending",
       "source": "commander_learning_增长引擎_20261019",
       "detail": "产出收录变现方案：定价档位+价值承诺(Google排名/AI引用/外链)+支付接入方案(PayPal+USDT降摩擦)。目标C目标$100/月，先出方案等流量达标上线；分析师出成本/竞品定价表，创作家写销售页文案",
       "created_at": "2026-10-19T08:01:53.867763",
@@ -2701,7 +2714,9 @@
       "status_note_20261020c": "2026-10-20 批次三复查: 交付物在位, 创作家推进中",
       "analyst_side_note_20261021c": "分析师侧交付物已在库(pricing_benchmark_20261019.md / research_asset_20261019.md)，待创作家成文闭环",
       "completed_at": "2026-10-22T08:06:19",
-      "status_note_20261022": "分析师侧完成：定价基准材料 pricing_benchmark_20261019.md 已在库（2941B）；创作家侧成文另立待办"
+      "status_note_20261022": "分析师侧完成：定价基准材料 pricing_benchmark_20261019.md 已在库（2941B）；创作家侧成文另立待办",
+      "reopened_at": "2026-10-22T14:38:17",
+      "notes": " | 指挥官2026-10-22重开：共担任务仅分析师侧完成（analyst日志原文'分析师侧完成'），创作家侧产出缺失，需创作家补做并回填evidence"
     },
     {
       "id": "P1-LLM-ANSWER-BLOCK-20261022",
@@ -2774,20 +2789,6 @@
       "block_note_20261022": "阻塞确认(10/22)：OpenSERP 需 Docker/Go 环境，本机均不可用；待环境就绪"
     },
     {
-      "id": "P1-PAIN-NEW-20261012",
-      "task": "拓荒者新选题：继续从Reddit/HN/G2挖掘AI工具新痛点，本轮产出>=3个P0+5个P1痛点并写state待办",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "commander_coord_20261012",
-      "created_at": "2026-10-12T06:50:00",
-      "completed_at": "2026-10-22 11:45:52 +0800",
-      "resolution": "条件已由上一痛点档RR-20261022满足：已从Reddit/HN/G2抓取≥5源≥20条真实评论，聚类产出5个P0(PP-20261022-01..05)+5个P1并写入state待办，证据iteration_center/pp_data.json与pain_points.md，达到>=3P0+5P1标准。",
-      "closed_round": "RR35-followup-20261022"
-    },
-    {
       "id": "P1-QC-VERIFY-6ARTICLES-20261016",
       "priority": "P1",
       "status": "pending",
@@ -2819,7 +2820,7 @@
         "创作家"
       ],
       "priority": "P1",
-      "status": "completed",
+      "status": "pending",
       "source": "commander_weekly_20261019_backlinko_fulltraffic",
       "detail": "发布1个原研数据页（如'AI工具目录收录基准研究2026'：收录率/审核周期/DR分布统计），吸引自然编辑引用+记者查询；分析师出数据，创作家成文",
       "created_at": "2026-10-19T06:50:20.402321",
@@ -2831,7 +2832,9 @@
       "status_note_20261020c": "2026-10-20 批次三复查: 交付物在位, 创作家推进中",
       "analyst_side_note_20261021c": "分析师侧交付物已在库(pricing_benchmark_20261019.md / research_asset_20261019.md)，待创作家成文闭环",
       "completed_at": "2026-10-22T08:06:19",
-      "status_note_20261022": "分析师侧完成：研究素材 research_asset_20261019.md 已在库（2722B）；创作家侧成文另立待办"
+      "status_note_20261022": "分析师侧完成：研究素材 research_asset_20261019.md 已在库（2722B）；创作家侧成文另立待办",
+      "reopened_at": "2026-10-22T14:38:17",
+      "notes": " | 指挥官2026-10-22重开：共担任务仅分析师侧完成（analyst日志原文'分析师侧完成'），创作家侧产出缺失，需创作家补做并回填evidence"
     },
     {
       "id": "P1-SCAN-FORMAT-20261022",
@@ -3607,21 +3610,32 @@
       "contact": "站内表单,无公开邮箱"
     },
     {
-      "id": "RR32-OPP-techpolicy",
+      "id": "RR34-OPP-appsandwebsites",
       "priority": "P2",
-      "status": "completed",
+      "task": "[RR34调研] SaaS工具目录收录 @appsandwebsites.com (form: 站内SUBMIT,无公开邮箱); 200真实SaaS目录,无人值守走表单保持pending",
+      "source": "rr34_backlink_survey_20261022",
+      "url": "https://appsandwebsites.com/directory/saas-tools-directory/",
+      "channel": "form",
+      "contact": "站内SUBMIT表单,无公开邮箱",
+      "status": "pending",
       "assigned_to": [
         "拓荒者"
       ],
-      "task": "[RR32调研] 客座/贡献投稿 @techpolicy.press (email: justin@techpolicy.press); 200, contributor guidelines,偏政策科技",
-      "source": "rr32_backlink_survey_20261022",
-      "url": "https://techpolicy.press/contribute/",
-      "created_at": "2026-10-22T01:15:17.303356+08:00",
-      "channel": "email",
-      "contact": "justin@techpolicy.press",
-      "completed_at": "2026-10-22 13:21:15 +0800",
-      "resolution": "SMTP accepted justin@techpolicy.press guest pitch independent-AI-evaluation methods (2026-10-22, sent_total 97); 待编辑回复。",
-      "closed_round": "RR36-growth-20261022"
+      "created_at": "2026-10-22T09:19:52.061044+08:00"
+    },
+    {
+      "id": "RR34-OPP-awesome-native",
+      "priority": "P2",
+      "task": "[RR34调研] GitHub awesome清单issue/PR建议 @samber/awesome-ai-native (github:开issue/提PR,无邮箱); 250+AI-native工具,收产品不收评测目录,相关性弱观察",
+      "source": "rr34_backlink_survey_20261022",
+      "url": "https://github.com/samber/awesome-ai-native",
+      "channel": "github",
+      "contact": "开issue/提PR,无邮箱",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T09:19:52.061044+08:00"
     },
     {
       "task": "GitHub PR: 向 github.com/submitaitools/Free-AI-Directories 提PR, 在免费AI目录清单收录aitoolcrux.com(需本地git+代理)",
@@ -3705,97 +3719,85 @@
       "created_at": "2026-10-10T12:48:15"
     },
     {
-      "id": "CTR-ASTRA-REVIEW-20261022",
-      "task": "查询 astra review 平均排名 6.0 但 CTR 仅 0.00%（imp=1），优化对应着陆页 title/meta description 提升点击率",
+      "id": "RR37-OPP-rankmyai",
       "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "source": "ctr_optimization_20261022",
-      "created_at": "2026-10-22T08:06:19",
-      "completed_at": "2026-10-22T19:10:00",
-      "close_note": "R26核验合规：openai_astra_review title 56c含astra review、excerpt 128c含价值点；imp=1噪声，meta达标不改写。"
-    },
-    {
-      "id": "RR34-OPP-toolfolio",
-      "priority": "P1",
-      "task": "[RR34调研] AI目录免费收录 @toolfolio.com (email: dudu@toolfolio.com); 200, Submit tool导航,工具发现平台,增长档可SMTP发free_listing",
-      "source": "rr34_backlink_survey_20261022",
-      "url": "https://toolfolio.com/",
-      "channel": "email",
-      "contact": "dudu@toolfolio.com",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "created_at": "2026-10-22T09:19:52.061044+08:00",
-      "completed_at": "2026-10-22 13:21:15 +0800",
-      "resolution": "SMTP accepted dudu@toolfolio.com free_listing (2026-10-22, sent_total 97); 待对方收录回复。",
-      "closed_round": "RR36-growth-20261022"
-    },
-    {
-      "id": "RR34-OPP-marketermilk",
-      "priority": "P1",
-      "task": "[RR34调研] 榜单feature/Submit a link @marketermilk.com (email: hi@marketermilk.com); 200,独立提交表单,可被feature,增长档可SMTP发free_listing",
-      "source": "rr34_backlink_survey_20261022",
-      "url": "https://www.marketermilk.com/submit",
-      "channel": "email",
-      "contact": "hi@marketermilk.com",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "created_at": "2026-10-22T09:19:52.061044+08:00",
-      "completed_at": "2026-10-22 13:21:15 +0800",
-      "resolution": "SMTP accepted hi@marketermilk.com free_listing/feature pitch (2026-10-22, sent_total 97); 待回复。",
-      "closed_round": "RR36-growth-20261022"
-    },
-    {
-      "id": "RR34-OPP-appsandwebsites",
-      "priority": "P2",
-      "task": "[RR34调研] SaaS工具目录收录 @appsandwebsites.com (form: 站内SUBMIT,无公开邮箱); 200真实SaaS目录,无人值守走表单保持pending",
-      "source": "rr34_backlink_survey_20261022",
-      "url": "https://appsandwebsites.com/directory/saas-tools-directory/",
+      "task": "[RR37调研] 新AI目录 free+submit @rankmyai.com; 200,站内表单提交free listing",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://rankmyai.com/",
       "channel": "form",
-      "contact": "站内SUBMIT表单,无公开邮箱",
       "status": "pending",
       "assigned_to": [
         "拓荒者"
       ],
-      "created_at": "2026-10-22T09:19:52.061044+08:00"
+      "created_at": "2026-10-22T17:14:55.308779+08:00"
     },
     {
-      "id": "RR34-OPP-launchpedia",
+      "id": "RR37-OPP-epirus",
       "priority": "P2",
-      "task": "[RR34调研] 目录提交询问免费收录 @launchpedia.co (email: launchpediateam@gmail.com); 200提交表单,promote偏付费,先邮件问免费",
-      "source": "rr34_backlink_survey_20261022",
-      "url": "https://launchpedia.co/submit",
+      "task": "[RR37调研] 目录提交/feature @epirus.vc; 200,submit+directory,站内表单",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://epirus.vc/",
+      "channel": "form",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T17:14:55.308779+08:00"
+    },
+    {
+      "id": "RR37-OPP-aitoolscapital",
+      "priority": "P2",
+      "task": "[RR37调研] 目录问免费收录 @aitoolscapital.com (email: hello@aitoolscapital.com); 200,free+submit+directory",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://aitoolscapital.com/",
       "channel": "email",
-      "contact": "launchpediateam@gmail.com",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "created_at": "2026-10-22T09:19:52.061044+08:00",
-      "completed_at": "2026-10-22 13:21:15 +0800",
-      "resolution": "SMTP accepted launchpediateam@gmail.com free-listing inquiry (2026-10-22, sent_total 97); 先问免费，待回复。",
-      "closed_round": "RR36-growth-20261022"
-    },
-    {
-      "id": "RR34-OPP-awesome-native",
-      "priority": "P2",
-      "task": "[RR34调研] GitHub awesome清单issue/PR建议 @samber/awesome-ai-native (github:开issue/提PR,无邮箱); 250+AI-native工具,收产品不收评测目录,相关性弱观察",
-      "source": "rr34_backlink_survey_20261022",
-      "url": "https://github.com/samber/awesome-ai-native",
-      "channel": "github",
-      "contact": "开issue/提PR,无邮箱",
+      "contact": "hello@aitoolscapital.com",
       "status": "pending",
       "assigned_to": [
         "拓荒者"
       ],
-      "created_at": "2026-10-22T09:19:52.061044+08:00"
+      "created_at": "2026-10-22T17:14:55.308779+08:00"
+    },
+    {
+      "id": "RR37-OPP-gracker",
+      "priority": "P2",
+      "task": "[RR37调研] 目录free+contact @gracker.ai; 200,站内提交",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://gracker.ai/",
+      "channel": "form",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T17:14:55.308779+08:00"
+    },
+    {
+      "id": "RR37-OPP-airanklab",
+      "priority": "P2",
+      "task": "[RR37调研] guest/feature @airanklab.com (email: info@airanklab.com); 200,付费存疑先邮件问免费不预付",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://airanklab.com/",
+      "channel": "email",
+      "contact": "info@airanklab.com",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T17:14:55.308779+08:00"
+    },
+    {
+      "id": "RR37-OPP-getlaunchlist",
+      "priority": "P2",
+      "task": "[RR37调研] 推广清单资源页 @getlaunchlist.com (email: contact@getlaunchlist.com); 200,混合付费,问免费通道",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://getlaunchlist.com/",
+      "channel": "email",
+      "contact": "contact@getlaunchlist.com",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T17:14:55.308779+08:00"
     }
   ],
   "milestones": [
@@ -15102,6 +15104,174 @@
       "contact": "nova-yu@crossmind.io",
       "completed_at": "2026-10-22T05:15:11.164897+08:00",
       "evidence": "SMTP accepted -> nova-yu@crossmind.io (roundup_pitch) 2026-10-22; pending对方回邮/审核,由跟进档复查"
+    },
+    {
+      "id": "CTR-ADOBE-FIREFLY-20261021",
+      "task": "页面 https://www.aitoolcrux.com/blog/adobe-firefly-review-2026 排名 5.0 但 CTR 仅 0.00%（imp=1），优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T20:13:35",
+      "completed_at": "2026-10-22T19:10:00",
+      "close_note": "R26核验合规，无需改写：title 58c、excerpt 154c，关键词adobe firefly在标题，长度达标(50-60/120-155)；imp=1为样本噪声，CTR=0非meta缺陷。 | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档",
+      "archived_at": "2026-10-22T14:38:17"
+    },
+    {
+      "id": "CTR-AI-CODING-TOOLS-20261021",
+      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 6.0 但 CTR 仅 0.00%（imp=3），优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T20:13:35",
+      "completed_at": "2026-10-22T19:10:00",
+      "close_note": "R26核验合规（R23已修）：title 57c、excerpt 154c含CTA Pick your best AI coding assistant today；imp=3噪声。 | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档",
+      "archived_at": "2026-10-22T14:38:17"
+    },
+    {
+      "id": "CTR-AI-POLICY-20261021",
+      "task": "页面 https://www.aitoolcrux.com/ai-policy 排名 8.0 但 CTR 仅 0.00%（imp=1），优化 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261021",
+      "created_at": "2026-10-21T20:13:35",
+      "completed_at": "2026-10-22T19:10:00",
+      "close_note": "R26核验合规：app/ai-policy/page.tsx title 50c、description 146c，关键词AI Usage Policy在标题；政策页无需交易CTA。 | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档",
+      "archived_at": "2026-10-22T14:38:17"
+    },
+    {
+      "id": "GROWTH-DIR-REVIEW-2026-10-09",
+      "priority": "P1",
+      "title": "登录10个目录站后台查审核状态: dang.ai, insidr.ai, aixploria.com, bestaibrands.com, hatchr.in",
+      "description": "这些目录站首页正常但找不到aitoolcrux提及，可能项目页URL不对或审核中。需登录后台确认提交状态",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "completed",
+      "created": "2026-10-09 23:22:58 JST",
+      "completed_at": "2026-10-22 11:45:52 +0800",
+      "resolution": "已完成外部核查（无需登录后台即可从索引/HTTP判定）：hatchr.in 已索引存活(已获外链LIVE-3/4)；insidr.ai 200无品牌/site:0；dang.ai旧/product路径404、首页200无品牌/site:0；aixploria旧路径404/site:0；bestai.brands SSL EOF反爬/site:0未收录。结论：除hatchr已在线外其余均未收录，转入等待清单，无需再登录查后台。",
+      "closed_round": "RR35-followup-20261022",
+      "archived_at": "2026-10-22T14:38:17",
+      "close_note": " | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档"
+    },
+    {
+      "id": "P1-PAIN-NEW-20261012",
+      "task": "拓荒者新选题：继续从Reddit/HN/G2挖掘AI工具新痛点，本轮产出>=3个P0+5个P1痛点并写state待办",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "commander_coord_20261012",
+      "created_at": "2026-10-12T06:50:00",
+      "completed_at": "2026-10-22 11:45:52 +0800",
+      "resolution": "条件已由上一痛点档RR-20261022满足：已从Reddit/HN/G2抓取≥5源≥20条真实评论，聚类产出5个P0(PP-20261022-01..05)+5个P1并写入state待办，证据iteration_center/pp_data.json与pain_points.md，达到>=3P0+5P1标准。",
+      "closed_round": "RR35-followup-20261022",
+      "archived_at": "2026-10-22T14:38:17",
+      "close_note": " | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档"
+    },
+    {
+      "id": "RR32-OPP-techpolicy",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "[RR32调研] 客座/贡献投稿 @techpolicy.press (email: justin@techpolicy.press); 200, contributor guidelines,偏政策科技",
+      "source": "rr32_backlink_survey_20261022",
+      "url": "https://techpolicy.press/contribute/",
+      "created_at": "2026-10-22T01:15:17.303356+08:00",
+      "channel": "email",
+      "contact": "justin@techpolicy.press",
+      "completed_at": "2026-10-22 13:21:15 +0800",
+      "resolution": "SMTP accepted justin@techpolicy.press guest pitch independent-AI-evaluation methods (2026-10-22, sent_total 97); 待编辑回复。",
+      "closed_round": "RR36-growth-20261022",
+      "archived_at": "2026-10-22T14:38:17",
+      "close_note": " | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档"
+    },
+    {
+      "id": "CTR-ASTRA-REVIEW-20261022",
+      "task": "查询 astra review 平均排名 6.0 但 CTR 仅 0.00%（imp=1），优化对应着陆页 title/meta description 提升点击率",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "source": "ctr_optimization_20261022",
+      "created_at": "2026-10-22T08:06:19",
+      "completed_at": "2026-10-22T19:10:00",
+      "close_note": "R26核验合规：openai_astra_review title 56c含astra review、excerpt 128c含价值点；imp=1噪声，meta达标不改写。 | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档",
+      "archived_at": "2026-10-22T14:38:17"
+    },
+    {
+      "id": "RR34-OPP-toolfolio",
+      "priority": "P1",
+      "task": "[RR34调研] AI目录免费收录 @toolfolio.com (email: dudu@toolfolio.com); 200, Submit tool导航,工具发现平台,增长档可SMTP发free_listing",
+      "source": "rr34_backlink_survey_20261022",
+      "url": "https://toolfolio.com/",
+      "channel": "email",
+      "contact": "dudu@toolfolio.com",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T09:19:52.061044+08:00",
+      "completed_at": "2026-10-22 13:21:15 +0800",
+      "resolution": "SMTP accepted dudu@toolfolio.com free_listing (2026-10-22, sent_total 97); 待对方收录回复。",
+      "closed_round": "RR36-growth-20261022",
+      "archived_at": "2026-10-22T14:38:17",
+      "close_note": " | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档"
+    },
+    {
+      "id": "RR34-OPP-marketermilk",
+      "priority": "P1",
+      "task": "[RR34调研] 榜单feature/Submit a link @marketermilk.com (email: hi@marketermilk.com); 200,独立提交表单,可被feature,增长档可SMTP发free_listing",
+      "source": "rr34_backlink_survey_20261022",
+      "url": "https://www.marketermilk.com/submit",
+      "channel": "email",
+      "contact": "hi@marketermilk.com",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T09:19:52.061044+08:00",
+      "completed_at": "2026-10-22 13:21:15 +0800",
+      "resolution": "SMTP accepted hi@marketermilk.com free_listing/feature pitch (2026-10-22, sent_total 97); 待回复。",
+      "closed_round": "RR36-growth-20261022",
+      "archived_at": "2026-10-22T14:38:17",
+      "close_note": " | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档"
+    },
+    {
+      "id": "RR34-OPP-launchpedia",
+      "priority": "P2",
+      "task": "[RR34调研] 目录提交询问免费收录 @launchpedia.co (email: launchpediateam@gmail.com); 200提交表单,promote偏付费,先邮件问免费",
+      "source": "rr34_backlink_survey_20261022",
+      "url": "https://launchpedia.co/submit",
+      "channel": "email",
+      "contact": "launchpediateam@gmail.com",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T09:19:52.061044+08:00",
+      "completed_at": "2026-10-22 13:21:15 +0800",
+      "resolution": "SMTP accepted launchpediateam@gmail.com free-listing inquiry (2026-10-22, sent_total 97); 先问免费，待回复。",
+      "closed_round": "RR36-growth-20261022",
+      "archived_at": "2026-10-22T14:38:17",
+      "close_note": " | 指挥官2026-10-22 14:33验证：真完成（打磨师线上title/desc字符核验通过 / 拓荒者SMTP accepted留痕），归档"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
