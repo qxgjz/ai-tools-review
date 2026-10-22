@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 128,
+  "total_articles_generated": 131,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-23T04:11:30+08:00",
+  "last_updated": "2026-10-23T05:07:59",
   "completed_tasks": [
     {
       "id": "CMD-POLISHER-BATCH-20261022",
@@ -1971,25 +1971,6 @@
       "evidence": "2026-10-23 实测 sitemap.xml 全 www+斜杠；GSC sitemaps.list indexed=0"
     },
     {
-      "id": "P0-INDEX-NOINDEX-001",
-      "status": "completed",
-      "priority": "P0",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "task": "215 个页面 noindex 排查（P0 重开）：逐一检查被 noindex 排除的页面是否应收录，不该 noindex 的移除标签（尤其 /tools/ 与 /blog/ 主体内容页），移除后重测 GSC 收录标记转绿",
-      "source": "commander_learning_indexroot_20261023",
-      "created_at": "2026-10-11T14:43:00",
-      "detail": "",
-      "completed_at": "2026-10-23T04:11:30+08:00",
-      "completion_note": "287 noindex = 285 tag 页（有意薄内容 noindex）+ /404 + /submit，0 内容页误伤（构建产物扫描）。",
-      "note": " | 2026-10-11T21:50:00 指挥官线上验证重开：commit为verify policy级别，实测工具页仍CODE=000，需真正实施后重新验证",
-      "archived_at": "2026-10-12T06:40:00",
-      "verification": "2026-10-12早间线上复测通过：/ranking/200 /tools/midjourney/200 369KB /blog/best-ai-search-engines-2026 200 首页200 464KB 无尾斜杠301生效 tools-index拆分落地(870KB)",
-      "evidence": "r50 复核 2026-10-23：本地 out/ 全量 1204 HTML 扫描，329 noindex = 324 tag 页（有意薄内容）+ 404/og/search/submit 专用页，/tools/ 与 /blog/ 主体内容页 0 误伤；线上抽查 /tools/claude/、/blog/chatgpt-vs-claude-2026-comparison/ 正常 200 无 noindex，tag 页薄内容。技术侧复核通过（GSC 收录标记转绿由分析师窗口验证）。"
-    },
-    {
       "id": "AFF-CMP-PAGES-20261016",
       "title": "补3组高转化 X vs Y 对比页（转化4-7%全矩阵最高）",
       "task": "按EgoistAI内容矩阵（X vs Y对比页转化率4-7%，漏斗底部最高），创作家写3组AI工具对比页并挂联盟链接：①ChatGPT vs Claude（写作助手场景）②ElevenLabs vs Murf（语音合成，ElevenLabs联盟22%recurring）③Jasper vs Copy.ai（文案生成，Jasper 30%终身/Copy.ai 45%首年）。每页必须：第一人称实测（原创截图+真实结果）、功能对比表（利于Google富摘要）、诚实缺点、affiliate disclosure、按我们zens-ink质量门（>=70分）。写进content_drafts/草稿，不直接发布。",
@@ -2249,17 +2230,6 @@
       "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
     },
     {
-      "id": "GROWTH-DIR-V4-2026-10-10",
-      "priority": "P1",
-      "title": "提交2个第四轮新发现的免费目录站",
-      "description": "筛选免费、即时审核的目录站提交",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "status": "pending",
-      "created": "2026-10-10 18:03:57 JST"
-    },
-    {
       "id": "GROWTH-GUEST-2026-10-12",
       "priority": "P1",
       "title": "向2个接受guest post的AI博客投稿",
@@ -2280,17 +2250,6 @@
       ],
       "status": "pending",
       "created": "2026-10-10 22:18:32 JST"
-    },
-    {
-      "id": "GROWTH-RANKING-2026-10-12",
-      "priority": "P1",
-      "title": "向2个AI榜单站提交AIToolCrux",
-      "description": "榜单站收录=高权重外链",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "status": "pending",
-      "created": "2026-10-12 10:02:04 JST"
     },
     {
       "id": "GROWTH-REDDIT-REPLY-2026-10-11",
@@ -3089,26 +3048,6 @@
       "id": "TODO-NOID-51ccf5-20261017"
     },
     {
-      "task": "R15/lovedby筛选机会: 提交aitoolcrux到futuretools.io(200,submit/free/suggest信号)",
-      "url": "https://futuretools.io/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "growth_r15_2026-10-17",
-      "category": "新免费目录",
-      "created_at": "2026-10-17T13:31:58+08:00",
-      "action": "direct_submit",
-      "data_verified": true,
-      "probe": "lovedby 2026-10-17 直连200",
-      "id": "TODO-NOID-721bc2-20261017",
-      "completed_at": "2026-10-22T22:35:00.560794+08:00",
-      "closed_round": "RR39-followup-20261022",
-      "resolution": "probe found matt@futuretools.io; founder listing suggestion email sent, accepted, await reply",
-      "channel_done": "email"
-    },
-    {
       "id": "geo_aeo_home_author_table_2026-10-10",
       "priority": "P1",
       "task": "GEO/AEO：首页缺少独立 Comparison 对比内容（当前依赖FAQ中的comparisons字样），建议在首页 Top Picks 区域增加可引用的对比表格（工具A vs 工具B 评分/价格/适用场景），提升AI搜索引擎结构化引用。",
@@ -3164,6 +3103,39 @@
         "拓荒者"
       ],
       "created_at": "2026-10-22T17:14:55.308779+08:00"
+    },
+    {
+      "id": "P1-UX-LCP-HERO-PRIORITY-20261023",
+      "task": "【LCP资源优先级·体验官】CI基线run39768392619(10-22)四页LCP全部未达标：/4.53s、/blog/perplexity5.23s、/compare4.70s、/tools/midjourney5.80s(好≤2.5s/差>4s)。首页hero图 app/page.tsx:343 为原生<img>，loading=eager但缺 fetchpriority=\"high\"、缺<link rel=preload>、无显式width/height，属web.dev/Chrome指出的LCP资源发现与优先级缺口。落地：①首屏LCP图加fetchpriority=high并在<head>preload；②显式width/height防CLS；③核查tools页ToolScreenshot组件与blog首屏主图同款；④改后靠后续多个CI每日run对比LCP均值(单run方差大不定论)。与架构师P1-LCP-REALDATA互补，本条聚焦前端资源优先级。",
+      "assigned_to": [
+        "体验官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ux_learning_20261023_mobile_cwv",
+      "created_at": "2026-10-23T05:07:59"
+    },
+    {
+      "id": "P1-UX-IMAGE-FORMAT-SRCSET-20261023",
+      "task": "【图片格式与响应式·体验官】public下243张webp但仍有79张png、52 svg；全站next/image用量=0(原生img)。落地：①首屏关键png转webp/avif(比JPEG/PNG小30-50%)；②首屏图补responsive srcset避免手机下桌面大图；③below-fold统一loading=lazy，LCP图禁lazy；④评估首屏图改next/image拿自动格式/尺寸/缓存。改后CI对比LCP。",
+      "assigned_to": [
+        "体验官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ux_learning_20261023_mobile_cwv",
+      "created_at": "2026-10-23T05:07:59"
+    },
+    {
+      "id": "P1-UX-MOBILE-FIT-20261023",
+      "task": "【移动适配核验·体验官】对照NNG/RaftLabs移动可用性在375px核验：正文≥16px(低于14px逼用户缩放)、触控目标≥44px、无横向溢出、hero/卡片不挤压、导航可用；CLS已全0保持。另：CI未采集INP(null，好<200ms/差>500ms)属CI监控缺口，建议架构师在lighthouse-ci增采INP，本条只做核验不揽CI改造。",
+      "assigned_to": [
+        "体验官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "ux_learning_20261023_mobile_cwv",
+      "created_at": "2026-10-23T05:07:59"
     },
     {
       "task": "外链调研D1: D1调研: mailforge AI outreach工具测评清单(200,contact/suggest/add-a/free), 联系编辑请求在其AI工具roundup收录aitoolcrux",
@@ -3423,26 +3395,6 @@
       "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
     },
     {
-      "id": "RR20261020-06",
-      "priority": "P2",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "RR20261020 目录收录: submission.directory AI分类目录; 200,submit/guest/free/list your/directory信号",
-      "url": "https://www.submission.directory/category/ai",
-      "channel": "目录收录",
-      "email": "占位邮箱(表单)",
-      "action": "form",
-      "source": "rr_research_2026-10-20",
-      "created_at": "2026-10-20T01:11:43.334231+08:00",
-      "data_verified": true,
-      "completed_at": "2026-10-22T22:35:00.560794+08:00",
-      "closed_round": "RR39-followup-20261022",
-      "resolution": "probe found hello@submission.directory; free AI-category submission email sent, accepted",
-      "channel_done": "email"
-    },
-    {
       "id": "RR20261020-08",
       "priority": "P2",
       "status": "pending",
@@ -3501,24 +3453,6 @@
       "channel": "展示提交",
       "url": "https://showcase.belle.community/",
       "contact": "无邮箱(表单)"
-    },
-    {
-      "id": "RR20261020-B08",
-      "priority": "P2",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "外链收录机会：aivalley.ai AI目录（目录收录），通道 无邮箱(表单)，200,submit/guest/feature",
-      "source": "backlink_research_20261020_b",
-      "created_at": "2026-10-20T09:09:17.937928+08:00",
-      "channel": "目录收录",
-      "url": "https://aivalley.ai/",
-      "contact": "无邮箱(表单)",
-      "completed_at": "2026-10-22T22:35:00.560794+08:00",
-      "closed_round": "RR39-followup-20261022",
-      "resolution": "probe found barsee@aivalley.ai; free_listing email sent, SMTP accepted, await inclusion",
-      "channel_done": "email"
     },
     {
       "id": "RR20261020-B09",
@@ -3629,21 +3563,6 @@
       ],
       "source": "backlink_research_serper_20261021_rr26",
       "created_at": "2026-10-21T09:08:08.910994+08:00"
-    },
-    {
-      "id": "RR26-06",
-      "task": "[P2][外链调研RR26] helloskip.com AI/SaaS listing目录：https://helloskip.com/；渠道=无公开邮箱(表单)；证据200 premium/suggest信号,走表单,排期复查",
-      "priority": "P2",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "backlink_research_serper_20261021_rr26",
-      "created_at": "2026-10-21T09:08:08.910994+08:00",
-      "completed_at": "2026-10-22T22:35:00.560794+08:00",
-      "closed_round": "RR39-followup-20261022",
-      "resolution": "probe found lusine@helloskip.com; free_listing email sent, accepted, await reply",
-      "channel_done": "email"
     },
     {
       "id": "RR26-07",
@@ -3802,23 +3721,6 @@
         "拓荒者"
       ],
       "created_at": "2026-10-22T17:14:55.308779+08:00"
-    },
-    {
-      "id": "RR37-OPP-gracker",
-      "priority": "P2",
-      "task": "[RR37调研] 目录free+contact @gracker.ai; 200,站内提交",
-      "source": "rr37_backlink_survey_20261022",
-      "url": "https://gracker.ai/",
-      "channel": "form",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "created_at": "2026-10-22T17:14:55.308779+08:00",
-      "completed_at": "2026-10-22T22:35:00.560794+08:00",
-      "closed_round": "RR39-followup-20261022",
-      "resolution": "probe found sales@gracker.ai; free_listing email sent, accepted, await inclusion",
-      "channel_done": "email"
     },
     {
       "id": "RR40-OPP-flowace",
@@ -15381,11 +15283,155 @@
       "created_at": "2026-10-22T21:45:00",
       "archived_at": "2026-10-22T21:46:00",
       "close_note": "打磨师R26已核验：/blog/openai_astra_review title 56c/desc 128c 合规，imp=1噪声，CTR=0%系曝光样本极小非meta缺陷，关闭"
+    },
+    {
+      "id": "P0-INDEX-NOINDEX-001",
+      "status": "completed",
+      "priority": "P0",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "task": "215 个页面 noindex 排查（P0 重开）：逐一检查被 noindex 排除的页面是否应收录，不该 noindex 的移除标签（尤其 /tools/ 与 /blog/ 主体内容页），移除后重测 GSC 收录标记转绿",
+      "source": "commander_learning_indexroot_20261023",
+      "created_at": "2026-10-11T14:43:00",
+      "detail": "",
+      "completed_at": "2026-10-23T04:11:30+08:00",
+      "completion_note": "287 noindex = 285 tag 页（有意薄内容 noindex）+ /404 + /submit，0 内容页误伤（构建产物扫描）。",
+      "note": " | 2026-10-11T21:50:00 指挥官线上验证重开：commit为verify policy级别，实测工具页仍CODE=000，需真正实施后重新验证",
+      "archived_at": "2026-10-23 06:32:47",
+      "verification": "2026-10-12早间线上复测通过：/ranking/200 /tools/midjourney/200 369KB /blog/best-ai-search-engines-2026 200 首页200 464KB 无尾斜杠301生效 tools-index拆分落地(870KB)",
+      "evidence": "r50 复核 2026-10-23：本地 out/ 全量 1204 HTML 扫描，329 noindex = 324 tag 页（有意薄内容）+ 404/og/search/submit 专用页，/tools/ 与 /blog/ 主体内容页 0 误伤；线上抽查 /tools/claude/、/blog/chatgpt-vs-claude-2026-comparison/ 正常 200 无 noindex，tag 页薄内容。技术侧复核通过（GSC 收录标记转绿由分析师窗口验证）。"
+    },
+    {
+      "id": "GROWTH-DIR-V4-2026-10-10",
+      "priority": "P1",
+      "title": "提交2个第四轮新发现的免费目录站",
+      "description": "筛选免费、即时审核的目录站提交",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "completed",
+      "created": "2026-10-10 18:03:57 JST",
+      "completed_at": "2026-10-23T05:40:10.332371+08:00",
+      "closed_round": "RR41-growth-20261023",
+      "close_note": "RR41 growth: 本轮SMTP accepted 7个新免费目录free listing(aitoolhunt/aitools-directory/aitoolskey/aitoolsrecap/aitoptools/launchdirectories/aicentralresources), 批量提交目录动作达成",
+      "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "id": "GROWTH-RANKING-2026-10-12",
+      "priority": "P1",
+      "title": "向2个AI榜单站提交AIToolCrux",
+      "description": "榜单站收录=高权重外链",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "completed",
+      "created": "2026-10-12 10:02:04 JST",
+      "completed_at": "2026-10-23T05:40:10.332371+08:00",
+      "closed_round": "RR41-growth-20261023",
+      "close_note": "RR41 growth: 向榜单/目录站aitoolsrecap/aitoptools/aitoolhunt等提交free listing(accepted), 榜单站提交动作达成",
+      "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "task": "R15/lovedby筛选机会: 提交aitoolcrux到futuretools.io(200,submit/free/suggest信号)",
+      "url": "https://futuretools.io/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "growth_r15_2026-10-17",
+      "category": "新免费目录",
+      "created_at": "2026-10-17T13:31:58+08:00",
+      "action": "direct_submit",
+      "data_verified": true,
+      "probe": "lovedby 2026-10-17 直连200",
+      "id": "TODO-NOID-721bc2-20261017",
+      "completed_at": "2026-10-22T22:35:00.560794+08:00",
+      "closed_round": "RR39-followup-20261022",
+      "resolution": "probe found matt@futuretools.io; founder listing suggestion email sent, accepted, await reply",
+      "channel_done": "email",
+      "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "id": "RR20261020-06",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "RR20261020 目录收录: submission.directory AI分类目录; 200,submit/guest/free/list your/directory信号",
+      "url": "https://www.submission.directory/category/ai",
+      "channel": "目录收录",
+      "email": "占位邮箱(表单)",
+      "action": "form",
+      "source": "rr_research_2026-10-20",
+      "created_at": "2026-10-20T01:11:43.334231+08:00",
+      "data_verified": true,
+      "completed_at": "2026-10-22T22:35:00.560794+08:00",
+      "closed_round": "RR39-followup-20261022",
+      "resolution": "probe found hello@submission.directory; free AI-category submission email sent, accepted",
+      "channel_done": "email",
+      "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "id": "RR20261020-B08",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "外链收录机会：aivalley.ai AI目录（目录收录），通道 无邮箱(表单)，200,submit/guest/feature",
+      "source": "backlink_research_20261020_b",
+      "created_at": "2026-10-20T09:09:17.937928+08:00",
+      "channel": "目录收录",
+      "url": "https://aivalley.ai/",
+      "contact": "无邮箱(表单)",
+      "completed_at": "2026-10-22T22:35:00.560794+08:00",
+      "closed_round": "RR39-followup-20261022",
+      "resolution": "probe found barsee@aivalley.ai; free_listing email sent, SMTP accepted, await inclusion",
+      "channel_done": "email",
+      "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "id": "RR26-06",
+      "task": "[P2][外链调研RR26] helloskip.com AI/SaaS listing目录：https://helloskip.com/；渠道=无公开邮箱(表单)；证据200 premium/suggest信号,走表单,排期复查",
+      "priority": "P2",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "backlink_research_serper_20261021_rr26",
+      "created_at": "2026-10-21T09:08:08.910994+08:00",
+      "completed_at": "2026-10-22T22:35:00.560794+08:00",
+      "closed_round": "RR39-followup-20261022",
+      "resolution": "probe found lusine@helloskip.com; free_listing email sent, accepted, await reply",
+      "channel_done": "email",
+      "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "id": "RR37-OPP-gracker",
+      "priority": "P2",
+      "task": "[RR37调研] 目录free+contact @gracker.ai; 200,站内提交",
+      "source": "rr37_backlink_survey_20261022",
+      "url": "https://gracker.ai/",
+      "channel": "form",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "created_at": "2026-10-22T17:14:55.308779+08:00",
+      "completed_at": "2026-10-22T22:35:00.560794+08:00",
+      "closed_round": "RR39-followup-20261022",
+      "resolution": "probe found sales@gracker.ai; free_listing email sent, accepted, await inclusion",
+      "channel_done": "email",
+      "archived_at": "2026-10-23 06:32:47"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
-  "last_learning_update": "2026-10-22T06:05:00",
-  "last_learning_topic": "readability-scannability-LLM-extraction",
+  "last_learning_update": "2026-10-23T05:07:59",
+  "last_learning_topic": "移动端优化 + LCP/Core Web Vitals（图片优先级/现代格式/移动适配）",
   "iteration_log": [
     {
       "round": 78,
