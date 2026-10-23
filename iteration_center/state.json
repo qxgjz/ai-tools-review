@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 131,
+  "total_articles_generated": 134,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -15953,8 +15953,8 @@
   "openseo_info": 476,
   "openseo_last_run": "2026-09-28 09:24",
   "last_published_article": {
-    "slug": "2026-10-22-elevenlabs-vs-cartesia-2026",
-    "batch": "46"
+    "slug": "heygen-vs-veed-2026",
+    "batch": "48"
   },
   "publication_stats": {
     "total_published": 1,
