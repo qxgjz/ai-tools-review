@@ -1389,20 +1389,6 @@
   ],
   "next_iteration_focus": [
     {
-      "id": "CF-20261017-005",
-      "task": "CF爬虫点名阻塞项：架构师已产出bot_traffic_pct=92.6+分析报告，但现有token无Logpush/AdaptiveGroups权限无法点名具体爬虫。需指挥官/用户提供：①CF Dashboard开启Logpush（HTTP请求日志，免费）或 ②Zone Analytics全权限API token（Analytics:Read+Logpush:Edit）或 ③Dashboard手动导出UA Top列表；拿到后继续点名GPTBot/CCBot等。",
-      "assigned_to": [
-        "指挥官"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "cf_bot_analysis_2026-10-17",
-      "created_at": "2026-10-17T06:40:00",
-      "blocks": [
-        "CF-20261017-001"
-      ]
-    },
-    {
       "id": "CMD-20261018-001",
       "status": "pending",
       "priority": "P0",
@@ -1441,52 +1427,6 @@
       "detail": "指挥官已自主落地4条外链（含DR96 GitHub）做示范；拓荒者必须批量执行aiscout/aitoolhunt/saashub/betalist等10+目标"
     },
     {
-      "id": "COMP-20261009-001",
-      "task": "竞品分析发现内容缺口: AI Agents 专门分类页和内容集群。竞品有 567-620, 我们 0。建议写 Best AI Agents 2026: Tested & Compared (6维度实测), SERP竞争度=High",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "competitor_analysis_2026-10-09",
-      "data_verified": true,
-      "competitor_count": "567-620",
-      "our_count": 0,
-      "suggested_slug": "/blog/best-ai-agents-2026",
-      "serp_competition": "High",
-      "created_at": "2026-10-09T19:14:16"
-    },
-    {
-      "id": "COMP-20261009-003",
-      "task": "竞品分析发现内容缺口: AI Tool Comparison 专门内容。竞品有 5+ 专门对比站, 我们 1 page (pos 38.8)。建议写 Best AI Comparison Tools 2026: Which Platform Gives the Most Accurate Verdict?, SERP竞争度=Low (蓝海)",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "competitor_analysis_2026-10-09",
-      "data_verified": true,
-      "competitor_count": "5+ 专门对比站",
-      "our_count": "1 page (pos 38.8)",
-      "suggested_slug": "/blog/best-ai-comparison-tools-2026",
-      "serp_competition": "Low (蓝海)",
-      "created_at": "2026-10-09T19:14:16"
-    },
-    {
-      "id": "COMP-20261012-01",
-      "task": "竞品 futurepedia 有 ai-agents 分类，我们 0 篇。建议写: Best AI Agents 2026: Tested & Compared (6维度实测), slug: /blog/best-ai-agents-2026",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "competitor_gap_futurepedia",
-      "competitor_category": "ai-agents",
-      "our_count": 0,
-      "competitor_count": 1,
-      "created_at": "2026-10-12T21:45:39"
-    },
-    {
       "id": "GROWTH-REDDIT-4STEP-20261018",
       "title": "落地Reddit四步外链系统：r/microsaas+r/sideproject+r/artificial 找5个AI工具创始人帖，评论→DM免费收录→24h内Google排名截图交付",
       "assigned_to": "window2",
@@ -1495,140 +1435,6 @@
       "source": "commander_learning_AI工具站案例",
       "created": "2026-10-18",
       "detail": "AIToolsRecap验证50-60%回复率/3天5工具商；指挥官已有免费收录入口(insidr/toolsify已通)，截图用OpenSEO排名数据；本周落地5个工具商"
-    },
-    {
-      "id": "KW-20261013-01",
-      "task": "基于关键词 [best ai music generators 2026] 写 2000 字新文章，标题建议 [Best AI Music Generators 2026: Suno vs Udio vs Soundraw Tested]，slug 建议 [/blog/best-ai-music-generators-2026]",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-13",
-      "keyword": "best ai music generators 2026",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按用途分类（商用授权/个人创作/视频配乐），附价格和授权模式对比，差异化强调商用授权安全",
-      "created_at": "2026-10-13T09:03:16"
-    },
-    {
-      "id": "KW-20261013-02",
-      "task": "基于关键词 [best ai text to speech tools 2026] 写 2000 字新文章，标题建议 [Best AI Text-to-Speech Tools 2026: ElevenLabs vs Murf vs Cartesia]，slug 建议 [/blog/best-ai-text-to-speech-tools-2026]",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-13",
-      "keyword": "best ai text to speech tools 2026",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按场景分类（视频配音/客服机器人/播客/开发者API），附每分钟成本和延迟对比，差异化强调开发者友好",
-      "created_at": "2026-10-13T09:03:16"
-    },
-    {
-      "id": "KW-20261013-03",
-      "task": "基于关键词 [best ai avatar generators 2026] 写 2000 字新文章，标题建议 [Best AI Avatar Generators 2026: HeyGen vs Synthesia vs D-ID]，slug 建议 [/blog/best-ai-avatar-generators-2026]",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-13",
-      "keyword": "best ai avatar generators 2026",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按用户类型分类（企业培训/营销视频/UGC广告/个人品牌），附水印政策和商用权对比，差异化强调无水印方案",
-      "created_at": "2026-10-13T09:03:16"
-    },
-    {
-      "id": "KW-20261014-P0-01",
-      "task": "基于关键词 [best ai content detector 2026] 写 2000 字新文章，标题建议 [Best AI Content Detectors 2026: 8 Tools Tested for Accuracy & False Positives]，slug 建议 [best-ai-content-detectors-2026]",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "独立评测假阳性率，ESL写作场景实测，免费vs付费对比",
-      "keyword": "best ai content detector 2026",
-      "created_at": "2026-10-14T18:32:09"
-    },
-    {
-      "id": "KW-20261014-P0-02",
-      "task": "基于关键词 [best ai seo tools 2026] 写 2000 字新文章，标题建议 [Best AI SEO Tools 2026: GEO/AEO Tools for Small Teams]，slug 建议 [best-ai-seo-tools-2026]",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "GEO/AEO 新赛道独立评测，小团队/独立开发者性价比",
-      "keyword": "best ai seo tools 2026",
-      "created_at": "2026-10-14T18:32:09"
-    },
-    {
-      "id": "KW-20261014-P0-03",
-      "task": "基于关键词 [best ai logo generator 2026] 写 2000 字新文章，标题建议 [Best AI Logo Generators 2026: SVG Quality & Commercial Rights Compared]，slug 建议 [best-ai-logo-generators-2026]",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-14",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "设计师视角：矢量质量、编辑自由度、商用版权条款对比",
-      "keyword": "best ai logo generator 2026",
-      "created_at": "2026-10-14T18:32:09"
-    },
-    {
-      "id": "LEARN-20261014-04",
-      "task": "内容策略：43.8%的ChatGPT引用来自'best X'列表文章。确保每个主要类别都有一篇全面的best-of文章（10-15个工具起步），定期更新",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "data_learning_2026-10-14",
-      "topic": "GEO - best-of listicles",
-      "knowledge": "best X listicles是AI引用最常见的内容格式（43.8%）",
-      "created_at": "2026-10-14T05:01:39"
-    },
-    {
-      "id": "P0-CMD-CREATOR-SPEED-20261019",
-      "title": "[指挥官] 完成率15.1%<50%催办：创作家批量加快（当前pending 60+，一次产≥8篇/天或按SOP批量重写3篇/次持续推进）",
-      "assigned_to": "创作家",
-      "priority": "P0",
-      "status": "pending",
-      "source": "commander_qa_20261019",
-      "detail": "待办堆积主因创作家60+pending；新文章质量已达标(batch35/36=100分)，保持质量前提下加快吞吐",
-      "created_at": "2026-10-19T14:37:28.426505"
-    },
-    {
-      "id": "P0-CMD-SCOUT-SPEED-20261019",
-      "title": "[指挥官] 完成率15.1%<50%催办：拓荒者批量加快（当前pending 50，外链/邮件/收录落地持续推进，一次≥10条）",
-      "assigned_to": "拓荒者",
-      "priority": "P0",
-      "status": "pending",
-      "source": "commander_qa_20261019",
-      "detail": "外链completed真实(SMTP accepted+代理GET核验)，堆积主因待办量大；优先P0：Reddit四步+rank proof外联",
-      "created_at": "2026-10-19T14:37:28.426505"
-    },
-    {
-      "id": "P0-COMMUNITY-REDDIT-20261012",
-      "task": "Reddit社区增长(零预算最高ROI动作)：用户登录Beautiful_Smoke_2425后，先在r/SaaS/r/Entrepreneur/r/microsaas暖号——发2-3条故事型非销售内容/真诚回答（不是链接），积累账号可信度后再自然提到aitoolcrux；本周已收集3个待回复帖(r/SaaS 3条)优先真诚回答；禁止纯推销（参考：0观众0预算Reddit暖号→$17K/月案例）",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "commander_learning_cold_start_growth_20261012",
-      "created_at": "2026-10-12"
     },
     {
       "id": "P0-GEO-001",
@@ -1652,19 +1458,6 @@
       "source": "commander_learning_2026SEO_GEO_20261013"
     },
     {
-      "id": "P0-GEO-ELMO-TRACKER-20261020",
-      "title": "自托管 elmo AI可见性追踪器（Docker Compose）：监控 ChatGPT/Claude/Gemini/Perplexity 对 aitoolcrux 的提及与引用，建立 GEO 基线并纳入周报（30天目标A辅助验证）",
-      "priority": "P0",
-      "assigned_to": "分析师",
-      "status": "pending",
-      "source": "commander_learning_github_trending_20261020",
-      "evidence": "github.com/elmo AI可见性追踪器 235星 MIT；Docker Compose自托管零API费",
-      "created_at": "2026-10-20T08:02:09.063309",
-      "status_note_20261020b": "2026-10-20 批次二评估: elmo 项目已核实真实存在(elmohq.com, MIT, v0.2.6, Postgres 存储, BYOK 追踪 ChatGPT/Claude/Gemini/Perplexity 提及与引用, UI localhost:1515); 部署前提=Docker Engine 24+/Compose v2+Node 18+; 本机实测 docker 命令不存在(硬阻塞)→ 部署需先装 Docker(运维/用户动作), 分析师侧评估完成, 保持 pending",
-      "status_note_20261020c": "2026-10-20 批次三复查: docker 仍不可用(上轮实测), 部署阻塞不变, 保持 pending",
-      "block_note_20261022": "阻塞确认(10/22)：本机 docker 命令不可用（unavailable），elmo 需 Docker Compose 自托管→待运维安装 Docker Desktop 后解锁"
-    },
-    {
       "id": "P0-INDEXMON-CDP-CLOSE-20261019",
       "title": "闭环 AdsPower CDP 批量URL检查（40个 unknown 从未补全，10-13重跑20个仍全unknown）",
       "priority": "P0",
@@ -1677,51 +1470,6 @@
       "status_note_20261020c": "2026-10-20 批次三 重大进展: AdsPower CDP 已上线, 全量 68 URL 索引检查完成并保存 url_index_check_batch_0_67_20261020_201116.json; 状态分布 indexed 25/redirect 19/not_indexed 15/redirect_error 3/duplicate 1/unknown 5; 40 个 unknown 历史欠账已补全(现仅 5 unknown); 未编入索引合计 38/68=55.9%, 头部工具页 chatgpt/claude/gemini/midjourney/perplexity 全未收录→曝光断崖索引层根因; 剩余动作=架构师修复 redirect/not_indexed URL 后本通道复测(用户既定: 架构师验证坏URL修复必须用此通道实测复核)",
       "rerun_note_20261021c": "批次三CDP复测0-19段与早间一致(通道稳定可采信)：category/video+agent indexed；tools/chatgpt=redirect、tools/claude=not_indexed、tools/gemini=redirect_error 头部页未修复→保持pending",
       "rerun_note_20261022": "CDP复测0-19段(10/22 08:05)：tools/chatgpt=redirect、tools/claude=not_indexed、tools/gemini=redirect_error 连续3天一致未修复→P0保持；本轮新增波动：category/image+writing redirect→unknown(通道抖动)，category/code redirect→redirect_error"
-    },
-    {
-      "id": "P0-KW-EMAIL-20261018",
-      "task": "基于关键词 [best AI email tools 2026] 写 2000 字新文章，标题建议 [Best AI Email Tools 2026: 8 Email Assistants Tested on Gmail & Outlook]，slug 建议 [best-ai-email-tools-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-18",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "无偏实测+免费/开源角度（Inbox Zero）vs 付费（Superhuman/Shortwave），中小企业省钱视角",
-      "created_at": "2026-10-18T09:10:22"
-    },
-    {
-      "id": "P0-KW-FITNESS-20261018",
-      "task": "基于关键词 [best AI fitness apps 2026] 写 2000 字新文章，标题建议 [Best AI Fitness Apps 2026: 10 Workout & Nutrition Apps Compared]，slug 建议 [best-ai-fitness-apps-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-18",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "真机测试+免费替代（Planfit/Nike Training Club）vs 付费（Fitbod/JuggernautAI），避免站方自夸式评测",
-      "created_at": "2026-10-18T09:10:22"
-    },
-    {
-      "id": "P0-KW-LEGAL-20261018",
-      "task": "基于关键词 [best AI legal tools 2026] 写 2000 字新文章，标题建议 [Best AI Tools for Lawyers 2026: Contract Review & Research Compared]，slug 建议 [best-ai-legal-tools-2026]",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "status": "pending",
-      "source": "keyword_mining_2026-10-18",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "独立律师/自由职业者视角，聚焦 Spellbook/CoCounsel 性价比，避开 Harvey 大所叙事",
-      "created_at": "2026-10-18T09:10:22"
     },
     {
       "id": "P0-KW-ai-agent-vs-chatbot",
@@ -1856,26 +1604,6 @@
       "reopened_at": "2026-10-10"
     },
     {
-      "id": "P0-RANKPROOF-OUTREACH-20261019",
-      "title": "[战略学习] Google排名证明截图外联：对已收录50+工具方发'你的工具在Google排X位'邮件请求回链/社媒分享",
-      "assigned_to": "拓荒者",
-      "priority": "P0",
-      "status": "pending",
-      "source": "commander_learning_增长引擎_20261019",
-      "detail": "AIToolsRecap验证：收录后24h内发Google排名截图是最强销售工具(50-60%回复率)。用OpenSEO/Serper拉已收录工具在GSC中的真实排名，截图附邮件(复用g_mail_sent通道)，先免费收录后soft upsell $49/$99；完成后更新backlinks_tracking.md",
-      "created_at": "2026-10-19T08:01:53.867763"
-    },
-    {
-      "id": "P0-TIER1-DIRECTORY-SUBMIT-20261019",
-      "title": "[周会] Tier1目录批量提交：Product Hunt/G2/Capterra/TAAFT/Dang.ai/Futurepedia/Toolify（周三-周五发，4资产模板复用）",
-      "assigned_to": "拓荒者",
-      "priority": "P0",
-      "status": "pending",
-      "source": "commander_weekly_20261019_heloaitools",
-      "detail": "HeloAITools 2026指南：Tier1目录DR排序 PH91/G2 90/Capterra 89/TAAFT 76/Dang 72/Futurepedia 71/Toolify 70。先写4资产（tagline160字+short desc150-200词+long desc 300-500词+canonical描述）复用于全目录；周三-周五提交；完成后更新backlinks_tracking.md",
-      "created_at": "2026-10-19T06:50:20.402321"
-    },
-    {
       "task": "Reddit养号：登录Beautiful_Smoke_2425后，先在r/SaaS/r/ChatGPT/r/Entrepreneur发25条无产品真实评论（2-4周），零提及aitoolcrux",
       "assigned_to": [
         "拓荒者"
@@ -1932,26 +1660,276 @@
       "created": "2026-10-09 20:13:47 JST"
     },
     {
-      "id": "URGE-CREATOR-20261022",
-      "task": "【指挥官催办】创作家 pending 70 条超重，完成率0%<50%红线：本轮 Batch44/45/46 已量产 9 篇但 state.json 大量待办未同步关闭——立即批量执行并逐条关闭：优先 CMD-CREATOR-VI DEO-DESIGN-20261022 视频/设计词承接、共担 CMD-CREATOR-LISTING-PRICING/RESEARCH-ASSET 成文，一次成文≥3篇并写回 state.json status=completed+evidence",
-      "status": "pending",
-      "priority": "P0",
+      "id": "COMP-20261009-001",
+      "task": "竞品分析发现内容缺口: AI Agents 专门分类页和内容集群。竞品有 567-620, 我们 0。建议写 Best AI Agents 2026: Tested & Compared (6维度实测), SERP竞争度=High",
       "assigned_to": [
         "创作家"
       ],
-      "source": "commander_urge_20261022",
-      "created_at": "2026-10-22T21:48:00"
+      "priority": "P0",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-09",
+      "data_verified": true,
+      "competitor_count": "567-620",
+      "our_count": 0,
+      "suggested_slug": "/blog/best-ai-agents-2026",
+      "serp_competition": "High",
+      "created_at": "2026-10-09T19:14:16"
     },
     {
-      "id": "URGE-GROWTH-20261022",
-      "task": "【指挥官催办】拓荒者 pending 68 条次重，完成率0%<50%红线：RR38 已 SMTP 3/3 accepted 但 state.json 待办未批量关闭——立即批量执行外链目录提交/HN评论（AdsPower登录态未打通则明示阻塞），并按 RR38 档账本把已发信调研待办逐条标记 completed+evidence，一次≥5条",
-      "status": "pending",
+      "id": "COMP-20261009-003",
+      "task": "竞品分析发现内容缺口: AI Tool Comparison 专门内容。竞品有 5+ 专门对比站, 我们 1 page (pos 38.8)。建议写 Best AI Comparison Tools 2026: Which Platform Gives the Most Accurate Verdict?, SERP竞争度=Low (蓝海)",
+      "assigned_to": [
+        "创作家"
+      ],
       "priority": "P0",
+      "status": "pending",
+      "source": "competitor_analysis_2026-10-09",
+      "data_verified": true,
+      "competitor_count": "5+ 专门对比站",
+      "our_count": "1 page (pos 38.8)",
+      "suggested_slug": "/blog/best-ai-comparison-tools-2026",
+      "serp_competition": "Low (蓝海)",
+      "created_at": "2026-10-09T19:14:16"
+    },
+    {
+      "id": "P0-COMMUNITY-REDDIT-20261012",
+      "task": "Reddit社区增长(零预算最高ROI动作)：用户登录Beautiful_Smoke_2425后，先在r/SaaS/r/Entrepreneur/r/microsaas暖号——发2-3条故事型非销售内容/真诚回答（不是链接），积累账号可信度后再自然提到aitoolcrux；本周已收集3个待回复帖(r/SaaS 3条)优先真诚回答；禁止纯推销（参考：0观众0预算Reddit暖号→$17K/月案例）",
+      "priority": "P0",
+      "status": "pending",
       "assigned_to": [
         "拓荒者"
       ],
-      "source": "commander_urge_20261022",
-      "created_at": "2026-10-22T21:48:00"
+      "source": "commander_learning_cold_start_growth_20261012",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "COMP-20261012-01",
+      "task": "竞品 futurepedia 有 ai-agents 分类，我们 0 篇。建议写: Best AI Agents 2026: Tested & Compared (6维度实测), slug: /blog/best-ai-agents-2026",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "competitor_gap_futurepedia",
+      "competitor_category": "ai-agents",
+      "our_count": 0,
+      "competitor_count": 1,
+      "created_at": "2026-10-12T21:45:39"
+    },
+    {
+      "id": "KW-20261013-01",
+      "task": "基于关键词 [best ai music generators 2026] 写 2000 字新文章，标题建议 [Best AI Music Generators 2026: Suno vs Udio vs Soundraw Tested]，slug 建议 [/blog/best-ai-music-generators-2026]",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-13",
+      "keyword": "best ai music generators 2026",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按用途分类（商用授权/个人创作/视频配乐），附价格和授权模式对比，差异化强调商用授权安全",
+      "created_at": "2026-10-13T09:03:16"
+    },
+    {
+      "id": "KW-20261013-02",
+      "task": "基于关键词 [best ai text to speech tools 2026] 写 2000 字新文章，标题建议 [Best AI Text-to-Speech Tools 2026: ElevenLabs vs Murf vs Cartesia]，slug 建议 [/blog/best-ai-text-to-speech-tools-2026]",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-13",
+      "keyword": "best ai text to speech tools 2026",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按场景分类（视频配音/客服机器人/播客/开发者API），附每分钟成本和延迟对比，差异化强调开发者友好",
+      "created_at": "2026-10-13T09:03:16"
+    },
+    {
+      "id": "KW-20261013-03",
+      "task": "基于关键词 [best ai avatar generators 2026] 写 2000 字新文章，标题建议 [Best AI Avatar Generators 2026: HeyGen vs Synthesia vs D-ID]，slug 建议 [/blog/best-ai-avatar-generators-2026]",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-13",
+      "keyword": "best ai avatar generators 2026",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按用户类型分类（企业培训/营销视频/UGC广告/个人品牌），附水印政策和商用权对比，差异化强调无水印方案",
+      "created_at": "2026-10-13T09:03:16"
+    },
+    {
+      "id": "LEARN-20261014-04",
+      "task": "内容策略：43.8%的ChatGPT引用来自'best X'列表文章。确保每个主要类别都有一篇全面的best-of文章（10-15个工具起步），定期更新",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - best-of listicles",
+      "knowledge": "best X listicles是AI引用最常见的内容格式（43.8%）",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "KW-20261014-P0-01",
+      "task": "基于关键词 [best ai content detector 2026] 写 2000 字新文章，标题建议 [Best AI Content Detectors 2026: 8 Tools Tested for Accuracy & False Positives]，slug 建议 [best-ai-content-detectors-2026]",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "独立评测假阳性率，ESL写作场景实测，免费vs付费对比",
+      "keyword": "best ai content detector 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P0-02",
+      "task": "基于关键词 [best ai seo tools 2026] 写 2000 字新文章，标题建议 [Best AI SEO Tools 2026: GEO/AEO Tools for Small Teams]，slug 建议 [best-ai-seo-tools-2026]",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "GEO/AEO 新赛道独立评测，小团队/独立开发者性价比",
+      "keyword": "best ai seo tools 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "KW-20261014-P0-03",
+      "task": "基于关键词 [best ai logo generator 2026] 写 2000 字新文章，标题建议 [Best AI Logo Generators 2026: SVG Quality & Commercial Rights Compared]，slug 建议 [best-ai-logo-generators-2026]",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-14",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "设计师视角：矢量质量、编辑自由度、商用版权条款对比",
+      "keyword": "best ai logo generator 2026",
+      "created_at": "2026-10-14T18:32:09"
+    },
+    {
+      "id": "CF-20261017-005",
+      "task": "CF爬虫点名阻塞项：架构师已产出bot_traffic_pct=92.6+分析报告，但现有token无Logpush/AdaptiveGroups权限无法点名具体爬虫。需指挥官/用户提供：①CF Dashboard开启Logpush（HTTP请求日志，免费）或 ②Zone Analytics全权限API token（Analytics:Read+Logpush:Edit）或 ③Dashboard手动导出UA Top列表；拿到后继续点名GPTBot/CCBot等。",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "cf_bot_analysis_2026-10-17",
+      "created_at": "2026-10-17T06:40:00",
+      "blocks": [
+        "CF-20261017-001"
+      ]
+    },
+    {
+      "id": "P0-KW-EMAIL-20261018",
+      "task": "基于关键词 [best AI email tools 2026] 写 2000 字新文章，标题建议 [Best AI Email Tools 2026: 8 Email Assistants Tested on Gmail & Outlook]，slug 建议 [best-ai-email-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-18",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "无偏实测+免费/开源角度（Inbox Zero）vs 付费（Superhuman/Shortwave），中小企业省钱视角",
+      "created_at": "2026-10-18T09:10:22"
+    },
+    {
+      "id": "P0-KW-FITNESS-20261018",
+      "task": "基于关键词 [best AI fitness apps 2026] 写 2000 字新文章，标题建议 [Best AI Fitness Apps 2026: 10 Workout & Nutrition Apps Compared]，slug 建议 [best-ai-fitness-apps-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-18",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "真机测试+免费替代（Planfit/Nike Training Club）vs 付费（Fitbod/JuggernautAI），避免站方自夸式评测",
+      "created_at": "2026-10-18T09:10:22"
+    },
+    {
+      "id": "P0-KW-LEGAL-20261018",
+      "task": "基于关键词 [best AI legal tools 2026] 写 2000 字新文章，标题建议 [Best AI Tools for Lawyers 2026: Contract Review & Research Compared]，slug 建议 [best-ai-legal-tools-2026]",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "status": "pending",
+      "source": "keyword_mining_2026-10-18",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "独立律师/自由职业者视角，聚焦 Spellbook/CoCounsel 性价比，避开 Harvey 大所叙事",
+      "created_at": "2026-10-18T09:10:22"
+    },
+    {
+      "id": "P0-TIER1-DIRECTORY-SUBMIT-20261019",
+      "title": "[周会] Tier1目录批量提交：Product Hunt/G2/Capterra/TAAFT/Dang.ai/Futurepedia/Toolify（周三-周五发，4资产模板复用）",
+      "assigned_to": "拓荒者",
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_weekly_20261019_heloaitools",
+      "detail": "HeloAITools 2026指南：Tier1目录DR排序 PH91/G2 90/Capterra 89/TAAFT 76/Dang 72/Futurepedia 71/Toolify 70。先写4资产（tagline160字+short desc150-200词+long desc 300-500词+canonical描述）复用于全目录；周三-周五提交；完成后更新backlinks_tracking.md",
+      "created_at": "2026-10-19T06:50:20.402321"
+    },
+    {
+      "id": "P0-RANKPROOF-OUTREACH-20261019",
+      "title": "[战略学习] Google排名证明截图外联：对已收录50+工具方发'你的工具在Google排X位'邮件请求回链/社媒分享",
+      "assigned_to": "拓荒者",
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_learning_增长引擎_20261019",
+      "detail": "AIToolsRecap验证：收录后24h内发Google排名截图是最强销售工具(50-60%回复率)。用OpenSEO/Serper拉已收录工具在GSC中的真实排名，截图附邮件(复用g_mail_sent通道)，先免费收录后soft upsell $49/$99；完成后更新backlinks_tracking.md",
+      "created_at": "2026-10-19T08:01:53.867763"
+    },
+    {
+      "id": "P0-CMD-CREATOR-SPEED-20261019",
+      "title": "[指挥官] 完成率15.1%<50%催办：创作家批量加快（当前pending 60+，一次产≥8篇/天或按SOP批量重写3篇/次持续推进）",
+      "assigned_to": "创作家",
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_qa_20261019",
+      "detail": "待办堆积主因创作家60+pending；新文章质量已达标(batch35/36=100分)，保持质量前提下加快吞吐",
+      "created_at": "2026-10-19T14:37:28.426505"
+    },
+    {
+      "id": "P0-CMD-SCOUT-SPEED-20261019",
+      "title": "[指挥官] 完成率15.1%<50%催办：拓荒者批量加快（当前pending 50，外链/邮件/收录落地持续推进，一次≥10条）",
+      "assigned_to": "拓荒者",
+      "priority": "P0",
+      "status": "pending",
+      "source": "commander_qa_20261019",
+      "detail": "外链completed真实(SMTP accepted+代理GET核验)，堆积主因待办量大；优先P0：Reddit四步+rank proof外联",
+      "created_at": "2026-10-19T14:37:28.426505"
+    },
+    {
+      "id": "P0-GEO-ELMO-TRACKER-20261020",
+      "title": "自托管 elmo AI可见性追踪器（Docker Compose）：监控 ChatGPT/Claude/Gemini/Perplexity 对 aitoolcrux 的提及与引用，建立 GEO 基线并纳入周报（30天目标A辅助验证）",
+      "priority": "P0",
+      "assigned_to": "分析师",
+      "status": "pending",
+      "source": "commander_learning_github_trending_20261020",
+      "evidence": "github.com/elmo AI可见性追踪器 235星 MIT；Docker Compose自托管零API费",
+      "created_at": "2026-10-20T08:02:09.063309",
+      "status_note_20261020b": "2026-10-20 批次二评估: elmo 项目已核实真实存在(elmohq.com, MIT, v0.2.6, Postgres 存储, BYOK 追踪 ChatGPT/Claude/Gemini/Perplexity 提及与引用, UI localhost:1515); 部署前提=Docker Engine 24+/Compose v2+Node 18+; 本机实测 docker 命令不存在(硬阻塞)→ 部署需先装 Docker(运维/用户动作), 分析师侧评估完成, 保持 pending",
+      "status_note_20261020c": "2026-10-20 批次三复查: docker 仍不可用(上轮实测), 部署阻塞不变, 保持 pending",
+      "block_note_20261022": "阻塞确认(10/22)：本机 docker 命令不可用（unavailable），elmo 需 Docker Compose 自托管→待运维安装 Docker Desktop 后解锁"
     },
     {
       "id": "P2-URL-CANONICAL-20261021",
@@ -1984,108 +1962,282 @@
       "evidence": "2026-10-23 实测 sitemap.xml 全 www+斜杠；GSC sitemaps.list indexed=0"
     },
     {
-      "id": "AFF-CMP-PAGES-20261016",
-      "title": "补3组高转化 X vs Y 对比页（转化4-7%全矩阵最高）",
-      "task": "按EgoistAI内容矩阵（X vs Y对比页转化率4-7%，漏斗底部最高），创作家写3组AI工具对比页并挂联盟链接：①ChatGPT vs Claude（写作助手场景）②ElevenLabs vs Murf（语音合成，ElevenLabs联盟22%recurring）③Jasper vs Copy.ai（文案生成，Jasper 30%终身/Copy.ai 45%首年）。每页必须：第一人称实测（原创截图+真实结果）、功能对比表（利于Google富摘要）、诚实缺点、affiliate disclosure、按我们zens-ink质量门（>=70分）。写进content_drafts/草稿，不直接发布。",
-      "priority": "P1",
+      "id": "URGE-CREATOR-20261022",
+      "task": "【指挥官催办】创作家 pending 70 条超重，完成率0%<50%红线：本轮 Batch44/45/46 已量产 9 篇但 state.json 大量待办未同步关闭——立即批量执行并逐条关闭：优先 CMD-CREATOR-VI DEO-DESIGN-20261022 视频/设计词承接、共担 CMD-CREATOR-LISTING-PRICING/RESEARCH-ASSET 成文，一次成文≥3篇并写回 state.json status=completed+evidence",
+      "status": "pending",
+      "priority": "P0",
       "assigned_to": [
         "创作家"
       ],
-      "status": "pending",
-      "source": "commander_learning_affiliate_20261016",
-      "created_at": "2026-10-16T15:32:00",
-      "updated_at": "2026-10-16T15:32:00"
+      "source": "commander_urge_20261022",
+      "created_at": "2026-10-22T21:48:00"
     },
     {
-      "id": "CMD-CREATOR-LISTING-PRICING-20261022",
-      "task": "共担待办P1-LISTING-PRICING-20261019创作家侧：基于分析师已产出pricing_benchmark_20261019.md（2941B在库），创作家将定价基准落地为2篇以上定价对比/榜单内容（如best AI tools by price tier），写content_drafts/并回填evidence",
-      "priority": "P1",
+      "id": "URGE-GROWTH-20261022",
+      "task": "【指挥官催办】拓荒者 pending 68 条次重，完成率0%<50%红线：RR38 已 SMTP 3/3 accepted 但 state.json 待办未批量关闭——立即批量执行外链目录提交/HN评论（AdsPower登录态未打通则明示阻塞），并按 RR38 档账本把已发信调研待办逐条标记 completed+evidence，一次≥5条",
+      "status": "pending",
+      "priority": "P0",
       "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "commander_urge_20261022",
+      "created_at": "2026-10-22T21:48:00"
+    },
+    {
+      "id": "P0-GEO-TLDR-TABLE-20261023",
+      "task": "为最高曝光Top20文章每篇顶部加TL;DR摘要（2-3句直接答案）+ 至少1个Markdown对比/数据表格（DigitalBrik实证：TL;DR+表格提升31%被AI snippet引用概率；与已有answer capsule互补不重复）。验收：20篇均含TL;DR块+表格，随机抽3篇用llmevalkit查TL;DR块存在",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "打磨师"
+      ],
+      "source": "commander_learning_seo_geo_20261023",
+      "created_at": "2026-10-23 08:05:00",
+      "close_note": "R29复核：state被他窗口last-write还原为pending，但posts.json中20篇r28-tldr块与6篇r28-low块完整无损；R28成果已推送(17c0c2e)，重新标记completed。本轮另修5篇低分双达标(zens88+Flesch>50)：cursor-alternatives 56.1 / free-ai-tools-for-students 53.6 / perplexity-alternatives 58.2 / meeting-notes 54.1 / n8n-vs-zapier 59.1；mental-health zens88但Flesch48.6留正文。无新增P0-CTR待办。",
+      "reopened_at": "2026-10-23T14:50:00+08:00",
+      "reopen_note": "指挥官10-23 14:50核验：打磨师R28已完成20篇(真实含TLDR+表格，llmevalkit抽检100分)但口径为GSC聚合曝光，GA4真实流量Top文章未覆盖：perplexity-review-2026(66K字)、suno-alternatives、chatgpt-vs-claude-2026-comparison、best-ai-productivity-tools-2026、perplexity-ai-review-2026 均无TLDR。重开补做：以上5篇加## TL;DR(2-3句)+表格。另completed_at=21:30为未来时间戳(时钟异常)，本轮以日志证据为准判定部分完成。",
+      "completed_at": "2026-10-23T22:10:00"
+    },
+    {
+      "id": "P0-WINDOW-TODO-READ-FIX-20261023",
+      "task": "修复窗口待办读取盲区：创作家/打磨师等窗口读取state.json时仅识别部分字段(创作家10-23日志自述todos=0，实际assigned_to含创作家的pending=71条)，导致待办未触达、完成率1.1%。方案：①统一窗口读取逻辑=按assigned_to包含自己窗口名过滤pending ②窗口SOP写明读取命令 ③指挥官调度输出附各窗口pending清单(已做)。验收：各窗口下轮日志显示读取到全部assigned pending并批量处理。",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "架构师"
+      ],
+      "source": "commander_daily_20261023_todo_read_blindspot",
+      "created_at": "2026-10-23 14:50:00",
+      "acceptance": "窗口SOP含统一读取命令+下轮各窗口日志显示读取pending数>0"
+    },
+    {
+      "id": "CONTENT-AIO-STRUCT-20261018",
+      "title": "创作家模板升级：新增quick-answer box(顶部2秒可见)+workflow stack段(多工具组合，AI Overview引用最爱)+if-X-use-Y决策框架",
+      "assigned_to": "window3",
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_learning_AI工具站案例",
+      "created": "2026-10-18",
+      "detail": "对标AIToolsRecap最佳文章结构；已有BLUF/对比表/FAQ，补workflow stack+if条件段；下一批5篇文章应用"
+    },
+    {
+      "id": "GEO-CONTENT-PATTERNS-20261021",
+      "title": "GEO内容结构优化：工具页/文章补 Expert Quotes（0/2）、Step-by-step（1/2）、Real Examples（1/2）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
         "创作家"
       ],
-      "status": "pending",
-      "source": "commander_daily_20261022",
-      "created_at": "2026-10-22T14:38:17",
-      "due": "2026-10-25",
-      "notes": "指挥官重开共担待办衍生；完成须回填evidence字段"
+      "source": "geo_audit_2026-10-21",
+      "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
     },
     {
-      "id": "CMD-CREATOR-RESEARCH-ASSET-20261022",
-      "task": "共担待办P1-RESEARCH-ASSET-20261019创作家侧：基于分析师已产出research_asset_20261019.md（2722B在库），创作家将调研资产转化为1-2篇数据驱动文章（引用原始数据+图表），写content_drafts/并回填evidence",
+      "id": "GROWTH-GUEST-2026-10-12",
       "priority": "P1",
+      "title": "向2个接受guest post的AI博客投稿",
+      "description": "客座博客=高质量外链+精准流量",
       "assigned_to": [
-        "创作家"
+        "拓荒者"
       ],
       "status": "pending",
-      "source": "commander_daily_20261022",
-      "created_at": "2026-10-22T14:38:17",
-      "due": "2026-10-25",
-      "notes": "指挥官重开共担待办衍生；完成须回填evidence字段"
+      "created": "2026-10-12 18:03:05 JST"
     },
     {
-      "id": "CMD-CREATOR-VIDEO-DESIGN-20261022",
-      "task": "GSC新曝光词内容机会（latest_report_2026-10-22：best ai video editor/design系列词开始获曝光60-83位）：创作家产2篇对比评测——①best ai video editor 2026（对照已产kling-vs-hailuo、复用截图kling-home/hailuo-home及现有视频类评测）②best ai design tools 2026（含Canva/Figma/Beautiful.ai对比，复用gamma-home/beautifulai-home截图）。每篇≥2000词、5内链+2外链、FAQ≥3、zens-ink≥70+llmevalkit无幻觉，写content_drafts/并回填evidence",
+      "id": "GROWTH-HYZENPRO-RESUME-2026-10-10",
       "priority": "P1",
+      "title": "继续完成hyzenpro.com提交（7步表单，已到第2步）",
+      "description": "表单URL: https://hyzenpro.com/submit-ai-tool/，已填基本信息，下次需补key features tags(3个)、pros(1)、cons(1)、pricing、FAQs、About you(email)、最后submit",
       "assigned_to": [
-        "创作家"
+        "拓荒者"
       ],
       "status": "pending",
-      "source": "commander_daily_20261022_report_audit",
-      "created_at": "2026-10-22T14:40:22",
-      "due": "2026-10-26",
-      "notes": "audit_findings.md 2026-10-22批次新发现#2衍生；指挥官报告校验补录"
+      "created": "2026-10-10 22:18:32 JST"
     },
     {
+      "id": "GROWTH-REDDIT-REPLY-2026-10-11",
+      "priority": "P1",
+      "title": "在Reddit求推荐帖中回复推荐AIToolCrux（10个候选）",
+      "description": "需Reddit登录态，回复要自然不spam",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "created": "2026-10-11 02:04:42 JST"
+    },
+    {
+      "id": "GSC-QUOTA-RERUN-20261012",
       "priority": "P1",
       "assigned_to": [
         "拓荒者"
       ],
       "status": "pending",
-      "task": "R调研新目录: 提交aitoolcrux到submitstartup.io($0一次性免费,SaaS/AI tool目录), 填官网https://www.aitoolcrux.com+一句话简介+类别; Serper命中在线, 本地URLError待代理复查",
-      "source": "growth_r_research_20261018",
-      "url": "https://submitstartup.io/",
-      "action": "free directory submit",
-      "created_at": "2026-10-18T01:14:42+08:00",
-      "id": "CMD-FIX-NOID-38-20261021"
+      "source": "gsc_batch_check_20261012",
+      "task": "GSC网址检查每日配额2026-10-12已耗尽（页面弹窗超出配额）。2026-10-13配额重置后用修复版脚本重跑40个unknown URL：python scripts/gsc_batch_check.py。脚本已修复：输入框必须用input.Ax4B8，且每次输入前必须cdp.send(ws,Page.bringToFront)把页面带到前台，否则dispatchKeyEvent事件被丢弃导致value为空。重跑完成后对照url_index_check_batch_0_67_20261012_202338.json汇总最终收录状态，404/noindex/redirect坏URL清单派给架构师修复。"
     },
     {
-      "id": "CMD-LEARN-AFF-UPSELL-20261022",
-      "task": "联盟佣金结构升级（参考PopularAiTools佣金分层：premium 30-50% recurring/cookie 90-365天）：分析师梳理当前affiliate_programs.md已接入联盟的cookie时长与佣金类型，列出佣金<25%或cookie<60天的联盟名单，评估替换为recurring型联盟（30-50% recurring）；目标：AFF漏斗基线从0.14%提升，产出替换建议清单交指挥官",
+      "id": "P1-GEO-003",
+      "status": "pending",
       "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "P1-GEO-003: GEO基线测量（本月必做）：①用Perplexity/ChatGPT/Claude各跑5个品牌prompt（\"best AI tools directory\"、\"AI tool comparison\"、\"futurepedia vs aitoolcrux\"等），记录是否被提及/引用/推荐，输出到iteration_center/ai_citation_audit.md ②下月同prompt复测对比，量化GEO提升 ③检查GSC生成式AI性能报告（2026年6月已上线）是否可用",
+      "source": "commander_learning_geo_2026",
+      "created": "2026-10-11"
+    },
+    {
+      "id": "P1-GEO-BASELINE-AUDIT-20261013",
       "assigned_to": [
         "分析师"
       ],
+      "priority": "P1",
       "status": "pending",
-      "source": "commander_learning_AI工具站成功案例拆解",
-      "created_at": "2026-10-22T08:02:02",
-      "due": "2026-10-26",
-      "notes": "产出清单含：联盟名/当前佣金/当前cookie/建议动作（保留/替换/新增）"
+      "task": "GEO引用baseline审计：取top10目标关键词，在ChatGPT Search/Perplexity/Google AI Overviews各跑一遍，记录我们是否被引用、被哪些来源引用、输出iteration_center/geo_citation_baseline.md，此后每周追踪对比（被引用=Share of Voice增长）",
+      "source": "commander_learning_2026SEO_GEO_20261013",
+      "status_note_20261018": "需浏览器跑 ChatGPT Search/Perplexity，超出分析师只读范围，保持 pending",
+      "status_note_20261018b": "2026-10-18复查：技术就绪度审计已完成(real_geo_aeo_audit_results.json 04:02生成, geo_readiness_score=8.94, 10/11爬虫可访问, CCBot被屏蔽, llms.txt+llms-full.txt均存在, 7关键页AEO 8/8全过)；但引用级baseline(top10关键词跑ChatGPT Search/Perplexity/AIO)未做，保持pending(引用级需浏览器操作)",
+      "status_note_20261018c": "2026-10-18 20:05复查：技术审计结果存在(04:02, score 8.94)，引用级baseline(baseline-browser-mapping为站内JS资源非审计产物)未做，保持pending",
+      "status_note_20261019": "2026-10-19 08:0x复查: 引用级baseline未做（需浏览器跑ChatGPT Search/Perplexity），保持pending",
+      "status_note_20261019b": "2026-10-19 14:2x复查: 引用级baseline未做（需浏览器），保持pending",
+      "status_note_20261019c": "2026-10-19 21:0x复查: 引用级 baseline 需浏览器跑 AI 搜索，无新证据，保持 pending",
+      "status_note_20261020": "2026-10-20 复查: 引用级基线审计需浏览器环境(SERP 实测), 本会话无 GUI 浏览器会话, 保持 pending",
+      "status_note_20261020b": "2026-10-20 批次二复查: 需浏览器 SERP 实测, 无 GUI 会话, 保持 pending",
+      "status_note_20261020c": "2026-10-20 批次三复查: 需浏览器 SERP 实测, 保持 pending",
+      "block_note_20261022": "阻塞确认(10/22)：需在 ChatGPT Search/Perplexity/AI Overviews 实际 SERP 检索，当前无 GUI 浏览器会话；待浏览器环境或人工执行"
     },
     {
-      "id": "CMD-LEARN-TASK-PAGES-20261022",
-      "task": "建设task-based落地页群（抄TAAFT的'AI for X'模式）：从state现有209篇reviews中提取20个高频任务词（如AI for video editing/logo making/coding），创作家为每个任务词生成300字任务说明+内链到3-5个相关工具review页，目标：覆盖'AI tool for X'类长尾查询（TAAFT靠此吃下海量查询），产出20个页面草稿",
+      "id": "P1-INDEXMON-INTERNAL-LINK-20261019",
+      "title": "在已曝光博客文章（best-ai-voice-changers-2026 曝光68）中加内链指向未收录分类页/工具页",
       "priority": "P1",
+      "assigned_to": "创作家",
+      "status": "pending",
+      "source": "index_monitor_20261019",
+      "evidence": "OpenSEO top_pages 曝光68点击2"
+    },
+    {
+      "task": "设置Reddit关键词监控：AI tool review / best AI / AI alternative / frustrated AI / waste of money，帖子2h内参与回答",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "source": "growth_learning_reddit_2026-10-13",
+      "detail": "Alai案例88k注册，趁帖子热时介入",
+      "id": "P1-NOID-FIX-118",
+      "status": "pending"
+    },
+    {
+      "task": "在r/SaaS weekly feedback thread自然提及aitoolcrux（透明说\"我做了个AI工具评测站\"），不硬推",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "source": "growth_learning_reddit_2026-10-13",
+      "detail": "用指定promo thread，周二/三发",
+      "id": "P1-NOID-FIX-119",
+      "status": "pending"
+    },
+    {
+      "id": "PAIN-P1-2026-10-09-44891",
+      "priority": "P1",
+      "task": "用户痛点【AI编码工具(Cursor/Copilot)实际效果不如宣传】，建议写文章【AI Coding Tools in 2026: Why Cursor and Copilot Still Can't Replace Senior Devs】",
       "assigned_to": [
         "创作家"
       ],
+      "source": "pain_point_mining_2026-10-09",
+      "verified": true,
+      "serp_competition": "Low",
+      "sources_count": 3,
       "status": "pending",
-      "source": "commander_learning_AI工具站成功案例拆解",
-      "created_at": "2026-10-22T08:02:02",
-      "due": "2026-10-25",
-      "notes": "参考TAAFT task-based分类；每页含FAQ；完成后交打磨师质检"
+      "created": "2026-10-09 20:15:06 JST"
     },
     {
-      "id": "CMD-LEARN-VS-PAGES-20261022",
-      "task": "批量产出'A vs B'对比页（目录站bottom-funnel流量主力，参考aitoolcamp 2026目录SEO三支柱）：已有素材competitor_windsurf-vs-cursor.json等，创作家按现成素材写10篇2000字对比评测（含价格/功能/适用场景对比表+结论推荐），复用现有comparison模板，写完存content_drafts/不直接发布",
+      "id": "PAIN-P1-2026-10-09-4560",
       "priority": "P1",
+      "task": "用户痛点【Notion AI令人失望、找替代】，建议写文章【Notion AI Is Disappointing? Here Are 7 Real Alternatives in 2026】",
       "assigned_to": [
         "创作家"
       ],
+      "source": "pain_point_mining_2026-10-09",
+      "target_tool": "Notion AI",
+      "evidence_count": 9,
       "status": "pending",
-      "source": "commander_learning_AI工具站成功案例拆解",
-      "created_at": "2026-10-22T08:02:02",
-      "due": "2026-10-28",
-      "notes": "对标高意图bottom-funnel查询；每篇需真实使用体验证据"
+      "created": "2026-10-09 19:50:00 JST"
+    },
+    {
+      "id": "PAIN-P1-2026-10-09-4598",
+      "priority": "P1",
+      "task": "用户痛点【AI图像生成一致性差/商用不可靠】，建议写文章【AI Image Generators Still Can't Do Consistency in 2026 (And Workarounds That Work)】",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "pain_point_mining_2026-10-09",
+      "verified": true,
+      "serp_competition": "Medium",
+      "sources_count": 1,
+      "status": "pending",
+      "created": "2026-10-09 20:15:06 JST"
+    },
+    {
+      "id": "PAIN-P1-2026-10-09-5166",
+      "priority": "P1",
+      "task": "用户痛点【MidJourney订阅后悔/想取消】，建议写文章【Is MidJourney Still Worth It in 2026? Honest Review After Price Hikes】",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "pain_point_mining_2026-10-09",
+      "target_tool": "MidJourney",
+      "evidence_count": 1,
+      "status": "pending",
+      "created": "2026-10-09 19:50:00 JST"
+    },
+    {
+      "id": "PAIN-P1-2026-10-09-59727",
+      "priority": "P1",
+      "task": "用户痛点【AI生成内容被Google惩罚/不排名】，建议写文章【Does AI Content Get Penalized by Google in 2026? What Actually Happens】",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "pain_point_mining_2026-10-09",
+      "verified": true,
+      "serp_competition": "Low",
+      "sources_count": 1,
+      "status": "pending",
+      "created": "2026-10-09 20:15:06 JST"
+    },
+    {
+      "id": "PAIN-P1-2026-10-09-62131",
+      "priority": "P1",
+      "task": "用户痛点【SaaS老板用AI工具反而更麻烦/不实用】，建议写文章【AI Tools for SaaS in 2026: What Actually Works vs. What's Overhyped】",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "pain_point_mining_2026-10-09",
+      "verified": true,
+      "serp_competition": "Medium",
+      "sources_count": 2,
+      "status": "pending",
+      "created": "2026-10-09 20:13:47 JST"
+    },
+    {
+      "id": "P1-CONTENT-KEYWORD-DENSITY-001",
+      "task": "打磨师质检4篇草稿关键词密度0.0-0.13%<0.5%阈值。创作家写新文章时主关键词自然出现≥3次（标题/H2/正文首段/结尾），发布前自查密度≥0.5%。",
+      "assigned_to": [
+        "分析师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "hallucination_audit_report.md 2026-10-09",
+      "created_at": "2026-10-09",
+      "status_note_20261018": "content_drafts 存在，需创作家写文自查密度≥0.5%，保持 pending",
+      "status_note_20261018b": "2026-10-18复查：content_drafts增至74篇；抽查最新3篇密度全部达标(fitness文章 ai4.12%+fitness0.92%、hallucinate0.59%、notion3.14%，均≥0.5%阈值)。创作家已响应，原4篇问题草稿质检结果未知，保持pending",
+      "status_note_20261018c": "2026-10-18 20:05复查：content_drafts增至77篇，最新2篇密度达标(subscription 1.89%、social media 0.81%)；创作家持续响应，待打磨师质检旧4篇",
+      "status_note_20261019": "2026-10-19 08:0x复查: 创作家持续产出（77篇），最新草稿密度达标；待打磨师质检旧4篇",
+      "status_note_20261019b": "2026-10-19 14:2x复查: 无新草稿证据，旧4篇待质检",
+      "status_note_20261019c": "2026-10-19 21:0x复查: content_drafts 86 篇（今日 +9），打磨师 R19/R20 日志无密度复检记录，旧 4 篇待质检，保持 pending",
+      "status_note_20261020": "2026-10-20 复查: 旧 4 篇草稿无打磨师复检记录, 保持 pending 待打磨师安排密度复检",
+      "status_note_20261020b": "2026-10-20 批次二复查: 无打磨师复检记录, 保持 pending",
+      "status_note_20261020c": "2026-10-20 批次三复查: 无打磨师复检记录, 保持 pending"
     },
     {
       "id": "COMP-20261009-002",
@@ -2118,6 +2270,119 @@
       "suggested_slug": "/blog/best-ai-voice-changers-content-creators",
       "serp_competition": "Medium",
       "created_at": "2026-10-09T19:14:16"
+    },
+    {
+      "id": "geo_aeo_home_author_table_2026-10-10",
+      "priority": "P1",
+      "task": "GEO/AEO：首页缺少独立 Comparison 对比内容（当前依赖FAQ中的comparisons字样），建议在首页 Top Picks 区域增加可引用的对比表格（工具A vs 工具B 评分/价格/适用场景），提升AI搜索引擎结构化引用。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T00:44:14"
+    },
+    {
+      "id": "seo_broken_links_2026-10-10",
+      "priority": "P1",
+      "task": "SEO审计(2026-10-10)：broken外链207个（853去重外链中），多为外部站点403/timeout/git.io失效，需逐条核实并替换/移除失效外链引用。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T04:34:47"
+    },
+    {
+      "id": "geo_content_expert_quotes_2026-10-10",
+      "priority": "P1",
+      "task": "GEO审计(2026-10-10)：GEO Content 7项检查中 Expert Quotes 覆盖 0/2 页面（/tools/chatgpt、/blog/chatgpt-vs-claude-2026-comparison），AI引擎引用缺少专家引言信号。建议在关键工具页/对比文章中加入专家评价或\"According to\"引用段。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T12:48:15"
+    },
+    {
+      "id": "geo_faq_missing_content_2026-10-11",
+      "priority": "P1",
+      "task": "9篇文章缺FAQ内容（无FAQPage schema）：n8n-review-2026, best-ai-agents-2026, ai-agent-vs-chatbot-2026, how-to-build-an-ai-agent, what-is-an-ai-agent, best-ai-voice-changers-content-creators, best-ai-coding-tools-beginners, best-ai-tools-for-beginners-2026, agenta-ai-review-2026。每篇需补 FAQ 区块（3-6问，每问<80词答案），内容来自Google PAA与搜索建议。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-11",
+      "status": "pending",
+      "created_at": "2026-10-11T12:41:42"
+    },
+    {
+      "id": "P1-CONTENT-FAQ-001",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家"
+      ],
+      "task": "6篇best-ai-*-tools列表文补FAQ+H2+结论（audit_findings P1）",
+      "source": "audit_findings_2026-10-11",
+      "created_at": "2026-10-11T14:43:00",
+      "detail": ""
+    },
+    {
+      "id": "P1-ANSWER-FIRST-20261012",
+      "task": "新文章采用Answer-First 40-60字直接答案架构：正文开头/每个H2下先给40-60字直答再展开；打磨师批量打磨时检查AI可提取性（ChatGPT 93%引用来自第三方→评测必须引用真实用户评论/外部数据）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "打磨师",
+        "创作家"
+      ],
+      "source": "commander_weekly_review_20261012",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P1-BACKLINK-15-20261012",
+      "task": "外链补足90天目标缺口：当前4条存活dofollow backlink，距目标5-15个相关真实域名差1-11个；优先获取1条'有流量的编辑链接'（客座博客/资源页，质量>数量），而非继续批量目录盲扫；持续使用Serper调研的资源页/客座博客线索（backlink_opportunities.md）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "source": "commander_learning_cold_start_growth_20261012",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P1-GEO-THREE-20261012",
+      "task": "GEO三要素落地到新文章：每篇评测至少3个统计数字（带命名来源+年份）+1个专家/用户直接引语（带归属）+内文出处链接（Princeton研究：统计+40%可见性、引用+115%、引语+30-40%）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "commander_weekly_review_20261012",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P1-H1-MISSING-20261012",
+      "task": "H1缺失修复（audit_findings 9-27：121页缺H1，含5个article-api-*自动页）：创作家/打磨师批量检查并补H1（每页唯一H1），架构师核查模板层H1输出；同时301处理article-api-*丑陋URL",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家",
+        "打磨师"
+      ],
+      "source": "audit_findings.md",
+      "created_at": "2026-10-12"
+    },
+    {
+      "id": "P1-THIN-CATEGORY-20261012",
+      "task": "薄内容分类页修复（audit_findings 9-27：10个分类页138-148词）：为/blog/category/*和/subcategory/*添加>=300词介绍性文字，或设置noindex（二选一按价值判断）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "audit_findings.md",
+      "created_at": "2026-10-12"
     },
     {
       "id": "COMP-20261012-02",
@@ -2207,83 +2472,55 @@
       "created_at": "2026-10-13T05:07:11"
     },
     {
-      "id": "CONTENT-AIO-STRUCT-20261018",
-      "title": "创作家模板升级：新增quick-answer box(顶部2秒可见)+workflow stack段(多工具组合，AI Overview引用最爱)+if-X-use-Y决策框架",
-      "assigned_to": "window3",
+      "id": "SEO-AUDIT-20261014-BROKEN-LINKS",
+      "task": "全站broken外链188条待核（812 URL审计）：403反爬类(ProductHunt/G2/Midjourney等实际活链)、404死链(bing.com/images/create等)、timeout类(jina.ai/mistral等)需人工核实替换或移除",
       "priority": "P1",
       "status": "pending",
-      "source": "commander_learning_AI工具站案例",
-      "created": "2026-10-18",
-      "detail": "对标AIToolsRecap最佳文章结构；已有BLUF/对比表/FAQ，补workflow stack+if条件段；下一批5篇文章应用"
-    },
-    {
-      "id": "GEO-CONTENT-EXPERT-QUOTES-20261022",
-      "priority": "P1",
-      "title": "GEO Content 6.7/10：补 Expert Quotes（0%）、Step-by-step（33%）、Real Examples（33%）",
-      "description": "GEO 审计（real_geo_aeo_audit.py 2026-10-22）GEO Content Structure 66.7/100：Expert Quotes 0/3 页、Step By Step 1/3、Real Examples 1/3。AI 引擎偏好引用含专家引述/步骤/实例的数据密集型内容。",
       "assigned_to": [
-        "window2",
         "创作家"
       ],
-      "status": "pending",
-      "source": "geo_audit_2026-10-22",
-      "created_at": "2026-10-22T04:17:11+08:00",
-      "evidence": "r49 复核 2026-10-23T00:21Z：GEO 9.1/10 A（+0.2，部分因审计样本缩至 1 页）；GEO Content 7.1/10（Expert Quotes 0%/Step By Step 0% 仍在，样本=1 页）；AEO 10/10（blog/alternatives 2 页 Failed to fetch 经 web_fetch 服务端核实 200+Quick Answer 在位=本机超时假象）；llms.txt 10/10；crawler 9.1/10。"
+      "source": "seo_audit_20261014",
+      "created_at": "2026-10-14T04:28:23",
+      "completion_note": "详细清单见iteration_center/seo_audit_full_20260917.md Broken外链节；403类勿当死链删除（反爬拒绝bot），仅处理确认404/timed out目标失效的链接。"
     },
     {
-      "id": "GEO-CONTENT-PATTERNS-20261021",
-      "title": "GEO内容结构优化：工具页/文章补 Expert Quotes（0/2）、Step-by-step（1/2）、Real Examples（1/2）",
+      "id": "LEARN-20261014-01",
+      "task": "GEO优化：把所有博客文章的H2标题改成问句格式（如'How Much Does X Cost?'），紧跟40-60字直接答案。普林斯顿GEO研究证实此举提升AI引用率30-40%",
+      "assigned_to": [
+        "打磨师"
+      ],
       "priority": "P1",
       "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - answer-first structure",
+      "knowledge": "每个H2是问题，首段直接给答案（40-60字），AI引擎更容易提取引用",
+      "created_at": "2026-10-14T05:01:39"
+    },
+    {
+      "id": "LEARN-20261014-03",
+      "task": "GEO优化：文章中每个关键声明都要带具体数字+来源（如'Our survey of 200 users found...'），Perplexity重度偏好带数据的引用",
       "assigned_to": [
-        "window2",
         "创作家"
       ],
-      "source": "geo_audit_2026-10-21",
-      "description": "real_geo_aeo_audit.py(10-21) GEO Content Score 71.4/100：Expert Quotes 0/2页(0%)、Step By Step 1/2(50%)、Real Examples 1/2(50%)。AI引擎偏好数据/引述/实例内容，建议工具页加真实使用引述+步骤式评测过程+真实案例截图。AEO 10/10、AI Crawler 9.1/10、llms.txt/llms-full.txt 已线上验证完整。\n[r42 2026-10-21] real_geo_aeo_audit 复核：Overall 8.9/10 Grade A（llms-full 597KB/9253行完整，AEO 7页全满分，AI Crawler 9.1/10）；GEO Content 66.7/100：Expert Quotes 0/3(0%)、Step By Step 1/3(33%)、Real Examples 1/3(33%)。技术侧无新问题，内容侧持续缺引述/步骤/实例，请创作家优先补。"
+      "priority": "P1",
+      "status": "pending",
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - quantified claims",
+      "knowledge": "具体统计+命名来源+年份 = Perplexity引用磁铁，提升30-40%引用率",
+      "created_at": "2026-10-14T05:01:39"
     },
     {
-      "id": "GROWTH-GUEST-2026-10-12",
-      "priority": "P1",
-      "title": "向2个接受guest post的AI博客投稿",
-      "description": "客座博客=高质量外链+精准流量",
+      "id": "LEARN-20261014-08",
+      "task": "内容更新策略：Perplexity重度偏好新鲜内容。给高价值页面加'Last Updated'日期并定期刷新（至少每月一次）",
       "assigned_to": [
-        "拓荒者"
+        "打磨师"
       ],
-      "status": "pending",
-      "created": "2026-10-12 18:03:05 JST"
-    },
-    {
-      "id": "GROWTH-HYZENPRO-RESUME-2026-10-10",
       "priority": "P1",
-      "title": "继续完成hyzenpro.com提交（7步表单，已到第2步）",
-      "description": "表单URL: https://hyzenpro.com/submit-ai-tool/，已填基本信息，下次需补key features tags(3个)、pros(1)、cons(1)、pricing、FAQs、About you(email)、最后submit",
-      "assigned_to": [
-        "拓荒者"
-      ],
       "status": "pending",
-      "created": "2026-10-10 22:18:32 JST"
-    },
-    {
-      "id": "GROWTH-REDDIT-REPLY-2026-10-11",
-      "priority": "P1",
-      "title": "在Reddit求推荐帖中回复推荐AIToolCrux（10个候选）",
-      "description": "需Reddit登录态，回复要自然不spam",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "status": "pending",
-      "created": "2026-10-11 02:04:42 JST"
-    },
-    {
-      "id": "GSC-QUOTA-RERUN-20261012",
-      "priority": "P1",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "status": "pending",
-      "source": "gsc_batch_check_20261012",
-      "task": "GSC网址检查每日配额2026-10-12已耗尽（页面弹窗超出配额）。2026-10-13配额重置后用修复版脚本重跑40个unknown URL：python scripts/gsc_batch_check.py。脚本已修复：输入框必须用input.Ax4B8，且每次输入前必须cdp.send(ws,Page.bringToFront)把页面带到前台，否则dispatchKeyEvent事件被丢弃导致value为空。重跑完成后对照url_index_check_batch_0_67_20261012_202338.json汇总最终收录状态，404/noindex/redirect坏URL清单派给架构师修复。"
+      "source": "data_learning_2026-10-14",
+      "topic": "GEO - freshness signal",
+      "knowledge": "Perplexity给最近更新的页面更高权重，新鲜度是直接排名因子",
+      "created_at": "2026-10-14T05:01:39"
     },
     {
       "id": "KW-20261014-P1-01",
@@ -2346,6 +2583,254 @@
       "created_at": "2026-10-14T18:32:09"
     },
     {
+      "id": "AFF-CMP-PAGES-20261016",
+      "title": "补3组高转化 X vs Y 对比页（转化4-7%全矩阵最高）",
+      "task": "按EgoistAI内容矩阵（X vs Y对比页转化率4-7%，漏斗底部最高），创作家写3组AI工具对比页并挂联盟链接：①ChatGPT vs Claude（写作助手场景）②ElevenLabs vs Murf（语音合成，ElevenLabs联盟22%recurring）③Jasper vs Copy.ai（文案生成，Jasper 30%终身/Copy.ai 45%首年）。每页必须：第一人称实测（原创截图+真实结果）、功能对比表（利于Google富摘要）、诚实缺点、affiliate disclosure、按我们zens-ink质量门（>=70分）。写进content_drafts/草稿，不直接发布。",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "commander_learning_affiliate_20261016",
+      "created_at": "2026-10-16T15:32:00",
+      "updated_at": "2026-10-16T15:32:00"
+    },
+    {
+      "id": "P1-OPENSEO-KEYWORDS-20261016",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "commander_openseo_integration_20261016",
+      "task": "用OpenSEO关键词研究（research_keywords，seeds=[best ai tools, ai writing tools, ai chat], locationCode=2840, en）拉取150词清单，筛选volume>=400且KD<=35的词，产出20个内容选题写入iteration_center/content_briefs/openseo_kw_20261016.md。注意credits只剩169，单次调用≤5 seeds，每周≤2次。",
+      "created_at": "2026-10-16T21:30:00",
+      "updated_at": "2026-10-16T21:30:00"
+    },
+    {
+      "id": "P1-CONTENT-REAL-KW-20261016",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "commander_diagnose_20261016",
+      "task": "内容转向真实搜索词（证据：唯一有真实点击的博客是 best-ai-voice-changers-2026（2次点击/68曝光/pos16.5）+ openai_astra_review（1次/160曝光/pos10.8），其余全部0点击）。动作：1) 用OpenSEO research_keywords拉best ai tools相关真实词（volume≥400/KD≤35）；2) 优先扩写 best-ai-voice-changers 同主题系列（类似词：ai voice changer free、ai voice changer for gaming等）提升排名进前10；3) 产出2篇新选题。验收：新增2篇含真实搜索量的文章草稿。",
+      "created_at": "2026-10-16T22:10:00",
+      "updated_at": "2026-10-16T22:10:00"
+    },
+    {
+      "id": "P1-QC-VERIFY-6ARTICLES-20261016",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "commander_dispatch_20261016",
+      "task": "补充6篇新文章质量验证留痕（验证真实性存疑：创作家日志称batch27/28的6篇文章zens-ink 100/100/100，但iteration_center/zensink_content_quality_report.json（145篇，avg 53，pass仅12）中找不到这6篇记录）。动作：1) 对 best-ai-research-assistants-2026 / best-no-code-ai-tools-2026 / best-ai-website-builders-2026 及batch28的translators/hr-tools/ecommerce共6篇，重新跑zens-ink content_qc；2) 把结果写入zensink_content_quality_report.json（或独立留痕文件）；3) 若实际<70，标记假完成整改。验收：6篇分数可复核，≥70通过。",
+      "created_at": "2026-10-16T22:20:00",
+      "updated_at": "2026-10-16T22:20:00"
+    },
+    {
+      "id": "SEO-20261017-004",
+      "task": "主打唯一有点击词'best voice changer 2026'（pos 4，GSC唯一产生点击）：优化/blog/best-ai-voice-changers-2026页面标题/首段答案/FAQ+加2条相关外链（Reddit r/voicemod类讨论+工具站联盟），目标2周内从pos 4升到pos 1-2拿自然流量",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "gsc_analysis_2026-10-17",
+      "data_verified": true,
+      "created_at": "2026-10-17T01:00:00"
+    },
+    {
+      "id": "P1-CF-DASHBOARD-ACTIONS-20261017",
+      "task": "用户侧CF操作（架构师r28留痕）：①Cloudflare Dashboard Purge Cache（线上robots.txt无参版仍是旧缓存，含/og/ Disallow的新版已部署但边缘未更新）②Dashboard开启Bot Fight Mode（API无权限）③可选：Dashboard Analytics手动导出UA Top列表补爬虫点名",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "cf_bot_analysis_2026-10-17",
+      "created_at": "2026-10-17T06:50:00"
+    },
+    {
+      "id": "P1-TOOL-ELMO-20261017",
+      "task": "部署 elmo（124 star，AEO/GEO品牌可见度追踪器，Docker Compose自托管）：监控ChatGPT/Claude/Gemini/Perplexity对aitoolcrux及核心品牌词（aitoolcrux/AI tool review类）的提及与内容引用，产出一周AI提及报告；目标=量化30天目标B中'AI渠道信号'：AI回答中被提及/引用次数、引用URL、上下文正面/负面",
+      "assigned_to": [
+        "分析师"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_learning_GitHub_trending_20261017",
+      "created_at": "2026-10-17T08:10:00",
+      "status_note_20261018": "elmo 未部署（无 docker-compose），需运维窗口，保持 pending",
+      "status_note_20261018b": "2026-10-18复核查：无任何elmo相关文件/目录，Docker部署未开始，保持pending(部署类，超出分析师只读范围)",
+      "status_note_20261018c": "2026-10-18 20:05复核查：无elmo文件，部署未开始",
+      "status_note_20261019": "2026-10-19 08:0x复查: 无elmo文件，部署未开始",
+      "status_note_20261019b": "2026-10-19 14:2x复查: 无elmo文件",
+      "status_note_20261019c": "2026-10-19 21:0x复查: elmo 相关文件 0，未部署，保持 pending",
+      "status_note_20261020": "2026-10-20 复查: Elmo 工具部署属开发类, 项目内无 elmo 相关文件, 保持 pending 待开发窗口",
+      "status_note_20261020b": "2026-10-20 批次二复查: 已被 P0-GEO-ELMO-TRACKER-20261020 升级承接(同 elmo 部署, 指挥官提级 P0), 保留 pending 待同环境阻塞解除",
+      "status_note_20261020c": "2026-10-20 批次三复查: 已被 P0-GEO-ELMO 承接, 保持 pending",
+      "block_note_20261022": "阻塞确认(10/22)：本机 docker 命令不可用，无法部署 elmo；同一阻塞"
+    },
+    {
+      "task": "R15外链机会: 提交aitoolcrux到bestofai.io免费目录(200存活, submit+free信号, 一次审核进分类/职业/替代页), 附官网https://www.aitoolcrux.com与一句话简介",
+      "url": "https://bestofai.io/submit/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "growth_r15_2026-10-17",
+      "category": "新免费目录站",
+      "created_at": "2026-10-17T13:27:02+08:00",
+      "action": "direct_submit",
+      "data_verified": true,
+      "probe": "R15 2026-10-17 直连200",
+      "id": "TODO-NOID-51ccf5-20261017"
+    },
+    {
+      "task": "R15/lovedby筛选机会: 提交aitoolcrux到toolpilot.ai(200,submit/free/suggest/contact/add-a信号), 附官网与简介",
+      "url": "https://toolpilot.ai/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "growth_r15_2026-10-17",
+      "category": "新免费目录",
+      "created_at": "2026-10-17T13:31:58+08:00",
+      "action": "direct_submit",
+      "data_verified": true,
+      "probe": "lovedby 2026-10-17 直连200",
+      "id": "TODO-NOID-100c89-20261017"
+    },
+    {
+      "id": "P1-CLAUDE-SEO-INSTALL-20261017",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "task": "claude-seo接入（评估已完成，见claude_seo_evaluation_2026-10-17.md）：待指挥官提供Claude Code CLI+Anthropic登录态环境后安装plugin并跑全站审计，与OpenSEO结果交叉验证；阻塞解除前保持pending（blocked_reason=需Claude Code环境）",
+      "source": "commander_daily_2026-10-17",
+      "created_at": "2026-10-17T14:40:00",
+      "blocked_reason": "需指挥官提供 Claude Code CLI + Anthropic 登录态环境后安装 plugin 跑全站审计；阻塞解除前保持 pending",
+      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。"
+    },
+    {
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "task": "R调研新目录: 提交aitoolcrux到submitstartup.io($0一次性免费,SaaS/AI tool目录), 填官网https://www.aitoolcrux.com+一句话简介+类别; Serper命中在线, 本地URLError待代理复查",
+      "source": "growth_r_research_20261018",
+      "url": "https://submitstartup.io/",
+      "action": "free directory submit",
+      "created_at": "2026-10-18T01:14:42+08:00",
+      "id": "CMD-FIX-NOID-38-20261021"
+    },
+    {
+      "id": "P1-COLOR-CONTRAST-REMAIN-20261018",
+      "task": "Lighthouse color-contrast 4审计页全失败(axe error断言, r29修复后仍有遗漏元素): 首页/compare/blog/midjourney各至少1处对比度<4.5:1; 需逐页定位修复",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "lighthouse_ci_2026-10-18",
+      "created_at": "2026-10-18T21:55:32"
+    },
+    {
+      "id": "R19-saasclub-io",
+      "task": "[外链调研R19/社区推荐] saasclub.io/suggest: SaaS社区guest+工具suggest入口, 代理GET 200含guest/submit/suggest/contact信号, 以独立AI评测站身份suggest收录/嘉宾; 无邮箱走suggest表单",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "url": "https://saasclub.io/suggest/",
+      "channel": "社区推荐/guest",
+      "source": "backlink_research_R19_20261019",
+      "created_at": "2026-10-19T01:14:50.545186+08:00",
+      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
+    },
+    {
+      "id": "P1-FEATURED-FOUNDER-EMAIL-20261019",
+      "title": "[周会] 'you're featured'邮件→已收录工具创始人（reciprocal link）",
+      "assigned_to": "拓荒者",
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_weekly_20261019_popularaitools",
+      "detail": "对已收录的50+工具创始人发'你被收录了'邮件，礼貌请求回链或社媒分享；高转化外链战术",
+      "created_at": "2026-10-19T06:50:20.402321"
+    },
+    {
+      "id": "P1-RESEARCH-ASSET-20261019",
+      "title": "[周会] 原研数据资产：AI工具目录收录基准研究页（链接磁铁）",
+      "assigned_to": [
+        "分析师",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_weekly_20261019_backlinko_fulltraffic",
+      "detail": "发布1个原研数据页（如'AI工具目录收录基准研究2026'：收录率/审核周期/DR分布统计），吸引自然编辑引用+记者查询；分析师出数据，创作家成文",
+      "created_at": "2026-10-19T06:50:20.402321",
+      "status_note_20261019": "2026-10-19 08:0x: 分析师数据部分已完成（research_asset_20261019.md：收录成本$0-$497/审核周期48h-2周/目录DR 49-90/规模对比），待创作家成文",
+      "status_note_20261019b": "2026-10-19 14:2x复查: 数据资产已就绪（research_asset_20261019.md），待创作家成文（数据/文案均未动）",
+      "status_note_20261019c": "2026-10-19 21:0x复查: 数据资产 research_asset_20261019.md 就绪，待创作家成文",
+      "status_note_20261020": "2026-10-20 复查: 分析师侧数据交付物 iteration_center/research_asset_20261019.md 已存在(收录参数+DR时间表+规模对比), 创作家成文部分待推进, 整体待创作家侧闭环",
+      "status_note_20261020b": "2026-10-20 批次二复查: 分析师侧交付物在位, 创作家成文待推进",
+      "status_note_20261020c": "2026-10-20 批次三复查: 交付物在位, 创作家推进中",
+      "analyst_side_note_20261021c": "分析师侧交付物已在库(pricing_benchmark_20261019.md / research_asset_20261019.md)，待创作家成文闭环",
+      "completed_at": "2026-10-22T08:06:19",
+      "status_note_20261022": "分析师侧完成：研究素材 research_asset_20261019.md 已在库（2722B）；创作家侧成文另立待办",
+      "reopened_at": "2026-10-22T14:38:17",
+      "notes": " | 指挥官2026-10-22重开：共担任务仅分析师侧完成（analyst日志原文'分析师侧完成'），创作家侧产出缺失，需创作家补做并回填evidence"
+    },
+    {
+      "id": "P1-ARTICLE-REFRESH-20261019",
+      "title": "[战略学习] 批量refresh 2026-04前发布的top30文章（更新数据/加新工具/优化passage结构）",
+      "assigned_to": [
+        "打磨师",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_learning_增长引擎_20261019",
+      "detail": "Plantois验证refresh可跳20+位。从data/posts.json筛2026-04前文章按GSC曝光排序取top30，每篇更新统计数字+新增2026新工具+quick-answer box结构；一次批量≥5篇",
+      "created_at": "2026-10-19T08:01:53.867763"
+    },
+    {
+      "id": "P1-LISTING-PRICING-20261019",
+      "title": "[战略学习] 收录变现定价模型设计：$49收录/$99 Featured（对标Futurepedia $99/$299、AIToolsRecap $49/$99）",
+      "assigned_to": [
+        "分析师",
+        "创作家"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_learning_增长引擎_20261019",
+      "detail": "产出收录变现方案：定价档位+价值承诺(Google排名/AI引用/外链)+支付接入方案(PayPal+USDT降摩擦)。目标C目标$100/月，先出方案等流量达标上线；分析师出成本/竞品定价表，创作家写销售页文案",
+      "created_at": "2026-10-19T08:01:53.867763",
+      "status_note_20261019b": "2026-10-19 14:2x: 分析师成本/竞品定价表已完成（pricing_benchmark_20261019.md：Futurepedia $247-497/Toolify $100/TAAFT $49-347；成本 $10/单；目标档位 $49/$99；支付 PayPal+USDT），待创作家写销售页文案",
+      "status_note_20261019c": "2026-10-19 21:0x复查: 定价表 pricing_benchmark_20261019.md 就绪，待创作家写销售页",
+      "status_note_20261020": "2026-10-20 复查: 分析师侧交付物 iteration_center/pricing_benchmark_20261019.md 已存在(竞品定价表+成本测算+四档目标), 创作家销售页文案待推进",
+      "status_note_20261020b": "2026-10-20 批次二复查: 分析师侧交付物在位, 创作家文案待推进",
+      "status_note_20261020c": "2026-10-20 批次三复查: 交付物在位, 创作家推进中",
+      "analyst_side_note_20261021c": "分析师侧交付物已在库(pricing_benchmark_20261019.md / research_asset_20261019.md)，待创作家成文闭环",
+      "completed_at": "2026-10-22T08:06:19",
+      "status_note_20261022": "分析师侧完成：定价基准材料 pricing_benchmark_20261019.md 已在库（2941B）；创作家侧成文另立待办",
+      "reopened_at": "2026-10-22T14:38:17",
+      "notes": " | 指挥官2026-10-22重开：共担任务仅分析师侧完成（analyst日志原文'分析师侧完成'），创作家侧产出缺失，需创作家补做并回填evidence"
+    },
+    {
       "id": "KW-WEEK-20261019-01",
       "assigned_to": [
         "创作家"
@@ -2390,45 +2875,6 @@
       "data_verified": true
     },
     {
-      "id": "LEARN-20261014-01",
-      "task": "GEO优化：把所有博客文章的H2标题改成问句格式（如'How Much Does X Cost?'），紧跟40-60字直接答案。普林斯顿GEO研究证实此举提升AI引用率30-40%",
-      "assigned_to": [
-        "打磨师"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "data_learning_2026-10-14",
-      "topic": "GEO - answer-first structure",
-      "knowledge": "每个H2是问题，首段直接给答案（40-60字），AI引擎更容易提取引用",
-      "created_at": "2026-10-14T05:01:39"
-    },
-    {
-      "id": "LEARN-20261014-03",
-      "task": "GEO优化：文章中每个关键声明都要带具体数字+来源（如'Our survey of 200 users found...'），Perplexity重度偏好带数据的引用",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "data_learning_2026-10-14",
-      "topic": "GEO - quantified claims",
-      "knowledge": "具体统计+命名来源+年份 = Perplexity引用磁铁，提升30-40%引用率",
-      "created_at": "2026-10-14T05:01:39"
-    },
-    {
-      "id": "LEARN-20261014-08",
-      "task": "内容更新策略：Perplexity重度偏好新鲜内容。给高价值页面加'Last Updated'日期并定期刷新（至少每月一次）",
-      "assigned_to": [
-        "打磨师"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "data_learning_2026-10-14",
-      "topic": "GEO - freshness signal",
-      "knowledge": "Perplexity给最近更新的页面更高权重，新鲜度是直接排名因子",
-      "created_at": "2026-10-14T05:01:39"
-    },
-    {
       "id": "LEARN-REDDIT-20261020-01",
       "priority": "P1",
       "status": "pending",
@@ -2465,67 +2911,6 @@
       "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
     },
     {
-      "id": "P1-ANSWER-FIRST-20261012",
-      "task": "新文章采用Answer-First 40-60字直接答案架构：正文开头/每个H2下先给40-60字直答再展开；打磨师批量打磨时检查AI可提取性（ChatGPT 93%引用来自第三方→评测必须引用真实用户评论/外部数据）",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "打磨师",
-        "创作家"
-      ],
-      "source": "commander_weekly_review_20261012",
-      "created_at": "2026-10-12"
-    },
-    {
-      "id": "P1-ARTICLE-REFRESH-20261019",
-      "title": "[战略学习] 批量refresh 2026-04前发布的top30文章（更新数据/加新工具/优化passage结构）",
-      "assigned_to": [
-        "打磨师",
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "commander_learning_增长引擎_20261019",
-      "detail": "Plantois验证refresh可跳20+位。从data/posts.json筛2026-04前文章按GSC曝光排序取top30，每篇更新统计数字+新增2026新工具+quick-answer box结构；一次批量≥5篇",
-      "created_at": "2026-10-19T08:01:53.867763"
-    },
-    {
-      "id": "P1-BACKLINK-15-20261012",
-      "task": "外链补足90天目标缺口：当前4条存活dofollow backlink，距目标5-15个相关真实域名差1-11个；优先获取1条'有流量的编辑链接'（客座博客/资源页，质量>数量），而非继续批量目录盲扫；持续使用Serper调研的资源页/客座博客线索（backlink_opportunities.md）",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "source": "commander_learning_cold_start_growth_20261012",
-      "created_at": "2026-10-12"
-    },
-    {
-      "id": "P1-CF-DASHBOARD-ACTIONS-20261017",
-      "task": "用户侧CF操作（架构师r28留痕）：①Cloudflare Dashboard Purge Cache（线上robots.txt无参版仍是旧缓存，含/og/ Disallow的新版已部署但边缘未更新）②Dashboard开启Bot Fight Mode（API无权限）③可选：Dashboard Analytics手动导出UA Top列表补爬虫点名",
-      "assigned_to": [
-        "指挥官"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "cf_bot_analysis_2026-10-17",
-      "created_at": "2026-10-17T06:50:00"
-    },
-    {
-      "id": "P1-CLAUDE-SEO-INSTALL-20261017",
-      "status": "pending",
-      "priority": "P1",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "task": "claude-seo接入（评估已完成，见claude_seo_evaluation_2026-10-17.md）：待指挥官提供Claude Code CLI+Anthropic登录态环境后安装plugin并跑全站审计，与OpenSEO结果交叉验证；阻塞解除前保持pending（blocked_reason=需Claude Code环境）",
-      "source": "commander_daily_2026-10-17",
-      "created_at": "2026-10-17T14:40:00",
-      "blocked_reason": "需指挥官提供 Claude Code CLI + Anthropic 登录态环境后安装 plugin 跑全站审计；阻塞解除前保持 pending",
-      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。"
-    },
-    {
       "id": "P1-CLAUDE-SEO-V241-20261020",
       "title": "Claude SEO v2.4.1 评估落地（17.5K星/MIT/Windows install.ps1）：与 P1-CLAUDE-SEO-INSTALL 联动，Anthropic key 到位后 /seo audit 跑全站 0-100 健康分 + /seo schema 校验 schema 嵌套",
       "priority": "P1",
@@ -2536,60 +2921,60 @@
       "created_at": "2026-10-20T08:02:09.063309"
     },
     {
-      "id": "P1-COLOR-CONTRAST-REMAIN-20261018",
-      "task": "Lighthouse color-contrast 4审计页全失败(axe error断言, r29修复后仍有遗漏元素): 首页/compare/blog/midjourney各至少1处对比度<4.5:1; 需逐页定位修复",
+      "id": "P1-OPENSERP-RANK-20261020",
+      "title": "评估并接入 openserp（Go SERP 抓取 CLI，Docker 自托管）替代付费 serper：跑 top10 目标查询词排名快照，产出每周排名跟踪表",
       "priority": "P1",
+      "assigned_to": "分析师",
       "status": "pending",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "source": "lighthouse_ci_2026-10-18",
-      "created_at": "2026-10-18T21:55:32"
+      "source": "commander_learning_github_trending_20261020",
+      "evidence": "github openserp 745星：Google/Yandex/Bing/DDG/Ecosia 自托管；免费替代付费 serper",
+      "created_at": "2026-10-20T08:02:09.063309",
+      "status_note_20261020b": "2026-10-20 批次二评估: OpenSERP(karust/openserp)已核实真实存在(openserp.org, Go 二进制或 Docker 镜像 karust/openserp, 免费自托管 REST API, 6 引擎 Google/Bing/Yandex/Baidu/DDG/Ecosia, 端口 7000); 本机实测 docker 与 go 均不可用→两种接入路径均阻塞; 项目内已有 20+ serper 付费脚本可用作临时排名快照; 保持 pending 待环境准备(装 Go 或 Docker)后接入",
+      "status_note_20261020c": "2026-10-20 批次三复查: docker/go 均不可用, 接入阻塞不变, 保持 pending",
+      "block_note_20261022": "阻塞确认(10/22)：OpenSERP 需 Docker/Go 环境，本机均不可用；待环境就绪"
     },
     {
-      "id": "P1-CONTENT-FAQ-001",
-      "status": "pending",
+      "id": "P1-LCP-REALDATA-20261020",
+      "title": "midjourney页真实环境LCP定位（CI模拟8.4s异常，需RUM/CRUX确认）",
+      "description": "r39追加。r40初步排查(midjourney页): ①JS chunks全正常——midjourney页不引用657KB tools全量chunk(3310为ranking/search等其他页用), 最大本地chunk仅172KB(fd9d1056共享); ②framer-motion确认已删净(package.json无依赖+源码0处import), 657KB chunk的\"framer/motion\"字符串=工具名Framer AI/Motion数据, 非库代码; ③RadarChart为自绘SVG组件(dynamicImport ssr:false懒加载, 无recharts依赖); ④HTML 365KB正常。结论: midjourney页LCP 8.4s(CI模拟)无法在本地资源层面解释, 嫌疑=页面长/Live screenshot大图/真实环境差异, 需CRUX(RUM)或现场Lighthouse确认。首页LCP主因已由P0-HOME-DUP修复(重复区块-525行)覆盖, 待CWV复测。\nr41(10-21)：CWV 最新=10-20T10:58Z（r40 首页去重前基线）：首页 LCP 5.0/4.4/4.4s、perplexity-review 4.8/5.1/4.9s、compare 4.6/4.8/4.4s、midjourney 5.6/5.8/5.8s——全站超2.5s红线为系统性JS/HTML负担（共享chunk 540KB+HTML 300-365KB）。r41 已修第三方preload抢带宽（umami+gtag async化）；下轮 CWV 应反映 首页去重+r40 preload 修复。真实环境 RUM 仍建议（现场 Lighthouse）。\n[r42 2026-10-21] CWV 字段确认：lcp 为字符串字段（如 \"5.0 s\"），CI 报告 perf 分数 midjourney 76/72/73、首页 48/81/81；无新报告，系统性 JS/HTML 减重为下一杠杆。",
       "priority": "P1",
       "assigned_to": [
-        "创作家"
+        "架构师"
       ],
-      "task": "6篇best-ai-*-tools列表文补FAQ+H2+结论（audit_findings P1）",
-      "source": "audit_findings_2026-10-11",
-      "created_at": "2026-10-11T14:43:00",
-      "detail": ""
+      "status": "pending",
+      "source": "r39_perf_recheck_20261020",
+      "created_at": "2026-10-20T12:23:36+08:00",
+      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。"
     },
     {
-      "id": "P1-CONTENT-KEYWORD-DENSITY-001",
-      "task": "打磨师质检4篇草稿关键词密度0.0-0.13%<0.5%阈值。创作家写新文章时主关键词自然出现≥3次（标题/H2/正文首段/结尾），发布前自查密度≥0.5%。",
-      "assigned_to": [
-        "分析师"
-      ],
+      "id": "P1-MIDJOURNEY-LCP-20261020",
+      "title": "/tools/midjourney LCP回升至7.8-8.4s（反弹），继续优化LCP至<4s",
       "priority": "P1",
+      "assigned_to": "架构师",
       "status": "pending",
-      "source": "hallucination_audit_report.md 2026-10-09",
-      "created_at": "2026-10-09",
-      "status_note_20261018": "content_drafts 存在，需创作家写文自查密度≥0.5%，保持 pending",
-      "status_note_20261018b": "2026-10-18复查：content_drafts增至74篇；抽查最新3篇密度全部达标(fitness文章 ai4.12%+fitness0.92%、hallucinate0.59%、notion3.14%，均≥0.5%阈值)。创作家已响应，原4篇问题草稿质检结果未知，保持pending",
-      "status_note_20261018c": "2026-10-18 20:05复查：content_drafts增至77篇，最新2篇密度达标(subscription 1.89%、social media 0.81%)；创作家持续响应，待打磨师质检旧4篇",
-      "status_note_20261019": "2026-10-19 08:0x复查: 创作家持续产出（77篇），最新草稿密度达标；待打磨师质检旧4篇",
-      "status_note_20261019b": "2026-10-19 14:2x复查: 无新草稿证据，旧4篇待质检",
-      "status_note_20261019c": "2026-10-19 21:0x复查: content_drafts 86 篇（今日 +9），打磨师 R19/R20 日志无密度复检记录，旧 4 篇待质检，保持 pending",
-      "status_note_20261020": "2026-10-20 复查: 旧 4 篇草稿无打磨师复检记录, 保持 pending 待打磨师安排密度复检",
-      "status_note_20261020b": "2026-10-20 批次二复查: 无打磨师复检记录, 保持 pending",
-      "status_note_20261020c": "2026-10-20 批次三复查: 无打磨师复检记录, 保持 pending"
+      "source": "commander_daily_20261020",
+      "created_at": "2026-10-20T14:30",
+      "evidence": "r49 复核：无新 CWV；待 CrUX key + 带代码改动部署触发新 CI。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。",
+      "description": "\nr41(10-21)：CWV(10-20T10:58Z) LCP 5.6/5.8/5.8s（r39 8.4s时代已过）；图片层已闭环（webp 152KB+preload+fetchPriority=high+无大chunk）；r41 已修第三方 analytics preload（umami+gtag 改原生async，preload 4→2）——下轮 CI CWV 复测后评估是否继续（目标<4s，剩余主因为系统性 JS/HTML 负担）。\n[r42 2026-10-21] CWV 仍为 10-20T10:58Z 基线（无新报告），r41 preload 修复效果待下轮 CI 双跑；线上 7a7ebb2 已部署且首页新版已收敛。"
     },
     {
-      "id": "P1-CONTENT-REAL-KW-20261016",
+      "id": "P1-HN-ENGAGE-20261020",
+      "title": "HN养号评论（aitoolcrux账号）每天2-3条AI帖评论：需先CDP登录态恢复，无登录不假完成；已保持pending多日",
       "priority": "P1",
+      "assigned_to": "window2(外链拓荒)",
       "status": "pending",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "commander_diagnose_20261016",
-      "task": "内容转向真实搜索词（证据：唯一有真实点击的博客是 best-ai-voice-changers-2026（2次点击/68曝光/pos16.5）+ openai_astra_review（1次/160曝光/pos10.8），其余全部0点击）。动作：1) 用OpenSEO research_keywords拉best ai tools相关真实词（volume≥400/KD≤35）；2) 优先扩写 best-ai-voice-changers 同主题系列（类似词：ai voice changer free、ai voice changer for gaming等）提升排名进前10；3) 产出2篇新选题。验收：新增2篇含真实搜索量的文章草稿。",
-      "created_at": "2026-10-16T22:10:00",
-      "updated_at": "2026-10-16T22:10:00"
+      "source": "commander_daily_20261020_2133",
+      "created_at": "2026-10-20T21:36"
+    },
+    {
+      "id": "P1-HANDOFF-SCHEMA-20261021",
+      "title": "WINDOW_SOP新增handoff契约：每条completed待办必须带evidence四字段（做了什么/数据结果/置信度/需复查），无evidence一律退回pending；验收用确定性工具（zens-ink/llmevalkit）",
+      "priority": "P1",
+      "assigned_to": "指挥官",
+      "status": "pending",
+      "source": "commander_learning_multiagent",
+      "created_at": "2026-10-21T08:00",
+      "evidence": "Maat契约化交接+单响应原则；P0-FAKE-FIX教训延伸"
     },
     {
       "id": "P1-DENSITY-REGRESSION-20261021",
@@ -2606,16 +2991,6 @@
       "created_at": "2026-10-21T14:06:53"
     },
     {
-      "id": "P1-FEATURED-FOUNDER-EMAIL-20261019",
-      "title": "[周会] 'you're featured'邮件→已收录工具创始人（reciprocal link）",
-      "assigned_to": "拓荒者",
-      "priority": "P1",
-      "status": "pending",
-      "source": "commander_weekly_20261019_popularaitools",
-      "detail": "对已收录的50+工具创始人发'你被收录了'邮件，礼貌请求回链或社媒分享；高转化外链战术",
-      "created_at": "2026-10-19T06:50:20.402321"
-    },
-    {
       "id": "P1-GA4-SG-BOT-CLEAN-20261021",
       "task": "新加坡 IP 段 Bot 流量清洗（10/16=96s全0engaged，10/03=893s同模式）：Cloudflare WAF 规则屏蔽新加坡机房ASN/UA特征，保留真实访客；GA4 侧加 internal 流量排除验证",
       "priority": "P1",
@@ -2629,122 +3004,18 @@
       "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。"
     },
     {
-      "id": "P1-GEO-003",
-      "status": "pending",
+      "id": "GEO-CONTENT-EXPERT-QUOTES-20261022",
       "priority": "P1",
+      "title": "GEO Content 6.7/10：补 Expert Quotes（0%）、Step-by-step（33%）、Real Examples（33%）",
+      "description": "GEO 审计（real_geo_aeo_audit.py 2026-10-22）GEO Content Structure 66.7/100：Expert Quotes 0/3 页、Step By Step 1/3、Real Examples 1/3。AI 引擎偏好引用含专家引述/步骤/实例的数据密集型内容。",
       "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "P1-GEO-003: GEO基线测量（本月必做）：①用Perplexity/ChatGPT/Claude各跑5个品牌prompt（\"best AI tools directory\"、\"AI tool comparison\"、\"futurepedia vs aitoolcrux\"等），记录是否被提及/引用/推荐，输出到iteration_center/ai_citation_audit.md ②下月同prompt复测对比，量化GEO提升 ③检查GSC生成式AI性能报告（2026年6月已上线）是否可用",
-      "source": "commander_learning_geo_2026",
-      "created": "2026-10-11"
-    },
-    {
-      "id": "P1-GEO-BASELINE-AUDIT-20261013",
-      "assigned_to": [
-        "分析师"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "task": "GEO引用baseline审计：取top10目标关键词，在ChatGPT Search/Perplexity/Google AI Overviews各跑一遍，记录我们是否被引用、被哪些来源引用、输出iteration_center/geo_citation_baseline.md，此后每周追踪对比（被引用=Share of Voice增长）",
-      "source": "commander_learning_2026SEO_GEO_20261013",
-      "status_note_20261018": "需浏览器跑 ChatGPT Search/Perplexity，超出分析师只读范围，保持 pending",
-      "status_note_20261018b": "2026-10-18复查：技术就绪度审计已完成(real_geo_aeo_audit_results.json 04:02生成, geo_readiness_score=8.94, 10/11爬虫可访问, CCBot被屏蔽, llms.txt+llms-full.txt均存在, 7关键页AEO 8/8全过)；但引用级baseline(top10关键词跑ChatGPT Search/Perplexity/AIO)未做，保持pending(引用级需浏览器操作)",
-      "status_note_20261018c": "2026-10-18 20:05复查：技术审计结果存在(04:02, score 8.94)，引用级baseline(baseline-browser-mapping为站内JS资源非审计产物)未做，保持pending",
-      "status_note_20261019": "2026-10-19 08:0x复查: 引用级baseline未做（需浏览器跑ChatGPT Search/Perplexity），保持pending",
-      "status_note_20261019b": "2026-10-19 14:2x复查: 引用级baseline未做（需浏览器），保持pending",
-      "status_note_20261019c": "2026-10-19 21:0x复查: 引用级 baseline 需浏览器跑 AI 搜索，无新证据，保持 pending",
-      "status_note_20261020": "2026-10-20 复查: 引用级基线审计需浏览器环境(SERP 实测), 本会话无 GUI 浏览器会话, 保持 pending",
-      "status_note_20261020b": "2026-10-20 批次二复查: 需浏览器 SERP 实测, 无 GUI 会话, 保持 pending",
-      "status_note_20261020c": "2026-10-20 批次三复查: 需浏览器 SERP 实测, 保持 pending",
-      "block_note_20261022": "阻塞确认(10/22)：需在 ChatGPT Search/Perplexity/AI Overviews 实际 SERP 检索，当前无 GUI 浏览器会话；待浏览器环境或人工执行"
-    },
-    {
-      "id": "P1-GEO-THREE-20261012",
-      "task": "GEO三要素落地到新文章：每篇评测至少3个统计数字（带命名来源+年份）+1个专家/用户直接引语（带归属）+内文出处链接（Princeton研究：统计+40%可见性、引用+115%、引语+30-40%）",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
+        "window2",
         "创作家"
       ],
-      "source": "commander_weekly_review_20261012",
-      "created_at": "2026-10-12"
-    },
-    {
-      "id": "P1-H1-MISSING-20261012",
-      "task": "H1缺失修复（audit_findings 9-27：121页缺H1，含5个article-api-*自动页）：创作家/打磨师批量检查并补H1（每页唯一H1），架构师核查模板层H1输出；同时301处理article-api-*丑陋URL",
-      "priority": "P1",
       "status": "pending",
-      "assigned_to": [
-        "创作家",
-        "打磨师"
-      ],
-      "source": "audit_findings.md",
-      "created_at": "2026-10-12"
-    },
-    {
-      "id": "P1-HANDOFF-SCHEMA-20261021",
-      "title": "WINDOW_SOP新增handoff契约：每条completed待办必须带evidence四字段（做了什么/数据结果/置信度/需复查），无evidence一律退回pending；验收用确定性工具（zens-ink/llmevalkit）",
-      "priority": "P1",
-      "assigned_to": "指挥官",
-      "status": "pending",
-      "source": "commander_learning_multiagent",
-      "created_at": "2026-10-21T08:00",
-      "evidence": "Maat契约化交接+单响应原则；P0-FAKE-FIX教训延伸"
-    },
-    {
-      "id": "P1-HN-ENGAGE-20261020",
-      "title": "HN养号评论（aitoolcrux账号）每天2-3条AI帖评论：需先CDP登录态恢复，无登录不假完成；已保持pending多日",
-      "priority": "P1",
-      "assigned_to": "window2(外链拓荒)",
-      "status": "pending",
-      "source": "commander_daily_20261020_2133",
-      "created_at": "2026-10-20T21:36"
-    },
-    {
-      "id": "P1-INDEXMON-INTERNAL-LINK-20261019",
-      "title": "在已曝光博客文章（best-ai-voice-changers-2026 曝光68）中加内链指向未收录分类页/工具页",
-      "priority": "P1",
-      "assigned_to": "创作家",
-      "status": "pending",
-      "source": "index_monitor_20261019",
-      "evidence": "OpenSEO top_pages 曝光68点击2"
-    },
-    {
-      "id": "P1-LCP-REALDATA-20261020",
-      "title": "midjourney页真实环境LCP定位（CI模拟8.4s异常，需RUM/CRUX确认）",
-      "description": "r39追加。r40初步排查(midjourney页): ①JS chunks全正常——midjourney页不引用657KB tools全量chunk(3310为ranking/search等其他页用), 最大本地chunk仅172KB(fd9d1056共享); ②framer-motion确认已删净(package.json无依赖+源码0处import), 657KB chunk的\"framer/motion\"字符串=工具名Framer AI/Motion数据, 非库代码; ③RadarChart为自绘SVG组件(dynamicImport ssr:false懒加载, 无recharts依赖); ④HTML 365KB正常。结论: midjourney页LCP 8.4s(CI模拟)无法在本地资源层面解释, 嫌疑=页面长/Live screenshot大图/真实环境差异, 需CRUX(RUM)或现场Lighthouse确认。首页LCP主因已由P0-HOME-DUP修复(重复区块-525行)覆盖, 待CWV复测。\nr41(10-21)：CWV 最新=10-20T10:58Z（r40 首页去重前基线）：首页 LCP 5.0/4.4/4.4s、perplexity-review 4.8/5.1/4.9s、compare 4.6/4.8/4.4s、midjourney 5.6/5.8/5.8s——全站超2.5s红线为系统性JS/HTML负担（共享chunk 540KB+HTML 300-365KB）。r41 已修第三方preload抢带宽（umami+gtag async化）；下轮 CWV 应反映 首页去重+r40 preload 修复。真实环境 RUM 仍建议（现场 Lighthouse）。\n[r42 2026-10-21] CWV 字段确认：lcp 为字符串字段（如 \"5.0 s\"），CI 报告 perf 分数 midjourney 76/72/73、首页 48/81/81；无新报告，系统性 JS/HTML 减重为下一杠杆。",
-      "priority": "P1",
-      "assigned_to": [
-        "架构师"
-      ],
-      "status": "pending",
-      "source": "r39_perf_recheck_20261020",
-      "created_at": "2026-10-20T12:23:36+08:00",
-      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。"
-    },
-    {
-      "id": "P1-LISTING-PRICING-20261019",
-      "title": "[战略学习] 收录变现定价模型设计：$49收录/$99 Featured（对标Futurepedia $99/$299、AIToolsRecap $49/$99）",
-      "assigned_to": [
-        "分析师",
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "commander_learning_增长引擎_20261019",
-      "detail": "产出收录变现方案：定价档位+价值承诺(Google排名/AI引用/外链)+支付接入方案(PayPal+USDT降摩擦)。目标C目标$100/月，先出方案等流量达标上线；分析师出成本/竞品定价表，创作家写销售页文案",
-      "created_at": "2026-10-19T08:01:53.867763",
-      "status_note_20261019b": "2026-10-19 14:2x: 分析师成本/竞品定价表已完成（pricing_benchmark_20261019.md：Futurepedia $247-497/Toolify $100/TAAFT $49-347；成本 $10/单；目标档位 $49/$99；支付 PayPal+USDT），待创作家写销售页文案",
-      "status_note_20261019c": "2026-10-19 21:0x复查: 定价表 pricing_benchmark_20261019.md 就绪，待创作家写销售页",
-      "status_note_20261020": "2026-10-20 复查: 分析师侧交付物 iteration_center/pricing_benchmark_20261019.md 已存在(竞品定价表+成本测算+四档目标), 创作家销售页文案待推进",
-      "status_note_20261020b": "2026-10-20 批次二复查: 分析师侧交付物在位, 创作家文案待推进",
-      "status_note_20261020c": "2026-10-20 批次三复查: 交付物在位, 创作家推进中",
-      "analyst_side_note_20261021c": "分析师侧交付物已在库(pricing_benchmark_20261019.md / research_asset_20261019.md)，待创作家成文闭环",
-      "completed_at": "2026-10-22T08:06:19",
-      "status_note_20261022": "分析师侧完成：定价基准材料 pricing_benchmark_20261019.md 已在库（2941B）；创作家侧成文另立待办",
-      "reopened_at": "2026-10-22T14:38:17",
-      "notes": " | 指挥官2026-10-22重开：共担任务仅分析师侧完成（analyst日志原文'分析师侧完成'），创作家侧产出缺失，需创作家补做并回填evidence"
+      "source": "geo_audit_2026-10-22",
+      "created_at": "2026-10-22T04:17:11+08:00",
+      "evidence": "r49 复核 2026-10-23T00:21Z：GEO 9.1/10 A（+0.2，部分因审计样本缩至 1 页）；GEO Content 7.1/10（Expert Quotes 0%/Step By Step 0% 仍在，样本=1 页）；AEO 10/10（blog/alternatives 2 页 Failed to fetch 经 web_fetch 服务端核实 200+Quick Answer 在位=本机超时假象）；llms.txt 10/10；crawler 9.1/10。"
     },
     {
       "id": "P1-LLM-ANSWER-BLOCK-20261022",
@@ -2759,76 +3030,6 @@
       "created_at": "2026-10-22T06:05:00"
     },
     {
-      "id": "P1-MIDJOURNEY-LCP-20261020",
-      "title": "/tools/midjourney LCP回升至7.8-8.4s（反弹），继续优化LCP至<4s",
-      "priority": "P1",
-      "assigned_to": "架构师",
-      "status": "pending",
-      "source": "commander_daily_20261020",
-      "created_at": "2026-10-20T14:30",
-      "evidence": "r49 复核：无新 CWV；待 CrUX key + 带代码改动部署触发新 CI。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。",
-      "description": "\nr41(10-21)：CWV(10-20T10:58Z) LCP 5.6/5.8/5.8s（r39 8.4s时代已过）；图片层已闭环（webp 152KB+preload+fetchPriority=high+无大chunk）；r41 已修第三方 analytics preload（umami+gtag 改原生async，preload 4→2）——下轮 CI CWV 复测后评估是否继续（目标<4s，剩余主因为系统性 JS/HTML 负担）。\n[r42 2026-10-21] CWV 仍为 10-20T10:58Z 基线（无新报告），r41 preload 修复效果待下轮 CI 双跑；线上 7a7ebb2 已部署且首页新版已收敛。"
-    },
-    {
-      "task": "设置Reddit关键词监控：AI tool review / best AI / AI alternative / frustrated AI / waste of money，帖子2h内参与回答",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "source": "growth_learning_reddit_2026-10-13",
-      "detail": "Alai案例88k注册，趁帖子热时介入",
-      "id": "P1-NOID-FIX-118",
-      "status": "pending"
-    },
-    {
-      "task": "在r/SaaS weekly feedback thread自然提及aitoolcrux（透明说\"我做了个AI工具评测站\"），不硬推",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "source": "growth_learning_reddit_2026-10-13",
-      "detail": "用指定promo thread，周二/三发",
-      "id": "P1-NOID-FIX-119",
-      "status": "pending"
-    },
-    {
-      "id": "P1-OPENSEO-KEYWORDS-20261016",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "commander_openseo_integration_20261016",
-      "task": "用OpenSEO关键词研究（research_keywords，seeds=[best ai tools, ai writing tools, ai chat], locationCode=2840, en）拉取150词清单，筛选volume>=400且KD<=35的词，产出20个内容选题写入iteration_center/content_briefs/openseo_kw_20261016.md。注意credits只剩169，单次调用≤5 seeds，每周≤2次。",
-      "created_at": "2026-10-16T21:30:00",
-      "updated_at": "2026-10-16T21:30:00"
-    },
-    {
-      "id": "P1-OPENSERP-RANK-20261020",
-      "title": "评估并接入 openserp（Go SERP 抓取 CLI，Docker 自托管）替代付费 serper：跑 top10 目标查询词排名快照，产出每周排名跟踪表",
-      "priority": "P1",
-      "assigned_to": "分析师",
-      "status": "pending",
-      "source": "commander_learning_github_trending_20261020",
-      "evidence": "github openserp 745星：Google/Yandex/Bing/DDG/Ecosia 自托管；免费替代付费 serper",
-      "created_at": "2026-10-20T08:02:09.063309",
-      "status_note_20261020b": "2026-10-20 批次二评估: OpenSERP(karust/openserp)已核实真实存在(openserp.org, Go 二进制或 Docker 镜像 karust/openserp, 免费自托管 REST API, 6 引擎 Google/Bing/Yandex/Baidu/DDG/Ecosia, 端口 7000); 本机实测 docker 与 go 均不可用→两种接入路径均阻塞; 项目内已有 20+ serper 付费脚本可用作临时排名快照; 保持 pending 待环境准备(装 Go 或 Docker)后接入",
-      "status_note_20261020c": "2026-10-20 批次三复查: docker/go 均不可用, 接入阻塞不变, 保持 pending",
-      "block_note_20261022": "阻塞确认(10/22)：OpenSERP 需 Docker/Go 环境，本机均不可用；待环境就绪"
-    },
-    {
-      "id": "P1-QC-VERIFY-6ARTICLES-20261016",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "commander_dispatch_20261016",
-      "task": "补充6篇新文章质量验证留痕（验证真实性存疑：创作家日志称batch27/28的6篇文章zens-ink 100/100/100，但iteration_center/zensink_content_quality_report.json（145篇，avg 53，pass仅12）中找不到这6篇记录）。动作：1) 对 best-ai-research-assistants-2026 / best-no-code-ai-tools-2026 / best-ai-website-builders-2026 及batch28的translators/hr-tools/ecommerce共6篇，重新跑zens-ink content_qc；2) 把结果写入zensink_content_quality_report.json（或独立留痕文件）；3) 若实际<70，标记假完成整改。验收：6篇分数可复核，≥70通过。",
-      "created_at": "2026-10-16T22:20:00",
-      "updated_at": "2026-10-16T22:20:00"
-    },
-    {
       "id": "P1-READABILITY-SENTENCE-PARA-20261022",
       "task": "可读性批次打磨（学习落地，来源Google Search Central/Yoast/NNg/ClaritySEO）：①平均句长15-20词，>25词句子拆成2-3句（Yoast: >20词句子占比>25%即标红）；②段落2-4句/<100词（Yoast绿<150词、红>200词），一段只讲一个意思；③主动语态占比>90%（被动>10%标红）；④加过渡词（however/for example/after that）连接，避免连续同结构句；⑤目标Flesch Reading Ease 60-70（电商65-75，grade6-7），先保SOP硬线Flesch>50。批量过现存低分/长文，一次≥5篇。",
       "priority": "P1",
@@ -2839,30 +3040,6 @@
       "status": "pending",
       "source": "learning_readability_20261022",
       "created_at": "2026-10-22T06:05:00"
-    },
-    {
-      "id": "P1-RESEARCH-ASSET-20261019",
-      "title": "[周会] 原研数据资产：AI工具目录收录基准研究页（链接磁铁）",
-      "assigned_to": [
-        "分析师",
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "commander_weekly_20261019_backlinko_fulltraffic",
-      "detail": "发布1个原研数据页（如'AI工具目录收录基准研究2026'：收录率/审核周期/DR分布统计），吸引自然编辑引用+记者查询；分析师出数据，创作家成文",
-      "created_at": "2026-10-19T06:50:20.402321",
-      "status_note_20261019": "2026-10-19 08:0x: 分析师数据部分已完成（research_asset_20261019.md：收录成本$0-$497/审核周期48h-2周/目录DR 49-90/规模对比），待创作家成文",
-      "status_note_20261019b": "2026-10-19 14:2x复查: 数据资产已就绪（research_asset_20261019.md），待创作家成文（数据/文案均未动）",
-      "status_note_20261019c": "2026-10-19 21:0x复查: 数据资产 research_asset_20261019.md 就绪，待创作家成文",
-      "status_note_20261020": "2026-10-20 复查: 分析师侧数据交付物 iteration_center/research_asset_20261019.md 已存在(收录参数+DR时间表+规模对比), 创作家成文部分待推进, 整体待创作家侧闭环",
-      "status_note_20261020b": "2026-10-20 批次二复查: 分析师侧交付物在位, 创作家成文待推进",
-      "status_note_20261020c": "2026-10-20 批次三复查: 交付物在位, 创作家推进中",
-      "analyst_side_note_20261021c": "分析师侧交付物已在库(pricing_benchmark_20261019.md / research_asset_20261019.md)，待创作家成文闭环",
-      "completed_at": "2026-10-22T08:06:19",
-      "status_note_20261022": "分析师侧完成：研究素材 research_asset_20261019.md 已在库（2722B）；创作家侧成文另立待办",
-      "reopened_at": "2026-10-22T14:38:17",
-      "notes": " | 指挥官2026-10-22重开：共担任务仅分析师侧完成（analyst日志原文'分析师侧完成'），创作家侧产出缺失，需创作家补做并回填evidence"
     },
     {
       "id": "P1-SCAN-FORMAT-20261022",
@@ -2877,232 +3054,82 @@
       "created_at": "2026-10-22T06:05:00"
     },
     {
-      "id": "P1-THIN-CATEGORY-20261012",
-      "task": "薄内容分类页修复（audit_findings 9-27：10个分类页138-148词）：为/blog/category/*和/subcategory/*添加>=300词介绍性文字，或设置noindex（二选一按价值判断）",
+      "id": "CMD-LEARN-AFF-UPSELL-20261022",
+      "task": "联盟佣金结构升级（参考PopularAiTools佣金分层：premium 30-50% recurring/cookie 90-365天）：分析师梳理当前affiliate_programs.md已接入联盟的cookie时长与佣金类型，列出佣金<25%或cookie<60天的联盟名单，评估替换为recurring型联盟（30-50% recurring）；目标：AFF漏斗基线从0.14%提升，产出替换建议清单交指挥官",
       "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "audit_findings.md",
-      "created_at": "2026-10-12"
-    },
-    {
-      "id": "P1-TOOL-ELMO-20261017",
-      "task": "部署 elmo（124 star，AEO/GEO品牌可见度追踪器，Docker Compose自托管）：监控ChatGPT/Claude/Gemini/Perplexity对aitoolcrux及核心品牌词（aitoolcrux/AI tool review类）的提及与内容引用，产出一周AI提及报告；目标=量化30天目标B中'AI渠道信号'：AI回答中被提及/引用次数、引用URL、上下文正面/负面",
       "assigned_to": [
         "分析师"
       ],
-      "priority": "P1",
       "status": "pending",
-      "source": "commander_learning_GitHub_trending_20261017",
-      "created_at": "2026-10-17T08:10:00",
-      "status_note_20261018": "elmo 未部署（无 docker-compose），需运维窗口，保持 pending",
-      "status_note_20261018b": "2026-10-18复核查：无任何elmo相关文件/目录，Docker部署未开始，保持pending(部署类，超出分析师只读范围)",
-      "status_note_20261018c": "2026-10-18 20:05复核查：无elmo文件，部署未开始",
-      "status_note_20261019": "2026-10-19 08:0x复查: 无elmo文件，部署未开始",
-      "status_note_20261019b": "2026-10-19 14:2x复查: 无elmo文件",
-      "status_note_20261019c": "2026-10-19 21:0x复查: elmo 相关文件 0，未部署，保持 pending",
-      "status_note_20261020": "2026-10-20 复查: Elmo 工具部署属开发类, 项目内无 elmo 相关文件, 保持 pending 待开发窗口",
-      "status_note_20261020b": "2026-10-20 批次二复查: 已被 P0-GEO-ELMO-TRACKER-20261020 升级承接(同 elmo 部署, 指挥官提级 P0), 保留 pending 待同环境阻塞解除",
-      "status_note_20261020c": "2026-10-20 批次三复查: 已被 P0-GEO-ELMO 承接, 保持 pending",
-      "block_note_20261022": "阻塞确认(10/22)：本机 docker 命令不可用，无法部署 elmo；同一阻塞"
+      "source": "commander_learning_AI工具站成功案例拆解",
+      "created_at": "2026-10-22T08:02:02",
+      "due": "2026-10-26",
+      "notes": "产出清单含：联盟名/当前佣金/当前cookie/建议动作（保留/替换/新增）"
     },
     {
-      "id": "PAIN-P1-2026-10-09-44891",
+      "id": "CMD-LEARN-TASK-PAGES-20261022",
+      "task": "建设task-based落地页群（抄TAAFT的'AI for X'模式）：从state现有209篇reviews中提取20个高频任务词（如AI for video editing/logo making/coding），创作家为每个任务词生成300字任务说明+内链到3-5个相关工具review页，目标：覆盖'AI tool for X'类长尾查询（TAAFT靠此吃下海量查询），产出20个页面草稿",
       "priority": "P1",
-      "task": "用户痛点【AI编码工具(Cursor/Copilot)实际效果不如宣传】，建议写文章【AI Coding Tools in 2026: Why Cursor and Copilot Still Can't Replace Senior Devs】",
       "assigned_to": [
         "创作家"
       ],
-      "source": "pain_point_mining_2026-10-09",
-      "verified": true,
-      "serp_competition": "Low",
-      "sources_count": 3,
       "status": "pending",
-      "created": "2026-10-09 20:15:06 JST"
+      "source": "commander_learning_AI工具站成功案例拆解",
+      "created_at": "2026-10-22T08:02:02",
+      "due": "2026-10-25",
+      "notes": "参考TAAFT task-based分类；每页含FAQ；完成后交打磨师质检"
     },
     {
-      "id": "PAIN-P1-2026-10-09-4560",
+      "id": "CMD-LEARN-VS-PAGES-20261022",
+      "task": "批量产出'A vs B'对比页（目录站bottom-funnel流量主力，参考aitoolcamp 2026目录SEO三支柱）：已有素材competitor_windsurf-vs-cursor.json等，创作家按现成素材写10篇2000字对比评测（含价格/功能/适用场景对比表+结论推荐），复用现有comparison模板，写完存content_drafts/不直接发布",
       "priority": "P1",
-      "task": "用户痛点【Notion AI令人失望、找替代】，建议写文章【Notion AI Is Disappointing? Here Are 7 Real Alternatives in 2026】",
       "assigned_to": [
         "创作家"
       ],
-      "source": "pain_point_mining_2026-10-09",
-      "target_tool": "Notion AI",
-      "evidence_count": 9,
       "status": "pending",
-      "created": "2026-10-09 19:50:00 JST"
+      "source": "commander_learning_AI工具站成功案例拆解",
+      "created_at": "2026-10-22T08:02:02",
+      "due": "2026-10-28",
+      "notes": "对标高意图bottom-funnel查询；每篇需真实使用体验证据"
     },
     {
-      "id": "PAIN-P1-2026-10-09-4598",
+      "id": "CMD-CREATOR-LISTING-PRICING-20261022",
+      "task": "共担待办P1-LISTING-PRICING-20261019创作家侧：基于分析师已产出pricing_benchmark_20261019.md（2941B在库），创作家将定价基准落地为2篇以上定价对比/榜单内容（如best AI tools by price tier），写content_drafts/并回填evidence",
       "priority": "P1",
-      "task": "用户痛点【AI图像生成一致性差/商用不可靠】，建议写文章【AI Image Generators Still Can't Do Consistency in 2026 (And Workarounds That Work)】",
       "assigned_to": [
         "创作家"
       ],
-      "source": "pain_point_mining_2026-10-09",
-      "verified": true,
-      "serp_competition": "Medium",
-      "sources_count": 1,
       "status": "pending",
-      "created": "2026-10-09 20:15:06 JST"
+      "source": "commander_daily_20261022",
+      "created_at": "2026-10-22T14:38:17",
+      "due": "2026-10-25",
+      "notes": "指挥官重开共担待办衍生；完成须回填evidence字段"
     },
     {
-      "id": "PAIN-P1-2026-10-09-5166",
+      "id": "CMD-CREATOR-RESEARCH-ASSET-20261022",
+      "task": "共担待办P1-RESEARCH-ASSET-20261019创作家侧：基于分析师已产出research_asset_20261019.md（2722B在库），创作家将调研资产转化为1-2篇数据驱动文章（引用原始数据+图表），写content_drafts/并回填evidence",
       "priority": "P1",
-      "task": "用户痛点【MidJourney订阅后悔/想取消】，建议写文章【Is MidJourney Still Worth It in 2026? Honest Review After Price Hikes】",
       "assigned_to": [
         "创作家"
       ],
-      "source": "pain_point_mining_2026-10-09",
-      "target_tool": "MidJourney",
-      "evidence_count": 1,
       "status": "pending",
-      "created": "2026-10-09 19:50:00 JST"
+      "source": "commander_daily_20261022",
+      "created_at": "2026-10-22T14:38:17",
+      "due": "2026-10-25",
+      "notes": "指挥官重开共担待办衍生；完成须回填evidence字段"
     },
     {
-      "id": "PAIN-P1-2026-10-09-59727",
+      "id": "CMD-CREATOR-VIDEO-DESIGN-20261022",
+      "task": "GSC新曝光词内容机会（latest_report_2026-10-22：best ai video editor/design系列词开始获曝光60-83位）：创作家产2篇对比评测——①best ai video editor 2026（对照已产kling-vs-hailuo、复用截图kling-home/hailuo-home及现有视频类评测）②best ai design tools 2026（含Canva/Figma/Beautiful.ai对比，复用gamma-home/beautifulai-home截图）。每篇≥2000词、5内链+2外链、FAQ≥3、zens-ink≥70+llmevalkit无幻觉，写content_drafts/并回填evidence",
       "priority": "P1",
-      "task": "用户痛点【AI生成内容被Google惩罚/不排名】，建议写文章【Does AI Content Get Penalized by Google in 2026? What Actually Happens】",
       "assigned_to": [
         "创作家"
       ],
-      "source": "pain_point_mining_2026-10-09",
-      "verified": true,
-      "serp_competition": "Low",
-      "sources_count": 1,
       "status": "pending",
-      "created": "2026-10-09 20:15:06 JST"
-    },
-    {
-      "id": "PAIN-P1-2026-10-09-62131",
-      "priority": "P1",
-      "task": "用户痛点【SaaS老板用AI工具反而更麻烦/不实用】，建议写文章【AI Tools for SaaS in 2026: What Actually Works vs. What's Overhyped】",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "pain_point_mining_2026-10-09",
-      "verified": true,
-      "serp_competition": "Medium",
-      "sources_count": 2,
-      "status": "pending",
-      "created": "2026-10-09 20:13:47 JST"
-    },
-    {
-      "id": "R19-saasclub-io",
-      "task": "[外链调研R19/社区推荐] saasclub.io/suggest: SaaS社区guest+工具suggest入口, 代理GET 200含guest/submit/suggest/contact信号, 以独立AI评测站身份suggest收录/嘉宾; 无邮箱走suggest表单",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "url": "https://saasclub.io/suggest/",
-      "channel": "社区推荐/guest",
-      "source": "backlink_research_R19_20261019",
-      "created_at": "2026-10-19T01:14:50.545186+08:00",
-      "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段"
-    },
-    {
-      "id": "SEO-20261017-004",
-      "task": "主打唯一有点击词'best voice changer 2026'（pos 4，GSC唯一产生点击）：优化/blog/best-ai-voice-changers-2026页面标题/首段答案/FAQ+加2条相关外链（Reddit r/voicemod类讨论+工具站联盟），目标2周内从pos 4升到pos 1-2拿自然流量",
-      "assigned_to": [
-        "创作家"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "gsc_analysis_2026-10-17",
-      "data_verified": true,
-      "created_at": "2026-10-17T01:00:00"
-    },
-    {
-      "id": "SEO-AUDIT-20261014-BROKEN-LINKS",
-      "task": "全站broken外链188条待核（812 URL审计）：403反爬类(ProductHunt/G2/Midjourney等实际活链)、404死链(bing.com/images/create等)、timeout类(jina.ai/mistral等)需人工核实替换或移除",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "seo_audit_20261014",
-      "created_at": "2026-10-14T04:28:23",
-      "completion_note": "详细清单见iteration_center/seo_audit_full_20260917.md Broken外链节；403类勿当死链删除（反爬拒绝bot），仅处理确认404/timed out目标失效的链接。"
-    },
-    {
-      "task": "R15/lovedby筛选机会: 提交aitoolcrux到toolpilot.ai(200,submit/free/suggest/contact/add-a信号), 附官网与简介",
-      "url": "https://toolpilot.ai/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "growth_r15_2026-10-17",
-      "category": "新免费目录",
-      "created_at": "2026-10-17T13:31:58+08:00",
-      "action": "direct_submit",
-      "data_verified": true,
-      "probe": "lovedby 2026-10-17 直连200",
-      "id": "TODO-NOID-100c89-20261017"
-    },
-    {
-      "task": "R15外链机会: 提交aitoolcrux到bestofai.io免费目录(200存活, submit+free信号, 一次审核进分类/职业/替代页), 附官网https://www.aitoolcrux.com与一句话简介",
-      "url": "https://bestofai.io/submit/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "growth_r15_2026-10-17",
-      "category": "新免费目录站",
-      "created_at": "2026-10-17T13:27:02+08:00",
-      "action": "direct_submit",
-      "data_verified": true,
-      "probe": "R15 2026-10-17 直连200",
-      "id": "TODO-NOID-51ccf5-20261017"
-    },
-    {
-      "id": "geo_aeo_home_author_table_2026-10-10",
-      "priority": "P1",
-      "task": "GEO/AEO：首页缺少独立 Comparison 对比内容（当前依赖FAQ中的comparisons字样），建议在首页 Top Picks 区域增加可引用的对比表格（工具A vs 工具B 评分/价格/适用场景），提升AI搜索引擎结构化引用。",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "geo_audit_2026-10-10",
-      "status": "pending",
-      "created_at": "2026-10-10T00:44:14"
-    },
-    {
-      "id": "geo_content_expert_quotes_2026-10-10",
-      "priority": "P1",
-      "task": "GEO审计(2026-10-10)：GEO Content 7项检查中 Expert Quotes 覆盖 0/2 页面（/tools/chatgpt、/blog/chatgpt-vs-claude-2026-comparison），AI引擎引用缺少专家引言信号。建议在关键工具页/对比文章中加入专家评价或\"According to\"引用段。",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "geo_audit_2026-10-10",
-      "status": "pending",
-      "created_at": "2026-10-10T12:48:15"
-    },
-    {
-      "id": "geo_faq_missing_content_2026-10-11",
-      "priority": "P1",
-      "task": "9篇文章缺FAQ内容（无FAQPage schema）：n8n-review-2026, best-ai-agents-2026, ai-agent-vs-chatbot-2026, how-to-build-an-ai-agent, what-is-an-ai-agent, best-ai-voice-changers-content-creators, best-ai-coding-tools-beginners, best-ai-tools-for-beginners-2026, agenta-ai-review-2026。每篇需补 FAQ 区块（3-6问，每问<80词答案），内容来自Google PAA与搜索建议。",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "geo_audit_2026-10-11",
-      "status": "pending",
-      "created_at": "2026-10-11T12:41:42"
-    },
-    {
-      "id": "seo_broken_links_2026-10-10",
-      "priority": "P1",
-      "task": "SEO审计(2026-10-10)：broken外链207个（853去重外链中），多为外部站点403/timeout/git.io失效，需逐条核实并替换/移除失效外链引用。",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "seo_audit_2026-10-10",
-      "status": "pending",
-      "created_at": "2026-10-10T04:34:47"
+      "source": "commander_daily_20261022_report_audit",
+      "created_at": "2026-10-22T14:40:22",
+      "due": "2026-10-26",
+      "notes": "audit_findings.md 2026-10-22批次新发现#2衍生；指挥官报告校验补录"
     },
     {
       "id": "RR37-OPP-rankmyai",
@@ -3116,6 +3143,53 @@
         "拓荒者"
       ],
       "created_at": "2026-10-22T17:14:55.308779+08:00"
+    },
+    {
+      "id": "P1-AI-REFERRAL-TRACK-20261023",
+      "task": "GA4建立AI平台引荐跟踪清单：weekly监控ChatGPT(chatgpt.com)、Perplexity(perplexity.ai)、Gemini、Claude、Copilot(bing.com合并)五类AI引荐来源，纳入周报新增节（当前chatgpt.com=32为最大AI引荐，需持续跟踪增长+识别被引用页面）。验收：latest_report新增AI引荐小节，含各平台sessions与引用页面top5",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "分析师"
+      ],
+      "source": "commander_learning_seo_geo_20261023",
+      "created_at": "2026-10-23 08:05:00"
+    },
+    {
+      "id": "P1-INDEX-UNKNOWN-41-RERUN-20261023",
+      "task": "补跑AdsPower CDP GSC URL检查41个unknown URL（index_diagnosis_20261023.md B-4类，10-12批已证20个indexed，其余21个补跑闭环）：n8n/runway/sora/pika/elevenlabs/suno/litellm/kagi/exa/auto-gpt/jan/ollama/llama-cpp/vllm/gemini-cli/claude-code/openhands/lobe-chat/langchain/crewai/letta/cognee/langfuse/phoenix/deepeval等。输出：真实收录清单，unknown收敛为0。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "分析师"
+      ],
+      "source": "commander_daily_20261023_index_diagnosis",
+      "created_at": "2026-10-23 14:50:00",
+      "acceptance": "41个unknown全部闭环（indexed/not_indexed分类），产出清单"
+    },
+    {
+      "id": "P1-INDEXNOW-HIGH-TRAFFIC-20261023",
+      "task": "对index_diagnosis_20261023.md B-4类高流量工具页批量IndexNow提交（iteration_center/geo_submit.py）：elevenlabs/sora/perplexity/exa/n8n + /tools/claude + 3个redirect_error页(category/chat、category/code、tools/gemini)在URL-CANONICAL完成后重抓。验收：提交后7天GSC该批URL状态从redirect_error/unknown转indexed或减少。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师"
+      ],
+      "source": "commander_daily_20261023_index_diagnosis",
+      "created_at": "2026-10-23 14:50:00",
+      "acceptance": "IndexNow已提交清单+提交后GSC状态变化"
+    },
+    {
+      "id": "P1-CATEGORY-DATEMODIFIED-20261023",
+      "task": "category模板(app/category/[slug]/page.tsx)补结构化dateModified+分类页E-E-A-T信号（index_diagnosis_20261023.md §2/§3：category/search、category/memory、category/design 3页被质量阈值/duplicate拦）：dateModified源自数据更新时间；与P1-CATEGORY-DIFF-20261023(创作家补分类描述)配合。验收：3个category页含dateModified，线上200。",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师"
+      ],
+      "source": "commander_daily_20261023_index_diagnosis",
+      "created_at": "2026-10-23 14:50:00",
+      "acceptance": "category模板含dateModified，3页线上验证"
     },
     {
       "id": "P1-UX-LCP-HERO-PRIORITY-20261023",
@@ -3151,33 +3225,130 @@
       "created_at": "2026-10-23T05:07:59"
     },
     {
-      "task": "外链调研D1: D1调研: mailforge AI outreach工具测评清单(200,contact/suggest/add-a/free), 联系编辑请求在其AI工具roundup收录aitoolcrux",
-      "url": "https://www.mailforge.ai/blog/ai-outreach-tools",
+      "id": "RR42-OPP-leadgenapp",
+      "task": "客座投稿 LeadGen App B2B博客(write-for-us)：按指南投一篇AI/SaaS营销原创文，正文自然带AIToolCrux链接，联系editor@leadgenapp.io",
       "assigned_to": [
         "拓荒者"
       ],
-      "priority": "P2",
+      "priority": "P1",
       "status": "pending",
-      "source": "growth_d1_2026-10-17",
-      "category": "清单pitch",
-      "created_at": "2026-10-17T17:16:52+08:00",
-      "action": "submit_or_pitch",
-      "data_verified": true,
-      "probe": "D1 2026-10-17 直连200",
-      "id": "CMD-FIX-NOID-124-20261021"
+      "source": "RR42-research-20261023",
+      "url": "https://leadgenapp.io/write-for-us/",
+      "channel": "guest_post_email",
+      "contact": "editor@leadgenapp.io",
+      "created_at": "2026-10-23T09:14:12.739938+08:00",
+      "note": "200, free/contribute/editorial, B2B营销主题相关, 需原创非直链"
+    },
+    {
+      "id": "P1-CATEGORY-DIFF-20261023",
+      "title": "分类页差异化内容（category/search、category/memory、category/design）",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "index_diagnosis_20261023",
+      "created_at": "2026-10-23T12:34:03+08:00",
+      "description": "index_diagnosis_20261023.md 诊断：category/search、category/memory 被 Crawled-not-indexed（聚合页无分类描述/日期/内链）；category/design 被 duplicate（模板同质）。动作：category 模板加 80-120 字分类定义+筛选标准；关联博客页加内链。验收：3 个分类页线上可见差异化描述。"
+    },
+    {
+      "id": "GROWTH-DIR-V5-2026-10-11",
+      "priority": "P2",
+      "title": "调研2个第五轮新发现目录站",
+      "description": "筛选免费、无需登录的目录站",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "created": "2026-10-11 02:04:42 JST"
+    },
+    {
+      "id": "GROWTH-NEWSLETTER-2026-10-12",
+      "priority": "P2",
+      "title": "向2个AI Newsletter推荐AIToolCrux",
+      "description": "Newsletter提及=高质量外链",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "created": "2026-10-12 10:02:04 JST"
+    },
+    {
+      "task": "GitHub PR: 向 github.com/submitaitools/Free-AI-Directories 提PR, 在免费AI目录清单收录aitoolcrux.com(需本地git+代理)",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "sop0100_eval_2026-10-17",
+      "status": "pending",
+      "id": "TODO-MISSINGID-2806-20261017"
+    },
+    {
+      "task": "P2 联系cowork.ink, suggest把aitoolcrux列入2026 best AI tools清单; 页面含suggest入口, 200存活",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r19_research_2026-10-17",
+      "status": "pending",
+      "channel": "清单收录",
+      "url": "https://cowork.ink/blog/best-ai-tools-2026/",
+      "id": "TODO-NOID-59dd3c-20261017"
+    },
+    {
+      "task": "P2 从lovedby.ai的100+ AI目录清单里筛出尚未提交过、免费且给dofollow的项, 逐个排期; 本文含每个目录的互惠徽章HTML",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r19_research_2026-10-17",
+      "status": "pending",
+      "channel": "清单筛选",
+      "url": "https://www.lovedby.ai/blog/ai-directories-saas-free-backlinks",
+      "completed_at": "2026-10-17T13:31:58+08:00",
+      "evaluation_outcome": "eval_done",
+      "evaluation_note": "lovedby清单77域名已抓取比对, 31候选直连探测21存活; 3个强信号目录补待办, 其余见backlink_opportunities排期清单",
+      "id": "TODO-NOID-RESIDUAL-20261017",
+      "reopened_at": "2026-10-17T14:45:00",
+      "reopen_reason": "2026-10-17指挥官复核：无id无证据，重开待核实"
+    },
+    {
+      "task": "P2 向lilachbullock.com pitch一篇SaaS/AI工具类客座, 指南页200存活含write-for-us/submit, 作者简介带链接",
+      "assigned_to": "拓荒者",
+      "priority": "P2",
+      "source": "r19_research_2026-10-17",
+      "status": "pending",
+      "channel": "客座博客",
+      "url": "https://www.lilachbullock.com/write-for-us-saas/",
+      "id": "TODO-NOID-b98e50-20261017"
+    },
+    {
+      "id": "geo_aeo_methodology_expert_2026-10-10",
+      "priority": "P2",
+      "task": "GEO/AEO：/methodology 已补 Comparison 表格（架构师修复），建议内容侧补充专家引言与一手测试数据引用（如\"我们在14天测试中记录X个问题\"），进一步增强AI引擎对方法论页的引用。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T00:44:14"
+    },
+    {
+      "id": "geo_content_step_examples_2026-10-10",
+      "priority": "P2",
+      "task": "GEO审计(2026-10-10)：GEO Content Step-by-step 覆盖 1/2 页面（50%）、Real Examples 1/2 页面（50%）。建议在 /tools/chatgpt 补充步骤引导 + 具体使用示例段落。",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "geo_audit_2026-10-10",
+      "status": "pending",
+      "created_at": "2026-10-10T12:48:15"
     },
     {
       "priority": "P2",
-      "assigned_to": [
-        "拓荒者"
-      ],
       "status": "pending",
-      "task": "R调研: betalist.com早期创业目录(直连200,含submit/list信号), 注册账号后submit startup收录aitoolcrux(偏早期创业,需登录)",
-      "source": "growth_r_research_20261018",
-      "url": "https://betalist.com/",
-      "action": "directory submit(login)",
-      "created_at": "2026-10-18T01:14:42+08:00",
-      "id": "CMD-FIX-NOID-125-20261021"
+      "task": "broken外链 147 个（含 midjourney 403、github.com/eumemic/ai-legion 连接失败等）— 逐一替换/移除",
+      "assigned_to": [
+        "创作家"
+      ],
+      "source": "seo_audit_2026-10-10",
+      "created_at": "2026-10-10T22:54:04",
+      "id": "P2-seo_audit_2026-10-10-73"
     },
     {
       "id": "COMP-20261012-05",
@@ -3224,26 +3395,49 @@
       "created_at": "2026-10-13T05:07:11"
     },
     {
-      "id": "GROWTH-DIR-V5-2026-10-11",
-      "priority": "P2",
-      "title": "调研2个第五轮新发现目录站",
-      "description": "筛选免费、无需登录的目录站",
+      "task": "R15外链机会: appscribed 188条已验证存活AI目录清单(含newsletter分组,dofollow信号), 比对已提交清单筛出未提交免费dofollow项逐个排期",
+      "url": "https://appscribed.com/ai-tool-directories/",
       "assigned_to": [
         "拓荒者"
       ],
+      "priority": "P2",
       "status": "pending",
-      "created": "2026-10-11 02:04:42 JST"
+      "source": "growth_r15_2026-10-17",
+      "category": "清单源",
+      "created_at": "2026-10-17T13:27:02+08:00",
+      "action": "screen_list",
+      "data_verified": true,
+      "probe": "R15 2026-10-17 直连200",
+      "id": "TODO-NOID-091766-20261017"
     },
     {
-      "id": "GROWTH-NEWSLETTER-2026-10-12",
+      "task": "外链调研D1: D1调研: mailforge AI outreach工具测评清单(200,contact/suggest/add-a/free), 联系编辑请求在其AI工具roundup收录aitoolcrux",
+      "url": "https://www.mailforge.ai/blog/ai-outreach-tools",
+      "assigned_to": [
+        "拓荒者"
+      ],
       "priority": "P2",
-      "title": "向2个AI Newsletter推荐AIToolCrux",
-      "description": "Newsletter提及=高质量外链",
+      "status": "pending",
+      "source": "growth_d1_2026-10-17",
+      "category": "清单pitch",
+      "created_at": "2026-10-17T17:16:52+08:00",
+      "action": "submit_or_pitch",
+      "data_verified": true,
+      "probe": "D1 2026-10-17 直连200",
+      "id": "CMD-FIX-NOID-124-20261021"
+    },
+    {
+      "priority": "P2",
       "assigned_to": [
         "拓荒者"
       ],
       "status": "pending",
-      "created": "2026-10-12 10:02:04 JST"
+      "task": "R调研: betalist.com早期创业目录(直连200,含submit/list信号), 注册账号后submit startup收录aitoolcrux(偏早期创业,需登录)",
+      "source": "growth_r_research_20261018",
+      "url": "https://betalist.com/",
+      "action": "directory submit(login)",
+      "created_at": "2026-10-18T01:14:42+08:00",
+      "id": "CMD-FIX-NOID-125-20261021"
     },
     {
       "id": "GROWTH-RR-05-20261018",
@@ -3261,53 +3455,6 @@
       "angle": "marketing guest, author bio",
       "created_at": "2026-10-18T09:06:06+08:00",
       "channel_blocked": "需pitch表单/邮件, 代理7890拒连/无邮件通道, 待通道恢复"
-    },
-    {
-      "id": "LEARN-REDDIT-20261020-04",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "可发帖sub与频率门槛台账：r/SideProject、r/alphaandbetausers、r/IMadeThis欢迎展示；r/SaaS约60天1次且需披露；r/indiehackers用SHOW IH flair求反馈；逐sub先读侧栏规则记录门槛。",
-      "source": "growth_learning_2026-10-20",
-      "created_at": "2026-10-20T05:12:22.069210+08:00",
-      "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
-    },
-    {
-      "id": "LEARN-REDDIT-20261020-05",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "How-I-Built-This长文结构：讲问题→自己如何解决→产品仅结尾一句提及；发帖后48h内跟进回复全部评论，启动价值主要来自帖下讨论而非首发。",
-      "source": "growth_learning_2026-10-20",
-      "created_at": "2026-10-20T05:12:22.069210+08:00",
-      "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
-    },
-    {
-      "id": "LEARN-REDDIT-20261020-06",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "冷启动诊断+shadowban自检：零traction三因=错误sub/标题太推广或模糊/低流量时段，换角度换sub重试；每周退出登录搜自己用户名，近期帖不出现即疑似shadowban。",
-      "source": "growth_learning_2026-10-20",
-      "created_at": "2026-10-20T05:12:22.069210+08:00",
-      "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
-    },
-    {
-      "priority": "P2",
-      "status": "pending",
-      "task": "broken外链 147 个（含 midjourney 403、github.com/eumemic/ai-legion 连接失败等）— 逐一替换/移除",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "seo_audit_2026-10-10",
-      "created_at": "2026-10-10T22:54:04",
-      "id": "P2-seo_audit_2026-10-10-73"
     },
     {
       "id": "R18-commudle-com",
@@ -3438,6 +3585,42 @@
       "source": "rr_research_2026-10-20",
       "created_at": "2026-10-20T01:11:43.334231+08:00",
       "data_verified": true
+    },
+    {
+      "id": "LEARN-REDDIT-20261020-04",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "可发帖sub与频率门槛台账：r/SideProject、r/alphaandbetausers、r/IMadeThis欢迎展示；r/SaaS约60天1次且需披露；r/indiehackers用SHOW IH flair求反馈；逐sub先读侧栏规则记录门槛。",
+      "source": "growth_learning_2026-10-20",
+      "created_at": "2026-10-20T05:12:22.069210+08:00",
+      "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
+    },
+    {
+      "id": "LEARN-REDDIT-20261020-05",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "How-I-Built-This长文结构：讲问题→自己如何解决→产品仅结尾一句提及；发帖后48h内跟进回复全部评论，启动价值主要来自帖下讨论而非首发。",
+      "source": "growth_learning_2026-10-20",
+      "created_at": "2026-10-20T05:12:22.069210+08:00",
+      "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
+    },
+    {
+      "id": "LEARN-REDDIT-20261020-06",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "冷启动诊断+shadowban自检：零traction三因=错误sub/标题太推广或模糊/低流量时段，换角度换sub重试；每周退出登录搜自己用户名，近期帖不出现即疑似shadowban。",
+      "source": "growth_learning_2026-10-20",
+      "created_at": "2026-10-20T05:12:22.069210+08:00",
+      "note": "学习沉淀SOP，待Reddit登录态后执行，无登录前不发帖不假完成"
     },
     {
       "id": "RR20261020-B05",
@@ -3642,87 +3825,6 @@
       "created_at": "2026-10-22T09:19:52.061044+08:00"
     },
     {
-      "task": "GitHub PR: 向 github.com/submitaitools/Free-AI-Directories 提PR, 在免费AI目录清单收录aitoolcrux.com(需本地git+代理)",
-      "assigned_to": "拓荒者",
-      "priority": "P2",
-      "source": "sop0100_eval_2026-10-17",
-      "status": "pending",
-      "id": "TODO-MISSINGID-2806-20261017"
-    },
-    {
-      "task": "R15外链机会: appscribed 188条已验证存活AI目录清单(含newsletter分组,dofollow信号), 比对已提交清单筛出未提交免费dofollow项逐个排期",
-      "url": "https://appscribed.com/ai-tool-directories/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "source": "growth_r15_2026-10-17",
-      "category": "清单源",
-      "created_at": "2026-10-17T13:27:02+08:00",
-      "action": "screen_list",
-      "data_verified": true,
-      "probe": "R15 2026-10-17 直连200",
-      "id": "TODO-NOID-091766-20261017"
-    },
-    {
-      "task": "P2 联系cowork.ink, suggest把aitoolcrux列入2026 best AI tools清单; 页面含suggest入口, 200存活",
-      "assigned_to": "拓荒者",
-      "priority": "P2",
-      "source": "r19_research_2026-10-17",
-      "status": "pending",
-      "channel": "清单收录",
-      "url": "https://cowork.ink/blog/best-ai-tools-2026/",
-      "id": "TODO-NOID-59dd3c-20261017"
-    },
-    {
-      "task": "P2 从lovedby.ai的100+ AI目录清单里筛出尚未提交过、免费且给dofollow的项, 逐个排期; 本文含每个目录的互惠徽章HTML",
-      "assigned_to": "拓荒者",
-      "priority": "P2",
-      "source": "r19_research_2026-10-17",
-      "status": "pending",
-      "channel": "清单筛选",
-      "url": "https://www.lovedby.ai/blog/ai-directories-saas-free-backlinks",
-      "completed_at": "2026-10-17T13:31:58+08:00",
-      "evaluation_outcome": "eval_done",
-      "evaluation_note": "lovedby清单77域名已抓取比对, 31候选直连探测21存活; 3个强信号目录补待办, 其余见backlink_opportunities排期清单",
-      "id": "TODO-NOID-RESIDUAL-20261017",
-      "reopened_at": "2026-10-17T14:45:00",
-      "reopen_reason": "2026-10-17指挥官复核：无id无证据，重开待核实"
-    },
-    {
-      "task": "P2 向lilachbullock.com pitch一篇SaaS/AI工具类客座, 指南页200存活含write-for-us/submit, 作者简介带链接",
-      "assigned_to": "拓荒者",
-      "priority": "P2",
-      "source": "r19_research_2026-10-17",
-      "status": "pending",
-      "channel": "客座博客",
-      "url": "https://www.lilachbullock.com/write-for-us-saas/",
-      "id": "TODO-NOID-b98e50-20261017"
-    },
-    {
-      "id": "geo_aeo_methodology_expert_2026-10-10",
-      "priority": "P2",
-      "task": "GEO/AEO：/methodology 已补 Comparison 表格（架构师修复），建议内容侧补充专家引言与一手测试数据引用（如\"我们在14天测试中记录X个问题\"），进一步增强AI引擎对方法论页的引用。",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "geo_audit_2026-10-10",
-      "status": "pending",
-      "created_at": "2026-10-10T00:44:14"
-    },
-    {
-      "id": "geo_content_step_examples_2026-10-10",
-      "priority": "P2",
-      "task": "GEO审计(2026-10-10)：GEO Content Step-by-step 覆盖 1/2 页面（50%）、Real Examples 1/2 页面（50%）。建议在 /tools/chatgpt 补充步骤引导 + 具体使用示例段落。",
-      "assigned_to": [
-        "创作家"
-      ],
-      "source": "geo_audit_2026-10-10",
-      "status": "pending",
-      "created_at": "2026-10-10T12:48:15"
-    },
-    {
       "id": "RR37-OPP-epirus",
       "priority": "P2",
       "task": "[RR37调研] 目录提交/feature @epirus.vc; 200,submit+directory,站内表单",
@@ -3769,58 +3871,6 @@
       "created_at": "2026-10-23T01:15:43.630185+08:00"
     },
     {
-      "id": "P0-GEO-TLDR-TABLE-20261023",
-      "task": "为最高曝光Top20文章每篇顶部加TL;DR摘要（2-3句直接答案）+ 至少1个Markdown对比/数据表格（DigitalBrik实证：TL;DR+表格提升31%被AI snippet引用概率；与已有answer capsule互补不重复）。验收：20篇均含TL;DR块+表格，随机抽3篇用llmevalkit查TL;DR块存在",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "打磨师"
-      ],
-      "source": "commander_learning_seo_geo_20261023",
-      "created_at": "2026-10-23 08:05:00",
-      "completed_at": "2026-10-23T21:30:00",
-      "close_note": "R28完成：GSC live_pull聚合仅8篇博客有曝光（openai_astra_review 1083/best-ai-voice-changers 1020/adobe-firefly 441/beginners 374/ai-coding-comparison 186/review-guide 66/comparison 18/agents 2），补足12篇高价值comparison/listicle共20篇，每篇顶部加## TL;DR(2-3句直接答案，取自自身quickAnswer/title，无编造)；14篇已有markdown表格，6篇无表者用正文真实H2建Guide-at-a-glance表。验收：20篇均含TL;DR+表格，原生check_draft 73-88无回退；随机抽3篇(openai_astra/note-taking/chatgpt-vs-gemini)llmevalkit evaluate_content score100、无幻觉、AIprob<0.3、TL;DR块存在。同轮低分优化5篇双达标(zens88+Flesch>50)：project-mgmt51.9/design61.3/email60.4/transcription53.4/video-editors51.4；midjourney-vs-dalle3 zens88但Flesch46.9留正文批改。"
-    },
-    {
-      "id": "P1-AI-REFERRAL-TRACK-20261023",
-      "task": "GA4建立AI平台引荐跟踪清单：weekly监控ChatGPT(chatgpt.com)、Perplexity(perplexity.ai)、Gemini、Claude、Copilot(bing.com合并)五类AI引荐来源，纳入周报新增节（当前chatgpt.com=32为最大AI引荐，需持续跟踪增长+识别被引用页面）。验收：latest_report新增AI引荐小节，含各平台sessions与引用页面top5",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "分析师"
-      ],
-      "source": "commander_learning_seo_geo_20261023",
-      "created_at": "2026-10-23 08:05:00"
-    },
-    {
-      "id": "P1-INDEX-DIAG-CLASSIFY-20261023",
-      "task": "按Ecomexperts 2026诊断工作流对GSC未收录URL分诊：①Crawled-not-indexed(质量阈值)→列URL+缺失的E-E-A-T信号(作者/更新日期/深度)清单②Discovered-not-indexed(crawl budget)→列URL+内链缺失点清单③输出iteration_center/index_diagnosis_20261023.md。与URL-CANONICAL(技术归一)互补，聚焦内容/链接维度。验收：报告含68个未收录URL全部分诊+每类修复动作",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "架构师"
-      ],
-      "source": "commander_learning_seo_geo_20261023",
-      "created_at": "2026-10-23 08:05:00",
-      "completed_at": "2026-10-23T12:34:03+08:00",
-      "evidence": "r51 完成 2026-10-23：报告 iteration_center/index_diagnosis_20261023.md（68 URL 全分诊）。状态分布=indexed 7/redirect 13/redirect_error 3/not_indexed 3/duplicate 1/unknown 41；3 个 redirect_error（category/chat、category/code、tools/gemini）线上 web_fetch 实测全 200=历史 301 链遗留（URL-CANONICAL 同源）；not_indexed 3 个=category/search、category/memory（缺分类描述/dateModified/内链，归创作家）、tools/claude（信号齐全，IndexNow 提交）；unknown 41=AdsPower 工具未闭环非未收录（10-12 批已证其中 20 indexed）；IndexNow 提交 8 URL（tools/claude/category/search/category/memory/elevenlabs/sora/perplexity/exa/n8n）全 200。"
-    },
-    {
-      "id": "RR42-OPP-leadgenapp",
-      "task": "客座投稿 LeadGen App B2B博客(write-for-us)：按指南投一篇AI/SaaS营销原创文，正文自然带AIToolCrux链接，联系editor@leadgenapp.io",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "RR42-research-20261023",
-      "url": "https://leadgenapp.io/write-for-us/",
-      "channel": "guest_post_email",
-      "contact": "editor@leadgenapp.io",
-      "created_at": "2026-10-23T09:14:12.739938+08:00",
-      "note": "200, free/contribute/editorial, B2B营销主题相关, 需原创非直链"
-    },
-    {
       "id": "RR42-OPP-arunangshudas",
       "task": "客座投稿 Arunangshu Das 科技博客：按write-for-us指南投AI工具评测类原创，联系collab@arunangshudas.com",
       "assigned_to": [
@@ -3865,17 +3915,52 @@
       "note": "参考清单非直接外链目标, 需二次核验"
     },
     {
-      "id": "P1-CATEGORY-DIFF-20261023",
-      "title": "分类页差异化内容（category/search、category/memory、category/design）",
+      "id": "BL12-P1-SAASCOMPARELY",
       "priority": "P1",
-      "status": "pending",
+      "title": "客座pitch SaaSComparely (info@saascomparely.org)",
+      "description": "https://saascomparely.org/write-for-us/ 200含guest post/submit/contribute；发原创AI工具评测方法pitch，bio带aitoolcrux.com",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "拓荒者"
       ],
-      "source": "index_diagnosis_20261023",
-      "created_at": "2026-10-23T12:34:03+08:00",
-      "description": "index_diagnosis_20261023.md 诊断：category/search、category/memory 被 Crawled-not-indexed（聚合页无分类描述/日期/内链）；category/design 被 duplicate（模板同质）。动作：category 模板加 80-120 字分类定义+筛选标准；关联博客页加内链。验收：3 个分类页线上可见差异化描述。"
+      "status": "pending",
+      "created": "2026-10-23 18:19:46 +08:00",
+      "source": "backlink_research_RR12_2026-10-23"
+    },
+    {
+      "id": "BL12-P1-POWEREDBYAI",
+      "priority": "P1",
+      "title": "免费目录提交 PoweredByAI (support@poweredbyai.app)",
+      "description": "https://poweredbyai.app 200 free/submit/suggest/add-your/listing/directory/dofollow全信号；发免费收录请求",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "created": "2026-10-23 18:19:46 +08:00",
+      "source": "backlink_research_RR12_2026-10-23"
+    },
+    {
+      "id": "BL12-P1-TOPAI",
+      "priority": "P1",
+      "title": "免费目录提交 TopAI.tools (hello@topai.tools)",
+      "description": "https://topai.tools 200 free/submit/listing/directory；发免费收录请求",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "created": "2026-10-23 18:19:46 +08:00",
+      "source": "backlink_research_RR12_2026-10-23"
+    },
+    {
+      "id": "BL12-P2-FORM-RESOURCE",
+      "priority": "P2",
+      "title": "核验P2表单/资源页：technovice/startup.ai/aixploria/mybesh/kipwise/altar.io/websitebuilderexpert",
+      "description": "先核验站内表单/收录邮箱再行动，不盲发；清单见backlink_opportunities.md RR12段",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "created": "2026-10-23 18:19:46 +08:00",
+      "source": "backlink_research_RR12_2026-10-23"
     }
   ],
   "milestones": [
@@ -15549,6 +15634,20 @@
       "resolution": "probe found sales@gracker.ai; free_listing email sent, accepted, await inclusion",
       "channel_done": "email",
       "archived_at": "2026-10-23 06:32:47"
+    },
+    {
+      "id": "P1-INDEX-DIAG-CLASSIFY-20261023",
+      "task": "按Ecomexperts 2026诊断工作流对GSC未收录URL分诊：①Crawled-not-indexed(质量阈值)→列URL+缺失的E-E-A-T信号(作者/更新日期/深度)清单②Discovered-not-indexed(crawl budget)→列URL+内链缺失点清单③输出iteration_center/index_diagnosis_20261023.md。与URL-CANONICAL(技术归一)互补，聚焦内容/链接维度。验收：报告含68个未收录URL全部分诊+每类修复动作",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "架构师"
+      ],
+      "source": "commander_learning_seo_geo_20261023",
+      "created_at": "2026-10-23 08:05:00",
+      "completed_at": "2026-10-23T12:34:03+08:00",
+      "evidence": "r51 完成 2026-10-23：报告 iteration_center/index_diagnosis_20261023.md（68 URL 全分诊）。状态分布=indexed 7/redirect 13/redirect_error 3/not_indexed 3/duplicate 1/unknown 41；3 个 redirect_error（category/chat、category/code、tools/gemini）线上 web_fetch 实测全 200=历史 301 链遗留（URL-CANONICAL 同源）；not_indexed 3 个=category/search、category/memory（缺分类描述/dateModified/内链，归创作家）、tools/claude（信号齐全，IndexNow 提交）；unknown 41=AdsPower 工具未闭环非未收录（10-12 批已证其中 20 indexed）；IndexNow 提交 8 URL（tools/claude/category/search/category/memory/elevenlabs/sora/perplexity/exa/n8n）全 200。",
+      "archived_at": "2026-10-23T14:50:00+08:00"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -16024,7 +16123,7 @@
   "last_cycle_result": "pushed 17 new articles, fixed merge conflict, fixed F-grade article, fixed missing category fields",
   "last_deploy_commit": "684c6de",
   "last_verified": true,
-  "last_cleanup": "2026-10-08T02:27:14.787931",
+  "last_cleanup": "2026-10-23 14:50",
   "cleanup_summary": {
     "original": 327,
     "kept": 50,
@@ -16040,13 +16139,7 @@
   ],
   "last_tool_audit": "2026-10-09",
   "tool_audit_result": "18 tools available, 1 unavailable (Crawl4AI, trafilatura替代)",
-  "todo_completion_rate": {
-    "rate_pct": 0.0,
-    "pending": 143,
-    "completed": 0,
-    "total": 143,
-    "updated_at": "2026-10-19T06:37:14.997683"
-  },
+  "todo_completion_rate": 0.011,
   "last_schedule": "2026-10-09",
   "live_gsc_pull_script": "iteration_center/_pull_gsc_via_proxy.py",
   "ga4_live_pull_script": "iteration_center/_pull_ga4_via_proxy.py",
@@ -16175,5 +16268,5 @@
       "https://aitoolsdirectory.com/?s=aitoolcrux mentions=0, 确认未通过; 催办邮件待发(无邮件通道)"
     ]
   },
-  "last_commander_update": "2026-10-17T14:40:00"
+  "last_commander_update": "2026-10-23T14:50:00+08:00"
 }
