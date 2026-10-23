@@ -145,3 +145,4 @@ CrUX key、Anthropic key、GA4 Admin、CF Dashboard（URL-CANONICAL）、GSC unk
 
 ### 剩余（我的）
 P0=1（URL-CANONICAL 待人工）；P1=5（阻塞沿用）；全站 P0=43
+- seo_audit_full.py 最终结论：缺 httpx/bs4/h2 依赖（3 次补齐后）仍因本机直连线上超时无法完成（r31 经验 7 已知死路，非网站问题）；全站 SEO 审计改用替代通道：①robots.txt 3074B/10 crawler accessible（GEO 审计）②sitemap.xml 服务端 200 urlset/loc/lastmod 格式正常 ③首页 build 产物 canonical 在位+无 noindex（可索引）④首页 7 处 JSON-LD+Organization（结构化数据）⑤category 模板本轮加 dateModified 线上验证通过
