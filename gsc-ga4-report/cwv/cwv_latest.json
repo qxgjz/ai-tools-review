@@ -1,86 +1,86 @@
 {
-  "generatedAt": "2026-10-22T21:14:46.152Z",
+  "generatedAt": "2026-10-23T11:02:23.684Z",
   "pages": [
     {
       "url": "/",
-      "performance": 56,
-      "lcp": "3.8 s",
+      "performance": 80,
+      "lcp": "3.4 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/",
-      "performance": 74,
+      "performance": 81,
       "lcp": "4.4 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/",
+      "performance": 82,
+      "lcp": "4.4 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/blog/perplexity-review-2026/",
+      "performance": 76,
+      "lcp": "5.1 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/blog/perplexity-review-2026/",
       "performance": 75,
-      "lcp": "4.4 s",
+      "lcp": "5.1 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
-      "performance": 71,
-      "lcp": "5.0 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/blog/perplexity-review-2026/",
-      "performance": 70,
+      "performance": 74,
       "lcp": "5.2 s",
       "inp": null,
       "cls": "0"
     },
     {
-      "url": "/blog/perplexity-review-2026/",
-      "performance": 70,
+      "url": "/compare/",
+      "performance": 73,
+      "lcp": "5.1 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/compare/",
+      "performance": 77,
       "lcp": "4.8 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/compare/",
-      "performance": 71,
-      "lcp": "4.5 s",
+      "performance": 75,
+      "lcp": "4.9 s",
       "inp": null,
       "cls": "0"
     },
     {
-      "url": "/compare/",
+      "url": "/tools/midjourney/",
+      "performance": 73,
+      "lcp": "5.9 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/tools/midjourney/",
       "performance": 70,
-      "lcp": "4.9 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/compare/",
-      "performance": 72,
-      "lcp": "4.9 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
-      "performance": 66,
-      "lcp": "6.0 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
-      "performance": 68,
       "lcp": "5.7 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/tools/midjourney/",
-      "performance": 69,
+      "performance": 67,
       "lcp": "5.9 s",
       "inp": null,
       "cls": "0"
