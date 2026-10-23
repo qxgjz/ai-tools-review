@@ -1,16 +1,16 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-22 22:15:03
+**Date:** 2026-10-23 22:01:32
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 224 |
-| Avg content score | 82.9/100 |
+| Articles | 233 |
+| Avg content score | 82.2/100 |
 | Perfect articles | 90 |
-| Articles below 85 | 113 |
+| Articles below 85 | 122 |
 | Pages audited | 20 |
 | Technical issues | 5 |
 | Critical issues | 0 |
@@ -21,6 +21,7 @@
 
 | Slug | Score | Words | Flesch | Links | Failed |
 |------|-------|-------|--------|-------|--------|
+| grammarly-vs-prowritingaid-2026 | 42 | 1948 | 39.8 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | best-ai-hr-tools-2026 | 46 | 2275 | 37.8 | 4 | first_para_pass, readability_pass |
 | best-ai-real-estate-tools-2026 | 46 | 2410 | 36.7 | 3 | first_para_pass, readability_pass |
 | best-ai-personal-assistants-2026 | 49 | 1925 | 53.7 | 0 | word_count_pass, first_para_pass, internal_links_pass |
@@ -28,10 +29,10 @@
 | best-ai-interior-design-tools-2026 | 49 | 1967 | 43.8 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | best-ai-ecommerce-tools-2026 | 51 | 2237 | 38.2 | 4 | first_para_pass, readability_pass |
 | jasper-vs-writesonic-2026 | 51 | 1901 | 38.4 | 5 | word_count_pass, first_para_pass, readability_pass |
+| veed-vs-capcut-2026 | 51 | 1941 | 54.3 | 0 | word_count_pass, first_para_pass, internal_links_pass |
 | best-ai-text-to-speech-tools-2026 | 53 | 2344 | 38.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | best-ai-avatar-generators-2026 | 53 | 2331 | 34.6 | 0 | first_para_pass, internal_links_pass, readability_pass |
 | free-ai-fitness-coaches-2026 | 54 | 1996 | 50.4 | 8 | word_count_pass, first_para_pass |
-| best-ai-meeting-notes-tools-2026 | 54 | 1956 | 48.3 | 5 | word_count_pass, first_para_pass |
 | best-ai-summarizer-tools-2026 | 57 | 2260 | 48.7 | 0 | first_para_pass, internal_links_pass |
 | best-ai-content-detectors-2026 | 57 | 2357 | 46.5 | 0 | first_para_pass, internal_links_pass |
 | best-ai-automation-tools-2026 | 57 | 2353 | 48.0 | 0 | first_para_pass, internal_links_pass |
@@ -55,6 +56,7 @@
 | best-ai-sales-assistants-2026 | 62 | 2426 | 47.4 | 0 | first_para_pass, internal_links_pass |
 | best-ai-copywriting-tools-2026 | 62 | 2232 | 52.4 | 0 | first_para_pass, internal_links_pass |
 | elevenlabs-vs-cartesia-2026 | 62 | 2044 | 39.2 | 5 | first_para_pass, readability_pass |
+| deepseek-vs-chatgpt-2026 | 62 | 2020 | 63.7 | 0 | first_para_pass, internal_links_pass |
 | free-ai-voice-changers-2026 | 63 | 1993 | 55.6 | 5 | word_count_pass, first_para_pass |
 | beautiful-ai-alternatives | 66 | 2180 | 53.2 | 9 | first_para_pass |
 | best-ai-3d-generators-2026 | 66 | 3237 | 52.7 | 4 | first_para_pass |
@@ -64,12 +66,12 @@
 | best-ai-social-media-tools-2026 | 66 | 2123 | 48.8 | 4 | first_para_pass |
 | best-ai-travel-planners-2026 | 66 | 2145 | 48.7 | 5 | first_para_pass |
 | best-ai-health-apps-2026 | 66 | 2175 | 47.8 | 3 | first_para_pass |
-| free-ai-tools-for-students-2026 | 66 | 2416 | 50.4 | 10 | first_para_pass |
+| free-ai-tools-for-students-2026 | 66 | 3182 | 52.2 | 12 | first_para_pass |
 | ai-voice-changer-vs-voicemod-2026 | 66 | 1976 | 45.9 | 5 | word_count_pass |
-| best-ai-mental-health-apps-2026 | 66 | 2027 | 41.1 | 5 | first_para_pass |
+| best-ai-mental-health-apps-2026 | 66 | 2266 | 41.9 | 7 | first_para_pass |
+| best-ai-meeting-notes-tools-2026 | 66 | 2206 | 48.2 | 7 | first_para_pass |
 | gamma-vs-beautifulai-2026 | 66 | 2008 | 53.8 | 5 | first_para_pass |
 | suno-vs-udio-2026 | 66 | 2102 | 56.6 | 5 | first_para_pass |
-| cursor-alternatives-2026 | 69 | 2828 | 55.6 | 0 | first_para_pass, internal_links_pass, external_links_pass |
 | chatgpt-for-beginners-guide-2026 | 69 | 1971 | 61.1 | 5 | word_count_pass, first_para_pass |
 | best-ai-agent-tools-2026 | 69 | 1994 | 47.4 | 5 | word_count_pass, first_para_pass |
 | best-ai-video-editors-for-beginners | 69 | 1987 | 52.3 | 5 | word_count_pass, first_para_pass |
@@ -96,15 +98,22 @@
 | ai-tools-for-non-technical-users-20 | 71 | 2495 | 56.4 | 14 | — |
 | best-free-ai-voice-changers-2026 | 71 | 2099 | 52.3 | 5 | first_para_pass |
 | claude-rate-limits-2026 | 71 | 2020 | 56.7 | 5 | first_para_pass |
-| perplexity-alternatives-2026 | 71 | 2006 | 50.7 | 5 | first_para_pass |
-| n8n-vs-zapier-2026 | 71 | 2034 | 55.2 | 5 | first_para_pass |
+| perplexity-alternatives-2026 | 71 | 2236 | 52.1 | 7 | first_para_pass |
+| n8n-vs-zapier-2026 | 71 | 2288 | 59.0 | 7 | first_para_pass |
 | devin-vs-cursor-2026 | 71 | 2015 | 45.3 | 5 | first_para_pass |
 | kling-vs-hailuo-2026 | 71 | 2021 | 66.8 | 5 | first_para_pass |
 | deepl-vs-google-translate-2026 | 71 | 2037 | 47.4 | 5 | first_para_pass |
 | midjourney-vs-stable-diffusion-2026 | 71 | 2124 | 43.5 | 5 | first_para_pass |
+| dalle-vs-stable-diffusion-2026 | 71 | 2542 | 58.2 | 5 | first_para_pass |
+| notion-ai-vs-chatgpt-2026 | 71 | 2068 | 54.4 | 4 | first_para_pass |
+| bubble-vs-glide-2026 | 71 | 2234 | 52.7 | 5 | first_para_pass |
+| grammarly-vs-quillbot-2026 | 71 | 2303 | 45.8 | 4 | first_para_pass |
+| canva-vs-figma-2026 | 71 | 2255 | 48.3 | 4 | first_para_pass |
+| heygen-vs-veed-2026 | 71 | 2198 | 45.4 | 4 | first_para_pass |
 | cursor-vs-github-copilot-2026 | 72 | 1967 | 48.3 | 3 | word_count_pass, first_para_pass |
 | elevenlabs-vs-playht-2026 | 72 | 1871 | 48.7 | 5 | word_count_pass, first_para_pass |
 | elevenlabs-vs-murf-2026 | 74 | 2579 | 36.0 | 3 | first_para_pass, readability_pass |
+| midjourney-free-trial-2026 | 74 | 2784 | 55.8 | 0 | first_para_pass, internal_links_pass |
 | best-ai-voice-changers-content-crea | 74 | 1788 | 52.6 | 6 | word_count_pass, first_para_pass |
 | best-no-code-ai-tools-2026 | 74 | 2303 | 48.3 | 4 | first_para_pass |
 | best-ai-website-builders-2026 | 74 | 2237 | 40.6 | 4 | first_para_pass |
@@ -119,19 +128,19 @@
 | best-ai-voice-cloning-tools-2026 | 74 | 2045 | 45.5 | 5 | first_para_pass |
 | ai-voice-changer-for-discord-2026 | 74 | 2058 | 46.4 | 5 | first_para_pass |
 | what-is-an-ai-agent | 77 | 2150 | 59.1 | 12 | first_para_pass |
+| how-to-get-chatgpt-free-2026 | 78 | 2191 | 61.9 | 5 | first_para_pass |
 | claude-alternatives-2026 | 78 | 1452 | 60.3 | 3 | word_count_pass |
 | notion-ai-vs-obsidian-ai | 78 | 1932 | 63.3 | 3 | word_count_pass |
 | gemini-vs-chatgpt-2026 | 80 | 2288 | 51.4 | 5 | first_para_pass |
 | otter-ai-alternatives | 80 | 2205 | 48.2 | 4 | first_para_pass |
 | best-free-ai-tools-for-students-202 | 80 | 2289 | 65.4 | 5 | — |
-| midjourney-free-trial-2026 | 80 | 2718 | 54.9 | 0 | internal_links_pass |
+| cursor-alternatives-2026 | 80 | 3162 | 51.4 | 2 | internal_links_pass |
 | canva-ai-alternatives-2026 | 80 | 4047 | 28.4 | 6 | readability_pass |
 | notion-ai-vs-notion-ai-salesforce-2 | 80 | 2015 | 46.0 | 5 | first_para_pass |
 | notion-ai-vs-salesforce-2026 | 80 | 2124 | 44.0 | 5 | first_para_pass |
 | ai-tools-hallucinate-too-much-2026 | 80 | 2329 | 46.4 | 4 | first_para_pass |
 | ai-agent-vs-chatbot-2026 | 82 | 2078 | 49.4 | 8 | — |
 | how-to-build-an-ai-agent | 82 | 2132 | 60.6 | 11 | — |
-| how-to-get-chatgpt-free-2026 | 83 | 2120 | 61.4 | 5 | — |
 | best-free-ai-tools-for-youtube-crea | 83 | 3325 | 51.4 | 5 | first_para_pass |
 | how-to-use-cursor-for-react-develop | 83 | 3305 | 47.7 | 4 | first_para_pass |
 | synthesia-vs-heygen | 86 | 2260 | 41.1 | 5 | first_para_pass |
@@ -160,7 +169,7 @@
 | midjourney-vs-dalle-3-2026 | 100 | 2078 | 51.8 | 4 | — |
 | jasper-ai-alternative-2026 | 100 | 2015 | 52.7 | 3 | — |
 | chatgpt-vs-claude-2026 | 100 | 2100 | 53.0 | 5 | — |
-| best-ai-voice-changers-2026 | 100 | 2927 | 52.6 | 7 | — |
+| best-ai-voice-changers-2026 | 100 | 2962 | 53.8 | 7 | — |
 | best-ai-slack-bots-2026 | 100 | 2443 | 65.5 | 8 | — |
 | best-ai-scheduling-tools-2026 | 100 | 2166 | 59.9 | 3 | — |
 | best-ai-podcast-tools-2026 | 100 | 2088 | 55.6 | 4 | — |
@@ -180,33 +189,33 @@
 | best-ai-comparison-tools-2026 | 100 | 2968 | 62.5 | 8 | — |
 | best-ai-chatbot-builders-2026 | 100 | 2729 | 63.5 | 6 | — |
 | best-ai-automation-agents-2026 | 100 | 2852 | 62.7 | 8 | — |
-| best-ai-agents-2026-ranked-reviewed | 100 | 3152 | 43.2 | 8 | — |
-| best-ai-crm-tools-2026 | 100 | 2955 | 53.6 | 10 | — |
-| best-ai-project-management-tools-20 | 100 | 2558 | 48.6 | 7 | — |
-| best-ai-note-taking-tools-2026 | 100 | 2930 | 58.6 | 13 | — |
-| best-ai-design-tools-2026 | 100 | 2641 | 48.3 | 4 | — |
-| best-ai-email-tools-2026 | 100 | 2119 | 46.7 | 8 | — |
+| best-ai-agents-2026-ranked-reviewed | 100 | 3192 | 44.3 | 8 | — |
+| best-ai-crm-tools-2026 | 100 | 2996 | 53.4 | 10 | — |
+| best-ai-project-management-tools-20 | 100 | 2768 | 52.4 | 9 | — |
+| best-ai-note-taking-tools-2026 | 100 | 3730 | 59.0 | 15 | — |
+| best-ai-design-tools-2026 | 100 | 3641 | 43.6 | 7 | — |
+| best-ai-email-tools-2026 | 100 | 2969 | 57.6 | 13 | — |
 | best-ai-translation-tools-2026 | 100 | 2637 | 40.2 | 4 | — |
-| best-ai-transcription-tools-2026 | 100 | 2868 | 47.7 | 8 | — |
-| best-ai-chatbots-2026 | 100 | 3372 | 52.9 | 6 | — |
-| best-ai-legal-tools-2026 | 100 | 3828 | 48.5 | 10 | — |
-| best-ai-seo-tools-2026 | 100 | 3468 | 50.6 | 10 | — |
-| best-ai-video-editors-2026 | 100 | 3490 | 48.6 | 6 | — |
+| best-ai-transcription-tools-2026 | 100 | 3071 | 51.5 | 10 | — |
+| best-ai-chatbots-2026 | 100 | 3405 | 53.4 | 6 | — |
+| best-ai-legal-tools-2026 | 100 | 3860 | 50.0 | 10 | — |
+| best-ai-seo-tools-2026 | 100 | 3501 | 51.5 | 10 | — |
+| best-ai-video-editors-2026 | 100 | 3692 | 50.6 | 8 | — |
 | best-ai-marketing-tools-2026 | 100 | 3387 | 54.7 | 6 | — |
 | best-ai-research-tools-2026 | 100 | 3478 | 47.5 | 6 | — |
 | best-ai-productivity-tools-2026 | 100 | 4115 | 53.5 | 4 | — |
 | best-ai-coding-tools-2026 | 100 | 4500 | 48.9 | 5 | — |
 | best-ai-image-generators-2026 | 100 | 2560 | 47.6 | 5 | — |
 | best-ai-video-generators-2026 | 100 | 2246 | 51.7 | 4 | — |
-| best-ai-writing-tools-2026 | 100 | 4107 | 43.8 | 8 | — |
-| midjourney-vs-dall-e-3-2026-compari | 100 | 3497 | 48.3 | 7 | — |
+| best-ai-writing-tools-2026 | 100 | 4147 | 46.8 | 8 | — |
+| midjourney-vs-dall-e-3-2026-compari | 100 | 3715 | 54.3 | 9 | — |
 | windsurf-review-2026 | 100 | 3035 | 45.7 | 7 | — |
-| cursor-vs-github-copilot-2026-compa | 100 | 3495 | 48.4 | 9 | — |
+| cursor-vs-github-copilot-2026-compa | 100 | 3552 | 48.7 | 9 | — |
 | midjourney-vs-dalle-3-2026-comparis | 100 | 3088 | 43.8 | 7 | — |
-| chatgpt-vs-gemini-2026-comparison | 100 | 2907 | 43.7 | 7 | — |
+| chatgpt-vs-gemini-2026-comparison | 100 | 2961 | 44.6 | 7 | — |
 | cursor-ai-review-2026-best-ai-code- | 100 | 3238 | 51.2 | 7 | — |
 | claude_fable_51_review | 100 | 5254 | 52.7 | 10 | — |
-| openai_astra_review | 100 | 12602 | 43.9 | 18 | — |
+| openai_astra_review | 100 | 12636 | 44.7 | 18 | — |
 | chatgpt-deep-review-2026 | 100 | 7296 | 48.0 | 10 | — |
 | ai-tools-selection-guide-2026 | 100 | 7092 | 45.9 | 12 | — |
 | chatgpt-vs-claude-2026-comparison | 100 | 2244 | 47.7 | 4 | — |
@@ -230,17 +239,17 @@
 | kling-review-2026 | 100 | 11913 | 43.3 | 14 | — |
 | heygen-review-2026 | 100 | 13754 | 44.7 | 13 | — |
 | leonardo-ai-review-2026 | 100 | 14636 | 46.1 | 15 | — |
-| adobe-firefly-review-2026 | 100 | 14413 | 46.9 | 17 | — |
+| adobe-firefly-review-2026 | 100 | 14518 | 49.5 | 17 | — |
 | writesonic-review-2026 | 100 | 14552 | 47.7 | 14 | — |
 | tabnine-review-2026 | 100 | 11500 | 43.7 | 14 | — |
-| ai-tools-review-guide-2026 | 100 | 13007 | 49.3 | 16 | — |
-| ai-coding-tools-comparison-2026 | 100 | 14898 | 44.6 | 14 | — |
+| ai-tools-review-guide-2026 | 100 | 13120 | 49.2 | 16 | — |
+| ai-coding-tools-comparison-2026 | 100 | 15003 | 47.1 | 14 | — |
 | replit-review-2026 | 100 | 11757 | 48.2 | 13 | — |
 | best-free-ai-tools-2026 | 100 | 12100 | 46.2 | 14 | — |
-| ai-tools-comparison-2026 | 100 | 12064 | 50.0 | 15 | — |
-| ai-tools-for-beginners-2026 | 100 | 12204 | 52.0 | 16 | — |
-| jasper-vs-copy-ai-2026-comparison | 100 | 2482 | 54.9 | 10 | — |
-| canva-ai-vs-adobe-firefly-2026-comp | 100 | 2883 | 43.8 | 9 | — |
+| ai-tools-comparison-2026 | 100 | 12171 | 53.1 | 15 | — |
+| ai-tools-for-beginners-2026 | 100 | 12329 | 59.5 | 16 | — |
+| jasper-vs-copy-ai-2026-comparison | 100 | 2552 | 57.9 | 10 | — |
+| canva-ai-vs-adobe-firefly-2026-comp | 100 | 2968 | 46.2 | 9 | — |
 | surfer-seo-vs-frase-2026-comparison | 100 | 2051 | 49.9 | 3 | — |
 | gemini-pricing-2026 | 100 | 2856 | 53.3 | 4 | — |
 | windsurf-vs-cursor-2026 | 100 | 2928 | 45.2 | 3 | — |
