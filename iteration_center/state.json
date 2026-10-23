@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 134,
+  "total_articles_generated": 137,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -16052,8 +16052,8 @@
   "openseo_info": 476,
   "openseo_last_run": "2026-09-28 09:24",
   "last_published_article": {
-    "slug": "heygen-vs-veed-2026",
-    "batch": "48"
+    "slug": "veed-vs-capcut-2026",
+    "batch": "49"
   },
   "publication_stats": {
     "total_published": 1,
