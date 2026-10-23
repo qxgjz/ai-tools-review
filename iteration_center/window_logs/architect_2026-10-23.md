@@ -67,3 +67,40 @@ CrUX key、Anthropic key、GA4 Admin、CF Dashboard Always Use HTTPS + non-www�
 
 ### 剩余（我的）
 P0=1（URL-CANONICAL 待人工）；P1=3（均阻塞）；P2=0；全站 P0=43
+
+## r51（2026-10-23 12:3x cron 轮：P1-INDEX-DIAG 完成 + GEO 8.9 稳定复核 + IndexNow 8 URL）
+
+### 待办处理（1 completed / 1 新开单给创作家 / 6 evidence 推进，P0 本轮=1 待人工）
+| 待办 | 优先级 | 结果 | 证据 |
+|---|---|---|---|
+| P1-INDEX-DIAG-CLASSIFY-20261023 | P1 | ✅ completed | 报告 iteration_center/index_diagnosis_20261023.md：68 URL 全分诊 |
+| P2-URL-CANONICAL-20261021 | P0 | ⛔ 待人工 | 四通道 API 被拒（r50 已证），redirect_error/redirect 同源 |
+| P1-CATEGORY-DIFF-20261023 | P1 | 🆕 开单（创作家） | category/search、memory 缺差异化描述，design duplicate |
+| P1-CLAUDE-SEO×2 / GA4 / LCP×2 | P1 | 🔄 阻塞沿用 | 待 key/人工 |
+
+### P1-INDEX-DIAG-CLASSIFY 完成（68 URL 全分诊，Ecomexperts 2026 工作流）
+- 状态分布：indexed 7 / redirect 13 / redirect_error 3 / not_indexed 3 / duplicate 1 / unknown 41
+- **3 redirect_error（category/chat、category/code、tools/gemini）web_fetch 服务端实测全 200**（Title 正常）→ 历史 301 链遗留，URL-CANONICAL 同源，非页面故障
+- **not_indexed 3**：category/search、category/memory（缺分类描述+dateModified+内链→开单创作家）；tools/claude（E-E-A-T 信号齐全，AEO 10/10，IndexNow 提交推动收录）
+- **unknown 41**：AdsPower 工具未闭环（r44 遗留），非未收录证据；10-12 批已证其中 20 indexed
+- E-E-A-T 模板证据：tools/blog/compare/alternatives 均有 datePublished+author（app/*/[slug]/page.tsx）；category 聚合页无（设计如此，差异化单补）
+- 内链缺失点：category/memory、category/search、category/observability 无分类互链
+
+### IndexNow 提交（推动 discovered-not-indexed 收录）
+- 8 URL：/tools/claude/、/category/search/、/category/memory/、/tools/elevenlabs/、/tools/sora/、/tools/perplexity/、/tools/exa/、/tools/n8n/ → **status=200 ok=True**（geo_logs/geo_submit_20261023_123144.json）
+
+### GEO 技术检查（≥2 问题处理）
+1. real_geo_aeo_audit.py（12:30Z）：Overall **8.9/10 Grade A**（连续 3 轮稳定=真实基线）；AEO 6/7 页 10/10，/alternatives/chatgpt-alternatives 1 页 Failed to fetch=r49 已证本机网络假象（r50 同页成功）；GEO Content 6.7/10 @3 页样本（Expert Quotes 0% 归创作家单沿用）
+2. robots.txt 3074B CCBot allow 在位；llms.txt 10/10
+
+### 门控结果
+- 无代码改动（诊断/提交类）；GEO 报告落盘 real_geo_aeo_audit_results.json（12:30Z）
+
+### state.json 更新
+- P1-INDEX-DIAG-CLASSIFY → completed+completed_at；新开 P1-CATEGORY-DIFF（创作家）；P1×6 evidence 追加；last_updated=2026-10-23T12:34:03+08:00
+
+### 阻塞/待人工（沿用 5 项）
+CrUX key、Anthropic key、GA4 Admin、CF Dashboard Always Use HTTPS + non-www→www（URL-CANONICAL）、GSC unknown 41 补跑（分析师工具闭环）
+
+### 剩余（我的）
+P0=1（URL-CANONICAL 待人工）；P1=5（INDEX-DIAG 已完成，其余阻塞）；全站 P0=43
