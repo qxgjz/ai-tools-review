@@ -35,6 +35,16 @@
 - 更新方式：Python json.load → 修改自己字段 → json.dump；diff 只含自己的改动
 - 若发现他窗改动被覆盖，先恢复现场态，再只叠加自己的字段
 
+### 3b. state.json 待办读取统一命令（2026-10-23 新增，P0-WINDOW-TODO-READ-FIX）
+- 各窗口开工第一步必须用统一 Python 命令读取自己的全部 pending 待办，禁止凭印象、日志、旧摘要或只读部分字段判断"无待办"
+- 统一命令（在项目根执行，把「窗口名」换成自己的名字）：
+  ```powershell
+  python -X utf8 -c "import json,io,sys; sys.stdout=io.TextIOWrapper(sys.stdout.buffer,encoding='utf-8'); s=json.load(open('iteration_center/state.json',encoding='utf-8')); me='窗口名'; t=[x for x in s['next_iteration_focus'] if isinstance(x,dict) and x.get('status')=='pending' and (me in x.get('assigned_to',[]) or (isinstance(x.get('assigned_to'),str) and me in x.get('assigned_to')))]; print('pending=',len(t)); [print(x.get('priority'),x.get('id'),str(x.get('title'))[:60]) for x in sorted(t,key=lambda z:(0 if str(z.get('priority'))=='P0' else 1 if str(z.get('priority'))=='P1' else 2,str(z.get('created_at',''))))]"
+  ```
+- 窗口名对照：window1/架构师、window2/创作家、window3/拓荒者、window4/分析师、window5/打磨师、window6/体验官、window7/设计师（assigned_to 数组含任一名即命中）
+- 判定标准：命令输出的 pending 数量就是本窗口真实待办数；>0 必须按 P0→P1→P2 批量处理，禁止报"无待办/0 条"
+- 每个窗口执行日志必须记录"读到的 pending 数"，便于指挥官核验读取盲区已消除
+
 ### 4. 禁止事项
 - ❌ 禁止说"我会做"但不实际执行
 - ❌ 禁止凭记忆说"已经修好了"，必须回读验证

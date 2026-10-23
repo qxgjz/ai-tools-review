@@ -576,6 +576,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
   const sortedTools = [...tools].sort(
     (a, b) => calculateScoreResult(b.scores).total - calculateScoreResult(a.scores).total,
   );
+  // E-E-A-T: dataModified = 该分类下工具最近一次数据更新时间（ISO 日期，与工具页 lastUpdated 同源）
+  const lastModified = tools.reduce(
+    (max, t) => (t.lastUpdated && t.lastUpdated > max ? t.lastUpdated : max),
+    '',
+  );
   // 精简工具卡片数据（CategoryToolsClient 只需轻字段 + pricing/lastUpdated，避免全字段序列化进 RSC payload）
   const cardTools = sortedTools.map((t) => ({
     id: t.id,
@@ -602,6 +607,7 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             name: `Best ${category.name} AI Tools 2026`,
             description: category.description,
             url: `https://www.aitoolcrux.com/category/${params.slug}`,
+            ...(lastModified ? { dateModified: lastModified } : {}),
             isPartOf: {
               '@type': 'WebSite',
               name: 'AIToolCrux',
@@ -678,6 +684,11 @@ export default function CategoryPage({ params }: { params: { slug: string } }) {
             <div className="flex-1 min-w-0">
               <h1 className="text-3xl font-extrabold mb-2">{category.name}</h1>
               <p className="text-white/80">{category.description}</p>
+              {lastModified && (
+                <p className="text-white/60 text-xs mt-2">
+                  Last updated: {lastModified} · Six-dimension expert evaluation
+                </p>
+              )}
             </div>
             <div className="text-center flex-shrink-0">
               <div className="text-4xl font-extrabold">{sortedTools.length}</div>
