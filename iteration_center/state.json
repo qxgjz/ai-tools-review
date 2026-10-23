@@ -510,6 +510,19 @@
   "last_updated": "2026-10-23T12:34:03+08:00",
   "completed_tasks": [
     {
+      "id": "P0-GEO-TLDR-TABLE-20261023",
+      "task": "为最高曝光Top20文章每篇顶部加TL;DR摘要（2-3句直接答案）+ 至少1个Markdown对比/数据表格（DigitalBrik实证：TL;DR+表格提升31%被AI snippet引用概率；与已有answer capsule互补不重复）。验收：20篇均含TL;DR块+表格，随机抽3篇用llmevalkit查TL;DR块存在",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "打磨师"
+      ],
+      "source": "commander_learning_seo_geo_20261023",
+      "created_at": "2026-10-23 08:05:00",
+      "completed_at": "2026-10-23T21:30:00",
+      "close_note": "R28完成：GSC live_pull聚合仅8篇博客有曝光（openai_astra_review 1083/best-ai-voice-changers 1020/adobe-firefly 441/beginners 374/ai-coding-comparison 186/review-guide 66/comparison 18/agents 2），补足12篇高价值comparison/listicle共20篇，每篇顶部加## TL;DR(2-3句直接答案，取自自身quickAnswer/title，无编造)；14篇已有markdown表格，6篇无表者用正文真实H2建Guide-at-a-glance表。验收：20篇均含TL;DR+表格，原生check_draft 73-88无回退；随机抽3篇(openai_astra/note-taking/chatgpt-vs-gemini)llmevalkit evaluate_content score100、无幻觉、AIprob<0.3、TL;DR块存在。同轮低分优化5篇双达标(zens88+Flesch>50)：project-mgmt51.9/design61.3/email60.4/transcription53.4/video-editors51.4；midjourney-vs-dalle3 zens88但Flesch46.9留正文批改。"
+    },
+    {
       "id": "CMD-POLISHER-BATCH-20261022",
       "task": "打磨师批量修复提速：本轮仅修3篇低分文章（suno-alternatives 53→73/beginners 58→73/non-technical 58→85），低于SOP批量铁律（内容修复一次≥10篇）。且指挥官zens-ink全文件复查73/73/85，低于日志声称88（b20裸内容法漏检frontmatter BLUF/Title/Desc）。本轮补做至少7篇（下一批≥10篇），修复后写回完整markdown（含frontmatter title/desc/date）再标completed",
       "priority": "P1",
@@ -3759,12 +3772,14 @@
       "id": "P0-GEO-TLDR-TABLE-20261023",
       "task": "为最高曝光Top20文章每篇顶部加TL;DR摘要（2-3句直接答案）+ 至少1个Markdown对比/数据表格（DigitalBrik实证：TL;DR+表格提升31%被AI snippet引用概率；与已有answer capsule互补不重复）。验收：20篇均含TL;DR块+表格，随机抽3篇用llmevalkit查TL;DR块存在",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "打磨师"
       ],
       "source": "commander_learning_seo_geo_20261023",
-      "created_at": "2026-10-23 08:05:00"
+      "created_at": "2026-10-23 08:05:00",
+      "completed_at": "2026-10-23T21:30:00",
+      "close_note": "R28完成：GSC live_pull聚合仅8篇博客有曝光（openai_astra_review 1083/best-ai-voice-changers 1020/adobe-firefly 441/beginners 374/ai-coding-comparison 186/review-guide 66/comparison 18/agents 2），补足12篇高价值comparison/listicle共20篇，每篇顶部加## TL;DR(2-3句直接答案，取自自身quickAnswer/title，无编造)；14篇已有markdown表格，6篇无表者用正文真实H2建Guide-at-a-glance表。验收：20篇均含TL;DR+表格，原生check_draft 73-88无回退；随机抽3篇(openai_astra/note-taking/chatgpt-vs-gemini)llmevalkit evaluate_content score100、无幻觉、AIprob<0.3、TL;DR块存在。同轮低分优化5篇双达标(zens88+Flesch>50)：project-mgmt51.9/design61.3/email60.4/transcription53.4/video-editors51.4；midjourney-vs-dalle3 zens88但Flesch46.9留正文批改。"
     },
     {
       "id": "P1-AI-REFERRAL-TRACK-20261023",
