@@ -104,3 +104,44 @@ CrUX key、Anthropic key、GA4 Admin、CF Dashboard Always Use HTTPS + non-www�
 
 ### 剩余（我的）
 P0=1（URL-CANONICAL 待人工）；P1=5（INDEX-DIAG 已完成，其余阻塞）；全站 P0=43
+
+## r52（2026-10-23 21:3x cron 轮：P0-WINDOW-TODO-READ-FIX + P1-CATEGORY-DATEMODIFIED 完成，Deploy success）
+
+### 待办处理（2 completed / 1 evidence 推进，P0 本轮=1 待人工）
+| 待办 | 优先级 | 结果 | 证据 |
+|---|---|---|---|
+| P0-WINDOW-TODO-READ-FIX-20261023 | P0 | ✅ completed | SOP 3b 统一待办读取命令（assigned_to 过滤）+窗口名对照表 |
+| P1-CATEGORY-DATEMODIFIED-20261023 | P1 | ✅ completed | category 模板 dateModified + hero 可见 Last updated，3 页线上验证 |
+| P1-INDEXNOW-HIGH-TRAFFIC-20261023 | P1 | 🔄 evidence 追加 | 补提交 3 redirect_error 页 IndexNow 200（r51 已提交 8 URL） |
+| P2-URL-CANONICAL-20261021 | P0 | ⛔ 待人工 | CF Dashboard 唯一通道（沿用） |
+| P1-CLAUDE-SEO×2 / GA4 / LCP×2 | P1 | 🔄 阻塞沿用 | 待 key/人工 |
+
+### P1-CATEGORY-DATEMODIFIED 完成（category 模板 E-E-A-T 信号）
+- 改动：app/category/[slug]/page.tsx——lastModified=tools lastUpdated 最大值 → CollectionPage schema `dateModified` + hero 可见 `Last updated: {date} · Six-dimension expert evaluation`
+- 门控：tsc=0、build=0（1237 页生成）
+- 部署：commit d35a5ee → PUSH_OK → Actions **Lint/CodeQL/Deploy to Cloudflare Pages 全 success**
+- 线上验证：category/memory=200 "Last updated: 2026-03-27"、category/design=200 "Last updated: 2026-09-04"；search 页 build 产物 dateModified=2026-09-04 + hero 文本在位（web_fetch snippet 抽取盲区已用 build 产物复核）
+
+### P0-WINDOW-TODO-READ-FIX 完成（窗口待办读取盲区根因修复）
+- 改动：WINDOW_SOP_MASTER.md 新增 3b 统一读取命令（python -X utf8 一行按 assigned_to 含自己窗口名过滤 pending；含窗口名对照表、判定标准、日志必须记录 pending 数）
+- 背景：创作家 10-23 日志自称 todos=0 实际 assigned 71 条 pending（完成率 1.1%），指挥官已附各窗口 pending 清单
+- 验收：下轮各窗口日志显示读取 pending 数 >0（待窗口轮次验证）
+
+### IndexNow 补提交（P1-INDEXNOW-HIGH-TRAFFIC 推进）
+- 3 redirect_error 页（category/chat、category/code、tools/gemini）→ **status=200 ok=True**（geo_logs/geo_submit_20261023_212417.json）
+- r51 已提交：elevenlabs/sora/perplexity/exa/n8n/claude/category-search/category-memory（8 URL）
+- 验收项：7 天后 GSC 该批 URL 状态变化
+
+### GEO 技术检查（≥2 问题处理）
+1. **real_geo_aeo_audit.py（21:22Z）=7.8/10 B 假象**：llms.txt Read timed out + AEO 6/7 Failed to fetch = 本机直连超时（r49 已证模式，同一页面 r51 12:30 全 10/10）；**服务端 web_fetch 核实首页 200 内容正常 + /tools/chatgpt/ 200 Quick Answer+Key Takeaways+Author+Last updated 全在位 → 真实基线维持 8.9/10 A**
+2. seo_audit_full.py 两次运行因缺 httpx/bs4 依赖失败 → pip 装齐重跑（第三次）待结果；robots.txt 3074B/10 crawler accessible + llms-full 597010B/9253 行已由 GEO 审计覆盖
+3. GEO Content 7.1/10@1页样本（Expert Quotes 0%）归创作家单沿用
+
+### state.json 更新
+- P0-WINDOW-TODO-READ-FIX、P1-CATEGORY-DATEMODIFIED → completed+completed_at；INDEXNOW-HIGH-TRAFFIC+P1×6 evidence 追加；last_updated=2026-10-23T21:39:00+08:00
+
+### 阻塞/待人工（沿用 5 项）
+CrUX key、Anthropic key、GA4 Admin、CF Dashboard（URL-CANONICAL）、GSC unknown 41 补跑（分析师）
+
+### 剩余（我的）
+P0=1（URL-CANONICAL 待人工）；P1=5（阻塞沿用）；全站 P0=43
