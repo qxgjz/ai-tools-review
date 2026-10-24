@@ -48,3 +48,34 @@
 ## 剩余
 - 我的 P0=1（URL-CANONICAL 人工）、P1=5（阻塞）+INDEXNOW（10-30）；全站 P0=44
 - seo_audit_full.py/Lighthouse 本机死路维持（r31 经验 7），替代通道已覆盖
+
+# r55 手动指令轮（2026-10-24 10:00 +08:00，窗口1直接下达 4 项）
+
+## 指令项处理结果
+| # | 指令 | 结果 | 证据 |
+|---|---|---|---|
+| 1 | P0 URL-CANONICAL 闭环（检查 next.config/_redirects 非www→www） | **代码层不可行，保持阻塞**；伴生 IndexNow 完成 | next.config 无 redirects；public/_redirects 全 path-level（CF Pages 不支持 host 匹配）；rulesets PUT 405 复测；IndexNow 23 URL 全 200 |
+| 2 | P0-AFF-LINK-INFRA：全站联盟链接 /go/[tool] 302 + affiliate_click 埋点 | **COMPLETED** | commit 892bf4c；tsc=0 build=0；CF Deploy success 01:50:37Z；线上 22/22 /go/ 302 Location 正确；go_slug 进 layout chunk |
+| 3 | P1 GA4-SG-BOT-CLEAN：CF WAF 屏蔽新加坡 IP Bot | **保持阻塞（API 全拒）** | firewall rules GET 410、zone rulesets PUT 405 复测；唯一通道=CF Dashboard 人工 |
+| 4 | P1 LCP-REALDATA | 阻塞沿用 | 缺 CrUX key |
+
+## P0-AFF-LINK-INFRA 实施明细
+- lib/affiliate.ts：ctaHref(affiliateUrl, officialUrl, slug) → affiliate 走 /go/{slug}，official 直链
+- 渲染点：app/tools/[slug]/page.tsx 4 处、components/compare/CompareClient.tsx 2 处、components/monetization/AffiliateCTA.tsx（+toolSlug prop，覆盖 blog 页）、app/blog/[slug]/page.tsx 传 toolSlug
+- public/_redirects 追加 22 条：/go/{slug} {affiliateUrl} 302（Python 从 tools.json 生成）
+- GA4EventTracker.tsx：getGoSlugFromHref + isGoLink 判定；/go/ 点击发 affiliate_click（go_slug 字段）+ tool_outbound_click + article_affiliate_click；/go 不发 outbound_click（CF 302 承载）
+- 门控：npx tsc --noEmit=0；npm run build=0
+- 部署：Actions Lint/Unit/CodeQL success；Deploy step success（CF API 确认 892bf4c production 01:50:37Z）；CI Verify homepage 步骤失败=CI 脚本侧问题，部署本身成功（三查原则判定）
+- 线上验证：curl 22/22 /go/{slug} 全 302 且 Location 正确（首轮 16/22 + 6 个瞬时抖动重试全过）
+
+## IndexNow（P1-INDEXNOW-HIGH-TRAFFIC 推进）
+- 本轮提交 23 URL 全 status=200 ok=True：20 高流量工具页（geo_submit_20261024_100001.json）+ 默认 3（首页/blog/sitemap，geo_submit_20261024_095935.json）
+- 累计：r51 8 + r52 3 + r55 23 = 34 URL；10-30 核 GSC
+
+## state.json
+- 新开 P0-AFF-LINK-INFRA-20261024 → completed（completed_at 2026-10-24T10:00:36+08:00）
+- URL-CANONICAL/GA4-SG-BOT/INDEXNOW/LCP×2/CLAUDE-SEO×2 evidence 追加；last_updated=2026-10-24T10:00:36+08:00；focus=202
+
+## 剩余
+- 我的 P0=1（URL-CANONICAL 人工）、P1=5（阻塞）+INDEXNOW（10-30 验收）；全站 P0=44
+- 人工通道 4 项：CF Dashboard（URL-CANONICAL + WAF SG Bot 两条都需 Dashboard）、CrUX key、Anthropic key、GA4 Admin
