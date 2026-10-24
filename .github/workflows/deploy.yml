@@ -49,7 +49,7 @@ jobs:
       - name: Verify homepage
         run: |
           for i in 1 2 3; do
-            if curl -sf -o /dev/null -w "%{http_code}" https://aitoolcrux.com/ | grep -q "200"; then
+            if curl -sfL -o /dev/null -w "%{http_code}" https://www.aitoolcrux.com/ | grep -q "200"; then
               echo "✅ Homepage OK"
               exit 0
             fi
@@ -62,7 +62,7 @@ jobs:
       - name: Verify blog
         run: |
           for i in 1 2 3; do
-            if curl -sf -o /dev/null -w "%{http_code}" https://aitoolcrux.com/blog/ | grep -q "200"; then
+            if curl -sfL -o /dev/null -w "%{http_code}" https://www.aitoolcrux.com/blog/ | grep -q "200"; then
               echo "✅ Blog OK"
               exit 0
             fi
