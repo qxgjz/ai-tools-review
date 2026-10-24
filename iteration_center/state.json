@@ -510,6 +510,15 @@
   "last_updated": "2026-10-25T00:11:52+08:00",
   "completed_tasks": [
     {
+      "id": "CMD-20261024-001",
+      "title": "GSC误伤排查：best-ai-agent-tools-2026 Google无法识别",
+      "priority": "P0",
+      "status": "completed",
+      "source": "commander_diagnosis_20261024_gsc_inspect",
+      "completed_at": "2026-10-24T21:05:23+08:00",
+      "evidence": "r57 2026-10-24 复核完成：1) CF 层无任何规则误伤（firewall_custom/managed/ratelimit 三 phase entrypoint 全 404，SG 清洗从未落地）；2) Googlebot UA 抓取 200 + 39KB 完整内容；3) sitemap/canonical/robots 全一致。根因=URL 规范化过渡期+收录滞后，非 Bot 误伤。处置：IndexNow 9 URL 全 200。"
+    },
+    {
       "id": "P0-GEO-TLDR-TABLE-20261023",
       "task": "为最高曝光Top20文章每篇顶部加TL;DR摘要（2-3句直接答案）+ 至少1个Markdown对比/数据表格（DigitalBrik实证：TL;DR+表格提升31%被AI snippet引用概率；与已有answer capsule互补不重复）。验收：20篇均含TL;DR块+表格，随机抽3篇用llmevalkit查TL;DR块存在",
       "priority": "P0",
