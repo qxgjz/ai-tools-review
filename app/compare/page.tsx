@@ -7,10 +7,32 @@ import comparisonsData from '@/data/comparisons.json';
 
 export const dynamicParams = false;
 
+const COMPARE_KEEP_FIELDS = [
+  'slug',
+  'name',
+  'vendor',
+  'category',
+  'description',
+  'scores',
+  'tags',
+  'hasFreeTier',
+  'pricing',
+  'lastUpdated',
+] as const;
+
 export default function ComparePage() {
-  const tools: Tool[] = JSON.parse(
+  const allTools: Tool[] = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), 'public/data/tools-index.json'), 'utf-8'),
   );
+  // Keep only fields the comparison UI actually uses: cutting pros/cons/bestFor/
+  // officialUrl/etc. shrinks the RSC flight payload by ~210KB (page was 1.09MB).
+  const tools: Tool[] = allTools.map((t) => {
+    const slim: Partial<Tool> = {};
+    for (const k of COMPARE_KEEP_FIELDS) {
+      (slim as Record<string, unknown>)[k] = (t as unknown as Record<string, unknown>)[k];
+    }
+    return slim as Tool;
+  });
   return (
     <>
       <CompareClient initialTools={tools} />
