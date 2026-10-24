@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-24T10:00:36+08:00",
+  "last_updated": "2026-10-24T12:17:44+08:00",
   "completed_tasks": [
     {
       "id": "P0-GEO-TLDR-TABLE-20261023",
@@ -1969,28 +1969,14 @@
         "window1",
         "架构师"
       ],
-      "status": "pending",
-      "source": "commander_learning_indexroot_20261023",
-      "created_at": "2026-10-21T08:14:39",
-      "evidence": "r50 复核 2026-10-23 04:0xZ：线上 HEAD 实测 8 URL（www/non-www × http/https × 有/无斜杠）全 200，无任何 301/308 归一，问题现状未变；程序化通道四重验证全被拒：zone settings PATCH 403 / firewall rules 410 / rulesets PUT 405 (Method not allowed for this authentication scheme) / pages project PATCH 403 (Authentication error)；canonical 均已指向 https://www.aitoolcrux.com/tools/claude/ 合并权重。唯一剩余通道：CF Dashboard 人工（Always Use HTTPS + Redirect Rule non-www→www）或换全权限 token。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：代码层复核——next.config 无 redirects；public/_redirects 全 path-level 规则（CF Pages _redirects 不支持 host 匹配，无法做 non-www→www）；rulesets PUT 405 复测（Method Not Allowed）→ 程序化通道维持全拒，唯一通道=CF Dashboard 人工（Always Use HTTPS + non-www→www Redirect Rule）。",
-      "blocks": [
-        "P0-INDEX-FIX-20261020"
-      ]
-    },
-    {
-      "id": "P1-SITEMAP-INDEXED-0-20261021",
-      "task": "sitemap.xml submitted=845 但 indexed=0（P0 重开，10/23 实测根因）：sitemap 全部为 www+尾斜杠 URL，与站内实际 URL（非www 无斜杠）不一致；GSC 判无效/重定向。改为生成站内真实 URL 集合（统一 www+斜杠）后重新提交 sitemap，IndexNow 批量推送，3-5 天后核 GSC sitemap indexed 从 0 恢复",
-      "priority": "P0",
-      "assigned_to": [
-        "分析师"
-      ],
       "status": "completed",
       "source": "commander_learning_indexroot_20261023",
-      "created_at": "2026-10-21T14:06:53",
-      "completed_at": "2026-10-24T09:44:28",
-      "status_note_20261021c": "URL Inspection API 抽查闭环(10/21批次三)：首页/category-video PASS(Submitted and indexed)→sitemap indexed=0为GSC统计口径未聚合，非全站未索引；但 tools/claude=URL unknown to Google 头部页问题真实(并入P0-INDEXMON)。结论：sitemap口径澄清，无需紧急处理",
-      "evidence": "2026-10-23 实测 sitemap.xml 全 www+斜杠；GSC sitemaps.list indexed=0",
-      "notes": " | completed by 分析师 2026-10-24: 重拉GSC核对：submitted=881(↑自845) indexed仍=0，lastSubmitted=10-18，线上sitemap已规范化(全www+斜杠)，等待Google重抓"
+      "created_at": "2026-10-21T08:14:39",
+      "evidence": "r50 复核 2026-10-23 04:0xZ：线上 HEAD 实测 8 URL（www/non-www × http/https × 有/无斜杠）全 200，无任何 301/308 归一，问题现状未变；程序化通道四重验证全被拒：zone settings PATCH 403 / firewall rules 410 / rulesets PUT 405 (Method not allowed for this authentication scheme) / pages project PATCH 403 (Authentication error)；canonical 均已指向 https://www.aitoolcrux.com/tools/claude/ 合并权重。唯一剩余通道：CF Dashboard 人工（Always Use HTTPS + Redirect Rule non-www→www）或换全权限 token。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：代码层复核——next.config 无 redirects；public/_redirects 全 path-level 规则（CF Pages _redirects 不支持 host 匹配，无法做 non-www→www）；rulesets PUT 405 复测（Method Not Allowed）→ 程序化通道维持全拒，唯一通道=CF Dashboard 人工（Always Use HTTPS + non-www→www Redirect Rule）。 | r56 2026-10-24（CF 前置已解除）：CF Dashboard 人工已创建 Redirect Rule「Non-www to www 301 redirect」（条件 http.host eq \"aitoolcrux.com\"，类型=动态 Dynamic，URL 表达式 concat(\"https://www.aitoolcrux.com\", http.request.uri.path)，状态 301，保留查询字符串）。线上 curl 实测三层全过：http://aitoolcrux.com/ → https://www.aitoolcrux.com/、文章路径完整保留、?utm_source=test&id=5 查询保留；浏览器实测非www 文章页 301 至 www 页面 200 正常。非www→www 阻塞解除。剩余：http→https 归一（CF Always Use HTTPS 或规则）、无斜杠→斜杠、sitemap 全 www 确认、GSC 重提、redirect_error 3 条清理。 | r56 2026-10-24 COMPLETED：线上 8 组合 curl 实测全归一——http://aitoolcrux.com/ 301→https://www.aitoolcrux.com/、http://www 301→https://www、https://aitoolcrux.com/ 301→https://www、https://www 200；/tools/midjourney 全组合 301→www 且 https://www/tools/midjourney/ 200、无斜杠 308 加斜杠；sitemap.xml 884 URL 全 https://www.aitoolcrux.com/（non-www=0）；redirect_error 3 条（category/chat、category/code、tools/gemini）线上全 200；canonical 均指向 https://www.aitoolcrux.com/（r50 确认）。IndexNow r51/r52/r55 累计 34 URL 已提交，GSC 10-30 复核。",
+      "blocks": [
+        "P0-INDEX-FIX-20261020"
+      ],
+      "completed_at": "2026-10-24T12:17:44+08:00"
     },
     {
       "id": "URGE-CREATOR-20261022",
@@ -2006,20 +1992,22 @@
     {
       "id": "URGE-GROWTH-20261022",
       "task": "【指挥官催办】拓荒者 pending 68 条次重，完成率0%<50%红线：RR38 已 SMTP 3/3 accepted 但 state.json 待办未批量关闭——立即批量执行外链目录提交/HN评论（AdsPower登录态未打通则明示阻塞），并按 RR38 档账本把已发信调研待办逐条标记 completed+evidence，一次≥5条",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "拓荒者"
       ],
       "source": "commander_urge_20261022",
       "created_at": "2026-10-22T21:48:00",
-      "last_note": "RR17 2026-10-24: 当日SMTP accepted=7 (submitmytool/submitsaas/beyondaitools + 晨间saascomparely/aitoolmind/ideaproof/toolbit)"
+      "last_note": "RR17 2026-10-24: 当日SMTP accepted=7 (submitmytool/submitsaas/beyondaitools + 晨间saascomparely/aitoolmind/ideaproof/toolbit)",
+      "completed_at": "2026-10-24 11:49:00 +08:00",
+      "followup_note": "2026-10-24 11:49:00 +08:00 跟进档已批量复检：58 个已发目录首页 200/无收录(审核中)，Serper 新确认 2 条生效外链(sideprojectors/thehackstack)，存活 dofollow=6 达下限；RR 已发目录无独立 state 待办的脱节已记录，10-27 起 follow-up。"
     },
     {
       "id": "P0-GEO-TLDR-TABLE-20261023",
       "task": "为最高曝光Top20文章每篇顶部加TL;DR摘要（2-3句直接答案）+ 至少1个Markdown对比/数据表格（DigitalBrik实证：TL;DR+表格提升31%被AI snippet引用概率；与已有answer capsule互补不重复）。验收：20篇均含TL;DR块+表格，随机抽3篇用llmevalkit查TL;DR块存在",
       "priority": "P0",
-      "status": "completed",
+      "status": "pending",
       "assigned_to": [
         "打磨师"
       ],
@@ -2028,38 +2016,8 @@
       "close_note": "R30复核：20篇r28-tldr+6篇r28-low块完整，另补5篇缺口，全部带posts.json证据链，重新completed。",
       "reopened_at": "2026-10-23T14:50:00+08:00",
       "reopen_note": "2026-10-23 21:30 实测：posts.json(233条) GA4最高曝光5篇中4篇仍无TLDR=perplexity-review-2026(66324字)/suno-alternatives(15158字)/chatgpt-vs-claude-2026-comparison(15450字)/best-ai-productivity-tools-2026(29137字)，全库TLDR仍20篇（与14:47轮一致）。打磨师R29仅确认R28旧成果完好并重新标completed，未补GA4真实流量缺口；其close_note所称\"last-write还原\"实为指挥官14:47按验收口径重开。判定：部分完成→重开，补做GA4 top5 TLDR后按逐篇posts.json核验闭环",
-      "completed_at": "2026-10-24T12:00:00"
-    },
-    {
-      "id": "P0-CMD-POLISHER-TLDR-GAP-20261023",
-      "title": "补齐GA4最高曝光5篇文章TL;DR+表格（P0-GEO-TLDR缺口）",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "打磨师",
-        "window5"
-      ],
-      "source": "commander_daily_20261023_2130",
-      "created_at": "2026-10-23 21:35:00",
-      "description": "打磨师P0-GEO-TLDR-TABLE-20261023经21:30实测判定部分完成：GA4最高曝光文章perplexity-review-2026(66K字)/suno-alternatives/chatgpt-vs-claude-2026-comparison/best-ai-productivity-tools-2026均无TL;DR。请为这4篇（+perplexity-ai-review-2026若存在）补`## TL;DR`2-3句直答+Guide-at-a-glance表，完成后用Python逐篇读posts.json验证TLDR=True再标completed；禁止只确认旧成果不补缺口。参考SOP 3b统一命令读取自己全部pending待办",
       "completed_at": "2026-10-24T12:00:00",
-      "close_note": "补5篇TLDR缺口并逐篇posts.json验证：perplexity-review-2026(4句+补表)/suno-alternatives(2句)/chatgpt-vs-claude-2026-comparison(3句)/best-ai-productivity-tools-2026(2句)/midjourney-vs-dalle-3-2026(2句)，均含## TL;DR≥2句+≥1 markdown表，标记r30-tldr-20261024。"
-    },
-    {
-      "id": "P0-AFF-CONVERT-STRUCT-20261024",
-      "task": "联盟转化结构改造（TipSeason转化三要素，对齐C目标$0→$100/月）：改造现有20个高流量/alternatives/+reviews/页——①verdict在前100字内出现（不埋2000字后）②联盟链接3处（推荐段落内/价格区/verdict旁Get Started CTA按钮）③对比表可扫读（关键差异一屏可见）。验收：抽查10页全部满足三要素；affiliate_click从4次/月基线提升",
-      "priority": "P0",
-      "assigned_to": [
-        "打磨师",
-        "创作家"
-      ],
-      "status": "completed",
-      "source": "commander_learning_联盟营销变现模式创新_20261024",
-      "created_at": "2026-10-24T08:10:00+08:00",
-      "due": "2026-10-31",
-      "notes": "对照页：tipseason.beehiiv.com营收案例；与AFF-CMP-PAGES-20261016（补新页）互补，本条=改造现有页；逐页posts.json验证verdict前置后标completed",
-      "completed_at": "2026-10-24T12:00:00",
-      "close_note": "打磨师承担10页完成：best-ai-presentation/beautiful-ai-alternatives/sudowrite-alternatives/perplexity-vs-chatgpt/best-ai-music-generators/best-ai-text-to-speech/best-ai-spreadsheet/best-ai-sql/best-ai-summarizer/clearscope-alternatives。每页顶部加Quick Verdict(前100字)+3处联盟链接(取自身affiliateLinks)+已有可扫读对比表，标记r30-aff-20261024。创作家共担其余页面。"
+      "reopened_20261024": "指挥官 r57 复核：打磨师 r30 仅补 5 篇 TLDR（perplexity-review/suno-alternatives/chatgpt-vs-claude/best-ai-productivity-tools/midjourney-vs-dalle-3，r30_verify.py 通过），全库精确 TL;DR 仅 25/237，缺口 50 篇（含曝光 Top1 /blog/best-ai-coding-tools-2026 与 best-ai-* 长尾系），未达 Top20 全覆盖承诺。已并入 P0-CMD-POLISHER-TLDR-GAP-20261023（归档），按缺口补齐，验收=逐篇 posts.json 验证 + r30 标记。"
     },
     {
       "id": "CONTENT-AIO-STRUCT-20261018",
@@ -2394,12 +2352,14 @@
       "id": "P1-BACKLINK-15-20261012",
       "task": "外链补足90天目标缺口：当前4条存活dofollow backlink，距目标5-15个相关真实域名差1-11个；优先获取1条'有流量的编辑链接'（客座博客/资源页，质量>数量），而非继续批量目录盲扫；持续使用Serper调研的资源页/客座博客线索（backlink_opportunities.md）",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "拓荒者"
       ],
       "source": "commander_learning_cold_start_growth_20261012",
-      "created_at": "2026-10-12"
+      "created_at": "2026-10-12",
+      "completed_at": "2026-10-24 11:49:00 +08:00",
+      "followup_note": "2026-10-24 11:49:00 +08:00 实测存活 dofollow backlink=6 条(历史4+sideprojectors+thehackstack)，达90天≥5下限，curl+Serper 双验。"
     },
     {
       "id": "P1-GEO-THREE-20261012",
@@ -2770,7 +2730,7 @@
       "source": "commander_daily_2026-10-17",
       "created_at": "2026-10-17T14:40:00",
       "blocked_reason": "需指挥官提供 Claude Code CLI + Anthropic 登录态环境后安装 plugin 跑全站审计；阻塞解除前保持 pending",
-      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。"
+      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。 | r56 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。"
     },
     {
       "priority": "P1",
@@ -2968,7 +2928,7 @@
       "assigned_to": "架构师",
       "status": "pending",
       "source": "commander_learning_github_trending_20261020",
-      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。",
+      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。 | r56 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。",
       "created_at": "2026-10-20T08:02:09.063309"
     },
     {
@@ -2995,7 +2955,7 @@
       "status": "pending",
       "source": "r39_perf_recheck_20261020",
       "created_at": "2026-10-20T12:23:36+08:00",
-      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。"
+      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。 | r56 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。"
     },
     {
       "id": "P1-MIDJOURNEY-LCP-20261020",
@@ -3005,7 +2965,7 @@
       "status": "pending",
       "source": "commander_daily_20261020",
       "created_at": "2026-10-20T14:30",
-      "evidence": "r49 复核：无新 CWV；待 CrUX key + 带代码改动部署触发新 CI。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。",
+      "evidence": "r49 复核：无新 CWV；待 CrUX key + 带代码改动部署触发新 CI。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。 | r56 2026-10-24：阻塞沿用（缺 Anthropic key/CrUX key）。",
       "description": "\nr41(10-21)：CWV(10-20T10:58Z) LCP 5.6/5.8/5.8s（r39 8.4s时代已过）；图片层已闭环（webp 152KB+preload+fetchPriority=high+无大chunk）；r41 已修第三方 analytics preload（umami+gtag 改原生async，preload 4→2）——下轮 CI CWV 复测后评估是否继续（目标<4s，剩余主因为系统性 JS/HTML 负担）。\n[r42 2026-10-21] CWV 仍为 10-20T10:58Z 基线（无新报告），r41 preload 修复效果待下轮 CI 双跑；线上 7a7ebb2 已部署且首页新版已收敛。"
     },
     {
@@ -3028,22 +2988,6 @@
       "evidence": "Maat契约化交接+单响应原则；P0-FAKE-FIX教训延伸"
     },
     {
-      "id": "P1-DENSITY-REGRESSION-20261021",
-      "task": "最新6篇草稿关键词密度抽检5篇未达标（claude-rate-limits 0.09%、voice-changer-vs-voicemod 0.34%、best-free-ai-voice-changers 0.28%、free-ai-fitness-coaches 0.14%、free-ai-tools-for-students 0.20%；仅 non-technical 1.15%达标）→ 创作家写文自查≥0.5%未落实，打磨师复检",
-      "priority": "P1",
-      "assigned_to": [
-        "window3",
-        "创作家",
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "source": "analyst_20261021",
-      "created_at": "2026-10-21T14:06:53",
-      "completed_at": "2026-10-24T12:00:00",
-      "close_note": "复检6篇草稿原全部<0.5%，注入自然聚焦块后复测：claude-rate-limits 0.77%/voice-changer-vs-voicemod 0.69%/best-free-ai-voice-changers 0.79%/free-ai-fitness-coaches 0.95%/free-ai-tools-for-students 0.57%/non-technical 0.58%，全部PASS。"
-    },
-    {
       "id": "P1-GA4-SG-BOT-CLEAN-20261021",
       "task": "新加坡 IP 段 Bot 流量清洗（10/16=96s全0engaged，10/03=893s同模式）：Cloudflare WAF 规则屏蔽新加坡机房ASN/UA特征，保留真实访客；GA4 侧加 internal 流量排除验证",
       "priority": "P1",
@@ -3054,7 +2998,7 @@
       "status": "pending",
       "source": "analyst_20261021",
       "created_at": "2026-10-21T14:06:53",
-      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：WAF 通道复测——firewall rules GET 410 Gone、zone rulesets PUT 405 → 无程序化通道可建 WAF 规则屏蔽新加坡 IP 段，唯一通道=CF Dashboard 人工（Security > WAF > Custom rules，屏蔽 146.0.0.0/8 等 SG 段 Bot UA）。"
+      "evidence": "r50 复核 2026-10-23：阻塞沿用（Anthropic key / GA4 Admin 人工 / CrUX key 缺失）。 | r51 复核 2026-10-23：阻塞沿用（Anthropic key/GA4 Admin 人工/CrUX key 缺失）。 | r52 复核 2026-10-23：阻塞沿用（人工项）。 | r53 复核 2026-10-24：阻塞沿用（人工项：CF Dashboard/CrUX key/Anthropic key/GA4 Admin）。 | r54 复核 2026-10-24：阻塞沿用（人工项）。 | r55 2026-10-24：WAF 通道复测——firewall rules GET 410 Gone、zone rulesets PUT 405 → 无程序化通道可建 WAF 规则屏蔽新加坡 IP 段，唯一通道=CF Dashboard 人工（Security > WAF > Custom rules，屏蔽 146.0.0.0/8 等 SG 段 Bot UA）。 | r56 2026-10-24：阻塞沿用（WAF API 410/405，唯一通道 CF Dashboard 人工）。"
     },
     {
       "id": "GEO-CONTENT-EXPERT-QUOTES-20261022",
@@ -3105,20 +3049,6 @@
       "status": "pending",
       "source": "learning_readability_20261022",
       "created_at": "2026-10-22T06:05:00"
-    },
-    {
-      "id": "CMD-LEARN-AFF-UPSELL-20261022",
-      "task": "联盟佣金结构升级（参考PopularAiTools佣金分层：premium 30-50% recurring/cookie 90-365天）：分析师梳理当前affiliate_programs.md已接入联盟的cookie时长与佣金类型，列出佣金<25%或cookie<60天的联盟名单，评估替换为recurring型联盟（30-50% recurring）；目标：AFF漏斗基线从0.14%提升，产出替换建议清单交指挥官",
-      "priority": "P1",
-      "assigned_to": [
-        "分析师"
-      ],
-      "status": "completed",
-      "source": "commander_learning_AI工具站成功案例拆解",
-      "created_at": "2026-10-22T08:02:02",
-      "due": "2026-10-26",
-      "notes": "产出清单含：联盟名/当前佣金/当前cookie/建议动作（保留/替换/新增） | completed by 分析师 2026-10-24: 联盟清单已交付 affiliate_upgrade_recommendations_2026-10-24.md（23计划全量动作表）",
-      "completed_at": "2026-10-24T09:44:28"
     },
     {
       "id": "CMD-LEARN-TASK-PAGES-20261022",
@@ -3199,19 +3129,6 @@
       "created_at": "2026-10-22T17:14:55.308779+08:00"
     },
     {
-      "id": "P1-AI-REFERRAL-TRACK-20261023",
-      "task": "GA4建立AI平台引荐跟踪清单：weekly监控ChatGPT(chatgpt.com)、Perplexity(perplexity.ai)、Gemini、Claude、Copilot(bing.com合并)五类AI引荐来源，纳入周报新增节（当前chatgpt.com=32为最大AI引荐，需持续跟踪增长+识别被引用页面）。验收：latest_report新增AI引荐小节，含各平台sessions与引用页面top5",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "分析师"
-      ],
-      "source": "commander_learning_seo_geo_20261023",
-      "created_at": "2026-10-23 08:05:00",
-      "completed_at": "2026-10-24T09:44:28",
-      "notes": " | completed by 分析师 2026-10-24: GA4拉取成功(556518278)：28d sessions=3581，AI引荐chatgpt=32/bing=11，latest_report已更新AI引荐小节"
-    },
-    {
       "id": "P1-INDEX-UNKNOWN-41-RERUN-20261023",
       "task": "补跑AdsPower CDP GSC URL检查41个unknown URL（index_diagnosis_20261023.md B-4类，10-12批已证20个indexed，其余21个补跑闭环）：n8n/runway/sora/pika/elevenlabs/suno/litellm/kagi/exa/auto-gpt/jan/ollama/llama-cpp/vllm/gemini-cli/claude-code/openhands/lobe-chat/langchain/crewai/letta/cognee/langfuse/phoenix/deepeval等。输出：真实收录清单，unknown收敛为0。",
       "priority": "P1",
@@ -3234,7 +3151,7 @@
       "source": "commander_daily_20261023_index_diagnosis",
       "created_at": "2026-10-23 14:50:00",
       "acceptance": "IndexNow已提交清单+提交后GSC状态变化",
-      "evidence": " | r52 2026-10-23：补充 IndexNow 提交 3 redirect_error 页（category/chat、category/code、tools/gemini）status=200 ok=True（geo_logs/geo_submit_20261023_212417.json）；r51 已提交 elevenlabs/sora/perplexity/exa/n8n/claude+category-search/memory。7 天后核 GSC 状态变化。 | r53 2026-10-24：验收期未到（10-30 核 GSC），保持 pending。 | r54 2026-10-24：验收期未到（10-30 核 GSC），保持 pending。 | r55 2026-10-24：批量提交 20 高流量工具页（midjourney/cursor/windsurf/jasper/copy-ai/grammarly/runway/elevenlabs/ray/replit-ai/writesonic/quillbot/calendly-ai/pika/pictory/heygen/canva-ai/gemini/claude/notion-ai）全 status=200 ok=True（geo_logs/geo_submit_20261024_100001.json）+ 默认 3 URL（首页/blog/sitemap）200（geo_submit_20261024_095935.json）；10-30 核 GSC 状态变化。"
+      "evidence": " | r52 2026-10-23：补充 IndexNow 提交 3 redirect_error 页（category/chat、category/code、tools/gemini）status=200 ok=True（geo_logs/geo_submit_20261023_212417.json）；r51 已提交 elevenlabs/sora/perplexity/exa/n8n/claude+category-search/memory。7 天后核 GSC 状态变化。 | r53 2026-10-24：验收期未到（10-30 核 GSC），保持 pending。 | r54 2026-10-24：验收期未到（10-30 核 GSC），保持 pending。 | r55 2026-10-24：批量提交 20 高流量工具页（midjourney/cursor/windsurf/jasper/copy-ai/grammarly/runway/elevenlabs/ray/replit-ai/writesonic/quillbot/calendly-ai/pika/pictory/heygen/canva-ai/gemini/claude/notion-ai）全 status=200 ok=True（geo_logs/geo_submit_20261024_100001.json）+ 默认 3 URL（首页/blog/sitemap）200（geo_submit_20261024_095935.json）；10-30 核 GSC 状态变化。 | r56 2026-10-24：验收期未到（10-30 核 GSC），保持 pending。"
     },
     {
       "id": "P1-UX-LCP-HERO-PRIORITY-20261023",
@@ -3259,19 +3176,6 @@
       "source": "ux_learning_20261023_mobile_cwv",
       "created_at": "2026-10-23T05:07:59",
       "completion_note": "已转79张博客正文截图png->webp q80(commit 6e2cce4,11.81MB->4.21MB省7.60MB/64.3%，明细iteration_center/png_webp_convert_log.json)。发现：①首屏LCP图本就是/screenshots/real/webp/*.webp；②output=export+images.unoptimized:true 下next/image不转格式故无收益，保留原生img；③79张png经grep为孤儿图(posts.json 0引用)，webp已就位待内容引用切换。below-fold lazy与首屏srcset待内容引用切换时一并补，暂留pending。"
-    },
-    {
-      "id": "P1-UX-MOBILE-FIT-20261023",
-      "task": "【移动适配核验·体验官】对照NNG/RaftLabs移动可用性在375px核验：正文≥16px(低于14px逼用户缩放)、触控目标≥44px、无横向溢出、hero/卡片不挤压、导航可用；CLS已全0保持。另：CI未采集INP(null，好<200ms/差>500ms)属CI监控缺口，建议架构师在lighthouse-ci增采INP，本条只做核验不揽CI改造。",
-      "assigned_to": [
-        "体验官"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "ux_learning_20261023_mobile_cwv",
-      "created_at": "2026-10-23T05:07:59",
-      "completed_at": "2026-10-24 09:45",
-      "completion_note": "核验完成：375px下触控目标min-height/width=44px已达标(globals.css 768px media)；body正文16px px达标；新增 body{overflow-x:clip} 兜底防横向滚动(commit 6e2cce4,已push部署,首页200)。CLS历史CI全0保持。观察项：html根rem在480px降到14px，影响rem单位小字，留待打磨。INP仍null(CI未采)属监控缺口，已建议架构师增采，本条不揽CI改造。"
     },
     {
       "id": "RR42-OPP-leadgenapp",
@@ -4087,19 +3991,31 @@
       "created_at": "2026-10-24T09:44:28"
     },
     {
-      "id": "P0-AFF-LINK-INFRA-20261024",
+      "id": "P0-CMD-POLISHER-TLDR-URGE-20261024",
+      "task": "加快批量修复进度（P0 催办·指挥官 10-24 验收）：打磨师 TLDR 待办 r30 仅补 5 篇，全库缺口 50 篇（精确 TL;DR 25/237），曝光 Top1 best-ai-coding-tools-2026 未覆盖；本周内补齐缺口至 ≤20 篇，验收=posts.json 逐篇含 TL;DR 块+对比表。",
       "priority": "P0",
-      "status": "completed",
-      "title": "全站联盟链接统一走 /go/[tool] 302 中转 + affiliate_click 全量埋点核验",
-      "description": "r55 指令：所有 affiliateUrl 渲染点改 /go/{slug}；_redirects 追加 22 条 302；GA4EventTracker 扩展 /go/ 识别（affiliate_click/tool_outbound_click/article_affiliate_click 带 go_slug）",
       "assigned_to": [
-        "window1",
-        "架构师"
+        "打磨师",
+        "window5"
       ],
-      "source": "window1_direct_20261024",
-      "created_at": "2026-10-24T10:00:36+08:00",
-      "completed_at": "2026-10-24T10:00:36+08:00",
-      "evidence": "commit 892bf4c（7 文件：lib/affiliate.ts ctaHref helper + tools页4处 + blog AffiliateCTA toolSlug + CompareClient 2处 + AffiliateCTA + GA4EventTracker + public/_redirects 22规则）；tsc=0 build=0；Deploy success 01:50:37Z（CF Pages API 确认 892bf4c production）；线上 curl 验证 22/22 /go/{slug} 全 302 且 Location 正确（midjourney->midjourney.com/?via=aitoolcrux 等）；out/_redirects 22 规则在位；go_slug 进 layout chunk（客户端埋点生效）；build 产物 CTA href=/go/midjourney 无直链泄漏（officialUrl 直链保留为设计）"
+      "status": "pending",
+      "source": "commander_audit_20261024",
+      "created_at": "2026-10-24T11:20:00+08:00",
+      "due": "2026-10-28",
+      "evidence": "r57 复核：r30_verify.py 通过 5 篇；全库精确 TL;DR 25/237；50 篇缺口示例 best-ai-slack-bots/best-ai-project-management/best-ai-design-tools/best-ai-video-editors/best-ai-image-generators 等（曝光长尾页）。"
+    },
+    {
+      "id": "P1-GSC-INDEX-VERIFY-20261024",
+      "task": "GSC 网址检查核验（AdsPower CDP 直连）：Top5 高权重 URL 全部已收录（indexed）——首页、/blog/best-ai-coding-tools-2026、/tools/claude/、/blog/best-ai-agent-tools-2026、/blog/ai-coding-tools-comparison-2026。sitemap 881 条已提交、状态成功（上次读取 10-18）。之前报告的 redirect/not_indexed 为 GSC 检查页加载中间态误判。",
+      "priority": "P1",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "status": "completed",
+      "source": "commander_gsc_verify_20261024",
+      "created_at": "2026-10-24T12:10:00+08:00",
+      "completed_at": "2026-10-24T12:10:00+08:00",
+      "evidence": "gsc-ga4-report/req_index_top5_20261024.json（多轮检查+末轮稳定 indexed 5/5，含结果卡片原文\"网址已收录到 Google\"）"
     }
   ],
   "milestones": [
@@ -4116,7 +4032,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-24 09:44:28",
-  "last_action": "r55: P0-AFF-LINK-INFRA-20261024 completed（/go/ 302 中转 22 规则全上线，线上 22/22 302 验证通过，GA4 go_slug 埋点进 chunk）；IndexNow 批量提交 23 URL 全 200；URL-CANONICAL 代码层复核不可行（_redirects 无 host 能力 + rulesets PUT 405 复测）+ GA4-SG-BOT WAF API 410/405 复测 → 均维持人工通道；LCP/CLAUDE-SEO 阻塞沿用",
+  "last_action": "r56: P2-URL-CANONICAL-20261021 COMPLETED（他窗 CF 层已配重定向：线上 8 组合全归一 non-www→www/http→https/加斜杠 301-308；sitemap 884 全 www；redirect_error 3 条全 200）；剩余 6 条阻塞沿用；GEO 审计进行中",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -15911,6 +15827,139 @@
       "note": "RR16 guest pitch sent accepted -> ideaproof.ai@gmail.com",
       "close_note": "拓荒者RR16：SMTP accepted ideaproof.ai@gmail.com",
       "archived_at": "2026-10-24T06:40:00+08:00"
+    },
+    {
+      "id": "P1-SITEMAP-INDEXED-0-20261021",
+      "task": "sitemap.xml submitted=845 但 indexed=0（P0 重开，10/23 实测根因）：sitemap 全部为 www+尾斜杠 URL，与站内实际 URL（非www 无斜杠）不一致；GSC 判无效/重定向。改为生成站内真实 URL 集合（统一 www+斜杠）后重新提交 sitemap，IndexNow 批量推送，3-5 天后核 GSC sitemap indexed 从 0 恢复",
+      "priority": "P0",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "archived",
+      "source": "commander_learning_indexroot_20261023",
+      "created_at": "2026-10-21T14:06:53",
+      "completed_at": "2026-10-24T09:44:28",
+      "status_note_20261021c": "URL Inspection API 抽查闭环(10/21批次三)：首页/category-video PASS(Submitted and indexed)→sitemap indexed=0为GSC统计口径未聚合，非全站未索引；但 tools/claude=URL unknown to Google 头部页问题真实(并入P0-INDEXMON)。结论：sitemap口径澄清，无需紧急处理",
+      "evidence": "2026-10-23 实测 sitemap.xml 全 www+斜杠；GSC sitemaps.list indexed=0",
+      "notes": " | completed by 分析师 2026-10-24: 重拉GSC核对：submitted=881(↑自845) indexed仍=0，lastSubmitted=10-18，线上sitemap已规范化(全www+斜杠)，等待Google重抓",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "P0-AFF-CONVERT-STRUCT-20261024",
+      "task": "联盟转化结构改造（TipSeason转化三要素，对齐C目标$0→$100/月）：改造现有20个高流量/alternatives/+reviews/页——①verdict在前100字内出现（不埋2000字后）②联盟链接3处（推荐段落内/价格区/verdict旁Get Started CTA按钮）③对比表可扫读（关键差异一屏可见）。验收：抽查10页全部满足三要素；affiliate_click从4次/月基线提升",
+      "priority": "P0",
+      "assigned_to": [
+        "打磨师",
+        "创作家"
+      ],
+      "status": "archived",
+      "source": "commander_learning_联盟营销变现模式创新_20261024",
+      "created_at": "2026-10-24T08:10:00+08:00",
+      "due": "2026-10-31",
+      "notes": "对照页：tipseason.beehiiv.com营收案例；与AFF-CMP-PAGES-20261016（补新页）互补，本条=改造现有页；逐页posts.json验证verdict前置后标completed",
+      "completed_at": "2026-10-24T12:00:00",
+      "close_note": "打磨师承担10页完成：best-ai-presentation/beautiful-ai-alternatives/sudowrite-alternatives/perplexity-vs-chatgpt/best-ai-music-generators/best-ai-text-to-speech/best-ai-spreadsheet/best-ai-sql/best-ai-summarizer/clearscope-alternatives。每页顶部加Quick Verdict(前100字)+3处联盟链接(取自身affiliateLinks)+已有可扫读对比表，标记r30-aff-20261024。创作家共担其余页面。",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "P1-DENSITY-REGRESSION-20261021",
+      "task": "最新6篇草稿关键词密度抽检5篇未达标（claude-rate-limits 0.09%、voice-changer-vs-voicemod 0.34%、best-free-ai-voice-changers 0.28%、free-ai-fitness-coaches 0.14%、free-ai-tools-for-students 0.20%；仅 non-technical 1.15%达标）→ 创作家写文自查≥0.5%未落实，打磨师复检",
+      "priority": "P1",
+      "assigned_to": [
+        "window3",
+        "创作家",
+        "window5",
+        "打磨师"
+      ],
+      "status": "archived",
+      "source": "analyst_20261021",
+      "created_at": "2026-10-21T14:06:53",
+      "completed_at": "2026-10-24T12:00:00",
+      "close_note": "复检6篇草稿原全部<0.5%，注入自然聚焦块后复测：claude-rate-limits 0.77%/voice-changer-vs-voicemod 0.69%/best-free-ai-voice-changers 0.79%/free-ai-fitness-coaches 0.95%/free-ai-tools-for-students 0.57%/non-technical 0.58%，全部PASS。",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "CMD-LEARN-AFF-UPSELL-20261022",
+      "task": "联盟佣金结构升级（参考PopularAiTools佣金分层：premium 30-50% recurring/cookie 90-365天）：分析师梳理当前affiliate_programs.md已接入联盟的cookie时长与佣金类型，列出佣金<25%或cookie<60天的联盟名单，评估替换为recurring型联盟（30-50% recurring）；目标：AFF漏斗基线从0.14%提升，产出替换建议清单交指挥官",
+      "priority": "P1",
+      "assigned_to": [
+        "分析师"
+      ],
+      "status": "archived",
+      "source": "commander_learning_AI工具站成功案例拆解",
+      "created_at": "2026-10-22T08:02:02",
+      "due": "2026-10-26",
+      "notes": "产出清单含：联盟名/当前佣金/当前cookie/建议动作（保留/替换/新增） | completed by 分析师 2026-10-24: 联盟清单已交付 affiliate_upgrade_recommendations_2026-10-24.md（23计划全量动作表）",
+      "completed_at": "2026-10-24T09:44:28",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "P1-AI-REFERRAL-TRACK-20261023",
+      "task": "GA4建立AI平台引荐跟踪清单：weekly监控ChatGPT(chatgpt.com)、Perplexity(perplexity.ai)、Gemini、Claude、Copilot(bing.com合并)五类AI引荐来源，纳入周报新增节（当前chatgpt.com=32为最大AI引荐，需持续跟踪增长+识别被引用页面）。验收：latest_report新增AI引荐小节，含各平台sessions与引用页面top5",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "分析师"
+      ],
+      "source": "commander_learning_seo_geo_20261023",
+      "created_at": "2026-10-23 08:05:00",
+      "completed_at": "2026-10-24T09:44:28",
+      "notes": " | completed by 分析师 2026-10-24: GA4拉取成功(556518278)：28d sessions=3581，AI引荐chatgpt=32/bing=11，latest_report已更新AI引荐小节",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "P1-UX-MOBILE-FIT-20261023",
+      "task": "【移动适配核验·体验官】对照NNG/RaftLabs移动可用性在375px核验：正文≥16px(低于14px逼用户缩放)、触控目标≥44px、无横向溢出、hero/卡片不挤压、导航可用；CLS已全0保持。另：CI未采集INP(null，好<200ms/差>500ms)属CI监控缺口，建议架构师在lighthouse-ci增采INP，本条只做核验不揽CI改造。",
+      "assigned_to": [
+        "体验官"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "ux_learning_20261023_mobile_cwv",
+      "created_at": "2026-10-23T05:07:59",
+      "completed_at": "2026-10-24 09:45",
+      "completion_note": "核验完成：375px下触控目标min-height/width=44px已达标(globals.css 768px media)；body正文16px px达标；新增 body{overflow-x:clip} 兜底防横向滚动(commit 6e2cce4,已push部署,首页200)。CLS历史CI全0保持。观察项：html根rem在480px降到14px，影响rem单位小字，留待打磨。INP仍null(CI未采)属监控缺口，已建议架构师增采，本条不揽CI改造。",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "P0-AFF-LINK-INFRA-20261024",
+      "priority": "P0",
+      "status": "archived",
+      "title": "全站联盟链接统一走 /go/[tool] 302 中转 + affiliate_click 全量埋点核验",
+      "description": "r55 指令：所有 affiliateUrl 渲染点改 /go/{slug}；_redirects 追加 22 条 302；GA4EventTracker 扩展 /go/ 识别（affiliate_click/tool_outbound_click/article_affiliate_click 带 go_slug）",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "window1_direct_20261024",
+      "created_at": "2026-10-24T10:00:36+08:00",
+      "completed_at": "2026-10-24T10:00:36+08:00",
+      "evidence": "commit 892bf4c（7 文件：lib/affiliate.ts ctaHref helper + tools页4处 + blog AffiliateCTA toolSlug + CompareClient 2处 + AffiliateCTA + GA4EventTracker + public/_redirects 22规则）；tsc=0 build=0；Deploy success 01:50:37Z（CF Pages API 确认 892bf4c production）；线上 curl 验证 22/22 /go/{slug} 全 302 且 Location 正确（midjourney->midjourney.com/?via=aitoolcrux 等）；out/_redirects 22 规则在位；go_slug 进 layout chunk（客户端埋点生效）；build 产物 CTA href=/go/midjourney 无直链泄漏（officialUrl 直链保留为设计）",
+      "archived_at": "2026-10-24T11:20:00+08:00",
+      "audit_20261024": "指挥官验收通过（窗口日志证据链完整：创作家batch51 10/10 PASS、打磨师r30 6篇密度PASS、架构师22/22 302 curl、体验官commit 6e2cce4、分析师产出文件）"
+    },
+    {
+      "id": "P0-CMD-POLISHER-TLDR-GAP-20261023",
+      "title": "补齐GA4最高曝光5篇文章TL;DR+表格（P0-GEO-TLDR缺口）",
+      "priority": "P0",
+      "status": "archived",
+      "assigned_to": [
+        "打磨师",
+        "window5"
+      ],
+      "source": "commander_daily_20261023_2130",
+      "created_at": "2026-10-23 21:35:00",
+      "description": "打磨师P0-GEO-TLDR-TABLE-20261023经21:30实测判定部分完成：GA4最高曝光文章perplexity-review-2026(66K字)/suno-alternatives/chatgpt-vs-claude-2026-comparison/best-ai-productivity-tools-2026均无TL;DR。请为这4篇（+perplexity-ai-review-2026若存在）补`## TL;DR`2-3句直答+Guide-at-a-glance表，完成后用Python逐篇读posts.json验证TLDR=True再标completed；禁止只确认旧成果不补缺口。参考SOP 3b统一命令读取自己全部pending待办",
+      "completed_at": "2026-10-24T12:00:00",
+      "close_note": "补5篇TLDR缺口并逐篇posts.json验证：perplexity-review-2026(4句+补表)/suno-alternatives(2句)/chatgpt-vs-claude-2026-comparison(3句)/best-ai-productivity-tools-2026(2句)/midjourney-vs-dalle-3-2026(2句)，均含## TL;DR≥2句+≥1 markdown表，标记r30-tldr-20261024。",
+      "archived_at": "2026-10-24T11:25:00+08:00",
+      "merged_into": "P0-GEO-TLDR-TABLE-20261023（已重开 pending，r57 复核仅补 5 篇，缺口 50 篇）"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -16531,5 +16580,5 @@
       "https://aitoolsdirectory.com/?s=aitoolcrux mentions=0, 确认未通过; 催办邮件待发(无邮件通道)"
     ]
   },
-  "last_commander_update": "2026-10-24T09:30:00+08:00"
+  "last_commander_update": "2026-10-24T12:10:00+08:00"
 }

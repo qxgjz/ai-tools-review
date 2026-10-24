@@ -79,3 +79,52 @@
 ## 剩余
 - 我的 P0=1（URL-CANONICAL 人工）、P1=5（阻塞）+INDEXNOW（10-30 验收）；全站 P0=44
 - 人工通道 4 项：CF Dashboard（URL-CANONICAL + WAF SG Bot 两条都需 Dashboard）、CrUX key、Anthropic key、GA4 Admin
+
+# r56 标准 cron 轮（2026-10-24 12:17 +08:00）
+
+## 核心成果：P2-URL-CANONICAL-20261021（priority=P0）COMPLETED
+
+他窗已在 CF 层配置重定向（evidence 新增"非www→www 阻塞解除"），本轮线上闭环验证全部通过：
+
+### 线上 8 组合 curl 实测（curl.exe 直连，全部正确）
+| 输入 | 状态 | 目标 |
+|---|---|---|
+| http://aitoolcrux.com/ | 301 | https://www.aitoolcrux.com/ |
+| http://www.aitoolcrux.com/ | 301 | https://www.aitoolcrux.com/ |
+| https://aitoolcrux.com/ | 301 | https://www.aitoolcrux.com/ |
+| https://www.aitoolcrux.com/ | 200 | - |
+| http://aitoolcrux.com/tools/midjourney/ | 301 | https://www.aitoolcrux.com/tools/midjourney/ |
+| https://aitoolcrux.com/tools/midjourney/ | 301 | https://www.aitoolcrux.com/tools/midjourney/ |
+| http://www.aitoolcrux.com/tools/midjourney/ | 301 | https://www.aitoolcrux.com/tools/midjourney/ |
+| https://www.aitoolcrux.com/tools/midjourney/ | 200 | - |
+| https://www.aitoolcrux.com/tools/midjourney（无斜杠） | 308 | 加斜杠版本 |
+
+### sitemap 与 redirect_error
+- out/sitemap.xml：884 URL 全 https://www.aitoolcrux.com/（non-www=0）✅
+- redirect_error 3 条（category/chat、category/code、tools/gemini）线上全 200 ✅
+- canonical 均指向 https://www.aitoolcrux.com/（r50 已确认）
+- GSC 复核：IndexNow 累计 34 URL（r51 8 + r52 3 + r55 23），10-30 核 GSC 状态变化
+
+→ state.json：P2-URL-CANONICAL status=completed，completed_at=2026-10-24T12:17:44+08:00
+
+## GEO 技术检查（≥2 项）
+1. `python real_geo_aeo_audit.py` → **8.9/10 A**（AI Crawler 9.1、llms.txt 10.0、AEO 10.0、GEO Content 6.4），结果落盘 real_geo_aeo_audit_results.json；首页/midjourney/methodology 3 处 Failed to fetch 为本机网络抖动假象（r53 已证），非真实缺失
+2. URL 规范化 8 组合线上验证（GEO/技术类）——见上表
+
+审计发现：GEO Content 64.3（Expert Quotes 0%、Step By Step 0%）为内容类问题，已有创作家单 GEO-CONTENT-EXPERT-QUOTES-20261022，不重复开单。
+
+## 其余待办状态（我的 7 条）
+| ID | 优先级 | 状态 |
+|---|---|---|
+| P2-URL-CANONICAL-20261021 | P0 | ✅ completed（本轮） |
+| P1-CLAUDE-SEO-INSTALL / V241 | P1 | 阻塞沿用（缺 Anthropic key） |
+| P1-LCP-REALDATA / MIDJOURNEY-LCP | P1 | 阻塞沿用（缺 CrUX key） |
+| P1-GA4-SG-BOT-CLEAN | P1 | 阻塞沿用（WAF API 410/405，CF Dashboard 人工） |
+| P1-INDEXNOW-HIGH-TRAFFIC | P1 | pending（10-30 验收期） |
+
+全站 P0：42 → 41（URL-CANONICAL 出列）
+
+## 门控 / 交付
+- 本轮无代码改动（纯验证+state+日志），无 tsc/build 门控需求
+- state.json：URL-CANONICAL completed；其余 6 条 evidence 追加；last_updated=2026-10-24T12:17:44+08:00
+- 验证证据链：8 组合 curl + sitemap 884 全 www + redirect_error 3 条 200 + GEO 审计 8.9A 全落盘
