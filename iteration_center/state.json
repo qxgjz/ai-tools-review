@@ -1809,7 +1809,7 @@
       "created_at": "2026-10-24T11:20:00+08:00",
       "due": "2026-10-28",
       "evidence": "r57 复核：r30_verify.py 通过 5 篇；全库精确 TL;DR 25/237；50 篇缺口示例 best-ai-slack-bots/best-ai-project-management/best-ai-design-tools/best-ai-video-editors/best-ai-image-generators 等（曝光长尾页）。",
-      "progress_note": "R31本轮+33篇高价值review/comparison，全库TL;DR 25→58/237；缺口212→179。目标≤20需继续批量，留pending。"
+      "progress_note": "R32再+32篇TL;DR，覆盖58→90/238；缺口180→148。继续后续轮批量，留pending。"
     },
     {
       "id": "P0-CMD-GROWTH-BACKLINK-FAKE-20261024",
@@ -3115,7 +3115,7 @@
     },
     {
       "id": "CTR-OPT-AI-CODING-COMPARE-20261024",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3124,11 +3124,13 @@
       "task": "页面 /blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 仅 0.00%（30d 曝光 2），优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-24",
       "url": "/blog/ai-coding-tools-comparison-2026",
-      "created_at": "2026-10-24T15:16:34"
+      "created_at": "2026-10-24T15:16:34",
+      "completed_at": "2026-10-24T20:30:00",
+      "close_note": "title 57字符含关键词；excerpt 122字符含价值点/CTA。已改posts.json。"
     },
     {
       "id": "CTR-OPT-OBSERVABILITY-TOOLS-20261024",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3137,11 +3139,13 @@
       "task": "页面 /blog/best-ai-observability-tools-2026 排名 9.5 但 CTR 仅 0.00%（30d 曝光 2），优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-24",
       "url": "/blog/best-ai-observability-tools-2026",
-      "created_at": "2026-10-24T15:16:34"
+      "created_at": "2026-10-24T15:16:34",
+      "completed_at": "2026-10-25T12:10:00",
+      "close_note": "best-ai-observability-tools-2026 title 50字符去AIToolCrux尾；excerpt 150字符含rankings/free tiers。已改posts.json。"
     },
     {
       "id": "CTR-OPT-GEMINI-CLI-REVIEW-20261024",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3150,11 +3154,13 @@
       "task": "查询 [gemini cli reviews] 排名 11.0 但 CTR 仅 0.00%（30d 曝光 1），优化对应落地页 title/meta 提升点击率",
       "source": "ctr_optimization_2026-10-24",
       "url": "gemini cli reviews",
-      "created_at": "2026-10-24T15:16:34"
+      "created_at": "2026-10-24T15:16:34",
+      "completed_at": "2026-10-25T12:10:00",
+      "close_note": "无gemini-cli专页；抛光最相关落地页gemini-pricing-2026 title/excerpt含Gemini pricing关键词。留创作家后续建专页。"
     },
     {
       "id": "CTR-OPT-COPILOT-PRICING-QUERY-20261024",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3163,7 +3169,9 @@
       "task": "查询 [github copilot windsurf amazon q tabnine jetbrains ai pricing changes] 排名 5.0 但 CTR 仅 0.00%（30d 曝光 1），优化对应落地页 title/meta 提升点击率",
       "source": "ctr_optimization_2026-10-24",
       "url": "github copilot pricing comparison",
-      "created_at": "2026-10-24T15:16:34"
+      "created_at": "2026-10-24T15:16:34",
+      "completed_at": "2026-10-25T12:10:00",
+      "close_note": "github-copilot-review-2026 R31已优化title/pricing；本轮保持。"
     },
     {
       "id": "P1-ANALYTICS-US-AUDIENCE-20261024",
@@ -3910,6 +3918,56 @@
       "source": "commander_directive_20261024_us_audience",
       "task": "外链与社区推广侧重美国/英文站点：Reddit美国高活跃板块、Product Hunt、美国AI目录站（批量提交英文收录站时优先US流量站）；HN评论/Reddit回复围绕美国用户作息时间发布（美东时段），渠道台账标注US/非US",
       "notes": "2026-10-24 15:31:55 +08:00 evidence: US方向已落地——Reddit登录态打通并发布首条价值评论;10个US目录通道实测(toolify/theresanaiforthat 403反爬,topai需登录,futurepedia拿到pitch邮箱contact@futurepedia.io);活外链基线6条(github/sideprojectors/thehackstack/insidr/toolsify/aisotools,3条US已验锚点)。台账已标Region。下一步:今晚美东时段r/SaaS发评+明日SMTP发futurepedia+浏览器平提交US目录。本周目标≥5 US活外链。"
+    },
+    {
+      "id": "RR-OPP-instatus-wf",
+      "task": "客座投稿 instatus.com/blog/write-for-us: 投AI工具/SaaS主题原创文, author bio带aitoolcrux",
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "source": "serper_research_2026-10-24"
+    },
+    {
+      "id": "RR-OPP-zapier-roundup",
+      "task": "pitch zapier.com/blog/free-ai-tools/ 高权重免费AI工具清单收录aitoolcrux",
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "source": "serper_research_2026-10-24"
+    },
+    {
+      "id": "RR-OPP-dokan-roundup",
+      "task": "pitch dokan.co 100+免费AI工具清单收录aitoolcrux",
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "source": "serper_research_2026-10-24"
+    },
+    {
+      "id": "RR-OPP-digitalsynopsis",
+      "task": "pitch digitalsynopsis AI生产力工具清单(卖家向)收录aitoolcrux",
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "source": "serper_research_2026-10-24"
+    },
+    {
+      "id": "RR-OPP-techcounter-wf",
+      "task": "客座投稿 technologycounter.com/write-for-us AI/SaaS文带链",
+      "priority": "P2",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "pending",
+      "source": "serper_research_2026-10-24"
     }
   ],
   "milestones": [
