@@ -144,3 +144,28 @@
 /blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md /blog/creatium-coach-review-2025/ 301
 /blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md /blog/elevenlabs-review-2026/ 301
 /compare /compare/ 301
+
+# architect r55 P0-AFF-LINK-INFRA-20261024: /go/{slug} -> affiliateUrl 302 (link cloak + attribution)
+# Generated from data/tools.json affiliateUrl fields
+/go/midjourney https://www.midjourney.com/?via=aitoolcrux 302
+/go/cursor https://cursor.com/?via=aitoolcrux 302
+/go/windsurf https://windsurf.com/?via=aitoolcrux 302
+/go/jasper https://www.jasper.ai/?via=aitoolcrux 302
+/go/copy-ai https://www.copy.ai/?via=aitoolcrux 302
+/go/notion-ai https://www.notion.so/?via=aitoolcrux 302
+/go/grammarly https://grammarly.com/aitoolcrux 302
+/go/runway https://runwayml.com/?via=aitoolcrux 302
+/go/elevenlabs https://try.elevenlabs.io/e45ubw2ct0ag?utm_source=aitoolcrux&utm_medium=affiliate&utm_campaign=review&utm_content=elevenlabs 302
+/go/canva-magic https://www.canva.com/?via=aitoolcrux 302
+/go/ray https://raycast.com/?via=aitoolcrux 302
+/go/ai https://www.copy.ai/?via=aitoolcrux 302
+/go/pi https://pictory.ai/?ref=aitoolcrux 302
+/go/replit-ai https://replit.com/?via=aitoolcrux 302
+/go/writesonic https://writesonic.com/?via=aitoolcrux 302
+/go/grammarlygo https://grammarly.com/aitoolcrux 302
+/go/quillbot https://quillbot.com/?via=aitoolcrux 302
+/go/calendly-ai https://calendly.com/?via=aitoolcrux 302
+/go/pika https://pika.art/?via=aitoolcrux 302
+/go/pictory https://pictory.ai/?ref=aitoolcrux 302
+/go/heygen https://www.heygen.com/?via=aitoolcrux 302
+/go/canva-ai https://www.canva.com/?via=aitoolcrux 302

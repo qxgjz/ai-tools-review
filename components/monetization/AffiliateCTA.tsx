@@ -1,7 +1,10 @@
 'use client';
 
+import { ctaHref } from '@/lib/affiliate';
+
 interface AffiliateCTAProps {
   toolName: string;
+  toolSlug?: string;
   officialUrl?: string;
   affiliateUrl?: string;
   description?: string;
@@ -54,6 +57,7 @@ function microcopyText(freeAccess?: boolean): string {
 
 export function AffiliateCTA({
   toolName,
+  toolSlug,
   officialUrl,
   affiliateUrl,
   description,
@@ -61,7 +65,7 @@ export function AffiliateCTA({
   hasFreeTier = false,
   freeAccess = false,
 }: AffiliateCTAProps) {
-  const url = affiliateUrl || officialUrl || '#';
+  const url = ctaHref(affiliateUrl, officialUrl, toolSlug);
   const isAffiliate = !!affiliateUrl;
   const microcopy = microcopyText(freeAccess);
 

@@ -35,6 +35,12 @@ function getToolSlugFromPath(): string | null {
   return match ? match[1] : null;
 }
 
+/** Extract tool slug from /go/{slug} redirect link (architect r55 /go infra) */
+function getGoSlugFromHref(href: string): string | null {
+  const match = href.match(/^\/go\/([^/?#]+)/);
+  return match ? match[1] : null;
+}
+
 /** Extract article slug from /blog/{slug} path */
 function getArticleSlugFromPath(): string | null {
   const match = window.location.pathname.match(/^\/blog\/([^/]+)/);
@@ -89,29 +95,36 @@ export function GA4EventTracker() {
       const href = link.getAttribute('href');
       if (!href) return;
 
+      // /go/{slug} redirect links (architect r55): cloaked affiliate endpoint.
+      // Treated as affiliate clicks; the final destination is resolved by CF 302.
+      const goSlug = getGoSlugFromHref(href);
+      const isGoLink = !!goSlug;
+
       // 检测外链
       const isExternal = href.startsWith('http') && !href.includes('aitoolcrux.com');
-      if (!isExternal) return;
+      if (!isExternal && !isGoLink) return;
 
       const linkText = link.textContent?.trim().substring(0, 100) || 'unknown';
       const pagePath = window.location.pathname;
       const toolSlug = getToolSlugFromPath();
       const articleSlug = getArticleSlugFromPath();
-      const isAff = isAffiliateUrl(href);
+      const isAff = isAffiliateUrl(href) || isGoLink;
       const isCta = isCtaButton(link);
 
-      // 基础外链事件（保留兼容）
-      trackEvent('event', 'outbound_click', {
-        outbound_url: href,
-        link_text: linkText,
-        page_path: pagePath,
-      });
+      // 基础外链事件（保留兼容；/go 跳转由 CF 302 承载，不重复发 outbound）
+      if (isExternal) {
+        trackEvent('event', 'outbound_click', {
+          outbound_url: href,
+          link_text: linkText,
+          page_path: pagePath,
+        });
+      }
 
       // === 转化事件：工具页出站点击（Key Event候选）===
-      if (toolSlug) {
+      if (toolSlug || goSlug) {
         trackEvent('event', 'tool_outbound_click', {
-          tool_slug: toolSlug,
-          outbound_url: href,
+          tool_slug: toolSlug || goSlug || '',
+          outbound_url: isGoLink ? `/go/${goSlug}` : href,
           link_text: linkText,
           is_affiliate: isAff,
           is_cta_button: isCta,
@@ -129,17 +142,18 @@ export function GA4EventTracker() {
       // === 转化事件：Compare页CTA点击（Key Event候选）===
       if (pagePath === '/compare' && isCta) {
         trackEvent('event', 'compare_cta_click', {
-          outbound_url: href,
+          outbound_url: isGoLink ? `/go/${goSlug}` : href,
           link_text: linkText,
           is_affiliate: isAff,
         });
       }
 
       // === 转化事件：文章内联盟链接点击（Key Event候选）===
-      if (articleSlug && isAff) {
+      if ((articleSlug || goSlug) && isAff) {
         trackEvent('event', 'article_affiliate_click', {
-          article_slug: articleSlug,
-          outbound_url: href,
+          article_slug: articleSlug || '',
+          go_slug: goSlug || '',
+          outbound_url: isGoLink ? `/go/${goSlug}` : href,
           link_text: linkText,
         });
       }
@@ -147,10 +161,11 @@ export function GA4EventTracker() {
       // 联盟链接点击（保留兼容）
       if (isAff) {
         trackEvent('event', 'affiliate_click', {
-          outbound_url: href,
+          outbound_url: isGoLink ? `/go/${goSlug}` : href,
+          go_slug: goSlug || undefined,
           link_text: linkText,
           page_path: pagePath,
-          tool_slug: toolSlug || undefined,
+          tool_slug: toolSlug || goSlug || undefined,
           article_slug: articleSlug || undefined,
         });
       }

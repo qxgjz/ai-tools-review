@@ -5,6 +5,7 @@ import Link from 'next/link';
 import type { Tool } from '@/types';
 import { calculateScoreResult, DIMENSION_LABELS, GRADE_DESCRIPTIONS } from '@/lib/scoring';
 import { AffiliateCTA } from '@/components/monetization/AffiliateCTA';
+import { ctaHref } from '@/lib/affiliate';
 import dynamicImport from 'next/dynamic';
 const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
 const MultiRadarChart = dynamicImport(() => import('@/components/charts/MultiRadarChart').then((m) => m.MultiRadarChart), { ssr: false });
@@ -1120,7 +1121,7 @@ export default function CompareClient({ initialTools }: { initialTools: Tool[] }
                           </Link>
                           {(tool.affiliateUrl || tool.officialUrl) && (
                             <a
-                              href={tool.affiliateUrl || tool.officialUrl}
+                              href={ctaHref(tool.affiliateUrl, tool.officialUrl, tool.slug)}
                               target="_blank"
                               rel="noopener noreferrer sponsored"
                               className="inline-flex items-center gap-1 px-3 py-1.5 text-sm font-semibold text-white bg-emerald-700 hover:bg-emerald-800 rounded-lg transition-colors"
@@ -1297,7 +1298,7 @@ export default function CompareClient({ initialTools }: { initialTools: Tool[] }
                   (tool.affiliateUrl || tool.officialUrl) && (
                     <a
                       key={tool.slug}
-                      href={tool.affiliateUrl || tool.officialUrl}
+                      href={ctaHref(tool.affiliateUrl, tool.officialUrl, tool.slug)}
                       target="_blank"
                       rel="noopener noreferrer sponsored"
                       className="inline-flex items-center gap-2 px-5 py-2.5 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-colors shadow-sm"
@@ -1335,6 +1336,7 @@ export default function CompareClient({ initialTools }: { initialTools: Tool[] }
               <AffiliateCTA
                 key={tool.slug}
                 toolName={tool.name}
+                toolSlug={tool.slug}
                 officialUrl={tool.officialUrl}
                 affiliateUrl={tool.affiliateUrl}
                 description={`Compare ${tool.name} with other AI tools and see our full review. Click to visit official site.`}

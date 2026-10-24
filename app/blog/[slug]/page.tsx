@@ -531,6 +531,7 @@ export default function PostPage({ params }: PostPageProps) {
               <div className="mb-10">
                 <AffiliateCTA
                   toolName={toolName}
+                  toolSlug={tool.slug}
                   officialUrl={officialUrl}
                   affiliateUrl={affiliateUrl}
                   description={`Ready to try ${toolName}? Get the full experience with the latest features and pricing.`}

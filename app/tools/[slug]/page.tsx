@@ -44,6 +44,7 @@ import { FAQSection } from '@/components/content/FAQSection';
 import { UserReviewCollector } from '@/components/reviews/UserReviewCollector';
 import { AuthorBio } from '@/components/author/AuthorBio';
 import { shouldSkipStaticGen } from '@/lib/static-gen';
+import { ctaHref } from '@/lib/affiliate';
 import dynamicImport from 'next/dynamic';
 const RadarChart = dynamicImport(() => import('@/components/charts/RadarChart').then((m) => m.RadarChart), { ssr: false });
 
@@ -534,7 +535,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
               return (
                 <>
                   <a
-                    href={tool.affiliateUrl || tool.officialUrl}
+                    href={ctaHref(tool.affiliateUrl, tool.officialUrl, tool.slug)}
                     target="_blank"
                     rel="noopener noreferrer sponsored"
                     className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
@@ -1210,7 +1211,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             See for yourself why we scored it {total.toFixed(1)}/10 — no credit card required.
           </p>
           <a
-            href={tool.affiliateUrl || tool.officialUrl}
+            href={ctaHref(tool.affiliateUrl, tool.officialUrl, tool.slug)}
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
@@ -1320,7 +1321,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
           {(tool.officialUrl || tool.affiliateUrl) && (
             <>
               <a
-                href={tool.affiliateUrl || tool.officialUrl}
+                href={ctaHref(tool.affiliateUrl, tool.officialUrl, tool.slug)}
                 target="_blank"
                 rel="noopener noreferrer sponsored"
                 className="inline-flex items-center gap-2 px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors shadow-sm hover:shadow-md active:scale-95"
@@ -1497,7 +1498,7 @@ export default function ToolDetailPage({ params }: { params: { slug: string } })
             {total.toFixed(1)}/10 &middot; Grade {grade}
           </p>
           <a
-            href={tool.affiliateUrl || tool.officialUrl}
+            href={ctaHref(tool.affiliateUrl, tool.officialUrl, tool.slug)}
             target="_blank"
             rel="noopener noreferrer sponsored"
             className="flex items-center justify-center gap-2 w-full px-6 py-3.5 bg-emerald-700 hover:bg-emerald-800 text-white text-sm font-semibold rounded-lg transition-colors active:scale-[0.98]"
