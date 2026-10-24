@@ -101,6 +101,7 @@
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     scrollbar-gutter: stable;
+    overflow-x: clip;
   }
 
   /* === 标题：Space Grotesk + 负字距（标准 -0.5~-2.4px）=== */

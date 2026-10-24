@@ -340,12 +340,20 @@ export default function HomePage() {
                       <div className="relative rounded-xl overflow-hidden border border-white/10 shadow-2xl shadow-black/40 transition-colors duration-200 group-hover:border-white/20">
                         <div className="aspect-[4/3] overflow-hidden bg-zinc-900">
                           {/* eslint-disable-next-line @next/next/no-img-element */}
+                          <link
+                            rel="preload"
+                            as="image"
+                            href={heroTool.screenshot!}
+                            media="(min-width: 1024px)"
+                          />
                           <img
                             src={heroTool.screenshot!}
                             alt={`${heroTool.name} interface - real screenshot`}
                             className="w-full h-full object-cover object-top"
                             style={{ transform: 'scale(1.2)' }}
                             loading="eager"
+                            fetchPriority="high"
+                            decoding="async"
                           />
                         </div>
                         <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-zinc-950/70 to-transparent pointer-events-none" />
