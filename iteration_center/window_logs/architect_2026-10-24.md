@@ -128,3 +128,42 @@
 - 本轮无代码改动（纯验证+state+日志），无 tsc/build 门控需求
 - state.json：URL-CANONICAL completed；其余 6 条 evidence 追加；last_updated=2026-10-24T12:17:44+08:00
 - 验证证据链：8 组合 curl + sitemap 884 全 www + redirect_error 3 条 200 + GEO 审计 8.9A 全落盘
+
+# r57 标准 cron 轮（2026-10-24 21:05 +08:00）
+
+## 核心成果：P0-CMD-20261024-001（指挥官 GSC 误伤排查）COMPLETED
+
+背景：GSC 显示 best-ai-agent-tools-2026 "Google 无法识别此网址"，指挥官疑新加坡 IP 清洗规则误伤 Googlebot。
+
+### 三步复核结果
+1. **CF 规则审查**：firewall_custom / firewall_managed / http_ratelimit 三 phase entrypoint GET 全 404 —— CF 层无任何自定义/托管/限速规则；新加坡 IP 清洗规则从未落地（GA4-SG-BOT-CLEAN 一直阻塞于"唯一通道 CF Dashboard 人工"），**无从拦截 Googlebot**
+2. **Googlebot 抓取实测**：UA=Googlebot/2.1 抓取 https://www.aitoolcrux.com/blog/best-ai-agent-tools-2026/ → **200** + 39289 字节完整内容（含标题/h1）；normal UA 同 200
+3. **配套核实**：sitemap 含该 URL（带斜杠 www）；线上 canonical 一致；robots meta=index,follow → **无需改任何规则**
+
+### 根因判定
+"Google 无法识别此网址" = **URL 规范化 10-24 生效后的重定向过渡期（http/non-www 301 到 www）+ 文章新增收录滞后**，非 WAF/Bot 误伤。
+
+### 处置
+IndexNow 提交带斜杠 canonical URL 促 Google 重抓：geo_submit_20261024_210500.json（9 URL 全 200 = best-ai-agent-tools-2026 + 8 高流量工具页 elevenlabs/sora/perplexity/exa/n8n/runway/pika/suno）。
+
+## GEO 技术检查（≥2 项）
+1. Googlebot UA 抓取验证（技术类）——见上
+2. CF WAF 规则全量审查（技术类）——三 phase 404，确认零规则
+
+（real_geo_aeo_audit.py r56 已跑 8.9A 且落盘；seo_audit_full/Lighthouse 无 Chrome 为已知死路不重试。）
+
+## 其余待办（我的 8 条）
+| ID | 优先级 | 状态 |
+|---|---|---|
+| CMD-20261024-001 | P0 | ✅ completed（本轮） |
+| P1-INDEX-41-REMAINING-RESULTS | P1 | evidence 追加（redirect 归位 + 9 URL IndexNow 提交，等 Google 重抓 10-30 复查） |
+| P1-CLAUDE-SEO ×2 / LCP ×2 | P1 | 阻塞沿用（缺 Anthropic/CrUX key） |
+| P1-GA4-SG-BOT | P1 | 阻塞沿用（CF 零规则已复核，落地需 Dashboard 人工） |
+| P1-INDEXNOW-HIGH-TRAFFIC | P1 | pending（10-30 验收） |
+
+全站 P0：24（batch54 已清 9）→ CMD 出列后 23
+
+## 门控 / 交付
+- 本轮无代码改动（纯验证+state+日志），无 tsc/build 门控
+- state.json：CMD-20261024-001 completed（completed_at 21:05:23）；INDEX-41 evidence 追加；last_updated=2026-10-24T21:05:23+08:00
+- 证据链：GBot 200 + 39KB 内容 + 三 phase 404 + sitemap/canonical 一致 + IndexNow 9 URL 全 200
