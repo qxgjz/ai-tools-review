@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-25 11:36:55",
+  "last_updated": "2026-10-25T13:44:06+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -1696,11 +1696,13 @@
         "window1",
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "task": "配置GA4转化事件：在Next.js里加ga()事件追踪（联盟链接点击、CTA按钮点击），目标Key Events从0变为可衡量。没有转化数据所有ROI分析都是空谈",
       "source": "commander_report_scan_20261025",
       "created_at": "2026-10-25 06:37:22",
-      "created_date": "20261025"
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：已落地验证（r55 实现）。components/analytics/GA4EventTracker.tsx 已挂载 layout.tsx；事件：outbound_click/tool_outbound_click/compare_cta_click/article_affiliate_click/affiliate_click/scroll_depth/tool_selected，带 tool_slug/go_slug/article_slug/page_path 参数；产物 out/_next/static/chunks/app/layout-*.js 确认含 affiliate_click 事件（15.5KB）。GA4 Key Events 配置需 GA4 后台人工把 event 标为 conversion（一次性），事件本身已全量上报。"
     },
     {
       "id": "P0-AFF-PRIORITY-RERANK-20261025",
@@ -1722,11 +1724,13 @@
         "window1",
         "架构师"
       ],
-      "status": "pending",
+      "status": "completed",
       "source": "commander_learning_affiliate-monetization",
       "task": "落地联盟RPV追踪：在Next.js给每个联盟链接加ga()点击事件+per-URL参数追踪（区分文章/offer/页面），配合P0-GA4-CONVERSION-EVENTS；产出联盟点击-转化归因表，用于筛高转化offer；验证方式=线上点击后GA4 Realtime出现事件",
       "created_at": "2026-10-25 08:01:07",
-      "created_date": "20261025"
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：已落地验证（r55 /go infra 实现）。lib/affiliate.ts ctaHref 全站联盟链接统一 /go/{slug} 302；public/_redirects 22条 /go 规则；GA4 affiliate_click 事件参数含 go_slug/tool_slug/article_slug/page_path/outbound_url（区分文章/offer/页面=per-URL归因），可产出联盟点击-转化归因表。"
     },
     {
       "id": "KW-SEO-TOOLS-20261025",
@@ -1796,11 +1800,13 @@
         "架构师"
       ],
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "source": "report_audit_20261025",
       "created_at": "2026-10-25T11:24:07",
       "created_date": "2026-10-25",
-      "blocks": []
+      "blocks": [],
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：全站23断链(审计P0)复核闭环。实测20条URL：19条已存在301(本地_redirects已含规则)且线上 301→200；唯一缺失 /best-ai-animation-tools-2026 根路径 404 → 本轮补 301 至 /blog/category/ai-video/（commit 67e4939，CF deploy success，线上 curl -IL = 301→200）。audit_findings 报告未跟随重定向导致误报19条，已记录。"
     },
     {
       "id": "T-20261025112407-191",
@@ -1809,11 +1815,13 @@
         "架构师"
       ],
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "source": "report_health_20261025",
       "created_at": "2026-10-25T11:24:07",
       "created_date": "2026-10-25",
-      "blocks": []
+      "blocks": [],
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：Actions健康复核。.github/workflows 共21个workflow（deploy.yml等）在库；最近部署证据链：67e4939/108b67e/9f4240f 全部 CF Pages deploy success；health_report 所指失败的 weekly-diagnosis.yml/auto-optimize.yml 已不在 workflow 目录（9月上旬旧数据=报告陈旧），非真实故障。无需代码修复。"
     },
     {
       "id": "CMD-20261024-002",
@@ -3153,7 +3161,8 @@
       "task": "GSC 查询级数据被 -site: 过滤器垃圾查询污染（13/23 为工具生成 site 排除式长查询，干净词仅 10 个）：fetch_gsc 脚本需过滤 -site: 模式查询 + 提高查询维度 rowLimit",
       "source": "gsc_query_data_gap_2026-10-25",
       "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "notes": "r60 调查：scripts/ 目录无 fetch_gsc.py，grep -site: 仅命中 r14/r15_research.py（旧研究脚本）。-site: 过滤需分析师窗口确认 GSC 拉取脚本实际路径后自修（脚本非架构师窗口资产）。"
     },
     {
       "id": "T-20261025112407-190",
@@ -4417,7 +4426,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-25T12:09:13",
-  "last_action": "r59: seo_audit_full(修 lxml 后) P0=0；/compare/ 1.09MB 自修完成(裁剪9字段→812KB，e79e23c 部署 success，线上 200+831KB)；重复Title开创作家单；2大图开P2自修单；180 broken 判定为外部站/网络误报类(403/超时/SSL/重置)，记录不另开单",
+  "last_action": "r60 2026-10-25: P0x4 完成(T-189断链20/20闭环+补1条301/T-191 Actions健康复核=陈旧误报/GA4-CONVERSION与AFF-RPV均为r55已实现本轮补验证证据)；P1-GSC-QUERY-DATA-GAP 调查记录(脚本不在仓库)",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

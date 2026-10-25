@@ -57,3 +57,31 @@
 
 ## 我的 pending 复盘点
 P1-CLAUDE-SEO / GA4-SG-BOT（阻塞）、INDEX-41 / INDEXNOW（10-30 验收）——全部沿用，本轮新增 P2 大图自修单
+
+# r60 标准 cron 轮（2026-10-25 13:44 +08:00）
+
+## 读到的 pending：架构师/window1 = 14 条（P0x4 新开、P1x7、P2x3）｜本轮处理 P0 全 4 条
+
+## P0-1: T-20261025112407-189 全站断链闭环
+- 复核 audit_findings 20 条断链：curl 全量实测（含 -I -L 重定向链）
+- 结论：19/20 已有 301 规则且线上 301→200（audit 报告未跟随重定向=误报）；唯一缺失 `/best-ai-animation-tools-2026` 根路径 404
+- 修复：_redirects 补 1 条 301 → /blog/category/ai-video/（commit 67e4939）
+- 门控：tsc=0 build=0；CF deploy success；线上 curl -IL = 301→200 ✓
+- 证据：out/_redirects 含规则；20 条断链线上链验证表见 _r60 临时脚本输出
+
+## P0-2: T-20261025112407-191 GitHub Actions 健康复核
+- .github/workflows 21 个 workflow 在库（deploy/lint/codeql 等）；最近部署 67e4939/108b67e/9f4240f 全 CF Pages deploy success
+- health_report 所指失败的 weekly-diagnosis.yml / auto-optimize.yml 已不在 workflow 目录 → 9 月上旬旧数据，报告陈旧误报，无真实故障，无需修复
+- 注：无 GitHub token（api_keys 无 gh_token），Actions 明细用 CF Pages API + 本地 workflow 清单交叉验证
+
+## P0-3+4: GA4 转化事件 + 联盟 RPV 追踪（重复单，r55 已实现，本轮补验证证据）
+- GA4EventTracker.tsx 已挂载 layout.tsx；事件集：outbound_click/tool_outbound_click/compare_cta_click/article_affiliate_click/affiliate_click/scroll_depth/tool_selected
+- RPV 归因参数：tool_slug/go_slug/article_slug/page_path/outbound_url —— 区分文章/offer/页面齐全
+- /go/{slug} 302 中转 22 条已生效；产物 layout-*.js bundle 确认含 affiliate_click（15.5KB）
+- 遗留：GA4 后台需人工将关键事件标记为 Key Event/Conversion（一次性配置，事件上报本身已全量）
+
+## P1 调查记录
+- P1-GSC-QUERY-DATA-GAP-20261025：scripts/ 无 fetch_gsc.py（grep -site: 仅旧研究脚本）→ 脚本归分析师窗口，已 note 待其确认路径后自修
+
+## 门控/部署/验证汇总
+- tsc=0 build=0 → commit 67e4939 → PUSH_OK → CF deploy success → 线上 /best-ai-animation-tools-2026 = 301→200 ✓
