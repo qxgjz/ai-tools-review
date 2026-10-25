@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-25 06:37:22",
+  "last_updated": "2026-10-25 08:01:07",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -1437,7 +1437,7 @@
       "source": "commander_diagnosis_20261018",
       "task": "外链从0到1：28天关键词全排50-86位=域名权重极低，本周必出10条真实外链(HARO答问/高DR目录提交/Reddit+Quora真实价值回复/相关博客客座)，完成后记录到backlinks_tracking.md并提交URL供指挥官验收",
       "url": "",
-      "notes": "2026-10-24 22:23:09 +08:00 活外链复核3/3有效; insidr/aisotools/toolsify已提交但Google未索引aitoolcrux页"
+      "notes": "2026-10-24 22:23:09 +08:00 活外链复核3/3有效; insidr/aisotools/toolsify已提交但Google未索引aitoolcrux页 | 2026-10-25 11:05:40 +08:00 3目录仍n=0; 品牌泛搜出现hatchr.in新第三方条目, 持续监控"
     },
     {
       "id": "CMD-20261018-007",
@@ -2102,7 +2102,7 @@
       "completed_at": "2026-10-24 11:49:00 +08:00",
       "followup_note": "2026-10-24 11:49:00 +08:00 实测存活 dofollow backlink=6 条(历史4+sideprojectors+thehackstack)，达90天≥5下限，curl+Serper 双验。",
       "reopen_note": "指挥官2026-10-24T14:31验收: 假完成——无evidence/close_note, backlinks_tracking.md实证活外链仅5条(LIVE-1~5)未达15条目标; 需逐条URL存活+brand核验补足≥15再标completed",
-      "notes": "2026-10-24 22:23:09 +08:00 已验证3条活外链全部200+anchor: sideprojectors/thehackstack(US)+github(DR96)"
+      "notes": "2026-10-24 22:23:09 +08:00 已验证3条活外链全部200+anchor: sideprojectors/thehackstack(US)+github(DR96) | 2026-10-25 11:05:40 +08:00 品牌SERP新增hatchr.in两条aitoolcrux条目(Google已索引), 静态anchor未检出待浏览器确认"
     },
     {
       "id": "P1-CF-DASHBOARD-ACTIONS-20261017",
@@ -2840,7 +2840,7 @@
       "assigned_to": "拓荒者",
       "source": "commander_directive_20261024_us_audience",
       "task": "外链与社区推广侧重美国/英文站点：Reddit美国高活跃板块、Product Hunt、美国AI目录站（批量提交英文收录站时优先US流量站）；HN评论/Reddit回复围绕美国用户作息时间发布（美东时段），渠道台账标注US/非US",
-      "notes": "2026-10-24 15:31:55 +08:00 evidence: US方向已落地——Reddit登录态打通并发布首条价值评论;10个US目录通道实测(toolify/theresanaiforthat 403反爬,topai需登录,futurepedia拿到pitch邮箱contact@futurepedia.io);活外链基线6条(github/sideprojectors/thehackstack/insidr/toolsify/aisotools,3条US已验锚点)。台账已标Region。下一步:今晚美东时段r/SaaS发评+明日SMTP发futurepedia+浏览器平提交US目录。本周目标≥5 US活外链。 | 2026-10-24 22:23:09 +08:00 US活外链确认2条(sideprojectors/thehackstack), 本周目标5条当前=2条(github非US), 还差3条"
+      "notes": "2026-10-24 15:31:55 +08:00 evidence: US方向已落地——Reddit登录态打通并发布首条价值评论;10个US目录通道实测(toolify/theresanaiforthat 403反爬,topai需登录,futurepedia拿到pitch邮箱contact@futurepedia.io);活外链基线6条(github/sideprojectors/thehackstack/insidr/toolsify/aisotools,3条US已验锚点)。台账已标Region。下一步:今晚美东时段r/SaaS发评+明日SMTP发futurepedia+浏览器平提交US目录。本周目标≥5 US活外链。 | 2026-10-24 22:23:09 +08:00 US活外链确认2条(sideprojectors/thehackstack), 本周目标5条当前=2条(github非US), 还差3条 | 2026-10-25 11:05:40 +08:00 US活外链: sideprojectors/thehackstack仍在SERP; hatchr.in待确认是否计入"
     },
     {
       "priority": "P2",
@@ -3471,6 +3471,314 @@
       "source": "commander_report_scan_20261025",
       "created_at": "2026-10-25 06:37:22",
       "created_date": "20261025"
+    },
+    {
+      "id": "P0-AFF-PRIORITY-RERANK-20261025",
+      "priority": "P0",
+      "assigned_to": "window3(拓荒者)",
+      "status": "pending",
+      "source": "commander_learning_affiliate-monetization",
+      "task": "按2026-10-25战略学习清单重排联盟计划接入优先级：优先接入recurring≥30%且cookie≥90天的计划（GoHighLevel 40%终身+5%二级、Systeme.io 40-60%终身、HubSpot 30%×12月/180d、ActiveCampaign 20-30%×12月/90d、Notion 50%×12月）；淘汰佣金<20%或cookie<90d的已接入计划；本周新接入≥3个Premium档计划并登记到affiliate_clicks.md",
+      "created_at": "2026-10-25 08:01:07",
+      "created_date": "20261025"
+    },
+    {
+      "id": "P1-AFF-DECISION-CONTENT-20261025",
+      "priority": "P1",
+      "assigned_to": "window2(创作家)",
+      "status": "pending",
+      "source": "commander_learning_affiliate-monetization",
+      "task": "按\"决策型教程\"模式写2篇联盟向文章：①\"How to Choose the Best AI Coding Assistant 2026\"（决策框架+3家对比，挂HubSpot/Notion级Premium计划链接，每篇3个联盟链接、2张实拍截图、数据源可追溯）②\"AI Tools That Pay for Themselves: Cost-Benefit Guide\"（价值测算，挂GoHighLevel/Systeme.io链接）；目标=文章意图与offer匹配（RPV方法论），写完成稿不发布",
+      "created_at": "2026-10-25 08:01:07",
+      "created_date": "20261025"
+    },
+    {
+      "id": "P0-AFF-RPV-TRACKING-20261025",
+      "priority": "P0",
+      "assigned_to": "window1(架构师)",
+      "status": "pending",
+      "source": "commander_learning_affiliate-monetization",
+      "task": "落地联盟RPV追踪：在Next.js给每个联盟链接加ga()点击事件+per-URL参数追踪（区分文章/offer/页面），配合P0-GA4-CONVERSION-EVENTS；产出联盟点击-转化归因表，用于筛高转化offer；验证方式=线上点击后GA4 Realtime出现事件",
+      "created_at": "2026-10-25 08:01:07",
+      "created_date": "20261025"
+    },
+    {
+      "id": "RR25-OP-mary-ai",
+      "task": "pitch/收录 Roundup机会 marketingmary.ai: https://marketingmary.ai/ai-marketing-tools/",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-improvado",
+      "task": "pitch/收录 Roundup机会 improvado.io: https://improvado.io/ai-marketing-tools/",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P1",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-greptile",
+      "task": "pitch/收录 Roundup机会 greptile.com: https://www.greptile.com/blog/best-developer-productivity-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-aubergine",
+      "task": "pitch/收录 Roundup机会 aubergine.co: https://aubergine.co/ai-coding-design-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-pecollective",
+      "task": "pitch/收录 Roundup机会 pecollective.com: https://pecollective.com/best-ai-tools-for-developers",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-faros",
+      "task": "pitch/收录 Roundup机会 faros.ai: https://faros.ai/blog/best-ai-coding-agents",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-redgate",
+      "task": "pitch/收录 Roundup机会 red-gate.com: https://www.red-gate.com/blog/best-ai-developer-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-piktochart",
+      "task": "pitch/收录 Roundup机会 piktochart.com: https://piktochart.com/blog/best-ai-tools-for-social-media-content-creation",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-saascrmreview",
+      "task": "pitch/收录 Roundup机会 saascrmreview.com: https://saascrmreview.com/best-ai-content-creation-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-stob",
+      "task": "pitch/收录 Roundup机会 stob.ai: https://stob.ai/best-ai-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-aibuzz",
+      "task": "pitch/收录 Roundup机会 aibuzz.blog: https://aibuzz.blog/best-ai-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "RR25-OP-aiera",
+      "task": "pitch/收录 Roundup机会 aiera.blog: https://aiera.blog/best-ai-tools",
+      "assigned_to": "拓荒者",
+      "status": "pending",
+      "priority": "P2",
+      "created_at": "2026-10-25 09:04:18 +08:00",
+      "source": "backlink_research_20261025b",
+      "notes": "2026-10-25 09:04:18 +08:00 第二轮Serper调研自动补录"
+    },
+    {
+      "id": "KW-SEO-TOOLS-20261025",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI SEO tools 2026] 写 2000 字新文章，标题建议 [Best AI SEO Tools 2026: 10 Tested (Semrush vs Surfer vs Frase) — With GEO/AI-Search Angle]，slug 建议 [best-ai-seo-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "分任务矩阵（Semrush=全站/Ahrefs=外链/Surfer=内容优化）+ GEO 与 AI 搜索可见性差异化（传统 SEO 平台不覆盖 AI 引用）",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-TRANSCRIPTION-20261025",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI transcription tools 2026] 写 2000 字新文章，标题建议 [Best AI Transcription Tools 2026: 9 Tested (Otter vs Fireflies vs Descript)]，slug 建议 [best-ai-transcription-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按用例分（会议=Otter/CRM=Fireflies/播客=Descript/企业=Deepgram）+ 实测准确率对比（93.4% vs 98.7%）",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-NOTE-TAKING-20261025",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI note taking apps 2026] 写 2000 字新文章，标题建议 [Best AI Note-Taking Apps 2026: 10 Compared (Notion AI vs Mem vs NotebookLM)]，slug 建议 [best-ai-note-taking-apps-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按需求分（工作区=Notion/第二大脑=Mem/加密=Reflect/研究=NotebookLM/自托管=Obsidian），定价+加密双矩阵",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-STOCK-TRADING-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI stock trading tools 2026] 写 2000 字新文章，标题建议 [Best AI Stock Trading Tools 2026: 7 Tested (TrendSpider vs Danelfin vs Trade Ideas)]，slug 建议 [best-ai-stock-trading-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-NO-CODE-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI no-code tools 2026] 写 2000 字新文章，标题建议 [Best AI No-Code Tools 2026: 10 Tested (Bubble vs Lovable vs Bolt)]，slug 建议 [best-ai-no-code-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-VIDEO-ENHANCER-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI video enhancers 2026] 写 2000 字新文章，标题建议 [Best AI Video Enhancers 2026: 8 Tested (Topaz vs HitPaw vs CapCut)]，slug 建议 [best-ai-video-enhancer-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-FINANCE-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI finance tools 2026] 写 2000 字新文章，标题建议 [Best AI Finance Tools 2026: 9 Tested (for budgeting & investing)]，slug 建议 [best-ai-finance-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "KW-STUDENTS-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI tools for students 2026] 写 2000 字新文章，标题建议 [Best AI Tools for Students 2026: 12 Picks (Study Stack)]，slug 建议 [best-ai-tools-for-students-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "CTR-BLOG-OPENAI-ASTRA-WWW-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "CTR-BLOG-MIDJOURNEY-V7-215236-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 midjourney v7 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "CTR-BLOG-CREATIUM-COACH-173022-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 creatium coach 查询 排名 8.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T11:16:27"
+    },
+    {
+      "id": "P1-GSC-QUERY-DATA-GAP-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window1",
+        "窗口1"
+      ],
+      "task": "GSC 查询级数据被 -site: 过滤器垃圾查询污染（13/23 为工具生成 site 排除式长查询，干净词仅 10 个）：fetch_gsc 脚本需过滤 -site: 模式查询 + 提高查询维度 rowLimit",
+      "source": "gsc_query_data_gap_2026-10-25",
+      "created_at": "2026-10-25T11:16:27"
     }
   ],
   "milestones": [
@@ -3486,7 +3794,7 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-25T00:00:00",
+  "last_update": "2026-10-25T11:16:27",
   "last_action": "r59: seo_audit_full(修 lxml 后) P0=0；/compare/ 1.09MB 自修完成(裁剪9字段→812KB，e79e23c 部署 success，线上 200+831KB)；重复Title开创作家单；2大图开P2自修单；180 broken 判定为外部站/网络误报类(403/超时/SSL/重置)，记录不另开单",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
