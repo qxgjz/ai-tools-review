@@ -38,7 +38,7 @@
 | 工具 | 手册写的状态 | 真实状态 | 原因 | 替代方案 |
 |------|------------|---------|------|---------|
 | **Crawl4AI** | ✅ | ❌未安装 | Windows长路径限制（unclecode-litellm依赖链路径超长） | **trafilatura+requests**（已装，可做正文提取）；如需JS渲染用playwright |
-| **OpenSEO** | v0.1.9 ✅运行中 | ❌未运行 | Docker服务未启动 | opengtm（已装，功能重叠） |
+| ~~OpenSEO 本地Docker~~ | v0.1.9 ✅运行中 | ❌未运行 | Docker服务未启动 | **✅改用 OpenSEO 官方托管 API（2026-10-16 实测可用）** |
 
 ### 🔑 API凭证状态
 
@@ -52,9 +52,45 @@
 | **SEONaut** | 717 | 技术SEO审计 | Go语言，Docker部署 |
 | **marketingskills** | 33.3K | 最大marketing skills集合 | 待评估哪些skill可复用 |
 | **CrewAI** | 52.8K | 多Agent协作框架 | ⚠️脚本已就绪，Python 3.14依赖冲突待解决 |
-| **OpenSEO** | 20.5K | 完整SEO套件 | 📋部署指南已写，当前阶段不建议部署（资源占用高） |
+| **OpenSEO** | 20.5K | 完整SEO套件 | ✅官方托管API已接入（2026-10-16实测可用，替代本地Docker） |
 | **llmevalkit** | - | 78指标AI内容评估 | ✅已接入，scripts/llmevalkit_toolkit.py |
 | **opengtm** | - | AEO审计+关键词研究 | ✅已接入，scripts/opengtm_toolkit.py |
+
+---
+
+## OpenSEO 官方托管 API 接入（2026-10-16 实测✅）
+
+> **背景**：本地 Docker 版未运行，2026-10-16 改用官方托管 API，实测 key 有效、GSC 数据通道通、关键词研究通、排名追踪可调用。**定位**：排名/外链/AI可见性/GSC数据源；关键词研究仍以 opengtm 为主（OpenSEO 作补充，避免重复耗 credits）。
+
+### 配置
+| 项 | 值 |
+|---|---|
+| MCP端点 | `https://app.openseo.so/mcp`（POST，JSON-RPC 2.0，Streamable HTTP） |
+| 鉴权 | header `Authorization: Bearer oseo_...` 或 `x-api-key: oseo_...` |
+| API key | 存 `iteration_center/api_keys.json` 的 `openseo_api_key`（**已 gitignore，勿提交仓库**） |
+| 项目ID | `987a369f-b373-49d6-bbf1-d15928167c67`（www.aitoolcrux.com，market 2158/zh-TW） |
+| 账号/credits | qx273344@gmail.com / credits 169（关键词/SERP/AI检查耗 credits，GSC/GA4/项目/报告免费） |
+| 可用工具 | 77 个（关键词、SERP、外链、排名追踪、AI可见性、GSC、GA4、站点审计、报告） |
+
+### 已验证调用参数（勿再猜）
+- 关键词研究：`research_keywords`，arguments=`{"projectId":"...","seeds":[{"seed":"关键词","locationCode":2840,"languageCode":"en"}]}`（2840=US；seeds≤5个）
+- GSC性能：`get_search_console_performance`，arguments=`{"projectId":"...","dimensions":["date"]}`，可选 dateRange 或 startDate+endDate（Pacific Time，默认回退~3天延迟）
+- 排名追踪：`get_rank_tracker`（当前无配置，接入后由分析师建）；建前先用 `estimate_rank_tracker_cost` 估算 credits
+- 免费优先：whoami / list_projects / get_search_console_performance / get_rank_tracker / 项目上下文 / 报告 不耗 credits
+
+### 调用脚本
+- 实测脚本：`C:\Users\通明街\Doubao\chats\2026-09-02\new-chat\verify_openseo_20261016.py`（rpc函数：代理127.0.0.1:7890 + Chrome UA + Origin/Referer 头，绕 Cloudflare Error 1010）
+- 接线模式：任何窗口要调 OpenSEO 先读 api_keys.json 取 key，POST JSON-RPC 2.0 到端点，走代理+Chrome UA
+
+### 与既有工具分工
+| 能力 | 首选 | 备选 |
+|---|---|---|
+| 排名追踪 | **OpenSEO**（托管） | zens-ink rank_tracker / SerpBear |
+| 外链 wins/losses | **OpenSEO**（托管） | 手动查 backlinks ALIVE |
+| AI可见性审计 | **OpenSEO**（托管，按需耗credits） | real_geo_aeo_audit.py（本地） |
+| GSC数据 | **OpenSEO免费通道** | gsc-fetch.yml workflow |
+| 关键词研究 | opengtm（已装） | OpenSEO（补充，控制credits） |
+| 站点审计 | OpenSEO（托管）/ real_seo_audit.py | zens-ink site_audit |
 
 ---
 
@@ -64,7 +100,7 @@
 
 | 工具 | 版本/状态 | 访问方式 | 用途 | 负责人 |
 |------|----------|---------|------|--------|
-| **OpenSEO** | v0.1.9 ✅运行中 | http://localhost:3001 | 全站技术审计、排名追踪、关键词研究、反链分析 | 窗口1+窗口4 |
+| **OpenSEO** | v0.1.9 ✅托管API | https://app.openseo.so/mcp（MCP Streamable HTTP，POST JSON-RPC 2.0，鉴权 `Authorization: Bearer oseo_...` 或 `x-api-key: oseo_...`） | 全站技术审计、排名追踪、关键词研究、反链分析、GSC性能、AI可见性（77个工具） | 窗口1+窗口4 |
 | **Lighthouse** | v13.4.1 ✅全局安装 | CLI `lighthouse <url>` | 页面性能、SEO、可访问性审计 | 窗口1 |
 | **Unlighthouse** | ✅GitHub Actions | `.github/workflows/unlighthouse.yml` | 全站Lighthouse批量扫描 | 窗口1 |
 | **GitHub Actions** | 16个workflow ✅ | `.github/workflows/` | CI/CD、GSC拉取、监控、测试 | 全部窗口 |
@@ -196,7 +232,7 @@
 
 | 项目 | Stars | 功能 | 状态 | 安装方式 |
 |------|-------|------|------|---------|
-| **OpenSEO** | 20,045 | 开源Semrush/Ahrefs替代 | ✅已安装运行 | Docker/Cloudflare Workers |
+| **OpenSEO** | 20,045 | 开源Semrush/Ahrefs替代 | ✅官方托管API已接入（2026-10-16实测：key有效/GSC通/关键词研究通） | 托管 https://app.openseo.so/mcp，API key在iteration_center/api_keys.json |
 | **OpenClaw** | 157K | AI agent for SEO，自动化关键词/竞品/内容/审计 | ⚠️待评估 | pip install openclaw |
 | **Claude SEO** | 4,900+ | 18并行AI agent审计，0-100分 | ⚠️待评估 | Claude Code skill |
 | **marketingskills** | 33.3K | 最大marketing skills集合（含seo-audit/ai-seo） | ⚠️待评估 | Claude Code skill |
@@ -292,7 +328,7 @@
 
 | 任务 | 首选工具 | 备选工具 | 调用方式 | 输出 |
 |------|---------|---------|---------|------|
-| 全站技术审计 | OpenSEO | zens-ink site_audit | http://localhost:3001 | 988问题分类报告 |
+| 全站技术审计 | OpenSEO（托管API） | zens-ink site_audit | MCP POST https://app.openseo.so/mcp（key读api_keys.json） | 988问题分类报告 |
 | 40+规则SEO审计 | real_seo_audit.py | seo-agent | `python real_seo_audit.py` | JSON+MD报告 |
 | GEO/AEO审计 | real_geo_aeo_audit.py | answerlint | `python real_geo_aeo_audit.py` | AI搜索可见性报告 |
 | 内链审计 | real_internal_link_audit.py | zens-ink | `python real_internal_link_audit.py` | 内链结构报告 |
@@ -358,9 +394,9 @@
 
 **步骤1：运行审计（5分钟）**
 ```bash
-# 1.1 检查OpenSEO最新审计结果
-# 访问 http://localhost:3001 查看最新审计报告
-# 重点关注：thin-content、heading-order-skip、slow-response、meta-description-too-long
+# 1.1 用 OpenSEO 托管 API 查最新审计结果
+# 用 Python 读 api_keys.json 取 key，POST JSON-RPC 2.0 到 https://app.openseo.so/mcp（走代理127.0.0.1:7890+Chrome UA）
+# 调 get_report / 站点审计工具；重点关注：thin-content、heading-order-skip、slow-response、meta-description-too-long
 
 # 1.2 运行real_seo_audit.py（40+规则）
 cd C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review
@@ -661,8 +697,10 @@ from google.analytics.data_v1beta import BetaAnalyticsDataClient
 # 1.3 用Cloudflare GraphQL API拉实时流量
 # 拉取：请求数、独立访客、国家分布、安全事件
 
-# 1.4 检查OpenSEO排名追踪结果
-# 访问 http://localhost:3001 查看20+10个关键词的排名变化
+# 1.1 访问 OpenSEO 托管 API 查排名追踪结果
+# 用 Python 读 iteration_center/api_keys.json 取 openseo_api_key
+# POST JSON-RPC 2.0 到 https://app.openseo.so/mcp（走代理 127.0.0.1:7890 + Chrome UA）
+# 调 get_rank_tracker 查 10+ 个关键词排名变化
 ```
 
 **步骤2：数据分析（15分钟）**

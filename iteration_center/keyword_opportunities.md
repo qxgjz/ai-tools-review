@@ -429,3 +429,36 @@
 | portrait / project-mgmt / coding-assistant | 预估高 | SERP 5-6 站竞争 High（ClickUp/TechRepublic/DigitalTrends 权威域） |
 | text-to-image / gift | 预估中-高 | SERP 验证 High/Medium |
 | 3D / churn / fun | 预估中 | futurepedia 分类缺口依据，未实搜 |
+
+
+---
+
+## 2026-10-26 00:29 关键词挖掘 r28（含竞品同轮）
+
+**Total keywords analyzed: 8**（P0×3 + P1×5）
+
+### P0（SERP 已验证）
+| 词 | 竞争度 | 建议标题 | slug | 切入角度 |
+|---|---|---|---|---|
+| best AI 3D generator tools 2026 | High | Best AI 3D Generator Tools 2026: 7 Tested (Meshy vs Tripo vs Rodin) | best-ai-3d-generator-tools-2026 | 按产出场景分+免费额度/导出格式表 |
+| best AI churn prediction tools 2026 | Medium | Best AI Churn Prediction Tools 2026: 6 Tested (Powerdrill vs Pecan vs Amplitude) | best-ai-churn-prediction-tools-2026 | 按团队规模分+价格对比（$13.27 起） |
+| best AI HR tools 2026 | High | Best AI HR Tools 2026: 10 Tested (Lattice vs BambooHR vs Workday) | best-ai-hr-tools-2026 | 按工作流分+每员工成本表 |
+
+### P1
+| 词 | 竞争度 | 建议标题 | slug |
+|---|---|---|---|
+| best AI travel planning tools 2026 | Medium | Best AI Travel Planning Tools 2026: 7 Tested (MindTrip vs Wanderlog vs Wonderplan) | best-ai-travel-planning-tools-2026 |
+| best AI fun tools 2026 | Medium | Best AI Fun Tools 2026: 12 Tested | best-ai-fun-tools-2026 |
+| best AI real estate tools 2026 | 预估Medium | Best AI Real Estate Tools 2026: 8 Tested | best-ai-real-estate-tools-2026 |
+| best AI research assistant tools 2026 | 预估Medium | Best AI Research Assistant Tools 2026: 7 Tested | best-ai-research-assistant-tools-2026 |
+| best AI prompt generators 2026 | 预估Low | Best AI Prompt Generators 2026: 9 Tested | best-ai-prompt-generators-2026 |
+
+### 搜索量标注（全部"预估"，附依据）
+| 词 | 预估 | 依据 |
+|---|---|---|
+| 3D / HR | 高 | SERP High（eWeek/Peoplebox 等权威域 6+ 站竞争） |
+| churn / travel / fun | 中 | SERP Medium（中小博客竞争，无超权威域霸屏） |
+| real-estate / research / prompt | 中/低 | 竞品分类缺口依据，未实搜（标预估） |
+
+### 竞品对比
+- futurepedia 75 分类缓存 vs 本地 40 篇 published；本轮 3D/churn/HR/travel/fun 全为竞品有我们无

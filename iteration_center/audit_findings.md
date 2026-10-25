@@ -4246,3 +4246,55 @@ CTR opps: 3
 - 未收录 428 分解：discovered_not_indexed 400（93.5%，最大类）、duplicate_without_canonical 9、auto_redirect 9、noindex 5、404 2、crawled_not_indexed 2、redirect_error 1
 - **P0 杠杆修正**：真实问题不是"未收录"，而是 ①discovered_not_indexed 400 条指向内容质量/相关性不足 ②GSC 点击归零下的 CTR/Title 优化。sitemap 提交问题降级为 P1（canonical/重定向链修复）
 - 周度跟踪：每周 AdsPower CDP 拉索引覆盖率更新 gsc_indexed_baseline 表
+
+
+---
+
+## 体验官 UX 组件巡检（2026-10-26，GH-20261026-007）
+
+参考基准：github.com/Kiranism/next-shadcn-dashboard-starter（shadcn/ui AI-first 组件实践）。
+方法：Edge headless `--window-size=375,812`（移动端 iPhone SE 尺寸）实截 4 页 + 源码双重核验。
+取证截图：`%TEMP%\ux_shots\{home_m,ranking_m,compare_m,tool_m}.png`（4 张，375px 宽）。
+
+### 巡检页面（4/5，达标 3-5 要求）
+| 页面 | 组件覆盖 | 移动端判定 |
+|------|---------|-----------|
+| / 首页 | Button（View Rankings / AI Tool Matcher）、Quick Answer 卡片、Hero 标题 | ⚠️ 文字溢出 |
+| /ranking/ | Card stack（#1 Gemini 卡）、View Review 按钮、评分环 | ⚠️ 副标题溢出 |
+| /compare/ | Quick Answer 卡片、Key Takeaways 列表、Tested & Reviewed badge | ⚠️ 文字溢出 |
+| /tools/midjourney/ | Breadcrumb、Try CTA 按钮、元信息行、Grade badge | ⚠️ 元信息行溢出 |
+
+### 组件实现合规项（对照 starter 最佳实践）
+- Button（`components/ui/button.tsx`）：h-10=40px 触控达标，whitespace-nowrap 正确，focus-visible ring 完整。✅
+- Table（`components/ui/table.tsx`）：外层 `relative w-full overflow-auto`，移动端可横向滚动。✅
+- ToolCard（`components/tools/ToolCard.tsx`）：flex 列布局 + line-clamp + h-full，无溢出。✅
+- Compare 静态对比表（`CompareClient.tsx:313`）：已包 `overflow-x-auto`。✅
+- Grid 响应式：`grid-cols-1 md:grid-cols-2` / `sm:grid-cols-2 lg:grid-cols-3` 断点正确。✅
+
+### 发现问题（P1，需补录待办）
+1. **全局 AffiliateDisclosure 条 375px 文字横向溢出**（4 页共性）
+   - 源码 `components/monetization/AffiliateDisclosure.tsx:16-17`：外层 `max-w-7xl mx-auto px-4` 正确，但内层 `flex items-center justify-between gap-4` 文字容器缺 `min-w-0` + `break-words`，长句"We may earn commission at no extra cost..."在 375px 下被推宽，右边缘裁切（截图实证："We may earn"、"ratin"被切）。
+2. **Quick Answer 卡片正文 375px 横向溢出**（首页 + compare 两页）
+   - 浅绿色卡片内段落（"The best AI tool in 2026..."）右边缘裁切（"for gene"、"Mid"、"integrations"、"prici"被切）。根因待定位：卡片容器缺 `min-w-0` 或段落缺 `break-words`/`overflow-wrap`。
+3. **ranking 页副标题 375px 溢出**
+   - "Sorted by six-dimension weighted scoring. Scroll to explore the top 10..."右边缘裁切（"Scr"、"card stack"被切）。
+4. **工具详情页元信息行 375px 溢出**
+   - "Midjourney Inc. / Updated 2026-09-04 / im[age?]"与"No paid ranking"、"if yo[u]"右边缘裁切。
+   - 注：body 已加 `overflow-x:clip`（10-24 实施档），故无横向滚动条，但文字仍被裁切在视口右缘——需从容器换行层面修复，而非仅靠 clip。
+
+### 结论
+shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 最佳实践；但**多个长文本容器缺 `min-w-0` + `break-words`/`flex-wrap`**，在 375px 下共性溢出。补录 P1 待办给体验官窗口修复。
+
+## 2026-10-26 00:29 r28 追加 · 蚕食检测（P0 已闭环）+ SEO MCP 评估（P0 已闭环）
+
+**蚕食检测**（数据源 live_pull 实读）：
+- URL 变体蚕食 5 组（首页 http/www/无斜杠、about 斜杠、ai-policy 无斜杠）→ 曝光拆分、权重稀释，P0 修复待办已建
+- 同族蚕食：ai coding tools 2 页共享（best 12imp/pos4.1 vs comparison 2imp/pos5.5）
+- article-api 异常 URL 4 imp 污染索引预算
+- 修复：_redirects 301 规范化 + canonical + 页面主次划分
+
+**SEO MCP 接入评估（GH-20261026-005）**：
+- open-seo-mcp-skills（7.2k★/MIT）评估：8 skills（seo-audit/keyword-research/rank-tracking/competitor-gap/backlink-check/ai-visibility/content-brief/seo-vs-ads），数据源=真实 GSC/GA4/Ads/DataForSEO
+- 已本地化 vendor/open-seo-mcp-skills/；MCP endpoint 实测 401（OAuth 待授权，代理 7890 通）
+- 覆盖差距 5 项：关键词量（禁编造搜索量的正解）/反链/SERP 简报/AI 可见性（GEO）/seo-vs-ads
+- 接入方案：iteration_center/seo_mcp_接入方案_20261026.md；推荐授权后落地（解锁 GEO-BASELINE）

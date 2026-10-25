@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-26 00:17:33",
+  "last_updated": "2026-10-26T00:28:28+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -4820,7 +4820,7 @@
     },
     {
       "id": "P0-GSC-CANNIBAL-AUDIT-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "数据分析师",
@@ -4828,7 +4828,9 @@
       ],
       "source": "commander_report_audit_20261025",
       "created_date": "2026-10-25",
-      "task": "knowledge_analytics.md P0：用Python执行GSC蚕食检测(关键词被多页共享排名的cannibalization)，全站905页找出隐藏蚕食问题(如article-api-时间戳-标题-...-md丑URL与正式slug互蚕食、/about与/about/并存)，输出蚕食清单+合并方案给架构师"
+      "task": "knowledge_analytics.md P0：用Python执行GSC蚕食检测(关键词被多页共享排名的cannibalization)，全站905页找出隐藏蚕食问题(如article-api-时间戳-标题-...-md丑URL与正式slug互蚕食、/about与/about/并存)，输出蚕食清单+合并方案给架构师",
+      "completed_at": "2026-10-26T00:27:29",
+      "evidence": "iteration_center/gsc_cannibalization_20261026.md"
     },
     {
       "id": "P0-GA4-PAGEPATH-FIX-20261025",
@@ -4904,8 +4906,10 @@
       "source": "github_project_research_20261026",
       "url": "https://github.com/Ryze-AI-Adgent/open-seo-mcp-skills",
       "id": "GH-20261026-005",
-      "status": "pending",
-      "created_date": "2026-10-26"
+      "status": "completed",
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-26T00:27:29",
+      "evidence": "iteration_center/seo_mcp_接入方案_20261026.md + vendor/open-seo-mcp-skills/"
     },
     {
       "task": "提示词质量升级：用 LangGPT(12.6k★) 结构化提示词框架重构创作家文章生成的元提示词（角色/任务/约束/输出格式/校验），并在 awesome-doubao-prompts(341★) 中挑选5条高质量豆包提示词用于内容生产，输出新版提示词模板到 iteration_center/",
@@ -4932,8 +4936,10 @@
       "source": "github_project_research_20261026",
       "url": "https://github.com/Kiranism/next-shadcn-dashboard-starter",
       "id": "GH-20261026-007",
-      "status": "pending",
-      "created_date": "2026-10-26"
+      "status": "completed",
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-26T00:28:28+08:00",
+      "completion_note": "Edge headless 375px 实截4页(home/ranking/compare/midjourney) + 源码双重核验；基础shadcn组件(Button/Table/Tabs/ToolCard)合规；发现4处长文本容器缺min-w-0/break-words导致375px文字右缘裁切；巡检报告已写入iteration_center/audit_findings.md体验官段落；补录P1-UX-MOBILE-TEXT-OVERFLOW-20261026。"
     },
     {
       "task": "目录站视觉参考：分析开源 AI 目录站 aigotools(660★) 的页面布局/分类导航/卡片设计/i18n/SEO结构，输出3条可落地的站内改版建议（列表页信息密度、分类标签、面包屑），供架构师实施",
@@ -4947,6 +4953,299 @@
       "id": "GH-20261026-008",
       "status": "pending",
       "created_date": "2026-10-26"
+    },
+    {
+      "id": "CANONICAL-REDIRECT-AUDIT-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "全站 URL 规范化：http→https、www→非www、尾部斜杠统一（GSC 实数据发现首页 3 版本+about 2 版本蚕食），_redirects 加 301 规则",
+      "source": "gsc_cannibalization_20261026",
+      "created_at": "2026-10-26T00:27:29"
+    },
+    {
+      "id": "ARTICLE-API-URL-CLEAN-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "/blog/article-api-*（含时间戳+md 后缀）系列 URL 301→规范文章或 410，释放索引预算（GSC 实数据 4 imp）",
+      "source": "gsc_cannibalization_20261026",
+      "created_at": "2026-10-26T00:27:29"
+    },
+    {
+      "id": "CODING-TOOLS-CANNIBAL-RESOLVE-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家",
+        "window3"
+      ],
+      "task": "best-ai-coding-tools-2026 与 ai-coding-tools-comparison-2026 二选一为主页，另一页差异化（列表 vs 对比表）并互指，消除同族蚕食",
+      "source": "gsc_cannibalization_20261026",
+      "created_at": "2026-10-26T00:27:29"
+    },
+    {
+      "id": "P1-UX-MOBILE-TEXT-OVERFLOW-20261026",
+      "task": "【移动端文字溢出·体验官】375px实截发现4处长文本容器横向溢出被右缘裁切：①AffiliateDisclosure条(AffiliateDisclosure.tsx:16-17 flex无min-w-0)；②Quick Answer卡片正文(home/compare)；③ranking页副标题；④工具详情页元信息行。修复：相关flex/文本容器加min-w-0 + break-words/overflow-wrap + 必要时flex-wrap。复测375px截图无右缘裁切。",
+      "assigned_to": [
+        "体验官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "GH-20261026-007组件巡检",
+      "created_at": "2026-10-26T00:28:28+08:00",
+      "completion_note": ""
+    },
+    {
+      "id": "CTR-PAGE-AI-CODING-TOOLS-COMPARISON-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T00:29:52",
+      "position": 5.5,
+      "ctr_pct": 0.0,
+      "note": "与 best-ai-coding-tools-2026 同族，排名 5.5 但 0 点击"
+    },
+    {
+      "id": "CTR-PAGE-CREATIUM-COACH-REVIEW-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md 排名 6.0 但 CTR 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T00:29:52",
+      "position": 6.0,
+      "ctr_pct": 0.0,
+      "note": "异常 article-api URL，排名 6.0 但 0 点击，title 含时间戳+md 后缀需重写"
+    },
+    {
+      "id": "CTR-QUERY-TABBYML-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "查询 [tabbyml] 排名 18.0 但 CTR 0%，优化对应落地页 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T00:29:52",
+      "position": 18.0,
+      "ctr_pct": 0.0,
+      "note": "查询级，5-20 扩选"
+    },
+    {
+      "id": "CA-3D-GENERATOR-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 3D-generator 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-3d-generator-tools-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "CA-CHURN-MANAGEMENT-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 churn-management 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-churn-prediction-tools-2026 文章，SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "Medium",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "CA-HUMAN-RESOURCES-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 human-resources 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-hr-tools-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "CA-TRAVEL-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 travel 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-travel-planning-tools-2026 文章，SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "Medium",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "CA-FUN-TOOLS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 fun-tools 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-fun-tools-2026 文章，SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "Medium",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-3D-GENERATOR-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI 3D generator tools 2026] 写 2000 字新文章，标题建议 [Best AI 3D Generator Tools 2026: 7 Tested (Meshy vs Tripo vs Rodin)]，slug 建议 [best-ai-3d-generator-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按产出场景分+免费额度/导出格式表",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-CHURN-PREDICTION-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI churn prediction tools 2026] 写 2000 字新文章，标题建议 [Best AI Churn Prediction Tools 2026: 6 Tested (Powerdrill vs Pecan vs Amplitude)]，slug 建议 [best-ai-churn-prediction-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "按团队规模分+价格对比（$13.27 起）",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-HR-TOOLS-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI HR tools 2026] 写 2000 字新文章，标题建议 [Best AI HR Tools 2026: 10 Tested (Lattice vs BambooHR vs Workday)]，slug 建议 [best-ai-hr-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按工作流分+每员工成本表",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-TRAVEL-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI travel planning tools 2026] 写 2000 字新文章，标题建议 [Best AI Travel Planning Tools 2026: 7 Tested]，slug 建议 [best-ai-travel-planning-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": false,
+      "our_angle": "按规划方式分（可预订/清单/免费）",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-FUN-TOOLS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI fun tools 2026] 写 2000 字新文章，标题建议 [Best AI Fun Tools 2026: 12 Tested]，slug 建议 [best-ai-fun-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": false,
+      "our_angle": "按娱乐类型分+全免费清单",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-REAL-ESTATE-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI real estate tools 2026] 写 2000 字新文章，标题建议 [Best AI Real Estate Tools 2026: 8 Tested]，slug 建议 [best-ai-real-estate-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": false,
+      "our_angle": "按环节分（房源/估值/营销）",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-RESEARCH-ASSISTANT-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI research assistant tools 2026] 写 2000 字新文章，标题建议 [Best AI Research Assistant Tools 2026: 7 Tested]，slug 建议 [best-ai-research-assistant-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": false,
+      "our_angle": "按工作流分（检索/综述/引用）",
+      "created_at": "2026-10-26T00:29:52"
+    },
+    {
+      "id": "KW-PROMPT-GENERATORS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI prompt generators 2026] 写 2000 字新文章，标题建议 [Best AI Prompt Generators 2026: 9 Tested]，slug 建议 [best-ai-prompt-generators-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Low",
+      "serp_verified": false,
+      "our_angle": "按场景分+免费额度",
+      "created_at": "2026-10-26T00:29:52"
     }
   ],
   "milestones": [
@@ -4962,7 +5261,7 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-25T21:10:54",
+  "last_update": "2026-10-26T00:29:52",
   "last_action": "commander dispatch 8 GitHub project todos",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
