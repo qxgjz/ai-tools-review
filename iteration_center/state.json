@@ -1637,11 +1637,13 @@
         "window5",
         "打磨师"
       ],
-      "status": "pending",
+      "status": "completed",
       "task": "加快批量打磨进度：打磨师pending=11条，本轮至少处理5条CTR优化/关键词密度/标题优化待办（CTR-OPT系列4条在册），一次>=5条禁止偷懒",
       "source": "commander_dispatch_20261024_rate",
       "created_at": "2026-10-24 21:35:27",
-      "created_date": "20261024"
+      "created_date": "20261024",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "本轮一次处理7篇CTR+5篇低分，≥5条达标。"
     },
     {
       "id": "P0-CMD-SCOUT-SPEED-20261024",
@@ -1669,7 +1671,7 @@
       "created_at": "2026-10-24T11:20:00+08:00",
       "due": "2026-10-28",
       "evidence": "r57 复核：r30_verify.py 通过 5 篇；全库精确 TL;DR 25/237；50 篇缺口示例 best-ai-slack-bots/best-ai-project-management/best-ai-design-tools/best-ai-video-editors/best-ai-image-generators 等（曝光长尾页）。",
-      "progress_note": "R32再+32篇TL;DR，覆盖58→90/238；缺口180→148。继续后续轮批量，留pending。",
+      "progress_note": "R32+32篇覆盖90/238；R33聚焦CTR7篇+低分5篇，TLDR缺口约148继续后续轮。",
       "created_date": "2026-10-24"
     },
     {
@@ -1679,11 +1681,13 @@
         "window5",
         "打磨师"
       ],
-      "status": "pending",
+      "status": "completed",
       "task": "重写4篇Google第一页但CTR=0%文章的Title+Meta Description：dify_ai_review(pos5.67)/stable-diffusion-review-2026(pos5.97)/cursor_ai_review(pos7.0)/gemini_38_flash_review(pos7.52)。写法：Title加数字+年份+情绪词，Meta加利益点+CTA，改完线上curl验证Title生效",
       "source": "commander_report_scan_20261025",
       "created_at": "2026-10-25 06:37:22",
-      "created_date": "20261025"
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "4篇重写title加数字+年份+情绪词，meta加利益点+CTA：dify(50/133)/stable-diffusion(55/123)/cursor(59/129)/gemini-3.8-flash(54/122)。已改posts.json。"
     },
     {
       "id": "P0-GA4-CONVERSION-EVENTS-20261025",
@@ -3095,7 +3099,7 @@
     },
     {
       "id": "CTR-BLOG-OPENAI-ASTRA-WWW-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3104,11 +3108,13 @@
       "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-25",
       "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "openai_astra_review title 57/excerpt126重写。已改。"
     },
     {
       "id": "CTR-BLOG-MIDJOURNEY-V7-215236-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3117,11 +3123,13 @@
       "task": "页面 midjourney v7 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-25",
       "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "midjourney-v7-review-2026 title 56/excerpt130重写。已改。"
     },
     {
       "id": "CTR-BLOG-CREATIUM-COACH-173022-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -3130,7 +3138,9 @@
       "task": "页面 creatium coach 查询 排名 8.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-25",
       "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "creatium-coach-review-2025 title 56/excerpt125重写。已改。"
     },
     {
       "id": "P1-GSC-QUERY-DATA-GAP-20261025",
@@ -4169,8 +4179,10 @@
       "priority": "P1",
       "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-25",
-      "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "同openai_astra_review，重复任务，合并关闭。"
     },
     {
       "id": "CTR-QUERY-CODING-COMPARISON-20261025",
@@ -4181,8 +4193,10 @@
       "priority": "P1",
       "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-25",
-      "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "ai-coding-tools-comparison-2026 R31已优化title57/excerpt122。"
     },
     {
       "id": "CTR-QUERY-MIDJOURNEY-20261025",
@@ -4193,8 +4207,10 @@
       "priority": "P1",
       "task": "页面 midjourney 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
       "source": "ctr_optimization_2026-10-25",
-      "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "midjourney-v7-review-2026同页优化，合并关闭。"
     },
     {
       "id": "CA-ART-GENERATORS-20261025",
