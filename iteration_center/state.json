@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-25T13:44:06+08:00",
+  "last_updated": "2026-10-25 15:41:03",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -1631,21 +1631,6 @@
       "created_date": "20261024"
     },
     {
-      "id": "P0-CMD-POLISHER-SPEED-20261024",
-      "priority": "P0",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "task": "加快批量打磨进度：打磨师pending=11条，本轮至少处理5条CTR优化/关键词密度/标题优化待办（CTR-OPT系列4条在册），一次>=5条禁止偷懒",
-      "source": "commander_dispatch_20261024_rate",
-      "created_at": "2026-10-24 21:35:27",
-      "created_date": "20261024",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "本轮一次处理7篇CTR+5篇低分，≥5条达标。"
-    },
-    {
       "id": "P0-CMD-SCOUT-SPEED-20261024",
       "priority": "P0",
       "assigned_to": [
@@ -1671,107 +1656,8 @@
       "created_at": "2026-10-24T11:20:00+08:00",
       "due": "2026-10-28",
       "evidence": "r57 复核：r30_verify.py 通过 5 篇；全库精确 TL;DR 25/237；50 篇缺口示例 best-ai-slack-bots/best-ai-project-management/best-ai-design-tools/best-ai-video-editors/best-ai-image-generators 等（曝光长尾页）。",
-      "progress_note": "R32+32篇覆盖90/238；R33聚焦CTR7篇+低分5篇，TLDR缺口约148继续后续轮。",
+      "progress_note": "R34聚焦4 CTR页+5低分；TLDR覆盖~90/247，缺口继续后续轮批量。",
       "created_date": "2026-10-24"
-    },
-    {
-      "id": "CTR-OPT-TOP10-FOUR-20261025",
-      "priority": "P0",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "status": "completed",
-      "task": "重写4篇Google第一页但CTR=0%文章的Title+Meta Description：dify_ai_review(pos5.67)/stable-diffusion-review-2026(pos5.97)/cursor_ai_review(pos7.0)/gemini_38_flash_review(pos7.52)。写法：Title加数字+年份+情绪词，Meta加利益点+CTA，改完线上curl验证Title生效",
-      "source": "commander_report_scan_20261025",
-      "created_at": "2026-10-25 06:37:22",
-      "created_date": "20261025",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "4篇重写title加数字+年份+情绪词，meta加利益点+CTA：dify(50/133)/stable-diffusion(55/123)/cursor(59/129)/gemini-3.8-flash(54/122)。已改posts.json。"
-    },
-    {
-      "id": "P0-GA4-CONVERSION-EVENTS-20261025",
-      "priority": "P0",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "status": "completed",
-      "task": "配置GA4转化事件：在Next.js里加ga()事件追踪（联盟链接点击、CTA按钮点击），目标Key Events从0变为可衡量。没有转化数据所有ROI分析都是空谈",
-      "source": "commander_report_scan_20261025",
-      "created_at": "2026-10-25 06:37:22",
-      "created_date": "20261025",
-      "completed_at": "2026-10-25T13:44:06+08:00",
-      "evidence": "r60 2026-10-25 13:xx：已落地验证（r55 实现）。components/analytics/GA4EventTracker.tsx 已挂载 layout.tsx；事件：outbound_click/tool_outbound_click/compare_cta_click/article_affiliate_click/affiliate_click/scroll_depth/tool_selected，带 tool_slug/go_slug/article_slug/page_path 参数；产物 out/_next/static/chunks/app/layout-*.js 确认含 affiliate_click 事件（15.5KB）。GA4 Key Events 配置需 GA4 后台人工把 event 标为 conversion（一次性），事件本身已全量上报。"
-    },
-    {
-      "id": "P0-AFF-PRIORITY-RERANK-20261025",
-      "priority": "P0",
-      "assigned_to": [
-        "window3",
-        "拓荒者"
-      ],
-      "status": "completed",
-      "source": "commander_learning_affiliate-monetization",
-      "task": "按2026-10-25战略学习清单重排联盟计划接入优先级：优先接入recurring≥30%且cookie≥90天的计划（GoHighLevel 40%终身+5%二级、Systeme.io 40-60%终身、HubSpot 30%×12月/180d、ActiveCampaign 20-30%×12月/90d、Notion 50%×12月）；淘汰佣金<20%或cookie<90d的已接入计划；本周新接入≥3个Premium档计划并登记到affiliate_clicks.md",
-      "created_at": "2026-10-25 08:01:07",
-      "created_date": "20261025",
-      "notes": "Rerank 2026-10-25 (recurring% x cookie): GoHighLevel & Systeme.io top (lifetime, 40-60%); then Kit/Writesonic/Jasper (30% recurring, >=90d); HubSpot/B2B tiered lower priority for AI-tool audience. Actual enrollment gated on analyst CMD-LEARN-AFF-UPSELL (due 10-26) per P1-AFF-EXEC-ENROLL-20261024.",
-      "ranking": [
-        [
-          "GoHighLevel",
-          "40% recurring + 5% sub-affiliate",
-          "lifetime",
-          "TOP-priority: highest recurring + tier2"
-        ],
-        [
-          "Systeme.io",
-          "40-60% recurring",
-          "lifetime",
-          "TOP: high recurring, lifetime cookie"
-        ],
-        [
-          "Kit (ConvertKit)",
-          "30% recurring",
-          "~60d mid",
-          "write/SaaS audience fit; confirm cookie length"
-        ],
-        [
-          "Writesonic",
-          "30% recurring",
-          "90d+",
-          "writing tools overlap with our reviews"
-        ],
-        [
-          "Jasper",
-          "30% recurring",
-          "90d+",
-          "writing tools overlap"
-        ],
-        [
-          "HubSpot / HubSpot affiliate",
-          "recurring tiered",
-          "90d",
-          "B2B SaaS; lower conversion for AI-tool audience"
-        ]
-      ],
-      "completed_at": "2026-10-25T14:36:35.694215+08:00",
-      "resolution": "Ranked recurring affiliate programs by recurring% x cookie length; enrollment deferred to analyst list due 10-26."
-    },
-    {
-      "id": "P0-AFF-RPV-TRACKING-20261025",
-      "priority": "P0",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "status": "completed",
-      "source": "commander_learning_affiliate-monetization",
-      "task": "落地联盟RPV追踪：在Next.js给每个联盟链接加ga()点击事件+per-URL参数追踪（区分文章/offer/页面），配合P0-GA4-CONVERSION-EVENTS；产出联盟点击-转化归因表，用于筛高转化offer；验证方式=线上点击后GA4 Realtime出现事件",
-      "created_at": "2026-10-25 08:01:07",
-      "created_date": "20261025",
-      "completed_at": "2026-10-25T13:44:06+08:00",
-      "evidence": "r60 2026-10-25 13:xx：已落地验证（r55 /go infra 实现）。lib/affiliate.ts ctaHref 全站联盟链接统一 /go/{slug} 302；public/_redirects 22条 /go 规则；GA4 affiliate_click 事件参数含 go_slug/tool_slug/article_slug/page_path/outbound_url（区分文章/offer/页面=per-URL归因），可产出联盟点击-转化归因表。"
     },
     {
       "id": "KW-SEO-TOOLS-20261025",
@@ -1835,49 +1721,94 @@
       "blocks": []
     },
     {
-      "id": "T-20261025112407-189",
-      "task": "【报告补录-20261025】修复全站23个断链（audit_findings.md P0-Critical），逐条验证线上200或301到有效页",
+      "id": "KW-ART-GENERATORS-20261025",
       "assigned_to": [
-        "架构师"
+        "window2",
+        "创作家"
       ],
       "priority": "P0",
-      "status": "completed",
-      "source": "report_audit_20261025",
-      "created_at": "2026-10-25T11:24:07",
-      "created_date": "2026-10-25",
-      "blocks": [],
-      "completed_at": "2026-10-25T13:44:06+08:00",
-      "evidence": "r60 2026-10-25 13:xx：全站23断链(审计P0)复核闭环。实测20条URL：19条已存在301(本地_redirects已含规则)且线上 301→200；唯一缺失 /best-ai-animation-tools-2026 根路径 404 → 本轮补 301 至 /blog/category/ai-video/（commit 67e4939，CF deploy success，线上 curl -IL = 301→200）。audit_findings 报告未跟随重定向导致误报19条，已记录。"
+      "task": "基于关键词 [best AI art generators 2026] 写 2000 字新文章，标题建议 [Best AI Art Generators 2026: 8 Tested (Midjourney vs DALL-E 3 vs Adobe Firefly)]，slug 建议 [best-ai-art-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按用途矩阵（写实=Midjourney/易用=DALL-E 3/Adobe工作流=Firefly/本地控制=SD/开源=FLUX）+ 实测样图对比",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
     },
     {
-      "id": "T-20261025112407-191",
-      "task": "【报告补录-20261025】GitHub Actions连续失败（health_report.md P0），检查GitHub Token与workflow配置并修复，恢复自动优化/诊断",
+      "id": "KW-LEGAL-20261025",
       "assigned_to": [
-        "架构师"
+        "window2",
+        "创作家"
       ],
       "priority": "P0",
-      "status": "completed",
-      "source": "report_health_20261025",
-      "created_at": "2026-10-25T11:24:07",
-      "created_date": "2026-10-25",
-      "blocks": [],
-      "completed_at": "2026-10-25T13:44:06+08:00",
-      "evidence": "r60 2026-10-25 13:xx：Actions健康复核。.github/workflows 共21个workflow（deploy.yml等）在库；最近部署证据链：67e4939/108b67e/9f4240f 全部 CF Pages deploy success；health_report 所指失败的 weekly-diagnosis.yml/auto-optimize.yml 已不在 workflow 目录（9月上旬旧数据=报告陈旧），非真实故障。无需代码修复。"
+      "task": "基于关键词 [best AI legal tools 2026] 写 2000 字新文章，标题建议 [Best AI Legal Tools 2026: 8 Tested (Harvey vs Lexis+ AI vs Spellbook)]，slug 建议 [best-ai-legal-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按律所规模分（大所=Harvey/中台=Lexis+ AI/起草=Spellbook/合同管理=Evisort）+ 合规与幻觉风险视角",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
     },
     {
-      "id": "CMD-20261024-002",
-      "status": "completed",
-      "priority": "P1",
+      "id": "KW-ECOMMERCE-20261025",
       "assigned_to": [
-        "window4",
-        "分析师"
+        "window2",
+        "创作家"
       ],
-      "source": "commander_diagnosis_20261024_gsc_inspect",
-      "task": "验证2026-10-24批量请求收录效果：14个URL(13个/tools/工具页+best-ai-agent-tools-2026)已通过GSC请求编入索引(req_index_batch_20261024.json)，7天后(2026-10-31)用GSC inspect复查收录状态变化，产出对比报告写入gsc-ga4-report/",
-      "url": "https://www.aitoolcrux.com/gsc-ga4-report/req_index_batch_20261024.json",
-      "created_date": "2026-10-25",
-      "completed_at": "2026-10-25T12:08:00",
-      "evidence": "中间核查(2026-10-25)：req_index_batch 13 URL 已于 10-24 全部 REQUESTED 进入优先抓取队列；10-22 url_index_check_batch_0_19 显示 category/video=indexed、category/agent=indexed、tools/chatgpt=redirect(规范页)、tools/claude=not_indexed(10-22时点)。sitemap_summary submitted=0 indexed=0 仍异常。正式 7 天复查定于 2026-10-31，已在 P2-INDEX-MONITOR 承接。"
+      "priority": "P0",
+      "task": "基于关键词 [best AI ecommerce tools 2026] 写 2000 字新文章，标题建议 [Best AI Ecommerce Tools 2026: 9 Tested (Shopify Sidekick vs Gorgias vs Klaviyo)]，slug 建议 [best-ai-ecommerce-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "按电商环节分（建站=Shopify Sidekick/客服=Gorgias/邮件=Klaviyo/搜索=Algolia）+ 定价分层",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
+    },
+    {
+      "id": "KW-AUDIO-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI audio generators 2026] 写 2000 字新文章，标题建议 [Best AI Audio Generators 2026: 9 Tested (ElevenLabs vs Suno vs Murf)]，slug 建议 [best-ai-audio-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按输出类型分（语音=ElevenLabs/音乐=Suno/音效=Soundraw/播客=Noty）+ 免费 tier 矩阵",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-WORKFLOW-AUTOMATION-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI workflow automation 2026] 写 2000 字新文章，标题建议 [Best AI Workflow Automation Tools 2026: 10 Tested (Zapier vs Make vs n8n)]，slug 建议 [best-ai-workflow-automation-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按技术门槛分（无代码=Zapier/Make/企业=UiPath/开发者=n8n/Mastra）+ 对比表",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-PRESENTATION-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI presentation generators 2026] 写 2000 字新文章，标题建议 [Best AI Presentation Generators 2026: 8 Tested (Gamma vs Beautiful.ai vs Plus AI)]，slug 建议 [best-ai-presentation-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按输出格式分（网页=Gamma/PPTX=Beautiful.ai/Google Slides=Plus AI/品牌=Claude Design）+ 免费额度对比",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
     },
     {
       "id": "GSC-QUOTA-RERUN-20261012",
@@ -2038,20 +1969,6 @@
       "status": "pending",
       "created": "2026-10-09 20:13:47 JST",
       "created_date": "2026-10-09"
-    },
-    {
-      "id": "RR-OPP-instatus-wf",
-      "task": "客座投稿 instatus.com/blog/write-for-us: 投AI工具/SaaS主题原创文, author bio带aitoolcrux",
-      "priority": "P1",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "status": "completed",
-      "source": "serper_research_2026-10-24",
-      "notes": "2026-10-24 22:23:09 +08:00 本轮未发客座pitch, SMTP额度优先RR已用",
-      "created_date": "2026-10-24",
-      "completed_at": "2026-10-25T14:36:35.694215+08:00",
-      "resolution": "2026-10-25: guest pitch emailed write@instatus.com (SMTP accepted); topic 'How Status Pages Reduce Support Tickets in 2026'; awaiting editor reply."
     },
     {
       "id": "RR-OPP-zapier-roundup",
@@ -3027,21 +2944,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "P1-AUTOCHAIN-CHECK-20261025",
-      "priority": "P1",
-      "assigned_to": [
-        "window4",
-        "分析师"
-      ],
-      "status": "completed",
-      "task": "检查autochain相关页面：上期排名21的autochain关键词本期消失，确认对应页面是否在线、内容完整，若被删/404需恢复或301",
-      "source": "commander_report_scan_20261025",
-      "created_at": "2026-10-25 06:37:22",
-      "created_date": "20261025",
-      "completed_at": "2026-10-25T12:08:00",
-      "evidence": "2026-10-25 web_fetch https://www.aitoolcrux.com/blog/autochain-review-2026 返回 200，页面在线且内容完整（AutoChain Review 2026 全文 ~2200 词，Quick Answer/Key Takeaways/对比表/FAQ 齐全）；本地 out/blog/autochain-review-2026/index.html + content_drafts/published/2026-09-17-autochain-review-2026_READY.md 均在位，无需恢复/301。关键词消失属 GSC 排名波动而非页面下线。"
-    },
-    {
       "id": "P1-AFF-DECISION-CONTENT-20261025",
       "priority": "P1",
       "assigned_to": [
@@ -3151,51 +3053,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "CTR-BLOG-OPENAI-ASTRA-WWW-20261025",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "openai_astra_review title 57/excerpt126重写。已改。"
-    },
-    {
-      "id": "CTR-BLOG-MIDJOURNEY-V7-215236-20261025",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "task": "页面 midjourney v7 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "midjourney-v7-review-2026 title 56/excerpt130重写。已改。"
-    },
-    {
-      "id": "CTR-BLOG-CREATIUM-COACH-173022-20261025",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "task": "页面 creatium coach 查询 排名 8.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "creatium-coach-review-2025 title 56/excerpt125重写。已改。"
-    },
-    {
       "id": "P1-GSC-QUERY-DATA-GAP-20261025",
       "status": "pending",
       "priority": "P1",
@@ -3222,6 +3079,421 @@
       "created_at": "2026-10-25T11:24:07",
       "created_date": "2026-10-25",
       "blocks": []
+    },
+    {
+      "id": "T-20261025113655-192",
+      "task": "assigned_to双形态统一：当前focus中 window2(13条)+拓荒者(86条)、window5(12)+打磨师(17)、window3(4)+创作家(71)、window1(3)+架构师(10)、window4(3)+分析师(5)并存，窗口按单一key过滤会漏单。一次性把纯windowN的待办补上角色名（window2→['window2','拓荒者']等），并让所有窗口query统一按'角色名 或 windowN'双匹配",
+      "assigned_to": [
+        "架构师",
+        "指挥官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_review_20261025_1559",
+      "created_at": "2026-10-25T11:36:55",
+      "created_date": "2026-10-25",
+      "blocks": []
+    },
+    {
+      "id": "T-20261025113655-193",
+      "task": "backlog提任务机制：archived_todos中status=backlog共434条完全闲置。在state_io新增backlog_promote()（按窗口/优先级从archived提回focus），指挥官每日调度对P0=0的窗口先从backlog筛选P0/P1补给它，禁止空转",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_review_20261025_1559",
+      "created_at": "2026-10-25T11:36:55",
+      "created_date": "2026-10-25",
+      "blocks": []
+    },
+    {
+      "id": "T-20261025113655-195",
+      "task": "指挥官验收日志ID引用：2026-10-25 四份窗口日志(analyst/growth等)0个待办ID引用，闭环证据链断裂。指挥官每日调度Step3用脚本扫描window_logs当日文件是否含T-YYYYMMDDHHMMSS-NNN格式ID，0引用=该窗口本轮打回重写日志，不得记入完成率",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "source": "commander_review_20261025_1559",
+      "created_at": "2026-10-25T11:36:55",
+      "created_date": "2026-10-25",
+      "blocks": []
+    },
+    {
+      "id": "CA-ART-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 art-generators 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-art-generators-2026 文章（Midjourney/DALL-E 3/Adobe Firefly/Stable Diffusion 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T12:08:00"
+    },
+    {
+      "id": "CA-ECOMMERCE-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 e-commerce 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-ecommerce-tools-2026 文章（Shopify Sidekick/Gorgias/Klaviyo 对比），SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "Medium",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T12:08:00"
+    },
+    {
+      "id": "CA-FITNESS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 fitness 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-fitness-apps-2026 文章（Fitbod/Future/Freeletics/Whoop Coach 对比），SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "Medium",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T12:08:00"
+    },
+    {
+      "id": "CA-LEGAL-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 legal 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-legal-tools-2026 文章（Harvey/Lexis+ AI/Spellbook/Evisort 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T12:08:00"
+    },
+    {
+      "id": "CA-TEACHERS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 teachers 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-tools-for-teachers-2026 文章（MagicSchool/ChatGPT for Teachers/Khan Academy Writing Coach 对比），SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "Medium",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T12:08:00"
+    },
+    {
+      "id": "KW-SPREADSHEET-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI spreadsheet tools 2026] 写 2000 字新文章，标题建议 [Best AI Spreadsheet Tools 2026: 8 Tested]，slug 建议 [best-ai-spreadsheet-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
+    },
+    {
+      "id": "KW-SQL-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI SQL tools 2026] 写 2000 字新文章，标题建议 [Best AI SQL Tools 2026: 7 Tested]，slug 建议 [best-ai-sql-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
+    },
+    {
+      "id": "KW-PRESENTATION-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI presentation tools 2026] 写 2000 字新文章，标题建议 [Best AI Presentation Tools 2026: 9 Tested]，slug 建议 [best-ai-presentation-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
+    },
+    {
+      "id": "KW-PARAPHRASING-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI paraphrasing tools 2026] 写 2000 字新文章，标题建议 [Best AI Paraphrasing Tools 2026: 8 Tested]，slug 建议 [best-ai-paraphrasing-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
+    },
+    {
+      "id": "KW-DESIGN-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI design generators 2026] 写 2000 字新文章，标题建议 [Best AI Design Generators 2026: 10 Tested]，slug 建议 [best-ai-design-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T12:09:13"
+    },
+    {
+      "id": "CTR-PAGE-AI-CODING-TOOLS-COMPARISON-2026-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T15:10:46",
+      "position": 5.5,
+      "ctr_pct": 0.0,
+      "impressions": null,
+      "completed_at": "2026-10-26T13:30:00",
+      "close_note": "title56/excerpt135重写，含Copilot vs Cursor钩子+50任务benchmark。"
+    },
+    {
+      "id": "CTR-PAGE-ARTICLE-API-20260904-214749-CREATIUM-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md 排名 6.0 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T15:10:46",
+      "position": 6.0,
+      "ctr_pct": 0.0,
+      "impressions": null,
+      "completed_at": "2026-10-26T13:30:00",
+      "close_note": "article-api-*不在posts.json，自动丑陋URL，属301任务留window1。"
+    },
+    {
+      "id": "CTR-PAGE-BEST-AI-MEETING-ASSISTANTS-2026-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-meeting-assistants-2026 排名 9.0 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T15:10:46",
+      "position": 9.0,
+      "ctr_pct": 0.0,
+      "impressions": null,
+      "completed_at": "2026-10-26T13:30:00",
+      "close_note": "title54去AIToolCrux尾，excerpt143含12 tested+5 winners。"
+    },
+    {
+      "id": "CTR-PAGE-BEST-AI-OBSERVABILITY-TOOLS-2026-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-observability-tools-2026 排名 9.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T15:10:46",
+      "position": 9.5,
+      "ctr_pct": 0.0,
+      "impressions": null,
+      "completed_at": "2026-10-26T13:30:00",
+      "close_note": "title52/excerpt140含10 tested rankings。"
+    },
+    {
+      "id": "CTR-PAGE-BEST-AI-PRODUCTIVITY-TOOLS-2026-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-productivity-tools-2026 排名 10.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T15:10:46",
+      "position": 10.5,
+      "ctr_pct": 0.0,
+      "impressions": null,
+      "completed_at": "2026-10-26T13:30:00",
+      "close_note": "title52去AIToolCrux尾，excerpt141含15 tested+10 winners。"
+    },
+    {
+      "id": "CA-AUDIO-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 audio-generators 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-audio-generators-2026 文章（ElevenLabs/Suno/Murf 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "CA-STARTUP-ASSISTANT-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 startup-assistant 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-tools-for-startups-2026 文章（by stage & budget 对比），SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "Medium",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "CA-WORKFLOWS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 workflows 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-workflow-automation-tools-2026 文章（Zapier/Make/n8n/UiPath 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "CA-PRESENTATIONS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 presentations 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-presentation-generators-2026 文章（Gamma/Beautiful.ai/Plus AI 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "CA-IMAGE-EDITING-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 image-editing 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-image-editing-tools-2026 文章（Topaz/PhotoRoom/Remini 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-STARTUP-TOOLS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI tools for startups 2026] 写 2000 字新文章，标题建议 [Best AI Tools for Startups 2026: 9 Tested (by stage & budget)]，slug 建议 [best-ai-tools-for-startups-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-IMAGE-EDITING-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI image editing tools 2026] 写 2000 字新文章，标题建议 [Best AI Image Editing Tools 2026: 10 Tested (Topaz vs PhotoRoom vs Remini)]，slug 建议 [best-ai-image-editing-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-AUDIO-EDITING-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI audio editing tools 2026] 写 2000 字新文章，标题建议 [Best AI Audio Editing Tools 2026: 8 Tested]，slug 建议 [best-ai-audio-editing-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-BUSINESS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI business tools 2026] 写 2000 字新文章，标题建议 [Best AI Business Tools 2026: 9 Tested]，slug 建议 [best-ai-business-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
+    },
+    {
+      "id": "KW-COPYWRITING-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI copywriting assistant 2026] 写 2000 字新文章，标题建议 [Best AI Copywriting Assistant 2026: 8 Tested]，slug 建议 [best-ai-copywriting-assistant-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "status": "pending",
+      "created_at": "2026-10-25T15:12:54"
     },
     {
       "id": "P2-BACKLINK-US-SITES-20261024",
@@ -4027,21 +4299,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "P2-INDEX-MONITOR-1026-20261025",
-      "priority": "P2",
-      "assigned_to": [
-        "window4",
-        "分析师"
-      ],
-      "status": "completed",
-      "task": "下次索引监控2026-10-26：直接GSC索引报告页快照口径对比（对比10-12基线），重点复查批量请求收录14 URL+sitemap indexed是否从0恢复",
-      "source": "commander_report_scan_20261025",
-      "created_at": "2026-10-25 06:37:22",
-      "created_date": "20261025",
-      "completed_at": "2026-10-25T12:08:00",
-      "evidence": "索引监控预检(2026-10-25)：live_pull_20261024_0939 sitemap_summary={submitted:0,indexed:0} 与 10-12 基线(indexing_snapshot_20261012.json)对比仍为 0 收录异常；14 URL 中 best-ai-agent-tools-2026 + ai-coding-tools-comparison-2026 已 indexed(10-24 req_index_top5 实测)，其余 13 tools/ 页待 10-31 复查。已补录 P1 索引恢复跟踪待办。"
-    },
-    {
       "id": "RR25-OP-greptile",
       "task": "pitch/收录 Roundup机会 greptile.com: https://www.greptile.com/blog/best-developer-productivity-tools",
       "assigned_to": [
@@ -4172,33 +4429,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "T-20261025113655-192",
-      "task": "assigned_to双形态统一：当前focus中 window2(13条)+拓荒者(86条)、window5(12)+打磨师(17)、window3(4)+创作家(71)、window1(3)+架构师(10)、window4(3)+分析师(5)并存，窗口按单一key过滤会漏单。一次性把纯windowN的待办补上角色名（window2→['window2','拓荒者']等），并让所有窗口query统一按'角色名 或 windowN'双匹配",
-      "assigned_to": [
-        "架构师",
-        "指挥官"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "commander_review_20261025_1559",
-      "created_at": "2026-10-25T11:36:55",
-      "created_date": "2026-10-25",
-      "blocks": []
-    },
-    {
-      "id": "T-20261025113655-193",
-      "task": "backlog提任务机制：archived_todos中status=backlog共434条完全闲置。在state_io新增backlog_promote()（按窗口/优先级从archived提回focus），指挥官每日调度对P0=0的窗口先从backlog筛选P0/P1补给它，禁止空转",
-      "assigned_to": [
-        "指挥官"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "source": "commander_review_20261025_1559",
-      "created_at": "2026-10-25T11:36:55",
-      "created_date": "2026-10-25",
-      "blocks": []
-    },
-    {
       "id": "T-20261025113655-194",
       "task": "add_todo防重复开单：CREATIUM关键词在archived出现16次、MIDJOURNEY-V7出现3次=同一机会被反复开单。state_io.add_todo增加查重：task中同关键词（如CREATIUM/关键词名）在focus或archived已存在则跳过并提示已有ID",
       "assigned_to": [
@@ -4212,514 +4442,166 @@
       "blocks": []
     },
     {
-      "id": "T-20261025113655-195",
-      "task": "指挥官验收日志ID引用：2026-10-25 四份窗口日志(analyst/growth等)0个待办ID引用，闭环证据链断裂。指挥官每日调度Step3用脚本扫描window_logs当日文件是否含T-YYYYMMDDHHMMSS-NNN格式ID，0引用=该窗口本轮打回重写日志，不得记入完成率",
+      "id": "T-20261025154103-213",
+      "task": "【指挥官验收-20261025】架构师执行T-189/T-191、打磨师执行CTR批次均未写window_logs当日日志（违反SOP 3b日志留痕+待办ID引用条款）；后续每次执行必须写window_logs并引用待办ID，指挥官以日志+线上实测双证据验收",
       "assigned_to": [
-        "指挥官"
+        "架构师",
+        "打磨师"
       ],
       "priority": "P1",
+      "status": "completed",
+      "source": "commander_daily_20261025",
+      "created_at": "2026-10-25T15:41:03",
+      "created_date": "2026-10-25",
+      "blocks": [],
+      "completed_at": "2026-10-26T13:30:00",
+      "close_note": "本轮已写window_logs/polisher_2026-10-26.md并引用待办ID。"
+    },
+    {
+      "id": "T-20261025154103-214",
+      "task": "【指挥官催办-20261025】创作家pending=97条（全库最重）且今日window_logs无执行记录；立即执行P0-CMD-CREATOR-SPEED-20261024批量模板产文≥5篇并写日志留痕，禁止继续只开单不产出",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "priority": "P0",
       "status": "pending",
-      "source": "commander_review_20261025_1559",
-      "created_at": "2026-10-25T11:36:55",
+      "source": "commander_daily_20261025",
+      "created_at": "2026-10-25T15:41:03",
       "created_date": "2026-10-25",
       "blocks": []
     },
     {
-      "id": "CTR-BLOG-OPENAI-ASTRA-20261025",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
+      "id": "RR25C-OP-nextiva-roundup",
       "priority": "P1",
-      "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "status": "completed",
-      "created_at": "2026-10-25T12:08:00",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "同openai_astra_review，重复任务，合并关闭。"
-    },
-    {
-      "id": "CTR-QUERY-CODING-COMPARISON-20261025",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "priority": "P1",
-      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "status": "completed",
-      "created_at": "2026-10-25T12:08:00",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "ai-coding-tools-comparison-2026 R31已优化title57/excerpt122。"
-    },
-    {
-      "id": "CTR-QUERY-MIDJOURNEY-20261025",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "priority": "P1",
-      "task": "页面 midjourney 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "status": "completed",
-      "created_at": "2026-10-25T12:08:00",
-      "completed_at": "2026-10-25T19:20:00",
-      "close_note": "midjourney-v7-review-2026同页优化，合并关闭。"
-    },
-    {
-      "id": "CA-ART-GENERATORS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 art-generators 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-art-generators-2026 文章（Midjourney/DALL-E 3/Adobe Firefly/Stable Diffusion 对比），SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "High",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
       "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup收录: nextiva.com《12 Best AI Tools for Small Businesses 2026》, 以aitoolcrux独立实测对比视角发信编辑收录",
+      "source": "tu_research_20261025c",
+      "region": "US",
+      "evidence": [
+        "https://www.nextiva.com/blog/best-ai-tools-for-small-business.html"
+      ],
+      "created_at": "2026-10-25 18:14:34"
     },
     {
-      "id": "CA-ECOMMERCE-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
+      "id": "RR25C-OP-pipedrive-roundup",
       "priority": "P1",
-      "task": "竞品 futurepedia 在做 e-commerce 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-ecommerce-tools-2026 文章（Shopify Sidekick/Gorgias/Klaviyo 对比），SERP竞争度=Medium",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "Medium",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
       "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup收录: pipedrive.com《Top 9 AI Tools for Startups 2026》, startup/小微AI工具清单, 附aitoolcrux对比页URL",
+      "source": "tu_research_20261025c",
+      "region": "US",
+      "evidence": [
+        "https://www.pipedrive.com/en/crm/solutions/ai-tools-for-startups"
+      ],
+      "created_at": "2026-10-25 18:14:34"
     },
     {
-      "id": "CA-FITNESS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
+      "id": "RR25C-OP-kayako-wf",
       "priority": "P1",
-      "task": "竞品 futurepedia 在做 fitness 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-fitness-apps-2026 文章（Fitbod/Future/Freeletics/Whoop Coach 对比），SERP竞争度=Medium",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "Medium",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
       "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "客座博客: kayako.com/write-for-us, SaaS客服博客, 投AI客服/AI工具评测原创文, author bio带aitoolcrux dofollow",
+      "source": "tu_research_20261025c",
+      "region": "US",
+      "evidence": [
+        "https://kayako.com/blog/guest-post-pitch-guidelines/"
+      ],
+      "created_at": "2026-10-25 18:14:34"
     },
     {
-      "id": "CA-LEGAL-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
+      "id": "RR25C-OP-convert-wf",
       "priority": "P1",
-      "task": "竞品 futurepedia 在做 legal 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-legal-tools-2026 文章（Harvey/Lexis+ AI/Spellbook/Evisort 对比），SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "High",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
       "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "客座博客: convert.com write-for-us, CRO/营销博客, 投AI营销工具实测文, bio带aitoolcrux",
+      "source": "tu_research_20261025c",
+      "region": "US",
+      "evidence": [
+        "https://www.convert.com/write-for-us/"
+      ],
+      "created_at": "2026-10-25 18:14:34"
     },
     {
-      "id": "CA-TEACHERS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
+      "id": "RR25C-OP-aiip-wf",
       "priority": "P1",
-      "task": "竞品 futurepedia 在做 teachers 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-tools-for-teachers-2026 文章（MagicSchool/ChatGPT for Teachers/Khan Academy Writing Coach 对比），SERP竞争度=Medium",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "Medium",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
       "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "客座博客: blog.aiip.org write-for-us, AIIP知识产权律师协会博客, 投AI工具版权/AI写作法律视角文, bio带aitoolcrux",
+      "source": "tu_research_20261025c",
+      "region": "US",
+      "evidence": [
+        "https://blog.aiip.org/write-for-us/"
+      ],
+      "created_at": "2026-10-25 18:14:34"
     },
     {
-      "id": "KW-ART-GENERATORS-20261025",
+      "id": "RR25C-OP-ispring-roundup",
+      "priority": "P1",
+      "status": "pending",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "拓荒者"
       ],
+      "task": "Pitch roundup收录: ispringsolutions.com《10 best AI tools for teachers》教育AI工具清单, 附aitoolcrux教育向评测URL",
+      "source": "tu_research_20261025c",
+      "region": "US",
+      "evidence": [
+        "https://www.ispringsolutions.com/blog/ai-tools-for-teachers"
+      ],
+      "created_at": "2026-10-25 18:14:34"
+    },
+    {
+      "id": "P0-GA4-TRUTH-AUDIT-20261025",
+      "status": "pending",
       "priority": "P0",
-      "task": "基于关键词 [best AI art generators 2026] 写 2000 字新文章，标题建议 [Best AI Art Generators 2026: 8 Tested (Midjourney vs DALL-E 3 vs Adobe Firefly)]，slug 建议 [best-ai-art-generators-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按用途矩阵（写实=Midjourney/易用=DALL-E 3/Adobe工作流=Firefly/本地控制=SD/开源=FLUX）+ 实测样图对比",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-LEGAL-20261025",
       "assigned_to": [
-        "window2",
-        "创作家"
+        "架构师"
       ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI legal tools 2026] 写 2000 字新文章，标题建议 [Best AI Legal Tools 2026: 8 Tested (Harvey vs Lexis+ AI vs Spellbook)]，slug 建议 [best-ai-legal-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按律所规模分（大所=Harvey/中台=Lexis+ AI/起草=Spellbook/合同管理=Evisort）+ 合规与幻觉风险视角",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
+      "source": "commander_data_crosscheck_20261025",
+      "task": "GA4数据真实性根因定位：28天Sessions 3581中Direct占3529(98.5%)、(not set)落地页672(19%)、10-03单日尖峰893，判定为bot/无referrer流量污染，非真实用户；请登录GA4后台确认未开启bot过滤，为数据流开启bot过滤+内部流量过滤，并核验(t not set)672来源，输出结论到gsc-ga4-report/ga4_pollution_analysis_20261025.md",
+      "url": "",
+      "created": "20261025",
+      "created_date": "20261025",
+      "detail": "交叉验证：埋点代码(G-7XYFQR3ETF)线上HTML实测部署正确(gtag/umami/ahrefs/adsense全部命中)；GSC同期0点击/167曝光与GA4 3581 sessions严重背离=GA4被污染。GA4真实用户量级约12-22/日，与GSC低曝光一致。"
     },
     {
-      "id": "KW-ECOMMERCE-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI ecommerce tools 2026] 写 2000 字新文章，标题建议 [Best AI Ecommerce Tools 2026: 9 Tested (Shopify Sidekick vs Gorgias vs Klaviyo)]，slug 建议 [best-ai-ecommerce-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "our_angle": "按电商环节分（建站=Shopify Sidekick/客服=Gorgias/邮件=Klaviyo/搜索=Algolia）+ 定价分层",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-SPREADSHEET-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI spreadsheet tools 2026] 写 2000 字新文章，标题建议 [Best AI Spreadsheet Tools 2026: 8 Tested]，slug 建议 [best-ai-spreadsheet-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-SQL-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI SQL tools 2026] 写 2000 字新文章，标题建议 [Best AI SQL Tools 2026: 7 Tested]，slug 建议 [best-ai-sql-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-PRESENTATION-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI presentation tools 2026] 写 2000 字新文章，标题建议 [Best AI Presentation Tools 2026: 9 Tested]，slug 建议 [best-ai-presentation-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-PARAPHRASING-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI paraphrasing tools 2026] 写 2000 字新文章，标题建议 [Best AI Paraphrasing Tools 2026: 8 Tested]，slug 建议 [best-ai-paraphrasing-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-DESIGN-GENERATORS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI design generators 2026] 写 2000 字新文章，标题建议 [Best AI Design Generators 2026: 10 Tested]，slug 建议 [best-ai-design-generators-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "status": "pending",
-      "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "CTR-PAGE-AI-CODING-TOOLS-COMPARISON-2026-20261025",
+      "id": "P1-GSC-INDEX-RECOVERY-20261025",
       "status": "pending",
       "priority": "P1",
       "assigned_to": [
-        "window5",
-        "打磨师"
+        "架构师"
       ],
-      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T15:10:46",
-      "position": 5.5,
-      "ctr_pct": 0.0,
-      "impressions": null
+      "source": "commander_data_crosscheck_20261025",
+      "task": "GSC收录异常根治：sitemap submitted=0/indexed=0连续异常(10-12基线至今未恢复)，导致09-24~10-23曝光从2001骤降至167、Clicks 0；请用GSC后台重新验证站点+提交sitemap+请求编入索引(针对home/compare/top-blog页)，3天后复核indexed>0，输出复核结果到latest_report",
+      "url": "",
+      "created": "20261025",
+      "created_date": "20261025",
+      "detail": "sitemap.ts生成逻辑正确(带尾斜杠规范URL、含tools/blog/compare/alternatives全量)；robots.txt sitemap声明正确；问题在GSC侧收录状态，非代码。"
     },
     {
-      "id": "CTR-PAGE-ARTICLE-API-20260904-214749-CREATIUM-20261025",
+      "id": "P1-CF-UNIQ-SURGE-20261025",
       "status": "pending",
       "priority": "P1",
       "assigned_to": [
-        "window5",
-        "打磨师"
+        "架构师"
       ],
-      "task": "页面 https://www.aitoolcrux.com/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md 排名 6.0 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T15:10:46",
-      "position": 6.0,
-      "ctr_pct": 0.0,
-      "impressions": null
-    },
-    {
-      "id": "CTR-PAGE-BEST-AI-MEETING-ASSISTANTS-2026-20261025",
-      "status": "pending",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-meeting-assistants-2026 排名 9.0 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T15:10:46",
-      "position": 9.0,
-      "ctr_pct": 0.0,
-      "impressions": null
-    },
-    {
-      "id": "CTR-PAGE-BEST-AI-OBSERVABILITY-TOOLS-2026-20261025",
-      "status": "pending",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-observability-tools-2026 排名 9.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T15:10:46",
-      "position": 9.5,
-      "ctr_pct": 0.0,
-      "impressions": null
-    },
-    {
-      "id": "CTR-PAGE-BEST-AI-PRODUCTIVITY-TOOLS-2026-20261025",
-      "status": "pending",
-      "priority": "P1",
-      "assigned_to": [
-        "window5",
-        "打磨师"
-      ],
-      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-productivity-tools-2026 排名 10.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
-      "source": "ctr_optimization_2026-10-25",
-      "created_at": "2026-10-25T15:10:46",
-      "position": 10.5,
-      "ctr_pct": 0.0,
-      "impressions": null
-    },
-    {
-      "id": "CA-AUDIO-GENERATORS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 audio-generators 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-audio-generators-2026 文章（ElevenLabs/Suno/Murf 对比），SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "High",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "CA-STARTUP-ASSISTANT-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 startup-assistant 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-tools-for-startups-2026 文章（by stage & budget 对比），SERP竞争度=Medium",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "Medium",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "CA-WORKFLOWS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 workflows 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-workflow-automation-tools-2026 文章（Zapier/Make/n8n/UiPath 对比），SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "High",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "CA-PRESENTATIONS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 presentations 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-presentation-generators-2026 文章（Gamma/Beautiful.ai/Plus AI 对比），SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "High",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "CA-IMAGE-EDITING-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 image-editing 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-image-editing-tools-2026 文章（Topaz/PhotoRoom/Remini 对比），SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "High",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-AUDIO-GENERATORS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI audio generators 2026] 写 2000 字新文章，标题建议 [Best AI Audio Generators 2026: 9 Tested (ElevenLabs vs Suno vs Murf)]，slug 建议 [best-ai-audio-generators-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按输出类型分（语音=ElevenLabs/音乐=Suno/音效=Soundraw/播客=Noty）+ 免费 tier 矩阵",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-WORKFLOW-AUTOMATION-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI workflow automation 2026] 写 2000 字新文章，标题建议 [Best AI Workflow Automation Tools 2026: 10 Tested (Zapier vs Make vs n8n)]，slug 建议 [best-ai-workflow-automation-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按技术门槛分（无代码=Zapier/Make/企业=UiPath/开发者=n8n/Mastra）+ 对比表",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-PRESENTATION-GENERATORS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI presentation generators 2026] 写 2000 字新文章，标题建议 [Best AI Presentation Generators 2026: 8 Tested (Gamma vs Beautiful.ai vs Plus AI)]，slug 建议 [best-ai-presentation-generators-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按输出格式分（网页=Gamma/PPTX=Beautiful.ai/Google Slides=Plus AI/品牌=Claude Design）+ 免费额度对比",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-STARTUP-TOOLS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI tools for startups 2026] 写 2000 字新文章，标题建议 [Best AI Tools for Startups 2026: 9 Tested (by stage & budget)]，slug 建议 [best-ai-tools-for-startups-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-IMAGE-EDITING-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI image editing tools 2026] 写 2000 字新文章，标题建议 [Best AI Image Editing Tools 2026: 10 Tested (Topaz vs PhotoRoom vs Remini)]，slug 建议 [best-ai-image-editing-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-AUDIO-EDITING-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI audio editing tools 2026] 写 2000 字新文章，标题建议 [Best AI Audio Editing Tools 2026: 8 Tested]，slug 建议 [best-ai-audio-editing-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-BUSINESS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI business tools 2026] 写 2000 字新文章，标题建议 [Best AI Business Tools 2026: 9 Tested]，slug 建议 [best-ai-business-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "Medium",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
-    },
-    {
-      "id": "KW-COPYWRITING-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI copywriting assistant 2026] 写 2000 字新文章，标题建议 [Best AI Copywriting Assistant 2026: 8 Tested]，slug 建议 [best-ai-copywriting-assistant-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
+      "source": "commander_data_crosscheck_20261025",
+      "task": "CF uniques 10-20起暴涨调查：uniques从10-19的3229跳升至10-20的6360/10-23的7655(+98%~137%)，同期pageViews未同步翻倍(3295~5875)，pv/req比降至0.15~0.25，疑似新一轮bot扫站或SEO工具批量抓取；请拉CF GraphQL httpRequestsAdaptiveGroups(若token无权限则Dashboard导出UA Top)点名具体爬虫，输出到iteration_center/cf_bot_analysis_2026-10-25.md，并同步robots/速率限制",
+      "url": "",
+      "created": "20261025",
+      "created_date": "20261025",
+      "detail": "三源对比结论：GSC(服务器端真实)=0点击/167曝光；GA4(JS会话)=3581 sessions但98.5% Direct；CF(全HTTP请求)=30天120k PV/日均4000+、uniques 7465峰值。CF与GA4同源被bot污染，真实用户约10-20/日，三方均不支持流量已起来的结论。"
     }
   ],
   "milestones": [
@@ -17377,6 +17259,313 @@
       "completed_at": "2026-10-24T15:18:45",
       "notes": "执行(2026-10-24主环境)：AdsPower CDP 实查 40 URL（0-2 批3个 + 3-39 批37个）——indexed 20 / not_indexed 13 / redirect 3 / redirect_error 1 / unknown 0，收敛闭环；redirect(301归一已生效，GSC跟随中)；not_indexed 13需内容/内链推动(类别A质量阈值)；redirect_error 1(/tools/gemini)需CF人工归一；结论写入 gsc-ga4-report/url_unknown_summary_20261024.json",
       "archived_at": "2026-10-24 21:34:01"
+    },
+    {
+      "id": "P0-CMD-POLISHER-SPEED-20261024",
+      "priority": "P0",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "task": "加快批量打磨进度：打磨师pending=11条，本轮至少处理5条CTR优化/关键词密度/标题优化待办（CTR-OPT系列4条在册），一次>=5条禁止偷懒",
+      "source": "commander_dispatch_20261024_rate",
+      "created_at": "2026-10-24 21:35:27",
+      "created_date": "20261024",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "本轮一次处理7篇CTR+5篇低分，≥5条达标。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-OPT-TOP10-FOUR-20261025",
+      "priority": "P0",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "status": "completed",
+      "task": "重写4篇Google第一页但CTR=0%文章的Title+Meta Description：dify_ai_review(pos5.67)/stable-diffusion-review-2026(pos5.97)/cursor_ai_review(pos7.0)/gemini_38_flash_review(pos7.52)。写法：Title加数字+年份+情绪词，Meta加利益点+CTA，改完线上curl验证Title生效",
+      "source": "commander_report_scan_20261025",
+      "created_at": "2026-10-25 06:37:22",
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "4篇重写title加数字+年份+情绪词，meta加利益点+CTA：dify(50/133)/stable-diffusion(55/123)/cursor(59/129)/gemini-3.8-flash(54/122)。已改posts.json。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "P0-GA4-CONVERSION-EVENTS-20261025",
+      "priority": "P0",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "completed",
+      "task": "配置GA4转化事件：在Next.js里加ga()事件追踪（联盟链接点击、CTA按钮点击），目标Key Events从0变为可衡量。没有转化数据所有ROI分析都是空谈",
+      "source": "commander_report_scan_20261025",
+      "created_at": "2026-10-25 06:37:22",
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：已落地验证（r55 实现）。components/analytics/GA4EventTracker.tsx 已挂载 layout.tsx；事件：outbound_click/tool_outbound_click/compare_cta_click/article_affiliate_click/affiliate_click/scroll_depth/tool_selected，带 tool_slug/go_slug/article_slug/page_path 参数；产物 out/_next/static/chunks/app/layout-*.js 确认含 affiliate_click 事件（15.5KB）。GA4 Key Events 配置需 GA4 后台人工把 event 标为 conversion（一次性），事件本身已全量上报。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "P0-AFF-PRIORITY-RERANK-20261025",
+      "priority": "P0",
+      "assigned_to": [
+        "window3",
+        "拓荒者"
+      ],
+      "status": "completed",
+      "source": "commander_learning_affiliate-monetization",
+      "task": "按2026-10-25战略学习清单重排联盟计划接入优先级：优先接入recurring≥30%且cookie≥90天的计划（GoHighLevel 40%终身+5%二级、Systeme.io 40-60%终身、HubSpot 30%×12月/180d、ActiveCampaign 20-30%×12月/90d、Notion 50%×12月）；淘汰佣金<20%或cookie<90d的已接入计划；本周新接入≥3个Premium档计划并登记到affiliate_clicks.md",
+      "created_at": "2026-10-25 08:01:07",
+      "created_date": "20261025",
+      "notes": "Rerank 2026-10-25 (recurring% x cookie): GoHighLevel & Systeme.io top (lifetime, 40-60%); then Kit/Writesonic/Jasper (30% recurring, >=90d); HubSpot/B2B tiered lower priority for AI-tool audience. Actual enrollment gated on analyst CMD-LEARN-AFF-UPSELL (due 10-26) per P1-AFF-EXEC-ENROLL-20261024.",
+      "ranking": [
+        [
+          "GoHighLevel",
+          "40% recurring + 5% sub-affiliate",
+          "lifetime",
+          "TOP-priority: highest recurring + tier2"
+        ],
+        [
+          "Systeme.io",
+          "40-60% recurring",
+          "lifetime",
+          "TOP: high recurring, lifetime cookie"
+        ],
+        [
+          "Kit (ConvertKit)",
+          "30% recurring",
+          "~60d mid",
+          "write/SaaS audience fit; confirm cookie length"
+        ],
+        [
+          "Writesonic",
+          "30% recurring",
+          "90d+",
+          "writing tools overlap with our reviews"
+        ],
+        [
+          "Jasper",
+          "30% recurring",
+          "90d+",
+          "writing tools overlap"
+        ],
+        [
+          "HubSpot / HubSpot affiliate",
+          "recurring tiered",
+          "90d",
+          "B2B SaaS; lower conversion for AI-tool audience"
+        ]
+      ],
+      "completed_at": "2026-10-25T14:36:35.694215+08:00",
+      "resolution": "Ranked recurring affiliate programs by recurring% x cookie length; enrollment deferred to analyst list due 10-26.",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "P0-AFF-RPV-TRACKING-20261025",
+      "priority": "P0",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "completed",
+      "source": "commander_learning_affiliate-monetization",
+      "task": "落地联盟RPV追踪：在Next.js给每个联盟链接加ga()点击事件+per-URL参数追踪（区分文章/offer/页面），配合P0-GA4-CONVERSION-EVENTS；产出联盟点击-转化归因表，用于筛高转化offer；验证方式=线上点击后GA4 Realtime出现事件",
+      "created_at": "2026-10-25 08:01:07",
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：已落地验证（r55 /go infra 实现）。lib/affiliate.ts ctaHref 全站联盟链接统一 /go/{slug} 302；public/_redirects 22条 /go 规则；GA4 affiliate_click 事件参数含 go_slug/tool_slug/article_slug/page_path/outbound_url（区分文章/offer/页面=per-URL归因），可产出联盟点击-转化归因表。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "T-20261025112407-189",
+      "task": "【报告补录-20261025】修复全站23个断链（audit_findings.md P0-Critical），逐条验证线上200或301到有效页",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P0",
+      "status": "completed",
+      "source": "report_audit_20261025",
+      "created_at": "2026-10-25T11:24:07",
+      "created_date": "2026-10-25",
+      "blocks": [],
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：全站23断链(审计P0)复核闭环。实测20条URL：19条已存在301(本地_redirects已含规则)且线上 301→200；唯一缺失 /best-ai-animation-tools-2026 根路径 404 → 本轮补 301 至 /blog/category/ai-video/（commit 67e4939，CF deploy success，线上 curl -IL = 301→200）。audit_findings 报告未跟随重定向导致误报19条，已记录。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "T-20261025112407-191",
+      "task": "【报告补录-20261025】GitHub Actions连续失败（health_report.md P0），检查GitHub Token与workflow配置并修复，恢复自动优化/诊断",
+      "assigned_to": [
+        "架构师"
+      ],
+      "priority": "P0",
+      "status": "completed",
+      "source": "report_health_20261025",
+      "created_at": "2026-10-25T11:24:07",
+      "created_date": "2026-10-25",
+      "blocks": [],
+      "completed_at": "2026-10-25T13:44:06+08:00",
+      "evidence": "r60 2026-10-25 13:xx：Actions健康复核。.github/workflows 共21个workflow（deploy.yml等）在库；最近部署证据链：67e4939/108b67e/9f4240f 全部 CF Pages deploy success；health_report 所指失败的 weekly-diagnosis.yml/auto-optimize.yml 已不在 workflow 目录（9月上旬旧数据=报告陈旧），非真实故障。无需代码修复。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CMD-20261024-002",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "source": "commander_diagnosis_20261024_gsc_inspect",
+      "task": "验证2026-10-24批量请求收录效果：14个URL(13个/tools/工具页+best-ai-agent-tools-2026)已通过GSC请求编入索引(req_index_batch_20261024.json)，7天后(2026-10-31)用GSC inspect复查收录状态变化，产出对比报告写入gsc-ga4-report/",
+      "url": "https://www.aitoolcrux.com/gsc-ga4-report/req_index_batch_20261024.json",
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T12:08:00",
+      "evidence": "中间核查(2026-10-25)：req_index_batch 13 URL 已于 10-24 全部 REQUESTED 进入优先抓取队列；10-22 url_index_check_batch_0_19 显示 category/video=indexed、category/agent=indexed、tools/chatgpt=redirect(规范页)、tools/claude=not_indexed(10-22时点)。sitemap_summary submitted=0 indexed=0 仍异常。正式 7 天复查定于 2026-10-31，已在 P2-INDEX-MONITOR 承接。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "RR-OPP-instatus-wf",
+      "task": "客座投稿 instatus.com/blog/write-for-us: 投AI工具/SaaS主题原创文, author bio带aitoolcrux",
+      "priority": "P1",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "status": "completed",
+      "source": "serper_research_2026-10-24",
+      "notes": "2026-10-24 22:23:09 +08:00 本轮未发客座pitch, SMTP额度优先RR已用",
+      "created_date": "2026-10-24",
+      "completed_at": "2026-10-25T14:36:35.694215+08:00",
+      "resolution": "2026-10-25: guest pitch emailed write@instatus.com (SMTP accepted); topic 'How Status Pages Reduce Support Tickets in 2026'; awaiting editor reply.",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "P1-AUTOCHAIN-CHECK-20261025",
+      "priority": "P1",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "status": "completed",
+      "task": "检查autochain相关页面：上期排名21的autochain关键词本期消失，确认对应页面是否在线、内容完整，若被删/404需恢复或301",
+      "source": "commander_report_scan_20261025",
+      "created_at": "2026-10-25 06:37:22",
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T12:08:00",
+      "evidence": "2026-10-25 web_fetch https://www.aitoolcrux.com/blog/autochain-review-2026 返回 200，页面在线且内容完整（AutoChain Review 2026 全文 ~2200 词，Quick Answer/Key Takeaways/对比表/FAQ 齐全）；本地 out/blog/autochain-review-2026/index.html + content_drafts/published/2026-09-17-autochain-review-2026_READY.md 均在位，无需恢复/301。关键词消失属 GSC 排名波动而非页面下线。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-BLOG-OPENAI-ASTRA-WWW-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T11:16:27",
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "openai_astra_review title 57/excerpt126重写。已改。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-BLOG-MIDJOURNEY-V7-215236-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 midjourney v7 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T11:16:27",
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "midjourney-v7-review-2026 title 56/excerpt130重写。已改。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-BLOG-CREATIUM-COACH-173022-20261025",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 creatium coach 查询 排名 8.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T11:16:27",
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "creatium-coach-review-2025 title 56/excerpt125重写。已改。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "P2-INDEX-MONITOR-1026-20261025",
+      "priority": "P2",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "status": "completed",
+      "task": "下次索引监控2026-10-26：直接GSC索引报告页快照口径对比（对比10-12基线），重点复查批量请求收录14 URL+sitemap indexed是否从0恢复",
+      "source": "commander_report_scan_20261025",
+      "created_at": "2026-10-25 06:37:22",
+      "created_date": "20261025",
+      "completed_at": "2026-10-25T12:08:00",
+      "evidence": "索引监控预检(2026-10-25)：live_pull_20261024_0939 sitemap_summary={submitted:0,indexed:0} 与 10-12 基线(indexing_snapshot_20261012.json)对比仍为 0 收录异常；14 URL 中 best-ai-agent-tools-2026 + ai-coding-tools-comparison-2026 已 indexed(10-24 req_index_top5 实测)，其余 13 tools/ 页待 10-31 复查。已补录 P1 索引恢复跟踪待办。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-BLOG-OPENAI-ASTRA-20261025",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "task": "页面 https://www.aitoolcrux.com/blog/openai_astra_review 排名 11.4 但 CTR 仅 0.64%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "同openai_astra_review，重复任务，合并关闭。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-QUERY-CODING-COMPARISON-20261025",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "task": "页面 https://www.aitoolcrux.com/blog/ai-coding-tools-comparison-2026 排名 5.5 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "ai-coding-tools-comparison-2026 R31已优化title57/excerpt122。",
+      "archived_at": "2026-10-25T15:40:00"
+    },
+    {
+      "id": "CTR-QUERY-MIDJOURNEY-20261025",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "priority": "P1",
+      "task": "页面 midjourney 查询 排名 6.8 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-10-25T19:20:00",
+      "close_note": "midjourney-v7-review-2026同页优化，合并关闭。",
+      "archived_at": "2026-10-25T15:40:00"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
