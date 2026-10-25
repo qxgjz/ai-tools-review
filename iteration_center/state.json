@@ -1854,7 +1854,8 @@
       "block_note_20261022": "阻塞确认(10/22)：需在 ChatGPT Search/Perplexity/AI Overviews 实际 SERP 检索，当前无 GUI 浏览器会话；待浏览器环境或人工执行",
       "created_date": "2026-10-25",
       "status_note_20261025": "2026-10-25 复查：引用级 baseline 仍需浏览器跑 ChatGPT Search/Perplexity/AIO，无 GUI 会话，保持 pending（技术就绪度 8.94 已确认，缺引用级实测）",
-      "status_note_20261025_1509": "2026-10-25 15:09 复查：引用级 baseline 需浏览器跑 ChatGPT Search/Perplexity/AIO，本机无 GUI 会话；技术就绪度 8.94 已确认，缺引用级实测，保持 pending"
+      "status_note_20261025_1509": "2026-10-25 15:09 复查：引用级 baseline 需浏览器跑 ChatGPT Search/Perplexity/AIO，本机无 GUI 会话；技术就绪度 8.94 已确认，缺引用级实测，保持 pending",
+      "status_note_20261025_2106": "2026-10-25 21:06 复查：需浏览器跑 ChatGPT Search/Perplexity/AIO，本机无 GUI 会话，保持 pending"
     },
     {
       "task": "设置Reddit关键词监控：AI tool review / best AI / AI alternative / frustrated AI / waste of money，帖子2h内参与回答",
@@ -2470,7 +2471,8 @@
       "block_note_20261022": "阻塞确认(10/22)：本机 docker 命令不可用，无法部署 elmo；同一阻塞",
       "created_date": "2026-10-17",
       "status_note_20261025": "2026-10-25 复查：elmo 部署需 Docker，本机 docker 不可用，已被 P0-GEO-ELMO-TRACKER 承接，保持 pending",
-      "status_note_20261025_1509": "2026-10-25 15:09 复查：elmo 部署需 Docker，本机 docker 不可用；已被 P0-GEO-ELMO-TRACKER 承接，保持 pending"
+      "status_note_20261025_1509": "2026-10-25 15:09 复查：elmo 部署需 Docker，本机 docker 不可用；已被 P0-GEO-ELMO-TRACKER 承接，保持 pending",
+      "status_note_20261025_2106": "2026-10-25 21:06 复查：需 Docker 本机不可用，已被 P0-GEO-ELMO-TRACKER 承接，保持 pending"
     },
     {
       "task": "R15外链机会: 提交aitoolcrux到bestofai.io免费目录(200存活, submit+free信号, 一次审核进分类/职业/替代页), 附官网https://www.aitoolcrux.com与一句话简介",
@@ -4605,7 +4607,7 @@
     },
     {
       "id": "P0-GSC-INDEXED-ZERO-REPORT-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "数据分析师",
@@ -4613,7 +4615,9 @@
       ],
       "source": "commander_gsc_rootcause_20261025",
       "task": "GSC收录认知纠偏报告：sitemap API报submitted=881/indexed=0是GSC报告口径问题(已知bug, 站点存在301/308重定向链时sitemap indexed长期显示0)，真实收录=477/905(52.8%, indexing_snapshot_20261012)；向用户输出《真实收录基线》到gsc-ga4-report/gsc_indexed_baseline_20261025.md：总URL 905 / indexed 477 / not_indexed 428(其中discovered_not_indexed 400为最大类) / 周度跟踪真实收录率，纠正'收录是零'误判",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T21:08:14",
+      "evidence": "gsc_indexed_baseline_20261025.md 已产出：总URL 905 / indexed 477 (52.8%) / not_indexed 428 (discovered_not_indexed 400 为最大类)；纠正收录=0 误判（sitemap API 口径 bug + 301/308 重定向链）"
     },
     {
       "id": "P0-GSC-URL-CANONICAL-20261025",
@@ -4638,6 +4642,284 @@
       "source": "commander_gsc_rootcause_20261025",
       "task": "redirect_error修复：GSC URL检查category/chat、category/code、tools/gemini=redirect_error、category/productivity/audio/dev-tools/database/observability/tools/chatgpt=redirect；线上实测无尾斜杠URL(Googlebot UA)存在SSL握手超时/读取超时(疑似CF限速或回源慢)，带尾斜杠200正常；请①用Googlebot UA串行探测全category/tools页确认无尾斜杠超时范围 ②检查CF WAF/速率限制规则是否对Googlebot误伤(与10-20起uniques暴涨联动) ③确保回源稳定后GSC批量URL Inspection复核，输出到iteration_center/gsc_redirect_error_fix_20261025.md",
       "created_date": "2026-10-25"
+    },
+    {
+      "id": "P1-VERCEL-DOMAIN-CLEANUP-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "commander_vercel_email_20261025",
+      "task": "Vercel域配置残留清理：Vercel邮件通知qxgjz项目有2个配置错误的域(aitoolcrux.com、www.aitoolcrux.com)；DNS实测apex与www均解析到Cloudflare IP(104.21.75.243/172.67.184.10)，非Vercel标准IP 76.76.21.21，线上服务由Cloudflare提供(server头=cloudflare)，Vercel绑定属残留；请登录Vercel Dashboard(账号qxgjz)删除aitoolcrux.com与www.aitoolcrux.com两个域绑定或删除残留项目，消除持续告警邮件；若计划迁移Vercel则另行评估DNS切换",
+      "created_date": "2026-10-25"
+    },
+    {
+      "id": "HN-COMMENT-CEREBRASTFM-20261025",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "HN养号价值评论: Cerebras Trillion-Parameter Models 帖, 从agentic实测/70B对比latency视角发顶层评论(无链接不推产品)",
+      "source": "hn_publish_2026-10-25",
+      "region": "US",
+      "evidence": [
+        "https://news.ycombinator.com/item?id=50227356"
+      ],
+      "completed_at": "2026-10-25 20:53:21",
+      "created_at": "2026-10-25 20:53:21"
+    },
+    {
+      "id": "HN-COMMENT-RETRY-SAMSUNGTFLITE-20261025",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "重试HN评论: Samsung TensorFlow-lite 960x540 on-device tracking帖(item?id=50230181), 草稿='On-device inference framed as privacy win, but model output still shipped off & TF-lite blob unauditable; moves data path not accountability'. 本轮2次提交comments数未增(39->39), 疑新号karma=1冷却, 下轮隔1小时再试",
+      "source": "hn_publish_2026-10-25",
+      "region": "US",
+      "evidence": [
+        "https://news.ycombinator.com/item?id=50230181"
+      ],
+      "created_at": "2026-10-25 20:53:21"
+    },
+    {
+      "id": "CTR-PAGE-BEST-AI-CODING-TOOLS-2026-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-coding-tools-2026 排名 4.1 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T21:10:54",
+      "position": 4.1,
+      "ctr_pct": 0.0,
+      "note": "全站最高曝光 12 imp，排名第 4 仍 0 点击"
+    },
+    {
+      "id": "CTR-PAGE-BEST-AI-COMPARISON-TOOLS-2026-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-comparison-tools-2026/ 排名 18.0 但 CTR 仅 0%，优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T21:10:54",
+      "position": 18.0,
+      "ctr_pct": 0.0,
+      "note": "5-20 扩选范围"
+    },
+    {
+      "id": "CTR-QUERY-COPILOT-PRICING-20261025",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "查询 [github copilot windsurf amazon q tabnine jetbrains ai pricing changes] 排名 5.0 但 CTR 仅 0%，优化对应落地页 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-25",
+      "created_at": "2026-10-25T21:10:54",
+      "position": 5.0,
+      "ctr_pct": 0.0,
+      "note": "查询级，5 位 0 点击，长尾组合词"
+    },
+    {
+      "id": "CA-PORTRAIT-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 portrait-generators 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-portrait-generators-2026 文章（ProfileLoom/Pixelbin/Firefly 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "CA-TEXT-TO-IMAGE-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 text-to-image 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-text-to-image-generators-2026 文章（Ideogram/Midjourney/FLUX 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "CA-PROJECT-MANAGEMENT-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 project-management 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-project-management-tools-2026 文章（ClickUp/Monday/Asana 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "CA-CODE-ASSISTANT-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 code-assistant 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-coding-assistant-2026 文章（Cursor/Copilot/Claude Code 对比），SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "High",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "CA-GIFT-IDEAS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 gift-ideas 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-gift-idea-generators-2026 文章（GiftX/Giftruly/SmartGiftAI 对比），SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "Medium",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-PORTRAIT-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI portrait generators 2026] 写 2000 字新文章，标题建议 [Best AI Portrait Generators 2026: 9 Free & Paid Tested]，slug 建议 [best-ai-portrait-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "免费额度矩阵（ProfileLoom 1张/Pixelbin 3张/Bing 15张）+ 商用安全（Firefly）",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-PROJECT-MANAGEMENT-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI project management tools 2026] 写 2000 字新文章，标题建议 [Best AI Project Management Tools 2026: 10 Tested]，slug 建议 [best-ai-project-management-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按团队类型分（PMO=Monday/软件=Jira/预算=Productive/个人=Motion）+ 定价表",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-CODING-ASSISTANT-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI coding assistant 2026] 写 2000 字新文章，标题建议 [Best AI Coding Assistant 2026: 7 Tested]，slug 建议 [best-ai-coding-assistant-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按工作流分（IDE=Cursor/Copilot/终端=Claude Code/开源=OpenCode）+ 实测对比",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-TEXT-TO-IMAGE-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI text-to-image generators 2026] 写 2000 字新文章，标题建议 [Best AI Text-to-Image Generators 2026: 8 Tested]，slug 建议 [best-ai-text-to-image-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-GIFT-IDEAS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI gift idea generators 2026] 写 2000 字新文章，标题建议 [Best AI Gift Idea Generators 2026: 7 Tested]，slug 建议 [best-ai-gift-idea-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-3D-GENERATOR-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI 3D generator tools 2026] 写 2000 字新文章，标题建议 [Best AI 3D Generator Tools 2026: 7 Tested]，slug 建议 [best-ai-3d-generator-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-CHURN-PREDICTION-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI churn prediction tools 2026] 写 2000 字新文章，标题建议 [Best AI Churn Prediction Tools 2026: 6 Tested]，slug 建议 [best-ai-churn-prediction-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Medium",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
+    },
+    {
+      "id": "KW-FUN-TOOLS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI fun tools 2026] 写 2000 字新文章，标题建议 [Best AI Fun Tools 2026: 12 Tested]，slug 建议 [best-ai-fun-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "Low",
+      "status": "pending",
+      "created_at": "2026-10-25T21:10:54"
     }
   ],
   "milestones": [
@@ -4653,8 +4935,8 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-25T00:00:00",
-  "last_action": "commander_gsc_rootcause_20261025: 补录3条根因待办+升级1条P0",
+  "last_update": "2026-10-25T21:10:54",
+  "last_action": "commander_vercel_email_20261025: 补录Vercel域清理待办",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

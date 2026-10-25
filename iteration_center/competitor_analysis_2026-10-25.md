@@ -36,3 +36,28 @@
 
 ## 待办（写入 state.json，5 条 P1）
 CA-AUDIO-GENERATORS-20261025 / CA-STARTUP-ASSISTANT-20261025 / CA-WORKFLOWS-20261025 / CA-PRESENTATIONS-20261025 / CA-IMAGE-EDITING-20261025
+
+---
+
+## r27 追加（2026-10-25 21:10 · 21:00 档）
+
+**数据源**：futurepedia 75 分类缓存（同 r26）+ 本地 40 篇 published 文章 + 5 词 SERP 实搜
+
+### 本轮新缺口（5 个，避开 r26 已开单）
+| 缺口分类 | futurepedia | 我们 | 建议选题 | 竞争度 | 前 10 竞品 |
+|---|---|---|---|---|---|
+| portrait-generators | 1 | 0 | best-ai-portrait-generators-2026 | High | DEV/Sozee/Slashdot/Habr |
+| text-to-image | 1 | 0 | best-ai-text-to-image-generators-2026 | High | scored.tools/Pixo/TechSifted/AIRated/Dreamina/ToolChase |
+| project-management | 1 | 0 | best-ai-project-management-tools-2026 | High | ClickUp/DigitalPM/TechRepublic/Productive/Slack |
+| code-assistant | 1 | 0 | best-ai-coding-assistant-2026 | High | CodeTalentHub/DEV/DigitalTrends/Xataka |
+| gift-ideas | 1 | 0 | best-ai-gift-idea-generators-2026 | Medium | ToolWorthy/GiftX/topai.tools/AIToolsGuidebook/Foundr |
+
+### 可借鉴选题（5 个）
+1. **Best AI Portrait Generators 2026**（best-ai-portrait-generators-2026）— High — 切入：免费额度矩阵（ProfileLoom 1张/Pixelbin 3张/Bing 15张）+ 商用安全（Firefly）
+2. **Best AI Text-to-Image Generators 2026**（best-ai-text-to-image-generators-2026）— High — 切入：按需求分（文字渲染=Ideogram/艺术=Midjourney/商用=Firefly/开源=FLUX）+ 评分制
+3. **Best AI Project Management Tools 2026**（best-ai-project-management-tools-2026）— High — 切入：按团队类型分（PMO=Monday/软件团队=Jira/预算=Productive/个人=Motion）+ 定价表
+4. **Best AI Coding Assistant 2026**（best-ai-coding-assistant-2026）— High — 切入：按工作流分（IDE=Cursor/Copilot/终端=Claude Code/开源=OpenCode）+ 实测对比
+5. **Best AI Gift Idea Generators 2026**（best-ai-gift-idea-generators-2026）— Medium — 切入：按流程分（发现=GiftX/会话=GiftList Genie/Amazon=SmartGiftAI/免账号=Giftruly）
+
+### SERP 验证
+- 5 词全部实搜，High×4 / Medium×1；权威域：ClickUp/TechRepublic/DigitalTrends

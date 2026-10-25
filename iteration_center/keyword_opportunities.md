@@ -399,3 +399,33 @@
 | best AI workflow automation 2026 | 预估高 | SERP 6 站竞争 High（ProductHunt 分类页+企业级站点） |
 | best AI presentation generators 2026 | 预估高 | SERP 7 站竞争 High（Prezi/Manus 权威域） |
 | P1 五个词 | 预估中-高 | futurepedia 分类缺口依据，未实搜 |
+
+
+---
+
+## 2026-10-25 21:10 关键词挖掘 r27（21:00 档 · 与竞品分析同轮）
+
+**Total keywords analyzed: 8**（P0×3 + P1×5）
+
+### P0（SERP 已验证）
+| 词 | 竞争度 | 建议标题 | slug |
+|---|---|---|---|
+| best AI portrait generators 2026 | High | Best AI Portrait Generators 2026: 9 Free & Paid Tested (ProfileLoom vs Pixelbin vs Firefly) | best-ai-portrait-generators-2026 |
+| best AI project management tools 2026 | High | Best AI Project Management Tools 2026: 10 Tested (ClickUp vs Monday vs Asana) | best-ai-project-management-tools-2026 |
+| best AI coding assistant 2026 | High | Best AI Coding Assistant 2026: 7 Tested (Cursor vs Copilot vs Claude Code vs OpenCode) | best-ai-coding-assistant-2026 |
+
+### P1
+| 词 | 竞争度(估) | 建议标题 | slug |
+|---|---|---|---|
+| best AI text-to-image generators 2026 | High | Best AI Text-to-Image Generators 2026: 8 Tested (Ideogram vs Midjourney vs FLUX) | best-ai-text-to-image-generators-2026 |
+| best AI gift idea generators 2026 | Medium | Best AI Gift Idea Generators 2026: 7 Tested (GiftX vs Giftruly vs SmartGiftAI) | best-ai-gift-idea-generators-2026 |
+| best AI 3D generator tools 2026 | Medium | Best AI 3D Generator Tools 2026: 7 Tested | best-ai-3d-generator-tools-2026 |
+| best AI churn prediction tools 2026 | Medium | Best AI Churn Prediction Tools 2026: 6 Tested | best-ai-churn-prediction-tools-2026 |
+| best AI fun tools 2026 | Low | Best AI Fun Tools 2026: 12 Tested | best-ai-fun-tools-2026 |
+
+### 搜索量标注（"预估"）
+| 词 | 搜索量 | 依据 |
+|---|---|---|
+| portrait / project-mgmt / coding-assistant | 预估高 | SERP 5-6 站竞争 High（ClickUp/TechRepublic/DigitalTrends 权威域） |
+| text-to-image / gift | 预估中-高 | SERP 验证 High/Medium |
+| 3D / churn / fun | 预估中 | futurepedia 分类缺口依据，未实搜 |

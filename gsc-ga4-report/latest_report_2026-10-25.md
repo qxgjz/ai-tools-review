@@ -55,3 +55,22 @@
 ### 关键结论
 - 页面级 CTR 目标集中在排名 5-10 但 0% 点击的 5 个页面——title/meta 优化优先级最高
 - 竞品内容缺口每轮 +5，创作家 backlog 充足（本周已产出 CA 10 条 + KW 16 条）
+
+## r27 追加（2026-10-25 21:11 · 21:00 档）
+
+### GSC 新拉取（fetch_gsc 实跑）
+- Clicks 0 | Impressions 167 | CTR 0% | AvgPos 14.13（与 r26 同口径，环比持平）
+- **收录纠偏（P0 完成）**：真实收录 477/905（52.8%），非 0。sitemap API indexed=0 是 GSC 口径 bug（301/308 重定向链导致）。基线见 gsc_indexed_baseline_20261025.md
+
+### 本轮产出
+| 项 | 数量 | 明细 |
+|---|---|---|
+| 待办执行 | 1 完成 + 2 复查 | P0-GSC-INDEXED-ZERO-REPORT 完成（产出基线）；GEO-BASELINE/ELMO 阻塞保持 |
+| CTR 优化 | +3 | best-ai-coding-tools(4.1/12imp/0%)、comparison-tools/(18.0/0%)、copilot-pricing 查询(5.0/0%) |
+| 竞品缺口 | +5 (P1) | portrait-generators/text-to-image/project-management/code-assistant/gift-ideas（SERP High×4/Medium×1） |
+| 关键词挖掘 | +8 | 3 P0（portrait/project-mgmt/coding-assistant 全 SERP High）+ 5 P1（text-to-image/gift/3D/churn/fun） |
+| focus | 245 | pending 222 → +16 |
+
+### 关键结论
+- 收录 52.8% 意味着"收录为零"不是问题；真正杠杆：discovered_not_indexed 400 条（内容质量）+ CTR/Title 优化
+- GSC 点击归零下，内容 backlog 持续增长（本周 CA 15 + KW 32 + CTR 8），创作家消化节奏需关注

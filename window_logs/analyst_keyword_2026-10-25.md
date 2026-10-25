@@ -24,3 +24,13 @@
 - P0 词全部 serp_verified=true ✅
 - 数据来自实际抓取/实搜，无编造 ✅
 - 与 r25 批次（art/legal/ecommerce/spreadsheet/sql/presentation/paraphrasing/design）无重复 ✅
+
+---
+
+## r27 追加（2026-10-25 21:11 · 21:00 档）
+
+- 挖掘关键词：8 个（P0×3 / P1×5）
+- SERP 验证：5 个词实搜（portrait/text-to-image/project-mgmt/code-assistant/gift，High×4/Medium×1）
+- 竞品对比：futurepedia 75 分类（缓存）vs 本地 40 篇 published
+- 写入待办：16 条（CTR 3 + CA 5 + KW 8）
+- 硬约束：搜索量全标"预估"附依据 ✅；P0 全部 serp_verified=true ✅；与 r25/r26 无重复分类 ✅

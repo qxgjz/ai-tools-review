@@ -4238,3 +4238,11 @@ CTR opps: 3
 
 **结论（复确认）**：曝光塌方为当前唯一 P0 级杠杆，URL 规范化 + IndexNow 批量提交后需 3-5 天复查；本轮新增 5 个 CTR 页面级待办（排名 5-10.5 但 0% 点击），title/meta 优化可作为并行动作。
 
+
+## 2026-10-25 21:11 r27 追加 · 收录认知纠偏（P0 已闭环）
+
+**结论**：此前"收录=0"为 GSC sitemap API 口径误判（站点存在 301/308 重定向链时 indexed 长期显示 0）。AdsPower CDP 实抓 GSC 页面得到真实基线：
+- 总 URL 905 / **indexed 477（52.8%）** / not_indexed 428
+- 未收录 428 分解：discovered_not_indexed 400（93.5%，最大类）、duplicate_without_canonical 9、auto_redirect 9、noindex 5、404 2、crawled_not_indexed 2、redirect_error 1
+- **P0 杠杆修正**：真实问题不是"未收录"，而是 ①discovered_not_indexed 400 条指向内容质量/相关性不足 ②GSC 点击归零下的 CTR/Title 优化。sitemap 提交问题降级为 P1（canonical/重定向链修复）
+- 周度跟踪：每周 AdsPower CDP 拉索引覆盖率更新 gsc_indexed_baseline 表
