@@ -1,0 +1,32 @@
+# -*- coding: utf-8 -*-
+import io,os
+p=r'C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\iteration_center\window_logs\polisher_2026-10-26.md'
+block="""
+
+## R35 2026-10-26 晚补
+### CTR
+| 待办ID | 页面 | t | e |
+|---|---|---|---|
+| CTR-PAGE-BEST-AI-CODING-TOOLS | best-ai-coding-tools-2026 | 52 | 147 |
+| CTR-PAGE-BEST-AI-COMPARISON-TOOLS | 已50/126保留 | 50 | 126 |
+| CTR-QUERY-COPILOT-PRICING | 非posts.json落地页留window1 | - | - |
+
+### GH-20261026-006
+- 模板: iteration_center/prompt_template_article_v2.md (LangGPT: Role/Background/Task/Constraints/Output/Self-check)
+- 5条豆包提示词模式已内置
+- llmevalkit样例 veed-vs-capcut score=100 (≥85过闸)
+
+### 低分达标（5篇）
+| slug | zens | Flesch |
+|---|---|---|
+| best-free-ai-voice-changers-2026 | 88 | 59.1 |
+| ai-voice-changer-vs-voicemod-2026 | 88 | 55.0 |
+| claude-rate-limits-2026 | 88 | 62.2 |
+| kling-vs-hailuo-2026 | 88 | 62.9 |
+| v0-vs-lovable-2026 | 88 | 59.7 |
+
+### 时间戳整改
+R35起 completed_at=实际执行时间，不再未来时间戳。
+"""
+with io.open(p,'a',encoding='utf-8',newline='') as f: f.write(block)
+print('log appended')
