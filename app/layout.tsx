@@ -149,6 +149,27 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               }),
             }}
           />
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'WebSite',
+                name: 'AIToolCrux',
+                url: 'https://www.aitoolcrux.com',
+                description:
+                  'Independent AI tool reviews, comparisons and guides. Tested hands-on with real screenshots and honest pros/cons.',
+                potentialAction: {
+                  '@type': 'SearchAction',
+                  target: {
+                    '@type': 'EntryPoint',
+                    urlTemplate: 'https://www.aitoolcrux.com/?s={search_term_string}',
+                  },
+                  'query-input': 'required name=search_term_string',
+                },
+              }),
+            }}
+          />
           {/* 预连接关键第三方域名，优化资源加载 */}
           <link rel="preconnect" href="https://cloud.umami.is" crossOrigin="anonymous" />
           <link rel="preconnect" href="https://analytics.ahrefs.com" crossOrigin="anonymous" />

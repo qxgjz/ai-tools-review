@@ -4298,3 +4298,82 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 - 已本地化 vendor/open-seo-mcp-skills/；MCP endpoint 实测 401（OAuth 待授权，代理 7890 通）
 - 覆盖差距 5 项：关键词量（禁编造搜索量的正解）/反链/SERP 简报/AI 可见性（GEO）/seo-vs-ads
 - 接入方案：iteration_center/seo_mcp_接入方案_20261026.md；推荐授权后落地（解锁 GEO-BASELINE）
+
+
+## 2026-10-26 设计师巡检（定时任务「设计师-视觉与配图核验」）
+
+### A. 文章配图核验（batch50 三篇对比文章，线上逐张比对）
+
+**方法**：打开线上文章 URL 提取渲染 img + 逐张 Read 图片视觉核验 + curl 线上资源状态码。
+
+| 文章 | 配图1 | 配图2 | 结论 |
+|---|---|---|---|
+| claude-code-vs-copilot-2026 | anthropic-home.webp（Anthropic官网，Claude Code归属✓） | copilot-home.webp（GitHub Copilot官方页✓） | ✅ 一致 |
+| replit-vs-cursor-2026 | replit-home.webp（Replit官方首页✓） | cursor-home.webp（Cursor官网首页✓） | ✅ 一致 |
+| v0-vs-lovable-2026 | v0-home.webp（v0.dev官方首页✓） | lovable-home.webp（Lovable官方首页✓） | ✅ 一致 |
+
+- 6/6 张均为对应 AI 工具**真实官网界面针对性截图**，无随机抽取、无示意图冒充；线上资源 curl 全部 200；无破图。
+- 结论：配图核验**全部通过，无需开单**。
+
+### B. shadcn/ui 组件巡检（5页 × 桌面1440/移动375 双视口）
+
+**方法**：Playwright 抓取 首页 / 工具页(/tools/chatgpt) / 对比页(/compare) / 文章页(batch50) / 博客列表页，检查横向溢出、破图、按钮/表单/下拉渲染、console 错误。
+
+- 横向溢出：5页 × 2视口 **全部无溢出**（scrollWidth == clientWidth）✅
+- 破图：imagesBroken 全空 ✅
+- 组件渲染：按钮/输入框/下拉框数量正常、渲染正常 ✅
+
+**发现 2 个非渲染类问题（需开单）**：
+1. **Vercel Insights 脚本残留 404**：每页加载 `/_vercel/insights/script.js` → 404。站点部署在 Cloudflare Pages（无 /_vercel/insights 端点），代码里残留 @vercel/analytics 引用。浪费请求 + 脏 console。
+2. **CSP 白名单缺失，第三方分析被拦截**：线上强制执行 CSP（middleware.ts），实测拦截：`analytics.ahrefs.com`（script-src）、`static.cloudflareinsights.com`（script-src）、`gateway.umami.is`（connect-src）、`giscus.app`（文章页 style-src）。→ Ahrefs/CF/Umami 数据可能漏采、giscus 评论样式加载失败。与 r34 记录"giscus/umami 全覆盖"矛盾，需核查 middleware.ts 白名单与实际域名。
+
+### C. GitHub 参考站改版建议（GH-20261026-008，aigotools 660★ 解剖）
+
+参考站特征：Next.js 目录站，Hero + "推荐"高密度卡片网格（logo+名称+描述+分类标签pill），分类导航清晰；本站对照实测：/ranking Top10 大卡单列占整行、Complete Ranking 分类标签无样式挤成一坨（如 "AI AssistantChatbotGoogle"）、工具页有面包屑但缺 schema。
+
+**建议1｜列表页信息密度（P1，before/after）**
+- before：Top10 大卡堆叠视图（#1 Gemini 8.9/100 每卡占整行，描述与下方列表重复）；Complete Ranking 行内 logo+名称+厂商+描述+评分，但分类标签文本拼接无样式。
+- after：Top10 压缩为 2 列紧凑卡（约140px 高，logo|名称|评分|3标签）；Complete Ranking 行内标签改 Badge pill；每行固定 5 字段（logo/名称/厂商/标签/评分+CTA），533 条可快速扫读。
+
+**建议2｜分类标签 pill 化 + 可点击（P1，before/after）**
+- before：`AI AssistantChatbotGoogle` 三个分类直接文本拼接，无间距、无样式、不可点击。
+- after：shadcn Badge（outline 变体，primary 色 text）独立渲染，gap 8px，hover 变 primary，点击跳 `/blog/category/{slug}`；每工具最多显示 3 个标签。
+
+**建议3｜面包屑统一 + BreadcrumbList schema（P2，before/after）**
+- before：工具页有 Home>Ranking>chat>ChatGPT 面包屑但无 BreadcrumbList JSON-LD；分类页/文章页面包屑层级不统一（chat 小写 vs Category 大写混用）。
+- after：全站统一 shadcn Breadcrumb（Home > Category > Tool / Home > Blog > Article），末级非链接；每页注入 BreadcrumbList schema（GEO/AEO 可提取）。
+
+
+---
+
+# SEO 配置对照审计（GH-20261026-002，r62 架构师 2026-10-26）
+
+对照基准：github.com/timlrx/tailwind-nextjs-starter-blog（10.6k★）SEO 配置清单
+审计对象：aitoolcrux.com（Next.js 14 App Router 静态站 + Cloudflare Pages）
+
+## 结论（先行）
+现有站 SEO 配置与 starter-blog 清单**逐项全覆盖（8/8）**，本轮补齐 1 项增强（WebSite JSON-LD + SearchAction），记录 2 项 P2 建议。线上验证 sitemap.xml / robots.txt / rss.xml 全 200。
+
+## 逐项对照表
+| 配置项 | starter-blog 标准 | aitoolcrux 现状 | 线上验证 | 判定 |
+|---|---|---|---|---|
+| Sitemap | sitemap.xml 动态生成 | app/sitemap.ts → sitemap.xml | sitemap.xml = 200 | ✅ |
+| Robots | robots.txt 动态生成 | app/robots.ts（Allow/Disallow/sitemap） | robots.txt = 200 | ✅ |
+| RSS | rss route + head feed 声明 | app/rss.xml/route.ts；layout alternates.types 声明 rss+xml | rss.xml = 200 | ✅ |
+| OG Meta | openGraph images/title/desc/locale | layout openGraph 完整（api/og 1200×630, en_US） | SSR 注入 | ✅ |
+| Twitter Card | summary_large_image | twitter.card=summary_large_image | SSR 注入 | ✅ |
+| Canonical | metadataBase + alternates.canonical | metadataBase=www + alternates.canonical + 各页 generateMetadata | SSR 注入 | ✅ |
+| JSON-LD | Organization/WebSite schema | Organization（sameAs/contactPoint）+ 本轮新增 WebSite+SearchAction；各页 Breadcrumb/FAQ/Article | SSR 注入 | ✅ |
+| Indexing meta | robots index/follow | layout metadata.robots + 各页默认 index | SSR 注入 | ✅ |
+
+## 本轮补齐
+1. WebSite JSON-LD（含 SearchAction potentialAction）加入 app/layout.tsx。
+2. llms.txt / llms-full.txt（796 页）由 GH-20261026-001 生成并验证线上 200。
+
+## P2 建议（记录不阻塞）
+1. og-image 为 SVG（og-image.svg + /api/og）：部分平台不支持 SVG og:image → 建议生成静态 PNG 1200×630 作首选。
+2. twitter 卡无独立 images 字段 → 可显式添加提高渲染确定性。
+
+## 补充审计
+- real_geo_aeo_audit.py 7 条 Recommendations（Quick Answer/Key Takeaways/数据/专家引述/作者署名/对比表/llms-full）→ llms-full 已满足，内容类转创作家窗口。
+- seo_audit_full.py（sitemap 驱动 40+ 规则）并行运行中，发现项追加后转 state 待办。

@@ -39,9 +39,10 @@ function PageViewTrackerInner() {
   useEffect(() => {
     if (typeof window === 'undefined' || !pathname) return;
 
-    // Build full path with query string if present
-    const query = searchParams?.toString();
-    const pagePath = query ? `${pathname}?${query}` : pathname;
+    // GA4 page_path must be the normalized pathname only (query strings in
+    // page_path split landing pages into '?-suffixed'/(not set) buckets in
+    // reports; full URL incl. query stays in page_location below).
+    const pagePath = pathname;
 
     // Classify page type for RPM tracking and content analysis
     const pageType = classifyPageType(pathname);
