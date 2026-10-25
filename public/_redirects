@@ -169,3 +169,6 @@
 /go/pictory https://pictory.ai/?ref=aitoolcrux 302
 /go/heygen https://www.heygen.com/?via=aitoolcrux 302
 /go/canva-ai https://www.canva.com/?via=aitoolcrux 302
+
+# r60: root-path broken-link fix (only missing rule in audit 20-list)
+/best-ai-animation-tools-2026 /blog/category/ai-video/ 301
