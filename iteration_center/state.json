@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 151,
+  "total_articles_generated": 154,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-25 15:41:03",
+  "last_updated": "2026-10-25",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -4578,12 +4578,12 @@
     {
       "id": "P1-GSC-INDEX-RECOVERY-20261025",
       "status": "pending",
-      "priority": "P1",
+      "priority": "P0",
       "assigned_to": [
         "架构师"
       ],
       "source": "commander_data_crosscheck_20261025",
-      "task": "GSC收录异常根治：sitemap submitted=0/indexed=0连续异常(10-12基线至今未恢复)，导致09-24~10-23曝光从2001骤降至167、Clicks 0；请用GSC后台重新验证站点+提交sitemap+请求编入索引(针对home/compare/top-blog页)，3天后复核indexed>0，输出复核结果到latest_report",
+      "task": "GSC收录异常根治：sitemap submitted=0/indexed=0连续异常(10-12基线至今未恢复)，导致09-24~10-23曝光从2001骤降至167、Clicks 0；请用GSC后台重新验证站点+提交sitemap+请求编入索引(针对home/compare/top-blog页)，3天后复核indexed>0，输出复核结果到latest_report 【已升级P0】sitemap API indexed=0实为报告口径问题，真实收录477/905(52.8%)；本次执行重点转向：对400个discovered_not_indexed页面按价值排序批量请求编入索引(每日≤50)，修复redirect_error页(category/chat/code、tools/gemini)，3天后复核真实收录率>60%",
       "url": "",
       "created": "20261025",
       "created_date": "20261025",
@@ -4602,6 +4602,42 @@
       "created": "20261025",
       "created_date": "20261025",
       "detail": "三源对比结论：GSC(服务器端真实)=0点击/167曝光；GA4(JS会话)=3581 sessions但98.5% Direct；CF(全HTTP请求)=30天120k PV/日均4000+、uniques 7465峰值。CF与GA4同源被bot污染，真实用户约10-20/日，三方均不支持流量已起来的结论。"
+    },
+    {
+      "id": "P0-GSC-INDEXED-ZERO-REPORT-20261025",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "数据分析师",
+        "window4"
+      ],
+      "source": "commander_gsc_rootcause_20261025",
+      "task": "GSC收录认知纠偏报告：sitemap API报submitted=881/indexed=0是GSC报告口径问题(已知bug, 站点存在301/308重定向链时sitemap indexed长期显示0)，真实收录=477/905(52.8%, indexing_snapshot_20261012)；向用户输出《真实收录基线》到gsc-ga4-report/gsc_indexed_baseline_20261025.md：总URL 905 / indexed 477 / not_indexed 428(其中discovered_not_indexed 400为最大类) / 周度跟踪真实收录率，纠正'收录是零'误判",
+      "created_date": "2026-10-25"
+    },
+    {
+      "id": "P0-GSC-URL-CANONICAL-20261025",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "commander_gsc_rootcause_20261025",
+      "task": "URL规范化根治：GSC Top Pages出现http://www.aitoolcrux.com/(HTTP版本)与/about、/about/并存，无尾斜杠URL全部308重定向到带尾斜杠(GSC判redirect/redirect_error而非indexed)；请①CF开启Always Use HTTPS彻底消灭HTTP版本 ②确认无尾斜杠308链稳定 ③对GSC中http://版本与/about无尾斜杠URL逐个URL Inspection请求编入索引促使Google合并到规范URL ④检查Next配置无额外重定向循环；线上实测证据见iteration_center/_url_probe2_1025.py",
+      "created_date": "2026-10-25"
+    },
+    {
+      "id": "P0-GSC-REDIRECT-ERROR-20261025",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "commander_gsc_rootcause_20261025",
+      "task": "redirect_error修复：GSC URL检查category/chat、category/code、tools/gemini=redirect_error、category/productivity/audio/dev-tools/database/observability/tools/chatgpt=redirect；线上实测无尾斜杠URL(Googlebot UA)存在SSL握手超时/读取超时(疑似CF限速或回源慢)，带尾斜杠200正常；请①用Googlebot UA串行探测全category/tools页确认无尾斜杠超时范围 ②检查CF WAF/速率限制规则是否对Googlebot误伤(与10-20起uniques暴涨联动) ③确保回源稳定后GSC批量URL Inspection复核，输出到iteration_center/gsc_redirect_error_fix_20261025.md",
+      "created_date": "2026-10-25"
     }
   ],
   "milestones": [
@@ -4617,8 +4653,8 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-25T15:12:54",
-  "last_action": "r60 2026-10-25: P0x4 完成(T-189断链20/20闭环+补1条301/T-191 Actions健康复核=陈旧误报/GA4-CONVERSION与AFF-RPV均为r55已实现本轮补验证证据)；P1-GSC-QUERY-DATA-GAP 调查记录(脚本不在仓库)",
+  "last_update": "2026-10-25T00:00:00",
+  "last_action": "commander_gsc_rootcause_20261025: 补录3条根因待办+升级1条P0",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -18187,6 +18223,6 @@
     ]
   },
   "last_commander_update": "2026-10-24T12:10:00+08:00",
-  "last_batch": "batch56",
+  "last_batch": "batch57",
   "last_batch_date": "2026-10-25"
 }
