@@ -222,3 +222,4 @@ Recheck after 1-2 weeks for indexing improvement.
 - 68 URL 状态：url_index_check_batch_0_67_20261012_202338.json
 - GSC 曝光：gsc-ga4-report/live_pull_20261012_2007.json
 | 2026-10-18 | 165 | -1 | 125 | 📈 +125 new indexed |
+| 2026-10-25 | 181 | -1 | 16 | 📈 +16 new indexed |
