@@ -1,7 +1,8 @@
 ﻿import type { Metadata } from 'next';
 import Script from 'next/script';
 import Link from 'next/link';
-import { Analytics } from '@vercel/analytics/next';
+// GH-20261026-010: @vercel/analytics removed — site deploys on Cloudflare Pages,
+// /_vercel/insights/script.js has no endpoint there and 404s on every page.
 import { GeistSans } from 'geist/font/sans';
 import { GeistMono } from 'geist/font/mono';
 import '@fontsource/space-grotesk/400.css';
@@ -502,7 +503,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </footer>
           <BackToTop />
         </ThemeProvider>
-        <Analytics />
         <GA4PageTracker />
         <GA4EventTracker />
         <WebVitalsReporter />
