@@ -13,6 +13,7 @@
 | `screenshot_bot.py` | Playwright批量截图 | `python scripts/seo_toolkit/screenshot_bot.py --url https://... --tool chatgpt` | public/screenshots/{tool}/3张WebP |
 | `gsc_pipeline.py` | GSC分析+待办自动写入 | `python scripts/seo_toolkit/gsc_pipeline.py` | gsc_analysis_{日期}.md + state.json待办 |
 | `publisher.py` | 自动写入+git+线上验证 | `python scripts/seo_toolkit/publisher.py --slug {文章slug}` | commit hash + 线上验证结果 |
+| `competitor_gap_runner.py` | 竞品 sitemap 前置环境检测+缓存（zens_ink 检查/网络/代理 7890/UA） | `python scripts/seo_toolkit/competitor_gap_runner.py`（或 `--check-only` 只检测） | iteration_center/competitor_sitemap_cache.json（futurepedia 等分类缓存，断网可回退） |
 
 ## 各窗口调用脚本的标准流程
 
