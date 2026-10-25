@@ -362,3 +362,40 @@
 | best AI legal tools 2026 | 预估中高 | SERP 5 站竞争 High（含 OpenAI Astra for Law 新动态）；B2B 高客单 |
 | best AI ecommerce tools 2026 | 预估高 | SERP 6 站竞争 Medium（Airwallex/TechieHub 等），电商刚需 |
 | P1 五个词 | 预估中-高 | futurepedia 分类缺口依据，未实搜 |
+
+
+---
+
+## 2026-10-25 关键词挖掘 r26（15:09 档 · 与竞品分析同轮）
+
+**生成：** 2026-10-25 15:12
+**数据源：** futurepedia 75 分类实抓 + 5 词 SERP 实搜（general_search）
+**Total keywords analyzed: 8**（P0×3 + P1×5）
+
+### P0（SERP 已验证）
+| 词 | 竞争度 | 建议标题 | slug | SERP 依据 |
+|---|---|---|---|---|
+| best AI audio generators 2026 | High | Best AI Audio Generators 2026: 9 Tested (ElevenLabs vs Suno vs Murf) | best-ai-audio-generators-2026 | Notevibes/wearetandem/ailove/tooldirectory/AIChatDaily 6 站 |
+| best AI workflow automation 2026 | High | Best AI Workflow Automation Tools 2026: 10 Tested (Zapier vs Make vs n8n) | best-ai-workflow-automation-tools-2026 | ProductHunt/Reclaim/Rework/Mastra/RydeValues 6 站 |
+| best AI presentation generators 2026 | High | Best AI Presentation Generators 2026: 8 Tested (Gamma vs Beautiful.ai vs Plus AI) | best-ai-presentation-generators-2026 | Perceptis/Prezi/wearetandem/Manus/MaxProductive 7 站 |
+
+### P1（futurepedia 分类缺口）
+| 词 | 竞争度(估) | 建议标题 | slug |
+|---|---|---|---|
+| best AI tools for startups 2026 | Medium | Best AI Tools for Startups 2026: 9 Tested (by stage & budget) | best-ai-tools-for-startups-2026 |
+| best AI image editing tools 2026 | High | Best AI Image Editing Tools 2026: 10 Tested (Topaz vs PhotoRoom vs Remini) | best-ai-image-editing-tools-2026 |
+| best AI audio editing tools 2026 | Medium | Best AI Audio Editing Tools 2026: 8 Tested | best-ai-audio-editing-tools-2026 |
+| best AI business tools 2026 | Medium | Best AI Business Tools 2026: 9 Tested | best-ai-business-tools-2026 |
+| best AI copywriting assistant 2026 | High | Best AI Copywriting Assistant 2026: 8 Tested | best-ai-copywriting-assistant-2026 |
+
+### 竞品对比
+- futurepedia 75 分类（实抓）vs 我们 0 分类；本地 blog 243 页、tools 533
+- 本轮 P0 词全部命中"竞品有分类我们无文章"缺口，SERP 竞争度 High 有明确差异化空间
+
+### 搜索量标注（全部"预估"）
+| 词 | 搜索量 | 依据 |
+|---|---|---|
+| best AI audio generators 2026 | 预估高 | SERP 6 站竞争 High（Notevibes/AIChatDaily 权威域） |
+| best AI workflow automation 2026 | 预估高 | SERP 6 站竞争 High（ProductHunt 分类页+企业级站点） |
+| best AI presentation generators 2026 | 预估高 | SERP 7 站竞争 High（Prezi/Manus 权威域） |
+| P1 五个词 | 预估中-高 | futurepedia 分类缺口依据，未实搜 |

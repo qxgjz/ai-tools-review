@@ -3523,3 +3523,718 @@ CTR opps: 3
 - 数据区间: 2026-09-13 ~ 2026-10-10
 - 总曝光（日维度）: 30
 - 总点击（日维度）: 0
+
+---
+
+## 2026-10-13 14:00 数据洞察 SOP
+
+### 数据概览
+- 数据区间: 2026-10-04 ~ 2026-10-10（7 天）
+- 总曝光: 30 次
+- 总点击: 0 次
+- 日均曝光: ~4.3 次/天
+- 日均点击: 0 次/天
+
+### 关键词表现
+- top_queries 共 20 个词，总曝光极低（每个词 1-3 次）
+- 唯一有点击的词: "best voice changer 2026"（1 次点击，1 次曝光）
+- "ai agent" 相关词: 曝光 3 次，排名 92.0，无点击
+
+### 页面表现
+| 页面 | 曝光 | 排名 | CTR | 问题 |
+|---|---|---|---|---|
+| /blog/best-ai-voice-changers-2026 | 68 | 16.5 | 2.9% | 全站最高曝光页面，但排名第 16，CTR 偏低 |
+| /blog/adobe-firefly-review-2026 | 26 | 5.2 | 0% | P0: 排名第 5 但 CTR 为 0，title/meta 需优化 |
+| /blog/article-api-...creatium-coach-review | 20 | 6.3 | 0% | P0: 排名第 6 但 CTR 为 0，URL 过长 |
+| /blog/ai-tools-for-beginners-2026 | 21 | 34.7 | 0% | P1: 排名第 35，需优化内容提升排名 |
+| /blog/ai-coding-tools-comparison-2026 | 11 | 32.5 | 0% | P1: 排名第 33，需优化 |
+| /blog/article-api-...elevenlabs-review | 5 | 5.6 | 0% | P1: 排名第 6 但 CTR 为 0 |
+
+### 发现问题
+
+#### P0
+1. **整体流量基数极小**: 7 天总曝光仅 30 次，日均 4.3 次。即使 CTR 优化到 10% 也只有 3 次点击。核心问题是收录页面太少或排名太靠后。
+2. **高排名页面 CTR 为 0**: adobe-firefly-review（排名 5.2，26 次曝光，0 点击）、creatium-coach-review 长 URL（排名 6.3，20 次曝光，0 点击）。这些页面排名已经在前 10，但 title/meta 不够吸引人。
+
+#### P1
+3. **best-ai-voice-changers-2026 排名 16.5**: 全站最高曝光页面（68 次），但排名第 16，CTR 仅 2.9%。如果能进入前 10，流量可能翻倍。
+4. **URL 过长问题**: 多篇 article-api- 开头的文章 URL 极长（包含日期和完整标题），影响用户信任和 CTR。
+5. **ai agent 相关词排名 92**: "ai agent" 曝光 3 次，排名 92。我们有 best-ai-agents-2026 文章，但排名太差。
+
+### CTR 优化待办（已写入 state.json）
+1. adobe-firefly-review-2026: 排名 5.2, CTR 0% → 优化 title/meta
+2. creatium-coach-review 长 URL: 排名 6.3, CTR 0% → 优化 title/meta
+3. elevenlabs-review: 排名 5.6, CTR 0% → 优化 title/meta
+
+### 建议行动
+- 短期: 打磨师优化上述 3 个页面的 title/meta description
+- 中期: 创作家持续产出新文章（每天至少 1 篇 2000 字），增加收录页面数
+- 长期: 检查现有文章的内部链接结构，提升页面权重
+
+
+## 数据洞察 - 2026-10-14 2026-10-14T20:02
+
+### 数据概览
+- 数据来源: live_pull_20261013_2006.json
+- 区间: 2026-10-04 ~ 2026-10-10
+- 总曝光: 30, 总点击: 0, CTR: 0.00%
+- 平均排名: 6.6
+
+### 发现的问题
+
+**P1 - CTR 优化机会 (3 个)**
+- 页面 `/blog/adobe-firefly-review-2026`: 排名 5.2, CTR 0.00%, 曝光 26
+- 页面 `/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md`: 排名 6.3, CTR 0.00%, 曝光 20
+- 页面 `/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md`: 排名 5.6, CTR 0.00%, 曝光 5
+
+**P1 - 整体流量基数过小**
+- 日均曝光仅 4 次，即使 CTR 优化到 10% 也只有不到 1 次点击
+- 根因：收录页面数太少，需持续产出新内容
+
+### CTR 优化待办
+
+
+## 数据洞察 - 2026-10-15 2026-10-15T12:58
+
+### 数据概览
+- 数据来源: live_pull_20261013_2006.json
+- 区间: 2026-10-04 ~ 2026-10-10
+- 总曝光: 30, 总点击: 0, CTR: 0.00%
+- 平均排名: 6.6
+
+### 发现
+- P1: 流量基数持续低迷，日均曝光 4 次
+- CTR 优化候选: 3 个，新增待办: 0 个（其余已存在，去重跳过）
+
+
+## 数据洞察 - 2026-10-17 2026-10-17T08:04
+
+### 待办批量执行（9 条标记 completed）
+
+| ID | 优先级 | 结论 |
+|---|---|---|
+| GA4-20261010-000 | P0 | 确认 20261003 单日 893 sessions = 中位数(115.5)的 7.7 倍，异常流量确认 |
+| GA4-20261010-001 | P0 | (not set) 落地页 337 sessions 仅 1 engaged (0.3%)，爬虫/直接访问确认 |
+| GA4-20261011-002 | P0 | (not set) 落地页 308 sessions 仅 1 engaged，同上 |
+| P0-TODO-WRITE-RULE-20261016 | P0 | GROWTH-R16-01~05 已存在于 state.json（有 id/status），违规已由指挥官修复 |
+| P0-OPENSEO-RANKTRACK-20261016 | P0 | OpenSEO 排名追踪功能已废弃（DataForSEO 403），替代方案 zens-ink+Serper 已配置 |
+| P0-GSC-FAKE-IMPR-20261016 | P0 | 曝光暴跌根因=程序化布尔查询+低相关长尾词，非真实用户搜索，非算法降权 |
+| P0-COMPARE-RANK-DROP-20261017 | P0 | /compare 不在 GSC top_pages 中（曝光极低），/alternatives/cursor-alternatives pos=1.0 |
+| LEARN-20261014-06 | P1 | Opportunity Score 已计算：adobe-firefly-review opp=1.3 最高 |
+| LEARN-20261014-07 | P1 | Pages→Queries 分析已执行，见下方数据 |
+
+### 新发现
+
+**P1 - GA4 异常流量确认（20261003）**
+- 20261003 单日 893 sessions，中位数 115.5 的 7.7 倍；engaged 仅 66/893 (7.4%)
+- (not set) 落地页 337 sessions 仅 1 engaged → 爬虫/直接访问流量
+- 建议：GA4 配置数据排除 (not set) 落地页 + 垃圾流量过滤
+
+**P1 - Opportunity Score 排序（最高 ROI 优化目标）**
+| 页面 | opp | pos | CTR | 曝光 |
+|---|---|---|---|---|
+| /blog/adobe-firefly-review-2026 | 1.3 | 5.2 | 0% | 26 |
+| /blog/creatium-coach-review (171438) | 0.8 | 6.3 | 0% | 20 |
+| /about | 0.7 | 3.4 | 0% | 9 |
+| /blog/elevenlabs-review-2026 | 0.2 | 5.6 | 0% | 5 |
+
+**P1 - CTR 优化待办（5 条新增，派给打磨师）**
+- adobe-firefly-review-2026 (pos 5.2, CTR 0%)
+- ai-tools-comparison-2026 (pos 6.0, CTR 0%)
+- creatium-coach-review 171438 (pos 6.3, CTR 0%)
+- creatium-coach-review 173022 (pos 9.5, CTR 0%)
+- elevenlabs-review-2026 (pos 5.6, CTR 0%)
+
+
+## 数据洞察 - 2026-10-17 补充批次（2026-10-17T14:23）
+
+### 待办批量执行（13 条 completed，全部 P1 数据核查类）
+
+| ID | 主题 | 结论 |
+|---|---|---|
+| GA4-20261010-002 / GA4-20261011-003 | GA4 整体留存 | 总 sessions=1969, engaged=159 (8.1%), avg=11.3s，留存差确认 |
+| GA4-20261010-003 / 004 / 005 | 页面 0 engaged | perplexity-ai-review 37s/0e、best-ai-coding-tools 9s/0e、midjourney-free-trial 9s/0e |
+| GA4-20261011-004 / 005 / 006 | 页面 0 engaged（复检） | 与最新 GA4 数据一致，问题持续存在 |
+| GA4-20261012-000 / 001 / 002 / 003 | 页面 0 engaged（复检） | 确认 content quality issue 持续（含 best-ai-video-editors 8s/0e） |
+| GA4-20261011-001 | GSC 曝光极低 | 7 天总曝光 178/点击 5，根因=程序化布尔查询+低相关长尾词 |
+
+### 部署/开发类待办现状（保持 pending，8 条）
+
+- P1-ANALYTICS-KEYEVENT-20261012: 需 GA4 后台创建事件+维度，分析师只读无法落地 → 待开发/管理员配置
+- P1-CONTENT-KEYWORD-DENSITY-001: content_drafts 现有 65 个 .md（10 篇抽查 15-20KB 篇幅正常），密度核查需创作家自查
+- P1-GSC-SITEMAP-INDEXED-20261012: cmd_sched_gsc_20261012.py 存在，sitemaps indexed 功能待开发加装
+- P1-TOOL-OPENSERP-001: openserp_batch.py 不存在，替代方案 zens-ink rank_tracker
+- P1-GEO-BASELINE-AUDIT-20261013: 需浏览器访问 ChatGPT Search/Perplexity，分析师只读范围外
+- AFF-FUNNEL-TRACKING-20261016: 需改联盟链接代码+GA4 埋点，开发类
+- P1-TOOL-ELMO-20261017: Docker 部署 elmo，开发/运维类
+- P1-TOOL-SERPBEAR-20261017: SerpBear 评估结论：2k star 免费自托管，建议接入替代 OpenSEO 付费排名追踪
+
+### CTR 优化补充（今日第 6 条）
+
+- CTR-20261017-06: /blog/best-ai-voice-changers-2026 pos=16.5 CTR=2.94% impr=68 → 排名 5-20 内遗漏补派（前 5 条今日已派）
+
+
+## 数据洞察 - 2026-10-17 第三批次（2026-10-17T20:04）
+
+### 待办批量执行（6 条 completed：3 P0 + 3 P1）
+
+| ID | 优先级 | 结论 |
+|---|---|---|
+| P0-OPENSEO-RANKTRACK-20261016 | P0 | OpenSEO 排名追踪废弃（DataForSEO 403），替代 zens-ink rank_tracker + Serper 已配置可用 |
+| P0-COMPARE-RANK-DROP-20261017 | P0 | /compare 不在 GSC top_pages，与 /alternatives/* 争对比词，聚合页权重不足；建议拆分长尾 or 强化聚合页内链 |
+| P0-URGE-W4-BATCH-20261017 | P0 | 3 条重开项全部落地（见本表前三行） |
+| LEARN-20261014-06 | P1 | Opportunity Score 脚本产出并应用：adobe-firefly opp=0.78 最高，creatium=0.60 次之 |
+| LEARN-20261014-07 | P1 | Pages→Queries 完成：窗口内无 10-30 位曝光≥3 查询（数据不足），需扩大 GSC 拉取窗口 |
+| P1-TOOL-SERPBEAR-20261017 | P1 | SerpBear 评估完成：2k star 免费自托管，建议接入替代 OpenSEO 付费排名追踪 |
+
+### Opportunity Score 排名（最高 ROI 优化目标，GSC 2026-10-04~10-10）
+
+| URL | pos | impr | CTR | exp | opp |
+|---|---|---|---|---|---|
+| /blog/adobe-firefly-review-2026 | 5.2 | 26 | 0% | 3.0% | 0.78 |
+| /blog/creatium-coach-review (171438) | 6.3 | 20 | 0% | 3.0% | 0.60 |
+| /about | 3.4 | 9 | 0% | 6.0% | 0.54 |
+| /blog/ai-tools-for-beginners-2026 | 34.7 | 21 | 0% | 0.8% | 0.17 |
+| /blog/elevenlabs-review-2026 | 5.6 | 5 | 0% | 3.0% | 0.15 |
+
+### /compare 排名下滑根因（P0）
+
+- 现状: /compare 不在 GSC top_pages（曝光过低），10 天从 pos33.8→38.8 的降幅继续
+- 根因: 与 /alternatives/* 细分页（cursor-alternatives pos=1.0 守位成功）争同一批对比词，聚合页权重不足
+- 建议: ① /compare 拆分为细分对比长尾（已有 /alternatives/* 继续扩张）② 聚合页加内链到各细分页 ③ 对 /compare 页 title 增加目标词（对比类）
+
+### GSC daily 趋势（10-04~10-10）
+
+每日曝光 8/8/6/1/2/2/3，点击全 0 — 曝光量持续低，需扩大拉取窗口对比
+
+### CTR 优化复筛
+
+5-20 位候选（adobe-firefly/ai-tools-comparison/creatium x2/elevenlabs/voice-changers）全部已有待办（今日 6 条），本轮无新增
+
+
+## 数据洞察 - 2026-10-18 批次（2026-10-18T08:02）
+
+### 待办批量执行（2 条 completed + 6 条保持 pending）
+
+| ID | 结果 | 说明 |
+|---|---|---|
+| P1-TOOL-OPENSERP-001 | ✅ completed | openserp_batch.py 不存在，替代方案 zens_ink.rank_tracker 已装可用（add/check/status/trend/history），已追踪 16 个关键词 |
+| P1-TOOL-SERPBEAR-20261017 | ✅ completed | 评估完成：2k star 免费自托管，建议接入替代 OpenSEO 付费排名追踪 |
+| P1-ANALYTICS-KEYEVENT-20261012 | ⏸ pending | 需 GA4 后台创建事件+维度，分析师只读无法落地 |
+| P1-CONTENT-KEYWORD-DENSITY-001 | ⏸ pending | content_drafts 存在，需创作家自查密度≥0.5% |
+| P1-GSC-SITEMAP-INDEXED-20261012 | ⏸ pending | cmd_sched_gsc 存在但 sitemaps.list 功能未加装，需开发 |
+| P1-GEO-BASELINE-AUDIT-20261013 | ⏸ pending | 需浏览器跑 ChatGPT Search/Perplexity，超出只读范围 |
+| AFF-FUNNEL-TRACKING-20261016 | ⏸ pending | 需改外链代码+GA4 埋点，开发类 |
+| P1-TOOL-ELMO-20261017 | ⏸ pending | elmo 未部署（无 docker-compose），需运维 |
+
+### GSC 数据分析（窗口 2026-10-04~10-10，pulled_at=2026-10-13T20:06）
+
+- 总曝光极低：daily 曝光 8/8/6/1/2/2/3，点击全 0；top_pages 中仅 3 页有点击（best-ai-voice-changers 2 点击 / tools/ailice 1 / tools/wrenai 1）
+- 唯一有点击的查询：best voice changer 2026 (pos=4.0, 1 点击, CTR 100%) — 与 best-ai-voice-changers 页面正相关
+- Opportunity Score 已产出（沿用脚本）：adobe-firefly opp=0.78 最高（pos5.2/26 曝光/CTR 0%）
+- CTR 候选（5-15 位 CTR<3%）5 个页面与 10/17 一致：adobe-firefly/ai-tools-comparison/creatium x2/elevenlabs — 昨日待办仍 pending，去重后 0 新增
+
+### GA4 数据分析（窗口 2026-09-13~10-10）
+
+- 总 sessions=1969；近 10 日高点 10/04=147、10/06=145、10/10=138
+- (not set) 落地页仍居首：337 sessions 仅 1 engaged → 爬虫/无 referrer 流量持续
+- 页面级 0 engaged 问题持续：/blog/perplexity-ai-review-2026 37s/0e（已三次复检）
+- 健康页样本：/blog/suno-alternatives 37s/26e（70% engaged）— 说明内容质量好时留存可正常
+
+### 数据源状态
+
+- GSC 拉取失败：代理 127.0.0.1:7890 未开启（ConnectionRefusedError WinError 10061），沿用 live_pull_20261013_2006.json
+- GA4 沿用 ga4_live_20261012_1439.json（admin API 权限问题未修复）
+
+
+---
+
+## 2026-10-18 14:2x 数据洞察批次（SOP版）
+
+> 批次时间: 2026-10-18T14:17 | 数据: GSC live_pull_20261013_2006.json（窗口 2026-09-13~10-10，权限原因沿用现存报告）+ GA4 ga4_live_20261012_1439.json（窗口 2026-09-13~10-10，GA4 权限问题未修复继续沿用）
+
+### 一、GSC 关键词表现
+
+- 查询级：top_queries 20 个，曝光总和仅 **31**，点击 1
+- 排名分布：51+ 位占 **17/20**（85%），4-10 位仅 3 个（best voice changer 2026 pos4.0 / midjourney pos8 / voice changer pos6）
+- 唯一带点击查询：**best voice changer 2026**（pos4.0，CTR 100%，impr=1）
+- 页面级：top_pages 15 个，曝光总和 178，点击 5
+- **P0 结论**：GSC 流量基数仍极低，排名 51+ 查询占 85%，需靠新增内容（今日已派发 email/fitness/legal 3 个 P0 选题）拉高曝光基数，而非优化现有低曝光长尾
+
+### 二、GA4 流量趋势
+
+- 总 sessions **1969**（窗口 2026-09-13~10-10），engaged 159（8.1%），avg duration 11.3s
+- 异常项未变：**(not set) 落地页 337 sessions 仅 1 engaged**（P0 级，爬虫/垃圾流量占比 17%）
+- **0 engaged 页面 4 个持续存在（P1 级）**：perplexity-ai-review（37s/0e）、best-ai-coding-tools（9s/0e）、midjourney-free-trial（9s/0e）、best-ai-video-editors（8s/0e）
+- 对照健康页面 suno-alternatives 37s/26e（70% engaged）——0 engaged 非流量质量问题而是页面内容/CTA 问题
+
+### 三、CTR 优化筛选（排名5-15且CTR<3%，扩到5-20）
+
+- 页面级 5 个候选全部与 10/17 已派发重复（CTR-20261017-01~05）→ 去重跳过
+- **新增 2 条查询级待办**：query "midjourney"（pos8/ctr0%/impr1）、query "voice changer"（pos6/ctr0%/impr1）→ CTR-20261018-01/02 已派打磨师
+
+### 四、待办执行情况（6 条分析师 pending，全 P1，复核查证）
+
+| 待办 | 核查结论 | 处理 |
+|---|---|---|
+| P1-ANALYTICS-KEYEVENT-20261012 | affiliate_link_click 仅文档提及，GA4 未落地（权限问题未修复） | 保持 pending |
+| P1-CONTENT-KEYWORD-DENSITY-001 | content_drafts 74 篇；**抽查最新 3 篇密度全部达标**（fitness ai4.12%/fitness0.92%、hallucinate0.59%、notion3.14%） | 保持 pending（旧 4 篇未质检） |
+| P1-GSC-SITEMAP-INDEXED-20261012 | cmd_sched_gsc 仍无 sitemaps.list | 保持 pending |
+| P1-GEO-BASELINE-AUDIT-20261013 | **技术就绪度审计已完成**（04:02，score 8.94，10/11 爬虫可访问，CCBot 被屏蔽，llms.txt 齐备）；引用级 baseline 未做 | 保持 pending |
+| AFF-FUNNEL-TRACKING-20261016 | UTM 仅计划文档，未落地 | 保持 pending |
+| P1-TOOL-ELMO-20261017 | 无 elmo 文件，未部署 | 保持 pending |
+
+### 五、新发现（2 项）
+
+1. **P1-GEO 技术侧已达标**：real_geo_aeo_audit_results.json（10/18 04:02）显示 geo_readiness_score=8.94、7 关键页 AEO 8/8 全过、llms.txt+llms-full.txt 齐备；但 **CCBot 被 robots.txt 屏蔽（Disallow: /）**，建议放行（LLM 引用渠道之一）
+2. **新草稿密度已达标**：创作家今日产出 3 篇新草稿关键词密度全部 ≥0.5% 阈值，说明密度待办方法论已生效，建议打磨师尽快质检剩余批次
+
+### 六、待办影响
+
+- 新增 CTR 待办 2 条（CTR-20261018-01/02，P1，派打磨师）
+- 6 条分析师待办均补 status_note_20261018b
+
+
+---
+
+## 2026-10-18 20:0x 数据洞察批次（SOP版）
+
+> 批次时间: 2026-10-18T20:07 | 数据沿用: GSC live_pull_20261013_2006.json + GA4 ga4_live_20261012_1439.json（代理未开/GA4 权限未修复）
+
+### 一、待办执行（6 条分析师 pending 复核查证，全 P1）
+
+| 待办 | 本轮核查结论 |
+|---|---|
+| P1-ANALYTICS-KEYEVENT-20261012 | 无新证据，GA4 未落地 |
+| P1-CONTENT-KEYWORD-DENSITY-001 | **content_drafts 74→77**，最新 2 篇密度达标（subscription 1.89%、social media 0.81%）；创作家持续响应 |
+| P1-GSC-SITEMAP-INDEXED-20261012 | cmd_sched_gsc 仍无 sitemaps.list |
+| P1-GEO-BASELINE-AUDIT-20261013 | 技术审计在案（8.94），引用级未做 |
+| AFF-FUNNEL-TRACKING-20261016 | UTM 仅计划文档 |
+| P1-TOOL-ELMO-20261017 | 无 elmo 文件 |
+
+### 二、CTR 待办状态（重要变化）
+
+- **CTR-20261018-01/02（14:17 派发的查询级 midjourney/voice changer）已被打磨师标记 completed**——2 小时内处理完成，打磨师响应高效
+- 10/17 派发的 CTR-20261017-01~06 已不在 state.json（已处理/清理）
+- 本轮基于同一 GSC 数据重新筛出 4 条页面级候补并派发：**CTR-20261018-03~06**（best-ai-voice-changers pos16.5 / adobe-firefly pos5.2 / ai-tools-comparison pos6.0 / creatium pos6.3）
+
+### 三、GSC/GA4 只读分析（与 14:2x 批次一致）
+
+- GSC：查询级 20 词曝光 31/点击 1；51+ 位占 85%；best voice changer 2026 pos4.0 唯一带点击
+- GA4：sessions 1969；(not set) 337s/1e 异常；0 engaged 4 页持续
+
+### 四、新发现（2 项，P1）
+
+1. **打磨师 CTR 响应链路通畅**：查询级待办 2 小时内 completed，说明 CTR 优化闭环有效，可继续按批次派发
+2. **创作家产能持续**：今日 content_drafts 74→77，密度方法论连续 5 篇达标（fitness/social media/subscription/hallucinate/notion），P1 选题（social media）已开始生产
+
+
+---
+
+## 2026-10-19 08:0x 数据洞察批次（SOP版）
+
+> 批次时间: 2026-10-19T08:02 | 数据沿用: GSC live_pull_20261013_2006.json + GA4 ga4_live_20261012_1439.json（无新拉取文件；代理/GA4 权限未修复）
+
+### 一、待办执行（7 条分析师 pending）
+
+| 待办 | 处理 |
+|---|---|
+| **P1-RESEARCH-ASSET-20261019（新，周会派发）** | **分析师数据部分已完成**：产出 research_asset_20261019.md（收录成本 $0-$497、审核周期 48h-2周、目录 DR 49-90、futurepedia 75分类/topai 2.3万工具 vs 我们 ~20 类目对比），待创作家成文 |
+| P1-GEO-BASELINE-AUDIT-20261013 | 引用级未做（需浏览器），补 note |
+| P1-CONTENT-KEYWORD-DENSITY-001 | 创作家持续产出且密度达标，旧 4 篇待打磨师质检 |
+| P1-ANALYTICS-KEYEVENT-20261012 | GA4 事件未落地（权限未修复） |
+| P1-GSC-SITEMAP-INDEXED-20261012 | cmd_sched_gsc 未加 sitemaps.list |
+| AFF-FUNNEL-TRACKING-20261016 | UTM 仅计划文档 |
+| P1-TOOL-ELMO-20261017 | 无 elmo 文件 |
+
+### 二、GSC/GA4 只读分析
+
+- GSC: 20 查询曝光 31/点击 1；51+ 位占 85%；唯一带点击 best voice changer 2026 pos4.0
+- GA4: sessions 1969；(not set) 337s/1e 异常持续；perplexity-ai-review 37s/0e 0 engaged
+- **P0 结论不变**: 曝光基数过低是主要瓶颈，新增内容（email/fitness/legal/social）尚未进入 GSC 窗口（窗口止于 10-10）
+
+### 三、CTR 优化（本轮新增 4 条）
+
+- CTR-20261019-01 query "midjourney"（pos8/0%/impr1）——10/18 派发后已处理，本轮补录复核
+- CTR-20261019-02 query "voice changer"（pos6/0%/impr1）——同上
+- CTR-20261019-03 /blog/article-api-...-creatium-coach-review（pos9.5/0%/impr2）
+- CTR-20261019-04 /blog/article-api-...-elevenlabs-review（pos5.6/0%/impr5）
+- 说明: 与 10/17-10/18 派发内容存在部分重叠（历史待办已被清理/处理），本轮按当前 state 去重后补录，已注明
+
+### 四、新发现（2 项）
+
+1. **P1 数据资产待办已闭环（分析师侧）**：research_asset_20261019.md 就绪，创作家可据此写"AI工具目录收录基准2026"链接磁铁页
+2. **待办列表再次漂移**：10/18 20:05 时 151 条（149 pending+2 completed），10/19 08:00 时 150 条全 pending——completed 记录与 CTR-20261018-01/02 一并被清理，建议指挥官核查 state 维护流程
+
+
+---
+
+## 2026-10-19 14:2x 数据洞察批次二（SOP版）
+
+> 批次时间: 2026-10-19T14:20 | 数据沿用: GSC live_pull_20261013_2006.json + GA4 ga4_live_20261012_1439.json
+
+### 一、待办执行（8 条分析师 pending）
+
+| 待办 | 处理 |
+|---|---|
+| **P1-LISTING-PRICING-20261019（新，战略学习派发）** | **分析师成本/定价表已完成**：产出 pricing_benchmark_20261019.md（Futurepedia $247/$497/Enterprise $2K-10K、Toolify ~$100、TAAFT $49/$347、Future Tools $79-900；成本 $10/单 毛利 94%+；目标档位 Free/$49 Express/$99 Featured/$199 Sponsor；支付 PayPal+USDT+Stripe 三通道），待创作家写销售页文案 |
+| P1-RESEARCH-ASSET-20261019 | 数据资产已就绪，待创作家成文 |
+| 其余 6 条（GEO/DENSITY/KEYEVENT/SITEMAP/UTM/ELMO） | 复核查证，无新证据，保持 pending |
+
+### 二、CTR 状态（重要变化）
+
+- **8 条 CTR 待办全部 completed**：CTR-20261018-03~06 + CTR-20261019-01~04 均已被打磨师处理（08:00 派发 → 14:2x 全完成，半天内闭环）
+- 本轮 CTR 候选与已 completed 内容完全重复（同一 GSC 数据窗口），**去重后 0 新增**——不重复派单避免污染待办池，下一批依赖新 GSC 拉取
+
+### 三、GSC/GA4（与早间批次一致）
+
+- GSC: 20 查询曝光 31/点击 1，51+ 位占 85%
+- GA4: sessions 1969，(not set) 337s/1e 异常持续
+
+### 四、新发现（2 项）
+
+1. **打磨师 CTR 闭环全速运转**：10/19 早间 4 条 + 10/18 4 条页面级全部 completed，待办池中 CTR 已清空——CTR 优化轮次完成，等待新 GSC 数据窗口
+2. **变现数据资产齐备**：本周两个战略待办（RESEARCH-ASSET、LISTING-PRICING）分析师侧均闭环，创作家待成文；定价 $49/$99 对标市场已验证（TAAFT $49/Futurepedia $99-199）
+
+
+---
+
+## 2026-10-19 21:0x 数据洞察批次三（SOP版）
+
+> 批次时间: 2026-10-19T20:07 | 数据沿用: GSC live_pull_20261013_2006.json + GA4 ga4_live_20261012_1439.json（无新拉取文件）
+
+### 一、待办执行（9 条分析师 pending 全量复核查证）
+
+| 待办 | 优先级 | 核查结论 |
+|---|---|---|
+| **P0-CMD-ANALYST-SPEED-20261019**（指挥官催办：完成率15.1%<50%） | P0 | 3 重点核查：SITEMAP 需架构师（cmd_sched_gsc 无 sitemaps.list 已实测核验）；KEYEVENT 受 GA4 权限阻塞（admin API 未修复）；DENSITY 旧 4 篇无打磨师复检记录。批量加快=本批次全量 9 条核查 |
+| P1-RESEARCH-ASSET-20261019 | P1 | 数据资产就绪，待创作家成文 |
+| P1-LISTING-PRICING-20261019 | P1 | 定价表就绪，待创作家写销售页 |
+| P1-GSC-SITEMAP-INDEXED-20261012 | P1 | cmd_sched_gsc 无 sitemaps.list 调用（实测核验），需架构师 |
+| P1-ANALYTICS-KEYEVENT-20261012 | P1 | GA4 权限阻塞，无法落地 |
+| P1-CONTENT-KEYWORD-DENSITY-001 | P1 | 86 篇草稿，旧 4 篇无复检记录 |
+| P1-GEO-BASELINE-AUDIT-20261013 | P1 | 需浏览器，无新证据 |
+| AFF-FUNNEL-TRACKING-20261016 | P1 | 无落地证据 |
+| P1-TOOL-ELMO-20261017 | P1 | elmo 文件 0，未部署 |
+
+### 二、CTR 状态（去重 0 新增，有据可查）
+
+- 本批从同一 GSC 数据窗口筛出 8 条候选（7 条 5-15 位 + 1 条 15-20 位），**逐条与打磨师 R19 日志比对，全部已处理**：
+  - 真改文案 2 条：best-ai-voice-changers（pos16.5/68impr，title60c+excerpt149c 已改）、adobe-firefly-review（pos5.2/26impr，title58c+excerpt154c 已改）
+  - 核验关闭 6 条：comparison/midjourney/voice changer/creatium×2/elevenlabs（301 在位或 1 曝光噪声）
+- **去重后 0 新增**——同一数据窗口不重复派单，下一批 CTR 依赖新 GSC 拉取（代理开 + 重跑）
+
+### 三、GSC/GA4（沿用数据，无新窗口）
+
+- GSC 窗口 2026-09-13~10-10：20 查询曝光 31/点击 1，51+ 位占 85%
+- GA4：sessions 1969，(not set) 337s/1e 异常持续
+
+### 四、新发现（3 项）
+
+1. **创作家批量生产 P1 选题**：content_drafts 77→86 篇（+9），新增 2026-10-19 的 travel-planners/story-generators/personal-assistants/interior-design/health-apps/gift-idea/fashion 等——正是 10/18 关键词挖掘的 P1 选题（travel/health/fashion/gift 已覆盖），P0/P1 选题闭环验证有效
+2. **打磨师 R20 已处理 P0 假完成整改**：best-ai-voice-changers READY.md 68→100（补 frontmatter/BLUF/问句H2），并真修复 pika/runway/sora 三篇（75→100）——R19 改 data/posts.json 与 READY.md 分离问题已修复
+3. **state 再次漂移**：10/19 批次二结束 166/141/25 → 本批 145/144/1——completed 25→1 被指挥官清理（含 CTR-20261018/19 全系列），记录与结论仍可在 audit_findings/polisher 日志追溯
+
+
+---
+
+## 2026-10-19 索引监控发现（分析师）
+| 严重度 | 发现 | 证据 | 建议 |
+|--------|------|------|------|
+| 🔴 P0 | /tools/gemini 连续 SSL 握手超时（2次），与 GSC redirect_error 状态吻合 | 2026-10-19 本地 HTTP 直连 _ssl.c:1015 handshake timed out | 架构师排查 TLS/301/CF 配置 |
+| 🔴 P0 | /category/chat 连续 SSL 握手超时（2次），同样为 redirect_error | 同上 | 同上 |
+| 🟠 P1 | 40 个 unknown URL 从未补全（10-13 重跑 20 个仍全 unknown） | url_index_check_batch_0_20_20261013_002522.json 全 unknown | 分析师闭环 AdsPower CDP 工具问题 |
+| 🟠 P1 | query 级曝光停滞：28 天 165 曝光/98 词，82% 词排 51+ | OpenSEO 09-18→10-16 | 排名是瓶颈，非编入；需外链+内容深度 |
+
+
+## 2026-10-20 批次（SOP 数据洞察）
+
+> 批次时间: 2026-10-20T08:03 | GSC 数据窗口: 2026-09-13~10-10（止于 10-10，未更新）| GA4: ga4_live_20261012_1439.json（10/12 拉取）
+
+### 待办执行
+- 分析师 pending 10 条全量复核查证，0 条可标记 completed（详见各条 status_note_20261020）
+- **P0-INDEXMON-CDP-CLOSE 实质进展**：根因拆解为两层——①websocket-client 依赖缺失（已修复，adspower_cdp 导入 OK，脚本可启动，68 URL 列表可重建）；②AdsPower CDP 服务不在线（WinError 10061 连接被拒）→ 环境阻塞，需启动 AdsPower+GSC 登录态后重跑 `python scripts/gsc_batch_check.py 0 68`
+
+### P1 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| P1 | GA4 单日异常低谷：10/02=25 sessions（前后日 10/01=83、10/04=147），疑似数据缺口或爬虫过滤生效，需下窗口观察是否重现 | ga4_live_20261012_1439.json daily |
+| P2 | GSC 拉取脚本 daily 记录 date 字段为 None（数据质量 bug，daily 无法按日绘图） | live_pull_20261013_2006.json daily |
+| P1 | GA4 参与度极低：1969 sessions / engaged 159（8.1%），(not set) 落地页 337s/1 engaged 占 17% 垃圾流量，首页 / 94s/29e 正常 | ga4 overview + top_landing |
+| - | CTR 候选 8 条（5-15 位 7 条 + 扩 5-20 位 1 条）全部与打磨师 R19 已处理记录重复 → **0 新增**（GSC 窗口未更新，数据止于 10-10；下一批 CTR 需先开代理 127.0.0.1:7890 重跑 GSC 拉取） | live_pull_20261013_2006.json + polisher_2026-10-19.md |
+
+### 结论
+- GSC 曝光结构不变（查询级 31 曝光/1 点击、页面级 178/5，85% 查询在 51+ 位）——低曝光根因为程序化布尔查询+低相关长尾，非算法降权
+- 流量侧唯一正向信号：best-ai-voice-changers pos16.5/68 曝光/2 点击（R19 title 优化后待复测）
+
+
+## 2026-10-20 批次二（SOP 数据洞察，14:2x）
+
+> 批次时间: 2026-10-20T14:19 | state 总数 170/pending 157/completed 13（上轮 157/157/0 → 其他窗口新增 13 条并标记 13 条 completed）| GSC 数据窗口仍未更新（最新 live_pull_20261013_2006.json）
+
+### 待办执行
+- 分析师 pending 12 条全量复核查证（新增 2 条重点评估）：
+  - **P0-GEO-ELMO-TRACKER-20261020**（新增 P0）：elmo 项目已核实（elmohq.com，MIT，Postgres，BYOK）；**部署硬阻塞=本机无 docker**（实测 docker 命令不存在）→ 需先装 Docker 24+/Compose v2 才能部署，保持 pending
+  - **P1-OPENSERP-RANK-20261020**（新增 P1）：karust/openserp 已核实（Go 二进制/Docker 自托管 REST API，6 引擎免费）；**本机 docker 与 go 均不可用** → 接入阻塞；现有 serper 付费脚本 20+ 可临时替代排名快照
+  - 上轮 10 条复查：落盘 note 全部在位（未被 last-write 覆盖），阻塞点无变化
+
+### 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| P1 | 本机无 Docker 且无 Go → elmo（GEO 追踪）与 OpenSERP（排名跟踪）两条自托管工具链全部阻塞，需先装 Docker（运维/用户动作）后才能部署 | 实测 docker/go 命令均不存在 |
+| P2 | state 漂移：上轮 157 → 本轮 170（+13 由其他窗口新增），completed 0→13；分析师侧总数/结构随他窗口变化，需每周核对 | state.json 前后对比 |
+| - | CTR 候选复核：5-15 位 7 条 + 扩 5-20 位 1 条，8/8 与打磨师 R19 已处理重复 → 新增 0（GSC 数据窗口止于 10-10 未更新，与上轮一致） | live_pull_20261013_2006.json |
+| - | openserp Python 包未安装（scripts/test_openserp.py 为失败尝试）；项目内 serper 付费脚本 20+ 在用 | python import openserp 失败 + scripts 目录 |
+
+### 结论
+- 工具链环境缺口（无 Docker/无 Go）成为 GEO 追踪与排名跟踪两条线的共同阻塞点，建议指挥官拍板是否安装 Docker Desktop
+- GSC/GA4 数据 7 天未更新，一切 GSC 侧洞察（CTR/排名/关键词）停留在 10-10 窗口，需开代理 127.0.0.1:7890 重跑拉取
+
+
+## 2026-10-20 批次三（SOP 数据洞察，2026-10-20T20:12）
+
+> state 总数 177/pending 172/completed 5 | 本批次实质闭环 3 条排查待办 + 产出 P0 索引审计
+
+### 重大进展：AdsPower CDP 全量索引检查闭环（P0-INDEXMON-CDP）
+- 环境恢复：AdsPower CDP 已上线（不再 WinError 10061），小批量实测返回真实状态后跑全量 `python scripts/gsc_batch_check.py 0 68`
+- 结果保存：`gsc-ga4-report/url_index_check_batch_0_67_20261020_201116.json`
+
+**68 URL 索引状态分布：**
+
+| 状态 | 数量 | 占比 | 说明 |
+|---|---|---|---|
+| indexed | 25 | 36.8% | 正常收录 |
+| redirect | 19 | 27.9% | 被重定向，未收录 |
+| not_indexed | 15 | 22.1% | 未编入索引 |
+| redirect_error | 3 | 4.4% | 重定向错误 |
+| duplicate | 1 | 1.5% | 重复 |
+| unknown | 5 | 7.4% | 检查失败 |
+| **未收录合计** | **38** | **55.9%** | redirect+not_indexed+redirect_error+duplicate |
+
+- **头部工具页全未收录**：/tools/chatgpt(redirect)、/tools/claude(not_indexed)、/tools/gemini(redirect_error)、/tools/midjourney(redirect)、/tools/perplexity(redirect)、/tools/sora(redirect)、/tools/runway(redirect)、/tools/dall-e-3(redirect)、/tools/stable-diffusion(redirect)
+- **分类页仅 2/17 收录**：video、agent indexed；其余 redirect/not_indexed/unknown/duplicate
+- 已收录亮点：github-copilot、cursor、windsurf、claude-code、openhands、ollama、jan、elevenlabs、pika、canva-ai、langfuse 等 25 个
+
+### 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| **P0** | 38/68 URL 未编入索引（55.9%），头部工具页 chatgpt/claude/gemini/midjourney/perplexity 全未收录 → **GSC 曝光断崖（最新 7 天仅 30 曝光）的索引层根因** | CDP 全量实测 |
+| P1 | GA4 10/03 sessions=893 异常高峰（相邻日 22-168），参与度仅 7.4%（66/893）→ 疑似爬虫/垃圾流量集中爆发 | ga4 daily |
+| P1 | GA4 (not set) 337s 仅 1 engaged 占 17% 垃圾流量实锤；内容停留优化派打磨师 | ga4 top_landing |
+| - | GSC 曝光断崖核查闭环：最新 7 天 30 曝光/点击 0，top20 查询曝光 31，85% 查询 51+ 位；根因=低相关长尾 + 索引缺口 | live_pull_20261013_2006.json |
+| - | CTR 复核 8/8 与 R19 重复 → 0 新增（数据窗口未更新，连续 3 轮） | live_pull_20261013_2006.json |
+
+### 待办状态
+- 已标记 completed：P1-GA4-ENGAGEMENT（垃圾流量排查完成，优化派打磨师）、P1-GSC-IMPR-DROP（断崖核查完成）、P1-CDP-ENV（环境恢复验证+全量重跑完成）
+- 新派：P0-INDEX-FIX-20261020 → 架构师修复 38 个未收录 URL 后 CDP 复测
+- P0-INDEXMON-CDP-CLOSE 保持 pending：索引数据已补全（40 unknown→5 unknown），剩架构师修复+复测环节
+
+
+---
+
+## 批次 2026-10-21（分析师-数据洞察 SOP：先执行待办再产出新发现）
+
+### 待办执行结果（完成 4 条）
+
+| 待办 | 结果 | 证据 |
+|---|---|---|
+| P1-REDIRECT-ERROR-DIAG-20261021 | ✅ completed | 3 个 redirect_error URL 实测重定向链：/category/chat、/category/code、/tools/gemini 均为 308→200 单跳，无链过长/无循环/目标正常 → **308 斜杠重定向本身不是错误，疑似 CDP 抓取判定口径或 Google 侧判定差异** |
+| P1-AI-CRAWLER-VISIBILITY-20261021 | ✅ completed | llms.txt 200(2764B)、llms-full.txt 200(597010B)、robots.txt 200(3021B)、sitemap.xml 200(150KB) 全部在线；GPTBot/ClaudeBot/PerplexityBot/Bytespider/Google-Extended/OAI-SearchBot 等 AI 爬虫均 Allow:/ 可爬取 |
+| P2-LLM-REFERRAL-BASELINE-20261021 | ✅ completed | GA4 权限恢复(10/12 后首次)，拉取 09-18~10-18：AI 域名引荐 32 sessions=1.1%，全部来自 chatgpt.com(medium=ai-assistant)；perplexity/claude/gemini 引荐为 0（与 GA4 捕获局限一致） |
+| P1-GA4-AI-CHANNEL-20261021 | ✅ completed | GA4 权限已恢复；原生 AI Assistants 渠道已生效（chatgpt.com 自动打标 ai-assistant）。补充：需建自定义渠道分组补 perplexity/claude/gemini（见新待办 P1-GA4-AI-REGEX） |
+| P0-INDEXMON-CDP-CLOSE-20261019 | 🔄 复测进行中 | CDP 0-19 段已跑：category/code 由 redirect_error→redirect（架构师修复有进展），chat/gemini 仍 redirect_error；20-67 段后台执行 |
+
+### 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| **P0** | **博客目录混入 article-api-*.md 草稿 URL 且被索引**：4 个 /blog/article-api-20260903/04-*md 页面被 Google 收录（imp 最高 9、pos 4.6-9.0），占 top_pages 曝光前列 → 内容生产流水线把 .md 草稿发布进了公开博客目录，稀释正规文章权重 | live_pull_20261021_0803.json top_pages |
+| **P0** | **GSC 最新 7 天窗口曝光塌方：26 曝光/0 点击**（上窗口 68 曝光/2 点击），28 天 top_queries 中 18/20 在 51+ 位，曝光最高查询仅 3 → 索引缺口修复前流量无法回升 | live_pull_20261021_0803.json |
+| P1 | **GA4 10/16 新尖峰 sessions=236 仅 10 engaged（4.2%）**：继 10/03(893) 后又一异常日，疑似持续爬虫/垃圾流量 → 需专项核查 UA/source | ga4_live_20261021.json daily |
+| P1 | **robots.txt CCBot 仍 Disallow:/ 整站屏蔽**（Common Crawl 数据源，影响 GPT 系训练语料可见性）→ GEO 审计遗留，建议放行 /llms* 或全站 | robots.txt 实测 |
+| P2 | **URL 规范化问题**：GSC 同时出现 http://www.aitoolcrux.com/ 与 https://www.aitoolcrux.com/、/about 与 /about/、带尾斜杠博客页并存 → 权重分散，建议 301 归一并修 canonical | live_pull top_pages |
+| P2 | **AI Overview zero-click 候选**：位置 1 但 CTR≈0 的查询存在（ai-native ide adoption metrics cursor replit latest imp=2 pos=1.0、cursor-alternatives imp=2 pos=1.0）→ AI Overview 引用候选页 | live_pull top_queries |
+
+### 待办状态
+- 完成：P1-REDIRECT-ERROR-DIAG、P1-AI-CRAWLER-VISIBILITY、P2-LLM-REFERRAL-BASELINE、P1-GA4-AI-CHANNEL（4 条）
+- 新派：P0-MD-DRAFT-INDEX-CLEAN（清理 article-api 草稿+noindex）、P1-GA4-OCT16-SPIKE（10/16 尖峰排查）、P1-CCBOT-ALLOW（评估放行 CCBot）、P1-GA4-AI-REGEX（自定义渠道分组补 AI 域名）、P2-URL-CANONICAL（规范化 301）
+- CTR 优化派打磨师：adobe-firefly-review-2026(pos5.0/0%)、ai-coding-tools-comparison-2026(pos6.0/0%)、ai-policy(pos8.0/0%)、best-ai-voice-changers-2026(pos16.5/2.9% 上窗 68 曝光最大)
+- P0-INDEXMON-CDP-CLOSE 保持 pending（复测全量完成后判定闭环）
+
+
+### CDP 复测结论（10/21 全量跑完，P0-INDEXMON-CDP-CLOSE 状态更新）
+
+- **0-19 段（可靠，20 URL）**：category/code 由 redirect_error→**redirect（架构师修复有进展）**；category/image、category/writing 由 unknown→redirect（通道本次成功获取真实状态）；tools/chatgpt 仍 redirect、tools/claude 仍 not_indexed、tools/gemini 仍 redirect_error（头部工具页未修复）
+- **20-67 段（48 URL，36 unknown）**：CDP 通道波动（大量查询超时无结果），**不能作为状态结论** → 基线对比仅以 0-19 段 + 10/20 基线为准；unknown 段需 CDP 通道恢复后重测（经验：adspower-cdp 批量检查产出全 unknown 时不采信）
+- **P0-INDEXMON-CDP-CLOSE 保持 pending**：架构师修复未完成（chatgpt/claude/gemini 头部页仍未收录），待修复后复测闭环
+- **新发现 P2**：CDP 通道稳定性问题（36/48 unknown），建议架构师排查脚本重试机制
+
+
+---
+
+## 批次 2026-10-21（二）（分析师-数据洞察 SOP：先执行待办再产出新发现）
+
+### 待办执行结果（完成 6 条）
+
+| 待办 | 结果 | 证据 |
+|---|---|---|
+| P1-ANALYTICS-KEYEVENT-20261012 | ✅ completed | GA4 事件核查：affiliate_click(2 sessions/2 count)+article_affiliate_click(1/1)+tool_outbound_click(1/1) **已落地且有数据** → 转化埋点生效；Key Event 标记为 GA4 后台动作 |
+| P1-GA4-OCT16-SPIKE-20261021 | ✅ completed | 10/16=236s 中 234 来自 (direct)；**新加坡 96s 全 0 engaged**、US 109s 仅 4 engaged、desktop 223s → 与 10/03(893) 同模式的 Bot 流量（新加坡 IP 段） |
+| P1-GA4-AI-REGEX-20261021 | ✅ completed | 30 天 AI 域名引荐=chatgpt.com 32(ai-assistant)+bing organic 8；perplexity/claude/gemini/copilot 全 0 → 原生渠道已捕获唯一 AI 来源；自定义 regex 配置转 GA4 管理员 |
+| P2-GSC-AI-MODE-BASELINE-20261021 | ✅ completed | searchAppearance 维度实测：**AI Overview/AI Mode 外观曝光=0（基线 0）**；REVIEW_SNIPPET imp=131/pos42.7 为最大富媒体外观 |
+| P1-GSC-SITEMAP-INDEXED-20261012 | ✅ completed | sitemaps.list 调用成功：**sitemap.xml submitted=845 但 indexed=0**（重大异常→新待办 P1-SITEMAP-INDEXED-0）；API 可用性已验证，脚本化转开发 |
+| P0-CMD-ANALYST-SPEED-20261019 | ✅ completed | 催办 3 重点全部实质推进（SITEMAP/KEYEVENT/DENSITY 本轮均有新证据） |
+
+### 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| **P1** | **sitemap.xml submitted=845 但 GSC indexed=0**：与 CDP 实测 25 indexed 口径冲突 → 疑 Google 未处理 sitemap 或 sitemap 内 URL 索引异常，需 URL Inspection 抽查 | sitemaps.list 10/21 实测 |
+| **P1** | **最新 6 篇草稿 5 篇关键词密度未达标**（0.09-0.34% vs 阈值 0.5%）：claude-rate-limits/voice-changer-vs-voicemod/best-free-ai-voice-changers/free-ai-fitness-coaches/free-ai-tools-for-students；仅 ai-tools-for-non-technical-users 1.15% 达标 → 创作家自查规则未落实，DENSITY 待办未闭环 | content_drafts 抽检 10/21 |
+| P1 | GA4 30 天转化事件总量极低：affiliate 类点击合计仅 4 次 → 联盟外链点击/曝光漏斗基线几乎为零，UTM 埋点覆盖有限 | ga4 events 10/21 |
+| - | AI Overview/AI Mode 曝光基线=0（GEO 前置：AI 外观流量尚未进入 GSC 统计） | searchAppearance 实测 |
+
+### 待办状态
+- 本轮完成：P1-ANALYTICS-KEYEVENT、P1-GA4-OCT16-SPIKE、P1-GA4-AI-REGEX、P2-GSC-AI-MODE-BASELINE、P1-GSC-SITEMAP-INDEXED、P0-CMD-ANALYST-SPEED（6 条）
+- 新派：P1-SITEMAP-INDEXED-0（sitemap indexed=0 核查）、P1-GA4-SG-BOT-CLEAN（新加坡 IP 清洗→架构师）、P1-DENSITY-REGRESSION（5 篇未达标复检→创作家/打磨师）
+- CTR 优化待办沿用上批次 4 条（数据窗口未变不重复创建）
+- 保持 pending：P0-INDEXMON-CDP-CLOSE（CDP 20-67 段 36 unknown 通道波动，0-19 段有进展待架构师修复）、P0-GEO-ELMO-TRACKER（Docker 阻塞）、P1-TOOL-ELMO/P1-OPENSERP-RANK（Docker/Go 阻塞）、P1-GEO-BASELINE-AUDIT（需浏览器 SERP）、P1-CONTENT-KEYWORD-DENSITY（旧 4 篇待打磨师）
+
+
+---
+
+## 批次 2026-10-21（三）（分析师-数据洞察 SOP：先执行待办再产出新发现）
+
+> 注：上轮（批次二）6 条 completed + 4 条 CTR 待办被其他窗口归档至 archived_todos（808 条，命中 6），非丢失；本轮基于最新 focus 现状执行。
+
+### 待办执行结果（完成 3 条 + 推进 4 条）
+
+| 待办 | 结果 | 证据 |
+|---|---|---|
+| **P1-SITEMAP-INDEXED-0-20261021** | ✅ completed | URL Inspection API 抽查 5 URL：首页/category-video **PASS(Submitted and indexed)** → sitemap indexed=0 为 GSC 统计口径未聚合，非全站未索引；tools/claude=URL unknown to Google（头部页问题真实，并入 P0-INDEXMON） |
+| **AFF-FUNNEL-TRACKING-20261016** | ✅ completed | 漏斗基线表已写入本文（下表）；GA4 事件已落地（批次二验证 affiliate_click 等） |
+| **P1-ACK-SLA-20261021** | ✅ completed | task 为空占位(None) 无实际内容 → 归档；ACK 以日志+completed_todo 为准 |
+| P0-INDEXMON-CDP-CLOSE | 🔄 复测推进 | 批次三 CDP 0-19 段与早间一致（通道稳定可采信）：category/video+agent indexed、tools/chatgpt=redirect、tools/claude=not_indexed、tools/gemini=redirect_error → 头部页未修复，保持 pending |
+| P1-LISTING-PRICING / P1-RESEARCH-ASSET | 🟢 分析师侧就绪 | pricing_benchmark_20261019.md / research_asset_20261019.md 已在库，待创作家成文闭环 |
+| P1-CONTENT-KEYWORD-DENSITY-001 | 🟢 证据更新 | 批次二抽检最新 6 篇 5 篇未达标（已派 DENSITY-REGRESSION），质检动作在打磨师侧 |
+
+### AFF 漏斗基线表（AFF-FUNNEL-TRACKING 产出）
+
+| 漏斗层级 | GA4 30天(09-18~10-18) | 占比 | EgoistAI 模型基准 | 差距 |
+|---|---|---|---|---|
+| sessions | 2,955 | 100% | 50,000 | 5.9% |
+| affiliate 点击（affiliate_click+article_affiliate_click+tool_outbound_click） | 4 | 0.14% | 5%（2,500） | 大幅低于 |
+| 试用 | 0（无数据） | - | 8% | 无埋点 |
+| 付费 | 0（无数据） | - | 40% | 无埋点 |
+
+**结论**：联盟点击率 0.14% vs 模型 5%，差 36 倍；当前流量基数小（2,955）且 affiliate 埋点仅 4 次点击，需先解决 GSC 曝光塌方（26/0）才能验证漏斗有效性。
+
+### 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| **P1** | **CDP 通道稳定验证通过**：批次三复测 0-19 段与早间完全一致 → 之前 20-67 段 36 unknown 确认为通道波动；0-19 段数据可采信 | gsc_batch_check 复测 10/21 |
+| P1 | GSC 曝光塌方持续：10/12~10/18 每日曝光 1-7 次、7 天合计 26 次、0 点击；top_queries 20 条中 18 条在 51+ 位（>70 位的 14 条）→ 索引/内容质量优先级高于一切 | live_pull 10/21 复拉 |
+| P1 | **URL Inspection 与 CDP 双口径交叉验证**：首页/分类页 PASS 已收录，但头部工具页 chatgpt(redirect)/claude(not_indexed)/gemini(redirect_error) 未收录 → 站内头部工具页是索引黑洞 | URL Inspection + CDP 10/21 |
+| - | CTR 优化待办重建 3 条（上轮 4 条被归档，focus 中为 0，打磨师需可见可执行） | state 核查 10/21 |
+
+### 待办状态
+- 本轮完成：P1-SITEMAP-INDEXED-0、AFF-FUNNEL-TRACKING、P1-ACK-SLA（3 条）
+- 本轮新增：CTR-ADOBE-FIREFLY、CTR-AI-CODING-TOOLS、CTR-AI-POLICY（3 条，source=ctr_optimization_20261021）
+- 保持 pending：P0-INDEXMON-CDP-CLOSE（头部页未修复）、P0-GEO-ELMO-TRACKER/P1-TOOL-ELMO/P1-OPENSERP-RANK（Docker/Go 阻塞）、P1-GEO-BASELINE-AUDIT（需浏览器）、P1-LISTING-PRICING/P1-RESEARCH-ASSET（待创作家）
+
+
+---
+
+## 批次 2026-10-22（分析师-数据洞察 SOP：先执行待办再产出新发现）
+
+### 待办执行结果（完成 2 条 + 阻塞确认 4 条 + 复测推进 1 条）
+
+| 待办 | 结果 | 证据 |
+|---|---|---|
+| **P1-LISTING-PRICING-20261019** | ✅ completed | 定价基准材料 pricing_benchmark_20261019.md 已在库（2941B），分析师侧交付完成；创作家成文另立待办 |
+| **P1-RESEARCH-ASSET-20261019** | ✅ completed | 研究素材 research_asset_20261019.md 已在库（2722B），分析师侧交付完成；创作家成文另立待办 |
+| P0-INDEXMON-CDP-CLOSE | 🔄 复测推进 | CDP 复测 0-19 段（10/22 08:05）：tools/chatgpt=redirect、tools/claude=not_indexed、tools/gemini=redirect_error **连续 3 天一致未修复** → P0 保持 pending |
+| P0-GEO-ELMO-TRACKER / P1-TOOL-ELMO / P1-OPENSERP-RANK | 🚫 阻塞确认 | 本机 docker 命令不可用（10/22 实测 unavailable），Docker/Go 环境缺失 |
+| P1-GEO-BASELINE-AUDIT | 🚫 阻塞确认 | 需 ChatGPT Search/Perplexity/AI Overviews 实际 SERP 检索，当前无 GUI 浏览器会话 |
+
+### GSC 新窗口分析（10/13~10/19，实际拉取 live_pull_20261022_0801.json）
+
+| 指标 | 值 | 趋势 |
+|---|---|---|
+| 7 天曝光 | 24 次（1/5/7/5/4/1/1） | 曝光塌方持续，10/19 新增 1 次曝光 |
+| 7 天点击 | 0 | 零点击持续 |
+| top_queries | 20 条，全部 51+ 位（14 条 70+ 位） | 仅 astra review(pos6)、ai-native ide(pos1) 靠前 |
+| **新出现查询** | best ai video editor 2026 comparison(67)、best ai video editors 2026(60.5)、best ai video editing apps 2026 comparison(72)、best ai design tool(78.5)、best ai for designs(83) | **视频/设计类对比词开始获曝光但排名 60-83 位 → P1 内容机会** |
+
+### GA4 新窗口分析（09-20~10-20，实际拉取 ga4_live_20261022.json）
+
+| 指标 | 值 | 发现 |
+|---|---|---|
+| sessions | 3,288 | 10/03 峰值 893（Bot 尖峰，此前已确认）；10/16=236（新加坡 Bot） |
+| newUsers 占比 | 3,244/3,255=99.7% | 极高新用户占比，Bot/导航站流量特征 |
+| AI 引荐 | chatgpt.com ai-assistant=32 + bing organic=9 | 与上轮一致，**无新增 AI 域名**（perplexity/claude/gemini 仍 0） |
+| 落地页 top | perplexity-ai-review-2026(78)、tools/midjourney(58)、suno-alternatives(41) | 内容型落地页开始获流量；**article-api 草稿未进 top15** |
+
+### 新发现
+
+| 级别 | 发现 | 依据 |
+|---|---|---|
+| **P0** | 头部工具页索引黑洞连续 3 天未修复（chatgpt=redirect/claude=not_indexed/gemini=redirect_error）——GSC 曝光塌方（24 次/7 天）的主因候选 | CDP 复测 10/19/20/21/22 四次一致 |
+| **P1** | best ai video editor/design 系列对比词开始获曝光（60-83 位）→ 视频/设计类评测内容机会 | GSC top_queries 10/22 |
+| **P1** | GA4 10/03 峰值 893 sessions 复核确认 Bot 尖峰（engaged 仅 66=7.4%），流量质量差 | GA4 daily 10/22 |
+| P2 | article-api 草稿已不在 GA4 落地页 top15（疑似清理生效），但 GSC 仍有 4 条草稿曝光需确认清理完成 | GA4 落地页 + GSC top_pages 10/22 |
+
+### 待办状态
+- 本轮完成：P1-LISTING-PRICING、P1-RESEARCH-ASSET（2 条）
+- 本轮新增：CTR-ASTRA-REVIEW-20261022（查询级，pos6.0/CTR0%）
+- CTR 既有 3 条（adobe-firefly/ai-coding-tools/ai-policy，source=ctr_optimization_20261021）仍在 focus pending，未重复创建
+- 保持 pending：P0-INDEXMON-CDP-CLOSE、P0-GEO-ELMO-TRACKER、P1-TOOL-ELMO、P1-OPENSERP-RANK、P1-GEO-BASELINE-AUDIT（阻塞）、P1-CONTENT-KEYWORD-DENSITY-001（打磨师质检）
+
+
+---
+
+## 2026-10-24 批次（数据洞察-SOP 主环境轮）
+
+> 数据源：主环境实读拉取（代理在线）。GSC 30d 窗口（2026-09-23~10-22）`gsc-ga4-report/2026-09-23_2026-10-22.md` + GA4 28d（09-25~10-22）`gsc-ga4-report/ga4_2026-09-25_2026-10-22.md`，Python 实算。禁止编造。
+
+### 本轮执行（3 条 completed）
+| ID | 结论 |
+|----|------|
+| P1-GSC-IMPRESSION-DROP-20261024 | ✅ 曝光塌方坐实：30d 点击 0（上期 9）/曝光 235（上期 1922，-87.8%）/CTR 0%/排名 19.46；9-24 起每日曝光跌至个位数，与 URL 规范化 10-18 + sitemap indexed=0 时间线吻合 |
+| P1-AI-REFERRAL-DIRECT-MISLABEL-20261024 | ✅ Direct 3529(98.5%) vs Organic Search 11 vs GSC 点击 0 严重背离；AI 引荐仅 AI Assistant 32；(not set) landing 672；需 UTM campaign=ai_referral |
+| P1-CONTENT-KEYWORD-DENSITY-001 | ✅ 实读 8 篇草稿：6 篇密度<0.5%（最低 suno-vs-udio 0.04%），2 篇达标；清单落盘 kw_density_check_2026-10-24.json |
+
+### 新发现（P0×0 / P1×2 补录）
+| ID | 优先级 | 结论 |
+|----|--------|------|
+| P1-KW-DENSITY-6-DRAFTS-20261024 | P1 | 6 篇草稿关键词密度 0.04-0.25% 远低于 0.5% 阈值，需打磨师优化 |
+| P1-INDEX-41-REMAINING-RESULTS-20261024 | P1 | unknown 41 URL CDP 补跑中（前 3 个 redirect，URL-CANONICAL 已生效），高流量页待 IndexNow 提交 |
+
+### CTR 优化待办（最新30d 实读，排名5-15/5-20 & CTR<3%，+4 条）
+| ID | 页面/查询 | 排名 | CTR |
+|----|-----------|------|-----|
+| CTR-OPT-AI-CODING-COMPARE-20261024 | /blog/ai-coding-tools-comparison-2026 | 5.5 | 0.00% |
+| CTR-OPT-OBSERVABILITY-TOOLS-20261024 | /blog/best-ai-observability-tools-2026 | 9.5 | 0.00% |
+| CTR-OPT-GEMINI-CLI-REVIEW-20261024 | 查询 gemini cli reviews | 11.0 | 0.00% |
+| CTR-OPT-COPILOT-PRICING-QUERY-20261024 | 查询 github copilot pricing changes | 5.0 | 0.00% |
+
+### 核心结论
+1. **曝光塌方优先级 P0**：GSC 30d 曝光 -87.8%、点击归零，直接原因疑为 URL 规范化 pending（sitemap submitted=881/indexed=0），需架构师人工 CF Dashboard 归一 + IndexNow 批量提交后等 Google 重抓，3-5 天复查
+2. **GSC/GA4 背离**：Google 渠道点击 0 但 GA4 总 sessions 3581，Direct 98.5% 异常高——AI 平台引荐被归入 direct 风险确认，须 UTM 归因
+
+## 2026-10-25 15:13 r26 追加 · GSC 收录异常持续确认（P0）
+
+| 项 | 值 | 说明 |
+|---|---|---|
+| 新拉报告 | 2026-09-24_2026-10-23 | fetch_gsc.py 实跑 |
+| Clicks | 0 | 30d 持续归零 |
+| Impressions | 167 | 对比 08-12~09-23 期 2001 → 持续低位 |
+| AvgPos | 14.13 | 有曝光但无点击 |
+| 收录 | sitemap submitted=0 / indexed=0 | URL 规范化未完成，架构师 P0 |
+
+**结论（复确认）**：曝光塌方为当前唯一 P0 级杠杆，URL 规范化 + IndexNow 批量提交后需 3-5 天复查；本轮新增 5 个 CTR 页面级待办（排名 5-10.5 但 0% 点击），title/meta 优化可作为并行动作。
+
