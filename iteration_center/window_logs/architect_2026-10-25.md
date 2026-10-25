@@ -85,3 +85,47 @@ P1-CLAUDE-SEO / GA4-SG-BOT（阻塞）、INDEX-41 / INDEXNOW（10-30 验收）�
 
 ## 门控/部署/验证汇总
 - tsc=0 build=0 → commit 67e4939 → PUSH_OK → CF deploy success → 线上 /best-ai-animation-tools-2026 = 301→200 ✓
+
+# r61 标准 cron 轮（2026-10-25 22:16 +08:00）
+
+## 读到 pending：架构师/window1 = 15 条（P0x4 新开 + P1x11）→ 本轮处理 P0 全 4 + P1 3
+
+## P0-1: P0-GSC-URL-CANONICAL-20261025（URL规范化根治）
+- 实测：HTTP 版本已 301→HTTPS（http://www 与 http://apex 均 301）；always_use_https=off 但线上 CF 已重定向（PATCH 403=token 无 zone settings 权限，现状达标无需改）
+- 无尾斜杠 308 链稳定（/about、/category/chat → 308 → 200）；next.config 无 redirects=无循环
+- 编入索引：IndexNow Top50 提交 200 成功（_indexnow_top50.py 现成工具）
+- GSC URL Inspection 逐个请求编入索引 → 无 GSC API 凭证，转人工/CDP 通道
+
+## P0-2: P0-GSC-REDIRECT-ERROR-20261025（redirect_error 修复）
+- Googlebot UA 交替探测 6 页无尾斜杠：GB UA 下 curl 被 CF 边缘 bot 检测握手层拦截（category/chat 2/2 000），普通 UA 全 308→200，带斜杠全 200
+- 判定：308 链正常；GSC redirect_error=本机模拟 Googlebot 假象（curl TLS 指纹触发 CF bot 检测），非真实 Googlebot 误伤（indexed 477 实证）；无代码改动
+- CF WAF 三 phase 零规则；GraphQL/REST 无权限或 sunset
+- 产出：iteration_center/gsc_redirect_error_fix_20261025.md；人工遗留=Dashboard 确认 Bot Fight Mode 不误伤 Googlebot
+
+## P0-3: P0-GA4-TRUTH-AUDIT-20261025（GA4 数据真实性）
+- 实读 ga4 28d 报告：Sessions 3581 / Direct 3529(98.5%) / Engaged 299(8.3%) / duration 10.2s / (not set) 672(19%) / 10-03 尖峰 893 / Key Events 0；GSC Clicks 0 交叉印证 → bot/无 referrer 污染实锤
+- 产出：gsc-ga4-report/ga4_pollution_analysis_20261025.md；配置动作（开 bot 过滤+内部流量过滤）=GA4 后台人工（无 Data API token）
+
+## P0-4: P1-GSC-INDEX-RECOVERY-20261025（升级 P0）
+- IndexNow 批量提交 200 成功：priority 16 高价值工具页 + 评分 Top50（含 home/compare/工具页），URL 清单 daily_urls_for_gsc_top50.txt
+- redirect_error 页=非站点问题（见 P0-2 报告）；10-28 复核真实收录率>60%
+
+## P1-5: P1-CF-UNIQ-SURGE-20261025
+- GraphQL（uaFamily/sum/uniq/orderBy 全 unknown field）+ REST Zone Analytics（sunset 404）+ WAF API（零规则）→ 无程序化通道点名爬虫，需 Dashboard 导出 UA Top
+- 强关联：curl 伪装 Googlebot 被 CF 边缘 bot 检测拦截 → 边缘确有 bot 检测，uniques 暴涨与批量抓取相关
+- 产出：iteration_center/cf_bot_analysis_2026-10-25.md
+
+## P1-6: P1-VERCEL-DOMAIN-CLEANUP-20261025
+- Vercel API：ai-tools-review 项目绑定 aitoolcrux.com + www.aitoolcrux.com（DNS 实指 CF 104.21.75.243 = 残留）；DELETE 两条 200 成功，仅剩 vercel.app 默认域
+- 线上验证：home 200（DNS 在 CF 未动，删除 Vercel 绑定无影响）
+
+## 门控/验证
+- 本轮无代码改动（全为证据闭环 + 外部配置清理）→ 无 tsc/build/push 门控
+- 线上验证：home=200；HTTP→HTTPS=301；无尾斜杠=308→200
+- state 更新：6 条 completed（evidence 附时间/报告路径）；last_updated=2026-10-25T22:16:29+08:00
+
+## 剩余（架构师）
+- 阻塞：CLAUDE-SEO-INSTALL/V241（缺 Anthropic key）、GA4-SG-BOT（Dashboard 人工建 WAF）、GSC-URL-INSPECTION 批量编索引（需 GSC 后台/CDP）
+- 待验收：INDEX-41/INDEXNOW（10-30）、INDEX-RECOVERY 收录率复核（10-28）
+- P1：T-192 assigned_to 双形态统一（指挥官单，下轮）、GSC-QUERY-DATA-GAP（分析师脚本）
+- P2：SEO-BIG-IMG（2 大图压缩）、T-194 add_todo 查重

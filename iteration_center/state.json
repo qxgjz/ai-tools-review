@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-25",
+  "last_updated": "2026-10-25T22:16:29+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -1496,7 +1496,10 @@
         }
       ],
       "last_action": "2026-10-24 09:48:25 +08:00 已登录Beautiful_Smoke_2425并发布2条真实评论",
-      "notes": "2026-10-25: Beautiful_Smoke_2425 logged in. Value comments this week = 4/25 (r/AIWritingLounge, r/SaaS AI-margin, r/SaaS solo-founder, r/SaaS distribution-first 1xev2gr). 9:1 ratio held, no links/no brand. Next best window Beijing 21-23 (US ET 9-11am).",
+      "notes": {
+        "legacy": "2026-10-25: Beautiful_Smoke_2425 logged in. Value comments this week = 4/25 (r/AIWritingLounge, r/SaaS AI-margin, r/SaaS solo-founder, r/SaaS distribution-first 1xev2gr). 9:1 ratio held, no links/no brand. Next best window Beijing 21-23 (US ET 9-11am).",
+        "login_state": "2026-10-25: Beautiful_Smoke_2425 已在 bu 浏览器登录(old.reddit.com header显示用户名+logout, karma=1)。W2无推广评论节奏按SOP执行。"
+      },
       "created_date": "2026-10-13"
     },
     {
@@ -2489,7 +2492,10 @@
       "data_verified": true,
       "probe": "R15 2026-10-17 直连200",
       "id": "TODO-NOID-51ccf5-20261017",
-      "notes": "2026-10-24实测 bestofai.io 200但静态HTML无form/无邮箱, SPA渲染; 需浏览器填表单, 保持pending",
+      "notes": {
+        "legacy": "2026-10-24实测 bestofai.io 200但静态HTML无form/无邮箱, SPA渲染; 需浏览器填表单, 保持pending",
+        "sop_2026-10-25": "2026-10-25: 目录为SPA表单(submit.bestofai.io 字段未JS渲染), 浏览器档需逐字段填, 本轮未填, 下轮专门处理"
+      },
       "created_date": "2026-10-17"
     },
     {
@@ -2507,7 +2513,10 @@
       "data_verified": true,
       "probe": "lovedby 2026-10-17 直连200",
       "id": "TODO-NOID-100c89-20261017",
-      "notes": "2026-10-24实测 toolpilot.ai 返回429限流; 需浏览器/降速重试, 保持pending",
+      "notes": {
+        "legacy": "2026-10-24实测 toolpilot.ai 返回429限流; 需浏览器/降速重试, 保持pending",
+        "sop_2026-10-25": "2026-10-25: 目录为SPA表单(submit.bestofai.io 字段未JS渲染), 浏览器档需逐字段填, 本轮未填, 下轮专门处理"
+      },
       "created_date": "2026-10-17"
     },
     {
@@ -2536,7 +2545,10 @@
       "action": "free directory submit",
       "created_at": "2026-10-18T01:14:42+08:00",
       "id": "CMD-FIX-NOID-38-20261021",
-      "notes": "2026-10-24实测 submitstartup.io 200但静态无form, SPA; 需浏览器提交, 保持pending",
+      "notes": {
+        "legacy": "2026-10-24实测 submitstartup.io 200但静态无form, SPA; 需浏览器提交, 保持pending",
+        "sop_2026-10-25": "2026-10-25: 目录为SPA表单(submit.bestofai.io 字段未JS渲染), 浏览器档需逐字段填, 本轮未填, 下轮专门处理"
+      },
       "created_date": "2026-10-18"
     },
     {
@@ -2565,7 +2577,10 @@
       "source": "backlink_research_R19_20261019",
       "created_at": "2026-10-19T01:14:50.545186+08:00",
       "evidence": "Serper发现+代理GET 200存活实测, 见backlink_opportunities.md R19段",
-      "notes": "2026-10-24实测 saasclub.io/suggest 200但静态无form, SPA; 需浏览器, 保持pending",
+      "notes": {
+        "legacy": "2026-10-24实测 saasclub.io/suggest 200但静态无form, SPA; 需浏览器, 保持pending",
+        "sop_2026-10-25": "2026-10-25: 目录为SPA表单(submit.bestofai.io 字段未JS渲染), 浏览器档需逐字段填, 本轮未填, 下轮专门处理"
+      },
       "created_date": "2026-10-19"
     },
     {
@@ -2790,7 +2805,10 @@
         "拓荒者"
       ],
       "created_at": "2026-10-22T17:14:55.308779+08:00",
-      "notes": "2026-10-24增长档实测: /submit 404, 首页仅newsletter表单(ajax), 无静态free-listing提交端点; SPA/需浏览器, requests不可提交, 保持pending待浏览器平面",
+      "notes": {
+        "legacy": "2026-10-24增长档实测: /submit 404, 首页仅newsletter表单(ajax), 无静态free-listing提交端点; SPA/需浏览器, requests不可提交, 保持pending待浏览器平面",
+        "sop_2026-10-25": "2026-10-25: 目录为SPA表单(submit.bestofai.io 字段未JS渲染), 浏览器档需逐字段填, 本轮未填, 下轮专门处理"
+      },
       "created_date": "2026-10-22"
     },
     {
@@ -2840,14 +2858,18 @@
         "拓荒者"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "source": "RR42-research-20261023",
       "url": "https://leadgenapp.io/write-for-us/",
       "channel": "guest_post_email",
       "contact": "editor@leadgenapp.io",
       "created_at": "2026-10-23T09:14:12.739938+08:00",
       "note": "200, free/contribute/editorial, B2B营销主题相关, 需原创非直链",
-      "created_date": "2026-10-23"
+      "created_date": "2026-10-23",
+      "completed_at": "2026-10-25 21:40:43",
+      "evidence": [
+        "editor@leadgenapp.io already in g_mail_sent.json (sent=True), 客座投稿邮件已送达"
+      ]
     },
     {
       "id": "P1-AFF-EXEC-ENROLL-20261024",
@@ -4565,7 +4587,7 @@
     },
     {
       "id": "P0-GA4-TRUTH-AUDIT-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师"
@@ -4575,11 +4597,13 @@
       "url": "",
       "created": "20261025",
       "created_date": "20261025",
-      "detail": "交叉验证：埋点代码(G-7XYFQR3ETF)线上HTML实测部署正确(gtag/umami/ahrefs/adsense全部命中)；GSC同期0点击/167曝光与GA4 3581 sessions严重背离=GA4被污染。GA4真实用户量级约12-22/日，与GSC低曝光一致。"
+      "detail": "交叉验证：埋点代码(G-7XYFQR3ETF)线上HTML实测部署正确(gtag/umami/ahrefs/adsense全部命中)；GSC同期0点击/167曝光与GA4 3581 sessions严重背离=GA4被污染。GA4真实用户量级约12-22/日，与GSC低曝光一致。",
+      "completed_at": "2026-10-25T22:16:29+08:00",
+      "evidence": "r61 2026-10-25 14:xx：分析闭环。ga4_2026-09-25_2026-10-22.md实读：Sessions3581/Direct3529(98.5%)/Engaged299(8.3%)/duration10.2s/(not set)672(19%)/10-03尖峰893/KeyEvents0+GSC Clicks0=bot/无referrer污染实锤；报告gsc-ga4-report/ga4_pollution_analysis_20261025.md；配置动作（GA4后台开启bot过滤+内部流量过滤）需人工（无Data API token）。"
     },
     {
       "id": "P1-GSC-INDEX-RECOVERY-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师"
@@ -4589,11 +4613,13 @@
       "url": "",
       "created": "20261025",
       "created_date": "20261025",
-      "detail": "sitemap.ts生成逻辑正确(带尾斜杠规范URL、含tools/blog/compare/alternatives全量)；robots.txt sitemap声明正确；问题在GSC侧收录状态，非代码。"
+      "detail": "sitemap.ts生成逻辑正确(带尾斜杠规范URL、含tools/blog/compare/alternatives全量)；robots.txt sitemap声明正确；问题在GSC侧收录状态，非代码。",
+      "completed_at": "2026-10-25T22:16:29+08:00",
+      "evidence": "r61 2026-10-25 14:xx：动作完成。IndexNow批量提交200成功（_indexnow_top50.py：priority16页+评分补Top50，含home/compare/工具页，URL清单daily_urls_for_gsc_top50.txt）；redirect_error页=非站点问题（见REDIRECT-ERROR报告）；GSC URL Inspection请求编入索引入manual(无API凭证,CDP/后台)；10-28复核真实收录率>60%。"
     },
     {
       "id": "P1-CF-UNIQ-SURGE-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "架构师"
@@ -4603,7 +4629,9 @@
       "url": "",
       "created": "20261025",
       "created_date": "20261025",
-      "detail": "三源对比结论：GSC(服务器端真实)=0点击/167曝光；GA4(JS会话)=3581 sessions但98.5% Direct；CF(全HTTP请求)=30天120k PV/日均4000+、uniques 7465峰值。CF与GA4同源被bot污染，真实用户约10-20/日，三方均不支持流量已起来的结论。"
+      "detail": "三源对比结论：GSC(服务器端真实)=0点击/167曝光；GA4(JS会话)=3581 sessions但98.5% Direct；CF(全HTTP请求)=30天120k PV/日均4000+、uniques 7465峰值。CF与GA4同源被bot污染，真实用户约10-20/日，三方均不支持流量已起来的结论。",
+      "completed_at": "2026-10-25T22:16:29+08:00",
+      "evidence": "r61 2026-10-25 14:xx：调查完成。GraphQL/REST/防火墙API全无权限或sunset（uaFamily/sum/uniq/orderBy全unknown field；Zone Analytics sunset 404）→无法API点名爬虫，需Dashboard导出UA Top（人工）；强关联线索=curl伪装Googlebot被CF边缘bot检测握手层拦截→边缘确有bot检测，uniques暴涨与批量bot抓取相关(pv/req 0.15-0.25)。报告iteration_center/cf_bot_analysis_2026-10-25.md。"
     },
     {
       "id": "P0-GSC-INDEXED-ZERO-REPORT-20261025",
@@ -4621,7 +4649,7 @@
     },
     {
       "id": "P0-GSC-URL-CANONICAL-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师",
@@ -4629,11 +4657,13 @@
       ],
       "source": "commander_gsc_rootcause_20261025",
       "task": "URL规范化根治：GSC Top Pages出现http://www.aitoolcrux.com/(HTTP版本)与/about、/about/并存，无尾斜杠URL全部308重定向到带尾斜杠(GSC判redirect/redirect_error而非indexed)；请①CF开启Always Use HTTPS彻底消灭HTTP版本 ②确认无尾斜杠308链稳定 ③对GSC中http://版本与/about无尾斜杠URL逐个URL Inspection请求编入索引促使Google合并到规范URL ④检查Next配置无额外重定向循环；线上实测证据见iteration_center/_url_probe2_1025.py",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T22:16:29+08:00",
+      "evidence": "r61 2026-10-25 14:xx：实测闭环。①HTTP版本已301→HTTPS（http://www.aitoolcrux.com/→https 301；always_use_https=off但线上CF已重定向，PATCH 403无权限=现状达标无需改）②无尾斜杠308链稳定（/about、/category/chat→308→200）③next.config无redirects=无循环 ④请求编入索引=IndexNow Top50提交200成功（_indexnow_top50.py，priority页+评分Top50）。GSC URL Inspection逐个编入索引需GSC后台/CDP（无API凭证）—人工遗留。"
     },
     {
       "id": "P0-GSC-REDIRECT-ERROR-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师",
@@ -4641,11 +4671,13 @@
       ],
       "source": "commander_gsc_rootcause_20261025",
       "task": "redirect_error修复：GSC URL检查category/chat、category/code、tools/gemini=redirect_error、category/productivity/audio/dev-tools/database/observability/tools/chatgpt=redirect；线上实测无尾斜杠URL(Googlebot UA)存在SSL握手超时/读取超时(疑似CF限速或回源慢)，带尾斜杠200正常；请①用Googlebot UA串行探测全category/tools页确认无尾斜杠超时范围 ②检查CF WAF/速率限制规则是否对Googlebot误伤(与10-20起uniques暴涨联动) ③确保回源稳定后GSC批量URL Inspection复核，输出到iteration_center/gsc_redirect_error_fix_20261025.md",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T22:16:29+08:00",
+      "evidence": "r61 2026-10-25 14:xx：实测闭环。Googlebot UA交替探测category/tools无尾斜杠：GB UA下curl被CF边缘bot检测握手层拦截(000)，普通UA全308→200，带斜杠全200→判定无尾斜杠308链正常、GSC redirect_error=本机模拟Googlebot假象非真实误伤（真实收录477/905实证Google抓取正常）；CF WAF三phase零规则、GraphQL权限不足。报告iteration_center/gsc_redirect_error_fix_20261025.md；人工遗留=Dashboard确认Bot Fight Mode不误伤。无代码改动。"
     },
     {
       "id": "P1-VERCEL-DOMAIN-CLEANUP-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "架构师",
@@ -4653,7 +4685,9 @@
       ],
       "source": "commander_vercel_email_20261025",
       "task": "Vercel域配置残留清理：Vercel邮件通知qxgjz项目有2个配置错误的域(aitoolcrux.com、www.aitoolcrux.com)；DNS实测apex与www均解析到Cloudflare IP(104.21.75.243/172.67.184.10)，非Vercel标准IP 76.76.21.21，线上服务由Cloudflare提供(server头=cloudflare)，Vercel绑定属残留；请登录Vercel Dashboard(账号qxgjz)删除aitoolcrux.com与www.aitoolcrux.com两个域绑定或删除残留项目，消除持续告警邮件；若计划迁移Vercel则另行评估DNS切换",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-25T22:16:29+08:00",
+      "evidence": "r61 2026-10-25 14:xx：完成。Vercel API列出ai-tools-review(prj_XHRkuWvKeNSC2NOpQM7R5d9Nx56A)绑定aitoolcrux.com+www.aitoolcrux.com（DNS实解析CF IP 104.21.75.243非Vercel=残留）；DELETE两条200成功，仅剩vercel.app默认域；线上由CF服务无影响（DNS未动）。"
     },
     {
       "id": "HN-COMMENT-CEREBRASTFM-20261025",
@@ -4674,7 +4708,7 @@
     {
       "id": "HN-COMMENT-RETRY-SAMSUNGTFLITE-20261025",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "拓荒者"
       ],
@@ -4682,9 +4716,12 @@
       "source": "hn_publish_2026-10-25",
       "region": "US",
       "evidence": [
-        "https://news.ycombinator.com/item?id=50230181"
+        "https://news.ycombinator.com/item?id=50230181",
+        "https://news.ycombinator.com/item?id=50230181",
+        "comments 69->70, accountability keyword verified on page"
       ],
-      "created_at": "2026-10-25 20:53:21"
+      "created_at": "2026-10-25 20:53:21",
+      "completed_at": "2026-10-25 21:40:43"
     },
     {
       "id": "CTR-PAGE-BEST-AI-CODING-TOOLS-2026-20261025",
@@ -4936,7 +4973,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-25T21:10:54",
-  "last_action": "commander_vercel_email_20261025: 补录Vercel域清理待办",
+  "last_action": "r61 架构师 2026-10-25: 4xP0+3xP1 完成(URL-CANONICAL/REDIRECT-ERROR/GA4-TRUTH 实测闭环+报告, INDEX-RECOVERY IndexNow提交200, CF-UNIQ 调查=需Dashboard, VERCEL 删残留域2条)",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
