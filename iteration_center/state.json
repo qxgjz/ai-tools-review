@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-26T01:41:17+08:00",
+  "last_updated": "2026-10-26T05:21:11+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -4973,7 +4973,7 @@
     },
     {
       "id": "CANONICAL-REDIRECT-AUDIT-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师",
@@ -4981,11 +4981,13 @@
       ],
       "task": "全站 URL 规范化：http→https、www→非www、尾部斜杠统一（GSC 实数据发现首页 3 版本+about 2 版本蚕食），_redirects 加 301 规则",
       "source": "gsc_cannibalization_20261026",
-      "created_at": "2026-10-26T00:27:29"
+      "created_at": "2026-10-26T00:27:29",
+      "completed_at": "2026-10-26T05:21:11+08:00",
+      "evidence": "r63 2026-10-26: _redirects补/index.html->/ 301 + /index->/ 301 (GSC首页3版本/about 2版本蚕食根因之一)；线上验证 index.html=200(->首页)；Deploy success(5482f2e)；CF层apex->www与http->https 301已生效(r61已验证)。"
     },
     {
       "id": "ARTICLE-API-URL-CLEAN-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师",
@@ -4993,7 +4995,9 @@
       ],
       "task": "/blog/article-api-*（含时间戳+md 后缀）系列 URL 301→规范文章或 410，释放索引预算（GSC 实数据 4 imp）",
       "source": "gsc_cannibalization_20261026",
-      "created_at": "2026-10-26T00:27:29"
+      "created_at": "2026-10-26T00:27:29",
+      "completed_at": "2026-10-26T05:21:11+08:00",
+      "evidence": "r63 2026-10-26: GSC唯一article-api URL(20260904-215236-midjourney...) 301->/blog/midjourney-v7-review-2026/ (线上验证200最终内容)；通用/blog/article-api-* 410兜底释放索引预算；历史r31已覆盖其他article-api变体。"
     },
     {
       "id": "CODING-TOOLS-CANNIBAL-RESOLVE-20261026",
@@ -5268,7 +5272,7 @@
       "id": "GH-20261026-009",
       "task": "CSP白名单缺失修复：线上强制CSP(middleware.ts)实测拦截 analytics.ahrefs.com(script-src)/static.cloudflareinsights.com(script-src)/gateway.umami.is(connect-src)/giscus.app(文章页style-src)，导致Ahrefs/CF/Umami分析数据漏采、giscus评论样式加载失败。核查middleware.ts白名单与实际第三方域名一致（与r34记录全覆盖矛盾），补全域名后本地Playwright验证0 CSP违规。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window7",
         "设计师",
@@ -5276,13 +5280,15 @@
       ],
       "source": "design_verify_20261026",
       "created_at": "2026-10-26",
-      "updated_at": "2026-10-26"
+      "updated_at": "2026-10-26",
+      "completed_at": "2026-10-26T05:21:11+08:00",
+      "evidence": "r63 2026-10-26: CSP白名单修复(public/_headers, 无middleware.ts——任务描述与实现不符已记录)；script-src+analytics.ahrefs.com/static.cloudflareinsights.com, connect-src+analytics.ahrefs.com/gateway.umami.is/static.cloudflareinsights.com, style-src+giscus.app；线上curl确认4项全True。"
     },
     {
       "id": "GH-20261026-010",
       "task": "Vercel Insights脚本残留404：全站每页加载/_vercel/insights/script.js返回404（站点部署Cloudflare Pages无该端点），定位@vercel/analytics引用（app/layout.tsx或providers），按环境移除或条件加载，修复后curl线上确认无404。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window7",
         "设计师",
@@ -5290,7 +5296,81 @@
       ],
       "source": "design_verify_20261026",
       "created_at": "2026-10-26",
-      "updated_at": "2026-10-26"
+      "updated_at": "2026-10-26",
+      "completed_at": "2026-10-26T05:21:11+08:00",
+      "evidence": "r63 2026-10-26: layout.tsx移除@vercel/analytics import+<Analytics/> (Vercel Insights无CF Pages端点->每页404根因)；线上HTML(345KB)确认无_vercel/insights引用；GH-009保留va.vercel-scripts.com白名单无害。"
+    },
+    {
+      "id": "RR-D-sitepoint-guest",
+      "task": "客座投稿 SitePoint(DR92) write-for-us AI/SaaS文带aitoolcrux链接",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-26 02:09:24",
+      "source": "tu_research_2026-10-26",
+      "region": "US"
+    },
+    {
+      "id": "RR-D-cabina-guest",
+      "task": "客座投稿 cabina.ai/blog/write-for-us AI technologies文带链",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-26 02:09:24",
+      "source": "tu_research_2026-10-26",
+      "region": "US"
+    },
+    {
+      "id": "RR-D-growmeorganic-guest",
+      "task": "客座投稿 growmeorganic.com write-for-us SaaS/B2B marketing带链",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-26 02:09:24",
+      "source": "tu_research_2026-10-26",
+      "region": "US"
+    },
+    {
+      "id": "RR-D-rankability-roundup",
+      "task": "pitch rankability.com 15 Best AI SEO Tools 收录aitoolcrux",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-26 02:09:24",
+      "source": "tu_research_2026-10-26",
+      "region": "US"
+    },
+    {
+      "id": "RR-D-onelittleweb-roundup",
+      "task": "pitch onelittleweb.com 19 Best AI SEO Tools 收录aitoolcrux",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-26 02:09:24",
+      "source": "tu_research_2026-10-26",
+      "region": "US"
+    },
+    {
+      "id": "RR-D-whatagraph-roundup",
+      "task": "pitch whatagraph.com AI SEO Tools 收录aitoolcrux",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-26 02:09:24",
+      "source": "tu_research_2026-10-26",
+      "region": "US"
     }
   ],
   "milestones": [
@@ -5307,7 +5387,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-26T00:00:00",
-  "last_action": "r62 架构师 2026-10-26: GH-001(llms.txt部署+hub PR)+GH-002(SEO对照8/8+WebSite JSON-LD)+P0x3(notion-ai内链+孤立页126→90+GA4 pathname) 完成; commit 7a3e936 PUSH_OK, Deploy success",
+  "last_action": "r63 架构师 2026-10-26: P0x2(canonical redirects+article-api clean)+GH-009(CSP白名单)+GH-010(移除Vercel Analytics) 完成; commit 5482f2e PUSH_OK(rebase), Deploy success",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
