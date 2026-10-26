@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-26T22:48:17+08:00",
+  "last_updated": "2026-10-27T01:30:31+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -1794,7 +1794,8 @@
       "task": "外链从0到1：28天关键词全排50-86位=域名权重极低，本周必出10条真实外链(HARO答问/高DR目录提交/Reddit+Quora真实价值回复/相关博客客座)，完成后记录到backlinks_tracking.md并提交URL供指挥官验收",
       "url": "",
       "notes": "2026-10-24 22:23:09 +08:00 活外链复核3/3有效; insidr/aisotools/toolsify已提交但Google未索引aitoolcrux页 | 2026-10-25 11:05:40 +08:00 3目录仍n=0; 品牌泛搜出现hatchr.in新第三方条目, 持续监控",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completion_note": "2026-10-26 23:11:07 复查: 28 天真活外链仍 2 条(目标本周 10 条未达)；outreach 已发 pitch 等编辑回复，不重复发；瓶颈=目录提交通道被 CF/直连拦截"
     },
     {
       "id": "CMD-20261018-007",
@@ -3475,7 +3476,8 @@
         "fu_verify_2026-10-25": "2026-10-25 23:13:37: 真活外链复检=2条(github/sideprojectors), thehackstack 404断链, hatchr空页不计; insidr/aisotools/toolsify未收录(n=0); 缺口仍大",
         "fu_verify_2026-10-26": "本轮curl复检: 真活仍2条(github/sideprojectors), thehackstack 404, hatchr空页无anchor; Serper site: insidr/aisotools/toolsify 全n=0未收录; 距目标5-15个真实域名仍差3-13个"
       },
-      "created_date": "2026-10-12"
+      "created_date": "2026-10-12",
+      "completion_note": "截至 2026-10-26 23:11:07: 真活外链 2/5-15(github/sideprojectors)，缺口 3-13；thehackstack 死链已移除，hatchr 空页不计；3 目录仍 n=0 观察中"
     },
     {
       "id": "P1-GEO-THREE-20261012",
@@ -5467,7 +5469,7 @@
       "id": "SEO-BIG-IMG-P2-20261025",
       "title": "2 大图>200KB：screenshots/real/webp/freeletics-home.webp(201KB)/planfit-home.webp(283KB)",
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "架构师",
         "window1"
@@ -5475,7 +5477,9 @@
       "source": "seo_audit_full_20261025",
       "created": "2026-10-25",
       "task": "压缩至<200KB（webp 质量 75-80 或缩尺寸）。",
-      "created_date": "2026-10-25"
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-27 01:30:31",
+      "evidence": "r66 2026-10-27: planfit-home.webp 283->39KB, freeletics-home.webp 201->35KB (PIL quality=78 method=6, 尺寸1440x900不变), 均<200KB; public/已改, build后out/验证35.7/39.1KB"
     },
     {
       "id": "RR25-OP-commandlinux-wf",
@@ -5703,7 +5707,7 @@
     },
     {
       "id": "P2-SCHEMA-TYPE-COUNT-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P2",
       "assigned_to": [
         "架构师",
@@ -5711,7 +5715,9 @@
       ],
       "task": "本周E2E走查P2：≥3类schema→AI引用概率+13%（MakeADir）。盘点全站页面JSON-LD schema类型数，缺口页补（Organization/WebSite/Article/FAQPage/BreadcrumbList/Product）",
       "source": "commander_weekly_review_20261026",
-      "created_date": "2026-10-26"
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-27 01:30:31",
+      "evidence": "r66 2026-10-27: 全站1310页JSON-LD盘点=10类(Organization1309/WebSite1309/FAQPage838/BreadcrumbList813/Review795/SoftwareApplication533/Article281/CollectionPage20/WebPage1/ItemList1), 841页>=3类核心内容页全覆盖; 唯一无JSON-LD页=/ai-tools-guide-2026.html(静态页低优); 信息页(404/policy/category)2类属正常"
     },
     {
       "id": "GH-20261026-011",
@@ -6156,6 +6162,18 @@
       ],
       "source": "commander_20261026_indexmonitor",
       "created_at": "2026-10-26T22:37:46"
+    },
+    {
+      "id": "BACKLINK-VERIFY-20261026G",
+      "priority": "P1",
+      "status": "completed",
+      "completed_at": "2026-10-26T23:11:07",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "外链跟进复查: curl+Serper 验证 5 条已知外链 + 3 目录收录状态",
+      "completion_note": "真活 2 条(github/sideprojectors)，thehackstack 404 死链确认移除，hatchr 空页不计；insidr/aisotools/toolsify 仍 n=0；证据 _tu_verify_20261026g.json + _serper.json",
+      "source": "backlink_followup_20261026g"
     }
   ],
   "milestones": [
@@ -6172,7 +6190,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-26T21:48:59",
-  "last_action": "收录推进验收(2026-10-26): GSC查询污染根因修复(fetch_gsc过滤-site:+rowLimit25,实跑验证0污染), IndexNow提交15页200",
+  "last_action": "r66架构师: SEO-BIG-IMG-P2+SCHEMA-TYPE-COUNT completed; P0-BING复验blocker; GEO审计10爬虫accessible",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
