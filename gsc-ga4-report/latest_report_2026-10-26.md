@@ -19,3 +19,17 @@
 - URL 变体数量（规范化后应为 0 组）
 - coding-tools 族点击恢复
 - SEO MCP 授权后 AI 可见性基线（解锁 GEO-BASELINE）
+# GSC/GA4 数据日报（2026-10-26 r29，09:00 档）
+
+## GSC
+- Clicks 0 | Impressions 167 | CTR 0% | AvgPos 14.13（窗口 2026-09-24~10-23，与 r28 同数据，环比持平）
+- 无新拉数据；上次拉取 2026-10-26 00:2x（r28）
+
+## 关键发现（本轮）
+1. **关键词量验证（P0 完成）**：48 候选词 12 词实搜 → 9 High/3 Medium/0 Low；"停止无效长尾量产"判断成立；5 词入选有量清单（legal/gift/churn/travel/fun）
+2. CTR 无新命中（数据窗口未变），补开 ai-policy(8.0)/首页(2.0) 2 条
+3. 竞品缺口本轮全 High（marketing/sales/search-engine）→ 内容策略转向差异化/GEO
+4. 收录基线 477/905=52.8% 维持
+
+## 待办
+- 完成 1（P0 量验证）；新写入 14；focus=276→290 区间；分析师 pending=2（阻塞）

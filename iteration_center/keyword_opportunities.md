@@ -462,3 +462,27 @@
 
 ### 竞品对比
 - futurepedia 75 分类缓存 vs 本地 40 篇 published；本轮 3D/churn/HR/travel/fun 全为竞品有我们无
+
+
+---
+
+## 2026-10-26 09:04 关键词挖掘 r29（09:00 档 · P0 量验证同轮）
+
+**Total keywords analyzed: 12**（本轮实搜）+ 5 入选清单
+
+### 验证结论
+- 48 候选词验证 12 词：**9 High / 3 Medium / 0 Low**
+- 入选有量词 5 个：legal（本轮新验证 Medium）+ gift/churn/travel/fun（复用 r27/r28 验证 Medium）
+- **无 Low 词 → 停止 best-of 饱和词量产，转向差异化/GEO 长尾**
+
+### 本轮新增候选（P1，预估，未 SERP 验证）
+| 词 | 竞争度（估） | 建议标题 | slug |
+|---|---|---|---|
+| best AI storyteller tools 2026 | Low | Best AI Storyteller Tools 2026: 8 Tested | best-ai-storyteller-tools-2026 |
+| best AI writing generators 2026 | Medium | Best AI Writing Generators 2026: 10 Tested | best-ai-writing-generators-2026 |
+| best AI health tools 2026 | Medium | Best AI Health Tools 2026: 9 Tested | best-ai-health-tools-2026 |
+| best AI automations 2026 | High | Best AI Automations 2026: 11 Tested | best-ai-automations-2026 |
+| best AI personal assistant 2026 | Medium | Best AI Personal Assistant 2026: 8 Tested | best-ai-personal-assistant-2026 |
+
+### 搜索量标注（全"预估"）
+依据=SERP 竞争度（实搜 12 词）或竞品分类缺口（未实搜词）。Serper 不可用已记录。

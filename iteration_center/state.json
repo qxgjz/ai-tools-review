@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-26T07:50:00+08:00",
+  "last_updated": "2026-10-26T08:40:00+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -5299,6 +5299,281 @@
       "created_at": "2026-10-25T11:36:55",
       "created_date": "2026-10-25",
       "blocks": []
+    },
+    {
+      "id": "P0-BING-WMT-CHATGPT-ENTRY-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "本周E2E走查P0：ChatGPT引用87%对应Bing top结果（Yext 2026研究），接入Bing Webmaster Tools：注册aitoolcrux.com验证、提交sitemap、配置IndexNow（如已配则核对生效）。完成后GEO基线解锁（ChatGPT/Perplexity可见性测试）",
+      "source": "commander_weekly_review_20261026",
+      "created_date": "2026-10-26"
+    },
+    {
+      "id": "P0-KEYWORD-VOLUME-VALIDATION-20261026",
+      "status": "completed",
+      "priority": "P0",
+      "assigned_to": [
+        "分析师",
+        "window4"
+      ],
+      "task": "本周E2E走查P0（破零点击主线）：GSC 167曝光/0点击28天，现有词全在pos51+无量。分析师用Serper对创作家全部候选关键词做SERP验证（有搜索量+竞争度低才入选），输出\"有量词清单\"P0给创作家，停止无效长尾量产",
+      "source": "commander_weekly_review_20261026",
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-26T09:04:08",
+      "evidence": "iteration_center/serp_validated_keywords_20261026.md（Serper 不可用，降级 general_search 实搜 12 词）"
+    },
+    {
+      "id": "P1-STATISTICS-ADDITION-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "task": "本周E2E走查P1：Princeton GEO研究=Statistics Addition单点最高40%引用提升。每篇best-X文章正文≥2个统计数字证据（\"Tested 10 tools\"/\"4.8 across 1200+ reviews\"），打磨师QC时核验",
+      "source": "commander_weekly_review_20261026",
+      "created_date": "2026-10-26"
+    },
+    {
+      "id": "P1-ORIGINAL-RESEARCH-REPORT-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "task": "本周E2E走查P1：原创研究数据引用率82% vs 普通博客25%（Yext 2026）。利用目录站533工具排名独家数据，Q4产出一篇\"2026 AI Tools Market Data Report\"（原创排名/趋势/对比数据，非综述），2000+词US口径",
+      "source": "commander_weekly_review_20261026",
+      "created_date": "2026-10-26"
+    },
+    {
+      "id": "P1-QUARTERLY-REFRESH-LIST-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "打磨师",
+        "window5"
+      ],
+      "task": "本周E2E走查P1：AI引擎强偏好近期内容（Stackari）。产出Top20曝光页季度刷新清单（1-3月内刷新重点页：suno-alternatives/perplexity-ai-review/midjourney等），标注每页需更新数据与last updated日期",
+      "source": "commander_weekly_review_20261026",
+      "created_date": "2026-10-26"
+    },
+    {
+      "id": "P2-SCHEMA-TYPE-COUNT-20261026",
+      "status": "pending",
+      "priority": "P2",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "本周E2E走查P2：≥3类schema→AI引用概率+13%（MakeADir）。盘点全站页面JSON-LD schema类型数，缺口页补（Organization/WebSite/Article/FAQPage/BreadcrumbList/Product）",
+      "source": "commander_weekly_review_20261026",
+      "created_date": "2026-10-26"
+    },
+    {
+      "id": "KW-VOLUME-CONFIRMED-LEGAL-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI legal tools 2026]（SERP 已验证 Medium，有量词清单入选）写 2000 字新文章，标题建议 [Best AI Legal Tools 2026: 8 Tested (Harvey vs Spellbook vs GenieAI)]，slug 建议 [best-ai-legal-tools-2026]，切入：中小律所成本对比+合规叙事+免费额度",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "our_angle": "中小律所成本对比+合规叙事",
+      "volume_verified": true,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "CTR-PAGE-AI-POLICY-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/ai-policy 排名 8.0 但 CTR 0%，优化 title/meta description 提升点击率（政策页也参与曝光）",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T09:04:08",
+      "position": 8.0,
+      "ctr_pct": 0.0,
+      "note": "5-15 位命中"
+    },
+    {
+      "id": "CTR-PAGE-HOMEPAGE-CANONICAL-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/（规范首页）排名 2.0 但 CTR 0%（4 imp），优化首页 title/meta description 与首屏标题，提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T09:04:08",
+      "position": 2.0,
+      "ctr_pct": 0.0,
+      "note": "全站流量入口，0 点击"
+    },
+    {
+      "id": "CA-MARKETING-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 marketing 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-marketing-tools-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "CA-SALES-ASSISTANT-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 sales-assistant 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-sales-tools-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "CA-SEARCH-ENGINE-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 search-engine 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-search-engines-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "CA-GAMING-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 gaming 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-gaming-tools-2026 文章，SERP竞争度=预估Medium",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "预估Medium",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "CA-STORYTELLER-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 storyteller 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-storyteller-tools-2026 文章，SERP竞争度=预估Low",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "预估Low",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "KW-STORYTELLER-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI storyteller tools 2026] 写 2000 字新文章，标题建议 [Best AI Storyteller Tools 2026: 8 Tested]，slug 建议 [best-ai-storyteller-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Low",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "KW-WRITING-GENERATORS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI writing generators 2026] 写 2000 字新文章，标题建议 [Best AI Writing Generators 2026: 10 Tested]，slug 建议 [best-ai-writing-generators-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Medium",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "KW-HEALTH-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI health tools 2026] 写 2000 字新文章，标题建议 [Best AI Health Tools 2026: 9 Tested]，slug 建议 [best-ai-health-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Medium",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "KW-AUTOMATIONS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI automations 2026] 写 2000 字新文章，标题建议 [Best AI Automations 2026: 11 Tested]，slug 建议 [best-ai-automations-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估High",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T09:04:08"
+    },
+    {
+      "id": "KW-PERSONAL-ASSISTANT-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI personal assistant 2026] 写 2000 字新文章，标题建议 [Best AI Personal Assistant 2026: 8 Tested]，slug 建议 [best-ai-personal-assistant-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Medium",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T09:04:08"
     }
   ],
   "milestones": [
@@ -5314,8 +5589,8 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-26T00:00:00",
-  "last_action": "commander_report_check_20261026: added 3",
+  "last_update": "2026-10-26T09:04:08",
+  "last_action": "commander_weekly_review_20261026: added 6",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

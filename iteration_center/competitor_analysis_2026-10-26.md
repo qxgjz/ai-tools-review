@@ -1,30 +1,28 @@
-# 竞品网站分析报告（2026-10-26）
+# 竞品网站分析报告（2026-10-26 r29，09:00 档）
 
-- 数据源：futurepedia 75 分类缓存（iteration_center/competitor_sitemap_cache.json，2026-10-25 实抓）+ 本地 content_drafts/published 40 篇 + general_search SERP 实搜
-- 执行窗口：分析师（window4）r28
-
-## 竞品内容矩阵对比表
-| 竞品 | 分类数 | 工具数（分类代表） | blog/resources | 变现方式 |
+## 竞品内容矩阵
+| 竞品 | 分类数 | 工具数 | blog/resources | 变现 |
 |---|---|---|---|---|
-| futurepedia.io | 75 分类（实抓） | 每分类多工具（如 gift-ideas 多款） | resources+best 列表 | 免费收录+外链；工具目录模式 |
-| topai.tools | 分类目录（历史 r26 已抓） | 多 | category 页 | 工具目录+订阅收录 |
-| 本地 aitoolcrux | 0 分类页 | 40 篇 published 文章 | blog 40 篇 | 联盟（affiliate）+收录 |
+| futurepedia.io | 75 分类 | 每分类多工具 | resources+best 列表 | 免费收录+外链 |
+| topai.tools | 分类目录 | 多 | category 页 | 目录+订阅收录 |
+| aitoolcrux | 0 分类页 | 40 篇 published | blog | 联盟+收录 |
 
-## 内容缺口清单（本轮 5 个新缺口，避开 r25/r26/r27 已开单）
-| 缺口分类 | 竞品(futurepedia) | 我们 | 建议选题 | 竞争度 | 前 10 SERP |
-|---|---|---|---|---|---|
-| 3D-generator | 1 | 0 | best-ai-3d-generator-tools-2026 | High | eWeek/AIGearTools/topai/AIInsiders/SearchEye/BestForAI |
-| churn-management | 1 | 0 | best-ai-churn-prediction-tools-2026 | Medium | buildbetter/Powerdrill/Zendesk/AISO/AiOps/Dupple |
-| human-resources | 1 | 0 | best-ai-hr-tools-2026 | High | Peoplebox/AIInsiders/ToolStacker/TechieHub/PMP/Chitika |
-| travel | 1 | 0 | best-ai-travel-planning-tools-2026 | Medium | Go2Blog/TravelAnywhere/Tineo/theairankings/Stardrift/DreamTrip |
-| fun-tools | 1 | 0 | best-ai-fun-tools-2026 | Medium | DataCamp/DigitalTrends/DEV/PH（无专门词竞争） |
+## 内容缺口（本轮 5 个新缺口，避开 r25-r28 已开单）
+| 缺口分类 | 竞品 | 我们 | 建议选题 | 竞争度（SERP 实搜/预估） |
+|---|---|---|---|---|
+| marketing | 1 | 0 | best-ai-marketing-tools-2026 | High（HubSpot/Braze/LoudScale/AIclicks） |
+| sales-assistant | 1 | 0 | best-ai-sales-tools-2026 | High（Otter/Salesforge/Rework/HubSpot/Vainu） |
+| search-engine | 1 | 0 | best-ai-search-engines-2026 | High（AIInsiders/ToolWorthy/ToolStacker/AIclicks） |
+| gaming | 1 | 0 | best-ai-gaming-tools-2026 | 预估Medium（未实搜） |
+| storyteller | 1 | 0 | best-ai-storyteller-tools-2026 | 预估Low（未实搜） |
 
-## 可借鉴选题（5 个，含竞争度+slug）
-1. **Best AI 3D Generator Tools 2026**（best-ai-3d-generator-tools-2026）— High — 切入：按产出场景分（Mesh=Meshy/速度=Tripo/写实=Rodin/游戏资产=Sloyd）+ 免费额度与导出格式表
-2. **Best AI Churn Prediction Tools 2026**（best-ai-churn-prediction-tools-2026）— Medium — 切入：按团队规模分（SMB=Powerdrill/SQL=Pecan/CRM=Salesforce Einstein/产品数据=Amplitude）+ 价格对比（$13.27 起）
-3. **Best AI HR Tools 2026**（best-ai-hr-tools-2026）— High — 切入：按工作流分（招聘=Paradox/绩效=Lattice/员工支持=Moveworks/政策=Claude）+ 每员工成本表
-4. **Best AI Travel Planning Tools 2026**（best-ai-travel-planning-tools-2026）— Medium — 切入：按规划方式分（可预订=MindTrip/清单=Wanderlog/免费=Wonderplan/AI Mode=Google）+ 免费 vs 付费边界
-5. **Best AI Fun Tools 2026**（best-ai-fun-tools-2026）— Medium — 切入：按娱乐类型分（游戏/头像/语音/梗图）+ 全免费清单
+## 可借鉴选题（5 个）
+1. best-ai-marketing-tools-2026 — High — 切入：按营销环节分（内容=Jasper/邮件=HubSpot/实验=Optimizely/数据=Braze）+ 定价表
+2. best-ai-sales-tools-2026 — High — 切入：按销售环节分（对话=Gong/外呼=Apollo/数据=Clay/CRM=HubSpot）
+3. best-ai-search-engines-2026 — High — 切入：按场景分（引用=Perplexity/深度=ChatGPT/AI Mode=Google/隐私=Kagi/Brave）+ 引用准确率实测（CJR 数据）
+4. best-ai-gaming-tools-2026 — 预估Medium — 切入：按用途分（NPC/关卡/美术/陪练）
+5. best-ai-storyteller-tools-2026 — 预估Low — 切入：按体裁分（小说/剧本/儿童故事/互动叙事）
 
 ## SERP 验证
-- 5 词全实搜（general_search，2026-10-26 0:28 档）；竞争度依据=前 6-10 排名页域名质量与数量
+- 实搜 3 词（marketing/sales/search-engine 全 High）；gaming/storyteller 标预估未实搜（本轮验证预算已用于 P0 12 词）
+- 关键洞察：**本轮全部缺口词竞争度 High**——印证指挥官 P0 判断，内容策略应从 best-of 转向差异化长尾/GEO

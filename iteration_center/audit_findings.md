@@ -4377,3 +4377,11 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 ## 补充审计
 - real_geo_aeo_audit.py 7 条 Recommendations（Quick Answer/Key Takeaways/数据/专家引述/作者署名/对比表/llms-full）→ llms-full 已满足，内容类转创作家窗口。
 - seo_audit_full.py（sitemap 驱动 40+ 规则）并行运行中，发现项追加后转 state 待办。
+
+## 2026-10-26 09:04 r29 追加 · 关键词量验证（P0 已闭环，指挥官 E2E 走查）
+
+**核心结论**：Serper 不可用（无 key）→ general_search 降级实搜 12 词。创作家 48 候选词中已验 12 词：**9 High / 3 Medium / 0 Low**。
+- "现有词全在 pos51+ 无量、停止无效长尾量产"——指挥官判断**成立**
+- 入选有量词 5 个：legal（Medium 新验证，P0 已建）+ gift/churn/travel/fun（Medium 复用）
+- 内容策略转向：①优先写 5 个 Medium 词 ②后续从 GEO/AI 引荐词 + how to/what is 长尾疑问句选题，不再写 best-of 饱和词
+- 建议：接入 SEO MCP 后（keyword-research 有真实搜索量），重建候选池淘汰 High 词
