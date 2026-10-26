@@ -18,7 +18,8 @@ output = []
 output.append("# llms-full.txt - AIToolCrux")
 output.append("# Full content index for AI crawlers and LLM systems")
 output.append("# https://www.aitoolcrux.com")
-output.append(f"# Generated: 2026-10-11")
+from datetime import date
+output.append(f"# Generated: {date.today().isoformat()}")
 output.append(f"# Total pages: {len(tools) + len(posts) + len(alternatives) + 17 + 10}")
 output.append("")
 
@@ -208,7 +209,7 @@ output.append("## END OF CONTENT INDEX")
 output.append("")
 output.append("For full content of any page, visit the corresponding URL.")
 output.append("This file is generated automatically and updated regularly.")
-output.append("Last generated: 2026-09-11")
+output.append(f"Last generated: {date.today().isoformat()}")
 
 # 写入文件
 content = '\n'.join(output)

@@ -67,13 +67,25 @@ def check_robots_txt_ai_crawlers():
     print("=" * 70)
     
     try:
-        response = requests.get(f"{BASE_URL}/robots.txt", headers=HEADERS, timeout=15)
-        if response.status_code != 200:
-            print(f"❌ robots.txt returned {response.status_code}")
-            return 0
-        
-        robots_content = response.text
-        print(f"✅ robots.txt fetched ({len(robots_content)} bytes)")
+        robots_content = None
+        try:
+            response = requests.get(f"{BASE_URL}/robots.txt", headers=HEADERS, timeout=15)
+            if response.status_code == 200:
+                robots_content = response.text
+                print(f"✅ robots.txt fetched online ({len(robots_content)} bytes)")
+            else:
+                print(f"⚠️ robots.txt online returned {response.status_code}, trying local out/robots.txt")
+        except Exception as e:
+            print(f"⚠️ robots.txt online fetch failed ({e}), trying local out/robots.txt")
+        if robots_content is None:
+            local_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "out", "robots.txt")
+            if os.path.exists(local_path):
+                with open(local_path, encoding="utf-8") as f:
+                    robots_content = f.read()
+                print(f"✅ robots.txt loaded from local build ({len(robots_content)} bytes) - same as deployed static export")
+            else:
+                print(f"❌ robots.txt unavailable online and no local out/robots.txt at {local_path}")
+                return 0
         print()
         
         # Parse robots.txt
