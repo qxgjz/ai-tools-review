@@ -34,6 +34,12 @@ export default function CompareClient({ initialTools }: { initialTools: Tool[] }
     [selectedSlugs],
   );
 
+  // r65: SSR 只内联前 30 个完整工具；fetch 全量前选中的 30 之外工具缺
+  // scores/pros/cons，比较结果区需等待数据就绪，防止 undefined.slice 崩溃。
+  const comparisonReady =
+    selectedTools.length >= 2 &&
+    selectedTools.every((t) => t.scores && Array.isArray(t.pros) && Array.isArray(t.cons));
+
   const filteredTools = useMemo(() => {
     if (!searchQuery.trim()) return tools;
     const q = searchQuery.toLowerCase();
@@ -794,7 +800,7 @@ export default function CompareClient({ initialTools }: { initialTools: Tool[] }
       </div>
 
       {/* Compare结果 */}
-      {selectedTools.length >= 2 ? (
+      {comparisonReady ? (
         <div className="space-y-8">
           {/* 总览卡片 */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
@@ -1344,6 +1350,22 @@ export default function CompareClient({ initialTools }: { initialTools: Tool[] }
               />
             ))}
           </div>
+        </div>
+      ) : selectedTools.length >= 2 ? (
+        /* 数据加载中（fetch 全量工具前，30 个之外的工具选中后） */
+        <div className="bg-white dark:bg-gray-900 rounded-xl shadow-sm border border-gray-100 dark:border-gray-800 p-12 text-center">
+          <div className="w-16 h-16 mx-auto mb-4 bg-emerald-100 dark:bg-emerald-900/30 rounded-full flex items-center justify-center">
+            <svg className="w-8 h-8 text-emerald-500 animate-spin" fill="none" viewBox="0 0 24 24">
+              <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+              <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
+            </svg>
+          </div>
+          <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-2">
+            Loading full tool data…
+          </h3>
+          <p className="text-gray-500 dark:text-gray-400 max-w-md mx-auto">
+            Fetching detailed scores and pricing for all {533}+ tools — this takes under a second.
+          </p>
         </div>
       ) : (
         /* 空状态 */

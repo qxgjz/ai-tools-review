@@ -18,21 +18,16 @@ const COMPARE_KEEP_FIELDS = [
   'hasFreeTier',
   'pricing',
   'lastUpdated',
-] as const;
+] as const; // 保留：客户端 fetch 全量后按需使用（r65 起 SSR 不再 slim 映射，直接 slice 30）
 
 export default function ComparePage() {
   const allTools: Tool[] = JSON.parse(
     fs.readFileSync(path.join(process.cwd(), 'public/data/tools-index.json'), 'utf-8'),
   );
-  // Keep only fields the comparison UI actually uses: cutting pros/cons/bestFor/
-  // officialUrl/etc. shrinks the RSC flight payload by ~210KB (page was 1.09MB).
-  const tools: Tool[] = allTools.map((t) => {
-    const slim: Partial<Tool> = {};
-    for (const k of COMPARE_KEEP_FIELDS) {
-      (slim as Record<string, unknown>)[k] = (t as unknown as Record<string, unknown>)[k];
-    }
-    return slim as Tool;
-  });
+  // r65: SSR 只内联前 30 个完整工具（首屏选择器立即可用），全量 533 个由
+  // CompareClient 挂载后 fetch /data/tools-index.json 替换 —— 砍掉 ~430KB
+  // Flight payload（页面曾 813KB > 500KB，seo_audit P1）。
+  const tools: Tool[] = allTools.slice(0, 30);
   return (
     <>
       <CompareClient initialTools={tools} />
