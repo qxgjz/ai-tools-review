@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-10-26T22:34:28.199642",
+  "urls": [
+    "https://www.aitoolcrux.com/tools/exa/",
+    "https://www.aitoolcrux.com/tools/n8n/",
+    "https://www.aitoolcrux.com/tools/claude/"
+  ],
+  "results": {
+    "indexnow": {
+      "status": 200,
+      "ok": true
+    }
+  }
+}
