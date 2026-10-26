@@ -97,7 +97,10 @@ def main():
 
     # Top queries
     base["dimensions"] = ["query"]
+    base["rowLimit"] = 25
     top_queries = gsc_query(token, base)
+    # P1-GSC-QUERY-DATA-GAP: 过滤工具生成的 -site: 排除式垃圾查询，避免污染查询级报告
+    clean_rows = [r for r in top_queries.get("rows", []) if "-site:" not in (r["keys"][0] or "")]
 
     # By device
     base["dimensions"] = ["device"]
@@ -134,7 +137,7 @@ Generated: {datetime.now(timezone.utc).isoformat()}
         report += f"| {page} | {r['clicks']} | {r['impressions']} | {r['ctr']*100:.1f}% | {r['position']:.1f} |\n"
 
     report += "\n## Top Queries\n\n| Query | Clicks | Impressions | CTR | Position |\n|-------|--------|-------------|-----|----------|\n"
-    for r in top_queries.get("rows", []):
+    for r in clean_rows:
         report += f"| {r['keys'][0]} | {r['clicks']} | {r['impressions']} | {r['ctr']*100:.1f}% | {r['position']:.1f} |\n"
 
     report += "\n## By Device\n\n| Device | Clicks | Impressions | Avg Position |\n|--------|--------|-------------|---------------|\n"

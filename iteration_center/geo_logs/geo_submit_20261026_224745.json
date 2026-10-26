@@ -1,0 +1,26 @@
+{
+  "timestamp": "2026-10-26T22:47:45.488377",
+  "urls": [
+    "https://www.aitoolcrux.com/tools/ollama/",
+    "https://www.aitoolcrux.com/tools/gemini-cli/",
+    "https://www.aitoolcrux.com/tools/vllm/",
+    "https://www.aitoolcrux.com/tools/claude-code/",
+    "https://www.aitoolcrux.com/tools/openhands/",
+    "https://www.aitoolcrux.com/tools/langchain/",
+    "https://www.aitoolcrux.com/tools/crewai/",
+    "https://www.aitoolcrux.com/tools/jan/",
+    "https://www.aitoolcrux.com/tools/litellm/",
+    "https://www.aitoolcrux.com/tools/kagi/",
+    "https://www.aitoolcrux.com/tools/letta/",
+    "https://www.aitoolcrux.com/tools/cognee/",
+    "https://www.aitoolcrux.com/tools/langfuse/",
+    "https://www.aitoolcrux.com/tools/phoenix/",
+    "https://www.aitoolcrux.com/tools/deepeval/"
+  ],
+  "results": {
+    "indexnow": {
+      "status": 200,
+      "ok": true
+    }
+  }
+}

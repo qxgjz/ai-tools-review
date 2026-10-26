@@ -164,3 +164,35 @@
 ### 剩余
 - P0 pending：1（BING-WMT 缺 key）
 - P1 pending：CLAUDE-SEO / GA4-SG-BOT / GSC-QUERY / INDEX-41-REMAINING / P2-SCHEMA-TYPE-COUNT 等
+
+
+---
+
+## r65b 收录推进验收（2026-10-26，IndexNow + 查询污染清理）
+
+**触发**：收录推进验收定时任务。目标 A：GSC 曝光 2000→10000，收录异常必须推进。
+
+### 1. 待办状态核对
+- **P1-INDEXNOW-HIGH-TRAFFIC-20261023**：已 archived+completed（r65 完成），无需重复。
+- **P1-INDEX-41-REMAINING-RESULTS-20261024**：pending 保持，本轮推进提交（见下）。
+- **P1-GSC-QUERY-DATA-GAP-20261025**：**本轮 completed**。
+
+### 2. IndexNow 批量提交（B-4 类剩余 15 页）
+- 提交 ollama/gemini-cli/vllm/claude-code/openhands/langchain/crewai/jan/litellm/kagi/letta/cognee/langfuse/phoenix/deepeval（sitemap 916 URL 确认存在）= **status 200**
+- 日志：iteration_center/geo_logs/geo_submit_20261026_224745.json
+- 累计：B-4 高流量 7 页（r65）+ 8 页（r57）+ 15 页（本轮）= 重点工具页 IndexNow 全覆盖
+- 待 Google 重抓后 10-30 复查收录（复查点未到期，保持 pending）
+
+### 3. GSC 查询级 -site: 污染验证与修复
+- **数据面**：latest_report_2026-10-26.md（r28-r31）均无 -site: 查询；本轮 fetch_gsc 实拉新报告 Top Queries 8 行 **0 处 -site:**。
+- **根因**：fetch_gsc.py Top Queries 段无过滤逻辑（13/23 为 -site: 垃圾查询时直接进报告）。
+- **修复**：`.github/scripts/fetch_gsc.py` 加 `clean_rows` 过滤（排除含 `-site:` 查询）+ query 维度 rowLimit 显式 25。最小改动，py_compile OK。
+- **workflow 核查**：gsc-fetch.yml 无语法问题，secret 正常（本地实跑成功：Impressions 171/Pos 14.29，与 r31 一致）。
+- 验证产出：gsc-ga4-report/2026-09-25_2026-10-24.md（新窗口实拉，Top Queries 无 -site:）。
+
+### 4. state 更新
+- P1-GSC-QUERY-DATA-GAP-20261025 → **completed** + evidence（修复+实跑验证）。
+- P1-INDEX-41-REMAINING-RESULTS-20261024 → pending 保持，evidence 追加本轮 15 页提交（复查 10-30 未到期）。
+
+### 5. 卡点
+- GSC 曝光 171（干净窗口）vs 目标 10000：基数低，IndexNow 持续推进 + URL 变体蚕食修复（CANONICAL-REDIRECT-AUDIT/ARTICLE-API-URL-CLEAN 待指挥官催）为提曝关键路径。

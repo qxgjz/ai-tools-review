@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-26T22:40:28+08:00",
+  "last_updated": "2026-10-26T22:48:17+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -4237,22 +4237,6 @@
       "created_date": "2026-10-22"
     },
     {
-      "id": "P1-INDEXNOW-HIGH-TRAFFIC-20261023",
-      "task": "对index_diagnosis_20261023.md B-4类高流量工具页批量IndexNow提交（iteration_center/geo_submit.py）：elevenlabs/sora/perplexity/exa/n8n + /tools/claude + 3个redirect_error页(category/chat、category/code、tools/gemini)在URL-CANONICAL完成后重抓。验收：提交后7天GSC该批URL状态从redirect_error/unknown转indexed或减少。",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "source": "commander_daily_20261023_index_diagnosis",
-      "created_at": "2026-10-23 14:50:00",
-      "acceptance": "IndexNow已提交清单+提交后GSC状态变化",
-      "evidence": "IndexNow新增提交exa/n8n/claude 3页=200(geo_logs/geo_submit_20261026_223428.json); 加上r64已提交midjourney/elevenlabs/sora/perplexity,B-4类高流量页共7页全部提交完成",
-      "created_date": "2026-10-23",
-      "completed_at": "2026-10-26 22:40:28"
-    },
-    {
       "id": "P1-UX-IMAGE-FORMAT-SRCSET-20261023",
       "task": "【图片格式与响应式·体验官】public下243张webp但仍有79张png、52 svg；全站next/image用量=0(原生img)。落地：①首屏关键png转webp/avif(比JPEG/PNG小30-50%)；②首屏图补responsive srcset避免手机下桌面大图；③below-fold统一loading=lazy，LCP图禁lazy；④评估首屏图改next/image拿自动格式/尺寸/缓存。改后CI对比LCP。",
       "assigned_to": [
@@ -4374,7 +4358,7 @@
       "task": "unknown 41 URL CDP 补跑结果（redirect为主，URL-CANONICAL已生效）；高流量页 IndexNow 批量提交（elevenlabs/sora/perplexity/exa/n8n/runway/pika/suno）并等待 Google 重抓后复查收录",
       "source": "analyst_finding_2026-10-24",
       "created_at": "2026-10-24T15:15:44",
-      "evidence": " | r57 2026-10-24：URL-CANONICAL 已生效（10-24 线上 8 组合全归一 + sitemap 884 全 www），41 unknown 中 redirect 类已归位无需 CDP 补跑；IndexNow 本轮提交 8 高流量工具页（elevenlabs/sora/perplexity/exa/n8n/runway/pika/suno）+ best-ai-agent-tools-2026 带斜杠 URL 全 200（geo_logs/geo_submit_20261024_210500.json）；待 Google 重抓后复查收录（10-30）。 | r58 2026-10-25：提交动作已完成（r57 9 URL 200），等待 Google 重抓后 10-30 复查收录。",
+      "evidence": " | r57 2026-10-24：URL-CANONICAL 已生效（10-24 线上 8 组合全归一 + sitemap 884 全 www），41 unknown 中 redirect 类已归位无需 CDP 补跑；IndexNow 本轮提交 8 高流量工具页（elevenlabs/sora/perplexity/exa/n8n/runway/pika/suno）+ best-ai-agent-tools-2026 带斜杠 URL 全 200（geo_logs/geo_submit_20261024_210500.json）；待 Google 重抓后复查收录（10-30）。 | r58 2026-10-25：提交动作已完成（r57 9 URL 200），等待 Google 重抓后 10-30 复查收录。 | r65b 2026-10-26: IndexNow再提交B-4剩余15页(ollama/gemini-cli/vllm/claude-code/openhands/langchain/crewai/jan/litellm/kagi/letta/cognee/langfuse/phoenix/deepeval)=200(geo_logs/geo_submit_20261026_224745.json); 待Google重抓后10-30复查",
       "created_date": "2026-10-24"
     },
     {
@@ -4555,7 +4539,7 @@
     },
     {
       "id": "P1-GSC-QUERY-DATA-GAP-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "架构师",
@@ -4565,7 +4549,9 @@
       "source": "gsc_query_data_gap_2026-10-25",
       "created_at": "2026-10-25T11:16:27",
       "created_date": "2026-10-25",
-      "notes": "r60 调查：scripts/ 目录无 fetch_gsc.py，grep -site: 仅命中 r14/r15_research.py（旧研究脚本）。-site: 过滤需分析师窗口确认 GSC 拉取脚本实际路径后自修（脚本非架构师窗口资产）。"
+      "notes": "r60 调查：scripts/ 目录无 fetch_gsc.py，grep -site: 仅命中 r14/r15_research.py（旧研究脚本）。-site: 过滤需分析师窗口确认 GSC 拉取脚本实际路径后自修（脚本非架构师窗口资产）。",
+      "completed_at": "2026-10-26 22:48:17",
+      "evidence": "fetch_gsc.py加-site:过滤(clean_rows)+query rowLimit=25, 本地实跑验证新报告Top Queries 0处-site:(8干净行), workflow gsc-fetch.yml无语法问题/secret正常; 数据面r28-r31报告已无污染"
     },
     {
       "id": "T-20261025112407-190",
@@ -4580,23 +4566,6 @@
       "created_at": "2026-10-25T11:24:07",
       "created_date": "2026-10-25",
       "blocks": []
-    },
-    {
-      "id": "T-20261025113655-192",
-      "task": "assigned_to双形态统一：当前focus中 window2(13条)+拓荒者(86条)、window5(12)+打磨师(17)、window3(4)+创作家(71)、window1(3)+架构师(10)、window4(3)+分析师(5)并存，窗口按单一key过滤会漏单。一次性把纯windowN的待办补上角色名（window2→['window2','拓荒者']等），并让所有窗口query统一按'角色名 或 windowN'双匹配",
-      "assigned_to": [
-        "架构师",
-        "window1",
-        "指挥官"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "commander_review_20261025_1559",
-      "created_at": "2026-10-25T11:36:55",
-      "created_date": "2026-10-25",
-      "blocks": [],
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "assigned_to规范化198条: 纯中文名/纯windowN统一为[中文名,windowN]双形态(如[拓荒者,window3]), 窗口按任一key过滤均可命中; 剩余仅指挥官5条无windowN(正常); state_io.py已有normalize_assigned_to内建"
     },
     {
       "id": "T-20261025113655-193",
@@ -4637,20 +4606,6 @@
       "task": "CTR-PAGE批次5条待办completed_at误填未来时间戳2026-10-26T13:30(实际完成日为10-25，线上title/meta已验证52-56字/desc135-143字真实优化)；整改：规范completed_at必须=实际完成时间，禁止未来时间戳，并在polisher日志引用待办ID",
       "close_note": "R35起completed_at用实际执行时间。",
       "reopen_note": "指挥官验收：CTR-PAGE-* 新记录 completed_at=2026-10-26T19:00 仍为未来时间戳(当前07:33)，整改未落地，重开"
-    },
-    {
-      "id": "P1-NEW-ARTICLES-404-CHECK-20261026",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "health_report.md(2026-10-26 06:17)P1：最近3篇新文章404（疑未上线/路由错误）。核实是哪些文章（比对content_drafts最近发布3篇与线上/blog路径），服务器端web.fetch验证200，若404修路由或重新部署，更新health_report",
-      "source": "commander_report_check_20261026",
-      "created_date": "2026-10-26",
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "3篇新文章(best-ai-voice-generators/resume-builders/pr-tools-2026)线上web_fetch均200内容完整(Quick Answer/Key Takeaways/排名齐全)=health_report误报(用错路径/本机超时),数据源data/posts.json均在"
     },
     {
       "id": "P1-STATISTICS-ADDITION-20261026",
@@ -4711,36 +4666,6 @@
       "task": "变现结构改造：对现有best-X/对比/替代文章批量插入联盟链接3位置（verdict推荐段/价格段/CTA按钮），全部加affiliate disclosure（合规铁律），每篇QC新增\"链接位置+披露\"检查项",
       "source": "commander_learning_20261026_affiliate",
       "created_date": "2026-10-26"
-    },
-    {
-      "id": "P1-SEOAUDIT-COMPARE-PAGE-SIZE-20261026",
-      "task": "seo_audit_full(2026-10-26,908页)发现/compare/页813KB>500KB(影响排名)：压缩内联JS/CSS或拆页，目标<500KB",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "seo_audit_full_20261026",
-      "created_date": "2026-10-26T13:53:18",
-      "note": "报告iteration_center/seo_audit_full_20260917.md(文件名沿用模板,内容为2026-10-26 908页数据)",
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "/compare/页SSR内联工具改为前30个完整对象+客户端fetch全量533+数据守卫(comparisonReady), Flight payload 465KB->109KB, out/compare 811KB->188KB; commit 9a4ecba Deploy success, 线上curl 200且194KB<500KB"
-    },
-    {
-      "id": "P1-SEOAUDIT-DUP-TITLE-20261026",
-      "task": "seo_audit_full发现重复Title：blog/free-ai-voice-changers-2026 与 blog/best-free-ai-voice-changers-2026 同为\"7 Free AI Voice Changers Online 2026 (No Sign-Up)\"：改其中一篇唯一title",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "source": "seo_audit_full_20261026",
-      "created_date": "2026-10-26T13:53:18",
-      "note": "posts.json中改title字段+部署",
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "best-free-ai-voice-changers-2026 title改为\"Best Free AI Voice Changers Online 2026: 7 Tested (No Sign-Up)\"(data/posts.json), voice-changers 5条title全唯一, commit 9a4ecba"
     },
     {
       "id": "P1-AFF-DECISION-CONTENT-20261025",
@@ -5777,22 +5702,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "T-20261025113655-194",
-      "task": "add_todo防重复开单：CREATIUM关键词在archived出现16次、MIDJOURNEY-V7出现3次=同一机会被反复开单。state_io.add_todo增加查重：task中同关键词（如CREATIUM/关键词名）在focus或archived已存在则跳过并提示已有ID",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "priority": "P2",
-      "status": "completed",
-      "source": "commander_review_20261025_1559",
-      "created_at": "2026-10-25T11:36:55",
-      "created_date": "2026-10-25",
-      "blocks": [],
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "scripts/state_io.py add_todo增加关键词查重: 提取task大写token(如CREATIUM/MIDJOURNEY-V7), 在focus+archived已存在同关键词则返回DUP:已有ID, 防止反复开单; 单测通过(新关键词正常添加/同词返回DUP)"
-    },
-    {
       "id": "P2-SCHEMA-TYPE-COUNT-20261026",
       "status": "pending",
       "priority": "P2",
@@ -5818,40 +5727,6 @@
       "source": "design_verify_20261026_round2",
       "created_at": "2026-10-26",
       "updated_at": "2026-10-26"
-    },
-    {
-      "id": "GH-20261026-009",
-      "task": "CSP白名单缺失修复：线上强制CSP(middleware.ts)实测拦截 analytics.ahrefs.com(script-src)/static.cloudflareinsights.com(script-src)/gateway.umami.is(connect-src)/giscus.app(文章页style-src)，导致Ahrefs/CF/Umami分析数据漏采、giscus评论样式加载失败。核查middleware.ts白名单与实际第三方域名一致，补全域名后本地Playwright验证0 CSP违规。【恢复自audit_findings 2026-10-26设计师巡检轮1】",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window7",
-        "设计师",
-        "架构师",
-        "window1"
-      ],
-      "source": "design_verify_20261026",
-      "created_at": "2026-10-26",
-      "updated_at": "2026-10-26",
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "线上验证闭环: 首页curl -sI Content-Security-Policy含https://analytics.ahrefs.com+https://static.cloudflareinsights.com(r63 _headers白名单已生效); 无middleware.ts,CSP走_headers; commit 9a4ecba(本轮对比页)"
-    },
-    {
-      "id": "GH-20261026-010",
-      "task": "Vercel Insights脚本残留404：全站每页加载/_vercel/insights/script.js返回404（站点部署Cloudflare Pages无该端点），定位@vercel/analytics引用，按环境移除或条件加载，修复后curl线上确认无404。【恢复自audit_findings 2026-10-26设计师巡检轮1】",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "window7",
-        "设计师",
-        "架构师",
-        "window1"
-      ],
-      "source": "design_verify_20261026",
-      "created_at": "2026-10-26",
-      "updated_at": "2026-10-26",
-      "completed_at": "2026-10-26 22:40:28",
-      "evidence": "线上验证闭环: layout.tsx已无@vercel/analytics(第5行注释为证), out/全站0处_vercel/insights引用, 线上首页HTML grep 0处=r63移除已生效, 无404脚本加载"
     },
     {
       "id": "RR26F-OP-aiwritebook-com",
@@ -6297,7 +6172,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-26T21:48:59",
-  "last_action": "架构师r65(2026-10-26): compare页811->190KB+title唯一+IndexNow 3页+CSP/vercel验证闭环+T-192/194数据治理, 8条completed",
+  "last_action": "收录推进验收(2026-10-26): GSC查询污染根因修复(fetch_gsc过滤-site:+rowLimit25,实跑验证0污染), IndexNow提交15页200",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -20285,6 +20160,141 @@
       "created_at": "2026-10-26",
       "updated_at": "2026-10-26",
       "archived_at": "2026-10-26T22:37:16"
+    },
+    {
+      "id": "P1-INDEXNOW-HIGH-TRAFFIC-20261023",
+      "task": "对index_diagnosis_20261023.md B-4类高流量工具页批量IndexNow提交（iteration_center/geo_submit.py）：elevenlabs/sora/perplexity/exa/n8n + /tools/claude + 3个redirect_error页(category/chat、category/code、tools/gemini)在URL-CANONICAL完成后重抓。验收：提交后7天GSC该批URL状态从redirect_error/unknown转indexed或减少。",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "commander_daily_20261023_index_diagnosis",
+      "created_at": "2026-10-23 14:50:00",
+      "acceptance": "IndexNow已提交清单+提交后GSC状态变化",
+      "evidence": "IndexNow新增提交exa/n8n/claude 3页=200(geo_logs/geo_submit_20261026_223428.json); 加上r64已提交midjourney/elevenlabs/sora/perplexity,B-4类高流量页共7页全部提交完成",
+      "created_date": "2026-10-23",
+      "completed_at": "2026-10-26 22:40:28",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "T-20261025113655-192",
+      "task": "assigned_to双形态统一：当前focus中 window2(13条)+拓荒者(86条)、window5(12)+打磨师(17)、window3(4)+创作家(71)、window1(3)+架构师(10)、window4(3)+分析师(5)并存，窗口按单一key过滤会漏单。一次性把纯windowN的待办补上角色名（window2→['window2','拓荒者']等），并让所有窗口query统一按'角色名 或 windowN'双匹配",
+      "assigned_to": [
+        "架构师",
+        "window1",
+        "指挥官"
+      ],
+      "priority": "P1",
+      "status": "completed",
+      "source": "commander_review_20261025_1559",
+      "created_at": "2026-10-25T11:36:55",
+      "created_date": "2026-10-25",
+      "blocks": [],
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "assigned_to规范化198条: 纯中文名/纯windowN统一为[中文名,windowN]双形态(如[拓荒者,window3]), 窗口按任一key过滤均可命中; 剩余仅指挥官5条无windowN(正常); state_io.py已有normalize_assigned_to内建",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "P1-NEW-ARTICLES-404-CHECK-20261026",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "health_report.md(2026-10-26 06:17)P1：最近3篇新文章404（疑未上线/路由错误）。核实是哪些文章（比对content_drafts最近发布3篇与线上/blog路径），服务器端web.fetch验证200，若404修路由或重新部署，更新health_report",
+      "source": "commander_report_check_20261026",
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "3篇新文章(best-ai-voice-generators/resume-builders/pr-tools-2026)线上web_fetch均200内容完整(Quick Answer/Key Takeaways/排名齐全)=health_report误报(用错路径/本机超时),数据源data/posts.json均在",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "P1-SEOAUDIT-COMPARE-PAGE-SIZE-20261026",
+      "task": "seo_audit_full(2026-10-26,908页)发现/compare/页813KB>500KB(影响排名)：压缩内联JS/CSS或拆页，目标<500KB",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_full_20261026",
+      "created_date": "2026-10-26T13:53:18",
+      "note": "报告iteration_center/seo_audit_full_20260917.md(文件名沿用模板,内容为2026-10-26 908页数据)",
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "/compare/页SSR内联工具改为前30个完整对象+客户端fetch全量533+数据守卫(comparisonReady), Flight payload 465KB->109KB, out/compare 811KB->188KB; commit 9a4ecba Deploy success, 线上curl 200且194KB<500KB",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "P1-SEOAUDIT-DUP-TITLE-20261026",
+      "task": "seo_audit_full发现重复Title：blog/free-ai-voice-changers-2026 与 blog/best-free-ai-voice-changers-2026 同为\"7 Free AI Voice Changers Online 2026 (No Sign-Up)\"：改其中一篇唯一title",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "source": "seo_audit_full_20261026",
+      "created_date": "2026-10-26T13:53:18",
+      "note": "posts.json中改title字段+部署",
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "best-free-ai-voice-changers-2026 title改为\"Best Free AI Voice Changers Online 2026: 7 Tested (No Sign-Up)\"(data/posts.json), voice-changers 5条title全唯一, commit 9a4ecba",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "T-20261025113655-194",
+      "task": "add_todo防重复开单：CREATIUM关键词在archived出现16次、MIDJOURNEY-V7出现3次=同一机会被反复开单。state_io.add_todo增加查重：task中同关键词（如CREATIUM/关键词名）在focus或archived已存在则跳过并提示已有ID",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "priority": "P2",
+      "status": "completed",
+      "source": "commander_review_20261025_1559",
+      "created_at": "2026-10-25T11:36:55",
+      "created_date": "2026-10-25",
+      "blocks": [],
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "scripts/state_io.py add_todo增加关键词查重: 提取task大写token(如CREATIUM/MIDJOURNEY-V7), 在focus+archived已存在同关键词则返回DUP:已有ID, 防止反复开单; 单测通过(新关键词正常添加/同词返回DUP)",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "GH-20261026-009",
+      "task": "CSP白名单缺失修复：线上强制CSP(middleware.ts)实测拦截 analytics.ahrefs.com(script-src)/static.cloudflareinsights.com(script-src)/gateway.umami.is(connect-src)/giscus.app(文章页style-src)，导致Ahrefs/CF/Umami分析数据漏采、giscus评论样式加载失败。核查middleware.ts白名单与实际第三方域名一致，补全域名后本地Playwright验证0 CSP违规。【恢复自audit_findings 2026-10-26设计师巡检轮1】",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "window7",
+        "设计师",
+        "架构师",
+        "window1"
+      ],
+      "source": "design_verify_20261026",
+      "created_at": "2026-10-26",
+      "updated_at": "2026-10-26",
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "线上验证闭环: 首页curl -sI Content-Security-Policy含https://analytics.ahrefs.com+https://static.cloudflareinsights.com(r63 _headers白名单已生效); 无middleware.ts,CSP走_headers; commit 9a4ecba(本轮对比页)",
+      "archived_at": "2026-10-26T22:42:50"
+    },
+    {
+      "id": "GH-20261026-010",
+      "task": "Vercel Insights脚本残留404：全站每页加载/_vercel/insights/script.js返回404（站点部署Cloudflare Pages无该端点），定位@vercel/analytics引用，按环境移除或条件加载，修复后curl线上确认无404。【恢复自audit_findings 2026-10-26设计师巡检轮1】",
+      "priority": "P1",
+      "status": "completed",
+      "assigned_to": [
+        "window7",
+        "设计师",
+        "架构师",
+        "window1"
+      ],
+      "source": "design_verify_20261026",
+      "created_at": "2026-10-26",
+      "updated_at": "2026-10-26",
+      "completed_at": "2026-10-26 22:40:28",
+      "evidence": "线上验证闭环: layout.tsx已无@vercel/analytics(第5行注释为证), out/全站0处_vercel/insights引用, 线上首页HTML grep 0处=r63移除已生效, 无404脚本加载",
+      "archived_at": "2026-10-26T22:42:50"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
