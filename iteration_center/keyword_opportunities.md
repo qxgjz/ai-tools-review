@@ -486,3 +486,27 @@
 
 ### 搜索量标注（全"预估"）
 依据=SERP 竞争度（实搜 12 词）或竞品分类缺口（未实搜词）。Serper 不可用已记录。
+
+
+---
+
+## r30 追加（2026-10-26 15:06 · 15:00 档）
+
+**Total keywords analyzed: 3**（本轮实搜）+ 5 P1 候选（预估）
+
+### 验证结论
+- 实搜 3 词：ai-detection **High** / education **Medium（P0 新入选）** / fashion-assistant **High**
+- P0 优先池：education（本轮新验证）+ legal（r29）+ churn（r28）——均 serp_verified=true，Medium
+- GSC Easy Wins：最新 live_pull 无排名 20-50 且有曝光词（tabbyml pos18 已开单、bondai pos89.5 等过远）→ **不足 5 个跳过**（SOP 允许）
+
+### 本轮新增候选（P1，预估，未 SERP 验证）
+| 词 | 竞争度（估） | 建议标题 | slug |
+|---|---|---|---|
+| best AI cartoon generators 2026 | Medium | Best AI Cartoon Generators 2026: 8 Tested | best-ai-cartoon-generators-2026 |
+| best AI religion tools 2026 | Low | Best AI Religion & Faith Tools 2026: 7 Tested | best-ai-religion-tools-2026 |
+| best AI ticketing tools 2026 | Low | Best AI Ticketing Management Tools 2026: 6 Tested | best-ai-ticketing-tools-2026 |
+| best AI text generators 2026 | Medium | Best AI Text Generators 2026: 9 Tested | best-ai-text-generators-2026 |
+| best AI misc tools 2026 | Low | Best AI Misc & Niche Tools 2026: 12 Tested | best-ai-misc-tools-2026 |
+
+### 搜索量标注（全"预估"）
+依据=SERP 竞争度（实搜 3 词）或竞品分类缺口（未实搜词）。搜索量未编造。

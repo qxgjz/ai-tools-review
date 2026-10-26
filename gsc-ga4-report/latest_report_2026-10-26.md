@@ -33,3 +33,26 @@
 
 ## 待办
 - 完成 1（P0 量验证）；新写入 14；focus=276→290 区间；分析师 pending=2（阻塞）
+
+
+---
+
+# r30 追加（2026-10-26 15:06 · 15:00 档 · 新 GSC 窗口实拉）
+
+## GSC（fetch_gsc.py 实拉，窗口 2026-09-25~10-24）
+| 指标 | r29(09-24~10-23) | r30(09-25~10-24) | 变化 |
+|---|---|---|---|
+| Clicks | 0 | 0 | = |
+| Impressions | 167 | **171** | **+4** |
+| CTR | 0% | 0% | = |
+| AvgPos | 14.13 | **14.29** | **-0.16（略降）** |
+
+### 新曝光页面（本窗口新增）
+- /about/ 6 imp pos3.3（新变体）、/alternatives/cursor-alternatives 2 imp pos1.0、/blog/best-ai-meeting-assistants-2026 1 imp pos9.0、/blog/best-ai-observability-tools-2026 2 imp pos9.5、/blog/best-ai-productivity-tools-2026 2 imp pos10.5、bondai 查询 2 imp pos89.5
+- **3 个新 5-15 位 CTR 命中**（meeting/observability/productivity 全 0%）→ 已开 CTR 待办给打磨师
+
+### 关键发现
+1. education 词 SERP Medium → 新 P0（KW-VOLUME-CONFIRMED-EDUCATION）
+2. 蚕食持续：/about vs /about/（7+6 imp）、首页变体（1+7 imp）、article-api 异常 URL 5 imp——r28 修复待办（CANONICAL-REDIRECT-AUDIT/ARTICLE-API-URL-CLEAN）仍 pending，建议指挥官催架构师
+3. MOBILE 4 imp pos6.5：移动端有位置但 0 点击，与桌面一致
+4. 收录基线 477/905=52.8% 维持

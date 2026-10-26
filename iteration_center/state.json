@@ -3556,7 +3556,8 @@
       "created_date": "2026-10-17",
       "status_note_20261025": "2026-10-25 复查：elmo 部署需 Docker，本机 docker 不可用，已被 P0-GEO-ELMO-TRACKER 承接，保持 pending",
       "status_note_20261025_1509": "2026-10-25 15:09 复查：elmo 部署需 Docker，本机 docker 不可用；已被 P0-GEO-ELMO-TRACKER 承接，保持 pending",
-      "status_note_20261025_2106": "2026-10-25 21:06 复查：需 Docker 本机不可用，已被 P0-GEO-ELMO-TRACKER 承接，保持 pending"
+      "status_note_20261025_2106": "2026-10-25 21:06 复查：需 Docker 本机不可用，已被 P0-GEO-ELMO-TRACKER 承接，保持 pending",
+      "note": "r30 复查 2026-10-26 15:0x：仍阻塞——本机 Docker 不可用，elmo 为 Docker Compose 自托管；保持 pending"
     },
     {
       "task": "R15外链机会: 提交aitoolcrux到bestofai.io免费目录(200存活, submit+free信号, 一次审核进分类/职业/替代页), 附官网https://www.aitoolcrux.com与一句话简介",
@@ -4081,7 +4082,8 @@
       "created_date": "2026-10-25",
       "status_note_20261025": "2026-10-25 复查：引用级 baseline 仍需浏览器跑 ChatGPT Search/Perplexity/AIO，无 GUI 会话，保持 pending（技术就绪度 8.94 已确认，缺引用级实测）",
       "status_note_20261025_1509": "2026-10-25 15:09 复查：引用级 baseline 需浏览器跑 ChatGPT Search/Perplexity/AIO，本机无 GUI 会话；技术就绪度 8.94 已确认，缺引用级实测，保持 pending",
-      "status_note_20261025_2106": "2026-10-25 21:06 复查：需浏览器跑 ChatGPT Search/Perplexity/AIO，本机无 GUI 会话，保持 pending"
+      "status_note_20261025_2106": "2026-10-25 21:06 复查：需浏览器跑 ChatGPT Search/Perplexity/AIO，本机无 GUI 会话，保持 pending",
+      "note": "r30 复查 2026-10-26 15:0x：仍阻塞——需浏览器 GUI 跑 ChatGPT Search/Perplexity/AIO SERP；无浏览器会话则不可完成，保持 pending"
     },
     {
       "id": "SEO-DUP-TITLE-VOICE-20261025",
@@ -4398,11 +4400,13 @@
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-10-26 06:40:34",
       "notes": {
-        "cooled_2026-10-26": "HN comment-toofast限速(新号karma=1), 下次触发重试, 评论稿已备好467字符"
-      }
+        "cooled_2026-10-26": "HN comment-toofast限速(新号karma=1), 下次触发重试, 评论稿已备好467字符",
+        "sop_2026-10-26c": "2026-10-26 14:40:02: HN评论已发 item?id=50236628 (467字符, grace period+opt-in视角)"
+      },
+      "completed_at": "2026-10-26 14:40:02"
     },
     {
       "id": "geo_aeo_methodology_expert_2026-10-10",
@@ -5675,7 +5679,8 @@
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://www.campaignmonitor.com/blog/email-marketing/best-ai-marketing-tools/",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "email_search_2026-10-26c": "contact页404, 需翻about/press或Twitter DM, 本轮跳过"
       }
     },
     {
@@ -5685,14 +5690,16 @@
         "拓荒者"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-10-26 10:13:48",
       "region": "US",
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://prezent.ai/blog/best-ai-marketing-tools",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
-      }
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "sop_2026-10-26c": "2026-10-26 14:40:02: SMTP accepted -> ask@prezent.ai pitch收录aitoolcrux到9 Best AI Marketing Tools"
+      },
+      "completed_at": "2026-10-26 14:40:02"
     },
     {
       "id": "RR-E-gomega-roundup",
@@ -5707,7 +5714,8 @@
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://gomega.ai/best-ai-seo-tools-for-small-businesses/",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "email_search_2026-10-26c": "contact页只有占位 jane@company.com, 待About页深挖"
       }
     },
     {
@@ -5717,14 +5725,16 @@
         "拓荒者"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-10-26 10:13:48",
       "region": "US",
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://www.behindrankings.com/blog/best-ai-seo-tools",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
-      }
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "sop_2026-10-26c": "2026-10-26 14:40:02: SMTP accepted -> victoria@behindrankings.com pitch收录到Best AI SEO Tools 2027"
+      },
+      "completed_at": "2026-10-26 14:40:02"
     },
     {
       "id": "RR-E-aiclicks-roundup",
@@ -5739,7 +5749,8 @@
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://aiclicks.io/blog/best-seo-tools-for-small-businesses",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "email_search_2026-10-26c": "contact页200但无公开邮箱, 待Contact表单"
       }
     },
     {
@@ -5749,14 +5760,16 @@
         "拓荒者"
       ],
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-10-26 10:13:48",
       "region": "US",
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://zentricsolutions.com/best-ai-marketing-tools-for-small-business/",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
-      }
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "sop_2026-10-26c": "2026-10-26 14:40:02: SMTP accepted -> contact@zentricsolutions.com pitch收录到Best AI Marketing Tools for Small Business"
+      },
+      "completed_at": "2026-10-26 14:40:02"
     },
     {
       "id": "RR-E-impactplus-roundup",
@@ -5771,7 +5784,8 @@
       "source": "tu_research_2026-10-26",
       "notes": {
         "target_url": "https://www.impactplus.com/blog/ai-tools-for-content-creation",
-        "angle": "independent comparison site, pitch add aitoolcrux as resource entry"
+        "angle": "independent comparison site, pitch add aitoolcrux as resource entry",
+        "email_search_2026-10-26c": "contact页200但无公开邮箱, 待Contact表单"
       }
     },
     {
@@ -5799,6 +5813,222 @@
       "source": "seo_audit_full_20261026",
       "created_date": "2026-10-26T13:53:18",
       "note": "posts.json中改title字段+部署"
+    },
+    {
+      "id": "CTR-PAGE-MEETING-ASSISTANTS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-meeting-assistants-2026 排名 9.0 但 CTR 0%（2026-10-26 新窗口曝光出现），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T15:06:51",
+      "position": 9.0,
+      "ctr_pct": 0.0,
+      "window": "2026-09-25~10-24"
+    },
+    {
+      "id": "CTR-PAGE-OBSERVABILITY-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-observability-tools-2026 排名 9.5 但 CTR 0%（2026-10-26 新窗口曝光出现），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T15:06:51",
+      "position": 9.5,
+      "ctr_pct": 0.0,
+      "window": "2026-09-25~10-24"
+    },
+    {
+      "id": "CTR-PAGE-PRODUCTIVITY-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-productivity-tools-2026 排名 10.5 但 CTR 0%（2026-10-26 新窗口曝光出现），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-26",
+      "created_at": "2026-10-26T15:06:51",
+      "position": 10.5,
+      "ctr_pct": 0.0,
+      "window": "2026-09-25~10-24"
+    },
+    {
+      "id": "CA-AI-DETECTION-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 ai-detection 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-detection-tools-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "CA-CARTOON-GENERATORS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 cartoon-generators 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-cartoon-generators-2026 文章，SERP竞争度=预估Medium",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "预估Medium",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "CA-EDUCATION-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 education 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-education-tools-2026 文章，SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "Medium",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "CA-FASHION-ASSISTANT-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 fashion-assistant 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-fashion-tools-2026 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "High",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "CA-RELIGION-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 religion 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-religion-tools-2026 文章，SERP竞争度=预估Low",
+      "source": "competitor_analysis_2026-10-26",
+      "data_verified": true,
+      "serp_competition": "预估Low",
+      "competitor_count": 1,
+      "our_count": 0,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "KW-VOLUME-CONFIRMED-EDUCATION-20261026",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI education tools 2026]（SERP 已验证 Medium，r30 实搜）写 2000 字新文章，标题建议 [Best AI Education Tools 2026: 10 Tested (Khanmigo vs MagicSchool vs Gemini for Education)]，slug 建议 [best-ai-education-tools-2026]，切入：K-12 合规（COPPA/FERPA）+免费额度+按角色分",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "volume_verified": true,
+      "created_at": "2026-10-26T15:06:51",
+      "our_angle": "K-12 合规+免费额度"
+    },
+    {
+      "id": "KW-CARTOON-GENERATORS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI cartoon generators 2026] 写 2000 字新文章，标题建议 [Best AI Cartoon Generators 2026: 8 Tested]，slug 建议 [best-ai-cartoon-generators-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Medium",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "KW-RELIGION-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI religion tools 2026] 写 2000 字新文章，标题建议 [Best AI Religion & Faith Tools 2026: 7 Tested]，slug 建议 [best-ai-religion-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Low",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "KW-TICKETING-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI ticketing tools 2026] 写 2000 字新文章，标题建议 [Best AI Ticketing Management Tools 2026: 6 Tested]，slug 建议 [best-ai-ticketing-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Low",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "KW-TEXT-GENERATORS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI text generators 2026] 写 2000 字新文章，标题建议 [Best AI Text Generators 2026: 9 Tested]，slug 建议 [best-ai-text-generators-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Medium",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T15:06:51"
+    },
+    {
+      "id": "KW-MISC-TOOLS-20261026",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI misc tools 2026] 写 2000 字新文章，标题建议 [Best AI Misc & Niche Tools 2026: 12 Tested]，slug 建议 [best-ai-misc-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "预估Low",
+      "serp_verified": false,
+      "volume_verified": false,
+      "created_at": "2026-10-26T15:06:51"
     }
   ],
   "milestones": [
@@ -5814,7 +6044,7 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-26T14:00:00",
+  "last_update": "2026-10-26T15:06:51",
   "last_action": "架构师r64收尾: seo_audit_full 908页审计归档(P0=137超时误报定性, 新增2条真实P1待办)",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",

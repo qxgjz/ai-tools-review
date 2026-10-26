@@ -4385,3 +4385,11 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 - 入选有量词 5 个：legal（Medium 新验证，P0 已建）+ gift/churn/travel/fun（Medium 复用）
 - 内容策略转向：①优先写 5 个 Medium 词 ②后续从 GEO/AI 引荐词 + how to/what is 长尾疑问句选题，不再写 best-of 饱和词
 - 建议：接入 SEO MCP 后（keyword-research 有真实搜索量），重建候选池淘汰 High 词
+
+## 2026-10-26 15:06 r30 追加 · 新 GSC 窗口（09-25~10-24 实拉）
+
+**数据**：曝光 167→171（+4），点击仍 0，排名 14.13→14.29（-0.16）。环比持平，无点击仍是核心问题。
+- **P0 级新发现**：3 个新页面进入 5-15 位（meeting-assistants 9.0 / observability 9.5 / productivity 10.5）但 CTR 0% → CTR 待办已开（打磨师）
+- **P1**：/about vs /about/ 双变体共存（7+6 imp）、article-api 异常 URL 5 imp 持续污染 → r28 已建修复待办（架构师）仍 pending，本轮复查确认未闭环
+- **P1 正面信号**：/alternatives/cursor-alternatives 2 imp pos1.0——alternatives 页面首次进 SERP 前 1 位，说明新内容类型（vs/alternatives）有效，建议创作家继续
+- education（Medium）入选有量词 → 新 P0 待办
