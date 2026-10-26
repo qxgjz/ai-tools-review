@@ -203,6 +203,76 @@ for alt in alternatives:
             output.append(f"A: {faq.get('answer', '')[:100]}")
         output.append("")
 
+# 子分类页面
+output.append("=" * 80)
+output.append("## SUB-CATEGORY PAGES")
+output.append("")
+try:
+    with open('data/subcategories.json', 'r', encoding='utf-8') as f:
+        subcats = json.load(f)
+    for slug, info in sorted(subcats.items()):
+        name = info.get('name', slug)
+        parent = info.get('parent', '')
+        output.append(f"- {name} ({slug}) - parent: {parent}, tools: {info.get('toolCount', 0)}")
+        output.append(f"  URL: https://www.aitoolcrux.com/subcategory/{slug}")
+        output.append("")
+except Exception as e:
+    output.append(f"# subcategories unavailable: {e}")
+    output.append("")
+
+# 对比页
+output.append("=" * 80)
+output.append("## COMPARE PAGES")
+output.append("")
+try:
+    with open('data/comparisons.json', 'r', encoding='utf-8') as f:
+        comps = json.load(f)
+    for c in comps:
+        output.append(f"- {c.get('title', c.get('slug', ''))}")
+        output.append(f"  URL: https://www.aitoolcrux.com/compare/{c.get('slug')}")
+        md = c.get('metaDescription', '')
+        if md:
+            output.append(f"  {md[:150]}")
+        output.append("")
+except Exception as e:
+    output.append(f"# comparisons unavailable: {e}")
+    output.append("")
+
+# 博客分类与站内信息页（从 build 产物 sitemap 精确提取）
+output.append("=" * 80)
+output.append("## BLOG CATEGORY PAGES")
+output.append("")
+import re as _re
+try:
+    with open('out/sitemap.xml', 'r', encoding='utf-8') as f:
+        smap_content = f.read()
+    smap_urls = set(_re.findall(r'https?://www\.aitoolcrux\.com[^\s<]+', smap_content))
+    blog_cats = sorted(u for u in smap_urls if '/blog/category/' in u)
+    for u in blog_cats:
+        output.append(f"- {u}")
+    if not blog_cats:
+        output.append("# no blog category URLs found in sitemap")
+    output.append("")
+    info_slugs = ['about', 'ai-policy', 'alternatives', 'authors', 'blog',
+                  'contact', 'disclosure', 'free-ai-tools-guide', 'generator',
+                  'privacy', 'terms', 'ai-tools-guide-2026']
+    info_urls = []
+    for u in sorted(smap_urls):
+        path = u.replace('https://www.aitoolcrux.com', '').strip('/')
+        if path in info_slugs:
+            info_urls.append(u)
+    output.append("=" * 80)
+    output.append("## SITE INFORMATION PAGES")
+    output.append("")
+    for u in info_urls:
+        output.append(f"- {u}")
+    if not info_urls:
+        output.append("# no information page URLs found in sitemap")
+    output.append("")
+except Exception as e:
+    output.append(f"# sitemap unavailable: {e}")
+    output.append("")
+
 # 底部
 output.append("=" * 80)
 output.append("## END OF CONTENT INDEX")

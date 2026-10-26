@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-27T01:30:31+08:00",
+  "last_updated": "2026-10-27T05:08:31+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -6174,6 +6174,201 @@
       "task": "外链跟进复查: curl+Serper 验证 5 条已知外链 + 3 目录收录状态",
       "completion_note": "真活 2 条(github/sideprojectors)，thehackstack 404 死链确认移除，hatchr 空页不计；insidr/aisotools/toolsify 仍 n=0；证据 _tu_verify_20261026g.json + _serper.json",
       "source": "backlink_followup_20261026g"
+    },
+    {
+      "id": "RR27A-OP-01-monday-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://monday.com/blog/ai-agents/ai-for-lawyers/ (AI for Lawyers: 10 Best Platforms to Use in 2026), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-02-americanbar-org",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.americanbar.org/groups/law_practice/resources/law-practice-magazine/sponsored/ai-for-law-firms-in-2026-what-tools-how-to-choose/ (AI for Law Firms in 2026: What the Tools Do, and How ...), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-03-housingwire-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.housingwire.com/articles/ai-tools-real-estate/ (16 Indispensable AI Tools for Real Estate Agents), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-04-housecanary-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.housecanary.com/blog/5-ai-tools-for-real-estate-agents (18 Best AI Tools for Real Estate Agents (2026)), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-05-realtrends-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.realtrends.com/blog/2025/01/06/ai-tools-for-real-estate-agents/ (20 Ai tools for real estate agents to get a competitive edge), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-06-aihr-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.aihr.com/blog/free-hr-tools/ (15 Best Free HR Tools You Should Try in 2026), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-07-gusto-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://gusto.com/resources/guides/best-ai-hr-tools (8 Best AI Tools for HR in 2026), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-08-peoplebox-ai",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.peoplebox.ai/blog/ai-tools-hr-teams/ (15 Best AI Tools for HR (Free & Paid): 2026 Buyer's Guide), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-09-julius-ai",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://julius.ai/articles/best-ai-hr-tools-to-use-in-2025 (The Ultimate List of the 51 Best AI Tools for HR Teams in ...), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-10-samcart-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.samcart.com/blog/blog-best-ai-tools-for-online-business (Best AI tools for online business in 2026 (I tested 134)), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-11-zoho-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.zoho.com/commerce/academy/ai-tools-for-ecommerce-business.html (10 must-have AI tools for ecommerce businesses in 2026), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-12-salesforge-ai",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.salesforge.ai/blog/ai-sales-tools (13 Best AI Sales Tools in 2026 (Tested & Ranked by ...), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-13-saleshandy-com",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://www.saleshandy.com/blog/ai-sales-tools/ (10 Best AI Sales Tools & Platforms in 2026), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-14-pipeline-zoominfo",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://pipeline.zoominfo.com/sales/generative-ai-sales-tools (12 Best Generative AI Sales Tools for 2026), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "RR27A-OP-15-neuraplus-ai-github",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: https://neuraplus-ai.github.io/blog/write-for-us-ai-blog-2026.html (Write For Us AI Blog 2026: Get Published & Build Authority), 以 aitoolcrux 独立实测对比视角发信编辑收录",
+      "source": "backlink_research_20261027a",
+      "created_at": "2026-10-27T02:12:43"
+    },
+    {
+      "id": "GEO-LLMS-FULL-COVERAGE-20261027",
+      "title": "GEO技术: llms-full.txt 全站覆盖补齐 (sitemap 916/916 URL)",
+      "task": "审计发现 sitemap 916 URL 中 98 个不在 llms-full.txt (compare 10 + subcategory 37 + blog category 34 + 信息页 17)。扩展 generate_llms_full.py 增加 SUB-CATEGORY/COMPARE/BLOG CATEGORY/SITE INFORMATION 段, 重建后覆盖 916/916 零缺失 (949 URL 含重复引用)。",
+      "priority": "P1",
+      "status": "completed",
+      "completed_at": "2026-10-27 05:08:31",
+      "evidence": "r67 2026-10-27: public/llms-full.txt 重建 676590B/10155 行; python 核验 sitemap 916 URL missing=0; generate_llms_full.py 已扩展 (subcategories.json 69 类 + comparisons.json 10 对比 + out/sitemap.xml 提取 category/信息页)",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "geo_audit_20261027",
+      "created_at": "2026-10-27 05:08:31"
+    },
+    {
+      "id": "GEO-GUIDE-SCHEMA-20261027",
+      "title": "GEO技术: ai-tools-guide-2026.html 补 Article JSON-LD (唯一无 schema 页)",
+      "task": "schema 盘点发现 /ai-tools-guide-2026.html 是全站唯一无 JSON-LD 页 (public 静态 HTML)。补齐 Article schema (headline/datePublished/author/publisher/mainEntityOfPage)。",
+      "priority": "P1",
+      "status": "completed",
+      "completed_at": "2026-10-27 05:08:31",
+      "evidence": "r67 2026-10-27: public/ai-tools-guide-2026.html 插入 application/ld+json Article 块, python 验证 1 block/Article ok; 全站无 JSON-LD 页清零",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "geo_audit_20261027",
+      "created_at": "2026-10-27 05:08:31"
     }
   ],
   "milestones": [
@@ -6190,7 +6385,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-26T21:48:59",
-  "last_action": "r66架构师: SEO-BIG-IMG-P2+SCHEMA-TYPE-COUNT completed; P0-BING复验blocker; GEO审计10爬虫accessible",
+  "last_action": "r67架构师: GEO修复2项 (llms-full 916/916覆盖 + guide页Article schema); 内容类审计发现与既有5条创作家待办重叠不重复开单",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
