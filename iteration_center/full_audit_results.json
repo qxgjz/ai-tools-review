@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-25T21:40:41.445102",
+  "audit_time": "2026-10-26T23:05:36.209047",
   "mode": "quick",
   "content": {
-    "total_articles": 253,
-    "average_score": 82.67549407114622,
+    "total_articles": 262,
+    "average_score": 82.60114503816787,
     "perfect_count": 90,
-    "below_85_count": 130,
+    "below_85_count": 138,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -70,10 +70,10 @@
         "slug": "notion-ai-alternative-2026",
         "title": "7 Best Notion AI Alternatives in 2026 (Free & | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 2019,
-        "flesch": 59.3,
-        "internal_links": 4,
-        "external_links": 21,
+        "word_count": 2250,
+        "flesch": 51.5,
+        "internal_links": 6,
+        "external_links": 22,
         "images": 1,
         "failed_checks": []
       },
@@ -92,10 +92,10 @@
         "slug": "jasper-ai-alternative-2026",
         "title": "7 Best Jasper AI Alternatives in 2026 (Cheaper | AIToolCrux",
         "quality_score": 100.0,
-        "word_count": 2015,
-        "flesch": 52.7,
-        "internal_links": 3,
-        "external_links": 21,
+        "word_count": 2241,
+        "flesch": 48.6,
+        "internal_links": 5,
+        "external_links": 22,
         "images": 1,
         "failed_checks": []
       },
@@ -147,10 +147,10 @@
         "slug": "best-ai-podcast-tools-2026",
         "title": "Best AI Podcast Tools 2026: Top 5 for Recording, Editing...",
         "quality_score": 100.0,
-        "word_count": 2088,
-        "flesch": 55.6,
-        "internal_links": 4,
-        "external_links": 6,
+        "word_count": 2283,
+        "flesch": 56.1,
+        "internal_links": 6,
+        "external_links": 7,
         "images": 1,
         "failed_checks": []
       },
@@ -158,10 +158,10 @@
         "slug": "best-ai-idea-generators-2026",
         "title": "Best AI Idea Generators 2026: Top 5 for Startups, Content...",
         "quality_score": 100.0,
-        "word_count": 2212,
-        "flesch": 49.7,
-        "internal_links": 4,
-        "external_links": 6,
+        "word_count": 2426,
+        "flesch": 50.9,
+        "internal_links": 6,
+        "external_links": 7,
         "images": 1,
         "failed_checks": []
       },
@@ -2144,10 +2144,10 @@
         "slug": "ai-tools-horrible-customer-support-2026",
         "title": "AI Tools With the Worst Customer Support in 2026 (Real User Reports)",
         "quality_score": 74.4,
-        "word_count": 2173,
-        "flesch": 43.5,
-        "internal_links": 5,
-        "external_links": 17,
+        "word_count": 2613,
+        "flesch": 42.0,
+        "internal_links": 7,
+        "external_links": 21,
         "images": 2,
         "failed_checks": [
           "first_para_pass"
@@ -2301,29 +2301,26 @@
       {
         "slug": "best-ai-personal-assistants-2026",
         "title": "Best AI Personal Assistants 2026: 8 Tools Tested & Ranked",
-        "quality_score": 48.9,
-        "word_count": 1925,
-        "flesch": 53.7,
-        "internal_links": 0,
-        "external_links": 4,
+        "quality_score": 65.6,
+        "word_count": 2081,
+        "flesch": 51.5,
+        "internal_links": 2,
+        "external_links": 5,
         "images": 0,
         "failed_checks": [
-          "word_count_pass",
-          "first_para_pass",
           "internal_links_pass"
         ]
       },
       {
         "slug": "best-ai-education-tools-2026",
         "title": "Best AI Education Tools 2026: For Teachers & Students",
-        "quality_score": 48.9,
-        "word_count": 1945,
-        "flesch": 49.3,
-        "internal_links": 0,
-        "external_links": 4,
+        "quality_score": 60.0,
+        "word_count": 2126,
+        "flesch": 48.3,
+        "internal_links": 2,
+        "external_links": 5,
         "images": 0,
         "failed_checks": [
-          "word_count_pass",
           "first_para_pass",
           "internal_links_pass"
         ]
@@ -2331,14 +2328,13 @@
       {
         "slug": "best-ai-interior-design-tools-2026",
         "title": "Best AI Interior Design Tools 2026: Redesign Rooms Fast",
-        "quality_score": 48.9,
-        "word_count": 1967,
-        "flesch": 43.8,
-        "internal_links": 0,
-        "external_links": 6,
+        "quality_score": 60.0,
+        "word_count": 2140,
+        "flesch": 42.4,
+        "internal_links": 2,
+        "external_links": 7,
         "images": 0,
         "failed_checks": [
-          "word_count_pass",
           "first_para_pass",
           "internal_links_pass"
         ]
@@ -2439,16 +2435,13 @@
       {
         "slug": "best-ai-agent-tools-2026",
         "title": "Best AI Agent Tools 2026: Frameworks vs Ready-Made Agents",
-        "quality_score": 68.9,
-        "word_count": 1994,
-        "flesch": 47.4,
-        "internal_links": 5,
-        "external_links": 2,
+        "quality_score": 85.6,
+        "word_count": 2163,
+        "flesch": 47.1,
+        "internal_links": 7,
+        "external_links": 3,
         "images": 2,
-        "failed_checks": [
-          "word_count_pass",
-          "first_para_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "best-ai-video-editors-for-beginners-2026",
@@ -2501,7 +2494,7 @@
       },
       {
         "slug": "best-free-ai-voice-changers-2026",
-        "title": "7 Free AI Voice Changers Online 2026 (No Sign-Up)",
+        "title": "Best Free AI Voice Changers Online 2026: 7 Tested (No Sign-Up)",
         "quality_score": 71.1,
         "word_count": 2333,
         "flesch": 50.2,
@@ -3112,8 +3105,52 @@
         "slug": "best-ai-text-to-image-generators-2026",
         "title": "\"Best AI Text-to-Image Generators 2026: 8 Tested (Midjourney vs DALL-E)\"",
         "quality_score": 76.7,
-        "word_count": 2124,
-        "flesch": 38.1,
+        "word_count": 3004,
+        "flesch": 34.1,
+        "internal_links": 2,
+        "external_links": 10,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-art-generators-2026",
+        "title": "\"Best AI Art Generators 2026: 8 Tested (Midjourney vs DALL-E vs FLUX)\"",
+        "quality_score": 76.7,
+        "word_count": 2129,
+        "flesch": 34.5,
+        "internal_links": 0,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-audio-generators-2026",
+        "title": "\"Best AI Audio Generators 2026: 9 Tested (ElevenLabs vs Suno vs Murf)\"",
+        "quality_score": 82.2,
+        "word_count": 2095,
+        "flesch": 38.4,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "internal_links_pass",
+          "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-portrait-generators-2026",
+        "title": "\"Best AI Portrait Generators 2026: 9 Tested (Free & Paid)\"",
+        "quality_score": 76.7,
+        "word_count": 2043,
+        "flesch": 34.8,
         "internal_links": 0,
         "external_links": 3,
         "images": 2,
@@ -3121,6 +3158,90 @@
           "first_para_pass",
           "internal_links_pass",
           "readability_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-tools-for-students-2026",
+        "title": "\"Best AI Tools for Students 2026: 12 Picks (Study Stack)\"",
+        "quality_score": 80.0,
+        "word_count": 2145,
+        "flesch": 51.6,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-sql-tools-2026",
+        "title": "\"Best AI SQL Tools 2026: 7 Tested (Analysts & Developers)\"",
+        "quality_score": 71.1,
+        "word_count": 2145,
+        "flesch": 51.0,
+        "internal_links": 0,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-tools-for-business-2026",
+        "title": "\"Best AI Business Tools 2026: 9 Tested (Small Teams)\"",
+        "quality_score": 80.0,
+        "word_count": 2055,
+        "flesch": 55.1,
+        "internal_links": 0,
+        "external_links": 2,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-paraphrasing-tools-2026",
+        "title": "\"Best AI Paraphrasing Tools 2026: 8 Tested (QuillBot vs Writesonic)\"",
+        "quality_score": 71.1,
+        "word_count": 2107,
+        "flesch": 48.8,
+        "internal_links": 0,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-finance-tools-2026",
+        "title": "\"Best AI Finance Tools 2026: 9 Tested (Budgeting & Investing)\"",
+        "quality_score": 65.6,
+        "word_count": 2168,
+        "flesch": 53.5,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-audio-editing-tools-2026",
+        "title": "\"Best AI Audio Editing Tools 2026: 8 Tested (Clean, Transcribe & Mix)\"",
+        "quality_score": 65.6,
+        "word_count": 2119,
+        "flesch": 52.3,
+        "internal_links": 0,
+        "external_links": 3,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
         ]
       }
     ]
@@ -3137,7 +3258,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 1.7
+    "elapsed_seconds": 2.3
   },
   "geo": {
     "geo_score": 100,
