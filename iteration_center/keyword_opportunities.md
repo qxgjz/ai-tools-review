@@ -534,3 +534,39 @@
 
 ### 搜索量标注（全"预估"）
 依据=SERP 竞争度（实搜 3 词）或竞品分类缺口（未实搜词）。搜索量未编造。
+
+
+---
+
+## r32 · 每周一 GSC 关键词机会筛选（2026-10-26 21:48）
+
+**数据源（实读）**：`live_pull_20261024_0939.json`（最新拉取，query 窗口 09-25~10-22，8 条查询/15 页面）+ `fetch_gsc.py` 报告（窗口 09-25~10-24，171 imp/0 click/14.29）。站点曝光量小，15-50 位样本仅 2，**不编造凑 20 个**，按真实命中输出。
+
+### 一、Top 机会（15-50 位有曝光 · 口径命中 2 条）
+| # | 词/页面 | Imp | Pos | 机会判定 | 当前状态 |
+|---|---|---|---|---|---|
+| 1 | query: tabbyml | 1 | 18.0 | 品牌词有曝光，内容薄弱，机会区 | r27 已开 CTR（completed）；本轮新开 **KW-OPP-TABBYML P2**（内容增强） |
+| 2 | page: /blog/best-ai-comparison-tools-2026/（带斜杠变体） | 1 | 18.0 | 页面进 18 位但 0 点击 | r31 已开 CTR-PAGE-COMPARISON-TOOLS-SLASH（pending），不重复 |
+
+### 二、次优观察（5-15 位 · 非本任务口径，真实数据，均已开过 CTR/修复待办）
+| 词/页面 | Imp | Pos | 覆盖状态 |
+|---|---|---|---|
+| ai-coding-tools-comparison-2026 | 2 | 5.5 | r28 CANNIBAL-RESOLVE（pending） |
+| best-ai-coding-tools-2026 | 12 | 4.1 | r28 蚕食分析覆盖 |
+| /ai-policy | 1 | 8.0 | r29 CTR ✅ |
+| best-ai-meeting-assistants-2026 | 1 | 9.0 | r30 CTR（pending） |
+| best-ai-observability-tools-2026 | 2 | 9.5 | r30 CTR（pending） |
+| best-ai-productivity-tools-2026 | 2 | 10.5 | r30 CTR（pending） |
+
+### 三、深度观察（50-100 位有曝光 · 内容几乎为零，暂不开单）
+| 词 | Imp | Pos | 说明 |
+|---|---|---|---|
+| google gemini langgraph | 1 | 75.0 | 技术长尾，排名极深 |
+| milvus ui | 1 | 84.0 | 工具词，无对应内容 |
+| react agent | 1 | 82.0 | 技术词 |
+| bondai | 2 | 89.5 | 品牌词 2imp，无对应内容 |
+
+### 四、数据源限制说明
+- live_pull 最新为 10-24（fetch_gsc.py 只写 md 汇总不写 query JSON）；10-25/10-26 无新 live_pull
+- 全量 8 条查询 + 15 页面如上（fetch_gsc 报告 Top Queries 8 条/Top Pages 20 条中 15 条有曝光明细）
+- 竞争度依据：真实 GSC 排名+曝光（未用第三方搜索量）；搜索量全部"预估"标注
