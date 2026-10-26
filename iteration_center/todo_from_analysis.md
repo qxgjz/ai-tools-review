@@ -112,3 +112,13 @@
 
 ### P2（持续）
 5. **每周索引监控**：下次 2026-10-19，直接用 GSC 索引报告页快照口径对比。
+
+
+## 2026-10-19 索引监控建议（分析师）
+| 优先级 | 建议 | 对应窗口 |
+|--------|------|------|
+| P0 | 排查并修复 /tools/gemini、/category/chat SSL 握手超时（TLS/301/CF），修复后 IndexNow 提交请求编入 | 架构师 |
+| P0 | 闭环 AdsPower CDP 批量 URL 检查（40 unknown 补全） | 分析师 |
+| P1 | 对 discovered_not_indexed 400 个中高价值页面批量 IndexNow 提交（工具页 Top50 + memory/observability/claude/exa 等） | 拓荒者/增长黑客 |
+| P1 | 在已曝光博客文章（如 best-ai-voice-changers-2026 曝光68）中加内链指向未收录分类页/工具页 | 创作家 |
+| P2 | 下次索引监控 2026-10-26 | 分析师 |

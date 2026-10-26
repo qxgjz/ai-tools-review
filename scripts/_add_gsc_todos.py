@@ -1,34 +1,38 @@
 # -*- coding: utf-8 -*-
-import json, time
+"""补录GSC调查发现到state.json待办 (2026-10-24)"""
+import json, io, sys, datetime
+sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8')
+p = r'C:\Users\通明街\Doubao\chats\2026-08-28\new-chat\ai-tools-review\iteration_center\state.json'
+d = json.load(open(p, encoding='utf-8'))
+now = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+focus = d['next_iteration_focus']
 
-p = r"iteration_center\state.json"
-d = json.load(open(p, encoding="utf-8"))
-nf = d["next_iteration_focus"]
-new_items = [
-    {
-        "id": "GSC-QUOTA-RERUN-20261012",
-        "priority": "P1",
-        "assigned_to": ["analyst"],
-        "status": "pending",
-        "source": "gsc_batch_check_20261012",
-        "task": "GSC网址检查每日配额2026-10-12已耗尽（页面弹窗超出配额）。2026-10-13配额重置后用修复版脚本重跑40个unknown URL：python scripts/gsc_batch_check.py。脚本已修复：输入框必须用input.Ax4B8，且每次输入前必须cdp.send(ws,Page.bringToFront)把页面带到前台，否则dispatchKeyEvent事件被丢弃导致value为空。重跑完成后对照url_index_check_batch_0_67_20261012_202338.json汇总最终收录状态，404/noindex/redirect坏URL清单派给架构师修复。",
-    },
-    {
-        "id": "GSC-BADURL-FIX-VERIFY-20261012",
-        "priority": "P1",
-        "assigned_to": ["架构师"],
-        "status": "pending",
-        "source": "gsc_batch_check_20261012",
-        "task": "已确认的坏URL需修复并提交IndexNow：redirect_error(3个)=/category/chat、/category/code、/tools/gemini；redirect(1个)=/tools/chatgpt；discovered_not_indexed(4个)=/category/memory、/category/observability、/tools/claude、/tools/exa。检查线上是否有重定向链(301/302/canonical)，修复后重新请求编入索引。",
-    },
-]
-existing = {it.get("id") or "" for it in nf}
-added = 0
-for it in new_items:
-    if it["id"] not in existing:
-        nf.append(it)
-        added += 1
-d["next_iteration_focus"] = nf
-d["last_updated"] = time.strftime("%Y-%m-%d %H:%M:%S")
-json.dump(d, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
-print("added:", added, "total:", len(nf))
+new_todos = []
+t1 = ('检查Cloudflare防火墙/Bot规则是否误伤Googlebot：GSC显示best-ai-agent-tools-2026为'
+      '"Google无法识别此网址"，疑似新加坡IP段Bot清洗规则拦截Googlebot抓取。'
+      '1)查CF WAF/Bot管理规则是否排除verified Googlebot；'
+      '2)用GSC URL Inspection"测试实际网址"验证抓取返回200+正确内容；'
+      '3)若有误伤立即改规则')
+if not any('Cloudflare防火墙' in t.get('task', '') or '误伤Googlebot' in t.get('task', '') for t in focus):
+    new_todos.append({'id': 'CMD-20261024-001', 'status': 'pending', 'priority': 'P0',
+        'assigned_to': 'window1(核心迭代)', 'source': 'commander_diagnosis_20261024_gsc_inspect',
+        'task': t1, 'url': 'https://www.aitoolcrux.com/blog/best-ai-agent-tools-2026'})
+
+t2 = ('验证2026-10-24批量请求收录效果：14个URL(13个/tools/工具页+best-ai-agent-tools-2026)'
+      '已通过GSC请求编入索引(req_index_batch_20261024.json)，'
+      '7天后(2026-10-31)用GSC inspect复查收录状态变化，产出对比报告写入gsc-ga4-report/')
+if not any('批量请求收录' in t.get('task', '') and '验证' in t.get('task', '') for t in focus):
+    new_todos.append({'id': 'CMD-20261024-002', 'status': 'pending', 'priority': 'P1',
+        'assigned_to': 'window4(数据分析)', 'source': 'commander_diagnosis_20261024_gsc_inspect',
+        'task': t2, 'url': 'https://www.aitoolcrux.com/gsc-ga4-report/req_index_batch_20261024.json'})
+
+if new_todos:
+    focus.extend(new_todos)
+    focus.sort(key=lambda x: (0 if x.get('priority') == 'P0' else 1 if x.get('priority') == 'P1' else 2, x.get('id', '')))
+    d['next_iteration_focus'] = focus
+    d['last_updated'] = now
+    d['last_commander_review'] = now
+    json.dump(d, open(p, 'w', encoding='utf-8'), ensure_ascii=False, indent=2)
+    print('added', len(new_todos), 'todos; focus now', len(focus))
+else:
+    print('no new todos needed; focus', len(focus))
