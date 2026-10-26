@@ -126,3 +126,41 @@
 ### 剩余
 - P0 pending：1（BING-WMT，缺 key 阻塞）
 - P1 pending：INDEXNOW×2、CLAUDE-SEO、GA4-SG-BOT、GSC-QUERY、NEW-ARTICLES-404-CHECK、T-192
+
+
+---
+
+## r65 架构师轮（2026-10-26 深夜，验证闭环）
+
+**输入**：15 条 pending（P0×1 + P1×11 + P2×3，统一命令读取）
+
+### 处理 8 条 completed（全部带 evidence）
+1. **P1-NEW-ARTICLES-404-CHECK-20261026**：3 篇新文章（voice-generators/resume-builders/pr-tools-2026）线上 web_fetch 均 200 内容完整 = health_report 误报（用错路径/本机超时）。
+2. **P1-SEOAUDIT-COMPARE-PAGE-SIZE-20261026**：/compare/ SSR 只内联前 30 个完整工具 + 客户端 fetch 全量 533 + comparisonReady 数据守卫（防 undefined pros/cons 崩溃）。Flight payload 465KB→109KB，out/compare 811KB→**188KB**；线上 200 / 194KB <500KB 达标。
+3. **P1-SEOAUDIT-DUP-TITLE-20261026**：best-free-ai-voice-changers-2026 title 改唯一（"Best Free AI Voice Changers Online 2026: 7 Tested (No Sign-Up)"），voice-changers 5 条全唯一。
+4. **P1-INDEXNOW-HIGH-TRAFFIC-20261023**：IndexNow 新增 exa/n8n/claude = 200（geo_submit_20261026_223428.json）；B-4 高流量 7 页（midjourney/elevenlabs/sora/perplexity/exa/n8n/claude）全部提交完成。
+5. **GH-20261026-009**：线上验证闭环——首页 CSP 头含 analytics.ahrefs.com + static.cloudflareinsights.com（r63 白名单生效），无 middleware.ts（CSP 走 _headers）。
+6. **GH-20261026-010**：线上验证闭环——layout 无 @vercel/analytics、out/ 0 处 _vercel/insights、线上首页 HTML grep 0 处。
+7. **T-20261025113655-192**：assigned_to 规范化 198 条 → [中文名,windowN] 双形态，窗口按任一 key 过滤均命中。
+8. **T-20261025113655-194**：state_io.add_todo 加关键词查重（大写 token 与 focus/archived 匹配，命中返回 DUP:已有ID），单测通过。
+
+### GEO 技术检查
+- real_geo_aeo_audit.py：6.4/10 B，**10 个 AI 爬虫全 accessible**（上轮本地 fallback 修复生效，无 0.0 误报）。
+- seo_audit_full.py：本轮因本机 httpx ConnectTimeout 中断（r31 经验 7 已知死路）；引用 24h 内 908 页归档（P0=137 timeout 误报、P1=2 中 compare-size 与 dup-title 本轮已修）。
+- Lighthouse：本机无 Chrome，跳过。
+
+### 门控与部署
+- tsc=0 + build=0；out/compare 188KB + title 唯一验证。
+- commit 9a4ecba（compare/page.tsx + CompareClient.tsx + data/posts.json）PUSH_OK。
+- **push 经验修正（r65 实证）**：`git -c http.proxy= -c https.proxy= push` **空值=禁用代理**，10 次全败（Could not connect）；改用显式值 `-c http.proxy=http://127.0.0.1:7890 -c https.proxy=http://127.0.0.1:7890` 一次成功。以后统一显式代理值。
+- GitHub Actions 9a4ecba：Unit Tests/Lint/CodeQL/Deploy 全 success（Deploy 90s）。
+- CF Pages API：最新 production 部署 = 9a4ecba success（14:36 UTC）。
+- 线上验证：/compare/ 200 194KB；首页 CSP 头含 ahrefs/cloudflareinsights；首页无 _vercel 残留。
+
+### 卡点
+- **P0-BING-WMT-CHATGPT-ENTRY-20261026**：api_keys.json 仍无 Bing key（本轮复验），blocker 保持，需指挥官提供。
+- 他窗/人工：CLAUDE-SEO（缺 Anthropic key）、GA4-SG-BOT（CF Dashboard 人工 WAF）、GSC-QUERY（归分析师）、浏览器层 Cache-Control max-age=14400 需 Dashboard 设 Respect existing headers（P2 级）。
+
+### 剩余
+- P0 pending：1（BING-WMT 缺 key）
+- P1 pending：CLAUDE-SEO / GA4-SG-BOT / GSC-QUERY / INDEX-41-REMAINING / P2-SCHEMA-TYPE-COUNT 等
