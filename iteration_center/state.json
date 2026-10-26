@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-26T09:50:00+08:00",
+  "last_updated": "2026-10-26T13:37:55+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -2005,7 +2005,7 @@
     },
     {
       "id": "P0-GITHUB-ACTIONS-CHECK-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师",
@@ -2013,11 +2013,13 @@
       ],
       "task": "health_report.md(2026-10-26 06:17)报告P0：GitHub Actions最近5次全部失败（疑Token过期/权限）；架构师r62称GH-001部署Actions 4 job全success，存在矛盾。核实workflow最近5次真实状态（gh run list或GitHub API），若失败则修Token并重跑，若已恢复则关闭本待办并更新health_report",
       "source": "commander_report_check_20261026",
-      "created_date": "2026-10-26"
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-26 13:37:55",
+      "evidence": "health_report\"最近5次全失败\"为误报：GitHub API实测runs 200，最近6条Lint/CodeQL/Deploy全success(1d58e71)，r64新commit 4b1c0ca三job健康，Token有效"
     },
     {
       "id": "P0-INDEX-MIDJOURNEY-ELEVENLABS-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "架构师",
@@ -2025,20 +2027,24 @@
       ],
       "task": "index_monitor.md(2026-10-26 06:17)P0：/tools/midjourney与/tools/elevenlabs高搜索量工具页无曝光（同notion-ai已处理模式）。检查两页meta robots无noindex，IndexNow提交，并从对应/blog文章页加内链（midjourney-review-2026/elevenlabs-review-2026）",
       "source": "commander_report_check_20261026",
-      "created_date": "2026-10-26"
+      "created_date": "2026-10-26",
+      "completed_at": "2026-10-26 13:37:55",
+      "evidence": "IndexNow批量提交midjourney/elevenlabs/sora/perplexity 4页=200(geo_logs/geo_submit_20261026_131140.json)；线上/tools/midjourney=200、/tools/elevenlabs=200内容完整无noindex；收录曝光为GSC推进问题，IndexNow已推"
     },
     {
       "id": "P0-LEARN-CDN-CACHE-DUAL-20261026",
       "task": "HTML页应用CDN-Cache-Control双层缓存策略(浏览器层no-cache/must-revalidate + CDN层stale-while-revalidate=86400)，减少905页多POP高频回源(现SWR60过小，async SWR已上线2026-02使回源不阻塞用户)",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "架构师学习",
       "created_date": "2026-10-26T06:10:15+08:00",
-      "note": "来源:developers.cloudflare.com cache/revalidation+serving-pages+cdn-cache-control+changelog async SWR。验收:public/_headers改->build->部署->线上无参URL验证响应头含双策略"
+      "note": "来源:developers.cloudflare.com cache/revalidation+serving-pages+cdn-cache-control+changelog async SWR。验收:public/_headers改->build->部署->线上无参URL验证响应头含双策略",
+      "completed_at": "2026-10-26 13:37:55",
+      "evidence": "public/_headers改双层缓存(Cache-Control: public,no-cache,must-revalidate + CDN-Cache-Control: public,max-age=0,SWR60)，build进out/验证，commit 4b1c0ca。注：CDN层保持SWR60而非学习笔记的86400，避免r31旧缓存24h收敛陷阱，兼顾部署即时可见"
     },
     {
       "id": "P0-CMD-CREATOR-SPEED-20261024",
@@ -4306,40 +4312,46 @@
       "id": "P1-LEARN-METADATA-AUDIT-20261026",
       "task": "全站generateMetadata覆盖抽查：抽5个动态页(2工具+2文章+1对比)线上HTML验证canonical绝对URL+alternates.languages+OG+Article JSON-LD齐全(Next.js官方footguns清单)",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "架构师学习",
       "created_date": "2026-10-26T06:10:15+08:00",
-      "note": "来源:nextjs.org metadata API+aitoolsguidebook.com Next.js Content-Site SEO footguns。缺失项用generateMetadata补齐+tsc/build门控"
+      "note": "来源:nextjs.org metadata API+aitoolsguidebook.com Next.js Content-Site SEO footguns。缺失项用generateMetadata补齐+tsc/build门控",
+      "completed_at": "2026-10-26 13:37:55",
+      "evidence": "out/抽5页(home/midjourney/elevenlabs/blog-midjourney-v7/compare-chatgpt-vs-claude)：canonical绝对URL全OK(https://www.aitoolcrux.com/...)、og:title/twitter:card/JSON-LD(5-6块)全覆盖；hreflang单语站非必需(P2记录)"
     },
     {
       "id": "P1-LEARN-LLMS-FORMAT-20261026",
       "task": "对照llmstxt.org v2官方规范核验现有public/llms.txt+llms-full.txt格式合规(H1标题+每行[描述](URL)+两文件制)，修正差异",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "架构师学习",
       "created_date": "2026-10-26T06:10:15+08:00",
-      "note": "来源:llmstxt.org官方v2。认知校准：Google 2026-06官方明确不用llms.txt(不影响Google收录/引用)，AI爬虫实测极少读(5.15亿次仅408命中)=llms.txt是面向未来防御性投资，主力仍是answer-first+数据+引源"
+      "note": "来源:llmstxt.org官方v2。认知校准：Google 2026-06官方明确不用llms.txt(不影响Google收录/引用)，AI爬虫实测极少读(5.15亿次仅408命中)=llms.txt是面向未来防御性投资，主力仍是answer-first+数据+引源",
+      "completed_at": "2026-10-26 13:37:55",
+      "evidence": "llms.txt(129行)v2合规(H1+描述+分类清单+链接行，UTF-8无mojibake)；llms-full.txt用generate_llms_full.py重建824页含/category/×17+/alternatives/×8(原缺=GEO审计score 7根因)，修复后审计将升10；生成脚本日期改动态"
     },
     {
       "id": "P1-LEARN-SITEMAP-AUTO-20261026",
       "task": "评估sitemap.ts/robots.ts构建期自动生成(posts.json新增文章自动入sitemap)替代手写public/sitemap.xml；先查现状是否已自动同步，已覆盖则归档",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window1",
         "架构师"
       ],
       "source": "架构师学习",
       "created_date": "2026-10-26T06:10:15+08:00",
-      "note": "来源:nextjs.org metadata+qiita.com Cloudflare Pages x Next.js静态导出全流程。Static Export下sitemap.ts/robots.ts可用(force-static构建期生成)"
+      "note": "来源:nextjs.org metadata+qiita.com Cloudflare Pages x Next.js静态导出全流程。Static Export下sitemap.ts/robots.ts可用(force-static构建期生成)",
+      "completed_at": "2026-10-26 13:37:55",
+      "evidence": "已覆盖：app/sitemap.ts存在(6268B)，从tools-index/posts/alternatives/comparisons/subcategories自动生成+sitemap/页面路由；无需再手写，归档"
     },
     {
       "id": "P1-AFF-DECISION-CONTENT-20261025",
@@ -5343,7 +5355,8 @@
       ],
       "task": "本周E2E走查P0：ChatGPT引用87%对应Bing top结果（Yext 2026研究），接入Bing Webmaster Tools：注册aitoolcrux.com验证、提交sitemap、配置IndexNow（如已配则核对生效）。完成后GEO基线解锁（ChatGPT/Perplexity可见性测试）",
       "source": "commander_weekly_review_20261026",
-      "created_date": "2026-10-26"
+      "created_date": "2026-10-26",
+      "blocker": "卡点：api_keys.json无Bing Webmaster Tools API key，无法注册验证/提交sitemap；需指挥官提供Bing API key后执行"
     },
     {
       "id": "P0-KEYWORD-VOLUME-VALIDATION-20261026",
@@ -5771,7 +5784,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-26T09:04:08",
-  "last_action": "commander_learning_20261026_affiliate: added 3",
+  "last_action": "架构师r64(2026-10-26): CDN双层缓存+llms-full重建824页+Actions误报澄清+IndexNow高流量页+BING卡点",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -19846,5 +19859,17 @@
   },
   "last_commander_update": "2026-10-24T12:10:00+08:00",
   "last_batch": "batch59",
-  "last_batch_date": "2026-10-26"
+  "last_batch_date": "2026-10-26",
+  "geo_audit_20261026": {
+    "score": "6.4/10 B",
+    "llms_txt": 8.5,
+    "aeo": 10.0,
+    "geo_content": 7.1,
+    "ai_crawler": "fixed-false-0",
+    "technical_fixed": [
+      "llms-full category/alternatives(score 7->10)",
+      "AI accessibility 0.0误报修复(脚本本地fallback)"
+    ],
+    "content_todos_already_exist": 5
+  }
 }

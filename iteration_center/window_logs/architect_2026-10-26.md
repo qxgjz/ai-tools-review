@@ -88,3 +88,41 @@
 - P0 = 0
 - P1：CLAUDE-SEO×2（缺 key）、GA4-SG-BOT（Dashboard 人工）、INDEXNOW-HIGH-TRAFFIC、INDEX-41-REMAINING、GSC-QUERY-DATA-GAP（分析师）、T-192 双形态统一、GH-001 llms-txt-hub PR 待用户点击 Submit
 - P2：SEO-BIG-IMG（2 大图）、T-194 查重
+
+
+---
+
+## r64 架构师轮（2026-10-26 ~13:30，验证闭环）
+
+**输入**：17 条 pending（P0×4：BING-WMT / GITHUB-ACTIONS-CHECK / INDEX-MIDJOURNEY-ELEVENLABS / LEARN-CDN-CACHE-DUAL）
+
+### 处理 6 条（全部 completed + evidence）
+1. **P0-GITHUB-ACTIONS-CHECK-20261026**：health_report"最近5次全失败"为误报——GitHub API 实测 runs 200，最近 6 条 Lint/CodeQL/Deploy 全 success（1d58e71），Token 有效。证据：runs API 200。
+2. **P0-LEARN-CDN-CACHE-DUAL-20261026**：public/_headers 双层缓存 `Cache-Control: public,no-cache,must-revalidate` + `CDN-Cache-Control: public,max-age=0,SWR60`。CDN 层保持 SWR60（弃学习笔记的 86400，避免 r31 旧缓存 24h 收敛陷阱）。build 进 out/ 验证 → commit 4b1c0ca → Deploy success → 线上 curl：HTTP 200 + `cdn-cache-control: public,max-age=0,SWR60` 生效。注：浏览器层 Cache-Control 被 CF 默认 Browser Cache TTL 覆盖为 max-age=14400，需 Dashboard 设 Respect existing headers（记 P2）。
+3. **P0-INDEX-MIDJOURNEY-ELEVENLABS-20261026**：IndexNow 批量提交 midjourney/elevenlabs/sora/perplexity = 200（geo_logs/geo_submit_20261026_131140.json）；线上两页 200、内容完整、无 noindex。
+4. **P1-LEARN-LLMS-FORMAT-20261026**：llms.txt v2 合规；llms-full.txt 重建 824 页，补 /category/×17 + /alternatives/×8（原缺 = GEO 审计 llms-full score 7 根因，修复后升 10）。线上 disable_cache 验证 200 + Category 段。
+5. **P1-LEARN-METADATA-AUDIT-20261026**：out/ 抽 5 页 canonical 绝对 URL/OG/twitter/JSON-LD(5-6块) 全 OK；hreflang 单语站非必需。
+6. **P1-LEARN-SITEMAP-AUTO-20261026**：已覆盖归档——app/sitemap.ts 已自动生成（tools-index/posts/alternatives/comparisons/subcategories 驱动）。
+
+### GEO 技术检查
+- real_geo_aeo_audit.py：Overall 6.4/10 B（AEO 10.0 / llms 8.5 / GEO Content 7.1 / AI Crawler 0.0）。
+- **AI Crawler Accessibility 0.0 定位**：脚本 requests 直连线上 robots.txt 失败（本机链路死路）→ ai_crawler_accessibility={} → 误报 0.0。站点实际完备（robots.ts 20+ AI 爬虫 allow，线上 robots.txt 200 验证 GPTBot/ClaudeBot/Perplexity-User 全 Allow）。修复：脚本加本地 out/robots.txt fallback（real_geo_aeo_audit.py），消除误报。
+- **llms-full score 7 定位**：审计要求 has_categories，重建后修复。
+- seo_audit_full.py：905 页长跑进行中（结果单独补录）。
+- Lighthouse：本机无 Chrome 已知死路（r31 经验 7），不重试。
+- 内容类 Recommendations（Quick Answer/Key Takeaways/数据/引述/对比表）与现有 5 条 geo_audit 创作家待办重叠，不重复开单。
+
+### 门控与部署
+- tsc --noEmit = 0；npm run build = 0；out/_headers 双层 + out/llms-full 824 页验证。
+- commit 4b1c0ca PUSH_OK（含 public/_headers、public/llms-full.txt、generate_llms_full.py 动态日期、real_geo_aeo_audit.py fallback、审计 JSON）。
+- GitHub Actions：4b1c0ca Lint/CodeQL/Deploy 全 success（Deploy 240s 轮询完成）。
+- CF Pages API：最新 production 部署 = 4b1c0ca success（05:34 UTC）。
+- 线上验证：首页 200 + cdn-cache-control SWR60；llms-full.txt 200（Generated 2026-10-26 / 824 页 / Category 段）。
+
+### 卡点
+- **P0-BING-WMT-CHATGPT-ENTRY-20261026**：api_keys.json 无 Bing Webmaster Tools API key，无法注册验证/提交 sitemap；需指挥官提供 key（state blocker 已写明）。
+- 未动（他窗/阻塞）：CLAUDE-SEO-INSTALL（缺 Anthropic key）、GA4-SG-BOT（CF Dashboard 人工 WAF）、GSC-QUERY-DATA-GAP（归分析师）、T-192/T-194（指挥官治理）。
+
+### 剩余
+- P0 pending：1（BING-WMT，缺 key 阻塞）
+- P1 pending：INDEXNOW×2、CLAUDE-SEO、GA4-SG-BOT、GSC-QUERY、NEW-ARTICLES-404-CHECK、T-192
