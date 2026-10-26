@@ -4393,3 +4393,62 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 - **P1**：/about vs /about/ 双变体共存（7+6 imp）、article-api 异常 URL 5 imp 持续污染 → r28 已建修复待办（架构师）仍 pending，本轮复查确认未闭环
 - **P1 正面信号**：/alternatives/cursor-alternatives 2 imp pos1.0——alternatives 页面首次进 SERP 前 1 位，说明新内容类型（vs/alternatives）有效，建议创作家继续
 - education（Medium）入选有量词 → 新 P0 待办
+
+
+## 2026-10-26 16:30 设计师巡检（定时任务轮2）
+
+### A. 文章配图核验（batch51-60 新发布 18 篇，线上逐篇比对）
+
+**方法**：Playwright 打开线上文章 URL 提取渲染 img（src/alt/加载状态）+ h1 比对 slug 主题；配图文件名/alt 与正文工具逐一比对。
+
+| 结论 | 篇数 | 明细 |
+|---|---|---|
+| ✅ 配图一致 | 17 | 全部为对应 AI 工具真实官网界面/产品页针对性截图（runway-home/sora-openai-blog/kling-home/pika-pricing/topazlabs-home/veed-home/chatgpt-home/shopify-home/zapier-home/n8n-workflow-template/notion-ai-product/granola-product/gamma-home/beautifulai-home/langchain-home/chatgpt-home/elevenlabs-home/murf-home 等，alt 均精确对应工具） |
+| ⚠️ 内容错配 | 1 | suno-vs-udio-2026（见下） |
+
+**问题 1 条（已开单）**：
+- **suno-vs-udio-2026 内容-URL 错配**：URL slug 承诺 Suno vs Udio 对比，但线上 title/h1 实际为 "Suno AI Review 2026: Is the $10/mo Pro Plan Worth It?"（Suno 单工具评测），配图仅 suno-music-creator + suno-pricing 两张 Suno 截图，**缺 Udio 配图**。Quick Answer 提及 "how it compares to Udio" 但无 Udio 实测内容。配图与正文（Suno review）本身一致，但与 slug/承诺主题不符 → 影响 SEO 意图匹配与读者预期。判定：内容管线错配（创作家生成时模板串位），归创作家修复内容、设计师复核配图补齐 Udio 真实截图。
+- 其余 17 篇 h1 与 slug 主题一致，配图全部合格，线上资源 200、无破图。
+
+### B. shadcn/ui 组件巡检（5页 × 桌面1440/移动375）
+
+- 横向溢出：5页 × 2视口 **全部无溢出** ✅
+- 破图：全部为空 ✅
+- 按钮/输入框渲染正常（首页6btn/2input，工具页20btn，对比页538btn，文章页27btn，博客67btn）
+- console 错误：非首页每页 1-5 条，均为已知 CSP 拦截第三方分析（**引用待办 GH-20261026-009**，非新问题）；blog 375px 5 条含懒加载图集触发
+- 结论：组件渲染正常，无新渲染问题
+
+
+---
+
+## 索引监控异常发现（2026-10-26，分析师周任务）
+
+### ⚠️ 异常 1：收录增长停滞（连续 2 周持平）
+- **现象**：GSC 官方收录 477（10-12 快照）→ 10-19/10-26 两次周监控均确认维持 477；同期 sitemap 804→916（+112，内容持续扩产）
+- **根因**：未收录主体 428 中 400（93.5%）为 discovered_not_indexed（Google 已发现未编入）——新增页面大概率进入该队列而非直接编入，内容扩产未转化为收录增长
+- **影响**：30 天目标 A（GSC 曝光 10000+）依赖收录面扩大，当前收录停滞将直接拖慢曝光增长（曝光 171/周）
+- **处置**：非技术问题，是内容质量/相关性杠杆——压降 discovered_not_indexed 需内容增强试点，建议打磨师试点 10 条验证收录响应（已写入 index_monitor.md，待办见 todo_from_analysis.md）
+
+### ⚠️ 异常 2：索引快照 14 天未更新（监控通道失效）
+- **现象**：最近一次 GSC 索引报告页快照 indexing_snapshot_20261012.json（10-12），10-19/10-26 两轮均无新快照；sitemap API indexed 字段长期报 0（口径 bug，不可用）
+- **影响**：收录环比只能引用 10-12 旧基线，趋势判断失真；GSC-QUOTA-RERUN-20261012（40 unknown 补跑）配额已重置仍未闭环
+- **处置**：分析师 P0——重拉索引报告页快照恢复周度跟踪；40 unknown 补跑一并闭环
+
+### ✅ 已解决（本轮确认为闭环，不再误报）
+- **redirect_error 4 个 URL**（/tools/gemini、/tools/chatgpt、/category/chat、/category/code）：P0-GSC-REDIRECT-ERROR-20261025 已归档（10-25 22:50），架构师完成修复
+- **URL 规范化+article-api 410**：CANONICAL-REDIRECT-AUDIT-20261026、ARTICLE-API-URL-CLEAN-20261026 已归档（10-26 07:40），http→https/www→非www/尾斜杠统一完成——GSC 反映需 1-2 周，下轮验证
+- **13 个高价值工具页请求编入**（10-24 批次全 REQUESTED：exa/claude/suno/kagi 等）——2-4 周后验证收录结果
+
+### 数据来源
+- indexing_snapshot_20261012.json、gsc_indexed_baseline_20261025.md（477/905=52.8%）
+- latest_report_2026-10-26.md r30（曝光 171/0 点击/14.29）
+- req_index_batch_20261024.json（13 REQUESTED）
+- state.json（待办归档/在册状态核对）
+
+## 2026-10-26 21:06 r31 追加 · GSC 窗口未滚动复查（09-25~10-24 同上轮）
+
+**数据**：171/0/14.29 与 r30 完全一致（fetch_gsc.py 固定窗口，无新数据可读）。诚实记录：本轮无新曝光/排名变化可分析。
+- **P1**：5-20 位扩口径筛出新命中 1 条（comparison-tools/ 带斜杠 pos18.0 CTR 0%）→ CTR 待办已开
+- **P0 级（职责B）**：prompt-generators（Medium）与 research-assistant（Medium）SERP 实搜验证通过 → 2 个新 P0 待办（创作家），缓解"无词可写"backlog
+- **P1 观察**：video-generators SERP 含中文垃圾站（IT168 推广页）污染，说明该词竞价激烈+搜索引擎结果质量下降，短期不建议主攻（标 High）
+- 阻塞复查：GEO-BASELINE/ELMO 保持 pending（浏览器 GUI/Docker 不可用），未假完成

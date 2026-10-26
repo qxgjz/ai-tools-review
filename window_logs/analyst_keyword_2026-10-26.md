@@ -29,3 +29,15 @@
 - 竞品对比：futurepedia 75 分类（缓存）vs 本地 40 篇（实读）
 - 写入待办：6 条（1 P0 + 5 P1）
 - 硬约束：P0 serp_verified=true ✅；搜索量全标预估附依据 ✅；competitor_gap 失败已写日志 ✅
+
+---
+
+## r31 追加（2026-10-26 21:06 · 21:00 档）
+
+- 挖掘关键词：3 实搜 + 5 新候选（3 分类 + 2 长尾）
+- P0/P1/P2：P0=2 新（prompt-generators/research-assistant，serp_verified）+ P1=5 新
+- SERP 验证：3 词实搜（prompt Medium / research Medium / video High）
+- GSC Easy Wins：跳过（窗口未滚动）
+- 竞品对比：futurepedia 75 分类（缓存）vs 本地 40 篇（实读）
+- 写入待办：7 条（2 P0 + 4 P1 新 + 1 去重，real-estate 已存在）
+- 硬约束：P0 serp_verified=true ✅；搜索量全标预估附依据 ✅；competitor_gap 失败已写日志 ✅

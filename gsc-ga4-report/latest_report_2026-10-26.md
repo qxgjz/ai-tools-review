@@ -56,3 +56,20 @@
 2. 蚕食持续：/about vs /about/（7+6 imp）、首页变体（1+7 imp）、article-api 异常 URL 5 imp——r28 修复待办（CANONICAL-REDIRECT-AUDIT/ARTICLE-API-URL-CLEAN）仍 pending，建议指挥官催架构师
 3. MOBILE 4 imp pos6.5：移动端有位置但 0 点击，与桌面一致
 4. 收录基线 477/905=52.8% 维持
+
+
+---
+
+# r31 追加（2026-10-26 21:06 · 21:00 档 · GSC 窗口未滚动复查）
+
+## GSC（fetch_gsc.py 实拉）
+| 指标 | 数值 | 变化 |
+|---|---|---|
+| 窗口 | 2026-09-25~10-24 | **与 r30 相同（脚本固定窗口，本轮未滚动）** |
+| Clicks / Impressions / CTR / AvgPos | 0 / 171 / 0% / 14.29 | 与 r30 完全一致 |
+
+### 本轮结论
+- 无新数据窗口 → 5-15 位新命中为 0（r30 已开 meeting/observability/productivity 3 条仍在打磨师池中）
+- 扩口径 5-20 位筛出新命中 1 条：/blog/best-ai-comparison-tools-2026/（带斜杠变体）pos18.0 CTR 0% → 已开 CTR 待办
+- 其余同窗口命中均已开单（tabbyml 18.0 r27✅ / ai-policy 8.0 r29✅），不重复
+- 提醒：r30 已开 3 条 CTR 待办仍在 pending（打磨师 backlog），建议指挥官核查处理节奏

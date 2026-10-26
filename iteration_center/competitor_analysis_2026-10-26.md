@@ -59,3 +59,29 @@
 
 ### SERP 验证
 实搜 3 词：ai-detection High / education Medium / fashion High；cartoon/religion 标预估（验证预算本轮已用 3 个 P0 位）
+
+
+---
+
+## r31 追加（2026-10-26 21:06 · 21:00 档）
+
+**数据源**：competitor_gap 实抓失败（futurepedia/topai sitemap 无响应，同上轮）→ 降级缓存（futurepedia 75 分类，cached 10-25）；本地 40 篇 published 实读防重复
+
+### 内容缺口（本轮 5 个新缺口；r30 已开 ai-detection/education/fashion/cartoon/religion，本轮不重复）
+| 缺口分类 | 竞品 | 我们 | 建议选题 | 竞争度 |
+|---|---|---|---|---|
+| prompt-generators | 1 | 0 | best-ai-prompt-generators-2026 | **Medium**（SurePrompts/SaaSworthy/Filmora/BrandClickX/Toolradar，无巨头榜单） |
+| research-assistant | 1 | 0 | best-ai-research-assistant-tools-2026 | **Medium**（scored.tools/AI Insiders/ToolPilot/Dupple/Rework/Digital Trends 提及） |
+| video-generators | 1 | 0 | best-ai-video-generators-2026 | High（VideoGen/Fliki/PixVerse/DEV 垂直站强竞争+中文垃圾站污染） |
+| business | 1 | 0 | best-ai-business-tools-2026 | 预估Low（未实搜，泛分类） |
+| real-estate | 1 | 0 | best-ai-real-estate-tools-2026 | 预估Medium（未实搜，垂直有需求） |
+
+### 可借鉴选题（5 个）
+1. best-ai-prompt-generators-2026 — Medium — 切入：免费额度+按场景（视频/代码/营销）+PromptPerfect 多模型优化实测
+2. best-ai-research-assistant-tools-2026 — Medium — 切入：学术（Elicit/Consensus）vs 网页（Perplexity）vs 长报告（ChatGPT Deep Research）
+3. best-ai-video-generators-2026 — High — 切入：按任务分（Kling 60fps/Seedance 参考驱动/Veo 4K）+ 价格表
+4. best-ai-business-tools-2026 — 预估Low — 切入：SMB 全流程（财务/CRM/营销/客服）
+5. best-ai-real-estate-tools-2026 — 预估Medium — 切入：房源 listing→CRM→虚拟看房
+
+### SERP 验证（实搜 3 词）
+prompt-generators **Medium** / research-assistant **Medium** / video-generators **High**；business/real-estate 标预估（验证预算已用 3 个）

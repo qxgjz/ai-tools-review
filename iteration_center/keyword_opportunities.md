@@ -510,3 +510,27 @@
 
 ### 搜索量标注（全"预估"）
 依据=SERP 竞争度（实搜 3 词）或竞品分类缺口（未实搜词）。搜索量未编造。
+
+
+---
+
+## r31 追加（2026-10-26 21:06 · 21:00 档）
+
+**Total keywords analyzed: 3**（本轮实搜）+ 5 P1 候选（预估/长尾）
+
+### 验证结论
+- 实搜 3 词：prompt-generators **Medium（P0 新入选）** / research-assistant **Medium（P0 新入选）** / video-generators **High**
+- P0 优先池：prompt-generators、research-assistant（本轮）+ education（r30）+ legal（r29）+ churn（r28）——均 serp_verified=true，Medium
+- GSC Easy Wins：本轮跳过（GSC 窗口未滚动=同 r30 数据，live_pull 无新 20-50 位词）
+
+### 本轮新增候选（P1）
+| 词 | 竞争度（估） | 建议标题 | slug |
+|---|---|---|---|
+| best AI business tools 2026 | Low | Best AI Business Tools 2026: 10 Tested (SMB Focus) | best-ai-business-tools-2026 |
+| AI tools for real estate agents 2026 | Medium | Best AI Tools for Real Estate Agents 2026: 8 Tested | best-ai-real-estate-tools-2026 |
+| best AI video generators 2026 | High | Best AI Video Generators 2026: 9 Tested (Kling vs Seedance vs Veo) | best-ai-video-generators-2026 |
+| how to use AI for small business 2026 | Medium | How to Use AI for Your Small Business in 2026: Step-by-Step | how-to-use-ai-for-small-business-2026 |
+| how to use AI for research paper 2026 | Medium | How to Use AI for Research Papers in 2026: 7-Step Workflow | how-to-use-ai-for-research-paper-2026 |
+
+### 搜索量标注（全"预估"）
+依据=SERP 竞争度（实搜 3 词）或竞品分类缺口（未实搜词）。搜索量未编造。
