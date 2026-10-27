@@ -1852,7 +1852,7 @@
       "task": "本周E2E走查P0：ChatGPT引用87%对应Bing top结果（Yext 2026研究），接入Bing Webmaster Tools：注册aitoolcrux.com验证、提交sitemap、配置IndexNow（如已配则核对生效）。完成后GEO基线解锁（ChatGPT/Perplexity可见性测试）",
       "source": "commander_weekly_review_20261026",
       "created_date": "2026-10-26",
-      "blocker": "卡点未解除: api_keys.json第4次复验(2026-10-28 r70)仍无Bing Webmaster Tools API key, 需指挥官提供key"
+      "blocker": "卡点未解除: api_keys.json第5次复验(2026-10-28 r71)仍无Bing Webmaster Tools API key, 需指挥官提供key"
     },
     {
       "id": "P0-CMD-AFFILIATE-PLAN-REVAMP-20261026",
@@ -7105,6 +7105,186 @@
       "task": "申请 Syllaby.io 联盟（直连）：https://syllaby.io/affiliate — 佣金 30% lifetime recurring。需登录对应平台提交申请",
       "source": "affiliate_monitor_20261027",
       "created_at": "2026-10-27T19:39:20.994092"
+    },
+    {
+      "id": "RR28A-OP-01",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.theboutiquecoo.com — Best AI Tools for Small Business (2026)",
+      "evidence": "https://www.theboutiquecoo.com/blog/best-ai-tools-for-small-business",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-02",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.aidesigner.ai — Figma Make Alternatives: 6 Better Tools, Tested (2026)",
+      "evidence": "https://www.aidesigner.ai/blog/figma-make-alternatives",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-03",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.magicpatterns.com — Top Figma Make Alternatives in 2026: AI-Powered Design ...",
+      "evidence": "https://www.magicpatterns.com/blog/figma-make-alternatives",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-04",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: fin.ai — 7 Best Zendesk Alternatives and Competitors in 2026",
+      "evidence": "https://fin.ai/learn/zendesk-alternatives",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-05",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: cotera.co — Best AI Customer Support Tools in 2026: 10 Tested",
+      "evidence": "https://cotera.co/articles/best-ai-customer-support-tools",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-06",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.retellai.com — Best AI Customer Support Tools, Reviewed: 9 Picks for 2026",
+      "evidence": "https://www.retellai.com/blog/best-ai-customer-support-tools",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-07",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: aissist.io — 6 Best Zendesk Competitors & Alternatives (2026)",
+      "evidence": "https://aissist.io/insights/zendesk-competitors",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-08",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.helpdocs.io — 7 Best Zendesk Alternatives (2026)",
+      "evidence": "https://www.helpdocs.io/knowledge-base-comparison/zendesk-alternative/",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-09",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: missiveapp.com — 10 best Zendesk alternatives and competitors for 2026",
+      "evidence": "https://missiveapp.com/blog/zendesk-alternatives",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-10",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: morningscore.io — The 20 best SEO tools in 2026? I personally tested all tools",
+      "evidence": "https://morningscore.io/best-seo-tools/",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-11",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.intelegencia.com — 15 Best SEO Tools to Improve Rankings in 2026",
+      "evidence": "https://www.intelegencia.com/blog/seo/15-best-seo-tools-to-improve-rankings-and-website-performance",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-12",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.debugbear.com — Best SEO Testing And Monitoring Tools In 2026",
+      "evidence": "https://www.debugbear.com/software/best-seo-monitoring-tools",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-13",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.3daistudio.com — Best AI Image Generators in 2026 (+ Best Midjourney and ...",
+      "evidence": "https://www.3daistudio.com/blog/best-ai-image-generators-2026",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-14",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: evolink.ai — Best Midjourney Alternatives in 2026: 6 AI Image Tools ...",
+      "evidence": "https://evolink.ai/blog/midjourney-alternatives-2026",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "RR28A-OP-15",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.wireflow.ai — Midjourney Alternatives in 2026: 8 Free and Paid Tools ...",
+      "evidence": "https://www.wireflow.ai/blog/best-midjourney-alternatives-for-ai-image-generation-2026",
+      "source": "tu_research_20261028a",
+      "created_at": "2026-10-28T02:05:38.151410"
     }
   ],
   "milestones": [
