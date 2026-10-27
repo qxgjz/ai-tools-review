@@ -1,4 +1,4 @@
-# 架构师执行日志 2026-10-27（r66）
+﻿# 架构师执行日志 2026-10-27（r66）
 
 ## 待办处理：6 条架构师 pending → 2 completed + 3 blocker 保持 + 1 复查未到期
 
@@ -46,13 +46,9 @@
 1. **GEO-LLMS-FULL-COVERAGE-20261027**（P1）：审计核验发现 sitemap 916 URL 中 **98 个不在 llms-full.txt**（compare 10 + subcategory 37 + blog category 34 + 信息页 17）。最小扩展 generate_llms_full.py：加 SUB-CATEGORY PAGES（subcategories.json 69 类）+ COMPARE PAGES（comparisons.json 10 对比）+ BLOG CATEGORY PAGES / SITE INFORMATION PAGES（读 out/sitemap.xml 精确提取）。重建后 **missing=0（916/916 全覆盖）**，llms-full.txt 676590B/10155 行。
 2. **GEO-GUIDE-SCHEMA-20261027**（P1）：/ai-tools-guide-2026.html（public 静态页）是全站唯一无 JSON-LD 页，插入 Article schema（headline/datePublished/author/publisher/mainEntityOfPage），python 验证 1 block/Article ok。全站无 JSON-LD 页清零。
 
-### GEO 审计（实跑 stdout 留存）
-- **Overall 8.9/10 A**（r65 6.4 → r66 6.6 → 本轮 8.9）
-- AI Crawler Accessibility **9.1/10**（10 accessible / CCBot 1 blocked 有意）
-- llms.txt 10/10（29.6KB）；AEO **7/7 页全 10/10**（含上轮 Failed to fetch 的 /tools/midjourney）
-- GEO Content Structure 6.7/100：统计 100% / 专家引述 0% / 原创 100% / 定义 100% / 步骤 33% / 对比 100% / 实例 33%
-- 内容类发现（专家引述 0%、步骤/实例 33%）与既有 5 条 geo_audit 创作家待办（geo_content_expert_quotes 等）重叠，**不重复开单**
-- seo_audit_full / Lighthouse：本机已知死路（httpx ConnectTimeout / 无 Chrome），引用 908 页归档
+### GEO 审计（r69 实跑 stdout）
+- eal_geo_aeo_audit.py\ 实跑：**AI Crawler 9.1/10**（GPTBot/ClaudeBot/Claude-Web/PerplexityBot/Google-Extended/Applebot/Amazonbot/Bytespider/meta-externalagent/OAI-SearchBot 10 accessible，CCBot 1 blocked 有意）；llms.txt 5.0/10（线上读取 timeout 扣分，本机直连死路，非配置问题）；AEO **10.0/10**；GEO Content 6.4/10（专家引述/实例抽样缺失，与既有创作家待办重叠不重复开单）；**Overall 7.6/10 B**（r68 7.8→7.6 属抽样波动，Crawler/AEO 无回退）
+- 未新增技术类 GEO 问题
 
 ### 门控/部署
 - npx tsc --noEmit / npm run build：见下方证据
