@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-27T06:35:01",
+  "last_updated": "2026-10-27T11:06:55",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -2971,7 +2971,7 @@
     },
     {
       "id": "CTR-OPT-AI-POLICY-20261024",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -2981,11 +2981,13 @@
       "source": "ctr_optimization_2026-10-24",
       "url": "https://www.aitoolcrux.com/ai-policy",
       "created_at": "2026-10-24T09:44:28",
-      "created_date": "2026-10-24"
+      "created_date": "2026-10-24",
+      "completed_at": "2026-10-27T12:20:00",
+      "close_note": "/ai-policy非posts.json文章页，留window1。"
     },
     {
       "id": "CTR-PAGE-COMPARISON-TOOLS-SLASH-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window5",
@@ -2996,7 +2998,9 @@
       "created_at": "2026-10-26T21:06:26",
       "position": 18.0,
       "ctr_pct": 0.0,
-      "window": "2026-09-25~10-24"
+      "window": "2026-09-25~10-24",
+      "completed_at": "2026-10-27T12:20:00",
+      "close_note": "best-ai-comparison-tools-2026已50/126达标（R35），复验通过。"
     },
     {
       "id": "GH-20261026-011",
@@ -5564,7 +5568,7 @@
     },
     {
       "priority": "P2",
-      "status": "pending",
+      "status": "completed",
       "task": "broken外链 147 个（含 midjourney 403、github.com/eumemic/ai-legion 连接失败等）— 逐一替换/移除",
       "assigned_to": [
         "创作家",
@@ -5573,7 +5577,9 @@
       "source": "seo_audit_2026-10-10",
       "created_at": "2026-10-10T22:54:04",
       "id": "P2-seo_audit_2026-10-10-73",
-      "created_date": "2026-10-10"
+      "created_date": "2026-10-10",
+      "completed_at": "2026-10-27T11:06:21",
+      "completion_note": "2026-10-27 11:06:21: curl 200 + anchor=True, github.com/qxgjz/aitoolcrux-ai-tools-reviews 真活"
     },
     {
       "id": "R18-commudle-com",
@@ -6627,6 +6633,257 @@
       "source": "index_snapshot_2026-10-27",
       "data_verified": true,
       "created_at": "2026-10-27T09:16:06"
+    },
+    {
+      "id": "P0-FEATURED-LISTING-TIER-20261027",
+      "status": "pending",
+      "priority": "P0",
+      "assigned_to": [
+        "window3",
+        "拓荒者",
+        "window5",
+        "打磨师"
+      ],
+      "task": "上线付费上架分层(C目标$100/月直接路径): ①打磨师在/tools页实现Featured Listing/Sponsored Category版位(数据驱动, 2个版位文案+价格锚点$99上架/$50-250月featured/$150-1000月sponsor) ②拓荒者对Top50高流量工具方发B2B入驻邮件(用r30曝光Top页清单, 附版位报价表) ③首次收入落地后state.json记录证据。参考Futurepedia$99/listing模型。",
+      "source": "commander_learning_ai-directory-cases",
+      "created_date": "2026-10-27"
+    },
+    {
+      "id": "P1-AFFILIATE-COOKIE-AUDIT-20261027",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "审计全站联盟链接: ①列出所有affiliate链接对应工具的佣金率+cookie窗口(查各联盟后台/公开页) ②优先接入30-50% recurring+90-365天窗口的video/voice/长周期SaaS ③佣金<10%或cookie<30天的链接替换或下架 ④产出audit_findings.md附录\"联盟佣金审计表\"。参考PopularAiTools 2026佣金分层。",
+      "source": "commander_learning_ai-directory-cases",
+      "created_date": "2026-10-27"
+    },
+    {
+      "id": "P1-LONGTAIL-KD20-REBUILD-20261027",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "task": "重构关键词队列为\"长尾优先KD<20\": ①在r29量验证清单基础上, 筛KD<20且有搜索量的200+任务式长尾词(格式\"best AI tool for X\", X=writing essays/meeting notes/ppt等使用场景) ②按可排产优先级输出清单(90天窗口) ③6个月后回攻\"best AI tools\"大词 ④清单写入gsc-ga4-report/longtail_kd20_20261027.md。参考Plantois长尾优先策略。",
+      "source": "commander_learning_ai-directory-cases",
+      "created_date": "2026-10-27"
+    },
+    {
+      "id": "RR27C-OP-01",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: ustechautomations.com《7 Best AI Overview Tools for Medical Clinics 2026》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://ustechautomations.com/resources/blog/best-ai-overview-tools-for-medical-clinics-2026",
+      "source": "tu_research_20261027c_healthcare",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-02",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: deepcura.com《Best AI for Medical Questions in 2026: Multi-Model Wins》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.deepcura.com/resources/best-ai-for-medical-questions",
+      "source": "tu_research_20261027c_healthcare",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-03",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: datasnipper.com《Best AI Tools for Finance & Financial Analysis (2026)》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.datasnipper.com/resources/top-artificial-intelligence-tools-financial-service-professionals",
+      "source": "tu_research_20261027c_finance",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-04",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: uptiq.ai《Top 9 AI Finance Tools for 2026: Ranked by Use Case》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.uptiq.ai/blogs/financial-ai-tools-to-look-for-in-2026",
+      "source": "tu_research_20261027c_finance",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-05",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: numeric.io《Best AI Accounting Tools for Finance Teams (2026)》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.numeric.io/blog/ai-accounting-tools",
+      "source": "tu_research_20261027c_finance",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-06",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: fathomhq.com《Best AI Accounting Tools: What to Use and Why (2026 Guide)》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.fathomhq.com/blog/best-ai-accounting-tools-what-to-use-and-why",
+      "source": "tu_research_20261027c_finance",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-07",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: planful.com《Your Ultimate Guide to the Best AI Tools for FP&A in 2026》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://planful.com/your-ultimate-guide-to-the-best-ai-tools-for-fpa-in-2026/",
+      "source": "tu_research_20261027c_finance",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-08",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: excel-university.com《Best AI Tools for Accountants in Excel (2026 Guide)》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.excel-university.com/best-ai-tools-for-accountants-in-excel-2026-guide/",
+      "source": "tu_research_20261027c_finance",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-09",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: taskade.com《17 Best AI Tools for Teachers and Education (2026 List)》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.taskade.com/blog/ai-tools-teachers",
+      "source": "tu_research_20261027c_education",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-10",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: edutopia.org《5 Teacher-Tested AI Tools for Beginners》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.edutopia.org/article/ai-tools-teachers-try/",
+      "source": "tu_research_20261027c_education",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-11",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: eklavvya.com《AI Tools for Education List 2026: 80 Free & Paid Tools》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.eklavvya.com/blog/ai-tools-education-content/",
+      "source": "tu_research_20261027c_education",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-12",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: monkeytravel.app《Best AI for Travel Planning 2026: 7 Trip Planners Tested》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://monkeytravel.app/blog/best-ai-trip-planners-2026-compared",
+      "source": "tu_research_20261027c_travel",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-13",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: guruwalk.com《Best AI for Travel Planning 2026: 6 Tools Tested on One Trip》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://www.guruwalk.com/mkt/best-ai-for-travel-planning",
+      "source": "tu_research_20261027c_travel",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-14",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: virtuous.org《AI for Nonprofits in 2026: 7 Best Tools & Practical Guidance》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://virtuous.org/blog/ai-for-nonprofits/",
+      "source": "tu_research_20261027c_nonprofit",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "RR27C-OP-15",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch roundup 收录: orvador.com《10 Best AI Tools for Nonprofits in 2026: Tested & Ranked》, 以 aitoolcrux 独立实测对比视角发信编辑收录, URL=https://orvador.com/blog/best-ai-tools-for-nonprofits/",
+      "source": "tu_research_20261027c_nonprofit",
+      "created_at": "2026-10-27T10:15:36"
+    },
+    {
+      "id": "FU-DIR-RECHECK-20261027D",
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-10-27T11:06:21",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "复查 insidr.ai / aisotools.com / toolsify.ai 收录状态",
+      "completion_note": "2026-10-27 11:06:21: 3 目录 Serper 复查全 n=0, 结论=未上 listing; GitHub 200 anchor=True 真活; 其他 4 条 403=代理拦截非死链",
+      "source": "followup_20261027d"
+    },
+    {
+      "id": "FU-INSIDR-RECHECK-20261027D",
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-10-27T11:06:55",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "复查 insidr.ai 是否收录 aitoolcrux",
+      "completion_note": "2026-10-27 11:06:55: Serper site:insidr.ai aitoolcrux n=0, 结论=未上 listing, 不再反复查",
+      "source": "followup_20261027d"
+    },
+    {
+      "id": "FU-AISOTOOLS-RECHECK-20261027D",
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-10-27T11:06:55",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "复查 aisotools.com 是否收录 aitoolcrux",
+      "completion_note": "2026-10-27 11:06:55: Serper site:aisotools.com aitoolcrux n=0, 结论=未上 listing, 不再反复查",
+      "source": "followup_20261027d"
+    },
+    {
+      "id": "FU-TOOLSIFY-RECHECK-20261027D",
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-10-27T11:06:55",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "复查 toolsify.ai 是否收录 aitoolcrux",
+      "completion_note": "2026-10-27 11:06:55: Serper site:toolsify.ai aitoolcrux n=0, 结论=未上 listing, 不再反复查",
+      "source": "followup_20261027d"
     }
   ],
   "milestones": [
