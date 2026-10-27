@@ -7285,6 +7285,58 @@
       "evidence": "https://www.wireflow.ai/blog/best-midjourney-alternatives-for-ai-image-generation-2026",
       "source": "tu_research_20261028a",
       "created_at": "2026-10-28T02:05:38.151410"
+    },
+    {
+      "id": "P1-AI-OVERVIEWS-BASELINE-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "task": "GSC Generative AI 报告核查：2026-08-31 已全站上线，打开 GSC Performance→Generative AI tab（若 AI 数据量过少不显示则记录门槛），记录 AI Overviews/AI Mode 印象基线（按页面/国家拆分）；联动 GEO-BASELINE-AUDIT-20261013 的 Google 侧数据层",
+      "source": "learning_ai_search_geo_20261028",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "P1-GEO-PROOF-LEDGER-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "task": "建 Proof Ledger 买家问题库（20 个，从 LONGTAIL P0 场景选：best ai essay writer/free thumbnail maker/voiceover 等），每月首工作日跑 ChatGPT/Perplexity/Claude/Gemini 四引擎，记录引用出现/URL/位置；计算 share of mentions=品牌出现 prompts/总 prompts；这是 GEO-BASELINE-AUDIT-20261013 的可执行方法论",
+      "source": "learning_ai_search_geo_20261028",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "P2-GA4-AI-CHANNEL-20261028",
+      "status": "pending",
+      "priority": "P2",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "task": "GA4 自定义渠道组：regex 匹配 AI 工具来源（perplexity.ai/chatgpt.com/claude.ai/gemini.google.com/copilot.microsoft.com）补齐 GA4 AI Assistant 行漏计的 AI 引流，与 GSC Generative AI 印象交叉分析",
+      "source": "learning_ai_search_geo_20261028",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "P2-QUOTE-CITATION-GEO-20261028",
+      "status": "pending",
+      "priority": "P2",
+      "assigned_to": [
+        "window4",
+        "分析师"
+      ],
+      "task": "GEO 文章模板要素落地：Princeton GEO 论文实证\"引文+引用权威来源\"提升 AI 可见性最高 40%（领域依赖）；给创作家的文章 SOP 增加引用/引语密度要求，供 KW/CA 待办执行时参考",
+      "source": "learning_ai_search_geo_20261028",
+      "data_verified": true,
+      "created_date": "2026-10-28"
     }
   ],
   "milestones": [
@@ -7300,7 +7352,7 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-27T21:18:26",
+  "last_update": "2026-10-28T06:08:25",
   "last_action": "r69架构师: GH-20261027-012 dev动态路由500修复(async GSP + 移除dynamicParams=false), 全动态路由dev 200; P0-BING/P1-CLAUDE/P1-GA4 blocker复验保持",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
