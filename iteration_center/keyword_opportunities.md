@@ -590,3 +590,24 @@
 - 搜索量：全部"预估"，无第三方数据；依据=竞品分类存在+SERP 前10 竞品密度
 - 竞争度判定：email-assistant High（工具官方自推密集）/music-generator High/text-to-video High/social-media High/website-builders High
 - 切入角度：免费额度对比+独立实测+场景矩阵（竞品多为官方自推）
+
+
+## r35（2026-10-27 21:18 · 任务式长尾 SERP 验证）
+
+> SERP 实搜时间：2026-10-27 21:18（general_search，3 词）；本地覆盖：content_drafts 实查（essay 0 篇 / thumbnail 0 篇 / voiceover 0 篇）
+> Total keywords analyzed: 3（本轮）+ 5（r33）= 8
+
+| # | 关键词 | 竞争度 | 本地覆盖 | 建议标题 | slug | 切入角度 | 判定 |
+|---|---|---|---|---|---|---|---|
+| 1 | best AI tool for writing essays | **Medium** | 0 | Best AI Essay Writing Tools 2026: 9 Tested | best-ai-essay-writing-tools-2026 | 按学术阶段（高中/本科/研究生）+ 引用准确性 + 检测安全 | **P0 入选** |
+| 2 | best AI tool for creating YouTube thumbnails | **Medium** | 0 | Best AI Thumbnail Makers 2026: 8 Tested | best-ai-thumbnail-makers-2026 | 按创作者类型（游戏/教育/vlog）+ CTR A/B 测试（vidIQ/ThriftyThumbs） | **P0 入选** |
+| 3 | best AI tool for voiceover generation | **High** | 0 | Best AI Voiceover Generators 2026 | best-ai-voiceover-generators-2026 | 按用途（课程/广告/有声书）+ 免费额度矩阵 | CA P1（官方站霸榜） |
+
+### SERP 验证依据（前 6-10 竞品）
+- essay：bestwriting.com / paperguide.ai / toolpotion / thetoolmarketer / saasworthy / dev.to → 无巨头碾压，niche 站可排前 6 → Medium
+- thumbnails：crixpix / capcut(官方x2) / youtube blog / agentbrisk / techpilot → 官方偏自家，独立 niche 站可排 → Medium
+- voiceover：redhub PDF / capcut / elevenlabs(官方) / zapier / fliki(官方) → 官方站+Zapier 聚合 → High
+
+### 说明
+- 本轮 3 词为任务式长尾格式（"best AI tool for X"），与 r29-r33 的 best-of 大词（"best AI X tools 2026"）不同格式，非重复开单
+- 搜索量：全部"预估"（依据=SERP 竞争度 + 竞品分类存在性；无付费搜索量数据源）
