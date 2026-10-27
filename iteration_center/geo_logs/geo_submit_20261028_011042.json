@@ -1,0 +1,21 @@
+{
+  "timestamp": "2026-10-28T01:10:42.671592",
+  "urls": [
+    "https://www.aitoolcrux.com/tools/auto-gpt",
+    "https://www.aitoolcrux.com/tools/figma-ai",
+    "https://www.aitoolcrux.com/tools/canva-magic",
+    "https://www.aitoolcrux.com/tools/worldmonitor",
+    "https://www.aitoolcrux.com/tools/llama-index",
+    "https://www.aitoolcrux.com/tools/ragflow",
+    "https://www.aitoolcrux.com/tools/milvus",
+    "https://www.aitoolcrux.com/tools/faiss",
+    "https://www.aitoolcrux.com/tools/mem0",
+    "https://www.aitoolcrux.com/tools/copilot"
+  ],
+  "results": {
+    "indexnow": {
+      "status": 200,
+      "ok": true
+    }
+  }
+}
