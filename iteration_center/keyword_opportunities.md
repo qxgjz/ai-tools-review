@@ -570,3 +570,23 @@
 - live_pull 最新为 10-24（fetch_gsc.py 只写 md 汇总不写 query JSON）；10-25/10-26 无新 live_pull
 - 全量 8 条查询 + 15 页面如上（fetch_gsc 报告 Top Queries 8 条/Top Pages 20 条中 15 条有曝光明细）
 - 竞争度依据：真实 GSC 排名+曝光（未用第三方搜索量）；搜索量全部"预估"标注
+
+
+---
+
+## r33 · 关键词挖掘（2026-10-27 09:16 · 竞品 sitemap 实抓成功）
+
+**Total keywords analyzed: 5**（全部 SERP 实搜验证）
+
+| # | 关键词 | 分级 | 竞争度 | 建议标题 | slug | 依据 |
+|---|---|---|---|---|---|---|
+| 1 | best AI email assistant tools 2026 | **P0** | High | Best AI Email Assistants 2026: 12 Tools Compared for Gmail & Outlook | best-ai-email-assistants-2026 | futurepedia 有分类我们无；SERP 实搜验证 |
+| 2 | best AI music generator 2026 | **P0** | High | Best AI Music Generators 2026: Suno, Udio & 10 More Tested | best-ai-music-generators-2026 | 同上 |
+| 3 | best AI text to video generator 2026 | **P0** | High | Best AI Text-to-Video Generators 2026: 10 Tools Ranked by Output Quality | best-ai-text-to-video-generators-2026 | 同上 |
+| 4 | best AI social media tools 2026 | P1 | High | Best AI Social Media Tools 2026: 15 Tested for Scheduling & Content | best-ai-social-media-tools-2026 | 同上 |
+| 5 | best AI website builder 2026 | P1 | High | Best AI Website Builders 2026: 12 Compared for Speed & Cost | best-ai-website-builders-2026 | 同上 |
+
+### SERP 验证（5 词全部实搜）
+- 搜索量：全部"预估"，无第三方数据；依据=竞品分类存在+SERP 前10 竞品密度
+- 竞争度判定：email-assistant High（工具官方自推密集）/music-generator High/text-to-video High/social-media High/website-builders High
+- 切入角度：免费额度对比+独立实测+场景矩阵（竞品多为官方自推）

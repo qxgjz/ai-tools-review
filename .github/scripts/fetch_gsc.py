@@ -99,8 +99,11 @@ def main():
     base["dimensions"] = ["query"]
     base["rowLimit"] = 25
     top_queries = gsc_query(token, base)
-    # P1-GSC-QUERY-DATA-GAP: 过滤工具生成的 -site: 排除式垃圾查询，避免污染查询级报告
-    clean_rows = [r for r in top_queries.get("rows", []) if "-site:" not in (r["keys"][0] or "")]
+    # P1-GSC-SCRIPT-PATH-CONFIRM: 过滤工具生成的 site:/-site: 排除式垃圾查询，避免污染查询级报告
+    def _is_junk(q):
+        q = (q or "").strip()
+        return q.startswith("-site:") or q.startswith("site:") or "-site:" in q
+    clean_rows = [r for r in top_queries.get("rows", []) if not _is_junk(r["keys"][0])]
 
     # By device
     base["dimensions"] = ["device"]

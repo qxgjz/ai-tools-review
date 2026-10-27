@@ -4452,3 +4452,35 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 - **P0 级（职责B）**：prompt-generators（Medium）与 research-assistant（Medium）SERP 实搜验证通过 → 2 个新 P0 待办（创作家），缓解"无词可写"backlog
 - **P1 观察**：video-generators SERP 含中文垃圾站（IT168 推广页）污染，说明该词竞价激烈+搜索引擎结果质量下降，短期不建议主攻（标 High）
 - 阻塞复查：GEO-BASELINE/ELMO 保持 pending（浏览器 GUI/Docker 不可用），未假完成
+
+
+## W2 索引监控发现（2026-10-27 09:13 · AdsPower CDP 实抓 GSC 索引覆盖率页）
+
+### [P0] 异常：auto_redirect 9→94 暴增（+85）
+- 现象：GSC 索引报告"网页会自动重定向"10-12 为 9，10-27 实抓为 **94**
+- 推断：与 r28 已发现的 article-api-* 时间戳 URL（`.md` 后缀、异常 URL 污染索引）及新增页面 301 链相关
+- 建议：架构师 P0 排查新增 94 个重定向 URL，优先清理 article-api-* 时间戳页面（ARTICLE-API-URL-CLEAN 待办加速）
+
+### [P0] 异常：收录率 52.8%→46.2%（-6.6pp）
+- 现象：已知 URL 905→1384（+479，sitemap 10/23 更新），indexed 477→640（+163），未编入 428→744（+316）
+- 影响：内容量扩充但收录意愿下降，Google 对新长尾页"已发现未编入"589 条
+- 建议：discovered_not_indexed 仍是第一杠杆（内容质量+内链+IndexNow 提交高价值页）
+
+### [P1] 观察：noindex 5→33（+28）
+- 现象：noindex 页面从 5 增至 33
+- 建议：检查是否误设 noindex（如新模板默认）
+
+### [P1] 观察：duplicate_google_chosen 新增 8 条
+- 现象：Google 选择规范页与用户指定不同 8 条
+- 建议：纳入 CANONICAL-REDIRECT-AUDIT 待办一并修复
+
+
+---
+
+## GAP ID 复核（2026-10-27 09:16）
+### P1-REPORT-GAP-RECHECK 复核结论（{now}）
+| GAP ID | 状态 | 结论 |
+|---|---|---|
+| P0-TRAFFIC-CLIFF-20260924（流量悬崖） | focus/archived_todos 均无记录 | 已丢失（历史清理覆盖），git 历史可溯源；行为影响已由 r30-r33 持续监控替代 |
+| P1-OPENSER（openserp 排名核对） | archived_todos 内 P1-TOOL-OPENSERP-001 **completed** | 已闭环归档 ✅ |
+| GSC-QUOTA-RERUN-20261012（配额重跑） | 本轮随 P0-INDEX-SNAPSHOT-RERUN **completed** | 已闭环（indexing_snapshot_20261027 实抓）✅ |
