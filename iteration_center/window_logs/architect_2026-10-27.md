@@ -94,3 +94,30 @@
 ### 经验
 - **CF Pages _redirects 只支持 3xx 重定向（301/302/303/307/308），410/404 规则无效**（官方文档 Advanced redirects Rewrites ❌）；"410 兜底"类规则须改用 Pages Functions 或接受默认 404
 - article-api 变体治理三件套：robots Disallow（源头）+ 具体 301（权重合并）+ 默认 404（移除信号）
+
+## r69（2026-10-27 第四轮，GH-20261027-012 dev 动态路由 500 修复）
+
+### 待办核对（统一命令）
+- 架构师 pending 5 条：**GH-20261027-012**（P1，本轮处理 completed）+ P0-BING-WMT（api_keys.json 第 3 次复验仍无 bing key，blocker 保持）+ P1-CLAUDE-SEO（无 anthropic key，blocker 保持）+ P1-GA4-SG-BOT（CF Dashboard 人工 WAF，blocker 保持）+ P1-INDEX-41（10-30 复查未到期）
+- 处理 1 条（P1），3 blocker 保持，1 未到期；本轮无 P0 可执行项。
+
+### GH-20261027-012 修复（复现→根因→最小改动→验证）
+- **复现**：清 .next 重启 `npm run dev`，curl /tools/chatgpt/、/blog/stable-diffusion-review-2026/、/compare/* 全部 500；日志报 `⨯ Error: Page "/tools/[slug]/page" is missing exported function "generateStaticParams()", which is required with "output: export" config.`
+- **根因**：**Next 14.2.5 dev + output:export：`export const dynamicParams = false` 与 generateStaticParams 组合时导出检测失败**（文件明明导出了函数）。对照组实证：仅 `dynamic='force-static'` 的 category/compare/alternatives/blog-category/subcategory/authors 全部 200；含 dynamicParams=false 的 tools/blog/blog-tag 全部 500。
+- **最小改动**：
+  1. 9 个动态路由 `generateStaticParams` 改 `async`（Next 官方推荐形态，语义等价）：tools/blog/compare/authors/alternatives/blog-tag/category/blog-category/subcategory 的 [slug]/page.tsx
+  2. 移除 tools/blog/blog-tag 三处 `export const dynamicParams = false`（注释说明：静态导出只服务 generateStaticParams 已列页面，未列 slug 本就不生成，该配置在生产冗余；移除后 dev 恢复正常）
+- **验证**：dev 下 9 类动态路由真实 slug 全 200（tools/chatgpt、blog/stable-diffusion-review-2026、compare/chatgpt-vs-claude、alternatives/chatgpt-alternatives、category/chat、blog/category/ai-chat、blog/tag/chatgpt、subcategory/code-assistants、authors/aitoolcrux-editorial-team）；不存在的 slug 返回 500 missing param 属 Next dev 校验正常行为（生产静态导出不生成该页）。
+- 注意：此前 r68 轮验证 /compare/midjourney-vs-dalle-3-2026 500 系测试 slug 不存在（comparisons.json 实际 slug 为 midjourney-vs-dall-e-3），非代码问题。
+
+### GEO 审计
+- 本轮按 SOP 先跑 `real_geo_aeo_audit.py`：**AI Crawler 9.1/10（10 accessible/CCBot 1 blocked 有意）**；llms-full.txt 676590B present；AEO 10/10；llms.txt 线上读取 timeout（本机直连死路，非配置问题）→ Overall 7.8/10 B（与 r68 一致，配置无回退）
+- 未新增技术类 GEO 问题；内容类（GEO Content 7.1）与既有创作家待办重叠不重复开单
+
+### 门控/部署
+- npx tsc --noEmit=0 / npm run build=0；out/ 533 tools 页 + blog/authors/subcategory/compare/blog-tag 全部生成
+- commit + push + Actions + 线上验证见提交说明
+
+### 经验
+- **Next 14.2.x dev + output:export 下 dynamicParams=false 与 generateStaticParams 共存 = 导出检测 bug**（500 missing exported function）；静态导出站移除 dynamicParams=false 无损（未列 slug 不生成页面）
+- dev 复现动态路由问题时用**真实存在的 slug**（数据文件 keys）测试，避免把 missing param 误判为代码故障

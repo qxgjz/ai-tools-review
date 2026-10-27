@@ -39,7 +39,7 @@ interface ComparisonPageProps {
 
 export const dynamic = 'force-static';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   if (shouldSkipStaticGen()) return [];
   return comparisonsData.map((c: any) => ({ slug: c.slug }));
 }

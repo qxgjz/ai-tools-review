@@ -24,7 +24,7 @@ const AUTHORS: Record<string, any> = {
 
 export const dynamic = 'force-static';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   if (shouldSkipStaticGen()) return [];
   return Object.keys(AUTHORS).map((slug) => ({ slug }));
 }

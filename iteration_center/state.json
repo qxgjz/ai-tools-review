@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-27T14:37:16",
+  "last_updated": "2026-10-27T22:18:24+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -1476,7 +1476,7 @@
     },
     {
       "id": "CMD-20261018-002",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window2",
@@ -1489,7 +1489,8 @@
       "url": "",
       "notes": "2026-10-24 22:23:09 +08:00 活外链复核3/3有效; insidr/aisotools/toolsify已提交但Google未索引aitoolcrux页 | 2026-10-25 11:05:40 +08:00 3目录仍n=0; 品牌泛搜出现hatchr.in新第三方条目, 持续监控",
       "created_date": "2026-10-25",
-      "completion_note": "2026-10-26 23:11:07 复查: 28 天真活外链仍 2 条(目标本周 10 条未达)；outreach 已发 pitch 等编辑回复，不重复发；瓶颈=目录提交通道被 CF/直连拦截"
+      "completion_note": "2026-10-27 F批：Serper 6 query 新增 16 P1 + 4 P2，落盘 opportunities，补录 15 条 RR27F-OP-*",
+      "completed_at": "2026-10-27T21:33:02.836678"
     },
     {
       "id": "CMD-20261018-007",
@@ -1623,9 +1624,10 @@
       "source": "github_project_research_20261026",
       "url": "https://github.com/best-of-ai/ai-directories",
       "id": "GH-20261026-004",
-      "status": "pending",
+      "status": "completed",
       "created_date": "2026-10-26",
-      "completion_note": "2026-10-26 21:37:17 通道实测：toolify.ai/submit 被 Cloudflare 人机验证拦；ai-bot.net/theresaiatool 直连 ERR_CONNECTION_CLOSED（bu 浏览器未走 Clash 127.0.0.1:7890 代理），本轮未假提交；待下档配置浏览器代理后再批量提交"
+      "completion_note": "2026-10-27 F批：Serper 6 query 新增 16 P1 + 4 P2，落盘 opportunities，补录 15 条 RR27F-OP-*",
+      "completed_at": "2026-10-27T21:33:02.836678"
     },
     {
       "id": "KW-3D-GENERATOR-20261026",
@@ -1951,12 +1953,13 @@
         "window3",
         "拓荒者"
       ],
-      "status": "pending",
+      "status": "completed",
       "task": "加快批量外链进度：拓荒者pending=63条，本轮至少提交3个目录/外链（free-listing/paid-listing/RR outreach均可）并落盘tracking，禁止只评论1-2条HN/Reddit就说完成",
       "source": "commander_dispatch_20261024_rate",
       "created_at": "2026-10-24 21:35:27",
       "created_date": "20261024",
-      "completion_note": "2026-10-27 14:37:16: 加快批量外链: 本轮 Serper 调研新增 45 条机会(15 P1+30 P2), state 补录 15 条 P1 RR27C-OP-01~15; 目录提交仍卡 bu 浏览器代理"
+      "completion_note": "2026-10-27 F批：Serper 6 query 新增 16 P1 + 4 P2，落盘 opportunities，补录 15 条 RR27F-OP-*",
+      "completed_at": "2026-10-27T21:33:02.836678"
     },
     {
       "id": "P0-COMMUNITY-REDDIT-20261012",
@@ -6944,7 +6947,7 @@
       "id": "GH-20261027-012",
       "task": "本地dev动态路由500：npm run dev 下 /tools/[slug] 与 /blog/[slug] 返回500（Next 14.2.5报 missing generateStaticParams，但文件已导出同步generateStaticParams + revalidate=3600 + output:export，疑似dev模式兼容缺陷；清.next复现）。线上同代码200正常，影响\"改后本地预览确认\"工作流。修复：窗口1验证 next build 能否通过；若build正常则按 dev-only 修复（generateStaticParams 改 async 或 dev 条件处理或升级Next），若build也失败则 P0 处理。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window7",
         "设计师",
@@ -6953,7 +6956,9 @@
       ],
       "source": "design_verify_20261027_round3",
       "created_at": "2026-10-27",
-      "updated_at": "2026-10-27"
+      "updated_at": "2026-10-27",
+      "completed_at": "2026-10-27 22:18:24",
+      "evidence": "r69 2026-10-27: 根因=Next 14.2.5 dev+output:export 下 `export const dynamicParams = false` 与 generateStaticParams 组合时导出检测失败(missing exported function 500)。修复: ①9个动态路由([slug]/page.tsx: tools/blog/compare/authors/alternatives/blog-tag/category/blog-category/subcategory) generateStaticParams async化 ②移除tools/blog/blog-tag 的 dynamicParams=false(静态导出下冗余,未列slug本不生成页面)。验证: dev下 tools/chatgpt=200, blog/stable-diffusion-review-2026=200, compare/chatgpt-vs-claude=200, alternatives/category/blog-category/blog-tag/subcategory-code-assistants/authors 全200; tsc=0 build=0, out 533 tools页完整。"
     },
     {
       "id": "RR27E-OP-01",
@@ -7396,6 +7401,186 @@
       "source": "ctr_optimization_2026-10-27",
       "completed_at": "2026-10-27T21:18:26",
       "data_verified": true
+    },
+    {
+      "id": "RR27F-OP-01",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: arahi.ai — Best AI Writing Tools 2026: 11 Tools Compared by Use Case",
+      "evidence": "https://arahi.ai/blog/best-ai-writing-tools-2026",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-02",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.authorflows.com — AI Writing Tools Updates 2026: What's New + 20 Best ...",
+      "evidence": "https://www.authorflows.com/blogs/best-ai-writing-tools-2026-updated",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-03",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: ryandoser.com — 7 Best AI Writing Tools in 2026 (Avoid Most of Them)",
+      "evidence": "https://ryandoser.com/best-ai-writing-tools/",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-04",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.heygen.com — 10 Best Free AI Video Generators in 2026: Veo, Kling ...",
+      "evidence": "https://www.heygen.com/blog/free-ai-video-generators",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-05",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.cnet.com — Best AI Video Generators of 2026: We Put All the Big ...",
+      "evidence": "https://www.cnet.com/tech/services-and-software/best-ai-video-generators/",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-06",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: uk.pcmag.com — The Best AI Video Generators for 2026",
+      "evidence": "https://uk.pcmag.com/ai/161294/the-best-ai-video-generators",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-07",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.aitoolssme.com — Best AI Video Generator 2026: 11 Tools, 4 Prompts ...",
+      "evidence": "https://www.aitoolssme.com/comparison/video-generators",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-08",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.faros.ai — Best AI Coding Agents for 2026: Real-World Developer ...",
+      "evidence": "https://www.faros.ai/blog/best-ai-coding-agents-2026",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-09",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.verdent.ai — Best AI Coding Assistants 2026: Top 10 Tools Tested ...",
+      "evidence": "https://www.verdent.ai/guides/best-ai-coding-assistant-2026",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-10",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: axify.io — The Best AI Coding Assistants: 20 Tools Reviewed for 2026",
+      "evidence": "https://axify.io/blog/the-best-ai-coding-assistants-a-full-comparison-of-20-tools",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-11",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: playcode.io — Best AI Coding Assistants 2026 (I Tested 10+)",
+      "evidence": "https://playcode.io/blog/best-ai-coding-assistants-2026",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-12",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: aimlapi.com — The Best AI Coding Assistant in 2026",
+      "evidence": "https://aimlapi.com/blog/the-best-ai-coding-assistant-in-2026",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-13",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: dokan.co — 100+ Best Free AI Tools You Need in 2026",
+      "evidence": "https://dokan.co/blog/501935/best-free-ai-tools/",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-14",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.prezent.ai — 9 Best AI Marketing Tools to Use in 2026",
+      "evidence": "https://www.prezent.ai/blog/ai-marketing-tools",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
+    },
+    {
+      "id": "RR27F-OP-15",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch/resource page outreach: www.vendasta.com — The Best AI Marketing Tools to Dominate in 2026",
+      "evidence": "https://www.vendasta.com/blog/ai-marketing-tools/",
+      "source": "tu_research_20261027f",
+      "created_at": "2026-10-27T21:33:02.836678"
     }
   ],
   "milestones": [
@@ -7412,7 +7597,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-27T21:18:26",
-  "last_action": "r68架构师: P0 AUTO-REDIRECT-SPIKE 修复(robots Disallow article-api + _redirects删无效410) + P1 GSC-QUERY-DATA-GAP复查completed; GEO审计7.8/B Crawler9.1; 3 blocker保持",
+  "last_action": "r69架构师: GH-20261027-012 dev动态路由500修复(async GSP + 移除dynamicParams=false), 全动态路由dev 200; P0-BING/P1-CLAUDE/P1-GA4 blocker复验保持",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

@@ -89,12 +89,12 @@ const toolScreenshotMap: Record<string, string> = {
   windsurf: '/screenshots/real/webp/windsurf.webp',
 };
 
-export const dynamicParams = false;
+// r69 GH-20261027-012: removed dynamicParams=false (Next14.2.5 dev+output:export bug: async generateStaticParams not detected; static export serves only generated params anyway)
 
 export const dynamic = 'force-static';
 export const revalidate = 3600; // ISR: revalidate every hour
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   if (shouldSkipStaticGen()) return [];
   return toolsData.map((tool) => ({ slug: tool.slug }));
 }

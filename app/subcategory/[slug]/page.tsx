@@ -15,7 +15,7 @@ const subcats = subcatsData as Record<string, SubcatMeta>;
 
 export const dynamic = 'force-static';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   if (shouldSkipStaticGen()) return [];
   return Object.keys(subcats)
     .filter((s) => subcats[s].toolCount > 0)

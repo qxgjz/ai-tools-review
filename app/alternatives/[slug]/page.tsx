@@ -41,7 +41,7 @@ interface AlternativePage {
 
 export const dynamic = 'force-static';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   if (shouldSkipStaticGen()) return [];
   return alternativesData.map((item: AlternativePage) => ({
     slug: item.slug,

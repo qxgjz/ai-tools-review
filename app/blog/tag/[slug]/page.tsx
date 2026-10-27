@@ -24,9 +24,9 @@ interface TagPageProps {
 }
 
 export const dynamic = 'force-static';
-export const dynamicParams = false;
+// r69 GH-20261027-012: removed dynamicParams=false (Next14.2.5 dev+output:export bug: async generateStaticParams not detected; static export serves only generated params anyway)
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const tagSlugs = new Set<string>();
   posts.forEach((post: any) => {
     (post.tags || []).forEach((tag: string) => {

@@ -506,7 +506,7 @@ const CATEGORIES: Record<
 
 export const dynamic = 'force-static';
 
-export function generateStaticParams() {
+export async function generateStaticParams() {
   const categories = new Set(toolsData.map((t) => t.category));
   if (shouldSkipStaticGen()) return [];
   return Array.from(categories).map((slug) => ({ slug }));
