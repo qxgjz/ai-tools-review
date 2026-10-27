@@ -507,7 +507,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-10-27T11:06:55",
+  "last_updated": "2026-10-27T13:28:22+08:00",
   "completed_tasks": [
     {
       "id": "SEO-COMPARE-PAGE-1MB-20261025",
@@ -4029,7 +4029,7 @@
     },
     {
       "id": "P1-GSC-QUERY-DATA-GAP-20261025",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "架构师",
@@ -4040,8 +4040,8 @@
       "created_at": "2026-10-25T11:16:27",
       "created_date": "2026-10-25",
       "notes": "r60 调查：scripts/ 目录无 fetch_gsc.py，grep -site: 仅命中 r14/r15_research.py（旧研究脚本）。-site: 过滤需分析师窗口确认 GSC 拉取脚本实际路径后自修（脚本非架构师窗口资产）。",
-      "completed_at": "2026-10-26 22:48:17",
-      "evidence": "fetch_gsc.py加-site:过滤(clean_rows)+query rowLimit=25, 本地实跑验证新报告Top Queries 0处-site:(8干净行), workflow gsc-fetch.yml无语法问题/secret正常; 数据面r28-r31报告已无污染",
+      "completed_at": "2026-10-27 13:28:22",
+      "evidence": "r65b已修fetch_gsc.py(clean_rows过滤-site: + rowLimit 25); r68 2026-10-27 复查: latest_report_2026-10-27.md Top Queries 0处 -site:(干净行 ai-native ide adoption metrics/github copilot...pricing/tabbyml 等), workflow gsc-fetch.yml 无语法问题, 污染已清",
       "reopened_at": "2026-10-27T07:40:00",
       "commander_note": "重开: notes显示阻塞未闭环,需分析师确认fetch_gsc.py路径"
     },
@@ -6623,7 +6623,7 @@
     },
     {
       "id": "AUTO-REDIRECT-SPIKE-20261027",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window1",
@@ -6632,7 +6632,9 @@
       "task": "GSC 索引报告实抓（10-27）：auto_redirect 9→94 暴增（+85，noindex 5→33），疑似 article-api-* 时间戳 URL/.md 后缀及新页面 301 链；排查并清理重定向链（与 ARTICLE-API-URL-CLEAN 联动）",
       "source": "index_snapshot_2026-10-27",
       "data_verified": true,
-      "created_at": "2026-10-27T09:16:06"
+      "created_at": "2026-10-27T09:16:06",
+      "completed_at": "2026-10-27 13:28:22",
+      "evidence": "r68 2026-10-27: 根因=CF Pages _redirects 不支持非3xx状态码(官方文档 Rewrites other status codes ❌)，原 /blog/article-api-* 410 规则被忽略线上实测404；修复①app/robots.ts 加 Disallow /blog/article-api-(*+Googlebot+Bingbot 三块) 阻断新抓取 ②public/_redirects 删除无效410行+保留11条具体301规则合并权重到规范文章 ③线上实测: 已映射变体301→规范、未映射变体404(Google同等移除)、tools/category无斜杠308归一属良性。tsc=0/build=0，待部署"
     },
     {
       "id": "P0-FEATURED-LISTING-TIER-20261027",
@@ -6900,7 +6902,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-27T09:16:06",
-  "last_action": "r67架构师: GEO修复2项 (llms-full 916/916覆盖 + guide页Article schema); 内容类审计发现与既有5条创作家待办重叠不重复开单",
+  "last_action": "r68架构师: P0 AUTO-REDIRECT-SPIKE 修复(robots Disallow article-api + _redirects删无效410) + P1 GSC-QUERY-DATA-GAP复查completed; GEO审计7.8/B Crawler9.1; 3 blocker保持",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",

@@ -62,3 +62,35 @@
 ### 经验
 - llms-full 覆盖核验方法：sitemap <loc> vs llms-full 内 URL 集合做差集（rstrip('/') 归一），可复现。
 - generate_llms_full.py 现依赖 out/sitemap.xml（build 后运行），已做容错（无 out 则跳过段）。
+
+## r68（2026-10-27 第三轮，P0 AUTO-REDIRECT-SPIKE 修复轮）
+
+### 待办核对（统一命令）
+- 架构师 pending 6 条：**P0 AUTO-REDIRECT-SPIKE-20261027**（本轮处理）+ P0-BING-WMT（缺 key blocker）+ P1 CLAUDE-SEO（缺 anthropic key blocker）+ P1 GA4-SG-BOT（CF WAF 人工 blocker）+ P1 GSC-QUERY-DATA-GAP（本轮复查 completed）+ P1 INDEX-41（10-30 复查未到期）
+- 处理 2 条（1 P0 + 1 P1），3 blocker 保持，1 未到期。
+
+### P0 AUTO-REDIRECT-SPIKE-20261027 修复（根因→最小改动→验证）
+- **现象**：GSC 索引报告 auto_redirect 9→94 暴增（10-27 实抓），noindex 5→33（已核：375 本地 noindex 中 ~300 为 /blog/tag/* 设计性 noindex，subcategory/compare/category 无误设）
+- **复现**：线上实测 `/blog/article-api-20260999-...` 未映射变体返回 **404**（预期 410）→ 410 规则未生效
+- **根因**：**CF Pages _redirects 官方不支持非 3xx 状态码**（文档 "Advanced redirects: Rewrites (other status codes) ❌"）→ `/blog/article-api-* 410` 被 CF 静默忽略
+- **最小改动**：
+  1. `app/robots.ts`：* 块 + Googlebot + Bingbot 三处 Disallow `/blog/article-api-`（源头阻断新抓取）
+  2. `public/_redirects`：删除无效 410 行（注释说明根因），保留 11 条 article-api 具体 301 规则（权重合并到规范文章）；未映射变体由 Pages 默认 404（Google 对 404/410 同等移除）
+- **验证**：线上已映射变体 301→规范 ✓；未映射变体 404（CF 默认，不可改 410）✓；tools/category 无斜杠 308 归一属良性（CF 自动尾斜杠）
+
+### P1 GSC-QUERY-DATA-GAP-20261025 复查
+- evidence 已存在（r65b: fetch_gsc.py clean_rows 过滤 -site: + rowLimit 25，本地实跑 0 处）
+- r68 复查 latest_report_2026-10-27.md：Top Queries 全部干净行（ai-native ide adoption metrics / github copilot...pricing / tabbyml 等），**0 处 -site:** → completed + completed_at
+
+### GEO 审计（实跑 stdout，第二轮为准）
+- **Overall 7.8/10 B**；AI Crawler **9.1/10**（10 accessible / CCBot blocked 有意）；llms.txt 5.0/10（**线上读取 timeout 扣分，非配置问题**，r67 同配置 10/10，本机直连死路）；AEO 10.0/10；GEO Content 7.1/10
+- 第一轮实跑 Crawler 0/0 = 网络瞬时失败（v66/v67 已证），第二轮恢复 10 accessible
+- 内容类发现（GEO Content 专家引述/实例仍缺）与既有 5 条 geo_audit 创作家待办重叠，不重复开单；本轮无新技术类 GEO 问题
+
+### 门控/部署
+- npx tsc --noEmit=0 / npm run build=0；out/robots.txt 含 Disallow /blog/article-api- ✓、out/_redirects 无 410 ✓
+- commit + push + Actions + 线上验证见提交说明
+
+### 经验
+- **CF Pages _redirects 只支持 3xx 重定向（301/302/303/307/308），410/404 规则无效**（官方文档 Advanced redirects Rewrites ❌）；"410 兜底"类规则须改用 Pages Functions 或接受默认 404
+- article-api 变体治理三件套：robots Disallow（源头）+ 具体 301（权重合并）+ 默认 404（移除信号）

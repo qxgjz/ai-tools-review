@@ -17,12 +17,16 @@ export default function robots(): MetadataRoute.Robots {
           '/account',
           '/settings',
           '/private',
+          // architect r68 (AUTO-REDIRECT-SPIKE-20261027): 屏蔽遗留 article-api 伪 URL 变体，
+          // 防止 Google/Bing 继续发现并标记"自动重定向"（已由 _redirects 301 具体规则 + 410 兜底）
+          '/blog/article-api-',
         ],
       },
       // Google 爬虫特殊配置
       {
         userAgent: 'Googlebot',
         allow: '/',
+        disallow: ['/blog/article-api-'],
         crawlDelay: 1,
       },
       // Google 图片爬虫
@@ -34,6 +38,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: 'Bingbot',
         allow: '/',
+        disallow: ['/blog/article-api-'],
         crawlDelay: 1,
       },
       // 百度爬虫

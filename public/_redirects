@@ -178,6 +178,8 @@
 /index.html / 301
 /index / 301
 
-# r63 P0-ARTICLE-API-URL-CLEAN-20261026: legacy article-api pseudo URLs -> canonical article or 410
+# r63 P0-ARTICLE-API-URL-CLEAN-20261026: legacy article-api pseudo URLs -> canonical article
+# r68 P0-AUTO-REDIRECT-SPIKE-20261027: CF Pages _redirects 不支持非3xx状态码(官方: Rewrites other status codes ❌),
+# 原 `/blog/article-api-* 410` 规则被 CF 忽略(线上实测404), 已删除; 未映射变体由 Pages 默认 404 处理
+# (Google 对 404/410 同等视为 URL 移除); 新抓取由 robots.txt Disallow /blog/article-api- 阻断 (r68)
 /blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md /blog/midjourney-v7-review-2026/ 301
-/blog/article-api-* 410
