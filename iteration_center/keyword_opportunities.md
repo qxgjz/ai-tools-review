@@ -611,3 +611,19 @@
 ### 说明
 - 本轮 3 词为任务式长尾格式（"best AI tool for X"），与 r29-r33 的 best-of 大词（"best AI X tools 2026"）不同格式，非重复开单
 - 搜索量：全部"预估"（依据=SERP 竞争度 + 竞品分类存在性；无付费搜索量数据源）
+
+
+## r37（2026-10-28 09:04 · 竞品缺口 SERP 验证档）
+
+> Total keywords analyzed: 5（本轮）；搜索量=预估（依据=SERP 竞争度+竞品分类存在性）
+
+| # | 关键词 | 竞争度 | 本地覆盖 | 建议标题 | slug | 判定 |
+|---|---|---|---|---|---|---|
+| 1 | best AI e-commerce tools | **Medium** | 0 | Best AI E-commerce Tools 2026: 11 Tested | best-ai-ecommerce-tools-2026 | **P0** |
+| 2 | best AI text generators | **Medium** | 0 | Best AI Text Generators 2026: 12 Tools Tested | best-ai-text-generators-2026 | **P0** |
+| 3 | best AI chatbot builders | **Medium** | 0 | Best AI Chatbot Builders 2026: 9 No-Code Platforms | best-ai-chatbot-builders-2026 | **P0** |
+| 4 | best AI design generators | **Medium** | 0 | Best AI Design Generators 2026: 10 Tools | best-ai-design-generators-2026 | P1 |
+| 5 | best AI ticketing management tools | **High** | 0 | Best AI Ticketing Tools 2026: 12 Automated Systems | best-ai-ticketing-tools-2026 | P1 |
+
+### SERP 验证依据
+见 competitor_analysis_2026-10-28.md SERP 验证章节（5 词前 6-10 竞品实录）

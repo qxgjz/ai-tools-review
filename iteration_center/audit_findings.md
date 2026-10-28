@@ -4484,3 +4484,50 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 | P0-TRAFFIC-CLIFF-20260924（流量悬崖） | focus/archived_todos 均无记录 | 已丢失（历史清理覆盖），git 历史可溯源；行为影响已由 r30-r33 持续监控替代 |
 | P1-OPENSER（openserp 排名核对） | archived_todos 内 P1-TOOL-OPENSERP-001 **completed** | 已闭环归档 ✅ |
 | GSC-QUOTA-RERUN-20261012（配额重跑） | 本轮随 P0-INDEX-SNAPSHOT-RERUN **completed** | 已闭环（indexing_snapshot_20261027 实抓）✅ |
+
+
+## 2026-10-27 16:30 设计师巡检（定时任务轮3）
+
+### A. 文章配图核验（batch61-63 新发布 6 篇，逐篇线上+本地双通道核验）
+
+**方法**：①线上核验——web_fetch 打开线上文章 URL 比对 title/h1 与 slug 主题；②本地核验——逐张 Read 本地 webp 图片核验内容为对应工具真实界面（Playwright 因代理 7890 节点故障+chromium 版本缺失降级改用 Edge+云端抓取）。
+
+| 文章 | h1 vs slug | 配图 | 内容核验 |
+|---|---|---|---|
+| best-ai-churn-prediction-tools-2026 | ✅ 一致 | pecan-home + amplitude-home | ✅ Pecan官网"Predictive AI for business teams" / Amplitude官网"A new era for product teams" |
+| best-ai-health-tools-2026 | ✅ 一致 | fitbod-home + headspace-home | ✅ Fitbod官网移动端导航 / Headspace官网"Sleep better all with Headspace" |
+| best-ai-writing-generators-2026 | ✅ 一致 | copyai-home + rytr-home | ✅ copy.ai官网"First AI-Native GTM Platform" / Rytr官网真实 |
+| best-ai-email-assistants-2026 | ✅ 一致 | lindy-home + alfred-home | ✅ Lindy官网"Hire Lindy, get it done." / alfred_官网真实 |
+| best-ai-text-to-video-generators-2026 | ✅ 一致 | kling-home + hailuo-home | ✅ Kling AI官网（前日已验）/ MiniMax Hailuo创作平台"H3 LIVE NOW" |
+| best-ai-fun-tools-2026 | ✅ 一致 | giftassistant-home + giftgenie-home | ✅ giftassistant.io真实页面 / GiftGenie真实页面 |
+
+**结论：6 篇 × 12 张配图全部为对应 AI 工具真实官网/产品界面针对性截图，0 错误。**
+
+**复核 GH-20261026-011（suno-vs-udio-2026）**：线上 title 仍为 "Suno AI Review 2026: Is the $10/mo Pro Plan Worth It?"，**未修复**，继续 pending，待创作家重写。
+
+### B. shadcn/ui 组件巡检（本地 dev server，5页 × 1440/375）
+
+- 横向溢出：5页 × 2视口 **全部无溢出** ✅
+- 破图：全部为空 ✅
+- home/blog/compare 渲染正常（home 6btn/2input、blog 71btn、compare 35btn/2input）
+- **⚠️ 新发现 P1 问题（GH-20261027-012）**：本地 `npm run dev` 下 `/tools/[slug]` 与 `/blog/[slug]` 动态路由 **500**（Next 14.2.5 报 "missing exported function generateStaticParams()"，但文件实际已导出同步 generateStaticParams + `revalidate=3600`（ISR）+ `output:'export'` 配置组合疑似触发 dev 模式兼容缺陷；清 .next 缓存后复现，排除缓存脏）。**线上同代码 200 正常**（10-26 线上核验通过），故为 dev 预览工作流阻断（影响"设计师改后本地预览确认"铁律）＋潜在构建风险待验证。工作区另见 ux1024 窗口未提交改动（app/page.tsx.bak_ux1024 / globals.css.bak_ux1024），并行修改中，未触碰。
+- 观察项（P2，未开单）：blog 页 console 有 React hydration 警告 "Prop `src` did not match"（BlogListClient 图片 src 服务端/客户端不一致，dev-only 出现，线上未见，记录观察）。
+
+
+## r37（2026-10-28 · 分析师-数据洞察 SOP）
+
+### P1: 代理故障第 5 轮——GSC 新窗口数据持续缺失
+- **现象**：fetch_gsc.py 失败（ProxyError: WinError 10061 拒绝连接，7890 无监听响应）；competitor_gap 实抓失败（futurepedia sitemap 0 页）
+- **影响**：最新 GSC 报告仍为 09-26~10-25（166 imp/0 clk/14.61）；live_pull 仍为 10-24；竞品对比依赖 10-25 缓存
+- **处置**：已降级用缓存+live_pull 完成 CTR/缺口分析；请用户检查 Clash 节点有效性
+
+### P1: article-api-* 时间戳污染 URL 持续在 GSC 页面列表
+- **现象**：live_pull pages 中 article-api-20260904-214749-creatium-coach-review-2025-...-md 排名 6（imp 1）；article-api-20260903-* 排名 4（imp 3）
+- **关联**：AUTO-REDIRECT-SPIKE-20261027（r33 已开，架构师 P0）+ ARTICLE-API-URL-CLEAN 系列——污染 URL 仍在消耗抓取配额并造成重复内容风险
+- **建议**：架构师加速 URL 清洗（.md 后缀 + 时间戳 301 → 规范 slug）
+
+### P1: /ai-policy 与 ai-coding-tools-comparison 低 CTR（已开打磨师单）
+- /ai-policy pos8 CTR 0%；ai-coding-tools-comparison-2026 pos5.5 CTR 0%（对比页蚕食 best-ai-coding-tools 的曝光，应差异化 title）
+
+### 已核对：REPORT-GAP 无真实缺口
+- audit_findings 133 个 ID vs focus+archived_todos 全量对照：97 缺失均为历史泛 ID 或已被日期变体覆盖，6+2 个点名 ID 全部有主，未重复补录
