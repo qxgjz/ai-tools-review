@@ -1,10 +1,11 @@
 # -*- coding: utf-8 -*-
 """
 竞品 sitemap 抓取前置环境检测 + 缓存（SOP 动作3+4）
-- 前置检测：zens_ink 可导入 + 网络连通（代理 7890 或直连）
+- 前置检测：zens_ink 可导入 + 网络连通（优先代理 7890，代理不可用自动回退直连）
 - 在线：运行 zens_ink.competitor_gap，成功后把竞品 /ai-tools/ 分类清单缓存到
         iteration_center/competitor_sitemap_cache.json
 - 离线：明确报 [ENV ERROR]，不静默降级；如有缓存则回退读取缓存并退出码 3
+- 网络通道：输出 CHANNEL=proxy|direct；direct 表示 Clash 7890 未运行已自动回退直连
 
 用法:
   python scripts/seo_toolkit/competitor_gap_runner.py            # 完整流程
@@ -13,7 +14,7 @@
 退出码:
   0 = 成功（含缓存命中回退）
   2 = zens_ink 模块缺失（环境错误）
-  3 = 网络不可用且无缓存（环境错误）
+  3 = 网络不可用且无缓存（环境错误；直连也失败时才报此码）
   4 = competitor_gap 运行失败
 """
 import sys, os, json, re, subprocess, datetime, urllib.request
@@ -28,17 +29,31 @@ SITES = {
 PROXY = 'http://127.0.0.1:7890'
 UA = ('Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 '
       '(KHTML, like Gecko) Chrome/126.0 Safari/537.36')
+CHANNEL = 'unknown'  # proxy|direct，实测通道
 
 
-def _opener():
-    """返回走代理 127.0.0.1:7890 + UA 的 opener；代理不可用时回退直连"""
-    handlers = []
+def _fetch(url, timeout):
+    """请求 url：优先代理 7890，代理失败自动回退直连。
+
+    urllib 的 ProxyHandler 不做自动回退：代理不可达时 open() 直接抛错。
+    实测（r72）：Clash 7890 未运行时脚本误报 [ENV ERROR] 网络不可用，
+    即使直连可用也无法抓取；且对代理根路径发探测 GET 会被 HTTP 代理拒绝，
+    必须把"实际请求失败→回退直连"做成请求级 fallback。"""
+    global CHANNEL
+    req = urllib.request.Request(url, headers={'User-Agent': UA})
     try:
-        ph = urllib.request.ProxyHandler({'http': PROXY, 'https': PROXY})
-        handlers.append(ph)
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({'http': PROXY, 'https': PROXY}))
+        resp = opener.open(req, timeout=timeout)
+        CHANNEL = 'proxy'
+        return resp
     except Exception:
-        pass
-    return urllib.request.build_opener(*handlers)
+        CHANNEL = 'direct'
+        opener = urllib.request.build_opener(
+            urllib.request.ProxyHandler({}))  # {} = 禁用代理，直连
+        return opener.open(
+            urllib.request.Request(url, headers={'User-Agent': UA}),
+            timeout=timeout)
 
 
 def check_zens_ink():
@@ -51,9 +66,7 @@ def check_zens_ink():
 
 def check_network(timeout=12):
     try:
-        req = urllib.request.Request('https://futurepedia.io/sitemap.xml',
-                                     headers={'User-Agent': UA})
-        _opener().open(req, timeout=timeout)
+        _fetch('https://futurepedia.io/sitemap.xml', timeout).close()
         return True
     except Exception:
         return False
@@ -86,8 +99,7 @@ def save_cache(data):
 
 
 def fetch_categories(url, timeout=25):
-    req = urllib.request.Request(url, headers={'User-Agent': UA})
-    with _opener().open(req, timeout=timeout) as resp:
+    with _fetch(url, timeout) as resp:
         xml = resp.read().decode('utf-8', errors='ignore')
     return extract_categories(xml)
 
@@ -98,6 +110,7 @@ def main():
     zens_ok = check_zens_ink()
     net_ok = check_network()
     print(f'zens_ink 可导入: {zens_ok}')
+    print(f'网络通道: {CHANNEL}（proxy=走7890 / direct=代理不可用已回退直连）')
     print(f'网络连通 (futurepedia sitemap): {net_ok}')
 
     if not zens_ok:
@@ -138,7 +151,7 @@ def main():
             print(f'  {name}: {len(cats)} 分类')
         except Exception as e:
             cache_data['sites'][name] = {'url': url, 'error': str(e)}
-            print(f'  {name}: 抓取失败 - {e}')
+            print(f'  {name}: 抓取失败 - {e}（通道={CHANNEL}，若为 direct 且仍失败说明直连也不通，需开启 Clash 或检查网络）')
     save_cache(cache_data)
     print(f'[OK] 竞品 sitemap 分类清单已缓存: {CACHE_PATH}')
     sys.exit(0)
