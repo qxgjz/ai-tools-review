@@ -166,10 +166,12 @@ export default function robots(): MetadataRoute.Robots {
       // (保留全部 AI 搜索 bot 允许，GEO 不倒退)
       // architect r43 (analyst_20261021): CCBot 放行 llms 文件+博客目录——Common Crawl
       // 数据源影响 GPT 系训练语料可见性，博客内容为主 AI 引用来源；其余路径保持 Disallow
+      // architect r74 (2026-10-29): GEO 审计发现 CCBot Disallow:/ 使全站除 llms/博客外不可见,
+      // AI 可见性最大化 → 与其他 AI crawler 一致放开全站(allow:/ + 有限 disallow), 消除脚本 blocked 误报
       {
         userAgent: 'CCBot',
-        allow: ['/llms.txt', '/llms-full.txt', '/blog/'],
-        disallow: ['/'],
+        allow: '/',
+        disallow: ['/api/', '/og/', '/cdn-cgi/', '/admin', '/private'],
       },
       {
         userAgent: 'PetalBot', // 华为 Petal Search 采集
