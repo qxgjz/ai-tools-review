@@ -91,3 +91,34 @@
 ### 经验
 - **urllib ProxyHandler 无自动回退**：注释承诺"回退直连"必须实测验证；正确模式 = 请求级 try 代理 → except 直连（对代理根路径发探测 GET 会被 HTTP 代理拒绝，探测式方案不可靠）
 - 工具瘦身法：脚本低效点优先找"失败路径"（环境检测误报/错误提示含糊/静默降级），修失败路径比调参更能降任务完成时间
+## r73（2026-10-28 第八轮）
+
+### 待办核对（统一命令）
+- 架构师 pending 7 条：P0-BING（第7次复验无key）+ P0-EXPOSURE-CLIFF（本轮completed）+ P1-CLAUDE-SEO + P1-GA4-SG-BOT + P1-MOBILE-EXPOSURE + GH-20261028-014（评估已出）+ GH-20261026-009（本轮completed复核）+ GH-20261026-010（本轮completed复核）
+- 处理 **3 条 completed**（P0-EXPOSURE-CLIFF + GH-009 + GH-010），GH-014 出评估转创作家
+
+### P0-EXPOSURE-CLIFF-20261028 完成（曝光断崖根因修复）
+- **现象**：GSC 双窗口曝光 2008 imp (08-29~09-26) → 170 imp (09-27~10-26) = **-91.5%**；与 9-28 dd710b1 批量 301（3 slug 改名+删4重复+7条301）+ auto_redirect 9→94 暴增吻合
+- **根因定位**（线上实测）：public/_redirects 的 CF 精确匹配只匹配**不带尾斜杠**源；**带尾斜杠 article-api 请求返回 404**（非 301）。Google 收录的旧 URL 多为带斜杠形式 → 抓取 404 → 无 301 信号 → auto_redirect/discovered_not_indexed 堆积 + 旧曝光消失
+- **修复**：为 7 个唯一 article-api 源追加**带尾斜杠 301 变体规则**（commit eb56aa0，13 行）
+- **门控**：tsc=0 ✓ build=0 ✓（out/_redirects 含 7 条新规则，核验 7/7）
+- **部署**：PUSH_OK（首轮成功）→ Actions 三 job 全 success（Deploy 判定，attempt 12）
+- **线上验证**：3 个带斜杠 article-api URL 均 301 到 canonical（此前 404）→ **ALL_301_OK=True**
+- **恢复方案**：canonical 新 URL 已由 IndexNow 覆盖（r70 41 页 100%）；robots Disallow /blog/article-api- 阻断新抓取（r68）；待 Google 复审 auto_redirect 收敛（301 中间态 1-2 周）；10-30 复查点复核收录率
+
+### GH-20261026-009 / GH-20261026-010 复核完成（r63 已修复，线上验证）
+- GH-009 CSP：public/_headers CSP 白名单已含 analytics.ahrefs.com / static.cloudflareinsights.com / gateway.umami.is / giscus.app（script-src+connect-src）；线上首页 200 + CSP 头含全部 4 域名 → completed
+- GH-010 Vercel Analytics：app/layout.tsx 已移除 @vercel/analytics（注释标明 CF Pages 无该端点）；线上 HTML 无 /_vercel/insights 引用 → completed
+
+### GH-20261028-014 评估（slug 错配，架构师结论）
+- slug=best-ai-search-engines-2026 与内容（Best AI Research Tools: Perplexity/Elicit/Consensus 等10款）错配
+- **结论**：title/h1/正文自洽（Research Tools），现有 research 流量不受损；不推荐改 slug/重写正文（需 301，与 P0-EXPOSURE-CLIFF 恢复期冲突）；推荐创作家另写 best AI search engines 新文（Perplexity/ChatGPT Search/Copilot 等）抢该词 → architect_eval 已写入 state，执行转创作家
+
+### GEO 审计（r73 实跑 stdout）
+- Overall **3.9/10 D**（AI Crawler 0.0 + llms.txt 0.0 + AEO 10.0 + GEO Content 5.7）——**0.0 系本机全部 crawler 探测 timeout**
+- 云端验证：web_fetch(disable_cache) robots.txt 完好（GPTBot/ClaudeBot/Claude-Web/PerplexityBot/Claude-SearchBot/Claude-User/Perplexity-User 全 Allow+有限 Disallow）→ **配置完好，网络波动所致**（r69/r70/r72 同类已证），无新技术问题，不新开待办
+
+### 经验
+- **CF _redirects 精确匹配**：source 不带尾斜杠则不匹配带尾斜杠请求 → 线上 404。旧 URL 修复必须**同时覆盖带/不带斜杠两种变体**（GSC 收录 URL 多为带斜杠形式）
+- **曝光断崖核查链**：GSC 双窗口对比 → git log 定位时间点变更 → 线上实测 301/404 行为 → 确认根因 → 最小修复 → 部署验证闭环
+- 待办"被覆盖删除再次恢复"类：先复核代码+线上现状再决定修复或标记完成，避免重复造轮子（GH-009/010 r63 已修）
