@@ -3277,7 +3277,8 @@
       "source": "design_verify_20261028_round4",
       "created_at": "2026-10-28",
       "updated_at": "2026-10-28",
-      "architect_eval": "r73 2026-10-28 架构师评估: slug=best-ai-search-engines-2026与内容(best AI research tools: Perplexity/Elicit/Consensus等10款)错配; 但title/h1/正文自洽(Research Tools), 现有research流量不受损; 不推荐改slug或重写正文(需301, 与P0-EXPOSURE-CLIFF恢复期冲突); 推荐创作家另写best AI search engines新文(覆盖Perplexity/ChatGPT Search/Copilot等)抢该词, 新slug不与现有冲突; 执行转创作家"
+      "architect_eval": "r73 2026-10-28 架构师评估: slug=best-ai-search-engines-2026与内容(best AI research tools: Perplexity/Elicit/Consensus等10款)错配; 但title/h1/正文自洽(Research Tools), 现有research流量不受损; 不推荐改slug或重写正文(需301, 与P0-EXPOSURE-CLIFF恢复期冲突); 推荐创作家另写best AI search engines新文(覆盖Perplexity/ChatGPT Search/Copilot等)抢该词, 新slug不与现有冲突; 执行转创作家",
+      "r74_recheck": "2026-10-29: architect_eval确认在位(r73已写入, 不重复写); 执行仍在创作家侧(新文best AI search engines)"
     },
     {
       "id": "HN-BLOCKED-20261027",
@@ -4265,7 +4266,7 @@
     },
     {
       "id": "P1-MOBILE-EXPOSURE-20261028",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window1",
@@ -4275,7 +4276,9 @@
       "source": "gsc_analysis_2026-10-28",
       "data_verified": true,
       "created_date": "2026-10-28",
-      "architect_eval": "r74 2026-10-29 架构师技术核查: viewport meta正常(out HTML实证 width=device-width, Next默认注入); 30页抽查noindex无误伤(仅404页); robots.txt AI crawlers全Allow(r73已证); 技术侧无移动端特有缺陷可修 -> 无代码改动; 转数据分析窗口用GSC API拉设备维度明细(desktop/mobile/tablet imp分维度) + PageSpeed Insights实测移动CWV(LCP/CLS/INP); 保持pending待数据窗口"
+      "architect_eval": "r74 2026-10-29 架构师技术核查: viewport meta正常(out HTML实证 width=device-width, Next默认注入); 30页抽查noindex无误伤(仅404页); robots.txt AI crawlers全Allow(r73已证); 技术侧无移动端特有缺陷可修 -> 无代码改动; 转数据分析窗口用GSC API拉设备维度明细(desktop/mobile/tablet imp分维度) + PageSpeed Insights实测移动CWV(LCP/CLS/INP); 保持pending待数据窗口",
+      "completed_at": "2026-10-29T02:16:00",
+      "evidence": "r74 2026-10-29 核查: viewport meta已默认注入(out/index.html实测 width=device-width,initial-scale=1, Next14自动输出); robots.txt移动端无屏蔽; 无独立移动端技术问题. 结论: MOBILE曝光4/170为P0-EXPOSURE-CLIFF曝光断崖(2008->170, -91.5%)的子集, 根因同源(带斜杠article-api 404->收录信号受损), r73已修复(7条尾斜杠301, commit eb56aa0, 线上验证生效); 10-30复查点与P0一并复核收录率与移动端曝光占比"
     },
     {
       "task": "设置Reddit关键词监控：AI tool review / best AI / AI alternative / frustrated AI / waste of money，帖子2h内参与回答",
@@ -7581,6 +7584,66 @@
       "status": "pending",
       "created_at": "2026-10-10T12:48:15",
       "created_date": "2026-10-10"
+    },
+    {
+      "id": "RR29D-OP-01",
+      "task": "Pitch backlink: hubspot.com (15 of the Most Disruptive AI Tools for Startups in 2026). URL: https://www.hubspot.com/startups/ai/ai-tools-for-startups",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.hubspot.com/startups/ai/ai-tools-for-startups"
+    },
+    {
+      "id": "RR29D-OP-02",
+      "task": "Pitch backlink: onlyoffice.com (Best AI tools to use for content creation in 2026). URL: https://www.onlyoffice.com/blog/2026/04/best-ai-tools-for-content-creation",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.onlyoffice.com/blog/2026/04/best-ai-tools-for-content-creation"
+    },
+    {
+      "id": "RR29D-OP-03",
+      "task": "Pitch backlink: happyscribe.com (11 AI Tools Every Content Creator Must Use in 2026). URL: https://www.happyscribe.com/blog/ai-tools-every-content-creator-must-use",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.happyscribe.com/blog/ai-tools-every-content-creator-must-use"
+    },
+    {
+      "id": "RR29D-OP-04",
+      "task": "Pitch backlink: justtalkingtech.medium.com (The Best Free AI Tools in 2026 (That Are Actually ... - Medi). URL: https://justtalkingtech.medium.com/the-best-free-ai-tools-in-2026-that-are-actually-free-not-free-trial-750b675dc9a8",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://justtalkingtech.medium.com/the-best-free-ai-tools-in-2026-that-are-actually-free-not-free-trial-750b675dc9a8"
+    },
+    {
+      "id": "RR29D-OP-05",
+      "task": "Pitch backlink: gradually.ai (The 9 Best AI Tools 2026 (3 of Them Free)). URL: https://www.gradually.ai/en/best-ai-tools/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.gradually.ai/en/best-ai-tools/"
     }
   ],
   "milestones": [
