@@ -1484,6 +1484,21 @@
   ],
   "next_iteration_focus": [
     {
+      "id": "LEARN-20261029-EEAT",
+      "task": "E-E-A-T落地：每篇加具名作者byline+author bio页(LinkedIn/年限/认证)；每篇2-3条主源外链(官方文档/研究原报告，非二手博客)；文首加1个first-hand experience bullet(实测截图/真实使用时长/具体踩坑)；统计数据必须带(年份+机构)；YMYL类(隐私/定价/安全)加reviewed by+更新日期；Article/Person schema结构化数据；季度E-E-A-T自检清单",
+      "priority": "P1",
+      "assigned_to": [
+        "打磨师",
+        "创作家"
+      ],
+      "status": "pending",
+      "source": "learn-eeat-20261029",
+      "created_at": "2026-10-29T06:13:34+08:00",
+      "close_note": "",
+      "completed_at": "",
+      "progress_note": "E-E-A-T学习落地任务"
+    },
+    {
       "id": "AFF-APPLY-COPYAI",
       "priority": "P0",
       "status": "pending",
