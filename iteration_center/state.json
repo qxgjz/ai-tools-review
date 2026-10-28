@@ -1951,7 +1951,7 @@
       "task": "本周E2E走查P0：ChatGPT引用87%对应Bing top结果（Yext 2026研究），接入Bing Webmaster Tools：注册aitoolcrux.com验证、提交sitemap、配置IndexNow（如已配则核对生效）。完成后GEO基线解锁（ChatGPT/Perplexity可见性测试）",
       "source": "commander_weekly_review_20261026",
       "created_date": "2026-10-26",
-      "blocker": "卡点未解除: api_keys.json第8次复验(2026-10-29 r74)仍无Bing Webmaster Tools API key, 需指挥官提供key"
+      "blocker": "卡点未解除: api_keys.json第9次复验(2026-10-29 r75)仍无Bing Webmaster Tools API key, 需指挥官提供key"
     },
     {
       "id": "P0-CMD-CREATOR-SPEED-20261024",
@@ -3278,7 +3278,8 @@
       "created_at": "2026-10-28",
       "updated_at": "2026-10-28",
       "architect_eval": "r73 2026-10-28 架构师评估: slug=best-ai-search-engines-2026与内容(best AI research tools: Perplexity/Elicit/Consensus等10款)错配; 但title/h1/正文自洽(Research Tools), 现有research流量不受损; 不推荐改slug或重写正文(需301, 与P0-EXPOSURE-CLIFF恢复期冲突); 推荐创作家另写best AI search engines新文(覆盖Perplexity/ChatGPT Search/Copilot等)抢该词, 新slug不与现有冲突; 执行转创作家",
-      "r74_recheck": "2026-10-29: architect_eval确认在位(r73已写入, 不重复写); 执行仍在创作家侧(新文best AI search engines)"
+      "r74_recheck": "2026-10-29: architect_eval确认在位(r73已写入, 不重复写); 执行仍在创作家侧(新文best AI search engines)",
+      "r75_recheck": "2026-10-29: architect_eval在位, 执行在创作家侧, 架构师侧无动作"
     },
     {
       "id": "HN-BLOCKED-20261027",
