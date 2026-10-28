@@ -653,3 +653,30 @@ AI 功能总曝光 **8 次**：suno-review-2026(3) / gemini_38_flash_review(2) /
 
 ### 结论
 Total keywords analyzed: 本轮新增 0 个 P0/P1 候选（Easy Wins=0：排名 20-50 有曝光词 0 个，诚实跳过）；累计 SERP 验证词 70+。
+
+
+## r39（2026-10-28 21:2x · GSC 实拉修正 + courses 结构变化档）
+
+### GSC 实拉（fetch_gsc 重跑修正）
+| 指标 | 本期 09-27~10-26 | 上期 08-29~09-26 |
+|---|---|---|
+| Impressions | **188**（修正 +10.6%，r38 为 170） | 2008（断崖 -90.6%） |
+| Clicks | 0 | 9 |
+| Avg Position | 13.86（改善，r38 为 14.84） | — |
+| MOBILE | 4 imp（2.1%） | — |
+- 10-26 单日回升 18 imp（9 月底以来峰值），观察是否持续
+- Easy Wins（pos 20-50 有曝光）：0 个（诚实跳过，与 r38 一致）
+
+### SERP 验证（general_search 实搜 2026-10-28）
+| 关键词 | 竞争度 | 前 10 竞品 | 切入角度 |
+|---|---|---|---|
+| ai tools tutorial for beginners | **Medium** | ai4everyone.ai(独立站)/Udemy/Digital for Life/Adobe | 零代码工具上手教程列表 |
+| best free ai courses 2026 | **High** | DataCamp/MIT Learn/Coursera/Dataquest/DEV | 独立测评+资源地图差异化 |
+| best ai productivity tools 2026 | **Medium** | max-productive.ai/vucense.ai(niche)/Digital Trends/Slack | 本地已有 pos10.5 基础，做分类聚合 |
+
+### 关键词分级
+- P0：0 个（无新分类缺口 + Easy Wins=0，诚实记录）
+- P1：3 个 CA 词（见 competitor_analysis r39 段，均含 slug）
+- P2：0 个新
+
+Total keywords analyzed: 累计 70+（r29 起 SERP 验证口径），本轮 SERP 实搜 3 词。

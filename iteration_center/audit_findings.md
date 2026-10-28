@@ -4552,3 +4552,59 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 
 ### 已闭环: AI-OVERVIEWS-BASELINE（Generative AI 基线 8 曝光）
 - CDP 实读（见 state.json evidence）：suno(3)/gemini(2)/首页(1)/cursor(1)/tools-knowledge(1)
+
+
+## 2026-10-28 16:30 设计师巡检（定时任务轮4）
+
+### A. 文章配图核验（batch64-66 新发布 9 篇，本地逐张 Read + 线上 web_fetch 双通道）
+
+**核验范围**：10-28 新发布 6 篇 + 10-27 轮3未核验 3 篇（no-code/research-assistant/business-tools），共 9 篇。
+
+**A1. 有配图 6 篇 / 15 张 — 全部为对应工具真实界面 ✅**
+
+| 文章 | 配图 | 内容核验 |
+|---|---|---|
+| best-ai-text-generators-2026 (10-28) | chatgpt-home / claude-home / jasper-home / writesonic-home | ✅ ChatGPT未登录界面"Ask ChatGPT" / Claude官网"Think fast, build faster" / Jasper官网"Put AI agents to work for marketing" / Writesonic官网"Win customers from AI search" |
+| best-ai-personal-assistant-2026 (10-28) | gemini-chat-ui / chatgpt-app-ui / claude-home | ✅ Gemini官网"Meet Gemini, your personal AI assistant" / ChatGPT界面 / Claude官网 |
+| best-ai-tools-for-startups-2026 (10-28) | notion-ai-product / zapier-home / deel-home | ✅ Notion官网"Where teams and agents Create together"+Ramp HQ / Zapier官网"Welcome to automation in the agentic era" / Deel官网"Hire, manage, pay, & equip anyone" |
+| best-ai-no-code-tools-2026 (10-27) | bubble-home / lovable-home | ✅ Bubble官网"Launch apps, not prototypes" / Lovable官网"Build something Lovable" |
+| best-ai-research-assistant-tools-2026 (10-27) | elicit-home / consensus-home | ✅ Elicit官网"AI for Scientific Research" / Consensus官网"Research starts here" |
+| best-ai-business-tools-2026 (10-27) | clay-home / gong-home | ✅ Clay官网"Build systems to grow revenue" / Gong官网"Revenue AI built to automate handoffs" |
+
+**A2. ⚠️ 配图缺失 3 篇（hasRealScreenshots=True + screenshotCount=2，但正文 0 张图片引用，线上全文无图）**
+
+| 文章 | 线上 title | 证据 |
+|---|---|---|
+| best-ai-essay-writing-tools-2026 (10-28) | "Best AI Essay Writing Tools 2026: QuillBot vs Sudowrite" | posts.json 正文无 ![]() 引用；线上 web_fetch 全文无 webp/img |
+| best-ai-thumbnail-makers-2026 (10-28) | "Best AI Thumbnail Makers 2026: 8 Tested (Canva vs Fotor)" | 同上，全文无图 |
+| best-ai-search-engines-2026 (10-28) | **"Best AI Research Tools 2026: Complete Compariso"** | 同上无图 + **线上自认 "Screenshots: This article is currently text-only. Real product screenshots are being crawled and will be added in the next update"** |
+
+**A3. ⚠️ 内容-URL 错配 1 篇（同 GH-20261026-011 同类问题）**：slug=`best-ai-search-engines-2026` 承诺 search engines，但线上 title/h1 为 "Best AI Research Tools 2026"，正文为 research assistants（Perplexity/Elicit/Consensus...）。→ 开单 GH-20261028-014。
+
+### B. shadcn/ui 组件巡检（本地 dev server，5页 × 1440/375 双视口）
+
+- **GH-20261027-012 复测：已修复 ✅**（10-27 登记 dev 动态路由 500；10-28 本地复测 /tools/chatgpt 与 /blog/[slug] 均 HTTP 200，btns=20/43 渲染正常）。注：该待办已被其他窗口从 state.json 覆盖删除，按 audit_findings 留痕恢复为 completed。
+- 5 页 × 2 视口全部 200、无横向溢出、无破图 ✅（home 6btn/2input、tool 20btn/2input、compare 35btn/2input、article 43btn/1input、blog 75btn/1input）
+- P2 观察项（未开单）：①"Extra attributes from the server: tabindex at h1" hydration 警告（多页出现，焦点管理相关，dev-only）；②article 页 "two children with the same key"；③blog 页 list key prop 警告（已知，BlogListClient）；④home 页 404 资源（favicon 类）。
+
+### C. 待办状态
+- GH-20261028-013（新增 P1）：3 篇新文章配图缺失 + hasRealScreenshots 虚假标记
+- GH-20261028-014（新增 P1）：best-ai-search-engines-2026 内容-URL 错配
+- GH-20261027-012：恢复补录 completed（本地复测修复确认）
+- GH-20261026-011：仍 pending（suno-vs-udio 未修复）
+- GH-20261026-009 / GH-20261026-010：又被覆盖删除，恢复补录 pending（若为指挥官有意关闭请标注，否则需代理恢复后复核线上）
+
+
+## r39（2026-10-28 21:2x · GSC 数据修正 + 竞品结构变化）
+
+### GSC 数据修正（fetch_gsc 重跑）
+- 188 imp / 0 clk / pos 13.86（r38 为 170/14.84，GSC 延迟修正 +10.6%/-0.98 位）；断崖仍 -90.6%（vs 2008）
+- **10-26 单日 18 imp** 为 30 天峰值，观察是否走出低位（P0-EXPOSURE-CLIFF 在池待架构师）
+
+### P1: MOBILE 2.1%（4/188 imp）持续（P1-MOBILE-EXPOSURE 在池未动）
+
+### P1: 竞品变现模式重大变化
+- futurepedia sitemap 531/635 URLs 为 courses（课程变现），工具目录降权。若课程联盟模式验证有效，aitoolcrux 可跟进教程型内容（本轮已开 CA×2）
+
+### P1: 最大曝光页 0 CTR
+- best-ai-coding-tools-2026 pos4.1 imp12（全站曝光 6.4%）0% CTR，已开打磨师单（扩展范围依据）

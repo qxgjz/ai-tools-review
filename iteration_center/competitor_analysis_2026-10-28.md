@@ -40,3 +40,10 @@ ai-detection* / automations* / chatbots★ / churn-management* / copywriting-ass
 - **缺口复核**：72 分类 vs 本地 237 md → 23 个缺口，与 r37 清单一致；copywriting-assistant 与 text-generators 工具重叠不重复开；video-editing 与本地视频类内容疑似覆盖不重复开
 - **结论**：r37 已开 5 个 CA（ecommerce/text-generators/chatbot-builders/design-generators/ticketing）在池未动，本轮无新缺口待办（避免待办池膨胀）
 - topai.tools sitemap 持续 404（第 N 次确认，死路）
+
+
+## r39 复核（21:2x · 代理正常实抓档）
+- **futurepedia sitemap 结构重大变化**：635 URLs 中 **courses=531（83.6%）**、ai-tools 分类页 77、resources=7、learning-paths=3、tutorials=1。**变现模式=课程主导**（此前为工具目录+联盟）。
+- ai-tools 分类 77 个 vs 本地 243 md：12 个名义 GAP（chatbots/productivity/workflows/religion/marketing/project-management/automations/human-resources/presentations/legal/teachers/transcriber）**逐条核对全部已被历史 CA 开单覆盖或本地已有**（HR/presentation/legal/teachers/religion/marketing/project-mgmt/automations 在 r25 大事记，chatbots 在 r37）→ 分类缺口 0 新。
+- **真结构性缺口 = 内容类型**：竞品课程/教程类内容 531+3+7 URLs，我们 0。开 3 条 CA（教程型×2 + productivity 分类聚合×1，全部 SERP 实搜验证）。
+- topai.tools sitemap 404 死路（持续）。

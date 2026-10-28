@@ -7636,6 +7636,97 @@
       "vertical": "agencies",
       "http_status": 200,
       "created_at": "2026-10-28T18:33:40.401585"
+    },
+    {
+      "id": "HN-BLOCKED-20261028",
+      "priority": "P1",
+      "status": "blocked",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "HN publish/comment blocked: ego-browser Chromium does not route through Clash proxy (127.0.0.1:7890). HN direct connection times out. urllib via proxy returns 200 but has no session cookie. Known logged-in identity is 840754587 (karma=1), not aitoolcrux. karma=1 rate limit ~1 comment/hour. Two drafts remain unpublished: Kimi K3.1 Pro speed tier comment + AI image generation diffusion-to-agents comment.",
+      "evidence": "ego-browser nodejs hn-check.mjs hung 5+ min with no stdout; HN direct URLError timeout; HN via proxy 200 but anonymous; Clash 7890 OPEN",
+      "source": "hn_growth_20261028",
+      "created_at": "2026-10-28T20:56:10.878112",
+      "resolved_at": null
+    },
+    {
+      "id": "CTR-PAGE-GUIDE-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/ai-tools-review-guide-2026/ 排名 10.0 但 CTR 仅 0%（imp 1），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "CTR-PAGE-COMPARISON-TOOLS-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-comparison-tools-2026/ 排名 18.0 但 CTR 仅 0%（imp 1，5-20 扩大范围），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "CTR-PAGE-CODING-TOOLS-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-coding-tools-2026 排名 4.1 但 CTR 仅 0%（imp 12=全站最大曝光页，首页边缘位，扩展依据），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "CA-TOOLS-TUTORIAL-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 AI 教程型内容（courses 531 URLs/learning-paths 3，我们 0 个分类），建议写 \"AI Tools Tutorial for Beginners: 10 Free Tools You Can Master Today\" 文章（slug: ai-tools-tutorial-beginners），SERP竞争度=Medium（general_search 实搜已验证：前 10 含 ai4everyone.ai 独立站）",
+      "source": "competitor_analysis_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "CA-FREE-AI-COURSES-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在卖 AI 课程（courses 531 URLs，变现=课程主导），我们 0 个课程类内容，建议写 \"Best Free AI Courses in 2026: 15 Certified Resources\" 文章（slug: best-free-ai-courses-2026，切入=独立测评+资源地图差异化），SERP竞争度=High（前 10 被 DataCamp/MIT/Coursera 垄断）",
+      "source": "competitor_analysis_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28"
+    },
+    {
+      "id": "CA-PRODUCTIVITY-CATEGORY-20261028",
+      "status": "pending",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 有 ai-tools/productivity 分类页（我们只有单篇 best-ai-productivity-tools-2026，无分类聚合页），建议写 productivity AI 工具分类聚合页（slug: ai-tools/productivity），SERP竞争度=Medium（前 10 含 max-productive.ai/vucense.ai 两 niche 站）",
+      "source": "competitor_analysis_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28"
     }
   ],
   "milestones": [
@@ -7651,7 +7742,7 @@
   "last_iteration_summary": "Iter 86: INP optimization - AdSense lazyOnload + GA4 events requestIdleCallback. tsc pass, online verified.",
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
-  "last_update": "2026-10-28T15:14:39",
+  "last_update": "2026-10-28T21:26:31",
   "last_action": "r69架构师: GH-20261027-012 dev动态路由500修复(async GSP + 移除dynamicParams=false), 全动态路由dev 200; P0-BING/P1-CLAUDE/P1-GA4 blocker复验保持",
   "current_round": 79,
   "last_iteration_date": "2026-10-11",
