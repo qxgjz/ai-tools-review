@@ -627,3 +627,29 @@
 
 ### SERP 验证依据
 见 competitor_analysis_2026-10-28.md SERP 验证章节（5 词前 6-10 竞品实录）
+
+
+## r38（2026-10-28 09:3x · GSC 全量查询 + Generative AI 基线档）
+
+> 数据来源：AdsPower CDP 实读 GSC Performance UI（8/31~10/25 全量 281 查询）+ fetch_gsc 双窗口实拉。
+
+### 曝光断崖（P0 信号）
+| 窗口 | Impressions | 日均 |
+|---|---|---|
+| 08-29 ~ 09-26（prev） | 2008 | ~67 |
+| 09-27 ~ 10-26（cur） | 170 | ~6 |
+| 变化 | **-91.5%** | — |
+
+### 正向信号
+| 查询 | Clicks | Impressions | 意义 |
+|---|---|---|---|
+| best voice changer 2026 | **1** | 1 | 全站唯一真实点击（8/31~10/25 窗口），评测类长尾开始出结果 |
+| ai observability tools | 0 | 17 | 已有曝光，pos 9.5，需 CTR 优化 |
+| ai tool comparison / ai comparison tools / ai tool compare | 0 | 31+13+10 | 对比类需求合计 54 曝光 |
+
+### Generative AI 基线（GEO/AEO 首建，2026-08-31~10-25）
+AI 功能总曝光 **8 次**：suno-review-2026(3) / gemini_38_flash_review(2) / 首页(1) / cursor-review-2026(1) / tools-knowledge(1)。
+→ GEO 策略验证点：suno/gemini/cursor 评测文已被 AI 引用，与 Proof Ledger 词库（音乐/语音/对比类）方向一致。
+
+### 结论
+Total keywords analyzed: 本轮新增 0 个 P0/P1 候选（Easy Wins=0：排名 20-50 有曝光词 0 个，诚实跳过）；累计 SERP 验证词 70+。

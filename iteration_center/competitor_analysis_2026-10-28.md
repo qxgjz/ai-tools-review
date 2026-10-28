@@ -33,3 +33,10 @@ ai-detection* / automations* / chatbots★ / churn-management* / copywriting-ass
 3. chatbot-builders：SiteGPT / Tidio / Chat Data / YourGPT / Toolradar / Conferbot → Medium（独立站+工具商）
 4. design-generators：Digital Trends / Dreamina(CapCut) / Guideflow / Design Shifu / Kimi → Medium（混排可打）
 5. ticketing：Zendesk(官方×4) / Salesforce(官方) / ONES(Freshservice) / Zoho → High（官方自营霸榜）
+
+
+## r38 复核（09:3x · 代理恢复后实抓）
+- **实抓成功**：requests+浏览器 UA+7890 直抓 futurepedia sitemap（200/635 URLs）→ **72 分类**（10-25 缓存为 75，差异 3 个=分类下线或 slug 变更，已按实抓更新缓存，source=live_fetch_20261028_requests_ua）
+- **缺口复核**：72 分类 vs 本地 237 md → 23 个缺口，与 r37 清单一致；copywriting-assistant 与 text-generators 工具重叠不重复开；video-editing 与本地视频类内容疑似覆盖不重复开
+- **结论**：r37 已开 5 个 CA（ecommerce/text-generators/chatbot-builders/design-generators/ticketing）在池未动，本轮无新缺口待办（避免待办池膨胀）
+- topai.tools sitemap 持续 404（第 N 次确认，死路）

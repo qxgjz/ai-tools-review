@@ -4531,3 +4531,24 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 
 ### 已核对：REPORT-GAP 无真实缺口
 - audit_findings 133 个 ID vs focus+archived_todos 全量对照：97 缺失均为历史泛 ID 或已被日期变体覆盖，6+2 个点名 ID 全部有主，未重复补录
+
+
+## r38（2026-10-28 09:3x · 代理恢复后 GSC 实拉 + Generative AI 基线）
+
+### P0: 曝光断崖 -91.5%（2008 → 170 imp）
+- 双窗口实拉（fetch_gsc.py）：prev 08-29~09-26=2008 imp，cur 09-27~10-26=170 imp
+- 与 r33 auto_redirect 9→94 暴增时间吻合（9 月下旬），联动 P0-EXPOSURE-CLIFF-20261028（架构师）
+- 10 月日均 1-7 imp，低位持续 30 天
+
+### P1: 移动端曝光 2.4%（4/170 imp）
+- 移动端几乎无展示，桌面 166。需核查 RWD/viewport/CWV 移动指标（P1-MOBILE-EXPOSURE-20261028）
+
+### P1: article-api-* 污染 URL 持续
+- 最新窗口 article-api-20260903(4 imp, pos3.2) + article-api-20260904(1 imp, pos6.0) 仍在 GSC 页面列表
+- 持续消耗抓取配额，关联 AUTO-REDIRECT-SPIKE-20261027（r33，架构师 P0 在池）
+
+### 新低 CTR 页面（3 条已开打磨师单）
+- best-ai-meeting-assistants-2026 pos9.0 / observability pos9.5 / productivity pos10.5，全 0%
+
+### 已闭环: AI-OVERVIEWS-BASELINE（Generative AI 基线 8 曝光）
+- CDP 实读（见 state.json evidence）：suno(3)/gemini(2)/首页(1)/cursor(1)/tools-knowledge(1)
