@@ -183,3 +183,16 @@
 # 原 `/blog/article-api-* 410` 规则被 CF 忽略(线上实测404), 已删除; 未映射变体由 Pages 默认 404 处理
 # (Google 对 404/410 同等视为 URL 移除); 新抓取由 robots.txt Disallow /blog/article-api- 阻断 (r68)
 /blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md /blog/midjourney-v7-review-2026/ 301
+
+# r73 P0-EXPOSURE-CLIFF-20261028: 带尾斜杠变体 404 修复（_redirects 精确匹配不带斜杠源）
+# 线上实测: 无尾斜杠 article-api 请求 301 正常, 但带尾斜杠请求 404 (CF 精确匹配)
+# Google 收录旧 URL 多为带斜杠形式 -> 抓取 404 导致 auto_redirect/discovered_not_indexed 堆积、曝光断崖(2008->170 imp)
+# 为全部 7 个唯一 article-api 源补带尾斜杠变体, 两条路径均 301 到 canonical
+/blog/article-api-20260903-171438-creatium-coach-review-2025-is-this-ai-content-coach-worth-your-time-md/ /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260903-173022-creatium-coach-review-2025-a-handy-way-to-turn-documents-into-a-coach-but-not-a-md/ /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260903-173210-elevenlabs-review-2026-is-it-still-the-most-human-like-ai-voice-generator-md/ /blog/elevenlabs-review-2026/ 301
+/blog/article-api-20260904-214749-creatium-coach-review-2025-an-honest-look-at-this-ai-business-coaching-tool-md/ /blog/creatium-coach-review-2025/ 301
+/blog/article-api-20260904-215236-midjourney-v7-review-2026-is-it-still-the-best-ai-image-generator-md/ /blog/midjourney-v7-review-2026/ 301
+/blog/article-api-20260903-173442-midjourney-v7-review-2026-the-art-director-s-ai-that-still-demands-patience-md/ /blog/midjourney-v7-review-2026/ 301
+/blog/article-api-20260904-215037-elevenlabs-v2-review-2026-3-weeks-of-testing-the-ai-voice-platform-md/ /blog/elevenlabs-v2-review-2026/ 301
+
