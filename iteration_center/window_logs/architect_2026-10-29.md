@@ -67,3 +67,28 @@
 ### 待办状态小结
 - 剩余 P0=1（BING 缺 key）；P1=2（CLAUDE-SEO 缺 key / GA4-SG-BOT 需 CF Dashboard 人工）；GH-014 在创作家侧
 - **架构师侧已无可自动执行的 pending，全为外部依赖**（连续第 2 轮）
+## r76（2026-10-29 第十一轮）
+
+### 待办核对（Python）
+- 架构师 pending 6 条：新增 **P0-BATCH-PROGRESS-PUSH-20261029M**（多窗口催办）+ **P1-AFF-EMAIL-CAPTURE-20261029**（本轮completed）+ 外部依赖 4 条
+- 处理 **1 条 completed**（P1-AFF-EMAIL-CAPTURE）+ P0-BATCH 本窗口贡献记录 + BING 第 10 次复验
+
+### P1-AFF-EMAIL-CAPTURE-20261029 完成（联盟变现 email capture 层）
+- **现状盘点**：NewsletterSignup.tsx 已有（default/compact 变体，Email Octopus API），首页已嵌（但 dynamic ssr:false 表单不进 SSG HTML）；文章页 blog/[slug] **只 import 未渲染**（核心缺口，top20 高流量文章无表单）；PDF 资源已存在（public/2026-ai-tools-guide.pdf）
+- **改动**：
+  1. NewsletterSignup.tsx：升级 lead magnet=2026 AI Tools Guide PDF（两变体标题/副标题 + 成功态"Download Your Free Guide ↓"指向 /2026-ai-tools-guide.pdf）
+  2. app/blog/[slug]/page.tsx：Free Guide 链接后嵌入 `<NewsletterSignup variant="compact" />`（全站文章覆盖）
+  3. app/page.tsx：首页 dynamic ssr:false → **ssr:true**（表单 SSG HTML 可见）
+- **门控**：tsc=0 + build=0；out 验证：文章页含表单 ✓ / 首页含标题 ✓ / PDF ✓
+- **commit `8957a04` PUSH_OK**；Actions 四 job 全 success（Lint/Unit/CodeQL/Deploy attempt 10）；CF 部署列表确认 8957a04 deploy success
+- **线上验证**（urllib+代理7890）：首页 200 含 lead magnet 标题 / 文章页 200 含表单 / /2026-ai-tools-guide.pdf 200
+- **Blocker**：NEXT_PUBLIC_EO_API_KEY + NEXT_PUBLIC_EO_LIST_ID 未配置（.env.local 缺失）→ 需指挥官在 CF Pages 配置环境变量后重建部署，否则提交走 setup fallback 假成功；转化 2-4% 目标待 GA4 观测
+
+### P0-BATCH-PROGRESS-PUSH-20261029M
+- 架构师侧响应：执行 P1-AFF-EMAIL-CAPTURE completed；日志 r76 段已写；其余 pending 全外部依赖
+
+### P0-BING blocker 第 10 次复验
+- api_keys.json 第 10 次复验（2026-10-29 r76）仍无 bing/anthropic key
+
+### 待办状态小结
+- 剩余 P0=1（BING 缺 key）+ P0-BATCH（跨窗口，等待各窗口自报）；P1 架构师侧=2（CLAUDE-SEO 缺 key / GA4-SG-BOT 需 CF 人工）+ EO keys 配置 blocker
