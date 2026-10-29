@@ -57,12 +57,22 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
   if (variant === 'compact') {
     return (
       <div className="bg-gradient-to-br from-emerald-700 to-teal-600 rounded-xl p-6 text-white shadow-lg">
-        <h3 className="text-lg font-bold mb-1">Get 5 Free AI Tools Weekly</h3>
-        <p className="text-emerald-100 text-sm mb-4">5 hand-picked free AI tools, no VPN needed.</p>
+        <h3 className="text-lg font-bold mb-1">Get the Free 2026 AI Tools Guide (PDF)</h3>
+        <p className="text-emerald-100 text-sm mb-4">The 20 best free AI tools compared in one PDF — straight to your inbox.</p>
         {status === 'success' ? (
-          <p className="text-green-200 text-sm font-medium">
-            ✓ Thanks for subscribing! Check your inbox.
-          </p>
+          <div className="text-sm">
+            <p className="text-green-200 font-medium mb-2">
+              ✓ You're in! Your guide is ready below.
+            </p>
+            <a
+              href="/2026-ai-tools-guide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-4 py-2 bg-white text-emerald-700 rounded-lg font-semibold text-sm hover:bg-emerald-50 hover:shadow-md transition-all"
+            >
+              Download Your Free Guide ↓
+            </a>
+          </div>
         ) : (
           <form onSubmit={handleSubmit} className="flex gap-2">
             <input
@@ -83,7 +93,7 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
                   aria-hidden="true"
                 />
               )}
-              {status === 'loading' ? 'Sending...' : 'Get My Free Tools'}
+              {status === 'loading' ? 'Sending...' : 'Get the Free Guide'}
             </button>
           </form>
         )}
@@ -111,14 +121,22 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
           </svg>
         </div>
         <h2 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-          Get 5 Free AI Tools Every Week
+          Get the Free 2026 AI Tools Guide (PDF)
         </h2>
         <p className="text-gray-600 dark:text-gray-300 mb-6">
-          5 hand-picked free AI tool recommendations, straight to your inbox — no VPN needed.
+          The 20 best free AI tools compared in one PDF — straight to your inbox, no VPN needed.
         </p>
         {status === 'success' ? (
           <div className="bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-200 rounded-lg p-4 font-medium">
-            ✓ You're in! Check your inbox to confirm your subscription.
+            <p className="mb-2">✓ You're in! Your guide is ready below.</p>
+            <a
+              href="/2026-ai-tools-guide.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1 px-4 py-2 bg-emerald-700 text-white rounded-lg font-semibold text-sm hover:bg-emerald-800 transition-all"
+            >
+              Download Your Free Guide ↓
+            </a>
           </div>
         ) : (
           <form
@@ -143,7 +161,7 @@ export function NewsletterSignup({ variant = 'default' }: { variant?: 'default' 
                   aria-hidden="true"
                 />
               )}
-              {status === 'loading' ? 'Sending...' : 'Get My Free Tools'}
+              {status === 'loading' ? 'Sending...' : 'Get the Free Guide'}
             </button>
           </form>
         )}

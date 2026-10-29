@@ -565,6 +565,11 @@ export default function PostPage({ params }: PostPageProps) {
               </Link>
             </section>
 
+            {/* Email capture - lead magnet PDF (P1-AFF-EMAIL-CAPTURE-20261029) */}
+            <section className="mb-16">
+              <NewsletterSignup variant="compact" />
+            </section>
+
             {/* Related Tools - internal linking to tool pages (P1-2 内链优化) */}
             {relatedTools.length > 0 && (
               <section className="mb-16">

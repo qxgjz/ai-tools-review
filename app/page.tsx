@@ -46,7 +46,7 @@ const ToolList = dynamic(() => import('@/components/tools/ToolList').then((m) =>
 const NewsletterSignup = dynamic(
   () => import('@/components/monetization/NewsletterSignup').then((m) => m.NewsletterSignup),
   {
-    ssr: false,
+    ssr: true,
     loading: () => null,
   },
 );
