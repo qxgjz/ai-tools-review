@@ -1,20 +1,20 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-10-27 22:54:59
+**Date:** 2026-10-28 23:08:18
 **Mode:** Quick
 
 ## Summary
 
 | Metric | Value |
 |--------|-------|
-| Articles | 271 |
-| Avg content score | 82.2/100 |
+| Articles | 280 |
+| Avg content score | 82.3/100 |
 | Perfect articles | 90 |
-| Articles below 85 | 143 |
+| Articles below 85 | 150 |
 | Pages audited | 20 |
 | Technical issues | 5 |
 | Critical issues | 0 |
-| Audit duration | 1.9s |
+| Audit duration | 2.1s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
@@ -162,8 +162,15 @@
 | best-ai-image-editing-tools-2026 | 80 | 2231 | 44.1 | 0 | first_para_pass, internal_links_pass |
 | best-ai-tools-for-students-2026 | 80 | 2145 | 51.6 | 0 | first_para_pass, internal_links_pass |
 | best-ai-tools-for-business-2026 | 80 | 2055 | 55.1 | 0 | first_para_pass, internal_links_pass |
+| best-ai-storyteller-tools-2026 | 80 | 2871 | 36.3 | 5 | first_para_pass, readability_pass |
 | how-to-build-an-ai-agent | 82 | 2132 | 60.6 | 11 | — |
 | best-ai-presentation-generators-202 | 83 | 2276 | 51.2 | 4 | first_para_pass, title_pass |
+| best-ai-essay-writing-tools-2026 | 83 | 3228 | 48.8 | 7 | first_para_pass |
+| best-ai-thumbnail-makers-2026 | 83 | 3101 | 49.6 | 7 | first_para_pass |
+| best-ai-search-engines-2026 | 83 | 2849 | 48.5 | 7 | first_para_pass |
+| best-ai-text-generators-2026 | 83 | 3412 | 54.0 | 7 | first_para_pass |
+| best-ai-tools-for-startups-2026 | 83 | 3145 | 56.2 | 7 | first_para_pass |
+| best-ai-sales-tools-2026 | 83 | 2879 | 40.6 | 5 | first_para_pass |
 | cursor-vs-windsurf-2026 | 86 | 2302 | 43.1 | 4 | — |
 | suno-alternatives | 86 | 2443 | 46.2 | 12 | — |
 | synthesia-vs-heygen | 86 | 2260 | 41.1 | 5 | first_para_pass |
@@ -185,6 +192,8 @@
 | best-ai-video-upscalers-2026 | 89 | 2461 | 45.2 | 4 | first_para_pass |
 | best-ai-workflow-automation-tools-2 | 89 | 2365 | 51.2 | 5 | first_para_pass |
 | best-ai-note-taking-apps-2026 | 89 | 2303 | 49.6 | 4 | first_para_pass |
+| best-ai-personal-assistant-2026 | 89 | 3100 | 51.1 | 7 | first_para_pass |
+| best-ai-travel-planning-tools-2026 | 89 | 2689 | 48.2 | 5 | first_para_pass |
 | best-ai-audio-tools-2026 | 91 | 2608 | 32.7 | 8 | readability_pass |
 | best-ai-agents-2026 | 91 | 2474 | 57.0 | 10 | — |
 | runway-vs-kling-2026 | 91 | 2259 | 58.1 | 0 | internal_links_pass |

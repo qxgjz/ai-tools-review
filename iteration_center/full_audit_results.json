@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-27T22:54:59.320573",
+  "audit_time": "2026-10-28T23:08:18.088356",
   "mode": "quick",
   "content": {
-    "total_articles": 271,
-    "average_score": 82.22435424354231,
+    "total_articles": 280,
+    "average_score": 82.28714285714273,
     "perfect_count": 90,
-    "below_85_count": 143,
+    "below_85_count": 150,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -3368,6 +3368,124 @@
           "first_para_pass",
           "internal_links_pass"
         ]
+      },
+      {
+        "slug": "best-ai-essay-writing-tools-2026",
+        "title": "Best AI Essay Writing Tools 2026: QuillBot vs Sudowrite",
+        "quality_score": 83.3,
+        "word_count": 3228,
+        "flesch": 48.8,
+        "internal_links": 7,
+        "external_links": 4,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-thumbnail-makers-2026",
+        "title": "Best AI Thumbnail Makers 2026: 8 Tested (Canva vs Fotor)",
+        "quality_score": 83.3,
+        "word_count": 3101,
+        "flesch": 49.6,
+        "internal_links": 7,
+        "external_links": 4,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-search-engines-2026",
+        "title": "Best AI Search Engines 2026: 7 Compared & Accuracy-Tested",
+        "quality_score": 83.3,
+        "word_count": 2849,
+        "flesch": 48.5,
+        "internal_links": 7,
+        "external_links": 3,
+        "images": 0,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-text-generators-2026",
+        "title": "Best AI Text Generators 2026: 10 Tested by Output Quality",
+        "quality_score": 83.3,
+        "word_count": 3412,
+        "flesch": 54.0,
+        "internal_links": 7,
+        "external_links": 11,
+        "images": 4,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-personal-assistant-2026",
+        "title": "Best AI Personal Assistant 2026: 8 Tested (Gemini vs Siri)",
+        "quality_score": 88.9,
+        "word_count": 3100,
+        "flesch": 51.1,
+        "internal_links": 7,
+        "external_links": 7,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-tools-for-startups-2026",
+        "title": "Best AI Tools for Startups 2026: 8 Tested by Stage & Budget",
+        "quality_score": 83.3,
+        "word_count": 3145,
+        "flesch": 56.2,
+        "internal_links": 7,
+        "external_links": 9,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-sales-tools-2026",
+        "title": "Best AI Sales Tools 2026: 8 Tested (Gong vs 21X vs Paradox)",
+        "quality_score": 83.3,
+        "word_count": 2879,
+        "flesch": 40.6,
+        "internal_links": 5,
+        "external_links": 6,
+        "images": 3,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-travel-planning-tools-2026",
+        "title": "Best AI Travel Planning Tools 2026: Layla vs Tineo",
+        "quality_score": 88.9,
+        "word_count": 2689,
+        "flesch": 48.2,
+        "internal_links": 5,
+        "external_links": 4,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass"
+        ]
+      },
+      {
+        "slug": "best-ai-storyteller-tools-2026",
+        "title": "Best AI Storyteller Tools 2026: NovelAI vs Sudowrite",
+        "quality_score": 80.0,
+        "word_count": 2871,
+        "flesch": 36.3,
+        "internal_links": 5,
+        "external_links": 5,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "readability_pass"
+        ]
       }
     ]
   },
@@ -3383,7 +3501,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 1.9
+    "elapsed_seconds": 2.1
   },
   "geo": {
     "geo_score": 100,
