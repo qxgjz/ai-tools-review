@@ -4608,3 +4608,31 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 
 ### P1: 最大曝光页 0 CTR
 - best-ai-coding-tools-2026 pos4.1 imp12（全站曝光 6.4%）0% CTR，已开打磨师单（扩展范围依据）
+
+
+## r40（2026-10-29 · 分析师-数据洞察 SOP 触发）
+
+### GSC 实拉（fetch_gsc 2026-09-28~10-27）
+| 指标 | r40 本期 | r39 修正 | 变化 |
+|---|---|---|---|
+| Impressions | **181** | 188 | -3.7% |
+| Clicks | 0 | 0 | — |
+| Avg Position | 14.12 | 13.86 | -0.26 位 |
+| MOBILE | 4 imp（2.2%） | 4（2.1%） | 持平低位 |
+- 断崖持续：vs 上期窗口 2015 imp，**-91.0%**（P0-EXPOSURE-CLIFF 在池）
+
+### P1: 10-26 回升信号未延续（证伪/未确立）
+- 10-26 单日 18 imp 为本窗口峰值，但 **10-27 回落至 5 imp**——单日峰值不代表走出低位，需继续观察（下轮 GSC 验证）
+
+### P0: AdsPower 离线阻塞索引快照（本轮环境故障）
+- 双 profile CDP 端口探测均 live=False（k1hfuvv6:56307 / k1fpm0ag:50787），AdsPower 浏览器进程未运行
+- P0-GSC-SNAPSHOT-RETRY-20261029 无法执行，保持 pending（周度收录跟踪断档第 1 轮）；需用户启动 AdsPower 后重试；API 路线（sitemaps 404/urlInspection 403）仍为死路不复测
+
+### 复核：CTR 候选 0 新（页面级+查询级全历史覆盖）
+- 5-20 位页面：ai-tools-review-guide(10.0)/comparison-tools(18.0)/meeting-assistants(9.0)/observability(9.5)/productivity(10.5)/coding-tools(4.1)/ai-policy(8.0) 均在 r25-r39 已开单
+- 查询级：tabbyml(18.0)/copilot-pricing(5.0) 已开单 completed
+- **本轮 0 新 CTR 待办**，不重复开单（r31 CTR-CHECK 先例）
+
+### P1: live_pull 数据结构纠偏
+- live_pull_20261024_0939.json 真实结构 = {site, daily[], top_queries[], top_pages[], sitemap_summary}（此前记忆的 rows/keys 结构与文件不符，已修正 re-grounding 指针）
+- top_queries 仅 7 条（全站查询量极低），Easy Wins pos20-50=0

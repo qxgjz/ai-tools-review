@@ -680,3 +680,12 @@ Total keywords analyzed: 本轮新增 0 个 P0/P1 候选（Easy Wins=0：排名 
 - P2：0 个新
 
 Total keywords analyzed: 累计 70+（r29 起 SERP 验证口径），本轮 SERP 实搜 3 词。
+
+
+## r40（2026-10-29 · Easy Wins 复核档）
+
+- GSC 实拉：181 imp / 0 clk / pos 14.12（vs r39 188/13.86，回落）
+- live_pull top_queries 全量 7 条：ai-native ide(pos1)/bondai(pos89.3)/copilot pricing(pos5)/gemini langgraph(pos75)/milvus ui(pos84)/react agent(pos82)/tabbyml(pos18)
+- **Easy Wins（pos 20-50 有曝光）：0 个**（top_queries 无该区间命中，诚实跳过，与 r38/r39 一致）
+- 竞品缺口：0 新分类（futurepedia 77 分类 12 名义 GAP 全历史覆盖复核，与 r39 结论一致）；无新 P0/P1/P2 词
+- Total keywords analyzed：本轮实读 7 查询 + 77 分类（竞品实抓）
