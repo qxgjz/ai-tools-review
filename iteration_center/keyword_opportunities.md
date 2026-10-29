@@ -689,3 +689,12 @@ Total keywords analyzed: 累计 70+（r29 起 SERP 验证口径），本轮 SERP
 - **Easy Wins（pos 20-50 有曝光）：0 个**（top_queries 无该区间命中，诚实跳过，与 r38/r39 一致）
 - 竞品缺口：0 新分类（futurepedia 77 分类 12 名义 GAP 全历史覆盖复核，与 r39 结论一致）；无新 P0/P1/P2 词
 - Total keywords analyzed：本轮实读 7 查询 + 77 分类（竞品实抓）
+
+
+## r41（2026-10-29 下午档 · Easy Wins 复核）
+
+- GSC 二次实拉：197 imp / pos 13.22（imp +16、位次 +0.9 改善）
+- Top queries 8 条（新增 aizolo reviews pos22.0 imp1）
+- **Easy Wins（pos 20-50）：1 个候选（aizolo reviews pos22），不足 5 个跳过**（SOP 阈值）
+- 竞品缺口：0 新（11 个名义 GAP 全历史覆盖复核，与 r40 一致）
+- Total keywords analyzed：本轮实读 8 查询 + 77 分类（竞品实抓）

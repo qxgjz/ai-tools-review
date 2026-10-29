@@ -4636,3 +4636,25 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 ### P1: live_pull 数据结构纠偏
 - live_pull_20261024_0939.json 真实结构 = {site, daily[], top_queries[], top_pages[], sitemap_summary}（此前记忆的 rows/keys 结构与文件不符，已修正 re-grounding 指针）
 - top_queries 仅 7 条（全站查询量极低），Easy Wins pos20-50=0
+
+
+## r41（2026-10-29 下午档 · 分析师-数据洞察 SOP 触发）
+
+### GSC 二次实拉（同一窗口 09-28~10-27 数据回填后）：197 imp / 0 clk / pos 13.22
+| 指标 | r41 下午 | r40 早间 | 变化 |
+|---|---|---|---|
+| Impressions | **197** | 181 | **+16（+8.8%）** |
+| Avg Position | **13.22** | 14.12 | **+0.90 位改善** |
+| MOBILE | 5 imp（2.5%） | 4（2.2%） | 微升 |
+- **P0 观察：同窗口两次拉取数据不同（181→197），GSC 仍在回填；回升信号加强（位次改善最显著），10-26 单日峰值后未再跌落**
+- 新查询 aizolo reviews（pos 22.0 imp 1）——首个 pos20-50 区间曝光词，数量不足 5 跳过 Easy Wins
+
+### P0: 索引快照降级实抓（AdsPower 本轮在线）
+- sitemaps 页实抓：submitted=931（2026-10-18 提交 / 2026-10-28 读取成功）
+- AI 报告实抓：8 次曝光（suno 3/gemini 2/首页 1/cursor 1/knowledge 1，与 r38 基线持平）
+- **旧版 /search-console/indexing 端点 404（GSC 改版）**：indexed/not_indexed 饼图无法抓取 → P0-GSC-SNAPSHOT-RETRY 保持 pending，完整环比待 GSC 恢复
+
+### P1: Slug Guard 治理闭环（新发现 4 条历史冲突待办）
+- COMP-20261012-04/05、COMP-20261013-03/04 建议 slug 与 data/posts.json 已存在文章冲突
+- 实核：best-ai-coding-tools-2026（09-14 已发）/ best-no-code-ai-tools-2026（同款标题已存在）/ best-ai-transcription-tools-2026（**10-29 当天已发布**）
+- 处理：4 条标 completed（目标文章已存在，避免创作家重复产出），源头脚本 scripts/analyst_slug_guard.py 落地
