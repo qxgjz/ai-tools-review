@@ -1,5 +1,5 @@
 {
-  "audit_time": "2026-10-29T23:14:04.219382",
+  "audit_time": "2026-10-30T22:55:50.929593",
   "mode": "quick",
   "content": {
     "total_articles": 283,
@@ -3545,7 +3545,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 1.7
+    "elapsed_seconds": 1.9
   },
   "geo": {
     "geo_score": 100,
