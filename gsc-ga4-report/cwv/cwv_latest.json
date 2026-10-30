@@ -1,16 +1,9 @@
 {
-  "generatedAt": "2026-10-30T12:10:02.029Z",
+  "generatedAt": "2026-10-30T21:58:52.264Z",
   "pages": [
     {
       "url": "/",
-      "performance": 74,
-      "lcp": "4.6 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/",
-      "performance": 79,
+      "performance": 64,
       "lcp": "4.6 s",
       "inp": null,
       "cls": "0"
@@ -18,70 +11,77 @@
     {
       "url": "/",
       "performance": 77,
-      "lcp": "5.0 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/blog/perplexity-review-2026/",
-      "performance": 73,
-      "lcp": "5.6 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/blog/perplexity-review-2026/",
-      "performance": 77,
-      "lcp": "5.2 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/blog/perplexity-review-2026/",
-      "performance": 73,
-      "lcp": "5.7 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/compare/",
-      "performance": 81,
       "lcp": "4.3 s",
       "inp": null,
       "cls": "0"
     },
     {
-      "url": "/compare/",
-      "performance": 81,
-      "lcp": "4.3 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/compare/",
-      "performance": 81,
-      "lcp": "4.5 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
-      "performance": 70,
-      "lcp": "6.2 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
-      "performance": 75,
-      "lcp": "5.8 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
+      "url": "/",
       "performance": 76,
-      "lcp": "5.6 s",
+      "lcp": "4.3 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/blog/perplexity-review-2026/",
+      "performance": 68,
+      "lcp": "5.4 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/blog/perplexity-review-2026/",
+      "performance": 67,
+      "lcp": "5.4 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/blog/perplexity-review-2026/",
+      "performance": 70,
+      "lcp": "5.3 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/compare/",
+      "performance": 70,
+      "lcp": "4.7 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/compare/",
+      "performance": 65,
+      "lcp": "4.8 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/compare/",
+      "performance": 75,
+      "lcp": "4.4 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/tools/midjourney/",
+      "performance": 65,
+      "lcp": "6.1 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/tools/midjourney/",
+      "performance": 66,
+      "lcp": "6.0 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/tools/midjourney/",
+      "performance": 66,
+      "lcp": "5.8 s",
       "inp": null,
       "cls": "0"
     }
