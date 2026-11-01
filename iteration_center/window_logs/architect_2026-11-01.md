@@ -50,3 +50,47 @@
 ### 待办状态小结
 - 剩余 P0=1（BING 缺 key）；P1 架构师侧=2（CLAUDE-SEO/GA4）+ GH-014（创作家）
 - GEO 分数轨迹：r78 crawler 10.0（本机真实探测），llms-full 覆盖 952/952
+
+---
+
+## r79（2026-11-02 01:25）——GH011 处置 + GEO 例行
+
+### 本轮待办核对
+- state 现场重读：架构师 pending 7 条（3 新 P0：GH011/GSC-REVIEW/BAML-PAGE + 旧 4 条全外部依赖）
+
+### P0-GH011-REMEDIATE-20261101 处置（完成）
+- **线上实证**：/blog/suno-vs-udio-2026/ 200（212KB，H2x18：Quick Answer/Key Takeaways/Suno vs Udio 全对比段/FAQ/Conclusion，udio 287 次/suno 269 次）= **完整真实对比文章**
+- **结论**：r43"实为单工具"前提与线上事实不符（本地草稿 2026-10-22/10-24 两版亦为完整对比，udio 57-66 次）
+- **处置**：保留文章（有效对比资产）；移除 public/_redirects 第 114 行僵尸 301 `/blog/suno-vs-udio-2026 /blog/suno-review-2026/ 301`（源无尾斜杠，从不匹配线上带斜杠请求，从未生效，且会把有效对比页导去单工具评测）
+- **门禁**：tsc=0、build=0（out/_redirects 同步，suno-vs-udio 命中 0）
+- **commit**：`76a216d`（1 file -1 行）PUSH_OK 首次成功
+- **Actions**：Lint/CodeQL/Deploy 三 job 全 success（Deploy 第 13 轮）
+- **CF 部署**：最新 = 76a216d（2026-11-01T17:16，deploy success）
+- **线上验证**：suno-vs-udio-2026 200（212,322B，未被 301，文章保留生效）；suno-review-2026 200
+
+### P0-REQ13-BAML-PAGE-20261101 核对（完成）
+- REQ13-VERIFY 名单 13 个 = exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/promptfoo/chroma/copilot，**不含 baml**
+- baml 在 tools.json(533) 0 命中 / posts.json(283) 0 命中 / 线上 sitemap 无 /tools/baml/
+- 补页条件不成立，无需补页；置 completed（验收在 11-02 由分析师/window4 执行）
+
+### P0-GSC-REVIEW-20261103
+- 复查日 11-03 未到；GSC 最新报告仍 latest_report_2026-10-27.md（窗口4 未出新），本轮无动作，保持 pending
+
+### GEO 例行（real_geo_aeo_audit.py）
+- crawler **11/11 accessible、blocked=0、score 10.0**（配置完好实锤，与 r78 高分轮一致）
+- aeo_optimization：/tools/chatgpt、/tools/cursor 8/8 checks = 10.0
+- geo_readiness_score 6.43；recommendations **空**（常规 7 项已全在位，无需新增）
+- 云端例行全 200：robots 3192B / sitemap 167,641B（952 URL）/ llms.txt 29,900B / llms-full.txt 698,307B / 首页 346,294B
+- **llms-full 覆盖核查**：线上 sitemap 952 vs llms-full.txt missing=0（无需修复，无 commit）
+
+### BING 第 13 次复验
+- api_keys.json 第 13 次复验（2026-11-02 r79）仍无 bing/anthropic/claude key（跨轮稳定卡点）
+
+### state 更新
+- P0-GH011-REMEDIATE-20261101 → completed + evidence（线上实证/处置/commit/部署/验证全链）
+- P0-REQ13-BAML-PAGE-20261101 → completed + evidence（名单不含 baml）
+- geo_score_history 追加 r79 10.0；completed_tasks 新增 GEO-LLMS-FULL-COVERAGE-20261102
+
+### 待办状态小结
+- 架构师侧剩余：P0=2（BING 缺 key、GSC-REVIEW 11-03 复查）；P1=2（CLAUDE-SEO 缺 key、GA4-SG-BOT CF Dashboard 人工）+ GH-014（创作家/设计师执行中）
+- GEO 分数轨迹：r77 5.36（网络波动）→ r78 10.0 → r79 10.0（连续两轮 11/11 accessible 实锤配置完好）
