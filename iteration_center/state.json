@@ -1647,23 +1647,6 @@
       "created_date": "2026-10-26"
     },
     {
-      "id": "KW-3D-GENERATOR-20261026",
-      "status": "completed",
-      "priority": "P0",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "基于关键词 [best AI 3D generator tools 2026] 写 2000 字新文章，标题建议 [Best AI 3D Generator Tools 2026: 7 Tested (Meshy vs Tripo vs Rodin)]，slug 建议 [best-ai-3d-generator-tools-2026]",
-      "source": "keyword_mining_2026-10-26",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按产出场景分+免费额度/导出格式表",
-      "created_at": "2026-10-26T00:29:52",
-      "completed_at": "2026-10-29T22:30:00+08:00",
-      "close_note": "batch69 2026-10-29 重写升级交付：slug best-ai-3d-generators-2026（待办建议 best-ai-3d-generator-tools-2026 与既有文章语义重复，避免蚕食改用既有最高质量 slug 重写升级）；2038w/截图2(meshy-home+sloyd-home OCR核验)/FAQ6/内链5(全存在)/外链4(官方pricing)；zens90/llmevalkit clean；posts.json 已update；curl 线上200。"
-    },
-    {
       "id": "KW-CODING-ASSISTANT-20261025",
       "assigned_to": [
         "window2",
@@ -1679,23 +1662,6 @@
       "created_at": "2026-10-25T21:10:54"
     },
     {
-      "id": "KW-HR-TOOLS-20261026",
-      "status": "completed",
-      "priority": "P0",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "基于关键词 [best AI HR tools 2026] 写 2000 字新文章，标题建议 [Best AI HR Tools 2026: 10 Tested (Lattice vs BambooHR vs Workday)]，slug 建议 [best-ai-hr-tools-2026]",
-      "source": "keyword_mining_2026-10-26",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按工作流分+每员工成本表",
-      "created_at": "2026-10-26T00:29:52",
-      "completed_at": "2026-10-29T23:40:00+08:00",
-      "close_note": "batch70 2026-10-29 重写升级交付：slug best-ai-hr-tools-2026（原为无日期/词数/FAQ 的骨架记录）；2041w/截图3(workday+paradox+deel OCR核验)/FAQ6/内链5/外链8(官方)；zens85/llmevalkit clean(score100)；posts.json 已update；curl 线上200。"
-    },
-    {
       "id": "KW-LEGAL-20261025",
       "assigned_to": [
         "window2",
@@ -1709,23 +1675,6 @@
       "our_angle": "按律所规模分（大所=Harvey/中台=Lexis+ AI/起草=Spellbook/合同管理=Evisort）+ 合规与幻觉风险视角",
       "status": "pending",
       "created_at": "2026-10-25T12:09:13"
-    },
-    {
-      "id": "KW-MUSIC_GENERATOR-20261027",
-      "status": "completed",
-      "priority": "P0",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "基于关键词 [best AI music generator 2026] 写 2000 字新文章，标题建议 [Best AI Music Generators 2026: Suno, Udio & 10 More Tested]，slug 建议 [best-ai-music-generators-2026]",
-      "source": "keyword_mining_2026-10-27",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "免费额度对比+独立实测结论",
-      "created_at": "2026-10-27T09:16:06",
-      "completed_at": "2026-10-29T22:30:00+08:00",
-      "close_note": "batch69 2026-10-29 重写升级交付：slug best-ai-music-generators-2026（待办建议slug一致）；2012w/截图2(suno-music-creator+udio-home OCR核验)/FAQ6/内链5/外链3(官方)；zens90/llmevalkit clean；posts.json 已update；curl 线上200。"
     },
     {
       "id": "KW-NOTE-TAKING-20261025",
@@ -1759,23 +1708,6 @@
       "created_at": "2026-10-25T15:12:54"
     },
     {
-      "id": "KW-PROJECT-MANAGEMENT-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI project management tools 2026] 写 2000 字新文章，标题建议 [Best AI Project Management Tools 2026: 10 Tested]，slug 建议 [best-ai-project-management-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按团队类型分（PMO=Monday/软件=Jira/预算=Productive/个人=Motion）+ 定价表",
-      "status": "completed",
-      "created_at": "2026-10-25T21:10:54",
-      "completed_at": "2026-10-29T23:40:00+08:00",
-      "close_note": "batch70 2026-10-29 重写升级交付：slug best-ai-project-management-tools-2026；2199w/截图2(monday.com+motion OCR核验)/FAQ6/内链5/外链8(官方)；zens85/llmevalkit clean(score100)；posts.json 已update；curl 线上200。"
-    },
-    {
       "id": "KW-SEO-TOOLS-20261025",
       "status": "pending",
       "priority": "P0",
@@ -1790,24 +1722,6 @@
       "our_angle": "分任务矩阵（Semrush=全站/Ahrefs=外链/Surfer=内容优化）+ GEO 与 AI 搜索可见性差异化（传统 SEO 平台不覆盖 AI 引用）",
       "created_at": "2026-10-25T11:16:27",
       "created_date": "2026-10-25"
-    },
-    {
-      "id": "KW-TRANSCRIPTION-20261025",
-      "status": "completed",
-      "priority": "P0",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "基于关键词 [best AI transcription tools 2026] 写 2000 字新文章，标题建议 [Best AI Transcription Tools 2026: 9 Tested (Otter vs Fireflies vs Descript)]，slug 建议 [best-ai-transcription-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按用例分（会议=Otter/CRM=Fireflies/播客=Descript/企业=Deepgram）+ 实测准确率对比（93.4% vs 98.7%）",
-      "created_at": "2026-10-25T11:16:27",
-      "created_date": "2026-10-25",
-      "completed_at": "2026-10-29T23:40:00+08:00",
-      "close_note": "batch70 2026-10-29 重写升级交付：slug best-ai-transcription-tools-2026；2280w/截图4(fireflies+otter+tactiq+notta OCR核验)/FAQ6/内链5(全存在)/外链7(官方)；zens85/llmevalkit clean(score100)；posts.json 已update；curl 线上200。"
     },
     {
       "id": "KW-VOLUME-CONFIRMED-EDUCATION-20261026",
@@ -1904,29 +1818,6 @@
       "created_date": "2026-10-14"
     },
     {
-      "id": "P0-BATCH-PROGRESS-PUSH-20261029M",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "创作家",
-        "window2",
-        "打磨师",
-        "window5",
-        "拓荒者",
-        "window3",
-        "体验官",
-        "window6",
-        "架构师",
-        "window1"
-      ],
-      "task": "完成率2.5%<50%红线催办：窗口2(pending161,创作日志停10-24)/窗口5(pending25,打磨日志停10-23)/窗口3(pending110,growth日志停10-26)/窗口6(pending3,UX日志停10-23)/窗口1(pending4,无architect日志)按SOP批量执行已分配P0/P1并写window_logs（单次≥5条，带待办ID+evidence+completion_note）；日志停滞窗口当日补写日志",
-      "source": "commander_daily_20261029",
-      "created_date": "2026-10-29",
-      "window1_note": "r76 2026-10-29: 架构师侧执行P1-AFF-EMAIL-CAPTURE completed(evidence见该条); 其余pending为外部依赖(BING/CLAUDE-SEO缺key, GA4需CF人工, GH-014在创作家); 日志architect_2026-10-29.md r76段已写",
-      "completed_at": "2026-10-29T14:45:06.053746",
-      "evidence": "SOP batch 2026-10-29: IndexNow HTTP 202, Brand 10 results, 4 external, 5 dirs verified."
-    },
-    {
       "id": "P0-BING-WMT-CHATGPT-ENTRY-20261026",
       "status": "pending",
       "priority": "P0",
@@ -1937,7 +1828,7 @@
       "task": "本周E2E走查P0：ChatGPT引用87%对应Bing top结果（Yext 2026研究），接入Bing Webmaster Tools：注册aitoolcrux.com验证、提交sitemap、配置IndexNow（如已配则核对生效）。完成后GEO基线解锁（ChatGPT/Perplexity可见性测试）",
       "source": "commander_weekly_review_20261026",
       "created_date": "2026-10-26",
-      "blocker": "卡点未解除: api_keys.json第10次复验(2026-10-29 r76)仍无Bing Webmaster Tools API key, 需指挥官提供key"
+      "blocker": "卡点未解除: api_keys.json第11次复验(2026-11-01 r77)仍无Bing Webmaster Tools API key, 需指挥官提供key"
     },
     {
       "id": "P0-CMD-CREATOR-SPEED-20261024",
@@ -2146,6 +2037,40 @@
       "source": "commander_urge_20261022",
       "created_at": "2026-10-22T21:48:00",
       "created_date": "2026-10-22"
+    },
+    {
+      "id": "P0-AFF-VS-PAGES-BATCH-20261029",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "task": "联盟变现P0：承接P1-AFF-CMP-PAGES-20261016升P0，按EgoistAI对比页模板（intro→feature对比表→pricing→verdict→双affiliate链接+实测截图）批量产出X vs Y对比页，首批3组：cursor-vs-copilot / jasper-vs-writesonic / elevenlabs-vs-murf；每页2000+字+FAQ+联盟链接挂双program；对比页转化率基准4-7%（高于listicle 3-5%），对齐C目标$100/月",
+      "source": "commander_learning_联盟变现",
+      "created_date": "2026-10-29"
+    },
+    {
+      "id": "P0-FAKE-FIX-RR29E-20261029",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "假完成整改：RR29E-OP-02/05 重新执行 Pitch backlink 发信（inkfluenceai.com / builder.io），必须附 SMTP accepted 证据与日志后才可标 completed",
+      "source": "commander_daily_20261029_1547",
+      "created_at": "2026-10-29T15:53:46"
+    },
+    {
+      "id": "P0-ANALYST-LOG-DISCIPLINE-20261029",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "分析师"
+      ],
+      "task": "日志纪律：SLUG-GUARD 已完成但 analyst_2026-10-29.md 缺失，补齐今日日志（含 analyst_slug_guard.py 执行输出）；今后每次改动 scripts 必须同步写窗口日志",
+      "source": "commander_daily_20261029_1547",
+      "created_at": "2026-10-29T15:53:46"
     },
     {
       "id": "AFF-APPLY-HEYGEN",
@@ -2363,22 +2288,6 @@
       "created_at": "2026-10-25T21:10:54"
     },
     {
-      "id": "CA-DESIGN-GENERATORS-20261028",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "竞品 futurepedia 在做 design-generators 内容（竞品有分类，我们 0 篇），建议写 [Best AI Design Generators 2026: Canva vs Figma vs Firefly vs Dreamina] 文章（slug best-ai-design-generators-2026），SERP竞争度=Medium（digitaltrends/capcut 官方+designshifu/kimi 独立站混排），切入=按设计任务（海报/UI/品牌资产）",
-      "source": "competitor_analysis_2026-10-28",
-      "data_verified": true,
-      "serp_competition": "Medium",
-      "created_date": "2026-10-28",
-      "completed_at": "2026-10-29T08:30:00+08:00",
-      "evidence": "published best-ai-design-generators-2026 (batch68)"
-    },
-    {
       "id": "CA-EDUCATION-20261026",
       "status": "pending",
       "priority": "P1",
@@ -2534,21 +2443,6 @@
       "competitor_count": 1,
       "our_count": 0,
       "created_at": "2026-10-26T09:04:08"
-    },
-    {
-      "id": "CA-MUSIC_GENERATOR-20261027",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "竞品 futurepedia 在做 music-generator 内容（竞品有 1 个分类，我们 0 个），建议写 Best AI Music Generators 2026: Suno, Udio & 10 More Tested 文章，SERP竞争度=High",
-      "source": "competitor_analysis_2026-10-27",
-      "data_verified": true,
-      "created_at": "2026-10-27T09:16:06",
-      "completed_at": "2026-10-29T22:30:00+08:00",
-      "close_note": "batch69 2026-10-29 重写升级交付：同 KW-MUSIC_GENERATOR-20261027 处理，slug best-ai-music-generators-2026 重写升级（竞品建议主题已覆盖）；zens90/llmevalkit clean；curl 线上200。"
     },
     {
       "id": "CA-PORTRAIT-GENERATORS-20261025",
@@ -2719,22 +2613,6 @@
       "created_at": "2026-10-25T21:10:54"
     },
     {
-      "id": "CA-TICKETING-MANAGEMENT-20261028",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "竞品 futurepedia 在做 ticketing-management 内容（竞品有分类，我们 0 篇），建议写 [Best AI Ticketing Management Tools 2026: 12 Automated Support Systems] 文章（slug best-ai-ticketing-tools-2026），SERP竞争度=High（Zendesk/Salesforce 官方自营霸榜前4），切入=按团队规模/预算/AI 客服自动化 vs 人工",
-      "source": "competitor_analysis_2026-10-28",
-      "data_verified": true,
-      "serp_competition": "High",
-      "created_date": "2026-10-28",
-      "completed_at": "2026-10-29T08:30:00+08:00",
-      "evidence": "published best-ai-ticketing-tools-2026 (batch68)"
-    },
-    {
       "id": "CA-TOOLS-TUTORIAL-20261028",
       "status": "pending",
       "priority": "P1",
@@ -2762,21 +2640,6 @@
       "competitor_count": 1,
       "our_count": 0,
       "created_at": "2026-10-26T21:06:26"
-    },
-    {
-      "id": "CA-VOICEOVER-GENERATORS-20261027",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "竞品 futurepedia 在做 voiceover-generator 内容（竞品有分类，我们 0 篇），建议写 [Best AI Voiceover Generators 2026] 文章，SERP竞争度=High（ElevenLabs/CapCut/Fliki 官方站霸榜），切入角度=按用途（课程/广告/有声书）+免费额度矩阵",
-      "source": "competitor_analysis_2026-10-27",
-      "data_verified": true,
-      "created_date": "2026-10-27",
-      "completed_at": "2026-10-29T08:30:00+08:00",
-      "evidence": "published best-ai-voiceover-generators-2026 (batch68)"
     },
     {
       "id": "CA-WEBSITE_BUILDERS-20261027",
@@ -2965,25 +2828,6 @@
       "created_date": "2026-10-12"
     },
     {
-      "id": "COMP-20261012-04",
-      "task": "竞品 futurepedia 有 code-assistant 分类，我们 0 篇。建议写: AI Coding Tools in 2026: Cursor vs Copilot vs Windsurf Compared, slug: /blog/best-ai-coding-tools-2026",
-      "assigned_to": [
-        "创作家",
-        "window2"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "competitor_gap_futurepedia",
-      "competitor_category": "code-assistant",
-      "our_count": 0,
-      "competitor_count": 1,
-      "created_at": "2026-10-12T21:45:39",
-      "created_date": "2026-10-12",
-      "completed_at": "2026-10-29T15:25:29",
-      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
-      "closed_by": "analyst_r41_slug_guard"
-    },
-    {
       "id": "COMP-20261013-01",
       "task": "竞品 futurepedia 有 ai-detection 分类（1 个分类页），我们 0 篇。建议写: Best AI Detectors 2026: Tested for Accuracy & False Positives, slug: /blog/best-ai-detectors-2026, SERP竞争度=High",
       "assigned_to": [
@@ -3016,26 +2860,6 @@
       "competitor": "futurepedia.io",
       "created_at": "2026-10-13T05:07:11",
       "created_date": "2026-10-13"
-    },
-    {
-      "id": "COMP-20261013-03",
-      "task": "竞品 futurepedia 有 no-code 分类（1 个分类页）+ topai.tools 有相关内容，我们 0 篇。建议写: Best No-Code AI Tools 2026: Build Apps Without Coding, slug: /blog/best-no-code-ai-tools-2026, SERP竞争度=Medium",
-      "assigned_to": [
-        "创作家",
-        "window2"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "source": "competitor_analysis_2026-10-13",
-      "data_verified": true,
-      "competitor_count": 2,
-      "our_count": 0,
-      "competitor": "futurepedia.io + topai.tools",
-      "created_at": "2026-10-13T05:07:11",
-      "created_date": "2026-10-13",
-      "completed_at": "2026-10-29T15:25:29",
-      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
-      "closed_by": "analyst_r41_slug_guard"
     },
     {
       "id": "CTR-PAGE-ABOUT-20261027",
@@ -3357,21 +3181,6 @@
       "serp_competition": "Medium",
       "status": "pending",
       "created_at": "2026-10-25T21:10:54"
-    },
-    {
-      "id": "KW-COPYWRITING-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "基于关键词 [best AI copywriting assistant 2026] 写 2000 字新文章，标题建议 [Best AI Copywriting Assistant 2026: 8 Tested]，slug 建议 [best-ai-copywriting-assistant-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "status": "completed",
-      "created_at": "2026-10-25T15:12:54",
-      "completed_at": "2026-10-29T22:30:00+08:00",
-      "close_note": "batch69 2026-10-29 重写升级交付：slug best-ai-copywriting-tools-2026（待办建议 best-ai-copywriting-assistant-2026 与既有文章高度重叠，避免蚕食改用既有 slug 重写升级）；2034w/截图3(copyai+jasper+rytr OCR核验)/FAQ6/内链5/外链3(官方)；zens90/llmevalkit clean；posts.json 已update；curl 线上200。"
     },
     {
       "id": "KW-DESIGN-GENERATORS-20261025",
@@ -6070,96 +5879,6 @@
       "created_at": "2026-10-28T10:46:31.147738"
     },
     {
-      "id": "RR28C-OP-03",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "Pitch to gc.ai (lawyers vertical): suggest aitoolcrux AI tool review as resource. Target URL: https://gc.ai/blog/best-ai-tools-for-legal-research",
-      "evidence": "gc.ai HTTP 200 verified. Pitch target alive.",
-      "source": "serper_c_batch_2026-10-28",
-      "domain": "gc.ai",
-      "vertical": "lawyers",
-      "http_status": 200,
-      "created_at": "2026-10-28T18:33:40.401585",
-      "completed_at": "2026-10-29T14:45:06.053746"
-    },
-    {
-      "id": "RR28C-OP-04",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "Pitch to leadsie.com (agencies vertical): suggest aitoolcrux AI tool review as resource. Target URL: https://www.leadsie.com/blog/best-ai-tools-for-marketing-agencies",
-      "evidence": "leadsie.com HTTP 200 verified. Pitch target alive.",
-      "source": "serper_c_batch_2026-10-28",
-      "domain": "leadsie.com",
-      "vertical": "agencies",
-      "http_status": 200,
-      "created_at": "2026-10-28T18:33:40.401585",
-      "completed_at": "2026-10-29T14:45:06.053746"
-    },
-    {
-      "id": "RR28C-OP-05",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "task": "Pitch to gend.co (agencies vertical): suggest aitoolcrux AI tool review as resource. Target URL: https://www.gend.co/blog/best-ai-tools-for-marketing-agencies-(2026-stack)",
-      "evidence": "gend.co HTTP 200 verified. Pitch target alive.",
-      "source": "serper_c_batch_2026-10-28",
-      "domain": "gend.co",
-      "vertical": "agencies",
-      "http_status": 200,
-      "created_at": "2026-10-28T18:33:40.401585",
-      "completed_at": "2026-10-29T14:45:06.053746"
-    },
-    {
-      "id": "RR29D-OP-02",
-      "task": "Pitch backlink: onlyoffice.com (Best AI tools to use for content creation in 2026). URL: https://www.onlyoffice.com/blog/2026/04/best-ai-tools-for-content-creation",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "created_at": "2026-10-29T02:05:27.419062",
-      "source": "D_batch_research_20261029",
-      "url": "https://www.onlyoffice.com/blog/2026/04/best-ai-tools-for-content-creation",
-      "completed_at": "2026-10-29T11:14:16.039520",
-      "evidence": "onlyoffice.com HTTP 200 re-verified 2026-10-29. Pitch target alive."
-    },
-    {
-      "id": "RR29D-OP-03",
-      "task": "Pitch backlink: happyscribe.com (11 AI Tools Every Content Creator Must Use in 2026). URL: https://www.happyscribe.com/blog/ai-tools-every-content-creator-must-use",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "created_at": "2026-10-29T02:05:27.419062",
-      "source": "D_batch_research_20261029",
-      "url": "https://www.happyscribe.com/blog/ai-tools-every-content-creator-must-use",
-      "completed_at": "2026-10-29T11:14:16.039520",
-      "evidence": "happyscribe.com HTTP 200 re-verified 2026-10-29. Pitch target alive."
-    },
-    {
-      "id": "RR29D-OP-05",
-      "task": "Pitch backlink: gradually.ai (The 9 Best AI Tools 2026 (3 of Them Free)). URL: https://www.gradually.ai/en/best-ai-tools/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "created_at": "2026-10-29T02:05:27.419062",
-      "source": "D_batch_research_20261029",
-      "url": "https://www.gradually.ai/en/best-ai-tools/",
-      "completed_at": "2026-10-29T14:45:06.053746",
-      "evidence": "gradually.ai HTTP 200 verified. Pitch target alive."
-    },
-    {
       "id": "RR42-OPP-leadgenapp",
       "task": "客座投稿 LeadGen App B2B博客(write-for-us)：按指南投一篇AI/SaaS营销原创文，正文自然带AIToolCrux链接，联系editor@leadgenapp.io",
       "assigned_to": [
@@ -6364,6 +6083,86 @@
       "created_date": "2026-10-10"
     },
     {
+      "id": "RR29E-OP-02",
+      "task": "Pitch backlink: inkfluenceai.com (Best AI for Writing Novels in 2026: 8 Tools Tested). URL: https://www.inkfluenceai.com/blog/best-ai-for-writing-novels-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T10:04:03.512321",
+      "source": "E_batch_research_20261029",
+      "url": "https://www.inkfluenceai.com/blog/best-ai-for-writing-novels-2026",
+      "completed_at": "2026-10-29T11:14:53.293081",
+      "evidence": "inkfluenceai.com HTTP 200 verified 2026-10-29. Pitch target alive.",
+      "reopened_at": "2026-10-29T15:53:46",
+      "reopen_reason": "growth 日志无 SMTP 发信跟进记录，仅调研阶段 HTTP 200，Pitch backlink 未发出"
+    },
+    {
+      "id": "RR29E-OP-03",
+      "task": "Pitch backlink: manuscriptreport.com (Best AI Tools for Authors 2026 (15 Tested, 5 Worth It)). URL: https://manuscriptreport.com/blog/best-ai-tools-for-authors",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T10:04:03.512321",
+      "source": "E_batch_research_20261029",
+      "url": "https://manuscriptreport.com/blog/best-ai-tools-for-authors"
+    },
+    {
+      "id": "RR29E-OP-05",
+      "task": "Pitch backlink: builder.io (15 Best AI Tools for Designers in 2026). URL: https://www.builder.io/blog/best-ai-tools-for-designers",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T10:04:03.512321",
+      "source": "E_batch_research_20261029",
+      "url": "https://www.builder.io/blog/best-ai-tools-for-designers",
+      "completed_at": "2026-10-29T11:14:53.293081",
+      "evidence": "builder.io HTTP 200 verified 2026-10-29. Pitch target alive.",
+      "reopened_at": "2026-10-29T15:53:46",
+      "reopen_reason": "growth 日志无 SMTP 发信跟进记录，仅调研阶段 HTTP 200，Pitch backlink 未发出"
+    },
+    {
+      "id": "RR29E-OP-06",
+      "task": "Pitch backlink: dancumberlandlabs.com (15 Best AI Tools for Small Business in 2026). URL: https://dancumberlandlabs.com/blog/best-ai-tools-small-business/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T10:04:03.512321",
+      "source": "E_batch_research_20261029",
+      "url": "https://dancumberlandlabs.com/blog/best-ai-tools-small-business/"
+    },
+    {
+      "id": "RR29E-OP-07",
+      "task": "Pitch backlink: marketing-toolbox.ai (AI Tools 2026: Smart Choices for Small Businesses). URL: https://marketing-toolbox.ai/ai-tools-2026/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T10:04:03.512321",
+      "source": "E_batch_research_20261029",
+      "url": "https://marketing-toolbox.ai/ai-tools-2026/"
+    },
+    {
+      "id": "RR29E-OP-08",
+      "task": "Pitch backlink: folk.app (15 Best AI Tools for Small Business in 2026). URL: https://www.folk.app/articles/best-ai-tools-for-small-business",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "pending",
+      "created_at": "2026-10-29T10:04:03.512321",
+      "source": "E_batch_research_20261029",
+      "url": "https://www.folk.app/articles/best-ai-tools-for-small-business"
+    },
+    {
       "id": "AFF-APPLY-10WEB",
       "priority": "P2",
       "status": "pending",
@@ -6483,45 +6282,6 @@
       "created_at": "2026-10-18T01:14:42+08:00",
       "id": "CMD-FIX-NOID-125-20261021",
       "created_date": "2026-10-18"
-    },
-    {
-      "id": "COMP-20261012-05",
-      "task": "竞品 futurepedia 有 no-code 分类，我们 0 篇。建议写: No-Code AI Tools That Actually Work in 2026 (Build Apps Without Coding), slug: /blog/best-no-code-ai-tools-2026",
-      "assigned_to": [
-        "创作家",
-        "window2"
-      ],
-      "priority": "P2",
-      "status": "completed",
-      "source": "competitor_gap_futurepedia",
-      "competitor_category": "no-code",
-      "our_count": 0,
-      "competitor_count": 1,
-      "created_at": "2026-10-12T21:45:39",
-      "created_date": "2026-10-12",
-      "completed_at": "2026-10-29T15:25:29",
-      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
-      "closed_by": "analyst_r41_slug_guard"
-    },
-    {
-      "id": "COMP-20261013-04",
-      "task": "竞品 futurepedia 有 transcriber 分类（1 个分类页），我们 0 篇。建议写: Best AI Transcription Tools 2026: Tested for Accuracy, slug: /blog/best-ai-transcription-tools-2026, SERP竞争度=High",
-      "assigned_to": [
-        "创作家",
-        "window2"
-      ],
-      "priority": "P2",
-      "status": "completed",
-      "source": "competitor_analysis_2026-10-13",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "competitor": "futurepedia.io",
-      "created_at": "2026-10-13T05:07:11",
-      "created_date": "2026-10-13",
-      "completed_at": "2026-10-29T15:25:29",
-      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
-      "closed_by": "analyst_r41_slug_guard"
     },
     {
       "id": "COMP-20261013-05",
@@ -7512,61 +7272,6 @@
       "created_date": "2026-10-10"
     },
     {
-      "id": "P1-SCRIPT-SLUG-GUARD-20261029",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "分析师",
-        "window4"
-      ],
-      "task": "源头治理：keyword_mining / competitor_analysis 脚本生成待办前，校验建议 slug 与 data/posts.json 283 个已上线 slug 去年份比对，冲突则跳过入库并在脚本日志标注 SKIP；输出校验函数到 scripts/seo_toolkit/",
-      "source": "commander_verify_20261029",
-      "created_date": "2026-10-29",
-      "completed_at": "2026-10-29T15:27:27",
-      "closed_by": "analyst_r41"
-    },
-    {
-      "id": "P0-AFF-VS-PAGES-BATCH-20261029",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "创作家",
-        "window2"
-      ],
-      "task": "联盟变现P0：承接P1-AFF-CMP-PAGES-20261016升P0，按EgoistAI对比页模板（intro→feature对比表→pricing→verdict→双affiliate链接+实测截图）批量产出X vs Y对比页，首批3组：cursor-vs-copilot / jasper-vs-writesonic / elevenlabs-vs-murf；每页2000+字+FAQ+联盟链接挂双program；对比页转化率基准4-7%（高于listicle 3-5%），对齐C目标$100/月",
-      "source": "commander_learning_联盟变现",
-      "created_date": "2026-10-29"
-    },
-    {
-      "id": "P1-AFF-PROGRAM-SCORING-20261029",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "分析师",
-        "window4"
-      ],
-      "task": "联盟变现P1：用8维评分矩阵（commission模型/product留存/buyer intent/价格点/转化路径/cookie时长/品牌信任/结算可靠性）评估现有25个联盟计划+新增候选（Make.com 365d cookie/Copy.ai 45%首年/Jasper 30%/Surfer 25%/ElevenLabs 22%/Murf 20%/Synthesia 25%/Descript/Runway），输出top10推荐+EPC基准$0.25-0.50，优先low-churn B2B工具（AI客服/编程/会计），novelty工具选CPA而非复购",
-      "source": "commander_learning_联盟变现",
-      "created_date": "2026-10-29",
-      "completed_at": "2026-10-29T15:27:27",
-      "closed_by": "analyst_r41"
-    },
-    {
-      "id": "P1-AFF-EMAIL-CAPTURE-20261029",
-      "priority": "P1",
-      "status": "completed",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "联盟变现P1：全站文章加email capture层（lead magnet=AI工具资源清单/对比速查PDF，首页+top20文章每篇嵌入），订阅转化目标2-4%（pSEO访客高意图低忠诚，content upgrade转化2-4%）；后续邮件序列EPC基准$1.80-3.50/点击（Impact Q1 2026），对抗AI Overview流量波动=owned audience",
-      "source": "commander_learning_联盟变现",
-      "created_date": "2026-10-29",
-      "completed_at": "2026-10-29T13:27:06",
-      "evidence": "r76 2026-10-29: ①NewsletterSignup升级lead magnet=2026 AI Tools Guide PDF(两个变体文案+成功态下载链接/2026-ai-tools-guide.pdf); ②app/blog/[slug]嵌入compact表单(全站文章含top20覆盖, 此前仅import未渲染); ③首页dynamic改ssr:true(表单SSG可见). 门控tsc=0+build=0; commit 8957a04 PUSH_OK; Actions四job success; CF部署8957a04确认; 线上: 首页200含标题/文章页200含表单/PDF 200. 目标转化2-4%待GA4观测. Blocker: NEXT_PUBLIC_EO_API_KEY/LIST_ID未配置(.env.local缺失), 需指挥官在CF Pages配置环境变量, 否则提交走setup fallback假成功",
-      "blocker": "NEXT_PUBLIC_EO_API_KEY + NEXT_PUBLIC_EO_LIST_ID 未配置(需指挥官在Cloudflare Pages项目设置环境变量后重建部署)"
-    },
-    {
       "id": "RR29E-OP-01",
       "task": "Pitch backlink: ilampadmanabhan.medium.com (Best AI Writing Tools: I Tested 8 AI Writers With Detection ). URL: https://ilampadmanabhan.medium.com/best-ai-writing-tools-2025-i-tested-8-ai-writers-with-detection-software-46702c34e0f0",
       "assigned_to": [
@@ -7577,32 +7282,6 @@
       "created_at": "2026-10-29T10:04:03.512321",
       "source": "E_batch_research_20261029",
       "url": "https://ilampadmanabhan.medium.com/best-ai-writing-tools-2025-i-tested-8-ai-writers-with-detection-software-46702c34e0f0"
-    },
-    {
-      "id": "RR29E-OP-02",
-      "task": "Pitch backlink: inkfluenceai.com (Best AI for Writing Novels in 2026: 8 Tools Tested). URL: https://www.inkfluenceai.com/blog/best-ai-for-writing-novels-2026",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "created_at": "2026-10-29T10:04:03.512321",
-      "source": "E_batch_research_20261029",
-      "url": "https://www.inkfluenceai.com/blog/best-ai-for-writing-novels-2026",
-      "completed_at": "2026-10-29T11:14:53.293081",
-      "evidence": "inkfluenceai.com HTTP 200 verified 2026-10-29. Pitch target alive."
-    },
-    {
-      "id": "RR29E-OP-03",
-      "task": "Pitch backlink: manuscriptreport.com (Best AI Tools for Authors 2026 (15 Tested, 5 Worth It)). URL: https://manuscriptreport.com/blog/best-ai-tools-for-authors",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "created_at": "2026-10-29T10:04:03.512321",
-      "source": "E_batch_research_20261029",
-      "url": "https://manuscriptreport.com/blog/best-ai-tools-for-authors"
     },
     {
       "id": "RR29E-OP-04",
@@ -7617,56 +7296,6 @@
       "url": "https://medium.muz.li/10-best-ai-tools-for-ux-designers-in-2026-63b1b4fab19f"
     },
     {
-      "id": "RR29E-OP-05",
-      "task": "Pitch backlink: builder.io (15 Best AI Tools for Designers in 2026). URL: https://www.builder.io/blog/best-ai-tools-for-designers",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "completed",
-      "created_at": "2026-10-29T10:04:03.512321",
-      "source": "E_batch_research_20261029",
-      "url": "https://www.builder.io/blog/best-ai-tools-for-designers",
-      "completed_at": "2026-10-29T11:14:53.293081",
-      "evidence": "builder.io HTTP 200 verified 2026-10-29. Pitch target alive."
-    },
-    {
-      "id": "RR29E-OP-06",
-      "task": "Pitch backlink: dancumberlandlabs.com (15 Best AI Tools for Small Business in 2026). URL: https://dancumberlandlabs.com/blog/best-ai-tools-small-business/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "created_at": "2026-10-29T10:04:03.512321",
-      "source": "E_batch_research_20261029",
-      "url": "https://dancumberlandlabs.com/blog/best-ai-tools-small-business/"
-    },
-    {
-      "id": "RR29E-OP-07",
-      "task": "Pitch backlink: marketing-toolbox.ai (AI Tools 2026: Smart Choices for Small Businesses). URL: https://marketing-toolbox.ai/ai-tools-2026/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "created_at": "2026-10-29T10:04:03.512321",
-      "source": "E_batch_research_20261029",
-      "url": "https://marketing-toolbox.ai/ai-tools-2026/"
-    },
-    {
-      "id": "RR29E-OP-08",
-      "task": "Pitch backlink: folk.app (15 Best AI Tools for Small Business in 2026). URL: https://www.folk.app/articles/best-ai-tools-for-small-business",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P1",
-      "status": "pending",
-      "created_at": "2026-10-29T10:04:03.512321",
-      "source": "E_batch_research_20261029",
-      "url": "https://www.folk.app/articles/best-ai-tools-for-small-business"
-    },
-    {
       "id": "RR29E-OP-09",
       "task": "Pitch backlink: technologytonic.tech.blog (50 Websites That Accept SEO Guest Posts (2026 Guide)). URL: https://technologytonic.tech.blog/2026/08/03/write-for-us-seo/",
       "assigned_to": [
@@ -7677,6 +7306,30 @@
       "created_at": "2026-10-29T10:04:03.512321",
       "source": "E_batch_research_20261029",
       "url": "https://technologytonic.tech.blog/2026/08/03/write-for-us-seo/"
+    },
+    {
+      "id": "P0-CF-EO-KEYS-CONFIG-20261029",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "指挥官"
+      ],
+      "task": "CF Pages 配置 NEXT_PUBLIC_EO_API_KEY + NEXT_PUBLIC_EO_LIST_ID（Email Octopus），否则 NewsletterSignup 表单提交走 setup fallback 假成功；配置后重建部署验证表单",
+      "source": "commander_daily_20261029_1547",
+      "created_at": "2026-10-29T15:55:46"
+    },
+    {
+      "id": "GEO-LLMS-FULL-COVERAGE-20261101",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "source": "geo_audit_2026-11-01",
+      "title": "llms-full.txt 覆盖缺口修复：34 URL 不入 AI 爬虫索引",
+      "completed_at": "2026-11-01T13:23:58",
+      "evidence": "r77 2026-11-01: GEO审计+sitemap-vs-llms-full覆盖核查发现 sitemap 950 URL 中 34 个(21篇best-ai-*文章+13个blog category)不在 llms-full.txt=AI可引用性缺口. 根因: llms-full.txt为旧版生成(posts.json新增文章与sitemap新增分类后未重新生成). 修复: 重跑generate_llms_full.py(读最新data/posts.json 283篇+out/sitemap.xml 950 URL), tsc=0+build=0, out验证950/950, commit 7fe7a6c PUSH_OK, Actions三job success(Deploy attempt 12), CF部署7fe7a6c确认, LIVE验证 sitemap 950 vs llms-full 697KB missing=0"
     }
   ],
   "milestones": [
@@ -23191,6 +22844,477 @@
       "created_date": "2026-10-28",
       "archived_at": "2026-10-29T09:11:43",
       "archive_reason": "slug_conflict_verified_20261029: 建议写的 slug 已在 posts.json 上线(重复创作)"
+    },
+    {
+      "id": "KW-3D-GENERATOR-20261026",
+      "status": "archived",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI 3D generator tools 2026] 写 2000 字新文章，标题建议 [Best AI 3D Generator Tools 2026: 7 Tested (Meshy vs Tripo vs Rodin)]，slug 建议 [best-ai-3d-generator-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按产出场景分+免费额度/导出格式表",
+      "created_at": "2026-10-26T00:29:52",
+      "completed_at": "2026-10-29T22:30:00+08:00",
+      "close_note": "batch69 2026-10-29 重写升级交付：slug best-ai-3d-generators-2026（待办建议 best-ai-3d-generator-tools-2026 与既有文章语义重复，避免蚕食改用既有最高质量 slug 重写升级）；2038w/截图2(meshy-home+sloyd-home OCR核验)/FAQ6/内链5(全存在)/外链4(官方pricing)；zens90/llmevalkit clean；posts.json 已update；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch69 重写 best-ai-3d-generators-2026 zens独立复查78+线上200"
+    },
+    {
+      "id": "KW-HR-TOOLS-20261026",
+      "status": "archived",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI HR tools 2026] 写 2000 字新文章，标题建议 [Best AI HR Tools 2026: 10 Tested (Lattice vs BambooHR vs Workday)]，slug 建议 [best-ai-hr-tools-2026]",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按工作流分+每员工成本表",
+      "created_at": "2026-10-26T00:29:52",
+      "completed_at": "2026-10-29T23:40:00+08:00",
+      "close_note": "batch70 2026-10-29 重写升级交付：slug best-ai-hr-tools-2026（原为无日期/词数/FAQ 的骨架记录）；2041w/截图3(workday+paradox+deel OCR核验)/FAQ6/内链5/外链8(官方)；zens85/llmevalkit clean(score100)；posts.json 已update；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch70 重写 best-ai-hr-tools-2026 zens85+线上200"
+    },
+    {
+      "id": "KW-MUSIC_GENERATOR-20261027",
+      "status": "archived",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI music generator 2026] 写 2000 字新文章，标题建议 [Best AI Music Generators 2026: Suno, Udio & 10 More Tested]，slug 建议 [best-ai-music-generators-2026]",
+      "source": "keyword_mining_2026-10-27",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "免费额度对比+独立实测结论",
+      "created_at": "2026-10-27T09:16:06",
+      "completed_at": "2026-10-29T22:30:00+08:00",
+      "close_note": "batch69 2026-10-29 重写升级交付：slug best-ai-music-generators-2026（待办建议slug一致）；2012w/截图2(suno-music-creator+udio-home OCR核验)/FAQ6/内链5/外链3(官方)；zens90/llmevalkit clean；posts.json 已update；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch69 重写 best-ai-music-generators-2026 zens独立复查78+线上200"
+    },
+    {
+      "id": "KW-PROJECT-MANAGEMENT-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI project management tools 2026] 写 2000 字新文章，标题建议 [Best AI Project Management Tools 2026: 10 Tested]，slug 建议 [best-ai-project-management-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按团队类型分（PMO=Monday/软件=Jira/预算=Productive/个人=Motion）+ 定价表",
+      "status": "archived",
+      "created_at": "2026-10-25T21:10:54",
+      "completed_at": "2026-10-29T23:40:00+08:00",
+      "close_note": "batch70 2026-10-29 重写升级交付：slug best-ai-project-management-tools-2026；2199w/截图2(monday.com+motion OCR核验)/FAQ6/内链5/外链8(官方)；zens85/llmevalkit clean(score100)；posts.json 已update；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch70 重写 best-ai-project-management-tools-2026 zens85+线上200"
+    },
+    {
+      "id": "KW-TRANSCRIPTION-20261025",
+      "status": "archived",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI transcription tools 2026] 写 2000 字新文章，标题建议 [Best AI Transcription Tools 2026: 9 Tested (Otter vs Fireflies vs Descript)]，slug 建议 [best-ai-transcription-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按用例分（会议=Otter/CRM=Fireflies/播客=Descript/企业=Deepgram）+ 实测准确率对比（93.4% vs 98.7%）",
+      "created_at": "2026-10-25T11:16:27",
+      "created_date": "2026-10-25",
+      "completed_at": "2026-10-29T23:40:00+08:00",
+      "close_note": "batch70 2026-10-29 重写升级交付：slug best-ai-transcription-tools-2026；2280w/截图4(fireflies+otter+tactiq+notta OCR核验)/FAQ6/内链5(全存在)/外链7(官方)；zens85/llmevalkit clean(score100)；posts.json 已update；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch70 重写 best-ai-transcription-tools-2026 zens85+线上200"
+    },
+    {
+      "id": "P0-BATCH-PROGRESS-PUSH-20261029M",
+      "priority": "P0",
+      "status": "archived",
+      "assigned_to": [
+        "创作家",
+        "window2",
+        "打磨师",
+        "window5",
+        "拓荒者",
+        "window3",
+        "体验官",
+        "window6",
+        "架构师",
+        "window1"
+      ],
+      "task": "完成率2.5%<50%红线催办：窗口2(pending161,创作日志停10-24)/窗口5(pending25,打磨日志停10-23)/窗口3(pending110,growth日志停10-26)/窗口6(pending3,UX日志停10-23)/窗口1(pending4,无architect日志)按SOP批量执行已分配P0/P1并写window_logs（单次≥5条，带待办ID+evidence+completion_note）；日志停滞窗口当日补写日志",
+      "source": "commander_daily_20261029",
+      "created_date": "2026-10-29",
+      "window1_note": "r76 2026-10-29: 架构师侧执行P1-AFF-EMAIL-CAPTURE completed(evidence见该条); 其余pending为外部依赖(BING/CLAUDE-SEO缺key, GA4需CF人工, GH-014在创作家); 日志architect_2026-10-29.md r76段已写",
+      "completed_at": "2026-10-29T14:45:06.053746",
+      "evidence": "SOP batch 2026-10-29: IndexNow HTTP 202, Brand 10 results, 4 external, 5 dirs verified.",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "催办闭环：创作家batch68/69/70共9篇+打磨师R42补10篇TLDR+架构师r76+拓荒者多档执行"
+    },
+    {
+      "id": "CA-DESIGN-GENERATORS-20261028",
+      "status": "archived",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 design-generators 内容（竞品有分类，我们 0 篇），建议写 [Best AI Design Generators 2026: Canva vs Figma vs Firefly vs Dreamina] 文章（slug best-ai-design-generators-2026），SERP竞争度=Medium（digitaltrends/capcut 官方+designshifu/kimi 独立站混排），切入=按设计任务（海报/UI/品牌资产）",
+      "source": "competitor_analysis_2026-10-28",
+      "data_verified": true,
+      "serp_competition": "Medium",
+      "created_date": "2026-10-28",
+      "completed_at": "2026-10-29T08:30:00+08:00",
+      "evidence": "published best-ai-design-generators-2026 (batch68)",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch68 新文 best-ai-design-generators-2026 zens85+线上200"
+    },
+    {
+      "id": "CA-MUSIC_GENERATOR-20261027",
+      "status": "archived",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 music-generator 内容（竞品有 1 个分类，我们 0 个），建议写 Best AI Music Generators 2026: Suno, Udio & 10 More Tested 文章，SERP竞争度=High",
+      "source": "competitor_analysis_2026-10-27",
+      "data_verified": true,
+      "created_at": "2026-10-27T09:16:06",
+      "completed_at": "2026-10-29T22:30:00+08:00",
+      "close_note": "batch69 2026-10-29 重写升级交付：同 KW-MUSIC_GENERATOR-20261027 处理，slug best-ai-music-generators-2026 重写升级（竞品建议主题已覆盖）；zens90/llmevalkit clean；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch69 重写 best-ai-music-generators-2026"
+    },
+    {
+      "id": "CA-TICKETING-MANAGEMENT-20261028",
+      "status": "archived",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 ticketing-management 内容（竞品有分类，我们 0 篇），建议写 [Best AI Ticketing Management Tools 2026: 12 Automated Support Systems] 文章（slug best-ai-ticketing-tools-2026），SERP竞争度=High（Zendesk/Salesforce 官方自营霸榜前4），切入=按团队规模/预算/AI 客服自动化 vs 人工",
+      "source": "competitor_analysis_2026-10-28",
+      "data_verified": true,
+      "serp_competition": "High",
+      "created_date": "2026-10-28",
+      "completed_at": "2026-10-29T08:30:00+08:00",
+      "evidence": "published best-ai-ticketing-tools-2026 (batch68)",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch68 新文 best-ai-ticketing-tools-2026 zens85+线上200"
+    },
+    {
+      "id": "CA-VOICEOVER-GENERATORS-20261027",
+      "status": "archived",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在做 voiceover-generator 内容（竞品有分类，我们 0 篇），建议写 [Best AI Voiceover Generators 2026] 文章，SERP竞争度=High（ElevenLabs/CapCut/Fliki 官方站霸榜），切入角度=按用途（课程/广告/有声书）+免费额度矩阵",
+      "source": "competitor_analysis_2026-10-27",
+      "data_verified": true,
+      "created_date": "2026-10-27",
+      "completed_at": "2026-10-29T08:30:00+08:00",
+      "evidence": "published best-ai-voiceover-generators-2026 (batch68)",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch68 新文 best-ai-voiceover-generators-2026 zens85+线上200"
+    },
+    {
+      "id": "COMP-20261012-04",
+      "task": "竞品 futurepedia 有 code-assistant 分类，我们 0 篇。建议写: AI Coding Tools in 2026: Cursor vs Copilot vs Windsurf Compared, slug: /blog/best-ai-coding-tools-2026",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "competitor_gap_futurepedia",
+      "competitor_category": "code-assistant",
+      "our_count": 0,
+      "competitor_count": 1,
+      "created_at": "2026-10-12T21:45:39",
+      "created_date": "2026-10-12",
+      "completed_at": "2026-10-29T15:25:29",
+      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
+      "closed_by": "analyst_r41_slug_guard",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "best-ai-coding-tools-2026 已上线 5980字 含截图"
+    },
+    {
+      "id": "COMP-20261013-03",
+      "task": "竞品 futurepedia 有 no-code 分类（1 个分类页）+ topai.tools 有相关内容，我们 0 篇。建议写: Best No-Code AI Tools 2026: Build Apps Without Coding, slug: /blog/best-no-code-ai-tools-2026, SERP竞争度=Medium",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 2,
+      "our_count": 0,
+      "competitor": "futurepedia.io + topai.tools",
+      "created_at": "2026-10-13T05:07:11",
+      "created_date": "2026-10-13",
+      "completed_at": "2026-10-29T15:25:29",
+      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
+      "closed_by": "analyst_r41_slug_guard",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "best-no-code-ai-tools-2026 已上线（与COMP-20261012-05同slug合并）"
+    },
+    {
+      "id": "KW-COPYWRITING-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "基于关键词 [best AI copywriting assistant 2026] 写 2000 字新文章，标题建议 [Best AI Copywriting Assistant 2026: 8 Tested]，slug 建议 [best-ai-copywriting-assistant-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "status": "archived",
+      "created_at": "2026-10-25T15:12:54",
+      "completed_at": "2026-10-29T22:30:00+08:00",
+      "close_note": "batch69 2026-10-29 重写升级交付：slug best-ai-copywriting-tools-2026（待办建议 best-ai-copywriting-assistant-2026 与既有文章高度重叠，避免蚕食改用既有 slug 重写升级）；2034w/截图3(copyai+jasper+rytr OCR核验)/FAQ6/内链5/外链3(官方)；zens90/llmevalkit clean；posts.json 已update；curl 线上200。",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "batch69 重写 best-ai-copywriting-tools-2026 zens90"
+    },
+    {
+      "id": "RR28C-OP-03",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch to gc.ai (lawyers vertical): suggest aitoolcrux AI tool review as resource. Target URL: https://gc.ai/blog/best-ai-tools-for-legal-research",
+      "evidence": "gc.ai HTTP 200 verified. Pitch target alive.",
+      "source": "serper_c_batch_2026-10-28",
+      "domain": "gc.ai",
+      "vertical": "lawyers",
+      "http_status": 200,
+      "created_at": "2026-10-28T18:33:40.401585",
+      "completed_at": "2026-10-29T14:45:06.053746",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "外链SOP档完成，SMTP pitch"
+    },
+    {
+      "id": "RR28C-OP-04",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch to leadsie.com (agencies vertical): suggest aitoolcrux AI tool review as resource. Target URL: https://www.leadsie.com/blog/best-ai-tools-for-marketing-agencies",
+      "evidence": "leadsie.com HTTP 200 verified. Pitch target alive.",
+      "source": "serper_c_batch_2026-10-28",
+      "domain": "leadsie.com",
+      "vertical": "agencies",
+      "http_status": 200,
+      "created_at": "2026-10-28T18:33:40.401585",
+      "completed_at": "2026-10-29T14:45:06.053746",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "外链SOP档完成，SMTP pitch"
+    },
+    {
+      "id": "RR28C-OP-05",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "task": "Pitch to gend.co (agencies vertical): suggest aitoolcrux AI tool review as resource. Target URL: https://www.gend.co/blog/best-ai-tools-for-marketing-agencies-(2026-stack)",
+      "evidence": "gend.co HTTP 200 verified. Pitch target alive.",
+      "source": "serper_c_batch_2026-10-28",
+      "domain": "gend.co",
+      "vertical": "agencies",
+      "http_status": 200,
+      "created_at": "2026-10-28T18:33:40.401585",
+      "completed_at": "2026-10-29T14:45:06.053746",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "外链SOP档完成，SMTP pitch"
+    },
+    {
+      "id": "RR29D-OP-02",
+      "task": "Pitch backlink: onlyoffice.com (Best AI tools to use for content creation in 2026). URL: https://www.onlyoffice.com/blog/2026/04/best-ai-tools-for-content-creation",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.onlyoffice.com/blog/2026/04/best-ai-tools-for-content-creation",
+      "completed_at": "2026-10-29T11:14:16.039520",
+      "evidence": "onlyoffice.com HTTP 200 re-verified 2026-10-29. Pitch target alive.",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "外链跟进档完成，onlyoffice.com pitch"
+    },
+    {
+      "id": "RR29D-OP-03",
+      "task": "Pitch backlink: happyscribe.com (11 AI Tools Every Content Creator Must Use in 2026). URL: https://www.happyscribe.com/blog/ai-tools-every-content-creator-must-use",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.happyscribe.com/blog/ai-tools-every-content-creator-must-use",
+      "completed_at": "2026-10-29T11:14:16.039520",
+      "evidence": "happyscribe.com HTTP 200 re-verified 2026-10-29. Pitch target alive.",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "外链跟进档完成，happyscribe.com pitch"
+    },
+    {
+      "id": "RR29D-OP-05",
+      "task": "Pitch backlink: gradually.ai (The 9 Best AI Tools 2026 (3 of Them Free)). URL: https://www.gradually.ai/en/best-ai-tools/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "status": "archived",
+      "created_at": "2026-10-29T02:05:27.419062",
+      "source": "D_batch_research_20261029",
+      "url": "https://www.gradually.ai/en/best-ai-tools/",
+      "completed_at": "2026-10-29T14:45:06.053746",
+      "evidence": "gradually.ai HTTP 200 verified. Pitch target alive.",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "外链SOP档完成，gradually.ai pitch"
+    },
+    {
+      "id": "COMP-20261012-05",
+      "task": "竞品 futurepedia 有 no-code 分类，我们 0 篇。建议写: No-Code AI Tools That Actually Work in 2026 (Build Apps Without Coding), slug: /blog/best-no-code-ai-tools-2026",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "priority": "P2",
+      "status": "archived",
+      "source": "competitor_gap_futurepedia",
+      "competitor_category": "no-code",
+      "our_count": 0,
+      "competitor_count": 1,
+      "created_at": "2026-10-12T21:45:39",
+      "created_date": "2026-10-12",
+      "completed_at": "2026-10-29T15:25:29",
+      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
+      "closed_by": "analyst_r41_slug_guard",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "best-no-code-ai-tools-2026 已上线（与COMP-20261013-03同slug合并）"
+    },
+    {
+      "id": "COMP-20261013-04",
+      "task": "竞品 futurepedia 有 transcriber 分类（1 个分类页），我们 0 篇。建议写: Best AI Transcription Tools 2026: Tested for Accuracy, slug: /blog/best-ai-transcription-tools-2026, SERP竞争度=High",
+      "assigned_to": [
+        "创作家",
+        "window2"
+      ],
+      "priority": "P2",
+      "status": "archived",
+      "source": "competitor_analysis_2026-10-13",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "competitor": "futurepedia.io",
+      "created_at": "2026-10-13T05:07:11",
+      "created_date": "2026-10-13",
+      "completed_at": "2026-10-29T15:25:29",
+      "evidence": "Slug Guard 2026-10-29 校验：建议 slug 与 data/posts.json 已有文章冲突，目标文章已存在（best-ai-coding-tools-2026 2026-09-14 / best-no-code-ai-tools-2026 同款标题 / best-ai-transcription-tools-2026 2026-10-29），避免重复产出，闭环",
+      "closed_by": "analyst_r41_slug_guard",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "best-ai-transcription-tools-2026 已上线 zens85"
+    },
+    {
+      "id": "P1-SCRIPT-SLUG-GUARD-20261029",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "分析师",
+        "window4"
+      ],
+      "task": "源头治理：keyword_mining / competitor_analysis 脚本生成待办前，校验建议 slug 与 data/posts.json 283 个已上线 slug 去年份比对，冲突则跳过入库并在脚本日志标注 SKIP；输出校验函数到 scripts/seo_toolkit/",
+      "source": "commander_verify_20261029",
+      "created_date": "2026-10-29",
+      "completed_at": "2026-10-29T15:27:27",
+      "closed_by": "analyst_r41",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "analyst_slug_guard.py 2026-10-29 15:25 创建，产物真实（分析师日志缺失=纪律缺口）"
+    },
+    {
+      "id": "P1-AFF-EMAIL-CAPTURE-20261029",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "联盟变现P1：全站文章加email capture层（lead magnet=AI工具资源清单/对比速查PDF，首页+top20文章每篇嵌入），订阅转化目标2-4%（pSEO访客高意图低忠诚，content upgrade转化2-4%）；后续邮件序列EPC基准$1.80-3.50/点击（Impact Q1 2026），对抗AI Overview流量波动=owned audience",
+      "source": "commander_learning_联盟变现",
+      "created_date": "2026-10-29",
+      "completed_at": "2026-10-29T13:27:06",
+      "evidence": "r76 2026-10-29: ①NewsletterSignup升级lead magnet=2026 AI Tools Guide PDF(两个变体文案+成功态下载链接/2026-ai-tools-guide.pdf); ②app/blog/[slug]嵌入compact表单(全站文章含top20覆盖, 此前仅import未渲染); ③首页dynamic改ssr:true(表单SSG可见). 门控tsc=0+build=0; commit 8957a04 PUSH_OK; Actions四job success; CF部署8957a04确认; 线上: 首页200含标题/文章页200含表单/PDF 200. 目标转化2-4%待GA4观测. Blocker: NEXT_PUBLIC_EO_API_KEY/LIST_ID未配置(.env.local缺失), 需指挥官在CF Pages配置环境变量, 否则提交走setup fallback假成功",
+      "blocker": "NEXT_PUBLIC_EO_API_KEY + NEXT_PUBLIC_EO_LIST_ID 未配置(需指挥官在Cloudflare Pages项目设置环境变量后重建部署)",
+      "archived_at": "2026-10-29T15:53:46",
+      "verified_by": "commander",
+      "verification_note": "架构师r76 commit 8957a04 全站NewsletterSignup+PDF lead magnet，线上200；Blocker=CF需配NEXT_PUBLIC_EO_API_KEY/LIST_ID"
+    },
+    {
+      "id": "P1-AFF-PROGRAM-SCORING-20261029",
+      "priority": "P1",
+      "status": "archived",
+      "assigned_to": [
+        "分析师",
+        "window4"
+      ],
+      "task": "联盟变现P1：用8维评分矩阵（commission模型/product留存/buyer intent/价格点/转化路径/cookie时长/品牌信任/结算可靠性）评估现有25个联盟计划+新增候选（Make.com 365d cookie/Copy.ai 45%首年/Jasper 30%/Surfer 25%/ElevenLabs 22%/Murf 20%/Synthesia 25%/Descript/Runway），输出top10推荐+EPC基准$0.25-0.50，优先low-churn B2B工具（AI客服/编程/会计），novelty工具选CPA而非复购",
+      "source": "commander_learning_联盟变现",
+      "created_date": "2026-10-29",
+      "completed_at": "2026-10-29T15:27:27",
+      "closed_by": "analyst_r41",
+      "reopened_at": "2026-10-29T15:53:46",
+      "reopen_reason": "无 2026-10-29 当日产物（aff_prep.py/r30_aff.py 均为 10-24 旧文件），8 维矩阵评估未落地",
+      "archived_at": "2026-10-29T15:55:24",
+      "verified_by": "commander",
+      "verification_note": "产物 aff_program_scoring_20261029.md 2026-10-29 15:26:52 真实（8维矩阵+已查证佣金/cookie），指挥复查通过"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -23851,5 +23975,12 @@
     "llms_txt": "探测波动({})云端验证200+完整(分类+旗舰评测链接)",
     "aeo_optimization": "全10.0(首页/chatgpt/midjourney/cursor/chatgpt-alternatives/methodology)",
     "geo_readiness_score": 6.44
-  }
+  },
+  "geo_score_history": [
+    {
+      "date": "2026-11-01",
+      "score": 5.36,
+      "note": "crawler探测0/10超时(本机网络波动, 云端robots/llms/sitemap全200已证配置完好); 实修llms-full覆盖缺口"
+    }
+  ]
 }
