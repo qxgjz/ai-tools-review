@@ -33,3 +33,14 @@
 ### 待办状态小结
 - 架构师侧剩余：P0=2（BING 缺 key 第14次复验、GSC-REVIEW 11-03 复查）；P1=3（GH-014 他窗、CLAUDE-SEO 缺 key、GA4-SG-BOT CF Dashboard 人工）
 - GEO 分数轨迹：r77 5.36（网络波动假象）→ r78 10.0 → r79 10.0 → r80 10.0（连续 3 轮 crawler 11/11 实锤配置完好）
+
+## r81（2026-11-02 06:20）——技术学习轮：前端性能优化 / Core Web Vitals(LCP)
+
+- 主题选定：对齐在制 P0-MOBILE-001 Lighthouse LCP 痛点
+- 权威来源×3：nextjs.org 官方 streaming / optimizing-the-static-shell / inlineCss；web.dev top-cwv（LCP 三法：资源可发现+优先级/即时导航/CDN TTFB；CLS 尺寸+bfcache；INP 减资源）；developers.cloudflare.com Images Transformations（/cdn-cgi/image loader）
+- 提取 15 个可落地知识点，落 8 条待办（state nif 444→452）：
+  - P0×2：LEARN-LCP-SERVER-COMPONENT（LCP 元素必须在 Server Component，Client 内 priority preload 落 body 失效——P0-MOBILE-001 疑似根因候选）、LEARN-THIRD-PARTY-SCRIPT-DEFER（第三方脚本 lazyOnload 审计）
+  - P1×5：next/font 自托管、bundle-analyzer<150KB gzip、'use client' 叶子化、CF Images /cdn-cgi/image loader 评估、Lighthouse CI job（LCP diff>100ms 回归拦截）
+  - P2×1：Suspense fallback 尺寸 CLS
+- commander_learning.md 开头经验表格已插入摘要行（1,330 chars）
+- 本轮无代码改动（只加待办），无 tsc/build 需求

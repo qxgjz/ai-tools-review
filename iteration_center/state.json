@@ -7848,6 +7848,102 @@
       "task": "GEO审计2026-11-02：GEO Content Structure 66.7/100，Expert Quotes 0/3 页(0%)为唯一缺口。为重点页(首页/工具页/高流量文章)各补 1-2 条专家引语或可信第三方评价(带来源链接)，提升 AI 引用概率",
       "source": "geo_audit_20261102",
       "created_date": "2026-11-02"
+    },
+    {
+      "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "学习nextjs.org streaming指南：LCP元素(hero图/H1)必须在Server Component内——Client Component内next/image priority的preload会落到<body>而非<head>，对LCP完全失效。验收：curl线上首页+Top3文章HTML，grep <link rel=preload as=image>确认其行号 < </head>行号；LCP图必须fetchPriority=high+loading=eager(禁lazy)；每页仅1张priority图(多了饱和HTTP/2反而劣化LCP)",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "学习web.dev top-cwv+hashtagcoders：第三方脚本(analytics/chat/广告)是INP/LCP最大杀手。审计本站所有<script>/next/script，非关键脚本必须strategy=lazyOnload或afterInteractive；关键脚本尽量自托管。验收：grep app/layout.tsx与全局组件的script标签，列出每个第三方脚本的strategy，改完tsc=0+build=0+线上HTML确认脚本不在head阻塞位",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-NEXT-FONT-SELFHOST-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "审计字体加载：是否next/font自托管(构建期下载+内联关键CSS，消除FOIT/FOUT与外部Google Fonts DNS/连接开销)。若仍是外部fonts.googleapis.com引用，改next/font/google。验收：线上HTML head无fonts.googleapis.com外链",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-BUNDLE-ANALYZER-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "装@next/bundle-analyzer跑一次，审计首页+Top3文章路由客户端JS总量，目标营销页<150KB gzip；重库换轻量(moment→dayjs、lodash命名导入)、重型客户端库next/dynamic按需。验收：产出bundle报告数字+列出超量依赖",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-CLIENT-BOUNDARY-LEAVES-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "'use client'边界审查：父级use client会传染所有子组件(哪怕子组件没写指令)，破坏RSC优势+增大bundle+破坏LCP preload。审查layout.tsx/页面级是否误标use client，把客户端边界推到叶子组件(仅交互widget)。验收：grep 'use client'全仓库，列出文件树层级，确认无layout/页面级误标",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-CF-IMAGES-LOADER-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "评估Cloudflare Images Transformations：/cdn-cgi/image/{width=,quality=,f=avif}/路径自定义loader替代next/image Sharp on-demand——Sharp冷缓存首请求同步转换比原图还慢，CF边缘转换零冷启动+自动AVIF/WebP+边缘缓存。验收：出评估结论(接入/不接入+理由)，接入则写imageLoader.ts+next.config images.loaderFile，tsc=0+build=0+线上图URL变/cdn-cgi/image/",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-LIGHTHOUSE-CI-JOB-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "GitHub Actions现有Lint/CodeQL/Deploy三job之外加Lighthouse CI job：每PR跑首页+Top3文章Lighthouse移动端，LCP diff>100ms或CLS diff>0.02则build失败(回归拦截)。注意本机chrome-launcher无Chrome死路——CI runner上跑。验收：workflow文件+Actions实测一次绿",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P2-LEARN-SUSPENSE-FALLBACK-CLS-20261102",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "CLS防护：Suspense fallback骨架尺寸必须与最终内容一致(同高宽)，边界外加固定/min-height容器预留空间，防内容替换时reflow位移。审计现有loading.tsx骨架尺寸。验收：列出所有loading.tsx并核对尺寸匹配",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
     }
   ],
   "milestones": [
