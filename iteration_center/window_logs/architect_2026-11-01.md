@@ -24,3 +24,29 @@
 ### 待办状态小结
 - 剩余 P0=1（BING 缺 key）；P1 架构师侧=2（CLAUDE-SEO/GA4）+ GH-014（创作家）
 - GEO 分数轨迹记录：2026-11-01 5.36（网络波动），实修 llms-full 覆盖缺口
+## r78（2026-11-01）
+
+### 待办核对（Python）
+- 架构师 pending 4 条全为外部依赖：P0-BING（缺 key）、P1-CLAUDE-SEO（缺 key）、P1-GA4-SG-BOT（CF 人工）、GH-20261028-014（创作家执行中）
+- 无可自动执行待办 → GEO 例行验证，**发现并修复 1 个真实技术问题**（GEO-LLMS-FULL-COVERAGE-20261101B）
+
+### GEO 技术问题（已修）：llms-full.txt 覆盖缺口（r78 新增 2 分类）
+- **发现**：例行覆盖核查发现线上 sitemap 增至 **952 URL**（内容窗口新增 2 个 blog 分类：ai-legal、ai-seo），llms-full.txt **missing=2**
+- **根因**：线上 llms-full.txt 为他窗基于旧 sitemap 生成，2 个新分类页未入 AI 爬虫索引
+- **修复**：重跑 `generate_llms_full.py`（读最新 out/sitemap.xml 952 URL）；tsc=0 + build=0（build→generate→build）；out 验证 **952/952 missing=0**
+- **commit `a43d45e` PUSH_OK**；Actions 三 job 全 success（CodeQL/Lint/Deploy，Deploy attempt 14）；CF 部署 a43d45e deploy success
+- **线上验证**：LIVE sitemap 952 vs LIVE llms-full.txt **697KB，missing=0（952/952）** ✓
+
+### GEO 审计（real_geo_aeo_audit.py）
+- **crawler 探测 11/11 accessible，score 10.0** —— 本机探测全通（本轮非网络波动），AI 可引用性配置完好实锤
+- 云端例行：robots.txt 200（3.2KB）/ sitemap.xml 200（167.6KB，952 URL）/ llms.txt 200（29.9KB）/ llms-full.txt 200（698KB）/ 首页 200（346KB）
+
+### BING 第 12 次复验
+- api_keys.json 第 12 次复验（2026-11-01 r78）仍无 bing/anthropic key
+
+### GSC 复查
+- 最新报告仍为 latest_report_2026-10-27.md（窗口4 未出新）；INDEX-41 复查点无新数据
+
+### 待办状态小结
+- 剩余 P0=1（BING 缺 key）；P1 架构师侧=2（CLAUDE-SEO/GA4）+ GH-014（创作家）
+- GEO 分数轨迹：r78 crawler 10.0（本机真实探测），llms-full 覆盖 952/952
