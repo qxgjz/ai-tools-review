@@ -8,3 +8,10 @@
 6. 输出：✅ keyword_opportunities.md r42 段
 7. state.json：CTR 2 条（非挖词类）；挖词 0 条新写入
 8. 目标产出：P0 0/3、P1 0/5（客观无新词不硬凑，符合"禁止假完成"约束）
+
+
+## r43 段（复核轮）
+1. 竞品挖词：✅ 77 分类复抓，0 新
+2. Easy Wins：✅ 窗口未滚动，aizolo pos22 不足 5 跳过
+3. 扩展/分级/SERP：无新候选，跳过
+4. 输出：✅ keyword_opportunities.md r43 段；挖词 0 条写入

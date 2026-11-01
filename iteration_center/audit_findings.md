@@ -4674,3 +4674,76 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 - indexing 端点 /search-console/indexing 404 再确认（死路，indexed 环比待 GSC 恢复）
 - 新页面 best-ai-marketing-tools-2026 pos 8.0（5-15 区间新候选 → CTR 开单）；新查询 bondai(89)/milvus ui(84)/react agent(82)/google gemini langgraph(75) 均深尾无效曝光
 - 已闭环：P0-ANALYST-LOG-DISCIPLINE-20261029（日志核实存在，UTF-8 有效，乱码系 PowerShell 显示问题）
+
+
+## 2026-11-01 16:30 设计师巡检（定时任务轮5）
+
+### A. 文章配图核验（batch67-71 新发布 13 篇，date>=2026-10-29）
+
+**A1. 有配图 13 篇 / 30 张 — 全部为对应工具真实界面 ✅（0 错误）**
+
+本地逐张 Read 核验 27 张新文件 + 复用轮4已验文件 3 张（jasper-home/deel-home/elicit-home/consensus-home 中本轮引用的 jasper/deel/elicit/consensus）；posts.json 中 13/13 篇 md 图片引用数 == screenshotCount（2-4 张），无虚假标记。
+
+| 文章 | 配图（工具） | 核验要点 |
+|---|---|---|
+| best-ai-project-management-tools-2026 | project-homepage=monday.com（"People and agents working as one team"+Fortune 500） / motion-pricing（$19/$29 seat） | ✅ |
+| best-ai-transcription-tools-2026 | fireflies-home（"The #1 AI Assistant For Your Meetings"） / otter-pricing（4套餐） / tactiq-home（"Focus on the meeting, let AI handle the notes"） / notta-home（"AI Note Taker to Visualize Meeting Decisions"） | ✅ |
+| best-ai-legal-tools-2026 | legal-spellbook-home=Spellbook（"The complete contract AI suite"） / legal-homepage=Harvey（"Build a Frontier Legal Organization"+$550M raise） | ✅ |
+| best-ai-seo-tools-2026 | seo-homepage=Ahrefs（"Make your business discoverable—in search, AI, and beyond"） / clearscope-pricing（$129/$399） | ✅ |
+| best-ai-research-tools-2026 | scite-home（"AI for Research"+323M+ articles） / research-connectedpapers-home（"Explore academic papers in a visual graph"） | ✅ |
+| best-ai-music-generators-2026 | suno-music-creator（"Make any song you can imagine"+Chat to make music） / udio-home（Beta"Make your music. Create any song. Just describe it."） | ✅ 线上正文与配图逐字吻合 |
+| best-ai-copywriting-tools-2026 | copyai-home（"The First AI-Native GTM Platform"） / jasper-home（轮4已验） / rytr-home（"Get Rytr It's Free"+8M users） | ✅ |
+| best-ai-research-assistants-2026 | elicit-home / consensus-home / scite-home（轮4已验 elicit/consensus；scite 本轮新验） | ✅ |
+| best-ai-hr-tools-2026 | workday-home（"AI that gets work done right"） / deel-home（轮4已验） / paradox-home（"Meet the AI assistant for all things hiring"） | ✅ |
+| best-ai-3d-generators-2026 | meshy-home（"What will you create in 3D today?"+G2 4.8） / sloyd-home（"Unlimited AI 3D creation from text or images"） | ✅ |
+| best-ai-design-generators-2026 | v0-home（"What do you want to create?"） / sloyd-home / decorai-home（"See it redesigned by AI"+40M+ designs） | ✅ |
+| best-ai-voiceover-generators-2026 | elevenlabs-home（"Bringing technology to life"+V4） / murf-home（"Build AI Voice Experiences That Are Natural, Scalable & Efficient"） / cartesia-home（"#1-ranked realtime interaction models"） | ✅ 线上正文逐字吻合 |
+| best-ai-ticketing-tools-2026 | customer-homepage=Intercom（"A complete system for human and AI customer service"+Fin） / gorgias-home（"Deliver the best customer experience"） | ✅ |
+
+**A2. 线上配图渲染（web_fetch 云端通道，本机网络不可达见 C）**：music-generators 线上正文引用 Suno"Make any song you can imagine"+Udio"Make your music. Create any song. Just describe it." 与本地配图逐字一致；voiceover 线上正文 ElevenLabs"bringing technology to life"/Murf"build AI voice experiences that are natural, scalable and efficient"/Cartesia"number one ranked realtime interaction models" 与本地配图逐字一致 ✅。
+
+**A3. 历史待办线上复查（均未修复，保持 pending，不重复开单）**：
+- GH-20261026-011：suno-vs-udio-2026 线上 title 仍为 "Suno AI Review 2026: Is the $10/mo Pro Plan Worth It?"（slug 承诺对比，实为单工具）❌ 未修复。**新增观察**：10-29 发布的 best-ai-music-generators-2026 已实质覆盖 "Suno vs Udio vs Soundraw" 对比内容——建议指挥官评估 GH-011 改 slug 修复或由新文章替代下线。
+- GH-20261028-013：best-ai-essay-writing-tools-2026 / best-ai-thumbnail-makers-2026 / best-ai-search-engines-2026 线上全文仍无配图 ❌ 未修复。
+- GH-20261028-014：best-ai-search-engines-2026 线上 title 仍为 "Best AI Research Tools 2026: Complete Compariso"（slug 承诺 search engines）❌ 未修复。
+
+### B. shadcn/ui 组件巡检（本地 dev server，5 页 × 1440/375 双视口）
+
+- 5 页（home/tools-chatgpt/compare/article/blog）全部 HTTP 200、无横向溢出、无破图 ✅（btns 6/20/35/25/80、inputs 2/2/2/2/1）
+- article 页（best-ai-music-generators-2026）h1="Best AI Music Generators 2026: Suno vs Udio vs Soundraw"，suno/udio 配图渲染正常（broken=[]）✅
+- GH-20261027-012 修复状态延续：/tools/[slug] 与 /blog/[slug] dev 均 200 ✅
+- P2 观察项（与轮4相同，不重复开单）：tabindex hydration 警告（h1，多页）、blog 页 list key prop 警告、home 页 404 资源
+
+### C. 浏览器通道与环境（如实记录，不伪造证据）
+- **ego-browser（citrolabs/ego-lite v0.6.1.13 → skill guide v2.1.0）：CLI 可用**，usage guide 已读；但**本机出站网络不可达**——example.com 与 aitoolcrux.com 均 goto 超时（疑似系统代理 127.0.0.1:7890 MyClash 节点故障影响浏览器全部导航，连 localhost 导航也挂起），线上页面无法经 ego-browser 打开。线上配图核验改用 web_fetch 云端通道完成（与轮4同路径）；本地组件巡检在 ego-browser 导航不可用后回退 Playwright channel:'msedge'（轮4已验证路径，不受代理影响）。ego-browser 不可用原因已如实记录，未伪造浏览器截图证据。
+- 本轮 dev server 首编译慢导致 ego-browser 巡检首轮超时；预热后 Playwright 巡检正常完成。
+
+### D. 待办状态
+- 本轮无新增 P0/P1（13 篇配图全部真实且数量一致）。
+- GH-20261026-011 / GH-20261028-013 / GH-20261028-014：线上复查均未修复，保持 pending（GH-011 附替代建议，见 A3）。
+- GH-20261026-009 / GH-20261026-010（CSP/Vercel Insights）：不在本轮核验范围（非渲染类，且需代理恢复后复核线上）。
+
+
+## r43（2026-11-01 15:3x · 分析师-数据洞察 SOP 触发）
+
+### P0-1 GSC 断崖根因再排查（联合任务·分析师部分完成）
+| 排查层 | 实测结果 | 判定 |
+|---|---|---|
+| sitemap 拉取 | GSC sitemaps submitted=950/已发现 950，状态成功，上次读取 2026-11-01（CDP 实抓） | ✅ 正常 |
+| 线上 sitemap | 952 URLs，200 XML（requests 走代理 7890） | ✅ 正常 |
+| 核心服务响应 | 首页/3 博客页 200，无尾斜杠 301→带斜杠 | ✅ 正常 |
+| _redirects | public/_redirects Cloudflare 规则齐全（/tools、Blog 301、Category slugs） | ✅ 正常 |
+
+**结论**：断崖非 sitemap/响应/重定向三层问题，指向 auto_redirect 9 月下旬暴增事件后排名/索引层影响——r73 修复已生效但曝光恢复滞后（10-26/27 峰 18/16 后 10-28~30 骤降 4/1/1）。**48h 复查点：2026-11-03** 看 10-31~11-02 三日曝光。
+
+### P0-2 REQ13 预检（11-02 正式验证前一天）
+- 线上 sitemap 952 URLs 中：exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/pr-agent/promptfoo **12/12 全部在站**（含 /tools/ 页）
+- **⚠ baml 页 MISSING**：本地 posts.json 283 篇 0 命中、线上 sitemap 无 /tools/baml/——若 REQ13 名单含 baml 需先补页，正式验证将失败
+
+### P0-3 源头规范缺口确证（P0-SOURCE-VALIDATION 分析师部分）
+- scripts/analyst_source_validator.py 实跑：生成源待办 91 条 **缺 title 91/91（100%）**、task 全有、slug 冲突 0、全库缺 title/desc 409 条
+- 根因：keyword_mining/competitor_analysis 生成路径只写 task 不写 title → 校验器已落地可复用
+
+### 数据口径
+- GSC 窗口未滚动（10-01~10-30 同 r42）：155 imp / 0 clk / pos 15.66，重跑确认无回填变化；CTR 新候选 0（r42 已开 marketing-tools/tabbyml）
+- 竞品复抓：77 分类 GAP 11 全历史覆盖 → 0 新

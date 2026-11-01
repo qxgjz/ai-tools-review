@@ -707,3 +707,11 @@ Total keywords analyzed: 累计 70+（r29 起 SERP 验证口径），本轮 SERP
 - 竞品缺口：0 新（复抓 77 分类，11 个名义 GAP 全历史覆盖，与 r41 一致）
 - CTR 新开单 2 条：marketing-tools(pos8.0) + tabbyml(pos18)
 - Total keywords analyzed：6 查询（实读）+ 77 分类（竞品实抓）
+
+
+## r43（2026-11-01 · 复核轮）
+
+- GSC 窗口未滚动（155 imp/pos 15.66 同 r42），Easy Wins 候选仍仅 aizolo reviews(pos22)，不足 5 个跳过
+- 竞品缺口 0 新；无新 P0 关键词（不硬凑，符合禁止假完成）
+- REQ13 预检：12 核心工具页在 sitemap，baml 待确认
+- Total keywords analyzed：6 查询 + 77 竞品分类
