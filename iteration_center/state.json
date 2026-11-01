@@ -1977,7 +1977,7 @@
       "task": "重拉 GSC 索引报告页快照（indexing_snapshot 通道）恢复周度收录跟踪，与 10-26 快照环比，输出收录/未收录/变动清单到 gsc-ga4-report/",
       "source": "report-todo_from_analysis-20261026",
       "created_date": "2026-10-29",
-      "evidence": "r41 2026-10-29 尝试：AdsPower 在线(k1hfuvv6:63325)；sitemaps 页实抓 submitted=931(10-18提交/10-28读取成功)；AI 报告实抓 8 次曝光(8-31~10-26, suno3/gemini2/首页1/cursor1/knowledge1, 与 r38 基线持平)；旧版 /search-console/indexing 端点 404（GSC 改版，indexed/not_indexed 饼图无法从 UI 抓取，与 r33 时期对比通道失效）——完整环比待 GSC 恢复或改抓 URL 变体"
+      "evidence": "r42 2026-11-01 AdsPower CDP 实抓：sitemaps 页 submitted=950、已发现网页=950、状态成功、上次读取 2026-11-01 （10-28 时 931 → 环比 +19，10-18 提交批次被 Google 读取）；indexing 端点 /search-console/indexing 404 再确认（GSC 改版死路）——indexed/not_indexed 完整环比待 GSC 恢复；sitemaps discovered 950 作为周度替代跟踪指标"
     },
     {
       "id": "P0-REQ13-VERIFY-20261102",
@@ -2092,13 +2092,16 @@
     {
       "id": "P0-ANALYST-LOG-DISCIPLINE-20261029",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "分析师"
       ],
       "task": "日志纪律：SLUG-GUARD 已完成但 analyst_2026-10-29.md 缺失，补齐今日日志（含 analyst_slug_guard.py 执行输出）；今后每次改动 scripts 必须同步写窗口日志",
       "source": "commander_daily_20261029_1547",
-      "created_at": "2026-10-29T15:53:46"
+      "created_at": "2026-10-29T15:53:46",
+      "completed_at": "2026-11-01T15:10:00",
+      "evidence": "核实：window_logs/analyst_2026-10-29.md 已存在且 UTF-8 有效（1050字符，含 r41 段与 SLUG-GUARD/AFF 记录）；PowerShell Get-Content 默认编码显示乱码系显示问题非文件缺失；scripts/analyst_slug_guard.py 已落地",
+      "closed_by": "analyst_r42"
     },
     {
       "id": "AFF-APPLY-HEYGEN",
@@ -7366,6 +7369,30 @@
       "title": "llms-full.txt 覆盖缺口修复：34 URL 不入 AI 爬虫索引",
       "completed_at": "2026-11-01T13:23:58",
       "evidence": "r77 2026-11-01: GEO审计+sitemap-vs-llms-full覆盖核查发现 sitemap 950 URL 中 34 个(21篇best-ai-*文章+13个blog category)不在 llms-full.txt=AI可引用性缺口. 根因: llms-full.txt为旧版生成(posts.json新增文章与sitemap新增分类后未重新生成). 修复: 重跑generate_llms_full.py(读最新data/posts.json 283篇+out/sitemap.xml 950 URL), tsc=0+build=0, out验证950/950, commit 7fe7a6c PUSH_OK, Actions三job success(Deploy attempt 12), CF部署7fe7a6c确认, LIVE验证 sitemap 950 vs llms-full 697KB missing=0"
+    },
+    {
+      "id": "CTR-PAGE-MARKETING-TOOLS-20261101",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "页面 https://www.aitoolcrux.com/blog/best-ai-marketing-tools-2026 排名 8.0 但 CTR 仅 0%（imp 1，新窗口 10-01~10-30 新进 5-15 区间），优化 title/meta description 提升点击率",
+      "source": "ctr_optimization_2026-11-01",
+      "created_at": "2026-11-01T15:11:40"
+    },
+    {
+      "id": "CTR-QUERY-TABBYML-20261101",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "window5",
+        "打磨师"
+      ],
+      "task": "查询 [tabbyml] 排名 18.0 但 CTR 仅 0%（imp 1，5-20 扩大范围），优化匹配页 title/meta 提升点击率",
+      "source": "ctr_optimization_2026-11-01",
+      "created_at": "2026-11-01T15:11:40"
     }
   ],
   "milestones": [

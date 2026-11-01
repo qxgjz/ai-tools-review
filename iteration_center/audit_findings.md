@@ -4658,3 +4658,19 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 - COMP-20261012-04/05、COMP-20261013-03/04 建议 slug 与 data/posts.json 已存在文章冲突
 - 实核：best-ai-coding-tools-2026（09-14 已发）/ best-no-code-ai-tools-2026（同款标题已存在）/ best-ai-transcription-tools-2026（**10-29 当天已发布**）
 - 处理：4 条标 completed（目标文章已存在，避免创作家重复产出），源头脚本 scripts/analyst_slug_guard.py 落地
+
+
+## r42（2026-11-01 15:0x · 分析师-数据洞察 SOP 触发）
+
+### P0: 新窗口 GSC 实拉 10-01~10-30：155 imp / 0 clk / pos 15.66（fetch_gsc 自动窗口 UTC-2d）
+| 指标 | 本轮(10-01~30) | r41(09-28~10-27) | 口径 |
+|---|---|---|---|
+| Impressions | 155 | 197 | 窗口错 3 天（少 9 月末 3 天/多 10-28~30 尾部），不可直接环比 |
+| Avg Position | 15.66 | 13.22 | 同上口径 |
+| MOBILE | 5 (pos 9.60) | 5 (pos 9.60→10-27口径) | 移动位次显著优于桌面(15.87) |
+
+- **关键 P0 观察：回升未延续**。Daily trend：10-26=18、10-27=16 峰值后，**10-28=4 → 10-29=1 → 10-30=1 骤降**，确认曝光断崖（auto_redirect 9→94 暴增后 ~170-200 区间）仍未修复，P0-EXPOSURE-CLIFF 继续有效
+- sitemaps 通道：**submitted=950 / 已发现网页=950**（10-28 931 → +19，10-18 提交批次 11-01 被 Google 读取成功）——P0-GSC-SNAPSHOT-RETRY 降级指标可用
+- indexing 端点 /search-console/indexing 404 再确认（死路，indexed 环比待 GSC 恢复）
+- 新页面 best-ai-marketing-tools-2026 pos 8.0（5-15 区间新候选 → CTR 开单）；新查询 bondai(89)/milvus ui(84)/react agent(82)/google gemini langgraph(75) 均深尾无效曝光
+- 已闭环：P0-ANALYST-LOG-DISCIPLINE-20261029（日志核实存在，UTF-8 有效，乱码系 PowerShell 显示问题）

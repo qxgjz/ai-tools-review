@@ -698,3 +698,12 @@ Total keywords analyzed: 累计 70+（r29 起 SERP 验证口径），本轮 SERP
 - **Easy Wins（pos 20-50）：1 个候选（aizolo reviews pos22），不足 5 个跳过**（SOP 阈值）
 - 竞品缺口：0 新（11 个名义 GAP 全历史覆盖复核，与 r40 一致）
 - Total keywords analyzed：本轮实读 8 查询 + 77 分类（竞品实抓）
+
+
+## r42（2026-11-01 · Easy Wins 复核）
+
+- GSC 新窗口 155 imp / pos 15.66；top queries 6 条：aizolo reviews(22) / tabbyml(18) / bondai(89.3) / google gemini langgraph(75) / milvus ui(84) / react agent(82)
+- **Easy Wins（pos 20-50）：1 个候选（aizolo reviews pos22），不足 5 个跳过**（SOP 阈值）
+- 竞品缺口：0 新（复抓 77 分类，11 个名义 GAP 全历史覆盖，与 r41 一致）
+- CTR 新开单 2 条：marketing-tools(pos8.0) + tabbyml(pos18)
+- Total keywords analyzed：6 查询（实读）+ 77 分类（竞品实抓）
