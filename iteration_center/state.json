@@ -2050,10 +2050,12 @@
         "window4",
         "分析师"
       ],
-      "status": "pending",
+      "status": "completed",
       "created_at": "2026-11-01T22:34",
       "source": "commander_dispatch_20261101_r43",
-      "evidence": "r44 预查（11-02，窗口 10-02~10-31 已滚动）：10-31 曝光=1 **无回升**（10-26/27 峰 18/16 后 10-28/29/30/31=4/1/1/1 连续 4 天低位）；新窗口 154 imp/pos 15.75 较上窗口 155/15.66 曝光持平略降。11-03 正式复查结论倾向\"未恢复\"，建议架构师复查时重点看 11-01/11-02 两日是否仍 <5"
+      "evidence": "r45 正式复查（11-02 预执行，GSC 重跑 10-02~10-31 窗口，数据回填）：10-31 曝光回填 1→2 仍低位；峰后 10-28/29/30/31=4/1/1/2 **连续 4 天 <5 无回升**；窗口总量 156 imp / pos 15.56 较 r44（154/15.75）曝光 +2、位置 +0.19，持平略升但无实质恢复。结论：**曝光断崖未恢复**（r73 auto_redirect 修复生效但索引/排名恢复滞后）；11-03 后若窗口滚动至 10-04~11-02 可复查 11-01/11-02 两日是否仍 <5，建议架构师保持监测",
+      "completed_at": "2026-11-02T15:15:22",
+      "closed_by": "analyst_r45"
     },
     {
       "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
@@ -8483,6 +8485,18 @@
       "completed_at": "2026-11-02T11:24:09.754545",
       "source": "followup_20261102",
       "evidence": "{\"h_batch_alive\": 26, \"h_batch_total\": 26, \"known_backlinks_alive\": 5, \"brand_results\": 10, \"external_listings\": 7}"
+    },
+    {
+      "id": "SOP-20261102-INDEXNOW-BATCH2",
+      "task": "SOP 第三轮：IndexNow 第二批次 5 URL 提交",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-11-02T14:32:55.143481",
+      "source": "sop_20261102_third",
+      "evidence": "{\"indexnow_status\": 202, \"urls_submitted\": 5}"
     }
   ],
   "milestones": [

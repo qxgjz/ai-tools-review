@@ -723,3 +723,11 @@ Total keywords analyzed: 累计 70+（r29 起 SERP 验证口径），本轮 SERP
 - 竞品缺口 0 新（GAP 10 条全历史覆盖）；无新 P0 关键词（不硬凑）
 - REQ13 验证：12/13 在站可抓取，baml 404 缺失
 - Total keywords analyzed：6 查询 + 77 竞品分类
+
+
+## r45（2026-11-02 晚档 · 复核轮）
+
+- GSC Easy Wins：aizolo reviews pos 22（imp 1）不足 5 跳过；tabbyml pos 18 已开 CTR 单
+- 竞品缺口 0 新（GAP 9 全历史覆盖；teachers 已被 batch74 覆盖，缺口池收窄）
+- CTR 候选 0 新（13 张历史单未执行，候选池耗尽）
+- Total keywords analyzed：6 查询 + 77 竞品分类
