@@ -486,6 +486,23 @@
       ],
       "todos": [],
       "result": "3 P0 rewrite-upgrade articles: prompt-generators 2245w/5faq/5il/2shots(AIPRM home+pricing via Playwright, PromptHero home), coding-assistant 2034w/5faq/5il/2shots(cursor-home+copilot-home), note-taking-apps 2086w/6faq/4il/2shots(notion-ai+notion-product); zens-ink 100x3 (avg 100); llmevalkit clean score100 x3, hallucination_detected=False; pain-point quotes: generic-repetitive/thin-voice/hallucination/credits-no-rollover/billing-cancel; internal links all existing slugs; external links 2-7 official URLs; Definition-first + bluf frontmatter + date; Mem pricing contradiction -> no number written; git push + online curl 200 pending"
+    },
+    {
+      "id": "BATCH73-20261102",
+      "batch": "batch73",
+      "date": "2026-11-02",
+      "type": "content production (rewrite upgrade)",
+      "articles": [
+        "best-ai-presentation-generators-2026",
+        "best-ai-workflow-automation-tools-2026",
+        "best-ai-tools-for-students-2026"
+      ],
+      "todos": [
+        "KW-PRESENTATION-GENERATORS-20261025",
+        "KW-WORKFLOW-AUTOMATION-20261025",
+        "KW-VOLUME-CONFIRMED-EDUCATION-20261026"
+      ],
+      "result": "3 rewrite-upgrade articles: presentation 2337w/zens100, workflow 2364w/100, students 2113w/100; avg zens 100; screenshots OCR-verified (gamma/beautifulai, zapier/n8n, khanmigo/magicschool; 4 newly captured, 2 library reused); FAQ 6 each with pain_point quotes; internal 4-5 each all existing slugs; external 3 official sources each; llmevalkit 3 clean (hallucination=false, score 100); posts.json updated (283 entries unchanged, same-slug in-place); state updated; curl live 200 all 3 after deploy."
     }
   ],
   "phase_history": [
@@ -572,7 +589,7 @@
       "response": "immediate"
     }
   },
-  "last_updated": "2026-11-01T16:10:00+08:00",
+  "last_updated": "2026-11-02",
   "completed_tasks": [
     {
       "id": "GEO-CRAWLER-ACCESS-20261102",
@@ -1745,12 +1762,13 @@
       "serp_competition": "High",
       "serp_verified": true,
       "our_angle": "按输出格式分（网页=Gamma/PPTX=Beautiful.ai/Google Slides=Plus AI/品牌=Claude Design）+ 免费额度对比",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
+      "status": "completed",
+      "created_at": "2026-10-25T15:12:54",
+      "completed_at": "2026-11-02"
     },
     {
       "id": "KW-VOLUME-CONFIRMED-EDUCATION-20261026",
-      "status": "pending",
+      "status": "completed",
       "priority": "P0",
       "assigned_to": [
         "window2",
@@ -1762,7 +1780,8 @@
       "serp_verified": true,
       "volume_verified": true,
       "created_at": "2026-10-26T15:06:51",
-      "our_angle": "K-12 合规+免费额度"
+      "our_angle": "K-12 合规+免费额度",
+      "completed_at": "2026-11-02"
     },
     {
       "id": "KW-VOLUME-CONFIRMED-LEGAL-20261026",
@@ -1808,8 +1827,9 @@
       "serp_competition": "High",
       "serp_verified": true,
       "our_angle": "按技术门槛分（无代码=Zapier/Make/企业=UiPath/开发者=n8n/Mastra）+ 对比表",
-      "status": "pending",
-      "created_at": "2026-10-25T15:12:54"
+      "status": "completed",
+      "created_at": "2026-10-25T15:12:54",
+      "completed_at": "2026-11-02"
     },
     {
       "id": "LEARN-20261014-04",
@@ -2001,21 +2021,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "P0-GH011-REMEDIATE-20261101",
-      "priority": "P0",
-      "title": "GH-20261026-011处置决策：改slug或下线",
-      "description": "suno-vs-udio-2026 线上title仍为单工具承诺对比实为单工具，且best-ai-music-generators-2026已实质覆盖Suno vs Udio对比。r43建议指挥官决策：①改slug为suno-ai-review对齐title 或 ②下线由新文章替代。限期11-02给出处置并执行。",
-      "assigned_to": [
-        "window1",
-        "架构师"
-      ],
-      "status": "completed",
-      "created_at": "2026-11-01T22:34",
-      "source": "commander_dispatch_20261101_r43",
-      "completed_at": "2026-11-02T01:25:00",
-      "evidence": "线上实证: /blog/suno-vs-udio-2026/ 200 (212KB, H2x18: Quick Answer/Key Takeaways/全对比段/FAQ/Conclusion, udio 287次/suno 269次)=完整真实对比文章, r43实为单工具前提与线上事实不符; 处置=保留文章+移除public/_redirects第114行僵尸301(源无尾斜杠不匹配带斜杠请求, 从未生效, 会误伤有效对比页); commit 76a216d; CF部署76a216d success; Actions Lint/CodeQL/Deploy全success; 线上suno-vs-udio 200保持+suno-review 200"
-    },
-    {
       "id": "P0-GROWTH-BATCH-PUSH-20261101",
       "priority": "P0",
       "title": "拓荒者批量推进催办：pending 225条+Pitch通道修复后立即批量外联",
@@ -2044,6 +2049,30 @@
       "source": "commander_dispatch_20261101_r43"
     },
     {
+      "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "学习nextjs.org streaming指南：LCP元素(hero图/H1)必须在Server Component内——Client Component内next/image priority的preload会落到<body>而非<head>，对LCP完全失效。验收：curl线上首页+Top3文章HTML，grep <link rel=preload as=image>确认其行号 < </head>行号；LCP图必须fetchPriority=high+loading=eager(禁lazy)；每页仅1张priority图(多了饱和HTTP/2反而劣化LCP)",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102",
+      "priority": "P0",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "学习web.dev top-cwv+hashtagcoders：第三方脚本(analytics/chat/广告)是INP/LCP最大杀手。审计本站所有<script>/next/script，非关键脚本必须strategy=lazyOnload或afterInteractive；关键脚本尽量自托管。验收：grep app/layout.tsx与全局组件的script标签，列出每个第三方脚本的strategy，改完tsc=0+build=0+线上HTML确认脚本不在head阻塞位",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
       "id": "P0-POLISHER-BATCH-PUSH-20261101",
       "priority": "P0",
       "title": "打磨师批量修复催办：pending 34条+日志停10-23",
@@ -2055,23 +2084,6 @@
       "status": "pending",
       "created_at": "2026-11-01",
       "source": "commander_dispatch_20261101"
-    },
-    {
-      "id": "P0-REQ13-BAML-PAGE-20261101",
-      "priority": "P0",
-      "title": "REQ13预检baml页MISSING补页（11-02正式验证前）",
-      "description": "r43预检：exa/claude/suno等12/12在站，但 baml 本地posts.json 0命中、线上sitemap无/tools/baml/。若REQ13名单含baml必须11-02前补页（含正文+配图+进posts.json+sitemap），否则正式验证失败。",
-      "assigned_to": [
-        "window1",
-        "架构师",
-        "window2",
-        "创作家"
-      ],
-      "status": "completed",
-      "created_at": "2026-11-01T22:34",
-      "source": "commander_dispatch_20261101_r43",
-      "completed_at": "2026-11-02T01:25:00",
-      "evidence": "REQ13-VERIFY名单13个=exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/promptfoo/chroma/copilot, 不含baml; baml在tools.json(533) 0命中/posts.json(283) 0命中/线上sitemap无/tools/baml/; 补页条件不成立, 无需补页"
     },
     {
       "id": "P0-REQ13-VERIFY-20261102",
@@ -4057,6 +4069,54 @@
       "created_date": "2026-10-24"
     },
     {
+      "id": "P1-LEARN-BUNDLE-ANALYZER-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "装@next/bundle-analyzer跑一次，审计首页+Top3文章路由客户端JS总量，目标营销页<150KB gzip；重库换轻量(moment→dayjs、lodash命名导入)、重型客户端库next/dynamic按需。验收：产出bundle报告数字+列出超量依赖",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-CF-IMAGES-LOADER-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "评估Cloudflare Images Transformations：/cdn-cgi/image/{width=,quality=,f=avif}/路径自定义loader替代next/image Sharp on-demand——Sharp冷缓存首请求同步转换比原图还慢，CF边缘转换零冷启动+自动AVIF/WebP+边缘缓存。验收：出评估结论(接入/不接入+理由)，接入则写imageLoader.ts+next.config images.loaderFile，tsc=0+build=0+线上图URL变/cdn-cgi/image/",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-CLIENT-BOUNDARY-LEAVES-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "'use client'边界审查：父级use client会传染所有子组件(哪怕子组件没写指令)，破坏RSC优势+增大bundle+破坏LCP preload。审查layout.tsx/页面级是否误标use client，把客户端边界推到叶子组件(仅交互widget)。验收：grep 'use client'全仓库，列出文件树层级，确认无layout/页面级误标",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
+      "id": "P1-LEARN-LIGHTHOUSE-CI-JOB-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "GitHub Actions现有Lint/CodeQL/Deploy三job之外加Lighthouse CI job：每PR跑首页+Top3文章Lighthouse移动端，LCP diff>100ms或CLS diff>0.02则build失败(回归拦截)。注意本机chrome-launcher无Chrome死路——CI runner上跑。验收：workflow文件+Actions实测一次绿",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
+    },
+    {
       "id": "P1-LEARN-MA-COMPLEXITY-20261028A",
       "title": "SOP补算力按复杂度分配规则",
       "task": "在 WINDOW_SOP_MASTER.md 增加\"算力按复杂度缩放\"分配规则：简单任务=1窗口3-10步自闭环；比较/调研任务=2-4窗口并行且明确分工；复杂任务=6窗口并行+指挥官在派发时写明每窗口边界与验收。来源：Anthropic multi-agent research（scale effort to query complexity）。",
@@ -4067,6 +4127,18 @@
       ],
       "source": "commander_learning_多Agent协作",
       "created_at": "2026-10-28T09:34:15"
+    },
+    {
+      "id": "P1-LEARN-NEXT-FONT-SELFHOST-20261102",
+      "priority": "P1",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "审计字体加载：是否next/font自托管(构建期下载+内联关键CSS，消除FOIT/FOUT与外部Google Fonts DNS/连接开销)。若仍是外部fonts.googleapis.com引用，改next/font/google。验收：线上HTML head无fonts.googleapis.com外链",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
     },
     {
       "id": "P1-LLM-ANSWER-BLOCK-20261022",
@@ -6494,6 +6566,18 @@
       "created_date": "2026-10-13"
     },
     {
+      "id": "GEO-EXPERT-QUOTES-20261102",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "GEO审计2026-11-02：GEO Content Structure 66.7/100，Expert Quotes 0/3 页(0%)为唯一缺口。为重点页(首页/工具页/高流量文章)各补 1-2 条专家引语或可信第三方评价(带来源链接)，提升 AI 引用概率",
+      "source": "geo_audit_20261102",
+      "created_date": "2026-11-02"
+    },
+    {
       "id": "GROWTH-RR-05-20261018",
       "task": "客座投稿nextmsc.com: marketing/tech, 文末author bio可介绍aitoolcrux; 相关度中等, 备选。待通道。",
       "assigned_to": [
@@ -6620,6 +6704,18 @@
       "completed_at": "2026-10-27T23:13:16.121395",
       "completion_note": "2026-10-27 跟进档：Serper brand='aitoolcrux' 10 结果，确认 hatchr.in/sideprojectors/thehackstack 3 条真活外链；6 目录（insidr/aisotools/toolsify/bestofai/rankmyai/alternative.me）site: 收录全 0",
       "reopened_note": "指挥官2026-10-28判定假完成：无evidence字段+backlink_opportunities台账显示rankmyai/bestofai/aipulse等提交未成功(404/SPA/无公开邮箱)。需浏览器/表单通道真实提交成功并附URL证据后才可标completed。"
+    },
+    {
+      "id": "P2-LEARN-SUSPENSE-FALLBACK-CLS-20261102",
+      "priority": "P2",
+      "status": "pending",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "CLS防护：Suspense fallback骨架尺寸必须与最终内容一致(同高宽)，边界外加固定/min-height容器预留空间，防内容替换时reflow位移。审计现有loading.tsx骨架尺寸。验收：列出所有loading.tsx并核对尺寸匹配",
+      "source": "架构师学习",
+      "created_date": "2026-11-02"
     },
     {
       "id": "R18-commudle-com",
@@ -6852,6 +6948,310 @@
       "reopened_at": "2026-11-01T22:46:26.643818"
     },
     {
+      "id": "RR02G-OP-01",
+      "task": "Pitch backlink opportunity [ai_writing_alt]: albato.com | Best AI Writing Tools in 2026 Ranked - Albato",
+      "target_url": "https://albato.com/blog/publications/best-ai-writing-tools",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI writing tools alternatives 2026 list",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-01",
+      "task": "Pitch backlink opportunity [ai_video_gen]: pinggy.io | Best Video Generation AI Models in 2026",
+      "target_url": "https://pinggy.io/blog/best_video_generation_ai_models/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI video generation tools 2026 directory",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-01",
+      "task": "Pitch backlink opportunity [ai_chatbot_tools]: ajelix.com | The 10 Best AI Chatbots of 2026: The Ultimate Comparison ...",
+      "target_url": "https://ajelix.com/ai/best-ai-chatbots/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI chatbot tools list comparison 2026",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-01",
+      "task": "Pitch backlink opportunity [ai_img_gen]: finance.yahoo.com | Best AI Image Creation Tools (2026): CapCut Recognized for P",
+      "target_url": "https://finance.yahoo.com/technology/ai/articles/best-ai-image-creation-tools-103000805.html",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI image generation tools 2026 roundup",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-01",
+      "task": "Pitch backlink opportunity [ai_meeting]: cirrusinsight.com | 13 Best Meeting Note Takers in 2026 [Best Tools Compared]",
+      "target_url": "https://www.cirrusinsight.com/blog/ai-meeting-note-takers",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI meeting notes tools comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-01",
+      "task": "Pitch backlink opportunity [ai_seo_tools]: alphacorp.ai | AI SEO Tools for 2026: 9 Picks by Use Case",
+      "target_url": "https://alphacorp.ai/blog/ai-seo-tools-for-2026-9-picks-by-use-case",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI SEO tools 2026 recommendations",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-02",
+      "task": "Pitch backlink opportunity [ai_video_gen]: jackrighteous.com | Best AI Video Generation Tools for Creators (2026 Guide)",
+      "target_url": "https://jackrighteous.com/en-us/blogs/ai-art-visuals-creatives/best-ai-video-creation-tools-for-2026-creator-guide?srsltid=AYCX9vKYdVB3XbyzgIbCSSg9fAHulgQqYp1-pAS-z-EE6usMX_wxpHUY",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI video generation tools 2026 directory",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-02",
+      "task": "Pitch backlink opportunity [ai_chatbot_tools]: knock-ai.com | Best AI Chatbots 2026: Tested and Ranked by Use Case + ...",
+      "target_url": "https://www.knock-ai.com/blog/best-ai-chatbots",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI chatbot tools list comparison 2026",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-02",
+      "task": "Pitch backlink opportunity [ai_img_gen]: curiousrefuge.com | The 13 Best AI Image Generators of 2026 (Official Ranking)",
+      "target_url": "https://curiousrefuge.com/blog/best-ai-image-generators-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI image generation tools 2026 roundup",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-02",
+      "task": "Pitch backlink opportunity [ai_meeting]: read.ai | 8 Budget-Friendly AI Meeting Assistant Tools for Startups",
+      "target_url": "https://www.read.ai/articles/8-budget-friendly-ai-meeting-assistant-tools-for-startups",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI meeting notes tools comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-02",
+      "task": "Pitch backlink opportunity [ai_seo_tools]: ebmasterworld.com | Which AI Tools Are Actually Worth Paying For in 2026?",
+      "target_url": "https://www.webmasterworld.com/gpt/5132225.htm",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI SEO tools 2026 recommendations",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-03",
+      "task": "Pitch backlink opportunity [ai_video_gen]: quizmitra.com | Best AI Video Generators in 2026",
+      "target_url": "https://quizmitra.com/blog/best-ai-video-generators-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI video generation tools 2026 directory",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-03",
+      "task": "Pitch backlink opportunity [ai_chatbot_tools]: artificialanalysis.ai | AI Chatbots Comparison: ChatGPT, Claude, Meta ...",
+      "target_url": "https://artificialanalysis.ai/agents/chatbots",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI chatbot tools list comparison 2026",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-03",
+      "task": "Pitch backlink opportunity [ai_img_gen]: krea.ai | 8 Best Creative AI Image Generators in 2026",
+      "target_url": "https://www.krea.ai/blog/8-best-creative-ai-image-generators-in-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI image generation tools 2026 roundup",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-03",
+      "task": "Pitch backlink opportunity [ai_meeting]: tldv.io | AI Note Taker Apps: I Tested the 5 Best Free Options in 2026",
+      "target_url": "https://tldv.io/blog/free-ai-note-taking/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI meeting notes tools comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-03",
+      "task": "Pitch backlink opportunity [ai_seo_tools]: hatagraph.com | We Tested the 15 Best (& Underrated) AI SEO Tools in 2026",
+      "target_url": "https://whatagraph.com/blog/articles/ai-seo-tools",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI SEO tools 2026 recommendations",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-04",
+      "task": "Pitch backlink opportunity [ai_img_gen]: tech-insider.org | Best AI Image Generators in 2026: Top Tools for Creating Ima",
+      "target_url": "https://tech-insider.org/best-ai-image-generators-2026/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI image generation tools 2026 roundup",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-04",
+      "task": "Pitch backlink opportunity [ai_meeting]: meetjamie.ai | I tested 5 Best AI Note Takers in 2026 [Free & Paid]",
+      "target_url": "https://www.meetjamie.ai/blog/ai-note-taker",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI meeting notes tools comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
+      "id": "RR02G-OP-05",
+      "task": "Pitch backlink opportunity [ai_img_gen]: shattered.io | Best AI Image Generator 2026: GPT Image 2.5 vs 3 Rivals",
+      "target_url": "https://shattered.io/best-ai-image-generator-gpt-image-2-5-vs-nano-banana-2-1-2026/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T02:02:57.464285",
+      "source": "serper_g_batch_2026-11-02",
+      "query": "best AI image generation tools 2026 roundup",
+      "http_status": 200,
+      "verified_at": "2026-11-02T06:35:51.758901",
+      "verification_note": "HTTP 200 confirmed reachable on 2026-11-02. Pitch email queued pending SMTP."
+    },
+    {
       "id": "RR20261020-08",
       "priority": "P2",
       "status": "pending",
@@ -6921,24 +7321,6 @@
       "url": "https://showcase.belle.community/",
       "contact": "无邮箱(表单)",
       "created_date": "2026-10-20"
-    },
-    {
-      "id": "RR20261020-B09",
-      "priority": "P2",
-      "status": "completed",
-      "assigned_to": [
-        "拓荒者",
-        "window3"
-      ],
-      "task": "外链收录机会：alternative.me 替代品目录suggest（目录收录），通道 无邮箱(表单)，200,submit/suggest/contact",
-      "source": "backlink_research_20261020_b",
-      "created_at": "2026-10-20T09:09:17.937928+08:00",
-      "channel": "目录收录",
-      "url": "https://alternative.me/",
-      "contact": "无邮箱(表单)",
-      "created_date": "2026-10-20",
-      "completed_at": "2026-11-01T23:07:53.180497",
-      "evidence": "2026-11-01 Serper site: recheck all 0 results. No listing indexed. Marked no-follow."
     },
     {
       "id": "RR20261020-B10",
@@ -7476,6 +7858,22 @@
       "created_date": "2026-10-23"
     },
     {
+      "id": "SOP-20261102-G-BATCH-VERIFY",
+      "task": "SOP 档：G 批 19 域名 HTTP 验证 + IndexNow 5 URL 提交 + brand 复查",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "completed_at": "2026-11-02T06:35:51.758901",
+      "source": "sop_20261102",
+      "evidence": "{\"g_batch_http_alive\": 19, \"g_batch_total\": 19, \"indexnow_status\": 202, \"brand_results\": 10, \"external_listings\": 7, \"note\": \"HTTP verification only; pitch emails queued pending SMTP restoration (550 Too many attempts)\"}",
+      "title": "G批次19站点外联-真实pitch发出闭环（重开）",
+      "description": "HTTP验证已完成（19/19 alive+IndexNow 202），但pitch邮件仍queued（QQ SMTP 550封顶）未发出=未闭环。铁律：SMTP发出并收到accepted/回链后才可标completed。待QQ当日额度恢复后补发≥5条/次并附accepted证据。",
+      "reopen_reason": "指挥官11-02早间档验证：SMTP 550未发出仅HTTP验证标completed，第三次同类违例",
+      "reopened_at": "2026-11-02T07:45:33.644985"
+    },
+    {
       "task": "GitHub PR: 向 github.com/submitaitools/Free-AI-Directories 提PR, 在免费AI目录清单收录aitoolcrux.com(需本地git+代理)",
       "assigned_to": [
         "拓荒者",
@@ -7577,373 +7975,6 @@
       "status": "pending",
       "created_at": "2026-10-10T12:48:15",
       "created_date": "2026-10-10"
-    },
-    {
-      "id": "BACKLINK-REVIEW-20261101",
-      "task": "外链跟进档：5 条已获外链 HTTP 存活 + Serper brand 复查 + 6 个目录 site: 复查",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "completed",
-      "completed_at": "2026-11-01T23:07:53.180497",
-      "source": "followup_20261101",
-      "evidence": "{\"known_backlinks\": [{\"name\": \"hatchr-post\", \"status\": 200, \"anchor\": false}, {\"name\": \"hatchr-profile\", \"status\": 200, \"anchor\": false}, {\"name\": \"sideprojectors\", \"status\": 200, \"anchor\": true}, {\"name\": \"thehackstack\", \"status\": 200, \"anchor\": true}, {\"name\": \"github-repo\", \"status\": 200, \"anchor\": true}], \"brand_results\": 10, \"pending_dirs_site_check\": {\"insidr.ai\": 0, \"aisotools.com\": 0, \"toolsify.ai\": 0, \"bestofai.io\": 0, \"rankmyai.com\": 0, \"alternative.me\": 0}}"
-    },
-    {
-      "id": "RR02G-OP-01",
-      "task": "Pitch backlink opportunity [ai_writing_alt]: albato.com | Best AI Writing Tools in 2026 Ranked - Albato",
-      "target_url": "https://albato.com/blog/publications/best-ai-writing-tools",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI writing tools alternatives 2026 list"
-    },
-    {
-      "id": "RR02G-OP-01",
-      "task": "Pitch backlink opportunity [ai_video_gen]: pinggy.io | Best Video Generation AI Models in 2026",
-      "target_url": "https://pinggy.io/blog/best_video_generation_ai_models/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI video generation tools 2026 directory"
-    },
-    {
-      "id": "RR02G-OP-02",
-      "task": "Pitch backlink opportunity [ai_video_gen]: jackrighteous.com | Best AI Video Generation Tools for Creators (2026 Guide)",
-      "target_url": "https://jackrighteous.com/en-us/blogs/ai-art-visuals-creatives/best-ai-video-creation-tools-for-2026-creator-guide?srsltid=AYCX9vKYdVB3XbyzgIbCSSg9fAHulgQqYp1-pAS-z-EE6usMX_wxpHUY",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI video generation tools 2026 directory"
-    },
-    {
-      "id": "RR02G-OP-03",
-      "task": "Pitch backlink opportunity [ai_video_gen]: quizmitra.com | Best AI Video Generators in 2026",
-      "target_url": "https://quizmitra.com/blog/best-ai-video-generators-2026",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI video generation tools 2026 directory"
-    },
-    {
-      "id": "RR02G-OP-01",
-      "task": "Pitch backlink opportunity [ai_chatbot_tools]: ajelix.com | The 10 Best AI Chatbots of 2026: The Ultimate Comparison ...",
-      "target_url": "https://ajelix.com/ai/best-ai-chatbots/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI chatbot tools list comparison 2026"
-    },
-    {
-      "id": "RR02G-OP-02",
-      "task": "Pitch backlink opportunity [ai_chatbot_tools]: knock-ai.com | Best AI Chatbots 2026: Tested and Ranked by Use Case + ...",
-      "target_url": "https://www.knock-ai.com/blog/best-ai-chatbots",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI chatbot tools list comparison 2026"
-    },
-    {
-      "id": "RR02G-OP-03",
-      "task": "Pitch backlink opportunity [ai_chatbot_tools]: artificialanalysis.ai | AI Chatbots Comparison: ChatGPT, Claude, Meta ...",
-      "target_url": "https://artificialanalysis.ai/agents/chatbots",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI chatbot tools list comparison 2026"
-    },
-    {
-      "id": "RR02G-OP-01",
-      "task": "Pitch backlink opportunity [ai_img_gen]: finance.yahoo.com | Best AI Image Creation Tools (2026): CapCut Recognized for P",
-      "target_url": "https://finance.yahoo.com/technology/ai/articles/best-ai-image-creation-tools-103000805.html",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI image generation tools 2026 roundup"
-    },
-    {
-      "id": "RR02G-OP-02",
-      "task": "Pitch backlink opportunity [ai_img_gen]: curiousrefuge.com | The 13 Best AI Image Generators of 2026 (Official Ranking)",
-      "target_url": "https://curiousrefuge.com/blog/best-ai-image-generators-2026",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI image generation tools 2026 roundup"
-    },
-    {
-      "id": "RR02G-OP-03",
-      "task": "Pitch backlink opportunity [ai_img_gen]: krea.ai | 8 Best Creative AI Image Generators in 2026",
-      "target_url": "https://www.krea.ai/blog/8-best-creative-ai-image-generators-in-2026",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI image generation tools 2026 roundup"
-    },
-    {
-      "id": "RR02G-OP-04",
-      "task": "Pitch backlink opportunity [ai_img_gen]: tech-insider.org | Best AI Image Generators in 2026: Top Tools for Creating Ima",
-      "target_url": "https://tech-insider.org/best-ai-image-generators-2026/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI image generation tools 2026 roundup"
-    },
-    {
-      "id": "RR02G-OP-05",
-      "task": "Pitch backlink opportunity [ai_img_gen]: shattered.io | Best AI Image Generator 2026: GPT Image 2.5 vs 3 Rivals",
-      "target_url": "https://shattered.io/best-ai-image-generator-gpt-image-2-5-vs-nano-banana-2-1-2026/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI image generation tools 2026 roundup"
-    },
-    {
-      "id": "RR02G-OP-01",
-      "task": "Pitch backlink opportunity [ai_meeting]: cirrusinsight.com | 13 Best Meeting Note Takers in 2026 [Best Tools Compared]",
-      "target_url": "https://www.cirrusinsight.com/blog/ai-meeting-note-takers",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI meeting notes tools comparison"
-    },
-    {
-      "id": "RR02G-OP-02",
-      "task": "Pitch backlink opportunity [ai_meeting]: read.ai | 8 Budget-Friendly AI Meeting Assistant Tools for Startups",
-      "target_url": "https://www.read.ai/articles/8-budget-friendly-ai-meeting-assistant-tools-for-startups",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI meeting notes tools comparison"
-    },
-    {
-      "id": "RR02G-OP-03",
-      "task": "Pitch backlink opportunity [ai_meeting]: tldv.io | AI Note Taker Apps: I Tested the 5 Best Free Options in 2026",
-      "target_url": "https://tldv.io/blog/free-ai-note-taking/",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI meeting notes tools comparison"
-    },
-    {
-      "id": "RR02G-OP-04",
-      "task": "Pitch backlink opportunity [ai_meeting]: meetjamie.ai | I tested 5 Best AI Note Takers in 2026 [Free & Paid]",
-      "target_url": "https://www.meetjamie.ai/blog/ai-note-taker",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI meeting notes tools comparison"
-    },
-    {
-      "id": "RR02G-OP-01",
-      "task": "Pitch backlink opportunity [ai_seo_tools]: alphacorp.ai | AI SEO Tools for 2026: 9 Picks by Use Case",
-      "target_url": "https://alphacorp.ai/blog/ai-seo-tools-for-2026-9-picks-by-use-case",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI SEO tools 2026 recommendations"
-    },
-    {
-      "id": "RR02G-OP-02",
-      "task": "Pitch backlink opportunity [ai_seo_tools]: ebmasterworld.com | Which AI Tools Are Actually Worth Paying For in 2026?",
-      "target_url": "https://www.webmasterworld.com/gpt/5132225.htm",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI SEO tools 2026 recommendations"
-    },
-    {
-      "id": "RR02G-OP-03",
-      "task": "Pitch backlink opportunity [ai_seo_tools]: hatagraph.com | We Tested the 15 Best (& Underrated) AI SEO Tools in 2026",
-      "target_url": "https://whatagraph.com/blog/articles/ai-seo-tools",
-      "assigned_to": [
-        "拓荒者"
-      ],
-      "priority": "P2",
-      "status": "pending",
-      "created_at": "2026-11-02T02:02:57.464285",
-      "source": "serper_g_batch_2026-11-02",
-      "query": "best AI SEO tools 2026 recommendations"
-    },
-    {
-      "id": "GEO-EXPERT-QUOTES-20261102",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "GEO审计2026-11-02：GEO Content Structure 66.7/100，Expert Quotes 0/3 页(0%)为唯一缺口。为重点页(首页/工具页/高流量文章)各补 1-2 条专家引语或可信第三方评价(带来源链接)，提升 AI 引用概率",
-      "source": "geo_audit_20261102",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "学习nextjs.org streaming指南：LCP元素(hero图/H1)必须在Server Component内——Client Component内next/image priority的preload会落到<body>而非<head>，对LCP完全失效。验收：curl线上首页+Top3文章HTML，grep <link rel=preload as=image>确认其行号 < </head>行号；LCP图必须fetchPriority=high+loading=eager(禁lazy)；每页仅1张priority图(多了饱和HTTP/2反而劣化LCP)",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102",
-      "priority": "P0",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "学习web.dev top-cwv+hashtagcoders：第三方脚本(analytics/chat/广告)是INP/LCP最大杀手。审计本站所有<script>/next/script，非关键脚本必须strategy=lazyOnload或afterInteractive；关键脚本尽量自托管。验收：grep app/layout.tsx与全局组件的script标签，列出每个第三方脚本的strategy，改完tsc=0+build=0+线上HTML确认脚本不在head阻塞位",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P1-LEARN-NEXT-FONT-SELFHOST-20261102",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "审计字体加载：是否next/font自托管(构建期下载+内联关键CSS，消除FOIT/FOUT与外部Google Fonts DNS/连接开销)。若仍是外部fonts.googleapis.com引用，改next/font/google。验收：线上HTML head无fonts.googleapis.com外链",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P1-LEARN-BUNDLE-ANALYZER-20261102",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "装@next/bundle-analyzer跑一次，审计首页+Top3文章路由客户端JS总量，目标营销页<150KB gzip；重库换轻量(moment→dayjs、lodash命名导入)、重型客户端库next/dynamic按需。验收：产出bundle报告数字+列出超量依赖",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P1-LEARN-CLIENT-BOUNDARY-LEAVES-20261102",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "'use client'边界审查：父级use client会传染所有子组件(哪怕子组件没写指令)，破坏RSC优势+增大bundle+破坏LCP preload。审查layout.tsx/页面级是否误标use client，把客户端边界推到叶子组件(仅交互widget)。验收：grep 'use client'全仓库，列出文件树层级，确认无layout/页面级误标",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P1-LEARN-CF-IMAGES-LOADER-20261102",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "评估Cloudflare Images Transformations：/cdn-cgi/image/{width=,quality=,f=avif}/路径自定义loader替代next/image Sharp on-demand——Sharp冷缓存首请求同步转换比原图还慢，CF边缘转换零冷启动+自动AVIF/WebP+边缘缓存。验收：出评估结论(接入/不接入+理由)，接入则写imageLoader.ts+next.config images.loaderFile，tsc=0+build=0+线上图URL变/cdn-cgi/image/",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P1-LEARN-LIGHTHOUSE-CI-JOB-20261102",
-      "priority": "P1",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "GitHub Actions现有Lint/CodeQL/Deploy三job之外加Lighthouse CI job：每PR跑首页+Top3文章Lighthouse移动端，LCP diff>100ms或CLS diff>0.02则build失败(回归拦截)。注意本机chrome-launcher无Chrome死路——CI runner上跑。验收：workflow文件+Actions实测一次绿",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
-    },
-    {
-      "id": "P2-LEARN-SUSPENSE-FALLBACK-CLS-20261102",
-      "priority": "P2",
-      "status": "pending",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "CLS防护：Suspense fallback骨架尺寸必须与最终内容一致(同高宽)，边界外加固定/min-height容器预留空间，防内容替换时reflow位移。审计现有loading.tsx骨架尺寸。验收：列出所有loading.tsx并核对尺寸匹配",
-      "source": "架构师学习",
-      "created_date": "2026-11-02"
     }
   ],
   "milestones": [
@@ -24115,6 +24146,72 @@
       "completed_at": "2026-11-01T22:26:31",
       "evidence": "r78 2026-11-01: 例行核查发现 sitemap 增至 952(内容窗口新增分类), llms-full missing=2(ai-legal/ai-seo). 修复: 重跑generate_llms_full.py, tsc=0+build=0, out 952/952, commit a43d45e PUSH_OK, Actions三job success(Deploy attempt 14), CF部署a43d45e确认, LIVE sitemap 952 vs llms-full 697KB missing=0. GEO审计: crawler 11/11 accessible score 10.0(本机探测全通, 配置完好实锤)",
       "archived_at": "2026-11-01T22:46:26.643818"
+    },
+    {
+      "id": "P0-GH011-REMEDIATE-20261101",
+      "priority": "P0",
+      "title": "GH-20261026-011处置决策：改slug或下线",
+      "description": "suno-vs-udio-2026 线上title仍为单工具承诺对比实为单工具，且best-ai-music-generators-2026已实质覆盖Suno vs Udio对比。r43建议指挥官决策：①改slug为suno-ai-review对齐title 或 ②下线由新文章替代。限期11-02给出处置并执行。",
+      "assigned_to": [
+        "window1",
+        "架构师"
+      ],
+      "status": "archived",
+      "created_at": "2026-11-01T22:34",
+      "source": "commander_dispatch_20261101_r43",
+      "completed_at": "2026-11-02T01:25:00",
+      "evidence": "线上实证: /blog/suno-vs-udio-2026/ 200 (212KB, H2x18: Quick Answer/Key Takeaways/全对比段/FAQ/Conclusion, udio 287次/suno 269次)=完整真实对比文章, r43实为单工具前提与线上事实不符; 处置=保留文章+移除public/_redirects第114行僵尸301(源无尾斜杠不匹配带斜杠请求, 从未生效, 会误伤有效对比页); commit 76a216d; CF部署76a216d success; Actions Lint/CodeQL/Deploy全success; 线上suno-vs-udio 200保持+suno-review 200",
+      "archived_at": "2026-11-02T07:45:33.644985"
+    },
+    {
+      "id": "P0-REQ13-BAML-PAGE-20261101",
+      "priority": "P0",
+      "title": "REQ13预检baml页MISSING补页（11-02正式验证前）",
+      "description": "r43预检：exa/claude/suno等12/12在站，但 baml 本地posts.json 0命中、线上sitemap无/tools/baml/。若REQ13名单含baml必须11-02前补页（含正文+配图+进posts.json+sitemap），否则正式验证失败。",
+      "assigned_to": [
+        "window1",
+        "架构师",
+        "window2",
+        "创作家"
+      ],
+      "status": "archived",
+      "created_at": "2026-11-01T22:34",
+      "source": "commander_dispatch_20261101_r43",
+      "completed_at": "2026-11-02T01:25:00",
+      "evidence": "REQ13-VERIFY名单13个=exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/promptfoo/chroma/copilot, 不含baml; baml在tools.json(533) 0命中/posts.json(283) 0命中/线上sitemap无/tools/baml/; 补页条件不成立, 无需补页",
+      "archived_at": "2026-11-02T07:45:33.644985"
+    },
+    {
+      "id": "RR20261020-B09",
+      "priority": "P2",
+      "status": "archived",
+      "assigned_to": [
+        "拓荒者",
+        "window3"
+      ],
+      "task": "外链收录机会：alternative.me 替代品目录suggest（目录收录），通道 无邮箱(表单)，200,submit/suggest/contact",
+      "source": "backlink_research_20261020_b",
+      "created_at": "2026-10-20T09:09:17.937928+08:00",
+      "channel": "目录收录",
+      "url": "https://alternative.me/",
+      "contact": "无邮箱(表单)",
+      "created_date": "2026-10-20",
+      "completed_at": "2026-11-01T23:07:53.180497",
+      "evidence": "2026-11-01 Serper site: recheck all 0 results. No listing indexed. Marked no-follow.",
+      "archived_at": "2026-11-02T07:45:33.644985"
+    },
+    {
+      "id": "BACKLINK-REVIEW-20261101",
+      "task": "外链跟进档：5 条已获外链 HTTP 存活 + Serper brand 复查 + 6 个目录 site: 复查",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "archived",
+      "completed_at": "2026-11-01T23:07:53.180497",
+      "source": "followup_20261101",
+      "evidence": "{\"known_backlinks\": [{\"name\": \"hatchr-post\", \"status\": 200, \"anchor\": false}, {\"name\": \"hatchr-profile\", \"status\": 200, \"anchor\": false}, {\"name\": \"sideprojectors\", \"status\": 200, \"anchor\": true}, {\"name\": \"thehackstack\", \"status\": 200, \"anchor\": true}, {\"name\": \"github-repo\", \"status\": 200, \"anchor\": true}], \"brand_results\": 10, \"pending_dirs_site_check\": {\"insidr.ai\": 0, \"aisotools.com\": 0, \"toolsify.ai\": 0, \"bestofai.io\": 0, \"rankmyai.com\": 0, \"alternative.me\": 0}}",
+      "archived_at": "2026-11-02T07:45:33.644985"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -24736,8 +24833,8 @@
     ]
   },
   "last_commander_update": "2026-10-24T12:10:00+08:00",
-  "last_batch": "batch72",
-  "last_batch_date": "2026-11-01",
+  "last_batch": "batch73",
+  "last_batch_date": "2026-11-02",
   "geo_audit_20261026": {
     "score": "6.4/10 B",
     "llms_txt": 8.5,
