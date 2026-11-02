@@ -1963,13 +1963,14 @@
       "id": "P0-CREATOR-FAKE-FIX-PARAPHRASE-20261026",
       "task": "创作家假完成整改：补写 keyword [best AI paraphrasing tools 2026] 2000字新文章（KW-PARAPHRASING-20261025 重开），标题建议 [Best AI Paraphrasing Tools 2026: 7 Tested & Reviewed]，写完 zens-ink>=70 + 配图 + content_drafts 落盘 + creator 日志引用待办ID",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window2",
         "创作家"
       ],
       "source": "commander_20261026_daily",
-      "created_at": "2026-10-26T22:37:46"
+      "created_at": "2026-10-26T22:37:46",
+      "completed_at": "2026-11-02T14:27:35.973851+08:00"
     },
     {
       "id": "P0-FAKE-FIX-RR29E-20261029",
@@ -2461,7 +2462,7 @@
     },
     {
       "id": "CA-FREE-AI-COURSES-20261028",
-      "status": "pending",
+      "status": "completed",
       "priority": "P1",
       "assigned_to": [
         "window2",
@@ -2470,7 +2471,8 @@
       "task": "竞品 futurepedia 在卖 AI 课程（courses 531 URLs，变现=课程主导），我们 0 个课程类内容，建议写 \"Best Free AI Courses in 2026: 15 Certified Resources\" 文章（slug: best-free-ai-courses-2026，切入=独立测评+资源地图差异化），SERP竞争度=High（前 10 被 DataCamp/MIT/Coursera 垄断）",
       "source": "competitor_analysis_2026-10-28",
       "data_verified": true,
-      "created_date": "2026-10-28"
+      "created_date": "2026-10-28",
+      "completed_at": "2026-11-02T14:27:35.973851+08:00"
     },
     {
       "id": "CA-GAMING-20261026",
@@ -2703,8 +2705,9 @@
       "data_verified": true,
       "competitor_count": 1,
       "our_count": 0,
-      "status": "pending",
-      "created_at": "2026-10-25T12:08:00"
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-11-02T14:27:35.973851+08:00"
     },
     {
       "id": "CA-TEXT-GENERATORS-20261028",
