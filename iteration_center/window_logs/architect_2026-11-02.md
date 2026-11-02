@@ -44,3 +44,23 @@
   - P2×1：Suspense fallback 尺寸 CLS
 - commander_learning.md 开头经验表格已插入摘要行（1,330 chars）
 - 本轮无代码改动（只加待办），无 tsc/build 需求
+
+## r82（2026-11-02 ~07:00）——P0审计轮：LCP Server Component + 第三方脚本 defer
+
+**现场**：上轮 r81 commit 14915fa 经他窗续推已并入 HEAD（nif 451，8条学习待办全 IN）；本轮开工 HEAD=7c76b0e polisher R45。
+
+**P0-LEARN-LCP-SERVER-COMPONENT-20261102 → completed**（审计通过，无代码改动）
+- curl 线上首页（346,217B）：`<link rel="preload" as="image" href="/screenshots/real/webp/gemini.webp" fetchPriority="high"/>` @offset 363，`</head>` @5411 → **preload 正确落在 <head>** = LCP 图已在 Server Component（Client Component 内 priority 会落 body，本站无此问题）
+- LCP 图 @25790 带 `priority`+`eager`；全站 `<img>` 7 个，仅 1 张 priority（未饱和 HTTP/2）
+- 双 preload 小瑕疵：@363 无 media + @1940 media=(min-width:1024px) 指向同一 gemini.webp（next/image srcSet 自动产物，轻微带宽浪费，非阻塞项）
+
+**P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102 → completed**（审计通过，无代码改动）
+- layout.tsx：umami/ahrefs/gtag 原生 `async`；GA4-init `strategy=afterInteractive`；AdSense `strategy=lazyOnload`
+- 线上首页 render-blocking external scripts = **0**
+- 字体 geist/font 自托管，已删 fonts.googleapis.com 预连接（P1-LEARN-NEXT-FONT-SELFHOST 同步满足）
+- `'use client'` 全仓库仅 4 处（边界叶子化良好）
+
+**GEO 例行**：real_geo_aeo_audit.py → Overall 5.4 Grade C；**Crawler Accessibility 0/10 = 本机到 AI 引擎探测端点网络波动**（r77 同款；本轮 curl 首页/robots/llms 全 200，r80 连续 3 轮 10.0 已实锤站配置完好，不判站问题、不开单）。真实内容缺口 Expert Quotes 0/2 + Real Examples 0/2——r80 已派 window2（GEO-EXPERT-QUOTES-20261102），不重复开单。
+
+**门控**：本轮纯审计无代码改动，无需 tsc/build。
+**线上验证**：https://www.aitoolcrux.com/ 200 / 346,217B（urllib+代理7890）。

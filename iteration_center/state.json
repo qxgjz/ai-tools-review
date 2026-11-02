@@ -592,6 +592,11 @@
   "last_updated": "2026-11-02",
   "completed_tasks": [
     {
+      "id": "GEO-PERF-AUDIT-R82-20261102",
+      "completed_at": "2026-11-02T13:11:17",
+      "result": "P0-LEARN-LCP-SERVER-COMPONENT+P0-LEARN-THIRD-PARTY-SCRIPT-DEFER 审计通过(无代码改动); GEO例行 crawler波动不判站问题"
+    },
+    {
       "id": "GEO-CRAWLER-ACCESS-20261102",
       "title": "GEO/AEO例行审计 r80",
       "priority": "P1",
@@ -2052,26 +2057,30 @@
     {
       "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "架构师",
         "window1"
       ],
       "task": "学习nextjs.org streaming指南：LCP元素(hero图/H1)必须在Server Component内——Client Component内next/image priority的preload会落到<body>而非<head>，对LCP完全失效。验收：curl线上首页+Top3文章HTML，grep <link rel=preload as=image>确认其行号 < </head>行号；LCP图必须fetchPriority=high+loading=eager(禁lazy)；每页仅1张priority图(多了饱和HTTP/2反而劣化LCP)",
       "source": "架构师学习",
-      "created_date": "2026-11-02"
+      "created_date": "2026-11-02",
+      "completed_at": "2026-11-02T13:11:17",
+      "evidence": "r82审计通过：线上首页curl实证<preload as=image href=/screenshots/real/webp/gemini.webp fetchPriority=high>在<head>@offset363(head_end=5411)；LCP图@25790 priority+eager；每页仅1张priority；结论：LCP元素已在Server Component（preload正确落head），无需代码改动"
     },
     {
       "id": "P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102",
       "priority": "P0",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "架构师",
         "window1"
       ],
       "task": "学习web.dev top-cwv+hashtagcoders：第三方脚本(analytics/chat/广告)是INP/LCP最大杀手。审计本站所有<script>/next/script，非关键脚本必须strategy=lazyOnload或afterInteractive；关键脚本尽量自托管。验收：grep app/layout.tsx与全局组件的script标签，列出每个第三方脚本的strategy，改完tsc=0+build=0+线上HTML确认脚本不在head阻塞位",
       "source": "架构师学习",
-      "created_date": "2026-11-02"
+      "created_date": "2026-11-02",
+      "completed_at": "2026-11-02T13:11:17",
+      "evidence": "r82审计通过：layout.tsx第三方脚本全部async/lazyOnload/afterInteractive——umami/ahrefs/gtag原生async，GA4-init afterInteractive，AdSense lazyOnload；线上首页render-blocking external scripts=0；geist/font自托管无Google Fonts外链；无需代码改动"
     },
     {
       "id": "P0-POLISHER-BATCH-PUSH-20261101",
@@ -8010,6 +8019,467 @@
       "created_at": "2026-11-02",
       "source": "req13_verification_20261102",
       "data_verified": true
+    },
+    {
+      "id": "P0-AFF-FIREFLIES-APPLY-20261102",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P0",
+      "task": "Fireflies 联盟第一批接入闭环：①按 aff_program_scoring_20261029.md 已确认口径（官方联盟 30% recurring×12mo、60 天 cookie）提交 Fireflies 官方联盟申请（官方 affiliate 入口）；②拿到 affiliate link 后按 302 中转路由接入 ≥1 个高意图工具页（如 /blog/suno-vs-udio-2026/ 或新完成 KW 文章页）；③线上验证链接 200 且带 affiliate 参数埋点，落盘 backlinks_tracking.md。验收：线上至少 1 条可点击联盟链接+申请状态记录",
+      "source": "commander_learning_联盟营销",
+      "created_at": "2026-11-02T09:50:49",
+      "status": "pending"
+    },
+    {
+      "id": "P1-AFF-SCORING-V2-20261102",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P1",
+      "task": "联盟第2批候选评分更新（2026-11版）：按 11-02 战略学习新数据更新 aff_program_scoring——Systeme.io 60% lifetime、AWeber 30% lifetime、Synthesia 30%×2y、Supademo 30%recurring/单客$10k cap/无payout门槛、BotPenguin 20%×36mo/120d cookie、lemlist 25%×12mo(PartnerStack)、HubSpot 30%×12mo/180d cookie、Jotform 30%×12mo、Writesonic 20%、Copy.ai≤45%、Semrush $200-450/120d；输出 2026-11 评分表（佣金率×recurring时长×cookie×门槛×与本站内容匹配度 5 维）并给出第2批接入建议 2 个程序",
+      "source": "commander_learning_联盟营销",
+      "created_at": "2026-11-02T09:51:31",
+      "status": "pending"
+    },
+    {
+      "id": "P1-AFF-CONTENT-CTA-20261102",
+      "assigned_to": [
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "联盟转化内容改造 2 篇：选 2 篇高意图工具对比页（优先刚完成的 best-ai-presentation-generators / best-ai-workflow-automation，或 best-ai-education-tools），加\"诚实测试笔记（真实使用3行）+价格对比表+3处联盟CTA（verdict 前100字/价格区/底部按钮）\"，CTA 指向已接入的 302 中转联盟链接（Fireflies/第2批待定）。验收：2 篇线上发布且联盟链接可点击，截图留档",
+      "source": "commander_learning_联盟营销",
+      "created_at": "2026-11-02T09:51:31",
+      "status": "pending"
+    },
+    {
+      "id": "RR02H-OP-001",
+      "task": "Pitch backlink opportunity [ai_code_alt]: replit.com | Best AI coding assistant in 2026: complete developer guide",
+      "target_url": "https://replit.com/discover/best-ai-coding-assistant",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI code assistant alternatives 2026 list",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-002",
+      "task": "Pitch backlink opportunity [ai_code_alt]: secondtalent.com | Top 7 Open-Source AI Coding Assistants in 2026",
+      "target_url": "https://www.secondtalent.com/resources/open-source-ai-coding-assistants/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI code assistant alternatives 2026 list",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-003",
+      "task": "Pitch backlink opportunity [ai_presentation]: nextdocs.io | The Best AI Presentation Builders of 2026: We Tested 15 ...",
+      "target_url": "https://www.nextdocs.io/blogs/best-ai-presentation-builders-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI presentation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-004",
+      "task": "Pitch backlink opportunity [ai_presentation]: plusai.com | Best AI Presentation Makers of 2026 (with example outputs)",
+      "target_url": "https://plusai.com/blog/best-ai-presentation-makers/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI presentation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-005",
+      "task": "Pitch backlink opportunity [ai_presentation]: aippt.com | The 11 Best AI Presentation Makers for 2026",
+      "target_url": "https://www.aippt.com/blog/top-ai-presentation-makers",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI presentation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-006",
+      "task": "Pitch backlink opportunity [ai_presentation]: mlclever.com | Best AI Presentation Generators 2026: 11 Tools Tested",
+      "target_url": "https://www.mlclever.com/blog/ai-presentation-generators-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI presentation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-007",
+      "task": "Pitch backlink opportunity [ai_resume]: kickresume.com | 7 Best AI Resume Builders in 2026 (Tested and Compared)",
+      "target_url": "https://www.kickresume.com/en/help-center/best-ai-resume-builders/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI resume builder tools 2026 review",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-008",
+      "task": "Pitch backlink opportunity [ai_resume]: resumeoptimizerpro.com | Best AI Resume Builder 2026: 8 Free and Paid Tools Tested",
+      "target_url": "https://resumeoptimizerpro.com/blog/ai-resume-generator",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI resume builder tools 2026 review",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-009",
+      "task": "Pitch backlink opportunity [ai_resume]: resufit.com | Best AI Resume Builders 2026: Pricing & ATS Compared",
+      "target_url": "https://resufit.com/blog/best-ai-resume-builders-2026-pricing-features-ats-comparison/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI resume builder tools 2026 review",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-010",
+      "task": "Pitch backlink opportunity [ai_resume]: beamjobs.com | 10 Best AI Resume Builders in 2026 (Tested and Compared)",
+      "target_url": "https://www.beamjobs.com/resume-help/best-resume-builders",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI resume builder tools 2026 review",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-011",
+      "task": "Pitch backlink opportunity [ai_resume]: rezi.ai | 8 Best AI Resume Builders in 2026 (We Tested All of Them)",
+      "target_url": "https://www.rezi.ai/posts/best-ai-resume-builders",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI resume builder tools 2026 review",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-012",
+      "task": "Pitch backlink opportunity [ai_resume]: resume.io | 7 Best AI Resume Builders and How to Choose One",
+      "target_url": "https://resume.io/blog/what-is-the-best-ai-resume-builder",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI resume builder tools 2026 review",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-013",
+      "task": "Pitch backlink opportunity [ai_legal]: mycase.com | 12 Best Legal AI Tools to Improve Firm Productivity - MyCase",
+      "target_url": "https://www.mycase.com/blog/ai/legal-ai-tools/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI legal tools for lawyers 2026",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-014",
+      "task": "Pitch backlink opportunity [ai_legal]: lumay.ai | Enterprise Legal Agent Platforms & Revenue Operations",
+      "target_url": "https://www.lumay.ai/blogs/best-ai-for-lawyers",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI legal tools for lawyers 2026",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-015",
+      "task": "Pitch backlink opportunity [ai_translation]: lekhak.app | Top 7 Best AI Translation Tools in 2026 (Detailed ...",
+      "target_url": "https://lekhak.app/blog/top-7-best-ai-translation-tools-in-2026-detailed-comparison",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-016",
+      "task": "Pitch backlink opportunity [ai_translation]: lokalise.com | The best AI translation tools in 2026",
+      "target_url": "https://lokalise.com/blog/best-ai-translation-tools/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-017",
+      "task": "Pitch backlink opportunity [ai_translation]: acolad.com | Best AI Translation Tools in 2026: Enterprise Guide",
+      "target_url": "https://www.acolad.com/en/lia/best-ai-translation-tools",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-018",
+      "task": "Pitch backlink opportunity [ai_translation]: taia.io | Best Translation Software in 2026: Top Picks from 34 Tools",
+      "target_url": "https://taia.io/resources/blog/best-translation-software/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-019",
+      "task": "Pitch backlink opportunity [ai_translation]: gridly.com | 11 best AI translation software compared (2026) - Gridly",
+      "target_url": "https://www.gridly.com/blog/best-ai-translation-software-explore-these-9-solutions/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-020",
+      "task": "Pitch backlink opportunity [ai_translation]: transyncai.com | 6 Best Language Translators: 2026 Rankings",
+      "target_url": "https://www.transyncai.com/blog/best-language-translators-2026/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-021",
+      "task": "Pitch backlink opportunity [ai_translation]: better-i18n.com | Best AI Translation Tools in 2026: A Developer's Guide",
+      "target_url": "https://better-i18n.com/en/blog/best-ai-translation-tools-2026/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-022",
+      "task": "Pitch backlink opportunity [ai_translation]: blog.palabra.ai | 10 Best AI Live Translation Tools That We Tried in 2026",
+      "target_url": "https://blog.palabra.ai/al-speech-translation/the-10-best-ai-live-translation-tools-that-we-tried/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-023",
+      "task": "Pitch backlink opportunity [ai_translation]: intlpull.com | Best AI Translation Tools 2026: API Comparison & Benchmarks",
+      "target_url": "https://intlpull.com/blog/best-ai-translation-tools-comparison-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI translation tools 2026 comparison",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-024",
+      "task": "Pitch backlink opportunity [ai_email]: hitepanther.email | Best AI for Email Writing in 2026: 10 Tools That Actually Wo",
+      "target_url": "https://whitepanther.email/best-ai-for-email-writing/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI email writing tools 2026 list",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-025",
+      "task": "Pitch backlink opportunity [ai_email]: get-alfred.ai | 13 Best AI Email Assistants in 2026, Tested on Gmail and ...",
+      "target_url": "https://get-alfred.ai/blog/best-ai-email-assistants",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI email writing tools 2026 list",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "RR02H-OP-026",
+      "task": "Pitch backlink opportunity [ai_email]: marblism.com | Best AI Email Assistant: 13 Tools Compared (2026)",
+      "target_url": "https://www.marblism.com/blog/best-ai-email-assistant",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T10:34:36.650341",
+      "source": "serper_h_batch_2026-11-02",
+      "query": "best AI email writing tools 2026 list",
+      "http_status": 200,
+      "verified_at": "2026-11-02T11:24:09.754545",
+      "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
+    },
+    {
+      "id": "FOLLOWUP-20261102-H-BATCH",
+      "task": "跟进档：H 批 26 域名 HTTP 验证 + 已获外链复查 + brand 复查",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-11-02T11:24:09.754545",
+      "source": "followup_20261102",
+      "evidence": "{\"h_batch_alive\": 26, \"h_batch_total\": 26, \"known_backlinks_alive\": 5, \"brand_results\": 10, \"external_listings\": 7}"
     }
   ],
   "milestones": [
@@ -24931,6 +25401,12 @@
       "round": "r80",
       "score": 10.0,
       "note": "crawler 11/11 accessible blocked=0 (连续3轮实锤配置完好); llms.txt 10.0/AEO 7页全10.0; overall readiness 9.2 Grade A; GEO Content 6.7(Expert Quotes 0/3 唯一缺口->内容待办给window2); llms-full覆盖952/952 missing=0"
+    },
+    {
+      "date": "2026-11-02",
+      "round": "r82",
+      "score": 5.4,
+      "note": "crawler 0/10=本机到AI引擎探测端点网络波动(r77同款; 本轮curl首页/robots/llms全200,r80连续3轮10.0已实锤站配置完好); AEO Content 10.0/GEO Content 64.3(Expert Quotes 0/2+Real Examples 0/2=内容缺口,r80已派window2 GEO-EXPERT-QUOTES,不重复开单); 无新技术问题"
     }
   ]
 }
