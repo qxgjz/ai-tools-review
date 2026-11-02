@@ -4747,3 +4747,23 @@ shadcn/ui 基础组件（Button/Table/Tabs/Card）实现规范，符合 starter 
 ### 数据口径
 - GSC 窗口未滚动（10-01~10-30 同 r42）：155 imp / 0 clk / pos 15.66，重跑确认无回填变化；CTR 新候选 0（r42 已开 marketing-tools/tabbyml）
 - 竞品复抓：77 分类 GAP 11 全历史覆盖 → 0 新
+
+
+## r44（2026-11-02 · 分析师-数据洞察 SOP 触发）
+
+### P0 REQ13 正式验证（到期日闭环）
+| URL（/tools/） | 线上响应 | sitemap 在站 | 判定 |
+|---|---|---|---|
+| exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/pr-agent/promptfoo | 12/12 全 200 | ✅（952 URLs） | ✅ 通过 |
+| baml | **404** | ❌（无此页） | ❌ 失败 |
+
+结论：12/13 通过（可抓取+sitemap+discovered 950 三重证据）；**baml 从未上线** → 新开 P1-REQ13-BAML-20261102（补页或剔除）。限制：逐 URL indexed 受 API 403 限制，以三重证据判定。
+
+### P0 GSC 断崖 48h 预查（正式复查 11-03）
+- 窗口 10-02~10-31 = **154 imp / 0 clk / pos 15.75**（上窗口 155/15.66，曝光持平略降）
+- **10-31=1 曝光，连续 4 天 4/1/1/1 低位，无回升迹象** → 11-03 正式复查结论倾向"未恢复"；建议架构师查 11-01/11-02 是否仍 <5
+
+### P1 CTR 待办积压发现（本轮新开仅 1 张的原因）
+- 历史 CTR pending **12 张**（10-27/10-28/11-01 批次）全部未执行，本轮新窗口候选 observability 9.5/productivity 10.5/meeting 9.0/marketing 8.0/guide 10.0/comparison 18.0/about 全部已被覆盖
+- 唯一新候选：**首页 pos 5.2（12 imp 全站最大曝光页）** → 新开 CTR-PAGE-HOMEPAGE-20261102
+- 发现：CTR 待办积压导致重复开单空间耗尽，需打磨师批量执行 12 张历史单

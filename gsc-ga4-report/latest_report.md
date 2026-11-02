@@ -1,18 +1,16 @@
-# Latest GSC Report (analyst r42 更新 2026-11-01)
-
 # GSC Report: aitoolcrux.com
 
-Period: 2026-10-01 to 2026-10-30
-Generated: 2026-11-01T07:07:38.085823+00:00
+Period: 2026-10-02 to 2026-10-31
+Generated: 2026-11-02T01:01:16.015670+00:00
 
 ## Summary
 
 | Metric | This Period | Previous Period | Change |
 |--------|------------|-----------------|--------|
 | Clicks | 0 | 9 | -9 |
-| Impressions | 155 | 2063 | -1908 |
+| Impressions | 154 | 2064 | -1910 |
 | CTR | 0.00% | - | - |
-| Avg Position | 15.66 | - | - |
+| Avg Position | 15.75 | - | - |
 
 ## Top Pages
 
@@ -54,14 +52,13 @@ Generated: 2026-11-01T07:07:38.085823+00:00
 
 | Device | Clicks | Impressions | Avg Position |
 |--------|--------|-------------|---------------|
-| DESKTOP | 0 | 150 | 15.87 |
+| DESKTOP | 0 | 149 | 15.95 |
 | MOBILE | 0 | 5 | 9.60 |
 
 ## Daily Trend
 
 | Date | Clicks | Impressions |
 |------|--------|-------------|
-| 2026-10-01 | 0 | 1 |
 | 2026-10-02 | 0 | 9 |
 | 2026-10-03 | 0 | 14 |
 | 2026-10-04 | 0 | 8 |
