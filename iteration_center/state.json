@@ -16,7 +16,7 @@
   "total_iterations_completed": 62,
   "total_issues_fixed": 111,
   "total_pages_optimized": 5089,
-  "total_articles_generated": 187,
+  "total_articles_generated": 190,
   "current_todo": [
     {
       "id": "P0-UX-001",
@@ -503,6 +503,23 @@
         "KW-VOLUME-CONFIRMED-EDUCATION-20261026"
       ],
       "result": "3 rewrite-upgrade articles: presentation 2337w/zens100, workflow 2364w/100, students 2113w/100; avg zens 100; screenshots OCR-verified (gamma/beautifulai, zapier/n8n, khanmigo/magicschool; 4 newly captured, 2 library reused); FAQ 6 each with pain_point quotes; internal 4-5 each all existing slugs; external 3 official sources each; llmevalkit 3 clean (hallucination=false, score 100); posts.json updated (283 entries unchanged, same-slug in-place); state updated; curl live 200 all 3 after deploy."
+    },
+    {
+      "id": "BATCH75-20261102",
+      "batch": "batch75",
+      "date": "2026-11-02",
+      "type": "content production (new articles)",
+      "articles": [
+        "how-to-use-ai-for-research-paper-2026",
+        "how-to-use-ai-for-small-business-2026",
+        "best-ai-detection-tools-2026"
+      ],
+      "todos": [
+        "how to use AI for research paper 2026",
+        "how to use AI for small business 2026",
+        "best AI detection tools 2026"
+      ],
+      "result": "3 new articles: research-paper 2391w/8faq/4il/2shots(consensus+elicit OCR-verified), small-business 2197w/8faq/5il/2shots(canva-2026+hubspot-2026 newly captured), detection 2181w/8faq/5il/2shots(gptzero+originality OCR-verified); zens-ink content_qc 85x3 (avg 85); llmevalkit score=100 x3 hallucination=False (self-contrast mode, contradiction rule false-positive known); pain-point quotes: accuracy-friction, unauthorized-charges, usage-limits-token-caps; internal links 4-5 each all existing slugs; external links 2-4 official; Definition-first + bluf frontmatter + date 2026-11-02; posts.json 285->288; git push + online curl 200 pending"
     }
   ],
   "phase_history": [
@@ -1600,6 +1617,23 @@
         "CA-VOICEOVER-GENERATORS-20261027",
         "CA-TICKETING-MANAGEMENT-20261028"
       ]
+    },
+    {
+      "id": "BATCH75-20261102",
+      "batch": "batch75",
+      "date": "2026-11-02",
+      "type": "content production (new articles)",
+      "articles": [
+        "how-to-use-ai-for-research-paper-2026",
+        "how-to-use-ai-for-small-business-2026",
+        "best-ai-detection-tools-2026"
+      ],
+      "todos": [
+        "how to use AI for research paper 2026",
+        "how to use AI for small business 2026",
+        "best AI detection tools 2026"
+      ],
+      "result": "3 new articles: research-paper 2391w/8faq/4il/2shots(consensus+elicit OCR-verified), small-business 2197w/8faq/5il/2shots(canva-2026+hubspot-2026 newly captured), detection 2181w/8faq/5il/2shots(gptzero+originality OCR-verified); zens-ink content_qc 85x3 (avg 85); llmevalkit score=100 x3 hallucination=False (self-contrast mode, contradiction rule false-positive known); pain-point quotes: accuracy-friction, unauthorized-charges, usage-limits-token-caps; internal links 4-5 each all existing slugs; external links 2-4 official; Definition-first + bluf frontmatter + date 2026-11-02; posts.json 285->288; git push + online curl 200 pending"
     }
   ],
   "next_iteration_focus": [
@@ -1756,39 +1790,6 @@
       "created_date": "2026-10-25"
     },
     {
-      "id": "KW-PRESENTATION-GENERATORS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI presentation generators 2026] 写 2000 字新文章，标题建议 [Best AI Presentation Generators 2026: 8 Tested (Gamma vs Beautiful.ai vs Plus AI)]，slug 建议 [best-ai-presentation-generators-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按输出格式分（网页=Gamma/PPTX=Beautiful.ai/Google Slides=Plus AI/品牌=Claude Design）+ 免费额度对比",
-      "status": "completed",
-      "created_at": "2026-10-25T15:12:54",
-      "completed_at": "2026-11-02"
-    },
-    {
-      "id": "KW-VOLUME-CONFIRMED-EDUCATION-20261026",
-      "status": "completed",
-      "priority": "P0",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "基于关键词 [best AI education tools 2026]（SERP 已验证 Medium，r30 实搜）写 2000 字新文章，标题建议 [Best AI Education Tools 2026: 10 Tested (Khanmigo vs MagicSchool vs Gemini for Education)]，slug 建议 [best-ai-education-tools-2026]，切入：K-12 合规（COPPA/FERPA）+免费额度+按角色分",
-      "source": "keyword_mining_2026-10-26",
-      "serp_competition": "Medium",
-      "serp_verified": true,
-      "volume_verified": true,
-      "created_at": "2026-10-26T15:06:51",
-      "our_angle": "K-12 合规+免费额度",
-      "completed_at": "2026-11-02"
-    },
-    {
       "id": "KW-VOLUME-CONFIRMED-LEGAL-20261026",
       "status": "pending",
       "priority": "P0",
@@ -1819,22 +1820,6 @@
       "volume_verified": true,
       "created_at": "2026-10-26T21:06:26",
       "our_angle": "免费额度+场景化实测"
-    },
-    {
-      "id": "KW-WORKFLOW-AUTOMATION-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P0",
-      "task": "基于关键词 [best AI workflow automation 2026] 写 2000 字新文章，标题建议 [Best AI Workflow Automation Tools 2026: 10 Tested (Zapier vs Make vs n8n)]，slug 建议 [best-ai-workflow-automation-tools-2026]",
-      "source": "keyword_mining_2026-10-25",
-      "serp_competition": "High",
-      "serp_verified": true,
-      "our_angle": "按技术门槛分（无代码=Zapier/Make/企业=UiPath/开发者=n8n/Mastra）+ 对比表",
-      "status": "completed",
-      "created_at": "2026-10-25T15:12:54",
-      "completed_at": "2026-11-02"
     },
     {
       "id": "LEARN-20261014-04",
@@ -1960,19 +1945,6 @@
       "source": "commander_dispatch_20261101"
     },
     {
-      "id": "P0-CREATOR-FAKE-FIX-PARAPHRASE-20261026",
-      "task": "创作家假完成整改：补写 keyword [best AI paraphrasing tools 2026] 2000字新文章（KW-PARAPHRASING-20261025 重开），标题建议 [Best AI Paraphrasing Tools 2026: 7 Tested & Reviewed]，写完 zens-ink>=70 + 配图 + content_drafts 落盘 + creator 日志引用待办ID",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "source": "commander_20261026_daily",
-      "created_at": "2026-10-26T22:37:46",
-      "completed_at": "2026-11-02T14:27:35.973851+08:00"
-    },
-    {
       "id": "P0-FAKE-FIX-RR29E-20261029",
       "priority": "P0",
       "status": "pending",
@@ -2040,52 +2012,6 @@
       "source": "commander_dispatch_20261101"
     },
     {
-      "id": "P0-GSC-REVIEW-20261103",
-      "priority": "P0",
-      "title": "GSC断崖48h复查点验证（11-03）",
-      "description": "r43四层排查全正常（sitemap 950/952、核心200、重定向齐全），根因指向auto_redirect事件后排名/索引层。复查点=2026-11-03：读GSC 10-31~11-02三日曝光，若仍未回升则升级为域名信任/核心更新排查并考虑Search Console 申诉。",
-      "assigned_to": [
-        "window1",
-        "架构师",
-        "window4",
-        "分析师"
-      ],
-      "status": "completed",
-      "created_at": "2026-11-01T22:34",
-      "source": "commander_dispatch_20261101_r43",
-      "evidence": "r45 正式复查（11-02 预执行，GSC 重跑 10-02~10-31 窗口，数据回填）：10-31 曝光回填 1→2 仍低位；峰后 10-28/29/30/31=4/1/1/2 **连续 4 天 <5 无回升**；窗口总量 156 imp / pos 15.56 较 r44（154/15.75）曝光 +2、位置 +0.19，持平略升但无实质恢复。结论：**曝光断崖未恢复**（r73 auto_redirect 修复生效但索引/排名恢复滞后）；11-03 后若窗口滚动至 10-04~11-02 可复查 11-01/11-02 两日是否仍 <5，建议架构师保持监测",
-      "completed_at": "2026-11-02T15:15:22",
-      "closed_by": "analyst_r45"
-    },
-    {
-      "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "学习nextjs.org streaming指南：LCP元素(hero图/H1)必须在Server Component内——Client Component内next/image priority的preload会落到<body>而非<head>，对LCP完全失效。验收：curl线上首页+Top3文章HTML，grep <link rel=preload as=image>确认其行号 < </head>行号；LCP图必须fetchPriority=high+loading=eager(禁lazy)；每页仅1张priority图(多了饱和HTTP/2反而劣化LCP)",
-      "source": "架构师学习",
-      "created_date": "2026-11-02",
-      "completed_at": "2026-11-02T13:11:17",
-      "evidence": "r82审计通过：线上首页curl实证<preload as=image href=/screenshots/real/webp/gemini.webp fetchPriority=high>在<head>@offset363(head_end=5411)；LCP图@25790 priority+eager；每页仅1张priority；结论：LCP元素已在Server Component（preload正确落head），无需代码改动"
-    },
-    {
-      "id": "P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "架构师",
-        "window1"
-      ],
-      "task": "学习web.dev top-cwv+hashtagcoders：第三方脚本(analytics/chat/广告)是INP/LCP最大杀手。审计本站所有<script>/next/script，非关键脚本必须strategy=lazyOnload或afterInteractive；关键脚本尽量自托管。验收：grep app/layout.tsx与全局组件的script标签，列出每个第三方脚本的strategy，改完tsc=0+build=0+线上HTML确认脚本不在head阻塞位",
-      "source": "架构师学习",
-      "created_date": "2026-11-02",
-      "completed_at": "2026-11-02T13:11:17",
-      "evidence": "r82审计通过：layout.tsx第三方脚本全部async/lazyOnload/afterInteractive——umami/ahrefs/gtag原生async，GA4-init afterInteractive，AdSense lazyOnload；线上首页render-blocking external scripts=0；geist/font自托管无Google Fonts外链；无需代码改动"
-    },
-    {
       "id": "P0-POLISHER-BATCH-PUSH-20261101",
       "priority": "P0",
       "title": "打磨师批量修复催办：pending 34条+日志停10-23",
@@ -2097,21 +2023,6 @@
       "status": "pending",
       "created_at": "2026-11-01",
       "source": "commander_dispatch_20261101"
-    },
-    {
-      "id": "P0-REQ13-VERIFY-20261102",
-      "priority": "P0",
-      "status": "completed",
-      "assigned_to": [
-        "分析师",
-        "window4"
-      ],
-      "task": "验证 10-24 REQUESTED 13 高价值页 2 周后收录结果（exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/promptfoo/chroma/copilot），未编入的补 IndexNow+内链；验收点 2026-11-02；输出收录状态清单",
-      "source": "report-todo_from_analysis-20261026",
-      "created_date": "2026-10-29",
-      "completed_at": "2026-11-02T09:04:07",
-      "evidence": "r44 正式验证（11-02 到期日，requests 走代理 7890 实抓）：13 个高价值页线上可抓性 12/13 全部 200 （exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/pr-agent/promptfoo，final 均带斜杠）；baml /tools/baml/ **404 页面不存在**（本地 posts.json 283 篇 0 命中）。sitemap 收录层：952 URLs 中 12/13 在站、GSC discovered=950。验证结论：12/13 通过（可抓取+在 sitemap），baml 失败（从未上线）→ 需补页或名单剔除。限制：逐 URL indexed 状态受 URL Inspection API 403 限制（死路），以可抓取+sitemap+discovered 三重证据判定",
-      "closed_by": "analyst_r44"
     },
     {
       "id": "P0-SMTP-REMEDIATION-20261101",
@@ -2463,20 +2374,6 @@
       "created_at": "2026-10-25T12:08:00"
     },
     {
-      "id": "CA-FREE-AI-COURSES-20261028",
-      "status": "completed",
-      "priority": "P1",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "task": "竞品 futurepedia 在卖 AI 课程（courses 531 URLs，变现=课程主导），我们 0 个课程类内容，建议写 \"Best Free AI Courses in 2026: 15 Certified Resources\" 文章（slug: best-free-ai-courses-2026，切入=独立测评+资源地图差异化），SERP竞争度=High（前 10 被 DataCamp/MIT/Coursera 垄断）",
-      "source": "competitor_analysis_2026-10-28",
-      "data_verified": true,
-      "created_date": "2026-10-28",
-      "completed_at": "2026-11-02T14:27:35.973851+08:00"
-    },
-    {
       "id": "CA-GAMING-20261026",
       "status": "pending",
       "priority": "P1",
@@ -2693,23 +2590,6 @@
       "source": "competitor_analysis_2026-10-27",
       "data_verified": true,
       "created_at": "2026-10-27T09:16:06"
-    },
-    {
-      "id": "CA-TEACHERS-20261025",
-      "assigned_to": [
-        "window2",
-        "创作家"
-      ],
-      "priority": "P1",
-      "task": "竞品 futurepedia 在做 teachers 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-tools-for-teachers-2026 文章（MagicSchool/ChatGPT for Teachers/Khan Academy Writing Coach 对比），SERP竞争度=Medium",
-      "source": "competitor_analysis_2026-10-25",
-      "serp_competition": "Medium",
-      "data_verified": true,
-      "competitor_count": 1,
-      "our_count": 0,
-      "status": "completed",
-      "created_at": "2026-10-25T12:08:00",
-      "completed_at": "2026-11-02T14:27:35.973851+08:00"
     },
     {
       "id": "CA-TEXT-GENERATORS-20261028",
@@ -3152,7 +3032,7 @@
       "id": "GH-20261026-011",
       "task": "suno-vs-udio-2026 内容-URL 错配修复：URL slug 承诺 Suno vs Udio 对比，但线上 title/h1 实际为 \"Suno AI Review 2026: Is the $10/mo Pro Plan Worth It?\"（单工具评测），缺 Udio 配图与对比内容。修复：创作家按 vs-udio 对比模板重写内容（含 Udio 实测/定价对比），配图补 Udio 真实界面截图（禁用示意图），设计师复核 slug/h1/配图三者一致后部署。",
       "priority": "P1",
-      "status": "pending",
+      "status": "completed",
       "assigned_to": [
         "window7",
         "设计师",
@@ -3161,7 +3041,8 @@
       ],
       "source": "design_verify_20261026_round2",
       "created_at": "2026-10-26",
-      "updated_at": "2026-10-26"
+      "updated_at": "2026-10-26",
+      "description": " [2026-11-02 设计师线上验证：suno-vs-udio-2026 title 已改 \"Suno vs Udio 2026: Which AI Music Generator Keeps Your Songs?\"，与 slug 匹配，错配修复]"
     },
     {
       "id": "GH-20261028-013",
@@ -8475,28 +8356,264 @@
       "verification_note": "HTTP 200 confirmed 2026-11-02. Pitch queued pending SMTP."
     },
     {
-      "id": "FOLLOWUP-20261102-H-BATCH",
-      "task": "跟进档：H 批 26 域名 HTTP 验证 + 已获外链复查 + brand 复查",
+      "id": "RR02I-OP-001",
+      "task": "Pitch backlink opportunity [ai_notes]: screenpipe.com | Best AI Note Taking App in 2026 — What Actually Works",
+      "target_url": "https://screenpipe.com/blog/best-ai-note-taking-app-2026",
       "assigned_to": [
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "completed",
-      "completed_at": "2026-11-02T11:24:09.754545",
-      "source": "followup_20261102",
-      "evidence": "{\"h_batch_alive\": 26, \"h_batch_total\": 26, \"known_backlinks_alive\": 5, \"brand_results\": 10, \"external_listings\": 7}"
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI note taking apps Notion alternatives 2026"
     },
     {
-      "id": "SOP-20261102-INDEXNOW-BATCH2",
-      "task": "SOP 第三轮：IndexNow 第二批次 5 URL 提交",
+      "id": "RR02I-OP-002",
+      "task": "Pitch backlink opportunity [ai_notes]: slite.com | The 10 Best Notion Alternatives 2026",
+      "target_url": "https://slite.com/learn/best-notion-alternatives",
       "assigned_to": [
         "拓荒者"
       ],
       "priority": "P2",
-      "status": "completed",
-      "completed_at": "2026-11-02T14:32:55.143481",
-      "source": "sop_20261102_third",
-      "evidence": "{\"indexnow_status\": 202, \"urls_submitted\": 5}"
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI note taking apps Notion alternatives 2026"
+    },
+    {
+      "id": "RR02I-OP-003",
+      "task": "Pitch backlink opportunity [ai_notes]: builder.io | The 12 Best Notion Alternatives in 2026",
+      "target_url": "https://www.builder.io/blog/notion-alternatives",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI note taking apps Notion alternatives 2026"
+    },
+    {
+      "id": "RR02I-OP-004",
+      "task": "Pitch backlink opportunity [ai_notes]: remio.ai | Top 10 Notion Alternatives Tools for Smart Note Taking in ..",
+      "target_url": "https://www.remio.ai/post/top-10-notion-alternatives-tools-for-smart-note-taking-in-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI note taking apps Notion alternatives 2026"
+    },
+    {
+      "id": "RR02I-OP-005",
+      "task": "Pitch backlink opportunity [ai_analytics]: thoughtspot.com | Best AI Tools for Business Efficiency in 2026",
+      "target_url": "https://www.thoughtspot.com/data-trends/ai/best-ai-tools-for-business",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI analytics tools for small business 2026"
+    },
+    {
+      "id": "RR02I-OP-006",
+      "task": "Pitch backlink opportunity [ai_analytics]: scoopanalytics.com | Best AI data analysis tools for small businesses (2026)",
+      "target_url": "https://www.scoopanalytics.com/blog/best-ai-data-analysis-tools-for-small-businesses",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI analytics tools for small business 2026"
+    },
+    {
+      "id": "RR02I-OP-007",
+      "task": "Pitch backlink opportunity [ai_analytics]: sintra.ai | 25 Best AI Tools for Small Businesses in 2026",
+      "target_url": "https://sintra.ai/blog/best-ai-tools-for-small-businesses",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI analytics tools for small business 2026"
+    },
+    {
+      "id": "RR02I-OP-008",
+      "task": "Pitch backlink opportunity [ai_analytics]: marketing-toolbox.ai | AI Tools 2026: Smart Choices for Small Businesses",
+      "target_url": "https://marketing-toolbox.ai/ai-tools-2026/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI analytics tools for small business 2026"
+    },
+    {
+      "id": "RR02I-OP-009",
+      "task": "Pitch backlink opportunity [ai_customer_service]: freshworks.com | 10 best AI tools for customer support in 2026",
+      "target_url": "https://www.freshworks.com/customer-service/support/ai/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI customer service chatbot tools 2026"
+    },
+    {
+      "id": "RR02I-OP-010",
+      "task": "Pitch backlink opportunity [ai_customer_service]: onderchat.io | 13 Best AI Customer Service Chatbots (2026)",
+      "target_url": "https://wonderchat.io/blog/best-ai-customer-service-chatbots",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI customer service chatbot tools 2026"
+    },
+    {
+      "id": "RR02I-OP-011",
+      "task": "Pitch backlink opportunity [ai_customer_service]: enjo.ai | AI Chatbot for Customer Service: 10 Tools Ranked (2026)",
+      "target_url": "https://www.enjo.ai/post/ai-chatbot-for-customer-service",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI customer service chatbot tools 2026"
+    },
+    {
+      "id": "RR02I-OP-012",
+      "task": "Pitch backlink opportunity [ai_customer_service]: helpshift.com | 11 Best AI Customer Support Automation Platforms (2026)",
+      "target_url": "https://www.helpshift.com/blog/ai-customer-service-platform/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI customer service chatbot tools 2026"
+    },
+    {
+      "id": "RR02I-OP-013",
+      "task": "Pitch backlink opportunity [ai_customer_service]: botpress.com | The 11 Best AI Agents for Customer Support in 2026",
+      "target_url": "https://botpress.com/blog/ai-agent-customer-support",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI customer service chatbot tools 2026"
+    },
+    {
+      "id": "RR02I-OP-014",
+      "task": "Pitch backlink opportunity [ai_crm]: overloop.com | AI Sales Tools in 2026: Category-by-Category Guide",
+      "target_url": "https://overloop.com/blog/best-ai-sales-tools",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI CRM tools for sales 2026 comparison"
+    },
+    {
+      "id": "RR02I-OP-015",
+      "task": "Pitch backlink opportunity [ai_crm]: sybill.ai | 10 Best CRM Tools for Sales Teams in 2026",
+      "target_url": "https://www.sybill.ai/blogs/best-crm-tools",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI CRM tools for sales 2026 comparison"
+    },
+    {
+      "id": "RR02I-OP-016",
+      "task": "Pitch backlink opportunity [ai_crm]: amplemarket.com | Best AI sales engagement platforms in 2026: 10 tools tested",
+      "target_url": "https://www.amplemarket.com/blog/best-ai-sales-engagement-platforms-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI CRM tools for sales 2026 comparison"
+    },
+    {
+      "id": "RR02I-OP-017",
+      "task": "Pitch backlink opportunity [ai_crm]: getfuzzy.ai | Best AI Sales Tools in 2026: An Honest Comparison",
+      "target_url": "https://getfuzzy.ai/blog/best-ai-sales-tools-2026",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI CRM tools for sales 2026 comparison"
+    },
+    {
+      "id": "RR02I-OP-018",
+      "task": "Pitch backlink opportunity [ai_pm]: project-management.com | Best Free Project Management Tools in 2026: My Top 10 ...",
+      "target_url": "https://project-management.com/free-project-management-software-tools/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI project management tools 2026 list"
+    },
+    {
+      "id": "RR02I-OP-019",
+      "task": "Pitch backlink opportunity [ai_pm]: projectskillsmentor.com | Best AI Tools for Project Managers in 2026 (Plus How to ...",
+      "target_url": "https://projectskillsmentor.com/project-skills/best-ai-tools-for-project-managers-and-how-to-choose-the-right-one",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI project management tools 2026 list"
+    },
+    {
+      "id": "RR02I-OP-020",
+      "task": "Pitch backlink opportunity [ai_pm]: epicflow.com | 10 Best AI Project Management Tools and Software in 2026",
+      "target_url": "https://www.epicflow.com/blog/excellent-ai-project-management-software-tools-setting-new-standards/",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "pending",
+      "created_at": "2026-11-02T18:24:37.145179",
+      "source": "serper_i_batch_2026-11-02",
+      "query": "best AI project management tools 2026 list"
     }
   ],
   "milestones": [
@@ -8513,7 +8630,7 @@
   "latest_commit": "503f8b5",
   "last_commit": "aa7aa2d",
   "last_update": "2026-10-28T21:26:31",
-  "last_action": "r80创作家: batch72 3篇P0重写升级(prompt-generators/coding-assistant/note-taking-apps) 入库posts.json(283条同slug替换) zens100x3 llmeval clean",
+  "last_action": "r81创作家: batch75 3篇新文章(research-paper/small-business/ai-detection) 入库posts.json 285->288 zens85x3 llmeval100x3 hallucination=False",
   "current_round": 79,
   "last_iteration_date": "2026-11-01",
   "current_strategy": "冷启动阶段：先把SEO排名做起来，目标月UV 1万。不要想变现多元化，先活下来。",
@@ -24734,6 +24851,196 @@
       "source": "followup_20261101",
       "evidence": "{\"known_backlinks\": [{\"name\": \"hatchr-post\", \"status\": 200, \"anchor\": false}, {\"name\": \"hatchr-profile\", \"status\": 200, \"anchor\": false}, {\"name\": \"sideprojectors\", \"status\": 200, \"anchor\": true}, {\"name\": \"thehackstack\", \"status\": 200, \"anchor\": true}, {\"name\": \"github-repo\", \"status\": 200, \"anchor\": true}], \"brand_results\": 10, \"pending_dirs_site_check\": {\"insidr.ai\": 0, \"aisotools.com\": 0, \"toolsify.ai\": 0, \"bestofai.io\": 0, \"rankmyai.com\": 0, \"alternative.me\": 0}}",
       "archived_at": "2026-11-02T07:45:33.644985"
+    },
+    {
+      "id": "KW-PRESENTATION-GENERATORS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI presentation generators 2026] 写 2000 字新文章，标题建议 [Best AI Presentation Generators 2026: 8 Tested (Gamma vs Beautiful.ai vs Plus AI)]，slug 建议 [best-ai-presentation-generators-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按输出格式分（网页=Gamma/PPTX=Beautiful.ai/Google Slides=Plus AI/品牌=Claude Design）+ 免费额度对比",
+      "status": "completed",
+      "created_at": "2026-10-25T15:12:54",
+      "completed_at": "2026-11-02",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "KW-VOLUME-CONFIRMED-EDUCATION-20261026",
+      "status": "completed",
+      "priority": "P0",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "基于关键词 [best AI education tools 2026]（SERP 已验证 Medium，r30 实搜）写 2000 字新文章，标题建议 [Best AI Education Tools 2026: 10 Tested (Khanmigo vs MagicSchool vs Gemini for Education)]，slug 建议 [best-ai-education-tools-2026]，切入：K-12 合规（COPPA/FERPA）+免费额度+按角色分",
+      "source": "keyword_mining_2026-10-26",
+      "serp_competition": "Medium",
+      "serp_verified": true,
+      "volume_verified": true,
+      "created_at": "2026-10-26T15:06:51",
+      "our_angle": "K-12 合规+免费额度",
+      "completed_at": "2026-11-02",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "KW-WORKFLOW-AUTOMATION-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P0",
+      "task": "基于关键词 [best AI workflow automation 2026] 写 2000 字新文章，标题建议 [Best AI Workflow Automation Tools 2026: 10 Tested (Zapier vs Make vs n8n)]，slug 建议 [best-ai-workflow-automation-tools-2026]",
+      "source": "keyword_mining_2026-10-25",
+      "serp_competition": "High",
+      "serp_verified": true,
+      "our_angle": "按技术门槛分（无代码=Zapier/Make/企业=UiPath/开发者=n8n/Mastra）+ 对比表",
+      "status": "completed",
+      "created_at": "2026-10-25T15:12:54",
+      "completed_at": "2026-11-02",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "P0-CREATOR-FAKE-FIX-PARAPHRASE-20261026",
+      "task": "创作家假完成整改：补写 keyword [best AI paraphrasing tools 2026] 2000字新文章（KW-PARAPHRASING-20261025 重开），标题建议 [Best AI Paraphrasing Tools 2026: 7 Tested & Reviewed]，写完 zens-ink>=70 + 配图 + content_drafts 落盘 + creator 日志引用待办ID",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "source": "commander_20261026_daily",
+      "created_at": "2026-10-26T22:37:46",
+      "completed_at": "2026-11-02T14:27:35.973851+08:00",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "P0-GSC-REVIEW-20261103",
+      "priority": "P0",
+      "title": "GSC断崖48h复查点验证（11-03）",
+      "description": "r43四层排查全正常（sitemap 950/952、核心200、重定向齐全），根因指向auto_redirect事件后排名/索引层。复查点=2026-11-03：读GSC 10-31~11-02三日曝光，若仍未回升则升级为域名信任/核心更新排查并考虑Search Console 申诉。",
+      "assigned_to": [
+        "window1",
+        "架构师",
+        "window4",
+        "分析师"
+      ],
+      "status": "completed",
+      "created_at": "2026-11-01T22:34",
+      "source": "commander_dispatch_20261101_r43",
+      "evidence": "r45 正式复查（11-02 预执行，GSC 重跑 10-02~10-31 窗口，数据回填）：10-31 曝光回填 1→2 仍低位；峰后 10-28/29/30/31=4/1/1/2 **连续 4 天 <5 无回升**；窗口总量 156 imp / pos 15.56 较 r44（154/15.75）曝光 +2、位置 +0.19，持平略升但无实质恢复。结论：**曝光断崖未恢复**（r73 auto_redirect 修复生效但索引/排名恢复滞后）；11-03 后若窗口滚动至 10-04~11-02 可复查 11-01/11-02 两日是否仍 <5，建议架构师保持监测",
+      "completed_at": "2026-11-02T15:15:22",
+      "closed_by": "analyst_r45",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "P0-LEARN-LCP-SERVER-COMPONENT-20261102",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "学习nextjs.org streaming指南：LCP元素(hero图/H1)必须在Server Component内——Client Component内next/image priority的preload会落到<body>而非<head>，对LCP完全失效。验收：curl线上首页+Top3文章HTML，grep <link rel=preload as=image>确认其行号 < </head>行号；LCP图必须fetchPriority=high+loading=eager(禁lazy)；每页仅1张priority图(多了饱和HTTP/2反而劣化LCP)",
+      "source": "架构师学习",
+      "created_date": "2026-11-02",
+      "completed_at": "2026-11-02T13:11:17",
+      "evidence": "r82审计通过：线上首页curl实证<preload as=image href=/screenshots/real/webp/gemini.webp fetchPriority=high>在<head>@offset363(head_end=5411)；LCP图@25790 priority+eager；每页仅1张priority；结论：LCP元素已在Server Component（preload正确落head），无需代码改动",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "P0-LEARN-THIRD-PARTY-SCRIPT-DEFER-20261102",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "架构师",
+        "window1"
+      ],
+      "task": "学习web.dev top-cwv+hashtagcoders：第三方脚本(analytics/chat/广告)是INP/LCP最大杀手。审计本站所有<script>/next/script，非关键脚本必须strategy=lazyOnload或afterInteractive；关键脚本尽量自托管。验收：grep app/layout.tsx与全局组件的script标签，列出每个第三方脚本的strategy，改完tsc=0+build=0+线上HTML确认脚本不在head阻塞位",
+      "source": "架构师学习",
+      "created_date": "2026-11-02",
+      "completed_at": "2026-11-02T13:11:17",
+      "evidence": "r82审计通过：layout.tsx第三方脚本全部async/lazyOnload/afterInteractive——umami/ahrefs/gtag原生async，GA4-init afterInteractive，AdSense lazyOnload；线上首页render-blocking external scripts=0；geist/font自托管无Google Fonts外链；无需代码改动",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "P0-REQ13-VERIFY-20261102",
+      "priority": "P0",
+      "status": "completed",
+      "assigned_to": [
+        "分析师",
+        "window4"
+      ],
+      "task": "验证 10-24 REQUESTED 13 高价值页 2 周后收录结果（exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/promptfoo/chroma/copilot），未编入的补 IndexNow+内链；验收点 2026-11-02；输出收录状态清单",
+      "source": "report-todo_from_analysis-20261026",
+      "created_date": "2026-10-29",
+      "completed_at": "2026-11-02T09:04:07",
+      "evidence": "r44 正式验证（11-02 到期日，requests 走代理 7890 实抓）：13 个高价值页线上可抓性 12/13 全部 200 （exa/claude/suno/kagi/llama-cpp/vllm/lobe-chat/langchain/crewai/deepeval/pr-agent/promptfoo，final 均带斜杠）；baml /tools/baml/ **404 页面不存在**（本地 posts.json 283 篇 0 命中）。sitemap 收录层：952 URLs 中 12/13 在站、GSC discovered=950。验证结论：12/13 通过（可抓取+在 sitemap），baml 失败（从未上线）→ 需补页或名单剔除。限制：逐 URL indexed 状态受 URL Inspection API 403 限制（死路），以可抓取+sitemap+discovered 三重证据判定",
+      "closed_by": "analyst_r44",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "CA-FREE-AI-COURSES-20261028",
+      "status": "completed",
+      "priority": "P1",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "task": "竞品 futurepedia 在卖 AI 课程（courses 531 URLs，变现=课程主导），我们 0 个课程类内容，建议写 \"Best Free AI Courses in 2026: 15 Certified Resources\" 文章（slug: best-free-ai-courses-2026，切入=独立测评+资源地图差异化），SERP竞争度=High（前 10 被 DataCamp/MIT/Coursera 垄断）",
+      "source": "competitor_analysis_2026-10-28",
+      "data_verified": true,
+      "created_date": "2026-10-28",
+      "completed_at": "2026-11-02T14:27:35.973851+08:00",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "CA-TEACHERS-20261025",
+      "assigned_to": [
+        "window2",
+        "创作家"
+      ],
+      "priority": "P1",
+      "task": "竞品 futurepedia 在做 teachers 内容（竞品有 1 个分类，我们 0 个），建议写 best-ai-tools-for-teachers-2026 文章（MagicSchool/ChatGPT for Teachers/Khan Academy Writing Coach 对比），SERP竞争度=Medium",
+      "source": "competitor_analysis_2026-10-25",
+      "serp_competition": "Medium",
+      "data_verified": true,
+      "competitor_count": 1,
+      "our_count": 0,
+      "status": "completed",
+      "created_at": "2026-10-25T12:08:00",
+      "completed_at": "2026-11-02T14:27:35.973851+08:00",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "FOLLOWUP-20261102-H-BATCH",
+      "task": "跟进档：H 批 26 域名 HTTP 验证 + 已获外链复查 + brand 复查",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-11-02T11:24:09.754545",
+      "source": "followup_20261102",
+      "evidence": "{\"h_batch_alive\": 26, \"h_batch_total\": 26, \"known_backlinks_alive\": 5, \"brand_results\": 10, \"external_listings\": 7}",
+      "archived_at": "2026-11-02T16:15:35"
+    },
+    {
+      "id": "SOP-20261102-INDEXNOW-BATCH2",
+      "task": "SOP 第三轮：IndexNow 第二批次 5 URL 提交",
+      "assigned_to": [
+        "拓荒者"
+      ],
+      "priority": "P2",
+      "status": "completed",
+      "completed_at": "2026-11-02T14:32:55.143481",
+      "source": "sop_20261102_third",
+      "evidence": "{\"indexnow_status\": 202, \"urls_submitted\": 5}",
+      "archived_at": "2026-11-02T16:15:35"
     }
   ],
   "last_deploy_time": "2026-09-30 22:28",
@@ -25355,7 +25662,7 @@
     ]
   },
   "last_commander_update": "2026-10-24T12:10:00+08:00",
-  "last_batch": "batch73",
+  "last_batch": "batch75",
   "last_batch_date": "2026-11-02",
   "geo_audit_20261026": {
     "score": "6.4/10 B",
