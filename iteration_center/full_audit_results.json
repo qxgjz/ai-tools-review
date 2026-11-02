@@ -1,11 +1,11 @@
 {
-  "audit_time": "2026-10-31T22:25:30.621227",
+  "audit_time": "2026-11-01T22:43:11.391751",
   "mode": "quick",
   "content": {
     "total_articles": 283,
-    "average_score": 82.56855123674897,
+    "average_score": 82.94593639575956,
     "perfect_count": 88,
-    "below_85_count": 152,
+    "below_85_count": 151,
     "articles": [
       {
         "slug": "best-paid-ai-tools-worth-buying-2026",
@@ -355,8 +355,8 @@
         "slug": "best-ai-project-management-tools-2026",
         "title": "Best AI Project Management Tools 2026: 8 Tested",
         "quality_score": 83.3,
-        "word_count": 2186,
-        "flesch": 51.6,
+        "word_count": 2331,
+        "flesch": 52.5,
         "internal_links": 5,
         "external_links": 8,
         "images": 2,
@@ -412,8 +412,8 @@
         "slug": "best-ai-transcription-tools-2026",
         "title": "Best AI Transcription Tools 2026: 8 Tested for Accuracy",
         "quality_score": 83.3,
-        "word_count": 2280,
-        "flesch": 42.1,
+        "word_count": 2425,
+        "flesch": 44.6,
         "internal_links": 5,
         "external_links": 7,
         "images": 4,
@@ -448,25 +448,31 @@
       },
       {
         "slug": "best-ai-legal-tools-2026",
-        "title": "Best AI Legal Tools 2026: Complete Comparison | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 3860,
-        "flesch": 50.0,
-        "internal_links": 10,
-        "external_links": 3,
-        "images": 1,
-        "failed_checks": []
+        "title": "Best AI Legal Tools 2026: 8 Tested for Lawyers & Small Firms",
+        "quality_score": 80.0,
+        "word_count": 2614,
+        "flesch": 43.8,
+        "internal_links": 0,
+        "external_links": 6,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
       },
       {
         "slug": "best-ai-seo-tools-2026",
-        "title": "Best AI SEO Tools 2026: Complete Comparison of | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 3501,
-        "flesch": 51.5,
-        "internal_links": 10,
+        "title": "Best AI SEO Tools 2026: 10 Tested for Search & AI Visibility",
+        "quality_score": 80.0,
+        "word_count": 2733,
+        "flesch": 41.2,
+        "internal_links": 0,
         "external_links": 3,
-        "images": 1,
-        "failed_checks": []
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass"
+        ]
       },
       {
         "slug": "best-ai-video-editors-2026",
@@ -492,14 +498,18 @@
       },
       {
         "slug": "best-ai-research-tools-2026",
-        "title": "Best AI Research Tools 2026: Complete Compariso | AIToolCrux",
-        "quality_score": 100.0,
-        "word_count": 3488,
-        "flesch": 47.8,
-        "internal_links": 6,
-        "external_links": 1,
-        "images": 1,
-        "failed_checks": []
+        "title": "Best AI Research Tools 2026: 9 Tested for Academic Work",
+        "quality_score": 71.1,
+        "word_count": 2735,
+        "flesch": 31.8,
+        "internal_links": 0,
+        "external_links": 7,
+        "images": 2,
+        "failed_checks": [
+          "first_para_pass",
+          "internal_links_pass",
+          "readability_pass"
+        ]
       },
       {
         "slug": "best-ai-productivity-tools-2026",
@@ -687,34 +697,33 @@
         "slug": "dify_ai_review",
         "title": "Dify AI Review 2026: Build AI Apps Without Coding?",
         "quality_score": 71.1,
-        "word_count": 2405,
-        "flesch": 43.2,
+        "word_count": 2562,
+        "flesch": 37.7,
         "internal_links": 23,
         "external_links": 2,
         "images": 2,
         "failed_checks": [
-          "first_para_pass"
+          "first_para_pass",
+          "readability_pass"
         ]
       },
       {
         "slug": "cursor_ai_review",
         "title": "Cursor AI Review 2026: I Switched From Copilot (Here's Why)",
-        "quality_score": 71.1,
-        "word_count": 2276,
-        "flesch": 44.6,
+        "quality_score": 85.6,
+        "word_count": 2369,
+        "flesch": 43.2,
         "internal_links": 10,
         "external_links": 2,
         "images": 2,
-        "failed_checks": [
-          "first_para_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "gemini_38_flash_review",
         "title": "Gemini 3.8 Flash Review 2026: Cheaper, Faster, Enough?",
-        "quality_score": 71.1,
-        "word_count": 2323,
-        "flesch": 51.6,
+        "quality_score": 80.0,
+        "word_count": 2478,
+        "flesch": 51.3,
         "internal_links": 14,
         "external_links": 2,
         "images": 2,
@@ -824,9 +833,9 @@
       {
         "slug": "elevenlabs-review-2026",
         "title": "ElevenLabs Review 2026: Best AI Voice Generator & Cloning?",
-        "quality_score": 71.1,
-        "word_count": 2354,
-        "flesch": 46.4,
+        "quality_score": 80.0,
+        "word_count": 2515,
+        "flesch": 45.4,
         "internal_links": 16,
         "external_links": 3,
         "images": 2,
@@ -980,9 +989,9 @@
       {
         "slug": "suno-review-2026",
         "title": "Suno AI Review 2026: Is the $10/mo Pro Plan Worth It?",
-        "quality_score": 71.1,
-        "word_count": 2404,
-        "flesch": 46.0,
+        "quality_score": 80.0,
+        "word_count": 2554,
+        "flesch": 41.0,
         "internal_links": 15,
         "external_links": 2,
         "images": 2,
@@ -1159,8 +1168,8 @@
         "slug": "surfer-seo-vs-frase-2026-comparison",
         "title": "Surfer SEO vs Frase 2026: We Tested Both for 3 Weeks (Dat...",
         "quality_score": 100.0,
-        "word_count": 2051,
-        "flesch": 49.9,
+        "word_count": 2136,
+        "flesch": 52.1,
         "internal_links": 3,
         "external_links": 5,
         "images": 1,
@@ -1193,9 +1202,9 @@
       {
         "slug": "gemini-vs-chatgpt-2026",
         "title": "Gemini vs ChatGPT 2026: Which AI Assistant Is Actually Better?",
-        "quality_score": 80.0,
-        "word_count": 2288,
-        "flesch": 51.4,
+        "quality_score": 88.9,
+        "word_count": 2511,
+        "flesch": 53.4,
         "internal_links": 5,
         "external_links": 3,
         "images": 2,
@@ -1217,33 +1226,33 @@
       {
         "slug": "otter-ai-alternatives",
         "title": "7 Best Otter.ai Alternatives in 2026 (Tested After the Price Hike)",
-        "quality_score": 80.0,
-        "word_count": 2205,
-        "flesch": 48.2,
+        "quality_score": 100.0,
+        "word_count": 2281,
+        "flesch": 50.1,
         "internal_links": 4,
         "external_links": 3,
         "images": 3,
-        "failed_checks": [
-          "first_para_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "autochain-review-2026",
         "title": "AutoChain Review 2026: Lightweight LLM Agent Builder",
-        "quality_score": 88.9,
-        "word_count": 2254,
-        "flesch": 41.8,
+        "quality_score": 80.0,
+        "word_count": 2294,
+        "flesch": 39.3,
         "internal_links": 8,
         "external_links": 3,
         "images": 0,
-        "failed_checks": []
+        "failed_checks": [
+          "readability_pass"
+        ]
       },
       {
         "slug": "chatgpt-alternatives-2026",
         "title": "7 Best ChatGPT Alternatives in 2026",
         "quality_score": 88.9,
-        "word_count": 2108,
-        "flesch": 59.9,
+        "word_count": 2127,
+        "flesch": 59.7,
         "internal_links": 7,
         "external_links": 5,
         "images": 0,
@@ -1252,9 +1261,9 @@
       {
         "slug": "runway-vs-pika-2026",
         "title": "Runway vs Pika 2026: Which AI Video Generator Wins?",
-        "quality_score": 62.2,
-        "word_count": 2416,
-        "flesch": 33.6,
+        "quality_score": 71.1,
+        "word_count": 2581,
+        "flesch": 26.8,
         "internal_links": 4,
         "external_links": 3,
         "images": 2,
@@ -1267,8 +1276,8 @@
         "slug": "best-free-ai-tools-for-students-2026",
         "title": "Best Free AI Tools for Students 2026",
         "quality_score": 80.0,
-        "word_count": 2289,
-        "flesch": 65.4,
+        "word_count": 2416,
+        "flesch": 63.3,
         "internal_links": 5,
         "external_links": 7,
         "images": 1,
@@ -1277,29 +1286,25 @@
       {
         "slug": "cursor-vs-github-copilot-2026",
         "title": "Cursor vs GitHub Copilot 2026: Best AI Coding Assistant?",
-        "quality_score": 72.2,
-        "word_count": 1967,
-        "flesch": 48.3,
+        "quality_score": 88.9,
+        "word_count": 2035,
+        "flesch": 48.9,
         "internal_links": 3,
         "external_links": 2,
         "images": 0,
-        "failed_checks": [
-          "word_count_pass",
-          "first_para_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "elevenlabs-vs-playht-2026",
         "title": "ElevenLabs vs Play.ht 2026: Best AI Voice Generator Compared",
-        "quality_score": 72.2,
-        "word_count": 1871,
-        "flesch": 48.7,
+        "quality_score": 77.8,
+        "word_count": 1912,
+        "flesch": 48.8,
         "internal_links": 5,
         "external_links": 2,
         "images": 0,
         "failed_checks": [
-          "word_count_pass",
-          "first_para_pass"
+          "word_count_pass"
         ]
       },
       {
@@ -1319,8 +1324,8 @@
         "slug": "canva-pro-free-for-students",
         "title": "Canva Pro Free for Students 2026",
         "quality_score": 88.9,
-        "word_count": 2020,
-        "flesch": 64.5,
+        "word_count": 2054,
+        "flesch": 64.0,
         "internal_links": 5,
         "external_links": 2,
         "images": 0,
@@ -1330,8 +1335,8 @@
         "slug": "midjourney-v7-vs-dall-e-3-ecommerce",
         "title": "Midjourney v7 vs DALL-E 3: Ecommerce Pick",
         "quality_score": 88.9,
-        "word_count": 2078,
-        "flesch": 48.9,
+        "word_count": 2125,
+        "flesch": 49.3,
         "internal_links": 3,
         "external_links": 2,
         "images": 0,
@@ -1340,23 +1345,22 @@
       {
         "slug": "claude-alternatives-2026",
         "title": "7 Best Claude Alternatives in 2026: Top Picks Tested",
-        "quality_score": 72.2,
-        "word_count": 1559,
-        "flesch": 61.2,
+        "quality_score": 77.8,
+        "word_count": 1604,
+        "flesch": 61.1,
         "internal_links": 3,
         "external_links": 9,
         "images": 0,
         "failed_checks": [
-          "word_count_pass",
-          "first_para_pass"
+          "word_count_pass"
         ]
       },
       {
         "slug": "notion-ai-vs-obsidian-ai",
         "title": "Notion AI vs Obsidian AI 2026: Which Note-Taking Tool Wins?",
         "quality_score": 77.8,
-        "word_count": 1944,
-        "flesch": 63.3,
+        "word_count": 1996,
+        "flesch": 62.1,
         "internal_links": 3,
         "external_links": 2,
         "images": 0,
@@ -1429,9 +1433,9 @@
       {
         "slug": "lovable-vs-boltnew",
         "title": "Lovable vs Bolt.new 2026: We Built the Same App on Both",
-        "quality_score": 71.1,
-        "word_count": 2143,
-        "flesch": 54.0,
+        "quality_score": 80.0,
+        "word_count": 2309,
+        "flesch": 51.4,
         "internal_links": 9,
         "external_links": 2,
         "images": 4,
@@ -1442,39 +1446,39 @@
       {
         "slug": "claude-37-vs-gpt4o",
         "title": "Claude 3.7 Sonnet vs GPT-4o 2026: Side-by-Side Benchmarks",
-        "quality_score": 94.4,
-        "word_count": 2231,
-        "flesch": 52.0,
+        "quality_score": 100.0,
+        "word_count": 2304,
+        "flesch": 56.6,
         "internal_links": 3,
         "external_links": 9,
         "images": 2,
-        "failed_checks": [
-          "first_para_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "synthesia-vs-heygen",
         "title": "Synthesia vs HeyGen 2026: We Tested Both on the Same Script",
-        "quality_score": 85.6,
-        "word_count": 2260,
-        "flesch": 41.1,
+        "quality_score": 91.1,
+        "word_count": 2315,
+        "flesch": 37.0,
         "internal_links": 5,
         "external_links": 3,
         "images": 2,
         "failed_checks": [
-          "first_para_pass"
+          "readability_pass"
         ]
       },
       {
         "slug": "beautiful-ai-alternatives",
         "title": "7 Best Beautiful.ai Alternatives in 2026 (Free & Paid)",
-        "quality_score": 71.1,
-        "word_count": 2232,
-        "flesch": 52.3,
+        "quality_score": 74.4,
+        "word_count": 2403,
+        "flesch": 51.7,
         "internal_links": 9,
         "external_links": 6,
         "images": 2,
-        "failed_checks": []
+        "failed_checks": [
+          "first_para_pass"
+        ]
       },
       {
         "slug": "devin-ai-review",
@@ -1946,7 +1950,7 @@
       {
         "slug": "best-ai-research-assistants-2026",
         "title": "Best AI Research Assistants 2026: Literature & Report Tools",
-        "quality_score": 60.0,
+        "quality_score": 65.6,
         "word_count": 2393,
         "flesch": 30.1,
         "internal_links": 4,
@@ -2052,13 +2056,13 @@
       },
       {
         "slug": "best-ai-prompt-generators-2026",
-        "title": "\"Best AI Prompt Generators 2026: Free & Paid Compared\"",
-        "quality_score": 60.0,
-        "word_count": 2356,
-        "flesch": 54.3,
-        "internal_links": 3,
-        "external_links": 3,
-        "images": 0,
+        "title": "Best AI Prompt Generators 2026: Free & Paid Tools Compared",
+        "quality_score": 94.4,
+        "word_count": 2344,
+        "flesch": 60.2,
+        "internal_links": 5,
+        "external_links": 7,
+        "images": 2,
         "failed_checks": [
           "first_para_pass"
         ]
@@ -3051,11 +3055,11 @@
       },
       {
         "slug": "best-ai-note-taking-apps-2026",
-        "title": "\"Best AI Note-Taking Apps 2026: 10 Compared (Notion AI vs Mem vs NotebookLM)\"",
-        "quality_score": 88.9,
-        "word_count": 2303,
-        "flesch": 49.6,
-        "internal_links": 4,
+        "title": "Best AI Note-Taking Apps 2026: 10 Compared (Notion AI vs More)",
+        "quality_score": 94.4,
+        "word_count": 2201,
+        "flesch": 51.9,
+        "internal_links": 5,
         "external_links": 3,
         "images": 2,
         "failed_checks": [
@@ -3092,16 +3096,14 @@
       },
       {
         "slug": "best-ai-coding-assistant-2026",
-        "title": "\"Best AI Coding Assistant 2026: 7 Tested (Cursor vs Copilot vs Claude)\"",
-        "quality_score": 91.1,
-        "word_count": 2132,
-        "flesch": 44.7,
-        "internal_links": 0,
-        "external_links": 3,
+        "title": "Best AI Coding Assistant 2026: 7 Tested (Cursor vs Copilot)",
+        "quality_score": 100.0,
+        "word_count": 2193,
+        "flesch": 50.3,
+        "internal_links": 7,
+        "external_links": 2,
         "images": 2,
-        "failed_checks": [
-          "internal_links_pass"
-        ]
+        "failed_checks": []
       },
       {
         "slug": "best-ai-text-to-image-generators-2026",
@@ -3545,7 +3547,7 @@
       "Meta too long": 1
     },
     "critical_issues": [],
-    "elapsed_seconds": 1.2
+    "elapsed_seconds": 1.5
   },
   "geo": {
     "geo_score": 100,
