@@ -1,45 +1,45 @@
 {
-  "generatedAt": "2026-11-06T13:46:44.278Z",
+  "generatedAt": "2026-11-06T22:45:00.681Z",
   "pages": [
     {
       "url": "/",
-      "performance": 64,
-      "lcp": "3.6 s",
+      "performance": 65,
+      "lcp": "4.4 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/",
       "performance": 77,
-      "lcp": "4.6 s",
+      "lcp": "4.5 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/",
-      "performance": 81,
-      "lcp": "4.3 s",
+      "performance": 77,
+      "lcp": "4.5 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
       "performance": 71,
-      "lcp": "5.7 s",
+      "lcp": "5.1 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
-      "performance": 77,
+      "performance": 72,
       "lcp": "5.0 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
-      "performance": 76,
-      "lcp": "5.1 s",
+      "performance": 69,
+      "lcp": "5.6 s",
       "inp": null,
       "cls": "0"
     },
@@ -52,36 +52,36 @@
     },
     {
       "url": "/compare/",
-      "performance": 76,
-      "lcp": "4.6 s",
+      "performance": 77,
+      "lcp": "4.4 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/compare/",
-      "performance": 78,
-      "lcp": "4.6 s",
+      "performance": 79,
+      "lcp": "4.3 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/tools/midjourney/",
-      "performance": 69,
-      "lcp": "9.0 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
-      "performance": 71,
+      "performance": 66,
       "lcp": "6.0 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/tools/midjourney/",
+      "performance": 68,
+      "lcp": "5.7 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/tools/midjourney/",
       "performance": 70,
-      "lcp": "6.0 s",
+      "lcp": "5.7 s",
       "inp": null,
       "cls": "0"
     }
