@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-11-10 22:23 UTC
+> Generated: 2026-11-11 23:28 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
