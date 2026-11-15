@@ -1,45 +1,52 @@
 {
-  "generatedAt": "2026-11-14T22:00:29.875Z",
+  "generatedAt": "2026-11-15T13:28:31.540Z",
   "pages": [
     {
       "url": "/",
-      "performance": 86,
-      "lcp": "3.2 s",
+      "performance": 67,
+      "lcp": "5.1 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/",
-      "performance": 81,
-      "lcp": "4.5 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/",
-      "performance": 83,
+      "performance": 82,
       "lcp": "4.3 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/",
+      "performance": 82,
+      "lcp": "4.1 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
       "performance": 76,
-      "lcp": "5.2 s",
+      "lcp": "5.1 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
-      "performance": 74,
+      "performance": 75,
       "lcp": "5.4 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/blog/perplexity-review-2026/",
-      "performance": 74,
-      "lcp": "5.4 s",
+      "performance": 76,
+      "lcp": "5.0 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/compare/",
+      "performance": 78,
+      "lcp": "4.7 s",
       "inp": null,
       "cls": "0"
     },
@@ -53,14 +60,7 @@
     {
       "url": "/compare/",
       "performance": 79,
-      "lcp": "4.5 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/compare/",
-      "performance": 76,
-      "lcp": "4.7 s",
+      "lcp": "4.6 s",
       "inp": null,
       "cls": "0"
     },
@@ -74,14 +74,14 @@
     {
       "url": "/tools/midjourney/",
       "performance": 75,
-      "lcp": "5.7 s",
+      "lcp": "5.5 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/tools/midjourney/",
-      "performance": 73,
-      "lcp": "5.8 s",
+      "performance": 72,
+      "lcp": "5.9 s",
       "inp": null,
       "cls": "0"
     }
