@@ -1,6 +1,6 @@
 # AIToolCrux Context (auto-generated)
 
-> Generated: 2026-11-20 23:06 UTC
+> Generated: 2026-11-21 22:11 UTC
 > This file is auto-updated by GitHub Actions (context-update.yml)
 
 ## Core Info
@@ -47,11 +47,11 @@
 
 | Metric | Value |
 |--------|-------|
-| Clicks | 7 |
-| Impressions | 1506 |
-| CTR | 0.46% |
-| Avg Ranking | 23.87 |
-| Report | prev_gsc.md |
+| Clicks | 0 |
+| Impressions | 166 |
+| CTR | 0.00% |
+| Avg Ranking | 14.61 |
+| Report | latest_report_2026-10-27.md |
 
 ## Audit Findings (pending)
 
