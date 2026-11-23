@@ -226,3 +226,4 @@ Recheck after 1-2 weeks for indexing improvement.
 | 2026-11-01 | 0 | -1 | -181 | 📉 -181 lost |
 | 2026-11-08 | 16 | -1 | N/A |  |
 | 2026-11-16 | 21 | -1 | 5 | 📈 +5 new indexed |
+| 2026-11-23 | 43 | -1 | 22 | 📈 +22 new indexed |
