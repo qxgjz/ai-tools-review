@@ -1,17 +1,10 @@
 {
-  "generatedAt": "2026-11-24T16:59:55.400Z",
+  "generatedAt": "2026-11-25T01:57:17.956Z",
   "pages": [
     {
       "url": "/",
-      "performance": 67,
-      "lcp": "3.7 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/",
-      "performance": 80,
-      "lcp": "4.7 s",
+      "performance": 65,
+      "lcp": "4.4 s",
       "inp": null,
       "cls": "0"
     },
@@ -23,9 +16,9 @@
       "cls": "0"
     },
     {
-      "url": "/blog/perplexity-review-2026/",
-      "performance": 60,
-      "lcp": "7.8 s",
+      "url": "/",
+      "performance": 81,
+      "lcp": "4.4 s",
       "inp": null,
       "cls": "0"
     },
@@ -38,50 +31,57 @@
     },
     {
       "url": "/blog/perplexity-review-2026/",
-      "performance": 72,
-      "lcp": "5.7 s",
+      "performance": 77,
+      "lcp": "4.7 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/blog/perplexity-review-2026/",
+      "performance": 75,
+      "lcp": "5.1 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/compare/",
-      "performance": 78,
-      "lcp": "4.6 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/compare/",
-      "performance": 72,
-      "lcp": "5.3 s",
+      "performance": 81,
+      "lcp": "4.3 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/compare/",
       "performance": 77,
-      "lcp": "4.3 s",
+      "lcp": "4.8 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/compare/",
+      "performance": 75,
+      "lcp": "4.9 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/tools/midjourney/",
-      "performance": 70,
-      "lcp": "6.0 s",
+      "performance": 72,
+      "lcp": "6.1 s",
+      "inp": null,
+      "cls": "0"
+    },
+    {
+      "url": "/tools/midjourney/",
+      "performance": 74,
+      "lcp": "5.9 s",
       "inp": null,
       "cls": "0"
     },
     {
       "url": "/tools/midjourney/",
       "performance": 73,
-      "lcp": "5.7 s",
-      "inp": null,
-      "cls": "0"
-    },
-    {
-      "url": "/tools/midjourney/",
-      "performance": 71,
-      "lcp": "6.1 s",
+      "lcp": "5.9 s",
       "inp": null,
       "cls": "0"
     }
