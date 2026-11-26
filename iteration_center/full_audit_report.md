@@ -1,6 +1,6 @@
 # AIToolCrux Full Site Audit Report
 
-**Date:** 2026-11-25 02:59:41
+**Date:** 2026-11-26 02:08:05
 **Mode:** Quick
 
 ## Summary
@@ -14,7 +14,7 @@
 | Pages audited | 20 |
 | Technical issues | 5 |
 | Critical issues | 0 |
-| Audit duration | 1.7s |
+| Audit duration | 1.2s |
 | GEO score | 100/100 |
 
 ## Content Quality Details
